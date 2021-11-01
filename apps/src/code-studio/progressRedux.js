@@ -340,7 +340,9 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
     method: 'GET',
     data: {user_id: userId}
   }).done(data => {
-    data = data || {};
+    if (!data || _.isEmpty(data)) {
+      return;
+    }
 
     if (data.isVerifiedTeacher) {
       dispatch(setVerified());
@@ -365,9 +367,7 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
       );
     }
 
-    if (data.lockableAuthorized) {
-      dispatch(authorizeLockable());
-    }
+    dispatch(authorizeLockable(data.lockableAuthorized));
 
     if (data.completed) {
       dispatch(setScriptCompleted());
@@ -534,6 +534,7 @@ const lessonFromLesson = lesson =>
     'id',
     'lockable',
     'lessonNumber',
+    'lessonStartUrl',
     'lesson_plan_html_url',
     'student_lesson_plan_html_url',
     'description_student',

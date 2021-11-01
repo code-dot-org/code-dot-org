@@ -1,15 +1,1 @@
-family_name 'oceans'
-version_year 'unversioned'
-published_state 'preview'
-is_course true
-
-lesson 'Oceans', display_name: 'Oceans', has_lesson_plan: true
-level 'Oceans_Video_Machine_Learning'
-level 'Oceans_FishVTrash'
-level 'Oceans_CreaturesVTrashDemo'
-level 'Oceans_CreaturesVTrash'
-level 'Oceans_Video_Training_Data'
-level 'Oceans_Short'
-level 'Oceans_Video_Societal_Implications'
-level 'Oceans_Long'
-
+is_migrated true

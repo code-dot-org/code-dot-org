@@ -14,6 +14,7 @@ style_min: true
 
 ### Model language and sample docs for policies
   * [Model legislation](https://docs.google.com/document/d/1TL70O0pxsiv-ilC6puSagG4JzLTrDc5UMKfzyBwUgNI/edit?usp=sharing)
+  * [South Carolina Computer Science Graduation Requirement Case Study](https://advocacy.code.org/sccasestudy.pdf)
   * [Model state computer science coordinator job description](https://docs.google.com/document/d/12qHVm3YQ0-1RS2ciN1Hu39mSYziVQp82Gj_HOB_CkfE/edit?usp=sharing)
   * [State examples of "all schools offer" policies](https://docs.google.com/document/d/1JAqCLHh9Sp1KW00b4IOGbYFaIO3dmHDQ5bLG5cdNJYs/edit?usp=sharing)
 
@@ -25,7 +26,7 @@ style_min: true
 ### Teacher certification resources
 * [Recommendations for creating teacher pathways including certification](https://code.org/files/TeacherPathwayRecommendations.pdf)
 * [Micro-credentials: Addressing certification and professional learning](https://advocacy.code.org/micro-credentials.pdf)
-* [Resource listing certification requirements to teach particular courses per state](http://bit.ly/cscertification)
+* [Resource listing certification requirements to teach particular courses per state](https://docs.google.com/document/d/1XA1zIjuR222BtRWTljNatCD6TYFAZan8eDWqZneG6I8/edit?usp=sharing)
 
 ### Planning and implementation
   * [State planning toolkit](https://docs.google.com/document/d/13N843-BjK9JHXNWKFzJlxhpw7f6Y2pJF6tpV2aHM1HU/edit?usp=sharing)

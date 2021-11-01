@@ -25,6 +25,7 @@ const defaultProps = {
   sectionsForDropdown: [],
   unitHasLockableLessons: false,
   unitAllowsHiddenLessons: false,
+  publishedState: 'beta',
   versions: []
 };
 

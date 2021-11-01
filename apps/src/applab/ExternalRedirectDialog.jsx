@@ -16,7 +16,7 @@ class ExternalRedirectDialog extends React.Component {
   };
 
   handleRedirect(url) {
-    window.open(url, '_blank');
+    window.open(url, '_blank', 'noopener,noreferrer');
     this.props.handleClose();
   }
 

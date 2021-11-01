@@ -69,20 +69,24 @@ ________________
 <a id="k-5docs"></a>
 ## CS Fundamentals Facilitator Support Documents
 
-- [CS Fundamentals Facilitator Playbook](https://docs.google.com/document/d/1kJ42QppLmoB1mOkubTRF54HjH6oGUK-EpPKqE_BRSK0/edit?ts=5a96c3a5) - Toolkit for CS Fundamentals Facilitators
-- [CS Fundamentals Workshop Process Document](https://docs.google.com/document/d/1eMA0RT-id5dsVZS0p_UUt4FKMnjzf-uUBUY1y_Z7hr0/edit) - Guide for CS Fundamentals Facilitators and Regional Partners to manage K-5 workshops
-- [CS Fundamentals Facilitator Landing Page](https://curriculum.code.org/plcsf/) - See full list of resources and agendas for CS Fundamentals Facilitators
-- <a href="/educate/regional-partner/playbook/payments#csftravel">CS Fundamentals Facilitator Travel Policy</a>
+<ul>
+ <li><a href="https://docs.google.com/document/d/15OeABLkGfF4tOutKA4NydDuoigAhVwN0RAXm9x_DIRE/preview", target=_"blank">CS Fundamentals Facilitator Handbook</a> - The handbook contains an overview of CS Fundamentals facilitator program and facilitation principles.</li>
+ <li><a href="https://docs.google.com/document/d/1hmaqhTvLjl7b_TKjaGF8O3RgirGYMJLA-AZ9yDGBLEw/preview", target=_"blank">CS Fundamentals Workshop Organizer Guide</a> - This document outlines the process for managing CS Fundamentals workshops.</li>
+ <li><a href="https://curriculum.code.org/plcsf/", target=_"blank">CS Fundamentals Facilitator Landing Page</a> - See full list of resources and agendas for CS Fundamentals Facilitators</li>
+ <li><a href="/educate/regional-partner/playbook/payments#csftravel", target=_"blank">CS Fundamentals Facilitator Travel Policy</a></li> 
+</ul>
 
 
 <a id="6-12docs"></a>
 
 ## CS Discoveries and CS Principles Facilitator Support Documents
 
-- [6-12 Facilitator Handbook](https://docs.google.com/document/d/1_pIaekAxOXnVUO4KYnnlmgH-Bna3f046MidrD9gYnZI/preview) - Toolkit for CS Discoveries and CS Principles facilitators
-- [CS Discoveries Facilitator Landing Page](https://curriculum.code.org/plcsd/) - See full list of important resources and agendas for CS Discoveries Facilitators
-- [CS Principles Facilitator Landing Page](https://curriculum.code.org/plcsp/) - See full list of important resources and agendas for CS Principles Facilitators
-- <a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit">6-12 CS Discoveries & CS Principles Facilitator Travel Policy</a> *[Updated September 2019]* - Refer to this document for whether your facilitator(s) qualify for support with their travel to workshops for CS Discoveries or CS Principles.
+<ul>
+ <li><a href="https://docs.google.com/document/d/1_pIaekAxOXnVUO4KYnnlmgH-Bna3f046MidrD9gYnZI/preview", target=_"blank">6-12 Facilitator Handbook</a> - The handbook contains an overview of CS Discoveries and CS Principles facilitator programs and facilitation principles.</li>
+ <li><a href="https://curriculum.code.org/plcsd/", target=_"blank">CS Discoveries Facilitator Landing Page</a> - See full list of important resources and agendas for CS Discoveries Facilitators</li>
+ <li><a href="https://curriculum.code.org/plcsp/", target=_"blank">CS Principles Facilitator Landing Page</a> See full list of important resources and agendas for CS Principles Facilitators</li>
+ <li><a href="https://docs.google.com/document/d/1ichRN3P8XU71Ksr6VjejS6uYDK9yL3SMqEQjchm7xSo/edit", target=_"blank">6-12 CS Discoveries & CS Principles Facilitator Travel Policy</a> *[Updated September 2019]* - Refer to this document for whether your facilitator(s) qualify for support with their travel to workshops for CS Discoveries or CS Principles.</li>
+</ul>
 
 [**Back to the top**](#top)
 

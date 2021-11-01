@@ -5,7 +5,7 @@ require_relative '../../../dashboard/config/environment'
 total_updated = 0
 errors = []
 puts "Backfilling :pay_fee question changes..."
-Pd::Application::Teacher1920Application.find_each do |application|
+Pd::Application::TeacherApplication.find_each do |application|
   print '.'
   pay_fee = application.form_data_hash["payFee"]
 

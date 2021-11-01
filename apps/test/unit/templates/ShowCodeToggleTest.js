@@ -2,7 +2,7 @@ import $ from 'jquery';
 import sinon from 'sinon';
 import React from 'react';
 import {mount} from 'enzyme';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import {

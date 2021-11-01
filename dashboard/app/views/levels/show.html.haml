@@ -15,11 +15,12 @@
       %a{href: '#notes-outer'}= I18n.t('video.notes')
 
 - if @script_level
-  - level_data = { redirect_script_url: @redirect_unit_url, script_name: @script_level.script&.name, course_name: @script_level.script&.unit_group&.name, tts_autoplay_enabled: @tts_autoplay_enabled, code_review_enabled: @code_review_enabled}
+  - level_data = { redirect_script_url: @redirect_unit_url, script_name: @script_level.script&.name, course_name: @script_level.script&.unit_group&.name, tts_autoplay_enabled: @tts_autoplay_enabled, code_review_enabled: @code_review_enabled, show_unversioned_redirect_warning: @show_unversioned_redirect_warning}
   %link{href: asset_path('css/levels.css'), rel: 'stylesheet', type: 'text/css'}
   %script{ src: webpack_asset_path('js/levels/show.js'), data: { level: level_data.to_json } }
   -# Mount point for RedirectDialog React component.
   %div#redirect-dialog
+  %div#unversioned-redirect-dialog
 
 -#
   level-body is used for some semi-strange DOM manipulation. When a teacher toggles to viewAs a student,

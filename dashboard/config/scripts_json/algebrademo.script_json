@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:45 UTC",
+    "serialized_at": "2021-10-26 22:11:21 UTC",
     "published_state": "beta",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "algebrademo"
     }
@@ -104,21 +108,131 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "0a8b3f3d-50bb-4300-8805-f02e6a528609",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0a8b3f3d-50bb-4300-8805-f02e6a528609",
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebrademo"
+      }
+    },
+    {
+      "key": "637301a5-a3f4-41b7-89e8-fe73d671a623",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "637301a5-a3f4-41b7-89e8-fe73d671a623",
+        "lesson.key": "Making Pictures",
+        "lesson_group.key": "",
+        "script.name": "algebrademo"
+      }
+    },
+    {
+      "key": "c0416564-52c5-4e86-acf6-5ecd3be2030f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c0416564-52c5-4e86-acf6-5ecd3be2030f",
+        "lesson.key": "Defining Variables",
+        "lesson_group.key": "",
+        "script.name": "algebrademo"
+      }
+    },
+    {
+      "key": "f38b2bc5-d418-49a6-9039-819d75ed8266",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f38b2bc5-d418-49a6-9039-819d75ed8266",
+        "lesson.key": "Defining Simple Functions",
+        "lesson_group.key": "",
+        "script.name": "algebrademo"
+      }
+    },
+    {
+      "key": "d29661ef-aa35-49a2-a01e-774a3b3e75db",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d29661ef-aa35-49a2-a01e-774a3b3e75db",
+        "lesson.key": "The Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebrademo"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "5634214b-a1fc-4af7-8458-735883961da5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5",
+        "lesson_activity.key": "0a8b3f3d-50bb-4300-8805-f02e6a528609"
+      }
+    },
+    {
+      "key": "7f4e1c0c-aa74-4cf5-aa47-d8044e381dfe",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7f4e1c0c-aa74-4cf5-aa47-d8044e381dfe",
+        "lesson_activity.key": "637301a5-a3f4-41b7-89e8-fe73d671a623"
+      }
+    },
+    {
+      "key": "58b9e285-d22d-4070-a3e5-dc16d8be7cab",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "58b9e285-d22d-4070-a3e5-dc16d8be7cab",
+        "lesson_activity.key": "c0416564-52c5-4e86-acf6-5ecd3be2030f"
+      }
+    },
+    {
+      "key": "c378f2fd-379c-49d2-a8d2-7dbb1ffd197c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c378f2fd-379c-49d2-a8d2-7dbb1ffd197c",
+        "lesson_activity.key": "f38b2bc5-d418-49a6-9039-819d75ed8266"
+      }
+    },
+    {
+      "key": "bdeb27ce-0501-4edf-be49-a80929fe1797",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bdeb27ce-0501-4edf-be49-a80929fe1797",
+        "lesson_activity.key": "d29661ef-aa35-49a2-a01e-774a3b3e75db"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval .1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -127,7 +241,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5"
       },
       "level_keys": [
         "Calc Circles of Eval .1"
@@ -136,12 +251,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval .2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -150,7 +262,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5"
       },
       "level_keys": [
         "Calc Circles of Eval .2"
@@ -159,12 +272,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval .3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -173,7 +283,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5"
       },
       "level_keys": [
         "Calc Circles of Eval .3"
@@ -182,12 +293,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval .4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -196,7 +304,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5"
       },
       "level_keys": [
         "Calc Circles of Eval .4"
@@ -205,12 +314,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -219,7 +325,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5"
       },
       "level_keys": [
         "Calc Circles of Eval 2"
@@ -228,12 +335,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -242,7 +346,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5"
       },
       "level_keys": [
         "Calc Circles of Eval 3"
@@ -251,12 +356,9 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -265,7 +367,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5"
       },
       "level_keys": [
         "Calc Circles of Eval 4"
@@ -274,12 +377,9 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -288,7 +388,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5"
       },
       "level_keys": [
         "Calc Circles of Eval 5"
@@ -297,12 +398,9 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images .1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -311,7 +409,8 @@
         ],
         "lesson.key": "Making Pictures",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "7f4e1c0c-aa74-4cf5-aa47-d8044e381dfe"
       },
       "level_keys": [
         "Eval Strings Images .1"
@@ -320,12 +419,9 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images .2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -334,7 +430,8 @@
         ],
         "lesson.key": "Making Pictures",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "7f4e1c0c-aa74-4cf5-aa47-d8044e381dfe"
       },
       "level_keys": [
         "Eval Strings Images .2"
@@ -343,12 +440,9 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -357,7 +451,8 @@
         ],
         "lesson.key": "Making Pictures",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "7f4e1c0c-aa74-4cf5-aa47-d8044e381dfe"
       },
       "level_keys": [
         "Eval Strings Images 1"
@@ -366,12 +461,9 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -380,7 +472,8 @@
         ],
         "lesson.key": "Making Pictures",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "7f4e1c0c-aa74-4cf5-aa47-d8044e381dfe"
       },
       "level_keys": [
         "Eval Strings Images 2"
@@ -389,12 +482,9 @@
     {
       "chapter": 13,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -403,7 +493,8 @@
         ],
         "lesson.key": "Making Pictures",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "7f4e1c0c-aa74-4cf5-aa47-d8044e381dfe"
       },
       "level_keys": [
         "Eval Strings Images 3"
@@ -412,12 +503,9 @@
     {
       "chapter": 14,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -426,7 +514,8 @@
         ],
         "lesson.key": "Making Pictures",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "7f4e1c0c-aa74-4cf5-aa47-d8044e381dfe"
       },
       "level_keys": [
         "Eval Strings Images 4"
@@ -435,12 +524,9 @@
     {
       "chapter": 15,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Vars 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -449,7 +535,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "58b9e285-d22d-4070-a3e5-dc16d8be7cab"
       },
       "level_keys": [
         "Calc Vars 1"
@@ -458,12 +545,9 @@
     {
       "chapter": 16,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Vars 1.1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -472,7 +556,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "58b9e285-d22d-4070-a3e5-dc16d8be7cab"
       },
       "level_keys": [
         "Calc Vars 1.1"
@@ -481,12 +566,9 @@
     {
       "chapter": 17,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Vars 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -495,7 +577,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "58b9e285-d22d-4070-a3e5-dc16d8be7cab"
       },
       "level_keys": [
         "Calc Vars 3"
@@ -504,12 +587,9 @@
     {
       "chapter": 18,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Vars 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -518,7 +598,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "58b9e285-d22d-4070-a3e5-dc16d8be7cab"
       },
       "level_keys": [
         "Calc Vars 2"
@@ -527,12 +608,9 @@
     {
       "chapter": 19,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Vars 2.1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -541,7 +619,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "58b9e285-d22d-4070-a3e5-dc16d8be7cab"
       },
       "level_keys": [
         "Calc Vars 2.1"
@@ -550,12 +629,9 @@
     {
       "chapter": 20,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Vars 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -564,7 +640,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "58b9e285-d22d-4070-a3e5-dc16d8be7cab"
       },
       "level_keys": [
         "Calc Vars 4"
@@ -573,12 +650,9 @@
     {
       "chapter": 21,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Define Funcs 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -587,7 +661,8 @@
         ],
         "lesson.key": "Defining Simple Functions",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "c378f2fd-379c-49d2-a8d2-7dbb1ffd197c"
       },
       "level_keys": [
         "Eval Define Funcs 1"
@@ -596,12 +671,9 @@
     {
       "chapter": 22,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Define Funcs 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -610,7 +682,8 @@
         ],
         "lesson.key": "Defining Simple Functions",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "c378f2fd-379c-49d2-a8d2-7dbb1ffd197c"
       },
       "level_keys": [
         "Eval Define Funcs 2"
@@ -619,12 +692,9 @@
     {
       "chapter": 23,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Define Funcs 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -633,7 +703,8 @@
         ],
         "lesson.key": "Defining Simple Functions",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "c378f2fd-379c-49d2-a8d2-7dbb1ffd197c"
       },
       "level_keys": [
         "Eval Define Funcs 3"
@@ -642,12 +713,9 @@
     {
       "chapter": 24,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Define Funcs 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -656,7 +724,8 @@
         ],
         "lesson.key": "Defining Simple Functions",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "c378f2fd-379c-49d2-a8d2-7dbb1ffd197c"
       },
       "level_keys": [
         "Eval Define Funcs 4"
@@ -665,12 +734,9 @@
     {
       "chapter": 25,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Define Funcs 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -679,7 +745,8 @@
         ],
         "lesson.key": "Defining Simple Functions",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "c378f2fd-379c-49d2-a8d2-7dbb1ffd197c"
       },
       "level_keys": [
         "Eval Define Funcs 5"
@@ -688,12 +755,9 @@
     {
       "chapter": 26,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -702,7 +766,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "bdeb27ce-0501-4edf-be49-a80929fe1797"
       },
       "level_keys": [
         "Play Lab Rocket 1"
@@ -711,12 +776,9 @@
     {
       "chapter": 27,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Rocket Contract 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -725,7 +787,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "bdeb27ce-0501-4edf-be49-a80929fe1797"
       },
       "level_keys": [
         "Rocket Contract 1"
@@ -734,12 +797,9 @@
     {
       "chapter": 28,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -748,7 +808,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "bdeb27ce-0501-4edf-be49-a80929fe1797"
       },
       "level_keys": [
         "Play Lab Rocket 2"
@@ -757,12 +818,9 @@
     {
       "chapter": 29,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -771,7 +829,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "bdeb27ce-0501-4edf-be49-a80929fe1797"
       },
       "level_keys": [
         "Play Lab Rocket 3"
@@ -780,12 +839,9 @@
     {
       "chapter": 30,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Design Recipe .1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -794,7 +850,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "bdeb27ce-0501-4edf-be49-a80929fe1797"
       },
       "level_keys": [
         "Eval Design Recipe .1"
@@ -803,12 +860,9 @@
     {
       "chapter": 31,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Design Recipe 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -817,7 +871,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "bdeb27ce-0501-4edf-be49-a80929fe1797"
       },
       "level_keys": [
         "Eval Design Recipe 3"
@@ -826,12 +881,9 @@
     {
       "chapter": 32,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Design Recipe 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -840,7 +892,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "bdeb27ce-0501-4edf-be49-a80929fe1797"
       },
       "level_keys": [
         "Eval Design Recipe 4"
@@ -856,7 +909,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5"
       }
     },
     {
@@ -867,7 +921,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5"
       }
     },
     {
@@ -878,7 +933,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5"
       }
     },
     {
@@ -889,7 +945,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5"
       }
     },
     {
@@ -900,7 +957,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5"
       }
     },
     {
@@ -911,7 +969,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5"
       }
     },
     {
@@ -922,7 +981,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5"
       }
     },
     {
@@ -933,7 +993,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "5634214b-a1fc-4af7-8458-735883961da5"
       }
     },
     {
@@ -944,7 +1005,8 @@
         ],
         "lesson.key": "Making Pictures",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "7f4e1c0c-aa74-4cf5-aa47-d8044e381dfe"
       }
     },
     {
@@ -955,7 +1017,8 @@
         ],
         "lesson.key": "Making Pictures",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "7f4e1c0c-aa74-4cf5-aa47-d8044e381dfe"
       }
     },
     {
@@ -966,7 +1029,8 @@
         ],
         "lesson.key": "Making Pictures",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "7f4e1c0c-aa74-4cf5-aa47-d8044e381dfe"
       }
     },
     {
@@ -977,7 +1041,8 @@
         ],
         "lesson.key": "Making Pictures",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "7f4e1c0c-aa74-4cf5-aa47-d8044e381dfe"
       }
     },
     {
@@ -988,7 +1053,8 @@
         ],
         "lesson.key": "Making Pictures",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "7f4e1c0c-aa74-4cf5-aa47-d8044e381dfe"
       }
     },
     {
@@ -999,7 +1065,8 @@
         ],
         "lesson.key": "Making Pictures",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "7f4e1c0c-aa74-4cf5-aa47-d8044e381dfe"
       }
     },
     {
@@ -1010,7 +1077,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "58b9e285-d22d-4070-a3e5-dc16d8be7cab"
       }
     },
     {
@@ -1021,7 +1089,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "58b9e285-d22d-4070-a3e5-dc16d8be7cab"
       }
     },
     {
@@ -1032,7 +1101,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "58b9e285-d22d-4070-a3e5-dc16d8be7cab"
       }
     },
     {
@@ -1043,7 +1113,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "58b9e285-d22d-4070-a3e5-dc16d8be7cab"
       }
     },
     {
@@ -1054,7 +1125,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "58b9e285-d22d-4070-a3e5-dc16d8be7cab"
       }
     },
     {
@@ -1065,7 +1137,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "58b9e285-d22d-4070-a3e5-dc16d8be7cab"
       }
     },
     {
@@ -1076,7 +1149,8 @@
         ],
         "lesson.key": "Defining Simple Functions",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "c378f2fd-379c-49d2-a8d2-7dbb1ffd197c"
       }
     },
     {
@@ -1087,7 +1161,8 @@
         ],
         "lesson.key": "Defining Simple Functions",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "c378f2fd-379c-49d2-a8d2-7dbb1ffd197c"
       }
     },
     {
@@ -1098,7 +1173,8 @@
         ],
         "lesson.key": "Defining Simple Functions",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "c378f2fd-379c-49d2-a8d2-7dbb1ffd197c"
       }
     },
     {
@@ -1109,7 +1185,8 @@
         ],
         "lesson.key": "Defining Simple Functions",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "c378f2fd-379c-49d2-a8d2-7dbb1ffd197c"
       }
     },
     {
@@ -1120,7 +1197,8 @@
         ],
         "lesson.key": "Defining Simple Functions",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "c378f2fd-379c-49d2-a8d2-7dbb1ffd197c"
       }
     },
     {
@@ -1131,7 +1209,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "bdeb27ce-0501-4edf-be49-a80929fe1797"
       }
     },
     {
@@ -1142,7 +1221,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "bdeb27ce-0501-4edf-be49-a80929fe1797"
       }
     },
     {
@@ -1153,7 +1233,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "bdeb27ce-0501-4edf-be49-a80929fe1797"
       }
     },
     {
@@ -1164,7 +1245,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "bdeb27ce-0501-4edf-be49-a80929fe1797"
       }
     },
     {
@@ -1175,7 +1257,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "bdeb27ce-0501-4edf-be49-a80929fe1797"
       }
     },
     {
@@ -1186,7 +1269,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "bdeb27ce-0501-4edf-be49-a80929fe1797"
       }
     },
     {
@@ -1197,7 +1281,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebrademo"
+        "script.name": "algebrademo",
+        "activity_section.key": "bdeb27ce-0501-4edf-be49-a80929fe1797"
       }
     }
   ],

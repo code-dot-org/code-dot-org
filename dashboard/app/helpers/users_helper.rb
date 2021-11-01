@@ -261,7 +261,15 @@ module UsersHelper
             sum_time_spent = bubble_choice_progress.values.reduce(0) do |sum, sublevel_progress|
               sublevel_progress[:time_spent] ? sum + sublevel_progress[:time_spent] : sum
             end
-            level_progress[:time_spent] = sum_time_spent if sum_time_spent > 0
+
+            # The existence of level_progress needs to be checked due to a race condition where the user makes sublevel
+            # progress between when user_levels_by_level is fetched and when level_for_progress is fetched. In this
+            # case, user_levels_by_level may not include the user level for the new level_for_progress, resulting in nil
+            # level_progress. This may manifest for the user as a bubble choice bubble looking as though it hasn't been tried
+            # even though there is progress on a sublevel and should be resolved by a page refresh.
+            if level_progress && sum_time_spent > 0
+              level_progress[:time_spent] = sum_time_spent
+            end
           end
         end
 

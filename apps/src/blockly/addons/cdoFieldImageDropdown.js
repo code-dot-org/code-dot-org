@@ -17,7 +17,9 @@ function fixMenuGenerator(menuGenerator, width, height) {
   // an object containing the image url, width, height, and alt text; the second
   // is the generated code.
   let fixedMenuGenerator = [];
-  menuGenerator.forEach(menuItem => {
+  const options =
+    typeof menuGenerator === 'function' ? menuGenerator() : menuGenerator;
+  options.forEach(menuItem => {
     let url = menuItem[0];
     let code_id = menuItem[1];
     // TODO: add better alt text. For now, it's just using the code name for the

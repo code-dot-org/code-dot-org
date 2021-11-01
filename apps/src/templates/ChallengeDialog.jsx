@@ -82,7 +82,7 @@ class ChallengeDialog extends React.Component {
           />
         </div>
         <div style={styles.content}>
-          <div style={styles.text}>{this.props.text}</div>
+          {this.props.text && <div style={styles.text}>{this.props.text}</div>}
           {this.props.children}
         </div>
         <LegacyButton

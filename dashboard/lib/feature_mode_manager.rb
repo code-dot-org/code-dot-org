@@ -29,12 +29,14 @@ class FeatureModeManager
         postMilestone: true,
         postFailedRunMilestone: true,
         shareEnabled: true,
-        slogging: true
+        slogging: true,
+        updateChannelOnSave: true,
       },
       gatekeeper_hoc_tutorial_settings: {
         postMilestone: true,
         postFailedRunMilestone: true,
         shareEnabled: true,
+        updateChannelOnSave: true,
       },
       gatekeeper_csf_tutorial_settings: {
         postMilestone: true,
@@ -55,12 +57,14 @@ class FeatureModeManager
         postMilestone: true,
         postFailedRunMilestone: true,
         shareEnabled: true,
-        slogging: false
+        slogging: false,
+        updateChannelOnSave: true,
       },
       gatekeeper_hoc_tutorial_settings: {
         postMilestone: true,
         postFailedRunMilestone: true,
         shareEnabled: true,
+        updateChannelOnSave: true,
       },
       gatekeeper_csf_tutorial_settings: {
         postMilestone: true,
@@ -81,12 +85,14 @@ class FeatureModeManager
         postMilestone: true,
         postFailedRunMilestone: true,
         shareEnabled: true,
-        slogging: false
+        slogging: false,
+        updateChannelOnSave: true,
       },
       gatekeeper_hoc_tutorial_settings: {
         postMilestone: true,
         postFailedRunMilestone: false,
         shareEnabled: true,
+        updateChannelOnSave: true,
       },
       gatekeeper_csf_tutorial_settings: {
         postMilestone: true,
@@ -107,12 +113,14 @@ class FeatureModeManager
         postMilestone: true,
         postFailedRunMilestone: true,
         shareEnabled: true,
-        slogging: false
+        slogging: false,
+        updateChannelOnSave: true,
       },
       gatekeeper_hoc_tutorial_settings: {
         postMilestone: false,
         postFailedRunMilestone: false,
         shareEnabled: true,
+        updateChannelOnSave: false,
       },
       gatekeeper_csf_tutorial_settings: {
         postMilestone: false,

@@ -1,0 +1,661 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Abbeville High,,450069000011,5061,DiscCompSci,48,20,28,0,0,0,25,4,0
+Dixie High,,450069000012,5061,DiscCompSci,34,18,2,0,0,0,17,4,2
+Wright Middle,,450069000010,5061,DiscCompSci,32,16,16,2,0,0,17,7,1
+Silver Bluff High,,450072001323,4775,AP Computer Sci Principles,8,5,0,0,0,0,0,0,0
+Silver Bluff High,,450072001323,5023,ExplCompSci,100,57,47,7,2,0,56,10,3
+Aiken High,,450072000046,4773,DE Into to Computer Sci (CSCI 130),2,1,0,0,0,0,0,0,0
+Aiken High,,450072000046,4775,AP Computer Sci Principles,13,12,4,0,0,0,2,0,0
+Aiken High,,450072000046,5023,ExplCompSci,237,147,131,18,1,0,137,34,9
+South Aiken High,,450072001202,4771,AP Comp Sci A,18,12,3,3,0,0,1,0,1
+South Aiken High,,450072001202,5023,ExplCompSci,250,133,94,33,6,2,113,36,26
+South Aiken High,,450072001202,4775,AP Computer Sci Principles,66,37,12,4,0,0,12,0,0
+Midland Valley High,,450072001198,5023,ExplCompSci,227,126,61,34,6,0,129,35,28
+Paul Knox Middle,,450072000050,5023,ExplCompSci,34,10,18,0,0,1,14,1,0
+Langley-Bath-Clearwater Middle,,450072001194,5023,ExplCompSci,22,13,10,2,0,0,12,0,0
+Leavelle McCampbell Middle,,450072001196,5023,ExplCompSci,12,5,5,2,0,0,7,0,1
+New Ellenton STEAM Magnet Mid,,450072001199,5023,ExplCompSci,60,27,17,11,2,0,33,5,7
+North Augusta Middle,,450072000054,5023,ExplCompSci,23,13,12,2,0,0,12,1,0
+North Augusta High,,450072000055,4775,AP Computer Sci Principles,68,46,14,4,1,0,11,1,0
+North Augusta High,,450072000055,5023,ExplCompSci,278,160,121,39,5,2,126,34,26
+Wagener-Sally High,,450072000057,5023,ExplCompSci,83,47,43,0,1,0,45,11,0
+M. B. Kennedy Middle,,450072001197,5023,ExplCompSci,45,23,23,4,0,0,21,2,0
+Schofield Middle,,450072001201,5023,ExplCompSci,162,83,97,14,5,1,114,8,6
+Jackson STEM Magnet Middle,,450072001321,5023,ExplCompSci,56,21,32,0,1,0,33,5,0
+Ridge Spring-Monetta High,,450072000056,5023,ExplCompSci,75,36,37,12,2,0,47,18,7
+Ridge Spring-Monetta High,,450072000056,6372,PLTW Computer Science Essentials,40,22,19,9,0,1,24,7,6
+Aiken Scholars Academy,,450072001708,4773,DE Into to Computer Sci (CSCI 130),4,3,0,0,0,0,0,0,0
+Ridge Spring-Monetta Middle,,450072001713,5023,ExplCompSci,14,9,2,4,0,0,7,0,0
+A. L. Corbett Middle,,450072001702,5023,ExplCompSci,15,5,8,0,1,0,7,0,0
+Allendale-Fairfax Middle,,450075001415,5062,DiscCompSci8,62,31,59,0,1,0,62,6,0
+Palmetto High,,450078000076,5061,DiscCompSci,29,12,3,4,1,0,10,1,1
+Powdersville High,,450078001567,5023,ExplCompSci,34,23,4,2,1,0,8,3,4
+Wren High,,450078000077,5023,ExplCompSci,444,236,26,21,13,1,99,46,10
+Wren High,,450078000077,5061,DiscCompSci,95,48,21,11,9,2,45,13,4
+Wren Middle,,450078001203,5023,ExplCompSci,131,68,6,2,5,2,21,1,2
+Palmetto Middle,,450078000074,5023,ExplCompSci,29,16,3,6,4,0,14,4,3
+Anderson Institute of Tec,,450391101720,5050,Computer Prog 1,16,16,2,2,1,0,9,1,0
+Anderson Institute of Tec,,450391101720,5052,Computer Prog 3,5,4,0,0,0,0,0,0,0
+Anderson Institute of Tec,,450391101720,6373,Computer Science Applications,2,2,0,0,0,0,0,0,0
+Anderson Institute of Tec,,450391101720,6372,PLTW Computer Science Essentials,5,3,0,0,0,0,0,0,0
+Anderson Institute of Tec,,450391101720,5051,Computer Prog 2,16,16,2,2,1,0,9,1,0
+Anderson Institute of Tec,,450391101720,5053,Computer Prog 4,5,4,0,0,0,0,0,0,0
+Anderson Institute of Tec,,450391101720,6377,Computer Science Principles,18,13,0,2,2,0,2,0,2
+Belton Honea Path High,,450081000084,5023,ExplCompSci,81,21,4,1,0,0,22,3,0
+Crescent High,,450084000089,5023,ExplCompSci,43,21,10,2,0,0,25,7,2
+Crescent High,,450084000089,5061,DiscCompSci,97,55,14,6,0,0,61,12,3
+Starr-Iva Middle,,450084000088,5063,DiscCompSci7,41,17,4,2,0,0,17,0,0
+Starr-Iva Middle,,450084000088,5062,DiscCompSci8,52,25,5,2,0,0,28,3,0
+Anderson Institute Of Technology,,450391101720,5061,DiscCompSci,3,2,0,0,0,0,0,0,0
+Pendleton High,,450087000094,4775,AP Computer Sci Principles,15,9,0,1,0,0,3,0,1
+Pendleton High,,450087000094,5050,Computer Prog 1,19,17,2,1,0,0,7,0,0
+Pendleton High,,450087000094,5061,DiscCompSci,112,57,20,3,0,0,69,21,1
+Anderson Institute of Technology,,450391101720,5061,DiscCompSci,2,2,0,0,0,0,0,0,0
+T. L. Hanna High,,450090000108,5023,ExplCompSci,345,146,101,29,1,2,119,35,10
+Westside High,,450090000113,5023,ExplCompSci,489,251,217,59,2,3,316,56,29
+Glenview Middle,,450090001575,2785,Computer Science for Innovators & Makers,27,18,4,1,1,0,8,2,1
+Anderson  Five Charter School,,450090001602,5023,ExplCompSci,13,8,4,0,0,0,3,1,0
+Anderson Institute Of Technology,,450391101720,6372,PLTW Computer Science Essentials,13,10,1,2,0,0,4,1,1
+Bamberg-Ehrhardt High,,450093000119,5023,ExplCompSci,95,41,61,4,0,0,42,6,1
+Denmark Olar High,,450096000122,4775,AP Computer Sci Principles,7,3,0,0,0,0,0,0,0
+Denmark Olar High,,450096000122,5023,ExplCompSci,13,5,11,1,0,1,4,1,0
+Blackville-Hilda High,,450102000126,5061,DiscCompSci,40,29,36,0,0,0,38,0,0
+Williston-Elko High,,450105000129,5023,ExplCompSci,54,26,28,3,1,0,34,4,1
+Barnwell High,,450108000132,5023,ExplCompSci,165,74,96,5,2,1,159,19,3
+Barnwell High,,450108000132,6377,Computer Science Principles,10,10,1,0,0,0,10,0,1
+Lady'S Island Middle,,450111001360,2785,Computer Science for Innovators & Makers,51,29,22,5,1,0,35,6,1
+Beaufort High,,450111000147,6377,Computer Science Principles,11,8,0,1,0,0,1,0,1
+Beaufort High,,450111000147,5023,ExplCompSci,148,67,60,19,4,2,66,13,7
+Hilton Head Island High,,450111001350,5023,ExplCompSci,214,118,36,94,54,2,85,22,68
+Hilton Head Island High,,450111001350,6372,PLTW Computer Science Essentials,51,24,3,13,8,0,7,1,9
+Hilton Head Island High,,450111001350,5051,Computer Prog 2,10,10,0,2,0,0,0,0,1
+Hilton Head Island High,,450111001350,5050,Computer Prog 1,23,14,1,2,1,0,1,0,1
+Battery Creek High,,450111000149,5050,Computer Prog 1,75,46,39,15,5,0,34,8,11
+Battery Creek High,,450111000149,6372,PLTW Computer Science Essentials,77,46,44,8,2,1,36,10,5
+Whale Branch Middle,,450111000422,2785,Computer Science for Innovators & Makers,19,10,10,5,1,0,10,2,4
+Bluffton High,,450111001165,4775,AP Computer Sci Principles,9,5,0,0,0,0,0,0,0
+Bluffton High,,450111001165,5023,ExplCompSci,217,107,33,103,7,1,77,18,62
+Whale Branch Early College Hi,,450111001550,5023,ExplCompSci,141,77,128,7,1,1,97,18,2
+Whale Branch Early College Hi,,450111001550,6377,Computer Science Principles,36,12,30,3,2,0,20,0,2
+River Ridge Academy,,450111001662,2785,Computer Science for Innovators & Makers,139,75,26,33,6,1,25,12,11
+May River High,,450111001666,5023,ExplCompSci,357,181,71,91,21,1,92,17,28
+Robert Smalls Intl Acad,,450111001630,2785,Computer Science for Innovators & Makers,9,7,0,0,0,0,0,0,0
+Stratford High,,450117001351,4775,AP Computer Sci Principles,20,19,2,3,0,0,3,0,0
+Stratford High,,450117001351,5053,Computer Prog 4,15,12,2,0,1,0,3,1,0
+Stratford High,,450117001351,5023,ExplCompSci,436,237,162,115,26,7,156,72,84
+Stratford High,,450117001351,5052,Computer Prog 3,70,55,23,11,0,1,28,5,5
+Berkeley High,,450117000174,5023,ExplCompSci,252,132,108,23,6,3,93,30,3
+Berkeley High,,450117000174,5052,Computer Prog 3,45,36,13,3,1,0,13,2,1
+Cross High,,450117000176,5023,ExplCompSci,41,29,32,2,1,0,20,6,1
+Goose Creek High,,450117000177,5050,Computer Prog 1,21,16,8,3,0,0,5,0,3
+Goose Creek High,,450117000177,5023,ExplCompSci,409,219,190,102,31,9,135,50,66
+Hanahan High,,450117000178,5050,Computer Prog 1,52,45,5,8,2,0,10,2,7
+Hanahan High,,450117000178,4775,AP Computer Sci Principles,17,15,0,1,0,0,1,0,1
+Hanahan High,,450117000178,5023,ExplCompSci,107,54,26,24,11,1,31,7,27
+Hanahan High,,450117000178,6721,DECom&Prog (CPT114),2,1,0,0,0,0,0,0,0
+Berkeley Middle,,450117001207,5061,DiscCompSci,102,64,46,7,5,0,33,0,4
+Hanahan Middle,,450117000169,5062,DiscCompSci8,49,24,5,5,0,1,3,0,0
+Hanahan Middle,,450117000169,5063,DiscCompSci7,111,60,15,11,4,2,27,0,7
+Westview Middle,,450117001210,5063,DiscCompSci7,78,43,20,11,4,1,18,3,3
+Westview Middle,,450117001210,5062,DiscCompSci8,85,49,23,13,2,2,20,3,4
+Sedgefield Middle,,450117000171,5062,DiscCompSci8,174,99,92,39,11,2,82,6,21
+Sedgefield Middle,,450117000171,5063,DiscCompSci7,85,39,37,12,4,1,39,2,9
+St. Stephen Middle,,450117000172,5062,DiscCompSci8,45,23,35,0,0,0,25,1,0
+St. Stephen Middle,,450117000172,5063,DiscCompSci7,34,20,26,1,0,0,18,1,0
+College Park Middle,,450117000173,5063,DiscCompSci7,32,16,17,6,0,0,15,0,2
+College Park Middle,,450117000173,5062,DiscCompSci8,60,29,31,9,1,0,25,2,2
+Marrington Mid Sch of the Arts,,450117001158,5062,DiscCompSci8,22,7,7,3,1,0,5,0,0
+Marrington Mid Sch of the Arts,,450117001158,5063,DiscCompSci7,30,16,5,2,1,1,4,4,0
+Timberland High,,450117000160,5023,ExplCompSci,159,90,78,4,0,0,66,25,1
+Sangaree Middle,,450117001166,5063,DiscCompSci7,54,30,27,6,3,0,18,2,3
+Sangaree Middle,,450117001166,5062,DiscCompSci8,137,64,62,18,5,0,44,3,4
+Daniel Island School,,450117001472,5062,DiscCompSci8,56,38,0,0,0,0,1,1,1
+Daniel Island School,,450117001472,5063,DiscCompSci7,52,33,1,0,0,1,0,0,0
+Cane Bay High,,450117001523,5023,ExplCompSci,202,104,48,28,8,3,44,27,12
+Cane Bay High,,450117001523,4775,AP Computer Sci Principles,53,39,9,7,3,2,8,1,0
+Berkeley County Middle Coll Hi,,450117001556,6721,DECom&Prog (CPT114),2,1,0,0,0,0,0,0,0
+Cane Bay Middle,,450117001608,5061,DiscCompSci,175,111,49,13,5,4,34,21,2
+Cane Bay Middle,,450117001608,5063,DiscCompSci7,93,60,22,10,5,1,26,2,1
+Philip Simmons Middle,,450117001670,5063,DiscCompSci7,28,17,16,0,0,0,11,1,0
+Philip Simmons Middle,,450117001670,5062,DiscCompSci8,56,30,15,3,0,0,6,2,0
+Philp Simmons High School,,450117001681,5023,ExplCompSci,151,66,49,11,3,1,28,15,2
+Philp Simmons High School,,450117001681,5050,Computer Prog 1,5,5,0,0,0,0,0,0,0
+Berkeley Alternative School,,,5023,ExplCompSci,12,9,8,5,4,0,8,1,2
+Calhoun County High,,450125000187,5023,ExplCompSci,22,12,17,0,0,0,21,0,0
+Calhoun County High,,450125000187,5051,Computer Prog 2,1,1,0,0,0,0,0,0,0
+Calhoun County High,,450125000187,5050,Computer Prog 1,2,2,0,0,0,0,0,0,0
+Sandy Run School,,450125000424,5023,ExplCompSci,20,10,8,3,0,0,19,6,2
+St. Matthews K-8 School,,450125001532,5023,ExplCompSci,19,8,15,0,0,0,17,0,0
+Baptist Hill High,,450144000250,5023,ExplCompSci,2,1,0,0,0,0,0,0,0
+Baptist Hill High,,450144000250,5061,DiscCompSci,21,8,15,3,0,0,13,0,1
+Baptist Hill High,,450144000250,5063,DiscCompSci7,37,20,24,9,2,0,19,0,6
+North Charleston High,,450144000251,5023,ExplCompSci,194,92,161,24,6,0,124,21,23
+Burke High,,450144001328,5023,ExplCompSci,2,2,0,0,0,0,0,0,0
+Wando High,,450144000261,5023,ExplCompSci,96,59,11,3,0,0,7,9,1
+Wando High,,450144000261,5061,DiscCompSci,462,222,71,17,3,2,45,42,8
+Military Magnet Academy,,450144001330,5062,DiscCompSci8,1,1,0,0,0,0,0,0,0
+Military Magnet Academy,,450144001330,2785,Computer Science for Innovators & Makers,9,5,0,0,0,0,0,0,0
+Military Magnet Academy,,450144001330,5023,ExplCompSci,21,16,15,6,0,0,9,5,4
+St. Johns High,,450144000264,5023,ExplCompSci,51,24,36,13,2,0,23,8,3
+R. B. Stall High,,450144000265,4775,AP Computer Sci Principles,36,26,14,18,1,0,13,0,7
+R. B. Stall High,,450144000265,5023,ExplCompSci,399,219,203,167,12,3,136,40,112
+Northwoods Middle,,450144001211,2785,Computer Science for Innovators & Makers,54,15,37,7,0,0,30,0,2
+Northwoods Middle,,450144001211,5062,DiscCompSci8,7,2,0,0,0,0,0,0,0
+Haut Gap Middle,,450144001215,2785,Computer Science for Innovators & Makers,8,4,0,0,0,0,0,0,0
+Laing Middle,,450144001217,5062,DiscCompSci8,84,52,17,0,0,0,9,4,0
+Laing Middle,,450144001217,2785,Computer Science for Innovators & Makers,6,5,0,0,0,0,0,0,0
+Laing Middle,,450144001217,5063,DiscCompSci7,81,58,5,3,0,1,6,5,1
+St. James Santee Elementary,,450144001352,5062,DiscCompSci8,15,7,11,0,0,0,9,3,0
+St. James Santee Elementary,,450144001352,5063,DiscCompSci7,15,7,11,0,0,0,9,3,0
+St. James Santee Elementary,,450144001352,2785,Computer Science for Innovators & Makers,2,2,0,0,0,0,0,0,0
+Morningside Middle,,450144000215,5062,DiscCompSci8,7,2,0,0,0,0,0,0,0
+Morningside Middle,,450144000215,5063,DiscCompSci7,1,0,0,0,0,0,0,0,0
+Morningside Middle,,450144000215,2785,Computer Science for Innovators & Makers,13,6,9,2,0,0,9,1,1
+Moultrie Middle,,450144001218,5062,DiscCompSci8,157,116,9,2,0,1,8,3,1
+Moultrie Middle,,450144001218,2785,Computer Science for Innovators & Makers,16,11,1,2,1,0,4,0,1
+Moultrie Middle,,450144001218,5063,DiscCompSci7,43,34,1,0,0,0,3,0,0
+Murray LaSaine Montessori,,450144000218,2785,Computer Science for Innovators & Makers,3,1,0,0,0,0,0,0,0
+James Simons Montessori,,450144000228,2785,Computer Science for Innovators & Makers,6,4,0,0,0,0,0,0,0
+Williams Sch Creative/Sci Arts,,450144000249,5062,DiscCompSci8,87,49,44,5,0,2,29,1,1
+Williams Sch Creative/Sci Arts,,450144000249,2785,Computer Science for Innovators & Makers,88,55,45,5,3,2,37,3,2
+Williams Sch Creative/Sci Arts,,450144000249,5063,DiscCompSci7,67,27,37,0,2,0,23,2,0
+Buist Academy,,450144001382,5063,DiscCompSci7,51,24,9,0,0,1,2,0,0
+Buist Academy,,450144001382,5062,DiscCompSci8,52,29,0,2,0,0,2,1,0
+Charleston School Of The Arts,,450144000083,4775,AP Computer Sci Principles,60,18,3,4,0,0,2,0,1
+Charleston School Of The Arts,,450144000083,5023,ExplCompSci,1,0,0,0,0,0,0,0,0
+Charleston School Of The Arts,,450144000083,5061,DiscCompSci,64,28,18,0,0,0,5,6,0
+Academic Magnet High,,450144000168,4775,AP Computer Sci Principles,149,79,6,1,2,2,2,0,6
+Academic Magnet High,,450144000168,5050,Computer Prog 1,68,35,2,5,1,0,3,0,3
+Academic Magnet High,,450144000168,4771,AP Comp Sci A,35,30,1,2,1,0,2,1,1
+Thomas C. Cario Middle,,450144000430,5063,DiscCompSci7,55,30,1,1,0,0,2,1,0
+Thomas C. Cario Middle,,450144000430,2785,Computer Science for Innovators & Makers,49,33,2,2,0,0,2,1,0
+Thomas C. Cario Middle,,450144000430,5062,DiscCompSci8,59,36,3,1,0,0,2,1,0
+West Ashley High School,,450144000548,5051,Computer Prog 2,15,7,4,1,0,0,6,0,1
+West Ashley High School,,450144000548,5053,Computer Prog 4,8,7,0,0,0,0,0,0,0
+West Ashley High School,,450144000548,6372,PLTW Computer Science Essentials,49,25,27,4,1,1,16,3,3
+West Ashley High School,,450144000548,5023,ExplCompSci,8,6,0,0,0,0,0,0,0
+West Ashley High School,,450144000548,5052,Computer Prog 3,71,46,26,4,0,0,18,6,4
+Jerry Zucker Middle Sch of Sci,,450144001533,5061,DiscCompSci,46,20,22,19,3,0,16,1,5
+Jerry Zucker Middle Sch of Sci,,450144001533,2785,Computer Science for Innovators & Makers,39,29,20,9,0,0,16,6,4
+Jerry Zucker Middle Sch of Sci,,450144001533,5062,DiscCompSci8,1,1,0,0,0,0,0,0,0
+Montessori Community School,,450144001610,2785,Computer Science for Innovators & Makers,2,1,0,0,0,0,0,0,0
+Simmons Pinckney Middle,,450144001660,5062,DiscCompSci8,24,9,24,0,0,0,23,4,0
+Deer Park Middle,,450144001667,5063,DiscCompSci7,28,13,11,2,1,0,4,0,3
+Deer Park Middle,,450144001667,5062,DiscCompSci8,85,41,47,23,0,0,32,12,15
+Beckham High,,,5023,ExplCompSci,318,180,37,11,1,0,31,33,8
+Beckham High,,,4775,AP Computer Sci Principles,17,12,0,0,0,0,0,1,0
+East Cooper Montessori Charter,,450144000856,5062,DiscCompSci8,19,6,0,0,0,0,0,2,0
+East Cooper Montessori Charter,,450144000856,2785,Computer Science for Innovators & Makers,1,0,0,0,0,0,0,0,0
+Greg Mathis Charter High,,450144000857,5023,ExplCompSci,32,16,32,0,0,0,21,8,0
+James Island Charter High,,450144001168,4775,AP Computer Sci Principles,13,7,1,0,0,0,0,0,0
+James Island Charter High,,450144001168,5023,ExplCompSci,223,109,61,15,2,0,36,24,9
+James Island Charter High,,450144001168,5052,Computer Prog 3,37,28,3,0,0,0,3,0,1
+James Island Charter High,,450144001168,5053,Computer Prog 4,6,5,0,0,0,0,0,0,0
+Charleston Crtr Sch Math & Sci,,450144001505,5050,Computer Prog 1,31,21,21,2,0,0,15,3,2
+Charleston Crtr Sch Math & Sci,,450144001505,5051,Computer Prog 2,6,5,0,0,0,0,0,0,0
+Carolina Voyager Charter,,450144001628,5063,DiscCompSci7,23,9,6,2,0,0,4,3,1
+Carolina Voyager Charter,,450144001628,5062,DiscCompSci8,41,19,28,1,0,0,10,6,1
+Early College High School,,450249001531,5023,ExplCompSci,71,28,41,11,0,0,26,4,4
+East Cooper Cent. Adv. St.,,,4775,AP Computer Sci Principles,80,48,0,2,0,0,1,0,2
+East Cooper Cent. Adv. St.,,,5023,ExplCompSci,38,29,6,1,0,0,4,2,1
+East Cooper Cent. Adv. St.,,,4771,AP Comp Sci A,68,55,1,1,0,0,3,0,3
+Cooper River Cntr Adv. Studies,,,5050,Computer Prog 1,10,9,7,3,0,0,4,1,3
+Cooper River Cntr Adv. Studies,,,5051,Computer Prog 2,4,4,0,0,0,0,0,0,0
+Blacksburg High,,450150000283,5023,ExplCompSci,60,31,7,2,0,0,35,7,2
+Gaffney High,,450150000285,5023,ExplCompSci,265,153,76,17,0,0,169,43,11
+Gaffney High,,450150000285,5050,Computer Prog 1,7,6,0,0,0,0,0,0,0
+Gaffney High,,450150000285,5051,Computer Prog 2,4,4,0,0,0,0,0,0,0
+Chester Senior High,,450153000298,5023,ExplCompSci,31,21,14,0,0,0,30,2,0
+Chester Senior High,,450153000298,5061,DiscCompSci,62,43,27,2,2,0,55,10,2
+Lewisville High,,450153000301,6372,PLTW Computer Science Essentials,20,11,1,2,2,0,17,0,0
+Cheraw High,,450156000314,4775,AP Computer Sci Principles,6,6,0,0,0,0,0,0,0
+Cheraw High,,450156000314,5023,ExplCompSci,69,40,41,4,3,0,34,12,2
+Cheraw High,,450156000314,5052,Computer Prog 3,48,28,34,2,3,0,16,1,0
+Cheraw High,,450156000314,5053,Computer Prog 4,11,8,8,0,1,0,3,0,0
+Cheraw High,,450156000314,6721,DECom&Prog (CPT114),2,2,0,0,0,0,0,0,0
+Chesterfield High,,450156000315,5023,ExplCompSci,135,73,41,8,0,0,41,15,1
+Central High,,450156000318,5023,ExplCompSci,116,57,52,14,3,1,50,10,8
+Scott's Branch High,,450174000323,5023,ExplCompSci,46,24,39,1,0,0,43,6,1
+Manning High,,450177000327,4771,AP Comp Sci A,6,3,0,0,0,0,0,0,0
+Manning Junior High,,450177000326,5023,ExplCompSci,215,114,163,10,5,0,191,27,1
+East Clarendon Middle-High,,450180000331,6377,Computer Science Principles,12,4,1,0,0,0,5,0,0
+East Clarendon Middle-High,,450180000331,471B,Computer Sci HL-1,2,1,0,0,0,0,0,0,0
+East Clarendon Middle-High,,450180000331,6372,PLTW Computer Science Essentials,46,26,5,3,0,0,14,1,2
+Colleton County High,,450183000347,5023,ExplCompSci,411,194,192,33,8,0,407,28,22
+Colleton County Middle,,450183001586,5063,DiscCompSci7,171,74,101,10,4,1,171,3,6
+Colleton County Middle,,450183001586,5062,DiscCompSci8,110,50,51,4,1,0,110,9,5
+Hartsville High,,450186000370,5023,ExplCompSci,209,127,109,13,17,5,102,38,9
+Lamar High,,450186000371,5023,ExplCompSci,47,22,26,3,2,0,21,6,2
+Darlington High,,450186000095,5023,ExplCompSci,110,55,67,5,6,2,60,18,2
+Mayo High for Math/Sci/Tech,,450186000190,5023,ExplCompSci,64,31,14,0,2,1,11,2,1
+Darlington County Virtual Academy HS,,,5023,ExplCompSci,265,128,178,11,19,3,144,35,3
+Darlington County Inst of Tech,,450186001498,5051,Computer Prog 2,5,3,0,0,0,0,0,0,0
+Darlington County Inst of Tech,,450186001498,5050,Computer Prog 1,9,7,0,0,0,0,0,0,0
+Latta High,,450195000391,6377,Computer Science Principles,46,30,15,0,0,0,23,3,0
+Latta Middle,,450195000390,5023,ExplCompSci,148,63,47,6,3,2,80,7,0
+Lake View High,,450192000380,5023,ExplCompSci,86,48,33,1,5,0,86,5,0
+Dillon High,,450192000385,5050,Computer Prog 1,2,2,0,0,0,0,0,0,0
+Dillon High,,450192000385,5023,ExplCompSci,271,147,192,19,20,1,271,21,18
+Summerville High,,450201000402,6721,DECom&Prog (CPT114),1,0,0,0,0,0,0,0,0
+Summerville High,,450201000402,5023,ExplCompSci,459,244,172,46,14,3,192,41,21
+Fort Dorchester High,,450201000007,4771,AP Comp Sci A,14,13,2,0,0,0,3,0,1
+Fort Dorchester High,,450201000007,4775,AP Computer Sci Principles,29,21,9,3,0,0,5,1,0
+Fort Dorchester High,,450201000007,5023,ExplCompSci,357,186,167,68,23,9,155,53,49
+Ashley Ridge High,,450201001508,4775,AP Computer Sci Principles,11,10,2,0,1,0,1,0,0
+Ashley Ridge High,,450201001508,5023,ExplCompSci,310,167,106,19,4,0,87,35,3
+Woodland High,,450000200445,5023,ExplCompSci,19,9,7,2,0,0,17,0,1
+Woodland High,,450000200445,5052,Computer Prog 3,54,41,27,3,2,0,40,7,3
+Woodland High,,450000200445,4775,AP Computer Sci Principles,14,6,7,1,0,0,11,0,0
+Woodland High,,450000200445,5053,Computer Prog 4,10,7,3,1,0,0,5,0,1
+Strom Thurmond High,,450207000413,6372,PLTW Computer Science Essentials,25,10,13,0,1,1,12,0,0
+Strom Thurmond High,,450207000413,5023,ExplCompSci,3,2,0,0,0,0,0,0,0
+Thurmond Career and Tech Ctr,,450207001417,5023,ExplCompSci,133,72,61,9,11,2,66,9,9
+Fairfield Middle,,450210000421,5062,DiscCompSci8,59,36,49,3,0,0,51,4,3
+Fairfield Central High,,450210001392,5023,ExplCompSci,93,40,76,1,1,0,85,5,3
+Fairfield Central High,,450210001392,5061,DiscCompSci,197,106,174,4,0,0,189,24,3
+South Florence High,,450213000440,5050,Computer Prog 1,16,14,6,0,0,0,5,0,0
+South Florence High,,450213000440,4775,AP Computer Sci Principles,4,4,0,0,0,0,0,0,0
+South Florence High,,450213000440,5023,ExplCompSci,127,66,76,9,5,1,82,30,3
+South Florence High,,450213000440,5051,Computer Prog 2,16,15,10,0,1,0,5,2,0
+Wilson High,,450213000442,5050,Computer Prog 1,54,22,27,2,1,0,21,0,5
+Wilson High,,450213000442,5051,Computer Prog 2,11,8,9,0,0,0,9,0,0
+Wilson High,,450213000442,4775,AP Computer Sci Principles,15,6,7,0,0,0,6,0,1
+Wilson High,,450213000442,5023,ExplCompSci,233,126,199,15,9,2,187,27,9
+West Florence High,,450213000443,5051,Computer Prog 2,7,6,0,0,0,0,0,0,0
+West Florence High,,450213000443,5023,ExplCompSci,294,145,162,22,9,2,155,0,14
+West Florence High,,450213000443,5050,Computer Prog 1,63,36,33,3,1,2,28,0,3
+Henry L. Sneed Middle,,450213000048,2785,Computer Science for Innovators & Makers,51,27,29,5,0,1,29,1,5
+Hannah Pamplico High,,450216000450,5023,ExplCompSci,68,31,30,4,3,0,56,8,3
+Hannah-Pamplico Elem/Mid,,450216001409,2785,Computer Science for Innovators & Makers,16,13,5,2,0,0,15,0,2
+Lake City High,,450219000458,5023,ExplCompSci,88,57,65,5,2,0,82,23,5
+Truluck Crtv Arts & Sci Magnet,,450219001709,5023,ExplCompSci,64,34,31,6,0,0,63,6,2
+Timmonsville High,,450222000723,5023,ExplCompSci,6,2,0,0,0,0,0,0,0
+Timmonsville High,,450222000723,5061,DiscCompSci,63,33,58,3,0,0,61,13,2
+Johnsonville High,,450225000468,5023,ExplCompSci,87,46,28,4,0,0,38,18,4
+Andrews High,,450228000482,5023,ExplCompSci,10,5,1,0,0,0,1,2,0
+Georgetown High,,450228000485,4775,AP Computer Sci Principles,5,4,0,0,0,0,0,0,0
+Georgetown High,,450228000485,5023,ExplCompSci,79,41,40,11,3,0,39,20,9
+Georgetown High,,450228000485,6372,PLTW Computer Science Essentials,10,5,2,0,0,0,2,0,0
+Georgetown Middle,,450228001333,5023,ExplCompSci,241,125,129,34,2,1,99,44,26
+Rosemary Middle,,450228000478,5023,ExplCompSci,129,71,76,9,0,0,60,15,5
+Waccamaw High,,450228001440,5023,ExplCompSci,70,43,19,1,0,1,22,17,2
+Carvers Bay High,,450228000554,5052,Computer Prog 3,21,12,17,1,0,0,10,3,0
+Carvers Bay Middle,,450228000555,5023,ExplCompSci,112,54,80,2,1,0,54,16,1
+Waccamaw Middle,,450228000739,5023,ExplCompSci,131,67,16,10,0,0,24,6,2
+Berea High,,450231000560,5023,ExplCompSci,90,58,24,49,47,0,90,18,40
+Berea High,,450231000560,6373,Computer Science Applications,12,11,1,5,6,0,12,0,2
+Blue Ridge High,,450231000561,4771,AP Comp Sci A,4,4,0,0,0,0,0,0,0
+Blue Ridge High,,450231000561,5023,ExplCompSci,195,113,9,6,5,0,59,34,5
+Blue Ridge High,,450231000561,4775,AP Computer Sci Principles,8,2,0,0,0,0,0,0,0
+Carolina Academy (High),,450231000562,5023,ExplCompSci,118,71,36,59,57,0,118,23,43
+Eastside High,,450231000563,4771,AP Comp Sci A,12,8,0,0,0,0,1,0,1
+Eastside High,,450231000563,4775,AP Computer Sci Principles,54,32,5,6,3,1,3,0,0
+Eastside High,,450231000563,5023,ExplCompSci,189,101,42,35,32,0,57,29,30
+Greenville Senior High Acad,,450231000564,6377,Computer Science Principles,81,40,12,9,7,0,8,1,3
+Greenville Senior High Acad,,450231000564,5023,ExplCompSci,148,72,58,49,46,0,65,14,39
+Greenville Senior High Acad,,450231000564,4775,AP Computer Sci Principles,38,19,0,6,5,0,5,0,3
+Greer High,,450231000565,5023,ExplCompSci,239,132,77,68,55,7,109,32,57
+Greer High,,450231000565,6372,PLTW Computer Science Essentials,30,19,1,9,8,0,10,1,3
+Greer High,,450231000565,4775,AP Computer Sci Principles,14,11,1,1,1,0,2,0,1
+Wade Hampton High,,450243000610,4771,AP Comp Sci A,6,5,0,0,0,0,0,0,0
+Wade Hampton High,,450243000610,4775,AP Computer Sci Principles,44,26,2,5,5,1,6,0,4
+Wade Hampton High,,450243000610,5023,ExplCompSci,228,128,58,43,35,1,79,51,37
+Hillcrest Middle,,450390201079,5023,ExplCompSci,7,2,0,0,0,0,0,0,0
+Hillcrest High,,450231000567,5023,ExplCompSci,320,161,94,45,32,2,107,37,35
+J. L. Mann High Academy,,450231000568,4775,AP Computer Sci Principles,68,50,8,8,4,0,6,5,7
+J. L. Mann High Academy,,450231000568,5023,ExplCompSci,407,207,156,46,24,10,143,50,38
+J. L. Mann High Academy,,450231000568,5050,Computer Prog 1,19,15,1,3,2,0,1,2,2
+J. L. Mann High Academy,,450231000568,4771,AP Comp Sci A,15,11,1,0,0,0,0,1,1
+Mauldin High,,450231000569,5023,ExplCompSci,336,183,104,45,25,1,92,65,31
+Mauldin High,,450231000569,4771,AP Comp Sci A,17,9,0,0,1,0,0,0,3
+Mauldin High,,450231000569,6372,PLTW Computer Science Essentials,80,45,21,9,3,1,21,4,4
+Riverside High,,450231000571,4771,AP Comp Sci A,29,26,1,2,1,0,0,0,6
+Riverside High,,450231000571,4775,AP Computer Sci Principles,124,82,8,15,13,1,10,0,19
+Riverside High,,450231000571,5023,ExplCompSci,250,138,38,37,25,3,49,27,33
+Southside High,,450231000572,5023,ExplCompSci,173,90,110,42,32,2,119,31,31
+Woodmont High,,450231000574,4775,AP Computer Sci Principles,18,15,2,3,2,0,3,1,1
+Woodmont High,,450231000574,5023,ExplCompSci,290,162,108,25,19,3,131,42,11
+Northwest Middle,,450231001251,5023,ExplCompSci,32,12,3,3,2,0,12,1,1
+League Academy,,450231001249,5023,ExplCompSci,22,16,6,1,1,0,6,3,0
+Sevier Middle,,450231001253,5023,ExplCompSci,11,8,1,2,1,0,1,0,0
+Tanglewood Middle,,450231001254,5023,ExplCompSci,7,6,0,0,0,0,0,0,0
+Mauldin Middle,,450231000455,5023,ExplCompSci,30,19,6,3,3,0,10,1,4
+Greenville Virtual School,,,4771,AP Comp Sci A,20,14,4,3,2,0,3,0,2
+Greenville Virtual School,,,5023,ExplCompSci,190,80,34,19,9,1,47,7,10
+Greenville Virtual School,,,5050,Computer Prog 1,18,11,5,1,1,0,5,5,2
+Greenville Virtual School,,,5061,DiscCompSci,64,34,21,11,5,0,23,7,6
+Early College Program,,,5023,ExplCompSci,16,8,10,5,5,0,14,5,4
+K-8 Virtual Program,,,5023,ExplCompSci,459,280,211,60,42,1,234,31,23
+Donaldson Career Center,,450231000578,5023,ExplCompSci,25,13,12,7,8,0,12,5,6
+Emerald High,,450234000593,5054,Computer Programming with Visual Basic 1,7,7,0,0,0,0,0,0,0
+Emerald High,,450234000593,5373,DEIntroJava(CPT236),3,3,0,0,0,0,0,0,0
+Emerald High,,450234000593,4775,AP Computer Sci Principles,6,3,0,0,0,0,0,0,0
+Emerald High,,450234000593,5055,Computer Programming with Visual Basic 2,1,1,0,0,0,0,0,0,0
+Emerald High,,450234000593,8371,DE Advanced Java Programming (CPT 237),3,3,0,0,0,0,0,0,0
+Emerald High,,450234000593,4771,AP Comp Sci A,4,4,0,0,0,0,0,0,0
+Emerald High,,450234000593,5023,ExplCompSci,56,35,30,6,7,0,22,7,3
+Greenwood High,,450234000596,4771,AP Comp Sci A,2,2,0,0,0,0,0,0,0
+Greenwood High,,450234000596,4775,AP Computer Sci Principles,1,1,0,0,0,0,0,0,0
+Greenwood High,,450234000596,5023,ExplCompSci,168,95,74,30,27,0,58,15,19
+Greenwood High,,450234000596,5055,Computer Programming with Visual Basic 2,3,3,0,0,0,0,0,0,0
+Greenwood High,,450234000596,5054,Computer Programming with Visual Basic 1,5,5,0,0,0,0,0,0,0
+Greenwood High,,450234000596,5375,DEC++Pro(CPT232),1,1,0,0,0,0,0,0,0
+Ware Shoals High,,450237000601,5023,ExplCompSci,24,15,1,1,0,0,0,8,1
+Ware Shoals High,,450237000601,5054,Computer Programming with Visual Basic 1,1,1,0,0,0,0,0,0,0
+Ninety Six High,,450240000604,5023,ExplCompSci,75,39,18,2,0,0,14,9,0
+Ninety Six High,,450240000604,5050,Computer Prog 1,1,1,0,0,0,0,0,0,0
+Ninety Six High,,450240000604,5055,Computer Programming with Visual Basic 2,1,1,0,0,0,0,0,0,0
+Ninety Six High,,450240000604,5054,Computer Programming with Visual Basic 1,1,0,0,0,0,0,0,0,0
+Edgewood Middle,,450240000603,5023,ExplCompSci,10,6,1,1,0,0,1,0,0
+Wade Hampton High,,450243000610,5023,ExplCompSci,63,38,43,1,1,0,60,6,0
+Wade Hampton High,,450243000610,5053,Computer Prog 4,2,2,0,0,0,0,0,0,0
+Wade Hampton High,,450243000610,5052,Computer Prog 3,14,6,10,1,0,0,12,1,0
+Estill High,,450246000613,5023,ExplCompSci,51,21,45,4,0,3,46,9,2
+Aynor High,,450249000645,6377,Computer Science Principles,22,13,2,0,0,1,2,0,0
+North Myrtle Beach High,,450249000644,6377,Computer Science Principles,33,27,4,1,1,1,8,1,0
+North Myrtle Beach High,,450249000644,5050,Computer Prog 1,19,16,4,1,0,0,4,3,0
+North Myrtle Beach High,,450249000644,5023,ExplCompSci,163,93,32,18,1,3,41,21,11
+Conway High,,450249000642,4771,AP Comp Sci A,2,1,0,0,0,0,0,0,0
+Conway High,,450249000642,5023,ExplCompSci,179,91,57,29,1,2,82,39,15
+Conway High,,450249000642,6377,Computer Science Principles,7,5,0,0,0,0,0,0,0
+Conway High,,450249000642,6372,PLTW Computer Science Essentials,21,16,3,2,2,0,10,0,1
+Green Sea Floyds High,,450249000641,5023,ExplCompSci,77,45,23,6,0,0,21,9,3
+Loris High,,450249000643,5023,ExplCompSci,18,7,6,2,0,0,9,2,2
+Myrtle Beach High,,450249000640,5023,ExplCompSci,198,115,66,48,2,1,64,19,44
+Myrtle Beach High,,450249000640,6377,Computer Science Principles,8,8,0,0,0,0,0,0,0
+Socastee High,,450249000639,5023,ExplCompSci,156,99,18,34,5,6,49,26,22
+Carolina Forest High,,450249000244,5023,ExplCompSci,254,117,41,53,6,2,71,27,32
+Carolina Forest High,,450249000244,5050,Computer Prog 1,19,16,2,1,1,1,3,1,2
+Carolina Forest High,,450249000244,5052,Computer Prog 3,9,7,0,0,0,0,0,0,0
+St. James High,,450249000900,5050,Computer Prog 1,77,54,2,3,0,0,9,8,1
+St. James High,,450249000900,4775,AP Computer Sci Principles,6,6,0,0,0,0,0,0,0
+St. James High,,450249000900,5051,Computer Prog 2,16,14,1,1,0,0,2,0,0
+St. James High,,450249000900,6372,PLTW Computer Science Essentials,39,20,2,4,0,0,6,1,1
+St. James High,,450249000900,5023,ExplCompSci,129,72,22,7,2,0,32,24,1
+HCS Early College High,,450249001531,6721,DECom&Prog (CPT114),37,12,10,5,0,0,13,0,1
+Palmetto Acad/Motorsports,,450249001595,5061,DiscCompSci,45,42,3,7,1,0,23,8,3
+Scholars Academy,,,5023,ExplCompSci,2,2,0,0,0,0,0,0,0
+Scholars Academy,,,4773,DE Into to Computer Sci (CSCI 130),1,1,0,0,0,0,0,0,0
+Scholars Academy,,,4777,DE Algorithmic Design II,1,1,0,0,0,0,0,0,0
+Horry County Virtual (Full-Time),,,5061,DiscCompSci,144,97,52,12,5,1,55,20,6
+Horry County Virtual (Full-Time),,,4771,AP Comp Sci A,6,3,0,0,0,0,0,0,0
+Horry County Virtual (Full-Time),,,5023,ExplCompSci,461,230,159,48,15,3,173,73,26
+Academy For Arts/Science/Tech,,450249000647,4775,AP Computer Sci Principles,20,17,0,0,1,0,1,0,0
+Academy For Arts/Science/Tech,,450249000647,5051,Computer Prog 2,16,14,1,1,1,0,2,0,0
+Academy For Arts/Science/Tech,,450249000647,5023,ExplCompSci,11,6,0,1,0,0,1,0,1
+Academy For Arts/Science/Tech,,450249000647,5050,Computer Prog 1,9,9,0,0,0,0,0,0,0
+Academy for Tech & Academics,,,5023,ExplCompSci,66,29,20,9,1,0,29,13,5
+Hardeeville-Ridgeland Middle,,450252001449,5062,DiscCompSci8,15,9,7,8,0,0,15,0,5
+Ridgeland-Hardeeville High,,450252001487,5023,ExplCompSci,275,142,147,106,3,2,271,7,69
+North Central High,,450255001259,5023,ExplCompSci,114,66,32,9,7,0,70,20,5
+North Central High,,450255001259,4775,AP Computer Sci Principles,22,8,1,3,0,0,7,0,1
+Camden High,,450255000667,4775,AP Computer Sci Principles,12,6,4,0,0,0,3,0,0
+Camden High,,450255000667,5023,ExplCompSci,226,103,90,36,6,0,123,17,19
+Lugoff-Elgin High,,450255000665,4775,AP Computer Sci Principles,51,28,3,3,0,0,8,1,1
+Lugoff-Elgin High,,450255000665,5023,ExplCompSci,466,253,113,53,22,6,218,47,26
+Camden Middle,,450255001257,5023,ExplCompSci,24,15,5,1,0,0,3,0,0
+Lugoff-Elgin Middle,,450255000662,5023,ExplCompSci,22,13,0,1,0,0,5,0,0
+North Central Middle,,450255000766,5023,ExplCompSci,32,18,4,4,0,0,19,2,1
+Buford High,,450258001261,5023,ExplCompSci,135,78,15,5,3,0,42,24,3
+Indian Land High,,450258000689,5023,ExplCompSci,207,97,46,33,6,1,25,23,16
+Indian Land High,,450258000689,5053,Computer Prog 4,12,11,3,1,0,0,2,2,2
+Indian Land High,,450258000689,5052,Computer Prog 3,70,53,13,11,0,2,11,7,8
+Andrew Jackson High,,450258000688,5023,ExplCompSci,181,88,41,2,0,0,65,27,0
+Lancaster CSD Career Center,,450258001704,5051,Computer Prog 2,8,5,0,0,0,0,0,0,0
+Lancaster CSD Career Center,,450258001704,5050,Computer Prog 1,5,4,0,0,0,0,0,0,0
+Lancaster CSD Career Center,,450258001704,5023,ExplCompSci,309,138,179,52,8,0,150,46,42
+Laurens District 55 High,,450261000701,5023,ExplCompSci,128,62,45,26,4,2,52,19,21
+Laurens District 55 High,,450261000701,5053,Computer Prog 4,11,7,5,1,0,0,3,0,0
+Laurens District 55 High,,450261000701,5052,Computer Prog 3,22,17,5,3,0,1,6,2,2
+Sanders Middle,,450261000699,5023,ExplCompSci,36,19,14,3,0,0,17,4,0
+Gray Court-Owings Elem/Middle,,450261001623,5023,ExplCompSci,31,16,15,3,0,0,16,1,2
+Hickory Tavern Elem/Middle,,450261001622,5023,ExplCompSci,24,15,0,0,0,0,5,1,0
+Clinton High,,450264000708,5061,DiscCompSci,318,144,156,19,1,0,1,29,9
+Clinton Middle,,450264001264,5063,DiscCompSci7,18,8,3,1,0,0,0,0,0
+Clinton Middle,,450264001264,5062,DiscCompSci8,24,12,15,1,0,0,0,0,0
+Lee Central High,,450267000559,5023,ExplCompSci,64,31,60,1,0,2,59,1,1
+Lee Central High,,450267000559,5061,DiscCompSci,21,10,18,1,0,0,21,0,0
+Gilbert High,,450270000726,5023,ExplCompSci,364,198,48,51,4,0,164,55,36
+Gilbert High,,450270000726,4775,AP Computer Sci Principles,21,13,0,1,0,0,7,0,0
+Lexington High,,450270000724,5023,ExplCompSci,157,86,48,12,0,0,44,15,3
+Pelion High,,450270000725,5023,ExplCompSci,185,101,17,22,3,1,115,46,15
+White Knoll High,,450270000582,5023,ExplCompSci,689,342,222,77,13,3,308,81,27
+White Knoll High,,450270000582,4775,AP Computer Sci Principles,87,48,19,9,1,0,26,2,3
+River Bluff High,,450270001626,5023,ExplCompSci,519,264,79,30,6,2,113,33,34
+River Bluff High,,450270001626,4775,AP Computer Sci Principles,115,67,3,4,2,1,6,1,8
+Lexington Technology Center,,450270000727,5023,ExplCompSci,307,153,20,17,2,1,66,22,8
+Lexington Technology Center,,450270000727,5052,Computer Prog 3,69,61,7,3,0,0,17,4,3
+Lexington Technology Center,,450270000727,4775,AP Computer Sci Principles,16,9,1,1,0,0,1,1,2
+Lexington Technology Center,,450270000727,4771,AP Comp Sci A,7,4,0,0,0,0,0,0,0
+Lexington Technology Center,,450270000727,5053,Computer Prog 4,13,13,1,0,0,0,2,1,0
+Airport High,,450273000741,5023,ExplCompSci,278,130,96,59,6,3,122,30,33
+Brookland-Cayce  High,,450273000742,5023,ExplCompSci,265,142,86,69,17,4,121,41,57
+Lexington Two Innovation Ctr,,450273001705,5050,Computer Prog 1,27,25,3,3,0,0,12,1,2
+Lexington Two Innovation Ctr,,450273001705,5051,Computer Prog 2,5,5,0,0,0,0,0,0,0
+Lexington Two Innovation Ctr,,450273001705,4775,AP Computer Sci Principles,3,3,0,0,0,0,0,0,0
+Batesburg-Leesville High,,450276000748,5052,Computer Prog 3,97,57,33,11,1,0,54,9,11
+Swansea High,,450279000752,5023,ExplCompSci,101,45,28,19,7,0,101,26,17
+Swansea High Freshman Acad,,450279001587,5023,ExplCompSci,88,63,21,15,2,0,88,9,14
+Chapin High,,450282001170,5050,Computer Prog 1,5,4,0,0,0,0,0,0,0
+Chapin High,,450282001170,6372,PLTW Computer Science Essentials,39,24,0,1,1,0,4,2,0
+Chapin High,,450282001170,5023,ExplCompSci,338,182,33,22,5,0,55,31,8
+Irmo High,,450282000759,5023,ExplCompSci,249,123,185,15,7,8,151,39,14
+Irmo High,,450282000759,5050,Computer Prog 1,82,51,38,5,1,2,30,3,6
+Irmo High,,450282000759,5051,Computer Prog 2,2,1,0,0,0,0,0,0,0
+Dutch Fork High,,450282000017,4771,AP Comp Sci A,24,16,4,1,0,0,0,1,2
+Dutch Fork High,,450282000017,6372,PLTW Computer Science Essentials,35,23,10,1,1,1,5,1,3
+Dutch Fork High,,450282000017,5051,Computer Prog 2,10,9,0,0,0,0,0,0,0
+Dutch Fork High,,450282000017,4775,AP Computer Sci Principles,19,15,5,1,1,0,1,1,2
+Dutch Fork High,,450282000017,5023,ExplCompSci,413,203,225,19,6,4,168,55,11
+Dutch Fork High,,450282000017,5050,Computer Prog 1,67,39,16,2,2,0,8,0,4
+Spring Hill High,,450282001621,4775,AP Computer Sci Principles,10,8,0,0,0,0,1,1,0
+Spring Hill High,,450282001621,5051,Computer Prog 2,17,14,0,0,0,0,3,0,0
+Spring Hill High,,450282001621,5050,Computer Prog 1,82,58,13,2,0,0,15,6,3
+Spring Hill High,,450282001621,5023,ExplCompSci,220,92,41,11,4,0,43,14,4
+Chapin Middle,,450282001654,5062,DiscCompSci8,106,71,5,5,2,0,10,5,4
+McCormick High,,450300000804,5023,ExplCompSci,40,29,30,2,0,0,40,16,0
+Marion High,,450390800765,5023,ExplCompSci,170,94,134,4,1,0,163,2,1
+Mullins High,,450390800773,5023,ExplCompSci,68,45,54,2,3,0,68,22,2
+Marlboro County High,,450297001434,5023,ExplCompSci,151,71,99,1,17,1,146,20,1
+Blenheim Middle Sch Discovery,,450297000024,5023,ExplCompSci,33,16,28,0,1,0,31,2,0
+Newberry County Career Ctr,,450303000821,5061,DiscCompSci,428,218,159,66,50,0,192,54,36
+Seneca High,,450306000841,5023,ExplCompSci,151,82,34,18,0,1,58,15,10
+Walhalla Middle,,450306001288,5062,DiscCompSci8,107,61,3,16,0,1,39,12,7
+Walhalla High,,450306000842,5023,ExplCompSci,136,72,7,15,2,0,38,11,10
+West-Oak High,,450306001357,5023,ExplCompSci,114,55,3,6,1,1,53,20,4
+Seneca Middle,,450306001436,5062,DiscCompSci8,113,67,22,14,3,1,50,14,4
+Seneca Middle,,450306001436,5063,DiscCompSci7,98,50,26,9,0,1,40,16,6
+West Oak Middle,,450306001477,5063,DiscCompSci7,39,22,5,1,1,0,16,0,1
+West Oak Middle,,450306001477,5062,DiscCompSci8,72,32,5,2,0,1,24,13,2
+Hamilton Career & Tech Center,,450306000844,5052,Computer Prog 3,19,17,3,4,0,0,7,3,2
+Hamilton Career & Tech Center,,450306000844,4775,AP Computer Sci Principles,16,10,2,2,0,0,6,1,1
+Hamilton Career & Tech Center,,450306000844,5053,Computer Prog 4,19,17,3,4,0,0,7,3,2
+Bethune-Bowman Middle/High School,,450391000850,5023,ExplCompSci,70,38,61,6,2,0,67,6,5
+Edisto High School,,450391000862,5023,ExplCompSci,149,80,80,9,3,0,146,14,6
+Orangeburg-Wilkinson High School,,450391000873,5023,ExplCompSci,1,0,0,0,0,0,0,0,0
+North Middle/High School,,450391000876,5023,ExplCompSci,53,24,34,0,0,0,48,3,0
+Lake Marion Sch & Tech Ctr,,450391001192,5023,ExplCompSci,155,79,134,4,2,2,146,16,4
+Hunter-Kinard-Tyler High School,,450391000196,5023,ExplCompSci,67,28,53,1,0,0,66,3,0
+OCSD5 High Sch for Health Prof,,450391001604,5061,DiscCompSci,81,38,78,0,1,0,79,0,0
+Orangeburg Sch Dist 5 Tech Ctr,,450391000912,5051,Computer Prog 2,10,10,10,0,0,0,10,1,0
+Orangeburg Sch Dist 5 Tech Ctr,,450391000912,5023,ExplCompSci,83,41,73,4,0,0,81,11,4
+Orangeburg Sch Dist 5 Tech Ctr,,450391000912,5050,Computer Prog 1,28,26,22,0,0,0,28,1,0
+R. C. Edwards Middle,,450333000897,5023,ExplCompSci,2,2,0,0,0,0,0,0,0
+D. W. Daniel High,,450333000899,4775,AP Computer Sci Principles,15,9,0,0,0,0,3,1,0
+D. W. Daniel High,,450333000899,5023,ExplCompSci,153,82,20,20,2,0,48,13,9
+Easley High,,450333000902,5023,ExplCompSci,48,28,5,6,1,0,25,5,4
+Easley High,,450333000902,4775,AP Computer Sci Principles,21,16,2,2,0,0,6,1,2
+Liberty High,,450333000903,5023,ExplCompSci,148,85,6,17,2,0,92,34,6
+Pickens Middle,,450333001293,5023,ExplCompSci,1,1,0,0,0,0,0,0,0
+Pickens High,,450333000904,5023,ExplCompSci,180,104,4,12,0,0,83,34,5
+Columbia High,,450336000949,5061,DiscCompSci,149,69,130,7,2,0,133,17,14
+Dreher High,,450336000950,6377,Computer Science Principles,57,42,15,4,0,0,55,0,2
+Dreher High,,450336000950,4771,AP Comp Sci A,6,4,0,0,0,0,0,0,0
+Dreher High,,450336000950,5061,DiscCompSci,185,95,129,16,7,2,168,34,7
+Eau Claire High,,450336000951,4775,AP Computer Sci Principles,17,6,17,0,0,0,17,0,0
+Eau Claire High,,450336000951,5061,DiscCompSci,132,61,119,12,2,1,129,15,9
+A. C. Flora High,,450336000952,5061,DiscCompSci,276,141,122,22,5,1,264,34,18
+W.J. Keenan High,,450336000954,5061,DiscCompSci,163,75,158,3,3,1,154,20,1
+W.J. Keenan High,,450336000954,6377,Computer Science Principles,18,11,18,1,2,0,18,0,0
+Lower Richland High,,450336000955,6377,Computer Science Principles,22,17,19,2,0,0,22,1,0
+Lower Richland High,,450336000955,5061,DiscCompSci,309,157,278,19,7,3,297,46,11
+Crayton Middle,,450336001298,5063,DiscCompSci7,92,63,43,6,1,0,89,11,3
+Crayton Middle,,450336001298,5062,DiscCompSci8,94,53,49,10,4,1,78,8,5
+W. G. Sanders Middle,,450336001299,5063,DiscCompSci7,1,0,0,0,0,0,0,0,0
+W. G. Sanders Middle,,450336001299,5062,DiscCompSci8,44,23,42,0,0,0,42,4,0
+Heyward Gibbes Middle,,450336001301,5062,DiscCompSci8,16,7,15,0,0,0,16,1,0
+Hand Middle,,450336001300,5062,DiscCompSci8,89,48,56,6,0,0,79,16,0
+Hand Middle,,450336001300,5063,DiscCompSci7,61,44,38,4,0,1,61,3,1
+W. A. Perry Middle,,450336000946,5062,DiscCompSci8,19,9,18,0,0,0,19,3,0
+Southeast Middle,,450336000507,5062,DiscCompSci8,94,52,80,6,2,1,91,6,2
+Southeast Middle,,450336000507,5063,DiscCompSci7,83,43,73,8,2,0,83,4,7
+Richland One Ctr Middle Coll,,450336001195,5023,ExplCompSci,3,1,0,0,0,0,0,0,0
+Richland One Ctr Middle Coll,,450336001195,5061,DiscCompSci,4,0,0,0,0,0,0,0,0
+Richland Two Institute of Innovation,,450339001554,5050,Computer Prog 1,75,50,54,11,1,1,28,2,3
+Spring Valley High,,450339000975,5023,ExplCompSci,210,119,116,27,0,2,84,14,10
+Spring Valley High,,450339000975,4775,AP Computer Sci Principles,24,16,5,2,0,0,3,1,3
+Spring Valley High,,450339000975,4771,AP Comp Sci A,27,19,8,2,0,0,4,0,2
+Richland Northeast High,,450339001312,5023,ExplCompSci,134,82,90,29,3,2,68,9,20
+Richland Northeast High,,450339001312,5052,Computer Prog 3,27,21,18,4,2,0,11,3,1
+Richland Northeast High,,450339001312,5053,Computer Prog 4,18,15,15,2,0,0,10,0,1
+Ridge View High,,450339000118,4775,AP Computer Sci Principles,25,14,17,3,3,0,7,0,2
+Ridge View High,,450339000118,5023,ExplCompSci,77,36,65,1,0,0,32,8,0
+Ridge View High,,450339000118,5052,Computer Prog 3,19,15,15,0,2,2,6,1,0
+Ridge View High,,450339000118,5053,Computer Prog 4,17,14,17,0,0,0,8,0,0
+Blythewood Middle,,450339000203,5023,ExplCompSci,21,15,13,4,0,0,9,0,0
+Blythewood High,,450339000928,4775,AP Computer Sci Principles,50,24,15,2,0,1,5,0,1
+Blythewood High,,450339000928,4771,AP Comp Sci A,19,17,5,2,0,0,1,0,2
+Longleaf Middle,,450339001081,5062,DiscCompSci8,50,33,37,2,1,0,21,3,3
+Longleaf Middle,,450339001081,5063,DiscCompSci7,80,51,60,6,0,0,36,9,1
+Muller Road Middle,,450339001566,5062,DiscCompSci8,96,53,57,5,1,1,33,0,1
+Muller Road Middle,,450339001566,5063,DiscCompSci7,99,61,67,7,0,0,39,8,0
+Westwood High,,450339001606,4775,AP Computer Sci Principles,27,16,23,0,0,0,12,1,0
+Westwood High,,450339001606,5023,ExplCompSci,223,117,197,12,5,1,110,26,7
+Westwood High,,450339001606,5054,Computer Programming with Visual Basic 1,45,33,33,3,0,0,11,1,2
+Westwood High,,450339001606,5055,Computer Programming with Visual Basic 2,10,9,6,1,0,0,2,1,0
+Virtual School,,,5023,ExplCompSci,43,17,36,2,0,0,22,5,0
+Chapman High,,450348000988,4775,AP Computer Sci Principles,8,8,0,0,0,0,0,0,0
+Chapman High,,450348000988,5023,ExplCompSci,62,35,8,10,3,1,25,8,7
+Landrum High,,450348000989,4775,AP Computer Sci Principles,14,14,0,0,0,0,3,0,1
+Landrum High,,450348000989,5023,ExplCompSci,23,11,2,3,0,0,14,5,2
+T. E. Mabry Middle,,450348000990,5061,DiscCompSci,154,85,23,6,1,0,73,12,10
+Campobello-Gramling School,,450348000983,5061,DiscCompSci,43,22,3,1,0,0,13,0,0
+Landrum Middle,,450348000060,5061,DiscCompSci,43,23,1,3,0,0,13,0,2
+Boiling Springs High,,450351001000,4775,AP Computer Sci Principles,14,6,1,0,0,0,3,1,0
+Boiling Springs High,,450351001000,5023,ExplCompSci,603,313,111,56,75,2,228,45,93
+Chesnee High,,450351001001,5023,ExplCompSci,244,137,26,12,7,5,113,21,13
+Broome High,,450354001010,5023,ExplCompSci,171,87,32,20,5,1,111,21,12
+Woodruff Middle,,450357001014,5062,DiscCompSci8,130,76,21,21,1,1,68,9,10
+Woodruff High,,450357001015,4771,AP Comp Sci A,11,9,0,1,1,0,3,0,0
+Woodruff High,,450357001015,5023,ExplCompSci,53,36,7,6,2,0,19,4,4
+Woodruff High,,450357001015,5052,Computer Prog 3,37,27,2,5,1,0,13,3,4
+Woodruff High,,450357001015,5061,DiscCompSci,379,220,67,49,3,0,192,49,28
+James Byrnes Freshman Acad,,450360001476,5023,ExplCompSci,189,94,51,15,5,1,58,7,8
+Dorman High,,450363001038,4775,AP Computer Sci Principles,41,33,2,7,7,0,11,1,9
+Dorman High,,450363001038,5023,ExplCompSci,597,345,199,133,85,6,253,68,108
+Carver Middle,,450366001049,5062,DiscCompSci8,131,64,99,19,6,1,101,24,16
+Carver Middle,,450366001049,5023,ExplCompSci,8,4,0,0,0,0,0,0,0
+Carver Middle,,450366001049,5063,DiscCompSci7,31,18,24,4,1,1,23,1,2
+McCracken Middle,,450366001051,5063,DiscCompSci7,46,25,7,2,1,0,10,0,1
+McCracken Middle,,450366001051,5062,DiscCompSci8,103,43,39,4,0,0,40,5,0
+Spartanburg High,,450366001052,6377,Computer Science Principles,21,16,0,2,2,0,2,0,0
+Spartanburg High,,450366001052,5053,Computer Prog 4,10,10,4,3,1,0,6,3,2
+Spartanburg High,,450366001052,5023,ExplCompSci,274,124,147,42,10,4,145,20,26
+Spartanburg High,,450366001052,5052,Computer Prog 3,5,5,0,0,0,0,0,0,0
+E. P. Todd School,,450366001041,5062,DiscCompSci8,25,7,12,5,0,0,14,3,4
+E. P. Todd School,,450366001041,5063,DiscCompSci7,24,15,12,4,0,2,14,5,2
+Alice Drive Middle,,450390201063,2785,Computer Science for Innovators & Makers,68,29,22,1,1,1,68,0,0
+Sumter High,,450390201065,5053,Computer Prog 4,19,15,6,1,0,0,19,1,1
+Sumter High,,450390201065,5052,Computer Prog 3,139,82,62,7,2,1,139,0,6
+Sumter High,,450390201065,5023,ExplCompSci,422,210,281,17,2,0,420,69,4
+Crestwood High,,450390200217,5023,ExplCompSci,243,120,189,16,2,3,241,23,9
+Crestwood High,,450390200217,5052,Computer Prog 3,123,66,76,8,1,4,123,10,0
+Crestwood High,,450390200217,5053,Computer Prog 4,28,21,20,0,1,1,28,2,0
+Lakewood High,,450390200223,5023,ExplCompSci,167,91,92,4,3,1,167,10,2
+Sims Middle,,450375001089,5062,DiscCompSci8,185,105,80,7,2,0,99,41,2
+Union County High,,450375001092,5061,DiscCompSci,68,31,34,3,0,0,32,4,3
+Jonesville Elementary Middle,,450375001086,5062,DiscCompSci8,22,8,5,0,0,0,9,0,0
+Hemingway High,,450378001108,5023,ExplCompSci,65,26,57,0,0,0,65,10,0
+Kingstree Middle Magnet,,450378001107,5063,DiscCompSci7,98,43,91,1,0,0,98,2,2
+Kingstree Middle Magnet,,450378001107,5062,DiscCompSci8,117,51,109,1,0,1,117,2,0
+Kingstree Senior High,,450378001111,6377,Computer Science Principles,112,56,99,0,0,1,112,28,0
+C. E. Murray High,,450378001112,6377,Computer Science Principles,34,21,32,0,0,0,34,5,0
+C. E. Murray Middle,,450378001624,5062,DiscCompSci8,21,9,20,0,0,0,21,1,0
+C. E. Murray Middle,,450378001624,5063,DiscCompSci7,13,5,12,0,0,0,13,0,0
+York Comprehensive High,,450381001122,5023,ExplCompSci,193,99,45,20,1,0,92,38,11
+York Comprehensive High,,450381001122,5050,Computer Prog 1,53,43,12,3,2,0,17,2,3
+York Comprehensive High,,450381001122,5051,Computer Prog 2,23,21,4,1,0,0,8,0,1
+York Middle School,,450381001412,5062,DiscCompSci8,44,19,4,6,3,1,12,0,2
+York Middle School,,450381001412,2785,Computer Science for Innovators & Makers,27,14,8,1,1,0,18,13,0
+Clover High,,450384001129,4775,AP Computer Sci Principles,22,11,0,0,0,0,0,0,1
+Clover High,,450384001129,5053,Computer Prog 4,10,8,2,0,0,0,4,0,0
+Clover High,,450384001129,5050,Computer Prog 1,158,109,15,14,1,1,11,4,3
+Clover High,,450384001129,5052,Computer Prog 3,14,12,0,0,1,0,3,1,0
+Clover High,,450384001129,4771,AP Comp Sci A,9,7,0,0,0,0,0,0,0
+Clover High,,450384001129,5023,ExplCompSci,621,327,121,56,12,4,151,45,21
+Northwestern High,,450387001149,5050,Computer Prog 1,62,44,20,7,0,0,26,3,6
+Northwestern High,,450387001149,5061,DiscCompSci,98,51,49,13,1,0,60,18,6
+Northwestern High,,450387001149,5023,ExplCompSci,188,97,71,29,4,0,89,31,20
+Northwestern High,,450387001149,5051,Computer Prog 2,1,1,0,0,0,0,0,0,0
+Rock Hill High,,450387001150,5023,ExplCompSci,342,165,111,44,13,2,164,34,26
+Rock Hill High,,450387001150,5051,Computer Prog 2,10,8,1,1,0,0,3,1,0
+Rock Hill High,,450387001150,5050,Computer Prog 1,80,62,25,12,1,0,39,5,7
+Rawlinson Road Middle,,450387001148,5062,DiscCompSci8,7,6,0,0,0,0,0,0,0
+Rawlinson Road Middle,,450387001148,5063,DiscCompSci7,9,5,0,0,0,0,0,0,0
+Saluda Trail Middle,,450387000537,5062,DiscCompSci8,13,10,6,2,0,0,2,2,1
+South Pointe High,,450387001004,5023,ExplCompSci,131,68,59,7,1,0,67,26,2
+South Pointe High,,450387001004,5050,Computer Prog 1,40,32,24,1,0,1,18,2,1
+South Pointe High,,450387001004,5061,DiscCompSci,97,37,57,6,2,0,52,11,2
+South Pointe High,,450387001004,5051,Computer Prog 2,8,8,0,0,0,0,0,0,0
+South Pointe High,,450387001004,6372,PLTW Computer Science Essentials,12,10,5,0,0,0,3,2,0
+Dutchman Creek Middle,,450387001526,5062,DiscCompSci8,9,5,0,0,0,0,0,0,0
+The Phoenix Academy,,450177000431,5023,ExplCompSci,12,4,3,3,0,0,5,4,3
+Applied Tech Ctr,,450387001151,5023,ExplCompSci,192,91,131,13,4,0,129,44,4
+Fort Mill High,,450390001156,5023,ExplCompSci,389,184,80,31,3,0,60,36,24
+Fort Mill High,,450390001156,5054,Computer Programming with Visual Basic 1,75,60,6,9,2,0,8,7,2
+Fort Mill High,,450390001156,4775,AP Computer Sci Principles,52,41,4,2,0,0,1,1,5
+Nation Ford High,,450390001103,5023,ExplCompSci,336,144,73,57,3,1,55,43,33
+Nation Ford High,,450390001103,4775,AP Computer Sci Principles,22,10,2,1,1,0,4,0,5
+Nation Ford High,,450390001103,5054,Computer Programming with Visual Basic 1,62,48,9,5,2,0,5,3,2
+Catawba Ridge High School,,450390001718,4775,AP Computer Sci Principles,25,18,1,2,0,0,0,0,2
+Catawba Ridge High School,,450390001718,5051,Computer Prog 2,4,4,0,0,0,0,0,0,0
+Catawba Ridge High School,,450390001718,5023,ExplCompSci,330,166,53,24,7,3,38,39,9
+Catawba Ridge High School,,450390001718,5050,Computer Prog 1,19,16,1,2,0,0,0,0,0
+Palmetto Scholars Academy,,450390101542,6721,DECom&Prog (CPT114),2,1,0,0,0,0,0,0,0
+Palmetto Scholars Academy,,450390101542,4771,AP Comp Sci A,18,16,1,1,0,0,1,0,1
+Palmetto Scholars Academy,,450390101542,5023,ExplCompSci,50,23,12,7,1,0,9,1,1
+York Preparatory Academy,,450390101544,5023,ExplCompSci,100,60,27,3,2,0,27,14,2
+York Preparatory Academy,,450390101544,4775,AP Computer Sci Principles,18,9,5,1,0,0,4,2,1
+Fox Creek Charter High,,450390101176,5023,ExplCompSci,143,88,28,5,3,0,14,12,3
+Midlands Middle College,,450390101614,5023,ExplCompSci,7,2,0,0,0,0,0,0,0
+Bridges Prep School,,450390101617,5023,ExplCompSci,83,45,15,16,2,1,11,13,4
+Riverwalk Academy,,450390101645,5061,DiscCompSci,34,16,6,1,0,1,14,8,0
+High Point Academy,,450390101639,6372,PLTW Computer Science Essentials,14,10,2,1,0,1,7,1,1
+Lowcountry Montessori Sch,,450390101646,5061,DiscCompSci,21,10,4,1,0,0,6,2,0
+NEXT High,,450390101656,5056,Computer Programming with C++ 1,80,43,0,4,0,0,28,15,1
+Greenville Tech Charter Hi Sch,,450390100460,5050,Computer Prog 1,52,42,8,6,0,1,5,4,6
+Greenville Tech Charter Hi Sch,,450390100460,5051,Computer Prog 2,53,43,9,6,0,1,4,3,6
+Greer Middle Coll Charter Hi,,450390101688,5061,DiscCompSci,82,37,2,4,4,0,1,6,0
+Greer Middle Coll Charter Hi,,450390101688,5375,DEC++Pro(CPT232),1,1,0,0,0,0,0,0,0
+Greer Middle Coll Charter Hi,,450390101688,5050,Computer Prog 1,41,26,3,1,1,0,1,2,0
+Legacy Early College,,450390101685,5050,Computer Prog 1,27,11,16,7,3,1,27,1,7
+Polaris Tech,,450390101698,6372,PLTW Computer Science Essentials,12,9,2,3,0,0,12,0,3
+Polaris Tech,,450390101698,471A,ComputerScienSL,46,23,19,16,0,0,46,5,13
+Royal Academy of the Arts/Sci,,450390901590,6377,Computer Science Principles,55,29,17,30,0,0,40,3,27
+Royal Academy of the Arts/Sci,,450390901590,5023,ExplCompSci,1,1,0,0,0,0,0,0,0
+Oceanside Collegiate Acad,,450390901663,5023,ExplCompSci,184,98,15,5,2,0,4,5,0
+Gray Collegiate Acad,,450390901650,5023,ExplCompSci,249,126,73,18,2,0,42,10,0
+Coastal Leadership Acad,,450390901615,5023,ExplCompSci,28,15,6,5,0,0,13,6,1
+Odyssey Online Learning,,450390901527,5023,ExplCompSci,138,65,38,5,1,1,52,28,1
+Odyssey Online Learning,,450390901527,5051,Computer Prog 2,1,1,0,0,0,0,0,0,0
+Odyssey Online Learning,,450390901527,5050,Computer Prog 1,4,4,0,0,0,0,0,0,0
+SC Virtual Charter Sch,,450390901513,5050,Computer Prog 1,25,14,3,1,1,1,4,4,1
+SC Virtual Charter Sch,,450390901513,5023,ExplCompSci,708,289,159,43,8,2,145,73,16
+Cyber Academy of SC,,450390901616,5050,Computer Prog 1,128,102,31,13,4,0,61,18,2
+Cyber Academy of SC,,450390901616,5023,ExplCompSci,533,252,152,38,21,2,294,49,12
+Cyber Academy of SC,,450390901616,5051,Computer Prog 2,63,52,22,4,1,0,26,8,1
+Legion Collegiate Academy,,450390901715,5023,ExplCompSci,119,71,18,6,1,0,13,3,0
+SC Connections Academy,,450390101520,4771,AP Comp Sci A,30,20,4,0,0,2,8,2,0
+SC Connections Academy,,450390101520,5061,DiscCompSci,384,192,84,22,9,3,123,57,6
+Lowcountry Leadership,,450390101613,5023,ExplCompSci,32,16,8,2,1,0,14,5,2
+Brashier Middle College,,450390101687,5050,Computer Prog 1,43,25,5,5,0,0,6,2,2

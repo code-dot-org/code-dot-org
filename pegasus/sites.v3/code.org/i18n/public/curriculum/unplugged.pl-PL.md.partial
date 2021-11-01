@@ -1,0 +1,234 @@
+---
+title: Podstawy informatyki bez komputera
+video_player: true
+theme: responsive
+---
+
+# Podstawy informatyki bez komputera
+
+Przygotowaliśmy listę wszystkich naszych lekcji bez komputera, które możesz wykorzystać w swojej klasie. Teraz możesz uczyć podstaw informatyki, niezależnie od tego, czy masz komputery w klasie, czy nie!
+<br>
+<div class="col-50">
+Lekcje, podczas których uczniowie nie pracują na komputerze, nazywamy „bez komputera” (unplugged). Uczniowie często pracują z ołówkiem i papierem lub fizycznymi manipulacjami.  Są to celowo umieszczone możliwości kinestetyczne, które pomagają uczniom przetrawić skomplikowane pomysły w sposób, który odnosi się do ich własnego życia. <br><br>
+Lekcje bez komputera są szczególnie przydatne do budowania i utrzymywania środowiska w klasie opartego na współpracy, a także stanowią przydatne doświadczenia, do których można się odnieść przy wprowadzaniu bardziej abstrakcyjnych pojęć. Każde z tych zajęć można wykorzystać samodzielnie lub z innymi lekcjami informatyki na temat pokrewnych pojęć.
+</div>
+
+<div class="col-50" style="text-align:center">
+<img src="/images/new-main.jpg" width="90%">
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;W wieku powyżej 4 lat, tylko po angielsku
+</div>
+
+<div style="clear: both;"></div>
+
+***
+## Lekcje bez komputera w ramach kursu Podstawy informatyki 2021-22
+Następujące lekcje można znaleźć w <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">Podstawy informatyki 2021-22</a>. <br><br>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+#t01 {
+  width: 10%;
+  background-color: #ffa400;
+}
+#t02 {
+  width: 10%;
+  background-color: #ffb81d;
+}
+#t03 {
+  width: 10%;
+  background-color: #b9bf15;
+}
+#t04 {
+  width: 10%;
+  background-color: #00adbc;
+}
+#t05 {
+  width: 10%;
+  background-color: #0094ca;
+}
+#t06 {
+  width: 10%;
+  background-color: #7765a0;
+}
+</style>
+<table style="width:100%">
+  <tr>
+    <th><center><big>Kurs</th>
+    <th><center><big> Plan lekcji</th> 
+    <th width=10%><center><big>Pojęcia</th>
+    <th width=20%><center><big>Film</th>
+     <tr>
+    <th rowspan="3" id="t01">Kurs A</th>
+    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/3">A.3 - Szczęśliwe mapy</a><br><small>Ta lekcja bez komputerów łączy zespoły, które mają proste zadanie: doprowadzić "flurb" do owocu. Uczniowie będą ćwiczyć pisanie dokładnych instrukcji, pracując nad tłumaczeniem instrukcji na dostarczone symbole. Jeśli pojawią się problemy w kodzie, uczniowie powinni również współpracować, by wykryć błędy i utworzyć rozwiązania.</td><td>Sekwencjonowanie</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
+   </tr>
+   <tr>
+     <td width=40%><a href="https://curriculum.code.org/csf-20/coursea/7/">A.7 – Wesołe pętle</a><br><small>Ta aktywność powraca do Szczęśliwych Map. Tym razem uczniowie będą rozwiązywać większe, dłuższe łamigłówki za pomocą swoich kodów, co wskaże im użyteczność struktur, które umożliwiają łatwiej pisać dłuższy kod.</td><td>Pętle</td> <td><img src="/images/a7.png" width="90%"></td>
+   <tr>
+     <td width=40%><a href="https://curriculum.code.org/csf-20/coursea/11/">A.11 — Wielkie zdarzenie Jr.</a><br><small >Zdarzenia to świetny sposób na urozmaicenie wstępnie napisanego algorytmu. Czasami chcesz, aby Twój program był w stanie reagować na użytkownika, gdy on tego chce. Po to są zdarzenia.</td><td>Zdarzenia</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
+   </tr>
+        <tr>
+     <th rowspan="3" id="t02">Kurs B</th>
+     <td><a href="https://curriculum.code.org/csf-20/courseb/2/">B.2 – Przenieś, przenieś</a><br><small>Ta lekcja służy mentalnemu przygotowaniu uczniów do ćwiczeń z kodowania, które napotkają podczas tego kursu. W małych zespołach uczniowie będą wykorzystywać aktywności fizyczne, aby zaprogramować swoich kolegów z klasy, aby ostrożnie przechodzili z miejsca na miejsce, aż do osiągnięcia celu.</td><td>Sekwencjonowanie</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }} </td>
+   </tr>
+   <tr>
+     <td><a href="https://curriculum.code.org/csf-20/courseb/6/">B.6 — Zapętla się</a><br><small>Gdy zaczynamy pisać dłuższe i ciekawsze programy, nasz kod często zawiera dużo powtórzeń. In this lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.</td><td>Loops</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
+  <tr>
+    <td><a href="https://studio.code.org/s/courseb-2021/lessons/10">B.10 - The Right App</a><br><small>This lesson has students recognize that computer science can help people in real life. Po pierwsze, uczniowie wczuwają się w kilku fikcyjnych użytkowników smartfonów, aby pomóc im znaleźć „właściwą aplikację”, która odpowiada ich potrzebom. Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user.</td><td>Impacts of Computing</td> <td><img src="/images/b10.png" width="90%"></td>
+  </tr>
+       <tr>
+    <th rowspan="4" id="t03">Course C</th>
+    <td><a href="https://studio.code.org/s/coursec-2021/lessons/2">C.2 - My Robotic Friends Jr.</a><br><i>*Supplies: Plastic cups (10/group of 2-3)</i><br><small>Using a set of symbols in place of code, students will design algorithms to instruct a "robot" to stack cups in different patterns. Uczniowie na zmianę uczestniczą jako robot, odpowiadając tylko na algorytm zdefiniowany przez ich rówieśników. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
+  </tr> 
+  <tr>
+   <td><a href="https://studio.code.org/s/coursec-2021/lessons/7">C.7 - My Loopy Robotic Friend Jr</a><br><i>*Supplies: Paper cups (20/group of 4)</i><br><small>Overview
+Building on the initial "My Robotic Friends" activity, students tackle larger and more complicated designs. Aby zaprogramować swoje „roboty” do ukończenia tych większych projektów, uczniowie będą musieli zidentyfikować powtarzające się układy w swoich instrukcjach, które mogą być zastąpione pętlą.</td><td>Pętle</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
+   </tr> <tr>
+    <td><a href="https://curriculum.code.org/csf-20/coursec/14/">C.11 — Wielkie zdarzenie</a><br><small>Uczniowie wkrótce dowiedzą się, że zdarzenia to świetny sposób na zwiększenie elastyczności wstępnie napisanego algorytmu. Czasami chcesz, aby Twój program był w stanie reagować na użytkownika, gdy on tego chce. Zdarzenia mogą uczynić Twój program bardziej interesującym i interaktywnym.</td><td>Zdarzenia</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
+   </tr> 
+       </tr> 
+     <td><a href="https://studio.code.org/s/coursec-2021/lessons/15">C.15 - Binarne bransoletki</a><br><i>*Dostawy: Markery. Opcjonalnie – 18 czarnych/18 białych koralików, 1 czyścik do fajek na ucznia</i><br><small>Binarność jest niezwykle ważna w świecie komputerów. Większość dzisiejszych komputerów przechowuje różnego rodzaju informacje w postaci binarnej. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.</td><td>Binary</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
+  </tr>
+         <tr>
+    <th rowspan="3" id="t04">Course D</th>
+    <td><a href="https://studio.code.org/s/coursed-2021/lessons/2">D.2 - Graph Paper Programming<br></a><small>By "programming" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. Zajęcia rozpoczną się od instruowania się uczniów nawzajem, jak pokolorować kwadraty na papierze milimetrowym, aby odtworzyć istniejący obraz. If there’s time, the lesson can conclude with images that the students create themselves.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursed-2021/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
+      </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursed-2021/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. Nie zawsze mamy wszystkie informacje, których potrzebujemy podczas pisania programu. Czasami będziesz chciał zrobić coś innego w jednej sytuacji niż w innej, nawet jeśli nie wiesz, jaka sytuacja będzie prawdziwa po uruchomieniu kodu. Tu właśnie wkraczają instrukcje warunkowe. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+
+    </tr>
+         <tr>
+    <th rowspan="3" id="t05">Course E</th>
+    <td><a href="https://studio.code.org/s/coursee-2021/lessons/7">E.7 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2021/lessons/11">E.11 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. Funkcje (czasami nazywane procedurami) to miniprogramy, których możesz używać wielokrotnie w swoim większym programie. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursee-2021/lessons/17">E.17 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
+  </tr>
+    </tr>
+         <tr>
+    <th rowspan="3" id="t06">Course F</th>
+           <td><a href= "https://studio.code.org/s/coursef-2021/lessons/6">F.6 -Blank Space Stories</a><br><i>*Supplies: 6 envelopes(also suitable:paper or index cards,folded in half)</i><br><small>Students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs.
+   </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>  
+  </tr>
+        <tr>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+  </tr>
+  <tr>
+    <td><a href="https://studio.code.org/s/coursef-2021/lessons/19">F.19 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. In this lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
+  </tr>
+</table>
+
+<p style="clear:both"></p>
+
+***
+## Dodatkowe lekcje bez komputera
+
+Poniższe lekcje są zorganizowane według pojęć i można je znaleźć we wcześniejszych wersjach naszych kursów Podstawy informatyki. Dodatkowe zasoby, z których możesz skorzystać, gdy planujesz skorzystać z tych lekcji, obejmują:
+* [2019 Kurs A-F Przewodnik po kursie](https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview) | [2019 Kurs A-F Lista dostaw](https://docs.google.com/document/d/e/2PACX-1vRLQiHVgq1oIXytilpBZDoeEn2_JcIN__r600AbUKTSGkQDaydXAGKpmUu1J7mTVBEkh9ZOnGcBDQQt/pub) |F [2019 Listy kursów Amazon](https://www.amazon.com/ideas/amzn1.account.AFRP6N2PQKQ73HHEN6SJNS5ONHEA)
+* [2018 Kurs A-F Przewodnik po programie nauczania](https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf)
+* [2017 Kurs A-F Przewodnik po programie nauczania (v2)](https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf)
+* [Kurs 1-4 Przewodnik po programie nauczania](http://code.org/curriculum/docs/k-5/complete_compressed.pdf)
+* [CSF Fiszki](https://code.org/curriculum/docs/k-5/flashCards.pdf) <br><br>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+#t07 {
+  width: 10%;
+  background-color: #c6cacd;
+  color: #000000
+}
+</style>
+<table style="width:100%">
+  <tr>
+    <th><center><big>Pomysł</th>
+     <th width=65%><center><big>Plan lekcji <br>
+<small> Plan lekcji zawiera dodatkowe zasoby (slajdy, filmy, klucze odpowiedzi itp.).
+</th>
+     <th><center><big>Zasoby</th>
+      <tr>
+     <th rowspan="2" id=t07 width=5%>Obywatelstwo cyfrowe</th>
+     <td><a href="https://curriculum.code.org/csf-19/coursef/18">Crowdsourcing</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</ td>
+   </tr>
+   <tr>
+       <td colspan="2">*Popularna edukacja obejmuje <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">pełny program nauczania obywatelstwa cyfrowego</a>, w tym wiele działań bez komputera.</td>
+     <tr>
+     <th id=t07>Sekwencjonowanie</th>
+         <td><a href="https://curriculum.code.org/csf-20/coursec/16/">Binarne obrazy </a><br><small>*Dostawy: Opcjonalnie — grupowanie przeciwległych elementów do wyświetlenia uczniom.</td> Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
+ </tr>
+    <tr>
+    <th id=t07>Loops</th>
+        <td><a href="https://curriculum.code.org/csf-18/coursee/6/">My Loopy Robotic Friends</a><br><small>Here, students learn the simplicity and utility of loops by “programming” their friends using the language from "My Robotic Friends." Once loops are introduced, students will find that they can build bigger structures faster.
+</td> <td>{{ curriculum/unplugged/archive_two_video_thumbnail }}</td>
+  </tr>
+     <th rowspan="2" id=t07>Functions</th>
+    <td><a href="https://code.org/curriculum/course3/4/Teacher">Functional Suncatchers</a><br><small>In this lesson, students will make a suncatcher out of string, beads, and a special charm. Uczniowie wykonają serię powtarzających się kroków, a następnie zostaną poproszeni o zidentyfikowanie pewnych zestawów „umiejętności”, które są powielane kilka razy. Gdy te umiejętności zostaną zdefiniowane, zostaną wywołane z głównego programu, a cały piękny proces tworzenia zostanie zapisany na jednej kartce papieru. Ostateczny program będzie skierowany do całej klasy, bez względu na ich rodzaj sznurka, koralików i zawieszek. Aby skutecznie na to pozwolić, uczniowie będą musieli „wyabstrahować” szczegóły swoich konkretnych materiałów i stworzyć niejasne terminy dotyczące zaopatrzenia danej osoby. Takie użycie ogólnych symboli zastępczych jest wspaniałym wprowadzeniem do zmiennych.</td> <td><a href="https://youtu.be/d1MdyeXy0v0">Film z lekcji</a><br><a href="https://www.youtube.com/watch?v=Rb5DNYhLb7I">Zobacz trwającą lekcję</a><br><a href="https://www.code.org/curriculum/course3/4/Key- Activity4-FunctionalSuncatchers.pdf">Klucz odpowiedzi do zadania <a href="https://www.code.org/curriculum/course3/4/Key-Assessment4-FunctionalSkills.pdf">Klucz odpowiedzi do sprawdzianu</a></td >
+   </tr>
+   <tr>
+     <td><a href="https://curriculum.code.org/csf-1718/coursef/21/">Pisanie piosenek z parametrami</a><br><small>Jedną z najwspanialszych struktur w świecie informatyki jest funkcja. Funkcje (czasami nazywane procedurami) to miniprogramy, których możesz używać wielokrotnie w swoim większym programie. Ta lekcja pomoże uczniom intuicyjnie zrozumieć, dlaczego łączenie fragmentów kodu w funkcje jest tak przydatną praktyką i jak mogą używać tych struktur, nawet jeśli fragmenty kodu są nieco inne.
+</td> <td>{{ curriculum/unplugged/archive_three_video_thumbnail }}</td>
+  </tr>
+     <th rowspan="6" id=t07>Algorytmy</th>
+    <td><a href="https://curriculum.code.org/csf-1718/coursee/10/">Dice Race</a><br><small>Podczas tej lekcji uczniowie powiążą pojęcie algorytmów z rzeczywistymi aktywnościami, grając w grę Dice Race. Celem tutaj jest rozpoczęcie budowania umiejętności przekładania rzeczywistych sytuacji na scenariusze online i odwrotnie.
+</td> <td>{{ curriculum/unplugged/archive_four_video_thumbnail }}</td>
+   </tr>
+   <tr>
+     <td><a href="https://curriculum.code.org/csf-18/coursee/1">Moi znajomi od robotów</a><br><small>Używając wstępnie zdefiniowanego klucza, Twoi uczniowie dowiedzą się, jak wspierać się nawzajem, aby wykonać określone zadania bez używania poleceń słownych. Ten segment uczy uczniów związku między symbolami a działaniami, różnicy między algorytmem a programem oraz cennej umiejętności debugowania.</td> <td>{{ curriculum/unplugged/archive_five_video_thumbnail }}</td>
+   </tr>
+     <tr>
+     <td><a href="https://curriculum.code.org/csf-18/coursec/4/">Algorytmy z życia wzięte: papierowe samoloty</a><br><small>Podczas tej lekcji uczniowie będą odnosić pojęcia związane z algorytmami do codziennych aktywności. Po omówieniu algorytmów, uczniowie wykonają papierowe samoloty według algorytmu. The goal here is to start building the skills to translate real world situations to online scenarios and vice versa.</td> <td>{{ curriculum/unplugged/archive_six_video_thumbnail }}</td>
+  </tr>
+    <tr>
+    <td><a href="https://curriculum.code.org/csf-18/coursea/3/">Real Life Algorithms: Plant a Seed</a><br><small>In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.</td> <td>{{ curriculum/unplugged/archive_seven_video_thumbnail }}</td>
+  </tr>
+    <tr>
+    <td><a href="https://curriculum.code.org/csf-1718/coursef/10/">Tangrams</a><br><small>This lesson shows us something important about algorithms. As long as you keep an algorithm simple, there are lots of ways to use it. However, if you want to make sure everyone produces the same outcome, then your algorithm needs more detail. Students will learn the difference between a detailed and general algorithm while playing with tangrams.</td> <td>{{ curriculum/unplugged/archive_eight_video_thumbnail }}</td>
+  </tr>
+  </tr>
+    <tr>
+  </tr>
+    </tr>
+     <th id=t07 rowspan="4">Computational Thinking</th>
+        <tr>
+        <td><a href="https://code.org/curriculum/course3/1/Teacher">Computational Thinking</a><br><small>For this activity, no instructions are provided. Instead, students will use examples of what imaginary players have done to figure out how to play the game. This lesson gives students the opportunity to practice the four arts of computational thinking (decomposition, pattern matching, abstraction, and algorithms) in one cohesive activity.</td> <td><a href="https://youtu.be/TlAaklrolA0">Lesson Video</a><br><a href="https://www.youtube.com/watch?v=b4a7Ty1TpKU">See Lesson in Action</a><br><a href="https://www.code.org/curriculum/course3/1/Key-Activity1-ComputationalThinking.pdf">Activity Answer Key </a></td>
+        </tr>
+        <td><a href="https://studio.code.org/unplugged/unplug2.pdf">Computational Thinking with Monsters</a><br><small>With nothing but paper and markers, students will learn the four steps of computational thinking. Po krótkim wprowadzeniu uczniowie powinni zostać podzieleni na grupy, w których będą musieli stworzyć innym uczniom wskazówki, jak narysować konkretnego potwora (z katalogu wcześniej wybranych potworów). Całe zadanie należy rozłożyć, a następnie zespoły przeanalizują wszystkie potwory w katalogu pod kątem wzorców, wyabstrahują podobne szczegóły z potworów, a następnie wykorzystają te informacje do stworzenia algorytmu (wskazówek) dla innej drużyny, aby narysowała określonego potwora. Zespoły następnie zamieniają algorytmy z inną grupą i rysują potwora na podstawie tego, co wskazuje ten algorytm. Czy rysunek jest zgodny z zamierzeniami pierwotnego zespołu?</td> <td>{{ curriculum/unplugged/archive_nine_video_thumbnail }}</td>
+     <tr>
+     <td><a href="https://curriculum.code.org/csf-18/coursea/1/">Niewykryte błędy</a><br><small>Ta lekcja poprowadzi uczniów przez kolejne etapy debugowania . Uczniowie poznają mantrę: „Co się stało? Co miało się wydarzyć? Co ci to mówi?" </td> <td>{{ curriculum/unplugged/archive_ten_video_thumbnail }}</td>
+  </tr>
+    </tr>
+     <th rowspan="2" id=t07>Wytrwałość</th>
+  <td><a href="https://curriculum.code.org/csf-18/coursec/1/">Budowanie podstaw</a><br><small>Nowe i nierozwiązane problemy są często dość trudne. Jeśli chcemy mieć jakąkolwiek szansę na zrobienie czegoś kreatywnego, użytecznego i mądrego, musimy być gotowi do zaatakowania trudnych problemów, nawet jeśli oznacza to porażkę kilka razy, zanim nam się uda. Podczas tej lekcji uczniowie będą budować strukturę z popularnych materiałów. Konstrukcja zostanie przetestowana pod kątem zdolności do trzymania podręcznika przez ponad dziesięć sekund. Większość uczniów nie zrozumie tego dobrze za pierwszym razem, ale ważne jest, aby starali się i próbowali dalej.</td> <td>{{ curriculum/unplugged/archive_eleven_video_thumbnail }}</td>
+   </tr>
+   <tr>
+  <td><a href="https://curriculum.code.org/csf-18/coursea/2/">Stevie i wielki projekt</a><br><small>Gdy uczniowie napotkają barierę odpowiadając na pytanie lub pracując nad projektem, tak łatwo jest im się frustrować i rezygnować. Ta lekcja wprowadzi uczniów w ideę, że frustracja może być ważną częścią nauki. Tutaj frustracja jest przedstawiana jako krok w procesie twórczym, a nie oznaka porażki. Tę lekcję można przeprowadzić w ciągu jednej lub dwóch sesji klasowych. Jeśli masz więcej czasu, nie krępuj się narysować fazy budowania i rewizji aktywności Marble Run.</td> <td>{{ curriculum/unplugged/archive_twelve_video_thumbnail }}</td>
+   </tr>
+      <th id=t07>Abstrakcja</th>
+     <td><a href="https://code.org/curriculum/course4/5/Teacher">Mad Glibs</a><br><small>Abstrakcja jest jedną z najważniejszych umiejętności rozumowania i rozumienia w informatyce. Upraszcza problemy i zapobiega niepotrzebnym powtórzeniom. Dobry programista używa abstrakcji prawie za każdym razem, gdy tworzy program. Ta aktywność sprawi, że Twoi uczniowie przeanalizują historie pod kątem różnic, aby mogli je wyabstrahować. Those abstracted stories become templates for fun and crazy new ones.</td> <td><a href="https://youtu.be/TctGRrUdkcc">Lesson Video</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Activity5-MadGlibs.pdf">Activity Answer Key</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Assessment5-MadGlibs.pdf">Assessment Answer Key </a></td>
+  </tr>
+<tr>
+   <th id=t07>Variables</th>
+​     <td><a href="https://curriculum.code.org/csf-20/coursef/7/">Envelope Variables</a><br><i>*Supplies: Envelopes (1-4/group of 2-4)</i><br><small>Variables are used as placeholders for values such as numbers or words. Zmienne umożliwiają dużą swobodę w programowaniu. Zamiast wielokrotnie wpisywać frazę lub zapamiętywać różne liczby, informatycy używają zmiennych, aby się do nich odwoływać. Ta lekcja pomaga wyjaśnić, czym są zmienne i jak możemy ich używać na wiele różnych sposobów. Pojęcie zmiennych nie jest łatwym do zrozumienia pojęciem, dlatego zalecamy pozostawienie dużo czasu na dyskusję pod koniec lekcji.</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
+</tr>
+</table>
+
+
+<p style="clear:both"></p>
+

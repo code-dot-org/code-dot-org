@@ -2,7 +2,9 @@
   "func": "includes",
   "category": "Variables",
   "paletteParams": [
-    "searchValue"
+    {
+      "name": "searchValue"
+    }
   ],
   "params": [
     "\"World\""

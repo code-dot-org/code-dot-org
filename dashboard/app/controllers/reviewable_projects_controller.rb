@@ -75,7 +75,7 @@ class ReviewableProjectsController < ApplicationController
       script_id: params[:script_id]
     ).map(&:user)
 
-    return render json: peers_ready_for_review.pluck(:id, :name)
+    return render json: peers_ready_for_review.map {|user| {id: user.id, name: user.name}}
   end
 
   def decrypt_channel_id

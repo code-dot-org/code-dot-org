@@ -22,4 +22,15 @@ class ReviewableProject < ApplicationRecord
   def self.user_can_mark_project_reviewable?(project_owner, user)
     project_owner == user && project_owner.sections_as_student.all?(&:code_review_enabled?)
   end
+
+  def self.project_reviewable?(storage_app_id, user_id, level_id, script_id)
+    reviewable_projects = ReviewableProject.where(storage_app_id: storage_app_id, user_id: user_id)
+    if level_id
+      reviewable_projects = reviewable_projects.where(level_id: level_id)
+    end
+    if script_id
+      reviewable_projects = reviewable_projects.where(script_id: script_id)
+    end
+    reviewable_projects.any?
+  end
 end

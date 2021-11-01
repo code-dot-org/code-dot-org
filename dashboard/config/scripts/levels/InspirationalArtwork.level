@@ -79,7 +79,6 @@
                           </value>
                           <next>
                             <block type="controls_for_counter" inline="true">
-                              <mutation counter="counter"/>
                               <value name="FROM">
                                 <block type="math_number">
                                   <title name="NUM">2</title>
@@ -286,7 +285,6 @@
               <title name="TIMES">20</title>
               <statement name="DO">
                 <block type="controls_for_counter" inline="true">
-                  <mutation counter="counter"/>
                   <value name="FROM">
                     <block type="math_number">
                       <title name="NUM">12</title>

@@ -15,7 +15,7 @@ import {
   updateLessonGroupField
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import LessonToken from '@cdo/apps/lib/levelbuilder/unit-editor/LessonToken';
-import {lessonGroupShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {lessonGroupShape} from './shapes';
 import CloneLessonDialog from '@cdo/apps/lib/levelbuilder/unit-editor/CloneLessonDialog';
 import RemoveLessonDialog from '@cdo/apps/lib/levelbuilder/unit-editor/RemoveLessonDialog';
 import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';

@@ -7,7 +7,7 @@ ActiveRecord::Base.transaction do
   errors = []
   puts "Backfilling :pay_fee question changes..."
 
-  Pd::Application::PrincipalApproval1920Application.find_each do |application|
+  Pd::Application::PrincipalApprovalApplication.find_each do |application|
     print '.'
     pay_fee = application.form_data_hash["payFee"]
 

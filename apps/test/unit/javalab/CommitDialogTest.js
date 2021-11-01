@@ -4,10 +4,8 @@ import {shallow, mount} from 'enzyme';
 import sinon from 'sinon';
 import i18n from '@cdo/javalab/locale';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
-import {
-  UnconnectedCommitDialog as CommitDialog,
-  CommitDialogFile
-} from '@cdo/apps/javalab/CommitDialog';
+import {UnconnectedCommitDialog as CommitDialog} from '@cdo/apps/javalab/CommitDialog';
+import CommitDialogFileRow from '@cdo/apps/javalab/CommitDialogFileRow';
 
 describe('CommitDialog test', () => {
   let defaultProps,
@@ -64,7 +62,7 @@ describe('CommitDialog test', () => {
     const wrapper = mount(
       <CommitDialog {...defaultProps} files={['backpackFile.java']} />
     );
-    const file = wrapper.find(CommitDialogFile).first();
+    const file = wrapper.find(CommitDialogFileRow).first();
 
     expect(file.text()).to.not.contain(i18n.backpackFileNameConflictWarning());
     file
@@ -78,7 +76,7 @@ describe('CommitDialog test', () => {
     const wrapper = mount(
       <CommitDialog {...defaultProps} files={['fileNotInBackpack.java']} />
     );
-    const file = wrapper.find(CommitDialogFile).first();
+    const file = wrapper.find(CommitDialogFileRow).first();
 
     file
       .find('input[type="checkbox"]')

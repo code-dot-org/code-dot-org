@@ -47,6 +47,7 @@ export default class CourseOverviewTopRow extends Component {
             sections={sectionsForDropdown}
             showAssignButton={showAssignButton}
             courseId={id}
+            buttonLocationAnalytics={'course-overview-top'}
           />
         )}
         {!isTeacher && studentResources && studentResources.length > 0 && (

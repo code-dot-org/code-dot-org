@@ -26,14 +26,7 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     /** @type {Blockly.Trashcan} */
     this.trashcan = new Blockly.Trashcan(this);
     var svgTrashcan = this.trashcan.createDom();
-    this.flyout_.svgGroup_.appendChild(svgTrashcan);
-    this.pluginManager_.addPlugin({
-      id: 'trashcan',
-      plugin: this.trashcan,
-      weight: 1,
-      types: [Blockly.PluginManager.Type.POSITIONABLE]
-    });
-
+    this.flyout_?.svgGroup_?.appendChild(svgTrashcan);
     this.hideTrashcan();
   }
   addUnusedBlocksHelpListener(helpClickFunc) {

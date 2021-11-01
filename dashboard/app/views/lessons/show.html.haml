@@ -13,7 +13,7 @@
     %strong= @lesson.name
     %ul
       - if Rails.application.config.levelbuilder_mode
-        %li= link_to "Edit", script_lesson_edit_path(@lesson.script, @lesson)
+        %li= link_to "Edit", @lesson.get_uncached_edit_path
       - else
         %li= link_to 'Edit on levelbuilder', URI.join("https://levelbuilder-studio.code.org/", script_lesson_path(@lesson.script, @lesson)).to_s
 

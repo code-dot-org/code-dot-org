@@ -150,7 +150,7 @@ class InstructionsCsfMiddleCol extends React.Component {
             ref={c => {
               this.instructions = c;
             }}
-            longInstructions={markdown}
+            instructions={markdown}
             onResize={this.props.adjustMaxNeededHeight}
             inputOutputTable={
               this.props.collapsed ? undefined : this.props.inputOutputTable

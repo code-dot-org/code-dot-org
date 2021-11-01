@@ -63,7 +63,7 @@ class LessonLockDialog extends React.Component {
       this.props.selectedSectionId,
       '/assessments'
     );
-    window.open(assessmentsUrl, '_blank');
+    window.open(assessmentsUrl, '_blank', 'noopener,noreferrer');
   };
 
   handleRadioChange = event => {

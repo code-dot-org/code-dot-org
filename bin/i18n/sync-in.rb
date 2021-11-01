@@ -330,7 +330,7 @@ def localize_animation_library
   spritelab_animation_source_file = "#{I18N_SOURCE_DIR}/animations/spritelab_animation_library.json"
   FileUtils.mkdir_p(File.dirname(spritelab_animation_source_file))
   File.open(spritelab_animation_source_file, "w") do |file|
-    animation_strings = ManifestBuilder.new({spritelab: true, silent: true}).get_animation_strings
+    animation_strings = ManifestBuilder.new({spritelab: true, quiet: true}).get_animation_strings
     file.write(JSON.pretty_generate(animation_strings))
   end
 end
@@ -446,7 +446,9 @@ def localize_markdown_content
     break.md.partial
     csforgood.md
     curriculum/unplugged.md.partial
+    educate/csc.md.partial
     educate/curriculum/csf-transition-guide.md
+    helloworld.md.partial
     hourofcode/artist.md.partial
     hourofcode/flappy.md.partial
     hourofcode/frozen.md.partial
@@ -457,6 +459,7 @@ def localize_markdown_content
     hourofcode/starwars.md.partial
     hourofcode/unplugged-conditionals-with-cards.md.partial
     international/about.md.partial
+    poetry.md.partial
   ]
   markdown_files_to_localize.each do |path|
     original_path = File.join('pegasus/sites.v3/code.org/public', path)

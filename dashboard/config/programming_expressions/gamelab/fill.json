@@ -2,7 +2,9 @@
   "func": "fill",
   "category": "Drawing",
   "paletteParams": [
-    "color"
+    {
+      "name": "color"
+    }
   ],
   "params": [
     "\"yellow\""

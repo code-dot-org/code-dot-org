@@ -14,7 +14,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Roll\r\n\r\nThis program should display \"Left\" or \"Right\" on the screen, depending on which way the board is tilted.\r\n\r\n# Do this\r\n* Use the \"roll\" property of the accelerometer to determine whether the board is tilted to the left or right.\r\n* Use a conditional to change the text for the \"direction\" element to be either \"Left\" or \"Right\", depending on the board's orientation.",
+    "long_instructions": "# Roll\r\n\r\nThis program should display \"Left\" or \"Right\" on the screen, depending on which way the board is tilted.\r\n\r\n# Do this\r\n* Use the \"roll\" property of the accelerometer to determine whether the board is tilted to the left or right.\r\n* Use an `if-statement` to change the text for the \"direction\" element to be either \"Left\" or \"Right\", depending on the board's orientation.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -60,11 +60,11 @@
     "map_reference": "/docs/concepts/maker-toolkit/the-accelerometer/",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
-    "preload_asset_list": null,
     "encrypted": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null
   },
   "game_id": 41,
   "published": true,
@@ -72,7 +72,7 @@
   "level_num": "custom",
   "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-01T22:42:47.205+00:00\",\"changed\":[\"cloned from \\\"CSD U6 directional LEDs roll_2021\\\"\"],\"cloned_from\":\"CSD U6 directional LEDs roll_2021\"},{\"changed_at\":\"2021-09-01 22:42:55 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-01T22:42:47.205+00:00\",\"changed\":[\"cloned from \\\"CSD U6 directional LEDs roll_2021\\\"\"],\"cloned_from\":\"CSD U6 directional LEDs roll_2021\"},{\"changed_at\":\"2021-09-01 22:42:55 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-20 16:33:16 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

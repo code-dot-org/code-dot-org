@@ -298,6 +298,7 @@ Dashboard::Application.routes.draw do
 
   resources :lessons, only: [:edit, :update] do
     member do
+      get :show, to: 'lessons#show_by_id'
       post :clone
     end
   end
@@ -314,7 +315,7 @@ Dashboard::Application.routes.draw do
     end
   end
 
-  resources :programming_expressions, only: [] do
+  resources :programming_expressions, only: [:new, :create, :edit, :update, :show] do
     collection do
       get :search
     end
@@ -579,6 +580,7 @@ Dashboard::Application.routes.draw do
           get :cohort_view
           get :search
           get :fit_cohort
+          get :applications_closed
         end
       end
 
@@ -599,6 +601,7 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
   get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
+  get '/dashboardapi/v1/pd/applications/applications_closed', to: 'api/v1/pd/applications#applications_closed'
   post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
   post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 
@@ -719,8 +722,8 @@ Dashboard::Application.routes.draw do
   get '/api/teacher_panel_progress/:section_id', to: 'api#teacher_panel_progress'
   get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
-  get '/api/user_progress/:script/:lesson_position/:level_position', to: 'api#user_progress_for_lesson', as: 'user_progress_for_lesson'
-  get '/api/user_progress/:script/:lesson_position/:level_position/:level', to: 'api#user_progress_for_lesson', as: 'user_progress_for_lesson_and_level'
+  get '/api/user_app_options/:script/:lesson_position/:level_position/:level', to: 'api#user_app_options', as: 'user_app_options'
+  get '/api/example_solutions/:script_level_id/:level_id', to: 'api#example_solutions'
   put '/api/firehose_unreachable', to: 'api#firehose_unreachable'
   namespace :api do
     api_methods.each do |action|
@@ -748,6 +751,7 @@ Dashboard::Application.routes.draw do
       get 'users/:user_id/using_text_mode', to: 'users#get_using_text_mode'
       get 'users/:user_id/display_theme', to: 'users#get_display_theme'
       get 'users/:user_id/contact_details', to: 'users#get_contact_details'
+      get 'users/current', to: 'users#current'
       get 'users/:user_id/school_name', to: 'users#get_school_name'
       get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
 

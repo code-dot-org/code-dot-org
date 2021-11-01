@@ -5,14 +5,15 @@ import {Factory} from 'rosie';
 import './CodeReviewTestHelper';
 import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
-import Comment from '@cdo/apps/templates/instructions/codeReview/Comment';
+import {UnconnectedComment as Comment} from '@cdo/apps/templates/instructions/codeReview/Comment';
 
 const DEFAULT_COMMENT = Factory.build('CodeReviewComment');
 const DEFAULT_PROPS = {
   comment: DEFAULT_COMMENT,
   onResolveStateToggle: () => {},
   onDelete: () => {},
-  viewAsCodeReviewer: false
+  viewAsCodeReviewer: false,
+  viewAsTeacher: false
 };
 
 describe('Code Review Comment', () => {
@@ -36,7 +37,7 @@ describe('Code Review Comment', () => {
     const wrapper = renderWrapper(overrideProps);
 
     const commentBodyStyle = wrapper
-      .find('#code-review-comment-body')
+      .find('.code-review-comment-body')
       .first()
       .props().style;
 
@@ -62,13 +63,21 @@ describe('Code Review Comment', () => {
     });
   });
 
-  it('displays green check mark for resolved comment', () => {
+  it('displays check mark for resolved comment', () => {
     const wrapper = renderWrapper({isResolved: true});
-    expect(wrapper.find('.fa.fa-check')).to.have.lengthOf(1);
+    expect(wrapper.find('.fa-check-circle')).to.have.lengthOf(1);
   });
 
   it('shows ellipsis and comment options when viewing not as code reviewer', () => {
     const wrapper = renderWrapper();
+    expect(wrapper.find('.fa.fa-ellipsis-h')).to.have.lengthOf(1);
+  });
+
+  it('shows ellipsis and comment options when viewing as teacher', () => {
+    const wrapper = renderWrapper(
+      {},
+      {viewAsCodeReviewer: true, viewAsTeacher: true}
+    );
     expect(wrapper.find('.fa.fa-ellipsis-h')).to.have.lengthOf(1);
   });
 

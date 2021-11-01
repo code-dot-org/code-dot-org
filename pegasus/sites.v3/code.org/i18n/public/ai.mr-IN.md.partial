@@ -1,0 +1,117 @@
+---
+title: कृत्रिम बुद्धिमत्तेबद्दल (AI) शिका
+video_player: true
+theme: responsive
+style_min: true
+social:
+  og:title: Learn about Artificial Intelligence (AI)
+  og:description: Join us to explore AI in a new video series, train AI for Oceans in 25+ languages, discuss ethics, and more!
+  og:image: https://code.org/images/ai/exploring-ai.png
+  og:image:width: 1200
+  og:image:height: 630
+  twitter:image:src: https://code.org/images/ai/exploring-ai.png
+  og:video: ''
+  og:video:width: ''
+  og:video:height: ''
+  og:video:type: ''
+---
+
+{{ ai_header_stylesheets_links }}
+
+# कृत्रिम बुद्धिमत्तेबद्दल (AI) शिका
+<div style="background: url(/images/ai/ai-bg.png) top left no-repeat #00adbc;padding:10px 20px 10px; color:#ffffff; margin-bottom:15px">
+<div class="col-40" style="margin-bottom:15px">
+<h2 style="color:#ffffff; margin-top:25px">NEW AI and Machine Learning Module</h2><p>Our new curriculum module focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts through a number of online and unplugged activities and full-group discussions.</p><a  href="#about-aimodule"><button>Learn more</button></a>&nbsp;&nbsp;<a class="linktag" id="aimodule" href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" target="_blank"><button>Explore the module</button></a></div>
+<div class="col-60" style="padding: 30px 10px 0 20px;margin-bottom:15px" ><img src="/images/ai/ailab.gif" style="max-width: 100%" alt="AI Lab"/></div>
+<div class="clear"></div>
+</div>
+
+AI आणि मशीन लर्निंगचा परिणाम आपल्या संपूर्ण जगावर झालेला आहे, त्यामुळे आपण कसे जगतो आणि कसे काम करतो, यातसुद्धा बदल झाला आहे. त्यामुळे ज्याचे महत्त्व सातत्याने वाढत आहे असे हे तंत्रज्ञान समजून घेणे आपल्या सर्वांसाठी महत्त्वाचे आहे. यामध्ये केवळ ते कसे डिझाईन केले गेले आहे एवढेच समाविष्ट नाही तर त्याचा सामाजिक आणि नैतिक परिणामसुद्धा समाविष्ट आहे.
+
+नवीन व्हिडिओ मालिकेद्वारे AI शिकण्यासाठी आमच्यामध्ये सामील व्हा, 25+ भाषांमध्ये AIला महासागरांसाठी ट्रेन करा, नैतिकतेची चर्चा आणि बरेच काही करा!
+
+{{ ai_20px_margin }}
+
+{{ ai_for_oceans_tile }}
+
+{{ how_ai_works_tile }}
+
+{{ ai_and_ethics_tile }}
+
+{{ ai_20px_margin }}
+
+{{ ai_microsoft_block }}
+
+{{ ai_videos_link }}
+
+<a id="about-aimodule"></a>
+
+## NEW AI and Machine Learning Module
+<div>
+<div class="col-50">
+<p>The AI and Machine Learning Module is roughly a five week curriculum module that can be taught as a <a href="https://studio.code.org/s/aiml-2021?viewAs=Teacher" >standalone module</a> or as an optional <a href="https://studio.code.org/s/csd7-2021">unit in CS Discoveries</a>. It focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts</p><p>Because machine learning depends on large sets of data, the new unit includes real life datasets on healthcare, demographics, and more to engage students while exploring questions like, “What is a problem Machine Learning can help solve?” “How can AI help society?” “Who is benefiting from AI?” “Who is being harmed?” “Who is involved?” “Who is missing?”  </p>
+<p>Ethical considerations will be at the forefront of these discussions, with frequent discussion points and lessons around the impacts of these technologies. This will help students develop a holistic, thoughtful understanding of these technologies while they learn the technical underpinnings of how the technologies work.</p>
+</div>
+<div class="col-50" style="padding: 0 0 15px 25px"><p  style="text-align:right;"><img src="/images/ai/ai-modelcard.png" style="max-width: 100%"/></p><a class="linktag" id="aimodule2" href="https://studio.code.org/s/aiml-2021" target="_blank"><button>Explore the module</button></a></div>
+<div class="clear"></div>
+</div>
+
+## How AI Works
+
+मायक्रोसॉफ्टचे सीईओ सत्या नाडेला यांची प्रस्तावना असलेली ही छोट्या व्हिडिओजची मालिका तुम्हाला कृत्रिम बुद्धिमत्ता कशी काम करते आणि तिचे काय महत्त्व आहे, याची ओळख करून देईल. न्युरल नेटवर्क्स किंवा AI कसे काम करते याबद्दल जाणून घ्या आणि अल्गोरिदममधील पूर्वग्रह आणि AI मधील निर्णय प्रक्रियेची नीतीमत्ता यासारख्या समस्यांचा अभ्यास करा.
+
+{{ ai_vid_intro }}
+{{ ai_vid_mlintro }}
+
+{{ ai_clear_div }}
+
+{{ ai_vid_trainingdata }}
+{{ ai_vid_neuralnetworks }}
+
+{{ ai_clear_div }}
+
+{{ ai_vid_computervision }}
+{{ ai_vid_ethics1 }}
+
+{{ ai_clear_div }}
+
+{{ ai_vid_ethics2 }}
+
+{{ ai_clear_div }}
+
+{{ ai_videos_panel }}
+
+
+
+### इतर संस्थांचे AI बद्दलचे व्हिडीओज:
+- [AI पाहणे: दृश्य जग अधिक अॅक्सेसिबल बनवणे](https://youtu.be/DybczED-GKE) (3:27)
+- [अल्गोरीदम्समधील पूर्वग्रहांशी लढा देणे](https://youtu.be/UG_X_7g63rY) (8:44)
+- [मशीन लर्निंग आणि मानवी पूर्वग्रह](https://youtu.be/59bMh59JQDo)(2:33)
+- [AI ची नैतिकता](https://youtu.be/GboOXAjGevA) (8:03)
+- [मशीन लर्निंग: मोठ्या, लहान आणि कठीण समस्या सोडवणे](https://youtu.be/_rdINNHLYaQ) (5:19)
+- [तुमच्या फोनला कसे कळते की हा कुत्रा आहे?](https://youtu.be/bHvf7Tagt18) (5:57)
+- [AI म्हणजे काय?](https://youtu.be/mJeNghZXtMo) (6:14)
+- [Machine Learning Explained in 5 Minutes](https://youtu.be/3bJ7RChxMWQ) (5:14)
+- [Types of Machine Learning](https://youtu.be/wy-m6sd1BOA) (6:37)
+- [What is Machine Learning and How does it Work?](https://youtu.be/xr5LeWKbVnY) (3:51)
+
+
+## More resources
+
+{{ ai_resource_tiles }}
+
+## Activities Powered by AI and ML
+{{ ai_activities_table }}
+
+## Teach and Learn about AI
+{{ ai_teach_and_learn_table }}
+
+
+
+### महासागरांसाठी AI: पडद्यामागे
+
+पातळ्या 2-4 [टेन्सरफ्लो](https://www.tensorflow.org/)[मोबाईलनेट](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md) प्रोजेक्टने पुरवलेले आधीच ट्रेन केलेले मॉडेल वापरतात. मोबाईलनेट मॉडेल हे[ कन्व्होल्युशनल न्युरल नेटवर्क](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)असून ते "फुगा" किंवा "स्ट्रॉबेरी" अशा शब्दांनी हँड अनोटेट केलेल्या 1 कोटी 40 लाखांहून जास्त इमेजेसच्या [इमेजनेट](http://www.image-net.org/) या डेटासेटवर ट्रेन केलेले आहे. या कृतीमध्ये विद्यार्थ्याने निर्माण केलेला लेबल असलेला ट्रेनिंग डेटा वापरून हे मॉडेल कस्टमाईझ करण्यासाठी, आम्ही [ट्रान्सफर लर्निंग](https://en.wikipedia.org/wiki/Transfer_learning) हे तंत्र वापरतो. ट्रेनिंग डेटासेटमधली प्रत्येक इमेज, तिला लागू असण्याची सर्वांत जास्त शक्यता असलेल्या अनोटेशन्सची यादी मिळवण्यासाठी मोबाईलनेटला पिक्सेल्स म्हणून फीड केली जाते. नंतर, नवीन इमेजसाठी, आम्ही ती मोबाईलनेटला फीड करतो आणि मिळणाऱ्या अनोटेशन्सच्या यादीची ट्रेनिंग डेटासेटसाठी मिळणाऱ्या यादीशी तुलना करतो. आम्ही नवीन इमेजचे ट्रेनिंग सेटमध्ये सर्वांत जास्त सारखे निकाल देणाऱ्या लेबलनेच वर्गीकरण करतो (उदा. “मासा” किंवा “मासा नाही”).
+
+पातळ्या 6-8 \[सपोर्ट-व्हेक्टर मशीन\](https://en.wikipedia.org/wiki/Support-vector_machine) (SVM) वापरतात. आम्ही माशाच्या प्रत्येक अवयवाकडे बघतो (उदा. डोळे, तोंड, शरीर) आणि प्रत्येक माशासाठी या अवयवांसाठी सगळा मेटाडेटा (उदा. दातांची संख्या, शरीराचा आकार) संख्यांच्या व्हेक्टरमध्ये एकत्र करतो. SVM ला ट्रेन करण्यासाठी आम्ही हे व्हेक्टर्स वापरतो. ट्रेनिंग डेटानुसार, SVM सर्व संभाव्य माशांच्या "स्पेस"चे दोन भाग करते, जे आपण शिकण्याचा प्रयत्न करत असलेल्या वर्गांशी संबंधित असतात (उदा. "निळा" किंवा "निळा नाही").
+
+[[परत वर जा]](#top)

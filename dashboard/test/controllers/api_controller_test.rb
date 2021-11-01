@@ -79,6 +79,23 @@ class ApiControllerTest < ActionController::TestCase
     # UserLevel.create!(level_id: level.id, user_id: student.id, script_id: script.id, level_source: level_source)
   end
 
+  test "example_solutions should call ScriptLevel get_example_solution" do
+    STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    teacher = create :authorized_teacher
+    sign_in teacher
+
+    section = create :section
+    level = create :dance, :with_example_solutions
+    script_level = create :script_level, levels: [level]
+
+    get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
+
+    assert_response :success
+    assert_equal '["https://studio.code.org/projects/dance/example-1/view","https://studio.code.org/projects/dance/example-2/view"]', @response.body
+  end
+
   test "should get text_responses for section with default script" do
     get :section_text_responses, params: {section_id: @section.id}
     assert_response :success
@@ -800,7 +817,7 @@ class ApiControllerTest < ActionController::TestCase
       level: level, level_source: level_source
     create :activity, user: user, level: level, level_source: level_source
 
-    get :user_progress_for_lesson, params: {
+    get :user_app_options, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -828,6 +845,85 @@ class ApiControllerTest < ActionController::TestCase
     )
   end
 
+  test "user_app_options should return channel when param get_channel_id is true" do
+    script = create(:script, :with_levels, levels_count: 1)
+    level = script.script_levels.first.level
+
+    user = create :user, total_lines: 2
+    sign_in user
+
+    channel_token = create :channel_token, level: level, script_id: script.id, storage_id: storage_id_for_user_id(user.id)
+    expected_channel = channel_token.channel
+
+    get :user_app_options, params: {
+      script: script.name,
+      lesson_position: 1,
+      level_position: 1,
+      get_channel_id: true
+    }
+
+    body = JSON.parse(response.body)
+    assert_equal expected_channel, body['channel']
+  end
+
+  test "user_app_options should not return channel when param get_channel_id is false" do
+    script = create(:script, :with_levels, levels_count: 1)
+    level = script.script_levels.first.level
+
+    user = create :user, total_lines: 2
+    sign_in user
+
+    create :channel_token, level: level, script_id: script.id, storage_id: storage_id_for_user_id(user.id)
+
+    get :user_app_options, params: {
+      script: script.name,
+      lesson_position: 1,
+      level_position: 1,
+      get_channel_id: false
+    }
+
+    body = JSON.parse(response.body)
+    assert_nil body['channel']
+    assert_nil body['reduceChannelUpdates']
+  end
+
+  test "user_app_options should normally return reduceChannelUpdates false" do
+    script = create(:script, :with_levels, levels_count: 1)
+
+    user = create :user
+    sign_in user
+
+    get :user_app_options, params: {
+      script: script.name,
+      lesson_position: 1,
+      level_position: 1,
+      get_channel_id: true
+    }
+
+    body = JSON.parse(response.body)
+    assert_equal false, body['reduceChannelUpdates']
+  end
+
+  test "user_app_options should return reduceChannelUpdates true in emergency mode" do
+    script = create(:script, :with_levels, levels_count: 1)
+
+    user = create :user
+    sign_in user
+
+    # Mimic Gatekeeper setting that's set in emergency mode
+    Gatekeeper.set('updateChannelOnSave', where: {script_name: script.name}, value: false)
+
+    get :user_app_options, params: {
+      script: script.name,
+      lesson_position: 1,
+      level_position: 1,
+      get_channel_id: true
+    }
+
+    body = JSON.parse(response.body)
+    assert_equal true, body['reduceChannelUpdates']
+  end
+
   test "should slog the contained level id when present" do
     slogger = FakeSlogger.new
     CDO.set_slogger_for_test(slogger)
@@ -841,7 +937,7 @@ class ApiControllerTest < ActionController::TestCase
     user = create :user
     sign_in user
 
-    get :user_progress_for_lesson, params: {
+    get :user_app_options, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -860,7 +956,7 @@ class ApiControllerTest < ActionController::TestCase
     user = create :user
     sign_out user
 
-    get :user_progress_for_lesson, params: {
+    get :user_app_options, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -888,7 +984,7 @@ class ApiControllerTest < ActionController::TestCase
     young_student = create :young_student
     sign_in young_student
 
-    get :user_progress_for_lesson, params: {
+    get :user_app_options, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -905,7 +1001,7 @@ class ApiControllerTest < ActionController::TestCase
     user = create :user, total_lines: 2
     sign_in user
 
-    get :user_progress_for_lesson, params: {
+    get :user_app_options, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1
@@ -925,7 +1021,7 @@ class ApiControllerTest < ActionController::TestCase
     create :user_level, user: @student_1, script: script, level: level1a, level_source: level_source
     create :activity, user: @student_1, level: level1a, level_source: level_source
 
-    get :user_progress_for_lesson, params: {
+    get :user_app_options, params: {
       script: script.name,
       lesson_position: 1,
       level_position: 1,
@@ -1217,10 +1313,6 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
-  # test "" do
-
-  # end
-
   test "script_structure returns summarized script" do
     overview_path = 'http://script.overview/path'
     CDO.stubs(:studio_url).returns(overview_path)
@@ -1240,7 +1332,7 @@ class ApiControllerTest < ActionController::TestCase
     sign_out :user
     overview_path = 'http://script.overview/path'
     CDO.stubs(:studio_url).returns(overview_path)
-    script = Script.find_by_name('algebra')
+    script = create(:script, :with_levels, levels_count: 5)
 
     get :script_structure, params: {script: script.id}
     assert_response :success

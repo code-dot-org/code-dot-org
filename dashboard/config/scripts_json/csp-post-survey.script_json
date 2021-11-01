@@ -8,8 +8,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:08 UTC",
-    "published_state": "preview",
+    "serialized_at": "2021-10-25 22:53:26 UTC",
+    "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp-post-survey"
     }
@@ -31,7 +32,7 @@
   "lessons": [
     {
       "key": "CSP post-course survey",
-      "name": "CSP post-course survey",
+      "name": "CSP Student Post-Course Survey ('17-'18)",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,

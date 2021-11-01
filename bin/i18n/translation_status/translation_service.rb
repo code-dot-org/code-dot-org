@@ -8,10 +8,25 @@ class TranslationService
     # Normally we fallback to en-US, but we want to disable this so we detect missing strings.
     I18n.fallbacks.defaults = []
     I18n.backend.reload!
+    store_frontend_translations
   end
 
   # Returns true if a translation exists for a given key, otherwise returns false.
   def translated?(locale, key)
     I18n.exists?(key, locale: locale)
+  end
+
+  # Aggregate all blockly-mooc and blockly-core translation JSON files to be loaded into i18n
+  def store_frontend_translations
+    locales_dir = Rails.root.join("../i18n/locales")
+    locales = Dir.glob(locales_dir.join("*-*")).map {|dir| File.basename(dir)}
+    locales.each do |locale|
+      translations = {}
+      Dir.glob(locales_dir.join("#{locale}/blockly-*/*.json")).each do |loc_file|
+        name = File.basename(loc_file, ".*")
+        translations[name] = JSON.load(File.read(loc_file)).to_h
+      end
+      I18n.backend.store_translations(locale, translations)
+    end
   end
 end

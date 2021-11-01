@@ -4,21 +4,22 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "version_year": "2017",
-      "is_stable": true,
       "curriculum_path": "https://docs.google.com/document/d/1K5BE3odBGkcPIOrV38fOqQZD59v30_d_D530Uh8LFDY/edit",
-      "project_sharing": true,
       "family_name": "csppostap",
+      "has_lesson_plan": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_stable": true,
+      "project_sharing": true,
+      "student_detail_progress_view": true,
       "tts": true,
-      "hideable_lessons": true
+      "version_year": "2017"
     },
     "new_name": "csppostap-2017",
     "family_name": "csppostap",
-    "serialized_at": "2021-08-03 22:47:05 UTC",
+    "serialized_at": "2021-10-25 22:53:23 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csppostap-2017"
     }

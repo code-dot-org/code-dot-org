@@ -78,24 +78,35 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal 22, JSON.parse(@response.body)['numPages']
   end
 
+  test "should get filtered levels with name matching level key for blockly levels" do
+    game = Game.find_by_name("CustomMaze")
+    create(:level, name: 'blockly', level_num: 'special_blockly_level', game_id: game.id, type: "Maze")
+
+    get :get_filtered_levels, params: {name: 'blockly:CustomMaze:special_blockly_level'}
+    assert_equal 'blockly:CustomMaze:special_blockly_level', JSON.parse(@response.body)['levels'][0]["name"]
+  end
+
   test "should get filtered levels with level_type" do
+    existing_levels_count = Odometer.all.count
+    level = create(:odometer)
     get :get_filtered_levels, params: {page: 1, level_type: 'Odometer'}
-    assert_equal 1, JSON.parse(@response.body)['levels'].length
-    assert_equal "Odometer", JSON.parse(@response.body)['levels'][0]["name"]
+    assert_equal existing_levels_count + 1, JSON.parse(@response.body)['levels'].length
+    assert_equal level.name, JSON.parse(@response.body)['levels'][0]["name"]
     assert_equal 1, JSON.parse(@response.body)['numPages']
   end
 
   test "should get filtered levels with script_id" do
-    get :get_filtered_levels, params: {page: 1, script_id: 2}
+    script = create(:script, :with_levels, levels_count: 7)
+    get :get_filtered_levels, params: {page: 1, script_id: script.id}
     assert_equal 7, JSON.parse(@response.body)['levels'].length
-    assert_equal 3, JSON.parse(@response.body)['numPages']
+    assert_equal 1, JSON.parse(@response.body)['numPages']
   end
 
   test "should get filtered levels with owner_id" do
     Level.where(user_id: @levelbuilder.id).destroy_all
-    level = create :level, user: @levelbuilder
+    level = create :applab, user: @levelbuilder
     get :get_filtered_levels, params: {page: 1, owner_id: @levelbuilder.id}
-    assert_equal level[:name], JSON.parse(@response.body)['levels'][0]["name"]
+    assert_equal level.name, JSON.parse(@response.body)['levels'][0]["name"]
     assert_equal 1, JSON.parse(@response.body)['numPages']
   end
 

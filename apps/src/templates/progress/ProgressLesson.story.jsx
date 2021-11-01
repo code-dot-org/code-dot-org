@@ -25,7 +25,8 @@ const defaultProps = {
   lessonIsVisible: () => true,
   lessonIsLockedForUser: () => false,
   lessonIsLockedForAllStudents: () => false,
-  lockableAuthorized: true
+  lockableAuthorized: true,
+  lockableAuthorizedLoaded: true
 };
 
 export default storybook => {

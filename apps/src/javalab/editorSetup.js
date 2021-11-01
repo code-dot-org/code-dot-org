@@ -10,7 +10,7 @@ import {history, historyKeymap} from '@codemirror/history';
 import {foldGutter, foldKeymap} from '@codemirror/fold';
 import {indentOnInput} from '@codemirror/language';
 import {lineNumbers} from '@codemirror/gutter';
-import {defaultKeymap, defaultTabBinding} from '@codemirror/commands';
+import {defaultKeymap, indentWithTab} from '@codemirror/commands';
 import {bracketMatching} from '@codemirror/matchbrackets';
 import {closeBrackets, closeBracketsKeymap} from '@codemirror/closebrackets';
 import {highlightSelectionMatches, searchKeymap} from '@codemirror/search';
@@ -42,9 +42,10 @@ const editorSetup = [
     ...historyKeymap,
     ...foldKeymap,
     ...commentKeymap,
-    defaultTabBinding
+    indentWithTab
   ]),
-  java()
+  java(),
+  EditorState.tabSize.of(2)
 ];
 
 export {editorSetup};

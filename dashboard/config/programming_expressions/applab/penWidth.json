@@ -2,7 +2,9 @@
   "func": "penWidth",
   "category": "Turtle",
   "paletteParams": [
-    "width"
+    {
+      "name": "width"
+    }
   ],
   "params": [
     "3"

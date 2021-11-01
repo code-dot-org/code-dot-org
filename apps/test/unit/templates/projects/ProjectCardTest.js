@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import ProjectCard from '@cdo/apps/templates/projects/ProjectCard';
 import msg from '@cdo/locale';
 

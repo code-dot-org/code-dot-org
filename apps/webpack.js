@@ -26,9 +26,7 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', 'ml-distance-euclidean'),
   path.resolve(__dirname, 'node_modules', '@codemirror'),
   path.resolve(__dirname, 'node_modules', 'style-mod'),
-  path.resolve(__dirname, 'node_modules', 'lezer-tree'),
-  path.resolve(__dirname, 'node_modules', 'lezer-java'),
-  path.resolve(__dirname, 'node_modules', 'lezer'),
+  path.resolve(__dirname, 'node_modules', '@lezer'),
   path.resolve(
     __dirname,
     'node_modules',
@@ -72,6 +70,13 @@ var baseConfig = {
         __dirname,
         'src',
         'javalab',
+        'locale-do-not-import.js'
+      ),
+      '@cdo/poetry/locale': path.resolve(
+        __dirname,
+        'src',
+        'p5lab',
+        'poetry',
         'locale-do-not-import.js'
       ),
       '@cdo/spritelab/locale': path.resolve(

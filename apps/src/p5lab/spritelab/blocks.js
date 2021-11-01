@@ -8,8 +8,9 @@ import {APP_HEIGHT, P5LabInterfaceMode} from '../constants';
 import {TOOLBOX_EDIT_MODE} from '../../constants';
 import {animationSourceUrl} from '../redux/animationList';
 import {changeInterfaceMode} from '../actions';
-import {Goal, showBackground} from '../redux/animationPicker';
+import {Goal, show, showBackground} from '../redux/animationPicker';
 import i18n from '@cdo/locale';
+import experiments from '@cdo/apps/util/experiments';
 import spritelabMsg from '@cdo/spritelab/locale';
 function animations(areBackgrounds) {
   const animationList = getStore().getState().animationList;
@@ -79,8 +80,8 @@ const customInputTypes = {
         `${inputConfig.label}(0, 0)`,
         `${inputConfig.name}_LABEL`
       );
-      const label =
-        currentInputRow.titleRow[currentInputRow.titleRow.length - 1];
+      const fieldRow = currentInputRow.getFieldRow();
+      const label = fieldRow[fieldRow.length - 1];
       const icon = document.createElementNS(SVG_NS, 'tspan');
       icon.style.fontFamily = 'FontAwesome';
       icon.textContent = '\uf276';
@@ -177,6 +178,17 @@ const customInputTypes = {
   costumePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       let buttons;
+      /*
+       * A/B/C experiment for costume tab:
+       * Treatment A: Clicking button opens the animation picker modal over the codespace
+       * Treatment B: Clicking button switches to the Costume Tab and opens the animation picker modal
+       * Original (No treatment): Clicking button switches to the Costume Tab (and does not open the modal)
+       *
+       * This user experiment will be conducted in November 2021. This code should be removed
+       * and the behavior should revert to the original behavior by November 11, 2021.
+       */
+      const isAEnabled = experiments.isEnabled(experiments.COSTUME_TAB_A);
+      const isBEnabled = experiments.isEnabled(experiments.COSTUME_TAB_B);
       if (
         getStore().getState().pageConstants &&
         getStore().getState().pageConstants.showAnimationMode
@@ -185,9 +197,18 @@ const customInputTypes = {
           {
             text: i18n.costumeMode(),
             action: () => {
-              getStore().dispatch(
-                changeInterfaceMode(P5LabInterfaceMode.ANIMATION)
-              );
+              if (isAEnabled) {
+                getStore().dispatch(show(Goal.NEW_ANIMATION, true));
+              } else if (isBEnabled) {
+                getStore().dispatch(
+                  changeInterfaceMode(P5LabInterfaceMode.ANIMATION)
+                );
+                getStore().dispatch(show(Goal.NEW_ANIMATION, true));
+              } else {
+                getStore().dispatch(
+                  changeInterfaceMode(P5LabInterfaceMode.ANIMATION)
+                );
+              }
             }
           }
         ];

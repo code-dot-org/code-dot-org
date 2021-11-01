@@ -42,6 +42,7 @@ class SectionProgress extends Component {
     setScriptId: PropTypes.func.isRequired,
     setLessonOfInterest: PropTypes.func.isRequired,
     isLoadingProgress: PropTypes.bool.isRequired,
+    isRefreshingProgress: PropTypes.bool,
     showStandardsIntroDialog: PropTypes.bool
   };
 
@@ -115,9 +116,11 @@ class SectionProgress extends Component {
       scriptId,
       scriptData,
       isLoadingProgress,
+      isRefreshingProgress,
       showStandardsIntroDialog
     } = this.props;
-    const levelDataInitialized = scriptData && !isLoadingProgress;
+    const levelDataInitialized =
+      scriptData && !isLoadingProgress && !isRefreshingProgress;
     const lessons = scriptData ? scriptData.lessons : [];
     const scriptWithStandardsSelected =
       levelDataInitialized && scriptData.hasStandards;
@@ -219,6 +222,7 @@ export default connect(
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentUnitData(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,
+    isRefreshingProgress: state.sectionProgress.isRefreshingProgress,
     showStandardsIntroDialog: !state.currentUser.hasSeenStandardsReportInfo
   }),
   dispatch => ({

@@ -8,11 +8,12 @@
     "csa5-pilot-facilitator"
   ],
   "published_state": "pilot",
+  "instruction_type": "teacher_led",
   "properties": {
     "family_name": "csa-pilot-facilitator",
-    "version_year": "2021",
+    "has_numbered_units": true,
     "pilot_experiment": "csa-pilot-facilitators",
-    "has_numbered_units": true
+    "version_year": "2021"
   },
   "resources": [
     {

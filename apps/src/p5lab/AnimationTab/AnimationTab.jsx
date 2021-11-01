@@ -11,6 +11,7 @@ import AnimationList from './AnimationList';
 import ResizablePanes from '@cdo/apps/templates/ResizablePanes';
 import PiskelEditor from './PiskelEditor';
 import * as shapes from '../shapes';
+import {P5LabType} from '@cdo/apps/p5lab/constants';
 
 /**
  * Root of the animation editor interface mode for GameLab
@@ -23,6 +24,7 @@ class AnimationTab extends React.Component {
     hideUploadOption: PropTypes.bool.isRequired,
     hideAnimationNames: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
+    labType: PropTypes.oneOf(Object.keys(P5LabType)).isRequired,
 
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -42,7 +44,7 @@ class AnimationTab extends React.Component {
           onChange={this.props.onColumnWidthsChange}
         >
           <div style={styles.animationsColumn}>
-            <P5LabVisualizationHeader />
+            <P5LabVisualizationHeader labType={this.props.labType} />
             <AnimationList hideBackgrounds={this.props.hideBackgrounds} />
           </div>
           <div style={styles.editorColumn}>

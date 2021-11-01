@@ -1,6 +1,6 @@
 import React from 'react';
 import {mount} from 'enzyme';
-import {assert} from '../../../../../util/deprecatedChai';
+import {assert} from '../../../../../util/reconfiguredChai';
 import EligibilityConfirmDialog from '@cdo/apps/lib/kits/maker/ui/EligibilityConfirmDialog';
 
 describe('EligibilityConfirmDialog', () => {
