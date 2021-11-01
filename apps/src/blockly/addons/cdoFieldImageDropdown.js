@@ -3,7 +3,18 @@ import {FieldGridDropdown} from '@blockly/field-grid-dropdown';
 export class CdoFieldImageDropdown extends FieldGridDropdown {
   constructor(menuGenerator, width, height, buttons) {
     const fixedMenuGenerator = fixMenuGenerator(menuGenerator, width, height);
-    super(fixedMenuGenerator);
+    super(fixedMenuGenerator, undefined /* validator */, {columns: 7});
+  }
+
+  showEditor_(e = undefined) {
+    super.showEditor_(e);
+
+    // Override so that grid dropdown is white.
+    const primaryColour = color.white;
+    const borderColour = this.sourceBlock_.isShadow()
+      ? this.sourceBlock_.getParent().style.colourTertiary
+      : this.sourceBlock_.style.colourTertiary;
+    Blockly.DropDownDiv.setColour(primaryColour, borderColour);
   }
 }
 
