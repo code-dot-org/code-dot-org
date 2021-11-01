@@ -1,6 +1,6 @@
-import CdoFieldDropdown from './cdoFieldDropdown';
+import {FieldGridDropdown} from '@blockly/field-grid-dropdown';
 
-export class CdoFieldImageDropdown extends CdoFieldDropdown {
+export class CdoFieldImageDropdown extends FieldGridDropdown {
   constructor(menuGenerator, width, height, buttons) {
     const fixedMenuGenerator = fixMenuGenerator(menuGenerator, width, height);
     super(fixedMenuGenerator);

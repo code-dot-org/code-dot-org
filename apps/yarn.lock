@@ -1574,6 +1574,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@blockly/field-grid-dropdown@^1.0.25":
+  version "1.0.25"
+  resolved "https://registry.yarnpkg.com/@blockly/field-grid-dropdown/-/field-grid-dropdown-1.0.25.tgz#6cf6d6749e7de69a251c0e99b3269b89b561a000"
+  integrity sha512-3uGagJiJKltuS54fT/sTVWqN+j8aRUklevYPvchhg711A4gVeQzpWVVtnNk0IywKxTk61Pd/jZNZivPIq8ZFpg==
+
 "@cdo/interpreted@link:../dashboard/config/libraries":
   version "0.0.0"
   uid ""
