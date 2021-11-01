@@ -13,4 +13,8 @@
 #  index_code_review_group_members_on_follower_id           (follower_id)
 #
 class CodeReviewGroupMember < ApplicationRecord
+  def name
+    follower = Follower.find(follower_id)
+    User.find(follower.student_user_id).name
+  end
 end

@@ -89,6 +89,7 @@ Dashboard::Application.routes.draw do
         post 'leave'
         post 'update_sharing_disabled'
         get 'student_script_ids'
+        get 'code_review_groups'
       end
       collection do
         get 'membership'

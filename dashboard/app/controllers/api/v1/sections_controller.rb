@@ -200,6 +200,17 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: {key: site_key}
   end
 
+  # GET /api/v1/sections/<id>/code_review_groups
+  def code_review_groups
+    groups = CodeReviewGroup.find_by_section_id(@section.id)
+    groups_details = []
+    groups.each do |group|
+      members = group.members.map {|member| {follower_id: member.follower_id, name: member.name}}
+      groups_details << {id: group.id, name: group.name, members: members}
+    end
+    render json: {groups: groups_details}
+  end
+
   private
 
   def find_follower
