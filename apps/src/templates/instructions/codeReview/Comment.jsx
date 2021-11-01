@@ -79,7 +79,7 @@ class Comment extends Component {
     });
   };
 
-  getListItems = () => {
+  getMenuItems = () => {
     const {
       viewAsCodeReviewer,
       viewAsTeacher,
@@ -88,10 +88,10 @@ class Comment extends Component {
     } = this.props;
     const {isResolved} = this.props.comment;
     const {hideResolved} = this.state;
-    let listItems = [];
+    let menuItems = [];
     if (isResolved) {
       // resolved comments can be collapsed/expanded
-      listItems.push({
+      menuItems.push({
         onClick: this.toggleHideResolved,
         text: hideResolved ? msg.show() : msg.hide(),
         iconClass: hideResolved ? 'eye' : 'eye-slash'
@@ -100,7 +100,7 @@ class Comment extends Component {
     if (!viewAsCodeReviewer) {
       // Code owners can resolve/unresolve comment
       // TODO: Allow teachers to resolve/unresolve comments too
-      listItems.push({
+      menuItems.push({
         onClick: onResolveStateToggle,
         text: isResolved
           ? javalabMsg.markIncomplete()
@@ -110,14 +110,14 @@ class Comment extends Component {
     }
     if (viewAsTeacher) {
       // Teachers can delete comments
-      listItems.push({
+      menuItems.push({
         onClick: onDelete,
         text: javalabMsg.delete(),
         iconClass: 'trash'
       });
     }
 
-    return listItems.map((item, index) => {
+    return menuItems.map((item, index) => {
       return (
         <a onClick={item.onClick} key={index}>
           <span
@@ -159,7 +159,7 @@ class Comment extends Component {
               {this.renderFormattedTimestamp(timestampString)}
             </span>
             <InlineDropdownMenu icon="fa fa-ellipsis-h">
-              {this.getListItems()}
+              {this.getMenuItems()}
             </InlineDropdownMenu>
           </span>
         </div>
