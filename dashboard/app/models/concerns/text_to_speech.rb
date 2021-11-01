@@ -123,7 +123,13 @@ module TextToSpeech
     TextToSpeech.tts_upload_to_s3(text, filename, context)
   end
 
-  def tts_url(text)
+  # Returns the URL where the TTS audio file can be downloaded for the given text and locale
+  # @param text [String] The text which is being read aloud in the TTS file.
+  # @param locale [Symbol] The locale of the language being spoken e.g. :'en-US', :'es-MX'
+  # @return [String] URL where the TTS audio file can be downloaded from. `nil` is returned if any of
+  # the params are blank or if TTS is not supported for the given locale.
+  def tts_url(text, locale = I18n.locale)
+    return nil unless TextToSpeech.locale_supported?(locale) && !text.blank?
     "https://tts.code.org/#{tts_path(text)}"
   end
 
