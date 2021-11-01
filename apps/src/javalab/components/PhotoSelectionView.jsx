@@ -8,7 +8,11 @@ const photoInputId = 'photoInput';
  * Renders a component with a camera icon and optional prompt text
  * which allows a user to select and upload a photo when clicking the icon.
  */
-const PhotoSelectionView = ({promptText, onPhotoSelected, style}) => {
+export default function PhotoSelectionView({
+  promptText,
+  onPhotoSelected,
+  style
+}) {
   const onInputChange = event => {
     onPhotoSelected(event.target.files[0]);
   };
@@ -32,7 +36,7 @@ const PhotoSelectionView = ({promptText, onPhotoSelected, style}) => {
       <div style={styles.prompt}>{promptText}</div>
     </div>
   );
-};
+}
 
 PhotoSelectionView.propTypes = {
   /**
@@ -63,5 +67,3 @@ const styles = {
     textColor: color.white
   }
 };
-
-export default PhotoSelectionView;
