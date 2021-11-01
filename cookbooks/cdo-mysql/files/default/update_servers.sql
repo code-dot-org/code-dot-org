@@ -1,5 +1,6 @@
 -- This script maintains 'fallback' servers within reader hostgroups
 -- by setting `weight` values high for primary and low for fallback servers.
+-- See ./README.md for additional details.
 
 -- The 'reporting' instance is included in the reader hostgroup(s), and it is
 -- critical that it not be given a priority weight in those hostgroups.
