@@ -12,8 +12,5 @@
   - data[:teacher_level] = @script_level&.summarize_for_teacher_panel(@current_user)
   - data[:page_type] = 'level' if @level.present?
 
-- if @level && @script_level
-  - data[:level_examples] = @script_level.get_example_solutions(@current_user, @section)
-
 - content_for(:head) do
   %script{src: webpack_asset_path('js/levels/_teacher_panel.js'), data: {teacherpanel: data.to_json }}

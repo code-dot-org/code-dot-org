@@ -6,12 +6,24 @@
     "maxArgs": 7
   },
   "paletteParams": [
-    "imgData",
-    "x",
-    "y",
-    "r",
-    "g",
-    "b"
+    {
+      "name": "imgData"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "r"
+    },
+    {
+      "name": "g"
+    },
+    {
+      "name": "b"
+    }
   ],
   "params": [
     "imgData",
