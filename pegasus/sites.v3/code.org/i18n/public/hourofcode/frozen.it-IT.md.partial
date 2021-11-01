@@ -1,0 +1,47 @@
+---
+title: Risorse per insegnanti - Impara la programmazione con Anna e Elsa
+nav: hoc_teacher_resources_nav
+theme: responsive
+video_player: true
+---
+
+# Impara la programmazione con Anna e Elsa _ tutoria per "Un'ora di Coding"
+
+{{ hoc_frozen_video }}
+
+[col-50]
+
+## Risorse per l'insegnante
+
+### Lesson Plans:
+
+- [Impara la programmazione con Anna e Elsa]({{ hoc_frozen_cb_url }})
+- [Foglio delle risposte](https://docs.google.com/presentation/d/1McUzaAQyGLfgJKR2Mbre-L-bL9xNAW3KdPQmH4nGR78/edit?usp=sharing)
+- OPTIONAL: [The Drawing Machine](http://code.org/curriculum/misc/hocunplugged/Teacher)
+
+### Attività di approfondimento:
+
+- [Beyond an Hour of Code](http://code.org/learn/beyond)
+- [Fondamenti di Scienze Informatiche: Corso 2](https://studio.code.org/s/course2)
+
+### Altre risorse per l'insegnante:
+
+- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
+- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+
+[/col-50]
+
+[col-50]
+
+## Panoramica
+
+Usa la programmazione per unirti ad Anna ed Elsa mentre esplorano la magia e la bellezza del ghiaccio. Potrai creare fiocchi di neve e disegni mentre pattini sul ghiaccio e anche un paese delle meraviglie invernale da condividere con i tuoi amici!
+
+**Recommended Age Range:** 8+
+
+**Technology Requirements:** Modern browsers + tablets
+
+<a href="http://studio.code.org/s/frozen/reset"><button>Prova il tutorial</button></a>
+
+[/col-50]

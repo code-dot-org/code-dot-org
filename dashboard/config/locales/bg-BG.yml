@@ -175,6 +175,8 @@ bg:
     email_preference_privacy: "(Вижте нашата политика за поверителност)"
     email_preference_yes: Да
     email_preference_no: Не
+    share_teacher_email_reg_partner_preference_yes: Да
+    share_teacher_email_reg_partner_preference_no: Не
   school_info:
     title: Информацшя за училището (по избор)
     school_country: Училищен район
@@ -352,6 +354,7 @@ bg:
       algebra_game: Алгебра
       applab: Лаборатория за приложения
       artist: Художник
+      basketball: Баскетбол
       bounce: Bounce
       calc: Calc
       eval: Оценяване
@@ -458,6 +461,7 @@ bg:
     update_email: Актуализиране
     remove_parent_email_label: Премахване
     none: Без
+    encrypted: Шифровано
   user_level:
     completed: Завършено
     tried: Опитах
@@ -1019,8 +1023,11 @@ bg:
   pd:
     form_labels:
       email: Имейл
+      school: Училище
       school_name: Име на училището
+      school_city: 'Града на Училището '
       school_country: Училищен район
+      colombian_school_city: 'Града на Училището '
       colombian_chilean_school_name: Име на училището
     form_entries:
       gender:

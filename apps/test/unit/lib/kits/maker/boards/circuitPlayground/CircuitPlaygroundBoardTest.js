@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import sinon from 'sinon';
-import {expect} from '../../../../../../util/deprecatedChai';
+import {expect} from '../../../../../../util/reconfiguredChai';
 import {EventEmitter} from 'events'; // see node-libs-browser
 import Playground from 'playground-io';
 import five from '@code-dot-org/johnny-five';

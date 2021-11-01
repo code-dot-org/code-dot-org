@@ -398,7 +398,7 @@ class ApiController < ApplicationController
     if current_user
       script = Script.get_from_cache(params[:script])
       user = params[:user_id].present? ? User.find(params[:user_id]) : current_user
-      teacher_viewing_student = current_user.students.include?(user)
+      teacher_viewing_student = !current_user.student? && current_user.students.include?(user)
       render json: summarize_user_progress(script, user).merge(
         {
           signedIn: true,
@@ -410,14 +410,11 @@ class ApiController < ApplicationController
     end
   end
 
-  use_database_pool user_progress_for_lesson: :persistent
+  use_database_pool user_app_options: :persistent
 
-  # Return the JSON details of the users progress on a particular script
-  # level and marks the user as having started that level. (Because of the
-  # latter side effect, this should only be called when the user sees the level,
-  # to avoid spurious activity monitor warnings about the level being started
-  # but not completed.)
-  def user_progress_for_lesson
+  # Returns app_options values that are user-specific. This is used on cached
+  # levels.
+  def user_app_options
     response = user_summary(current_user)
     response[:signedIn] = !current_user.nil?
 
@@ -432,24 +429,29 @@ class ApiController < ApplicationController
 
       # Temporarily return the full set of progress so we can overwrite what the sessionStorage changed
       response[:progress] = summarize_user_progress(script, current_user)[:progress]
+      response[:isHoc] = script.hoc?
 
       if user_level
         response[:lastAttempt] = {
           timestamp: user_level.updated_at.to_datetime.to_milliseconds,
           source: level_source
         }
-      end
-      response[:isHoc] = script.hoc?
 
-      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(script, level, current_user)
-      if recent_driver
-        response[:pairingDriver] = recent_driver
-        if recent_attempt
-          response[:pairingAttempt] = edit_level_source_path(recent_attempt)
-        elsif level.channel_backed?
-          @level = level
-          recent_channel = get_channel_for(level, script.id, recent_user) if recent_user
-          response[:pairingChannelId] = recent_channel if recent_channel
+        # Pairing info
+        is_navigator = user_level.navigator?
+        if is_navigator
+          driver = user_level.driver
+          driver_level_source_id = user_level.driver_level_source_id
+        end
+
+        response[:isNavigator] = is_navigator
+        if driver
+          response[:pairingDriver] = driver.name
+          if driver_level_source_id
+            response[:pairingAttempt] = edit_level_source_path(driver_level_source_id)
+          elsif level.channel_backed?
+            response[:pairingChannelId] = get_channel_for(level, script.id, driver)
+          end
         end
       end
     end
@@ -459,12 +461,26 @@ class ApiController < ApplicationController
         tag: 'activity_start',
         script_level_id: script_level.try(:id),
         level_id: level.contained_levels.empty? ? level.id : level.contained_levels.first.id,
-        user_agent: request.user_agent.valid_encoding? ? request.user_agent : 'invalid_encoding',
+        user_agent: request.user_agent&.valid_encoding? ? request.user_agent : 'invalid_encoding',
         locale: locale
       )
     end
 
+    if params[:get_channel_id] == "true"
+      response[:channel] = get_channel_for(level, script.id, current_user)
+      response[:reduceChannelUpdates] =
+        !Gatekeeper.allows("updateChannelOnSave", where: {script_name: script.name}, default: true)
+    end
+
     render json: response
+  end
+
+  # GET /api/example_solutions/:script_level_id/:level_id
+  def example_solutions
+    script_level = Script.cache_find_script_level params[:script_level_id].to_i
+    level = Script.cache_find_level params[:level_id].to_i
+    section_id = params[:section_id].present? ? params[:section_id].to_i : nil
+    render json: script_level.get_example_solutions(level, current_user, section_id)
   end
 
   def section_text_responses

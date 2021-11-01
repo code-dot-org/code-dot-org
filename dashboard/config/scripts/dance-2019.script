@@ -1,18 +1,1 @@
-family_name 'dance-2019'
-version_year 'unversioned'
-published_state 'preview'
-tts true
-is_course true
-
-lesson 'Dance Party', display_name: 'Dance Party', has_lesson_plan: false
-level 'Dance_2019_01'
-level 'Dance_2019_02'
-level 'Dance_2019_03'
-level 'Dance_2019_04'
-level 'Dance_2019_05'
-level 'Dance_2019_06'
-level 'Dance_2019_07'
-level 'Dance_2019_08'
-level 'Dance_2019_09'
-level 'Dance_2019_10'
-
+is_migrated true

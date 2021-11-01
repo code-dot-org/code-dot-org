@@ -15,6 +15,7 @@ describe('UnitCalendarDialog', () => {
         handleClose={() => console.log('hello')}
         lessons={testLessons}
         weeklyInstructionalMinutes={90}
+        scriptId={123}
       />
     );
     expect(
@@ -35,6 +36,7 @@ describe('UnitCalendarDialog', () => {
         handleClose={() => console.log('hello')}
         lessons={testLessons}
         weeklyInstructionalMinutes={45}
+        scriptId={123}
       />
     );
     expect(wrapper.find('option').length).to.equal(6);
@@ -63,6 +65,7 @@ describe('UnitCalendarDialog', () => {
         handleClose={() => console.log('hello')}
         lessons={testLessons}
         weeklyInstructionalMinutes={20}
+        scriptId={123}
       />
     );
     expect(wrapper.find('option').length).to.equal(7);
@@ -91,6 +94,7 @@ describe('UnitCalendarDialog', () => {
         handleClose={() => console.log('hello')}
         lessons={testLessons}
         weeklyInstructionalMinutes={45}
+        scriptId={123}
       />
     );
     expect(wrapper.state('instructionalMinutes')).to.equal(45);

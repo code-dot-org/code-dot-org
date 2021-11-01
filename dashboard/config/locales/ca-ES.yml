@@ -185,6 +185,10 @@ ca:
     email_preference_yes: Sí
     email_preference_no: 'No'
     email_preference_required: Heu d'especificar una preferència de correu electrònic.
+    share_teacher_email_reg_partner_preference_yes: Sí
+    share_teacher_email_reg_partner_preference_no: 'No'
+    share_teacher_email_reg_partner_preference_required: Heu d'especificar una preferència
+      de correu electrònic.
   school_info:
     title: Informació de l'escola (opcional)
     school_country: País de l'escola

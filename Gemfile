@@ -96,7 +96,7 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium', '3.17.19'
+  gem 'eyes_selenium', '3.18.4'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'

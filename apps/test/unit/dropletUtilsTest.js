@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import {assert, expect} from '../util/deprecatedChai';
+import {assert, expect} from '../util/reconfiguredChai';
 import sinon from 'sinon';
 import * as testUtils from './../util/testUtils';
 import * as dropletUtils from '@cdo/apps/dropletUtils';

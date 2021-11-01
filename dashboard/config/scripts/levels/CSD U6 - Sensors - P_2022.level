@@ -227,17 +227,20 @@
     "makerlab_enabled": "true",
     "parent_level_id": 20450,
     "name_suffix": "_2021",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "widget_mode": "false",
     "libraries_enabled": "false",
     "validation_enabled": "false",
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null,
+    "contained_level_names": [
+      "CSD U6 - Sensors - PEmbed_2022"
+    ],
+    "encrypted_examples": [
+
+    ]
   },
   "game_id": 41,
   "published": true,
@@ -245,7 +248,7 @@
   "level_num": "custom",
   "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-01T22:05:06.518+00:00\",\"changed\":[\"cloned from \\\"CSD U6 sensor experiment embedded_2021\\\"\"],\"cloned_from\":\"CSD U6 sensor experiment embedded_2021\"},{\"changed_at\":\"2021-09-01 22:05:11 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-01T22:05:06.518+00:00\",\"changed\":[\"cloned from \\\"CSD U6 sensor experiment embedded_2021\\\"\"],\"cloned_from\":\"CSD U6 sensor experiment embedded_2021\"},{\"changed_at\":\"2021-09-01 22:05:11 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-17 22:02:50 +0000\",\"changed\":[\"code_functions\",\"embed\",\"validation_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-17 22:03:33 +0000\",\"changed\":[\"code_functions\",\"embed\",\"validation_enabled\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

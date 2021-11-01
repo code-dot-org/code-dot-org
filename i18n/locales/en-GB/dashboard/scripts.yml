@@ -24,10 +24,6 @@ en-GB:
           lessons:
             Variables:
               name: Variables
-        infinity:
-          lessons:
-            Infinity:
-              name: Infinity
         20-hour:
           description_audience: Ages 10-18
           lessons:
@@ -386,6 +382,10 @@ en-GB:
             Variables:
               key: Variables
               name: Variables
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Stage 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:

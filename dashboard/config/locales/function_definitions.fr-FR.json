@@ -3832,7 +3832,7 @@
           },
           "draw a circle": {
             "name": "dessine un cercle",
-            "description": "Dessine un cercle en respectant le rayon indiqué",
+            "description": "dessine un cercle en respectant le rayon indiqué",
             "parameters": {
               "radius": "rayon"
             }
@@ -3870,6 +3870,18 @@
               "length": "longueur",
               "sides": "côtés"
             }
+          },
+          "small flower": {
+            "name": "petite fleur"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "FLEURS LOGIQUES2 "
+          },
+          "LOGIC FLOWER": {
+            "name": "FLEUR LOGIQUE"
+          },
+          "LOGIC FLOWERS": {
+            "name": "FLEURS LOGIQUES"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -3883,7 +3895,7 @@
           },
           "draw a circle": {
             "name": "dessine un cercle",
-            "description": "Dessine un cercle en respectant le rayon indiqué",
+            "description": "dessine un cercle en respectant le rayon indiqué",
             "parameters": {
               "radius": "rayon"
             }
@@ -3893,7 +3905,7 @@
             "parameters": {
               "sides": "côtés",
               "length": "longueur",
-              "repeat": "répéter"
+              "repeat": "repeat"
             }
           },
           "draw a triangle": {
@@ -3933,7 +3945,7 @@
           },
           "draw a circle": {
             "name": "dessine un cercle",
-            "description": "Dessine un cercle en respectant le rayon indiqué",
+            "description": "dessine un cercle en respectant le rayon indiqué",
             "parameters": {
               "radius": "rayon"
             }
@@ -3983,7 +3995,7 @@
           },
           "draw a circle": {
             "name": "dessine un cercle",
-            "description": "Dessine un cercle en respectant le rayon indiqué",
+            "description": "dessine un cercle en respectant le rayon indiqué",
             "parameters": {
               "radius": "rayon"
             }
@@ -4063,7 +4075,7 @@
         },
         "courseC_artist_prog3_2021": {
           "draw flame": {
-            "name": "dessiner des flammes",
+            "name": "dessiner une flamme",
             "parameters": {
               "x": "x"
             }

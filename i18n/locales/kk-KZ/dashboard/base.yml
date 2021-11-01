@@ -111,6 +111,8 @@ kk:
     accept_terms: "Аккаунт құрі үшін келісуіңіз қажет"
     email_preference_yes: "Иә"
     email_preference_no: "Жоқ"
+    share_teacher_email_reg_partner_preference_yes: "Иә"
+    share_teacher_email_reg_partner_preference_no: "Жоқ"
   school_info:
     other: 'Басқасы'
   signin_form:

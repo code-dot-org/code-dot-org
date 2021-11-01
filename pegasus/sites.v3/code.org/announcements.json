@@ -1,10 +1,26 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "back-to-school-2021"
+    "/home": "myjourney-ilm"
   },
 
   "banners": {
+    "myjourney-ilm": {
+      "image": "/images/csjourneys/myjourney-ilm.png",
+      "title": "My Journey: Making Star Wars",
+      "body": "Hear how two computer science graduates use technology to help make movies and TV shows, including the many worlds of Star Wars. Recommended for grades K-5. Recording will be available the day after the live session.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat7",
+      "buttonId": "myjourney-ilm-details"
+    },  
+    "csjourneys": {
+      "image": "/images/csjourneys/teacher-banner.png",
+      "title": "Explore the wide world of computer science",
+      "body": "Bring CS to life with Code.org’s new career inspiration and exploration program! Sign up for live, engaging classroom experiences like virtual field trips and class chats, or let students explore with short videos and other resources.",
+      "buttonText": "Learn more",
+      "buttonUrl": "https://code.org/csjourneys",
+      "buttonId": "csjourneys-dashboard"
+    },
     "class-schedule-survey": {
       "image": "/images/class-schedule-survey.png",
       "title": "Fall 2021 Class Schedule Survey",

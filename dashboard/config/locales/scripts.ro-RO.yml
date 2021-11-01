@@ -200,6 +200,12 @@ ro:
           lessons:
             Artist:
               name: Artist
+              description_student: Creați imagini extraordinare programând Artistul.
+              description_teacher: În această lecție, elevii vor avea control asupra
+                Artistului și vor finaliza desene pe ecran. În această etapă din Artist,
+                elevii vor crea imagini a căror complexitate va crește progresiv,
+                folosind blocuri noi, cum ar fi `avansează cu 100 pixeli` și `virează
+                la dreapta cu 90 de grade`.
           student_description: Desenează poze şi proiecte mişto cu Artistul!
         hourofcode:
           title: Labirint Clasic
@@ -222,7 +228,7 @@ ro:
             şi Elsa în explorarea magiei şi frumuseţii de gheaţă.
           lessons:
             Artist:
-              name: Artist
+              name: Programati cu Anna și Elsa
           student_description: Hai să folosim programarea pentru a ne alătura Annei
             şi Elsei în timp ce explorează magia şi frumuseţea gheței. Veţi crea fulgi
             de zăpadă şi modele ca la patinaj şi veți face un paradis de iarnă, pe
@@ -384,7 +390,7 @@ ro:
             sau un joc cu personaje Disney Infinity.
           lessons:
             Infinity:
-              name: Infinit
+              name: Laborator de joacă Disney Infinity
           student_description: Folosește Laboratorul de Joacă pentru a crea o poveste
             sau un joc cu personaje Disney Infinity.
         algebrademo:
@@ -564,6 +570,13 @@ ro:
           lessons:
             Jigsaw:
               name: Puzzle
+              description_student: Fă clic și glisează obiecte pentru a rezolva puzzle-urile.
+              description_teacher: În această lecție, elevii își vor face o idee cu
+                privire la ce se poate întâmpla în timpul activităților desfășurate
+                în laboratorul de informatică. Această lecție începe cu o scurtă discuție
+                în care se prezintă regulile de conduită în laboratorul de informatică,
+                apoi elevii vor trece la utilizarea unui computer pentru a rezolva
+                puzzle-uri online.
         step:
           title: Pas
           lessons:
@@ -1132,6 +1145,8 @@ ro:
           lessons:
             Unit 6 Overview:
               name: Prezentare generală - Lecția 6
+        cspunit4draft:
+          description_short: Date
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -1219,7 +1234,7 @@ ro:
             Star Wars într-o galaxie foarte îndepărtată.
           lessons:
             Hour of Code 2015:
-              name: Ora de cod 2015
+              name: 'Star Wars: Programarea unei galaxii'
           student_description: Învață să programezi droizi si creează-ți propriul
             joc Star Wars într-o galaxie foarte îndepărtată.
         mc:
@@ -1232,6 +1247,18 @@ ro:
               name: Ora de cod 2015
           student_description: Utilizeaza blocuri de cod pentru a-l lua pe Steve sau
             Alex intr-o aventura in acest univers Minecraft.
+        oceans:
+          lessons:
+            Oceans:
+              description_student: 'Rezumatul tutorialului: Mai întâi elevii vor clasifica
+                obiectele în două categorii - „pești” și „obiecte care nu sunt pești”,
+                încercând să îndepărteze gunoaiele din ocean. Apoi elevii vor extinde
+                setul de date de învățare, incluzând alte creaturi marine care trăiesc
+                în apă. În a doua parte a activității, elevii vor alege propriile
+                etichete care vor fi aplicate unor imagini cu pești generați aleatoriu.
+                Aceste date de învățare sunt apoi utilizate pentru un model de învățare
+                automatizată care trebuie să poată asocia singur noile etichete cu
+                imaginile corespunzătoare.'
         CSPPD3-Unit3-pt2:
           lessons:
             Challenge Overview:
@@ -1551,6 +1578,8 @@ ro:
               name: Amprenta digitală
             Peer Review:
               name: Împerecheaţi dispozitivele
+        CSDU5-Draft:
+          description_short: Date
         CSF_Secret_Sample_Story:
           description_audience: Vârste 8 - 18 ani+
         MikeTest:
@@ -1877,7 +1906,14 @@ ro:
           description: Realizeaza un joc de baschet
           lessons:
             Bounce:
-              name: Săritură
+              description_student: Ți-ai dorit vreodată să poți juca jocuri video
+                la școală? În această lecție vei putea să-ți creezi propriul joc!
+              description_teacher: În această activitate online, elevii vor învăța
+                ce sunt evenimentele și cum sunt acestea folosite de computere în
+                programe precum jocurile video. Elevii vor rezolva puzzle-uri, făcând
+                programul să reacționeze la evenimente (cum ar fi apăsarea butoanelor
+                cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze
+                jocul, adăugând viteze și sunete diferite.
           student_description: Realizeaza un joc de baschet
         sample-csp5:
           lessons:
@@ -2194,7 +2230,14 @@ ro:
           description: Amesteca si potriveste sporturile
           lessons:
             Sports:
-              name: Sporturi (Sports)
+              description_student: Ți-ai dorit vreodată să poți juca jocuri video
+                la școală? În această lecție vei putea să-ți creezi propriul joc!
+              description_teacher: În această activitate online, elevii vor învăța
+                ce sunt evenimentele și cum sunt acestea folosite de computere în
+                programe precum jocurile video. Elevii vor rezolva puzzle-uri, făcând
+                programul să reacționeze la evenimente (cum ar fi apăsarea butoanelor
+                cu săgeți). La sfârșitul puzzle-ului, elevii vor putea să personalizeze
+                jocul, adăugând viteze și sunete diferite.
           student_description: Amesteca si potriveste sporturile
         2016_sciencePD-phase2b:
           lessons:
@@ -3968,10 +4011,6 @@ ro:
               name: Ce Este un Computer?
             Simple Encryption:
               name: Criptare simplă
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Ora de Programare Minecraft
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -5401,6 +5440,8 @@ ro:
               display_name: Avansare
             csf_variables:
               display_name: Variabile
+            csf_data:
+              display_name: Date
             csf_for_loops:
               display_name: Bucle Pentru
             csf_internet:
@@ -6443,6 +6484,8 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+            csf_data:
+              display_name: Date
             end_of_course_project:
               display_name: Proiect de final de curs
           lessons:
@@ -8106,6 +8149,8 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+            csf_data:
+              display_name: Date
             end_of_course_project:
               display_name: Proiect de final de curs
           lessons:
@@ -8786,6 +8831,8 @@ ro:
               display_name: Cetățenia Digitală
             csf_variables:
               display_name: Variabile
+            csf_data:
+              display_name: Date
             csf_for_loops:
               display_name: Bucle Pentru
             csf_sprites:
@@ -9428,6 +9475,8 @@ ro:
           lessons:
             Virus Simulation for Code Bytes:
               name: Cum se Codifică o Simulare
+            Outbreak:
+              name: Cum se Codifică o Simulare
           lesson_groups:
             outbreak:
               display_name: Simulare Epidemie
@@ -10010,6 +10059,8 @@ ro:
               display_name: Bucle
             csf_events:
               display_name: Evenimente
+            csf_data:
+              display_name: Date
             end_of_course_project:
               display_name: Proiect de final de curs
           name: coursec-2021
@@ -11071,6 +11122,14 @@ ro:
               display_name: Introducere
             Introduction:
               display_name: Introducere
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Lecția 3
+            Lesson 4:
+              display_name: Lecția 4
+            Lesson 5:
+              display_name: Lecția 5
         csp-post-survey-2020:
           lesson_groups:
             cspSurvey2020:
@@ -11150,6 +11209,12 @@ ro:
           lessons:
             lesson-3:
               name: Test
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Etapa 1
+            lessonGroup-3:
+              display_name: Etapa 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -11188,6 +11253,40 @@ ro:
             lessonGroup-2:
               display_name: Conţinut
         csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Widget-uri
+            lesson-3:
+              name: Instrumente
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Lecții
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Conţinut
+            content:
+              display_name: Conţinut
+            lesson_group:
+              display_name: Conţinut
+            lessonGroup-2:
+              display_name: Conţinut
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widget-uri
+            lesson-2:
+              name: Instrumente
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Albina de Ortografie
+          title: Albina de Ortografie
+        csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut

@@ -2,6 +2,69 @@
   "fi-FI": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "function/hero/unversioned": {
+          "word": "Funktio"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "code/artist/unversioned": {
+          "word": "Koodi"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Ehtolausekkeet"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Silmukat"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "code/sports/unversioned": {
+          "word": "Koodi"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Virheen etsintä"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Virheen etsintä"
+        },
         "variable/coursef/2021": {
           "word": "Muuttuja"
         },

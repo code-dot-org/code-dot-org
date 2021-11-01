@@ -1501,7 +1501,21 @@
         "ramp_artist_loops6_2021": "Szerkeszd át a ciklust, hogy megrajzold ezt a lépcsőt.",
         "ramp_artist_loops7_2021": "Keress egy mintát, és rövidítsd le ezt a kódot ciklusok használatával!",
         "ramp_artist_loops8_2021": "Keress egy mintát, és rövidítsd le ezt a kódot ciklusok használatával.",
-        "ramp_artist_loops9_2021": "Oldd meg ezt a feladványt egy négyzet megrajzolásával."
+        "ramp_artist_loops9_2021": "Oldd meg ezt a feladványt egy négyzet megrajzolásával.",
+        "iceage_click_hello": "Tudnál segíteni Sidnek, hogy kiáltson a barátainak amikor ráklikkelsz? ",
+        "iceage_free_play": "Itt az ideje, hogy elkészítsd a saját játékod vagy történeted! ",
+        "iceage_hello1": "Segíts Sidnek azt mondani, hogy \"Hello\"! Ehhez mozgasd ki a `szereplő mondja` blokkot, és kapcsold a 'futtatáskor' esemény aljához. ",
+        "iceage_hello2": "Segíts Maninak és Sidnek köszönteni egymást a `___ szereplő mondja` blokk kétszeri használatával.",
+        "iceage_move_events": "Írd meg a kódot, hogy segíts Motkánynak megszerezni az összes makkot!",
+        "iceage_move_events_dani": "Írd meg a kódot, hogy segíts Motkánynak megszerezni az összes makkot!",
+        "iceage_move_to_actor": "Kapcsolj egy blokkot az 'amikor a(z) 1. szereplő megérinti a(z) 2. szereplőt' eseményhez, hogy megszólaljon egy hang amikor Diego megtalálja Manit.",
+        "iceage_move_to_flag": "A motkány a makkját keresi! Tudsz neki segíteni megtenni az utolsó 200 pixelt?",
+        "iceage_repeat": "Segíts Nagyinak egy kicsit tornázni egymás után többször jobbra-balra mozogva.",
+        "iceage_sound_and_points": "Be tudod úgy fejezni ezt a programot, hogy a **pontnyerés hang lejátszása** és a **pontszám** is aktiválódnak amikor Sid és Nagyi összeütköznek? ",
+        "iceage_sound_and_points_dani": "Be tudod úgy fejezni ezt a programot, hogy a **pontnyerés hang lejátszása** és a **pontszám** is aktiválódnak amikor Sid és Nagyi összeütköznek? ",
+        "iceage_throw_hearts": "Használd az `amikor a 2. szereplő érinti bármely lövedéket` parancsot, hogy Sid (1. szereplő) szíveket dobjon Nagyira (2. szereplő), és állítsd Nagyi hangulatát boldogra amikor eltalálja velük.",
+        "iceage_warn_ice_age": "Változtasd meg a színhelyet egy jeges háttérre, és állítsd Sid (1. szereplő) sebességét gyorsra.",
+        "iceage_warn_ice_age_dani": "Változtasd meg a színhelyet egy jeges háttérre, és állítsd Sid (1. szereplő) sebességét gyorsra."
       }
     }
   }

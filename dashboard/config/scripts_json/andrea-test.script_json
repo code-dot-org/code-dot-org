@@ -4,8 +4,6 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "student_detail_progress_view": true,
-      "professional_learning_course": "Andrea Test",
       "announcements": [
         {
           "notice": "Announcing",
@@ -15,12 +13,15 @@
           "visibility": "Teacher-only"
         }
       ],
-      "only_instructor_review_required": true
+      "only_instructor_review_required": true,
+      "professional_learning_course": "Andrea Test",
+      "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:39 UTC",
+    "serialized_at": "2021-10-25 22:53:54 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "andrea-test"
     }
@@ -199,23 +200,23 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "andrea_test1",
-          "andrea-test2"
+          "andrea-test2",
+          "andrea_test1"
         ]
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "andrea_test1",
-          "andrea-test2"
+          "andrea-test2",
+          "andrea_test1"
         ],
         "lesson.key": "Part 2",
         "lesson_group.key": "content",
         "script.name": "andrea-test"
       },
       "level_keys": [
-        "andrea_test1",
-        "andrea-test2"
+        "andrea-test2",
+        "andrea_test1"
       ]
     },
     {
@@ -281,8 +282,8 @@
       "seeding_key": {
         "level.key": "andrea_test1",
         "script_level.level_keys": [
-          "andrea_test1",
-          "andrea-test2"
+          "andrea-test2",
+          "andrea_test1"
         ],
         "lesson.key": "Part 2",
         "lesson_group.key": "content",
@@ -293,8 +294,8 @@
       "seeding_key": {
         "level.key": "andrea-test2",
         "script_level.level_keys": [
-          "andrea_test1",
-          "andrea-test2"
+          "andrea-test2",
+          "andrea_test1"
         ],
         "lesson.key": "Part 2",
         "lesson_group.key": "content",

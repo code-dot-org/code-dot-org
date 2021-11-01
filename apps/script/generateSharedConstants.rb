@@ -11,6 +11,7 @@ require 'fileutils'
 require 'require_all'
 
 require_relative '../../lib/cdo/shared_constants'
+require_relative '../../lib/cdo/shared_constants/curriculum/shared_course_constants'
 autoload_all File.expand_path('../../lib/cdo/shared_constants/pd', File.dirname(__FILE__))
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
@@ -73,7 +74,6 @@ def main
     LEVEL_STATUS
     SECTION_LOGIN_TYPE
     POST_MILESTONE_MODE
-    PUBLISHED_STATE
     ALWAYS_PUBLISHABLE_PROJECT_TYPES
     ALL_PUBLISHABLE_PROJECT_TYPES
     CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
@@ -88,8 +88,23 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
+        %w(
+      PUBLISHED_STATE
+      INSTRUCTION_TYPE
+      PARTICIPANT_AUDIENCE
+      INSTRUCTOR_AUDIENCE
+    ),
+      source_module: SharedCourseConstants, transform_keys: false
+    ),
+    "#{REPO_DIR}/apps/src/generated/curriculum/sharedCourseConstants.js"
+  )
+
+  generate_shared_js_file(
+    generate_multiple_constants(
       %w(
         COURSES
+        ACTIVE_COURSES
+        ARCHIVED_COURSES
         COURSE_KEY_MAP
         SUBJECT_NAMES
         SUBJECTS
@@ -101,6 +116,7 @@ def main
         WORKSHOP_APPLICATION_STATES
         WORKSHOP_SEARCH_ERRORS
         WORKSHOP_TYPES
+        NOT_FUNDED_SUBJECTS
       ),
       source_module: Pd::SharedWorkshopConstants,
       transform_keys: false
@@ -129,7 +145,7 @@ def main
   generate_shared_js_file(
     generate_multiple_constants(
       %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
-      source_module: Pd::Teacher2122ApplicationConstants,
+      source_module: Pd::TeacherApplicationConstants,
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/teacherApplicationConstants.js"
@@ -138,7 +154,7 @@ def main
   generate_shared_js_file(
     generate_multiple_constants(
       %w(PAGE_LABELS TEXT_FIELDS),
-      source_module: Pd::PrincipalApproval2122ApplicationConstants,
+      source_module: Pd::PrincipalApprovalApplicationConstants,
       transform_keys: true
     ),
     "#{REPO_DIR}/apps/src/generated/pd/principalApprovalApplicationConstants.js"

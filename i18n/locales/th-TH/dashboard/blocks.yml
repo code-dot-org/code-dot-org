@@ -1098,8 +1098,19 @@ th:
         text: ที่ตั้งของ {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': มีฝน
       gamelab_makeNewSpriteAnon:
         text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': ขวา
+            '90': เป็นตำแหน่ง
+            '180': ซ้าย
+            '270': ขึ้นข้างบน
       gamelab_mirrorSprite:
         text: "{SPRITE} หน้า {DIRECTION}"
         options:
@@ -1120,6 +1131,20 @@ th:
         text: "[SPRITE]คลิก[0]"
       gamelab_playSound:
         text: เล่นเสียง {SOUND}
+      gamelab_playSoundOptions:
+        text: เล่นเสียง {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": ครัชช์
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": ฟองสบู่
+            "'sound://category_animals/bear.mp3'": หมี
+            "'sound://category_animals/cat.mp3'": แมว
+            "'sound://category_animals/cow.mp3'": วัว
+            "'sound://category_animals/sheep.mp3'": แกะ
+            "'sound://category_animals/chicken.mp3'": ไก่
+            "'sound://category_animals/dolphin.mp3'": โลมา
+            "'sound://category_animals/dog.mp3'": สุนัข
+            "'sound://category_digital/jump_7.mp3'": กระโดดออกไปที่
       gamelab_pointInDirection:
         text: จุด {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1557,18 +1582,75 @@ th:
         text: สัตว์ประหลาดเริ่มสวมหน้ากาก
       Outbreak_stopMoving:
         text: สัตว์ประหลาดหยุดเคลื่อนไหว
-      PoemBot_setBackgroundEffect:
-        text: กำหนดแบ็กกราวนด์เอฟเฟกต์ {BG_EFFECT} [PALETTE][1]
+      Poetry_addFrame:
         options:
-          BG_EFFECT:
-            '"solid"': ของแข็ง
-            '"rainbow"': รุ้งกินน้ำ
-      PoemBot_setForegroundEffect:
-        text: กำหนดโฟร์กราวด์เอฟเฟค {FG_EFFECT}
+          BRUSH:
+            Ice Cream: ไอศกรีม
+            Stars: ดาว
+            Fireworks: พลุ
+            '"rainbow"': สายรุ้ง
+            '"hearts"': หัวใจ
+            '"flowers"': ดอกไม้
+            '"waves"': คลื่น
+      Poetry_makeBurst:
         options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': มีฝน
+      Poetry_makeNewSpriteAnon:
+        text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
+      Poetry_playSound:
+        text: เล่นเสียง {SOUND}
+        options:
+          SOUND:
+            Light: อ่อน
+      Poetry_setBackground:
+        text: กำหนดสีแบ็กกราวนด์ {COLOR}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': สี
+            '"squiggles"': เส้นขะยุกขะยิก
+            '"space"': พื้นที่
+            '"stars"': ดาว
+            '"ripples"': ระลอกคลื่น
+            '"rain"': ฝน
             '"bubbles"': ฟองสบู่
+            '"confetti"': กระดาษสี
+            '"hearts"': หัวใจหลากสี
+          PALETTE:
+            '"rainbow"': สายรุ้ง
+      Poetry_setBackgroundImageAs:
+        text: ตั้งค่าพื้นหลังเป็น {IMG}
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': ฝน
+            '"bubbles"': ฟองสบู่
+            '"hearts"': หัวใจหลากสี
+            '"confetti"': กระดาษสี
+            '"starburst"': ดาวกระจาย
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            wandering: เคลื่อนที่
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            wandering: เคลื่อนที่
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: ไปข้างหน้า
       RyanLab_turnLeft:

@@ -2,6 +2,51 @@
   "pl-PL": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "Playlista Spotify (każdy wiek)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "Przedstawienie artysty",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "Skręty i kąty"
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "Skręty i kąty",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "Playlista Spotify (każdy wiek)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "Playlista Spotify (każdy wiek)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "Playlista Spotify (każdy wiek)",
+          "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "AI: Nauka maszynowa",
+          "url": "https://www.youtube.com/watch?v=OeU5m6vRyCk"
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "AI: Oddziaływanie na społeczeństwo",
+          "url": "https://youtu.be/ng4c1g3COfs"
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "AI: Dane treningowe i skłonność",
+          "url": "https://youtu.be/x2mRoFNm22g"
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Wprowadzenie Sprite Lab",
           "url": "https://docs.google.com/presentation/d/1DViz9dJjZv01OJ0uKKUkzD35L5BwSt4ot46KyTonX3A/template/preview"
@@ -43,11 +88,11 @@
           "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit"
         },
         "the_power_of_words_lesson_quiz/coursef/2021": {
-          "name": "Potęga słów: lekcja quizu",
+          "name": "Potęga słów: quiz",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy"
         },
         "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
-          "name": "Potęga słów: lekcja quizu",
+          "name": "Potęga słów: quiz",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz"
         },
         "variables_blank_space_stories/coursef/2021": {
@@ -195,6 +240,10 @@
         "sprite_lab_documentation_1/coursef/2021": {
           "name": "Dokumentacja Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "Modyfikacje wirtualnej lekcji ",
+          "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
         "digital-trails-lesson-slides/courseb/2021": {
           "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
@@ -357,6 +406,10 @@
           "name": "Forum Nauczycieli",
           "url": "https://forum.code.org/c/csf/"
         },
+        "virtual_lesson_modifications/courseb/2021": {
+          "name": "Modyfikacje wirtualnej lekcji ",
+          "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
+        },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
           "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
         },
@@ -379,10 +432,6 @@
         },
         "wiggles-go_noodle/coursea/2021": {
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
-        },
-        "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "name": "Jak zrobić sekcję klasy na Code.org",
-          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Szczęśliwe Mapy (Happy Maps)",
@@ -529,6 +578,10 @@
           "name": "Forum Nauczycieli",
           "url": "https://forum.code.org/c/csf/"
         },
+        "virtual_lesson_modifications/coursea/2021": {
+          "name": "Modyfikacje wirtualnej lekcji ",
+          "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
+        },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
           "url": "https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit"
         },
@@ -583,11 +636,11 @@
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "Obroty i kąty",
+          "name": "Skręty i kąty",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "csf-turns-angles-doc/coursec/2021": {
-          "name": "Obroty i kąty",
+          "name": "Skręty i kąty",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "feeling_faces_emotion_image/coursec/2021": {
@@ -686,6 +739,10 @@
         "teacher_forum_1/coursec/2021": {
           "name": "Forum Nauczycieli",
           "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursec/2021": {
+          "name": "Modyfikacje wirtualnej lekcji ",
+          "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "password_power-up_lesson_slides/coursed/2021": {
           "url": "https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit"
@@ -861,6 +918,10 @@
           "name": "Forum Nauczycieli",
           "url": "https://forum.code.org/c/csf/"
         },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "Modyfikacje wirtualnej lekcji ",
+          "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
+        },
         "unplugged_maze_blocks/express/2021": {
           "name": "Bloki labiryntu w trybie \"unplugged' - bez komputera",
           "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
@@ -877,11 +938,11 @@
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "turns_angles/express/2021": {
-          "name": "Obroty i kąty",
+          "name": "Skręty i kąty",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "turns_angles_1/express/2021": {
-          "name": "Obroty i kąty",
+          "name": "Skręty i kąty",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "swimming_fish_teacher_sandbox/express/2021": {
@@ -918,7 +979,7 @@
           "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
         },
         "pair_programming_video/express/2021": {
-          "name": "Film: programowanie w parach",
+          "name": "Film: o programowaniu w parach",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "unplugged_blocks_courses_c-f__1/express/2021": {
@@ -1058,11 +1119,11 @@
           "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "name": "Obroty i kąty",
+          "name": "Skręty i kąty",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "csf-turns-angles-video/coursee/2021": {
-          "name": "Obroty i kąty",
+          "name": "Skręty i kąty",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
@@ -1149,6 +1210,10 @@
         "sprite_lab_documentation_1/coursee/2021": {
           "name": "Dokumentacja Sprite Lab",
           "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "Modyfikacje wirtualnej lekcji ",
+          "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         }
       }
     }

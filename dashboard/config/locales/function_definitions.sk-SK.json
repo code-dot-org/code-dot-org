@@ -3907,6 +3907,18 @@
               "length": "dĺžka",
               "sides": "Strany"
             }
+          },
+          "small flower": {
+            "name": "malý kvet"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "LOGICKÉ KVETY2"
+          },
+          "LOGIC FLOWER": {
+            "name": "LOGICKÝ KVET"
+          },
+          "LOGIC FLOWERS": {
+            "name": "LOGICKÉ KVETY"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {

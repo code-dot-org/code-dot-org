@@ -358,7 +358,7 @@ def distribute_translations(upload_manifests)
     ### Animation library
     spritelab_animation_translation_path = "/animations/spritelab_animation_library.json"
     if file_changed?(locale, spritelab_animation_translation_path)
-      @manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true})
+      @manifest_builder ||= ManifestBuilder.new({spritelab: true, upload_to_s3: true, quiet: true})
       spritelab_animation_translation_file = File.join(locale_dir, spritelab_animation_translation_path)
       translations = JSON.load(File.open(spritelab_animation_translation_file))
       # Use js_locale here as the animation library is used by apps

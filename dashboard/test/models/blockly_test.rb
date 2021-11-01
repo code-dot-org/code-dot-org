@@ -646,4 +646,51 @@ XML
     assert_equal 'translated long instructions', summary[:longInstructions]
     assert_equal 'translated short instructions', summary[:shortInstructions]
   end
+
+  test 'remove_counter_mutations' do
+    counter_mutation_xml = <<XML
+<xml>
+  <block type="category">
+    <title name="CATEGORY">Category1</title>
+  </block>
+  <block type="controls_for_counter" inline="true">
+    <mutation counter="counter"/>
+    <value name="FROM">
+      <block type="math_number">
+        <title name="NUM">1</title>
+      </block>
+    </value>
+    <value name="TO">
+      <block type="math_number">
+        <title name="NUM">100</title>
+      </block>
+    </value>
+    <value name="BY">
+      <block type="math_number">
+        <title name="NUM">10</title>
+      </block>
+    </value>
+  </block>
+</xml>
+XML
+    updated_xml_string = Blockly.remove_counter_mutations(counter_mutation_xml)
+    updated_xml = Nokogiri::XML(updated_xml_string, &:noblanks)
+    assert_equal updated_xml.xpath('//mutation').count, 0
+  end
+
+  test 'other mutation blocks are not removed' do
+    counter_mutation_xml = <<XML
+<xml>
+  <block type="category">
+    <title name="CATEGORY">Category1</title>
+  </block>
+  <block type="procedures_callnoreturn">
+    <mutation name="draw pinwheel"/>
+  </block>
+</xml>
+XML
+    updated_xml_string = Blockly.remove_counter_mutations(counter_mutation_xml)
+    updated_xml = Nokogiri::XML(updated_xml_string, &:noblanks)
+    assert_equal updated_xml.xpath('//mutation').count, 1
+  end
 end

@@ -9,10 +9,6 @@ mk:
           lessons:
             Variables:
               name: Променливи
-        infinity:
-          lessons:
-            Infinity:
-              name: Бесконечно
         allthehiddenthings:
           lessons:
             Game Lab:

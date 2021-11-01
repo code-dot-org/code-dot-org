@@ -16,7 +16,7 @@ export default class DownloadParentLetter extends Component {
 
   onDownloadParentLetter = () => {
     const url = teacherDashboardUrl(this.props.sectionId, '/parent_letter');
-    window.open(url, '_blank');
+    window.open(url, '_blank', 'noopener,noreferrer');
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',

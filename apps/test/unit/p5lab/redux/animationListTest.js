@@ -18,7 +18,7 @@ import reducer, {
 import animationTab from '@cdo/apps/p5lab/redux/animationTab';
 import {EMPTY_IMAGE} from '@cdo/apps/p5lab/constants';
 import {createStore} from '../../../util/redux';
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';

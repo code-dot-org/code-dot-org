@@ -1106,8 +1106,19 @@ mn:
         text: "{SPRITE}-н байршил"
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': бороотой
       gamelab_makeNewSpriteAnon:
         text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': баруун
+            '90': доошоо
+            '180': зүүн
+            '270': дээшээ
       gamelab_mirrorSprite:
         text: "{SPRITE} нь {DIRECTION} руу харж байна"
         options:
@@ -1134,6 +1145,19 @@ mn:
         text: "{SPRITE} дээр дарсан"
       gamelab_playSound:
         text: хөгжимтоглох {SOUND}
+      gamelab_playSoundOptions:
+        text: хөгжимтоглох {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": хямрах
+            "'sound://category_animals/bear.mp3'": баавгай
+            "'sound://category_animals/cat.mp3'": муур
+            "'sound://category_animals/cow.mp3'": үхэр
+            "'sound://category_animals/sheep.mp3'": хонь
+            "'sound://category_animals/chicken.mp3'": тахиа
+            "'sound://category_animals/dolphin.mp3'": далайн гахай
+            "'sound://category_animals/dog.mp3'": нохой
+            "'sound://category_digital/jump_7.mp3'": үсрэх
       gamelab_pointInDirection:
         text: "{SPRITE} {DIRECTION}-г заах"
         options:
@@ -1584,16 +1608,69 @@ mn:
         text: "{SPRITE}-н х тэнхлэг"
       Mikelab_yLocationOf:
         text: "{SPRITE}-н у тэнхлэг"
-      PoemBot_setBackgroundEffect:
+      Poetry_addFrame:
         options:
-          BG_EFFECT:
-            '"rainbow"': солонго
-      PoemBot_setForegroundEffect:
-        text: урд газрын нөлөөг {FG_EFFECT}-р тохируулах
+          BRUSH:
+            Ice Cream: Зайрмаг
+            Stars: Одод
+            Fireworks: Салют
+            '"rainbow"': Солонго
+            '"hearts"': Зүрхнүүд
+            '"flowers"': Цэцэг
+            '"waves"': Давалгаа
+      Poetry_makeBurst:
         options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': бороотой
-            '"bubbles"': хөөс
+      Poetry_makeNewSpriteAnon:
+        text: шинэ {ANIMATION_NAME} шидтэнг {LOCATION} руу аваачих
+      Poetry_playSound:
+        text: хөгжимтоглох {SOUND}
+        options:
+          SOUND:
+            Light: Гэрэл
+      Poetry_setBackground:
+        text: суурь өнгийг тохируулах {COLOR}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Өнгөнүүд
+            '"squiggles"': Жижиг долгио
+            '"space"': Сансар
+            '"stars"': Одод
+            '"ripples"': Долгионууд
+            '"rain"': Бороо
+            '"bubbles"': Хөөс
+            '"confetti"': Конфетти
+            '"hearts"': Өнгөлөг зүрх
+          PALETTE:
+            '"rainbow"': Солонго
+      Poetry_setBackgroundImageAs:
+        text: суурь өнгийг {IMG} руу тохируулах
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Бороо
+            '"bubbles"': Хөөс
+            '"hearts"': Өнгөлөг зүрх
+            '"confetti"': Конфетти
+            '"starburst"': Оддын тэсрэлт
+      Poetry_textVariableJoin:
+        text: "{VAR}{TEXT2}"
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: урагш хөдлөх
       RyanLab_turnLeft:

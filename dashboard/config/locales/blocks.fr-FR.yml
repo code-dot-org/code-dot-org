@@ -989,7 +989,7 @@ fr:
       gamelab_costumeImage:
         text: "{COSTUME}"
       gamelab_createNewSprite:
-        text: crée un nouveau lutin appellé {NAME} avec le costume {COSTUME}  à {LOCATION}
+        text: crée un nouveau sprite appellé {NAME} avec le costume {COSTUME}  à {LOCATION}
       gamelab_destroy:
         text: supprimer {THIS}
       gamelab_draggable:
@@ -1109,8 +1109,21 @@ fr:
         text: emplacement de {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': pluie
       gamelab_makeNewSpriteAnon:
         text: faire un nouveau lutin {ANIMATION_NAME} à {LOCATION}
+      gamelab_makeNumSprites:
+        text: créer {NUM} des nouveau sprites {ANIMATION_NAME}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': vers la droite
+            '90': vers le bas
+            '180': vers la gauche
+            '270': vers le haut
       gamelab_mirrorSprite:
         text: "{SPRITE} orienté vers {DIRECTION}"
         options:
@@ -1139,6 +1152,24 @@ fr:
         text: cliqué {SPRITE}
       gamelab_playSound:
         text: jouer le son {SOUND}
+      gamelab_playSoundOptions:
+        text: jouer le son {SOUND}
+        options:
+          SOUND:
+            "'sound://category_app/app_button_1.mp3'": bouton
+            "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bulle
+            "'sound://category_animals/bear.mp3'": Ours
+            "'sound://category_animals/cat.mp3'": chat
+            "'sound://category_animals/cow.mp3'": vache
+            "'sound://category_animals/pig.mp3'": cochon
+            "'sound://category_animals/sheep.mp3'": mouton
+            "'sound://category_animals/chicken.mp3'": poulet
+            "'sound://category_animals/elephant.mp3'": éléphant
+            "'sound://category_animals/dolphin.mp3'": dauphin
+            "'sound://category_animals/chick.mp3'": poulet
+            "'sound://category_animals/dog.mp3'": chien
+            "'sound://category_digital/jump_7.mp3'": sauter
       gamelab_pointInDirection:
         text: diriger {SPRITE} vers {DIRECTION}
         options:
@@ -1510,6 +1541,11 @@ fr:
             '"x"': position x
             '"y"': position y
             '"direction"': direction du mouvement
+      Mikelab_setupOutbreak:
+        text: |-
+          Configuration de l'épidémie
+          population:{SPRITE2N}
+          {TOGGLE}virus
       Mikelab_setupSim:
         text: configure la simulation avec {SPRITE1N}{SPRITE1COSTUME}vitesse{SPRITE1SPEED}{SPRITE2N}{SPRITE2COSTUME}vitesse{SPRITE2SPEED}ramassant{SPRITE3N}{SPRITE3COSTUME}
       Mikelab_showScoreboard:
@@ -1578,18 +1614,97 @@ fr:
         text: coordonnées x de {SPRITE}
       Mikelab_yLocationOf:
         text: coordonnées y de {SPRITE}
-      PoemBot_setBackgroundEffect:
-        text: définir l’effet de fond {BG_EFFECT} [PALETTE][1]
+      Outbreak_beginCongregating:
+        text: les monstres commencent à se rassembler
+      Outbreak_beginQuarantining:
+        text: les monstres commencent à se mettre en quarantaine lorsqu'ils sont malades
+      Outbreak_beginSocialDistancing:
+        text: les monstres commencent à respecter les règles de distanciation physique
+      Outbreak_beginWandering:
+        text: les monstres commencent à errer
+      Outbreak_beginWearingMasks:
+        text: les monstres commencent à porter le masque
+      Outbreak_layoutBorder:
+        text: dispose les monstres sur une bordure
+      Outbreak_layoutClusters:
+        text: dispose les monstres par lots de {NUM}
+      Outbreak_layoutGrid:
+        text: dispose les monstres en quadrillage
+      Outbreak_layoutRandom:
+        text: dispose les monstres au hasard
+      Outbreak_stopMoving:
+        text: les monstres ne bougent plus
+      Poetry_addFrame:
         options:
-          BG_EFFECT:
-            '"solid"': unie
-            '"rainbow"': arc-en-ciel
-      PoemBot_setForegroundEffect:
-        text: définir l’effet de premier plan {FG_EFFECT}
+          BRUSH:
+            Ice Cream: Crème glacée
+            Stars: Étoiles
+            Fireworks: Feux d'artifice
+            '"rainbow"': Arc-en-ciel
+            '"hearts"': Cœurs
+            '"flowers"': Fleurs
+            '"waves"': Vagues
+      Poetry_makeBurst:
         options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': pluie
-            '"bubbles"': bulles
+      Poetry_makeNewSpriteAnon:
+        text: faire un nouveau lutin {ANIMATION_NAME} à {LOCATION}
+      Poetry_makeNumSprites:
+        text: créer {NUM} des nouveau sprites {ANIMATION_NAME}
+      Poetry_playSound:
+        text: jouer le son {SOUND}
+        options:
+          SOUND:
+            Light: Lumière
+      Poetry_setBackground:
+        text: définir la couleur de fond {COLOR}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Couleurs
+            '"squiggles"': Gribouillis
+            '"space"': Espace
+            '"stars"': Étoiles
+            '"ripples"': Ondulations
+            '"rain"': Pluie
+            '"bubbles"': Bulles
+            '"confetti"': Confettis
+            '"hearts"': Cœurs colorés
+          PALETTE:
+            '"rainbow"': Arc-en-ciel
+      Poetry_setBackgroundImageAs:
+        text: établir {IMG} comme arrière-plan
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Pluie
+            '"bubbles"': Bulles
+            '"hearts"': Cœurs colorés
+            '"confetti"': Confettis
+            '"starburst"': Starburst
+      Poetry_startBehavior:
+        options:
+          BEHAVIOR:
+            swimming_left_and_right: natation
+      Poetry_stopBehavior:
+        options:
+          BEHAVIOR:
+            swimming_left_and_right: natation
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: avancer
       RyanLab_turnLeft:

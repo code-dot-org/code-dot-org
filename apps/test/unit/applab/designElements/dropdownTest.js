@@ -1,4 +1,4 @@
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/reconfiguredChai';
 import library from '@cdo/apps/applab/designElements/library';
 
 const {elements, ElementType} = library;

@@ -1,4 +1,4 @@
-import {expect} from '../../../../../../util/deprecatedChai';
+import {expect} from '../../../../../../util/reconfiguredChai';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 import {MicrobitStubBoard} from '../makeStubBoard';
 import sinon from 'sinon';

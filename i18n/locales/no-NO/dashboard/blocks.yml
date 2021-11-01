@@ -1003,6 +1003,17 @@
         text: plassering av {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': regn
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': høyre
+            '90': ned
+            '180': venstre
+            '270': opp
       gamelab_mirrorSprite:
         text: "{SPRITE} se til {DIRECTION}"
         options:
@@ -1029,6 +1040,21 @@
         text: "{SPRITE}"
       gamelab_playSound:
         text: spillLyd {SOUND}
+      gamelab_playSoundOptions:
+        text: spillLyd {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": knas
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Bobble
+            "'sound://category_animals/bear.mp3'": Bjørn
+            "'sound://category_animals/cat.mp3'": katt
+            "'sound://category_animals/cow.mp3'": ku
+            "'sound://category_animals/sheep.mp3'": sau
+            "'sound://category_animals/chicken.mp3'": kylling
+            "'sound://category_animals/elephant.mp3'": elefant
+            "'sound://category_animals/dolphin.mp3'": delfin
+            "'sound://category_animals/dog.mp3'": hund
+            "'sound://category_digital/jump_7.mp3'": Hopp
       gamelab_pointInDirection:
         text: pek {SPRITE} {DIRECTION}
         options:
@@ -1349,18 +1375,56 @@
             '"down"': pil ned
             '"left"': pil venstre
             '"right"': pil høyre
-      PoemBot_setBackgroundEffect:
-        text: velg bakgrunnseffekt {BG_EFFECT} [PALETTE][1]
+      Poetry_addFrame:
         options:
-          BG_EFFECT:
-            '"solid"': solid
-            '"rainbow"': regnbue
-      PoemBot_setForegroundEffect:
-        text: sett forgrunneffekt {FG_EFFECT}
+          BRUSH:
+            Ice Cream: Iskrem
+            Stars: Stjerner
+            Fireworks: Fyrverkeri
+            '"rainbow"': Regnbue
+            '"hearts"': Hjerter
+      Poetry_makeBurst:
         options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': regn
-            '"bubbles"': bobler
+      Poetry_playSound:
+        text: spillLyd {SOUND}
+        options:
+          SOUND:
+            Light: Lys
+      Poetry_setBackground:
+        text: sett bakgrunnsfarge {COLOR}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Farger
+            '"space"': Verdensrom
+            '"stars"': Stjerner
+            '"rain"': Regn
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+          PALETTE:
+            '"rainbow"': Regnbue
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Regn
+            '"bubbles"': Bobler
+            '"confetti"': Konfetti
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: gå fremover
       RyanLab_turnLeft:

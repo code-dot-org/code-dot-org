@@ -103,6 +103,7 @@ mr:
         mc_2017_puzzle_3: माईनक्राफ्ट अवर ऑफ कोड - रिपीट लूप्स
         mc_2017_puzzle_8: माईनक्राफ्ट अवर ऑफ कोड - फंक्शन्स 
         mc_2017_puzzle_12: माईनक्राफ्ट अवर ऑफ कोड - फ्रीप्ले 
+        CSF_SpriteLabIntro_CDEF: ही स्प्राईट लॅब आहे
         CSF_StarWars_ProjectIntro: स्टार वॉर्स प्रोजेक्टची ओळख
         hoc_dance_warmup: डांस पार्टी - वार्म अप
         hoc_dance_events: नृत्य पार्टी - कार्यक्रम
@@ -114,6 +115,7 @@ mr:
         hoc_dance_warmup_2019: डांस पार्टी - वार्म अप
         hoc_dance_events_2019: नृत्य पार्टी - कार्यक्रम
         hoc_dance_properties_2019: नृत्य पार्टी - मालमत्ता
+        outbreak_mike: CodeBytes एपिसोड 3 माईकसह - आऊटब्रेक सिम्युलेटर   
     callout:
       text:
         run: तुमचा प्रोग्रॅम करून पाहण्यासाठी "रन" दाबा

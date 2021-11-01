@@ -228,7 +228,8 @@
           "ed076287532e86365e841e92bfc50d8c": "Bonjour tout le monde&#160;!"
         },
         "courseE_aboutme_5_2021": {
-          "ed076287532e86365e841e92bfc50d8c": "Bonjour tout le monde&#160;!"
+          "ed076287532e86365e841e92bfc50d8c": "Bonjour tout le monde&#160;!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey !"
         },
         "courseF_apps_aquarium": {
           "83e4a96aed96436c621b9809e258b309": "poissons",
@@ -244,14 +245,14 @@
           "e8a10c04d72b2f135dabe360c4bdd534": "Tu as gagné !"
         },
         "courseF_editable_chatbot": {
-          "a72e7c5c68af0546e963e510297f5233": " ",
+          "a72e7c5c68af0546e963e510297f5233": "Bonjour, je suis X-9 ! Comment tu t'appelles ? ",
           "6dfcc5e477ebd3e2c893b3fc86b2eb93": " ans aussi !",
           "e243ac4e74cc5a76adbecf3b4daa1906": "ma question",
-          "f0e5da70d264f312a1658d51c130b101": "Entrez votre nom :",
-          "13e575be866ecf5ac3dcbf61ab2048d7": "Quel âge avez-vous ?",
-          "05584ab56b744b51cd8c4a6e8b3a08ee": "Entrez votre âge :",
-          "605f302ebc9f7fbacba60b15f551a633": "Quelle est votre couleur préférée ?",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Entrez votre couleur préférée :",
+          "f0e5da70d264f312a1658d51c130b101": "Écris ton nom :",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Quel âge as-tu ?",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Écris ton âge :",
+          "605f302ebc9f7fbacba60b15f551a633": "Quelle est ta couleur préférée ?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Écris ta couleur préférée :",
           "ae096fbf24d913754b01a1601672bf62": "aussi !",
           "1f258d88a70309efc1435ef5daa277a0": "Merci d'avoir discuté avec moi aujourd'hui ! "
         },
@@ -262,7 +263,7 @@
         },
         "courseF_apps_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "Jeux festifs",
-          "bf08dd3d1961874f13e77c936aad27e5": "Une histoire d'espace vierge ",
+          "bf08dd3d1961874f13e77c936aad27e5": "Une histoire d'espace vide ",
           "514b8d5320196898a9ced3efe0d4c802": "Mettre un adjectif :",
           "88794317e8c695bbc7bc7d2f35792c7f": "Mettre un objet :",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Mettre une partie du corps : ",
@@ -278,7 +279,7 @@
         },
         "courseF_editable_madlib": {
           "f6175c6f0b0bcfff0256286315f0eb7b": "Jeux festifs",
-          "bf08dd3d1961874f13e77c936aad27e5": "Une histoire d'espace vierge ",
+          "bf08dd3d1961874f13e77c936aad27e5": "Une histoire d'espace vide ",
           "514b8d5320196898a9ced3efe0d4c802": "Mettre un adjectif :",
           "88794317e8c695bbc7bc7d2f35792c7f": "Mettre un objet :",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Mettre une partie du corps : ",
@@ -361,15 +362,15 @@
           "c3787b1ed128fdeec3ad638c8ba547d3": "choix 3"
         },
         "courseC19_playLab_EOC5_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Vous pouvez écrire quelque chose.",
+          "5cec903c4d41c49412a70a94d54999ee": "Tu peux écrire quelque chose.",
           "3e11a2dc6edb909c47778bed75a81769": "Texte ici"
         },
         "courseC19_playLab_EOC6_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Vous pouvez écrire quelque chose.",
+          "5cec903c4d41c49412a70a94d54999ee": "Tu peux écrire quelque chose.",
           "3e11a2dc6edb909c47778bed75a81769": "Texte ici"
         },
         "courseC19_playLab_sample1_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "Vous pouvez écrire quelque chose.",
+          "5cec903c4d41c49412a70a94d54999ee": "Tu peux écrire quelque chose.",
           "3e11a2dc6edb909c47778bed75a81769": "Texte ici"
         },
         "courseC19_playLab_sample2_2021": {
@@ -379,7 +380,7 @@
           "c084e152431f9116b9fdb3f7d465f13d": "Neila veut aider le robot spatial à apprendre à être gentil. ",
           "b2f02bf648ce32c4362afe1578d41f70": "Ça a marché ! Neila a montré au robot spatial le pouvoir de la gentillesse. ",
           "2a28483f9f4f9ee44cec653a445d4c82": "Les autres créatures n'ont plus peur ! ",
-          "5cec903c4d41c49412a70a94d54999ee": "Vous pouvez écrire quelque chose.",
+          "5cec903c4d41c49412a70a94d54999ee": "Tu peux écrire quelque chose.",
           "3e11a2dc6edb909c47778bed75a81769": "Texte ici"
         },
         "courseC_data wizard_2021": {
@@ -388,12 +389,33 @@
           "27944770529dd15319a983bee8951560": "Un chat !",
           "22f6f6821f4d6d0a08653935b466ac2f": "des chats !",
           "1c64ef29c853587fbe94f69f05272b79": "Un oiseau !",
-          "5b402e6ea05e847a076e03ad74420c45": " oiseaux !",
+          "5b402e6ea05e847a076e03ad74420c45": " des oiseaux !",
           "4b23c908b939eaf7918e07142b9e05e0": "Un dragon !",
           "7f945c111ba5ea6d7b1547601db6ba0e": " des dragons !",
-          "71fc859f3abd22273bad5d0d8eda2173": "Comptez tous les animaux !",
-          "f62038e77820419cd978f7b722da560a": "Combien apparaîtront ?",
-          "81a2909a24e4ca3b582ab9ee539c080c": "Comptez les animaux domestiques"
+          "71fc859f3abd22273bad5d0d8eda2173": "Compte tous les animaux !",
+          "f62038e77820419cd978f7b722da560a": "Combien vont apparaître ?",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Compte les animaux domestiques"
+        },
+        "courseE_aboutme_1_2021": {
+          "b63151482630edd1589a9ac24d107c49": "C'est moi ! Rikki ! J'aime faire du codage, sortir avec Thuy et manger des glaces ! ",
+          "810896b14fc6615f0c76628b9b6a727e": "Thuy c'est ma meilleure amie ! Elle est vraiment bonne en sport ! ",
+          "8e985f60f328934accd78e7649584840": "Moi ce que j'adore plus que tout, c'est les glaces !",
+          "31ba97bb501bb1f5b448221be09bad32": "Lollipop, c'est mon chien ! Il faut que je lui apprenne à faire du codage ! ",
+          "6f97975a0bda0c9219915161149cbb26": "Ça, c'est mon ordinateur ! Je m'en sers sans arrêt pour faire du codage !"
+        },
+        "courseF_apps_chatbot": {
+          "a72e7c5c68af0546e963e510297f5233": "Bonjour, je suis X-9 ! Comment tu t'appelles ? ",
+          "f0e5da70d264f312a1658d51c130b101": "Écris ton nom :",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Quel âge as-tu ?",
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Écris ton âge :",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " ans aussi !",
+          "605f302ebc9f7fbacba60b15f551a633": "Quelle est ta couleur préférée ?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Écris ta couleur préférée :",
+          "ae096fbf24d913754b01a1601672bf62": "aussi !",
+          "1f258d88a70309efc1435ef5daa277a0": "Merci d'avoir discuté avec moi aujourd'hui ! "
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "Quel est votre nom ?"
         }
       }
     }

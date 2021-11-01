@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 import VideoThumbnail from '@cdo/apps/templates/VideoThumbnail';
 

@@ -916,6 +916,13 @@ te:
             '"v"': v
             '"w"': w
             '"z"': z
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': కుడి
+            '90': డౌన్
+            '180': ఎడమ
+            '270': అప్
       gamelab_mirrorSprite:
         options:
           DIRECTION:
@@ -925,6 +932,11 @@ te:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": బబ్బుల్స్
+            "'sound://category_animals/bear.mp3'": బేర్
       gamelab_setBackground:
         text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
       gamelab_setBackgroundImage:
@@ -1092,11 +1104,51 @@ te:
           KEY:
             '"yes"': అవును
             '"no"': లేదు
-      PoemBot_setForegroundEffect:
-        text: సెట్ చేయండి ఫోర్‌గ్రౌండ్ ఎఫెక్ట్ {FG_EFFECT}
+      Poetry_addFrame:
         options:
-          FG_EFFECT:
+          BRUSH:
+            Ice Cream: ఐస్ క్రీమ్
+            Stars: స్టార్స్
+            Fireworks: ఫైర్‌వర్క్స్
+            '"rainbow"': రెయిన్‌బో
+            '"hearts"': హార్ట్స్
+      Poetry_playSound:
+        options:
+          SOUND:
+            Light: లైట్
+      Poetry_setBackground:
+        text: బ్యాక్‌గ్రౌండ్ రంగు {COLOR} సెట్ చేయండి
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': రంగులు
+            '"space"': స్పేస్
+            '"stars"': స్టార్స్
+            '"rain"': రెయిన్
             '"bubbles"': బబ్బుల్స్
+            '"confetti"': కన్ఫెట్టీ
+          PALETTE:
+            '"rainbow"': రెయిన్‌బో
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': రెయిన్
+            '"bubbles"': బబ్బుల్స్
+            '"confetti"': కన్ఫెట్టీ
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       aalab_layoutSprites:
         options:
           FORMAT:

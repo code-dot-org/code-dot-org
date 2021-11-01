@@ -30,6 +30,12 @@ class LessonsController < ApplicationController
     @lesson_data = @lesson.summarize_for_lesson_show(@current_user, can_view_teacher_markdown?)
   end
 
+  # GET /lessons/2345
+  def show_by_id
+    @lesson_data = @lesson.summarize_for_lesson_show(@current_user, can_view_teacher_markdown?)
+    render :show
+  end
+
   # GET /s/script-name/lessons/1/student
   def student_lesson_plan
     script = Script.get_from_cache(params[:script_id])
@@ -140,7 +146,7 @@ class LessonsController < ApplicationController
     destination_script = Script.find_by_name(params[:destinationUnitName])
     raise "Cannot find script #{params[:destinationUnitName]}" unless destination_script
     raise 'Destination script and lesson script must be in a course version' unless destination_script.get_course_version && @lesson.script.get_course_version
-    raise 'Destination script must have the same version year as the lesson' unless destination_script.get_course_version.version_year == @lesson.script.get_course_version.version_year
+    raise 'Lessons current unit and destination unit must both use code studio lesson plans' unless !destination_script.use_legacy_lesson_plans && !@lesson.script.use_legacy_lesson_plans
     ActiveRecord::Base.transaction do
       copied_lesson = @lesson.copy_to_unit(destination_script)
       render(status: 200, json: {editLessonUrl: edit_lesson_path(id: copied_lesson.id), editScriptUrl: edit_script_path(copied_lesson.script)})

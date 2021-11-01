@@ -221,7 +221,7 @@ is:
             og fegurð íss.
           lessons:
             Artist:
-              name: Listamaður
+              name: Kóðaðu með Önnu og Elsu
           student_description: Notum kóða til að fylgja Önnu og Elsu þegar þær kanna
             töfra og fegurð íssins. Þú munt búa til snjókorn og mynstur með því að
             láta þær skauta um ísinn og svo getur þú búið til eigin vetrarveröld til
@@ -383,7 +383,7 @@ is:
             Disney Infinity persónum.
           lessons:
             Infinity:
-              name: Óendanleiki
+              name: Disney Infinity leikjasmiðja
           student_description: Nota Leikjasmiðjuna til að búa til sögu eða leik með
             Disney Infinity persónum.
         algebrademo:
@@ -1664,9 +1664,6 @@ is:
             leik í órafjarlægri vetrarbraut.
           description_short: Lærðu að forrita vélmenni og búðu til þinn eigin Star
             Wars leik í órafjarlægri vetrarbraut.
-          lessons:
-            Hour of Code 2015:
-              name: Klukkustund kóðunar 2015
           student_description: Lærðu að forrita vélmenni og búðu til þinn eigin Star
             Wars leik í órafjarlægri vetrarbraut.
         mc:
@@ -2861,9 +2858,6 @@ is:
           title: Velja lið og búa til körfuboltaleik
           description_short: Velja lið og búa til körfuboltaleik
           description: Velja lið og búa til körfuboltaleik
-          lessons:
-            Bounce:
-              name: Skopp
           student_description: Velja lið og búa til körfuboltaleik
         sample-csp5:
           lessons:
@@ -3088,9 +3082,6 @@ is:
           title: Kóðaðu þinn eigin íþróttaleik
           description_short: Blandaðu saman íþróttum
           description: Blandaðu saman íþróttum
-          lessons:
-            Sports:
-              name: Íþróttir
           student_description: Blandaðu saman íþróttum
         2016_sciencePD-phase2b:
           lessons:
@@ -4058,9 +4049,6 @@ is:
           description: |-
             Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!
             Ferðist um Minecraft með kóða.
-          lessons:
-            Minecraft Hour of Code:
-              name: Klukkustund kóðunar með Minecraft
           student_description: |-
             Nú er komið nýtt Minecraft verkefni fyrir Klukkustund kóðunar!
             Ferðist um Minecraft með kóða.
@@ -7916,6 +7904,12 @@ is:
           lessons:
             lesson-2:
               name: Kennslustund 2
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Áfangi 1
+            lessonGroup-3:
+              display_name: Áfangi 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -7952,6 +7946,40 @@ is:
             lessonGroup-2:
               display_name: Innihald
         csa5-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innihald
+        csdu6-playground:
+          lessons:
+            lesson-19:
+              name: Verkefni
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Græjur
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Verkefni
+        csa4-exemplars:
+          lesson_groups:
+            lesson group:
+              display_name: Innihald
+            content:
+              display_name: Innihald
+            lesson_group:
+              display_name: Innihald
+            lessonGroup-2:
+              display_name: Innihald
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Græjur
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stafsetning
+          title: Stafsetning
+        csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Innihald

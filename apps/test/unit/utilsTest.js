@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import {stub} from 'sinon';
-import {assert, expect} from '../util/deprecatedChai';
+import {assert, expect} from '../util/reconfiguredChai';
 import * as utils from '@cdo/apps/utils';
 const {
   isSubsequence,

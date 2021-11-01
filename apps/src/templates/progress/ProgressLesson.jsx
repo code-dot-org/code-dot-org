@@ -32,7 +32,8 @@ class ProgressLesson extends React.Component {
     lessonIsVisible: PropTypes.func.isRequired,
     lessonIsLockedForUser: PropTypes.func.isRequired,
     selectedSectionId: PropTypes.string,
-    lockableAuthorized: PropTypes.bool.isRequired,
+    lockableAuthorized: PropTypes.bool,
+    lockableAuthorizedLoaded: PropTypes.bool.isRequired,
     lessonIsLockedForAllStudents: PropTypes.func.isRequired,
     isRtl: PropTypes.bool
   };
@@ -125,6 +126,16 @@ class ProgressLesson extends React.Component {
     // TODO: Make the back-end return a lesson url as part of the lesson metadata so we
     // don't need to pass it separately from lesson here and in ProgressLessonTeacherInfo.
     const lessonUrl = levels[0] && levels[0].url;
+
+    // If a teacher is not verified they will not be lockableAuthorized (meaning they can't
+    // lock or unlock lessons). For a lockable lesson where teacher is not authorized, we will
+    // display a warning explaining that they need to be verified to unlock lessons.
+    const showNotAuthorizedWarning =
+      lesson.lockable &&
+      viewAs === ViewType.Teacher &&
+      this.props.lockableAuthorizedLoaded &&
+      !this.props.lockableAuthorized;
+
     return (
       <div
         className="uitest-progress-lesson"
@@ -186,19 +197,17 @@ class ProgressLesson extends React.Component {
                 </span>
               )}
           </div>
-          {lesson.lockable &&
-            !this.props.lockableAuthorized &&
-            viewAs === ViewType.Teacher && (
-              <div style={styles.notAuthorizedWarning}>
-                {i18n.unverifiedTeacherLockWarning()}
-                <a
-                  style={styles.learnMoreLink}
-                  href="https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-"
-                >
-                  {i18n.learnMoreWithPeriod()}
-                </a>
-              </div>
-            )}
+          {showNotAuthorizedWarning && (
+            <div style={styles.notAuthorizedWarning}>
+              {i18n.unverifiedTeacherLockWarning()}
+              <a
+                style={styles.learnMoreLink}
+                href="https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-"
+              >
+                {i18n.learnMoreWithPeriod()}
+              </a>
+            </div>
+          )}
           {!this.state.collapsed && (
             <ProgressLessonContent
               description={description}
@@ -299,6 +308,7 @@ export default connect(state => ({
   showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.viewAs,
   lockableAuthorized: state.lessonLock.lockableAuthorized,
+  lockableAuthorizedLoaded: state.lessonLock.lockableAuthorizedLoaded,
   lessonIsVisible: (lesson, viewAs) => lessonIsVisible(lesson, state, viewAs),
   lessonIsLockedForUser: (lesson, levels, viewAs) =>
     lessonIsLockedForUser(lesson, levels, state, viewAs),

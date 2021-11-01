@@ -1,20 +1,20 @@
 ---
-title: 정보
+title: 소개
 theme: responsive
 video_player: true
 ---
 
-# 우리에 대한
+# 우리 소개
 
 <div class="col-60">
-  Code.org®는 학교에서 컴퓨터 과학에 대한 접근성을 확대하고 여성과 소수 민족의 소외 계층이 참여하는 비영리 단체입니다. 우리에 목표는 모든 학교에 있는 모든 학생들이 과학, 생물학, 화학처럼 컴퓨터 과학을 배울 기회를 가지는 것 입니다. We provide the most broadly used curriculum for teaching computer science in primary and secondary school and also organize the annual <a href="https://hourofcode.com">Hour of Code</a> campaign, which has engaged 10% of all students in the world. Code.org는 Amazon, Facebook, Google, the Infosys Foundation, Microsoft등과 같은 기업들로부터 기부를 받고 있습니다.
+  Code.org®는 학교에서 컴퓨터 과학에 대한 접근성을 확대하고 소외받는 계층의 어린 여성과 학생의 참여를 증가시키는데 전념하는 비영리 단체입니다. 우리에 비전은 모든 학교의 모든 학생들이 생물, 화학 또는 대수학처럼 컴퓨터 과학을 배울 기회를 갖게 하는 것 입니다. 우리는 초중등 학교에서 컴퓨터 과학을 가르치기 위해 가장 널리 사용되는 커리큘럼을 제공하고 또한 매년 <a href="https://hourofcode.com">아워오브코드</a> 캠페인을 개최하며 이 캠페인에는 세계 전체 학생의 10 %가 참여하고 있습니다. Code.org는 Amazon, Facebook, Google, Infosys Foundation, Microsoft를 포함한 <a href="/about/donors">많은</a> 기업들로부터 기부를 받고 있습니다.
 </div>
 
 [col-40]
 
 <div style="background-color:#7665a0;height:190px;padding:25px;display:flex;justify-content:center;flex-direction:column">
   
-  <font size="4" color="#FFFFFF"><b>Code.org 과정들은 수천만명에 학생들과 백만 명에 선생님들에게 도움을 주고 있습니다.</b></font>
+  <font size="4" color="#FFFFFF"><b>Code.org 과정은 전 세계 수천만명의 학생과 백만명의 교사가 사용하고 있습니다.</b></font>
  
 </div>
 
@@ -24,31 +24,31 @@ video_player: true
 
 ## 역사
 
-In 2013, Code.org was launched by twin brothers Hadi and Ali Partovi with a [video promoting computer science](https://www.youtube.com/watch?v=nKIu9yen5nc). 어느 날, 이 동영상은 유튜브에서 1등이 되었고, 15,000 개의 학교들이 도움을 요청하였습니다. 그 다음에는, 우리는 세계적인 운동을 지원하는 완전한 조직을 구축하기 위해 자원 봉사자의 부트 스트랩 직원으로부터 확장되었습니다 우리는 좋은 컴퓨터 과학이 운이 좋은 학생들만 배우는게 아니라, 모든 학생들이 배워야 한다고 생각합니다.
+Code.org는 2013년에 쌍둥이 형제인 Hadi와 Ali Partovi가 [컴퓨터 과학을 홍보하는 동영상](https://www.youtube.com/watch?v=nKIu9yen5nc)으로 시작했습니다. 이 동영상은 유튜브에서 하루 동안 1위를 했고, 15,000 개의 학교들이 도움을 요청했습니다. 그 이후로, 우리는 자원봉사자들에게 의존했던 규모에서 세계적인 운동을 지원하기 위한 완전한 조직을 구축하기 위해 확장되고 있습니다 우리는 운 좋은 일부 학생들만이 아니라 모든 어린이들이 질 좋은 컴퓨터 과학을 배워야 한다고 믿습니다.
 <br> <iframe width="560" height="315" src="https://www.youtube.com/embed/nKIu9yen5nc" frameborder="0" allowfullscreen mark="crwd-mark"></iframe>
 
 ## 우리가 하는 일
 
-We do work across the education spectrum: designing [our own courses](https://studio.code.org/courses) or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes. 우리의 연구는 컴퓨터 과학 교육을 수립하고, 기금을 조성하고, 퍼뜨리는 데 도움을 준 수많은 조직과 개인들에 의해 수십 년간의 노력을 토대로 구축되었습니다. 광범위한 컴퓨터 과학 교육 커뮤니티의 끊임없는 노력에 감사 드리며 지난 수년간 우리의 영향력을 확대 한 모든 파트너와 개인에게 감사드립니다.
+우리는 교육 스펙트럼 전반에 걸쳐 일합니다: [과정을 자체적으로](https://studio.code.org/courses) 설계하거나 또는 다른 이들과 파트너가 되고 교사를 교육시키고 큰 학군과 파트너가 되며 정부 정책 변경에 도움을 주고 파트너십을 통해 국제적으로 확대되고 고정관념을 깨기 위한 마케팅을 합니다. 우리의 일은 컴퓨터 과학 교육을 수립하고 기금을 조성하며 확산시키는 데 도움을 준 수 많은 조직과 개인의 수십 년간의 노력을 토대로 그 위에 구축되고 있습니다. 광범위한 컴퓨터 과학 교육 커뮤니티의 끊임없는 노력에 감사 드리며 지난 수년간 우리의 영향력을 확대해 준 모든 파트너와 개인에게 감사드립니다.
 
-## Code.org's International Reach
+## Code.org의 국제적 도달
 
-Over 40% of our website traffic comes from outside of the United States and that number continues to climb. In order to expand global access to computer science, our team works closely with [more than 100 international partners](/about/partners), helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organisation for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization.
+우리의 웹사이트 트래픽의 40% 이상이 미국 밖에서 오고 그 숫자는 계속 올라 가고 있습니다. 컴퓨터 과학으로의 세계적 접근을 확대하기 위해 우리 팀은 [100개 이상의 국제 파트너](/about/partners)와 긴밀히 협력하며 그들이 아워오브코드를 홍보하고 정책 변화를 지지하며 교사를 교육하는데 도움을 주고 있습니다. 우리는 세계 각국의 교육부와 파트너가 되고 경제협력개발기구와 유엔 교육과학문화기관 등과 같은 국제조직과 협력하여 컴퓨터 과학을 국제교육 담론의 일부로 만들고 있습니다.
 
-<img alt="Code.org International Partners" src="/images/international/international_partners.jpg" width="100%" />
+<img alt="Code.org 국제 파트너" src="/images/international/international_partners.jpg" width="100%" />
 
 ## 번역
 
-당신이 살고 있는 나라의 학생들에게 직접적인 영향을주고 싶습니까? Code.org에 있는 과정들이 그들에 언어로 번역이 될 수 있도록 도와주세요! 만약 당신이 번역을 도와주신다면, 당신은 컴퓨터 과학을 전 세계에 있는 학생들이 할 수 있게 해주는 7,00명이 넘는 사람들이 이용하는 사이트에 회원이 될 것입니다. Take a look at our [translation guide](/translate) for more information.
+당신이 살고 있는 나라의 학생들에게 직접적인 영향을 주고 싶으세요? Code.org 컨텐츠가 각 학생의 모국어로 제공될 수 있게 도와주세요! 튜토리얼과 레슨 번역 작업에 지원해 주시면, 여러분은 컴퓨터 과학을 전 세계 학생들에게 보급하는 일을 돕는 7,00명 이상의 번역가로 구성된 커뮤니티의 일원이 되실 것입니다. 더 자세한 정보는 [번역 가이드](/translate)를 참조하세요.
 
-## Our commitment to free curriculum and open source technology
+## 무료 커리큘럼과 오픈 소스 테크놀로지에 대한 우리의 약속
 
-All curriculum resources and tutorials we create will forever be free to use and openly licensed under a [Creative Commons](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, allowing others to make derivative education resources for non-commercial purposes. If you are interested in licensing our materials for commercial purposes, [contact us](/contact). Our courses are translated for worldwide use or by speakers of different languages. Our technology is developed as an [open source project](https://github.com/code-dot-org/code-dot-org).
+우리가 제작한 모든 커리큘럼 리소스와 튜토리얼은 평생 무료로 사용할 수 있고 [크리에이티브 커몬스](http://creativecommons.org/licenses/by-nc-sa/4.0/) 라이선스 하에서 개방형 허가를 받게 되어, 다른 이들이 비상업적 목적으로 파생적 교육 리소스를 만드는 것을 허용합니다. 우리의 자료를 상업적 목적으로 사용하기 위해 라이선스를 등록하는 데 관심이 있으면 [문의하세요](/contact). 우리의 과정은 전 세계에서 사용할 수 있도록 또한 다양한 언어 사용자에 의해 번역되었습니다. 우리의 기술은 [오픈 소스 프로젝트](https://github.com/code-dot-org/code-dot-org)로서 개발됩니다.
 
-<img alt="Students with a laptop" src="/images/international/group_computer.jpg" width="100%" />
+<img alt="랩톱이 있는 학생" src="/images/international/group_computer.jpg" width="100%" />
 
-## Follow us
+## 팔로우 하세요
 
-[Sign up to receive status updates](/about/hear-from-us) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:
+K-12 컴퓨터 과학 운동의 진행과 Code.org. 활동에 관한[상태 업데이트를 받으려면 가입하세요](/about/hear-from-us). 또는 소셜 미디어에서 Code.org를 팔로우하세요:
 
 {{ social_media_codeorg }}

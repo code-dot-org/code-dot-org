@@ -1,9 +1,9 @@
 /** @file Sprite Lab constants */
 var utils = require('@cdo/apps/utils');
 
-module.exports.LocationPickerMode = utils.makeEnum('IDLE', 'SELECTING');
+export const LocationPickerMode = utils.makeEnum('IDLE', 'SELECTING');
 
-module.exports.SpritelabReservedWords = [
+export const SpritelabReservedWords = [
   // p5 globals
   'CENTER',
   'World',
@@ -52,3 +52,11 @@ module.exports.SpritelabReservedWords = [
   'yLocationOf',
   'setupSim'
 ];
+
+export const valueTypeTabShapeMap = function(blockly) {
+  return {
+    [blockly.BlockValueType.SPRITE]: 'angle',
+    [blockly.BlockValueType.BEHAVIOR]: 'rounded',
+    [blockly.BlockValueType.LOCATION]: 'square'
+  };
+};

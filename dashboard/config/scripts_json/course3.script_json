@@ -4,24 +4,25 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_path": "https://code.org/curriculum/course3/{LESSON}/Teacher",
+      "curriculum_umbrella": "CSF",
+      "has_lesson_plan": true,
+      "hideable_lessons": true,
+      "is_course": true,
+      "lesson_extras_available": true,
       "project_widget_types": [
         "playlab",
         "artist"
       ],
       "project_widget_visible": true,
-      "has_lesson_plan": true,
-      "curriculum_path": "https://code.org/curriculum/course3/{LESSON}/Teacher",
-      "curriculum_umbrella": "CSF",
       "tts": true,
-      "lesson_extras_available": true,
-      "hideable_lessons": true,
-      "version_year": "unversioned",
-      "is_course": true
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "course3",
-    "serialized_at": "2021-08-03 22:46:41 UTC",
+    "serialized_at": "2021-10-25 22:53:00 UTC",
     "published_state": "preview",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "course3"
     }

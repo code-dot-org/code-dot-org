@@ -29,7 +29,8 @@ const initialState = {
   lockStatus: [],
   saving: false,
   // whether user is allowed to see lockable lessons
-  lockableAuthorized: false
+  lockableAuthorized: null,
+  lockableAuthorizedLoaded: false
 };
 
 /**
@@ -38,7 +39,8 @@ const initialState = {
 export default function reducer(state = initialState, action) {
   if (action.type === AUTHORIZE_LOCKABLE) {
     return Object.assign({}, state, {
-      lockableAuthorized: true
+      lockableAuthorized: action.isAuthorized,
+      lockableAuthorizedLoaded: true
     });
   }
 
@@ -142,7 +144,10 @@ export default function reducer(state = initialState, action) {
 /**
  * Authorizes the user to be able to see lockable lessons
  */
-export const authorizeLockable = () => ({type: AUTHORIZE_LOCKABLE});
+export const authorizeLockable = isAuthorized => ({
+  type: AUTHORIZE_LOCKABLE,
+  isAuthorized
+});
 
 export const openLockDialog = (sectionId, lessonId) => ({
   type: OPEN_LOCK_DIALOG,

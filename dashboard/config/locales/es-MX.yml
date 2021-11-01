@@ -241,6 +241,10 @@ es-MX:
     email_preference_yes: Sí
     email_preference_no: 'No'
     email_preference_required: Debes especificar una preferencia de correo electrónico.
+    share_teacher_email_reg_partner_preference_yes: Sí
+    share_teacher_email_reg_partner_preference_no: 'No'
+    share_teacher_email_reg_partner_preference_required: Debes especificar una preferencia
+      de correo electrónico.
     parent_account_checkbox: Soy padre o tutor registrándose en lugar de mi hijo
     parent_account_email_progress_permission: "¿Podríamos enviarte emails con actualizaciones
       ocasionales del progreso y proyectos de tus hijos, y actualizaciones sobre sus
@@ -1270,9 +1274,11 @@ es-MX:
       email: Correo electrónico
       email_alternate: Correo electrónico alternativo
       gender: Identidad de género
+      school: Escuela
       school_name: Nombre de la escuela
       school_city: Ciudad de la escuela
       school_country: País en el que está la escuela
+      school_department_region: Departamento/Región
       colombian_school_city: Establecimiento
       colombian_chilean_school_department: Departamento/Región
       colombian_school_municipality: Municipio

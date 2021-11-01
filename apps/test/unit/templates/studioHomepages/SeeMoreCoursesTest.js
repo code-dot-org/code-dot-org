@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {assert, expect} from '../../../util/deprecatedChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import ContentContainer from '@cdo/apps/templates/ContentContainer';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';

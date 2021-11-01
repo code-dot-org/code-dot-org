@@ -358,7 +358,7 @@ describe('DetailViewContents', () => {
     });
   });
 
-  xdescribe('Scholarship Teacher? row', () => {
+  describe('Scholarship Teacher? row', () => {
     it('on teacher applications', () => {
       const detailView = mountDetailView('Teacher', {
         isWorkshopAdmin: true,
@@ -383,13 +383,13 @@ describe('DetailViewContents', () => {
         .last()
         .simulate('click');
 
-      // Dropdown is still disabled
+      // Dropdown is enabled
       // note: this is the scholarship dropdown which is always disabled when scholarships are locked.
       expect(
         getLastRow()
           .find('Select')
           .prop('disabled')
-      ).to.equal(true);
+      ).to.equal(false);
 
       // Click "Save"
       detailView

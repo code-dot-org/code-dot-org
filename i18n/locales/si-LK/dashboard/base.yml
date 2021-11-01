@@ -128,6 +128,8 @@ si:
     accept_terms: "ගිණුමක් නිර්මාණය කිරීමට ඔබ එකඟ විය යුතුය"
     email_preference_yes: "ඔව්"
     email_preference_no: "නැහැ"
+    share_teacher_email_reg_partner_preference_yes: "ඔව්"
+    share_teacher_email_reg_partner_preference_no: "නැහැ"
   school_info:
     other: 'වෙනත්'
   signin_form:

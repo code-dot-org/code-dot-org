@@ -963,7 +963,12 @@
   coursed-2020_name: Kurs D (2019)
   coursee-2020_name: Kurs E (2019)
   coursef-2020_name: Kurs F (2019)
+  coursea-2021_name: Kurs A (2021)
+  courseb-2021_name: Kurs B (2021)
+  coursec-2021_name: Kurs C (2021)
   coursed-2021_name: Kurs D (2021)
+  coursee-2021_name: Kurs E (2021)
+  coursef-2021_name: Kurs F (2021)
   express-2018_name: Expresskurs (2018)
   pre-express-2018_name: Leseanfänger-Expresskurs (2018)
   express-2019_name: Expresskurs (2019)
@@ -1537,7 +1542,7 @@
   account_sign_up_email_opt_in: "Dürfen wir dich per E-Mail über Neuigkeiten zu unseren Kursen, lokale Möglichkeiten oder andere Neuigkeiten zur Informatik informieren?"
   account_sign_up_child_accept_terms: "Ich bestätige, dass ich die Erlaubnis meines Erziehungsberechtigten habe, die Dienste von Code.org zu nutzen."
   hoc_overview_dance_title: "Tanzparty"
-  hoc_overview_dance_subtitle: "Codieren Sie eine Tanzparty, um sie mit Ihren Freunden zu teilen. Mit Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara und 25 mehr!"
+  hoc_overview_dance_subtitle: "Programmiere eine Tanzparty, die du mit deinen Freunden teilen kannst. Mit Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara und 25 weiteren!"
   hoc_overview_dance_2019_subtitle: "Programmiere eine Tanzparty, die du mit deinen Freunden teilen kannst. Mit Katy Perry, Shawn Mendes, Panic! At The Disco, Lil Nas X, Jonas Brothers, Nicki Minaj, and 34 weiteren!"
   hoc_overview_title: "Hour of Code Aktivitäten von Code.org"
   hoc_overview_subtitle: "Die <a href=\"https://hourofcode.com\">Hour of Code</a> ist eine weltweite Bewegung, die Millionen von Schülern in über 180 Länder erreicht. Jeder kann, egal wo, ein Hour of Code Veranstaltung organisieren oder eines der über 200 einstündigen Tutorials versuchen, verfügbar in über 45 Sprachen."
@@ -1621,7 +1626,7 @@
   hoc2018_mc_journey: "Reise durch Minecraft mit Code."
   hoc2018_dance_party_main_heading: "Tanzparty"
   hoc2018_dance_party_landing_title: "Tanz"
-  hoc2018_dance_party_subheading: "Hilf mit bei der Übersetzung von Dance Party"
+  hoc2018_dance_party_subheading: "Hilf mit bei der Übersetzung von Tanzparty"
   hoc2018_dance_create_your_own_dance_title: "Erstelle deine eigene Tanzparty"
   hoc2018_dance_party_box_title: "Tanzparty"
   hoc2018_dance_party_box_description: "Programmiere eine Tanzparty, um sie mit deinen Freunden zu teilen!"
@@ -1635,7 +1640,7 @@
   hoc2018_dance_teacher_resources_tile1_description: "Unterrichtspläne, Urkunden und Musikfilter."
   hoc2018_dance_teacher_resources_tile1_button: "Stundenplan"
   hoc2018_dance_teacher_resources_tile2_title: "Unplugged-Tanzparty"
-  hoc2018_dance_teacher_resources_tile2_description: "Keine Computer erforderlich!  Lerne Codier-Konzepte, um gemeinsam eine Tanzparty zu choreografieren."
+  hoc2018_dance_teacher_resources_tile2_description: "Keine Computer erforderlich!  Lerne Programmierkonzepte, um gemeinsam eine Tanzparty zu choreografieren."
   hoc2018_dance_teacher_resources_tile2_button: "Aktivität ohne Computer"
   hoc2018_dance_featured_student_creations_title: "Projekte von Studenten im Blickpunkt"
   hoc2018_dance_videos_section_heading: "Lass dich inspirieren"
@@ -1680,7 +1685,7 @@
   hoc2019_mc_mee_description1: 'Das neue Minecraft Hour of Code Tutorial ist jetzt in Minecraft verfügbar: Education Edition für Windows, Mac und iPad. Lernen Sie die Grundlagen der Programmierung und erkunden Sie die KI mit Ihren Schülern!'
   hoc2019_mc_mee_description2: "Greifen Sie auf kostenlose Ressourcen zu, darunter einen Unterrichtsplan, Videos, einen Lehrplan für Informatik und Lehrerausbildungen."
   hoc2019_mc_more_coding_resources: "Mehr Quellcode Ressourcen"
-  hoc2019_dance_previous_versions: "Möchtest du eine frühere Version von Dance Party?\nKlicke hier um [Part 1](%{dance_2018_link}) und [Part 2](%{dance_extras_2018_link}) vom letzten Jahr zu starten."
+  hoc2019_dance_previous_versions: "Möchtest du eine frühere Version von Tanzparty?\nKlicke hier um [Part 1](%{dance_2018_link}) und [Part 2](%{dance_extras_2018_link}) vom letzten Jahr zu starten."
   homepage_slot_text_title_at_home: "Zu Hause lernen\n"
   homepage_slot_text_blurb_at_home: "Diese Ressource machen es einfacher"
   homepage_slot_text_link_code_break: "Mache eine Programmierpause"
@@ -1697,7 +1702,7 @@
   footer_support: "Unterstützung"
   footer_terms: "Bedingungen"
   ai_for_oceans: "KI für Meere"
-  ai_for_oceans_lesson_plan: "arbeitsplan"
+  ai_for_oceans_lesson_plan: "Arbeitsplan"
   ai_in_partnership_with: "In Zusammenarbeit mit"
   ai_microsoft_thanks: "Wir danken Microsoft für die Unterstützung unserer Vision und Mission, sicherzustellen, dass jedes Kind die Möglichkeit hat, Informatik und die Fähigkeiten zu erlernen, um im 21. Jahrhundert erfolgreich zu sein."
   ai_activity: "Aufgabe"

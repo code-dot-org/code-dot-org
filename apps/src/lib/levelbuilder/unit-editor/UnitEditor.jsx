@@ -17,21 +17,26 @@ import $ from 'jquery';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
 import {
-  getSerializedLessonGroups,
   init,
   mapLessonGroupDataForEditor
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import {
-  lessonGroupShape,
-  resourceShape as migratedResourceShape
-} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {lessonGroupShape} from './shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
-import {PublishedState} from '@cdo/apps/util/sharedConstants';
+import {
+  InstructionType,
+  PublishedState,
+  InstructorAudience,
+  ParticipantAudience
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import Button from '@cdo/apps/templates/Button';
+import Dialog from '@cdo/apps/templates/Dialog';
+import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
-const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', ''];
+const CURRICULUM_UMBRELLAS = ['CSF', 'CSD', 'CSP', 'CSA', 'CSC', ''];
 
 /**
  * Component for editing units in unit_groups or stand alone courses
@@ -43,6 +48,14 @@ class UnitEditor extends React.Component {
     i18nData: PropTypes.object.isRequired,
     initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
       .isRequired,
+    initialInstructionType: PropTypes.oneOf(Object.values(InstructionType))
+      .isRequired,
+    initialInstructorAudience: PropTypes.oneOf(
+      Object.values(InstructorAudience)
+    ).isRequired,
+    initialParticipantAudience: PropTypes.oneOf(
+      Object.values(ParticipantAudience)
+    ).isRequired,
     initialDeprecated: PropTypes.bool,
     initialLoginRequired: PropTypes.bool,
     initialHideableLessons: PropTypes.bool,
@@ -81,12 +94,12 @@ class UnitEditor extends React.Component {
     isMigrated: PropTypes.bool,
     initialIncludeStudentLessonPlans: PropTypes.bool,
     initialCourseVersionId: PropTypes.number,
+    initialUseLegacyLessonPlans: PropTypes.bool,
     preventCourseVersionChange: PropTypes.bool,
     scriptPath: PropTypes.string.isRequired,
 
     // from redux
     lessonGroups: PropTypes.arrayOf(lessonGroupShape).isRequired,
-    levelKeyList: PropTypes.object.isRequired,
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape)
       .isRequired,
     studentResources: PropTypes.arrayOf(migratedResourceShape).isRequired,
@@ -109,6 +122,7 @@ class UnitEditor extends React.Component {
       isSaving: false,
       error: null,
       lastSaved: null,
+      ttsDialogOpen: false,
       familyName: this.props.initialFamilyName,
       isCourse: this.props.initialIsCourse,
       showCalendar: this.props.initialShowCalendar,
@@ -151,8 +165,12 @@ class UnitEditor extends React.Component {
       hasImportedLessonDescriptions: false,
       oldScriptText: this.props.initialLessonLevelData,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
+      useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       deprecated: this.props.initialDeprecated,
-      publishedState: this.props.initialPublishedState
+      publishedState: this.props.initialPublishedState,
+      instructionType: this.props.initialInstructionType,
+      instructorAudience: this.props.initialInstructorAudience,
+      participantAudience: this.props.initialParticipantAudience
     };
   }
 
@@ -180,7 +198,11 @@ class UnitEditor extends React.Component {
   };
 
   handleStandaloneUnitChange = () => {
-    this.setState({isCourse: !this.state.isCourse});
+    this.setState({
+      isCourse: !this.state.isCourse,
+      familyName: null,
+      versionYear: null
+    });
   };
 
   handleShowCalendarChange = () => {
@@ -218,19 +240,6 @@ class UnitEditor extends React.Component {
       ) {
         shouldCloseAfterSave = false;
       }
-    }
-    // HACK: until the unit edit page no longer overwrites changes to the
-    // arrangement of levels within lessons, give the user a warning
-    if (
-      window.lessonEditorOpened &&
-      !confirm(
-        'WARNING: It looks like you opened a lesson edit page from this unit edit page. ' +
-          'If you made any changes on the lesson edit page which you do not ' +
-          'wish to lose, please click cancel now and reload this page before ' +
-          'saving any changes to this unit edit page.'
-      )
-    ) {
-      shouldCloseAfterSave = false;
     }
 
     if (this.state.showCalendar && !this.state.weeklyInstructionalMinutes) {
@@ -275,6 +284,9 @@ class UnitEditor extends React.Component {
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
       published_state: this.state.publishedState,
+      instruction_type: this.state.instructionType,
+      instructor_audience: this.state.instructorAudience,
+      participant_audience: this.state.participantAudience,
       deprecated: this.state.deprecated,
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
@@ -286,12 +298,9 @@ class UnitEditor extends React.Component {
       project_widget_visible: this.state.projectWidgetVisible,
       project_widget_types: this.state.projectWidgetTypes,
       lesson_extras_available: this.state.lessonExtrasAvailable,
-      script_text: this.props.isMigrated
-        ? getSerializedLessonGroups(
-            this.props.lessonGroups,
-            this.props.levelKeyList
-          )
-        : this.state.lessonLevelData,
+      lesson_groups:
+        this.props.isMigrated && JSON.stringify(this.props.lessonGroups),
+      script_text: !this.props.isMigrated && this.state.lessonLevelData,
       last_updated_at: this.state.lastUpdatedAt,
       old_unit_text: this.state.oldScriptText,
       has_verified_resources: this.state.hasVerifiedResources,
@@ -317,6 +326,7 @@ class UnitEditor extends React.Component {
       ),
       is_migrated: this.props.isMigrated,
       include_student_lesson_plans: this.state.includeStudentLessonPlans,
+      use_legacy_lesson_plans: this.state.useLegacyLessonPlans,
       is_maker_unit: this.state.isMakerUnit
     };
 
@@ -337,7 +347,7 @@ class UnitEditor extends React.Component {
         } else {
           const lessonGroups = mapLessonGroupDataForEditor(data.lesson_groups);
 
-          this.props.init(lessonGroups, this.props.levelKeyList);
+          this.props.init(lessonGroups);
           this.setState({
             lastSaved: Date.now(),
             isSaving: false,
@@ -495,12 +505,42 @@ class UnitEditor extends React.Component {
               type="checkbox"
               checked={this.state.tts}
               style={styles.checkbox}
-              onChange={() => this.setState({tts: !this.state.tts})}
+              onChange={e => {
+                this.setState({ttsDialogOpen: true});
+              }}
             />
             <HelpTip>
               <p>Check to enable text-to-speech for this unit.</p>
             </HelpTip>
           </label>
+          {this.state.ttsDialogOpen && (
+            <Dialog
+              hideBackdrop={false}
+              isOpen={this.state.ttsDialogOpen}
+              title={this.state.tts ? 'Turn off TTS' : 'Turn on TTS'}
+              cancelText="Cancel"
+              confirmText={this.state.tts ? 'Disable TTS' : 'Generate TTS'}
+              body={
+                this.state.tts
+                  ? 'Are you sure? All of the TTS files for this ' +
+                    'course have already been generated. Any new edits will not be reflected ' +
+                    'in the TTS files for this course.'
+                  : 'Are you sure? This will generate text to speech files for all ' +
+                    'levels in this script. It will also update the TTS files each time edits are ' +
+                    'made to a level. We have to pay for each file generated. Please ' +
+                    'confirm that levels are in a stable state before checking.'
+              }
+              handleClose={e => {
+                this.setState({ttsDialogOpen: false});
+              }}
+              onCancel={e => {
+                this.setState({ttsDialogOpen: false});
+              }}
+              onConfirm={e => {
+                this.setState({ttsDialogOpen: false, tts: !this.state.tts});
+              }}
+            />
+          )}
           <label>
             Is a Maker Unit
             <input
@@ -579,6 +619,31 @@ class UnitEditor extends React.Component {
             />
           </label>
         </CollapsibleEditorSection>
+
+        {this.props.hasCourse && (
+          <CollapsibleEditorSection title="Course Type Settings">
+            <p>
+              This unit is part of a course. Go to the course edit page to set
+              the course type settings for the course and its units.
+            </p>
+          </CollapsibleEditorSection>
+        )}
+        {!this.props.hasCourse && (
+          <CourseTypeEditor
+            instructorAudience={this.state.instructorAudience}
+            participantAudience={this.state.participantAudience}
+            instructionType={this.state.instructionType}
+            handleInstructionTypeChange={e =>
+              this.setState({instructionType: e.target.value})
+            }
+            handleInstructorAudienceChange={e =>
+              this.setState({instructorAudience: e.target.value})
+            }
+            handleParticipantAudienceChange={e =>
+              this.setState({participantAudience: e.target.value})
+            }
+          />
+        )}
 
         <CollapsibleEditorSection title="Announcements">
           <AnnouncementsEditor
@@ -694,9 +759,49 @@ class UnitEditor extends React.Component {
         </CollapsibleEditorSection>
 
         <CollapsibleEditorSection title="Lesson Settings">
-          {!this.props.isMigrated && (
+          {this.props.isMigrated && this.props.initialUseLegacyLessonPlans && (
             <label>
-              Curriculum Path
+              <Button
+                text={'Use Code Studio Lesson Plans'}
+                size={Button.ButtonSize.narrow}
+                color={Button.ButtonColor.white}
+                style={{margin: 0, height: 30, lineHeight: '8px'}}
+                onClick={e => {
+                  e.preventDefault();
+                  const msg =
+                    'Are you sure? This action cannot be undone. Please ' +
+                    'confirm that translations are complete before proceeding.';
+                  if (window.confirm(msg)) {
+                    this.setState({useLegacyLessonPlans: false});
+                  }
+                }}
+                disabled={!this.state.useLegacyLessonPlans}
+              />
+              <HelpTip>
+                <p>
+                  This unit contains lesson plans which have been imported from
+                  curriculum.code.org to studio.code.org, however we are still
+                  pointing our users to lesson plans on curriculum.code.org.
+                  Once you have reviewed the new content, click this button to
+                  start using the lesson plans on studio.code.org, for all
+                  lessons in this unit.
+                </p>
+              </HelpTip>
+            </label>
+          )}
+          {(!this.props.isMigrated || this.state.useLegacyLessonPlans) && (
+            <label>
+              Legacy Lesson Plan Path
+              <HelpTip>
+                <p>
+                  This field determines the location of the legacy lesson plan.
+                  If left blank, it will look for special file under
+                  code.org/curriculum/[unit]/[lesson] which redirects to
+                  curriculum.code.org or google docs. If you want to disable
+                  lesson plans entirely, you must go to each lesson edit page
+                  and uncheck "Has Lesson Plan".
+                </p>
+              </HelpTip>
               <input
                 value={this.state.curriculumPath}
                 style={styles.input}
@@ -754,7 +859,7 @@ class UnitEditor extends React.Component {
               }
             />
           )}
-          {this.props.isMigrated && (
+          {this.props.isMigrated && !this.state.useLegacyLessonPlans && (
             <label>
               Include student-facing lesson plans
               <input
@@ -835,7 +940,7 @@ class UnitEditor extends React.Component {
             )}
           </div>
         </CollapsibleEditorSection>
-        {this.props.isMigrated && (
+        {this.props.isMigrated && !this.state.useLegacyLessonPlans && (
           <CollapsibleEditorSection title="Unit Calendar Settings">
             <label>
               Show Calendar
@@ -878,7 +983,18 @@ class UnitEditor extends React.Component {
         )}
 
         {this.props.isLevelbuilder && (
-          <CollapsibleEditorSection title="Professional Learning Settings">
+          <CollapsibleEditorSection
+            title="Deeper Learning Settings"
+            collapsed={true}
+          >
+            <b>
+              <i>
+                These settings are only used for deeper learning courses which
+                use the peer review system which is not part of the normal
+                course model. All other courses should be built in the normal
+                course model.
+              </i>
+            </b>
             <label>
               Deprecated
               <input
@@ -1023,7 +1139,6 @@ export const UnconnectedUnitEditor = UnitEditor;
 export default connect(
   state => ({
     lessonGroups: state.lessonGroups,
-    levelKeyList: state.levelKeyList,
     migratedTeacherResources: state.resources,
     studentResources: state.studentResources
   }),

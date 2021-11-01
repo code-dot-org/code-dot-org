@@ -4,7 +4,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Pitch\r\n\r\nThis program lights the top LEDs (0 and 9) when you tilt the board forward. If you tilt the board back, the LEDs at the bottom (4 and 5) should light.\r\n\r\n# Do This\r\n* Use the board's pitch to make LEDs 4 and 5 light up when you tilt the board back.\r\n* Run your code and test it a few times.",
+    "long_instructions": "# Pitch\r\n\r\nThis program lights the top LEDs (0 and 9) when you tilt the board forward. If you tilt the board back, the LEDs at the bottom (4 and 5) should light.\r\n\r\n# Do This\r\n* Use the board's pitch to make LEDs 4 and 5 light up when you tilt the board back (Show me where).\r\n* When the board is tilted forward, turn off LEDs 4 and 5 (Show me where).\r\n* Run your code and test it a few times.",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -53,7 +53,6 @@
       "lessThanOperator": null,
       "greaterThanOperator": null
     },
-    "project_template_level_name": "CSD U6 directional LEDs template_2021",
     "encrypted_examples": "t+PLXXAbGkWWMJmMTHHyL1U3+6mxyRNBDjbHJi0caYXlH2WkCMjO7wf9rPqm\n5HJRcrGjBh48FCYuwBY60oJh9Q==\n",
     "parent_level_id": 20558,
     "name_suffix": "_2021",
@@ -64,8 +63,9 @@
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
-    "preload_asset_list": null,
-    "start_blocks": "onBoardEvent(accelerometer, \"data\", function() {\r\n  //Turn on the LEDs when the board is tilted forward\r\n  if (accelerometer.getOrientation('pitch') < 0) {\r\n    colorLeds[0].on();\r\n    colorLeds[9].on();\r\n  } else {\r\n    colorLeds[0].off();\r\n    colorLeds[9].off();\r\n  }\r\n});"
+    "start_blocks": "onBoardEvent(accelerometer, \"data\", function() {\r\n  //When the board is tilted forward\r\n  if (accelerometer.getOrientation('pitch') < 0) {\r\n    //Turn on the front lights\r\n    colorLeds[0].on();\r\n    colorLeds[9].on();\r\n    //Turn off the back lights\r\n  }\r\n  //When the board is tilted backwards\r\n  if (accelerometer.getOrientation('pitch') > 0) {\r\n    //Turn off the front lights\r\n    colorLeds[0].off();\r\n    colorLeds[9].off();\r\n    //Turn on the back lights\r\n  }\r\n});\r\n",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"></div></div>",
+    "preload_asset_list": null
   },
   "game_id": 41,
   "published": true,
@@ -73,7 +73,7 @@
   "level_num": "custom",
   "user_id": 568,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-09-01T22:40:52.403+00:00\",\"changed\":[\"cloned from \\\"CSD U6 directional leds pitch_2021\\\"\"],\"cloned_from\":\"CSD U6 directional leds pitch_2021\"},{\"changed_at\":\"2021-09-01 22:41:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-01T22:40:52.403+00:00\",\"changed\":[\"cloned from \\\"CSD U6 directional leds pitch_2021\\\"\"],\"cloned_from\":\"CSD U6 directional leds pitch_2021\"},{\"changed_at\":\"2021-09-01 22:41:44 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-20 16:04:12 +0000\",\"changed\":[\"code_functions\",\"project_template_level_name\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-20 16:26:13 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2021-09-20 16:28:09 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

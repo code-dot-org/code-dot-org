@@ -8,22 +8,32 @@ ru:
       age: возраст
       answer: ответ
       binary: двоичный
-      cats: все кошки
+      birds: птицы
+      bit: бит
+      cats: кошки
+      choice: выбор
       color: цвет
       counter: счетчик
+      direction: направление
       dogs: все собаки
+      dragons: драконы
       energy: энергия
+      gather: собирать
+      guess: угадать
       height: высота
       honey: мед
       i: Я
       left: влево
       length: длина
       level: уровень
+      meal: еда
       name: наименование
       nectar: нектар
+      nectars: нектары
       points: очки
       random: случайный
       repeat: повторить
+      repetitions: повторы
       right: вправо
       score: очки
       sides: стороны

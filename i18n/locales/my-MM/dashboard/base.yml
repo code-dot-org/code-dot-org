@@ -49,6 +49,7 @@ my:
     header:
       my_dashboard: "ကျွန်ုပ်ကျောက်သင်ပုံး"
       sections: "တန်းခွဲများ"
+      teacher_community: "ဆရာဖိုရမ်"
       professional_learning: "Professional Learning"
     user:
       create: 'ဖန်တီးပါ'

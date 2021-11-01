@@ -133,6 +133,8 @@ pt:
       Você terá que entrar digitando sua senha abaixo.
     use_clever: Desculpe, sua conta do Code.org não está ligada à sua %{provider}.
       Por favor entre através do seu Portal Clever.
+    invalid_provider: Desculpe-nos, contas do(a) empresa %{provider} não podem ser
+      associadas à contas do Code.org.
     unable_to_connect_provider: Não foi possível conecta sua conta do Code.org ao
       seu %{provider}. Por favor tente novamente.
     already_in_use: Seu %{provider} já está conectado a outra conta do Code.org.
@@ -201,6 +203,7 @@ pt:
     user_type_button: Atualizar Tipo de Conta
     user_type_label: Tipo de conta
     user_type_student: Estudante
+    user_type_student_ability_1: Salvar seu progresso e projetos
     user_type_teacher: Professor
     field_is_required: é obrigatório
     accept_terms: Você precisa aceitar para criar uma conta.
@@ -212,6 +215,10 @@ pt:
     email_preference_yes: Sim
     email_preference_no: Não
     email_preference_required: Você deve especificar um e-mail de preferência.
+    share_teacher_email_reg_partner_preference_yes: Sim
+    share_teacher_email_reg_partner_preference_no: Não
+    share_teacher_email_reg_partner_preference_required: Você deve especificar um
+      e-mail de preferência.
     parent_account_checkbox: Sou pai/responsável, atuando em nome do(a) meu(minha)
       filho(a)
     parent_account_email_progress_permission: Podemos enviar e-mails com atualizações
@@ -990,6 +997,9 @@ pt:
       de aceitar explicitamente os termos atualizados, observe que nossas ferramentas
       para o ensino de JavaScript podem estar indisponíveis aos seus alunos.
     review_terms: Ver os termos atualizados
+  donor_interstitial:
+    support_codeorg_1: Cada dólar doado ao Code.org gera oportunidades para mais estudantes.
+    support_codeorg_2: "[Doe agora](%{donate_url}) para ajudar o Code.org."
   school_info_interstitial:
     title: Nós queremos levar a Ciência da Computação para todos os alunos - ajude-nos
       a acompanhar o nosso progresso!
@@ -1212,6 +1222,7 @@ pt:
       email: E-mail
       email_alternate: Email Alternativo
       gender: Identidade de Gênero
+      school: Escola
       school_name: Nome da escola
       school_city: Cidade da Escola
       school_country: País da Escola

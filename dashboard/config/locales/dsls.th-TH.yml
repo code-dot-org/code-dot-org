@@ -2484,3 +2484,69 @@ th-TH:
         - {}
         questions:
         - {}
+      CourseF_outbreak_story:
+        markdown: "# การระบาด: เขียนโค้ดการจำลองของคุณเอง\n\n## ยินดีต้อนรับสู่ดินแดนมอนสเตอร์!\nดินแดนมอนสเตอร์เป็นสถานที่ที่ดีและมีความสุข
+          มอนสเตอร์ในเมืองมอนสเตอร์ชื่นชอบที่จะไปเยี่ยมเยียนเพื่อนบ้าน \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nวันหนึ่งมอนสเตอร์ตัวหนึ่งเริ่มรู้สึกไม่สบาย มอนสเตอร์ตัวนั้นติด**ไวรัส**!
+          ไวรัสเป็นเชื้อโรคขนาดเล็กที่สามารถทำให้คุณป่วยได้ ส่วนมอนสเตอร์ตัวอื่นนั้นก็ไม่ได้มีความกังวลใจ
+          พวกเขายังคงไปเยี่ยมเยียนเพื่อนๆอยู่\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nหลังจากนั้นไม่นานมอนสเตอร์อีกสองตัวก็ล้มป่วย มันคือไวรัสชนิดเดียวกัน!
+          ดูเหมือนว่าพวกเขาจะได้รับไวรัสมาจากเพื่อนๆ\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nไวรัสแพร่กระจายไปยังมอนสเตอร์ตัวอื่นที่อยู่ใกล้ๆ
+          อย่างช้าๆ มอนสเตอร์ที่มีสุขภาพแข็งแรงเริ่มกังวลว่าจะป่วยไปด้วย มอนสเตอร์ที่ป่วยก็เริ่มกังวลว่าพวกเขากำลังจะแพร่ไวรัสให้กับตัวอื่นๆ\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## การหยุดการแพร่กระจาย\nโชคดีที่หลังจากได้ศึกษาตัวไวรัสแล้ว
+          เพื่อนบ้านของดินแดนมอนสเตอร์ก็ได้ค้นพบครั้งสำคัญ พวกเขาค้นพบว่าหากสวมหน้ากาอนามัย
+          โอกาสจะแพร่เชื้อไวรัสจะน้อยลง เมื่อสวมหน้ากากอนามัยมอนสเตอร์ที่ป่วยมีโอกาสน้อยมากที่จะแพร่ไวรัสให้กับมอนสเตอร์ที่แข็งแรง\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          จะเกิดอะไรขึ้นต่อไป?\n\nวันนี้คุณจะเขียนโค้ดเพื่อสร้างและเรียกใช้ **การจำลอง**
+          การระบาดของไวรัสของคุณเองที่ดินแดนมอนสเตอร์ ซึ่งเป็นการจำลองโมเดลคอมพิวเตอร์ของกระบวนการหรือระบบ
+          เรียนรู้การเขียนโค้ดและคาดเดาว่าจะเกิดอะไรขึ้นกับเพื่อนบ้านของดินแดนมอนสเตอร์\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *ไวรัสจะแพร่กระจายเร็วแค่ไหน?*\n\n*
+          *ทุกคนจะป่วยหรือไม่?*\n\n* *หน้ากากอนามัยจะช่วยได้อย่างไร?*\n\n\nเมื่อคุณทำเสร็จแล้ว
+          ให้แบ่งปันการจำลองของคุณกับผู้อื่น แบ่งปันข้อความของคุณเกี่ยวกับสิ่งที่คุณคิดว่าเราสามารถทำได้เพื่อช่วยให้ผู้อื่นมีสุขภาพที่ดีเมื่อมีไวรัสเข้ามาในเมือง "

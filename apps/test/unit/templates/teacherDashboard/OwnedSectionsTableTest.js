@@ -1,16 +1,24 @@
-import {assert, expect} from '../../../util/deprecatedChai';
+import {assert, expect} from '../../../util/reconfiguredChai';
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import * as Table from 'reactabular-table';
+import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {createStore, combineReducers} from 'redux';
+import {Provider} from 'react-redux';
 import {
   UnconnectedOwnedSectionsTable as OwnedSectionsTable,
   sectionLinkFormatter,
   courseLinkFormatter,
   gradeFormatter,
   loginInfoFormatter,
-  studentsFormatter
+  studentsFormatter,
+  GRADES,
+  COLUMNS
 } from '@cdo/apps/templates/teacherDashboard/OwnedSectionsTable';
 import Button from '@cdo/apps/templates/Button';
+import {teacherSections} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+const GRADE_COLUMN = COLUMNS.GRADE.toString();
 
 const sectionRowData = [
   {
@@ -65,6 +73,179 @@ const sectionRowData = [
     assignmentPaths: []
   }
 ];
+
+const sectionGradesRowData = [
+  {
+    id: 1,
+    name: 'sectionA',
+    studentCount: 3,
+    code: 'ABC',
+    courseId: 29,
+    grade: 'K',
+    loginType: SectionLoginType.picture,
+    providerManaged: true,
+    hidden: false,
+    assignmentNames: [],
+    assignmentPaths: []
+  },
+  {
+    id: 2,
+    name: 'sectionB',
+    studentCount: 4,
+    code: 'DEF',
+    courseId: 29,
+    grade: '1',
+    loginType: SectionLoginType.picture,
+    providerManaged: true,
+    hidden: false,
+    assignmentNames: [],
+    assignmentPaths: []
+  },
+  {
+    id: 3,
+    name: 'sectionC',
+    studentCount: 0,
+    code: 'GHI',
+    courseId: 29,
+    scriptId: 168,
+    grade: '4',
+    loginType: SectionLoginType.picture,
+    providerManaged: false,
+    hidden: false,
+    assignmentNames: [],
+    assignmentPaths: []
+  },
+  {
+    id: 4,
+    name: 'sectionD',
+    studentCount: 0,
+    code: 'JKL',
+    grade: '10',
+    loginType: SectionLoginType.picture,
+    providerManaged: false,
+    hidden: false,
+    assignmentNames: [],
+    assignmentPaths: []
+  },
+  {
+    id: 5,
+    name: 'sectionE',
+    studentCount: 0,
+    code: 'MNO',
+    courseId: 29,
+    scriptId: 168,
+    grade: '12',
+    providerManaged: false,
+    hidden: false,
+    loginType: SectionLoginType.picture,
+    assignmentNames: [],
+    assignmentPaths: []
+  },
+  {
+    id: 6,
+    name: 'sectionF',
+    studentCount: 0,
+    code: 'PQR',
+    grade: 'Other',
+    providerManaged: false,
+    hidden: false,
+    loginType: SectionLoginType.picture,
+    assignmentNames: [],
+    assignmentPaths: []
+  },
+  {
+    id: 7,
+    name: 'sectionG',
+    studentCount: 0,
+    code: 'STU',
+    grade: null,
+    providerManaged: false,
+    hidden: false,
+    loginType: SectionLoginType.picture,
+    assignmentNames: [],
+    assignmentPaths: []
+  }
+];
+
+// Scramble these for the table to start un-ordered
+const initialState = {
+  teacherSections: {
+    sections: {
+      '1': sectionGradesRowData[5],
+      '2': sectionGradesRowData[0],
+      '3': sectionGradesRowData[2],
+      '4': sectionGradesRowData[4],
+      '5': sectionGradesRowData[3],
+      '6': sectionGradesRowData[1],
+      '7': sectionGradesRowData[6]
+    }
+  }
+};
+
+describe('OwnedSectionsTable Sorting', () => {
+  const store = createStore(
+    combineReducers({
+      teacherSections
+    }),
+    initialState
+  );
+
+  it('can be sorted correctly by grade', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <OwnedSectionsTable
+          sectionIds={[1, 2, 3, 4, 5, 6, 7]}
+          sectionRows={sectionGradesRowData}
+          onEdit={() => {}}
+        />
+      </Provider>
+    );
+
+    // first click should sort sections K-12
+    wrapper.find('.uitest-grade-header').simulate('click');
+    const expectedGradeOrder = ['K', '1', '4', '10', '12', 'Other', ''];
+    const tbody = wrapper.find('tbody');
+    expect(tbody.length).to.equal(1);
+    const rows = tbody.find('tr');
+    expect(rows.length).to.equal(7);
+    // Check grades for each row match expected order
+    rows.forEach((tr, rowIndex) => {
+      const cells = tr.find('td');
+      expect(cells.at(GRADE_COLUMN).text()).to.equal(
+        expectedGradeOrder[rowIndex]
+      );
+    });
+    expect(GRADES.length).to.equal(15);
+  });
+
+  it('can be sorted by grade in the reverse order with a second click', () => {
+    const wrapper = mount(
+      <Provider store={store}>
+        <OwnedSectionsTable
+          sectionIds={[1, 2, 3, 4, 5, 6, 7]}
+          sectionRows={sectionGradesRowData}
+          onEdit={() => {}}
+        />
+      </Provider>
+    );
+
+    expect(GRADES.length).to.equal(15);
+    // first click should sort sections K-12
+    wrapper.find('.uitest-grade-header').simulate('click');
+    // second click should sort sections in reverse order
+    wrapper.find('.uitest-grade-header').simulate('click');
+
+    const expectedGradeOrder = ['', 'Other', '12', '10', '4', '1', 'K'];
+    const body = wrapper.find('tbody');
+    const trows = body.find('tr');
+    trows.forEach((tr, rowIndex) => {
+      const cells = tr.find('td');
+      expect(cells.at(GRADE_COLUMN).text()).to.equal(
+        expectedGradeOrder[rowIndex]
+      );
+    });
+  });
+});
 
 describe('OwnedSectionsTable', () => {
   it('has a header and a body', () => {

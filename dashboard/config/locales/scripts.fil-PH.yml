@@ -225,7 +225,7 @@ fil:
             sa kanilang pagtuklas sa mahika at kagandahan ng yelo.
           lessons:
             Artist:
-              name: Artista
+              name: Mag-code kasama sina Anna at Elsa
           student_description: Gumamit tayo ng code para samahan sina Anna at Elsa
             sa kanilang pagtuklas sa mahika at kagandahan ng yelo. Ikaw ay lilikha
             ng mga niyebe at mga paterno habang ikaw ay nag-iceskate at gumawa ng
@@ -393,7 +393,7 @@ fil:
             na pinagbibidahan ng mga karakter sa Disney Infinity.
           lessons:
             Infinity:
-              name: Walang katapusan
+              name: Disney Infinity na Play Lab
           student_description: Gamitin ang Play Lab para lumikha ng mga kuwento o
             laro na pinagbibidahan ng mga karakter sa Disney Infinity.
         algebrademo:
@@ -568,6 +568,12 @@ fil:
           lessons:
             Jigsaw:
               name: Jigsaw
+              description_teacher: Ang araling ito ay magbibigay sa mga estudyante
+                ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter
+                lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala
+                sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay
+                uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online
+                na mga palaisipan.
           student_description: Subukan ang aming mga tutoryal sa jigsaw.
         step:
           title: Hakbang
@@ -1683,9 +1689,6 @@ fil:
             Star Wars na laro sa isang malayong malayo na kalawakan.
           description_short: Matutong mag-program ng mga droids, at lumikha ng sarili
             mong Star Wars na laro sa isang malayong malayo na kalawakan.
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           student_description: Matutong mag-program ng mga droids, at lumikha ng sarili
             mong Star Wars na laro sa isang malayong malayo na kalawakan.
         mc:
@@ -3844,7 +3847,14 @@ fil:
           description: Gumawa ng isang basketbol na laro
           lessons:
             Bounce:
-              name: Bounce
+              description_teacher: Sa online na gawaing ito, ang mga estudyante ay
+                matututo kung ano ang mga pangyayari, at kung paano ang mga kompyuter
+                gumagamit sa mga ito sa mga programa gaya ng mga video na mga laro.
+                Ang mga estudyante ay magtatrabaho sa mga palaisipan na nagpagawa
+                sa mga programa na tumugon sa mga pangyayari (gaya ng pagpindot sa
+                mga arrow na mga buttons.) Sa bandang huli ng palaisipan, ang mga
+                estudyante ay magkakaroon ng pagkakataon na i-customize ang kanilang
+                laro gamit ang iba't ibang mga bilis at mga tunog.
           student_description: Gumawa ng isang basketbol na laro
         sample-csp5:
           lessons:
@@ -4952,7 +4962,14 @@ fil:
           description: Maghalo at magtugma sa iba't ibang palakasan
           lessons:
             Sports:
-              name: Mga Palakasan
+              description_teacher: Sa online na gawaing ito, ang mga estudyante ay
+                matututo kung ano ang mga pangyayari, at kung paano ang mga kompyuter
+                gumagamit sa mga ito sa mga programa gaya ng mga video na mga laro.
+                Ang mga estudyante ay magtatrabaho sa mga palaisipan na nagpagawa
+                sa mga programa na tumugon sa mga pangyayari (gaya ng pagpindot sa
+                mga arrow na mga buttons.) Sa bandang huli ng palaisipan, ang mga
+                estudyante ay magkakaroon ng pagkakataon na i-customize ang kanilang
+                laro gamit ang iba't ibang mga bilis at mga tunog.
           student_description: Maghalo at magtugma sa iba't ibang palakasan
         2016_sciencePD-phase2b:
           lessons:
@@ -9226,7 +9243,7 @@ fil:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Ang Paglalakbay nv Bayani Oras ng Code'
             Minecraft Hour of Code:
-              name: Minecraft na Hour of Code
+              name: 'Minecraft: Ang Paglalakbay ng Bayani'
           student_description: Ang Minecraft ay nagbabalik para sa Oras ng Code na
             may mga bagong gawain! Maglakbay sa Minecraft sa pamamagitan ng code.
         applab-intro-staging:
@@ -18598,6 +18615,8 @@ fil:
           lessons:
             Virus Simulation for Code Bytes:
               name: Pag-coding ng isang Simulasyon
+            Outbreak:
+              name: Pag-coding ng isang Simulasyon
           lesson_groups:
             outbreak:
               display_name: Simula ng Simulasyon
@@ -20496,6 +20515,14 @@ fil:
               display_name: Panimula
             Introduction:
               display_name: Panimula
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: Aralin 3
+            Lesson 4:
+              display_name: Aralin 4
+            Lesson 5:
+              display_name: Aralin 5
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -20574,6 +20601,12 @@ fil:
           lesson_groups:
             lessonGroup-3:
               display_name: Mga Resources
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Stage 1
+            lessonGroup-3:
+              display_name: Stage 2
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
@@ -20590,3 +20623,22 @@ fil:
           lessons:
             lesson-18:
               name: Mga Widget
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: Mga Pagbabago sa Pag-Compute
+            lesson-13:
+              name: Accelerometer
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: Mga Widget
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Mga Widget
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Spelling Bee
+          title: Spelling Bee

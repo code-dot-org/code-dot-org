@@ -1,4 +1,4 @@
-import {expect} from '../util/deprecatedChai';
+import {expect} from '../util/reconfiguredChai';
 import Sounds from '@cdo/apps/Sounds';
 import sinon from 'sinon';
 import winMp3 from '!!file-loader!../audio/assets/win.mp3';

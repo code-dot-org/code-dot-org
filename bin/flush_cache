@@ -12,18 +12,21 @@ unless CDO.daemon
   exit 1
 end
 
-varnish_ban_cmd = "sudo varnishadm -T localhost:6082 -S /etc/varnish/secret 'ban obj.status ~ .'"
-CDO.log.info 'Flushing Varnish cache on daemon...'
-RakeUtils.system varnish_ban_cmd
+if system 'systemctl is-active --quiet varnish'
+  varnish_ban_cmd = "sudo varnishadm -T localhost:6082 -S /etc/varnish/secret 'ban obj.status ~ .'"
+  CDO.log.info 'Flushing Varnish cache on daemon...'
+  RakeUtils.system varnish_ban_cmd
 
-app_servers = CDO.app_servers.values
+  app_servers = CDO.app_servers.values
 
-unless app_servers.empty?
-  CDO.log.info 'Flushing Varnish caches on frontends...'
-  SSHKit::Coordinator.new(app_servers).each do
-    execute varnish_ban_cmd, raise_on_non_zero_exit: false
+  unless app_servers.empty?
+    CDO.log.info 'Flushing Varnish caches on frontends...'
+    SSHKit::Coordinator.new(app_servers).each do
+      execute varnish_ban_cmd, raise_on_non_zero_exit: false
+    end
   end
 end
+
 CDO.log.info 'Flushing CloudFront caches...'
 AWS::CloudFront.invalidate_caches
 CDO.log.info 'All done!'

@@ -37,11 +37,11 @@ class TheaterVisualizationColumn extends React.Component {
           showPreviewTitle={false}
           toggleVisualizationCollapsed={toggleVisualizationCollapsed}
         />
-        <div style={{opacity}}>
+        <div style={{...styles.theaterPreviewBackground, opacity}}>
           <ProtectedVisualizationDiv>
             <div id="theater-container" style={styles.theater}>
               <img id="theater" style={styles.theaterImage} />
-              <audio id="theater-audio" />
+              <audio id="theater-audio" preload="auto" />
             </div>
           </ProtectedVisualizationDiv>
         </div>
@@ -52,7 +52,6 @@ class TheaterVisualizationColumn extends React.Component {
 
 const styles = {
   theater: {
-    backgroundColor: 'white',
     width: 800,
     height: 800
   },
@@ -61,6 +60,12 @@ const styles = {
     visibility: 'hidden',
     width: 800,
     height: 800
+  },
+  theaterPreviewBackground: {
+    backgroundImage: 'url("/blockly/media/javalab/Theater.png")',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'top'
   }
 };
 

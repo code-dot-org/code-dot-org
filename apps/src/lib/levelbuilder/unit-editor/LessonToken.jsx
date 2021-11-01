@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import {Motion, spring} from 'react-motion';
 import color from '@cdo/apps/util/color';
 import {borderRadius, tokenMargin} from '@cdo/apps/lib/levelbuilder/constants';
-import {lessonShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {lessonShapeForUnitEdit} from './shapes';
 
 /**
  * Component for editing lessons
  */
 export default class LessonToken extends Component {
   static propTypes = {
-    lesson: lessonShape.isRequired,
+    lesson: lessonShapeForUnitEdit.isRequired,
     dragging: PropTypes.bool,
     draggedLessonPos: PropTypes.bool,
     delta: PropTypes.number,
@@ -66,14 +66,13 @@ export class LessonTokenContents extends Component {
     scale: PropTypes.number.isRequired,
     shadow: PropTypes.number.isRequired,
     draggedLessonPos: PropTypes.bool,
-    lesson: lessonShape.isRequired,
+    lesson: lessonShapeForUnitEdit.isRequired,
     handleDragStart: PropTypes.func.isRequired,
     removeLesson: PropTypes.func.isRequired,
     cloneLesson: PropTypes.func.isRequired
   };
 
   handleEditLesson = () => {
-    window.lessonEditorOpened = true;
     const url = this.props.lesson.lessonEditPath;
     const win = window.open(url, 'noopener', 'noreferrer');
     win.focus();

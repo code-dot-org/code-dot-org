@@ -37,6 +37,7 @@ import {
 import {
   Subjects,
   VirtualOnlySubjects,
+  NotFundedSubjects,
   MustSuppressEmailSubjects
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -359,8 +360,10 @@ export class WorkshopForm extends React.Component {
 
   renderWorkshopTypeOptions(validation) {
     const isCsf = this.state.course === 'CS Fundamentals';
+    const isAdminCounselor = this.state.course === 'Admin/Counselor Workshop';
     const showFeeInput = isCsf;
     const showMapChoice = isCsf;
+    const showFundedInput = !isAdminCounselor;
 
     return (
       <FormGroup>
@@ -393,7 +396,7 @@ export class WorkshopForm extends React.Component {
             {showMapChoice && this.renderOnMapRadios(validation)}
             {/* A small gap to resemble the gap below the fee input. */}
             {showFeeInput && <div style={{height: 7}}>&nbsp;</div>}
-            {this.renderFundedSelect(validation)}
+            {showFundedInput && this.renderFundedSelect(validation)}
           </Col>
         </Row>
         <Row>
@@ -729,6 +732,12 @@ export class WorkshopForm extends React.Component {
   handleSubjectChange = event => {
     const subject = this.handleFieldChange(event);
 
+    if (NotFundedSubjects.includes(subject)) {
+      this.setState({
+        funded: false
+      });
+    }
+
     if (VirtualOnlySubjects.includes(subject)) {
       this.setState({
         virtual: true
@@ -994,7 +1003,7 @@ export class WorkshopForm extends React.Component {
                 <HelpBlock>{validation.help.capacity}</HelpBlock>
               </FormGroup>
             </Col>
-            <Col sm={3}>
+            <Col sm={4}>
               <CourseSelect
                 course={this.state.course}
                 facilitatorCourses={this.props.facilitatorCourses}

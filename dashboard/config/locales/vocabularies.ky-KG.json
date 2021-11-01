@@ -2,6 +2,21 @@
   "ky-KG": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "Функция"
+        },
+        "code/artist/unversioned": {
+          "word": "Код жазуу"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Шартуулар"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Циклдер"
+        },
+        "code/sports/unversioned": {
+          "word": "Код жазуу"
+        },
         "variable/coursef/2021": {
           "word": "Өзгөрмө"
         },

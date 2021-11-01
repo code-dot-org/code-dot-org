@@ -105,6 +105,8 @@ eu:
     field_is_required: beharrezkoa da
     email_preference_yes: Bai
     email_preference_no: Ez
+    share_teacher_email_reg_partner_preference_yes: Bai
+    share_teacher_email_reg_partner_preference_no: Ez
   school_info:
     other: Beste bat
   signin_form:

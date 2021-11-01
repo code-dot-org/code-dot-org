@@ -17,12 +17,4 @@ MARKDOWN
 
 markdown <<MARKDOWN
 Which of the following is NOT true about encapsulation?
-
-```
-public class MyClass {
-  public static void main(String[] args){
-    System.out.println("Will this print an int or a double: " + (3.0 + 4));
-  }
-}
-```
 MARKDOWN

@@ -2,7 +2,9 @@
   "func": "setDepthEach",
   "category": "Groups",
   "paletteParams": [
-    "depth"
+    {
+      "name": "depth"
+    }
   ],
   "params": [
     "1"

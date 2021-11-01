@@ -3593,47 +3593,47 @@ de:
       1:
         image: notes/mc_2017_agent_intro_1.png
         text: 'Stacy: Stampy, Lizzy, Preston - danke, dass ihr mit mir gekommen seid.
-          Was ich euch zeigen möchte, ist direkt über diesem Plateau. Ich denke, dass
-          es euch gefallen wird!'
+          Was ich euch zeigen möchte, ist direkt über diesem Mesa Plateau. Ich denke,
+          dass es euch gefallen wird!'
       2:
         image: notes/mc_2017_agent_intro_2.png
-        text: Moment mal - da ist ein Loch in der Schiene! (kreisch)
+        text: Moment mal - da ist ein Loch in der Schiene! (schreit)
       3:
         image: notes/mc_2017_agent_intro_3.png
         text: 'Geht es allen gut? Stampy: Ah, ich sehe das Problem. Seht mal! Da war
           ein Loch in der Schiene. Stacy: Wirklich, Stampy? Lizzy: Vielleicht sollten
-          wir Bausteine sammeln, um sie zu reparieren. Preston: Lasst es uns zu einem
-          Rennen machen. Der erste, der wieder an die Spitze kommt, gewinnt. Stacy:
-          Ok, auf die Plätze, fertig, los! Ok, ich werde nur etwas von diesem Terrakotta
-          sammeln. Warte. Leute, ich kann nicht graben! Preston: Ich auch nicht. Lizzy:
-          Ich kann es auch nicht. Stacy: Ok, das ist wirklich seltsam. Stampy, kannst
-          du graben? Stampy: Ich kann auch nicht graben! Stacy: Ok, alle bleiben ruhig.
-          Stampy: Ist das Spiel unterbrochen? Stacy: Wenn ja, wie können wir das reparieren?
+          wir Blöcke sammeln, um sie zu reparieren. Preston: Lasst uns ein Wettrennen
+          daraus machen. Der erste, der wieder oben ist, gewinnt. Stacy: Ok, auf die
+          Plätze, fertig, los! Ok, ich werde nur etwas von diesem Terrakotta sammeln.
+          Wartet. Leute, ich kann nicht graben! Preston: Ich auch nicht. Lizzy: Ich
+          kann es auch nicht. Stacy: Ok, das ist wirklich seltsam. Stampy, kannst
+          du graben? Stampy: Ich kann nicht graben! Stacy: Ok, alle bleiben ruhig.
+          Stampy: Ist das Spiel kaputt? Stacy: Wenn ja, wie können wir das reparieren?
           Lizzy: Ich weiß es nicht. Stampy: Weiß jemand, wie man Minecraft-Code schreibt?'
       4:
         image: notes/mc_2017_agent_intro_4.png
         text: "(puff) Preston: Was ist das denn? Stampy: Ich habe so etwas noch nie
           zuvor gesehen. Lizzy: Es ist so süß! Stacy: Kann man es....zähmen? Preston:
           Okay, was ist los? Jemand muss in die reale Welt zurückkehren und das in
-          Ordnung bringen.  Alle: Nicht doch! Stacy: Nicht ich-(seufzt) Ok, ich gehe."
+          Ordnung bringen. Alle: Nicht doch! Stacy: Nicht ich-(seufzt) Ok, ich gehe."
       5:
         image: notes/mc_2017_agent_intro_5.png
         text: Oh, okay, hey, ich bin jetzt also in der realen Welt. Ich werde versuchen,
           die Büros von Minecraft zu finden.
       6:
         image: notes/mc_2017_agent_intro_6.png
-        text: Aber dafür brauche ich deine Hilfe. Beginne das Tutorial zu bearbeiten,
-          fange an zu lernen, wie man kodiert, und ich werde euch nach ein paar Levels
+        text: Aber dafür brauche ich deine Hilfe. Beginne mit dem Tutorial, fange
+          an zu lernen, wie man programmiert, und ich werde euch ein paar Stufen später
           treffen, okay? Wünscht mir Glück! Ich glaube, es geht hier entlang. Au!
           Kaktus! Mir geht‘s gut!
       7:
         image: notes/mc_2017_agent_intro_7.png
         text: Um die Aufgabe "Hour of Code" abzuschließen, musst du Code schreiben,
-          der den Agenten programmiert. Du wirst mit dem Agenten zusammenarbeiten,
-          um alle Hindernisse auf deinem Weg zu beseitigen, damit du die Gegenstände,
-          die du für deine Reise benötigst, einsammeln kannst. Nur der Agent kann
-          Bausteine platzieren und auflösen, und nur du kannst Gegenstände einsammeln.
-          Dein Bildschirm ist in drei Hauptteile gegliedert. Auf der linken Seite
+          um den Agenten zu programmieren. Du wirst mit dem Agenten zusammenarbeiten,
+          um alle Hindernisse auf deinem Weg zu beseitigen, damit du die Gegenstände
+          einsammeln kannst, die du für deine Reise benötigst. Nur der Agent kann
+          Blöcke platzieren und zerstören und nur du kannst Gegenstände einsammeln.
+          Dein Bildschirm ist in drei Hauptbereiche geteilt. Auf der linken Seite
           befindet sich Minecraft.
       8:
         image: notes/mc_2017_agent_intro_8.png
@@ -3641,87 +3641,86 @@ de:
           verstehen kann.
       9:
         image: notes/mc_2017_agent_intro_9.png
-        text: Auf der rechten Seite befindet sich der Arbeitsbereich. Dort stapelst
+        text: Und auf der rechten Seite befindet sich der Arbeitsbereich. Dort verbindest
           du die Befehle, um dein Programm zur Steuerung des Agenten zu erstellen.
       10:
         image: notes/mc_2017_agent_intro_10.png
         text: Der Agent kann gehen, sich drehen und Druckplatten aktivieren. Er kann
-          auch Bausteine zerstören und Bausteine platzieren. Wenn er den Baustein
-          wie diese Loren-Schienen platziert, gehen sie von selbst darunter.
+          auch Blöcke zerstören und platzieren. Wenn er einen Block, wie diese Grubenwagen-Schienen
+          platziert, plaziert er sie unter sich.
       11:
         image: notes/mc_2017_agent_intro_11.png
         text: Hast du vergessen, was du in einem Level tun musst, findest du oben
           die nötigen Anweisungen.
       12:
         image: notes/mc_2017_agent_intro_12.png
-        text: Wenn du es noch einmal versuchen möchtest, kannst du die blaue Schaltfläche
-          Zurücksetzen drücken, um alles auf den Ausgangspunkt zurückzusetzen. Und
-          wenn du einen Codebaustein löschen möchtest, ziehe ihn von deinem Arbeitsbereich
-          in die Werkzeugkiste. Denke daran, auf Run zu drücken, um den Agenten in
-          Bewegung zu bringen. Okay, mach weiter und probiere die ersten Level aus.
-          Viel Glück!
+        text: Wenn du es noch einmal versuchen möchtest, kannst du die blaue "Zurücksetzen"-Taste
+          drücken, um alles zurückzusetzen. Und wenn du einen Programmblock löschen
+          möchtest, ziehe ihn von deinem Arbeitsbereich in die Werkzeugkiste. Denke
+          daran, auf "Ausführen" zu drücken, damit der Agenten anfängt sich zu bringen.
+          Okay, mach weiter und probiere die ersten Stufen aus. Viel Glück!
     mc_2017_repeat:
       1:
         image: notes/mc_2017_repeat_1.png
-        text: 'Stampy: Ich frage mich, was Stacy vorhat?'
+        text: 'Stampy: Ich frage mich, was Stacy gerade macht?'
       2:
         image: notes/mc_2017_repeat_2.png
         text: 'Stacy: Woah, ich denke, ich bin am richtigen Ort. Das ist unglaublich!'
       3:
         image: notes/mc_2017_repeat_3.png
-        text: Ich fühle mich, als wäre ich wieder bei Minecraft! Hallo. Wie geht es
+        text: Ich fühle mich, als wäre ich zurück in Minecraft! Hallo. Wie geht es
           dir? Hallo?
       4:
         image: notes/mc_2017_repeat_4.png
-        text: 'Oh, da ist eine Kriechpflanze. Du tust nichts, oder? Katie: Stacy?
-          Stacy:Hi, Katie? Katie: Ja, willkommen bei Minecraft!'
+        text: 'Oh, da ist ein Creeper. Du tust nichts, oder? Katie: Stacy? Stacy:
+          Hi, Katie? Katie: Ja, willkommen bei Minecraft!'
       5:
         image: notes/mc_2017_repeat_5.png
-        text: 'Stacy: Das ist unglaublich. Also arbeitest du hier jeden Tag als Entwickler,
-          richtig? Katie: Ja, es ist ziemlich fantastisch. Ich bin Entwickler im Minecraft-Marktplatz-Team.
-          Stacy: Wie viele Programmiersprachen kennst du? Katie: In meiner Karriere
-          habe ich wahrscheinlich mit über einem Dutzend gearbeitet. Stacy: Ein Dutzend?
-          Katie: Ja. Stacy: Also weißt du zufällig nichts über diesen kleinen Golem-Typen,
-          der sich selbst den Agenten nennt? Katie: Wir benutzen den Agenten, um Dinge
-          zu tun, die Steve oder Alex nicht können, wie z. B. über die Lava zu gehen.
-          Stacy: Nun, ich will lernen, wie man programmiert, und sie wollen lernen,
-          wie man programmiert, also was ist eines der ersten Dinge, die man wissen
-          muss, wenn man lernt?'
+        text: 'Stacy: Das ist unglaublich. Also Du arbeitest hier also jeden Tag als
+          Entwicklerin, richtig? Katie: Ja, es ist echt super. Ich bin Entwicklerin
+          beim Minecraft Marktplatz-Team. Stacy: Wie viele Programmiersprachen kennst
+          du? Katie: In meiner Karriere habe ich wahrscheinlich mit über einem Dutzend
+          gearbeitet. Stacy: Ein Dutzend? Katie: Ja. Stacy: Also, du weißt nicht zufällig
+          etwas über diesen kleinen Golem, der sich selbst "der Agent" nennt? Katie:
+          Wir benutzen den Agenten, um Dinge zu tun, die Steve oder Alex nicht können,
+          wie z. B. über die Lava zu gehen. Stacy: Nun, ich will lernen, wie man programmiert,
+          und sie wollen auch lernen, wie man programmiert, also was ist eines der
+          ersten Dinge, die man wissen muss?'
       6:
         image: notes/mc_2017_repeat_6.png
         text: 'Katie: Nun, du musst lernen, wie man Schleifen benutzt. Schleifen sind
-          Dinge, die Entwickler schreiben, um einem Computer Befehle zu geben, die
-          immer wieder ausgeführt werden können. Stacy: Verstanden, also denke ich,
-          dass es tatsächlich einige davon gibt, die in den nächsten Levels auftauchen,
-          also mach weiter und versuche es mit Schleifen.'
+          Dinge, die Entwickler benutzen, um einem Computer Befehle zu geben, die
+          wiederholt werden können. Stacy: Verstanden, also ich denke, dass tatsächlich
+          einige davon in den nächsten Stufen auftauchen, also mach weiter und versuche
+          es mal mit Schleifen.'
       7:
         image: notes/mc_2017_repeat_7.png
         text: Im nächsten Level kannst du eine Schleife verwenden, um den Agenten
-          auf dem Pfad zu bewegen. Ziehe den Wiederholungsbaustein in den Arbeitsbereich
-          und platziere den Baustein „Vorwärtsbewegen“ innerhalb des Wiederholungsbausteins.
+          auf dem Pfad zu bewegen. Ziehe den "wiederholen"-Block in den Arbeitsbereich
+          und platziere den Block "vorwärts bewegen“ innerhalb des "wiederholen"-Blocks.
           Dadurch wird der Computer angewiesen, dasselbe mehrmals hintereinander zu
-          tun, ohne einen ganzen Haufen Bausteine in den Arbeitsbereich ziehen zu
-          müssen. Du kannst wählen, wie oft du wiederholen möchtest, indem du eine
-          Zahl in den Wiederholungsbaustein einträgst.
+          tun, ohne einen ganzen Haufen Blöcke in den Arbeitsbereich ziehen zu müssen.
+          Du kannst wählen, wie oft du wiederholen möchtest, indem du eine Zahl in
+          den "wiederholen"-Block einträgst.
       8:
         image: notes/mc_2017_repeat_8.png
-        text: Du kannst auch Abbiegungen und mehrere Befehle in den Wiederholungsbaustein
-          einfügen, aber versuche vorerst, eine Wiederholung zu verwenden, um den
-          Agenten ein paar Schritte vorwärts zu bewegen. Denke daran, wenn du an einem
-          Puzzle hängen bleibst, kannst du immer auf die blaue Schaltfläche Zurücksetzen
-          drücken und es erneut versuchen.
+        text: Du kannst auch Verzweigungen und mehrere Befehle in den "wiederholen"-Block
+          einfügen, aber versuche erstmal, die Wiederholung zu verwenden, um den Agenten
+          ein paar Schritte vorwärts zu bewegen. Denke daran, wenn du an einem Puzzle
+          hängen bleibst, kannst du immer auf die blaue "Zurücksetzen" Taste drücken
+          und es erneut versuchen.
       9:
         image: notes/mc_2017_repeat_9.png
-        text: 'Wenn du darüber nachdenkst, einen coolen Job wie Katie''s zu haben,
-          dann klicke einfach auf die Schaltfläche Showcode wenn du jedes Level beendet
-          hast. Das wird dir tatsächlich den Javascript-Code zeigen, den jemand wie
-          Katie benutzt, wenn sie Minecraft programmiert. Katie: Ja, viel Glück für
-          alle!'
+        text: 'Wenn du darüber nachdenkst, einen coolen Job wie den von Katie zu haben,
+          dann klicke einfach auf die Schaltfläche "Programm anzeigen" wenn du jede
+          Stufe beendet hast. Das wird dir tatsächlich den Javascript-Code zeigen,
+          den jemand wie Katie benutzt, wenn sie Minecraft programmiert. Katie: Ja,
+          viel Glück für alle!'
     mc_2017_functions:
       1:
         image: notes/mc_2017_functions_1.png
-        text: 'Preston: Ich will nicht angeben, aber ich bin ziemlich gut im Parkour.
-          Lizzy: Lass uns schlafen, damit es Tag ist, wenn Stacy zurückkommt.'
+        text: 'Preston: Ich will nicht angeben, aber ich bin ziemlich gut in Parkour.
+          Lizzy: Lasst uns schlafen gehen, damit es wieder Tag ist, wenn Stacy zurückkommt.'
       2:
         image: notes/mc_2017_functions_2.png
         text: 'Stacy: Ok Leute, ich bin zurück von den Minecraft Büros, und ich denke,
@@ -3729,35 +3728,34 @@ de:
           Ich denke, ich kann eine Funktion verwenden. Lass mich das nur öffnen.'
       3:
         image: notes/mc_2017_functions_3.png
-        text: Eine Funktion ist also ein bestimmter Satz von Anweisungen, um eine
+        text: Eine Funktion ist also eine bestimmte Reihe von Anweisungen, um eine
           bestimmte Aufgabe zu erfüllen, ähnlich wie ein Rezept. In den nächsten Stufen
           hast du Zugriff auf Funktionen, mit denen du die Aufgaben lösen kannst.
       4:
         image: notes/mc_2017_functions_4.png
         text: Sieh dir den Code in der Funktion an, wenn er sich im Arbeitsbereich
-          befindet, um zu sehen, was er tut.
+          befindet, um zu sehen, was sie tut.
       5:
         image: notes/mc_2017_functions_5.png
-        text: Dann suche den Baustein mit diesem Namen in der  Werkzeugkiste und ziehe
-          ihn von der  Werkzeugkiste auf den 'wenn Ausführen' Baustein.
+        text: Dann suche den Block mit diesem Namen im Werkzeugkasten und ziehe ihn
+          vom Werkzeugkasten auf den 'wenn Ausführen' Block.
       6:
         image: notes/mc_2017_functions_6.png
         text: Denke daran, dass du die gleiche Funktion jedes Mal verwenden kannst,
-          wenn du den gleichen Satz von Anweisungen ausführen musst, um etwas zu tun,
-          wie zum Beispiel eine Brücke zu bauen. Viel Glück, ich weiß, dass du es
-          schaffst!
+          wenn du die gleiche Reihe von Anweisungen ausführen musst, um etwas zu tun,
+          wie zum Beispiel eine Brücke zu bauen. Viel Glück, ich weiß, du kannst es
+          schaffen!
     mc_2017_congratulations:
       1:
         text: 'Preston: Herzlichen Glückwunsch!'
       2:
         text: 'Lizzy: Herzlichen Glückwunsch!'
       3:
-        text: 'Stampy: Herzlichen Glückwunsch, du hast es geschafft!'
+        text: 'Stampy: Glückwunsch, ihr habt es geschafft!'
       4:
-        text: 'Stacy: Herzlichen Glückwunsch Leute, du hast das total gerockt! Und
-          jetzt, da du die Stunde des Codes abgeschlossen hast, kannst du mit der
-          Programmierung in Minecraft beginnen. Du hast mehr über Schleifen, Funktionen
-          und was ein Software-Agent macht gelernt.'
+        text: 'Stacy: Glückwunsch Leute, ihr habt das total gerockt! Und jetzt, da
+          ihr die Hour of Code abgeschlossen habt, könnt ihr mit der Programmierung
+          in Minecraft beginnen. Ihr habt kennt Schleifen, Funktionen und den Software-Agenten.'
       5:
         text: Jetzt ist es Zeit für die Freispielstufe, in der du der Entwickler bist.
           Nutze die verbleibende Zeit, um deine eigenen Funktionen zum Erkunden, Bergbau
@@ -4262,7 +4260,7 @@ de:
         image: notes/hoc_dance_warmup_13.png
         text: Probiere es selbst aus! Und wenn du dich festgefahren fühlst, ist es
           okay! Steh einfach auf und bewege dich, und bevor du dich versiehst, hast
-          du deine eigene Tanzparty gemacht. Also, was wirst du erschaffen?
+          du deine eigene Tanzparty gemacht. Also, was wirst du bauen?
     hoc_dance_events:
       1:
         image: notes/hoc_dance_events_1.png
@@ -4368,7 +4366,7 @@ de:
         image: notes/hoc_dance_congrats_2.png
         text: Herzlichen Glückwunsch! Du hast gerade die Grundlagen der Informatik
           gelernt. Jetzt kannst du diese Bausteine verwenden, um eine Tanzparty nach
-          deinem eigenen Design zu gestalten, die du mit deinen Freunden teilen kannst.
+          eigenem Muster zu gestalten, die du mit deinen Freunden teilen kannst.
       3:
         text: Wenn du in der Werkzeugkiste nachschaust, wirst du einige brandneue
           Bausteine finden, die du noch nie zuvor gesehen hast. So kannst du beispielsweise
@@ -4725,15 +4723,15 @@ de:
         image: notes/hoc_dance_warmup_13.png
         text: Probiere es selbst aus! Und wenn du dich festgefahren fühlst, ist es
           okay, steh einfach auf und beweg dich! Und bevor du dich versiehst, hast
-          du deine eigene Tanzparty gemacht. Also, was wirst du erschaffen?
+          du deine eigene Tanzparty gemacht. Also, was wirst du bauen?
     hoc_dance_events_2019:
       1:
         image: notes/hoc_dance_events_1.png
         text: 'Hour of Code | Tanzparty: Ereignisse (Events)'
       2:
         image: notes/hoc_dance_events_2019_2.png
-        text: Mein Name ist Erin, und ich bin Software-Ingenieur hier bei Code.org,
-          und ich habe beim Aufbau der Dance Party mitgewirkt.
+        text: Mein Name ist Erin.  Ich bin Software-Ingenieurin hier bei Code.org
+          und ich habe beim Aufbau der Tanzparty mitgewirkt.
       3:
         image: notes/hoc_dance_events_2019_3.png
         text: Um verschiedene Tanzbewegungen zur richtigen Zeit mit der Musik durchzuführen,
@@ -4863,7 +4861,7 @@ de:
         image: notes/hoc_dance_congrats_2.png
         text: Herzlichen Glückwunsch! Du hast gerade die Grundlagen der Informatik
           gelernt. Jetzt kannst du diese Bausteine verwenden, um eine Tanzparty nach
-          deinem eigenen Design zu gestalten, die du mit deinen Freunden teilen kannst.
+          eigenem Muster zu gestalten, die du mit deinen Freunden teilen kannst.
       3:
         text: Wenn du in der Werkzeugkiste nachschaust, wirst du einige brandneue
           Bausteine finden, die du noch nie zuvor gesehen hast. So kannst du beispielsweise

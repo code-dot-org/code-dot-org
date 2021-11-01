@@ -60,6 +60,14 @@ class ChannelToken < ApplicationRecord
 
   # Finds the channel token. If a channel token exists for the user and level with and without a script ID,
   # the channel token with the script_id takes precedence.
+  #
+  # Background: The Channel Tokens table did not always have a script_id column. Originally, a channel token for a level
+  # was identified by the level_id. Since we use the same level in different scripts, we needed to include
+  # script_id to identify the correct channel token for a level (https://codedotorg.atlassian.net/browse/LP-1395). As part of
+  # this work, we had to backfill the channel tokens table with the proper script_id. For some channel tokens it was not
+  # possible to identify which script they were associated with. For these channel tokens the script_id was left empty, which
+  # is why we need to query for a channel token with script_id and fallback on one without script_id.
+  #
   # @param [Level] level The level associated with the channel token request.
   # @param [String] user_storage_id The ID of the storage app associated with the channel token request.
   # @param [Integer] script_id The ID of the script associated with the channel token.

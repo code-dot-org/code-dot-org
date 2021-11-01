@@ -48,7 +48,7 @@ social:
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, September 29th at 11 am EDT / 8 am PDT</strong></h3>
   <p>This FAQ session is designed to answer some of the most common questions that students ask about computer science, including what career options are available, how artificial intelligence and big data will shape the job market, and what to expect in college. To view more details, including key topics, student takeaways, and speaker bios, click the Register button below.</p>
-  <a href="https://www.eventbrite.com/e/your-questions-about-cs-careers-answered-registration-167660636477" target="_blank"><button style="margin-bottom:20px">Register</button></a>
+  <a href="https://code.zoom.us/rec/play/dLwAp7jG2lxKm2TFtunQNXaePZdP7jFuA8Xgp_5KVlEv240HeNz13TZ2A4XRt7j5zKgXCnbAA7GFg7cb.XIYTWIhx90B5Mjzy" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>
   <p>Featuring:</p>
   <div class="col-33" style="text-align:center">
     <img src="/images/csjourneys/jack-jobes.jpg" style="border-radius:50%; width:55%" alt="Jack Jobes">
@@ -107,7 +107,7 @@ social:
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, October 13th at 11 am EDT / 8 am PDT</strong></h3>
   <p>This event is designed to showcase really cool research and projects that computer science contributes to across multiple disciplines. Students will hear about opportunities they’ll have at the next level, and see how computer science plays a role in a variety of academic pathways they may want to pursue. To view more details, including key topics, student takeaways, and speaker bios, click the Register button below.</p>
-  <a href="https://www.eventbrite.com/e/college-project-showcase-registration-167738194455" target="_blank"><button style="margin-bottom:20px">Register</button></a>
+  <a href="https://code.zoom.us/rec/play/XfZg54bXBlEGkJnHjdwN-3hQrpFX41qzwvZMC3RX4Rvlb3c4ut9mY1YbIabkwUSwL_pxEyTtKw0YGX0.0XGsrzep-oa-QCv_" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>
   <p>Featuring:</p>
   <div class="col-25" style="text-align:center; margin-bottom:10px">
     <img src="/images/csjourneys/erin-howard.jpg" style="border-radius:50%; width:55%" alt="Erin Howard">
@@ -174,7 +174,10 @@ social:
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, October 27th at 11 am EDT / 8 am PDT</strong></h3>
   <p>Students will learn about key alternatives to the four-year college degree and steps they can take to explore these alternatives, including community college, apprenticeships, and Google Career Certificates. To view more details, including key topics, student takeaways, and speaker bios, click the Register button below.</p>
-  <a href="https://www.eventbrite.com/e/alternatives-to-the-4-year-cs-degree-registration-167770737793" target="_blank"><button style="margin-bottom:20px">Register</button></a>
+  <a href="https://www.eventbrite.com/e/alternatives-to-the-4-year-cs-degree-registration-167770737793" target="_blank"><button style="margin-bottom:20px">Register on Eventbrite</button></a>
+  <br>
+<p><i>By clicking above, you will be taken to www.eventbrite.com.</i></p>
+<br>
   <p>Featuring:</p>
   <div class="col-33" style="text-align:center; margin-bottom:10px">
     <img src="/images/csjourneys/robert-campbell.jpg" style="border-radius:50%; width:55%" alt="Robert Campbell">
@@ -191,6 +194,14 @@ social:
     Co-Founder/Chief Technology Officer 
     <br>
     <a href="https://shimmer.care/" target="_blank">shimmer</a></p>
+  </div>
+  <div class="col-33" style="text-align:center">
+    <img src="/images/csjourneys/johnny-tyson.png" style="border-radius:50%; width:55%" alt="Johnny Tyson III">
+    <p style="margin-top:10px"><strong>Johnny Tyson III</strong>
+    <br>
+    Thrive Apprentice 
+    <br>
+    <a href="https://www.verizon.com/" target="_blank">Verizon</a></p>
   </div>
   <div style="clear: both"></div>
 <br>
@@ -226,9 +237,20 @@ social:
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, November 10th at 11 am EDT / 8 am PDT</strong></h3>
   <p>Students learn about the importance of support networks to their career journey, and about steps to take to start building their own network of intentional connections, including finding a mentor, participating in extracurricular activities, and plugging in with affinity groups and/or professional networks. To view more details, including key topics, student takeaways, and speaker bios, click the Register button below.</p>
-  <a href="https://www.eventbrite.com/e/making-connections-and-building-support-networks-registration-167771632469" target="_blank"><button style="margin-bottom:20px">Register</button></a>
+  <a href="https://www.eventbrite.com/e/making-connections-and-building-support-networks-registration-167771632469" target="_blank"><button style="margin-bottom:20px">Register on Eventbrite</button></a>
+  <br>
+<p><i>By clicking above, you will be taken to www.eventbrite.com.</i></p>
+<br>
   <p>Featuring:</p>
-  <div class="col-33" style="text-align:center; margin-bottom:10px">
+  <div class="col-25" style="text-align:center; margin-bottom:10px">
+    <img src="/images/csjourneys/kyle-ali.jpg" style="border-radius:50%; width:55%" alt="Kyle Ali">
+    <p style="margin-top:10px"><strong>Kyle Ali</strong>
+    <br>
+    Head of Pre-College Programs 
+    <br>
+    <a href="https://edu.google.com/code-with-google/" target="_blank">Google</a></p>
+  </div>
+  <div class="col-25" style="text-align:center; margin-bottom:10px">
     <img src="/images/csjourneys/andrea-olson.jpg" style="border-radius:50%; width:55%" alt="Andrea Delgado-Olson">
     <p style="margin-top:10px"><strong>Andrea Delgado-Olson</strong>
     <br>
@@ -236,7 +258,7 @@ social:
     <br>
     <a href="https://nativesintech.org/" target="_blank">Natives in Tech</a></p>
   </div>
-  <div class="col-33" style="text-align:center">
+  <div class="col-25" style="text-align:center">
     <img src="/images/csjourneys/elisabeth-holm.jpg" style="border-radius:50%; width:55%" alt="Elisabeth Holm">
     <p style="margin-top:10px"><strong>Elisabeth Holm</strong>
     <br>
@@ -244,7 +266,7 @@ social:
     <br>
     <a href="https://sisterhoodofnativeamericancoders.org/" target="_blank">Sisterhood of Native American Coders</a></p>
   </div>
-  <div class="col-33" style="text-align:center; margin-bottom:10px">
+  <div class="col-25" style="text-align:center; margin-bottom:10px">
     <img src="/images/csjourneys/kia-huggan.jpg" style="border-radius:50%; width:55%" alt="Kianjai Huggan">
     <p style="margin-top:10px"><strong>Kianjai Huggan</strong>
     <br>

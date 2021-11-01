@@ -8,7 +8,8 @@ cron-pii:
 - dashboard.pd_%
 - dashboard.email_preferences
 - dashboard.teacher_feedbacks
-- dashboard.authentication_options
+- dashboard.authentication_options:
+    remove_column: [data]
 - dashboard.peer_reviews
 - dashboard.circuit_playground_discount_applications
 - dashboard.circuit_playground_discount_codes
@@ -46,6 +47,7 @@ cron:
 - dashboard.levels_script_levels
 - dashboard.parent_levels_child_levels
 - dashboard.courses
+- dashboard.unit_groups
 - dashboard.course_scripts
 - dashboard.survey_results
 - dashboard.sections

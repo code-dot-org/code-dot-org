@@ -97,7 +97,7 @@ To get a sense of the wide variety of types of tutorials and lesson plans you ca
 
 ## How to submit
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/L1hjArNnGSMJPzyE8) and complete the questions to submit your activity.
+Visit the [Hour of Code™ Activity Submission page](https://forms.gle/z8ARSLcJCFdNPVJS8) and complete the questions to submit your activity.
 
 What you’ll need:
 

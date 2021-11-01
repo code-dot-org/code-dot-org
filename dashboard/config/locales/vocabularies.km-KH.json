@@ -2,6 +2,21 @@
   "km-KH": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "អនុគមន៍"
+        },
+        "code/artist/unversioned": {
+          "word": "កូដ"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "លក្ខខណ្ឌ"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "រង្វិល​ជុំ"
+        },
+        "code/sports/unversioned": {
+          "word": "កូដ"
+        },
         "behavior/coursef/2021": {
           "word": "ឥរិយាបទ"
         },

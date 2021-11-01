@@ -72,7 +72,6 @@
               </value>
               <next>
                 <block type="controls_for_counter" deletable="true" movable="true" editable="true">
-                  <mutation counter="counter"/>
                   <value name="FROM">
                     <block type="math_number" deletable="true" movable="true" editable="true">
                       <title name="NUM">5</title>

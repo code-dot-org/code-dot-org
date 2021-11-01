@@ -18,6 +18,12 @@ class CodeReviewCommentsControllerTest < ActionController::TestCase
     @teacher = create :teacher
     @section = create :section, user: @teacher, code_review_enabled: true
     @another_student = create :student
+
+    create :reviewable_project,
+      user_id: @project_owner.id,
+      storage_app_id: @project_storage_app_id,
+      level_id: 2,
+      script_id: 1
   end
 
   test 'signed out cannot create CodeReviewComment' do

@@ -281,7 +281,7 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.false;
   });
 
-  it('renders dropdown button with links to printing options', () => {
+  it('renders dropdown button with links to printing options when published state is not pilot or indevelopment', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}

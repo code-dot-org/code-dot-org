@@ -530,7 +530,7 @@
           <mutation>
             <arg name="this sprite" type="Sprite"/>
           </mutation>
-          <title name="NAME">spinning</title>
+          <title name="NAME" id="spinning">spinning</title>
           <statement name="STACK">
             <block type="gamelab_changePropBy" inline="true">
               <title name="PROPERTY">"rotation"</title>

@@ -1,12 +1,12 @@
 ---
-title: Past Hour of Code Posters
+title: კოდის ერთი საათის ძველი პოსტერები
 ---
 
 {{ signup_button }}
 
-# Past Hour of Code Posters
+# კოდის ერთი საათის ძველი პოსტერები
 
-### Find our posters from previous years to print and hang in your classroom! Looking for the newest posters? [Click here]({{ promote/promote_posters_url }}).
+### აქ არის წინა წლების პოსტერები, რომლებიც შეგიძლიათ დაბეჭდოთ და კლასში დაკიდოთ! ახალ პოსტერებს ეძებთ? [აქ დააჭირეთ]({{ promote/promote_posters_url }}).
 
 * * *
 

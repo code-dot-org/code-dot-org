@@ -67,7 +67,11 @@
             "name": "gambar kaki kanan"
           },
           "draw body and arms": {
-            "name": "gambar tubuh dan lengan"
+            "name": "gambar tubuh dan lengan",
+            "parameters": {
+              "armlength": "Panjanglengan",
+              "bodylength": "Panjangbadan"
+            }
           },
           "draw a head": {
             "name": "gambar sebuah kepala"
@@ -280,7 +284,8 @@
         "Course 4 Bee Params 8": {
           "get nectar make honey": {
             "parameters": {
-              "honey": "madu"
+              "honey": "madu",
+              "nectars": "Madu"
             }
           }
         },
@@ -2447,6 +2452,13 @@
           "draw": {
             "parameters": {
               "binary": "binary"
+            }
+          }
+        },
+        "Course 4 Bee Params 7": {
+          "get many nectar": {
+            "parameters": {
+              "nectars": "Madu"
             }
           }
         }

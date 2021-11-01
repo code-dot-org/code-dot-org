@@ -239,6 +239,14 @@ pl:
     email_preference_yes: Tak
     email_preference_no: Nie
     email_preference_required: Musisz podać preferencje adresu e-mail.
+    share_teacher_email_reg_partner_question: Czy chcesz, abyśmy udostępnili Twoje
+      dane kontaktowe [regionalnemu partnerowi Code.org](%{cdo_regional_partner_desc})
+      w Twoim stanie, aby mogli powiadamiać Cię o lokalnym rozwoju zawodowym, zasobach
+      i wydarzeniach?
+    share_teacher_email_reg_partner_preference_yes: Tak
+    share_teacher_email_reg_partner_preference_no: Nie
+    share_teacher_email_reg_partner_preference_required: Musisz podać preferencje
+      adresu e-mail.
     parent_account_checkbox: Jestem rodzicem/opiekunem rejestrującym się w imieniu
       mojego dziecka
     parent_account_email_progress_permission: Czy możemy od czasu do czasu przesyłać
@@ -1268,9 +1276,12 @@ pl:
       email: e-mail
       email_alternate: Alternatywny e-mail
       gender: Tożsamość płciowa
+      school: Szkoła
       school_name: Nazwa szkoły
       school_city: Miasto szkoły
+      school_city_district: Miejscowość szkoły/Dystrykt
       school_country: Kraj szkoły
+      school_department_region: Szkolny Wydział/Region
       colombian_school_city: Miasto szkoły
       colombian_chilean_school_department: Szkolny Wydział/Region
       colombian_school_municipality: Gmina Szkoły

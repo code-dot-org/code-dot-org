@@ -1,8 +1,7 @@
-import {assert} from '../../util/deprecatedChai';
+import {assert, expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 
 var testUtils = require('../../util/testUtils');
-import {expect} from '../../util/reconfiguredChai';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import {setAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import Exporter, {getAppOptionsFile} from '@cdo/apps/applab/Exporter';

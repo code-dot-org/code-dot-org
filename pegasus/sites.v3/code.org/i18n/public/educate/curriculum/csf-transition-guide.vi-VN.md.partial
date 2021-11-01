@@ -1,144 +1,144 @@
 ---
-title: Computer Science Fundamentals Transition Guide
+title: Hướng dẫn làm quen các nguyên tắc cơ bản của khoa học máy tính
 theme: responsive
 style_min: true
 ---
 
-# Các khoá học được dạy từ A - F
+# Giảng dạy các khóa học A-F
 
 ## Mục lục
 
 * [Tổng quát](#overview)
-* [Dạy những khoá học mới](#newcourses)
-* [Câu truyện Vòng tròn Thời gian (Khoá học A và B)](#circletime)
-* [Bài Đoạn đầu đài & Thử thách những câu đố (Mọi lứa tuổi)](#scaffolding)
-* [Hoạt độn Bắt cầu dành cho Các khoá học chưa được Nạp (Mọi lứa tuổi)](#unplugged)
-* [Các Dự án Kết thúc Khóa học (Khóa học E & F)](#endofcourse)
-* [Kết luận ](#conclusion)
-* [Những câu hỏi thường gặp](#faq)
+* [Giảng dạy các khóa học mới](#newcourses)
+* [Kể chuyện trong giờ kết nối (Khóa học A và B)](#circletime)
+* [Phân tầng kiến thức trong giờ học & Câu hỏi (Mọi lứa tuổi)](#scaffolding)
+* [Các hoạt động chuyển tiếp cho bài học không dùng thiết bị điện tử (Mọi lứa tuổi)](#unplugged)
+* [Dự án tổng kết khóa học (Khóa học E & F)](#endofcourse)
+* [Kết luận](#conclusion)
+* [Câu hỏi thường gặp](#faq)
 
 <a id="overview"></a>
 
 ## Tổng quát
-Ngành giáo dục khoa học máy tính đã có sự thay đổi lớn sau khi thành lập các khóa học cơ bản về Khoa học máy tính. Originally, Courses 1-4 were designed as a starting point to acquire the basics, no matter what the age of the student who was coming to the discipline.  Now that far more districts, cities, and states have implemented computer science courses beginning at Kindergarten, teachers are asking for more content to see students through until middle school/junior high.
+Thực trạng giáo dục khoa học máy tính đã thay đổi rất nhiều kể từ khi tổ chức các khóa học Nguyên tắc cơ bản của Khoa học máy tính đầu tiên. Ban đầu, các Khóa học 1-4 được thiết kế như nền móng để tiếp thu những kiến thức cơ bản, cho dù học sinh đang bắt đầu học môn này ở độ tuổi nào.  Hiện nay đã có nhiều quận, huyện, thành phố và tiểu bang triển khai các khóa học về khoa học máy tính từ bậc Mẫu giáo. Giáo viên đang yêu cầu cung cấp thêm nội dung để hỗ trợ học sinh cho đến cấp trung học cơ sở/trung học phổ thông.
 
-Khóa học Khoa học máy tính cơ bản A- F, là câu trả lời của chúng tôi cho vấn đề đó.  The creation of a grade-by-grade curriculum allowed us to step back and rethink the way we were presenting material.  It also allowed us the chance to wholeheartedly incorporate feedback from the dedicated teacher community that has supported us on this mission. Designed with the help of some of the best elementary school CS education specialists across the country, Courses A-F should feel familiar enough to run with no extra professional development, but fresh enough to present to students who have done our lessons in the past.
+Các khóa học Nguyên tắc cơ bản của Khoa học máy tính A-F là câu trả lời của chúng tôi cho vấn đề đó.  Việc tạo ra chương trình đào tạo phù hợp với từng độ tuổi cho phép chúng tôi lùi lại và suy nghĩ lại về cách chúng tôi trình bày tài liệu.  Điều này cũng tạo điều kiện để chúng tôi có cơ hội toàn tâm toàn ý kết hợp ý kiến phản hồi từ cộng đồng giáo viên tận tâm đã hỗ trợ chúng tôi thực hiện sứ mệnh này. Với sự trợ giúp của một số chuyên gia giáo dục KHMT bậc tiểu học giỏi nhất trên toàn quốc, Khóa học A-F sẽ không quá mới lạ và có thể triển khai mà không cần đào tạo thêm về chuyên môn, nhưng vẫn có sự mới mẻ khi giới thiệu cho những em học sinh đã từng học với chúng tôi trước đây.
 
-* Khóa học A: Mẫu giáo
-* Khóa học B: Lớp 1
-* Khóa học C: Lớp 2
-* Khóa học D: Lớp 3
-* Khóa học E: Lớp 4
-* Khóa học F: Lớp 5
-* Pre-reader Express Course: Kindergarten - 1st Grade
-* Express Course: 2nd Grade - 5th Grade
+* Khóa A: Mẫu giáo
+* Khóa B: Lớp 1
+* Khóa C: Lớp 2
+* Khóa D: Lớp 3
+* Khóa E: Lớp 4
+* Khóa F: Lớp 5
+* Khóa học cấp tốc dành cho trẻ chưa biết đọc: Mẫu giáo – Lớp 1
+* Khóa học cấp tốc: Lớp 2 – Lớp 5
 
-The biggest update to CS Fundamentals is that content will move from four courses (Courses 1-4) to six courses aligned to each K-5 grade level (Courses A-F).  In doing so, the lessons have become more tailored to the appropriate levels for reading, math, and overall cognitive development.  Note the addition of two different “Express” courses, one for pre-readers and one for all other grades.  These are similar to the previous suite’s “accelerated” version.
+Cập nhật lớn nhất đối với Nguyên tắc cơ bản của KHMT là nội dung sẽ chuyển từ bốn khóa học (Khóa 1-4) sang sáu khóa học phù hợp với từng khối K-5 (Khóa học A-F).  Bằng phương pháp này, các bài học nay đã phù hợp hơn với các cấp độ thích hợp cho việc đọc, làm toán và phát triển nhận thức toàn diện.  Hãy lưu ý rằng có thêm hai khóa học “Cấp tốc” khác nhau, một khóa dành cho trẻ chưa biết đọc và một khóa học dành cho tất cả các khối còn lại.  Các khóa học này tương tự như phiên bản “tăng tốc” trong bộ khóa học trước kia.
 
 <a id="newcourses"></a>
 
-## Dạy những khoá học mới
-As mentioned earlier, the courses should feel familiar, but different.  If you’ve been to a Code.org professional development workshop, then you’re ready to teach the new courses. There are a small number of changes, but the overall platform, curriculum and pedagogical philosophy is unchanged. If you haven’t yet been, Code.org offers 1 day workshops at no cost to help you learn how to understand the curricula, navigate the Code.org platform, and teach the unplugged lessons.
+## Giảng dạy các khóa học mới
+Như đã đề cập trước đó, các khóa học này tuy có cảm giác quen thuộc nhưng vẫn khác biệt.  Nếu bạn đã tham dự hội thảo phát triển chuyên môn Code.org thì bạn đã sẵn sàng để dạy các khóa học mới. Tuy có một số thay đổi nhỏ nhưng tổng thể nền tảng, chương trình đào tạo và triết lý sư phạm không thay đổi. Nếu bạn chưa tham gia hội thảo này thì Code.org tổ chức hội thảo 1 ngày miễn phí để giúp bạn tìm hiểu nội dung chương trình đào tạo, cấu trúc nền tảng Code.org và dạy các bài học không dùng thiết bị điện tử.
 
-The main updates to the courses are:
+Các điểm cập nhật chính trong các khóa học này là:
 
-* Circle-time stories for the younger learners
-* A new approach to scaffolding and practicing/applying concepts
-* Bridging activities to enhance the transition from unplugged lessons to plugged lessons
-* End of course projects for older students
+* Kể chuyện trong giờ kết nối cho học viên nhỏ tuổi
+* Hướng tiếp cận mới đối với các khái niệm phân tầng kiến thức và thực hành/áp dụng
+* Các hoạt động chuyển tiếp để tăng cường quá trình chuyển từ bài học không dùng thiết bị điện tử sang bài học trực tuyến
+* Dự án tổng kết khóa học dành cho học sinh lớn
 
-The rest of this guide will present each idea in more detail, offering tips and tricks for implementing the changes in your classroom.
+Phần còn lại của bài hướng dẫn này sẽ trình bày chi tiết hơn từng ý tưởng, nêu các bí quyết và thủ thuật để triển khai những đổi mới trong lớp học của bạn.
 
 <a id="circletime"></a>
 
-## Câu truyện Vòng tròn Thời gian (Khoá học A và B)
-Some concepts are difficult to teach through activities and puzzles alone, especially for young students.  This is why we’ve introduced a small number of circle-time stories in the Kindergarten and First Grade curricula. These stories are intended to be read by the teacher to the entire class, with stops along the way to discuss critical ideas like debugging, persistence, and frustration.  Our hope is that allowing students to experience these tough concepts via story characters will help them to recognize the same notions when they arise in future lessons.
+## Kể chuyện trong giờ kết nối (Khóa học A và B)
+Một số khái niệm rất khó để giảng giải nếu như chỉ thông qua các hoạt động và câu hỏi, đặc biệt là đối với các em học sinh nhỏ tuổi.  Đây là lý do mà chúng tôi giới thiệu một lượng nhỏ thời gian kể chuyện trong giờ kết nối trong chương trình giảng dạy ở bậc Mẫu giáo và Lớp Một. Những câu chuyện này là để giáo viên đọc cho cả lớp, có các điểm dừng trong quá trình kể để thảo luận về các ý tưởng phản biện như sửa lỗi, sự kiên trì và sự thất vọng.  Chúng tôi hy vọng rằng việc tạo điều kiện cho học sinh trải nghiệm những khái niệm khó này thông qua các nhân vật trong truyện sẽ giúp các em nhận ra những khái niệm tương tự xuất hiện trong các bài học trong tương lai.
 
-Here is how the circle-time stories are intended to be used:
+Dưới đây là mục đích của hoạt động kể chuyện trong giờ kết nối:
 
-### Read the appropriate story to your class
-  - Make sure to check for understanding along the way with questions and comments at useful moments during the action.
-  - Discuss the stories afterward. What did your students hear? Are there any ideas that stuck with them?
-  - Try to get students to identify with the characters.  Is there anything that they do in their lives that remind them of one of the characters in the story?
+### Đọc câu chuyện thích hợp cho cả lớp
+  - Đảm bảo kiểm tra mức độ hiểu trong quá trình kể bằng các câu hỏi và nhận xét vào những thời điểm thích hợp trong hoạt động.
+  - Thảo luận về những câu chuyện sau khi kết thúc. Học sinh của bạn đã nghe được gì? Có bất kỳ ý nào khiến các em trăn trở không?
+  - Cố gắng để học sinh hòa mình vào các nhân vật.  Có điều gì các em từng làm trong đời khiến các em nhớ đến một trong những nhân vật trong câu chuyện không?
 
-### Remind students about the story before they begin the next activity.
-  - Do you remember the main ideas we discussed?
-  - How will you know if you see that idea today?
-  - What did the character do to handle that idea? What would you do?
+### Gợi lại câu chuyện cho học sinh trước khi bắt đầu hoạt động tiếp theo.
+  - Các em có nhớ những ý chính mà chúng ta đã thảo luận không?
+  - Làm thế nào để các em nhận ra nếu nhìn thấy ý đó trong ngày hôm nay?
+  - Nhân vật đã làm gì để xử lý ý đó? Các em sẽ làm gì?
 
-### Point out similarities between the story and the student’s situations when they intersect during an activity.
-  - Describe for a student how the position that they are in resembles a situation from the book.
-  - Ask a student to think about the characters and figure out what they might do.  Does that help the student figure out a next step?
+### Hãy chỉ ra những điểm tương đồng giữa câu chuyện và các tình huống của học sinh khi trao đổi với nhau trong hoạt động.
+  - Mô tả cho học sinh xem vị trí của các em giống với một tình huống trong sách như thế nào.
+  - Yêu cầu học sinh suy ngẫm về các nhân vật và đoán xem họ có thể sẽ làm gì.  Cách đó có giúp các em học sinh tìm ra bước tiếp theo không?
 
-If you are unable to gather your entire class together, Code.org has provided a video option at the beginning of the appropriate lesson that presents the stories with limited animations. While these videos don’t offer quite the same experience, they will allow students to get exposure to the concepts and characters before continuing on with the rest of the course.
+Nếu bạn không thể tập hợp toàn bộ lớp học lại với nhau, Code.org có cung cấp tùy chọn video ở đầu bài học thích hợp để trình bày các câu chuyện kèm theo một ít hình ảnh động. Mặc dù những video này không mang lại trải nghiệm hoàn toàn giống nhưng cũng sẽ tạo điều kiện để học sinh tiếp xúc với các khái niệm và nhân vật trước khi tiếp tục phần còn lại của khóa học.
 
 <a id="scaffolding"></a>
 
-## Bài Đoạn đầu đài & Thử thách những câu đố (Mọi lứa tuổi)
-Courses A-F are less scaffolded overall than our previous courses.  That means that we try to have students create their code from the beginning as often as possible, unless they are specifically learning to debug.  As part of this design, most of our online lessons follow a trend where we present a simple puzzle to begin the lesson, then slowly drill forward with a new concept until the point where students have had a chance to understand the idea underneath.  Next, we present them with a challenge puzzle, which is intended to get students thinking about the concept in a new and complicated way.
+## Phân tầng kiến thức trong giờ học & Câu hỏi (Mọi lứa tuổi)
+Các khóa học A-F nhìn chung ít phân tầng kiến thức hơn so với các khóa học trước của chúng tôi.  Điều đó có nghĩa là chúng tôi cố gắng để học sinh viết mã ngay từ đầu, thường xuyên nhất có thể, trừ khi các em đang học cách sửa lỗi cụ thể.  Là một phần trong cấu trúc này, hầu hết các bài học trực tuyến của chúng tôi đều theo xu hướng mà trong đó, chúng tôi đưa ra một câu hỏi đơn giản để bắt đầu bài học, sau đó từ từ đi sâu hơn vào khái niệm mới cho đến khi học sinh có cơ hội hiểu được ý tưởng đằng sau khái niệm đó.  Tiếp theo, chúng tôi đưa cho các em một câu hỏi thử thách nhằm giúp các em suy ngẫm về khái niệm đó theo một cách mới và phức tạp hơn.
 
-Challenge puzzles are new in Courses A-F.  The intention of challenge puzzles is to expose students to a high bar where they can practice persistence and independent thought.  Challenge puzzles are intentionally hard and designed so that only students who truly understand the concept will pass within a reasonable timeframe.  This means that a good number of students will not be successful on challenges their first time through. This requires a particular attitude from both student and teacher to pull off.
+Câu hỏi thử thách là tính năng mới trong Khóa học A-F.  Mục đích của các câu hỏi thử thách là đặt học sinh vào tình thế khó để các em có thể rèn luyện tính kiên trì và tư duy độc lập.  Các câu hỏi thử thách được cố ý biên soạn với độ khó cao để chỉ những học sinh thực sự hiểu khái niệm mới có thể trả lời được trong khoảng thời gian hợp lý.  Do đó một số lượng lớn học sinh sẽ không thành công trong những thử thách đầu tiên mà các em phải đối mặt. Điều này đòi hỏi cả học sinh và giáo viên phải có thái độ cụ thể mới có thể thành công.
 
-1. Students should give these challenges a hearty try, then put them aside and carry on.  That practice allows for two very important things to happen:
-2. Students gain a better understanding of when and why to use the concept being studied. The following puzzles feel easier after the challenge, even though they are serious puzzles in their own right.
+1. Học sinh nên mạnh dạn thử giải quyết những thử thách này, sau đó gạt chúng sang một bên và tiếp tục bài học.  Cách làm đó tạo điều kiện cho hai kết quả rất quan trọng sau đây:
+2. Học sinh hiểu rõ hơn về thời điểm và lý do sử dụng khái niệm đang tìm hiểu. Những câu hỏi phía sau sẽ có cảm giác dễ hơn sau khi thực hiện thử thách, mặc dù bản thân những câu hỏi đó cũng rất nghiêm túc.
 
-Keep in mind that students can go through lessons and reattempt incomplete puzzles at any time.  Sometimes it can be quite helpful to get a good night’s sleep before revisiting a tough problem.
+Hãy nhớ rằng học sinh có thể học hết bài và trả lời lại các câu hỏi chưa hoàn thành bất cứ lúc nào.  Đôi khi việc có một giấc ngủ ngon trước khi xem xét lại một vấn đề hóc búa cũng là điều vô cùng hữu ích.
 
-Once students make it past the challenge, they will find a handful of exercises waiting for them that are similar to what they may have experienced in the first half of the stage. These puzzles were placed intentionally to test a student’s clarity on the subject being studied.  They might seem far too easy, given the puzzles that were experienced beforehand, but they were created to demonstrate the exact level of competence desired from the corresponding stage.
+Một khi học sinh vượt qua được thử thách, các em sẽ thấy nhiều bài tập đang chờ đợi các em giải quyết, tương tự như những bài tập mà các em có thể đã làm trong nửa đầu của giai đoạn này. Những câu hỏi này nhằm mục đích kiểm tra khả năng hiểu bài của học sinh về chủ đề đang học.  Nghe có vẻ quá dễ vì các em học sinh đã được biết trước, nhưng những câu hỏi này được biên soạn để chứng minh mức năng lực kỳ vọng chính xác trong giai đoạn tương ứng.
 
-In some instances, we end our lessons with free-play style levels.  These levels might either have no “wrong” answer, or they might allow several different ways to solve their core problem.  Please encourage students to give them their best shot and not just click “Continue” even though they can.
+Trong một số trường hợp, chúng ta kết thúc bài học của mình bằng các màn chơi tự do.  Các màn chơi này có thể không có câu trả lời “sai” hoặc có thể chấp nhận giải quyết vấn đề cốt lõi bằng nhiều cách khác nhau.  Vui lòng khuyến khích học sinh cố gắng hết sức và đừng nhấp chuột ngay vào nút “Tiếp tục” mặc dù các em có thể làm vậy.
 
-Some final notes for this area:
+Một số lưu ý cuối cùng cho phần này:
 
-* Remind students to be persistent and use their debugging skills on problems that feel tough.
-* Videos are often helpful.  When students get stuck, have them rewatch the video a second, third, or even fourth time.
-* Require students to read the instructions.  If they are having a hard time, let them read the instructions out loud to a classmate.
-* It’s okay to use hints!  Students should use as many hints as they need, but be sure to attempt re-solving the puzzle at least one between each new offering.
+* Hãy nhắc học sinh kiên trì và sử dụng kỹ năng sửa lỗi của các em đối với các vấn đề khó.
+* Video thường rất có ích.  Khi học sinh gặp khó khăn, hãy yêu cầu các em xem lại video lần thứ hai, thứ ba hoặc thậm chí là thứ tư.
+* Hãy yêu cầu học sinh đọc hướng dẫn.  Nếu các em đang gặp khó khăn, hãy để các em đọc to hướng dẫn cho bạn cùng lớp.
+* Sử dụng gợi ý cũng được nhé!  Học sinh có thể sử dụng bao nhiêu gợi ý tùy thích nếu các em cần, nhưng hãy cố gắng trả lời ít nhất một câu hỏi trước khi nhận gợi ý mới.
 
 <a id="unplugged"></a>
 
-## Hoạt độn Bắt cầu dành cho Các khoá học chưa được Nạp (Mọi lứa tuổi)
-Unplugged activities meet students where they are in terms of pointing out how they already use important CS concepts in their everyday life.  Once students can identify fundamental ideas like loops and conditionals, they get over the mental blocks that can happen when trying to use them for the first time programming online.
+## Các hoạt động chuyển tiếp cho bài học không dùng thiết bị điện tử (Mọi lứa tuổi)
+Các em học sinh tham gia hoạt động không dùng thiết bị điện tử trong trường hợp các em liệt kê cách vận dụng các khái niệm KHMT quan trọng trong cuộc sống hàng ngày.  Sau khi học sinh có thể xác định các ý tưởng cơ bản như vòng lặp và lệnh điều kiện, các em sẽ vượt qua được trở ngại tâm lý có thể gặp phải khi cố gắng vận dụng các khái niệm này khi lập trình trực tuyến lần đầu tiên.
 
-Unplugged experiences are so important that we chose to take them one step further and bake in activities that bridge the unplugged lessons to their online counterparts.  In Courses A-F, you will now find that lesson plans provide examples of how to take the offline exercises and translate the lessons to the following set of online puzzles.  Appropriately, we call these "Bridging Activities."
+Trải nghiệm không dùng thiết bị điện tử rất quan trọng nên chúng tôi đã chọn phát triển thêm trải nghiệm này và triển khai các hoạt động xen kẽ giữa các bài học không dùng và có dùng thiết bị điện tử của các em.  Trong Khóa học A-F, bạn sẽ thấy rằng giáo án cung cấp ví dụ về cách triển khai bài tập không dùng ngoại tuyến và chuyển các bài học sang bộ câu hỏi trực tuyến sau.  Để cho phù hợp, chúng tôi gọi đây là “Hoạt động chuyển tiếp”.
 
-For the most part, bridging activities can be created either by taking the subject of the unplugged exercise and executing it with paper Blockly blocks, or by taking an online puzzle and solving it using the language from the unplugged exercise.  In some cases, a different relationship is introduced, but all of the examples are meant to keep the offline experiences from feeling too abstract or unrelated.
+Trong hầu hết trường hợp, chúng ta có thể xây dựng các hoạt động chuyển tiếp bằng cách lấy chủ đề của bài tập không dùng thiết bị điện tử và thực hiện với các khối Blockly bằng giấy hoặc bằng cách làm bài tập trực tuyến và giải bài tập bằng ngôn ngữ từ trong bài tập không dùng thiết bị điện tử.  Trong một số trường hợp, chúng tôi sẽ giới thiệu một cấu trúc khác, nhưng tất cả ví dụ đều nhằm mục đích đảm bảo trải nghiệm không dùng thiết bị điện tử không quá trừu tượng hoặc lạc lõng.
 
 <a id="endofcourse"></a>
 
-## Các Dự án Kết thúc Khóa học (Khóa học E & F)
-For older students, we have introduced substantial end of course projects in Courses E & F.  Though Code.org has provided the ability to build “projects” for quite a while, we felt that it would add some much needed perspective for students to be able to plan and execute their projects in a formal context.
+## Dự án tổng kết khóa học (Khóa học E & F)
+Đối với các em học sinh lớn hơn, chúng tôi đưa vào một số lượng đáng kể các dự án tổng kết trong Khóa học E & F. Mặc dù Code.org đã tạo điều kiện để xây dựng “dự án” từ trước đó nhưng chúng tôi cảm thấy rằng hoạt động này sẽ bổ sung một số góc nhìn cần thiết để học sinh có thể lập kế hoạch và thực hiện dự án của các em một cách chính thức.
 
-The end of course projects are relatively straightforward.  Over the period of four to five weeks students will review project ideas, plan their application, code their program, revise based on feedback (5th grade), then present their completed work.  Each of these steps is guided by a helpful handout, as well as a teacher lesson plan that highlights the big picture.
+Các dự án tổng kết khóa học tương đối đơn giản.  Trong khoảng thời gian từ bốn đến năm tuần, học sinh sẽ xem xét các ý tưởng dự án, lập kế hoạch ứng dụng, viết mã lệnh cho chương trình, sửa theo phản hồi (lớp 5), sau đó thuyết trình về công trình đã hoàn thành của các em.  Từng bước trong số này đều có hướng dẫn trong tài liệu hữu ích cũng như giáo án để làm nổi bật bức tranh toàn cảnh.
 
-**Review:** Students will take a look at a handful of aspirational projects, built to showcase the amazing things that can be done with the skills that they have learned up to this point.  These projects have been built either in Play Lab or Artist, but students are free to review projects from Tynker, Scratch, or even text-based languages if the teacher sees fit.
+**Xem xét:** Học sinh sẽ xem một số dự án thú vị được biên soạn để thể hiện những điều tuyệt vời mà các em có thể thực hiện bằng các kỹ năng mà đã học được cho đến thời điểm này.  Các dự án này đã được biên soạn trong Play Lab hoặc Họa sĩ, nhưng học sinh có thể thoải mái xem các dự án từ Tynker, Scratch hoặc thậm chí là các ngôn ngữ văn bản nếu giáo viên thấy phù hợp.
 
-**Plan:** The intention here is for students to sit back and think about what is really possible.  They will need to think about the games that they saw, and the limitations that they faced when editing them.  Afterward, they will sketch out a plan to create something unique.  Students might need to be reminded to stay realistic, as they will have limited time and resources when bringing their visions to life.  The materials here assume the use of Artist or Play Lab, but projects can be moved to whatever platform works for each particular classroom.
+**Lập kế hoạch:** Mục đích là để các em học sinh ngồi lại và suy ngẫm về những khả năng thực tế.  Các em sẽ cần phải suy nghĩ về các tựa game mà các em đã thấy và những hạn chế mà các em phải đối mặt khi chỉnh sửa chúng.  Sau đó, các em sẽ phác thảo kế hoạch để tạo ra một chi tiết độc đáo.  Bạn có thể cần phải nhắc học sinh tư duy thực tế vì các em bị hạn chế về thời gian và nguồn lực khi hiện thực hóa tầm nhìn của mình vào cuộc sống.  Các tài liệu ở đây mặc định việc sử dụng Họa sĩ hoặc Play Lab, nhưng các dự án có thể được chuyển sang bất kỳ nền tảng nào thích hợp cho từng lớp học cụ thể.
 
-**Build:** One day is not a whole lot of time to execute a plan that has been laid out on paper.  Students will face tough choices when it comes to trying to make things work as they run into one barrier after another.  They will learn to edit and adapt as bugs and program limitations change their perceptions of what can comfortably be accomplished in a restricted timeframe.
+**Xây dựng:** Một ngày không phải là quá nhiều thời gian để thực hiện một kế hoạch đã được vạch ra trên giấy.  Học sinh sẽ phải đối mặt với những lựa chọn khó khăn khi cố gắng làm cho chương trình hoạt động, đồng thời gặp hết rào cản này đến rào cản khác.  Các em sẽ học cách chỉnh sửa và thích nghi khi các lỗi và hạn chế của chương trình thay đổi nhận thức của các em về kết quả có thể dễ dàng đạt được trong khoảng thời gian hạn chế.
 
-**Revise:** For older students, a day of revising their programs based on the feedback of classmates can help them improve their final product, and lets them inspire others with the things that they have achieved.  Students will practice constructive critique, as well as group brainstorming and persistence.
+**Chỉnh sửa:** Đối với các em học sinh lớn, một ngày để chỉnh sửa chương trình của các em dựa trên phản hồi của các bạn cùng lớp có thể giúp các em cải thiện sản phẩm cuối cùng và tạo điều kiện để các em truyền cảm hứng cho những bạn khác bằng những kết quả mà các em đã đạt được.  Học sinh sẽ rèn luyện khả năng phê bình mang tính xây dựng, cũng như brainstorm (động não) theo nhóm và sự kiên trì.
 
-**Present:** Nearly a month in the making, this is the chance for students to stand-up and be proud of how far they have come.  Our lesson plan assumes an oral presentation, but teachers have the option of suggesting written or multimedia presentations instead.
+**Thuyết trình:** Sau gần một tháng làm việc, đây là cơ hội để các em học sinh đứng lên và tự hào về những gì các em đã đạt được.  Giáo án của chúng tôi giả định là một bài thuyết trình bằng miệng, nhưng thay vào đó, giáo viên có tùy ý đề xuất bài thuyết trình bằng văn bản hoặc đa phương tiện.
 
-No matter how thoroughly students embed themselves in their projects, they are sure to learn something useful about the processes of creativity and problem solving in computer science.
+Cho dù học sinh có toàn tâm toàn ý với các dự án của mình đến đâu thì chắc chắn các em sẽ học được điều gì đó hữu ích về các quy trình sáng tạo và giải quyết vấn đề trong ngành khoa học máy tính.
 
 <a id="conclusion"></a>
 
 ## Kết luận
-As you can see, Courses A-F in Computer Science Fundamentals contain exciting enhancements, influenced by feedback from the massive CS Fundamentals teacher & facilitator communities.
+Như bạn có thể thấy, Khóa học A-F với nội dung Nguyên tắc cơ bản của Khoa học máy tính có những điểm cải tiến thú vị dựa trên phản hồi từ giáo viên dạy Nguyên tắc cơ bản của KHMT & cộng đồng cố vấn viên.
 
-We hope this overview has been insightful.  If you have any questions or comments about this change, please visit http://forum.code.org/c/csf and post them on our forum.  We will be sure to get your questions answered as quickly as possible.  Until then, here are some of frequently asked questions about Courses A-F.
+Chúng tôi hy vọng phần tổng quan này cung cấp đủ thông tin cho bạn.  Nếu bạn có bất kỳ câu hỏi hoặc nhận xét nào về thay đổi này, vui lòng truy cập http://forum.code.org/c/csf và đăng trên diễn đàn của chúng tôi.  Chúng tôi chắc chắn sẽ trả lời câu hỏi của bạn nhanh nhất có thể.  Còn sau đây là một số câu hỏi thường gặp về Khóa học A-F.
 
 <a id="faq"></a>
 
-## Những câu hỏi thường gặp
+## Câu hỏi thường gặp
 
-| Question                                                                                                                                                    | Answer                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **You are launching a new set of courses-- does that mean that Courses 1-4 are going away?**                                                                | No. Just as our original 20-Hour course is still available and in-use on our website, we plan to keep Courses 1-4 around for those who feel that it better represents the experience that their students/children need.                                                                                                                                                                                                                                                        |
-| **When can we start using Courses A-F?**                                                                                                                    | Courses A-F are available now!                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| **Some of my favorite lessons/puzzles are missing from Courses A-F!**                                                                                       | Have no fear! They still exist where you left them in Courses 1-4 or the Accelerated 20-Hour course.                                                                                                                                                                                                                                                                                                                                                                           |
-| **These puzzles seem much harder.  I’m worried that they’re too difficult for my little ones.**                                                             | The backbone of these new courses is the desire to get students to think, problem solve, and practice persistence.  None of these things are required when puzzles are too easy to complete.  For this reason, we’ve had to make puzzles more difficult.  Please refer to the teacher guide for help with leading your class in building these skills.  As always, don’t underestimate the importance of using unplugged lessons before jumping in with the online puzzles.    |
-| **Some puzzles only allow a certain number of specific blocks.  What if my students want to code something out the long way before they figure out loops?** | There are a few puzzles that restrict specific blocks. This is one of our new manners of scaffolding.  It is a way of giving direction, without over scaffolding the pieces in the workspace itself.  For students who like to code puzzles the long way before they pare down (and, in fact for all students, all the time) it is useful to have a journal or scratch paper beside the keyboard where they can figure out the algorithm in whatever way comes most naturally. |
+| Câu hỏi                                                                                                                                                                     | Câu trả lời                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Chúng tôi đang tổ chức một bộ khóa học mới, điều đó có nghĩa là các Khóa học 1-4 sẽ bị gỡ bỏ?**                                                                           | Không. Cũng giống như khóa học 20 Giờ ban đầu của chúng tôi vẫn có sẵn và đang được sử dụng trên trang web của chúng tôi, chúng tôi có kế hoạch duy trì các Khóa học 1-4 cho những người cảm thấy rằng các khóa học này mang lại trải nghiệm tốt hơn mà học sinh/con cái của họ cần.                                                                                                                                                                                                                                     |
+| **Khi nào chúng ta có thể bắt đầu sử dụng Khóa học A-F?**                                                                                                                   | Các khóa học A-F hiện đã có thể sử dụng!                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Một số bài học/câu hỏi yêu thích của tôi không có trong Khóa học A-F!**                                                                                                   | Đừng lo! Chúng vẫn hiện diện ở chỗ cũ trong Khóa học 1-4 hoặc Khóa học 20 giờ cấp tốc.                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| **Những câu hỏi này có vẻ khó hơn nhiều.  Tôi e rằng chúng quá khó đối với những đứa con nhỏ của tôi.**                                                                     | Nền tảng của các khóa học mới này là mong muốn giúp học sinh tư duy, giải quyết vấn đề và rèn luyện sự kiên trì.  Nếu các câu hỏi quá dễ trả lời thì sẽ không cần tới những kỹ năng này.  Do đó, chúng tôi đã phải biên soạn các câu hỏi khó hơn.  Vui lòng tham khảo hướng dẫn của giáo viên để được trợ giúp dẫn dắt lớp học của bạn khi xây dựng những kỹ năng này.  Như mọi khi, đừng đánh giá thấp tầm quan trọng của việc sử dụng các bài học không dùng thiết bị điện tử trước khi làm bài tập trực tuyến.        |
+| **Một số câu hỏi chỉ cho phép một số khối cụ thể nhất định.  Điều gì sẽ xảy ra nếu học sinh của tôi muốn viết mã lệnh theo kiểu đầy đủ trước khi các em biết về vòng lặp?** | Có một số câu hỏi hạn chế các khối cụ thể. Đây là một trong những cách phân tầng kiến thức mới của chúng tôi.  Đó là cách hướng dẫn học sinh mà phân tầng quá nhiều mảnh kiến thức trong chính không gian làm việc.  Đối với các em học sinh thích viết mã lệnh theo kiểu đầy đủ trước rồi rút gọn sau (và thực tế là tất cả học sinh, mọi lúc, mọi nơi đều làm vậy), một cuốn sổ tay hoặc giấy nháp đặt bên cạnh bàn phím sẽ rất hữu ích để các em có thể tìm ra thuật toán theo bất kỳ cách nào sao cho tự nhiên nhất. |
 

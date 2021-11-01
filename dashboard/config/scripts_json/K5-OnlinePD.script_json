@@ -4,9 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
-      "professional_learning_course": "K5 Support",
-      "script_announcements": [
+      "announcements": [
         {
           "notice": "Updated version of this course available! ",
           "details": "We have released a new and improved version of this course! Click \"learn more\" to be routed to the 2019 version of Teaching Computer Science Fundamentals.",
@@ -15,7 +13,9 @@
           "visibility": "Teacher-only"
         }
       ],
-      "announcements": [
+      "pd": true,
+      "professional_learning_course": "K5 Support",
+      "script_announcements": [
         {
           "notice": "Updated version of this course available! ",
           "details": "We have released a new and improved version of this course! Click \"learn more\" to be routed to the 2019 version of Teaching Computer Science Fundamentals.",
@@ -27,8 +27,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:50 UTC",
+    "serialized_at": "2021-10-25 22:53:09 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "K5-OnlinePD"
     }

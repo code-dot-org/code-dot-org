@@ -1556,6 +1556,11 @@
               "width": "Širina"
             }
           }
+        },
+        "4-5 Artist 8": {
+          "draw circle": {
+            "name": "нацртај круг"
+          }
         }
       }
     }

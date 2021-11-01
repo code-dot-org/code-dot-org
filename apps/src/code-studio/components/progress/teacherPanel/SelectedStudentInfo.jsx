@@ -5,6 +5,7 @@ import Button from '@cdo/apps/templates/Button';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import Tooltip from '@cdo/apps/templates/Tooltip';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgress, studentShape} from './types';
 
@@ -65,6 +66,36 @@ export default class SelectedStudentInfo extends React.Component {
     }
   };
 
+  // Render a string and possibly a tooltip that describes the student's
+  // partners. This method should only be called when the student is in a
+  // pairing group. The length of partnerNames is typically equal to
+  // partnerCount but the length of partnerNames can be less than
+  // partnerCount if a partner's user account and/or progress was deleted.
+  renderPartners({partnerNames, partnerCount}) {
+    // Three cases:
+    // - no known partners: "3 other students"
+    // - exactly one known partner: "Student name"
+    // - all other cases: "Student name + 2" (with tooltip listing all known names)
+    if (partnerNames.length === 0) {
+      return <div>{i18n.otherStudents({count: partnerCount})}</div>;
+    } else if (partnerNames.length === 1 && partnerCount === 1) {
+      return <div>{partnerNames[0]}</div>;
+    } else {
+      let tooltipText = partnerNames.join(', ');
+      const unknownPartnersCount = partnerCount - partnerNames.length;
+      if (unknownPartnersCount > 0) {
+        tooltipText +=
+          ' + ' + i18n.otherStudents({count: unknownPartnersCount});
+      }
+
+      return (
+        <Tooltip text={tooltipText} place="bottom">
+          <div>{partnerNames[0] + ' + ' + (partnerCount - 1)}</div>
+        </Tooltip>
+      );
+    }
+  }
+
   render() {
     const {selectedStudent, levelWithProgress} = this.props;
 
@@ -89,14 +120,7 @@ export default class SelectedStudentInfo extends React.Component {
       );
     }
 
-    const {
-      paired,
-      navigator,
-      driver,
-      submitLevel,
-      status,
-      updatedAt
-    } = levelWithProgress;
+    const {paired, submitLevel, status, updatedAt} = levelWithProgress;
 
     return (
       <div style={styles.main}>
@@ -110,12 +134,7 @@ export default class SelectedStudentInfo extends React.Component {
           {paired && (
             <div>
               <div>{i18n.workedWith()}</div>
-              {navigator && (
-                <div key={navigator}>{i18n.partner({partner: navigator})}</div>
-              )}
-              {driver && (
-                <div key={driver}>{i18n.loggedIn({partner: driver})}</div>
-              )}
+              {this.renderPartners(levelWithProgress)}
             </div>
           )}
           <div style={styles.bubble}>

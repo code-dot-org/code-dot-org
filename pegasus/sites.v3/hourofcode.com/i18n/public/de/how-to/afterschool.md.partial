@@ -8,11 +8,11 @@ nav: how_to_nav
 
 # Wie unterrichtet man eine Hour of Code in Freizeit und Verein
 
-### Schließen Sie sich der Bewegung an und führen Sie Ihre SchülerInnen mit diesen Schritten an die Informatik heran.
+### Schließen Sie sich der Bewegung an und führen Sie Ihre Lernenden mit diesen Schritten an die Informatik heran.
 
-Rechnergestütztes Denken fördert Problemlösungsfähigkeiten, Logik und Kreativität. Gleichzeitig verändert die Technologie jede Branche auf diesem Planeten. Die SchülerInnen von heute müssen lernen, wie man Technologie schafft und nicht nur, wie man sie verwendet. Wenn sie früh anfangen, haben sie damit eine Basis für ihren Erfolg in jedem Berufsbild des 21. Jahrhunderts.
+Rechnergestütztes Denken fördert Problemlösungsfähigkeiten, Logik und Kreativität. Gleichzeitig verändert die Technologie jede Branche auf diesem Planeten. Lernende von heute müssen verstehen, wie man Technologie erschafft und nicht nur, wie man sie verwendet. Wenn sie früh anfangen, schaffen sie damit die Grundlagen zum Erfolg in jedem Berufsbild des 21. Jahrhunderts.
 
-Hour of Code ist ein einfacher und lustiger Weg, um Informatik zur Studenten vielleicht erstmals zu vorstellen. Wenn Sie mehr Hilfe brauchen, können Sie ein [lokalen Freiwilliger]({{ urls/volunteer_local }})finden, damit Hour of Code in Ihre außerschulische Klasse oder Schulclub zu helfen.
+Hour of Code ist eine einfache und spaßige Möglichkeit, um Lernende an die Informatik heranzuführen. Wenn Sie mehr Hilfe brauchen, können Sie ein [lokalen Freiwilliger]({{ urls/volunteer_local }})finden, damit Hour of Code in Ihre außerschulische Klasse oder Schulclub zu helfen.
 
 ### Sie können eine Hour of Code auch virtuell moderieren! Schauen Sie sich zum Einstieg unsere [Tipps für das Moderieren einer virtuellen Hour of Code Veranstaltung](https://hourofcode.com/us/how-to/virtual) an.
 
@@ -20,7 +20,7 @@ Hour of Code ist ein einfacher und lustiger Weg, um Informatik zur Studenten vie
 
 ## 1. Schauen Sie sich dieses Tutorialvideo an <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-## Wähle eine Lektion
+## 2. Wählen Sie eine Lektion
 
 Wir bieten eine Menge von [ lustige einstündige Tutorials ]({{ urls/learn }}), die von verschiedenen Teilhabern erstellen wurden, für Teilnehmer aller Altersgruppen. [ Probieren sie! ]({{ urls/learn }})
 
@@ -38,13 +38,13 @@ Bewerben Sie Ihre Hour of Code [mit diesen Tools]({{ urls/promote }}) und ermuti
 
 Die beste "Hour of Code"-Erfahrung macht man mit Computern, die einen Internetzugang haben. Aber Sie brauchen **nicht** ein Computer für jedes Kind und Sie können sogar Hour of Code ohne ein Computer machen.
 
-Testen Sie Tutorials auf den Computern oder Geräten der SchülerInnen. Prüfen Sie, Ton und Video im Browser ordnungsgemäß funktionieren. **Geringe Bandbreite haben?** Abspielen Videos vor der Klasse, sodass jeder Student nicht eigenen Videos herunterladen muss. Oder probieren die ausgesteckt/offline Tutorials.
+Testen Sie Tutorials auf den Computern oder Geräten der Lernenden. Prüfen Sie, dass Ton und Video im Browser ordnungsgemäß funktionieren. **Geringe Bandbreite haben?** Abspielen Videos vor der Klasse, sodass jeder Student nicht eigenen Videos herunterladen muss. Oder probieren die ausgesteckt/offline Tutorials.
 
-Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie ihre Schüle welche mitzubringen, wenn das ausgewählte Tutorial am Besten mit Sound funktioniert.
+Stellen Sie Ihrer Klasse Kopfhörer zur Verfügung, oder bitten Sie sie, eigene mitzubringen, wenn das ausgewählte Tutorial am Besten mit Ton funktioniert.
 
-**Nicht genug Geräte haben?** Benutzen Sie [](https://www.youtube.com/watch?v=vgkahOzFH2Q)Paar-Programmiuerung </a>. Wenn Schüler in Paaren arbeiten, helfen sich sich gegenseitig und sind weniger auf den Lehrer angewiesen. Sie werden dann auch festellen, dass Programieren sozial und kooperativ ist.
+**Nicht genug Geräte haben?** Benutzen Sie [](https://www.youtube.com/watch?v=vgkahOzFH2Q)Paar-Programmiuerung </a>. Wenn Lernende in Paaren arbeiten, helfen sich sich gegenseitig und sind weniger auf die Lehrkraft angewiesen. Sie werden dann auch feststellen, dass Informatik sozial und kooperativ ist.
 
-## 5. Beginnen Sie Ihre "Hour of Code" mit einem inspirierendem Video
+## 5. Beginnen Sie Ihre "Hour of Code" mit einem inspirierenden Video
 
 Beginnen Sie Ihre Hour of Code mit einer motivierenden Diskussion mit den Teilnehmern darüber, wie Informatik jeden Teil unseres Lebens beeinflusst.
 

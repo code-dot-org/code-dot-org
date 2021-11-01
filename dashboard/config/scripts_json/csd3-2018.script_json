@@ -4,7 +4,38 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "notice": "CS Discoveries Post-Course Survey for Students Now Open!",
+          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
+          "link": "https://studio.code.org/s/csd-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
+      "curriculum_umbrella": "CSD",
       "exclude_csf_column_in_legend": true,
+      "family_name": "csd3",
+      "has_lesson_plan": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_stable": true,
+      "lesson_extras_available": true,
+      "project_sharing": true,
+      "project_widget_types": [
+        "gamelab",
+        "weblab"
+      ],
+      "project_widget_visible": true,
+      "script_announcements": [
+        {
+          "notice": "CS Discoveries Post-Course Survey for Students Now Open!",
+          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
+          "link": "https://studio.code.org/s/csd-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
       "student_detail_progress_view": true,
       "teacher_resources": [
         [
@@ -28,44 +59,14 @@
           "https://curriculum.code.org/csd-18/unit3/code/"
         ]
       ],
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "project_widget_visible": true,
-      "project_widget_types": [
-        "gamelab",
-        "weblab"
-      ],
-      "version_year": "2018",
-      "is_stable": true,
-      "project_sharing": true,
-      "script_announcements": [
-        {
-          "notice": "CS Discoveries Post-Course Survey for Students Now Open!",
-          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
-          "link": "https://studio.code.org/s/csd-post-survey-2018",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
-      ],
-      "curriculum_umbrella": "CSD",
-      "family_name": "csd3",
       "tts": true,
-      "lesson_extras_available": true,
-      "hideable_lessons": true,
-      "announcements": [
-        {
-          "notice": "CS Discoveries Post-Course Survey for Students Now Open!",
-          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes. Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
-          "link": "https://studio.code.org/s/csd-post-survey-2018",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
-      ]
+      "version_year": "2018"
     },
     "new_name": null,
     "family_name": "csd3",
-    "serialized_at": "2021-08-03 22:47:24 UTC",
+    "serialized_at": "2021-10-25 22:53:41 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csd3-2018"
     }

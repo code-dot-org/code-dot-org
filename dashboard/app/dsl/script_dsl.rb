@@ -86,7 +86,8 @@ class ScriptDSL < BaseDSL
         key: key,
         display_name: properties[:display_name],
         big_questions: [],
-        lessons: []
+        lessons: [],
+        user_facing: true
       }.compact
     end
   end

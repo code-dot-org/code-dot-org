@@ -31,6 +31,7 @@ def get_social_metadata_for_page(request)
     codeorg2019_social: {path: "/shared/images/social-media/codeorg2019_social.png", width: 1200, height: 630},
     codeorg2020_social: {path: "/shared/images/social-media/codeorg2020_social.png", width: 1200, height: 630},
     hoc_2020_social: {path: "/shared/images/social-media/hoc2020_social.png", width: 1200, height: 630},
+    hoc_cse_social: {path: "/shared/images/social-media/hoc_cse_social.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -91,14 +92,14 @@ def get_social_metadata_for_page(request)
     },
     "hourofcode.com" => {
       "soon-hoc" => {
-        title: hoc_s(:social_hoc_is_coming),
-        description: hoc_s(:social_hoc2020_hoc_is_about_csforgood),
-        image: images[:hoc_2020_social]
+        title: hoc_s(:social_hoc_anybody),
+        description: hoc_s(:social_hoc2021_cse),
+        image: images[:hoc_cse_social]
       },
       "actual-hoc" => {
-        title: hoc_s(:social_hoc2018_hoc_here),
-        description: hoc_s(:social_hoc2020_hoc_is_about_csforgood),
-        image: images[:hoc_2020_social]
+        title: hoc_s(:social_hoc_anybody),
+        description: hoc_s(:social_hoc2021_cse),
+        image: images[:hoc_cse_social]
       },
       "default" => {
         title: hoc_s(:meta_tag_og_title),

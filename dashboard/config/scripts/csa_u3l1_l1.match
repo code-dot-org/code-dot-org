@@ -1,6 +1,7 @@
 name 'CSA U3L1-L1'
 title 'Check for Understanding'
 description 'Match the term to the correct definition.'
+height 'auto'
 
 question 'one-dimensional array'
 answer 'a linear structure that stores one or more values of the same data type'

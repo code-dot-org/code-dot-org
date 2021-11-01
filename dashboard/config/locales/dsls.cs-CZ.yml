@@ -3779,3 +3779,19 @@ cs-CZ:
         description: Právě se chystáte zahájit svůj závěrečný projekt. Než začnete,
           věnujte nějaký čas studiu těchto příkladů projektů.
         display_name: Příklady projektů
+      GettingLoopy-Unplugged_2021:
+        markdown: |
+          # Zacyklení
+
+          Tato lekce je úvodem do programátorské koncepce cyklů formou taneční aktivity.
+      MoveItMoveIt-Unplugged_2021:
+        markdown: |
+          # Pohybujte tím, pohybujte tím
+
+          Používejte mapu a vydávejte příkazy k dosažení cíle.
+      TheRightAppMarkdownLevel_2021:
+        markdown: "# Správná aplikace\n\n* Dnes každý používá počítače, zejména chytré
+          telefony. \n* Aplikace pro chytré telefony lidem umožňují například hovořit
+          s přáteli, poslouchat hudbu nebo třeba jen si prohlížet web.\n* Je důležité,
+          aby programátoři chápali potřeby jiných a navrhovali aplikace tak, aby na
+          ně pamatovali!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"

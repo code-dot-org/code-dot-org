@@ -2,6 +2,82 @@
   "fa-IR": {
     "data": {
       "resources": {
+        "dance-party-playlist/dance-extras/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "csf-artist-intro-video/artist/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "csf-turns-angles-doc/artist/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "csf-turns-angles-video/artist/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "dance-party-playlist/dance/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "dance-party-playlist/dance-extras-2019/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "dance-party-playlist/dance-2019/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "ai-ml/oceans/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "ai-societal/oceans/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "ai-training/oceans/unversioned": {
+          "name": "",
+          "url": ""
+        },
         "introducing_sprite_lab/coursef/2021": {
           "name": "",
           "url": ""
@@ -206,6 +282,10 @@
           "name": "",
           "url": ""
         },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "",
+          "url": ""
+        },
         "digital-trails-lesson-slides/courseb/2021": {
           "name": "",
           "url": ""
@@ -379,6 +459,10 @@
           "url": ""
         },
         "teacher_forum_1/courseb/2021": {
+          "name": "",
+          "url": ""
+        },
+        "virtual_lesson_modifications/courseb/2021": {
           "name": "",
           "url": ""
         },
@@ -578,6 +662,10 @@
           "name": "",
           "url": ""
         },
+        "virtual_lesson_modifications/coursea/2021": {
+          "name": "",
+          "url": ""
+        },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
           "name": "",
           "url": ""
@@ -747,6 +835,10 @@
           "url": ""
         },
         "teacher_forum_1/coursec/2021": {
+          "name": "",
+          "url": ""
+        },
+        "virtual_lesson_modifications/coursec/2021": {
           "name": "",
           "url": ""
         },
@@ -939,6 +1031,10 @@
           "url": ""
         },
         "teacher_forum_1/coursed/2021": {
+          "name": "",
+          "url": ""
+        },
+        "virtual_lesson_modifications/coursed/2021": {
           "name": "",
           "url": ""
         },
@@ -1251,6 +1347,10 @@
           "url": ""
         },
         "sprite_lab_documentation_1/coursee/2021": {
+          "name": "",
+          "url": ""
+        },
+        "virtual_lesson_modifications/coursee/2021": {
           "name": "",
           "url": ""
         }

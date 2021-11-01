@@ -5,13 +5,14 @@
     "login_required": true,
     "properties": {
       "is_migrated": true,
-      "tts": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-24 14:35:47 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-10-25 22:54:51 UTC",
+    "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "self-paced-pl-csd2-2021"
     }

@@ -1099,8 +1099,19 @@ fil:
         text: Lokasyon ng {SPRITE}
       gamelab_location_picker:
         text: "{LOCATION}"
+      gamelab_makeBurst:
+        options:
+          EFFECT:
+            '"rain"': ulan
       gamelab_makeNewSpriteAnon:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
+      gamelab_makeProjectile:
+        options:
+          DIRECTION:
+            '0': kanan
+            '90': baba
+            '180': kaliwa
+            '270': paitaas
       gamelab_mirrorSprite:
         text: "{SPRITE} mukha {DIRECTION}"
         options:
@@ -1121,6 +1132,19 @@ fil:
         text: nag-click {SPRITE}
       gamelab_playSound:
         text: Ang ... {SOUND}
+      gamelab_playSoundOptions:
+        text: Ang ... {SOUND}
+        options:
+          SOUND:
+            "'sound://category_collect/clicky_crunch.mp3'": crunch
+            "'sound://category_animals/bear.mp3'": oso
+            "'sound://category_animals/cat.mp3'": pusa
+            "'sound://category_animals/cow.mp3'": baka
+            "'sound://category_animals/sheep.mp3'": tupa
+            "'sound://category_animals/chicken.mp3'": manok
+            "'sound://category_animals/dolphin.mp3'": dolphin
+            "'sound://category_animals/dog.mp3'": aso
+            "'sound://category_digital/jump_7.mp3'": talon
       gamelab_pointInDirection:
         text: punto {SPRITE} {DIRECTION}
       gamelab_printText:
@@ -1544,17 +1568,66 @@ fil:
         text: x coordinate ng {SPRITE}
       Mikelab_yLocationOf:
         text: y ang mga {SPRITE}
-      PoemBot_setBackgroundEffect:
+      Poetry_addFrame:
         options:
-          BG_EFFECT:
-            '"solid"': solid
-            '"rainbow"': bahaghari
-      PoemBot_setForegroundEffect:
-        text: itakda ang foreground effect {FG_EFFECT}
+          BRUSH:
+            Ice Cream: Sorbetes
+            Stars: Mga Bituin
+            Fireworks: Fireworks
+            '"rainbow"': Bahaghari
+            '"hearts"': Mga Puso
+            '"flowers"': Mga Bulaklak
+            '"waves"': Mga Alon
+      Poetry_makeBurst:
         options:
-          FG_EFFECT:
+          EFFECT:
             '"rain"': ulan
-            '"bubbles"': bubbles
+      Poetry_makeNewSpriteAnon:
+        text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
+      Poetry_playSound:
+        text: Ang ... {SOUND}
+        options:
+          SOUND:
+            Light: Ilaw
+      Poetry_setBackground:
+        text: set background color {COLOR}
+      Poetry_setBackgroundEffect:
+        options:
+          EFFECT:
+            '"colors"': Mga Kulay
+            '"squiggles"': Squiggles
+            '"stars"': Mga Bituin
+            '"ripples"': Ripples
+            '"rain"': Ulan
+            '"bubbles"': Bubbles
+            '"confetti"': Confetti
+            '"hearts"': Makulay na mga Puso
+          PALETTE:
+            '"rainbow"': Bahaghari
+      Poetry_setBackgroundImageAs:
+        text: Itakda ang background sa {IMG}
+      Poetry_setForegroundEffect:
+        options:
+          EFFECT:
+            '"rain"': Ulan
+            '"bubbles"': Bubbles
+            '"hearts"': Makulay na mga Puso
+            '"confetti"': Confetti
+            '"starburst"': Starburst
+      Poetry_whenLineShows:
+        options:
+          'N':
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: umabante
       RyanLab_turnLeft:

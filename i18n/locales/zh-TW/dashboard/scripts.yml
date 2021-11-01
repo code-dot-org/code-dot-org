@@ -176,6 +176,8 @@ zh-TW:
           lessons:
             Artist:
               name: 藝術家
+              description_student: 為藝術家設計程式，製作漂亮的圖像。
+              description_teacher: 在本課堂中，學生會控制藝術家完成畫面上的圖畫。這個藝術家舞台可讓學生製作越來越複雜的圖像，期間會使用新的積木，例如「move forward by 100 pixels」（向前移動 100 像素）與「turn right by 90 degrees」（向右旋轉 90 度）等。
           student_description: 和小畫家一起畫圖和設計！
         hourofcode:
           title: 經典迷宮
@@ -191,7 +193,7 @@ zh-TW:
           description_short: 讓我們使用程式碼，與安娜和艾莎一同探索美麗且神奇的冰。
           lessons:
             Artist:
-              name: 藝術家
+              name: 與安娜與艾莎一同玩程式
           student_description: 讓我們使用程式碼，與安娜和艾莎一同探索美麗且神奇的冰。你可以利用在雪上溜冰製造出雪花等圖案，然後打造一個冬季仙境並分享給你的朋友！
         course4:
           title: 課程 4
@@ -335,7 +337,7 @@ zh-TW:
           description_short: 用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。
           lessons:
             Infinity:
-              name: 無限
+              name: 迪士尼無限 Play Lab
           student_description: 用 Play Lab 創作一個由迪士尼角色主演的故事或遊戲。
         algebrademo:
           title: 代數演示
@@ -514,6 +516,8 @@ zh-TW:
           lessons:
             Jigsaw:
               name: 拼圖
+              description_student: 以點擊與拖放的方式完成謎題。
+              description_teacher: 本課堂會讓學生瞭解在前往電腦室時預期會做甚麼。課堂首先會進行簡短討論，向學生介紹電腦室操守，然後開始使用電腦完成線上謎題。
           student_description: 試試我們的拼圖教程。
         step:
           title: 步進
@@ -1765,9 +1769,6 @@ zh-TW:
         starwarsblocks:
           description: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
           description_short: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
-          lessons:
-            Hour of Code 2015:
-              name: 一小時玩程式 2015
           student_description: 學習用程式控制機器人，並創造你自己的星際大戰遊戲…在那很遠很遠的銀河系…
         mc:
           title: 一小時玩 Minecraft
@@ -1784,6 +1785,7 @@ zh-TW:
           lessons:
             Oceans:
               name: 海洋
+              description_student: 教程摘要：學生首先會把物件分類為「fish」（魚）或「not fish」（不是魚），從而嘗試清除海洋中的垃圾。然後，學生將需要擴充訓練資料集，加入屬於海洋的其他海洋生物。在活動的第 2 部分，學生會自行選擇標籤套用於隨機產生的魚中。這些訓練資料會在機器學習模型中使用，然後學習模型便應能夠自行標籤新的圖像。
           student_description: 瞭解 AI（人工智慧）和機器學習，可以怎樣用來解決全球問題。
         CSPPD3-Unit3-pt2:
           title: 計算機科學原理：單元 3 專業發展挑戰
@@ -3574,7 +3576,8 @@ zh-TW:
           description: 選擇你的球隊，來場籃球比賽
           lessons:
             Bounce:
-              name: 彈跳
+              description_student: 有沒有想過，你可以在學校玩電子遊戲？在本課堂中，你將有機會製作自己的遊戲！
+              description_teacher: 在這項線上活動中，學生會學習甚麼是事件（event），以及電腦怎樣在程式（例如電子遊戲）中使用事件。學生會在各種謎題中，讓程式，對事件做出反應（例如按下箭頭按鈕後）。在謎題結束時，學生將有機會以不同的速度與聲音自訂遊戲。
           student_description: 選擇你的球隊，來場籃球比賽
         sample-csp5:
           lessons:
@@ -4150,7 +4153,8 @@ zh-TW:
           description: 搞個混搭的運動遊戲
           lessons:
             Sports:
-              name: 運動
+              description_student: 有沒有想過，你可以在學校玩電子遊戲？在本課堂中，你將有機會製作自己的遊戲！
+              description_teacher: 在這項線上活動中，學生會學習甚麼是事件（event），以及電腦怎樣在程式（例如電子遊戲）中使用事件。學生會在各種謎題中，讓程式，對事件做出反應（例如按下箭頭按鈕後）。在謎題結束時，學生將有機會以不同的速度與聲音自訂遊戲。
           student_description: 搞個混搭的運動遊戲
         2016_sciencePD-phase2b:
           lessons:
@@ -6910,7 +6914,7 @@ zh-TW:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: Minecraft 英雄之旅 一小時玩程式
             Minecraft Hour of Code:
-              name: 一小時玩 Minecraft
+              name: Minecraft：英雄之旅
           student_description: 全新的一小時玩 Minecraft 活動來了！用程式暢遊 Minecraft 世界吧。
         applab-intro-staging:
           title: App Lab 入門集結
@@ -9317,7 +9321,7 @@ zh-TW:
           description: Minecraft 帶著新活動回來啦！拿出你的創造力和解決問題能力，一同用程式探索與打造水世界。
           lessons:
             Aquatic:
-              name: 水上巡航
+              name: 'Minecraft: 水上巡航'
           student_description: Minecraft 帶著新活動回來啦！拿出你的創造力和解決問題能力，一同用程式探索與打造水世界。
         sconyers:
           title: 翠絲的遊樂場
@@ -12074,7 +12078,7 @@ zh-TW:
               display_name: 問卷
           lessons:
             CSD post-course survey:
-              name: CSD 課後問卷調查
+              name: CSD 學生課後問卷調查 ('18-'19)
         csp-post-survey-2018:
           title: CSP 學生課後問卷調查 ('18-'19)
           description_audience: CSP 學生
@@ -12085,7 +12089,7 @@ zh-TW:
               display_name: 問卷
           lessons:
             CSP post-course survey:
-              name: CSP 課後問卷調查
+              name: CSP 學生課後問卷調查 ('18-'19)
           student_description: 歡迎來到 Code.org 電腦科學原理課後問卷調查。本問卷調查需要大約 15 分鐘完成。你的回覆將會保持私密與匿名 -- 你的老師可看見全班的匿名匯總結果。這些結果對你的老師與 Code.org 都非常重要，目的是維持和改善課程的品質。感謝你的寶貴時間與關注。
         csp5-pilot:
           title: CSP 單元 5 試行版 - 清單（List）、迴圈（Loop）與尋訪（Traversal）
@@ -15595,6 +15599,8 @@ zh-TW:
           lessons:
             Virus Simulation for Code Bytes:
               name: 編碼一個模擬
+            Outbreak:
+              name: 編碼一個模擬
           lesson_groups:
             outbreak:
               display_name: 疫情爆發模擬
@@ -15615,6 +15621,8 @@ zh-TW:
               name: 運行中的角色
             End of Course Project:
               name: 課程結束專案
+            Outbreaklab:
+              name: 疫情爆發獨立實驗室
           lesson_groups:
             introduction:
               display_name: 介紹
@@ -16961,6 +16969,8 @@ zh-TW:
               name: 製作精靈圖
             lesson-8:
               name: 運行中的角色
+            lesson-5:
+              name: 疫情爆發
             lesson-2:
               name: 語言的力量
               description_student: 欺凌絕對是不恰當的行為。本課堂會教導你可以和不可以在線上做些甚麼。
@@ -17432,6 +17442,8 @@ zh-TW:
           lessons:
             lesson-20:
               name: 評估日
+            lesson-24:
+              name: Java 實驗室
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -17439,6 +17451,8 @@ zh-TW:
           lessons:
             lesson-15:
               name: 評估日
+            lesson-16:
+              name: Java 實驗室
           lesson_groups:
             lesson group:
               display_name: 內容
@@ -17446,6 +17460,8 @@ zh-TW:
           lessons:
             lesson-15:
               name: 評估日
+            lesson-17:
+              name: Java 實驗室
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -17453,6 +17469,8 @@ zh-TW:
           lessons:
             lesson-15:
               name: 評估日
+            lesson-16:
+              name: Java 實驗室
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -17460,6 +17478,8 @@ zh-TW:
           lessons:
             lesson-15:
               name: 評估日
+            Java Lab:
+              name: Java 實驗室
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -17511,6 +17531,23 @@ zh-TW:
               display_name: 深造：課程 E 和 F
             Introduction:
               display_name: 介紹
+        haikubot-pilot:
+          lesson_groups:
+            Lesson 3:
+              display_name: 第 3 課
+            Lesson 4:
+              display_name: 第 4 課
+            Lesson 5:
+              display_name: 第 5 課
+        outbreakmodule:
+          lessons:
+            intro monster town:
+              name: 歡迎來到怪物城鎮
+          lesson_groups:
+            Outbreak Module:
+              display_name: 疫情爆發模組
+          name: 疫情爆發模組
+          title: 疫情爆發模組\_V2
         csp-post-survey-2020:
           lessons:
             CSP post-course survey:
@@ -17524,6 +17561,11 @@ zh-TW:
           student_description: 歡迎來到 Code.org 電腦科學原理課後問卷調查。本問卷調查需要大約 15 分鐘完成。你的回覆將會保持私密與匿名 -- 你的老師可看見全班的匿名匯總結果。這些結果對你的老師與 Code.org 都非常重要，目的是維持和改善課程的品質。感謝你的寶貴時間與關注。
         aiml-2021:
           lessons:
+            lesson9:
+              description_teacher: |-
+                在本課中，學生參與一個線下活動，模擬僵屍疫情爆發。學生必須利用鄰近城鎮的數據來預測城鎮的哪一部分擁有最少的僵屍。學生們將使用相似度和平均值來預測某一特定地點的僵屍數量。然後，學生得到拯救，並將他們的預測與實際數字進行比較，以討論數字數據與分類數據的準確性有何不同。
+
+                **今日問題。**電腦如何學習用數字資料進行預測？
             lesson-22:
               name: 設計數據收集
           lesson_groups:
@@ -17531,6 +17573,11 @@ zh-TW:
               display_name: 問卷
         csd7-2021:
           lessons:
+            Similarity Models:
+              description_teacher: |-
+                在本課中，學生參與一個線下活動，模擬僵屍疫情爆發。學生必須利用鄰近城鎮的數據來預測城鎮的哪一部分擁有最少的僵屍。學生們將使用相似度和平均值來預測某一特定地點的僵屍數量。然後，學生得到拯救，並將他們的預測與實際數字進行比較，以討論數字數據與分類數據的準確性有何不同。
+
+                **今日問題。**電腦如何學習用數字資料進行預測？
             Survey Planning:
               name: 設計數據收集
           lesson_groups:
@@ -17624,8 +17671,10 @@ zh-TW:
               name: 模組 2
             Module 3:
               key: 模組 3
+              name: 模組 3
             Module 4:
               key: 模組 4
+              name: 模組 4
             Module 5:
               key: 模組 5
             Module 6:
@@ -17663,6 +17712,9 @@ zh-TW:
               name: 單元 2：網頁開發
             lesson-6:
               name: 資料與社會
+        outbreak-module:
+          name: 疫情爆發-模組
+          title: 疫情爆發
         csa1-exemplars:
           lessons:
             lesson-20:
@@ -17702,6 +17754,12 @@ zh-TW:
           lessons:
             lesson-3:
               name: 測試
+        dlp21-csp-mod4:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 階段 1
+            lessonGroup-3:
+              display_name: 階段 2
         dlp21-csp-mod1:
           title: 電腦科學原理深入學習 模組 1
         dlp21-csd:
@@ -17740,6 +17798,8 @@ zh-TW:
           lessons:
             Assessment Day:
               name: 評估日
+            lesson-1:
+              name: Java 實驗室
             lesson-20:
               name: 評估日
           lesson_groups:
@@ -17751,6 +17811,8 @@ zh-TW:
               name: 評估日
             lesson-15:
               name: 評估日
+            lesson-1:
+              name: Java 實驗室
           lesson_groups:
             lesson group:
               display_name: 內容
@@ -17758,6 +17820,8 @@ zh-TW:
           lessons:
             Assessment Day:
               name: 評估日
+            lesson-1:
+              name: Java 實驗室
             lesson-15:
               name: 評估日
           lesson_groups:
@@ -17767,6 +17831,8 @@ zh-TW:
           lessons:
             Assessment Day:
               name: 評估日
+            lesson-1:
+              name: Java 實驗室
             lesson-15:
               name: 評估日
           lesson_groups:
@@ -17777,6 +17843,62 @@ zh-TW:
             Assessment Day:
               name: 評估日
             lesson-15:
+              name: 評估日
+            Java Lab:
+              name: Java 實驗室
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 內容
+        csdu6-playground:
+          lessons:
+            lesson-2:
+              name: 運算上的創新
+            lesson-9:
+              name: 彩色顯示器
+            lesson-13:
+              name: 加速計
+            lesson-19:
+              name: 專案
+        csa-u7-dev:
+          lessons:
+            lesson-2:
+              name: 視窗元件
+            lesson-3:
+              name: 工具
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 階段
+            lessonGroup-3:
+              display_name: 專案
+        csa4-exemplars:
+          lessons:
+            lesson-15:
+              name: 評估日
+          lesson_groups:
+            lesson group:
+              display_name: 內容
+            content:
+              display_name: 內容
+            lesson_group:
+              display_name: 內容
+            lessonGroup-2:
+              display_name: 內容
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: 視窗元件
+            lesson-2:
+              name: 工具
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: 拼字蜜蜂
+          title: 拼字蜜蜂
+        outbreak-csc:
+          title: 疫情爆發
+        csa5-exemplars:
+          lessons:
+            lesson-14:
               name: 評估日
           lesson_groups:
             lessonGroup-2:
