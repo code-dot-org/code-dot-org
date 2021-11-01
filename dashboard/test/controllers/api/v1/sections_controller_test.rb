@@ -1076,6 +1076,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
   end
 
   test 'can get all code review groups for a section' do
+    sign_in @teacher
     # Create 5 students
     followers = []
     5.times do |i|
@@ -1085,7 +1086,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
     # Create 2 code review groups
     group1 = CodeReviewGroup.create(section_id: @section.id, name: "group1")
-    group2 = CodeReviewGroup.create(section_id: @section.id, name: "group1")
+    group2 = CodeReviewGroup.create(section_id: @section.id, name: "group2")
     # put student 0 and 1 in group 1, and student 2 in group 2
     CodeReviewGroupMember.create(follower_id: followers[0].id, code_review_group_id: group1.id)
     CodeReviewGroupMember.create(follower_id: followers[1].id, code_review_group_id: group1.id)
@@ -1095,6 +1096,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     group1_members = [{follower_id: followers[0].id, name: "student_0"}, {follower_id: followers[1].id, name: "student_1"}]
     group2_members = [{follower_id: followers[2].id, name: "student_2"}]
     expected_response = {groups: [{id: group1.id, name: "group1", members: group1_members}, {id: group2.id, name: "group2", members: group2_members}]}
-    assert_equal(json_response, expected_response.as_json)
+    assert_response :success
+    assert_equal(expected_response.as_json, json_response)
   end
 end
