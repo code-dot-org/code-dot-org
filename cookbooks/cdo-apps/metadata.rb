@@ -23,7 +23,6 @@ depends 'cdo-nginx'
 depends 'cdo-nodejs'
 depends 'cdo-java-7'
 depends 'chef_hostname', '< 1.0' # 1.0.0 requires Chef Client 12.11+
-depends 'poise-service'
 depends 'cdo-redis'
 depends 'cdo-i18n'
 depends 'cdo-analytics'
