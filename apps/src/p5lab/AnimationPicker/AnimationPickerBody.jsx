@@ -19,6 +19,8 @@ import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 
 const MAX_SEARCH_RESULTS = 40;
 const MAX_HEIGHT = 460;
+const MODAL_HEADER_HEIGHT = 95;
+const MODAL_FOOTER_HEIGHT = 50;
 
 export default class AnimationPickerBody extends React.Component {
   static propTypes = {
@@ -199,12 +201,17 @@ export default class AnimationPickerBody extends React.Component {
       onAnimationSelectionComplete
     } = this.props;
 
+    const headerFooterOffset =
+      this.multiSelectEnabled_ && (searchQuery !== '' || categoryQuery !== '')
+        ? MODAL_HEADER_HEIGHT + MODAL_FOOTER_HEIGHT
+        : MODAL_HEADER_HEIGHT;
+
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton =
       this.multiSelectEnabled_ && isMobileDevice();
     return (
-      <div style={{marginBottom: 10}}>
+      <div style={{maxHeight: MAX_HEIGHT}}>
         {shouldDisplaySecondDoneButton && (
           <Button
             text={msg.done()}
@@ -238,7 +245,7 @@ export default class AnimationPickerBody extends React.Component {
           </div>
         )}
         <ScrollableList
-          style={{maxHeight: MAX_HEIGHT}}
+          style={{maxHeight: MAX_HEIGHT - headerFooterOffset}}
           onScroll={this.handleScroll}
         >
           {' '}
@@ -323,6 +330,6 @@ const styles = {
   footer: {
     display: 'flex',
     justifyContent: 'flex-end',
-    height: 45
+    marginTop: 5
   }
 };
