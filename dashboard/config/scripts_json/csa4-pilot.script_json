@@ -14,9 +14,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:46 UTC",
+    "serialized_at": "2021-10-29 20:23:57 UTC",
     "published_state": null,
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csa4-pilot"
     }
@@ -6543,7 +6545,7 @@
     },
     {
       "name": "[KEY] U4L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1DX4-GghzBqTMk1-4YHeQkIrL-Qgc2neSJfznym2P0DI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1LdS0ZMIbYwTSwO4wMGfkMzhRMQ9Ao4KUo0lB3lEs_M8/edit?usp=sharing",
       "key": "_key_u4l6_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
