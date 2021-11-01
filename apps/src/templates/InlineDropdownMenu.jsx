@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import onClickOutside from 'react-onclickoutside';
+import {KeyCodes} from '@cdo/apps/constants';
 
 // HTML Adapted from:
 // https://www.w3.org/TR/wai-aria-practices-1.1/examples/menu-button/menu-button-actions.html
@@ -44,9 +45,8 @@ export class InlineDropdownMenu extends Component {
   // Adding a handleKeyDown allows the menu items to be keyboard accessible
   handleKeyDown = (event, selectAction) => {
     switch (event.which) {
-      // 13 is "enter" and 32 is "space"
-      case 13:
-      case 32: {
+      case KeyCodes.ENTER:
+      case KeyCodes.SPACE: {
         this.selectOptionWrapper(selectAction);
         break;
       }

@@ -3,6 +3,7 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {InlineDropdownMenu} from '@cdo/apps/templates/InlineDropdownMenu';
+import {KeyCodes} from '@cdo/apps/constants';
 
 const clickSpy = sinon.spy();
 
@@ -62,7 +63,7 @@ describe('InlineDropdownMenu', () => {
     wrapper
       .find('a')
       .at(1)
-      .invoke('onKeyDown')({which: 13});
+      .invoke('onKeyDown')({which: KeyCodes.ENTER});
     expect(clickSpy.calledOnce).to.be.true;
 
     // dropdown is closed
