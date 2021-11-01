@@ -3,7 +3,6 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import sinon from 'sinon';
 import {InlineDropdownMenu} from '@cdo/apps/templates/InlineDropdownMenu';
-// import { expect } from 'chai';
 
 const clickSpy = sinon.spy();
 
@@ -22,12 +21,6 @@ describe('InlineDropdownMenu', () => {
   });
 
   it('is hidden if there are no children', () => {
-    const wrapper = shallow(<InlineDropdownMenu icon="icon" />);
-    expect(wrapper.children().length).to.equal(0);
-    expect(wrapper).to.deep.equal({});
-  });
-
-  it('shows children when clicked', () => {
     const wrapper = shallow(<InlineDropdownMenu icon="icon" />);
     expect(wrapper.children().length).to.equal(0);
     expect(wrapper).to.deep.equal({});
