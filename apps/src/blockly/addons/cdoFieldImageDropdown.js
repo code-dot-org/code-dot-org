@@ -1,9 +1,13 @@
 import {FieldGridDropdown} from '@blockly/field-grid-dropdown';
+import color from '@cdo/apps/util/color';
 
 export class CdoFieldImageDropdown extends FieldGridDropdown {
   constructor(menuGenerator, width, height, buttons) {
-    const fixedMenuGenerator = fixMenuGenerator(menuGenerator, width, height);
-    super(fixedMenuGenerator, undefined /* validator */, {columns: 7});
+    super(
+      () => fixMenuGenerator(menuGenerator, width, height),
+      undefined /* validator */,
+      {columns: 7}
+    );
   }
 
   showEditor_(e = undefined) {
@@ -27,20 +31,17 @@ function fixMenuGenerator(menuGenerator, width, height) {
   // Google Blockly format: Each menu item is a two element array: the first is
   // an object containing the image url, width, height, and alt text; the second
   // is the generated code.
-  let fixedMenuGenerator = [];
   const options =
     typeof menuGenerator === 'function' ? menuGenerator() : menuGenerator;
-  options.forEach(menuItem => {
+  return options.map(menuItem => {
     let url = menuItem[0];
     let code_id = menuItem[1];
     // TODO: add better alt text. For now, it's just using the code name for the
     // image, but that's not necessarily a student-friendly string. (for example,
     // in Basketball, the hand dropdown has hand_1, hand_2, and hand_3, which might
     // benefit from more descriptive alt text.)
-    let option = {src: url, width: width, height: height, alt: code_id};
-    fixedMenuGenerator.push([option, code_id]);
+    return [{src: url, width: width, height: height, alt: code_id}, code_id];
   });
-  return fixedMenuGenerator;
 }
 
 export var __TestInterface = {
