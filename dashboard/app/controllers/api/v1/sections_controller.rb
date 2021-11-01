@@ -202,7 +202,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
   # GET /api/v1/sections/<id>/code_review_groups
   def code_review_groups
-    groups = CodeReviewGroup.find_by_section_id(@section.id)
+    groups = CodeReviewGroup.where(section_id: @section.id)
     groups_details = []
     groups.each do |group|
       members = group.members.map {|member| {follower_id: member.follower_id, name: member.name}}
