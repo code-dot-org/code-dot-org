@@ -274,15 +274,16 @@ export default class AnimationPickerBody extends React.Component {
               this.multiSelectEnabled_
             )}
         </ScrollableList>
-        {this.multiSelectEnabled_ && (
-          <div style={styles.footer}>
-            <Button
-              text={msg.done()}
-              onClick={onAnimationSelectionComplete}
-              color={Button.ButtonColor.orange}
-            />
-          </div>
-        )}
+        {this.multiSelectEnabled_ &&
+          (searchQuery !== '' || categoryQuery !== '') && (
+            <div style={styles.footer}>
+              <Button
+                text={msg.done()}
+                onClick={onAnimationSelectionComplete}
+                color={Button.ButtonColor.orange}
+              />
+            </div>
+          )}
       </div>
     );
   }
@@ -321,6 +322,7 @@ const styles = {
   },
   footer: {
     display: 'flex',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
+    height: 45
   }
 };
