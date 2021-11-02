@@ -54,7 +54,7 @@ export default function ProgrammingExpressionEditor({
     });
     const programmingExpressionToSave = {
       ...programmingExpression,
-      parameters: JSON.stringify(copiedParameters)
+      parameters: copiedParameters
     };
     fetch(`/programming_expressions/${id}`, {
       method: 'PUT',

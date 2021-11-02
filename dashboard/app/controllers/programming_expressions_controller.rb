@@ -70,9 +70,8 @@ class ProgrammingExpressionsController < ApplicationController
       :syntax,
       :return_value,
       :tips,
-      :parameters
+      parameters: [:name, :type, :required, :description]
     )
-    transformed_params[:parameters] = JSON.parse(transformed_params[:parameters]) if transformed_params[:parameters]
     transformed_params
   end
 end
