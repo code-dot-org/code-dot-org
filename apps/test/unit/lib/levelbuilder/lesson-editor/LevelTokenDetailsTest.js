@@ -51,7 +51,7 @@ describe('LevelTokenDetails', () => {
       activitySectionPosition: 5,
       activityPosition: 1,
       lessonExtrasAvailableForUnit: false,
-      professionalLearningCourse: false,
+      isProfessionalLearningCourse: false,
       inactiveLevelNames: []
     };
   });
@@ -62,7 +62,7 @@ describe('LevelTokenDetails', () => {
     assertCheckboxVisible(wrapper, 'Bonus', true);
     assertCheckboxVisible(wrapper, 'Assessment', true);
     assertCheckboxVisible(wrapper, 'Challenge', true);
-    assertCheckboxVisible(wrapper, 'Instructor In Training', true);
+    assertCheckboxVisible(wrapper, 'Instructor In Training', false);
 
     assertChecked(wrapper, 'Bonus', false);
     assertChecked(wrapper, 'Assessment', false);
@@ -70,16 +70,19 @@ describe('LevelTokenDetails', () => {
     assertChecked(wrapper, 'Instructor In Training', false);
   });
 
-  it('instructor in training is disabled if not a professional learning course', () => {
+  it('instructor in training is not shown if not a professional learning course', () => {
     const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
-    assertDisabled(wrapper, 'Instructor In Training', true);
+    assertCheckboxVisible(wrapper, 'Instructor In Training', false);
   });
 
-  it('instructor in training is enabled if a professional learning course', () => {
+  it('instructor in training is shown if a professional learning course', () => {
     const wrapper = shallow(
-      <LevelTokenDetails {...defaultProps} professionalLearningCourse={true} />
+      <LevelTokenDetails
+        {...defaultProps}
+        isProfessionalLearningCourse={true}
+      />
     );
-    assertDisabled(wrapper, 'Instructor In Training', false);
+    assertCheckboxVisible(wrapper, 'Instructor In Training', true);
   });
 
   it('bonus is enabled if lesson extras are not available for unit but bonus was already selected', () => {
@@ -122,7 +125,6 @@ describe('LevelTokenDetails', () => {
     assertChecked(wrapper, 'Bonus', true);
     assertChecked(wrapper, 'Assessment', true);
     assertChecked(wrapper, 'Challenge', true);
-    assertChecked(wrapper, 'Instructor In Training', true);
   });
 
   it('does not show variants by default', () => {
