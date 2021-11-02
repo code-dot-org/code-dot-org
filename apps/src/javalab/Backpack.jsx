@@ -237,7 +237,7 @@ class Backpack extends Component {
             ref={ref => (this.dropdownList = ref)}
           >
             {showFiles && (
-              <div>
+              <div style={styles.dropdownContainer}>
                 {backpackFilenames.map((filename, index) => (
                   <div
                     style={{
@@ -314,10 +314,13 @@ const styles = {
     paddingTop: 5,
     paddingBottom: 5,
     borderRadius: 2,
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    minWidth: 150
+    minWidth: 150,
+    maxWidth: 250,
+    maxHeight: 500,
+    overflow: 'auto'
+  },
+  dropdownContainer: {
+    width: 'fit-content'
   },
   dropdownDark: {
     backgroundColor: color.darkest_gray,
@@ -358,7 +361,8 @@ const styles = {
     }
   },
   fileListLabel: {
-    marginLeft: 5
+    marginLeft: 5,
+    width: 'inherit'
   },
   importButton: {
     backgroundColor: color.orange,
