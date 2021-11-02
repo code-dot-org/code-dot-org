@@ -501,7 +501,7 @@ class Lesson < ApplicationRecord
       scriptPath: script_path(script),
       lessonPath: get_uncached_show_path,
       lessonExtrasAvailableForUnit: script.lesson_extras_available,
-      professionalLearningCourse: false #TODO(dmcavoy): update once audiences for courses are set
+      isProfessionalLearningCourse: false #TODO(dmcavoy): update once audiences for courses are set
     }
   end
 
