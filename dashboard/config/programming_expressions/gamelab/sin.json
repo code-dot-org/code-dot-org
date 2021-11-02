@@ -2,7 +2,9 @@
   "func": "sin",
   "category": "Math",
   "paletteParams": [
-    "angle"
+    {
+      "name": "angle"
+    }
   ],
   "params": [
     "0"

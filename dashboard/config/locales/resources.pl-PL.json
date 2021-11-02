@@ -11,42 +11,15 @@
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "Obroty i kąty"
+          "name": "Skręty i kąty"
         },
         "csf-turns-angles-video/artist/unversioned": {
-          "name": "Obroty i kąty",
+          "name": "Skręty i kąty",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "dance-party-playlist/dance/unversioned": {
           "name": "Playlista Spotify (każdy wiek)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
-        },
-        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
-          "name": "Szyfrowanie i klucze publiczne",
-          "url": "https://youtu.be/ZghMPWGXexs"
-        },
-        "hocencryption/hoc-encryption/unversioned": {
-          "name": "Widgety szyfrowania w Studiu kodowania",
-          "url": "https://studio.code.org/s/hoc-encryption"
-        },
-        "activity-guide-text-compression/text-compression/unversioned": {
-          "url": "https://docs.google.com/document/d/1dEvtuFNhx9tOWBFt8z_7_uB6WqeS5SSSdYamsZu6hJ0/"
-        },
-        "activity-recap-decode-this-message/text-compression/unversioned": {
-          "name": "Podsumowanie zajęć - Dekoduj tę wiadomość",
-          "url": "https://docs.google.com/document/d/1Z3kwOLtnzV-vFvNYVCI5CwJlqW7oMPHsmLEQNog-0jM/"
-        },
-        "decode-this-message/text-compression/unversioned": {
-          "name": "Dekoduj tę wiadomość",
-          "url": "https://docs.google.com/document/d/1x89s9Xo6lwMJPQjJqhzPaBg_huwTF9LmV2PrUrESYZQ/"
-        },
-        "textcompressioncodestudio/text-compression/unversioned": {
-          "name": "Widgety kompresji tekstu w Studio kodowania",
-          "url": "https://studio.code.org/s/text-compression/stage/1/puzzle/1"
-        },
-        "video-text-compression/text-compression/unversioned": {
-          "name": "Film: Kompresja tekstu z Aloe Blacc",
-          "url": "https://www.youtube.com/watch?v=LCGkcn1f-ms&feature=youtu.be"
         },
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
           "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/edit?usp=sharing"
@@ -115,11 +88,11 @@
           "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit"
         },
         "the_power_of_words_lesson_quiz/coursef/2021": {
-          "name": "Potęga słów: lekcja quizu",
+          "name": "Potęga słów: quiz",
           "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy"
         },
         "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
-          "name": "Potęga słów: lekcja quizu",
+          "name": "Potęga słów: quiz",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz"
         },
         "variables_blank_space_stories/coursef/2021": {
@@ -663,11 +636,11 @@
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-video/coursec/2021": {
-          "name": "Obroty i kąty",
+          "name": "Skręty i kąty",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "csf-turns-angles-doc/coursec/2021": {
-          "name": "Obroty i kąty",
+          "name": "Skręty i kąty",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "feeling_faces_emotion_image/coursec/2021": {
@@ -1146,11 +1119,11 @@
           "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
         },
         "csf-turns-angles-doc/coursee/2021": {
-          "name": "Obroty i kąty",
+          "name": "Skręty i kąty",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
         "csf-turns-angles-video/coursee/2021": {
-          "name": "Obroty i kąty",
+          "name": "Skręty i kąty",
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {

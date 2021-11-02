@@ -2,7 +2,9 @@
   "func": "bounceOff",
   "category": "Sprites",
   "paletteParams": [
-    "target"
+    {
+      "name": "target"
+    }
   ],
   "params": [
     "target"

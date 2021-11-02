@@ -26249,10 +26249,6 @@ pt:
               name: Ferramentas
             lesson-3:
               name: Exemplos
-        poetry:
-          lessons:
-            lesson-3:
-              name: variáveis
         spelling-bee:
           lessons:
             lesson-1:
