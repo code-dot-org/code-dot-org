@@ -5,6 +5,7 @@ export const commands = {
     let sprites = this.getSpriteArray(spriteArg);
     return sprites.length;
   },
+
   destroy(spriteArg) {
     let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
