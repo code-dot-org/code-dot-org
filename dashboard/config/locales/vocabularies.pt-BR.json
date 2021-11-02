@@ -538,7 +538,6 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "code/coursed/2021": {
-          "word": "codificar",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "repeat/coursed/2021": {
@@ -594,9 +593,6 @@
         "event/express/2021": {
           "word": "Evento",
           "definition": "Uma ação que faz com que algo aconteça."
-        },
-        "code/express/2021": {
-          "word": "codificar"
         },
         "loop/express/2021": {
           "word": "Laço",

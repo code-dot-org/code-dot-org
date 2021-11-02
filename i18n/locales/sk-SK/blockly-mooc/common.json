@@ -1049,6 +1049,7 @@
   "numBlocksUsedLabel": "Bloky",
   "numLanguages": "{numLanguages} Jazyky",
   "numLinesOfCodeWritten": "Úloha splnená pomocou {numLines, plural, one {1 riadku} other {# riadkov}} kódu!",
+  "objectivesSubheading": "Žiaci budú schopní:",
   "ok": "OK",
   "okay": "Dobre",
   "online": "Online",

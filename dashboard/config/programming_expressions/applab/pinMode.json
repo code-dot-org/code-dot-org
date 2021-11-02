@@ -2,8 +2,12 @@
   "func": "pinMode",
   "category": "Maker",
   "paletteParams": [
-    "pin",
-    "mode"
+    {
+      "name": "pin"
+    },
+    {
+      "name": "mode"
+    }
   ],
   "params": [
     "13",

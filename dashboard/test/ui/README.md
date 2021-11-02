@@ -46,10 +46,15 @@ You can find the values for these settings in your saucelabs account settings (`
 If you want to run tests on saucelabs against localhost you need to set up your tunnel:
 
 1. Login to Saucelabs and download the [tunnel](https://app.saucelabs.com/tunnels)
+   - Notes: If you work on a linux EC2 instance, download the linux version (will end in .tar.gz)
+     - You will then need to secure copy this file into your dev environment with something like:
+     - `scp sc-4.7.1-linux.tar.gz ubuntu@[ip_address]:/ec2-user/environment/code-dot-org`
+     - From the destination folder, unzip and untar the file with `tar -xvzf sc-4.7.1-linux.tar`
 2. Start the tunnel via `bin/sc --user <saucelabs-username> --api-key <saucelabs-api-key>`
    - Notes: The link above has an example command line with your credentials that you can copy.
      - `bin/sc` should be replaced with the path that points to the tunnel software downloaded in step 1.
-     - The unique tunnel identifier `-i <tunnel-id>` included in that command can be safely ignored; if you leave it in, you'll also need to set the `tunnelIdentifier` option in the `sauce_capabilities` config. See [Using Sauce Connect Tunnel Identifiers](https://wiki.saucelabs.com/display/DOCS/Using+Sauce+Connect+Tunnel+Identifiers#UsingSauceConnectTunnelIdentifiers-TheBasicsofUsingTunnelIdentifiers) for more details.
+     - The unique tunnel identifier `-i <tunnel-id>` included in that command can usually be safely ignored (see the note below); if you leave it in, you'll also need to set the `tunnelIdentifier` option in the `sauce_capabilities` config. See [Using Sauce Connect Tunnel Identifiers](https://wiki.saucelabs.com/display/DOCS/Using+Sauce+Connect+Tunnel+Identifiers#UsingSauceConnectTunnelIdentifiers-TheBasicsofUsingTunnelIdentifiers) for more details.
+     - If you are running on an EC2 instance, the -i tunnel identifier referred to above is required to launch the tunnel.
 3. In a separate terminal window, `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
 
 You can now watch your tests run at the [saucelabs dashboard](https://saucelabs.com/beta/dashboard/tests)

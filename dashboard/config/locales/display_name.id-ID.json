@@ -344,7 +344,9 @@
         "helloworld_animals_costumes": "Kostum",
         "helloworld_emoji_costumes": "Kostum",
         "helloworld_food_costumes": "Kostum",
-        "helloworld_retro_costumes": "Kostum"
+        "helloworld_retro_costumes": "Kostum",
+        "courseF_apps_card": "Kartu Ucapan",
+        "courseF_editable_card": "Kartu Ucapan"
       }
     }
   }

@@ -8888,7 +8888,7 @@
         "courseA_artist_loops7_2021": {
           "courseA_artist_loops7_a": "Не можешь догадаться, куда поместить цикл? Запиши все шаги и найди повторяющееся действие.",
           "courseA_artist_loops7_b": "Сначала напиши код для одной волны, а затем повтори его, чтобы нарисовать две другие.",
-          "courseA_artist_loops7_c": "Помни, что в цикл [blockly block] можно вставить не один, а несколько блоков."
+          "courseA_artist_loops7_c": "Помни, что в цикл <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> можно вставить не один, а несколько блоков."
         },
         "courseA_artist_loops8_2021": {
           "courseA_artist_loops8_a": "Запусти код и посмотри, что для тебя написали.",
@@ -8915,7 +8915,7 @@
         },
         "courseA_collector_loops3_2021": {
           "courseA_collector_loops3_a": "Попробуй использовать цикл \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n!",
-          "courseA_collector_loops3_b": "Помни, что в цикл [blockly block] можно вложить не один, а несколько блоков."
+          "courseA_collector_loops3_b": "Помни, что в цикл <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> можно вложить не один, а несколько блоков."
         },
         "courseA_collector_loops4_2021": {
           "courseA_collector_loops4_a": "Для изменения расстояния, на которое переместится Лорел, измени количество раз выполнения цикла.",
@@ -8924,7 +8924,7 @@
         "courseA_collector_loops5_2021": {
           "courseA_collector_loops5_a": "Не сможешь найти ответ сразу – возьми лист бумаги и попробуй сообразить, какие стрелки понадобятся, и найти повторяющееся действие.",
           "courseA_collector_loops5_b": "Попробуй разбить задачу на две и двигаться сначала вбок, а затем вниз.",
-          "courseA_collector_loops5_c": "Начние с цикла <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, заставляющего Лорел перемещаться на запад и собирать сокровища."
+          "courseA_collector_loops5_c": "Начни с цикла <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, заставляющего Лорел перемещаться на запад и собирать сокровища."
         },
         "courseA_collector_loops6_2021": {
           "courseA_collector_loops6_a": "Не можешь догадаться, что не так? Попробуй прогнать код пару раз и посмотреть, что получится.",
@@ -8956,7 +8956,7 @@
           "courseA_harvester_loops1_a": "Когда ты подойдешь к кукурузе, используй этот блок, чтобы собрать ее!\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
         "courseA_harvester_loops2_2021": {
-          "courseA_harvester_loops2_a": "Твой код будет включать **четыре** блока \"двигаться на запад\"\n\n <xml><block type=\"maze_moveWest\"/></xml>\n\n и **четыре** блока <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>.",
+          "courseA_harvester_loops2_a": "Твой код будет включать **четыре** блока \"двигаться на запад\"\n\n<xml><block type=\"maze_moveWest\"/></xml>\n\n и **четыре** блока <xml>\n`pick corn`\n  <block type=\"harvester_corn\"/>\n</xml>.",
           "courseA_harvester_loops2_b": "Если у тебя все еще не получается, попробуй назвать шаги вслух."
         },
         "courseA_harvester_loops3_2021": {
@@ -9195,7 +9195,7 @@
           "courseB_artist_loops9_c": "Не можешь догадаться, куда поместить цикл? Запиши все шаги и найди повторяющееся действие."
         },
         "courseB_artist_loops_challenge1_2021": {
-          "courseB_artist_loops_challenge1_a": "Блоки, как этот: <xml>  <block type=\"simple_move_up_right\"/></xml>, позволят художнику двигаться под углом!",
+          "courseB_artist_loops_challenge1_a": "Такие блоки, как этот блок <xml>  <block type=\"simple_move_up_right\"/></xml>, позволят художнику двигаться под углом!",
           "courseB_artist_loops_challenge1_b": "Когда закончишь одну из костей, \"прыгни\" к следующей!",
           "courseB_artist_loops_challenge1_c": "Через некоторые линии тебе потребуется \"двигаться\" или \"прыгать\" дважды."
         },
@@ -10547,7 +10547,7 @@
           "card_idea3": "Ты можешь сделать программу интерактивной, заставив происходить другие события, когда пользователь нажимает клавишу или по истечении определенного времени. \n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <title name=\"KEY\">\"up\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseF_variables_chatbot_finish": {
-          "chatbot_idea1": "Ты можешь добавить второй (или третий, или четвертый) подсказку, подключив новый блок запросов на ввод с другой переменной к своему первому событию `после предоставления ответа`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Сколько тебе лет?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">gift</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "chatbot_idea1": "Ты можешь добавить второй (или третий, или четвертый) подсказку, подключив новый блок запросов на ввод с другой переменной к своему первому событию `после предоставления ответа`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">Сколько тебе лет?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">подарок</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
           "chatbot_idea2": "Ты можешь изменить одно поведение на другое, используя блок `спрайт останавливается` на блок `спрайт начинается` под событием. \n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_removeBehaviorSimple\">\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"BEHAVIOR\">\n          <block type=\"gamelab_behavior_get\">\n            <mutation></mutation>\n            <title name=\"VAR\" id=\"spinning left\">spinning left</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"robot_02_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n            </value>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>",
           "chatbot_idea3": "Ты можешь сделать программу интерактивной, заставив происходить другие события, когда пользователь нажимает клавишу или по истечении определенного времени. \n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <title name=\"KEY\">\"up\"</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
           "chatbot_idea4": "Ты можешь сигнализировать о завершении программы с помощью блока начального экрана.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n      <value name=\"TITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">Конец</title>\n        </block>\n      </value>\n      <value name=\"SUBTITLE\">\n        <block type=\"text\">\n        <title name=\"TEXT\">Спасибо за общение!</title>\n        </block>\n      </value>\n      </block></xml>"

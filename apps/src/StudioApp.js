@@ -55,6 +55,10 @@ import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {parseElement as parseXmlElement} from './xml';
 import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
+import {
+  getIdleTimeSinceLastReport,
+  resetIdleTime
+} from './redux/studioAppActivity';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {setPageConstants} from './redux/pageConstants';
 import {setVisualizationScale} from './redux/layout';
@@ -1695,11 +1699,17 @@ StudioApp.prototype.report = function(options) {
   // We don't need to report again on reset.
   this.hasReported = true;
   const currentTime = new Date().getTime();
+
+  const idleTimeSinceLastReport = getIdleTimeSinceLastReport(
+    getStore().getState().studioAppActivity
+  );
+
   // copy from options: app, level, result, testResult, program, onComplete
   var report = Object.assign({}, options, {
     pass: this.feedback_.canContinueToNextLevel(options.testResult),
     time: currentTime - this.initTime,
-    timeSinceLastMilestone: currentTime - this.milestoneStartTime,
+    timeSinceLastMilestone:
+      currentTime - this.milestoneStartTime - idleTimeSinceLastReport,
     attempt: this.attempts,
     lines: this.feedback_.getNumBlocksUsed()
   });
@@ -1707,6 +1717,8 @@ StudioApp.prototype.report = function(options) {
   // After we log the reported time we should update the start time of the milestone
   // otherwise if we don't leave the page we are compounding the total time
   this.milestoneStartTime = currentTime;
+
+  getStore().dispatch(resetIdleTime());
 
   this.lastTestResult = options.testResult;
 

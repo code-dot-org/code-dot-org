@@ -2,7 +2,7 @@
   "category": "Poetry - Effects",
   "config": {
     "func": "setBackgroundEffect",
-    "blockText": "set background effect {EFFECT} {PALETTE}",
+    "blockText": "set background to {EFFECT} {PALETTE}",
     "args": [
       {
         "name": "EFFECT",
@@ -42,6 +42,22 @@
           [
             "Cloudy",
             "\"clouds\""
+          ],
+          [
+            "Rain",
+            "\"rain\""
+          ],
+          [
+            "Bubbles",
+            "\"bubbles\""
+          ],
+          [
+            "Confetti",
+            "\"confetti\""
+          ],
+          [
+            "Colorful Hearts",
+            "\"hearts\""
           ]
         ]
       },

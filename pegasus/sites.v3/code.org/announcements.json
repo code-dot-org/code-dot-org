@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "irobot-classchat"
+    "/home": "myjourney-ilm"
   },
 
   "banners": {
-    "irobot-classchat": {
-      "image": "/images/csjourneys/irobot-classchat.png",
-      "title": "Building robots with iRobot",
-      "body": "Learn how two women are helping build software for robots and designing learning experiences that inspire the next generation of technologists. Recommended for grades K-5. Recording will be available the day after the live session.",
+    "myjourney-ilm": {
+      "image": "/images/csjourneys/myjourney-ilm.png",
+      "title": "My Journey: Making Star Wars",
+      "body": "Hear how two computer science graduates use technology to help make movies and TV shows, including the many worlds of Star Wars. Recommended for grades K-5. Recording will be available the day after the live session.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat5",
-      "buttonId": "irobot-classchat-details"
+      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat7",
+      "buttonId": "myjourney-ilm-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",
