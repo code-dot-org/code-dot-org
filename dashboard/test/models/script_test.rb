@@ -1455,6 +1455,45 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal Plc::LearningModule::CONTENT_MODULE, lm.module_type
   end
 
+  test 'should generate PLC objects for migrated unit' do
+    unit_file = File.join(self.class.fixture_path, 'test-plc.script')
+    Script.stubs(:unit_json_directory).returns(self.class.fixture_path)
+    unit_names, custom_i18n = Script.setup([unit_file])
+    unit = Script.find_by!(name: unit_names.first)
+    custom_i18n.deep_merge!(
+      {
+        'en' => {
+          'data' => {
+            'script' => {
+              'name' => {
+                'test-plc' => {
+                  'title' => 'PLC Test',
+                  'description' => 'PLC test fixture script'
+                }
+              }
+            }
+          }
+        }
+      }
+    )
+    I18n.backend.store_translations I18n.locale, custom_i18n['en']
+
+    unit.save! # Need to trigger an update because i18n strings weren't loaded
+    assert unit.professional_learning_course?
+    assert_equal 'Test plc course', unit.professional_learning_course
+    assert_equal 42, unit.peer_reviews_to_complete
+
+    course_unit = unit.plc_course_unit
+    assert_equal 'PLC Test', course_unit.unit_name
+    assert_equal 'PLC test fixture script', course_unit.unit_description
+
+    lm = unit.lessons.first.plc_learning_module
+    assert_equal 'Sample Module', lm.name
+    assert_equal 1, course_unit.plc_learning_modules.count
+    assert_equal lm, course_unit.plc_learning_modules.first
+    assert_equal Plc::LearningModule::CONTENT_MODULE, lm.module_type
+  end
+
   test 'expect error on bad module types' do
     unit_file = File.join(self.class.fixture_path, 'test-bad-plc-module.script')
     assert_raises ActiveRecord::RecordInvalid do
