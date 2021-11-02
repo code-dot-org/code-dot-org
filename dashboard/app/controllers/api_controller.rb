@@ -381,6 +381,20 @@ class ApiController < ApplicationController
     render json: student_progress.unshift(teacher_progress)
   end
 
+  # Get /api/teacher_panel_section
+  def teacher_panel_section
+    section_id = params[:section_id] ? params[:section_id].to_i : nil
+    section = "null"
+
+    if section_id
+      section = current_user.sections.find_by(id: section_id).summarize
+    elsif current_user.sections.length == 1
+      section = current_user.sections[0].summarize
+    end
+
+    render json: section
+  end
+
   def script_structure
     script = Script.get_from_cache(params[:script])
     overview_path = CDO.studio_url(script_path(script))
