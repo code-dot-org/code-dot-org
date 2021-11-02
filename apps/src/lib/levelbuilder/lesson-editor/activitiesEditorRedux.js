@@ -38,14 +38,14 @@ export const init = (
   searchOptions,
   programmingEnvironments,
   lessonExtrasAvailableForUnit,
-  professionalLearningCourse
+  isProfessionalLearningCourse
 ) => ({
   type: INIT,
   activities,
   searchOptions,
   programmingEnvironments,
   lessonExtrasAvailableForUnit,
-  professionalLearningCourse
+  isProfessionalLearningCourse
 });
 
 export const initActivities = activities => ({
@@ -497,10 +497,10 @@ function lessonExtrasAvailableForUnit(state = {}, action) {
   return state;
 }
 
-function professionalLearningCourse(state = {}, action) {
+function isProfessionalLearningCourse(state = {}, action) {
   switch (action.type) {
     case INIT:
-      return action.professionalLearningCourse;
+      return action.isProfessionalLearningCourse;
   }
   return state;
 }
@@ -635,7 +635,7 @@ export default {
   searchOptions,
   programmingEnvironments,
   lessonExtrasAvailableForUnit,
-  professionalLearningCourse
+  isProfessionalLearningCourse
 };
 
 export const emptyActivitySection = {
