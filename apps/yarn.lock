@@ -1574,6 +1574,11 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@blockly/plugin-scroll-options@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@blockly/plugin-scroll-options/-/plugin-scroll-options-1.0.4.tgz#ea85f8c3b2f0cbe8f273f89a56a306b3bb868795"
+  integrity sha512-Aex5zpSmWDvTBRGNJWwI12qYWhXG+u0bnb74LD917EdE94tsz4P2p7B/tby3NZdsE4DvNHjUG0dxCwxTbcitHg==
+
 "@cdo/interpreted@link:../dashboard/config/libraries":
   version "0.0.0"
   uid ""
