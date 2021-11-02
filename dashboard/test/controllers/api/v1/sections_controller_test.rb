@@ -1077,25 +1077,38 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
 
   test 'can get all code review groups for a section' do
     sign_in @teacher
+
+    # create a new section to avoid extra unassigned students
+    code_review_group_section = create(:section, user: @teacher, login_type: 'word')
     # Create 5 students
     followers = []
     5.times do |i|
       student = create(:student, name: "student_#{i}")
-      followers << create(:follower, section: @section, student_user: student)
+      followers << create(:follower, section: code_review_group_section, student_user: student)
     end
 
     # Create 2 code review groups
-    group1 = CodeReviewGroup.create(section_id: @section.id, name: "group1")
-    group2 = CodeReviewGroup.create(section_id: @section.id, name: "group2")
+    group1 = CodeReviewGroup.create(section_id: code_review_group_section.id, name: "group1")
+    group2 = CodeReviewGroup.create(section_id: code_review_group_section.id, name: "group2")
     # put student 0 and 1 in group 1, and student 2 in group 2
     CodeReviewGroupMember.create(follower_id: followers[0].id, code_review_group_id: group1.id)
     CodeReviewGroupMember.create(follower_id: followers[1].id, code_review_group_id: group1.id)
     CodeReviewGroupMember.create(follower_id: followers[2].id, code_review_group_id: group2.id)
 
-    get :code_review_groups, params: {id: @section.id}
-    group1_members = [{follower_id: followers[0].id, name: "student_0"}, {follower_id: followers[1].id, name: "student_1"}]
-    group2_members = [{follower_id: followers[2].id, name: "student_2"}]
-    expected_response = {groups: [{id: group1.id, name: "group1", members: group1_members}, {id: group2.id, name: "group2", members: group2_members}]}
+    get :code_review_groups, params: {id: code_review_group_section.id}
+    group1_members = [{follower_id: followers[0].id, name: followers[0].student_user.name}, {follower_id: followers[1].id, name: followers[1].student_user.name}]
+    group2_members = [{follower_id: followers[2].id, name: followers[2].student_user.name}]
+    unassigned_members = [
+      {follower_id: followers[3].id, name: followers[3].student_user.name},
+      {follower_id: followers[4].id, name: followers[4].student_user.name}
+    ]
+    expected_response = {
+      groups: [
+        {id: group1.id, name: group1.name, members: group1_members},
+        {id: group2.id, name: group2.name, members: group2_members},
+        {unassigned: true, name: 'unassigned', members: unassigned_members}
+      ]
+    }
     assert_response :success
     assert_equal(expected_response.as_json, json_response)
   end

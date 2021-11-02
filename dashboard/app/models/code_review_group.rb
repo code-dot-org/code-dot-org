@@ -13,7 +13,5 @@
 #  index_code_review_groups_on_section_id  (section_id)
 #
 class CodeReviewGroup < ApplicationRecord
-  def members
-    CodeReviewGroupMember.where(code_review_group_id: id)
-  end
+  has_many :members, class_name: 'CodeReviewGroupMember', foreign_key: 'code_review_group_id', dependent: :destroy
 end
