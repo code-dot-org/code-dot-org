@@ -18,7 +18,6 @@ const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
 const DEFAULT_PROPS = {
   onSelectUser: () => {},
   getSelectedUserId: () => {},
-  sectionData: null,
   unitName: 'A unit',
   pageType: pageTypes.level,
   viewAs: ViewType.Student,
