@@ -36,7 +36,7 @@ import {
 import googlePlatformApi, {
   loadGooglePlatformApi
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
-import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
+import {renderTeacherPanel} from './teacherPanelHelpers';
 
 var progress = module.exports;
 
@@ -369,8 +369,10 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       (data.isTeacher || data.teacherViewingStudent) &&
       !data.professionalLearningCourse
     ) {
-      const pageType = currentLevelId ? 'level' : 'script_overview';
-      queryLockStatus(store, scriptData.id, pageType);
+      const pageType = currentLevelId
+        ? pageTypes.level
+        : pageTypes.scriptOverview;
+
       renderTeacherPanel(
         store,
         scriptData.id,
