@@ -51,7 +51,7 @@ DEPENDENCIES
   ntp
   seven_zip (< 4.0.0)
   ssl_certificate
-    git: https://github.com/vzDevelopment/ssl_certificate-cookbook.git
+    git: https://github.com/code-dot-org/ssl_certificate-cookbook.git
     revision: 839592ab96a661a1ae4c09b5368f014fa39cab0c
     branch: add_provider-issue_45
   sudo-user
