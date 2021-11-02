@@ -378,7 +378,7 @@ class ApiController < ApplicationController
       return head :bad_request
     end
 
-    render json: student_progress.push(teacher_progress)
+    render json: student_progress.unshift(teacher_progress)
   end
 
   def script_structure

@@ -1273,15 +1273,17 @@ class ApiControllerTest < ActionController::TestCase
     # response is an array with one element for each student and one element for the teacher
     assert_equal @students.length + 1, response.length
 
-    # students are sorted by name so @student_1 should be the first result
-    assert_equal @student_1.id, response[0]["userId"]
-    assert_equal regular_level.id.to_s, response[0]["id"]
-    assert_equal "perfect", response[0]["status"]
+    # teacher is the first result
+    first_result = response[0]
+    assert_equal @teacher.id, first_result["userId"]
+    assert_equal regular_level.id.to_s, first_result["id"]
+    assert_equal "passed", first_result["status"]
 
-    # teacher is the last result, appended to the end
-    assert_equal @teacher.id, response[-1]["userId"]
-    assert_equal regular_level.id.to_s, response[-1]["id"]
-    assert_equal "passed", response[-1]["status"]
+    # students are sorted by name so @student_1 should be the first result
+    second_result = response[1]
+    assert_equal @student_1.id, second_result["userId"]
+    assert_equal regular_level.id.to_s, second_result["id"]
+    assert_equal "perfect", second_result["status"]
   end
 
   test "teacher_panel_progress returns progress when called with lesson and is_bonus_lesson" do
@@ -1305,16 +1307,18 @@ class ApiControllerTest < ActionController::TestCase
     # response is an array with one element for each student and one element for the teacher
     assert_equal @students.length + 1, response.length
 
-    # students are sorted by name so @student_1 should be the first result
-    assert_equal @student_1.id, response[0]["userId"]
-    assert_equal bonus_level.id.to_s, response[0]["id"]
-    assert_equal "perfect", response[0]["status"]
-
-    # teacher is the last result, appended to the end
-    assert_equal @teacher.id, response[-1]["userId"]
-    assert_equal bonus_level.id.to_s, response[-1]["id"]
+    # teacher is the first result
+    first_result = response[0]
+    assert_equal @teacher.id, first_result["userId"]
+    assert_equal bonus_level.id.to_s, first_result["id"]
     # if the user has done any work on a bonus level it's summarized as perfect for the teacher panel (not sure why)
-    assert_equal "perfect", response[-1]["status"]
+    assert_equal "perfect", first_result["status"]
+
+    # students are sorted by name so @student_1 should be the first result
+    first_student = response[1]
+    assert_equal @student_1.id, first_student["userId"]
+    assert_equal bonus_level.id.to_s, first_student["id"]
+    assert_equal "perfect", first_student["status"]
   end
 
   test "teacher_panel_progress returns error when called by teacher not associated with section" do
