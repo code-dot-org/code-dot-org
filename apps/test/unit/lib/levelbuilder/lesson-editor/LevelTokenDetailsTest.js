@@ -67,7 +67,6 @@ describe('LevelTokenDetails', () => {
     assertChecked(wrapper, 'Bonus', false);
     assertChecked(wrapper, 'Assessment', false);
     assertChecked(wrapper, 'Challenge', false);
-    assertChecked(wrapper, 'Instructor In Training', false);
   });
 
   it('instructor in training is not shown if not a professional learning course', () => {
