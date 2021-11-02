@@ -1,6 +1,9 @@
 import React from 'react';
 import CodeReviewGroupsManager from './CodeReviewGroupsManager';
 
+// TO DO: remove this entry entirely when we're done with development of this feature.
+// https://codedotorg.atlassian.net/browse/CSA-1010
+
 const names = [
   'Sanchit',
   'Mike',
