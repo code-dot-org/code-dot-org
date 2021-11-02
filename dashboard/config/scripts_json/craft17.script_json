@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:15 UTC",
+    "serialized_at": "2021-10-26 22:12:53 UTC",
     "published_state": "beta",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "craft17"
     }
@@ -44,21 +48,39 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "1e9db25f-54a3-4784-a273-a5e1ce08cc33",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1e9db25f-54a3-4784-a273-a5e1ce08cc33",
+        "lesson.key": "craft17 stage",
+        "lesson_group.key": "",
+        "script.name": "craft17"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc",
+        "lesson_activity.key": "1e9db25f-54a3-4784-a273-a5e1ce08cc33"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_01_RETRY"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -67,7 +89,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       },
       "level_keys": [
         "MC_HOC_2017_01_RETRY"
@@ -76,12 +99,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_02_Cole"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -90,7 +110,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       },
       "level_keys": [
         "MC_HOC_2017_02_Cole"
@@ -99,12 +120,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_03_Cole"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -113,7 +131,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       },
       "level_keys": [
         "MC_HOC_2017_03_Cole"
@@ -122,12 +141,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_04_Cole"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -136,7 +152,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       },
       "level_keys": [
         "MC_HOC_2017_04_Cole"
@@ -145,12 +162,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_04POINT5_RYAN"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -159,7 +173,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       },
       "level_keys": [
         "MC_HOC_2017_04POINT5_RYAN"
@@ -168,12 +183,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_05_Cole"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -182,7 +194,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       },
       "level_keys": [
         "MC_HOC_2017_05_Cole"
@@ -191,12 +204,9 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_06_Cole"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -205,7 +215,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       },
       "level_keys": [
         "MC_HOC_2017_06_Cole"
@@ -214,12 +225,9 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Function intro Ryan"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -228,7 +236,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       },
       "level_keys": [
         "Function intro Ryan"
@@ -237,12 +246,9 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_07_Cole"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -251,7 +257,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       },
       "level_keys": [
         "MC_HOC_2017_07_Cole"
@@ -260,12 +267,9 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_10_RETRY"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -274,7 +278,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       },
       "level_keys": [
         "MC_HOC_2017_10_RETRY"
@@ -283,12 +288,9 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_Ali"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -297,7 +299,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       },
       "level_keys": [
         "MC_HOC_2017_Ali"
@@ -306,12 +309,9 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MC_HOC_2017_FP20x20"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -320,7 +320,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       },
       "level_keys": [
         "MC_HOC_2017_FP20x20"
@@ -336,7 +337,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       }
     },
     {
@@ -347,7 +349,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       }
     },
     {
@@ -358,7 +361,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       }
     },
     {
@@ -369,7 +373,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       }
     },
     {
@@ -380,7 +385,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       }
     },
     {
@@ -391,7 +397,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       }
     },
     {
@@ -402,7 +409,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       }
     },
     {
@@ -413,7 +421,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       }
     },
     {
@@ -424,7 +433,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       }
     },
     {
@@ -435,7 +445,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       }
     },
     {
@@ -446,7 +457,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       }
     },
     {
@@ -457,7 +469,8 @@
         ],
         "lesson.key": "craft17 stage",
         "lesson_group.key": "",
-        "script.name": "craft17"
+        "script.name": "craft17",
+        "activity_section.key": "b36e5e68-c383-48ae-81c7-0b5e4e056fdc"
       }
     }
   ],

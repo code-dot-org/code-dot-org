@@ -1,19 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Draggable} from 'react-beautiful-dnd';
-import {grid} from './CodeReviewGroup';
+import color from '@cdo/apps/util/color';
+import {grid} from './StudentGroup';
 
-// A CodeReviewGroupMember is a component that
-// can be dragged between CodeReviewGroups
-// as teachers arrange students in their section into groups.
+// A Student is a component that
+// can be dragged between StudentGroups
+// as teachers arrange students in their section into code review groups.
 // These are called "Draggables" in the package we're using (React Beautiful DnD).
 // More information on React Beautiful DnD can be found here:
 // https://github.com/atlassian/react-beautiful-dnd
-export default function CodeReviewGroupMember({member, index}) {
+export default function Student({followerId, name, index}) {
+  // TO DO: style and add drag handle.
+  // https://codedotorg.atlassian.net/browse/CSA-1029
   return (
     <Draggable
-      key={member.id}
-      draggableId={member.id}
+      key={followerId}
+      draggableId={followerId.toString()}
       index={index}
       tab-index={index}
     >
@@ -22,18 +25,17 @@ export default function CodeReviewGroupMember({member, index}) {
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}
-          style={getItemStyle(
+          style={getStudentStyle(
             snapshot.isDragging,
             provided.draggableProps.style
           )}
         >
           <div
             style={{
-              display: 'flex',
-              justifyContent: 'space-around'
+              display: 'flex'
             }}
           >
-            {member.name}
+            {name}
           </div>
         </div>
       )}
@@ -41,24 +43,22 @@ export default function CodeReviewGroupMember({member, index}) {
   );
 }
 
-// TO DO: should specify shape of member -- needs ID and content property that can be rendered.
-CodeReviewGroupMember.propTypes = {
-  member: PropTypes.object.isRequired,
+Student.propTypes = {
+  followerId: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired
 };
 
-const getItemStyle = (isDragging, draggableStyle) => ({
-  // some basic styles to make the items look a bit nicer
+const getStudentStyle = (isDragging, draggableStyle) => ({
   userSelect: 'none',
   padding: grid * 2,
-  margin: grid,
-  borderRadius: '30px',
-  color: 'white',
+  color: color.dark_charcoal,
   width: 'auto',
   height: '20px',
+  border: `1px solid ${color.lighter_gray}`,
 
   // change background colour if dragging
-  background: isDragging ? 'navy' : '#0094CA',
+  background: isDragging ? 'navy' : 'white',
 
   // styles we need to apply on draggables
   ...draggableStyle

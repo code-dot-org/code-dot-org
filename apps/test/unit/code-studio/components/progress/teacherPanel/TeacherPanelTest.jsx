@@ -30,7 +30,8 @@ const DEFAULT_PROPS = {
   students: null,
   levelsWithProgress: [],
   loadLevelsWithProgress: () => {},
-  teacherId: 5
+  teacherId: 5,
+  exampleSolutions: []
 };
 
 const sectionScriptLevelData = [
@@ -188,41 +189,36 @@ describe('TeacherPanel', () => {
   });
 
   describe('Example Solutions', () => {
-    describe('on unit', () => {
-      it('does not display example solutions', () => {
-        const wrapper = setUp({
-          viewAs: ViewType.Teacher
-        });
-        expect(wrapper.find('Button')).to.have.length(0);
+    it('does not display example solutions if the viewType is student', () => {
+      const wrapper = setUp({
+        viewAs: ViewType.Student,
+        exampleSolutions: [
+          'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
+        ]
       });
+      expect(wrapper.find('Button')).to.have.length(0);
     });
 
-    describe('on level', () => {
-      it('displays example solution for level with one example solution', () => {
-        const wrapper = setUp({
-          viewAs: ViewType.Teacher,
-          students: students,
-          sectionData: {
-            level_examples: [
-              'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
-            ]
-          }
-        });
-
-        expect(wrapper.find('Button')).to.have.length(1);
+    it('displays example solution for level with one example solution', () => {
+      const wrapper = setUp({
+        viewAs: ViewType.Teacher,
+        students: students,
+        exampleSolutions: [
+          'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
+        ]
       });
 
-      it('does not display example solution for level with no example solution', () => {
-        const wrapper = setUp({
-          viewAs: ViewType.Teacher,
-          students: students,
-          sectionData: {
-            level_examples: null
-          }
-        });
+      expect(wrapper.find('Button')).to.have.length(1);
+    });
 
-        expect(wrapper.find('Button')).to.have.length(0);
+    it('does not display example solution for level with no example solution', () => {
+      const wrapper = setUp({
+        viewAs: ViewType.Teacher,
+        students: students,
+        exampleSolutions: null
       });
+
+      expect(wrapper.find('Button')).to.have.length(0);
     });
   });
 });

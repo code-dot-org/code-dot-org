@@ -2,7 +2,9 @@
   "func": "group.displace",
   "category": "Groups",
   "paletteParams": [
-    "target"
+    {
+      "name": "target"
+    }
   ],
   "params": [
     "target"

@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:46 UTC",
+    "serialized_at": "2021-10-26 22:11:14 UTC",
     "published_state": "beta",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "CSPLessonSamples"
     }
@@ -59,21 +63,62 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "840e63f4-e90c-40a6-82f1-01716df1953f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "840e63f4-e90c-40a6-82f1-01716df1953f",
+        "lesson.key": "Lesson 14",
+        "lesson_group.key": "",
+        "script.name": "CSPLessonSamples"
+      }
+    },
+    {
+      "key": "3ea74a9b-718a-4ec3-bf82-adc407605d58",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3ea74a9b-718a-4ec3-bf82-adc407605d58",
+        "lesson.key": "Lesson 15",
+        "lesson_group.key": "",
+        "script.name": "CSPLessonSamples"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "a5693e5b-a91f-4732-b8d6-ce50d6af0bbc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a5693e5b-a91f-4732-b8d6-ce50d6af0bbc",
+        "lesson_activity.key": "840e63f4-e90c-40a6-82f1-01716df1953f"
+      }
+    },
+    {
+      "key": "597c3bbf-13b2-4b84-9c85-4112a3cab097",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097",
+        "lesson_activity.key": "3ea74a9b-718a-4ec3-bf82-adc407605d58"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Video - Lesson 14 - B and W"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -82,7 +127,8 @@
         ],
         "lesson.key": "Lesson 14",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "a5693e5b-a91f-4732-b8d6-ce50d6af0bbc"
       },
       "level_keys": [
         "Pixelation - Video - Lesson 14 - B and W"
@@ -91,12 +137,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 14 - Make the Letter A"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -105,7 +148,8 @@
         ],
         "lesson.key": "Lesson 14",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "a5693e5b-a91f-4732-b8d6-ce50d6af0bbc"
       },
       "level_keys": [
         "Pixelation - Lesson 14 - Make the Letter A"
@@ -114,12 +158,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 14 - Fix bit offset"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -128,7 +169,8 @@
         ],
         "lesson.key": "Lesson 14",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "a5693e5b-a91f-4732-b8d6-ce50d6af0bbc"
       },
       "level_keys": [
         "Pixelation - Lesson 14 - Fix bit offset"
@@ -137,12 +179,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 14 - Make your own B and W Image"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -151,7 +190,8 @@
         ],
         "lesson.key": "Lesson 14",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "a5693e5b-a91f-4732-b8d6-ce50d6af0bbc"
       },
       "level_keys": [
         "Pixelation - Lesson 14 - Make your own B and W Image"
@@ -160,12 +200,9 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Video - Color 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -174,7 +211,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       },
       "level_keys": [
         "Pixelation - Video - Color 1"
@@ -183,12 +221,9 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 15 - Complete 3-bit color"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -197,7 +232,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       },
       "level_keys": [
         "Pixelation - Lesson 15 - Complete 3-bit color"
@@ -206,12 +242,9 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Video - Color 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -220,7 +253,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       },
       "level_keys": [
         "Pixelation - Video - Color 2"
@@ -229,12 +263,9 @@
     {
       "chapter": 8,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 15 - Color Shades"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -243,7 +274,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       },
       "level_keys": [
         "Pixelation - Lesson 15 - Color Shades"
@@ -252,12 +284,9 @@
     {
       "chapter": 9,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Video - Color 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -266,7 +295,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       },
       "level_keys": [
         "Pixelation - Video - Color 3"
@@ -275,12 +305,9 @@
     {
       "chapter": 10,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 15 - Color Shades 4x4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -289,7 +316,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       },
       "level_keys": [
         "Pixelation - Lesson 15 - Color Shades 4x4"
@@ -298,12 +326,9 @@
     {
       "chapter": 11,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation Flappy"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -312,7 +337,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       },
       "level_keys": [
         "Pixelation Flappy"
@@ -321,12 +347,9 @@
     {
       "chapter": 12,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation Bee"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -335,7 +358,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       },
       "level_keys": [
         "Pixelation Bee"
@@ -344,12 +368,9 @@
     {
       "chapter": 13,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 15 - Favicon Instructions"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -358,7 +379,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       },
       "level_keys": [
         "Pixelation - Lesson 15 - Favicon Instructions"
@@ -367,12 +389,9 @@
     {
       "chapter": 14,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 15 - Color Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -381,7 +400,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       },
       "level_keys": [
         "Pixelation - Lesson 15 - Color Free Play"
@@ -397,7 +417,8 @@
         ],
         "lesson.key": "Lesson 14",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "a5693e5b-a91f-4732-b8d6-ce50d6af0bbc"
       }
     },
     {
@@ -408,7 +429,8 @@
         ],
         "lesson.key": "Lesson 14",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "a5693e5b-a91f-4732-b8d6-ce50d6af0bbc"
       }
     },
     {
@@ -419,7 +441,8 @@
         ],
         "lesson.key": "Lesson 14",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "a5693e5b-a91f-4732-b8d6-ce50d6af0bbc"
       }
     },
     {
@@ -430,7 +453,8 @@
         ],
         "lesson.key": "Lesson 14",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "a5693e5b-a91f-4732-b8d6-ce50d6af0bbc"
       }
     },
     {
@@ -441,7 +465,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       }
     },
     {
@@ -452,7 +477,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       }
     },
     {
@@ -463,7 +489,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       }
     },
     {
@@ -474,7 +501,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       }
     },
     {
@@ -485,7 +513,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       }
     },
     {
@@ -496,7 +525,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       }
     },
     {
@@ -507,7 +537,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       }
     },
     {
@@ -518,7 +549,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       }
     },
     {
@@ -529,7 +561,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       }
     },
     {
@@ -540,7 +573,8 @@
         ],
         "lesson.key": "Lesson 15",
         "lesson_group.key": "",
-        "script.name": "CSPLessonSamples"
+        "script.name": "CSPLessonSamples",
+        "activity_section.key": "597c3bbf-13b2-4b84-9c85-4112a3cab097"
       }
     }
   ],
