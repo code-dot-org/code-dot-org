@@ -47,7 +47,7 @@
       %p Number is a multiplier for how long each step takes (so higher numbers are slower). Default is 5 for Maze, 2 for Bee.
       = f.number_field :step_speed
 
-  - if @level.is_a? GamelabJr
+  - if @level.instance_of?(GamelabJr)
     .field
       = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :include_shared_functions, description: "Make shared functions and behaviors available"}
 

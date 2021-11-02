@@ -2,7 +2,9 @@
   "func": "changeAnimation",
   "category": "Sprites",
   "paletteParams": [
-    "label"
+    {
+      "name": "label"
+    }
   ],
   "params": [
     "\"animation_1\""

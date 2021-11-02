@@ -19381,6 +19381,10 @@ en:
               name: CS Discoveries Post Course survey
               description_student: 
               description_teacher: 
+            lesson-1:
+              name: CS Discoveries Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csd2_1v2:
               display_name: 'Chapter 1: Creating Webpages'
@@ -19593,6 +19597,10 @@ en:
               name: CS Discoveries Post Course survey
               description_student: 
               description_teacher: 
+            lesson-1:
+              name: CS Discoveries Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csd3_1:
               display_name: 'Chapter 1: Images and Animations'
@@ -19770,6 +19778,10 @@ en:
               description_teacher: "**Question of the Day: How can I track my work while we make updates to our app?**\n \nTeams make a decision about how they will incorporate updates to their app, then they begin updating their app based on their post-its from yesterday’s lesson. They use a “To Do / Doing / Done” chart to organize their work and track their progress. Teams spend the majority of the class working on updating their app, with time at the end to re-combine into a single app if necessary.\n"
             Build a Paper Prototype:
               name: Build a Paper Prototype
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csd4_1:
               display_name: 'Chapter 1: User Centered Design'
@@ -19925,6 +19937,10 @@ en:
               name: Data and Machine Learning
               description_student: "**Question of the Day: How can machines \"learn\"?**\n\nIn this lesson, you get to work with Artificial Intelligence and learn about Machine Learning. "
               description_teacher: "**Question of the Day: How can machines \"learn\"?**\r\n\r\nIn this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own."
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csd5_1:
               display_name: 'Chapter 1: Representing Information'
@@ -20062,6 +20078,10 @@ en:
             CS Discoveries Post Course survey:
               key: CS Discoveries Post Course survey
               name: CS Discoveries Post Course survey
+              description_student: 
+              description_teacher: 
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
               description_student: 
               description_teacher: 
           lesson_groups:
@@ -23578,6 +23598,10 @@ en:
               name: Post-Unit Survey
               description_student: 
               description_teacher: 
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Chapter 1 - Understanding Machine Learning
@@ -23777,12 +23801,12 @@ en:
               description_teacher: ''
             Module 7:
               key: Module 7
-              name: 'Module 7: Tools and structure in Unit 9 - Data'
+              name: 'Module 7: Tools and Structure in Unit 9 - Data'
               description_student: ''
               description_teacher: ''
             Module 8:
               key: Module 8
-              name: 'Module 8: Building community and preparing students for the AP Exam'
+              name: 'Module 8: Building Community and Preparing Students for the AP Exam'
               description_student: ''
               description_teacher: ''
             new lesson:
@@ -26563,11 +26587,19 @@ en:
               description_student: 
               description_teacher: 
             lesson-5:
-              name: Word Choice
-              description_student: 
-              description_teacher: 
+              name: Choosing Words Carefully
+              description_student: Make your app even better! Change your poem generator app by adding words you want the user to choose from.
+              description_teacher: 'In this lesson, students create a poem generator app with multiple-choice prompts to guide the user to pick a carefully chosen word. Students will plan which words they will replace in their poems, choose three new multiple-choice words per prompt, and then program their poem generator using new multiple-choice prompts with events.
+
+'
             lesson-6:
               name: Poetry Circle
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Conditionals
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: poetry
           title: Computer Science and Poetry
@@ -26773,3 +26805,16 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Post-Course Survey
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csd-post-survey-2021
+          title: CS Discoveries Post-Course Survey
+          description_audience: ''
+          description_short: ''
+          description: This unit contains the CS Discoveries Post-Course Survey. This unit can be assigned after students complete their final unit in CS Discoveries.
+          student_description: This unit contains a survey for when your class is finished with the units in CS Discoveries. Your teacher will tell you when it's time to take this survey.
