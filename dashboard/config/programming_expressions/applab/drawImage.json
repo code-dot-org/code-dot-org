@@ -2,9 +2,15 @@
   "func": "drawImage",
   "category": "Canvas",
   "paletteParams": [
-    "id",
-    "x",
-    "y"
+    {
+      "name": "id"
+    },
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    }
   ],
   "params": [
     "\"id\"",

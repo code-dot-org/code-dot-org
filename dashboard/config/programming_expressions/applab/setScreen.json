@@ -2,7 +2,9 @@
   "func": "setScreen",
   "category": "UI controls",
   "paletteParams": [
-    "screenId"
+    {
+      "name": "screenId"
+    }
   ],
   "params": [
     "\"screen1\""

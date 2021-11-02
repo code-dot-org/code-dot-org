@@ -6,10 +6,13 @@
     "maxArgs": 1
   },
   "paletteParams": [
-    "url"
+    {
+      "name": "url"
+    }
   ],
   "params": [
     "\"sound://default.mp3\""
   ],
-  "dropdown": {}
+  "dropdown": {
+  }
 }
