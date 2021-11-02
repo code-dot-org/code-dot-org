@@ -21,7 +21,6 @@ export function renderTeacherPanel(
   scriptId,
   section,
   scriptName,
-  sectionData = null,
   pageType = null,
   isAsync = false
 ) {
@@ -46,7 +45,6 @@ export function renderTeacherPanel(
   ReactDOM.render(
     <Provider store={store}>
       <TeacherPanel
-        sectionData={sectionData}
         onSelectUser={onSelectUser}
         scriptName={scriptName}
         getSelectedUserId={getSelectedUserId}

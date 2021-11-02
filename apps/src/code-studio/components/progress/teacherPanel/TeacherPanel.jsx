@@ -16,13 +16,12 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {hasLockableLessons} from '@cdo/apps/code-studio/progressRedux';
-import {sectionData, studentShape, levelWithProgress} from './types';
+import {studentShape, levelWithProgress} from './types';
 
 class TeacherPanel extends React.Component {
   static propTypes = {
     onSelectUser: PropTypes.func,
     getSelectedUserId: PropTypes.func,
-    sectionData: sectionData,
     unitName: PropTypes.string,
     pageType: PropTypes.oneOf([
       pageTypes.level,
