@@ -201,6 +201,13 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   end
 
   # GET /api/v1/sections/<id>/code_review_groups
+  # Get all code review groups and their members for this section. Also include
+  # all unassigned followers. Format is:
+  # { groups: [
+  #   {unassigned: true, name: 'unassigned', members: [{follower_id: 1, name: 'student_name'},...]},
+  #   {id: <group-id>, name: 'group_name', members: [{follower_id: 2, name: 'student_name'},...]},
+  #   ...
+  # ]}
   def code_review_groups
     groups = CodeReviewGroup.where(section_id: @section.id)
     groups_details = []
@@ -218,14 +225,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     unassigned_members = unassigned_members.map {|member| {follower_id: member.id, name: member.student_user.name}}
     groups_details << {unassigned: true, name: 'unassigned', members: unassigned_members}
     render json: {groups: groups_details}
-  end
-
-  # POST /api/v1/sections/<id>/code_review_groups
-  def set_code_review_groups
-    ActiveRecord::Base.transaction do
-      # current_groups = CodeReviewGroup.where(section_id: @section.id)
-      # new_groups = params[:groups]
-    end
   end
 
   private
