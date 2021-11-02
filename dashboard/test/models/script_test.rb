@@ -1417,8 +1417,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal(expected, summary[:studentDescription])
   end
 
-  test 'should generate PLC objects' do
-    unit_file = File.join(self.class.fixture_path, 'test-plc.script')
+  test 'should generate PLC objects for unmigrated unit' do
+    unit_file = File.join(self.class.fixture_path, 'test-plc-unmigrated.script')
     unit_names, custom_i18n = Script.setup([unit_file])
     unit = Script.find_by!(name: unit_names.first)
     custom_i18n.deep_merge!(
@@ -1427,7 +1427,7 @@ class ScriptTest < ActiveSupport::TestCase
           'data' => {
             'script' => {
               'name' => {
-                'test-plc' => {
+                'test-plc-unmigrated' => {
                   'title' => 'PLC Test',
                   'description' => 'PLC test fixture script'
                 }
