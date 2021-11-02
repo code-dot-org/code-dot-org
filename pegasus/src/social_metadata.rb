@@ -1,9 +1,14 @@
 # Centralized social metadata for a few key pages:
+#
 #   code.org/
-#   csedweek.org/
-#   hourofcode.com/
 #   code.org/challenge
 #   code.org/dance
+#   code.org/minecraft
+#   code.org/oceans
+#   code.org/hourofcode/overview
+#
+#   hourofcode.com/
+#   hourofcode.com/learn
 #   hourofcode.com/thanks
 
 def get_social_metadata_for_page(request)
@@ -139,7 +144,7 @@ def get_social_metadata_for_page(request)
     page = "dance"
   elsif request.path == "/oceans" && request.site == "code.org"
     page = "oceans"
-  elsif request.path == "/" && ["code.org", "csedweek.org", "hourofcode.com"].include?(request.site)
+  elsif request.path == "/" && ["code.org", "hourofcode.com"].include?(request.site)
     page = request.site
   elsif request.path == "/thanks" && request.site == "hourofcode.com"
     page = "thanks"
