@@ -17582,10 +17582,6 @@ zh-CN:
               name: 小部件
             lesson-2:
               name: 工具
-        poetry:
-          lessons:
-            lesson-3:
-              name: 变量
         spelling-bee:
           lessons:
             lesson-1:

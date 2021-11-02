@@ -1605,6 +1605,16 @@ id:
         text: x koordinat {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinat {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Es Krim
+            Stars: Bintang
+            Fireworks: Kembang Api
+            '"rainbow"': Pelangi
+            '"hearts"': Hati
+            '"flowers"': Bunga
+            '"waves"': Gelombang
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1613,6 +1623,9 @@ id:
         text: buat sprite {ANIMATION_NAME} baru di {LOCATION}
       Poetry_playSound:
         text: Playsound {SOUND}
+        options:
+          SOUND:
+            Light: Lampu
       Poetry_setBackground:
         text: tetapkan warna latar belakang {COLOR}
       Poetry_setBackgroundEffect:
@@ -1623,6 +1636,10 @@ id:
             '"space"': Spasi
             '"stars"': Bintang
             '"ripples"': Riak
+            '"rain"': Hujan
+            '"bubbles"': Gelembung
+            '"confetti"': Konfeti
+            '"hearts"': Hati Penuh Warna
           PALETTE:
             '"rainbow"': Pelangi
       Poetry_setBackgroundImageAs:

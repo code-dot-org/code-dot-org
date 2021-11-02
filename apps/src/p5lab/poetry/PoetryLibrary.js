@@ -3,9 +3,11 @@ import _ from 'lodash';
 import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
 import {POEMS} from './constants';
-import * as utils from './commands/utils';
+import {containsAtLeastOneAlphaNumberic} from '../../utils';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as backgroundEffects} from './commands/backgroundEffects';
 import {commands as foregroundEffects} from './commands/foregroundEffects';
+import {commands as behaviors} from './commands/behaviors';
 import spritelabCommands from '../spritelab/commands/index';
 
 const OUTER_MARGIN = 50;
@@ -13,14 +15,13 @@ const LINE_HEIGHT = 50;
 const FONT_SIZE = 25;
 const PLAYSPACE_SIZE = 400;
 const POEM_DURATION = 400;
-const OCTI_SIZE = 75;
 
 export default class PoetryLibrary extends CoreLibrary {
   constructor(p5) {
     super(p5);
     // Extra information for validation code to be able to inspect the program state
     this.validationInfo = {
-      endTime: POEM_DURATION
+      endTime: POEM_DURATION * 1.25
     };
     this.poemState = {
       ..._.cloneDeep(getStore().getState().poetry.selectedPoem),
@@ -36,7 +37,8 @@ export default class PoetryLibrary extends CoreLibrary {
       // updates this value.
       // This value is used as an offset when calculating which lines to show.
       animationStartFrame:
-        appOptions.level.standaloneAppName === 'poetry_hoc' ? 1 : null
+        appOptions.level.standaloneAppName === 'poetry_hoc' ? 1 : null,
+      backgroundMusic: undefined
     };
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffects = [];
@@ -62,7 +64,11 @@ export default class PoetryLibrary extends CoreLibrary {
         );
         // Don't fire line events in preview
         if (!this.isPreviewFrame()) {
-          for (let i = 0; i < renderInfo.lines.length; i++) {
+          // filter non-poem-body lines (title, author, and blank lines) for line events
+          const poemLines = renderInfo.lines.filter(
+            line => line.isPoemBodyLine
+          );
+          for (let i = 0; i < poemLines.length; i++) {
             const lineNum = i + 1; // students will 1-index the lines
             if (this.lineEvents[lineNum] && !this.lineEvents[lineNum].fired) {
               // Fire line events
@@ -81,6 +87,8 @@ export default class PoetryLibrary extends CoreLibrary {
         }
       },
 
+      // And add custom Poetry commands
+
       addFrame(frameType) {
         this.poemState.frameType = frameType;
       },
@@ -89,16 +97,17 @@ export default class PoetryLibrary extends CoreLibrary {
         spritelabCommands.destroy.call(this, {costume});
       },
 
-      // And add custom Poem Bot commands
-      textConcat(text1, text2) {
-        return [text1, text2].join('');
+      playMusic(url) {
+        if (this.poemState.backgroundMusic) {
+          audioCommands.stopSound({url: this.poemState.backgroundMusic});
+        }
+        this.poemState.backgroundMusic = url;
+        this.soundLog.push(url);
+        audioCommands.playSound({url, loop: true});
       },
 
-      randomWord() {
-        // TODO: get curated random word list from Curriculum
-        const words = ['cat', 'dog', 'fish'];
-        const index = utils.randomInt(0, words.length - 1);
-        return words[index];
+      textConcat(text1, text2) {
+        return [text1, text2].join('');
       },
 
       addLine(line) {
@@ -129,17 +138,17 @@ export default class PoetryLibrary extends CoreLibrary {
         }
       },
 
-      animatePoem() {
+      animateText() {
         this.poemState.animationStartFrame = this.p5.World.frameCount;
         // Reset line events since we're starting the poem animation over.
         Object.values(this.lineEvents).forEach(e => (e.fired = false));
       },
 
-      showPoem() {
+      showText() {
         this.poemState.isVisible = true;
       },
 
-      hidePoem() {
+      hideText() {
         this.poemState.isVisible = false;
       },
 
@@ -188,33 +197,6 @@ export default class PoetryLibrary extends CoreLibrary {
         }
       },
 
-      drawOcti() {
-        this.p5.push();
-        this.p5.noStroke();
-        if (this.p5.World.frameCount > this.validationInfo.endTime) {
-          let octiImage = this.p5._preloadedInstructorImage;
-          this.p5.image(
-            octiImage,
-            PLAYSPACE_SIZE - OCTI_SIZE /* x */,
-            PLAYSPACE_SIZE - OCTI_SIZE /* y */,
-            OCTI_SIZE /* width */,
-            OCTI_SIZE /* height */
-          );
-        }
-        this.p5.pop();
-      },
-
-      isOctiClicked() {
-        return (
-          this.validationInfo.successFrame &&
-          this.p5.mouseDown() &&
-          this.p5.World.mouseX > PLAYSPACE_SIZE - OCTI_SIZE &&
-          this.p5.World.mouseX < PLAYSPACE_SIZE &&
-          this.p5.World.mouseY > PLAYSPACE_SIZE - OCTI_SIZE &&
-          this.p5.World.mouseY < PLAYSPACE_SIZE
-        );
-      },
-
       drawProgressBar() {
         this.p5.push();
         this.p5.noStroke();
@@ -228,14 +210,15 @@ export default class PoetryLibrary extends CoreLibrary {
         this.p5.rect(
           0,
           390,
-          (this.p5.frameCount / POEM_DURATION) * PLAYSPACE_SIZE,
+          (this.p5.frameCount / this.validationInfo.endTime) * PLAYSPACE_SIZE,
           10
         );
         this.p5.pop();
       },
 
       ...backgroundEffects,
-      ...foregroundEffects
+      ...foregroundEffects,
+      ...behaviors
     };
   }
 
@@ -286,10 +269,6 @@ export default class PoetryLibrary extends CoreLibrary {
     );
 
     this.p5.pop();
-  }
-
-  isPreviewFrame() {
-    return this.p5.World.frameCount === 1;
   }
 
   getScaledFontSize(text, font, desiredSize) {
@@ -383,11 +362,6 @@ export default class PoetryLibrary extends CoreLibrary {
   }
 
   getRenderInfo(poemState, frameCount) {
-    if (!poemState.isVisible) {
-      return {
-        lines: []
-      };
-    }
     let yCursor = OUTER_MARGIN;
     let renderInfo = {
       font: {
@@ -395,6 +369,11 @@ export default class PoetryLibrary extends CoreLibrary {
       },
       lines: []
     };
+
+    if (!poemState.isVisible) {
+      return renderInfo;
+    }
+
     if (poemState.title) {
       renderInfo.lines.push({
         text: poemState.title,
@@ -404,7 +383,8 @@ export default class PoetryLibrary extends CoreLibrary {
           poemState.title,
           poemState.font.font,
           FONT_SIZE * 2
-        )
+        ),
+        isPoemBodyLine: false
       });
       yCursor += LINE_HEIGHT;
     }
@@ -414,7 +394,8 @@ export default class PoetryLibrary extends CoreLibrary {
         text: poemState.author,
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
-        size: this.getScaledFontSize(poemState.author, poemState.font.font, 16)
+        size: this.getScaledFontSize(poemState.author, poemState.font.font, 16),
+        isPoemBodyLine: false
       });
       yCursor += LINE_HEIGHT;
     }
@@ -434,7 +415,8 @@ export default class PoetryLibrary extends CoreLibrary {
         text: line,
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
-        size: lineSize
+        size: lineSize,
+        isPoemBodyLine: containsAtLeastOneAlphaNumberic(line) // Used to skip blank lines in animations
       });
       yCursor += lineHeight;
     });
@@ -459,6 +441,30 @@ export default class PoetryLibrary extends CoreLibrary {
       this.p5.textSize(item.size);
       this.p5.text(item.text, item.x, item.y);
     });
+
+    if (this.isPreviewFrame()) {
+      // Draw line numbers in preview frame only
+      this.drawLineNumbers(renderInfo);
+    }
+  }
+
+  drawLineNumbers(renderInfo) {
+    this.p5.push();
+    this.p5.textAlign(this.p5.LEFT);
+    this.p5.stroke('white');
+    this.p5.strokeWeight(2);
+    this.p5.fill('black');
+    this.p5.textFont('Arial');
+    this.p5.textSize(16);
+
+    let lineNum = 1;
+    renderInfo.lines.forEach(item => {
+      if (item.isPoemBodyLine) {
+        this.p5.text(lineNum, 5, item.y);
+        lineNum++;
+      }
+    });
+    this.p5.pop();
   }
 
   // polyfill for https://github.com/processing/p5.js/blob/main/src/color/p5.Color.js#L355

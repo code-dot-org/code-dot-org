@@ -43,7 +43,8 @@ class TeacherPanel extends React.Component {
     students: PropTypes.arrayOf(studentShape),
     levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
     loadLevelsWithProgress: PropTypes.func.isRequired,
-    teacherId: PropTypes.number
+    teacherId: PropTypes.number,
+    exampleSolutions: PropTypes.array
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -78,7 +79,6 @@ class TeacherPanel extends React.Component {
 
   render() {
     const {
-      sectionData,
       viewAs,
       hasSections,
       sectionsAreLoaded,
@@ -90,7 +90,8 @@ class TeacherPanel extends React.Component {
       levelsWithProgress,
       getSelectedUserId,
       pageType,
-      teacherId
+      teacherId,
+      exampleSolutions
     } = this.props;
 
     const selectedUserId = getSelectedUserId();
@@ -103,7 +104,7 @@ class TeacherPanel extends React.Component {
       pageType !== pageTypes.scriptOverview;
 
     const displayLevelExamples =
-      viewAs === ViewType.Teacher && sectionData?.level_examples?.length > 0;
+      viewAs === ViewType.Teacher && exampleSolutions?.length > 0;
 
     const displayLockInfo =
       hasSections && unitHasLockableLessons && viewAs === ViewType.Teacher;
@@ -124,7 +125,7 @@ class TeacherPanel extends React.Component {
           )}
           {displayLevelExamples && (
             <div style={styles.exampleSolutions}>
-              {sectionData.level_examples.map((example, index) => (
+              {exampleSolutions.map((example, index) => (
                 <Button
                   __useDeprecatedTag
                   key={index}
@@ -282,7 +283,8 @@ export default connect(
       levelsWithProgress: state.teacherPanel.levelsWithProgress,
       isLoadingLevelsWithProgress:
         state.teacherPanel.isLoadingLevelsWithProgress,
-      teacherId: state.currentUser.userId
+      teacherId: state.currentUser.userId,
+      exampleSolutions: state.pageConstants?.exampleSolutions
     };
   },
   dispatch => ({

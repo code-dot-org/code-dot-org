@@ -647,6 +647,7 @@ in:
         hello_world_intro: crwdns2695457:0crwdne2695457:0
         hello_world_events: crwdns2695459:0crwdne2695459:0
         hello_world_congrats: crwdns2695461:0crwdne2695461:0
+        csp_global_vs_local: crwdns2698757:0crwdne2698757:0
     callout:
       text:
         drag_blocks: crwdns4931:0crwdne4931:0

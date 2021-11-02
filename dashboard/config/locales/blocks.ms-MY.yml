@@ -1474,10 +1474,23 @@ ms:
         text: raksasa mula memakai pelitup muka
       Outbreak_stopMoving:
         text: raksasa berhenti bergerak
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Aiskrim
+            Stars: Bintang
+            Fireworks: Bunga Api
+            '"rainbow"': Pelangi
+            '"hearts"': Hati
+            '"flowers"': Bunga
+            '"waves"': Gelombang
       Poetry_makeNewSpriteAnon:
         text: membuat baru {ANIMATION_NAME} bidadari {LOCATION} 123_321
       Poetry_playSound:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            Light: Lampu
       Poetry_setBackground:
         text: tetapkan warna {COLOR} latar belakang
       Poetry_setBackgroundEffect:
@@ -1488,6 +1501,10 @@ ms:
             '"space"': Ruang
             '"stars"': Bintang
             '"ripples"': Riak
+            '"rain"': Hujan
+            '"bubbles"': Gelembung
+            '"confetti"': Konfeti
+            '"hearts"': Hati Berwarna-warni
           PALETTE:
             '"rainbow"': Pelangi
       Poetry_setBackgroundImageAs:

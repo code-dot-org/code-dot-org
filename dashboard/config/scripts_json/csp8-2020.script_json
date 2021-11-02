@@ -4,13 +4,22 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "CSP",
-      "student_detail_progress_view": true,
-      "has_verified_resources": true,
-      "project_sharing": true,
-      "hideable_lessons": true,
+      "announcements": [
+        {
+          "notice": "",
+          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
+          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit8/{LESSON}",
+      "curriculum_umbrella": "CSP",
+      "has_lesson_plan": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
       "is_stable": true,
+      "project_sharing": true,
       "script_announcements": [
         {
           "notice": "",
@@ -20,6 +29,7 @@
           "visibility": "Teacher-only"
         }
       ],
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -29,22 +39,13 @@
           "standardMappings",
           "https://curriculum.code.org/csp-20/unit8/standards/"
         ]
-      ],
-      "has_lesson_plan": true,
-      "announcements": [
-        {
-          "notice": "",
-          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
-          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
       ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:57 UTC",
+    "serialized_at": "2021-10-25 22:54:11 UTC",
     "published_state": null,
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp8-2020"
     }

@@ -63,9 +63,9 @@ describe('Code Review Comment', () => {
     });
   });
 
-  it('displays green check mark for resolved comment', () => {
+  it('displays check mark for resolved comment', () => {
     const wrapper = renderWrapper({isResolved: true});
-    expect(wrapper.find('.fa.fa-check')).to.have.lengthOf(1);
+    expect(wrapper.find('.fa-check-circle')).to.have.lengthOf(1);
   });
 
   it('shows ellipsis and comment options when viewing not as code reviewer', () => {

@@ -4,11 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:58 UTC",
+    "serialized_at": "2021-10-26 22:14:45 UTC",
     "published_state": "beta",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "cspunit1-support"
     }
@@ -102,21 +106,136 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "b2b7aeac-a6fb-43eb-a2fa-f16ad3046a76",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b2b7aeac-a6fb-43eb-a2fa-f16ad3046a76",
+        "lesson.key": "Intro to the Unit",
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      }
+    },
+    {
+      "key": "11c8d69a-e711-4d43-b95f-95b0c3ae8d5f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "11c8d69a-e711-4d43-b95f-95b0c3ae8d5f",
+        "lesson.key": "Chapter Overviews",
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      }
+    },
+    {
+      "key": "1d2ffe46-ad96-40dc-96ff-ef9b923485b9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1d2ffe46-ad96-40dc-96ff-ef9b923485b9",
+        "lesson.key": "Tool Talk: Intro to Netsim",
+        "lesson_group.key": "required",
+        "script.name": "cspunit1-support"
+      }
+    },
+    {
+      "key": "55443e45-ae56-4c7a-8080-e7040bf430f6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "55443e45-ae56-4c7a-8080-e7040bf430f6",
+        "lesson.key": "Supporting Peer Learning",
+        "lesson_group.key": "practice",
+        "script.name": "cspunit1-support"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "2e23424b-c3ab-4df7-a2a5-8b01b298b718",
+      "position": 1,
+      "properties": {
+        "progression_name": "Sample Free Response"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e23424b-c3ab-4df7-a2a5-8b01b298b718",
+        "lesson_activity.key": "b2b7aeac-a6fb-43eb-a2fa-f16ad3046a76"
+      }
+    },
+    {
+      "key": "dc6f34e2-a32f-431d-b64c-8171e4513f98",
+      "position": 2,
+      "properties": {
+        "progression_name": "U1L5 How the Internet Works - Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc6f34e2-a32f-431d-b64c-8171e4513f98",
+        "lesson_activity.key": "b2b7aeac-a6fb-43eb-a2fa-f16ad3046a76"
+      }
+    },
+    {
+      "key": "9f44dadf-72ce-4581-bd58-71275dab5e03",
+      "position": 3,
+      "properties": {
+        "name": "Sample External Resource",
+        "progression_name": "Sample External Resource"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f44dadf-72ce-4581-bd58-71275dab5e03",
+        "lesson_activity.key": "b2b7aeac-a6fb-43eb-a2fa-f16ad3046a76"
+      }
+    },
+    {
+      "key": "7e0b4d89-333e-4770-8537-cfcb2066e789",
+      "position": 1,
+      "properties": {
+        "name": "Empty Markdown Level",
+        "progression_name": "Empty Markdown Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e0b4d89-333e-4770-8537-cfcb2066e789",
+        "lesson_activity.key": "11c8d69a-e711-4d43-b95f-95b0c3ae8d5f"
+      }
+    },
+    {
+      "key": "c4d2d50a-1db3-4641-b03e-2ffc0afbe88b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c4d2d50a-1db3-4641-b03e-2ffc0afbe88b",
+        "lesson_activity.key": "1d2ffe46-ad96-40dc-96ff-ef9b923485b9"
+      }
+    },
+    {
+      "key": "2c588586-a910-48de-a10d-bf05fc534c6f",
+      "position": 1,
+      "properties": {
+        "name": "U3L2 Free Response Reflection",
+        "progression_name": "U3L2 Free Response Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "2c588586-a910-48de-a10d-bf05fc534c6f",
+        "lesson_activity.key": "55443e45-ae56-4c7a-8080-e7040bf430f6"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sample Free Response"
-        ],
         "progression": "Sample Free Response"
       },
       "bonus": false,
@@ -126,7 +245,8 @@
         ],
         "lesson.key": "Intro to the Unit",
         "lesson_group.key": "required",
-        "script.name": "cspunit1-support"
+        "script.name": "cspunit1-support",
+        "activity_section.key": "2e23424b-c3ab-4df7-a2a5-8b01b298b718"
       },
       "level_keys": [
         "Sample Free Response"
@@ -135,12 +255,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L5 How the Internet Works - Video"
-        ],
         "progression": "U1L5 How the Internet Works - Video"
       },
       "bonus": false,
@@ -150,7 +267,8 @@
         ],
         "lesson.key": "Intro to the Unit",
         "lesson_group.key": "required",
-        "script.name": "cspunit1-support"
+        "script.name": "cspunit1-support",
+        "activity_section.key": "dc6f34e2-a32f-431d-b64c-8171e4513f98"
       },
       "level_keys": [
         "U1L5 How the Internet Works - Video"
@@ -159,12 +277,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sample External Resource"
-        ],
         "progression": "Sample External Resource"
       },
       "bonus": false,
@@ -174,7 +289,8 @@
         ],
         "lesson.key": "Intro to the Unit",
         "lesson_group.key": "required",
-        "script.name": "cspunit1-support"
+        "script.name": "cspunit1-support",
+        "activity_section.key": "9f44dadf-72ce-4581-bd58-71275dab5e03"
       },
       "level_keys": [
         "Sample External Resource"
@@ -183,12 +299,9 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Empty Markdown Level"
-        ],
         "progression": "Empty Markdown Level"
       },
       "bonus": false,
@@ -198,7 +311,8 @@
         ],
         "lesson.key": "Chapter Overviews",
         "lesson_group.key": "required",
-        "script.name": "cspunit1-support"
+        "script.name": "cspunit1-support",
+        "activity_section.key": "7e0b4d89-333e-4770-8537-cfcb2066e789"
       },
       "level_keys": [
         "Empty Markdown Level"
@@ -207,12 +321,9 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sample CSP Assessment"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -221,7 +332,8 @@
         ],
         "lesson.key": "Tool Talk: Intro to Netsim",
         "lesson_group.key": "required",
-        "script.name": "cspunit1-support"
+        "script.name": "cspunit1-support",
+        "activity_section.key": "c4d2d50a-1db3-4641-b03e-2ffc0afbe88b"
       },
       "level_keys": [
         "Sample CSP Assessment"
@@ -230,12 +342,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L2 Free Response Reflection"
-        ],
         "progression": "U3L2 Free Response Reflection"
       },
       "bonus": false,
@@ -245,7 +354,8 @@
         ],
         "lesson.key": "Supporting Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "cspunit1-support"
+        "script.name": "cspunit1-support",
+        "activity_section.key": "2c588586-a910-48de-a10d-bf05fc534c6f"
       },
       "level_keys": [
         "U3L2 Free Response Reflection"
@@ -261,7 +371,8 @@
         ],
         "lesson.key": "Intro to the Unit",
         "lesson_group.key": "required",
-        "script.name": "cspunit1-support"
+        "script.name": "cspunit1-support",
+        "activity_section.key": "2e23424b-c3ab-4df7-a2a5-8b01b298b718"
       }
     },
     {
@@ -272,7 +383,8 @@
         ],
         "lesson.key": "Intro to the Unit",
         "lesson_group.key": "required",
-        "script.name": "cspunit1-support"
+        "script.name": "cspunit1-support",
+        "activity_section.key": "dc6f34e2-a32f-431d-b64c-8171e4513f98"
       }
     },
     {
@@ -283,7 +395,8 @@
         ],
         "lesson.key": "Intro to the Unit",
         "lesson_group.key": "required",
-        "script.name": "cspunit1-support"
+        "script.name": "cspunit1-support",
+        "activity_section.key": "9f44dadf-72ce-4581-bd58-71275dab5e03"
       }
     },
     {
@@ -294,7 +407,8 @@
         ],
         "lesson.key": "Chapter Overviews",
         "lesson_group.key": "required",
-        "script.name": "cspunit1-support"
+        "script.name": "cspunit1-support",
+        "activity_section.key": "7e0b4d89-333e-4770-8537-cfcb2066e789"
       }
     },
     {
@@ -305,7 +419,8 @@
         ],
         "lesson.key": "Tool Talk: Intro to Netsim",
         "lesson_group.key": "required",
-        "script.name": "cspunit1-support"
+        "script.name": "cspunit1-support",
+        "activity_section.key": "c4d2d50a-1db3-4641-b03e-2ffc0afbe88b"
       }
     },
     {
@@ -316,7 +431,8 @@
         ],
         "lesson.key": "Supporting Peer Learning",
         "lesson_group.key": "practice",
-        "script.name": "cspunit1-support"
+        "script.name": "cspunit1-support",
+        "activity_section.key": "2c588586-a910-48de-a10d-bf05fc534c6f"
       }
     }
   ],

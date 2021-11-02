@@ -2,7 +2,9 @@
   "func": "loadImage",
   "category": "Drawing",
   "paletteParams": [
-    "url"
+    {
+      "name": "url"
+    }
   ],
   "params": [
     "\"https://code.org/images/logo.png\""
