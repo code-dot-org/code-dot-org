@@ -26579,9 +26579,9 @@ en:
               description_student: 'Write your own poem and then animate it using code! '
               description_teacher: 'In this CS and ELA integrated lesson, students will build on their previous learning about poetry by developing their own short poem. Then, students will work on their computers to animate their poems with code. In lesson 1, students used a poem dropdown menu to choose the poem they wanted to animate. In this lesson, students will use `set title`, `set author`, `add line`, and `animate text` blocks of code to change what text appears in their Playspace. '
             lesson-3:
-              name: User Input
-              description_student: 
-              description_teacher: 
+              name: Playing with Words
+              description_student: "Build an interactive app! Use prompts and user input in a creative new way. \n"
+              description_teacher: "In this lesson, students learn how to manipulate specific words in the text in their poems by using open-ended prompts and variables to store the user’s input. First, students explore an app with an open-ended prompt. Then students practice using variables in their code until they are able to combine text and variable blocks to create an interactive app.  \n"
             lesson-4:
               name: Build a Poem Generator
               description_student: 

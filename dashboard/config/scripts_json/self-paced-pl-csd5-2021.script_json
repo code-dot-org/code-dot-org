@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 18:41:44 UTC",
+    "serialized_at": "2021-11-02 19:28:43 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -525,6 +525,28 @@
       "chapter": 17,
       "position": 17,
       "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Consider real world implications"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-ModelCards-c4u"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d0423928-907f-4246-b062-97330e60ca53"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-ModelCards-c4u"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -733,6 +755,18 @@
         "level.key": "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021",
         "script_level.level_keys": [
           "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d0423928-907f-4246-b062-97330e60ca53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-ModelCards-c4u",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-ModelCards-c4u"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-8",
