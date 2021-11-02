@@ -170,7 +170,9 @@ class ActiveSupport::TestCase
 
     tested_script_names.each do |script_name|
       # create a placeholder factory-provided Script if we don't already have a
-      # fixture-provided one
+      # fixture-provided one.
+      # Specify skip_name_format_validation because 'ECSPD' will fail to be
+      # created otherwise, because upper case letters are not allowed.
       script = Script.find_by_name(script_name) ||
         create(:script, :with_levels, levels_count: 5, name: script_name, skip_name_format_validation: true)
 
