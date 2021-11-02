@@ -3,8 +3,8 @@ import _ from 'lodash';
 import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
 import {POEMS} from './constants';
-import * as utils from './commands/utils';
 import {containsAtLeastOneAlphaNumberic} from '../../utils';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as backgroundEffects} from './commands/backgroundEffects';
 import {commands as foregroundEffects} from './commands/foregroundEffects';
 import {commands as behaviors} from './commands/behaviors';
@@ -15,7 +15,6 @@ const LINE_HEIGHT = 50;
 const FONT_SIZE = 25;
 const PLAYSPACE_SIZE = 400;
 const POEM_DURATION = 400;
-const OCTI_SIZE = 75;
 
 export default class PoetryLibrary extends CoreLibrary {
   constructor(p5) {
@@ -38,7 +37,8 @@ export default class PoetryLibrary extends CoreLibrary {
       // updates this value.
       // This value is used as an offset when calculating which lines to show.
       animationStartFrame:
-        appOptions.level.standaloneAppName === 'poetry_hoc' ? 1 : null
+        appOptions.level.standaloneAppName === 'poetry_hoc' ? 1 : null,
+      backgroundMusic: undefined
     };
     this.backgroundEffect = () => this.p5.background('white');
     this.foregroundEffects = [];
@@ -87,6 +87,8 @@ export default class PoetryLibrary extends CoreLibrary {
         }
       },
 
+      // And add custom Poetry commands
+
       addFrame(frameType) {
         this.poemState.frameType = frameType;
       },
@@ -95,16 +97,17 @@ export default class PoetryLibrary extends CoreLibrary {
         spritelabCommands.destroy.call(this, {costume});
       },
 
-      // And add custom Poem Bot commands
-      textConcat(text1, text2) {
-        return [text1, text2].join('');
+      playMusic(url) {
+        if (this.poemState.backgroundMusic) {
+          audioCommands.stopSound({url: this.poemState.backgroundMusic});
+        }
+        this.poemState.backgroundMusic = url;
+        this.soundLog.push(url);
+        audioCommands.playSound({url, loop: true});
       },
 
-      randomWord() {
-        // TODO: get curated random word list from Curriculum
-        const words = ['cat', 'dog', 'fish'];
-        const index = utils.randomInt(0, words.length - 1);
-        return words[index];
+      textConcat(text1, text2) {
+        return [text1, text2].join('');
       },
 
       addLine(line) {
@@ -135,17 +138,17 @@ export default class PoetryLibrary extends CoreLibrary {
         }
       },
 
-      animatePoem() {
+      animateText() {
         this.poemState.animationStartFrame = this.p5.World.frameCount;
         // Reset line events since we're starting the poem animation over.
         Object.values(this.lineEvents).forEach(e => (e.fired = false));
       },
 
-      showPoem() {
+      showText() {
         this.poemState.isVisible = true;
       },
 
-      hidePoem() {
+      hideText() {
         this.poemState.isVisible = false;
       },
 
@@ -192,33 +195,6 @@ export default class PoetryLibrary extends CoreLibrary {
           // frame at which we know the student will pass the level).
           this.validationInfo.successFrame = this.p5.frameCount;
         }
-      },
-
-      drawOcti() {
-        this.p5.push();
-        this.p5.noStroke();
-        if (this.p5.World.frameCount > this.validationInfo.endTime) {
-          let octiImage = this.p5._preloadedInstructorImage;
-          this.p5.image(
-            octiImage,
-            PLAYSPACE_SIZE - OCTI_SIZE /* x */,
-            PLAYSPACE_SIZE - OCTI_SIZE /* y */,
-            OCTI_SIZE /* width */,
-            OCTI_SIZE /* height */
-          );
-        }
-        this.p5.pop();
-      },
-
-      isOctiClicked() {
-        return (
-          this.validationInfo.successFrame &&
-          this.p5.mouseDown() &&
-          this.p5.World.mouseX > PLAYSPACE_SIZE - OCTI_SIZE &&
-          this.p5.World.mouseX < PLAYSPACE_SIZE &&
-          this.p5.World.mouseY > PLAYSPACE_SIZE - OCTI_SIZE &&
-          this.p5.World.mouseY < PLAYSPACE_SIZE
-        );
       },
 
       drawProgressBar() {
@@ -293,10 +269,6 @@ export default class PoetryLibrary extends CoreLibrary {
     );
 
     this.p5.pop();
-  }
-
-  isPreviewFrame() {
-    return this.p5.World.frameCount === 1;
   }
 
   getScaledFontSize(text, font, desiredSize) {
@@ -390,11 +362,6 @@ export default class PoetryLibrary extends CoreLibrary {
   }
 
   getRenderInfo(poemState, frameCount) {
-    if (!poemState.isVisible) {
-      return {
-        lines: []
-      };
-    }
     let yCursor = OUTER_MARGIN;
     let renderInfo = {
       font: {
@@ -402,6 +369,11 @@ export default class PoetryLibrary extends CoreLibrary {
       },
       lines: []
     };
+
+    if (!poemState.isVisible) {
+      return renderInfo;
+    }
+
     if (poemState.title) {
       renderInfo.lines.push({
         text: poemState.title,

@@ -8,9 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-22 00:40:00 UTC",
+    "serialized_at": "2021-10-27 21:29:53 UTC",
     "published_state": "beta",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "valentine"
     }
@@ -79,6 +81,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Valentine_playlab_01"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -100,6 +105,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Valentine_artist_01"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -121,6 +129,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Valentine_artist2_01"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -142,6 +153,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "valentine_artist_03"
+        ]
       },
       "bonus": false,
       "seeding_key": {

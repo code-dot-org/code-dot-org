@@ -16,7 +16,7 @@ export const SingleCheckbox = props => {
       required={required}
       validationState={getValidationState(name, errors)}
       value={data[name]}
-      onChange={() => onChange(props)}
+      onChange={onChange}
       {...props}
     />
   );
