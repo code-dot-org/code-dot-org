@@ -16,7 +16,11 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     }
   }
 
-  /** Add trashcan to flyout instead of block canvas
+  /** Instantiate trashcan, but don't add it to the workspace SVG.
+   * If the toolbox is categorized, the toolbox will add the trashcan to its SVG
+   * when its DOM element is created (see CdoToolbox.js). If the toolbox is not
+   * categorized, the flyout will already be initialized, so we can go ahead and
+   * add the trashcan to the flyout SVG group now.
    * @override
    */
   addTrashcan() {
