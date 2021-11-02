@@ -17,9 +17,14 @@ social:
 
 The K–12 Computer Science Access Report is a collaborative partnership (with the help of many state education agencies and education organizations) to identify on a school-by-school basis where foundational computer science is taught and to identify disparities in students’ access to and participation in computer science. The annual [State of Computer Science Education](https://advocacy.code.org/stateofcs) (published each fall) includes a description and summary of this data. 
 
-**Appendices and all the summary data for the State of Computer Science Education can be downloaded here. The interactive data and raw data per school can be obtained from the Tableau view below.**
 
-The interactive visualization below provides data nationally and per state for the most recent school year of data reported in the K–12 Computer Science Access Report. Some tabs allow filtering by state, county, district, and legislative districts. An overview of each tab is as follows:
+The interactive visualization below provides data nationally and per state for the most recent school year of data reported in the K–12 Computer Science Access Report. Some tabs allow filtering by state, county, district, and legislative districts. The following data is also available:
+- Appendices and all the summary data for the State of Computer Science Education can be downloaded [here](#).
+- AP computer science exam-taking data over time, by gender and race/ethnicity can be viewed at [code.org/ap](https://code.org/ap) 
+- The interactive data and raw data per school can be obtained from the Tableau view below.
+
+
+An overview of each tab is as follows:
 
 - **Access Report:** provides summary statistics, map view, and key graphs on 9–12 computer science access, and allows filtering by state and more.
 - **Year over Year:** shows the percentage of 9–12 access over time by state or the U.S.

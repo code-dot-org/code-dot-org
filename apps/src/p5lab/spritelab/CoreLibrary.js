@@ -1,4 +1,5 @@
-import {createUuid} from '@cdo/apps/utils';
+import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
+import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
 
 export default class CoreLibrary {
@@ -34,6 +35,14 @@ export default class CoreLibrary {
     };
   }
 
+  isPreviewFrame() {
+    return this.currentFrame() === 1;
+  }
+
+  currentFrame() {
+    return this.p5.World.frameCount;
+  }
+
   getBackground() {
     return this.background;
   }
@@ -55,26 +64,68 @@ export default class CoreLibrary {
   }
 
   drawSpeechBubbles() {
-    this.p5.push();
-    this.p5.fill('black');
-    this.p5.stroke('white');
-    this.p5.strokeWeight(2);
-    this.p5.textSize(25);
-    this.speechBubbles.forEach(bubbleInfo => {
-      this.p5.text(bubbleInfo.text, bubbleInfo.sprite.x, bubbleInfo.sprite.y);
+    // Since this runs on every draw, remove any temporary speech
+    // bubbles that have expired.
+    this.removeExpiredSpeechBubbles();
+
+    if (this.speechBubbles.length === 0 || this.isPreviewFrame()) {
+      return;
+    }
+
+    this.speechBubbles.forEach(({text, sprite}) => {
+      this.drawSpeechBubble(
+        text,
+        sprite.x,
+        sprite.y - Math.round(sprite.getScaledHeight() / 2)
+      );
     });
-    this.p5.pop();
   }
 
-  addSpeechBubble(sprite, text) {
+  drawSpeechBubble(text, x, y) {
+    const padding = 8;
+    text = ellipsify(text, 150 /* maxLength */);
+    let textSize = 10;
+    if (text.length < 50) {
+      textSize = 20;
+    } else if (text.length < 75) {
+      textSize = 15;
+    }
+
+    const lines = stringToChunks(text, 16 /* maxLength */);
+    const longestLine = [...lines].sort((a, b) =>
+      a.length < b.length ? 1 : -1
+    )[0];
+    let width =
+      drawUtils.getTextWidth(this.p5, longestLine, textSize) + padding * 2;
+    width = Math.max(width, 50);
+    const height = lines.length * textSize + padding * 2;
+
+    // Draw bubble.
+    const {minY} = drawUtils.speechBubble(this.p5, x, y, width, height);
+
+    // Draw text within bubble.
+    drawUtils.multilineText(this.p5, lines, x, minY + padding, textSize, {
+      horizontalAlign: this.p5.CENTER
+    });
+  }
+
+  addSpeechBubble(sprite, text, seconds = null) {
     const id = createUuid();
-    this.speechBubbles.push({id, sprite, text});
+    const removeAt = seconds ? this.getAdjustedWorldTime() + seconds : null;
+    // Note: renderFrame is used by validation code.
+    this.speechBubbles.push({
+      id,
+      sprite,
+      text,
+      removeAt,
+      renderFrame: this.currentFrame()
+    });
     return id;
   }
 
-  removeSpeechBubble(bubbleId) {
+  removeExpiredSpeechBubbles() {
     this.speechBubbles = this.speechBubbles.filter(
-      bubbleInfo => bubbleInfo.id !== bubbleId
+      ({removeAt}) => !removeAt || removeAt > this.getAdjustedWorldTime()
     );
   }
 
@@ -193,6 +244,13 @@ export default class CoreLibrary {
       spriteIds.push(parseInt(spriteId))
     );
     return spriteIds;
+  }
+
+  getLastSpeechBubbleForSpriteId(spriteId) {
+    const speechBubbles = this.speechBubbles.filter(
+      ({sprite}) => sprite.id === parseInt(spriteId)
+    );
+    return speechBubbles[speechBubbles.length - 1];
   }
 
   /**
