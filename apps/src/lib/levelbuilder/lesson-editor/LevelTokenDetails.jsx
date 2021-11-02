@@ -27,9 +27,6 @@ const disabledBonusTooltipText =
 const bonusAlreadySelectedTooltipText =
   'In order for bonus levels to show up for users you must enable lesson extras for the unit.';
 
-const disabledProfessionalLearningCourseText =
-  'You must set participant audience for the course to be something other than student.';
-
 const ArrowRenderer = ({onMouseDown}) => {
   return <i className="fa fa-chevron-down" onMouseDown={onMouseDown} />;
 };
@@ -45,7 +42,7 @@ class LevelTokenDetails extends Component {
     //redux
     setScriptLevelField: PropTypes.func.isRequired,
     lessonExtrasAvailableForUnit: PropTypes.bool,
-    professionalLearningCourse: PropTypes.bool
+    isProfessionalLearningCourse: PropTypes.bool
   };
 
   handleCheckboxChange = field => {
@@ -66,10 +63,6 @@ class LevelTokenDetails extends Component {
           ? disabledBonusTooltipText
           : bonusAlreadySelectedTooltipText
         : tooltipText[option];
-    } else if (option === 'instructor_in_training') {
-      return !this.props.professionalLearningCourse
-        ? disabledProfessionalLearningCourseText
-        : tooltipText[option];
     }
 
     return tooltipText[option];
@@ -80,18 +73,15 @@ class LevelTokenDetails extends Component {
     Object.keys(tooltipText).forEach(option => {
       tooltipIds[option] = _.uniqueId();
     });
-    const scriptLevelOptions = [
-      'bonus',
-      'assessment',
-      'challenge',
-      'instructor_in_training'
-    ];
+    const scriptLevelOptions = ['bonus', 'assessment', 'challenge'];
+
+    if (this.props.isProfessionalLearningCourse) {
+      scriptLevelOptions.push('instructor_in_training');
+    }
 
     const disableBonus =
       !this.props.scriptLevel['bonus'] &&
       !this.props.lessonExtrasAvailableForUnit;
-
-    const disableInstructorInTraining = !this.props.professionalLearningCourse;
 
     const inactiveLevelNames = this.props.inactiveLevelNames || [];
 
@@ -110,11 +100,7 @@ class LevelTokenDetails extends Component {
                 style={styles.checkboxInput}
                 checked={!!this.props.scriptLevel[option]}
                 onChange={this.handleCheckboxChange.bind(this, option)}
-                disabled={
-                  (option === 'bonus' && disableBonus) ||
-                  (option === 'instructor_in_training' &&
-                    disableInstructorInTraining)
-                }
+                disabled={option === 'bonus' && disableBonus}
               />
               &nbsp;
               <span style={styles.checkboxText}>{optionText[option]}</span>
@@ -164,7 +150,7 @@ export const UnconnectedLevelTokenDetails = LevelTokenDetails;
 export default connect(
   state => ({
     lessonExtrasAvailableForUnit: state.lessonExtrasAvailableForUnit,
-    professionalLearningCourse: state.professionalLearningCourse
+    isProfessionalLearningCourse: state.isProfessionalLearningCourse
   }),
   {
     setScriptLevelField
