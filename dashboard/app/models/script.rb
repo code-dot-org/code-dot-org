@@ -205,7 +205,6 @@ class Script < ApplicationRecord
       )
 
       lessons.reload
-
       lessons.each do |lesson|
         lm = Plc::LearningModule.find_or_initialize_by(stage_id: lesson.id)
         lm.update!(
