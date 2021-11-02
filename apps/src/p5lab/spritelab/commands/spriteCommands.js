@@ -1,6 +1,6 @@
 import {commands as locationCommands} from './locationCommands';
 import {commands as behaviorCommands} from './behaviorCommands';
-import {utils} from '../../utils';
+import * as utils from '@cdo/apps/p5lab/utils';
 
 export const commands = {
   countByAnimation(spriteArg) {
