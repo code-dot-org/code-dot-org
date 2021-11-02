@@ -90,8 +90,6 @@ Dashboard::Application.routes.draw do
         post 'update_sharing_disabled'
         get 'student_script_ids'
         get 'code_review_groups'
-        get 'code_review_groups/unassigned', to: 'sections#unassigned_to_code_review_group'
-        post 'code_review_groups', to: 'sections#set_code_review_groups'
       end
       collection do
         get 'membership'
