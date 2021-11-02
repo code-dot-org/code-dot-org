@@ -23801,12 +23801,12 @@ en:
               description_teacher: ''
             Module 7:
               key: Module 7
-              name: 'Module 7: Tools and structure in Unit 9 - Data'
+              name: 'Module 7: Tools and Structure in Unit 9 - Data'
               description_student: ''
               description_teacher: ''
             Module 8:
               key: Module 8
-              name: 'Module 8: Building community and preparing students for the AP Exam'
+              name: 'Module 8: Building Community and Preparing Students for the AP Exam'
               description_student: ''
               description_teacher: ''
             new lesson:
@@ -26587,11 +26587,19 @@ en:
               description_student: 
               description_teacher: 
             lesson-5:
-              name: Word Choice
-              description_student: 
-              description_teacher: 
+              name: Choosing Words Carefully
+              description_student: Make your app even better! Change your poem generator app by adding words you want the user to choose from.
+              description_teacher: 'In this lesson, students create a poem generator app with multiple-choice prompts to guide the user to pick a carefully chosen word. Students will plan which words they will replace in their poems, choose three new multiple-choice words per prompt, and then program their poem generator using new multiple-choice prompts with events.
+
+'
             lesson-6:
               name: Poetry Circle
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Conditionals
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: poetry
           title: Computer Science and Poetry
