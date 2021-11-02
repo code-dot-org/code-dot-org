@@ -26,6 +26,9 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
     super.showEditor_(e);
 
     // Override so that grid dropdown is white.
+    // The Blockly team is planning to update the FieldGridDropdown plugin
+    // so that the dropdown color is configurable. Once that work is done, we can
+    // remove this code.
     const primaryColour = color.white;
     const borderColour = this.sourceBlock_.isShadow()
       ? this.sourceBlock_.getParent().style.colourTertiary
