@@ -205,6 +205,9 @@ class Script < ApplicationRecord
       )
 
       lessons.reload
+
+      puts "generate_plc_objects lessons: #{lessons.map(&:name)}"
+
       lessons.each do |lesson|
         lm = Plc::LearningModule.find_or_initialize_by(stage_id: lesson.id)
         lm.update!(
