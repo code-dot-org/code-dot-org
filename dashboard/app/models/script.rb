@@ -661,6 +661,41 @@ class Script < ApplicationRecord
     Rails.application.routes.url_helpers.script_path(self)
   end
 
+  def can_be_instructor?(user)
+    # If unit is in a unit group then decide based on unit group audience
+    return unit_group.can_be_instructor?(user) if unit_group
+
+    return false if user.student?
+    return true if user.permission?(UserPermission::CODE_INSTRUCTOR)
+
+    if instructor_audience == 'plc_reviewer'
+      return user.permission?(UserPermission::PLC_REVIEWER)
+    elsif instructor_audience == 'facilitator'
+      return user.permission?(UserPermission::FACILITATOR)
+    elsif instructor_audience == 'teacher'
+      return user.teacher?
+    end
+
+    false
+  end
+
+  def can_be_participant?(user)
+    # If unit is in a unit group then decide based on unit group audience
+    return unit_group.can_be_participant?(user) if unit_group
+
+    return true if user.permission?(UserPermission::CODE_INSTRUCTOR)
+
+    if participant_audience == 'facilitator'
+      return user.permission?(UserPermission::FACILITATOR)
+    elsif participant_audience == 'teacher'
+      return user.teacher?
+    elsif participant_audience == 'student'
+      return true #if participant audience is student let anyone join
+    end
+
+    false
+  end
+
   # @param user [User]
   # @param locale [String] User or request locale. Optional.
   # @return [Boolean] Whether the user can view the unit.
