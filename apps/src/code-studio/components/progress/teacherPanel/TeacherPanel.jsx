@@ -16,7 +16,7 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {hasLockableLessons} from '@cdo/apps/code-studio/progressRedux';
-import {sectionData, studentShape} from './types';
+import {sectionData, studentShape, levelWithProgress} from './types';
 
 class TeacherPanel extends React.Component {
   static propTypes = {
@@ -41,7 +41,7 @@ class TeacherPanel extends React.Component {
     unitHasLockableLessons: PropTypes.bool.isRequired,
     unlockedLessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     students: PropTypes.arrayOf(studentShape),
-    levelsWithProgress: PropTypes.array,
+    levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
     loadLevelsWithProgress: PropTypes.func.isRequired,
     teacherId: PropTypes.number
   };

@@ -7,7 +7,7 @@ import Radium from 'radium';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import SelectedStudentPairing from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentPairing';
-import {studentShape} from './types';
+import {studentShape, levelWithProgress} from './types';
 
 const RadiumFontAwesome = Radium(FontAwesome);
 
@@ -17,7 +17,7 @@ export default class SelectedStudentInfo extends React.Component {
     onSelectUser: PropTypes.func.isRequired,
     selectedUserId: PropTypes.number,
     teacherId: PropTypes.number,
-    levelsWithProgress: PropTypes.array
+    levelsWithProgress: PropTypes.arrayOf(levelWithProgress)
   };
 
   onUnsubmit = userLevelId => {
