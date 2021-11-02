@@ -1139,15 +1139,16 @@ class ScriptTest < ActiveSupport::TestCase
       @code_instructor = create :code_instructor
       @plc_reviewer = create :plc_reviewer
 
-      @unit_group = create(:unit_group, instructor_audience: 'teacher', participant_audience: 'student')
+      @unit_group = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
       @unit_in_course = create(:script)
       create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
+      @unit_in_course.reload
 
-      @unit_teacher_to_students = create(:script, instructor_audience: 'teacher', participant_audience: 'student')
-      @unit_facilitator_to_teacher = create(:script, instructor_audience: 'facilitator', participant_audience: 'teacher')
-      @unit_code_instructor_to_teacher = create(:script, instructor_audience: 'code_instructor', participant_audience: 'teacher')
-      @unit_plc_reviewer_to_facilitator = create(:script, instructor_audience: 'plc_reviewer', participant_audience: 'facilitator')
-      @unit_code_instructor_to_teacher = create(:script, instructor_audience: 'code_instructor', participant_audience: 'teacher')
+      @unit_teacher_to_students = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+      @unit_facilitator_to_teacher = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+      @unit_code_instructor_to_teacher = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+      @unit_plc_reviewer_to_facilitator = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+      @unit_code_instructor_to_teacher = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     end
 
     test 'unit in course should check course for participant and instructor audience' do
@@ -1201,23 +1202,31 @@ class ScriptTest < ActiveSupport::TestCase
     end
 
     test 'facilitator should be able to participate in units with facilitator as participant audience' do
-      assert_equal false, @unit_teacher_to_students.can_be_participant?(@facilitator)
-      assert_equal false, @unit_facilitator_to_teacher.can_be_participant?(@facilitator)
-      assert_equal false, @unit_code_instructor_to_teacher.can_be_participant?(@facilitator)
+      # anyone can be a participant in a student unit
+      assert_equal true, @unit_teacher_to_students.can_be_participant?(@facilitator)
+
+      # Since the facilitator is a teacher account it will also be able to participate in any teacher unit
+      assert_equal true, @unit_facilitator_to_teacher.can_be_participant?(@facilitator)
+      assert_equal true, @unit_code_instructor_to_teacher.can_be_participant?(@facilitator)
+      assert_equal true, @unit_code_instructor_to_teacher.can_be_participant?(@facilitator)
+
       assert_equal true, @unit_plc_reviewer_to_facilitator.can_be_participant?(@facilitator)
-      assert_equal false, @unit_code_instructor_to_teacher.can_be_participant?(@facilitator)
     end
 
     test 'teacher should be able to participate in units with teacher as participant audience' do
-      assert_equal false, @unit_teacher_to_students.can_be_participant?(@teacher)
+      # anyone can be a participant in a student unit
+      assert_equal true, @unit_teacher_to_students.can_be_participant?(@teacher)
+
       assert_equal true, @unit_facilitator_to_teacher.can_be_participant?(@teacher)
       assert_equal true, @unit_code_instructor_to_teacher.can_be_participant?(@teacher)
-      assert_equal false, @unit_plc_reviewer_to_facilitator.can_be_participant?(@teacher)
       assert_equal true, @unit_code_instructor_to_teacher.can_be_participant?(@teacher)
+
+      assert_equal false, @unit_plc_reviewer_to_facilitator.can_be_participant?(@teacher)
     end
 
     test 'student should be able to participate in units with student as participant audience' do
       assert_equal true, @unit_teacher_to_students.can_be_participant?(@student)
+
       assert_equal false, @unit_facilitator_to_teacher.can_be_participant?(@student)
       assert_equal false, @unit_code_instructor_to_teacher.can_be_participant?(@student)
       assert_equal false, @unit_plc_reviewer_to_facilitator.can_be_participant?(@student)
