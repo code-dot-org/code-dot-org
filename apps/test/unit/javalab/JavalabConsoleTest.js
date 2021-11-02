@@ -99,6 +99,7 @@ describe('Java Lab Console Test', () => {
       expect(photoSelectionView.props().promptText).to.equal(prompt);
 
       store.dispatch(closePhotoPrompter());
+      wrapper.update();
       expect(wrapper.find(PhotoSelectionView)).to.be.empty;
     });
 
@@ -121,6 +122,7 @@ describe('Java Lab Console Test', () => {
       const photoSelectionView = wrapper.find(PhotoSelectionView).first();
 
       photoSelectionView.props().onPhotoSelected(file);
+      wrapper.update();
 
       sinon.assert.calledWith(onPhotoPrompterFileSelected, file);
       expect(wrapper.find(PhotoSelectionView)).to.be.empty;
