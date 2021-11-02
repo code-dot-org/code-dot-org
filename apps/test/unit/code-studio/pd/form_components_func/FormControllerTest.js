@@ -1,8 +1,8 @@
 import FormController from '@cdo/apps/code-studio/pd/form_components_func/FormController';
 import React from 'react';
 import {expect} from '../../../../util/reconfiguredChai';
+import {mount} from 'enzyme';
 import sinon from 'sinon';
-import {isolateComponent} from 'isolate-components';
 
 let DummyPage1 = () => {
   return <div>Page 1</div>;
@@ -56,60 +56,71 @@ describe('FormController', () => {
       };
     });
 
-    const getCurrentPage = () => form.findOne('Pagination').props.activePage;
-    const getData = page => form.findOne(page).props.data;
-    const getErrors = page => form.findOne(page).props.errors;
+    const getCurrentPage = () => form.find('Pagination').prop('activePage');
+    const getData = page => form.find(page).prop('data');
+    const getErrors = page => form.find(page).prop('errors');
     const setPage = i => {
-      form.findOne('Pagination').props.onSelect(i + 1);
+      form.find('Pagination').prop('onSelect')(i + 1);
+      form.update();
     };
 
     it('Initially renders the first page', () => {
-      form = isolateComponent(<FormController {...defaultProps} />);
+      form = mount(<FormController {...defaultProps} />);
       expect(getCurrentPage()).to.equal(1);
-      expect(form.exists(DummyPage1));
-      expect(!form.exists(DummyPage2));
-      expect(!form.exists(DummyPage3));
+      expect(form.find(DummyPage1)).to.have.length(1);
+      expect(form.find(DummyPage2)).to.have.length(0);
+      expect(form.find(DummyPage3)).to.have.length(0);
     });
 
-    it('Displays correct number of page buttons on each page', () => {
-      form = isolateComponent(<FormController {...defaultProps} />);
-      const pagination = form.findOne('Pagination');
-      expect(pagination.props.items).to.equal(3);
+    it('Displays page buttons on each page', () => {
+      form = mount(<FormController {...defaultProps} />);
+      const validatePageButtons = () => {
+        const pageButtons = form.find('Pagination PaginationButton');
+        expect(pageButtons).to.have.length(3);
+        expect(pageButtons.map(button => button.text())).to.eql([
+          '1',
+          '2',
+          '3'
+        ]);
+      };
+
+      for (let i = 0; i < 3; i++) {
+        setPage(i);
+        validatePageButtons();
+      }
     });
 
     it('Has a next button on the first page', () => {
-      form = isolateComponent(<FormController {...defaultProps} />);
-      const nextButton = form.findOne('Button');
-      expect(nextButton.content()).to.eql('Next');
+      form = mount(<FormController {...defaultProps} />);
+      const nextButton = form.find('button');
+      expect(nextButton).to.have.length(1);
+      expect(nextButton.text()).to.eql('Next');
     });
 
     it('Has back and next buttons on middle pages', () => {
-      form = isolateComponent(
+      form = mount(
         <FormController {...defaultProps} validateOnSubmitOnly={true} />
       );
       setPage(1);
-      const buttons = form.findAll('Button');
+      const buttons = form.find('button');
       expect(buttons).to.have.length(2);
-      expect(buttons.map(button => button.content())).to.eql(['Back', 'Next']);
+      expect(buttons.map(button => button.text())).to.eql(['Back', 'Next']);
     });
 
     it('Has a back and submit button on the last page', () => {
-      form = isolateComponent(
+      form = mount(
         <FormController {...defaultProps} validateOnSubmitOnly={true} />
       );
       setPage(2);
-      const buttons = form.findAll('Button');
+      const buttons = form.find('button');
       expect(buttons).to.have.length(2);
-      expect(buttons.map(button => button.content())).to.eql([
-        'Back',
-        'Submit'
-      ]);
+      expect(buttons.map(button => button.text())).to.eql(['Back', 'Submit']);
     });
 
     describe('Page validation', () => {
       it('Does not navigate when the current page has errors', () => {
         // create errors
-        form = isolateComponent(
+        form = mount(
           <FormController {...defaultProps} requiredFields={['field1']} />
         );
         DummyPage1.associatedFields = ['field1'];
@@ -121,7 +132,7 @@ describe('FormController', () => {
 
       it('Navigates when the current page has no errors', () => {
         // create valid
-        form = isolateComponent(<FormController {...defaultProps} />);
+        form = mount(<FormController {...defaultProps} />);
         setPage(1);
 
         expect(getErrors(DummyPage2)).to.be.empty;
@@ -131,15 +142,14 @@ describe('FormController', () => {
       describe('Submitting', () => {
         let server;
 
-        const triggerSubmit = () =>
-          form.findOne('form').props.onSubmit(new window.SubmitEvent('submit'));
+        const submitButton = () => form.find('#submit').first();
 
         const setupValid = () => {
-          form = isolateComponent(<FormController {...defaultProps} />);
+          form = mount(<FormController {...defaultProps} />);
           setPage(2);
         };
         const setupErrored = () => {
-          form = isolateComponent(
+          form = mount(
             <FormController {...defaultProps} requiredFields={['field1']} />
           );
           DummyPage3.associatedFields = ['field1'];
@@ -156,7 +166,8 @@ describe('FormController', () => {
         it('Does not submit when the last page has errors', () => {
           setupErrored();
 
-          triggerSubmit();
+          submitButton().simulate('submit');
+          form.update();
 
           expect(getErrors(DummyPage3)).to.not.be.empty;
           expect(server.requests).to.be.empty;
@@ -165,7 +176,8 @@ describe('FormController', () => {
         it('Submits when the last page has no errors', () => {
           setupValid();
 
-          triggerSubmit();
+          submitButton().simulate('submit');
+          form.update();
 
           expect(getErrors(DummyPage3)).to.be.empty;
           expect(server.requests).to.have.length(1);
@@ -174,8 +186,9 @@ describe('FormController', () => {
 
         it('Disables the submit button during submit', () => {
           setupValid();
-          triggerSubmit();
-          expect(form.findOne('#submit').props.disabled).to.be.true;
+          submitButton().simulate('submit');
+          form.update();
+          expect(submitButton().prop('disabled')).to.be.true;
         });
 
         it('Re-enables the submit button on error', () => {
@@ -188,11 +201,12 @@ describe('FormController', () => {
             })
           ]);
 
-          triggerSubmit();
+          submitButton().simulate('submit');
           server.respond();
+          form.update();
 
           expect(getErrors(DummyPage3)).to.eql(['an error']);
-          expect(form.findOne('#submit').props.disabled).to.be.false;
+          expect(submitButton().prop('disabled')).to.be.false;
         });
 
         it('Keeps the submit button disabled and calls onSuccessfulSubmit on success', () => {
@@ -203,10 +217,11 @@ describe('FormController', () => {
             JSON.stringify({})
           ]);
 
-          triggerSubmit();
+          submitButton().simulate('submit');
           server.respond();
+          form.update();
 
-          expect(form.findOne('#submit').props.disabled).to.be.true;
+          expect(submitButton().prop('disabled')).to.be.true;
           expect(onSuccessfulSubmit).to.be.calledOnce;
         });
       });
@@ -215,7 +230,7 @@ describe('FormController', () => {
     describe('validateCurrentPageRequiredFields()', () => {
       it('Generates errors for missing required fields on the current page', () => {
         // No data provided, so all required fields are missing
-        form = isolateComponent(
+        form = mount(
           <FormController
             {...defaultProps}
             requiredFields={['included', 'excluded']}
@@ -237,7 +252,7 @@ describe('FormController', () => {
           otherPageTextFieldWithSpace: '   no trim   ',
           otherPageArrayField: ['  still no trim in array  ']
         };
-        form = isolateComponent(
+        form = mount(
           <FormController
             {...defaultProps}
             getInitialData={() => initialData}
@@ -287,7 +302,7 @@ describe('FormController', () => {
           ...pageData,
           page2Field1: 'unmodified'
         };
-        form = isolateComponent(
+        form = mount(
           <FormController
             {...defaultProps}
             getInitialData={() => initialData}
@@ -316,14 +331,14 @@ describe('FormController', () => {
         const initialData = {
           existingField1: 'existing value 1'
         };
-        form = isolateComponent(
+        form = mount(
           <FormController
             {...defaultProps}
             sessionStorageKey={sessionStorageKey}
             getInitialData={() => initialData}
           />
         );
-        form.findOne(DummyPage1).props.onChange({
+        form.find(DummyPage1).prop('onChange')({
           updatedField1: 'updated value 1'
         });
         expect(sessionStorage[sessionStorageKey]).to.eql(
@@ -341,7 +356,7 @@ describe('FormController', () => {
         const initialData = {
           existingField1: 'existing value 1'
         };
-        form = isolateComponent(
+        form = mount(
           <FormController
             {...defaultProps}
             sessionStorageKey={sessionStorageKey}
@@ -367,7 +382,7 @@ describe('FormController', () => {
           data: testData
         });
 
-        form = isolateComponent(
+        form = mount(
           <FormController
             {...defaultProps}
             sessionStorageKey={sessionStorageKey}
