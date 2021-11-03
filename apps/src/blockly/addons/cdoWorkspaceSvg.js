@@ -91,8 +91,12 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     return Blockly.mainBlockSpace.getMetrics().toolboxWidth;
   }
 
-  // Use visibility:hidden not display:none to hide the trashcan so that it still takes up space, which is important
-  // for how the lid opening works.
+  /**
+   * Use visibility:hidden not display:none for the toolbox contents so that
+   * Blockly's metrics calculations for toolbox dimensions still work as expected.
+   * Use display:none not visibility:hidden for the trashcan element so that
+   * it doesn't interfere with click events on the toolbox categories.
+   */
   hideTrashcan() {
     /**
      * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
