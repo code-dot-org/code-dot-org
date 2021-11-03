@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import OrderableList from './OrderableList';
+import ExampleEditor from './ExampleEditor';
 import ParameterEditor from './ParameterEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
@@ -27,6 +28,15 @@ function renderParameterEditor(param, updateFunc) {
     <ParameterEditor
       parameter={param}
       update={(key, value) => updateFunc(key, value)}
+    />
+  );
+}
+
+function renderExampleEditor(example, updateFunc) {
+  return (
+    <ExampleEditor
+      example={example}
+      updateExample={(key, value) => updateFunc(key, value)}
     />
   );
 }
@@ -209,6 +219,14 @@ export default function ProgrammingExpressionEditor({
           renderItem={renderParameterEditor}
         />
       </CollapsibleEditorSection>
+      <CollapsibleEditorSection title="Examples" collapsed>
+        <OrderableList
+          list={programmingExpression.examples || []}
+          setList={list => updateProgrammingExpression('examples', list)}
+          addButtonText="Add Another Example"
+          renderItem={renderExampleEditor}
+        />
+      </CollapsibleEditorSection>
       <SaveBar
         handleSave={save}
         isSaving={isSaving}
@@ -231,7 +249,8 @@ const programmingExpressionShape = PropTypes.shape({
   syntax: PropTypes.string,
   returnValue: PropTypes.string,
   tips: PropTypes.string,
-  parameters: PropTypes.arrayOf(PropTypes.object).isRequired
+  parameters: PropTypes.arrayOf(PropTypes.object).isRequired,
+  examples: PropTypes.arrayOf(PropTypes.object).isRequired
 });
 
 ProgrammingExpressionEditor.propTypes = {
