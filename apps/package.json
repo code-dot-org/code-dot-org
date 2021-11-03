@@ -219,6 +219,7 @@
     "webpack-stats-plugin": "^0.2.1"
   },
   "dependencies": {
+    "@blockly/field-grid-dropdown": "^1.0.25",
     "@blockly/plugin-scroll-options": "^1.0.4",
     "@code-dot-org/js-interpreter": "1.3.13",
     "@code-dot-org/remark-plugins": "^1.1.0",

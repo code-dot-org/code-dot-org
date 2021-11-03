@@ -25,6 +25,8 @@ const SET_IS_START_MODE = 'javalab/SET_IS_START_MODE';
 const SET_LEVEL_NAME = 'javalab/SET_LEVEL_NAME';
 const SET_DISABLE_FINISH_BUTTON = 'javalab/SET_DISABLE_FINISH_BUTTON';
 const TOGGLE_VISUALIZATION_COLLAPSED = 'javalab/TOGGLE_VISUALIZATION_COLLAPSED';
+const OPEN_PHOTO_PROMPTER = 'javalab/OPEN_PHOTO_PROMPTER';
+const CLOSE_PHOTO_PROMPTER = 'javalab/CLOSE_PHOTO_PROMPTER';
 
 const initialState = {
   consoleLogs: [],
@@ -44,7 +46,9 @@ const initialState = {
   isStartMode: false,
   levelName: undefined,
   disableFinishButton: false,
-  isVisualizationCollapsed: false
+  isVisualizationCollapsed: false,
+  isPhotoPrompterOpen: false,
+  photoPrompterPromptText: ''
 };
 
 // Action Creators
@@ -165,6 +169,15 @@ export const setDisableFinishButton = disableFinishButton => {
     disableFinishButton
   };
 };
+
+export const openPhotoPrompter = promptText => ({
+  type: OPEN_PHOTO_PROMPTER,
+  promptText
+});
+
+export const closePhotoPrompter = () => ({
+  type: CLOSE_PHOTO_PROMPTER
+});
 
 // Selectors
 export const getSources = state => {
@@ -390,6 +403,20 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isVisualizationCollapsed: !state.isVisualizationCollapsed
+    };
+  }
+  if (action.type === OPEN_PHOTO_PROMPTER) {
+    return {
+      ...state,
+      isPhotoPrompterOpen: true,
+      photoPrompterPromptText: action.promptText
+    };
+  }
+  if (action.type === CLOSE_PHOTO_PROMPTER) {
+    return {
+      ...state,
+      isPhotoPrompterOpen: false,
+      photoPrompterPromptText: ''
     };
   }
   return state;
