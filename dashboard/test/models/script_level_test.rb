@@ -874,7 +874,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
       Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
 
-      level = create :maze, name: 'visible after level', level_num: 'custom'
+      level = create :maze, name: 'visible after level'
       script_with_visible_after_lessons = create :script
       lesson_group = create :lesson_group, script: script_with_visible_after_lessons
 
@@ -944,8 +944,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script = create :script, is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script
-    level1 = create :level, level_num: 'custom'
-    level2 = create :level, level_num: 'custom'
+    level1 = create :level
+    level2 = create :level
     script_level = create :script_level, script: script, lesson: lesson, levels: [level1]
     assert_equal level1, script_level.oldest_active_level
     assert script_level.active?(level1)
@@ -990,8 +990,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script = create :script, is_migrated: false
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script
-    level1 = create :level, level_num: 'custom'
-    level2 = create :level, level_num: 'custom'
+    level1 = create :level
+    level2 = create :level
     script_level = create :script_level, script: script, lesson: lesson, levels: [level1]
     assert_equal level1, script_level.oldest_active_level
 

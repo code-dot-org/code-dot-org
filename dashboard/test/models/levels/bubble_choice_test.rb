@@ -315,9 +315,9 @@ DSL
   end
 
   test 'clone with suffix copies sublevels' do
-    sublevel1 = create :level, name: 'sublevel_1', level_num: 'custom'
-    sublevel2 = create :level, name: 'sublevel_2', level_num: 'custom'
-    sublevel3 = create :level, name: 'sublevel_3', level_num: 'custom'
+    sublevel1 = create :level, name: 'sublevel_1'
+    sublevel2 = create :level, name: 'sublevel_2'
+    sublevel3 = create :level, name: 'sublevel_3'
 
     # clone_with_suffix needs to be able to access the level object as well as
     # its DSL text. Rather than create an actual DSL file, we stub the level's
