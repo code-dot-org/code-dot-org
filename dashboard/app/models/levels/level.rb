@@ -44,7 +44,6 @@ class Level < ApplicationRecord
 
   validates_length_of :name, within: 1..70
   validate :reject_illegal_chars
-  validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where(level_num: ['custom', nil])}
   validates_uniqueness_of :level_num, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
   validate :validate_game, on: [:create, :update]
@@ -233,13 +232,13 @@ class Level < ApplicationRecord
   end
 
   def self.custom_levels
-    Naturally.sort_by(Level.where.not(user_id: nil), :name)
+    Naturally.sort_by(Level.where.not(level_num: 'custom'), :name)
   end
 
   # Custom levels are built in levelbuilder. Legacy levels are defined in .js.
-  # All custom levels will have a user_id, except for DSLDefined levels.
+  # All custom levels will have a 'custom' level_num, except for DSLDefined levels.
   def custom?
-    user_id.present? || is_a?(DSLDefined)
+    level_num == 'custom' || is_a?(DSLDefined)
   end
 
   def should_localize?
