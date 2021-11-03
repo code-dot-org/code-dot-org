@@ -8,7 +8,6 @@ layout: none
 
 =inline_css 'interactive-map.css'
 =inline_css 'advocacy-stateofcsreport.css'
-=inline_css 'tempsocs.css'
 
 :javascript
   var documents = {
@@ -75,13 +74,13 @@ layout: none
 .container_responsive{style: "background-color: #F5F5F5; text-align: center"}
   .col-33
     %a{href: "https://advocacy.code.org"}
-      %img{src: "/images/fit-100/CodeLogo.png", style: "padding: 10px"}
+      %img{src: "/images/fit-100/CodeLogo.png", style: "padding: 10px", alt: "Code.org Advocacy Coalition Logo"}
   .col-33
     %a{href: "https://www.csteachers.org"}
-      %img{src: "/images/fit-100/CSTALogo.png", style: "padding: 10px; padding-top: 15px"}
+      %img{src: "/images/fit-100/CSTALogo.png", style: "padding: 10px; padding-top: 15px", alt: "CSTA Logo"}
   .col-33
     %a{href: "https://ecepalliance.org"}
-      %img{src: "/images/fit-100/ECEP_Logo.jpg", style: "padding: 10px"}
+      %img{src: "/images/fit-100/ECEP_Logo.jpg", style: "padding: 10px", alt: "ECEP Logo"}
   .clear
 
 %br 
@@ -98,7 +97,7 @@ layout: none
       %br
       %br
       Choose a 
-      %a{href: "#", target: "_blank", style: "text-decoration: underline !important; color: #E8EFEF;"}digital PDF
+      %a{href: "/2021_state_of_cs.pdf", target: "_blank", style: "text-decoration: underline !important; color: #E8EFEF;"}digital PDF
       or 
       %a{href: "#", target: "_blank", style: "text-decoration: underline !important; color: #E8EFEF;"}order a physical copy
       today.
@@ -107,10 +106,10 @@ layout: none
 %br 
   .container_responsive#calltoaction{style: "text-align: center;"}
     .block.col-33{style: "padding: 25px;"}
-      %a{href: "#", target: "_blank", style: "text-decoration: none"}
+      %a{href: "/2021_state_of_cs.pdf", target: "_blank", style: "text-decoration: none"}
         .downloadaction
           %button{style: "background-color: #2C3F1C; color: white; border-color: #2C3F1C; margin-bottom: 4%;"} Download Report
-          %img{src: "/tempsocs-images/socs-cover-2021.png", alt: "screenshot of the front page cover of the State of CS 2021 report", style: "width: 75%; border-radius: 15px;"}
+          %img{src: "/images/socs-cover-2021.png", alt: "screenshot of the front page cover of the State of CS 2021 report", style: "width: 75%; border-radius: 15px;"}
     .block.col-33{style: "padding: 25px;"}
       .downloadaction
         %select.dropdown.small-state-dropdown.top-dropdown
@@ -119,13 +118,13 @@ layout: none
             %option{value: abbr}= state 
             :javascript
               statePicker()
-        %img{src: "/tempsocs-images/state-page.png", alt: "screenshot of the Guide to State Summaries page from the report", style: "width: 75%; border-radius: 15px;"}
+        %img{src: "/images/state-page.png", alt: "screenshot of the first page from Alabama's state handout", style: "width: 75%; border-radius: 15px;"}
 
     .block.col-33{style: "padding: 25px;"}
-      %a{href: "#", target: "_blank"}
+      %a{href: "http://code.org/yourschool/accessreport", target: "_blank"}
         .downloadaction
           %button{style: "background-color: #2C3F1C; color: white; border-color: #2C3F1C; margin-bottom: 4%;"} Interact with the Data
-          %img{src: "/tempsocs-images/tableau-long.png", alt: "screenshot of the Tableau dashboard linked below", style: "width: 75%; border-radius: 15px;"}
+          %img{src: "/images/tableau-long.png", alt: "screenshot of the Tableau dashboard linked below", style: "width: 75%; border-radius: 15px;"}
   .clear
 
 %h2{:style => "text-align: center;"}
@@ -140,7 +139,7 @@ layout: none
     %li{:data => {:target => "#slide-images", :slide_to => "2"}} 
   .carousel-inner
     .item.active{:style => "padding-left: 20%; padding-right: 20%;"}
-      %img.col-50{:src => "/tempsocs-images/percentage-heatmap.png", :alt => ""}
+      %img.col-50{:src => "/images/percentage-heatmap.png", :alt => "Heat map percentage of high schools offering at least one foundational computer science course in each US state. Raw data available for download at advocacy.code.org/StateOfCS"}
       .col-50{:style => "text-align: center; padding-top: 10%;"}
         %p
           %b Across the U.S., 51% of public high schools offer foundational computer science. 
@@ -148,7 +147,7 @@ layout: none
           %br
           %em Disparities in access persist. See the full report or the state handout to see disparities by state. 
     .item{:style => "padding-left: 20%; padding-right: 20%;"}
-      %img.col-50{:src => "/tempsocs-images/policy-correlation.png", :alt => ""}
+      %img.col-50{:src => "/images/policy-correlation.png", :alt => "Scatter plot of number of CS education policies in place vs Percent of High Schools Offering CS showing a positive correlation-- the higher the number of policies, the higher the percentage of high schools offering CS."}
       .col-50{:style => "text-align: center; padding-top: 10%;"}
         %p
           %b Adoption of computer science policies is correlated with the percentage of high schools offering computer science.
@@ -156,7 +155,7 @@ layout: none
           %br
           %em Policy to make computer science a fundamental part of the education system matters. See the full report for recommendations
     .item{:style => "padding-left: 20%; padding-right: 20%;"}
-      %img.col-50{:src => "/tempsocs-images/policy-count-map.png", :alt => ""}
+      %img.col-50{:src => "/images/policy-count-map.png", :alt => "Heat map number of CS education policies in each US state. Raw data available for download at advocacy.code.org/StateOfCS."}
       .col-50{:style => "text-align: center; padding-top: 10%;"}
         %p
           %b 39 states have adopted 4 or more policies to make computer science part of the education system. 
@@ -207,17 +206,16 @@ layout: none
           %h2 Downloads
           %ul
             %li
-              %a{href: "#", target: "_blank"} Download presentation 
+              %a{href: "/2021_State_of_CS_slides.pptx", target: "_blank"} Download presentation 
               (includes high-quality graphics)
             %li
-              %a{href: "#", target: "_blank"} Explore data
-              (data dashboard) or download data (
-              %a{href: "#", target: "_blank"}csv
-              \ / 
-              %a{href: "#", target: "_blank"}xlsx
+              Explore data (
+              %a{href: "http://code.org/yourschool/accessreport", target: "_blank"} data dashboard
+              ) or download data (
+              %a{href: "/2021_State_of_CS_data.xlsx", target: "_blank"}xlsx
               )
             %li
-              %a{href: "#", target: "_blank"} Download report 
+              %a{href: "/2021_state_of_cs.pdf", target: "_blank"} Download report 
             %li
               %a{href: "#", target: "_blank"} Purchase a report 
               (physical copy)
