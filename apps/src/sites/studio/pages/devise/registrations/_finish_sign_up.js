@@ -52,6 +52,7 @@ $(document).ready(() => {
   const inClearerUserTypeOptExp =
     localStorage.getItem('inClearerUserTypeOptExpLS') === 'true';
 
+  let userType = $('#user_user_type')[0].value;
   init();
 
   function init() {
@@ -68,7 +69,7 @@ $(document).ready(() => {
         'width:220px;';
     }
     // TO-DELETE ONCE CLEARER USER TYPE BUTTONS OPTIMIZELY-EXPERIMENT IS COMPLETE (end)
-    setUserType(getUserType());
+    setUserType(userType);
     renderSchoolInfo();
     renderParentSignUpSection();
   }
@@ -83,9 +84,8 @@ $(document).ready(() => {
       return false;
     }
 
-    // Optimizely-related code for new sign-up user-type buttons (start)
-    optimizelyCountUserTypeSelection(getUserType());
-    // Optimizely-related code for new sign-up user-type buttons (end)
+    // Trigger Optimizely counter for user type selection
+    optimizelyCountUserTypeSelection(userType);
 
     // Optimizely-related code for teacher opting to share email with regional partner (start)
     optimizelyCountSuccessSignupWithRegPartnerOpt();
@@ -93,7 +93,7 @@ $(document).ready(() => {
 
     alreadySubmitted = true;
     // Clean up school data and set age for teachers.
-    if (getUserType() === 'teacher') {
+    if (userType === 'teacher') {
       cleanSchoolInfo();
       $('#user_age').val('21+');
     }
@@ -119,7 +119,7 @@ $(document).ready(() => {
   $('#user_parent_email_preference_opt_in_required').change(function() {
     // If the user_type is currently blank, switch the user_type to 'student' because that is the only user_type which
     // allows the parent sign up section of the form.
-    if (getUserType() === '') {
+    if (userType === '') {
       $('#user_user_type')
         .val('student')
         .change();
@@ -138,16 +138,13 @@ $(document).ready(() => {
     }
   }
 
-  // Keep if sign-up user type experiment favors variant (start)
   // Event listeners for changing the user type
   document.addEventListener('selectUserTypeTeacher', e => {
     $('#user_user_type').val('teacher');
-    styleSelectedUserTypeButton('teacher');
     setUserType('teacher');
   });
   document.addEventListener('selectUserTypeStudent', e => {
     $('#user_user_type').val('student');
-    styleSelectedUserTypeButton('student');
     setUserType('student');
   });
 
@@ -160,9 +157,8 @@ $(document).ready(() => {
       teacherButton.classList.remove('select-user-type-button-selected');
     }
   }
-  // Keep if sign-up user type experiment favors variant (end)
 
-  // Optimizely-related code for new sign-up user-type buttons
+  // Optimizely metric for seeing which user type new users select
   function optimizelyCountUserTypeSelection(userType) {
     window['optimizely'] = window['optimizely'] || [];
     window['optimizely'].push({type: 'event', eventName: userType});
@@ -180,23 +176,21 @@ $(document).ready(() => {
     setUserType(value);
   });
 
-  function getUserType() {
-    var value = $('#user_user_type')[0].value;
-    styleSelectedUserTypeButton(value);
-    return value;
-  }
-
-  function setUserType(userType) {
-    if (userType) {
-      trackUserType(userType);
+  function setUserType(newUserType) {
+    if (newUserType) {
+      trackUserType(newUserType);
     }
 
-    if (userType === 'teacher') {
+    if (newUserType === 'teacher') {
       switchToTeacher();
     } else {
       // Show student fields by default.
       switchToStudent();
     }
+    if (inClearerUserTypeOptExp) {
+      styleSelectedUserTypeButton(newUserType);
+    }
+    userType = newUserType;
   }
 
   function switchToTeacher() {
