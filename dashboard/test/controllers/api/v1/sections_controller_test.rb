@@ -1106,7 +1106,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       groups: [
         {id: group1.id, name: group1.name, members: group1_members},
         {id: group2.id, name: group2.name, members: group2_members},
-        {unassigned: true, name: 'unassigned', members: unassigned_members}
+        {unassigned: true, members: unassigned_members}
       ]
     }
     assert_response :success
