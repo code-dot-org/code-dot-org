@@ -575,6 +575,74 @@ class SectionTest < ActiveSupport::TestCase
     refute Section.valid_grade?("56")
   end
 
+  test 'reset_code_review_groups creates new code review groups' do
+    code_review_group_section = create(:section, user: @teacher, login_type: 'word')
+    # Create 5 students
+    followers = []
+    5.times do |i|
+      student = create(:student, name: "student_#{i}")
+      followers << create(:follower, section: code_review_group_section, student_user: student)
+    end
+    group_1_name = 'new_group_1'
+    group_2_name = 'new_group_2'
+    new_groups = [
+      {name: group_1_name, members: [{follower_id: followers[0].id}]},
+      {name: group_2_name, members: [{follower_id: followers[2].id}, {follower_id: followers[3].id}]}
+    ]
+    code_review_group_section.reset_code_review_groups(new_groups)
+    code_review_group_section.reload
+
+    groups = code_review_group_section.code_review_groups
+    assert_equal 2, groups.count
+    assert_equal 1, groups.first.members.count
+  end
+
+  test 'reset_code_review_groups replaces existing code review groups' do
+    set_up_code_review_groups
+
+    new_group_name = 'new_group'
+    new_groups = [
+      {name: new_group_name, members: [{follower_id: @followers[0].id}, {follower_id: @followers[1].id}]},
+    ]
+
+    @code_review_group_section.reset_code_review_groups(new_groups)
+    @code_review_group_section.reload
+    # old group should be deleted
+    refute CodeReviewGroup.exists?(@group1.id)
+    new_groups = @code_review_group_section.code_review_groups
+    assert_equal 1, new_groups.count
+    assert_equal 2, new_groups.first.members.count
+  end
+
+  test 'unassign_all_code_review_groups deletes all members' do
+    set_up_code_review_groups
+    @code_review_group_section.unassign_all_code_review_groups
+    @code_review_group_section.reload
+    assert_equal 2, @code_review_group_section.code_review_groups.count
+    @code_review_group_section.code_review_groups.each do |group|
+      assert_empty group.members
+    end
+  end
+
+  def set_up_code_review_groups
+    # create a new section to avoid extra unassigned students
+    @code_review_group_section = create(:section, user: @teacher, login_type: 'word')
+    # Create 5 students
+    @followers = []
+    5.times do |i|
+      student = create(:student, name: "student_#{i}")
+      @followers << create(:follower, section: @code_review_group_section, student_user: student)
+    end
+
+    # Create 2 code review groups
+    @group1 = CodeReviewGroup.create(section_id: @code_review_group_section.id, name: "group1")
+    @group2 = CodeReviewGroup.create(section_id: @code_review_group_section.id, name: "group2")
+    # put student 0 and 1 in group 1, and student 2 in group 2
+    CodeReviewGroupMember.create(follower_id: @followers[0].id, code_review_group_id: @group1.id)
+    CodeReviewGroupMember.create(follower_id: @followers[1].id, code_review_group_id: @group1.id)
+    CodeReviewGroupMember.create(follower_id: @followers[2].id, code_review_group_id: @group2.id)
+  end
+
   class HasSufficientDiscountCodeProgress < ActiveSupport::TestCase
     self.use_transactional_test_case = true
 

@@ -1099,45 +1099,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal(expected_response.as_json, json_response)
   end
 
-  test 'post code_review_groups creates new code review groups' do
-    sign_in @teacher
-    code_review_group_section = create(:section, user: @teacher, login_type: 'word')
-    # Create 5 students
-    followers = []
-    5.times do |i|
-      student = create(:student, name: "student_#{i}")
-      followers << create(:follower, section: code_review_group_section, student_user: student)
-    end
-    group_1_name = 'new_group_1'
-    group_2_name = 'new_group_2'
-    new_groups = [
-      {name: group_1_name, members: [{follower_id: followers[0].id}]},
-      {name: group_2_name, members: [{follower_id: followers[2].id}, {follower_id: followers[3].id}]}
-    ]
-    post :set_code_review_groups, params: {id: code_review_group_section.id, groups: new_groups}
-    assert_response :success
-
-    new_groups = CodeReviewGroup.where(section_id: code_review_group_section.id)
-    assert_equal 2, new_groups.count
-    assert_equal 1, new_groups[0].members.count
-  end
-
-  test 'post code_review_groups replaces existing code review groups' do
-    sign_in @teacher
-    set_up_code_review_groups
-    new_group_name = 'new_group'
-    new_groups = [
-      {name: new_group_name, members: [{follower_id: @followers[0].id}, {follower_id: @followers[1].id}]},
-    ]
-    assert_not_nil CodeReviewGroup.find(@group1.id)
-    post :set_code_review_groups, params: {id: @code_review_group_section.id, groups: new_groups}
-    assert_empty CodeReviewGroup.where(id: @group1.id)
-    new_groups = CodeReviewGroup.where(section_id: @code_review_group_section.id)
-    assert_equal 1, new_groups.count
-    assert_not_equal @group1.id, new_groups[0].id
-    assert_equal 2, new_groups[0].members.count
-  end
-
   test 'post code_review_groups returns 400 for invalid group' do
     sign_in @teacher
     set_up_code_review_groups
@@ -1148,11 +1109,18 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     new_groups = [
       {name: new_group_name, members: [{follower_id: invalid_follower_id}]}
     ]
-    assert_not_nil CodeReviewGroup.find(@group1.id)
+    assert CodeReviewGroup.exists?(@group1.id)
     post :set_code_review_groups, params: {id: @code_review_group_section.id, groups: new_groups}
     # check that the original group still exists
-    assert_not_nil CodeReviewGroup.find(@group1.id)
+    assert CodeReviewGroup.exists?(@group1.id)
     assert_response 400
+  end
+
+  test 'can unassign all code review groups' do
+    sign_in @teacher
+    set_up_code_review_groups
+    post :unassign_all_code_review_groups, params: {id: @code_review_group_section.id}
+    assert_response :success
   end
 
   private
