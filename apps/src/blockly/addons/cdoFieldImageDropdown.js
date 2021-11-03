@@ -22,6 +22,8 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
     );
 
     this.buttons_ = buttons;
+    this.imageWidth_ = width;
+    this.imageHeight_ = height;
   }
 
   /**
@@ -51,8 +53,8 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
       const numBlankToAdd = numInLastRow > 0 ? this.columns_ - numInLastRow : 0;
       for (let i = 0; i < numBlankToAdd; i++) {
         const item = document.createElement('div');
-        item.style.width = this.previewSize_.width + 'px';
-        item.style.height = this.previewSize_.height + 'px';
+        item.style.width = this.imageWidth_ + 'px';
+        item.style.height = this.imageHeight_ + 'px';
         const menuItem = new Blockly.MenuItem(item, '');
         menuItem.setEnabled(false);
         this.menu_.addChild(menuItem);
