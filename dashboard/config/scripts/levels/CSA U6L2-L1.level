@@ -1,0 +1,24 @@
+<Javalab>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "long_instructions": "using numbers from a file",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "contained_level_names": [
+      "CSA U6L2-L1 Predict"
+    ]
+  },
+  "game_id": 68,
+  "published": true,
+  "created_at": "2021-11-03T17:39:34.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-11-03 17:39:41 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-11-03 17:42:50 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+}]]></config>
+</Javalab>
