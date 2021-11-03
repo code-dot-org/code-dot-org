@@ -614,16 +614,6 @@ class SectionTest < ActiveSupport::TestCase
     assert_equal 2, new_groups.first.members.count
   end
 
-  test 'unassign_all_code_review_groups deletes all members' do
-    set_up_code_review_groups
-    @code_review_group_section.unassign_all_code_review_groups
-    @code_review_group_section.reload
-    assert_equal 2, @code_review_group_section.code_review_groups.count
-    @code_review_group_section.code_review_groups.each do |group|
-      assert_empty group.members
-    end
-  end
-
   def set_up_code_review_groups
     # create a new section to avoid extra unassigned students
     @code_review_group_section = create(:section, user: @teacher, login_type: 'word')

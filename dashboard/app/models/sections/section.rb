@@ -424,14 +424,6 @@ class Section < ApplicationRecord
     end
   end
 
-  def unassign_all_code_review_groups
-    ActiveRecord::Base.transaction do
-      code_review_groups.each do |group|
-        group.members.delete_all
-      end
-    end
-  end
-
   private
 
   def unused_random_code
