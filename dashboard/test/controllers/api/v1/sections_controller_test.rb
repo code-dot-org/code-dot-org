@@ -1116,13 +1116,6 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response 400
   end
 
-  test 'can unassign all code review groups' do
-    sign_in @teacher
-    set_up_code_review_groups
-    post :unassign_all_code_review_groups, params: {id: @code_review_group_section.id}
-    assert_response :success
-  end
-
   private
 
   def set_up_code_review_groups

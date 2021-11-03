@@ -91,7 +91,6 @@ Dashboard::Application.routes.draw do
         get 'student_script_ids'
         get 'code_review_groups'
         post 'code_review_groups', to: 'sections#set_code_review_groups'
-        post 'code_review_groups/unassign_all', to: 'sections#unassign_all_code_review_groups'
       end
       collection do
         get 'membership'
