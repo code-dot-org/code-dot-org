@@ -341,6 +341,7 @@ module LessonImportHelper
           bonus: l.bonus,
           challenge: l.challenge,
           levels: l.levels,
+          variants: l.variants,
           activitySectionPosition: pos
         }.to_json
       )
