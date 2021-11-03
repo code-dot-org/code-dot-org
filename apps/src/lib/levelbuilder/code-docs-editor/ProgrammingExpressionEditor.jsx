@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import OrderableList from './OrderableList';
+import ParameterEditor from './ParameterEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -19,6 +20,15 @@ function useProgrammingExpression(initialProgrammingExpression) {
   }
 
   return [programmingExpression, updateProgrammingExpression];
+}
+
+function renderParameterEditor(param, updateFunc) {
+  return (
+    <ParameterEditor
+      parameter={param}
+      update={(key, value) => updateFunc(key, value)}
+    />
+  );
 }
 
 export default function ProgrammingExpressionEditor({
@@ -196,6 +206,7 @@ export default function ProgrammingExpressionEditor({
           list={programmingExpression.parameters}
           setList={list => updateProgrammingExpression('parameters', list)}
           addButtonText="Add Another Parameter"
+          renderItem={renderParameterEditor}
         />
       </CollapsibleEditorSection>
       <SaveBar
