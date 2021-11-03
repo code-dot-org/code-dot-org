@@ -14,6 +14,7 @@
 #
 class CodeReviewGroupMember < ApplicationRecord
   belongs_to :follower
+  belongs_to :code_review_group
 
   def name
     return follower.student_user.name
