@@ -1078,13 +1078,13 @@ class LevelTest < ActiveSupport::TestCase
     refute level.hint_prompt_enabled?
   end
 
-  test 'validates game' do
+  test 'validates game for deprecated blockly level' do
     error = assert_raises ActiveRecord::RecordInvalid do
-      create :level, game: nil
+      create :deprecated_blockly_level, game: nil
     end
     assert_includes error.message, 'Game required for non-custom levels'
 
-    level = create :level
+    level = create :deprecated_blockly_level
     level.game = nil
     error = assert_raises ActiveRecord::RecordInvalid do
       level.save!
