@@ -18,7 +18,6 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 export function renderTeacherPanel(
   store,
   scriptId,
-  section,
   scriptName,
   pageType = null
 ) {
@@ -30,7 +29,7 @@ export function renderTeacherPanel(
 
   ReactDOM.render(
     <Provider store={store}>
-      <TeacherPanel scriptName={scriptName} pageType={pageType} />
+      <TeacherPanel unitName={scriptName} pageType={pageType} />
     </Provider>,
     div
   );

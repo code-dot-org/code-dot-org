@@ -373,14 +373,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
         ? pageTypes.level
         : pageTypes.scriptOverview;
 
-      renderTeacherPanel(
-        store,
-        scriptData.id,
-        scriptData.section,
-        scriptData.name,
-        pageType,
-        onOverviewPage
-      );
+      renderTeacherPanel(store, scriptData.id, scriptData.name, pageType);
     }
   });
 }
