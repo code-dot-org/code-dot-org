@@ -149,7 +149,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "should select only callouts for current script level" do
     script = create(:script)
-    @level = create(:level, :blockly, user_id: nil)
+    @level = create(:deprecated_blockly_level)
     lesson = create(:lesson, script: script)
     @script_level = create(:script_level, script: script, levels: [@level], lesson: lesson)
 
@@ -166,7 +166,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "should localize callouts" do
     script = create(:script)
-    @level = create(:level, :blockly, user_id: nil)
+    @level = create(:deprecated_blockly_level)
     lesson = create(:lesson, script: script)
     @script_level = create(:script_level, script: script, levels: [@level], lesson: lesson)
 

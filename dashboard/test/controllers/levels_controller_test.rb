@@ -572,7 +572,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should not edit level if not custom level" do
-    level = create(:level, user_id: nil)
+    level = create(:deprecated_blockly_level, user_id: nil)
     refute Ability.new(@levelbuilder).can? :edit, level
 
     post :update_blocks, params: @default_update_blocks_params.merge(
@@ -969,7 +969,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "cannot clone hard-coded levels" do
-    old = create(:level, game_id: Game.first.id, name: "Fun Level", user_id: nil)
+    old = create(:deprecated_blockly_level, game_id: Game.first.id, name: "Fun Level", user_id: nil)
     refute old.custom?
     refute_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
@@ -1005,7 +1005,7 @@ class LevelsControllerTest < ActionController::TestCase
     sign_out @levelbuilder
     sign_in @platformization_partner
 
-    old = create(:level, game_id: Game.first.id, name: "Fun Level", user_id: nil)
+    old = create(:deprecated_blockly_level, game_id: Game.first.id, name: "Fun Level", user_id: nil)
     refute old.custom?
     refute_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}

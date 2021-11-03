@@ -232,7 +232,7 @@ class Level < ApplicationRecord
   end
 
   def self.custom_levels
-    Naturally.sort_by(Level.where.not(level_num: 'custom'), :name)
+    Naturally.sort_by(Level.where(level_num: 'custom'), :name)
   end
 
   # Custom levels are built in levelbuilder. Legacy levels are defined in .js.
