@@ -48,11 +48,15 @@ let userInOptimizelyVariant = experiments.isEnabled(
 
 $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById('school-info-inputs');
+
+  const inClearerUserTypeOptExp =
+    localStorage.getItem('inClearerUserTypeOptExpLS') === 'true';
+
   init();
 
   function init() {
     // TO-DELETE ONCE CLEARER USER TYPE BUTTONS OPTIMIZELY-EXPERIMENT IS COMPLETE (start)
-    if (experiments.isEnabled(experiments.CLEARER_SIGN_UP_USER_TYPE)) {
+    if (inClearerUserTypeOptExp) {
       // If in variant, toggle large buttons
       document.getElementById('select-user-type-original').style.cssText =
         'display:none;';
