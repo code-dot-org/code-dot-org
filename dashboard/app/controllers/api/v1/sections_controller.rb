@@ -202,7 +202,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
   # GET /api/v1/sections/<id>/code_review_groups
   # Get all code review groups and their members for this section. Also include
-  # all unassigned followers. Format is:
+  # all unassigned followers.
+  # Format is:
   # { groups: [
   #   {unassigned: true, name: 'unassigned', members: [{follower_id: 1, name: 'student_name'},...]},
   #   {id: <group-id>, name: 'group_name', members: [{follower_id: 2, name: 'student_name'},...]},
@@ -229,28 +230,17 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
   # POST /api/v1/sections/<id>/code_review_groups
   def set_code_review_groups
-    ActiveRecord::Base.transaction do
-      CodeReviewGroup.where(section_id: @section.id).destroy_all
-      created_groups = []
-      new_groups = params[:groups]
-      new_groups.each do |group|
-        # skip any unassigned members
-        next if group[:unassigned]
-        new_group = CodeReviewGroup.create(name: group[:name], section_id: @section.id)
-        new_group_members = []
-        new_group_data = {id: new_group.id, name: new_group.name, members: new_group_members}
-        next unless group[:members]
-        group[:members].each do |member|
-          new_member = CodeReviewGroupMember.create(follower_id: member[:follower_id], code_review_group_id: new_group.id)
-          new_group_members << {follower_id: new_member.follower_id, name: new_member.name}
-        end
-        new_group_data[:members] = new_group_members
-        created_groups << new_group_data
-      end
-      return render json: {groups: created_groups, result: 'success'}
-    end
-    return render_500
+    @section.reset_code_review_groups(params[:groups])
+    render json: {result: 'success'}
+  # if the group data is invalid we will get a record invalid exception
+  rescue ActiveRecord::RecordInvalid
+    render json: {result: 'invalid groups'}, status: 400
   end
+
+  # POST /api/v1/sections/<id>/code_review_groups/unassign_all
+  #def unassign_all_code_review_groups
+  #
+  #end
 
   private
 

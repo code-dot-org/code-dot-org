@@ -1079,7 +1079,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     sign_in @teacher
     set_up_code_review_groups
     get :code_review_groups, params: {id: @code_review_group_section.id}
-    group1_members = [{follower_id: @followers[0].id, name: @followers[0].student_user.name}, {follower_id: @followers[1].id, name: @followers[1].student_user.name}]
+    group1_members = [
+      {follower_id: @followers[0].id, name: @followers[0].student_user.name},
+      {follower_id: @followers[1].id, name: @followers[1].student_user.name}
+    ]
     group2_members = [{follower_id: @followers[2].id, name: @followers[2].student_user.name}]
     unassigned_members = [
       {follower_id: @followers[3].id, name: @followers[3].student_user.name},
@@ -1089,7 +1092,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
       groups: [
         {id: @group1.id, name: @group1.name, members: group1_members},
         {id: @group2.id, name: @group2.name, members: group2_members},
-        {unassigned: true, name: 'unassigned', members: unassigned_members}
+        {unassigned: true, members: unassigned_members}
       ]
     }
     assert_response :success
@@ -1103,7 +1106,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     followers = []
     5.times do |i|
       student = create(:student, name: "student_#{i}")
-      followers << create(:follower, section: @code_review_group_section, student_user: student)
+      followers << create(:follower, section: code_review_group_section, student_user: student)
     end
     group_1_name = 'new_group_1'
     group_2_name = 'new_group_2'
@@ -1113,12 +1116,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     ]
     post :set_code_review_groups, params: {id: code_review_group_section.id, groups: new_groups}
     assert_response :success
-    first_group = json_response["groups"][0]
-    assert_equal(group_1_name, first_group["name"])
-    group1 = CodeReviewGroup.find(first_group["id"])
-    assert_not_nil group1
-    assert_equal 1, group1.members.length
-    assert_not_nil CodeReviewGroupMember.find_by_follower_id(followers[0].id)
+
+    new_groups = CodeReviewGroup.where(section_id: code_review_group_section.id)
+    assert_equal 2, new_groups.count
+    assert_equal 1, new_groups[0].members.count
   end
 
   test 'post code_review_groups replaces existing code review groups' do
@@ -1128,13 +1129,30 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     new_groups = [
       {name: new_group_name, members: [{follower_id: @followers[0].id}, {follower_id: @followers[1].id}]},
     ]
-    assert_not_nil(CodeReviewGroup.find(@group1.id))
+    assert_not_nil CodeReviewGroup.find(@group1.id)
     post :set_code_review_groups, params: {id: @code_review_group_section.id, groups: new_groups}
-    assert_nil CodeReviewGroup.find(@group1.id)
+    assert_empty CodeReviewGroup.where(id: @group1.id)
     new_groups = CodeReviewGroup.where(section_id: @code_review_group_section.id)
     assert_equal 1, new_groups.count
     assert_not_equal @group1.id, new_groups[0].id
     assert_equal 2, new_groups[0].members.count
+  end
+
+  test 'post code_review_groups returns 400 for invalid group' do
+    sign_in @teacher
+    set_up_code_review_groups
+    new_group_name = 'new_group'
+    # delete follower 4 so it becomes invalid
+    invalid_follower_id = @followers[4].id
+    Follower.delete(@followers[4].id)
+    new_groups = [
+      {name: new_group_name, members: [{follower_id: invalid_follower_id}]}
+    ]
+    assert_not_nil CodeReviewGroup.find(@group1.id)
+    post :set_code_review_groups, params: {id: @code_review_group_section.id, groups: new_groups}
+    # check that the original group still exists
+    assert_not_nil CodeReviewGroup.find(@group1.id)
+    assert_response 400
   end
 
   private
@@ -1152,7 +1170,7 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     # Create 2 code review groups
     @group1 = CodeReviewGroup.create(section_id: @code_review_group_section.id, name: "group1")
     @group2 = CodeReviewGroup.create(section_id: @code_review_group_section.id, name: "group2")
-    # put student 0 and 1 in group 1, and student 2 in group 2\
+    # put student 0 and 1 in group 1, and student 2 in group 2
     CodeReviewGroupMember.create(follower_id: @followers[0].id, code_review_group_id: @group1.id)
     CodeReviewGroupMember.create(follower_id: @followers[1].id, code_review_group_id: @group1.id)
     CodeReviewGroupMember.create(follower_id: @followers[2].id, code_review_group_id: @group2.id)
