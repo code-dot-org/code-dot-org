@@ -23464,7 +23464,10 @@ en:
             Innovations in AI:
               name: Innovations in AI
               description_student: Research different examples of how Artificial Intelligence is being used to solve problems in the world.
-              description_teacher: In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.
+              description_teacher: |-
+                In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.
+
+                **Question of the Day:** How is AI helping to solve problems around the world?
             Patterns in Data:
               name: Patterns in Data
               description_student: Explore three different ways computers can make recommendations and how important data can be in making accurate decisions.
