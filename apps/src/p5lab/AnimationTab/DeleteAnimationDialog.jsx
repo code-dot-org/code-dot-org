@@ -20,9 +20,9 @@ export default class DeleteAnimationDialog extends React.Component {
         body={i18n.deleteAnimationConfirm()}
       >
         <Buttons>
-          <Cancel onClick={this.props.onCancel}>Cancel</Cancel>
+          <Cancel onClick={this.props.onCancel}>{i18n.cancel()}</Cancel>
           <Confirm onClick={this.props.onDelete} type="danger">
-            Delete
+            {i18n.delete()}
           </Confirm>
         </Buttons>
       </Dialog>
