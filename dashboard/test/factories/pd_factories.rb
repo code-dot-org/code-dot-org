@@ -819,7 +819,6 @@ FactoryGirl.define do
 
     pay_fee Pd::Application::TeacherApplication.options[:pay_fee].first
     plan_to_teach Pd::Application::TeacherApplication.options[:plan_to_teach].first
-    interested_in_online_program 'Yes'
     completing_on_behalf_of_someone_else 'No'
     cs_how_many_minutes 45
     cs_how_many_days_per_week 5
