@@ -44,16 +44,32 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
       this.menu_.openingCoords = null;
     }
 
-    this.buttons_?.forEach(button => {
-      const buttonElement = document.createElement('BUTTON');
-      buttonElement.innerHTML = button.text;
-      buttonElement.addEventListener('click', button.action);
-      const menuItem = new Blockly.MenuItem(buttonElement, button.text);
-      menuItem.setRole(Blockly.utils.aria.Role.OPTION);
-      menuItem.setRightToLeft(this.sourceBlock_.RTL);
-      menuItem.setEnabled(false);
-      this.menu_.addChild(menuItem);
-    });
+    if (this.buttons_) {
+      // Force buttons to a new row by adding blank elements if needed.
+      const numItems = this.menu_.menuItems_.length;
+      const numInLastRow = numItems % this.columns_;
+      const numBlankToAdd = numInLastRow > 0 ? this.columns_ - numInLastRow : 0;
+      for (let i = 0; i < numBlankToAdd; i++) {
+        const item = document.createElement('div');
+        item.style.width = this.previewSize_.width + 'px';
+        item.style.height = this.previewSize_.height + 'px';
+        const menuItem = new Blockly.MenuItem(item, '');
+        menuItem.setEnabled(false);
+        this.menu_.addChild(menuItem);
+      }
+
+      // Add buttons to menu
+      this.buttons_.forEach(button => {
+        const buttonElement = document.createElement('BUTTON');
+        buttonElement.innerHTML = button.text;
+        buttonElement.addEventListener('click', button.action);
+        const menuItem = new Blockly.MenuItem(buttonElement, '');
+        menuItem.setRole(Blockly.utils.aria.Role.OPTION);
+        menuItem.setRightToLeft(this.sourceBlock_.RTL);
+        menuItem.setEnabled(false);
+        this.menu_.addChild(menuItem);
+      });
+    }
 
     // Element gets created in render.
     this.menu_.render(Blockly.DropDownDiv.getContentDiv());
