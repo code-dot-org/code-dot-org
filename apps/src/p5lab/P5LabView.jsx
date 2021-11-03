@@ -24,6 +24,7 @@ import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
 import AnimationPicker from './AnimationPicker/AnimationPicker';
 import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * Top-level React wrapper for GameLab
@@ -37,6 +38,7 @@ class P5LabView extends React.Component {
     hidePauseButton: PropTypes.bool.isRequired,
     onPromptAnswer: PropTypes.func,
     labType: PropTypes.oneOf(Object.keys(P5LabType)).isRequired,
+
     // Provided by Redux
     interfaceMode: PropTypes.oneOf([
       P5LabInterfaceMode.CODE,
@@ -49,7 +51,8 @@ class P5LabView extends React.Component {
     isIframeEmbed: PropTypes.bool.isRequired,
     isRunning: PropTypes.bool.isRequired,
     isBlockly: PropTypes.bool.isRequired,
-    isBackground: PropTypes.bool
+    isBackground: PropTypes.bool,
+    currentUserType: PropTypes.string
   };
 
   state = {
@@ -70,6 +73,23 @@ class P5LabView extends React.Component {
     getManifest(app, locale).then(libraryManifest => {
       this.setState({libraryManifest});
     });
+
+    this.p5labTeacherUploadEnabled_ = experiments.isEnabled(
+      experiments.P5LAB_TEACHER_UPLOAD
+    );
+  }
+
+  shouldHideAnimationUpload() {
+    // Teachers should always be allowed to upload animations.
+    // Currently behind the 'p5labTeacherUpload' experiment flag.
+    if (
+      this.p5labTeacherUploadEnabled_ &&
+      this.props.currentUserType === 'teacher'
+    ) {
+      return false;
+    }
+
+    return this.props.isBlockly;
   }
 
   renderCodeMode() {
@@ -126,9 +146,8 @@ class P5LabView extends React.Component {
           {this.getChannelId() && (
             <AnimationPicker
               channelId={this.getChannelId()}
-              allowedExtensions=".png,.jpg,.jpeg"
               libraryManifest={this.state.libraryManifest}
-              hideUploadOption={this.props.isBlockly}
+              hideUploadOption={this.shouldHideAnimationUpload()}
               hideAnimationNames={this.props.isBlockly}
               navigable={navigable}
               defaultQuery={this.props.isBackground ? defaultQuery : undefined}
@@ -160,7 +179,7 @@ class P5LabView extends React.Component {
       <AnimationTab
         channelId={this.getChannelId()}
         libraryManifest={this.state.libraryManifest}
-        hideUploadOption={this.props.isBlockly}
+        hideUploadOption={this.shouldHideAnimationUpload()}
         hideAnimationNames={this.props.isBlockly}
         hideBackgrounds={this.props.isBlockly}
         labType={this.props.labType}
@@ -190,5 +209,6 @@ export default connect(state => ({
   isRunning: state.runState.isRunning,
   isIframeEmbed: state.pageConstants.isIframeEmbed,
   isBlockly: state.pageConstants.isBlockly,
-  isBackground: state.animationPicker.isBackground
+  isBackground: state.animationPicker.isBackground,
+  currentUserType: state.currentUser?.userType
 }))(P5LabView);

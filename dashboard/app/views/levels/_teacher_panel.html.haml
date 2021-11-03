@@ -6,10 +6,8 @@
 - data[:is_verified_teacher] = @current_user.authorized_teacher?
 
 - if @lesson_extras
-  - data[:teacher_level] = ScriptLevel.summarize_as_bonus_for_teacher_panel(@lesson.script, @bonus_level_ids, @current_user)
   - data[:page_type] = 'lesson_extras'
 - else
-  - data[:teacher_level] = @script_level&.summarize_for_teacher_panel(@current_user)
   - data[:page_type] = 'level' if @level.present?
 
 - content_for(:head) do
