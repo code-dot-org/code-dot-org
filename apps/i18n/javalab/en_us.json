@@ -88,6 +88,7 @@
   "runtimeError": "Your code hit an exception while it was running.\n{cause}",
   "saveToBackpack": "Save to Backpack",
   "startingPainter": "Starting painter.",
+  "timeoutWarning": "Warning: your project will stop running in 15 seconds.",
   "twoMainMethods": "Error: Your code can only have one main method. We found at least two classes with main methods.",
   "saving": "Saving...",
   "teacherLabel": "teacher",

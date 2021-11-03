@@ -106,6 +106,10 @@ export default class JavabuilderConnection {
         message = javalabMsg.generatingResults();
         lineBreakCount = 1;
         break;
+      case StatusMessageType.TIMEOUT_WARNING:
+        message = javalabMsg.timeoutWarning();
+        // line break count?
+        break;
       case StatusMessageType.EXITED:
         this.onNewlineMessage();
         this.onExit();
