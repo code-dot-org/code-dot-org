@@ -1099,6 +1099,16 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_equal(expected_response.as_json, json_response)
   end
 
+  test 'can post code_review_groups for a valid group' do
+    sign_in @teacher
+    set_up_code_review_groups
+    new_groups = [
+      {name: 'new_group', members: [{follower_id: @followers[0].id}]}
+    ]
+    post :set_code_review_groups, params: {id: @code_review_group_section.id, groups: new_groups}
+    assert_response :success
+  end
+
   test 'post code_review_groups returns 400 for invalid group' do
     sign_in @teacher
     set_up_code_review_groups
