@@ -209,7 +209,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   #   ...
   # ]}
   def code_review_groups
-    groups = CodeReviewGroup.where(section_id: @section.id)
+    groups = @section.code_review_groups
     groups_details = []
     assigned_follower_ids = []
     groups.each do |group|
@@ -221,9 +221,9 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       groups_details << {id: group.id, name: group.name, members: members}
     end
 
-    unassigned_members = @section.followers.where.not(id: assigned_follower_ids)
-    unassigned_members = unassigned_members.map {|member| {follower_id: member.id, name: member.student_user.name}}
-    groups_details << {unassigned: true, name: 'unassigned', members: unassigned_members}
+    unassigned_students = @section.followers.where.not(id: assigned_follower_ids)
+    unassigned_students = unassigned_students.map {|student| {follower_id: student.id, name: student.student_user.name}}
+    groups_details << {unassigned: true, members: unassigned_students}
     render json: {groups: groups_details}
   end
 

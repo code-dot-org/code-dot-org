@@ -100,7 +100,6 @@ module Pd
         {
           committed: 'Are you committed to participating in the entire Professional Learning Program?',
           able_to_attend_multiple: 'Your Regional Partner is hosting the following workshop(s). Please indicate which workshops you are able to attend. Select all that apply.',
-          interested_in_online_program: 'Do you want to be considered for Code.org’s national virtual academic year workshops?',
           pay_fee: 'Will your school be able to pay the fee?',
           understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship."
@@ -353,7 +352,6 @@ module Pd
         :previous_yearlong_cdo_pd,
         :committed,
         :able_to_attend_multiple,
-        :interested_in_online_program,
         :pay_fee,
         :scholarship_reasons,
         :gender_identity,
@@ -425,7 +423,7 @@ module Pd
       unable_to_attend: 'I’m not able to attend any of the above workshop dates. (Please Explain):',
       able_to_attend_single: "Yes, I'm able to attend".freeze,
       no_explain: "No (Please Explain):".freeze,
-      no_pay_fee: 'No, my school/district will not be able to pay the program fee. I would like to be considered for a scholarship.',
+      no_pay_fee: 'No, my school/district would not be able to pay the program fee and I would like to be considered for a scholarship.',
       i_dont_know_explain: "I don't know (Please Explain):",
       not_sure_explain: 'Not sure (Please Explain):'
     }.freeze
