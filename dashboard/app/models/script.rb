@@ -2107,7 +2107,9 @@ class Script < ApplicationRecord
     end
   end
 
-  def teacher_led?
-    instruction_type == SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+  # To help teachers have more control over the pacing of certain scripts, we
+  # send students on the last level of a lesson to the unit overview page.
+  def should_show_unit_overview_between_lessons
+    csd? || csp? || csa?
   end
 end
