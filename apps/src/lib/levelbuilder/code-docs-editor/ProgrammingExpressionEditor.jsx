@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
+import OrderableList from './OrderableList';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import {navigateToHref} from '@cdo/apps/utils';
+import {createUuid, navigateToHref} from '@cdo/apps/utils';
 import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 
@@ -30,6 +31,9 @@ export default function ProgrammingExpressionEditor({
     key,
     ...remainingProgrammingExpression
   } = initialProgrammingExpression;
+  remainingProgrammingExpression.parameters.forEach(
+    p => (p.key = createUuid())
+  );
   const [
     programmingExpression,
     updateProgrammingExpression
@@ -43,13 +47,22 @@ export default function ProgrammingExpressionEditor({
       return;
     }
     setIsSaving(true);
+    const copiedParameters = programmingExpression.parameters.map(p => {
+      const copied = {...p};
+      delete copied.key;
+      return copied;
+    });
+    const programmingExpressionToSave = {
+      ...programmingExpression,
+      parameters: copiedParameters
+    };
     fetch(`/programming_expressions/${id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
       },
-      body: JSON.stringify(programmingExpression)
+      body: JSON.stringify(programmingExpressionToSave)
     })
       .then(response => {
         setIsSaving(false);
@@ -178,6 +191,13 @@ export default function ProgrammingExpressionEditor({
           helpTip="List of tips for using this code documentation"
         />
       </CollapsibleEditorSection>
+      <CollapsibleEditorSection title="Parameters" collapsed>
+        <OrderableList
+          list={programmingExpression.parameters}
+          setList={list => updateProgrammingExpression('parameters', list)}
+          addButtonText="Add Another Parameter"
+        />
+      </CollapsibleEditorSection>
       <SaveBar
         handleSave={save}
         isSaving={isSaving}
@@ -199,7 +219,8 @@ const programmingExpressionShape = PropTypes.shape({
   content: PropTypes.string,
   syntax: PropTypes.string,
   returnValue: PropTypes.string,
-  tips: PropTypes.string
+  tips: PropTypes.string,
+  parameters: PropTypes.arrayOf(PropTypes.object).isRequired
 });
 
 ProgrammingExpressionEditor.propTypes = {
