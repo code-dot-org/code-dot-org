@@ -56,7 +56,7 @@ describe('LevelTokenDetails', () => {
     };
   });
 
-  it('renders with default props', () => {
+  it('renders checkboxes for non professional learning course', () => {
     const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
 
     assertCheckboxVisible(wrapper, 'Bonus', true);

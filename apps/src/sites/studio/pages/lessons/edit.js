@@ -5,7 +5,8 @@ import LessonEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonEditor'
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import reducers, {
   init,
-  mapActivityDataForEditor
+  mapActivityDataForEditor,
+  initIsProfessionalLearningCourse
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import createResourcesReducer, {
   initResources
@@ -47,9 +48,11 @@ $(document).ready(function() {
       activities,
       searchOptions,
       lessonData.programmingEnvironments,
-      lessonData.lessonExtrasAvailableForUnit,
-      lessonData.isProfessionalLearningCourse
+      lessonData.lessonExtrasAvailableForUnit
     )
+  );
+  store.dispatch(
+    initIsProfessionalLearningCourse(lessonData.isProfessionalLearningCourse)
   );
   store.dispatch(initResources('lessonResource', lessonData.resources || []));
   store.dispatch(initVocabularies(lessonData.vocabularies || []));

@@ -8,6 +8,8 @@ import {
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
 const INIT = 'activitiesEditor/INIT';
+const INIT_PROFESSIONAL_LEARNING =
+  'activitiesEditor/INIT_PROFESSIONAL_LEARNING';
 const INIT_ACTIVITIES = 'activitiesEditor/INIT_ACTIVITIES';
 const ADD_ACTIVITY = 'activitiesEditor/ADD_ACTIVITY';
 const MOVE_ACTIVITY = 'activitiesEditor/MOVE_ACTIVITY';
@@ -45,6 +47,11 @@ export const init = (
   searchOptions,
   programmingEnvironments,
   lessonExtrasAvailableForUnit,
+  isProfessionalLearningCourse
+});
+
+export const initIsProfessionalLearningCourse = isProfessionalLearningCourse => ({
+  type: INIT_PROFESSIONAL_LEARNING,
   isProfessionalLearningCourse
 });
 
@@ -499,7 +506,7 @@ function lessonExtrasAvailableForUnit(state = {}, action) {
 
 function isProfessionalLearningCourse(state = {}, action) {
   switch (action.type) {
-    case INIT:
+    case INIT_PROFESSIONAL_LEARNING:
       return action.isProfessionalLearningCourse;
   }
   return state;
