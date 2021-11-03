@@ -24,8 +24,25 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
     this.buttons_ = buttons;
   }
 
-  showEditor_(e = undefined) {
-    super.showEditor_(e);
+  /**
+   * @override
+   * Duplicated from Blockly.FieldDropdown.showEditor_ and FieldGridDropdown.showEditor_
+   * There are two functionality changes:
+   * 1. Override primaryColour to always be white. The Blockly team is planning
+   * to change FieldGridDropdown to make the dropdown color configurable. Once that
+   * change is shipped, we can remove the custom logic here.
+   * 2. Create MenuItems for the buttons and add them before we render the menu.
+   */
+  showEditor_(opt_e = undefined) {
+    this.dropdownCreate_();
+    if (opt_e && typeof opt_e.clientX === 'number') {
+      this.menu_.openingCoords = new Blockly.utils.Coordinate(
+        opt_e.clientX,
+        opt_e.clientY
+      );
+    } else {
+      this.menu_.openingCoords = null;
+    }
 
     this.buttons_?.forEach(button => {
       const buttonElement = document.createElement('BUTTON');
@@ -34,20 +51,42 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
       const menuItem = new Blockly.MenuItem(buttonElement, button.text);
       menuItem.setRole(Blockly.utils.aria.Role.OPTION);
       menuItem.setRightToLeft(this.sourceBlock_.RTL);
-      menuItem.setCheckable(true);
+      menuItem.setEnabled(false);
       this.menu_.addChild(menuItem);
-      this.menu_.render(Blockly.DropDownDiv.getContentDiv());
     });
 
-    // Override so that grid dropdown is white.
-    // The Blockly team is planning to update the FieldGridDropdown plugin
-    // so that the dropdown color is configurable. Once that work is done, we can
-    // remove this code.
+    // Element gets created in render.
+    this.menu_.render(Blockly.DropDownDiv.getContentDiv());
+    var menuElement = /** @type {!Element} */ (this.menu_.getElement());
+    Blockly.utils.dom.addClass(menuElement, 'blocklyDropdownMenu');
+
     const primaryColour = color.white;
     const borderColour = this.sourceBlock_.isShadow()
       ? this.sourceBlock_.getParent().style.colourTertiary
       : this.sourceBlock_.style.colourTertiary;
     Blockly.DropDownDiv.setColour(primaryColour, borderColour);
+
+    // Focusing needs to be handled after the menu is rendered and positioned.
+    // Otherwise it will cause a page scroll to get the misplaced menu in
+    // view. See issue #1329.
+    this.menu_.focus();
+
+    if (this.selectedMenuItem_) {
+      this.menu_.setHighlighted(this.selectedMenuItem_);
+    }
+
+    this.applyColour();
+
+    Blockly.utils.dom.addClass(
+      this.menu_.getElement(),
+      'fieldGridDropDownContainer'
+    );
+    this.updateColumnsStyling_();
+
+    Blockly.DropDownDiv.showPositionedByField(
+      this,
+      this.dropdownDispose_.bind(this)
+    );
   }
 }
 
