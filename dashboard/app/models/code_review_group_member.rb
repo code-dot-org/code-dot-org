@@ -15,8 +15,8 @@
 # Join table.
 # The logic here should be kept minimal, as it is used to join code_review_groups and followers.
 class CodeReviewGroupMember < ApplicationRecord
-  belongs_to :follower
-  belongs_to :code_review_group
+  belongs_to :follower, required: true
+  belongs_to :code_review_group, required: true
 
   def name
     return follower.student_user.name

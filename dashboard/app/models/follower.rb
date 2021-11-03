@@ -23,6 +23,7 @@ class Follower < ApplicationRecord
   belongs_to :section
   has_one :user, through: :section
   belongs_to :student_user, foreign_key: "student_user_id", class_name: 'User'
+  has_many :code_review_group_members, dependent: :delete_all
 
   accepts_nested_attributes_for :student_user
 
