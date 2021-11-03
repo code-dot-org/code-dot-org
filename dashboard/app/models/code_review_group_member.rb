@@ -11,6 +11,13 @@
 #
 #  index_code_review_group_members_on_code_review_group_id  (code_review_group_id)
 #  index_code_review_group_members_on_follower_id           (follower_id)
-#
+
+# Join table.
+# The logic here should be kept minimal, as it is used to join code_review_groups and followers.
 class CodeReviewGroupMember < ApplicationRecord
+  belongs_to :follower
+
+  def name
+    return follower.student_user.name
+  end
 end
