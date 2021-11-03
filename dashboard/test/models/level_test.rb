@@ -650,7 +650,7 @@ class LevelTest < ActiveSupport::TestCase
 
     level = Level.create(
       name: level_name,
-      user: create(:user),
+      level_num: 'custom',
       callout_json: JSON.generate(
         [
           {"callout_text": "first english markdown", "localization_key": "first"},
@@ -672,7 +672,7 @@ class LevelTest < ActiveSupport::TestCase
 
     level = Level.create(
       name: level_name,
-      user: create(:user),
+      level_num: 'custom',
       callout_json: JSON.generate(
         [
           {"callout_text": "first english markdown", "localization_key": "first"},
