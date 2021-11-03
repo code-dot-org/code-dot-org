@@ -82,6 +82,7 @@ export default class CoreLibrary {
   }
 
   drawSpeechBubble(text, x, y) {
+    //console.log(`${x}, ${y}`);
     const padding = 8;
     text = ellipsify(text, 150 /* maxLength */);
     let textSize = 10;
@@ -99,6 +100,22 @@ export default class CoreLibrary {
       drawUtils.getTextWidth(this.p5, longestLine, textSize) + padding * 2;
     width = Math.max(width, 50);
     const height = lines.length * textSize + padding * 2;
+
+    // x and y are located at the horizontal center and the top of the sprite, respectfully. This is the tip of the triangle.
+    let triangleSize = 10;
+    // Ensure bubble is visible.
+    if (y - height - triangleSize < 1) {
+      y = height + triangleSize;
+    }
+    if (x - width / 2 < 1) {
+      x = width / 2;
+    }
+    if (y > 400) {
+      y = 400;
+    }
+    if (x + width / 2 > 400) {
+      x = 400 - width / 2;
+    }
 
     // Draw bubble.
     const {minY} = drawUtils.speechBubble(this.p5, x, y, width, height);
