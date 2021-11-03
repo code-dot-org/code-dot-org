@@ -238,9 +238,10 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   end
 
   # POST /api/v1/sections/<id>/code_review_groups/unassign_all
-  #def unassign_all_code_review_groups
-  #
-  #end
+  def unassign_all_code_review_groups
+    @section.unassign_all_code_review_groups
+    render json: {result: 'success'}
+  end
 
   private
 
