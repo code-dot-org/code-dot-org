@@ -789,8 +789,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     seeding_key = nil
     # Important to minimize queries in seeding_key, since it's called for each ScriptLevel during seeding.
-    # Right now, for blockly levels, we need to make 1 to get the game name. This could be avoided with a little more work.
-    assert_queries(1) {seeding_key = script_level.seeding_key(seed_context)}
+    assert_queries(0) {seeding_key = script_level.seeding_key(seed_context)}
 
     expected = {
       "script_level.level_keys" => [script_level.levels.first.key],
@@ -827,8 +826,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     seeding_key = nil
     # Important to minimize queries in seeding_key, since it's called for each ScriptLevel during seeding.
-    # Right now, for blockly levels, we need to make 1 to get the game name. This could be avoided with a little more work.
-    assert_queries(1) {seeding_key = script_level.seeding_key(seed_context, false)}
+    assert_queries(0) {seeding_key = script_level.seeding_key(seed_context, false)}
 
     assert_equal [script_level.levels.first.key], seeding_key['script_level.level_keys']
   end
@@ -845,8 +843,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
 
     seeding_key = nil
     # Important to minimize queries in seeding_key, since it's called for each ScriptLevel during seeding.
-    # Right now, for blockly levels, we need to make 1 to get the game name. This could be avoided with a little more work.
-    assert_queries(1) {seeding_key = lsl.seeding_key(seed_context)}
+    assert_queries(0) {seeding_key = lsl.seeding_key(seed_context)}
 
     expected = {
       "level.key" => lsl.level.key,
@@ -975,7 +972,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     script = create :script, is_migrated: true
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, lesson_group: lesson_group, script: script
-    level1 = create :level
+    level1 = create :deprecated_blockly_level
     level2 = create :level
     script_level = create :script_level, script: script, lesson: lesson, levels: [level1]
     assert_equal level1, script_level.oldest_active_level
