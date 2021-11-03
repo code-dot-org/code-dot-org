@@ -141,7 +141,7 @@ describe('ProgrammingExpressionEditor', () => {
       shortDescription: 'This is a short description.',
       content: 'This is a longer description of the code.',
       externalDocumentation: 'developer.mozilla.org',
-      parameters: '[{"name":"id","type":"string"}]',
+      parameters: [{name: 'id', type: 'string'}],
       returnValue: 'none',
       syntax: 'block()',
       tips: 'some tips on how to use this block'
