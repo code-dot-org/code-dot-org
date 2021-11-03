@@ -17,6 +17,8 @@ import {
 import AnimationPickerBody from './AnimationPickerBody.jsx';
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
+import Button from '@cdo/apps/templates/Button';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 
 // Some operating systems round their file sizes, so max size is 101KB even
 // though our error message says 100KB, to help users avoid confusion.
@@ -65,7 +67,20 @@ class AnimationPicker extends React.Component {
     onAnimationSelectionComplete: PropTypes.func.isRequired
   };
 
+  state = {
+    exitingDialog: false
+  };
+
   onUploadClick = () => this.refs.uploader.openFileChooser();
+
+  onClose = () => {
+    // If the user has not selected any animations yet, close immediately
+    if (this.props.selectedAnimations.length > 0) {
+      this.setState({exitingDialog: true});
+    } else {
+      this.props.onClose();
+    }
+  };
 
   renderVisibleBody() {
     if (this.props.uploadError) {
@@ -76,22 +91,45 @@ class AnimationPicker extends React.Component {
       return <h1 style={styles.title}>{msg.animationPicker_uploading()}</h1>;
     }
     return (
-      <AnimationPickerBody
-        is13Plus={this.props.is13Plus}
-        onDrawYourOwnClick={this.props.onPickNewAnimation}
-        onPickLibraryAnimation={this.props.onPickLibraryAnimation}
-        onUploadClick={this.onUploadClick}
-        onAnimationSelectionComplete={this.props.onAnimationSelectionComplete}
-        playAnimations={this.props.playAnimations}
-        libraryManifest={this.props.libraryManifest}
-        hideUploadOption={this.props.hideUploadOption}
-        hideAnimationNames={this.props.hideAnimationNames}
-        navigable={this.props.navigable}
-        defaultQuery={this.props.defaultQuery}
-        hideBackgrounds={this.props.hideBackgrounds}
-        canDraw={this.props.canDraw}
-        selectedAnimations={this.props.selectedAnimations}
-      />
+      <div>
+        <AnimationPickerBody
+          is13Plus={this.props.is13Plus}
+          onDrawYourOwnClick={this.props.onPickNewAnimation}
+          onPickLibraryAnimation={this.props.onPickLibraryAnimation}
+          onUploadClick={this.onUploadClick}
+          onAnimationSelectionComplete={this.props.onAnimationSelectionComplete}
+          playAnimations={this.props.playAnimations}
+          libraryManifest={this.props.libraryManifest}
+          hideUploadOption={this.props.hideUploadOption}
+          hideAnimationNames={this.props.hideAnimationNames}
+          navigable={this.props.navigable}
+          defaultQuery={this.props.defaultQuery}
+          hideBackgrounds={this.props.hideBackgrounds}
+          canDraw={this.props.canDraw}
+          selectedAnimations={this.props.selectedAnimations}
+        />
+        {this.state.exitingDialog && (
+          <BaseDialog isOpen hideCloseButton={true} style={styles.dialog}>
+            <h3>{msg.animationPicker_leaveSelectionTitle()}</h3>
+            <p>{msg.animationPicker_leaveSelectionText()}</p>
+
+            <DialogFooter rightAlign={true}>
+              <Button
+                text={msg.animationPicker_discardSelection()}
+                onClick={() => {
+                  this.props.onClose();
+                  this.setState({exitingDialog: false});
+                }}
+                color={'gray'}
+              />
+              <Button
+                text={msg.animationPicker_returnToLibrary()}
+                onClick={() => this.setState({exitingDialog: false})}
+              />
+            </DialogFooter>
+          </BaseDialog>
+        )}
+      </div>
     );
   }
 
@@ -103,7 +141,7 @@ class AnimationPicker extends React.Component {
     return (
       <BaseDialog
         isOpen
-        handleClose={this.props.onClose}
+        handleClose={this.onClose}
         uncloseable={this.props.uploadInProgress}
         fullWidth={true}
         style={styles.dialog}
