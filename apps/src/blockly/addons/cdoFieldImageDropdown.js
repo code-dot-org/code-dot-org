@@ -20,10 +20,24 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
       undefined /* validator */,
       {columns: numColumns}
     );
+
+    this.buttons_ = buttons;
   }
 
   showEditor_(e = undefined) {
     super.showEditor_(e);
+
+    this.buttons_?.forEach(button => {
+      const buttonElement = document.createElement('BUTTON');
+      buttonElement.innerHTML = button.text;
+      buttonElement.addEventListener('click', button.action);
+      const menuItem = new Blockly.MenuItem(buttonElement, button.text);
+      menuItem.setRole(Blockly.utils.aria.Role.OPTION);
+      menuItem.setRightToLeft(this.sourceBlock_.RTL);
+      menuItem.setCheckable(true);
+      this.menu_.addChild(menuItem);
+      this.menu_.render(Blockly.DropDownDiv.getContentDiv());
+    });
 
     // Override so that grid dropdown is white.
     // The Blockly team is planning to update the FieldGridDropdown plugin
