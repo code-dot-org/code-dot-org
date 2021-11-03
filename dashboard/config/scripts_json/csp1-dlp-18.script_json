@@ -4,15 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true,
       "peer_reviews_to_complete": 6,
       "professional_learning_course": "CS Principles Facilitator in Training 2018-2019",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:49 UTC",
+    "serialized_at": "2021-11-02 14:29:22 UTC",
     "published_state": "beta",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp1-dlp-18"
     }
@@ -76,21 +79,97 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "ad345655-fa76-48b0-82e2-2c313c289483",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ad345655-fa76-48b0-82e2-2c313c289483",
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "csp1-dlp-18"
+      }
+    },
+    {
+      "key": "12b2bf63-494a-46e2-9084-341100596363",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "12b2bf63-494a-46e2-9084-341100596363",
+        "lesson.key": "Complete Unit 1 Deeper Learning Reflections",
+        "lesson_group.key": "content",
+        "script.name": "csp1-dlp-18"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "07216065-b2d0-49f9-b844-292d52e91b3c",
+      "position": 1,
+      "properties": {
+        "progression_name": "Background"
+      },
+      "seeding_key": {
+        "activity_section.key": "07216065-b2d0-49f9-b844-292d52e91b3c",
+        "lesson_activity.key": "ad345655-fa76-48b0-82e2-2c313c289483"
+      }
+    },
+    {
+      "key": "048cf65d-660c-465e-91e9-a07928c504e0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Deadlines and Payment"
+      },
+      "seeding_key": {
+        "activity_section.key": "048cf65d-660c-465e-91e9-a07928c504e0",
+        "lesson_activity.key": "ad345655-fa76-48b0-82e2-2c313c289483"
+      }
+    },
+    {
+      "key": "214b9238-32bb-4f45-a801-2d563469bf8e",
+      "position": 3,
+      "properties": {
+        "progression_name": "Resource Recommendations"
+      },
+      "seeding_key": {
+        "activity_section.key": "214b9238-32bb-4f45-a801-2d563469bf8e",
+        "lesson_activity.key": "ad345655-fa76-48b0-82e2-2c313c289483"
+      }
+    },
+    {
+      "key": "d4e0420d-7a9b-4173-988a-9ddd3d6874fa",
+      "position": 4,
+      "properties": {
+        "name": "Guidelines For Peer Review",
+        "progression_name": "Guidelines For Peer Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "d4e0420d-7a9b-4173-988a-9ddd3d6874fa",
+        "lesson_activity.key": "ad345655-fa76-48b0-82e2-2c313c289483"
+      }
+    },
+    {
+      "key": "576282b2-a1d7-473e-962f-d2f03cde5de3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "576282b2-a1d7-473e-962f-d2f03cde5de3",
+        "lesson_activity.key": "12b2bf63-494a-46e2-9084-341100596363"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Deeper Learning Overview"
-        ],
         "progression": "Background"
       },
       "bonus": false,
@@ -100,7 +179,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-dlp-18"
+        "script.name": "csp1-dlp-18",
+        "activity_section.key": "07216065-b2d0-49f9-b844-292d52e91b3c"
       },
       "level_keys": [
         "Deeper Learning Overview"
@@ -109,12 +189,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd deeper learning timeline 2018-2019"
-        ],
         "progression": "Deadlines and Payment"
       },
       "bonus": false,
@@ -124,7 +201,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-dlp-18"
+        "script.name": "csp1-dlp-18",
+        "activity_section.key": "048cf65d-660c-465e-91e9-a07928c504e0"
       },
       "level_keys": [
         "csd deeper learning timeline 2018-2019"
@@ -133,12 +211,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "deeper learning recommendations- csp - 2018"
-        ],
         "progression": "Resource Recommendations"
       },
       "bonus": false,
@@ -148,7 +223,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-dlp-18"
+        "script.name": "csp1-dlp-18",
+        "activity_section.key": "214b9238-32bb-4f45-a801-2d563469bf8e"
       },
       "level_keys": [
         "deeper learning recommendations- csp - 2018"
@@ -157,12 +233,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "peer review recommendations 18-19"
-        ],
         "progression": "Guidelines For Peer Review"
       },
       "bonus": false,
@@ -172,7 +245,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-dlp-18"
+        "script.name": "csp1-dlp-18",
+        "activity_section.key": "d4e0420d-7a9b-4173-988a-9ddd3d6874fa"
       },
       "level_keys": [
         "peer review recommendations 18-19"
@@ -181,12 +255,9 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp1-dlp-q1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -195,7 +266,8 @@
         ],
         "lesson.key": "Complete Unit 1 Deeper Learning Reflections",
         "lesson_group.key": "content",
-        "script.name": "csp1-dlp-18"
+        "script.name": "csp1-dlp-18",
+        "activity_section.key": "576282b2-a1d7-473e-962f-d2f03cde5de3"
       },
       "level_keys": [
         "csp1-dlp-q1"
@@ -204,12 +276,9 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp1-dlp-q2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -218,7 +287,8 @@
         ],
         "lesson.key": "Complete Unit 1 Deeper Learning Reflections",
         "lesson_group.key": "content",
-        "script.name": "csp1-dlp-18"
+        "script.name": "csp1-dlp-18",
+        "activity_section.key": "576282b2-a1d7-473e-962f-d2f03cde5de3"
       },
       "level_keys": [
         "csp1-dlp-q2"
@@ -227,12 +297,9 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp1-dlp-q3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -241,7 +308,8 @@
         ],
         "lesson.key": "Complete Unit 1 Deeper Learning Reflections",
         "lesson_group.key": "content",
-        "script.name": "csp1-dlp-18"
+        "script.name": "csp1-dlp-18",
+        "activity_section.key": "576282b2-a1d7-473e-962f-d2f03cde5de3"
       },
       "level_keys": [
         "csp1-dlp-q3"
@@ -257,7 +325,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-dlp-18"
+        "script.name": "csp1-dlp-18",
+        "activity_section.key": "07216065-b2d0-49f9-b844-292d52e91b3c"
       }
     },
     {
@@ -268,7 +337,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-dlp-18"
+        "script.name": "csp1-dlp-18",
+        "activity_section.key": "048cf65d-660c-465e-91e9-a07928c504e0"
       }
     },
     {
@@ -279,7 +349,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-dlp-18"
+        "script.name": "csp1-dlp-18",
+        "activity_section.key": "214b9238-32bb-4f45-a801-2d563469bf8e"
       }
     },
     {
@@ -290,7 +361,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "csp1-dlp-18"
+        "script.name": "csp1-dlp-18",
+        "activity_section.key": "d4e0420d-7a9b-4173-988a-9ddd3d6874fa"
       }
     },
     {
@@ -301,7 +373,8 @@
         ],
         "lesson.key": "Complete Unit 1 Deeper Learning Reflections",
         "lesson_group.key": "content",
-        "script.name": "csp1-dlp-18"
+        "script.name": "csp1-dlp-18",
+        "activity_section.key": "576282b2-a1d7-473e-962f-d2f03cde5de3"
       }
     },
     {
@@ -312,7 +385,8 @@
         ],
         "lesson.key": "Complete Unit 1 Deeper Learning Reflections",
         "lesson_group.key": "content",
-        "script.name": "csp1-dlp-18"
+        "script.name": "csp1-dlp-18",
+        "activity_section.key": "576282b2-a1d7-473e-962f-d2f03cde5de3"
       }
     },
     {
@@ -323,7 +397,8 @@
         ],
         "lesson.key": "Complete Unit 1 Deeper Learning Reflections",
         "lesson_group.key": "content",
-        "script.name": "csp1-dlp-18"
+        "script.name": "csp1-dlp-18",
+        "activity_section.key": "576282b2-a1d7-473e-962f-d2f03cde5de3"
       }
     }
   ],
