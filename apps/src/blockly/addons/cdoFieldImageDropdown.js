@@ -63,6 +63,9 @@ export class CdoFieldImageDropdown extends FieldGridDropdown {
         const buttonElement = document.createElement('BUTTON');
         buttonElement.innerHTML = button.text;
         buttonElement.addEventListener('click', button.action);
+        buttonElement.addEventListener('click', () =>
+          Blockly.DropDownDiv.hideIfOwner(this, true)
+        );
         const menuItem = new Blockly.MenuItem(buttonElement, '');
         menuItem.setRole(Blockly.utils.aria.Role.OPTION);
         menuItem.setRightToLeft(this.sourceBlock_.RTL);
