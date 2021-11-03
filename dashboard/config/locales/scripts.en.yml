@@ -26592,6 +26592,8 @@ en:
               description_teacher: 
             lesson-6:
               name: Poetry Circle
+              description_student: 
+              description_teacher: 
             lesson-7:
               name: Conditionals
               description_student: 
