@@ -101,10 +101,11 @@ export default class CoreLibrary {
     width = Math.max(width, 50);
     const height = lines.length * textSize + padding * 2;
 
-    // x and y are located at the horizontal center and the top of the sprite, respectfully. This is the tip of the triangle.
     let triangleSize = 10;
     let tipX = x;
-    // Ensure bubble is visible.
+
+    // For the calculations below, keep in mind that x and y are located at the horizontal center and the top of the sprite, respectively.
+    // In other words, x and y indicate the default position of the bubble's triangular tip.
     if (y > 400) {
       y = 400;
     }
