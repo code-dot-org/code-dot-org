@@ -18,7 +18,6 @@ const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
 const DEFAULT_PROPS = {
   onSelectUser: () => {},
   getSelectedUserId: () => {},
-  sectionData: null,
   unitName: 'A unit',
   pageType: pageTypes.level,
   viewAs: ViewType.Student,
@@ -30,6 +29,7 @@ const DEFAULT_PROPS = {
   students: null,
   levelsWithProgress: [],
   loadLevelsWithProgress: () => {},
+  teacherId: 5,
   exampleSolutions: []
 };
 
@@ -166,25 +166,24 @@ describe('TeacherPanel', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
         students: students,
-        getSelectedUserId: () => 0
+        pageType: pageTypes.scriptOverview
       });
 
       expect(wrapper.find(SelectedStudentInfo)).to.have.length(0);
     });
 
-    it('on level displays SelectedStudentInfo when student selected', () => {
+    it('on level displays SelectedStudentInfo when students have loaded, passes expected props', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
         students: students,
         getSelectedUserId: () => 1,
-        sectionData: {
-          section: {
-            students: students
-          }
-        }
+        teacherId: 5
       });
 
-      expect(wrapper.find(SelectedStudentInfo)).to.have.length(1);
+      const selectedStudentComponent = wrapper.find(SelectedStudentInfo);
+      expect(selectedStudentComponent).to.have.length(1);
+      expect(selectedStudentComponent.props().teacherId).to.equal(5);
+      expect(selectedStudentComponent.props().selectedUserId).to.equal(1);
     });
   });
 
@@ -205,12 +204,7 @@ describe('TeacherPanel', () => {
         students: students,
         exampleSolutions: [
           'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
-        ],
-        sectionData: {
-          section: {
-            students: students
-          }
-        }
+        ]
       });
 
       expect(wrapper.find('Button')).to.have.length(1);
@@ -220,12 +214,7 @@ describe('TeacherPanel', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
         students: students,
-        exampleSolutions: null,
-        sectionData: {
-          section: {
-            students: students
-          }
-        }
+        exampleSolutions: null
       });
 
       expect(wrapper.find('Button')).to.have.length(0);

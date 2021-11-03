@@ -56,6 +56,12 @@ export function PoemEditor(props) {
           onChange={event => setAuthor(event.target.value)}
         />
       </div>
+      <div style={{...styles.modalContainer, paddingTop: 0}}>
+        <div style={styles.label} />
+        <div style={{...styles.input, ...styles.warning}}>
+          {msg.authorWarning()}
+        </div>
+      </div>
       <div style={styles.modalContainer}>
         <label style={styles.label}>{msg.poem()}</label>
         <textarea
@@ -214,6 +220,9 @@ const styles = {
     fontStyle: 'italic',
     textAlign: 'right',
     marginRight: 5
+  },
+  warning: {
+    fontFamily: '"Gotham 5r", sans-serif'
   }
 };
 
