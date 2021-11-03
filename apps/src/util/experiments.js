@@ -39,6 +39,7 @@ experiments.CODE_REVIEW_GROUPS = 'codeReviewGroups';
 experiments.JAVALAB_UNIT_TESTS = 'javalabUnitTests';
 experiments.COSTUME_TAB_A = 'costumeTabA';
 experiments.COSTUME_TAB_B = 'costumeTabB';
+experiments.P5LAB_TEACHER_UPLOAD = 'p5labTeacherUpload';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

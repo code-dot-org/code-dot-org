@@ -355,6 +355,10 @@ const styles = {
   tutorialDetailDisabledIcon: {
     color: '#d9534f'
   },
+  tutorialDetailLanguages: {
+    overflowY: 'auto',
+    maxHeight: '110px'
+  },
   tutorialDetailsTable: {
     marginTop: 20,
     width: '100%'
