@@ -16,8 +16,8 @@ export default class DeleteAnimationDialog extends React.Component {
       <Dialog
         isOpen={this.props.isOpen}
         handleClose={this.props.onCancel}
-        title={i18n.deleteCostume()}
-        body={i18n.deleteCostumeConfirm()}
+        title={i18n.deleteAnimation()}
+        body={i18n.deleteAnimationConfirm()}
       >
         <Buttons>
           <Cancel onClick={this.props.onCancel}>Cancel</Cancel>
