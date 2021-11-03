@@ -213,7 +213,7 @@ class Backpack extends Component {
       backpackFilenames.length === 0;
 
     return (
-      <div>
+      <>
         <JavalabButton
           icon={
             <img
@@ -233,54 +233,68 @@ class Backpack extends Component {
         />
         {dropdownOpen && (
           <div
-            style={{...styles.dropdown, ...(isDarkMode && styles.dropdownDark)}}
-            ref={ref => (this.dropdownList = ref)}
+            className="ignore-react-onclickoutside"
+            style={{
+              ...styles.dropdownContainer,
+              ...(isDarkMode && styles.dropdownDark)
+            }}
           >
-            {showFiles && (
-              <div style={styles.dropdownContainer}>
-                {backpackFilenames.map((filename, index) => (
-                  <div
-                    style={{
-                      ...styles.fileListItem,
-                      ...(isDarkMode && styles.fileListItemDark)
-                    }}
-                    key={`backpack-file-${index}`}
-                  >
-                    <input
-                      type="checkbox"
-                      id={`backpack-file-${index}`}
-                      name={filename}
-                      onChange={this.handleFileCheckboxChange}
-                    />
-                    <label
-                      htmlFor={`backpack-file-${index}`}
-                      style={styles.fileListLabel}
+            <div
+              style={{
+                ...styles.dropdown,
+                ...(isDarkMode && styles.dropdownDark)
+              }}
+              ref={ref => (this.dropdownList = ref)}
+            >
+              {showFiles && (
+                <div style={styles.listContainer}>
+                  {backpackFilenames.map((filename, index) => (
+                    <div
+                      style={{
+                        ...styles.fileListItem,
+                        ...(isDarkMode && styles.fileListItemDark)
+                      }}
+                      key={`backpack-file-${index}`}
                     >
-                      {filename}
-                    </label>
-                  </div>
-                ))}
-                <JavalabButton
-                  text={javalabMsg.import()}
-                  style={styles.importButton}
-                  onClick={this.handleImport}
-                  isDisabled={selectedFiles.length === 0}
+                      <input
+                        type="checkbox"
+                        id={`backpack-file-${index}`}
+                        name={filename}
+                        onChange={this.handleFileCheckboxChange}
+                      />
+                      <label
+                        htmlFor={`backpack-file-${index}`}
+                        style={styles.fileListLabel}
+                      >
+                        {filename}
+                      </label>
+                    </div>
+                  ))}
+                </div>
+              )}
+              {backpackFilesLoading && (
+                <span
+                  className="fa fa-spin fa-spinner"
+                  style={styles.spinner}
                 />
-              </div>
-            )}
-            {backpackFilesLoading && (
-              <span className="fa fa-spin fa-spinner" style={styles.spinner} />
-            )}
-            {backpackLoadError && (
-              <div style={styles.message}>
-                {javalabMsg.backpackListLoadError()}
-              </div>
-            )}
-            {showNoFiles && (
-              <div style={styles.message}>
-                {javalabMsg.emptyBackpackMessage()}
-              </div>
-            )}
+              )}
+              {backpackLoadError && (
+                <div style={styles.message}>
+                  {javalabMsg.backpackListLoadError()}
+                </div>
+              )}
+              {showNoFiles && (
+                <div style={styles.message}>
+                  {javalabMsg.emptyBackpackMessage()}
+                </div>
+              )}
+            </div>
+            <JavalabButton
+              text={javalabMsg.import()}
+              style={styles.importButton}
+              onClick={this.handleImport}
+              isDisabled={selectedFiles.length === 0}
+            />
           </div>
         )}
         <JavalabDialog
@@ -299,32 +313,42 @@ class Backpack extends Component {
           isDarkMode={isDarkMode}
           confirmButtonText={msg.dialogOK()}
         />
-      </div>
+      </>
     );
   }
 }
 
 const styles = {
-  dropdown: {
+  dropdownContainer: {
+    display: 'flex',
     position: 'absolute',
-    marginTop: 30,
+    flexDirection: 'column',
+    top: 30,
+    backgroundColor: color.lightest_gray,
+    zIndex: 20,
+    borderWidth: 1,
+    borderColor: color.lightest_gray,
+    borderStyle: 'solid',
+    borderTopWidth: 0,
+    borderRadius: 4
+  },
+  dropdown: {
     backgroundColor: color.lightest_gray,
     color: color.darkest_gray,
-    zIndex: 20,
     paddingTop: 5,
     paddingBottom: 5,
     borderRadius: 2,
     minWidth: 150,
-    maxWidth: 250,
+    maxWidth: 450,
     maxHeight: 500,
     overflow: 'auto'
   },
-  dropdownContainer: {
-    width: 'fit-content'
-  },
   dropdownDark: {
     backgroundColor: color.darkest_gray,
-    color: color.light_gray
+    color: color.lightest_gray
+  },
+  listContainer: {
+    width: 'fit-content'
   },
   buttonStyles: {
     cursor: 'pointer',
@@ -368,7 +392,8 @@ const styles = {
     backgroundColor: color.orange,
     color: color.white,
     fontSize: 13,
-    padding: '5px 16px'
+    padding: '5px 16px',
+    width: 'fit-content'
   },
   backpackIcon: {
     height: 15,
