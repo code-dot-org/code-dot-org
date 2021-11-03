@@ -1,6 +1,6 @@
-import GoogleBlockly from 'blockly/core';
+import {ScrollMetricsManager} from '@blockly/plugin-scroll-options';
 
-export default class MetricsManager extends GoogleBlockly.MetricsManager {
+export default class MetricsManager extends ScrollMetricsManager {
   /** Force content to start in top-left corner, not scroll in all directions.
    * @override
    */

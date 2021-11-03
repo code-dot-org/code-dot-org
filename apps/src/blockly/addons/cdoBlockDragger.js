@@ -1,6 +1,6 @@
-import GoogleBlockly from 'blockly/core';
+import {ScrollBlockDragger} from '@blockly/plugin-scroll-options';
 
-export default class BlockDragger extends GoogleBlockly.BlockDragger {
+export default class BlockDragger extends ScrollBlockDragger {
   /** Show trashcan over toolbox while dragging
    * @override
    */
