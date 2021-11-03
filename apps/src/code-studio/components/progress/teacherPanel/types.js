@@ -8,8 +8,7 @@ export const sectionData = PropTypes.shape({
   page_type: PropTypes.string,
   script_id: PropTypes.number,
   script_name: PropTypes.string,
-  section: PropTypes.object,
-  teacher_level: levelWithProgress
+  section: PropTypes.object
 });
 
 const lessonExtra = PropTypes.shape({
