@@ -819,9 +819,9 @@ class LevelsControllerTest < ActionController::TestCase
     assert_select "#level_skin option[value='pvz'][selected='selected']"
   end
 
-  test 'should render level num in title' do
+  test 'should render level name in title' do
     get :show, params: {id: @level, game_id: @level.game}
-    assert_match /#{Regexp.quote(@level.level_num)}/, Nokogiri::HTML(@response.body).css('title').text.strip
+    assert_match /#{Regexp.quote(@level.name)}/, Nokogiri::HTML(@response.body).css('title').text.strip
   end
 
   test "should update maze data properly" do
