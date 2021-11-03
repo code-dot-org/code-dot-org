@@ -47,7 +47,9 @@ export function speechBubble(
   y,
   width,
   height,
-  {triangleSize = 10, fill = 'white', strokeWeight = 2, stroke = 'gray'} = {}
+  triangleSize,
+  tipX,
+  {fill = 'white', strokeWeight = 2, stroke = 'gray'} = {}
 ) {
   const minX = x - width / 2;
   const minY = y - height - triangleSize;
@@ -60,10 +62,10 @@ export function speechBubble(
   p5.beginShape();
   p5.rect(minX, minY, width, height, 8);
   p5.stroke(fill);
-  p5.triangle(x - triangleSize, maxY, x, maxY, x, y);
+  p5.triangle(tipX - triangleSize, maxY, tipX, maxY, tipX, y);
   p5.stroke(stroke);
-  p5.line(x, maxY, x, y);
-  p5.line(x, y, x - triangleSize - 1, maxY);
+  p5.line(tipX, maxY, tipX, y);
+  p5.line(tipX, y, tipX - triangleSize - 1, maxY);
   p5.endShape(p5.CLOSE);
   p5.pop();
 
