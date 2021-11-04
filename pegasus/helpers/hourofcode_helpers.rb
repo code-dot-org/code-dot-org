@@ -119,6 +119,15 @@ def hoc_get_locale_code
   Languages.get_hoc_locale_by_unique_language(@language)
 end
 
+# hourofcode.com calls this to translate tutorial's languages attribute
+def hoc_language(lang_codes_str)
+  return '' unless lang_codes_str
+
+  # Convert language codes to array and get the translated string
+  language_codes = lang_codes_str.split(',')
+  language_codes.map {|code| hoc_s(code.downcase)}.select {|code| code}.join ", "
+end
+
 def hoc_uri(uri)
   File.join(['/', (@company || @country), @user_language, uri].reject(&:nil_or_empty?))
 end

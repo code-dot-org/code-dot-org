@@ -128,6 +128,10 @@ class AnimationPicker extends React.Component {
   }
 }
 
+AnimationPicker.defaultProps = {
+  allowedExtensions: ['.png', '.jpg', '.jpeg'].join(',')
+};
+
 export default connect(
   state => ({
     visible: state.animationPicker.visible,

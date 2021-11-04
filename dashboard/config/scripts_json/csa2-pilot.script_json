@@ -15,9 +15,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:44 UTC",
+    "serialized_at": "2021-11-03 17:05:01 UTC",
     "published_state": null,
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csa2-pilot"
     }
@@ -7099,7 +7101,7 @@
       }
     },
     {
-      "name": "Combo Class FRQ Print Out",
+      "name": "Burger Subclass FRQ Print Out",
       "url": "https://docs.google.com/document/d/1Vhwh3WWjpzYYC9B0aIuGapty1X6Zzf7bf1My9Hc0F-Y/edit?usp=sharing",
       "key": "combo_class_frq_print_out",
       "properties": {
