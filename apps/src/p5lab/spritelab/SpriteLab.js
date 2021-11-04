@@ -22,6 +22,10 @@ export default class SpriteLab extends P5Lab {
     return P5LabType.SPRITELAB;
   }
 
+  saveToProjectGallery() {
+    return false;
+  }
+
   createLibrary(args) {
     if (!args.p5) {
       console.warn('cannot create SpriteLab library without p5 instance');

@@ -30,6 +30,10 @@ export default class Poetry extends SpriteLab {
     return P5LabType.POETRY;
   }
 
+  saveToProjectGallery() {
+    return true;
+  }
+
   createLibrary(args) {
     if (!args.p5) {
       console.warn('cannot create poetry library without p5 instance');

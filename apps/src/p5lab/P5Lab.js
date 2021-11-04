@@ -79,6 +79,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -1546,6 +1547,9 @@ export default class P5Lab {
     var level = this.level;
     let msg = this.getMsg();
 
+    const isSignedIn =
+      getStore().getState().currentUser.signInState === SignInState.SignedIn;
+
     this.studioApp_.displayFeedback({
       feedbackType: this.testResults,
       message: this.message,
@@ -1557,7 +1561,9 @@ export default class P5Lab {
         reinfFeedbackMsg: msg.reinfFeedbackMsg(),
         sharingText: msg.shareGame()
       },
-      hideXButton: true
+      hideXButton: true,
+      saveToProjectGallery: this.saveToProjectGallery(),
+      disableSaveToGallery: !isSignedIn
     });
   }
 
