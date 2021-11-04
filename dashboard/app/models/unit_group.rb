@@ -26,6 +26,7 @@ require 'cdo/shared_constants/curriculum/shared_course_constants'
 
 class UnitGroup < ApplicationRecord
   include SharedCourseConstants
+  include CourseAudiences
 
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
@@ -520,33 +521,6 @@ class UnitGroup < ApplicationRecord
     latest_assigned_version_year = latest_assigned_version&.version_year
     return nil unless latest_assigned_version_year && latest_assigned_version_year > version_year
     latest_assigned_version.link
-  end
-
-  def can_be_instructor?(user)
-    return false if user.student?
-    return true if user.permission?(UserPermission::CODE_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
-
-    if instructor_audience == 'plc_reviewer'
-      return user.permission?(UserPermission::PLC_REVIEWER)
-    elsif instructor_audience == 'facilitator'
-      return user.permission?(UserPermission::FACILITATOR)
-    elsif instructor_audience == 'teacher'
-      return user.teacher?
-    end
-
-    false
-  end
-
-  def can_be_participant?(user)
-    if participant_audience == 'facilitator'
-      return user.permission?(UserPermission::FACILITATOR)
-    elsif participant_audience == 'teacher'
-      return user.teacher?
-    elsif participant_audience == 'student'
-      return true #if participant audience is student let anyone join
-    end
-
-    false
   end
 
   # @param user [User]
