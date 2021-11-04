@@ -264,6 +264,7 @@ module Pd
       # Minimum requirements
       csd_which_grades: YES_NO,
       csp_which_grades: YES_NO,
+      csa_which_grades: YES_NO,
       committed: YES_NO,
       plan_to_teach: YES_NO,
       previous_yearlong_cdo_pd: YES_NO,
@@ -292,6 +293,15 @@ module Pd
       ],
       criteria_score_questions_csp: [
         :csp_which_grades,
+        :committed,
+        :plan_to_teach,
+        :previous_yearlong_cdo_pd,
+        :replace_existing,
+        :principal_approval,
+        :principal_schedule_confirmed,
+      ],
+      criteria_score_questions_csa: [
+        :csa_which_grades,
         :committed,
         :plan_to_teach,
         :previous_yearlong_cdo_pd,
