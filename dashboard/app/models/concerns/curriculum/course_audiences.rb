@@ -3,11 +3,6 @@
 module Curriculum::CourseAudiences
   extend ActiveSupport::Concern
 
-  included do
-    scope :script, ->(instructor_audience, participant_audience, unit_group) {where(instructor_audience: instructor_audience, participant_audience: participant_audience, unit_group: unit_group)}
-    scope :unit_group, ->(instructor_audience, participant_audience) {where(instructor_audience: instructor_audience, participant_audience: participant_audience)}
-  end
-
   def can_be_instructor?(user)
     # If unit is in a unit group then decide based on unit group audience
     return unit_group.can_be_instructor?(user) if is_a?(Script) && unit_group
