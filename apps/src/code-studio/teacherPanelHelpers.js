@@ -77,10 +77,12 @@ function queryStudentsForSection(store) {
   }
 
   $.ajax(request)
-    .success(section => {
-      store.dispatch(
-        setStudentsForCurrentSection(section.id, section.students)
-      );
+    .success((section, status) => {
+      if (status !== 'nocontent') {
+        store.dispatch(
+          setStudentsForCurrentSection(section.id, section.students)
+        );
+      }
     })
     .fail(err => {
       console.log(err);

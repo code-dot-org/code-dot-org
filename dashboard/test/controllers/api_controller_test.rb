@@ -1332,6 +1332,53 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  test "teacher_panel_section returns summarized section when passed section id owned by logged in teacher" do
+    get :teacher_panel_section, params: {
+      section_id: @section.id
+    }
+
+    assert_response :success
+    response = JSON.parse(@response.body)
+
+    assert_equal @section.id, response["id"]
+    assert_equal @teacher.name, response["teacherName"]
+    assert_equal 7, response["students"].length
+  end
+
+  test "teacher_panel_section returns no_content when passed section id not owned by logged in teacher" do
+    teacher = create :teacher
+    sign_in teacher
+
+    get :teacher_panel_section, params: {
+      section_id: @section.id
+    }
+
+    assert_response :no_content
+  end
+
+  test "teacher_panel_section returns teacher's section when no section id is passed and teacher has 1 section" do
+    teacher = create :teacher
+    sign_in teacher
+    section = create(:section, user: teacher, login_type: 'word')
+
+    get :teacher_panel_section
+
+    assert_response :success
+    response = JSON.parse(@response.body)
+
+    assert_equal section.id, response["id"]
+    assert_equal teacher.name, response["teacherName"]
+    assert_equal 0, response["students"].length
+  end
+
+  test "teacher_panel_section returns no_content when no section_id is passed and teacher has multiple sections" do
+    create(:section, user: @teacher, login_type: 'word')
+
+    get :teacher_panel_section
+
+    assert_response :no_content
+  end
+
   test "script_structure returns summarized script" do
     overview_path = 'http://script.overview/path'
     CDO.stubs(:studio_url).returns(overview_path)
