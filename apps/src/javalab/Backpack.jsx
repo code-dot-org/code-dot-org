@@ -340,8 +340,8 @@ const styles = {
     color: color.darkest_gray
   },
   dropdown: {
-    paddingTop: 5,
-    overflow: 'auto'
+    overflow: 'auto',
+    padding: 10
   },
   dropdownDark: {
     backgroundColor: color.darkest_gray,
@@ -377,8 +377,8 @@ const styles = {
   fileListItem: {
     display: 'flex',
     flexDirection: 'row',
-    padding: '5px 10px 5px 10px',
-    width: '95%',
+    padding: '5px',
+    width: '100%',
     ':hover': {
       backgroundColor: color.lighter_gray
     }
