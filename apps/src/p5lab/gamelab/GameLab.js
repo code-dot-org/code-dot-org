@@ -19,6 +19,10 @@ export default class GameLab extends P5Lab {
     return P5LabType.GAMELAB;
   }
 
+  saveToProjectGallery() {
+    return false;
+  }
+
   init(config) {
     if (!this.studioApp_) {
       throw new Error('GameLab requires a StudioApp');
