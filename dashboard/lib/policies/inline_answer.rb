@@ -10,8 +10,6 @@ class Policies::InlineAnswer
 
     # Authorized instructors who are instructing the course can view answers
     script = script_level.try(:script)
-    puts user.authorized_instructor?
-    puts script&.can_be_instructor?(user)
     return true if user.authorized_instructor? &&
       script&.can_be_instructor?(user)
 
