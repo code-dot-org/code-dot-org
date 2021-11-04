@@ -59,6 +59,14 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal true, @course_code_instructor_to_teacher.can_be_instructor?(@code_instructor)
     end
 
+    test 'levelbuilder should be able to see instructor view for any course' do
+      assert_equal true, @course_teacher_to_students.can_be_instructor?(@levelbuilder)
+      assert_equal true, @course_facilitator_to_teacher.can_be_instructor?(@levelbuilder)
+      assert_equal true, @course_code_instructor_to_teacher.can_be_instructor?(@levelbuilder)
+      assert_equal true, @course_plc_reviewer_to_facilitator.can_be_instructor?(@levelbuilder)
+      assert_equal true, @course_code_instructor_to_teacher.can_be_instructor?(@levelbuilder)
+    end
+
     test 'plc reviewer should be able to instruct courses with plc_reviewer as instructor audience ' do
       # Since the plc reviewer is a teacher account it will also be able to teach any teacher course
       assert_equal true, @course_teacher_to_students.can_be_instructor?(@plc_reviewer)
