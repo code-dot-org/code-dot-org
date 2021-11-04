@@ -572,12 +572,12 @@ FactoryGirl.define do
     game {create(:game, app: "unplug")}
   end
 
-  factory :match, parent: :level, class: Match do
+  factory :match, parent: :dsl_defined, class: Match do
     game {create(:game, app: "match")}
     properties {{title: 'title', answers: [{text: 'test', correct: true}], questions: [{text: 'test'}], options: {hide_submit: false}}}
   end
 
-  factory :text_match, parent: :level, class: TextMatch do
+  factory :text_match, parent: :dsl_defined, class: TextMatch do
     game {create(:game, app: "textmatch")}
     properties {{title: 'title', questions: [{text: 'test'}], options: {hide_submit: false}}}
   end
@@ -636,7 +636,11 @@ FactoryGirl.define do
     level_num 'custom'
   end
 
-  factory :multi, parent: :level, class: Multi do
+  factory :dsl_defined, parent: :level, class: DSLDefined do
+    level_num nil
+  end
+
+  factory :multi, parent: :dsl_defined, class: Multi do
     game {create(:game, app: "multi")}
     transient do
       submittable false
@@ -657,11 +661,11 @@ FactoryGirl.define do
     end
   end
 
-  factory :evaluation_multi, parent: :level, class: EvaluationMulti do
+  factory :evaluation_multi, parent: :dsl_defined, class: EvaluationMulti do
     game {create(:game, app: 'evaluation_multi')}
   end
 
-  factory :external, parent: :level, class: External do
+  factory :external, parent: :dsl_defined, class: External do
     after(:create) do |level|
       level.properties['markdown'] = 'lorem ipsum'
       level.save!
