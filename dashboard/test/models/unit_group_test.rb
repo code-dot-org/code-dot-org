@@ -43,6 +43,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       @facilitator = create :facilitator
       @code_instructor = create :code_instructor
       @plc_reviewer = create :plc_reviewer
+      @levelbuilder = create :levelbuilder
 
       @course_teacher_to_students = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
       @course_facilitator_to_teacher = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
