@@ -324,7 +324,7 @@ class ProjectsController < ApplicationController
       disallowed_html_tags: disallowed_html_tags
     )
 
-    if params[:key] == 'artist'
+    if ['artist', 'spritelab', 'poetry', 'poetry_hoc'].include? params[:key]
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
     end
 
