@@ -27,7 +27,7 @@
   "ifTooltip": "Əgər göstərilən istiqamətdə bir yol varsa, bəzi əmrləri yerinə yetir.",
   "ifelseTooltip": "Əgər göstərilən istiqamətdə yol varsa, əmrlərin birinci blokunu yerinə yetir. Əks halda isə əmrlərin ikinci blokunu.",
   "incrementOpponentScore": "rəqibə xal qazandır",
-  "incrementOpponentScoreTooltip": "Mövcud qarşı tərəfə vahid əlavə et.",
+  "incrementOpponentScoreTooltip": "Oyunçunun hazırki xallarının üstünə bir vahid gəl.",
   "incrementPlayerScore": "xal qazan",
   "incrementPlayerScoreTooltip": "Oyunçunun hazırki xallarının üstünə bir gəl.",
   "isWall": "bu divardırmı",

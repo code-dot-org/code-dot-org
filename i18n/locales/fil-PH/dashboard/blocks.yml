@@ -1568,6 +1568,16 @@ fil:
         text: x coordinate ng {SPRITE}
       Mikelab_yLocationOf:
         text: y ang mga {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Sorbetes
+            Stars: Mga Bituin
+            Fireworks: Fireworks
+            '"rainbow"': Bahaghari
+            '"hearts"': Mga Puso
+            '"flowers"': Mga Bulaklak
+            '"waves"': Mga Alon
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1576,6 +1586,9 @@ fil:
         text: gumawa ng bagong {ANIMATION_NAME} sprite sa {LOCATION}
       Poetry_playSound:
         text: Ang ... {SOUND}
+        options:
+          SOUND:
+            Light: Ilaw
       Poetry_setBackground:
         text: set background color {COLOR}
       Poetry_setBackgroundEffect:
@@ -1585,6 +1598,10 @@ fil:
             '"squiggles"': Squiggles
             '"stars"': Mga Bituin
             '"ripples"': Ripples
+            '"rain"': Ulan
+            '"bubbles"': Bubbles
+            '"confetti"': Confetti
+            '"hearts"': Makulay na mga Puso
           PALETTE:
             '"rainbow"': Bahaghari
       Poetry_setBackgroundImageAs:

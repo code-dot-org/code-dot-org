@@ -605,9 +605,10 @@ pl:
         poembot-playtest-intro: Wprowadzenie do PoemBot Playtest
         poembot-playtest-sprites: Duszki PoemBot Playtest
         poembot-playtest-events: Zdarzenia PoemBot Playtest
-        hello_world_intro: Witaj świecie - Wprowadzenie
-        hello_world_events: Witaj świecie - Zdarzenia
-        hello_world_congrats: Witaj świecie - Gratulacje
+        hello_world_intro: Witaj świecie - Witamy w Sprite Lab
+        hello_world_events: Witaj świecie - Programowanie ze zdarzeniami
+        hello_world_congrats: Witaj świecie - Rób, co chcesz
+        csp_global_vs_local: Debugowanie zmiennych globalnych versus lokalnych
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

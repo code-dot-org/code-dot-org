@@ -1,3 +1,4 @@
+import {ScrollOptions} from '@blockly/plugin-scroll-options';
 import {BlocklyVersion} from '@cdo/apps/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import CdoBlockDragger from './addons/cdoBlockDragger';
@@ -13,12 +14,14 @@ import CdoInput from './addons/cdoInput';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoPathObject from './addons/cdoPathObject';
 import CdoTheme from './addons/cdoTheme';
+import CdoToolbox from './addons/cdoToolbox';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
 import initializeVariables from './addons/cdoVariables';
 import CdoVariableMap from './addons/cdoVariableMap';
 import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
 import initializeBlocklyXml from './addons/cdoXml';
+import initializeCss from './addons/cdoCss';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -86,6 +89,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('contractEditor');
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
   blocklyWrapper.wrapReadOnlyProperty('Css');
+  blocklyWrapper.wrapReadOnlyProperty('DropDownDiv');
   blocklyWrapper.wrapReadOnlyProperty('disableVariableEditing');
   blocklyWrapper.wrapReadOnlyProperty('Events');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleDropdown');
@@ -120,6 +124,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Input');
   blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
   blocklyWrapper.wrapReadOnlyProperty('js');
+  blocklyWrapper.wrapReadOnlyProperty('MenuItem');
   blocklyWrapper.wrapReadOnlyProperty('MetricsManager');
   blocklyWrapper.wrapReadOnlyProperty('modalBlockSpace');
   blocklyWrapper.wrapReadOnlyProperty('Msg');
@@ -136,6 +141,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
   blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('utils');
+  blocklyWrapper.wrapReadOnlyProperty('Toolbox');
   blocklyWrapper.wrapReadOnlyProperty('Touch');
   blocklyWrapper.wrapReadOnlyProperty('Trashcan');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
@@ -146,7 +152,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
 
-  blocklyWrapper.blockly_.BlockDragger = CdoBlockDragger;
   blocklyWrapper.blockly_.BlockSvg = CdoBlockSvg;
   blocklyWrapper.blockly_.FieldButton = CdoFieldButton;
   blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
@@ -154,23 +159,16 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.FieldLabel = CdoFieldLabel;
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Input = CdoInput;
-  blocklyWrapper.blockly_.MetricsManager = CdoMetricsManager;
   blocklyWrapper.geras.PathObject = CdoPathObject;
+  blocklyWrapper.blockly_.Toolbox = CdoToolbox;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
   blocklyWrapper.blockly_.VariableMap = CdoVariableMap;
   blocklyWrapper.blockly_.WorkspaceSvg = CdoWorkspaceSvg;
 
   blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.METRICS_MANAGER,
+    blocklyWrapper.blockly_.registry.Type.TOOLBOX,
     blocklyWrapper.blockly_.registry.DEFAULT,
-    CdoMetricsManager,
-    true /* opt_allowOverrides */
-  );
-
-  blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.BLOCK_DRAGGER,
-    blocklyWrapper.blockly_.registry.DEFAULT,
-    CdoBlockDragger,
+    CdoToolbox,
     true /* opt_allowOverrides */
   );
 
@@ -284,6 +282,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
           vertical: true,
           horizontal: false
         }
+      },
+      plugins: {
+        blockDragger: CdoBlockDragger,
+        metricsManager: CdoMetricsManager
       }
     };
 
@@ -296,7 +298,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
       styleConstants['workspace-headers-height']
     }px)`;
     blocklyWrapper.editBlocks = opt_options.editBlocks;
-    return blocklyWrapper.blockly_.inject(container, options);
+    const workspace = blocklyWrapper.blockly_.inject(container, options);
+
+    const scrollOptionsPlugin = new ScrollOptions(workspace);
+    scrollOptionsPlugin.init();
   };
 
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.
@@ -311,6 +316,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   initializeTouch(blocklyWrapper);
   initializeVariables(blocklyWrapper);
   initializeCdoConstants(blocklyWrapper);
+  initializeCss(blocklyWrapper);
 
   return blocklyWrapper;
 }

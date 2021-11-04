@@ -1712,6 +1712,16 @@ pt:
         text: coordenada x do {SPRITE}
       Mikelab_yLocationOf:
         text: coordenada y do {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Sorvete
+            Stars: Estrelas
+            Fireworks: Fogos de artifício
+            '"rainbow"': Arco-íris
+            '"hearts"': Corações
+            '"flowers"': Flores
+            '"waves"': Ondas
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1721,6 +1731,10 @@ pt:
         text: criar novo {ANIMATION_NAME} elemento em {LOCATION}
       Poetry_playSound:
         text: reproduzir som {SOUND}
+        options:
+          SOUND:
+            Break: Pausa
+            Light: Claro
       Poetry_setBackground:
         text: definir a cor do plano de fundo {COLOR}
       Poetry_setBackgroundEffect:
@@ -1731,6 +1745,10 @@ pt:
             '"space"': Espaço
             '"stars"': Estrelas
             '"ripples"': Ondulação
+            '"rain"': Chuva
+            '"bubbles"': Bolhas
+            '"confetti"': Confete
+            '"hearts"': Corações coloridos
           PALETTE:
             '"rainbow"': Arco-íris
       Poetry_setBackgroundImageAs:

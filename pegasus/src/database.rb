@@ -17,17 +17,18 @@ class Tutorials
   # We alias the database columns with names that have the datatype suffixes stripped off for
   # backwards-compatibility with some existing tutorial pages
   # Note: A tutorial can be present in the sheet but hidden by giving it the "do-not-show" tag.
-  def initialize(table)
+  def initialize(table, no_cache=false)
     @table = "cdo_#{table}".to_sym
+
     # create an alias for each column without the datatype suffix (alias "amidala_jarjar_s" as "amidala_jarjar")
-    @column_aliases = CDO.cache.fetch("Tutorials/#{@table}/column_aliases") do
+    @column_aliases = CDO.cache.fetch("Tutorials/#{@table}/column_aliases", force: no_cache) do
       DB.schema(@table).map do |column|
         db_column_name = column[0].to_s
         column_alias = db_column_name.rindex('_').nil? ? db_column_name : db_column_name.rpartition('_')[0]
         "#{db_column_name}___#{column_alias}".to_sym
       end
     end
-    @contents = CDO.cache.fetch("Tutorials/#{@table}/contents") do
+    @contents = CDO.cache.fetch("Tutorials/#{@table}/contents", force: no_cache) do
       DB[@table].select(*@column_aliases).all
     end.deep_dup
   end

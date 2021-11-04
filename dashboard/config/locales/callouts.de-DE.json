@@ -1899,7 +1899,8 @@
           "hello_world_new": "Neuer Block!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Neuer Block!"
+          "hello_world_new": "Neuer Block!",
+          "hello_world_new_block": "Neuer Block!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "Neuer Block!"

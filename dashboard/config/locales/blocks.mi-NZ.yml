@@ -1353,10 +1353,24 @@ mi:
             '"down"': tohu raro
             '"left"': tohu maui
             '"right"': tohu katau
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Aihikirīmi
+            Stars: Ngā Whetū
+            Fireworks: Pahū ahi
+            '"rainbow"': Āniwaniwa
+            '"hearts"': Ngā Manawa
+            '"flowers"': Putiputi
+            '"waves"': Ngaru
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': ua
+      Poetry_playSound:
+        options:
+          SOUND:
+            Light: Rama
       Poetry_setBackground:
         text: kowhiri te tae papamuri {COLOR}
       Poetry_setBackgroundEffect:
@@ -1367,6 +1381,10 @@ mi:
             '"space"': Tuarangi
             '"stars"': Ngā Whetū
             '"ripples"': Ngā Pungarungaru
+            '"rain"': Ua
+            '"bubbles"': Ngā mirumiru
+            '"confetti"': Pepa tae iti
+            '"hearts"': Manawa Tae
           PALETTE:
             '"rainbow"': Āniwaniwa
       Poetry_setForegroundEffect:

@@ -2,7 +2,9 @@
   "func": "setTintEach",
   "category": "Groups",
   "paletteParams": [
-    "color"
+    {
+      "name": "color"
+    }
   ],
   "params": [
     "\"blue\""

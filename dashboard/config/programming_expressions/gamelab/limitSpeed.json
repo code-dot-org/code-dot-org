@@ -2,7 +2,9 @@
   "func": "limitSpeed",
   "category": "Sprites",
   "paletteParams": [
-    "max"
+    {
+      "name": "max"
+    }
   ],
   "params": [
     "3"

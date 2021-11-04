@@ -15,7 +15,12 @@
           "498cd895eb5a102c5aeb977e2b928dee": "நன்றி!"
         },
         "courseF_apps_aquarium": {
-          "83e4a96aed96436c621b9809e258b309": "மீன்"
+          "83e4a96aed96436c621b9809e258b309": "மீன்",
+          "f655df68ec33643278de7e69794e8d76": "மெய்நிகர் மீன்வளம் ",
+          "a1a2a07348784279a1e7a6f46dc7e353": "எதைச் சேர்ப்பீர்கள்? ",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "உயிரினம்",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "மற்றவை",
+          "0d3e73168beb875063ea0f0302fe32bd": "எந்த மீன்?"
         },
         "courseC19_playLab_EOC1_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "உரையை இங்கே தட்டச்சு செய்க",
@@ -71,6 +76,87 @@
           "71fc859f3abd22273bad5d0d8eda2173": "அனைத்து விலங்குகளையும் எண்ணுங்கள்!",
           "f62038e77820419cd978f7b722da560a": "எத்தனை தோன்றும்?",
           "81a2909a24e4ca3b582ab9ee539c080c": "செல்லப்பிராணிகளை எண்ணுங்கள்"
+        },
+        "courseF_apps_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "பிறந்த நாள் யாருக்கு? ",
+          "d1210f945885351b13feb9bbb868aeef": "அவர்களுக்கு எவ்வளவு வயது இருக்கும்? ",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_apps_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "பார்ட்டி கேம்ஸ் ",
+          "bf08dd3d1961874f13e77c936aad27e5": "ஒரு வெற்று விண்வெளி கதை ",
+          "514b8d5320196898a9ced3efe0d4c802": "ஒரு பெயரடை உள்ளிடவும்:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "ஒரு பொருளை உள்ளிடவும்:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "உடல் பகுதியை உள்ளிடவும்:",
+          "e522ee28f39133b45497637539ff429b": "எண்ணை உள்ளிடவும்: ",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "விளையாட்டுகள் ",
+          "5306eed2fd2c43fe033efd6016c0c38b": "கால் இனம்! ",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_editable_card": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "பிறந்த நாள் யாருக்கு? ",
+          "d1210f945885351b13feb9bbb868aeef": "அவர்களுக்கு எவ்வளவு வயது இருக்கும்? ",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_editable_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_editable_madlib": {
+          "f6175c6f0b0bcfff0256286315f0eb7b": "பார்ட்டி கேம்ஸ் ",
+          "bf08dd3d1961874f13e77c936aad27e5": "ஒரு வெற்று விண்வெளி கதை ",
+          "514b8d5320196898a9ced3efe0d4c802": "ஒரு பெயரடை உள்ளிடவும்:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "ஒரு பொருளை உள்ளிடவும்:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "உடல் பகுதியை உள்ளிடவும்:",
+          "e522ee28f39133b45497637539ff429b": "எண்ணை உள்ளிடவும்: ",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "விளையாட்டுகள் ",
+          "5306eed2fd2c43fe033efd6016c0c38b": "கால் இனம்! ",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_text_choice_events": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_text_choice_multiprompt": {
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "பிறந்த நாள் யாருக்கு? ",
+          "d1210f945885351b13feb9bbb868aeef": "அவர்களுக்கு எவ்வளவு வயது இருக்கும்? "
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_variables_card_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_variables_chatbot_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
+        },
+        "courseF_variables_madlib_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "எனது கேள்வி "
         }
       }
     }

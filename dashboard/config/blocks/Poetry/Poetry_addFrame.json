@@ -2,7 +2,7 @@
   "category": "Poetry - Effects",
   "config": {
     "func": "addFrame",
-    "blockText": "add {BRUSH} outline",
+    "blockText": "set frame to {BRUSH}",
     "color": [
       240,
       0.45,
@@ -14,52 +14,68 @@
         "type": "String",
         "options": [
           [
-            "Metal Frame"
+            "Metal Frame",
+            "\"placeholder\""
           ],
           [
-            "Bold"
+            "Bold",
+            "\"placeholder\""
           ],
           [
-            "Shadow Box"
+            "Shadow Box",
+            "\"placeholder\""
           ],
           [
-            "Gilded"
+            "Gilded",
+            "\"placeholder\""
           ],
           [
-            "Beaded"
+            "Beaded",
+            "\"placeholder\""
           ],
           [
-            "Beveled"
+            "Beveled",
+            "\"placeholder\""
           ],
           [
-            "Wood Frame"
+            "Wood Frame",
+            "\"placeholder\""
           ],
           [
-            "Bamboo"
+            "Bamboo",
+            "\"placeholder\""
           ],
           [
-            "Decorative"
+            "Decorative",
+            "\"placeholder\""
           ],
           [
-            "Donuts"
+            "Donuts",
+            "\"placeholder\""
           ],
           [
-            "Ice Cream"
+            "Ice Cream",
+            "\"placeholder\""
           ],
           [
-            "Fire"
+            "Fire",
+            "\"placeholder\""
           ],
           [
-            "Water"
+            "Water",
+            "\"placeholder\""
           ],
           [
-            "Leaves"
+            "Leaves",
+            "\"placeholder\""
           ],
           [
-            "Stars"
+            "Stars",
+            "\"placeholder\""
           ],
           [
-            "Fireworks"
+            "Fireworks",
+            "\"placeholder\""
           ],
           [
             "Rainbow",

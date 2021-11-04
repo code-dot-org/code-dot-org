@@ -2293,6 +2293,18 @@
               "length": "uzunlik",
               "sides": "tomonlar"
             }
+          },
+          "small flower": {
+            "name": "kichik gul"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "LOGIC FLOWERS2"
+          },
+          "LOGIC FLOWER": {
+            "name": "LOGIC FLOWER"
+          },
+          "LOGIC FLOWERS": {
+            "name": "LOGIC FLOWERS"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -2552,6 +2564,12 @@
           },
           "staggered squares": {
             "name": "shaxmat katakchalari"
+          },
+          "draw a line of squares": {
+            "name": "kvadratlar chizig'ini chizish"
+          },
+          "draw square": {
+            "name": "kvadrat chizish"
           }
         },
         "courseE_artist_functions8a_2021": {
@@ -2565,6 +2583,12 @@
         "courseE_artist_functions8b_2021": {
           "do something": {
             "name": "nimadir qilish"
+          },
+          "draw a line of squares": {
+            "name": "kvadratlar chizig'ini chizish"
+          },
+          "draw square": {
+            "name": "kvadrat chizish"
           }
         },
         "courseE_artist_functions8c_2021": {
@@ -2573,6 +2597,12 @@
           },
           "staggered squares": {
             "name": "shaxmat katakchalari"
+          },
+          "draw a line of squares": {
+            "name": "kvadratlar chizig'ini chizish"
+          },
+          "draw square": {
+            "name": "kvadrat chizish"
           }
         },
         "courseE_artist_functions9_2021": {
@@ -2581,6 +2611,9 @@
           },
           "draw line of triangles": {
             "name": "uchburchaklar chizig'ini chizish"
+          },
+          "draw triangle": {
+            "name": "uchburchak chizish"
           }
         },
         "courseE_artist_functionsProj_2021": {
@@ -2592,16 +2625,28 @@
           },
           "staggered squares": {
             "name": "shaxmat katakchalari"
+          },
+          "draw a line of squares": {
+            "name": "kvadratlar chizig'ini chizish"
+          },
+          "draw square": {
+            "name": "kvadrat chizish"
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
             "name": "nimadir qilish"
+          },
+          "my design": {
+            "name": "mening dizaynim"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
           "do something": {
             "name": "nimadir qilish"
+          },
+          "my design": {
+            "name": "mening dizaynim"
           }
         },
         "courseE_artist_functions_predict1_2021": {

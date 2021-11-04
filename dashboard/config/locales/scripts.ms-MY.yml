@@ -2460,7 +2460,7 @@ ms:
                 program anda boleh bertindak balas kepada pengguna tepat pada masa
                 pengguna memilihnya. Itulah tujuan peristiwa.
             Events in Play Lab:
-              name: Bergerak bersama Peristiwa
+              name: Bergerak bersama Acara
               description_teacher: Dalam aktiviti dalam talian ini, pelajar berpeluang
                 untuk mempelajari cara menggunakan peristiwa di dalam Makmal Mainan
                 dan melaksanakan semua kemahiran pengekodan yang telah mereka pelajari
@@ -2491,6 +2491,8 @@ ms:
               name: Penyahpepijatan di dalam Pengumpul
             'Loops: My Loopy Robotic Friends':
               name: 'Gelung: Rakan Robotik Bergelung Saya'
+            Loops in Artist:
+              name: Seni Pelekat dengan Gelung
             Nested Loops:
               name: Gelung Bersarang
             Nested Loops Project in Frozen:
@@ -2529,6 +2531,10 @@ ms:
               name: Bentangkan Projek Anda
             Debugging in Maze:
               name: Penyahpepijatan dengan Scrat
+            Programming in Collector:
+              name: Mengumpul Harta Karun bersama Laurel
+            Programming in Artist:
+              name: Mencipta Seni dengan Kod
             Loops with Rey and BB-8:
               name: Gelung dengan Rey dan BB-8
             Nested Loops in Frozen:
@@ -2589,7 +2595,7 @@ ms:
             'Events: The Big Event':
               name: Jr. Peristiwa Besar
             Events in Play Lab:
-              name: Pertempuran Diraja bersama Peristiwa
+              name: Pertempuran Diraja bersama Acara
             Programming in Ice Age:
               name: Pengaturcaraan dengan Scrat
             Loops in Ice Age:
@@ -2665,8 +2671,14 @@ ms:
               name: Penyahpepijatan di dalam Pagar Sesat
             'Real-life Algorithms: Paper Planes':
               name: Kapal Terbang Kertas
+            Programming in Collector:
+              name: Mengumpul Harta Karun bersama Laurel
+            Programming in Artist:
+              name: Mencipta Seni dengan Kod
             Loops with Rey and BB-8:
               name: Gelung dengan Rey dan BB-8
+            Loops in Artist:
+              name: Seni Pelekat dengan Gelung
             Loops in Harvester:
               name: Menuai Tanaman dengan Gelung
             Build a Flappy Game:
@@ -2710,6 +2722,8 @@ ms:
               name: Mengekod dengan Komen
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
+            Programming in Artist:
+              name: Mencipta Seni dengan Kod
             Loops in Artist:
               name: Melukis Bentuk dengan Gelung
             Nested Loops:
@@ -2913,6 +2927,8 @@ ms:
               name: Mengekod dengan Komen
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
+            Programming in Artist:
+              name: Mencipta Seni dengan Kod
             Loops in Artist:
               name: Melukis Bentuk dengan Gelung
             Nested Loops in Bee/Zombie:
@@ -3251,7 +3267,7 @@ ms:
             'Events: The Big Event':
               name: Jr. Peristiwa Besar
             Events in Play Lab:
-              name: Pertempuran Diraja bersama Peristiwa
+              name: Pertempuran Diraja bersama Acara
             Spelling Bee:
               name: Lebah Ejaan
             Sequencing with Scrat:
@@ -4219,10 +4235,16 @@ ms:
               name: Pengaturcaraan penyampai
             Debugging in Maze:
               name: Penyahpepijatan dengan Scrat
+            Programming in Collector:
+              name: Mengumpul Harta Karun bersama Laurel
+            Programming in Artist:
+              name: Mencipta Seni dengan Kod
             'Loops: Getting Loopy':
               name: 'Gelung: Menjadi Bergelung'
             Loops with Rey and BB-8:
               name: Gelung dengan Rey dan BB-8
+            Loops in Artist:
+              name: Seni Pelekat dengan Gelung
             Nested Loops in Bee:
               name: Gelung Bersarang di dalam Pagar Sesat
             Nested Loops in Frozen:
@@ -4330,6 +4352,7 @@ ms:
                 untuk mengenal pasti ralat, termasuk gelung yang tidak betul, blok
                 yang hilang, blok tambahan dan blok yang tidak boleh digunakan.
             Programming in Collector:
+              name: Mengumpul Harta Karun bersama Laurel
               description_student: Tulis algoritma untuk membantu Pengembara Laurel
                 mengumpulkan banyak batu permata!
               description_teacher: Dalam siri teka-teki ini, pelajar akan terus membangunkan
@@ -4338,6 +4361,7 @@ ms:
                 untuk membantu Laurel mengambil harta karun semasa dia berjalan di
                 sepanjang laluan.
             Programming in Artist:
+              name: Mencipta Seni dengan Kod
               description_student: Cipta imej yang cantik dengan mengatur cara Artis.
               description_teacher: Dalam pelajaran ini, pelajar akan mengawal Artis
                 bagi melengkapkan lukisan pada skrin. Tahap Artis ini akan membolehkan
@@ -4472,6 +4496,7 @@ ms:
                 permainan berinteraktif dan mencipta kata laluan baharu dengan menggunakan
                 garis panduan untuk kata laluan yang kuat.\\\r"
             Sticker Art with Loops:
+              name: Seni Pelekat dengan Gelung
               description_student: Dalam pelajaran ini, gelung memudahkan imej lebih
                 menarik dibuat dengan Artis!
               description_teacher: Cuba lihat wajah pelajar yang ceria sebaik sahaja
@@ -4571,7 +4596,7 @@ ms:
                 program anda boleh bertindak balas kepada pengguna tepat pada masa
                 pengguna memilihnya. Itulah tujuan peristiwa.
             Events in Play Lab:
-              name: Bergerak bersama Peristiwa
+              name: Bergerak bersama Acara
               description_student: Cipta permainan dan cerita anda sendiri.
               description_teacher: Dalam aktiviti dalam talian ini, pelajar berpeluang
                 untuk mempelajari cara menggunakan peristiwa di dalam Makmal Mainan
@@ -4703,8 +4728,8 @@ ms:
                 program anda boleh bertindak balas kepada pengguna tepat pada masa
                 pengguna memilihnya. Itulah tujuan peristiwa.
             Events in Play Lab:
-              name: Pertempuran Diraja bersama Peristiwa
-              description_student: Gunakan peristiwa untuk mencipta cerita atau membuat
+              name: Pertempuran Diraja bersama Acara
+              description_student: Gunakan acara untuk mencipta cerita atau membuat
                 permainan berinteraktif.
               description_teacher: Dalam aktiviti dalam talian ini, pelajar berpeluang
                 untuk mempelajari cara menggunakan peristiwa di dalam Makmal Mainan
@@ -4815,9 +4840,9 @@ ms:
             Programming in Harvester:
               name: Pengaturcaraan dengan Penuai
             Tell a Story in Play Lab:
-              name: Bergerak bersama Peristiwa
+              name: Bergerak bersama Acara
             Make a Game in Play Lab:
-              name: Pertempuran Diraja bersama Peristiwa
+              name: Pertempuran Diraja bersama Acara
             Ocean Scene with Loops:
               name: Pemandangan Lautan dengan Gelung
           student_description: Pelajari sains komputer dengan mencuba pelajaran di
@@ -5392,7 +5417,7 @@ ms:
                 program anda boleh bertindak balas kepada pengguna tepat pada masa
                 pengguna memilihnya. Itulah tujuan peristiwa.
             Events in Play Lab:
-              name: Bergerak bersama Peristiwa
+              name: Bergerak bersama Acara
               description_student: Cipta permainan dan cerita anda sendiri.
               description_teacher: Dalam aktiviti dalam talian ini, pelajar berpeluang
                 untuk mempelajari cara menggunakan peristiwa di dalam Makmal Mainan
@@ -5528,8 +5553,8 @@ ms:
                 program anda boleh bertindak balas kepada pengguna tepat pada masa
                 pengguna memilihnya. Itulah tujuan peristiwa.
             Events in Play Lab:
-              name: Pertempuran Diraja bersama Peristiwa
-              description_student: Gunakan peristiwa untuk mencipta cerita atau membuat
+              name: Pertempuran Diraja bersama Acara
+              description_student: Gunakan acara untuk mencipta cerita atau membuat
                 permainan berinteraktif.
               description_teacher: Dalam aktiviti dalam talian ini, pelajar berpeluang
                 untuk mempelajari cara menggunakan peristiwa di dalam Makmal Mainan
@@ -5629,6 +5654,7 @@ ms:
                 untuk mengenal pasti ralat, termasuk gelung yang tidak betul, blok
                 yang hilang, blok tambahan dan blok yang tidak boleh digunakan.
             Programming in Collector:
+              name: Mengumpul Harta Karun bersama Laurel
               description_student: Tulis algoritma untuk membantu Pengembara Laurel
                 mengumpulkan banyak batu permata!
               description_teacher: Dalam siri teka-teki ini, pelajar akan terus membangunkan
@@ -5637,6 +5663,7 @@ ms:
                 untuk membantu Laurel mengambil harta karun semasa dia berjalan di
                 sepanjang laluan.
             Programming in Artist:
+              name: Mencipta Seni dengan Kod
               description_student: Cipta imej yang cantik dengan mengatur cara Artis.
               description_teacher: Dalam pelajaran ini, pelajar akan mengawal Artis
                 bagi melengkapkan lukisan pada skrin. Tahap Artis ini akan membolehkan
@@ -5685,6 +5712,7 @@ ms:
                 idea yang telah mereka pelajari setakat ini, serta dapat pratonton
                 bersyarat secara tidak rasmi!
             Sticker Art with Loops:
+              name: Seni Pelekat dengan Gelung
               description_student: Dalam pelajaran ini, gelung memudahkan imej lebih
                 menarik dibuat dengan Artis!
               description_teacher: Cuba lihat wajah pelajar yang ceria sebaik sahaja
@@ -6547,6 +6575,12 @@ ms:
               name: Pengaturcaraan dengan Angry Birds
             Debugging with Scrat:
               name: Penyahpepijatan dengan Scrat
+            Collecting Treasure with Laurel:
+              name: Mengumpul Harta Karun bersama Laurel
+            Creating Art with Code:
+              name: Mencipta Seni dengan Kod
+            Sticker Art with Loops:
+              name: Seni Pelekat dengan Gelung
             Nested Loops in Maze:
               name: Gelung Bersarang di dalam Pagar Sesat
             Snowflakes with Anna and Elsa:
@@ -6663,9 +6697,9 @@ ms:
             Drawing Gardens with Loops:
               name: Melukis Taman dengan Gelung
             On the Move with Events:
-              name: Bergerak bersama Peristiwa
+              name: Bergerak bersama Acara
             A Royal Battle with Events:
-              name: Pertempuran Diraja bersama Peristiwa
+              name: Pertempuran Diraja bersama Acara
           student_description: Pelajari sains komputer dengan mencuba pelajaran di
             bawah mengikut tahap kelajuan anda sendiri! Pelajari mencipta atur cara
             komputer, membangunkan kemahiran penyelesaian masalah dan berusaha mengharungi
@@ -6890,6 +6924,8 @@ ms:
               name: Pengaturcaraan dengan Scrat
               description_student: Tulis program untuk membantu Scrat mendapatkan
                 buah oak.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan terus membangunkan kemahiran algoritma berjujukan.
             Programming with Rey and BB-8:
               key: Pengaturcaraan dengan Rey dan BB-8
               name: Pengaturcaraan dengan Rey dan BB-8
@@ -6969,6 +7005,8 @@ ms:
             Programming in Maze:
               key: Pengaturcaraan di dalam Pagar Sesat
               name: Pengaturcaraan dengan Angry Birds
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan terus membangunkan kemahiran algoritma berjujukan.
             Programming in Harvester:
               name: Pengaturcaraan dengan Penuai
               description_student: Bantu Penuai mengumpulkan sayuran di sepanjang
@@ -7009,8 +7047,12 @@ ms:
                 atau berteriak semasa anda menekan butang pada alat kawalan jauh gergasi.
             Events in Play Lab:
               key: Peristiwa di dalam Makmal Mainan
-              description_student: Gunakan peristiwa untuk mencipta cerita atau membuat
+              description_student: Gunakan acara untuk mencipta cerita atau membuat
                 permainan berinteraktif.
+              description_teacher: Dalam **projek mini** ini, pelajar akan berpeluang
+                mempelajari cara menggunakan acara di dalam Makmal Mainan dan melaksanakan
+                semua kemahiran pengekodan yang telah mereka pelajari untuk mencipta
+                permainan animasi.
             lesson-1:
               name: Akhir Projek Kursus
           lesson_groups:
@@ -7058,18 +7100,32 @@ ms:
             Programming in Maze:
               key: Pengaturcaraan di dalam Pagar Sesat
               name: Pengaturcaraan dengan Angry Birds
+              description_student: Pelajari tentang jujukan dan algoritma dengan _Angry
+                Birds_.
             Debugging in Maze:
               key: Penyahpepijatan di dalam Pagar Sesat
               name: Penyahpepijatan di dalam Pagar Sesat
               description_student: Cari masalah di dalam teka-teki dan berlatih kemahiran
                 penyahpepijatan anda.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan menemui kod prabertulis yang mengandungi kesalahan. Mereka perlu
+                meneliti kod sedia ada untuk mengenal pasti ralatnya.
             Programming in Collector:
               key: Pengaturcaraan di dalam Pengumpul
+              name: Mengumpul Harta Karun bersama Laurel
               description_student: Tulis algoritma untuk membantu Pengembara Laurel
                 mengumpulkan banyak batu permata!
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan terus membangunkan pemahaman mereka tentang algoritma dan penyahpepijatan.
+                Bersama watak baharu, _Pengembara Laurel_, pelajar akan mencipta algoritma
+                berjujukan untuk membantu _Laurel_ mengambil harta karun semasa dia
+                berjalan di sepanjang laluan.
             Programming in Artist:
               key: Pengaturcaraan di dalam Artis
+              name: Mencipta Seni dengan Kod
               description_student: Cipta imej yang cantik dengan mengatur cara Artis.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan mengawal Artis bagi melengkapkan lukisan pada skrin.
             Binary Bracelets:
               description_student: Cipta gelang binari anda sendiri dan ketahui cara
                 komputer mengingati maklumat!
@@ -7082,6 +7138,8 @@ ms:
             Loops with Rey and BB-8:
               key: Gelung dengan Rey dan BB-8
               name: Gelung dengan Rey dan BB-8
+              description_student: Bantu _BB-8_ melepasi pagar sesat dengan menggunakan
+                gelung!
             Loops in Harvester:
               name: Menuai Tanaman dengan Gelung
               description_student: Mari kita gunakan gelung untuk membantu penuai
@@ -7097,6 +7155,7 @@ ms:
                 idea yang telah mereka pelajari setakat ini, serta dapat pratonton
                 bersyarat secara tidak rasmi!
             Sticker Art with Loops:
+              key: Seni Pelekat dengan Gelung
               description_student: Dalam pelajaran ini, gelung memudahkan imej lebih
                 menarik dibuat dengan Artis!
             'Events: The Big Event':
@@ -7711,6 +7770,8 @@ ms:
             Programming with Angry Birds:
               key: Pengaturcaraan dengan Angry Birds
               name: Pengaturcaraan dengan Angry Birds
+              description_student: Pelajari tentang jujukan dan algoritma dengan _Angry
+                Birds_.
               description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
                 akan membangunkan algoritma berjujukan untuk menggerakkan burung dari
                 satu bahagian pagar sesat ke bahagian lain tempat khinzir berada.
@@ -7722,12 +7783,25 @@ ms:
               name: Penyahpepijatan di dalam Pagar Sesat
               description_student: Cari masalah di dalam teka-teki dan berlatih kemahiran
                 penyahpepijatan anda.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan menemui kod prabertulis yang mengandungi kesalahan. Mereka perlu
+                meneliti kod sedia ada untuk mengenal pasti ralatnya.
+            Collecting Treasure with Laurel:
+              key: Mengumpul Harta Karun bersama Laurel
+              name: Mengumpul Harta Karun bersama Laurel
             Creating Art with Code:
+              key: Mencipta Seni dengan Kod
+              name: Mencipta Seni dengan Kod
               description_student: Cipta imej yang cantik dengan mengatur cara Artis.
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan mengawal Artis bagi melengkapkan lukisan pada skrin.
             Loops with Rey and BB-8:
               key: Gelung dengan Rey dan BB-8
               name: Gelung dengan Rey dan BB-8
+              description_student: Bantu _BB-8_ melepasi pagar sesat dengan menggunakan
+                gelung!
             Sticker Art with Loops:
+              key: Seni Pelekat dengan Gelung
               description_student: Dalam pelajaran ini, gelung memudahkan imej lebih
                 menarik dibuat dengan Artis!
             Nested Loops in Maze:
@@ -7928,6 +8002,8 @@ ms:
                 dalam jujukan linear.
             Programming in with Angry Birds:
               name: Pengaturcaraan dengan Angry Birds
+              description_teacher: Dalam pelajaran **membina kemahiran** ini, pelajar
+                akan terus membangunkan kemahiran algoritma berjujukan.
             Programming with Rey and BB-8:
               key: Pengaturcaraan dengan Rey dan BB-8
               name: Pengaturcaraan dengan Rey dan BB-8
@@ -7976,8 +8052,8 @@ ms:
                 akhir tahap ini, pelajar akan diberikan peluang mencipta imej mereka
                 sendiri.
             On the Move with Events:
-              key: Bergerak bersama Peristiwa
-              name: Bergerak bersama Peristiwa
+              key: Bergerak bersama Acara
+              name: Bergerak bersama Acara
               description_student: Cipta permainan dan cerita anda sendiri.
               description_teacher: Dalam **projek mini** ini, pelajar berpeluang mempelajari
                 cara menggunakan acara di dalam Makmal Mainan dan melaksanakan semua
@@ -7985,10 +8061,14 @@ ms:
                 animasi. Sudah tiba masanya menjadi kreatif dan mencipta cerita di
                 dalam Makmal Mainan!
             A Royal Battle with Events:
-              key: Pertempuran Diraja bersama Peristiwa
-              name: Pertempuran Diraja bersama Peristiwa
-              description_student: Gunakan peristiwa untuk mencipta cerita atau membuat
+              key: Pertempuran Diraja bersama Acara
+              name: Pertempuran Diraja bersama Acara
+              description_student: Gunakan acara untuk mencipta cerita atau membuat
                 permainan berinteraktif.
+              description_teacher: Dalam **projek mini** ini, pelajar akan berpeluang
+                mempelajari cara menggunakan acara di dalam Makmal Mainan dan melaksanakan
+                semua kemahiran pengekodan yang telah mereka pelajari untuk mencipta
+                permainan animasi.
           lesson_groups:
             csf_sequencing:
               display_name: Penjujukan
@@ -8311,10 +8391,6 @@ ms:
               name: Projek Pengurusan Storan Kejiranan - Hari 2
             lesson-13:
               name: Projek Pengurusan Storan Kejiranan - Hari 3
-        poetry:
-          lessons:
-            lesson-3:
-              name: Pembolehubah
         spelling-bee:
           lessons:
             lesson-1:

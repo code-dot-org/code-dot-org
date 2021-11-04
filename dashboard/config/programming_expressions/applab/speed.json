@@ -2,7 +2,9 @@
   "func": "speed",
   "category": "Turtle",
   "paletteParams": [
-    "value"
+    {
+      "name": "value"
+    }
   ],
   "params": [
     "50"

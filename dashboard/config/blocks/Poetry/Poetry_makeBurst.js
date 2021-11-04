@@ -1,3 +1,7 @@
+function math_random_int(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function makeBurst(num,costume,effect) {
   for (var count = 0; count < num; count++) {
     createNewSprite({name: 'temporarySprite'}, costume, ({"x":200,"y":200}));
