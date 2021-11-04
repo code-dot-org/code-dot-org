@@ -116,5 +116,5 @@ const styles = {
 export const UnconnectedAddLevelFilters = AddLevelFilters;
 
 export default connect(state => ({
-  searchOptions: state.levelSearching.searchOptions
+  searchOptions: state.levelSearchingInfo.searchOptions
 }))(AddLevelFilters);

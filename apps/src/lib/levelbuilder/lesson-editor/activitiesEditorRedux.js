@@ -34,9 +34,9 @@ export const NEW_LEVEL_ID = '-1';
 
 // NOTE: Position for Activities, Activity Sections and Levels is 1 based.
 
-export const initg = searchInfo => ({
+export const initg = levelSearchingInfo => ({
   type: INIT_LEVEL_SEARCHING,
-  searchInfo
+  levelSearchingInfo
 });
 
 export const initUnitInfo = unitInfo => ({
@@ -468,10 +468,10 @@ function activities(state = [], action) {
   return newState;
 }
 
-function levelSearching(state = {}, action) {
+function levelSearchingInfo(state = {}, action) {
   switch (action.type) {
     case INIT_LEVEL_SEARCHING:
-      return action.searchInfo;
+      return action.levelSearchingInfo;
   }
   return state;
 }
@@ -611,7 +611,7 @@ function validateScriptLevel(scriptLevel, location) {
 
 export default {
   activities,
-  levelSearching,
+  levelSearchingInfo,
   unitInfo
 };
 

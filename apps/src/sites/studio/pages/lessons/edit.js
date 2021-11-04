@@ -29,7 +29,7 @@ $(document).ready(function() {
   const lessonData = getScriptData('lesson');
   const relatedLessons = getScriptData('relatedLessons');
   const unitInfo = getScriptData('unit');
-  const searchInfo = getScriptData('searchInfo');
+  const levelSearchingInfo = getScriptData('levelSearchingInfo');
 
   const activities = mapActivityDataForEditor(lessonData.activities);
   const objectives = lessonData.objectives || [];
@@ -46,7 +46,7 @@ $(document).ready(function() {
   const store = getStore();
 
   store.dispatch(initActivities(activities));
-  store.dispatch(initLevelSearching(searchInfo));
+  store.dispatch(initLevelSearching(levelSearchingInfo));
   store.dispatch(initUnitInfo(unitInfo));
   store.dispatch(initResources('lessonResource', lessonData.resources || []));
   store.dispatch(initVocabularies(lessonData.vocabularies || []));
