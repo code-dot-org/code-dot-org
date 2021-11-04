@@ -242,12 +242,11 @@ class Backpack extends Component {
             {showFiles && (
               <>
                 <div
-                  style={{
-                    ...styles.dropdown,
-                    ...(isDarkMode && styles.dropdownDark)
-                  }}
+                  style={styles.dropdown}
                   ref={ref => (this.dropdownList = ref)}
                 >
+                  {/* In the case of a vary long filename, this div adds styling
+                  that maintains highlighting even when scrolled to the right */}
                   <div style={styles.listContainer}>
                     {backpackFilenames.map((filename, index) => (
                       <div
@@ -341,12 +340,7 @@ const styles = {
     color: color.darkest_gray
   },
   dropdown: {
-    backgroundColor: color.lightest_gray,
-    color: color.darkest_gray,
     paddingTop: 5,
-    paddingBottom: 5,
-    borderRadius: 2,
-    minWidth: 150,
     overflow: 'auto'
   },
   dropdownDark: {
