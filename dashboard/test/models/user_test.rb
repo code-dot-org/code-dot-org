@@ -46,6 +46,10 @@ class UserTest < ActiveSupport::TestCase
     @user = create :user
     @teacher = create :teacher
     @student = create :student
+    @facilitator = create :facilitator
+    @code_instructor = create :code_instructor
+    @plc_reviewer = create :plc_reviewer
+    @levelbuilder = create :levelbuilder
   end
 
   test 'from_identifier finds user by id' do
@@ -2801,6 +2805,47 @@ class UserTest < ActiveSupport::TestCase
     # admins should be authorized teachers too
     assert @admin.teacher?
     assert @admin.authorized_teacher?
+  end
+
+  test "authorized instructor" do
+    # normal teacher accounts are not automatically authorized instructors
+    assert @teacher.teacher?
+    refute @teacher.authorized_instructor?
+
+    # you need to be given the authorized permission
+    real_teacher = create(:teacher)
+    real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
+    assert real_teacher.teacher?
+    assert real_teacher.authorized_instructor?
+
+    # or you have to be in a plc course
+    create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
+    assert plc_teacher.teacher?
+    assert plc_teacher.authorized_instructor?
+
+    # admins should be authorized instructors too
+    assert @admin.teacher?
+    assert @admin.authorized_instructor?
+
+    # facilitators should be authorized instructors too
+    assert @facilitator.teacher?
+    assert @facilitator.authorized_instructor?
+
+    # code instructors should be authorized instructors too
+    assert @code_instructor.teacher?
+    assert @code_instructor.authorized_instructor?
+
+    #plc reviewers should be authorized instructors too
+    assert @plc_reviewer.teacher?
+    assert @plc_reviewer.authorized_instructor?
+
+    #levelbuilders should be authorized instructors too
+    assert @levelbuilder.teacher?
+    assert @levelbuilder.authorized_instructor?
+
+    #students should not be authorized instructors
+    refute @student.teacher?
+    refute @student.authorized_instructor?
   end
 
   test 'terms_of_service_version for teacher without version' do

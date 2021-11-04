@@ -12,5 +12,5 @@ export const LabeledUsPhoneNumberInput = props => {
 };
 LabeledUsPhoneNumberInput.propTypes = {
   name: PropTypes.string.isRequired,
-  label: PropTypes.string
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
 };
