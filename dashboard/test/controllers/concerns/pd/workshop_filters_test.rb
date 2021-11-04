@@ -1,4 +1,4 @@
-require 'test_helper'
+crequire 'test_helper'
 
 class Pd::WorkshopFiltersTest < ActionController::TestCase
   freeze_time
