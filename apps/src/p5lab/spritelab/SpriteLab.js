@@ -82,8 +82,18 @@ export default class SpriteLab extends P5Lab {
     const current = new Date().getTime();
     if (isPaused) {
       this.library.endPause(current);
+      this.pausedSounds?.forEach(soundUrl =>
+        Sounds.getSingleton().playURL(soundUrl)
+      );
     } else {
       this.library.startPause(current);
+      const soundsById = Sounds.getSingleton().soundsById;
+      this.pausedSounds = Object.keys(soundsById).filter(
+        soundUrl => soundsById[soundUrl].isPlaying_
+      );
+      this.pausedSounds.forEach(soundUrl =>
+        Sounds.getSingleton().stopPlayingURL(soundUrl)
+      );
     }
   }
 
