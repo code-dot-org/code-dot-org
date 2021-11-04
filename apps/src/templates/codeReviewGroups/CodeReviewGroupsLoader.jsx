@@ -22,6 +22,10 @@ export default function CodeReviewGroupsLoader({sectionId}) {
   );
 }
 
+/**
+ * Converts code review groups JSON data from the server by performing
+ * any necessary JSON key conversions from snake case to camel case
+ */
 function convertGroupData(groups) {
   for (let group of groups) {
     group.members = group.members.map(member => {
