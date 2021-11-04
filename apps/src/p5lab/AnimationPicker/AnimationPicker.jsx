@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {createUuid} from '@cdo/apps/utils';
+import {createUuid, makeEnum} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 var msg = require('@cdo/locale');
@@ -23,6 +23,8 @@ import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 // Some operating systems round their file sizes, so max size is 101KB even
 // though our error message says 100KB, to help users avoid confusion.
 const MAX_UPLOAD_SIZE = 101000;
+
+export const PICKER_TYPE = makeEnum('spritelab', 'gamelab', 'backgrounds');
 
 /**
  * Dialog used for finding/selecting/uploading one or more assets to add to a
@@ -50,6 +52,7 @@ class AnimationPicker extends React.Component {
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
     canDraw: PropTypes.bool.isRequired,
+    pickerType: PropTypes.oneOf(Object.entries(PICKER_TYPE)).isRequired,
 
     // Provided via Redux
     visible: PropTypes.bool.isRequired,
@@ -90,6 +93,20 @@ class AnimationPicker extends React.Component {
     } else if (this.props.uploadInProgress) {
       return <h1 style={styles.title}>{msg.animationPicker_uploading()}</h1>;
     }
+
+    // Update text depending on the context of the animation picker
+    let imageText;
+    switch (this.props.pickerType) {
+      case PICKER_TYPE.spritelab:
+        imageText = 'costumes';
+        break;
+      case PICKER_TYPE.gamelab:
+        imageText = 'animations';
+        break;
+      default:
+        imageText = 'backgrounds';
+    }
+
     return (
       <div>
         <AnimationPickerBody
@@ -111,7 +128,7 @@ class AnimationPicker extends React.Component {
         {this.state.exitingDialog && (
           <BaseDialog isOpen hideCloseButton={true} style={styles.dialog}>
             <h3>{msg.animationPicker_leaveSelectionTitle()}</h3>
-            <p>{msg.animationPicker_leaveSelectionText()}</p>
+            <p>{msg.animationPicker_leaveSelectionText({imageText})}</p>
 
             <DialogFooter rightAlign={true}>
               <Button

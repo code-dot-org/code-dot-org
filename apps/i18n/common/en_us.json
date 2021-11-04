@@ -99,7 +99,7 @@
   "animationPicker_drawYourOwn": "Draw your own",
   "animationPicker_error": "Error: {message}",
   "animationPicker_failedToParseImage": "The image could not be parsed",
-  "animationPicker_leaveSelectionText": "Any selected costumes will not be added to your project.",
+  "animationPicker_leaveSelectionText": "Any selected {imageText} will not be added to your project.",
   "animationPicker_leaveSelectionTitle": "Leave the Library?",
   "animationPicker_noResultsFound": "Sorry, no results found.",
   "animationPicker_returnToLibrary": "Return to library",
