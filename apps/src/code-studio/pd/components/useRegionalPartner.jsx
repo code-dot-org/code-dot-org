@@ -56,29 +56,28 @@ export const useRegionalPartner = data => {
   const [partner, setPartner] = useState(null);
   // cache this debounced function so that it is more easily testable
   const debouncedFetch = useCallback(
-    debounce(fetchRegionalPartner, 500, {leading: true}),
+    debounce(
+      data =>
+        fetchRegionalPartner(data)
+          .then(partner => {
+            // Update state with all the partner workshop data to display
+            setLoadingPartner(false);
+            setLoadError(false);
+            setPartner(partner); // TODO(tim): potential issue where requests are fulfilled out of order
+          })
+          .catch(() => {
+            setLoadingPartner(false);
+            setLoadError(true);
+          }),
+      500,
+      {leading: true}
+    ),
     []
   );
 
   // load regional partner whenever parameters change
   useEffect(() => {
-    let cancelled = false;
-    debouncedFetch(data)
-      .then(partner => {
-        if (!cancelled) {
-          // Update state with all the partner workshop data to display
-          setLoadingPartner(false);
-          setLoadError(false);
-          setPartner(partner);
-        }
-      })
-      .catch(() => {
-        setLoadingPartner(false);
-        setLoadError(true);
-      });
-    return () => {
-      cancelled = true;
-    };
+    debouncedFetch(data);
   }, [program, schoolZipCode, schoolState, school]);
 
   return [loadingPartner ? null : partner, loadError];
