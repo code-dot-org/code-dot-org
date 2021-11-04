@@ -39,6 +39,10 @@ class DSLDefined < Level
     errors.add(:name, "cannot be the default level name") if name == DEFAULT_LEVEL_NAME
   end
 
+  def validate_level_num
+    raise "level_num must be nil for DSLDefined levels" unless level_num.nil?
+  end
+
   def dsl_default
     "Enter the level definition here.\n"
   end
