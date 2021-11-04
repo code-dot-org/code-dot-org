@@ -157,10 +157,9 @@ class Script < ApplicationRecord
   validates :instructor_audience, acceptance: {accept: SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values.push(nil), message: 'must be nil, code instructor, plc reviewer, facilitator, or teacher'}
   validates :participant_audience, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values.push(nil), message: 'must be nil, facilitator, teacher, or student'}
 
-  def prevent_duplicate_levels
-    reload
-    duplicate_keys = duplicate_level_keys
-    raise "duplicate levels detected: #{duplicate_keys.to_json}" unless duplicate_keys.empty?
+  def prevent_new_duplicate_levels(old_dup_level_keys = [])
+    new_dup_level_keys = duplicate_level_keys - old_dup_level_keys
+    raise "new duplicate levels detected in unit: #{new_dup_level_keys}" if new_dup_level_keys.any?
   end
 
   def duplicate_level_keys
