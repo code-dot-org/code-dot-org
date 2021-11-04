@@ -1138,6 +1138,7 @@ class ScriptTest < ActiveSupport::TestCase
       @facilitator = create :facilitator
       @code_instructor = create :code_instructor
       @plc_reviewer = create :plc_reviewer
+      @levelbuilder = create :levelbuilder
 
       @unit_group = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
       @unit_in_course = create(:script)
@@ -1165,6 +1166,14 @@ class ScriptTest < ActiveSupport::TestCase
       assert_equal true, @unit_code_instructor_to_teacher.can_be_instructor?(@code_instructor)
       assert_equal true, @unit_plc_reviewer_to_facilitator.can_be_instructor?(@code_instructor)
       assert_equal true, @unit_code_instructor_to_teacher.can_be_instructor?(@code_instructor)
+    end
+
+    test 'levelbuilder should be able to see instructor view for any unit' do
+      assert_equal true, @unit_teacher_to_students.can_be_instructor?(@levelbuilder)
+      assert_equal true, @unit_facilitator_to_teacher.can_be_instructor?(@levelbuilder)
+      assert_equal true, @unit_code_instructor_to_teacher.can_be_instructor?(@levelbuilder)
+      assert_equal true, @unit_plc_reviewer_to_facilitator.can_be_instructor?(@levelbuilder)
+      assert_equal true, @unit_code_instructor_to_teacher.can_be_instructor?(@levelbuilder)
     end
 
     test 'plc reviewer should be able to instruct units with plc_reviewer as instructor audience ' do
