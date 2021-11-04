@@ -190,15 +190,16 @@ class ReviewTab extends Component {
     this.dataApi
       .resolveCodeReviewComment(resolvedCommentId, newResolvedStatus)
       .done(() => {
-        const updatedComments = [...comments];
-        const resolvedCommentIndex = comments.findIndex(
+        const toggledCommentIndex = comments.findIndex(
           comment => comment.id === resolvedCommentId
         );
-        updatedComments[resolvedCommentIndex].isResolved = !updatedComments[
-          resolvedCommentIndex
-        ].isResolved;
-
-        this.setState({comments: updatedComments});
+        // Making a deep copy of the comment allows us to update state
+        // explicitly when setState is called. This is used by child elements
+        // such as Comment.
+        const toggledComment = {...comments[toggledCommentIndex]};
+        toggledComment.isResolved = !toggledComment.isResolved;
+        comments[toggledCommentIndex] = toggledComment;
+        this.setState({comments});
       })
       .fail(() => this.flashErrorOnComment(resolvedCommentId));
   };
