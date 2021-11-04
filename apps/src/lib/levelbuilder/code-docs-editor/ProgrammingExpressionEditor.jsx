@@ -54,6 +54,7 @@ export default function ProgrammingExpressionEditor({
   remainingProgrammingExpression.parameters.forEach(
     p => (p.key = createUuid())
   );
+  remainingProgrammingExpression.examples.forEach(e => (e.key = createUuid()));
   const [
     programmingExpression,
     updateProgrammingExpression
@@ -67,22 +68,13 @@ export default function ProgrammingExpressionEditor({
       return;
     }
     setIsSaving(true);
-    const copiedParameters = programmingExpression.parameters.map(p => {
-      const copied = {...p};
-      delete copied.key;
-      return copied;
-    });
-    const programmingExpressionToSave = {
-      ...programmingExpression,
-      parameters: copiedParameters
-    };
     fetch(`/programming_expressions/${id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
       },
-      body: JSON.stringify(programmingExpressionToSave)
+      body: JSON.stringify(programmingExpression)
     })
       .then(response => {
         setIsSaving(false);
