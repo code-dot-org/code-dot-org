@@ -122,7 +122,7 @@ class LessonsController < ApplicationController
         raise msg unless @lesson.script_levels.last.assessment && @lesson.script_levels.last.level.type == 'LevelGroup'
       end
 
-      @lesson.script.prevent_duplicate_levels
+      @lesson.prevent_duplicate_levels
       @lesson.script.fix_lesson_positions
     end
 
