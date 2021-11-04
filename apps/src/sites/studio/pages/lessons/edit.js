@@ -28,7 +28,7 @@ import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/Expandable
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
   const relatedLessons = getScriptData('relatedLessons');
-  const unitInfo = getScriptData('unit');
+  const unitInfo = getScriptData('unitForLesson');
   const levelSearchingInfo = getScriptData('levelSearchingInfo');
 
   const activities = mapActivityDataForEditor(lessonData.activities);
