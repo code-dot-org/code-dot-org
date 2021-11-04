@@ -218,7 +218,7 @@ export const UnconnectedProgrammingExpressionsEditor = ProgrammingExpressionsEdi
 export default connect(
   state => ({
     programmingExpressions: state.programmingExpressions,
-    programmingEnvironments: state.programmingEnvironments
+    programmingEnvironments: state.searchInfo.programmingEnvironments
   }),
   {
     addProgrammingExpression,

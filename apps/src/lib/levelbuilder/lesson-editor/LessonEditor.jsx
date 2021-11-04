@@ -121,7 +121,7 @@ class LessonEditor extends Component {
             );
           } else {
             navigateToHref(
-              linkWithQueryParams(this.state.originalLessonData.scriptPath)
+              linkWithQueryParams(this.state.originalLessonData.unit.unitPath)
             );
           }
         } else {
@@ -196,12 +196,12 @@ class LessonEditor extends Component {
             <input
               type="checkbox"
               checked={lockable}
-              disabled={this.props.initialLessonData.unitIsLaunched}
+              disabled={this.props.initialLessonData.course.isLaunched}
               style={styles.checkbox}
               onChange={() => this.setState({lockable: !lockable})}
             />
             <HelpTip>
-              {this.props.initialLessonData.unitIsLaunched ? (
+              {this.props.initialLessonData.course.isLaunched ? (
                 <p>Can't update lockable for visible unit.</p>
               ) : (
                 <p>
@@ -217,12 +217,12 @@ class LessonEditor extends Component {
             <input
               type="checkbox"
               checked={hasLessonPlan}
-              disabled={this.props.initialLessonData.unitIsLaunched}
+              disabled={this.props.initialLessonData.course.isLaunched}
               style={styles.checkbox}
               onChange={() => this.setState({hasLessonPlan: !hasLessonPlan})}
             />
             <HelpTip>
-              {this.props.initialLessonData.unitIsLaunched ? (
+              {this.props.initialLessonData.course.isLaunched ? (
                 <p>Can't update has lesson plan for visible unit.</p>
               ) : (
                 <p>
@@ -380,7 +380,7 @@ class LessonEditor extends Component {
               {this.state.originalLessonData.courseVersionId ? (
                 <ResourcesEditor
                   courseVersionId={
-                    this.state.originalLessonData.courseVersionId
+                    this.state.originalLessonData.course.courseVersionId
                   }
                   resourceContext="lessonResource"
                   resources={this.props.resources}
@@ -402,7 +402,7 @@ class LessonEditor extends Component {
               {this.state.originalLessonData.courseVersionId ? (
                 <VocabulariesEditor
                   courseVersionId={
-                    this.state.originalLessonData.courseVersionId
+                    this.state.originalLessonData.course.courseVersionId
                   }
                 />
               ) : (
