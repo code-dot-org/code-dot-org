@@ -33,6 +33,7 @@ require 'cdo/script_constants'
 require 'cdo/shared_constants'
 require 'cdo/shared_constants/curriculum/shared_course_constants'
 require 'ruby-progressbar'
+require 'cdo/dashboard/app/models'
 
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 
