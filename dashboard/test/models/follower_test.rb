@@ -68,7 +68,7 @@ class FollowerTest < ActiveSupport::TestCase
     end
   end
 
-  test 'deleting a follower deletes any code review group members' do
+  test 'deleting a follower deletes the associated code review group member' do
     code_review_group = CodeReviewGroup.create(section_id: @laurel_section.id, name: 'test_group')
     CodeReviewGroupMember.create(follower_id: @follower.id, code_review_group_id: code_review_group.id)
     @follower.destroy

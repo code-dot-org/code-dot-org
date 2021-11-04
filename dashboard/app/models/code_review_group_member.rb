@@ -15,6 +15,8 @@
 # Join table.
 # The logic here should be kept minimal, as it is used to join code_review_groups and followers.
 class CodeReviewGroupMember < ApplicationRecord
+  self.primary_key = :follower_id
+
   belongs_to :follower, required: true
   belongs_to :code_review_group, required: true
 
