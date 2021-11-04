@@ -1,6 +1,7 @@
 import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
+import {APP_HEIGHT, APP_WIDTH} from '../constants';
 
 export default class CoreLibrary {
   constructor(p5) {
@@ -82,7 +83,6 @@ export default class CoreLibrary {
   }
 
   drawSpeechBubble(text, x, y) {
-    //console.log(`${x}, ${y}`);
     const padding = 8;
     text = ellipsify(text, 150 /* maxLength */);
     let textSize = 10;
@@ -102,23 +102,23 @@ export default class CoreLibrary {
     const height = lines.length * textSize + padding * 2;
 
     let triangleSize = 10;
-    let tipX = x;
+    let triangleTipX = x;
+    // The number of pixels used to create the rounded corners of the speech bubble:
+    const rectangleCornerRadius = 8;
 
     // For the calculations below, keep in mind that x and y are located at the horizontal center and the top of the sprite, respectively.
     // In other words, x and y indicate the default position of the bubble's triangular tip.
-    if (y > 400) {
-      y = 400;
-    }
+    y = Math.min(y, APP_HEIGHT);
     if (y - height - triangleSize < 1) {
       triangleSize = Math.max(1, y - height);
       y = height + triangleSize;
     }
     if (x - width / 2 < 1) {
-      tipX = Math.max(x, 8 + triangleSize);
+      triangleTipX = Math.max(x, rectangleCornerRadius + triangleSize);
       x = width / 2;
     }
-    if (x + width / 2 > 400) {
-      tipX = Math.min(x, 392);
+    if (x + width / 2 > APP_WIDTH) {
+      triangleTipX = Math.min(x, APP_WIDTH - rectangleCornerRadius);
       x = 400 - width / 2;
     }
 
@@ -130,7 +130,7 @@ export default class CoreLibrary {
       width,
       height,
       triangleSize,
-      tipX
+      triangleTipX
     );
 
     // Draw text within bubble.
