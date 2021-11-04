@@ -44,7 +44,7 @@ export default function ExampleEditor({example, updateExample}) {
       <label>
         Example App Display Type
         <select
-          value={example.appDisplayType}
+          value={example.appDisplayType || 'directly'}
           onChange={e => updateExample('appDisplayType', e.target.value)}
           style={styles.selectInput}
         >
