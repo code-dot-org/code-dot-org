@@ -2823,9 +2823,9 @@ class UserTest < ActiveSupport::TestCase
     assert plc_teacher.teacher?
     assert plc_teacher.authorized_instructor?
 
-    # admins should be authorized instructors too
+    # admins are not authorized instructorsg
     assert @admin.teacher?
-    assert @admin.authorized_instructor?
+    refute @admin.authorized_instructor?
 
     # facilitators should be authorized instructors too
     assert @facilitator.teacher?
