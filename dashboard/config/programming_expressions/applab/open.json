@@ -2,7 +2,9 @@
   "func": "open",
   "category": "UI controls",
   "paletteParams": [
-    "url"
+    {
+      "name": "url"
+    }
   ],
   "params": [
     "\"https://code.org\""

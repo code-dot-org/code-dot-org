@@ -18,7 +18,6 @@ const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
 const DEFAULT_PROPS = {
   onSelectUser: () => {},
   getSelectedUserId: () => {},
-  sectionData: null,
   unitName: 'A unit',
   pageType: pageTypes.level,
   viewAs: ViewType.Student,
@@ -29,7 +28,9 @@ const DEFAULT_PROPS = {
   unlockedLessonNames: [],
   students: null,
   levelsWithProgress: [],
-  loadLevelsWithProgress: () => {}
+  loadLevelsWithProgress: () => {},
+  teacherId: 5,
+  exampleSolutions: []
 };
 
 const sectionScriptLevelData = [
@@ -165,70 +166,58 @@ describe('TeacherPanel', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
         students: students,
-        getSelectedUserId: () => 0
+        pageType: pageTypes.scriptOverview
       });
 
       expect(wrapper.find(SelectedStudentInfo)).to.have.length(0);
     });
 
-    it('on level displays SelectedStudentInfo when student selected', () => {
+    it('on level displays SelectedStudentInfo when students have loaded, passes expected props', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
         students: students,
         getSelectedUserId: () => 1,
-        sectionData: {
-          section: {
-            students: students
-          }
-        }
+        teacherId: 5
       });
 
-      expect(wrapper.find(SelectedStudentInfo)).to.have.length(1);
+      const selectedStudentComponent = wrapper.find(SelectedStudentInfo);
+      expect(selectedStudentComponent).to.have.length(1);
+      expect(selectedStudentComponent.props().teacherId).to.equal(5);
+      expect(selectedStudentComponent.props().selectedUserId).to.equal(1);
     });
   });
 
   describe('Example Solutions', () => {
-    describe('on unit', () => {
-      it('does not display example solutions', () => {
-        const wrapper = setUp({
-          viewAs: ViewType.Teacher
-        });
-        expect(wrapper.find('Button')).to.have.length(0);
+    it('does not display example solutions if the viewType is student', () => {
+      const wrapper = setUp({
+        viewAs: ViewType.Student,
+        exampleSolutions: [
+          'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
+        ]
       });
+      expect(wrapper.find('Button')).to.have.length(0);
     });
 
-    describe('on level', () => {
-      it('displays example solution for level with one example solution', () => {
-        const wrapper = setUp({
-          viewAs: ViewType.Teacher,
-          students: students,
-          sectionData: {
-            level_examples: [
-              'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
-            ],
-            section: {
-              students: students
-            }
-          }
-        });
-
-        expect(wrapper.find('Button')).to.have.length(1);
+    it('displays example solution for level with one example solution', () => {
+      const wrapper = setUp({
+        viewAs: ViewType.Teacher,
+        students: students,
+        exampleSolutions: [
+          'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
+        ]
       });
 
-      it('does not display example solution for level with no example solution', () => {
-        const wrapper = setUp({
-          viewAs: ViewType.Teacher,
-          students: students,
-          sectionData: {
-            level_examples: null,
-            section: {
-              students: students
-            }
-          }
-        });
+      expect(wrapper.find('Button')).to.have.length(1);
+    });
 
-        expect(wrapper.find('Button')).to.have.length(0);
+    it('does not display example solution for level with no example solution', () => {
+      const wrapper = setUp({
+        viewAs: ViewType.Teacher,
+        students: students,
+        exampleSolutions: null
       });
+
+      expect(wrapper.find('Button')).to.have.length(0);
     });
   });
 });

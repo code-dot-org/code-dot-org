@@ -2,7 +2,9 @@
   "func": "mirrorX",
   "category": "Sprites",
   "paletteParams": [
-    "dir"
+    {
+      "name": "dir"
+    }
   ],
   "params": [
     "-1"
