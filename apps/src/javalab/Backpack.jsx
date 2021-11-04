@@ -239,62 +239,66 @@ class Backpack extends Component {
               ...(isDarkMode && styles.dropdownDark)
             }}
           >
-            <div
-              style={{
-                ...styles.dropdown,
-                ...(isDarkMode && styles.dropdownDark)
-              }}
-              ref={ref => (this.dropdownList = ref)}
-            >
-              {showFiles && (
-                <div style={styles.listContainer}>
-                  {backpackFilenames.map((filename, index) => (
-                    <div
-                      style={{
-                        ...styles.fileListItem,
-                        ...(isDarkMode && styles.fileListItemDark)
-                      }}
-                      key={`backpack-file-${index}`}
-                    >
-                      <input
-                        type="checkbox"
-                        id={`backpack-file-${index}`}
-                        name={filename}
-                        onChange={this.handleFileCheckboxChange}
-                      />
-                      <label
-                        htmlFor={`backpack-file-${index}`}
-                        style={styles.fileListLabel}
+            {showFiles && (
+              <>
+                <div
+                  style={{
+                    ...styles.dropdown,
+                    ...(isDarkMode && styles.dropdownDark)
+                  }}
+                  ref={ref => (this.dropdownList = ref)}
+                >
+                  <div style={styles.listContainer}>
+                    {backpackFilenames.map((filename, index) => (
+                      <div
+                        style={{
+                          ...styles.fileListItem,
+                          ...(isDarkMode && styles.fileListItemDark)
+                        }}
+                        key={`backpack-file-${index}`}
                       >
-                        {filename}
-                      </label>
-                    </div>
-                  ))}
+                        <input
+                          type="checkbox"
+                          id={`backpack-file-${index}`}
+                          name={filename}
+                          onChange={this.handleFileCheckboxChange}
+                        />
+                        <label
+                          htmlFor={`backpack-file-${index}`}
+                          style={styles.fileListLabel}
+                        >
+                          {filename}
+                        </label>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              )}
-              {backpackFilesLoading && (
+                <JavalabButton
+                  text={javalabMsg.import()}
+                  style={styles.importButton}
+                  onClick={this.handleImport}
+                  isDisabled={selectedFiles.length === 0}
+                />
+              </>
+            )}
+            {backpackFilesLoading && (
+              <div style={styles.spinnerContainer}>
                 <span
                   className="fa fa-spin fa-spinner"
                   style={styles.spinner}
                 />
-              )}
-              {backpackLoadError && (
-                <div style={styles.message}>
-                  {javalabMsg.backpackListLoadError()}
-                </div>
-              )}
-              {showNoFiles && (
-                <div style={styles.message}>
-                  {javalabMsg.emptyBackpackMessage()}
-                </div>
-              )}
-            </div>
-            <JavalabButton
-              text={javalabMsg.import()}
-              style={styles.importButton}
-              onClick={this.handleImport}
-              isDisabled={selectedFiles.length === 0}
-            />
+              </div>
+            )}
+            {backpackLoadError && (
+              <div style={styles.message}>
+                {javalabMsg.backpackListLoadError()}
+              </div>
+            )}
+            {showNoFiles && (
+              <div style={styles.message}>
+                {javalabMsg.emptyBackpackMessage()}
+              </div>
+            )}
           </div>
         )}
         <JavalabDialog
@@ -327,10 +331,14 @@ const styles = {
     backgroundColor: color.lightest_gray,
     zIndex: 20,
     borderWidth: 1,
-    borderColor: color.lightest_gray,
+    borderColor: color.darkest_gray,
     borderStyle: 'solid',
     borderTopWidth: 0,
-    borderRadius: 4
+    borderRadius: 4,
+    maxWidth: '35%',
+    maxHeight: '80%',
+    minWidth: 150,
+    color: color.darkest_gray
   },
   dropdown: {
     backgroundColor: color.lightest_gray,
@@ -339,13 +347,12 @@ const styles = {
     paddingBottom: 5,
     borderRadius: 2,
     minWidth: 150,
-    maxWidth: 450,
-    maxHeight: 500,
     overflow: 'auto'
   },
   dropdownDark: {
     backgroundColor: color.darkest_gray,
-    color: color.lightest_gray
+    color: color.lightest_gray,
+    borderColor: color.lightest_gray
   },
   listContainer: {
     width: 'fit-content'
@@ -356,8 +363,11 @@ const styles = {
     backgroundColor: color.light_purple,
     margin: '3px 3px 3px 0px',
     height: 24,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    // prevent jitter when the button is clicked
+    borderColor: color.purple,
     borderRadius: 4,
-    borderWidth: 0,
     fontSize: 13,
     color: color.white,
     padding: '0px 12px',
@@ -374,7 +384,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'row',
     padding: '5px 10px 5px 10px',
-    width: '90%',
+    width: '95%',
     ':hover': {
       backgroundColor: color.lighter_gray
     }
@@ -404,7 +414,7 @@ const styles = {
   },
   message: {
     fontStyle: 'italic',
-    fontSize: 10,
+    fontSize: 12,
     lineHeight: '12px',
     padding: 10
   },
@@ -414,6 +424,9 @@ const styles = {
   importWarningConfirm: {
     marginTop: 10,
     marginBottom: 0
+  },
+  spinnerContainer: {
+    textAlign: 'center'
   }
 };
 
