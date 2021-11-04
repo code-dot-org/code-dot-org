@@ -111,12 +111,21 @@ describe('ProgrammingExpressionEditor', () => {
         .props().markdown
     ).to.equal('some tips on how to use this block');
 
+    // Parameters section
     const parametersSection = wrapper.find('CollapsibleEditorSection').at(3);
     const orderableParameterList = parametersSection.find('OrderableList');
     expect(orderableParameterList.props().addButtonText).to.equal(
       'Add Another Parameter'
     );
     expect(orderableParameterList.props().list.length).to.equal(1);
+
+    // Examples section
+    const examplesSection = wrapper.find('CollapsibleEditorSection').at(4);
+    const orderableExampleList = examplesSection.find('OrderableList');
+    expect(orderableExampleList.props().addButtonText).to.equal(
+      'Add Another Example'
+    );
+    expect(orderableExampleList.props().list.length).to.equal(1);
   });
 
   it('attempts to save when save is pressed', () => {
