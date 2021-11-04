@@ -16,12 +16,13 @@ export default function CodeReviewGroup({
     onNameUpdate(droppableId, event.target.value);
   };
   return (
-    <div>
+    <div style={styles.groupContainer}>
       <div style={styles.headerContainer}>
         <input
           value={name}
           style={styles.nameInput}
           onChange={handleNameUpdate}
+          placeholder={'Enter a group name'}
         />
         <button
           style={styles.deleteButtonContainer}
@@ -49,14 +50,25 @@ CodeReviewGroup.propTypes = {
 };
 
 const styles = {
+  groupContainer: {
+    paddingBottom: 20
+  },
   headerContainer: {
     display: 'flex',
     justifyContent: 'space-between',
-    border: '1px solid black',
+    border: `1px solid ${color.lighter_gray}`,
     background: color.lightest_gray,
     padding: '9px 12px'
   },
-  nameInput: {borderRadius: 4},
-  deleteButtonContainer: {display: 'flex'},
-  deleteButton: {padding: 10}
+  nameInput: {
+    padding: '5px 12px',
+    borderRadius: 4,
+    border: `1px solid ${color.lighter_gray}`
+  },
+  deleteButtonContainer: {
+    display: 'flex',
+    border: `1px solid ${color.dark_charcoal}`,
+    borderRadius: 4,
+    margin: 0
+  }
 };
