@@ -4,14 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS in Science Legacy"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:16 UTC",
+    "serialized_at": "2021-11-02 14:28:25 UTC",
     "published_state": "beta",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "2016_sciencePD_phase1"
     }
@@ -212,21 +214,292 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "52bbefc8-8caa-472b-98e6-b4921396e18c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "52bbefc8-8caa-472b-98e6-b4921396e18c",
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "2016_sciencePD_phase1"
+      }
+    },
+    {
+      "key": "598f74e6-9af0-407e-8678-27768d3e99bd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "598f74e6-9af0-407e-8678-27768d3e99bd",
+        "lesson.key": "What to Expect",
+        "lesson_group.key": "",
+        "script.name": "2016_sciencePD_phase1"
+      }
+    },
+    {
+      "key": "56bc1c3a-a8b9-46a9-aab1-560281f63e85",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "56bc1c3a-a8b9-46a9-aab1-560281f63e85",
+        "lesson.key": "Introduction to Complex Adaptive Systems",
+        "lesson_group.key": "",
+        "script.name": "2016_sciencePD_phase1"
+      }
+    },
+    {
+      "key": "bd3f060b-2177-432b-aef0-fb1b556fce5e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bd3f060b-2177-432b-aef0-fb1b556fce5e",
+        "lesson.key": "Introduction to Computational Science",
+        "lesson_group.key": "",
+        "script.name": "2016_sciencePD_phase1"
+      }
+    },
+    {
+      "key": "17dc2695-a593-4b99-8094-43fe15785742",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "17dc2695-a593-4b99-8094-43fe15785742",
+        "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
+        "lesson_group.key": "",
+        "script.name": "2016_sciencePD_phase1"
+      }
+    },
+    {
+      "key": "ccbc653a-99c4-4a31-9f16-97ec89a81c3e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ccbc653a-99c4-4a31-9f16-97ec89a81c3e",
+        "lesson.key": "Using Computer Models in Science",
+        "lesson_group.key": "",
+        "script.name": "2016_sciencePD_phase1"
+      }
+    },
+    {
+      "key": "841ea527-3ff6-4023-a361-95ac0e11d327",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "841ea527-3ff6-4023-a361-95ac0e11d327",
+        "lesson.key": "Using Models in the Classroom",
+        "lesson_group.key": "",
+        "script.name": "2016_sciencePD_phase1"
+      }
+    },
+    {
+      "key": "2126678b-9e17-4a3b-9f2a-679d90e0bf94",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2126678b-9e17-4a3b-9f2a-679d90e0bf94",
+        "lesson.key": "Dispositions and Classroom Culture",
+        "lesson_group.key": "",
+        "script.name": "2016_sciencePD_phase1"
+      }
+    },
+    {
+      "key": "6edf530a-fa0a-4730-bc21-c693963166cd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6edf530a-fa0a-4730-bc21-c693963166cd",
+        "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
+        "lesson_group.key": "",
+        "script.name": "2016_sciencePD_phase1"
+      }
+    },
+    {
+      "key": "da1b2808-5433-417e-9a7c-dd5191db9f82",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "da1b2808-5433-417e-9a7c-dd5191db9f82",
+        "lesson.key": "Introduction to StarLogo Nova",
+        "lesson_group.key": "",
+        "script.name": "2016_sciencePD_phase1"
+      }
+    },
+    {
+      "key": "9274610c-1030-4c75-b24f-99845710c4f8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9274610c-1030-4c75-b24f-99845710c4f8",
+        "lesson.key": "The Tutorial",
+        "lesson_group.key": "",
+        "script.name": "2016_sciencePD_phase1"
+      }
+    },
+    {
+      "key": "c45563c1-157b-4889-95d7-1c7e8592bb23",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c45563c1-157b-4889-95d7-1c7e8592bb23",
+        "lesson.key": "Post-Survey",
+        "lesson_group.key": "",
+        "script.name": "2016_sciencePD_phase1"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "10db620b-4b5e-47fa-a620-5aefceafc3a4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "10db620b-4b5e-47fa-a620-5aefceafc3a4",
+        "lesson_activity.key": "52bbefc8-8caa-472b-98e6-b4921396e18c"
+      }
+    },
+    {
+      "key": "2c22c605-7a92-45f7-8c04-bc30a08fe5c5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2c22c605-7a92-45f7-8c04-bc30a08fe5c5",
+        "lesson_activity.key": "598f74e6-9af0-407e-8678-27768d3e99bd"
+      }
+    },
+    {
+      "key": "b44c0d2a-3c3a-463d-b6dc-9d8393f2f752",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b44c0d2a-3c3a-463d-b6dc-9d8393f2f752",
+        "lesson_activity.key": "56bc1c3a-a8b9-46a9-aab1-560281f63e85"
+      }
+    },
+    {
+      "key": "2a4bc7a8-2991-4e90-8885-b549e2eacfe4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2a4bc7a8-2991-4e90-8885-b549e2eacfe4",
+        "lesson_activity.key": "bd3f060b-2177-432b-aef0-fb1b556fce5e"
+      }
+    },
+    {
+      "key": "0dc40727-31ac-420b-9f54-e2fcc9bcf216",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0dc40727-31ac-420b-9f54-e2fcc9bcf216",
+        "lesson_activity.key": "17dc2695-a593-4b99-8094-43fe15785742"
+      }
+    },
+    {
+      "key": "0b2925f7-4a66-4cfc-a479-bfc10b6ffe7e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0b2925f7-4a66-4cfc-a479-bfc10b6ffe7e",
+        "lesson_activity.key": "ccbc653a-99c4-4a31-9f16-97ec89a81c3e"
+      }
+    },
+    {
+      "key": "08b2e9e4-b788-44c6-806f-2825ba0ede2d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "08b2e9e4-b788-44c6-806f-2825ba0ede2d",
+        "lesson_activity.key": "841ea527-3ff6-4023-a361-95ac0e11d327"
+      }
+    },
+    {
+      "key": "e82acb12-442c-427c-97ed-aba3c5af9fbc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e82acb12-442c-427c-97ed-aba3c5af9fbc",
+        "lesson_activity.key": "2126678b-9e17-4a3b-9f2a-679d90e0bf94"
+      }
+    },
+    {
+      "key": "ed58d832-ede7-436b-82af-fd142ab0fb9e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ed58d832-ede7-436b-82af-fd142ab0fb9e",
+        "lesson_activity.key": "6edf530a-fa0a-4730-bc21-c693963166cd"
+      }
+    },
+    {
+      "key": "70a274e9-1d72-464c-aa8a-1b0a84569807",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "70a274e9-1d72-464c-aa8a-1b0a84569807",
+        "lesson_activity.key": "da1b2808-5433-417e-9a7c-dd5191db9f82"
+      }
+    },
+    {
+      "key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6",
+        "lesson_activity.key": "9274610c-1030-4c75-b24f-99845710c4f8"
+      }
+    },
+    {
+      "key": "fbfd6746-80c5-4215-bbd3-30b7cf3c5b98",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "fbfd6746-80c5-4215-bbd3-30b7cf3c5b98",
+        "lesson_activity.key": "c45563c1-157b-4889-95d7-1c7e8592bb23"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD Intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -235,7 +508,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "10db620b-4b5e-47fa-a620-5aefceafc3a4"
       },
       "level_keys": [
         "sciPD Intro"
@@ -244,12 +518,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS tour 2016-17 CSinSci"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -258,7 +529,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "10db620b-4b5e-47fa-a620-5aefceafc3a4"
       },
       "level_keys": [
         "PDECS tour 2016-17 CSinSci"
@@ -267,12 +539,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD commitment 2016-17"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -281,7 +550,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "10db620b-4b5e-47fa-a620-5aefceafc3a4"
       },
       "level_keys": [
         "sciPD commitment 2016-17"
@@ -290,12 +560,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD commitment match 16-17"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -304,7 +571,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "10db620b-4b5e-47fa-a620-5aefceafc3a4"
       },
       "level_keys": [
         "sciPD commitment match 16-17"
@@ -313,12 +581,9 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD what to expect 16-17"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -327,7 +592,8 @@
         ],
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2c22c605-7a92-45f7-8c04-bc30a08fe5c5"
       },
       "level_keys": [
         "sciPD what to expect 16-17"
@@ -336,12 +602,9 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD intro video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -350,7 +613,8 @@
         ],
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2c22c605-7a92-45f7-8c04-bc30a08fe5c5"
       },
       "level_keys": [
         "sciPD intro video"
@@ -359,12 +623,9 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD expectations"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -373,7 +634,8 @@
         ],
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2c22c605-7a92-45f7-8c04-bc30a08fe5c5"
       },
       "level_keys": [
         "sciPD expectations"
@@ -382,12 +644,9 @@
     {
       "chapter": 8,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD meet and greet 16-17"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -396,7 +655,8 @@
         ],
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2c22c605-7a92-45f7-8c04-bc30a08fe5c5"
       },
       "level_keys": [
         "sciPD meet and greet 16-17"
@@ -405,12 +665,9 @@
     {
       "chapter": 9,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD Break 16-17"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -419,7 +676,8 @@
         ],
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2c22c605-7a92-45f7-8c04-bc30a08fe5c5"
       },
       "level_keys": [
         "sciPD Break 16-17"
@@ -428,12 +686,9 @@
     {
       "chapter": 10,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD complex adaptive video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -442,7 +697,8 @@
         ],
         "lesson.key": "Introduction to Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "b44c0d2a-3c3a-463d-b6dc-9d8393f2f752"
       },
       "level_keys": [
         "sciPD complex adaptive video"
@@ -451,12 +707,9 @@
     {
       "chapter": 11,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD complex adaptive 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -465,7 +718,8 @@
         ],
         "lesson.key": "Introduction to Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "b44c0d2a-3c3a-463d-b6dc-9d8393f2f752"
       },
       "level_keys": [
         "sciPD complex adaptive 1"
@@ -474,12 +728,9 @@
     {
       "chapter": 12,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD complex adaptive 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -488,7 +739,8 @@
         ],
         "lesson.key": "Introduction to Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "b44c0d2a-3c3a-463d-b6dc-9d8393f2f752"
       },
       "level_keys": [
         "sciPD complex adaptive 2"
@@ -497,12 +749,9 @@
     {
       "chapter": 13,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD complex adaptive forum"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -511,7 +760,8 @@
         ],
         "lesson.key": "Introduction to Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "b44c0d2a-3c3a-463d-b6dc-9d8393f2f752"
       },
       "level_keys": [
         "sciPD complex adaptive forum"
@@ -520,12 +770,9 @@
     {
       "chapter": 14,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD intro to CS video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -534,7 +781,8 @@
         ],
         "lesson.key": "Introduction to Computational Science",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2a4bc7a8-2991-4e90-8885-b549e2eacfe4"
       },
       "level_keys": [
         "sciPD intro to CS video"
@@ -543,12 +791,9 @@
     {
       "chapter": 15,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD intro to CS 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -557,7 +802,8 @@
         ],
         "lesson.key": "Introduction to Computational Science",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2a4bc7a8-2991-4e90-8885-b549e2eacfe4"
       },
       "level_keys": [
         "sciPD intro to CS 1"
@@ -566,12 +812,9 @@
     {
       "chapter": 16,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD intro to CS 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -580,7 +823,8 @@
         ],
         "lesson.key": "Introduction to Computational Science",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2a4bc7a8-2991-4e90-8885-b549e2eacfe4"
       },
       "level_keys": [
         "sciPD intro to CS 2"
@@ -589,12 +833,9 @@
     {
       "chapter": 17,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD intro to CS forum"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -603,7 +844,8 @@
         ],
         "lesson.key": "Introduction to Computational Science",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2a4bc7a8-2991-4e90-8885-b549e2eacfe4"
       },
       "level_keys": [
         "sciPD intro to CS forum"
@@ -612,12 +854,9 @@
     {
       "chapter": 18,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD agent based video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -626,7 +865,8 @@
         ],
         "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "0dc40727-31ac-420b-9f54-e2fcc9bcf216"
       },
       "level_keys": [
         "sciPD agent based video"
@@ -635,12 +875,9 @@
     {
       "chapter": 19,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD agent based 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -649,7 +886,8 @@
         ],
         "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "0dc40727-31ac-420b-9f54-e2fcc9bcf216"
       },
       "level_keys": [
         "sciPD agent based 1"
@@ -658,12 +896,9 @@
     {
       "chapter": 20,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD agent based 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -672,7 +907,8 @@
         ],
         "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "0dc40727-31ac-420b-9f54-e2fcc9bcf216"
       },
       "level_keys": [
         "sciPD agent based 2"
@@ -681,12 +917,9 @@
     {
       "chapter": 21,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD agent based forum"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -695,7 +928,8 @@
         ],
         "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "0dc40727-31ac-420b-9f54-e2fcc9bcf216"
       },
       "level_keys": [
         "sciPD agent based forum"
@@ -704,12 +938,9 @@
     {
       "chapter": 22,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD computer models video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -718,7 +949,8 @@
         ],
         "lesson.key": "Using Computer Models in Science",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "0b2925f7-4a66-4cfc-a479-bfc10b6ffe7e"
       },
       "level_keys": [
         "sciPD computer models video"
@@ -727,12 +959,9 @@
     {
       "chapter": 23,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD computer models 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -741,7 +970,8 @@
         ],
         "lesson.key": "Using Computer Models in Science",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "0b2925f7-4a66-4cfc-a479-bfc10b6ffe7e"
       },
       "level_keys": [
         "sciPD computer models 1"
@@ -750,12 +980,9 @@
     {
       "chapter": 24,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD computer models 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -764,7 +991,8 @@
         ],
         "lesson.key": "Using Computer Models in Science",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "0b2925f7-4a66-4cfc-a479-bfc10b6ffe7e"
       },
       "level_keys": [
         "sciPD computer models 2"
@@ -773,12 +1001,9 @@
     {
       "chapter": 25,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD computer models forum"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -787,7 +1012,8 @@
         ],
         "lesson.key": "Using Computer Models in Science",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "0b2925f7-4a66-4cfc-a479-bfc10b6ffe7e"
       },
       "level_keys": [
         "sciPD computer models forum"
@@ -796,12 +1022,9 @@
     {
       "chapter": 26,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD class models video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -810,7 +1033,8 @@
         ],
         "lesson.key": "Using Models in the Classroom",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "08b2e9e4-b788-44c6-806f-2825ba0ede2d"
       },
       "level_keys": [
         "sciPD class models video"
@@ -819,12 +1043,9 @@
     {
       "chapter": 27,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD class models 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -833,7 +1054,8 @@
         ],
         "lesson.key": "Using Models in the Classroom",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "08b2e9e4-b788-44c6-806f-2825ba0ede2d"
       },
       "level_keys": [
         "sciPD class models 1"
@@ -842,12 +1064,9 @@
     {
       "chapter": 28,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD class models 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -856,7 +1075,8 @@
         ],
         "lesson.key": "Using Models in the Classroom",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "08b2e9e4-b788-44c6-806f-2825ba0ede2d"
       },
       "level_keys": [
         "sciPD class models 2"
@@ -865,12 +1085,9 @@
     {
       "chapter": 29,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD class models forum"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -879,7 +1096,8 @@
         ],
         "lesson.key": "Using Models in the Classroom",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "08b2e9e4-b788-44c6-806f-2825ba0ede2d"
       },
       "level_keys": [
         "sciPD class models forum"
@@ -888,12 +1106,9 @@
     {
       "chapter": 30,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD culture video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -902,7 +1117,8 @@
         ],
         "lesson.key": "Dispositions and Classroom Culture",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "e82acb12-442c-427c-97ed-aba3c5af9fbc"
       },
       "level_keys": [
         "sciPD culture video"
@@ -911,12 +1127,9 @@
     {
       "chapter": 31,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD culture 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -925,7 +1138,8 @@
         ],
         "lesson.key": "Dispositions and Classroom Culture",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "e82acb12-442c-427c-97ed-aba3c5af9fbc"
       },
       "level_keys": [
         "sciPD culture 1"
@@ -934,12 +1148,9 @@
     {
       "chapter": 32,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD culture 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -948,7 +1159,8 @@
         ],
         "lesson.key": "Dispositions and Classroom Culture",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "e82acb12-442c-427c-97ed-aba3c5af9fbc"
       },
       "level_keys": [
         "sciPD culture 2"
@@ -957,12 +1169,9 @@
     {
       "chapter": 33,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD culture forum"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -971,7 +1180,8 @@
         ],
         "lesson.key": "Dispositions and Classroom Culture",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "e82acb12-442c-427c-97ed-aba3c5af9fbc"
       },
       "level_keys": [
         "sciPD culture forum"
@@ -980,12 +1190,9 @@
     {
       "chapter": 34,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD framework video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -994,7 +1201,8 @@
         ],
         "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "ed58d832-ede7-436b-82af-fd142ab0fb9e"
       },
       "level_keys": [
         "sciPD framework video"
@@ -1003,12 +1211,9 @@
     {
       "chapter": 35,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD framework 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1017,7 +1222,8 @@
         ],
         "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "ed58d832-ede7-436b-82af-fd142ab0fb9e"
       },
       "level_keys": [
         "sciPD framework 1"
@@ -1026,12 +1232,9 @@
     {
       "chapter": 36,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD framework 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1040,7 +1243,8 @@
         ],
         "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "ed58d832-ede7-436b-82af-fd142ab0fb9e"
       },
       "level_keys": [
         "sciPD framework 2"
@@ -1049,12 +1253,9 @@
     {
       "chapter": 37,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD framework forum"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1063,7 +1264,8 @@
         ],
         "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "ed58d832-ede7-436b-82af-fd142ab0fb9e"
       },
       "level_keys": [
         "sciPD framework forum"
@@ -1072,12 +1274,9 @@
     {
       "chapter": 38,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo intro video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1086,7 +1285,8 @@
         ],
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "70a274e9-1d72-464c-aa8a-1b0a84569807"
       },
       "level_keys": [
         "sciPD StarLogo intro video"
@@ -1095,12 +1295,9 @@
     {
       "chapter": 39,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo intro 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1109,7 +1306,8 @@
         ],
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "70a274e9-1d72-464c-aa8a-1b0a84569807"
       },
       "level_keys": [
         "sciPD StarLogo intro 1"
@@ -1118,12 +1316,9 @@
     {
       "chapter": 40,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo intro 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1132,7 +1327,8 @@
         ],
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "70a274e9-1d72-464c-aa8a-1b0a84569807"
       },
       "level_keys": [
         "sciPD StarLogo intro 2"
@@ -1141,12 +1337,9 @@
     {
       "chapter": 41,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo intro 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1155,7 +1348,8 @@
         ],
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "70a274e9-1d72-464c-aa8a-1b0a84569807"
       },
       "level_keys": [
         "sciPD StarLogo intro 3"
@@ -1164,12 +1358,9 @@
     {
       "chapter": 42,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo intro 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1178,7 +1369,8 @@
         ],
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "70a274e9-1d72-464c-aa8a-1b0a84569807"
       },
       "level_keys": [
         "sciPD StarLogo intro 4"
@@ -1187,12 +1379,9 @@
     {
       "chapter": 43,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo tutorial 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1201,7 +1390,8 @@
         ],
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6"
       },
       "level_keys": [
         "sciPD StarLogo tutorial 1"
@@ -1210,12 +1400,9 @@
     {
       "chapter": 44,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo tutorial 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1224,7 +1411,8 @@
         ],
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6"
       },
       "level_keys": [
         "sciPD StarLogo tutorial 2"
@@ -1233,12 +1421,9 @@
     {
       "chapter": 45,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo tutorial 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1247,7 +1432,8 @@
         ],
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6"
       },
       "level_keys": [
         "sciPD StarLogo tutorial 3"
@@ -1256,12 +1442,9 @@
     {
       "chapter": 46,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo tutorial 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1270,7 +1453,8 @@
         ],
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6"
       },
       "level_keys": [
         "sciPD StarLogo tutorial 4"
@@ -1279,12 +1463,9 @@
     {
       "chapter": 47,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo tutorial 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1293,7 +1474,8 @@
         ],
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6"
       },
       "level_keys": [
         "sciPD StarLogo tutorial 5"
@@ -1302,12 +1484,9 @@
     {
       "chapter": 48,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo tutorial 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1316,7 +1495,8 @@
         ],
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6"
       },
       "level_keys": [
         "sciPD StarLogo tutorial 6"
@@ -1325,12 +1505,9 @@
     {
       "chapter": 49,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo tutorial 7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1339,7 +1516,8 @@
         ],
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6"
       },
       "level_keys": [
         "sciPD StarLogo tutorial 7"
@@ -1348,12 +1526,9 @@
     {
       "chapter": 50,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo tutorial 8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1362,7 +1537,8 @@
         ],
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6"
       },
       "level_keys": [
         "sciPD StarLogo tutorial 8"
@@ -1371,12 +1547,9 @@
     {
       "chapter": 51,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD finish 16-17"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1385,7 +1558,8 @@
         ],
         "lesson.key": "Post-Survey",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "fbfd6746-80c5-4215-bbd3-30b7cf3c5b98"
       },
       "level_keys": [
         "sciPD finish 16-17"
@@ -1401,7 +1575,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "10db620b-4b5e-47fa-a620-5aefceafc3a4"
       }
     },
     {
@@ -1412,7 +1587,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "10db620b-4b5e-47fa-a620-5aefceafc3a4"
       }
     },
     {
@@ -1423,7 +1599,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "10db620b-4b5e-47fa-a620-5aefceafc3a4"
       }
     },
     {
@@ -1434,7 +1611,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "10db620b-4b5e-47fa-a620-5aefceafc3a4"
       }
     },
     {
@@ -1445,7 +1623,8 @@
         ],
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2c22c605-7a92-45f7-8c04-bc30a08fe5c5"
       }
     },
     {
@@ -1456,7 +1635,8 @@
         ],
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2c22c605-7a92-45f7-8c04-bc30a08fe5c5"
       }
     },
     {
@@ -1467,7 +1647,8 @@
         ],
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2c22c605-7a92-45f7-8c04-bc30a08fe5c5"
       }
     },
     {
@@ -1478,7 +1659,8 @@
         ],
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2c22c605-7a92-45f7-8c04-bc30a08fe5c5"
       }
     },
     {
@@ -1489,7 +1671,8 @@
         ],
         "lesson.key": "What to Expect",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2c22c605-7a92-45f7-8c04-bc30a08fe5c5"
       }
     },
     {
@@ -1500,7 +1683,8 @@
         ],
         "lesson.key": "Introduction to Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "b44c0d2a-3c3a-463d-b6dc-9d8393f2f752"
       }
     },
     {
@@ -1511,7 +1695,8 @@
         ],
         "lesson.key": "Introduction to Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "b44c0d2a-3c3a-463d-b6dc-9d8393f2f752"
       }
     },
     {
@@ -1522,7 +1707,8 @@
         ],
         "lesson.key": "Introduction to Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "b44c0d2a-3c3a-463d-b6dc-9d8393f2f752"
       }
     },
     {
@@ -1533,7 +1719,8 @@
         ],
         "lesson.key": "Introduction to Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "b44c0d2a-3c3a-463d-b6dc-9d8393f2f752"
       }
     },
     {
@@ -1544,7 +1731,8 @@
         ],
         "lesson.key": "Introduction to Computational Science",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2a4bc7a8-2991-4e90-8885-b549e2eacfe4"
       }
     },
     {
@@ -1555,7 +1743,8 @@
         ],
         "lesson.key": "Introduction to Computational Science",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2a4bc7a8-2991-4e90-8885-b549e2eacfe4"
       }
     },
     {
@@ -1566,7 +1755,8 @@
         ],
         "lesson.key": "Introduction to Computational Science",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2a4bc7a8-2991-4e90-8885-b549e2eacfe4"
       }
     },
     {
@@ -1577,7 +1767,8 @@
         ],
         "lesson.key": "Introduction to Computational Science",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "2a4bc7a8-2991-4e90-8885-b549e2eacfe4"
       }
     },
     {
@@ -1588,7 +1779,8 @@
         ],
         "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "0dc40727-31ac-420b-9f54-e2fcc9bcf216"
       }
     },
     {
@@ -1599,7 +1791,8 @@
         ],
         "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "0dc40727-31ac-420b-9f54-e2fcc9bcf216"
       }
     },
     {
@@ -1610,7 +1803,8 @@
         ],
         "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "0dc40727-31ac-420b-9f54-e2fcc9bcf216"
       }
     },
     {
@@ -1621,7 +1815,8 @@
         ],
         "lesson.key": "Agent Based Modeling of Complex Adaptive Systems",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "0dc40727-31ac-420b-9f54-e2fcc9bcf216"
       }
     },
     {
@@ -1632,7 +1827,8 @@
         ],
         "lesson.key": "Using Computer Models in Science",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "0b2925f7-4a66-4cfc-a479-bfc10b6ffe7e"
       }
     },
     {
@@ -1643,7 +1839,8 @@
         ],
         "lesson.key": "Using Computer Models in Science",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "0b2925f7-4a66-4cfc-a479-bfc10b6ffe7e"
       }
     },
     {
@@ -1654,7 +1851,8 @@
         ],
         "lesson.key": "Using Computer Models in Science",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "0b2925f7-4a66-4cfc-a479-bfc10b6ffe7e"
       }
     },
     {
@@ -1665,7 +1863,8 @@
         ],
         "lesson.key": "Using Computer Models in Science",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "0b2925f7-4a66-4cfc-a479-bfc10b6ffe7e"
       }
     },
     {
@@ -1676,7 +1875,8 @@
         ],
         "lesson.key": "Using Models in the Classroom",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "08b2e9e4-b788-44c6-806f-2825ba0ede2d"
       }
     },
     {
@@ -1687,7 +1887,8 @@
         ],
         "lesson.key": "Using Models in the Classroom",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "08b2e9e4-b788-44c6-806f-2825ba0ede2d"
       }
     },
     {
@@ -1698,7 +1899,8 @@
         ],
         "lesson.key": "Using Models in the Classroom",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "08b2e9e4-b788-44c6-806f-2825ba0ede2d"
       }
     },
     {
@@ -1709,7 +1911,8 @@
         ],
         "lesson.key": "Using Models in the Classroom",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "08b2e9e4-b788-44c6-806f-2825ba0ede2d"
       }
     },
     {
@@ -1720,7 +1923,8 @@
         ],
         "lesson.key": "Dispositions and Classroom Culture",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "e82acb12-442c-427c-97ed-aba3c5af9fbc"
       }
     },
     {
@@ -1731,7 +1935,8 @@
         ],
         "lesson.key": "Dispositions and Classroom Culture",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "e82acb12-442c-427c-97ed-aba3c5af9fbc"
       }
     },
     {
@@ -1742,7 +1947,8 @@
         ],
         "lesson.key": "Dispositions and Classroom Culture",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "e82acb12-442c-427c-97ed-aba3c5af9fbc"
       }
     },
     {
@@ -1753,7 +1959,8 @@
         ],
         "lesson.key": "Dispositions and Classroom Culture",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "e82acb12-442c-427c-97ed-aba3c5af9fbc"
       }
     },
     {
@@ -1764,7 +1971,8 @@
         ],
         "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "ed58d832-ede7-436b-82af-fd142ab0fb9e"
       }
     },
     {
@@ -1775,7 +1983,8 @@
         ],
         "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "ed58d832-ede7-436b-82af-fd142ab0fb9e"
       }
     },
     {
@@ -1786,7 +1995,8 @@
         ],
         "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "ed58d832-ede7-436b-82af-fd142ab0fb9e"
       }
     },
     {
@@ -1797,7 +2007,8 @@
         ],
         "lesson.key": "Computational Thinking And The Framework For K-12 Science Education",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "ed58d832-ede7-436b-82af-fd142ab0fb9e"
       }
     },
     {
@@ -1808,7 +2019,8 @@
         ],
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "70a274e9-1d72-464c-aa8a-1b0a84569807"
       }
     },
     {
@@ -1819,7 +2031,8 @@
         ],
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "70a274e9-1d72-464c-aa8a-1b0a84569807"
       }
     },
     {
@@ -1830,7 +2043,8 @@
         ],
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "70a274e9-1d72-464c-aa8a-1b0a84569807"
       }
     },
     {
@@ -1841,7 +2055,8 @@
         ],
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "70a274e9-1d72-464c-aa8a-1b0a84569807"
       }
     },
     {
@@ -1852,7 +2067,8 @@
         ],
         "lesson.key": "Introduction to StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "70a274e9-1d72-464c-aa8a-1b0a84569807"
       }
     },
     {
@@ -1863,7 +2079,8 @@
         ],
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6"
       }
     },
     {
@@ -1874,7 +2091,8 @@
         ],
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6"
       }
     },
     {
@@ -1885,7 +2103,8 @@
         ],
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6"
       }
     },
     {
@@ -1896,7 +2115,8 @@
         ],
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6"
       }
     },
     {
@@ -1907,7 +2127,8 @@
         ],
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6"
       }
     },
     {
@@ -1918,7 +2139,8 @@
         ],
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6"
       }
     },
     {
@@ -1929,7 +2151,8 @@
         ],
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6"
       }
     },
     {
@@ -1940,7 +2163,8 @@
         ],
         "lesson.key": "The Tutorial",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "7df86805-fe19-4c39-afa2-6d25d73b7bf6"
       }
     },
     {
@@ -1951,7 +2175,8 @@
         ],
         "lesson.key": "Post-Survey",
         "lesson_group.key": "",
-        "script.name": "2016_sciencePD_phase1"
+        "script.name": "2016_sciencePD_phase1",
+        "activity_section.key": "fbfd6746-80c5-4215-bbd3-30b7cf3c5b98"
       }
     }
   ],

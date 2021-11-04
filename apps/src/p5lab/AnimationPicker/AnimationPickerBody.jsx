@@ -203,6 +203,7 @@ export default class AnimationPickerBody extends React.Component {
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton =
       this.multiSelectEnabled_ && isMobileDevice();
+
     return (
       <div style={{marginBottom: 10}}>
         {shouldDisplaySecondDoneButton && (
@@ -238,6 +239,7 @@ export default class AnimationPickerBody extends React.Component {
           </div>
         )}
         <ScrollableList
+          className="uitest-animation-picker-list"
           style={{maxHeight: MAX_HEIGHT}}
           onScroll={this.handleScroll}
         >
