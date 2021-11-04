@@ -1,6 +1,6 @@
 # Model concern for common curriculum audience methods
 # To use, include in a model and call the desired method.
-module CourseAudiences
+module Curriculum::CourseAudiences
   extend ActiveSupport::Concern
 
   included do
