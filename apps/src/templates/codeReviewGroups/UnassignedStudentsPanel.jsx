@@ -52,10 +52,19 @@ export const BUTTON_STYLE = {
   border: `1px solid ${color.dark_charcoal}`
 };
 
+export const GROUPS_CONTAINER_STYLE = {
+  display: 'flex',
+  flexDirection: 'column',
+  height: 355,
+  overflow: 'scroll',
+  border: `1px solid ${color.lightest_gray}`
+};
+
 const styles = {
   unassignedStudentsPanel: {
     width: 400
   },
   header: HEADER_STYLE,
-  button: BUTTON_STYLE
+  button: BUTTON_STYLE,
+  groupsContainer: GROUPS_CONTAINER_STYLE
 };

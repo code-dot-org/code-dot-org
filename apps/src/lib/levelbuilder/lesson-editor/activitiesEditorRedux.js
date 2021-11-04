@@ -7,9 +7,8 @@ import {
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 
-const INIT = 'activitiesEditor/INIT';
-const INIT_PROFESSIONAL_LEARNING =
-  'activitiesEditor/INIT_PROFESSIONAL_LEARNING';
+const INIT_LEVEL_SEARCHING = 'activitiesEditor/INIT_LEVEL_SEARCHING';
+const INIT_UNIT_INFO = 'activitiesEditor/INIT_COURSE_INFO';
 const INIT_ACTIVITIES = 'activitiesEditor/INIT_ACTIVITIES';
 const ADD_ACTIVITY = 'activitiesEditor/ADD_ACTIVITY';
 const MOVE_ACTIVITY = 'activitiesEditor/MOVE_ACTIVITY';
@@ -35,24 +34,14 @@ export const NEW_LEVEL_ID = '-1';
 
 // NOTE: Position for Activities, Activity Sections and Levels is 1 based.
 
-export const init = (
-  activities,
-  searchOptions,
-  programmingEnvironments,
-  lessonExtrasAvailableForUnit,
-  isProfessionalLearningCourse
-) => ({
-  type: INIT,
-  activities,
-  searchOptions,
-  programmingEnvironments,
-  lessonExtrasAvailableForUnit,
-  isProfessionalLearningCourse
+export const initLevelSearching = levelSearchingInfo => ({
+  type: INIT_LEVEL_SEARCHING,
+  levelSearchingInfo
 });
 
-export const initIsProfessionalLearningCourse = isProfessionalLearningCourse => ({
-  type: INIT_PROFESSIONAL_LEARNING,
-  isProfessionalLearningCourse
+export const initUnitInfo = unitInfo => ({
+  type: INIT_UNIT_INFO,
+  unitInfo
 });
 
 export const initActivities = activities => ({
@@ -270,7 +259,6 @@ function activities(state = [], action) {
   let newState = _.cloneDeep(state);
 
   switch (action.type) {
-    case INIT:
     case INIT_ACTIVITIES:
       validateActivities(action.activities, action.type);
       return action.activities;
@@ -480,34 +468,18 @@ function activities(state = [], action) {
   return newState;
 }
 
-function searchOptions(state = {}, action) {
+function levelSearchingInfo(state = {}, action) {
   switch (action.type) {
-    case INIT:
-      return action.searchOptions;
+    case INIT_LEVEL_SEARCHING:
+      return action.levelSearchingInfo;
   }
   return state;
 }
 
-function programmingEnvironments(state = {}, action) {
+function unitInfo(state = {}, action) {
   switch (action.type) {
-    case INIT:
-      return action.programmingEnvironments;
-  }
-  return state;
-}
-
-function lessonExtrasAvailableForUnit(state = {}, action) {
-  switch (action.type) {
-    case INIT:
-      return action.lessonExtrasAvailableForUnit;
-  }
-  return state;
-}
-
-function isProfessionalLearningCourse(state = {}, action) {
-  switch (action.type) {
-    case INIT_PROFESSIONAL_LEARNING:
-      return action.isProfessionalLearningCourse;
+    case INIT_UNIT_INFO:
+      return action.unitInfo;
   }
   return state;
 }
@@ -639,10 +611,8 @@ function validateScriptLevel(scriptLevel, location) {
 
 export default {
   activities,
-  searchOptions,
-  programmingEnvironments,
-  lessonExtrasAvailableForUnit,
-  isProfessionalLearningCourse
+  levelSearchingInfo,
+  unitInfo
 };
 
 export const emptyActivitySection = {
