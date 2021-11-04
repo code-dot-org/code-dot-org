@@ -238,10 +238,6 @@ class Level < ApplicationRecord
   def self.palette_categories
   end
 
-  def self.custom_levels
-    Naturally.sort_by(Level.where(level_num: 'custom'), :name)
-  end
-
   # Custom levels are built in levelbuilder. Legacy levels are defined in .js.
   # All custom levels will have a 'custom' level_num, except for DSLDefined levels.
   def custom?

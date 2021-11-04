@@ -114,12 +114,6 @@ class LevelTest < ActiveSupport::TestCase
     end
   end
 
-  test "get custom levels" do
-    custom_levels = Level.custom_levels
-    assert custom_levels.include?(@custom_level)
-    assert_not custom_levels.include?(@level)
-  end
-
   test "should not allow pairing with levelgroup type levels" do
     level = Level.create({type: "LevelGroup"})
     assert_equal level.should_allow_pairing?(0), false
