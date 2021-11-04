@@ -1667,7 +1667,7 @@ class Script < ApplicationRecord
 
   def summarize_for_lesson_edit
     {
-      isLaunched: script.launched?,
+      isLaunched: launched?,
       courseVersionId: get_course_version&.id,
       unitPath: script_path(self),
       lessonExtrasAvailableForUnit: lesson_extras_available
