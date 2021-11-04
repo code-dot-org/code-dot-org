@@ -524,7 +524,7 @@ class UnitGroup < ApplicationRecord
 
   def can_be_instructor?(user)
     return false if user.student?
-    return true if user.permission?(UserPermission::CODE_INSTRUCTOR)
+    return true if user.permission?(UserPermission::CODE_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
 
     if instructor_audience == 'plc_reviewer'
       return user.permission?(UserPermission::PLC_REVIEWER)
@@ -538,8 +538,6 @@ class UnitGroup < ApplicationRecord
   end
 
   def can_be_participant?(user)
-    return true if user.permission?(UserPermission::CODE_INSTRUCTOR)
-
     if participant_audience == 'facilitator'
       return user.permission?(UserPermission::FACILITATOR)
     elsif participant_audience == 'teacher'

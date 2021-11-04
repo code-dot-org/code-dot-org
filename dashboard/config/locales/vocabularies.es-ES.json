@@ -331,7 +331,7 @@
           "definition": "computadoras cuya función es proporcionar cosas a otros."
         },
         "url/coursef/2021": {
-          "word": "URL",
+          "word": "Stop",
           "definition": "una dirección fácil de recordar que llama a una página web (como www.code.org)."
         },
         "dsl_cable/coursef/2021": {
@@ -543,7 +543,6 @@
           "definition": "una acción que hace que algo suceda."
         },
         "code/coursed/2021": {
-          "word": "Programar",
           "definition": "(v) escribir código, o escribir instrucciones para una computadora."
         },
         "repeat/coursed/2021": {
@@ -599,9 +598,6 @@
         "event/express/2021": {
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
-        },
-        "code/express/2021": {
-          "word": "Programar"
         },
         "loop/express/2021": {
           "word": "Bucle",

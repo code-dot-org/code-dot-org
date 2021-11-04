@@ -1098,6 +1098,8 @@ bg:
         options:
           EFFECT:
             '"colors"': Цветове
+            '"rain"': Дъжд
+            '"bubbles"': Балончета
       Poetry_setForegroundEffect:
         options:
           EFFECT:

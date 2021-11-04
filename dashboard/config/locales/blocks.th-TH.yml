@@ -1584,6 +1584,16 @@ th:
         text: สัตว์ประหลาดเริ่มสวมหน้ากาก
       Outbreak_stopMoving:
         text: สัตว์ประหลาดหยุดเคลื่อนไหว
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: ไอศกรีม
+            Stars: ดาว
+            Fireworks: พลุ
+            '"rainbow"': สายรุ้ง
+            '"hearts"': หัวใจ
+            '"flowers"': ดอกไม้
+            '"waves"': คลื่น
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1592,6 +1602,9 @@ th:
         text: ทำใหม่ {ANIMATION_NAME} สไปรท์ {LOCATION}
       Poetry_playSound:
         text: เล่นเสียง {SOUND}
+        options:
+          SOUND:
+            Light: อ่อน
       Poetry_setBackground:
         text: กำหนดสีแบ็กกราวนด์ {COLOR}
       Poetry_setBackgroundEffect:
@@ -1602,6 +1615,10 @@ th:
             '"space"': พื้นที่
             '"stars"': ดาว
             '"ripples"': ระลอกคลื่น
+            '"rain"': ฝน
+            '"bubbles"': ฟองสบู่
+            '"confetti"': กระดาษสี
+            '"hearts"': หัวใจหลากสี
           PALETTE:
             '"rainbow"': สายรุ้ง
       Poetry_setBackgroundImageAs:

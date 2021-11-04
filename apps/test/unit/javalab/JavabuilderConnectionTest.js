@@ -4,18 +4,21 @@ import JavabuilderConnection from '@cdo/apps/javalab/JavabuilderConnection';
 import {
   WebSocketMessageType,
   StatusMessageType,
-  STATUS_MESSAGE_PREFIX
+  STATUS_MESSAGE_PREFIX,
+  ExecutionType
 } from '@cdo/apps/javalab/constants';
 import * as ExceptionHandler from '@cdo/apps/javalab/javabuilderExceptionHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
 
 describe('JavabuilderConnection', () => {
-  let onOutputMessage, handleException, connection;
+  let onOutputMessage, handleException, connection, setIsRunning, setIsTesting;
 
   beforeEach(() => {
     sinon.stub(project, 'getCurrentId');
     onOutputMessage = sinon.stub();
     handleException = sinon.stub(ExceptionHandler, 'handleException');
+    setIsRunning = sinon.stub();
+    setIsTesting = sinon.stub();
     connection = new JavabuilderConnection(
       null,
       onOutputMessage,
@@ -23,7 +26,9 @@ describe('JavabuilderConnection', () => {
       null,
       null,
       sinon.stub(),
-      sinon.stub()
+      setIsRunning,
+      setIsTesting,
+      ExecutionType.RUN
     );
   });
 
@@ -84,5 +89,39 @@ describe('JavabuilderConnection', () => {
       expect(closeStub).to.have.been.calledOnce;
       window.WebSocket.restore();
     });
+  });
+
+  describe('handleExecutionFinished', () => {
+    it('Sets running to false if execution type RUN has finished', () => {
+      const connection = createJavabuilderConnection(ExecutionType.RUN);
+
+      connection.handleExecutionFinished();
+
+      sinon.assert.calledWith(setIsRunning, false);
+      sinon.assert.notCalled(setIsTesting);
+    });
+
+    it('Sets testing to false if execution type TEST has finished', () => {
+      const connection = createJavabuilderConnection(ExecutionType.TEST);
+
+      connection.handleExecutionFinished();
+
+      sinon.assert.calledWith(setIsTesting, false);
+      sinon.assert.notCalled(setIsRunning);
+    });
+
+    function createJavabuilderConnection(executionType) {
+      return new JavabuilderConnection(
+        null,
+        onOutputMessage,
+        null,
+        null,
+        null,
+        sinon.stub(),
+        setIsRunning,
+        setIsTesting,
+        executionType
+      );
+    }
   });
 });

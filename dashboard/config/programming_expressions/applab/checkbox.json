@@ -2,8 +2,12 @@
   "func": "checkbox",
   "category": "UI controls",
   "paletteParams": [
-    "id",
-    "checked"
+    {
+      "name": "id"
+    },
+    {
+      "name": "checked"
+    }
   ],
   "params": [
     "\"id\"",

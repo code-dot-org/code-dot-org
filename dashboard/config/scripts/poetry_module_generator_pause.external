@@ -12,7 +12,7 @@ markdown <<MARKDOWN
 
 In the next levels, you will be building your Poem Generator project. 
 
-Before moving on, you should make sure you have a poem with some missing words.
+Before moving on, you should have the new version of your poem with blank spaces and variable labels. 
 
 If you are not sure if you should move on, check with your teacher!
 
@@ -25,11 +25,11 @@ Sample poem with missing words:
 > 
 > 
 >
-> The sweet, [adjective1] bird [verb] 
+> The [adjective1], sweet bird [verb] 
 > 
 > Louder than the [adjective2] streets 
 >
-> It will be alright
+> It will be all right
 
 
 

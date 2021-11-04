@@ -42,7 +42,8 @@ class TeacherPanel extends React.Component {
     unlockedLessonNames: PropTypes.arrayOf(PropTypes.string).isRequired,
     students: PropTypes.arrayOf(studentShape),
     levelsWithProgress: PropTypes.array,
-    loadLevelsWithProgress: PropTypes.func.isRequired
+    loadLevelsWithProgress: PropTypes.func.isRequired,
+    exampleSolutions: PropTypes.array
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -85,7 +86,8 @@ class TeacherPanel extends React.Component {
       unitHasLockableLessons,
       unlockedLessonNames,
       students,
-      unitName
+      unitName,
+      exampleSolutions
     } = this.props;
 
     let currentStudent = null;
@@ -121,7 +123,7 @@ class TeacherPanel extends React.Component {
       viewAs === ViewType.Teacher && currentStudent;
 
     const displayLevelExamples =
-      viewAs === ViewType.Teacher && sectionData?.level_examples?.length > 0;
+      viewAs === ViewType.Teacher && exampleSolutions?.length > 0;
 
     const displayLockInfo =
       hasSections && unitHasLockableLessons && viewAs === ViewType.Teacher;
@@ -142,7 +144,7 @@ class TeacherPanel extends React.Component {
           )}
           {displayLevelExamples && (
             <div style={styles.exampleSolutions}>
-              {sectionData.level_examples.map((example, index) => (
+              {exampleSolutions.map((example, index) => (
                 <Button
                   __useDeprecatedTag
                   key={index}
@@ -299,7 +301,8 @@ export default connect(
       students: state.teacherSections.selectedStudents,
       levelsWithProgress: state.teacherPanel.levelsWithProgress,
       isLoadingLevelsWithProgress:
-        state.teacherPanel.isLoadingLevelsWithProgress
+        state.teacherPanel.isLoadingLevelsWithProgress,
+      exampleSolutions: state.pageConstants?.exampleSolutions
     };
   },
   dispatch => ({

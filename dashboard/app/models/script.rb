@@ -666,7 +666,7 @@ class Script < ApplicationRecord
     return unit_group.can_be_instructor?(user) if unit_group
 
     return false if user.student?
-    return true if user.permission?(UserPermission::CODE_INSTRUCTOR)
+    return true if user.permission?(UserPermission::CODE_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
 
     if instructor_audience == 'plc_reviewer'
       return user.permission?(UserPermission::PLC_REVIEWER)
@@ -682,8 +682,6 @@ class Script < ApplicationRecord
   def can_be_participant?(user)
     # If unit is in a unit group then decide based on unit group audience
     return unit_group.can_be_participant?(user) if unit_group
-
-    return true if user.permission?(UserPermission::CODE_INSTRUCTOR)
 
     if participant_audience == 'facilitator'
       return user.permission?(UserPermission::FACILITATOR)
@@ -980,8 +978,8 @@ class Script < ApplicationRecord
   end
 
   # Generates TTS files for each level in a unit.
-  def tts_update
-    levels.each(&:tts_update)
+  def tts_update(update_all = false)
+    levels.each {|l| l.tts_update(update_all)}
   end
 
   def hint_prompt_enabled?
@@ -1390,6 +1388,9 @@ class Script < ApplicationRecord
   # Update strings and serialize changes to .script file
   def update_text(unit_params, unit_text, metadata_i18n, general_params)
     unit_name = unit_params[:name]
+    # Check if TTS has been turned on for a unit. If so we will need to generate all the TTS for that unit after updating
+    need_to_update_tts = general_params[:tts] && !tts
+
     begin
       # avoid ScriptDSL path for migrated scripts
       unit_data, i18n =
@@ -1424,6 +1425,7 @@ class Script < ApplicationRecord
     update_teacher_resources(general_params[:resourceTypes], general_params[:resourceLinks]) unless general_params[:is_migrated]
     update_migrated_teacher_resources(general_params[:resourceIds]) if general_params[:is_migrated]
     update_student_resources(general_params[:studentResourceIds]) if general_params[:is_migrated]
+    tts_update(true) if need_to_update_tts
     begin
       if Rails.application.config.levelbuilder_mode
         unit = Script.find_by_name(unit_name)

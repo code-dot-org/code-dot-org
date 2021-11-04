@@ -16,7 +16,6 @@
   "makeBackground": "Трябва да поставиш фон.",
   "makeForeground": "Трябва да добавиш преден ефект.",
   "noBehavior": "\nКликнете върху инструменталната кутия   **Sprites**  (**Спрайтове **)  за да намерите този блок.\n<xml><block type=\"PoemBot_startBehavior\"><title name=\"ANIMATION_NAME\">\"tropicalfish_04_1\"</title><title name=\"BEHAVIOR\">swimming_left_and_right</title></block></xml>\n( block_type -> тип_блок , PoemBot_startBehavior -> CтихотворениеБот_НачалоПоведение,  title name ->  име на заглавието, \nANIMATION_NAME ->  ИМЕ_НА_АНИМАЦИЯ , BEHAVIOR ->  ПОВЕДЕНИЕ, swimming_left_and_right -> плуване_наляво_и_дясно ) ",
-  "noTextEffects": "Трябва да добаш текстов ефект към твоя проект. ",
   "oneTextEffect": "Чудесна работа! Добави един текстов ефект. Опитай да добаш друг. ",
   "poLines": "Птиците изчезнаха в небето,\nИ сега последният облак се оттича.\nСедим заедно, планината и аз,\nДокато остане само планината. ",
   "poTitle": "Планина",
