@@ -1326,6 +1326,28 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal [1, 2], section.script_levels.map(&:position)
   end
 
+  test 'lesson update preserves level variants' do
+    sign_in @levelbuilder
+    activity = create :lesson_activity, lesson: @lesson
+    section = create :activity_section, lesson_activity: activity
+    inactive_level = create :level, name: 'inactive-level'
+    active_level = create :level, name: 'active-level'
+    script_level = create :script_level, activity_section: section, activity_section_position: 1, lesson: @lesson, script: @script, levels: [inactive_level]
+    script_level.add_variant(active_level)
+    assert_equal active_level, script_level.oldest_active_level
+    assert_equal [inactive_level, active_level], script_level.levels
+
+    @lesson.reload
+    activities_data = @lesson.summarize_for_lesson_edit[:activities]
+    @update_params['activities'] = activities_data.to_json
+    put :update, params: @update_params
+    assert_response :success
+
+    script_level.reload
+    assert_equal active_level, script_level.oldest_active_level
+    assert_equal [inactive_level, active_level], script_level.levels
+  end
+
   test 'legacy lesson clone fails if destination course does not use code studio lessons' do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true
