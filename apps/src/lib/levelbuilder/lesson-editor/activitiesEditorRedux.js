@@ -34,7 +34,7 @@ export const NEW_LEVEL_ID = '-1';
 
 // NOTE: Position for Activities, Activity Sections and Levels is 1 based.
 
-export const initg = levelSearchingInfo => ({
+export const initLevelSearching = levelSearchingInfo => ({
   type: INIT_LEVEL_SEARCHING,
   levelSearchingInfo
 });
