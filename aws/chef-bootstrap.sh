@@ -72,6 +72,9 @@ else
 fi
 ${CHEF_CLIENT} -v
 
+# Overwrite root certificate list in version of OpenSSL embedded in Chef client with a newer list in our repository.
+curl -o /opt/chef/embedded/ssl/certs/cacert.pem https://raw.githubusercontent.com/code-dot-org/code-dot-org/${BRANCH}/cookbooks/cacert.pem
+
 mkdir -p /etc/chef
 CLIENT_RB=/etc/chef/client.rb
 cat <<RUBY > ${CLIENT_RB}
