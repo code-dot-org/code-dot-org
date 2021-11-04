@@ -3,17 +3,18 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Title
+# Introduction to AI and machine learning
 
-#### In lesson 1, students are introduced to AI and machine learning by training A.I. Bot to recognize patterns in fish. As students progress through the unit, they will begin to unpack this experience as they learn what is going on behind the scenes. By the end of the Unit, students will have the context to understand not only what machine learning is, but how it works. 
+#### In Lesson 1, students are introduced to AI and machine learning by training A.I. Bot to recognize patterns in fish. As students progress through the unit, they will begin to unpack this experience as they learn what is going on behind the scenes. By the end of the unit, students will have the context to understand not only what machine learning is, but how it works. 
 
+## Key terms introduced in Lesson 2
 
 * #### **Features** - the inputs that a model uses to make decisions.
 * #### **Label** - the output you are trying to decide or predict with a model.
 * #### **Model** - a computer program designed to make a decision.
 * #### **Training** - giving examples to a model so it can learn.
 
-## Lesson overviews
+## Overview of Lessons 2 - 4 
 
 <details>
 <summary><strong>Lesson 2</strong></summary>
@@ -26,7 +27,7 @@ markdown <<MARKDOWN
 
 In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called "Green Glass Door" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.
 
-**Students will be able to:**
+**Students will be able to:** 
 * Describe the differences between supervised and unsupervised learning.
 
 </details>

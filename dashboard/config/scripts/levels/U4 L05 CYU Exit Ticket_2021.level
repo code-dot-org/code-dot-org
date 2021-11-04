@@ -2,7 +2,7 @@
   <config><![CDATA[{
   "properties": {
     "long_instructions": "Can a computer evaluate an expression to something between true and false? Can you write an expression to deal with a \"maybe\" answer?",
-    "title": "Updating Variables",
+    "title": "Conditionals",
     "allow_user_uploads": "false",
     "submittable": "true",
     "peer_reviewable": "false",
@@ -22,6 +22,8 @@
   "level_num": "custom",
   "user_id": 13,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2019-02-11 20:52:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-11 20:56:36 +0000\",\"changed\":[\"long_instructions\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-13 16:35:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-21 20:36:04 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-05-25 06:33:58 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2019-02-11 20:52:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-11 20:56:36 +0000\",\"changed\":[\"long_instructions\",\"title\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-13 16:35:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-02-21 20:36:04 +0000\",\"changed\":[\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2021-05-25 06:33:58 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2021-11-03 19:09:17 +0000\",\"changed\":[\"title\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
+  "level_concept_difficulty": {
+  }
 }]]></config>
 </FreeResponse>
