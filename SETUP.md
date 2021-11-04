@@ -444,6 +444,9 @@ If you run into an issue about mysql2 while running `bundle install` and the err
 
 (Steps from [this github issue](https://github.com/brianmario/mysql2/issues/795#issuecomment-439579677))
 
+If you run into an error like "Don't know how to set rpath on your system, if MySQL libraries are not in path mysql2 may not load" during `bundle install` and are running on a Mac with M1, try :
+- `gem install mysql2 -v '0.5.2' -- --with-opt-dir=$(brew --prefix openssl) --with-ldflags=-L/opt/homebrew/Cellar/zstd/1.5.0/lib`
+
 #### therubyracer
 
 If you run into an issue about therubyracer while running `bundle install` try :
