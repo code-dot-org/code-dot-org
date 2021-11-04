@@ -65,6 +65,11 @@ describe('LessonEditor', () => {
     defaultProps = {
       relatedLessons: [],
       initialObjectives: [],
+      unitInfo: {
+        isLaunched: false,
+        courseVersionId: 1,
+        unitPath: '/s/my-script/'
+      },
       initialLessonData: {
         id: 1,
         name: 'Lesson Name',
@@ -79,10 +84,7 @@ describe('LessonEditor', () => {
         preparation: '- One',
         announcements: [],
         assessmentOpportunities: 'Assessment Opportunities',
-        courseVersionId: 1,
-        scriptPath: '/s/my-script/',
         lessonPath: '/lessons/1',
-        unitIsLaunched: false,
         frameworks: []
       }
     };
@@ -141,9 +143,9 @@ describe('LessonEditor', () => {
   });
 
   it('disables editing of lockable and has lesson plan for visible script', () => {
-    let initialLessonDataCopy = _.cloneDeep(defaultProps.initialLessonData);
-    initialLessonDataCopy.unitIsLaunched = true;
-    const wrapper = createWrapper({initialLessonData: initialLessonDataCopy});
+    let unitInfoCopy = _.cloneDeep(defaultProps.unitInfo);
+    unitInfoCopy.isLaunched = true;
+    const wrapper = createWrapper({unitInfo: unitInfoCopy});
     expect(
       wrapper
         .find('input')
