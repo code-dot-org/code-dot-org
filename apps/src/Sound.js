@@ -74,9 +74,8 @@ Sound.prototype.play = function(options) {
 
     // Hook up on-ended callback, although browser support may be limited.
     this.playableBuffers[index].onended = function() {
-      this.isPlayingCount--;
-      if (this.isPlayingCount <= 0) {
-        this.isPlayingCount = 0;
+      this.isPlayingCount = Math.max(this.isPlayingCount - 1, 0);
+      if (this.isPlayingCount === 0) {
         this.isPlaying_ = false;
         options.onEnded && options.onEnded();
       }
@@ -169,10 +168,7 @@ Sound.prototype.stop = function() {
           // Older web audio.
           this.playableBuffers[index].noteOff(0);
         }
-        this.isPlayingCount--;
-        if (this.isPlayingCount < 0) {
-          this.isPlayingCount = 0;
-        }
+        this.isPlayingCount = Math.max(this.isPlayingCount - 1, 0);
       }
     } else if (this.audioElement) {
       // html 5 audio.
