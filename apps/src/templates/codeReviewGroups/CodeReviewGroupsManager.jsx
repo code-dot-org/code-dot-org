@@ -14,6 +14,7 @@ const DROPPABLE_ID_UNASSIGNED = 'unassigned';
 // can be found here:
 // https://github.com/atlassian/react-beautiful-dnd
 export default function CodeReviewGroupsManager({initialGroups}) {
+  console.log(initialGroups);
   const [groups, setGroups] = useState(
     initialGroups.map(group => addDroppableIdToGroup(group))
   );
@@ -28,6 +29,22 @@ export default function CodeReviewGroupsManager({initialGroups}) {
     const updatedGroup = {...getGroup(droppableId), ...{name: newName}};
     const updatedGroups = updateGroups(groups, [updatedGroup]);
     setGroups(updatedGroups);
+  };
+
+  const onGroupDelete = droppableId => {
+    const updatedUnassignedGroup = unassignAllFromGroup(droppableId);
+    const updatedGroups = updateGroups(groups, [updatedUnassignedGroup]);
+
+    const x = updatedGroups.filter(group => group.droppableId !== droppableId);
+    setGroups(x);
+  };
+
+  const unassignAllFromGroup = droppableId => {
+    const updatedUnassignedGroup = {...getUnassignedGroup()};
+    const unassignedGroup = getGroup(droppableId);
+    updatedUnassignedGroup.members.push(...unassignedGroup.members);
+
+    return updatedUnassignedGroup;
   };
 
   function onDragEnd(result) {
@@ -79,6 +96,7 @@ export default function CodeReviewGroupsManager({initialGroups}) {
             setGroups([generateNewGroup(), ...groups]);
           }}
           onGroupNameUpdate={onGroupNameUpdate}
+          onGroupDelete={onGroupDelete}
         />
       </div>
     </DragDropContext>

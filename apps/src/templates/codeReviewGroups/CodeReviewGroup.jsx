@@ -8,7 +8,8 @@ export default function CodeReviewGroup({
   droppableId,
   members,
   name,
-  onNameUpdate
+  onNameUpdate,
+  onDelete
 }) {
   const handleNameUpdate = event => {
     //preventdefault?
@@ -22,9 +23,13 @@ export default function CodeReviewGroup({
           style={styles.nameInput}
           onChange={handleNameUpdate}
         />
-        <span style={styles.deleteButtonContainer}>
+        <button
+          style={styles.deleteButtonContainer}
+          onClick={() => onDelete(droppableId)}
+          type={'button'}
+        >
           <FontAwesome icon={'trash'} style={styles.deleteButton} />
-        </span>
+        </button>
       </div>
       <StudentGroup
         droppableId={droppableId}
@@ -39,7 +44,8 @@ CodeReviewGroup.propTypes = {
   droppableId: PropTypes.string.isRequired,
   members: PropTypes.array.isRequired,
   name: PropTypes.string.isRequired,
-  onNameUpdate: PropTypes.func.isRequired
+  onNameUpdate: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired
 };
 
 const styles = {
