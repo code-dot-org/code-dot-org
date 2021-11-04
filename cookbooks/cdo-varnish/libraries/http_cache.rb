@@ -24,6 +24,8 @@ class HttpCache
     '/s/dance/lessons/1/levels/13',
     '/s/dance-2019/lessons/1/levels/10',
     '/s/poem-art/lessons/1/levels/9',
+    '/s/poem-art/lessons/1/levels/2', # prediction levels are not cacheable
+    '/s/poem-art/lessons/1/levels/5', # prediction levels are not cacheable
     '/s/hello-world-food/lessons/1/levels/11',
     '/s/hello-world-animals/lessons/1/levels/11',
     '/s/hello-world-retro/lessons/1/levels/11',
