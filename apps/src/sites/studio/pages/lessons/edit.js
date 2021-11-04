@@ -65,6 +65,7 @@ $(document).ready(function() {
           initialObjectives={objectives}
           relatedLessons={relatedLessons}
           initialLessonData={lessonData}
+          unitInfo={unitInfo}
         />
         <ExpandableImageDialog />
       </div>

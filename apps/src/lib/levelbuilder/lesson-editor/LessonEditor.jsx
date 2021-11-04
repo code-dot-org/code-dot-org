@@ -34,6 +34,7 @@ class LessonEditor extends Component {
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired,
     initialObjectives: PropTypes.arrayOf(PropTypes.object).isRequired,
     initialLessonData: PropTypes.object,
+    unitInfo: PropTypes.object,
 
     // from redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
@@ -120,9 +121,7 @@ class LessonEditor extends Component {
               linkWithQueryParams(this.state.originalLessonData.lessonPath)
             );
           } else {
-            navigateToHref(
-              linkWithQueryParams(this.state.originalLessonData.unit.unitPath)
-            );
+            navigateToHref(linkWithQueryParams(this.props.unitInfo.unitPath));
           }
         } else {
           const activities = mapActivityDataForEditor(data.activities);
@@ -196,12 +195,12 @@ class LessonEditor extends Component {
             <input
               type="checkbox"
               checked={lockable}
-              disabled={this.props.initialLessonData.course.isLaunched}
+              disabled={this.props.unitInfo.isLaunched}
               style={styles.checkbox}
               onChange={() => this.setState({lockable: !lockable})}
             />
             <HelpTip>
-              {this.props.initialLessonData.course.isLaunched ? (
+              {this.props.unitInfo.isLaunched ? (
                 <p>Can't update lockable for visible unit.</p>
               ) : (
                 <p>
@@ -217,12 +216,12 @@ class LessonEditor extends Component {
             <input
               type="checkbox"
               checked={hasLessonPlan}
-              disabled={this.props.initialLessonData.course.isLaunched}
+              disabled={this.props.unitInfo.isLaunched}
               style={styles.checkbox}
               onChange={() => this.setState({hasLessonPlan: !hasLessonPlan})}
             />
             <HelpTip>
-              {this.props.initialLessonData.course.isLaunched ? (
+              {this.props.unitInfo.isLaunched ? (
                 <p>Can't update has lesson plan for visible unit.</p>
               ) : (
                 <p>
@@ -377,11 +376,9 @@ class LessonEditor extends Component {
               collapsed={true}
               fullWidth={true}
             >
-              {this.state.originalLessonData.courseVersionId ? (
+              {this.props.unitInfo.courseVersionId ? (
                 <ResourcesEditor
-                  courseVersionId={
-                    this.state.originalLessonData.course.courseVersionId
-                  }
+                  courseVersionId={this.props.unitInfo.courseVersionId}
                   resourceContext="lessonResource"
                   resources={this.props.resources}
                 />
@@ -399,11 +396,9 @@ class LessonEditor extends Component {
               collapsed={true}
               fullWidth={true}
             >
-              {this.state.originalLessonData.courseVersionId ? (
+              {this.props.unitInfo.courseVersionId ? (
                 <VocabulariesEditor
-                  courseVersionId={
-                    this.state.originalLessonData.course.courseVersionId
-                  }
+                  courseVersionId={this.props.unitInfo.courseVersionId}
                 />
               ) : (
                 <h4>
