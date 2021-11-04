@@ -14,9 +14,8 @@ const DROPPABLE_ID_UNASSIGNED = 'unassigned';
 // can be found here:
 // https://github.com/atlassian/react-beautiful-dnd
 export default function CodeReviewGroupsManager({initialGroups}) {
-  console.log(initialGroups);
   const [groups, setGroups] = useState(
-    initialGroups.map(group => addDroppableIdToGroup(group))
+    _.cloneDeep(initialGroups).map(group => addDroppableIdToGroup(group))
   );
 
   const getGroup = droppableId =>
