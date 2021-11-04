@@ -44,8 +44,15 @@ class Level < ApplicationRecord
 
   validates_length_of :name, within: 1..70
   validate :reject_illegal_chars
+
+  # Together, these validations prevent collisions between level keys, including
+  # level keys which differ only by case, between all 3 categories of levels:
+  # custom levels, DSLDefined levels, and deprecated blockly levels. For more
+  # context on these categories and level keys, see:
+  # https://docs.google.com/document/d/1rS1ekCEVU1Q49ckh2S9lfq0tQo-m-G5KJLiEalAzPts/edit
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where(level_num: ['custom', nil])}
   validates_uniqueness_of :level_num, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
+
   validate :validate_game, on: [:create, :update]
 
   after_save :write_custom_level_file
