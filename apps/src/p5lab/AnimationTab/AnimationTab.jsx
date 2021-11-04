@@ -4,7 +4,7 @@ import React from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
-import AnimationPicker from '../AnimationPicker/AnimationPicker';
+import AnimationPicker, {PICKER_TYPE} from '../AnimationPicker/AnimationPicker';
 import P5LabVisualizationHeader from '../P5LabVisualizationHeader';
 import {setColumnSizes} from '../redux/animationTab';
 import AnimationList from './AnimationList';
@@ -25,6 +25,7 @@ class AnimationTab extends React.Component {
     hideAnimationNames: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
     labType: PropTypes.oneOf(Object.keys(P5LabType)).isRequired,
+    pickerType: PropTypes.oneOf(PICKER_TYPE).isRequired,
 
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -65,6 +66,7 @@ class AnimationTab extends React.Component {
             navigable={true}
             canDraw={true}
             hideBackgrounds={this.props.hideBackgrounds}
+            pickerType={this.props.pickerType}
           />
         )}
       </div>
