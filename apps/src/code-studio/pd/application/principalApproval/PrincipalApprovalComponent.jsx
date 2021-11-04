@@ -77,7 +77,7 @@ const COURSE_SUFFIXES = {
 };
 
 const PrincipalApprovalComponent = props => {
-  const {teacherApplication, onChange, data} = props;
+  const {teacherApplication, onChange, data, errors} = props;
   const [isPrivacyDialogOpen, setIsPrivacyDialogOpen] = useState(false);
   const [regionalPartner] = useRegionalPartner(data);
 
@@ -108,7 +108,7 @@ const PrincipalApprovalComponent = props => {
         <FormGroup
           id="school"
           controlId="school"
-          validationState={getValidationState('school', data)}
+          validationState={getValidationState('school', errors)}
         >
           <Row>
             <Col md={6}>
@@ -161,12 +161,14 @@ const PrincipalApprovalComponent = props => {
         />
       );
     } else if (teacherApplication.course === 'Computer Science A') {
-      <LabeledCheckBoxesWithAdditionalTextFields
-        name="replaceWhichCourseCsa"
-        textFieldMap={{
-          [TextFields.otherPleaseExplain]: 'other'
-        }}
-      />;
+      return (
+        <LabeledCheckBoxesWithAdditionalTextFields
+          name="replaceWhichCourseCsa"
+          textFieldMap={{
+            [TextFields.otherPleaseExplain]: 'other'
+          }}
+        />
+      );
     }
   };
 
@@ -192,12 +194,13 @@ const PrincipalApprovalComponent = props => {
         <p style={styles.questionText}>
           Percent of student enrollment by race or ethnicity
         </p>
-        {RACE_LIST.map(race => {
+        {RACE_LIST.map((race, i) => {
           return (
             <LabeledNumberInput
               name={race}
+              key={i}
               inlineControl={true}
-              labelWidt={{md: 3}}
+              labelWidth={{md: 3}}
               controlWidth={{md: 2}}
               min={0}
               max={100}
@@ -368,7 +371,7 @@ const PrincipalApprovalComponent = props => {
               <span>
                 {PageLabels.confirmPrincipal.replace(
                   '[regional partner]',
-                  regionalPartner.name || 'my local Code.org Regional Partner'
+                  regionalPartner?.name || 'my local Code.org Regional Partner'
                 )}{' '}
                 <a onClick={openPrivacyDialog}>Learn more.</a>
               </span>
@@ -390,7 +393,7 @@ PrincipalApprovalComponent.propTypes = {
   errorMessages: PropTypes.object.isRequired,
   data: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired,
-  teacherApplication: PropTypes.string.isRequired
+  teacherApplication: PropTypes.object.isRequired
 };
 
 PrincipalApprovalComponent.associatedFields = [
