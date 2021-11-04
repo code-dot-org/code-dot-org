@@ -334,7 +334,7 @@
         "Course 4 Artist Vars 6": "Aquí hay un código que puede dibujar cualquier polígono regular. Hay una nueva variable llamada lados que se inicializa a 4. ¿Puedes usar la variable lados (junto con el bloque de matemáticas) para activar la cantidad correcta independientemente de cuántos lados hay en el polígono? ¡Haz clic aquí para regresar a la pista!",
         "Course 4 Artist Vars 7": "Utiliza lo que aprendiste en el rompecabezas anterior para crear el hexágono usando la variable \"lados\". Vé cómo puedes cambiar solo una variable para dibujar un triángulo, cuadrado, pentágono u octágono?",
         "Course 4 Artist Vars 8": "Juego libre: Experimento con el número de lados de esta forma. ¿Puedes cambiar el algoritmo de modo que el tamaño total de la forma siga siendo el mismo, sin importa cuántos lados tenga? Consejo: Tendrás que usar tus bloques de matemáticas (360 dividido por \"caras\" en dos lugares esta vez) ",
-        "Course 4 Bee 1": "¡La abeja no puede contar lo que están debajo el nube!\n\nUsa el bloque \"si\" para chequear si hay un flor debajo el nube. \n\nConsigue el néctar un vez SÓLO si hay un flor.",
+        "Course 4 Bee 1": "La abeja no puede saber que hay debajo de la nube!\n\nUsa el bloque \"if\" para comprobar si hay una flor debajo de la nube\n\nObtén néctar sólo una vex, SOLAMENTE si hay una flor.",
         "Course 4 Bee 2": "Utiliza el bloque \"Si/de lo contrario\" para revisar cada objeto para ver si es una flor o un panal...de lo contrario, ¡haz miel!",
         "Course 4 Bee 3": "El objeto desconocido es una flor o un panal de miel. Ahora utiliza el bloque \"Si/de lo contrario\" para colectar néctar, \"Si\" si es una flor, \"de lo contrario\" haz miel (porque entonces sería un panal).",
         "Course 4 Bee Loops 5 NEW": "Aquí hay tres flores. ¿Puedes encontrar el patrón de instrucciones que se repita 3 veces para recoger el néctar con el menor número de bloques?",
@@ -3759,9 +3759,7 @@
         "ramp_artist_loops8_2021": "Busca un patrón y acorta este código a través de los bucles.",
         "ramp_artist_loops9_2021": "Dibuja un cuadrado para resolver este desafío.",
         "simcustom_2021": "Intenta hacer algunos cambios en los disfraces de los sprites o en el código de abajo. ",
-        "international_outbreak_freeplay": "Comparte un mensaje con tu simulación.",
-        "poetry_hoc_exemplar1": "¡Haz una predicción!",
-        "poetry_hoc_exemplar2": "¡Haz una predicción!"
+        "international_outbreak_freeplay": "Comparte un mensaje con tu simulación."
       }
     }
   }

@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "nextsteps-alternatives"
+    "/home": "myjourney-ilm"
   },
 
   "banners": {
-    "nextsteps-alternatives": {
-      "image": "/images/csjourneys/nextsteps-alternatives.png",
-      "title": "Learn about key alternatives to the 4-year college degree",
-      "body": "Give high school students the opportunity to learn about key alternatives to the four-year college degree, including community college and apprenticeships. Recommended for grades 9-12.",
+    "myjourney-ilm": {
+      "image": "/images/csjourneys/myjourney-ilm.png",
+      "title": "My Journey: Making Star Wars",
+      "body": "Hear how two computer science graduates use technology to help make movies and TV shows, including the many worlds of Star Wars. Recommended for grades K-5. Recording will be available the day after the live session.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/nextsteps#event-3",
-      "buttonId": "nextsteps-alternatives-details"
+      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat7",
+      "buttonId": "myjourney-ilm-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",

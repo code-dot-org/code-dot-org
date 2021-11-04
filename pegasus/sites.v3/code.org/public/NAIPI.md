@@ -56,29 +56,8 @@ Chief Technology Officer | Sante Fe Indian School<br>
 
 
 
-**_Indigenous Communities and CS Ed: Panel Discussion_**<br>
-Thursday, November 4th, 2-3pm PT
- 
-Moderator:
-	
-Ian Her Many Horses<br>
-Assistant Teaching Professor | CU Boulder; Board Member | Natives in Tech
- 
-Panelists:
- 
-Frieda McAlear<br>
-Senior Research Associate | Kapor Center
- 
-Elisabeth Holm<br>
-Founder | Sisterhood of Native American Coders (SONAC)
- 
-Jennifer Flanagan<br>
-CEO | Actua (Canada)
- 
-Zoe Timbrell<br>
-Co-Founder | OMGTech (New Zealand)
-<br>
-<br>
+![Keynote](/NAIPIpanel.png) 
+<br><br>
 
 
 **_CS Pathways in Our Communities: Workshop_**<br>

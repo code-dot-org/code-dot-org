@@ -1619,6 +1619,16 @@ tr:
         text: canavarları rastgele yerleştir
       Outbreak_stopMoving:
         text: canavarlar hareket etmeyi bırakıyor
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Dondurma
+            Stars: Yıldızlar
+            Fireworks: Havai fişek
+            '"rainbow"': Gökkuşağı
+            '"hearts"': Kalpler
+            '"flowers"': Çiçekler
+            '"waves"': Dalgalar
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1630,6 +1640,9 @@ tr:
         text: "{NUM} yeni {ANIMATION_NAME} hareketli nesneleri oluştur."
       Poetry_playSound:
         text: playSound {SOUND}
+        options:
+          SOUND:
+            Light: Aydınlık
       Poetry_setBackground:
         text: arka plan rengini {COLOR} olarak ayarla
       Poetry_setBackgroundEffect:
@@ -1640,6 +1653,10 @@ tr:
             '"space"': Uzay
             '"stars"': Yıldızlar
             '"ripples"': Dalgaları
+            '"rain"': Yağmur
+            '"bubbles"': Baloncuklar
+            '"confetti"': Konfeti
+            '"hearts"': Renkli Kalpler
           PALETTE:
             '"rainbow"': Gökkuşağı
       Poetry_setBackgroundImageAs:

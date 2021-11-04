@@ -21138,8 +21138,6 @@ es-MX:
               name: Ejemplos
         poetry:
           lessons:
-            lesson-3:
-              name: Variables
             lesson-6:
               name: Círculo de Poesía
         spelling-bee:
@@ -21160,3 +21158,15 @@ es-MX:
               display_name: Contenido
             lessonGroup-3:
               display_name: "¡Demuestra lo que sabes!"
+        csa-examples-21:
+          lessons:
+            lesson-1:
+              name: Unidad 1 Proyectos
+            lesson-3:
+              name: 'Unidad 3: Proyectos '
+            lesson-4:
+              name: 'Unidad 4: Proyectos '
+            lesson-5:
+              name: 'Unidad 5: Proyectos '
+            lesson-6:
+              name: 'Unidad 6: Proyectos '

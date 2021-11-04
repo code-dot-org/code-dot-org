@@ -4664,7 +4664,9 @@
         "poetry_hoc_freeplay": "crwdns2695567:0crwdne2695567:0",
         "poetry_hoc_sounds": "crwdns2695515:0crwdne2695515:0",
         "poetry_hoc_spriteBehaviors": "crwdns2695551:0crwdne2695551:0",
-        "poetry_hoc_spriteSizes": "crwdns2695559:0crwdne2695559:0"
+        "poetry_hoc_spriteSizes": "crwdns2695559:0crwdne2695559:0",
+        "poem art predict_library": "crwdns2710377:0crwdne2710377:0",
+        "poem art predict_sing": "crwdns2710373:0crwdne2710373:0"
       }
     }
   }

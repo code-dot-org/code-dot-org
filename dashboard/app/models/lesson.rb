@@ -490,18 +490,12 @@ class Lesson < ApplicationRecord
       activities: lesson_activities.map(&:summarize_for_lesson_edit),
       resources: resources.map(&:summarize_for_lesson_edit),
       vocabularies: vocabularies.sort_by(&:word).map(&:summarize_for_lesson_edit),
-      programmingEnvironments: ProgrammingEnvironment.all.map(&:summarize_for_lesson_edit),
       programmingExpressions: programming_expressions.sort_by {|pe| pe.syntax || ''}.map(&:summarize_for_lesson_edit),
       objectives: objectives.sort_by {|o| o.description || ''}.map(&:summarize_for_edit),
       standards: lesson_standards.map(&:summarize_for_lesson_edit),
       frameworks: Framework.all.map(&:summarize_for_lesson_edit),
       opportunityStandards: opportunity_standards.map(&:summarize_for_lesson_edit),
-      courseVersionId: lesson_group.script.get_course_version&.id,
-      unitIsLaunched: script.launched?,
-      scriptPath: script_path(script),
-      lessonPath: get_uncached_show_path,
-      lessonExtrasAvailableForUnit: script.lesson_extras_available,
-      isProfessionalLearningCourse: false #TODO(dmcavoy): update once audiences for courses are set
+      lessonPath: get_uncached_show_path
     }
   end
 

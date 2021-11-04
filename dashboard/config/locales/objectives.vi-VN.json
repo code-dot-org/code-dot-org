@@ -2,6 +2,15 @@
   "vi-VN": {
     "data": {
       "objectives": {
+        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
+          "description": "Thảo luận về vai trò của trí tuệ nhân tạo trong cuộc sống."
+        },
+        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+          "description": "Đào tạo và thử nghiệm mô hình máy học."
+        },
+        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+          "description": "Lý do định kiến của con người đóng vai trò quan trọng trong máy học."
+        },
         "5b8eb232-7326-4c4d-8507-0c2da9642581": {
           "description": "Mô tả tầm quan trọng của người dùng trong quá trình thiết kế."
         },
@@ -86,14 +95,113 @@
         "9d4ac105-0b5b-4e05-9a32-af6177abfb6c": {
           "description": "Kiểm tra mã lệnh để tìm những vị trí có thể thay thế biến cho các giá trị cụ thể."
         },
+        "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
+          "description": "Xác định giá trị đầu, giá trị cuối và giá trị bước nhảy cho “vòng lặp for”."
+        },
+        "1e676bcd-e312-4827-88ce-d6befc87d61c": {
+          "description": "Minh họa các giá trị đếm đạt được mỗi lần đi qua “vòng lặp for” trong thời gian chạy."
+        },
+        "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
+          "description": "Xác định giá trị đầu, giá trị cuối và giá trị bước cho vòng lặp for."
+        },
+        "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
+          "description": "Nhận biết khi nào sử dụng vòng lặp for và khi nào sử dụng các vòng lặp khác như vòng lặp repeat và while."
+        },
+        "68c038c1-990a-4009-ad61-619ba6ea71af": {
+          "description": "Sử dụng vòng lặp for để thay đổi vòng lặp nhiều lần với các giá trị khác nhau."
+        },
+        "7ad09074-8899-4330-bb54-6a00c5164299": {
+          "description": "Nhận biết khi nào sử dụng vòng lặp for và khi nào sử dụng các vòng lặp khác như vòng lặp repeat và while."
+        },
+        "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
+          "description": "Sử dụng bản mô phỏng máy tính để thu thập dữ liệu về một mô hình"
+        },
+        "519c1444-230e-4182-a4eb-09414a7d09fb": {
+          "description": "Vẽ biểu đồ hai đường thẳng để so sánh dữ liệu từ hai nguồn khác nhau"
+        },
+        "16dabf47-0051-4143-834c-067bb8fb605c": {
+          "description": "Dự đoán và kiểm tra dự đoán bằng cách sửa các biến trong bản mô phỏng"
+        },
+        "f748f186-f152-468e-9f51-48bee23c44db": {
+          "description": "Thảo luận về vai trò của trí tuệ nhân tạo trong cuộc sống."
+        },
+        "82bb0282-0550-4779-9a86-a15fbb93215f": {
+          "description": "Đào tạo và thử nghiệm mô hình máy học."
+        },
+        "6638c886-891e-4d59-820a-227e37274e49": {
+          "description": "Lý do định kiến của con người đóng vai trò quan trọng trong máy học."
+        },
+        "03137644-b4a2-4c28-8a6a-9de5c407a8f1": {
+          "description": "Tìm hiểu về mức độ phức tạp của quá trình gửi tin nhắn qua internet."
+        },
+        "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
+          "description": "Dịch các URL thành Địa chỉ IP."
+        },
+        "12c53e25-70d7-4192-a97a-da08dd673338": {
+          "description": "Học cách lập kế hoạch trước cho công việc đang cần hoàn thành."
+        },
+        "b76f1811-9865-416d-bd06-601301120384": {
+          "description": "Có thể giải thích ảnh hưởng do giới hạn của hệ thống đến thiết kế dự án."
+        },
+        "8f7582ed-ec8f-4370-8c2a-49ac0d54e10b": {
+          "description": "Mô tả cách thỏa hiệp để giúp dự án đi đúng hướng và truyền cảm hứng sáng tạo."
+        },
+        "ad877f06-ef7d-4a69-8217-1e593cfac32f": {
+          "description": "Soạn thảo và thực hiện các kế hoạch để giải quyết bất kỳ vấn đề nào trong mã lệnh."
+        },
+        "2fb6d16c-93cd-4226-b282-1f3d2c0f5c65": {
+          "description": "Trình bày rõ quy trình thiết kế và vai trò của quy trình này trong việc tạo nên dự án hoàn thiện cuối cùng."
+        },
+        "e66808ba-0c59-48f7-93c3-f5267f7b3de9": {
+          "description": "Hiểu được rằng thông tin chia sẻ trực tuyến để lại dấu chân số hoặc “dấu vết”."
+        },
+        "5efa6c72-000c-40a0-ace0-55f47117305b": {
+          "description": "Khám phá thông tin nào CÓ THỂ chia sẻ trực tuyến."
+        },
+        "d7a194a2-b69d-417f-8996-3f56c7bccd83": {
+          "description": "Hãy xác định danh sách các bước (thuật toán) để đưa một người bạn từ vị trí xuất phát đến đích"
+        },
+        "5c532776-e5e5-4e5e-b3f1-15f01eb66449": {
+          "description": "Dịch danh sách các bước thành một loạt hành động thực tế"
+        },
+        "8f2d92d5-7d6b-447d-90a9-f38ed7ef5e37": {
+          "description": "Xác định và sửa lỗi trong quá trình thực thi thuật toán"
+        },
+        "567921b7-1dc5-4b17-9c16-0bbcd785a498": {
+          "description": "Làm mẫu các hành vi phù hợp trong phòng máy tính"
+        },
+        "32056e13-2c3f-4ef7-8ada-49b29cac5f59": {
+          "description": "Thử nghiệm với các thao tác lập trình dựa trên khối tiêu chuẩn như: nhấp chuột, kéo và thả, v.v."
+        },
+        "fae372cb-4b72-4b35-abd6-e2424e54d791": {
+          "description": "Chuyển hành động thành chuỗi lệnh."
+        },
+        "bffe609e-4319-4507-b643-b2a2ab2507b9": {
+          "description": "Xây dựng chương trình bằng cách tổ chức lại các hành động theo trình tự."
+        },
+        "7fe333c7-2422-4e9e-8328-9fcd2da6fdba": {
+          "description": "Xây dựng một chương trình máy tính từ một tập hợp các chỉ dẫn bằng văn bản."
+        },
+        "4576e06e-56f1-4e32-a81d-7bbfea125273": {
+          "description": "Chuyển hành động thành chuỗi lệnh."
+        },
         "b7345cb5-cb6f-4bed-b9c8-4db24c6fb0c4": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
         },
         "1a658eb5-9957-4d23-9736-ba85ea545c5e": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
         },
+        "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
+          "description": "Làm mẫu các hành vi phù hợp trong phòng máy tính"
+        },
+        "6df3d067-06bb-4e95-856f-ef980543a15e": {
+          "description": "Thử nghiệm với các thao tác lập trình dựa trên khối tiêu chuẩn như: nhấp chuột, kéo và thả, v.v."
+        },
         "632bd918-c124-4f4c-892e-980cdc07b3bf": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "560e14ee-7390-4244-aee5-a0c2737112e5": {
+          "description": "Chuyển hành động thành chuỗi lệnh."
         },
         "46288097-dbab-437f-897c-4e14352ae388": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
@@ -118,6 +226,9 @@
         },
         "673ddc56-5217-45a9-919c-b42024f7de2b": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "8c021568-46ed-4243-a4d1-f2037138c01a": {
+          "description": "Chuyển hành động thành chuỗi lệnh."
         },
         "09281dd0-4b33-4537-9543-a2377bc2f923": {
           "description": "Tạo các nhân vật mới và gán cho họ trang phục và hành vi."
@@ -173,6 +284,30 @@
         "dd4add89-b2d6-4b12-a073-6ec56b4c6de1": {
           "description": "Kiểm tra mã lệnh để tìm những vị trí có thể thay thế biến cho các giá trị cụ thể."
         },
+        "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2": {
+          "description": "Xác định giá trị đầu, giá trị cuối và giá trị bước cho vòng lặp for."
+        },
+        "3abab07c-e404-45d4-ab89-f92a34c68356": {
+          "description": "Nhận biết khi nào sử dụng vòng lặp for và khi nào sử dụng các vòng lặp khác như vòng lặp repeat và while."
+        },
+        "1b705c64-cbba-4dfe-8d47-549eb6754326": {
+          "description": "Sử dụng vòng lặp for để thay đổi vòng lặp nhiều lần với các giá trị khác nhau."
+        },
+        "a5169230-8faf-4492-bc49-ca11dca864fa": {
+          "description": "Nhận biết khi nào sử dụng vòng lặp for và khi nào sử dụng các vòng lặp khác như vòng lặp repeat và while."
+        },
+        "565151fd-85db-44eb-9cfc-ccbe279cf49a": {
+          "description": "Làm mẫu các hành vi phù hợp trong phòng máy tính"
+        },
+        "af0ee86d-cae1-4a66-93c6-8030f2c36f47": {
+          "description": "Thử nghiệm với các thao tác lập trình dựa trên khối tiêu chuẩn như: nhấp chuột, kéo và thả, v.v."
+        },
+        "a5a52414-42a7-4b32-897b-819a70572328": {
+          "description": "Chuyển hành động thành chuỗi lệnh."
+        },
+        "620da514-ad6e-4049-a9d3-d189a79af01e": {
+          "description": "Chuyển hành động thành chuỗi lệnh."
+        },
         "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
         },
@@ -187,6 +322,18 @@
         },
         "5b77c883-5479-4cfe-a31a-605957dd083d": {
           "description": "Chia các nhiệm vụ phức tạp thành các phần nhỏ hơn có thể lặp lại."
+        },
+        "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
+          "description": "Học cách lập kế hoạch trước cho công việc đang cần hoàn thành."
+        },
+        "45927b72-922a-4845-8b40-2458a92372f5": {
+          "description": "Mô tả cách thỏa hiệp để giúp dự án đi đúng hướng và truyền cảm hứng sáng tạo."
+        },
+        "db7d248b-f06c-475c-8413-f1ea08fae35b": {
+          "description": "Soạn thảo và thực hiện các kế hoạch để giải quyết bất kỳ vấn đề nào trong mã lệnh."
+        },
+        "2594052b-3b87-4d83-9038-56175058c1c2": {
+          "description": "Trình bày rõ quy trình thiết kế và vai trò của quy trình này trong việc tạo nên dự án hoàn thiện cuối cùng."
         }
       }
     }
