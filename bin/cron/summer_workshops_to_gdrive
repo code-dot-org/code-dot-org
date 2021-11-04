@@ -25,11 +25,12 @@ def get_rows
   workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(Pd::Workshop.first).attributes.keys.map(&:to_s)
 
   # Subsequent rows are for each workshop.
-  Pd::Workshop.where(subject: subjects).find_each do |w|
-    if w.workshop_starting_date && w.workshop_starting_date >= EARLIEST_WORKSHOP_START_DATE && w.workshop_starting_date <= LATEST_WORKSHOP_START_DATE
-      workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(w).attributes.values
+  Pd::Workshop.
+    where(subject: subjects).
+    scheduled_start_on_or_after(EARLIEST_WORKSHOP_START_DATE).
+    scheduled_start_on_or_before(LATEST_WORKSHOP_START_DATE).find_each do |workshop|
+      workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(workshop).attributes.values
     end
-  end
 
   workshops
 end
