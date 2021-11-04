@@ -31,11 +31,11 @@ export default function CodeReviewGroupsManager({initialGroups}) {
   };
 
   const onGroupDelete = droppableId => {
+    // First, take all group members from deleted group and put them in unassigned group
     const updatedUnassignedGroup = unassignAllFromGroup(droppableId);
     const updatedGroups = updateGroups(groups, [updatedUnassignedGroup]);
 
-    const x = updatedGroups.filter(group => group.droppableId !== droppableId);
-    setGroups(x);
+    setGroups(updatedGroups.filter(group => group.droppableId !== droppableId));
   };
 
   const unassignAllFromGroup = droppableId => {
