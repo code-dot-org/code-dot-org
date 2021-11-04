@@ -1,6 +1,6 @@
 {
   "pages": {
-    "/projects": "home-learning-2020",
+    "/projects": "",
     "/home": "myjourney-ilm"
   },
 
@@ -12,7 +12,7 @@
       "buttonText": "Learn more",
       "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat7",
       "buttonId": "myjourney-ilm-details"
-    },  
+    },
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",
       "title": "Explore the wide world of computer science",
@@ -69,15 +69,6 @@
       "buttonText": "Join us",
       "buttonUrl": "https://code.org/educate/professional-learning/middle-high",
       "buttonId": "teacher-apps-stillon-2020-button",
-      "backgroundColor": "#59b9dc"
-    },
-    "home-learning-2020": {
-      "image": "/images/athome/fill-970x562/app-lab.png",
-      "title": "Project Ideas for Home Learning",
-      "body": "Parents and teachers — take a look at our Project Ideas page for starter projects in Game Lab, App Lab, and Web Lab. These include project descriptions, tips, and demo projects students can remix to make their own! ",
-      "buttonText": "View Project Ideas",
-      "buttonUrl": "https://code.org/athome/project-ideas",
-      "buttonId": "view-project-ideas-2020-button",
       "backgroundColor": "#59b9dc"
     },
     "soonhoc-2020": {
