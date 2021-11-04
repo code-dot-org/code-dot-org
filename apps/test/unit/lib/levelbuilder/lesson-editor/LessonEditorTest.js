@@ -9,7 +9,8 @@ import {
   registerReducers
 } from '@cdo/apps/redux';
 import reducers, {
-  init
+  initActivities,
+  initLevelSearching
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import createResourcesReducer, {
   initResources
@@ -50,7 +51,13 @@ describe('LessonEditor', () => {
     });
 
     store = getStore();
-    store.dispatch(init(sampleActivities, searchOptions, [], false));
+    store.dispatch(initActivities(sampleActivities));
+    store.dispatch(
+      initLevelSearching({
+        searchOptions: searchOptions,
+        programmingEnvironments: []
+      })
+    );
     store.dispatch(initResources(resourceTestData));
     store.dispatch(initVocabularies([]));
     store.dispatch(initProgrammingExpressions([]));
