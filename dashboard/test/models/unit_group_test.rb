@@ -53,85 +53,85 @@ class UnitGroupTest < ActiveSupport::TestCase
     end
 
     test 'code instructor should be able to instruct any course' do
-      assert_equal true, @course_teacher_to_students.can_be_instructor?(@code_instructor)
-      assert_equal true, @course_facilitator_to_teacher.can_be_instructor?(@code_instructor)
-      assert_equal true, @course_code_instructor_to_teacher.can_be_instructor?(@code_instructor)
-      assert_equal true, @course_plc_reviewer_to_facilitator.can_be_instructor?(@code_instructor)
-      assert_equal true, @course_code_instructor_to_teacher.can_be_instructor?(@code_instructor)
+      assert @course_teacher_to_students.can_be_instructor?(@code_instructor)
+      assert @course_facilitator_to_teacher.can_be_instructor?(@code_instructor)
+      assert @course_code_instructor_to_teacher.can_be_instructor?(@code_instructor)
+      assert @course_plc_reviewer_to_facilitator.can_be_instructor?(@code_instructor)
+      assert @course_code_instructor_to_teacher.can_be_instructor?(@code_instructor)
     end
 
     test 'levelbuilder should be able to see instructor view for any course' do
-      assert_equal true, @course_teacher_to_students.can_be_instructor?(@levelbuilder)
-      assert_equal true, @course_facilitator_to_teacher.can_be_instructor?(@levelbuilder)
-      assert_equal true, @course_code_instructor_to_teacher.can_be_instructor?(@levelbuilder)
-      assert_equal true, @course_plc_reviewer_to_facilitator.can_be_instructor?(@levelbuilder)
-      assert_equal true, @course_code_instructor_to_teacher.can_be_instructor?(@levelbuilder)
+      assert @course_teacher_to_students.can_be_instructor?(@levelbuilder)
+      assert @course_facilitator_to_teacher.can_be_instructor?(@levelbuilder)
+      assert @course_code_instructor_to_teacher.can_be_instructor?(@levelbuilder)
+      assert @course_plc_reviewer_to_facilitator.can_be_instructor?(@levelbuilder)
+      assert @course_code_instructor_to_teacher.can_be_instructor?(@levelbuilder)
     end
 
     test 'plc reviewer should be able to instruct courses with plc_reviewer as instructor audience ' do
       # Since the plc reviewer is a teacher account it will also be able to teach any teacher course
-      assert_equal true, @course_teacher_to_students.can_be_instructor?(@plc_reviewer)
-      assert_equal false, @course_facilitator_to_teacher.can_be_instructor?(@plc_reviewer)
-      assert_equal false, @course_code_instructor_to_teacher.can_be_instructor?(@plc_reviewer)
-      assert_equal true, @course_plc_reviewer_to_facilitator.can_be_instructor?(@plc_reviewer)
-      assert_equal false, @course_code_instructor_to_teacher.can_be_instructor?(@plc_reviewer)
+      assert @course_teacher_to_students.can_be_instructor?(@plc_reviewer)
+      refute @course_facilitator_to_teacher.can_be_instructor?(@plc_reviewer)
+      refute @course_code_instructor_to_teacher.can_be_instructor?(@plc_reviewer)
+      assert @course_plc_reviewer_to_facilitator.can_be_instructor?(@plc_reviewer)
+      refute @course_code_instructor_to_teacher.can_be_instructor?(@plc_reviewer)
     end
 
     test 'facilitator should be able to instruct courses with facilitator as instructor audience ' do
       # Since the facilitator is a teacher account it will also be able to teach any teacher course
-      assert_equal true, @course_teacher_to_students.can_be_instructor?(@facilitator)
-      assert_equal true, @course_facilitator_to_teacher.can_be_instructor?(@facilitator)
-      assert_equal false, @course_code_instructor_to_teacher.can_be_instructor?(@facilitator)
-      assert_equal false, @course_plc_reviewer_to_facilitator.can_be_instructor?(@facilitator)
-      assert_equal false, @course_code_instructor_to_teacher.can_be_instructor?(@facilitator)
+      assert @course_teacher_to_students.can_be_instructor?(@facilitator)
+      assert @course_facilitator_to_teacher.can_be_instructor?(@facilitator)
+      refute @course_code_instructor_to_teacher.can_be_instructor?(@facilitator)
+      refute @course_plc_reviewer_to_facilitator.can_be_instructor?(@facilitator)
+      refute @course_code_instructor_to_teacher.can_be_instructor?(@facilitator)
     end
 
     test 'teachers should be able to instruct courses with teacher as instructor audience ' do
-      assert_equal true, @course_teacher_to_students.can_be_instructor?(@teacher)
-      assert_equal false, @course_facilitator_to_teacher.can_be_instructor?(@teacher)
-      assert_equal false, @course_code_instructor_to_teacher.can_be_instructor?(@teacher)
-      assert_equal false, @course_plc_reviewer_to_facilitator.can_be_instructor?(@teacher)
-      assert_equal false, @course_code_instructor_to_teacher.can_be_instructor?(@teacher)
+      assert @course_teacher_to_students.can_be_instructor?(@teacher)
+      refute @course_facilitator_to_teacher.can_be_instructor?(@teacher)
+      refute @course_code_instructor_to_teacher.can_be_instructor?(@teacher)
+      refute @course_plc_reviewer_to_facilitator.can_be_instructor?(@teacher)
+      refute @course_code_instructor_to_teacher.can_be_instructor?(@teacher)
     end
 
     test 'students can not instruct courses' do
-      assert_equal false, @course_teacher_to_students.can_be_instructor?(@student)
-      assert_equal false, @course_facilitator_to_teacher.can_be_instructor?(@student)
-      assert_equal false, @course_code_instructor_to_teacher.can_be_instructor?(@student)
-      assert_equal false, @course_plc_reviewer_to_facilitator.can_be_instructor?(@student)
-      assert_equal false, @course_code_instructor_to_teacher.can_be_instructor?(@student)
+      refute @course_teacher_to_students.can_be_instructor?(@student)
+      refute @course_facilitator_to_teacher.can_be_instructor?(@student)
+      refute @course_code_instructor_to_teacher.can_be_instructor?(@student)
+      refute @course_plc_reviewer_to_facilitator.can_be_instructor?(@student)
+      refute @course_code_instructor_to_teacher.can_be_instructor?(@student)
     end
 
     test 'facilitator should be able to participate in courses with facilitator as participant audience' do
       # anyone can be a participant in a student course
-      assert_equal true, @course_teacher_to_students.can_be_participant?(@facilitator)
+      assert @course_teacher_to_students.can_be_participant?(@facilitator)
 
       # Since the facilitator is a teacher account it will also be able to participate in any teacher course
-      assert_equal true, @course_facilitator_to_teacher.can_be_participant?(@facilitator)
-      assert_equal true, @course_code_instructor_to_teacher.can_be_participant?(@facilitator)
-      assert_equal true, @course_code_instructor_to_teacher.can_be_participant?(@facilitator)
+      assert @course_facilitator_to_teacher.can_be_participant?(@facilitator)
+      assert @course_code_instructor_to_teacher.can_be_participant?(@facilitator)
+      assert @course_code_instructor_to_teacher.can_be_participant?(@facilitator)
 
-      assert_equal true, @course_plc_reviewer_to_facilitator.can_be_participant?(@facilitator)
+      assert @course_plc_reviewer_to_facilitator.can_be_participant?(@facilitator)
     end
 
     test 'teacher should be able to participate in courses with teacher as participant audience' do
       # anyone can be a participant in a student course
-      assert_equal true, @course_teacher_to_students.can_be_participant?(@teacher)
+      assert @course_teacher_to_students.can_be_participant?(@teacher)
 
-      assert_equal true, @course_facilitator_to_teacher.can_be_participant?(@teacher)
-      assert_equal true, @course_code_instructor_to_teacher.can_be_participant?(@teacher)
-      assert_equal true, @course_code_instructor_to_teacher.can_be_participant?(@teacher)
+      assert @course_facilitator_to_teacher.can_be_participant?(@teacher)
+      assert @course_code_instructor_to_teacher.can_be_participant?(@teacher)
+      assert @course_code_instructor_to_teacher.can_be_participant?(@teacher)
 
-      assert_equal false, @course_plc_reviewer_to_facilitator.can_be_participant?(@teacher)
+      refute @course_plc_reviewer_to_facilitator.can_be_participant?(@teacher)
     end
 
     test 'student should be able to participate in courses with student as participant audience' do
-      assert_equal true, @course_teacher_to_students.can_be_participant?(@student)
+      assert @course_teacher_to_students.can_be_participant?(@student)
 
-      assert_equal false, @course_facilitator_to_teacher.can_be_participant?(@student)
-      assert_equal false, @course_code_instructor_to_teacher.can_be_participant?(@student)
-      assert_equal false, @course_plc_reviewer_to_facilitator.can_be_participant?(@student)
-      assert_equal false, @course_code_instructor_to_teacher.can_be_participant?(@student)
+      refute @course_facilitator_to_teacher.can_be_participant?(@student)
+      refute @course_code_instructor_to_teacher.can_be_participant?(@student)
+      refute @course_plc_reviewer_to_facilitator.can_be_participant?(@student)
+      refute @course_code_instructor_to_teacher.can_be_participant?(@student)
     end
   end
 
