@@ -13,7 +13,8 @@ import {
 export default function AssignedStudentsPanel({
   groups,
   onCreateGroupClick,
-  onGroupNameUpdate
+  onGroupNameUpdate,
+  onGroupDelete
 }) {
   // TO DO: style and add small pop-up to get group name from teacher when creating a group.
   // https://codedotorg.atlassian.net/browse/CSA-1033
@@ -38,6 +39,7 @@ export default function AssignedStudentsPanel({
               key={group.droppableId}
               name={group.name}
               onNameUpdate={onGroupNameUpdate}
+              onDelete={onGroupDelete}
             />
           );
         })}
@@ -49,7 +51,8 @@ export default function AssignedStudentsPanel({
 AssignedStudentsPanel.propTypes = {
   groups: PropTypes.array.isRequired,
   onCreateGroupClick: PropTypes.func.isRequired,
-  onGroupNameUpdate: PropTypes.func.isRequired
+  onGroupNameUpdate: PropTypes.func.isRequired,
+  onGroupDelete: PropTypes.func.isRequired
 };
 
 const styles = {
