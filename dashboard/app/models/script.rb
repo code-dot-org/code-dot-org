@@ -159,12 +159,14 @@ class Script < ApplicationRecord
 
   def prevent_duplicate_levels
     reload
+    duplicate_keys = duplicate_level_keys
+    raise "duplicate levels detected: #{duplicate_keys.to_json}" unless duplicate_keys.empty?
+  end
 
-    unless levels.count == levels.uniq.count
-      levels_by_key = levels.map(&:key).group_by {|key| key}
-      duplicate_keys = levels_by_key.select {|_key, values| values.count > 1}.keys
-      raise "duplicate levels detected: #{duplicate_keys.to_json}"
-    end
+  def duplicate_level_keys
+    return [] if levels.count == levels.uniq.count
+    levels_by_key = levels.map(&:key).group_by {|key| key}
+    levels_by_key.select {|_key, values| values.count > 1}.keys
   end
 
   include SerializedProperties
