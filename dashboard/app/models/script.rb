@@ -33,7 +33,6 @@ require 'cdo/script_constants'
 require 'cdo/shared_constants'
 require 'cdo/shared_constants/curriculum/shared_course_constants'
 require 'ruby-progressbar'
-require 'cdo/dashboard/app/models'
 
 TEXT_RESPONSE_TYPES = [TextMatch, FreeResponse]
 
@@ -42,7 +41,7 @@ class Script < ApplicationRecord
   include ScriptConstants
   include SharedCourseConstants
   include SharedConstants
-  include CourseAudiences
+  include Curriculum::CourseAudiences
   include Rails.application.routes.url_helpers
 
   include Seeded

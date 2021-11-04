@@ -10,21 +10,19 @@ class InstructorAndParticipantAudienceTests < ActiveSupport::TestCase
     @levelbuilder = create :levelbuilder
 
     @unit_group = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
-    @unit_in_course = create(:script)
+    @unit_in_course = create(:script, name: 'unit-in-course')
     create(:unit_group_unit, script: @unit_in_course, unit_group: @unit_group, position: 1)
     @unit_in_course.reload
 
-    @course_teacher_to_students = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
-    @course_facilitator_to_teacher = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
-    @course_code_instructor_to_teacher = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
-    @course_plc_reviewer_to_facilitator = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
-    @course_code_instructor_to_teacher = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    @course_teacher_to_students = create(:unit_group, name: 'course-teacher-to-student', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    @course_facilitator_to_teacher = create(:unit_group, name: 'course-facilitator-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    @course_code_instructor_to_teacher = create(:unit_group, name: 'course-code-instructor-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    @course_plc_reviewer_to_facilitator = create(:unit_group, name: 'course-plc-reviewer-to-facilitator', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
 
-    @unit_teacher_to_students = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
-    @unit_facilitator_to_teacher = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
-    @unit_code_instructor_to_teacher = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
-    @unit_plc_reviewer_to_facilitator = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
-    @unit_code_instructor_to_teacher = create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    @unit_teacher_to_students = create(:script, name: 'unit-teacher-to-student', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
+    @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    @unit_code_instructor_to_teacher = create(:script, name: 'code-instructor-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
+    @unit_plc_reviewer_to_facilitator = create(:script, name: 'plc-reviewer-to-facilitator', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
   end
 
   test 'unit in course should check course for participant and instructor audience' do
