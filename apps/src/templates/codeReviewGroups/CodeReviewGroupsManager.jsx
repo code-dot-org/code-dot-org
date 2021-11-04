@@ -24,6 +24,12 @@ export default function CodeReviewGroupsManager({initialGroups}) {
   const getAssignedGroups = () =>
     groups.filter(group => group.droppableId !== DROPPABLE_ID_UNASSIGNED);
 
+  const onGroupNameUpdate = (droppableId, newName) => {
+    const updatedGroup = {...getGroup(droppableId), ...{name: newName}};
+    const updatedGroups = updateGroups(groups, [updatedGroup]);
+    setGroups(updatedGroups);
+  };
+
   function onDragEnd(result) {
     const {source, destination} = result;
     const sourceId = source.droppableId;
@@ -72,6 +78,7 @@ export default function CodeReviewGroupsManager({initialGroups}) {
           onCreateGroupClick={() => {
             setGroups([generateNewGroup(), ...groups]);
           }}
+          onGroupNameUpdate={onGroupNameUpdate}
         />
       </div>
     </DragDropContext>

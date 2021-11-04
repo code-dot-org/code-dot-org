@@ -68,8 +68,8 @@ const getMembers = (count, offset = 0) =>
 // as well as a group of students who have not been assigned to a group.
 // We'll also eventually pass in a group name as a top level property.
 const groups = [
-  {id: 1, members: getMembers(4)},
-  {id: 2, members: getMembers(4, 4)},
+  {id: 1, members: getMembers(4), name: 'Group 1'},
+  {id: 2, members: getMembers(4, 4), name: 'Group 2'},
   {members: getMembers(4, 8), unassigned: true}
 ];
 
