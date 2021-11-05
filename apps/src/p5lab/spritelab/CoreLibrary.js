@@ -123,15 +123,11 @@ export default class CoreLibrary {
     }
 
     // Draw bubble.
-    const {minY} = drawUtils.speechBubble(
-      this.p5,
-      x,
-      y,
-      width,
-      height,
+    const {minY} = drawUtils.speechBubble(this.p5, x, y, width, height, {
       triangleSize,
-      triangleTipX
-    );
+      triangleTipX,
+      rectangleCornerRadius
+    });
 
     // Draw text within bubble.
     drawUtils.multilineText(this.p5, lines, x, minY + padding, textSize, {
