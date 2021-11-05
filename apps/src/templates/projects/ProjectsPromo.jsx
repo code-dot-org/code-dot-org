@@ -14,7 +14,7 @@ const ProjectsPromo = () => {
       buttons={[
         {
           id: 'view-project-ideas',
-          url: pegasus('/athome/project-ideas'),
+          url: pegasus('/project-ideas'),
           text: i18n.projectPromoButton()
         }
       ]}
