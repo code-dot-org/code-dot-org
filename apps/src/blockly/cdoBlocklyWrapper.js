@@ -152,6 +152,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.BlockSpace.prototype.registerGlobalVariables = function() {}; // Not implemented.
 
+  blocklyWrapper.BlockSpace.prototype.getContainer = function() {
+    return this.blockSpaceEditor.getSVGElement().parentNode;
+  };
+
   blocklyWrapper.getGenerator = function() {
     return blocklyWrapper.Generator.get('JavaScript');
   };
