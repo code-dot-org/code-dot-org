@@ -267,6 +267,11 @@ class Pd::Workshop < ApplicationRecord
   end
 
   # Filters by the date the workshop was created
+  def self.created_on_or_before(date)
+    where('(DATE(created_at) <= ?)', date)
+  end
+
+  # Filters by the date the workshop was created
   def self.created_on_or_after(date)
     where('(DATE(created_at) >= ?)', date)
   end
