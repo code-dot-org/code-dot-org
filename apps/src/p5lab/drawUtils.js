@@ -23,11 +23,10 @@ export function getTextWidth(p5, text, size) {
  * Draw a speech bubble - a P5 shape comprised of a rectangle
  * with a triangle at the bottom. The x/y values will be the
  * bottom center of the bubble body, including the height added
- * by the triangle. The default triangle will have a size of 10
- * and be positioned horizontally with the bottom tip aligned
- * to the center of the bubble body. In cases where the sprite
- * is close to the app edges, the triangle size and position may
- * be adjusted.
+ * by the triangle. With the default config values, the triangle
+ * will have a size of 10 and align to the center of the bubble body.
+ * Other passed config values allow the triangle to be adjusted,
+ * such as when a sprite is close to the edge of the app canvas.
  *
  * Note: The bubble body and triangle stroke outlines will overlap if the width:triangleSize
  * ratio is too low (e.g., the width is too narrow and triangle is too large). Consider
@@ -39,8 +38,9 @@ export function getTextWidth(p5, text, size) {
  * @param {Number} y
  * @param {Number} width
  * @param {Number} height
- * @param {Number} triangleSize
- * @param {Number} triangleTipX
+ * @param {Number} config.triangleSize
+ * @param {Number} config.triangleTipX
+ * @param {Number} config.rectangleCornerRadius
  * @param {String} config.fill
  * @param {Number} config.strokeWeight
  * @param {Number} config.stroke
@@ -52,14 +52,18 @@ export function speechBubble(
   y,
   width,
   height,
-  triangleSize = 10,
-  triangleTipX = x,
-  {fill = 'white', strokeWeight = 2, stroke = 'gray'} = {}
+  {
+    triangleSize = 10,
+    triangleTipX = x,
+    rectangleCornerRadius = 8,
+    fill = 'white',
+    strokeWeight = 2,
+    stroke = 'gray'
+  } = {}
 ) {
   const minX = x - width / 2;
   const minY = y - height - triangleSize;
   const maxY = y - triangleSize;
-  const rectangleCornerRadius = 8;
 
   p5.push();
   p5.stroke(stroke);
