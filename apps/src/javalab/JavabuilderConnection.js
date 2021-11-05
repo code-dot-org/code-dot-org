@@ -107,8 +107,15 @@ export default class JavabuilderConnection {
         lineBreakCount = 1;
         break;
       case StatusMessageType.TIMEOUT_WARNING:
+        // need to test this
         message = javalabMsg.timeoutWarning();
-        // line break count?
+        lineBreakCount = 1;
+        break;
+      case StatusMessageType.TIMEOUT:
+        // need to test this
+        // is this akin to "onexit"? should we execute onexit() here?
+        message = javalabMsg.timeout();
+        lineBreakCount = 1;
         break;
       case StatusMessageType.EXITED:
         this.onNewlineMessage();
