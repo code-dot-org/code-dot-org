@@ -65,7 +65,7 @@ Resources:
       PreferredMaintenanceWindow: 'Tue:01:00-Tue:01:30'
       PubliclyAccessible: true
       VpcSecurityGroupIds: [!ImportValue VPC-RedshiftSecurityGroup]
-  TableauSync:
+  DMSReplicationInstance:
     Type: AWS::DMS::ReplicationInstance
     Properties:
       AllowMajorVersionUpgrade: true
@@ -152,7 +152,7 @@ Resources:
     Type: AWS::DMS::ReplicationTask
     Properties:
       MigrationType: full-load
-      ReplicationInstanceArn: !Ref TableauSync
+      ReplicationInstanceArn: !Ref DMSReplicationInstance
       ReplicationTaskIdentifier: <%= task_name %>-task
       SourceEndpointArn: !Ref AuroraCloneEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
