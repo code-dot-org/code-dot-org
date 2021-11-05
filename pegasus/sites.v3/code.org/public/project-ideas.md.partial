@@ -18,7 +18,7 @@ theme: responsive
 </style>
 <a id="top"></a>
 # Project Ideas for K-5 Elementary School Students
-<p> <a href="https://code.org/educate/spritelab">Sprite Lab</a> can be used by anyone but are targeted at elementary school students. Programming in a brand new environment can be challenging, but you can do it! For more information about full course offerings, check out <a href="https://code.org/educate/curriculum/elementary-school">CS Fundamentals</a> to find the right course for your age and skill level.</p>
+<p> <a href="https://code.org/educate/spritelab">Sprite Lab</a> can be used by anyone but is targeted at elementary school students. Programming in a brand new environment can be challenging, but you can do it! For more information about full course offerings, check out <a href="https://code.org/educate/curriculum/elementary-school">CS Fundamentals</a> to find the right course for your age and skill level.</p>
 <h2><a href="https://code.org/educate/spritelab"><strong>Sprite Lab</strong></a></h2>
 <div class="col-33" style="padding-right: 20px;">
     <img src="/images/spritelab/rikki.jpg">
