@@ -189,8 +189,20 @@ class Script < ApplicationRecord
     UNIT_JSON_DIRECTORY
   end
 
+  # We have two different ways to create professional learning courses
+  # You can create them in the normal curriculum model or you can create
+  # them using the PLC course models(which build on top of the normal curriculum model).
+  # We are moving toward everything being on the normal curriculum model. Until
+  # then the only courses that should be on the PLC course models are ones previous created
+  # and new courses that need the peer review system which is part of the PLC course models.
+  #
+  # This returns true if a course uses the PLC course models.
+  def old_professional_learning_course?
+    !professional_learning_course.nil?
+  end
+
   def generate_plc_objects
-    if professional_learning_course?
+    if old_professional_learning_course?
       unit_group = UnitGroup.find_by_name(professional_learning_course)
       unless unit_group
         unit_group = UnitGroup.new(name: professional_learning_course)
@@ -1574,7 +1586,7 @@ class Script < ApplicationRecord
       instructorAudience: get_instructor_audience,
       participantAudience: get_participant_audience,
       loginRequired: login_required,
-      plc: professional_learning_course?,
+      plc: old_professional_learning_course?,
       hideable_lessons: hideable_lessons?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
@@ -1631,7 +1643,7 @@ class Script < ApplicationRecord
     # Filter out lessons that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
     summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
-    summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
+    summary[:professionalLearningCourse] = professional_learning_course if old_professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
     summary[:calendarLessons] = filtered_lessons.map(&:summarize_for_calendar)
 
