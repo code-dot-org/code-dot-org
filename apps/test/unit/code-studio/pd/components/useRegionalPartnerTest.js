@@ -1,7 +1,6 @@
 import React from 'react';
 import {act} from 'react-dom/test-utils';
 import PropTypes from 'prop-types';
-// import {expect} from 'chai';
 import {expect} from '../../../../util/reconfiguredChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
@@ -9,25 +8,21 @@ import {useRegionalPartner} from '@cdo/apps/code-studio/pd/components/useRegiona
 import {PROGRAM_CSA} from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplicationConstants';
 import _ from 'lodash';
 
+let regionalPartnerData, regionalPartnerError;
+
 const RegionalPartnerUser = props => {
   const {data} = props;
-  const [regionalPartner, regionalPartnerError] = useRegionalPartner(data);
-  return (
-    <>
-      <div id="data">{JSON.stringify(regionalPartner)}</div>
-      <div id="error">{JSON.stringify(regionalPartnerError)}</div>
-    </>
-  );
+  const [regionalPartner, error] = useRegionalPartner(data);
+  regionalPartnerData = regionalPartner;
+  regionalPartnerError = error;
+  return null;
 };
 RegionalPartnerUser.propTypes = {
   data: PropTypes.object
 };
 
-const getRegionalPartnerData = element => {
-  return [
-    JSON.parse(element.find('#data').text()),
-    JSON.parse(element.find('#error').text())
-  ];
+const getRegionalPartnerData = () => {
+  return [regionalPartnerData, regionalPartnerError];
 };
 
 const GOOD_RESPONSE = {name: 'reginald partner'};
@@ -52,13 +47,14 @@ describe('useRegionalPartner tests', () => {
     debounceStub.restore();
   });
 
-  it('returns null when uninitialized', async () => {
+  it('returns undefined when loading', async () => {
     let rendered;
+    fetch.resetBehavior();
     rendered = await mount(<RegionalPartnerUser data={{}} />);
     const [regionalPartner, regionalPartnerError] = getRegionalPartnerData(
       rendered
     );
-    expect(regionalPartner).to.equal(null);
+    expect(regionalPartner).to.equal(undefined);
     expect(regionalPartnerError).to.equal(false);
     rendered.unmount();
   });
