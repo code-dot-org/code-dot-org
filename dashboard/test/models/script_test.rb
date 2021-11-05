@@ -11,7 +11,7 @@ class ScriptTest < ActiveSupport::TestCase
     @game = create(:game)
     @unit_file = File.join(self.class.fixture_path, "test-fixture.script")
     # Level names match those in 'test.script'
-    @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game, level_num: 'custom')}
+    @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
     @unit_group = create(:unit_group)
     @unit_in_unit_group = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
@@ -296,7 +296,7 @@ class ScriptTest < ActiveSupport::TestCase
     # test that LessonActivity, ActivitySection and Objective can be seeded
     # from .script_json when is_migrated is specified in the .script file.
     # use 'custom' level num to make level key match level name.
-    create :maze, name: 'test_maze_level', level_num: 'custom'
+    create :maze, name: 'test_maze_level'
     unit_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-models.script')
     Script.setup([unit_file])
 
@@ -1417,8 +1417,8 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal(expected, summary[:studentDescription])
   end
 
-  test 'should generate PLC objects' do
-    unit_file = File.join(self.class.fixture_path, 'test-plc.script')
+  test 'should generate PLC objects for unmigrated unit' do
+    unit_file = File.join(self.class.fixture_path, 'test-plc-unmigrated.script')
     unit_names, custom_i18n = Script.setup([unit_file])
     unit = Script.find_by!(name: unit_names.first)
     custom_i18n.deep_merge!(
@@ -1427,7 +1427,7 @@ class ScriptTest < ActiveSupport::TestCase
           'data' => {
             'script' => {
               'name' => {
-                'test-plc' => {
+                'test-plc-unmigrated' => {
                   'title' => 'PLC Test',
                   'description' => 'PLC test fixture script'
                 }
@@ -1440,6 +1440,43 @@ class ScriptTest < ActiveSupport::TestCase
     I18n.backend.store_translations I18n.locale, custom_i18n['en']
 
     unit.save! # Need to trigger an update because i18n strings weren't loaded
+    assert unit.professional_learning_course?
+    assert_equal 'Test plc course', unit.professional_learning_course
+    assert_equal 42, unit.peer_reviews_to_complete
+
+    course_unit = unit.plc_course_unit
+    assert_equal 'PLC Test', course_unit.unit_name
+    assert_equal 'PLC test fixture script', course_unit.unit_description
+
+    lm = unit.lessons.first.plc_learning_module
+    assert_equal 'Sample Module', lm.name
+    assert_equal 1, course_unit.plc_learning_modules.count
+    assert_equal lm, course_unit.plc_learning_modules.first
+    assert_equal Plc::LearningModule::CONTENT_MODULE, lm.module_type
+  end
+
+  test 'should generate PLC objects for migrated unit' do
+    i18n = {
+      'en' => {
+        'data' => {
+          'script' => {
+            'name' => {
+              'test-plc' => {
+                'title' => 'PLC Test',
+                'description' => 'PLC test fixture script'
+              }
+            }
+          }
+        }
+      }
+    }
+    I18n.backend.store_translations I18n.locale, i18n['en']
+
+    unit_file = File.join(self.class.fixture_path, 'test-plc.script')
+    Script.stubs(:unit_json_directory).returns(self.class.fixture_path)
+    unit_names, _custom_i18n = Script.setup([unit_file])
+    unit = Script.find_by!(name: unit_names.first)
+
     assert unit.professional_learning_course?
     assert_equal 'Test plc course', unit.professional_learning_course
     assert_equal 42, unit.peer_reviews_to_complete
@@ -3327,8 +3364,8 @@ class ScriptTest < ActiveSupport::TestCase
       lesson_activity = create :lesson_activity, lesson: lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity
 
-      level1 = create :level, name: 'level1-2021', level_num: 'custom'
-      level2 = create :level, name: 'level2-2021', level_num: 'custom'
+      level1 = create :level, name: 'level1-2021'
+      level2 = create :level, name: 'level2-2021'
       create :script_level, levels: [level1], script: @standalone_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 1
       create :script_level, levels: [level2], script: @standalone_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 2
 

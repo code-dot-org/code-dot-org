@@ -13,4 +13,6 @@
 #  index_code_review_groups_on_section_id  (section_id)
 #
 class CodeReviewGroup < ApplicationRecord
+  # use dependent: :delete_all here because code_review_group_members is a join table and has no id column.
+  has_many :members, class_name: 'CodeReviewGroupMember', dependent: :delete_all
 end

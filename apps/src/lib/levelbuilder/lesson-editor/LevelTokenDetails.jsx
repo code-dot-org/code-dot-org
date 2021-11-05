@@ -129,7 +129,7 @@ export const UnconnectedLevelTokenDetails = LevelTokenDetails;
 
 export default connect(
   state => ({
-    lessonExtrasAvailableForUnit: state.lessonExtrasAvailableForUnit
+    lessonExtrasAvailableForUnit: state.unitInfo.lessonExtrasAvailableForUnit
   }),
   {
     setScriptLevelField

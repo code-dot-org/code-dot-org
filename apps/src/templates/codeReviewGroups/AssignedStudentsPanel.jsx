@@ -4,8 +4,11 @@ import i18n from '@cdo/locale';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabButton from '@cdo/apps/javalab/JavalabButton';
 import StudentGroup from './StudentGroup';
-import color from '@cdo/apps/util/color';
-import {HEADER_STYLE, BUTTON_STYLE} from './UnassignedStudentsPanel';
+import {
+  HEADER_STYLE,
+  BUTTON_STYLE,
+  GROUPS_CONTAINER_STYLE
+} from './UnassignedStudentsPanel';
 
 export default function AssignedStudentsPanel({groups, onCreateGroupClick}) {
   // TO DO: style and add small pop-up to get group name from teacher when creating a group.
@@ -48,11 +51,5 @@ const styles = {
   },
   header: HEADER_STYLE,
   button: BUTTON_STYLE,
-  groupsContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    height: 355,
-    overflow: 'scroll',
-    border: `1px solid ${color.lightest_gray}`
-  }
+  groupsContainer: GROUPS_CONTAINER_STYLE
 };

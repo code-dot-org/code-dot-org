@@ -11,7 +11,7 @@ class StudentTable extends React.Component {
   static propTypes = {
     students: PropTypes.arrayOf(studentShape).isRequired,
     onSelectUser: PropTypes.func.isRequired,
-    getSelectedUserId: PropTypes.func.isRequired,
+    selectedUserId: PropTypes.number,
     levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
     sectionId: PropTypes.number,
     unitName: PropTypes.string
@@ -41,11 +41,9 @@ class StudentTable extends React.Component {
     const {
       students,
       onSelectUser,
-      getSelectedUserId,
+      selectedUserId,
       levelsWithProgress
     } = this.props;
-
-    const selectedUserId = getSelectedUserId();
 
     return (
       <table style={styles.table} className="student-table">
