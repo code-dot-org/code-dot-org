@@ -55,10 +55,19 @@ class P5LabView extends React.Component {
     currentUserType: PropTypes.string
   };
 
-  state = {
-    libraryManifest: {},
-    projectType: PICKER_TYPE.gamelab
-  };
+  constructor(props) {
+    super(props);
+
+    // Indicate the context of the animation picker
+    let projectType = this.props.isBlockly
+      ? PICKER_TYPE.spritelab
+      : PICKER_TYPE.gamelab;
+
+    this.state = {
+      libraryManifest: {},
+      projectType
+    };
+  }
 
   getChannelId() {
     if (dashboard && dashboard.project) {
@@ -78,12 +87,6 @@ class P5LabView extends React.Component {
     this.p5labTeacherUploadEnabled_ = experiments.isEnabled(
       experiments.P5LAB_TEACHER_UPLOAD
     );
-
-    // Indicate the context of the animation picker
-    let projectType = this.props.isBlockly
-      ? PICKER_TYPE.spritelab
-      : PICKER_TYPE.gamelab;
-    this.setState({projectType: projectType});
   }
 
   shouldHideAnimationUpload() {
