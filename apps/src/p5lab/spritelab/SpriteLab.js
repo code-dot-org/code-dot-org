@@ -22,6 +22,8 @@ export default class SpriteLab extends P5Lab {
     return P5LabType.SPRITELAB;
   }
 
+  // We don't want levels that show the finish dialog using
+  // this.studioApp_.displayFeedback to show the save & publish buttons.
   saveToProjectGallery() {
     return false;
   }
