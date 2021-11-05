@@ -1665,6 +1665,15 @@ class Script < ApplicationRecord
     summary
   end
 
+  def summarize_for_lesson_edit
+    {
+      isLaunched: launched?,
+      courseVersionId: get_course_version&.id,
+      unitPath: script_path(self),
+      lessonExtrasAvailableForUnit: lesson_extras_available
+    }
+  end
+
   # @return {Hash<string,number[]>}
   #   For teachers, this will be a hash mapping from section id to a list of hidden
   #   script ids for that section, filtered so that the only script id which appears
@@ -2134,5 +2143,11 @@ class Script < ApplicationRecord
     if is_migrated? && !use_legacy_lesson_plans?
       Services::CurriculumPdfs.get_unit_resources_url(self)
     end
+  end
+
+  # To help teachers have more control over the pacing of certain scripts, we
+  # send students on the last level of a lesson to the unit overview page.
+  def show_unit_overview_between_lessons?
+    csd? || csp? || csa?
   end
 end

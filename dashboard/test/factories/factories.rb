@@ -501,10 +501,8 @@ FactoryGirl.define do
 
   factory :level, class: Blockly do
     sequence(:name) {|n| "Level_#{n}"}
-    sequence(:level_num) {|n| "1_2_#{n}"}
+    level_num 'custom'
 
-    # User id must be non-nil for custom level
-    user_id '1'
     game
 
     trait :with_autoplay_video do
@@ -564,6 +562,10 @@ FactoryGirl.define do
     factory :sublevel do
       sequence(:name) {|n| "sub_level_#{n}"}
     end
+  end
+
+  factory :deprecated_blockly_level, parent: :level do
+    sequence(:level_num) {|n| "1_2_#{n}"}
   end
 
   factory :unplugged, parent: :level, class: Unplugged do
@@ -1333,6 +1335,7 @@ FactoryGirl.define do
   factory :regional_partner do
     sequence(:name) {|n| "Partner#{n}"}
     group 1
+    pl_programs_offered ['CSD', 'CSP']
   end
 
   factory :regional_partner_with_mappings, parent: :regional_partner do

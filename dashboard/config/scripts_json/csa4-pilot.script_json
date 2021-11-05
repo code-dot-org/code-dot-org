@@ -4,6 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "announcements": [
+        {
+          "notice": "CSA Pilot: The Playground",
+          "details": "Please note that for the AP CSA Pilot, The Playground is offered only in Units 4 and 8 and in a sandbox level found at the end of each unit. The Playground is not available as a standalone project outside of the course. Projects created in The Playground may not function after the end of the school year as potential updates are implemented. If this happens, we will provide instructions for students who wish to keep their projects working as expected.",
+          "link": "",
+          "type": "warning",
+          "visibility": "Teacher-only"
+        }
+      ],
       "curriculum_umbrella": "CSA",
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -14,9 +23,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:46 UTC",
+    "serialized_at": "2021-11-04 23:52:34 UTC",
     "published_state": null,
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csa4-pilot"
     }
@@ -6543,7 +6554,7 @@
     },
     {
       "name": "[KEY] U4L6 Extra Practice",
-      "url": "https://docs.google.com/document/d/1DX4-GghzBqTMk1-4YHeQkIrL-Qgc2neSJfznym2P0DI/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1LdS0ZMIbYwTSwO4wMGfkMzhRMQ9Ao4KUo0lB3lEs_M8/edit?usp=sharing",
       "key": "_key_u4l6_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
