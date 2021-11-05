@@ -22,6 +22,7 @@
 #  tts_autoplay_enabled :boolean          default(FALSE), not null
 #  restrict_section     :boolean          default(FALSE)
 #  code_review_enabled  :boolean          default(TRUE)
+#  properties           :text(65535)
 #
 # Indexes
 #
@@ -70,6 +71,7 @@ class Section < ApplicationRecord
 
   has_many :section_hidden_lessons
   has_many :section_hidden_scripts
+  has_many :code_review_groups
 
   # We want to replace uses of "stage" with "lesson" when possible, since "lesson" is the term used by curriculum team.
   # Use an alias here since it's not worth renaming the column in the database. Use "lesson_extras" when possible.
@@ -406,6 +408,21 @@ class Section < ApplicationRecord
   # so we check both here.
   def assigned_csa?
     script&.csa? || unit_group&.family_name == CSA
+  end
+
+  def reset_code_review_groups(new_groups)
+    ActiveRecord::Base.transaction do
+      code_review_groups.destroy_all
+      new_groups.each do |group|
+        # skip any unassigned members
+        next if group[:unassigned]
+        new_group = CodeReviewGroup.create!(name: group[:name], section_id: id)
+        next unless group[:members]
+        group[:members].each do |member|
+          CodeReviewGroupMember.create!(follower_id: member[:follower_id], code_review_group_id: new_group.id)
+        end
+      end
+    end
   end
 
   private

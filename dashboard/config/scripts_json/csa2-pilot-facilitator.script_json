@@ -15,9 +15,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:55 UTC",
+    "serialized_at": "2021-11-03 17:31:16 UTC",
     "published_state": null,
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csa2-pilot-facilitator"
     }
@@ -316,7 +318,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "Students complete a Free Response Question (FRQ) in this lesson. They annotate a College Board FRQ as a class, then write code to answer an FRQ.\n\nThe goals of this lesson are:\n* Practice reading a College Board FRQ\n* Practice handwriting an FRQ\n* Serve as a summative assessment of the content from Unit 2\n\nWhile the format of this FRQ is not the same as an FRQ on the AP exam, it helps students develop strategies for approaching these questions. ",
-        "preparation": "* Print out and post the Combo Class FRQ Print Out \n* Print copies of FRQ Writing (one per student)\n* Print copies of College Board FRQ (one per student)\n* Print copies of FRQ Graphic Organizer (one per student)\n* Print copies of the FRQ Scoring Guide (one per pair of students)\n* Gather 1 index card per student\n* (Optional) Gather a yellow, blue, orange, and pink colored pencil or marker for each student",
+        "preparation": "* Print out and post the Burger Class FRQ Print Out \n* Print copies of FRQ Writing (one per student)\n* Print copies of College Board FRQ (one per student)\n* Print copies of FRQ Graphic Organizer (one per student)\n* Print copies of the FRQ Scoring Guide (one per pair of students)\n* Gather 1 index card per student\n* (Optional) Gather a yellow, blue, orange, and pink colored pencil or marker for each student",
         "student_overview": "Today you complete a Free Response Question (FRQ). You do this by first looking and annotating an FRQ with peers, then handwriting code to solve a problem, following up with scoring your solution with a partner. "
       },
       "seeding_key": {
@@ -4234,7 +4236,7 @@
       "key": "c9d2faaf-d614-4db1-89bc-0505bb127da6",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pair students and distribute a copy of the FRQ Scoring Guide to each student.\n\n**Do This:** Ask students to evaluate their work with their partner using the Scoring Guide and complete the reflection on the last page of the FRQ Writing handout. Display the solution while moving through the slides: \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `Combo` superclass and constructor\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `getName()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `getPrice()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `toString()` method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What were you confident about? Are there some things you left out that could have brought up your score?*\n\n**Discussion Goal:** Help students process the solution to this particular problem. Take a moment to celebrate their successes and validate their frustrations.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pair students and distribute a copy of the FRQ Scoring Guide to each student.\n\n**Do This:** Ask students to evaluate their work with their partner using the Scoring Guide and complete the reflection on the last page of the FRQ Writing handout. Display the solution while moving through the slides: \n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation of the `Burger` subclass and constructor\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `getCheeseStatus()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation and construction for the `setCheeseStatus()` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation, construction, and return for the `toString()` method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What were you confident about? Are there some things you left out that could have brought up your score?*\n\n**Discussion Goal:** Help students process the solution to this particular problem. Take a moment to celebrate their successes and validate their frustrations.",
         "duration": "8",
         "name": "FRQ Scoring",
         "tips": [
@@ -7099,7 +7101,7 @@
       }
     },
     {
-      "name": "Combo Class FRQ Print Out",
+      "name": "Burger Subclass FRQ Print Out",
       "url": "https://docs.google.com/document/d/1Vhwh3WWjpzYYC9B0aIuGapty1X6Zzf7bf1My9Hc0F-Y/edit?usp=sharing",
       "key": "combo_class_frq_print_out",
       "properties": {

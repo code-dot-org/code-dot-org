@@ -1258,6 +1258,7 @@ class ApiControllerTest < ActionController::TestCase
 
     # create progress for student_1 on regular_level
     create :user_level, user: @student_1, script: script, level: regular_level, best_result: ActivityConstants::BEST_PASS_RESULT
+    create :user_level, user: @teacher, script: script, level: regular_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT
 
     get :teacher_panel_progress, params: {
       section_id: @section.id,
@@ -1269,12 +1270,20 @@ class ApiControllerTest < ActionController::TestCase
 
     response = JSON.parse(@response.body)
 
-    # response is an array with one element for each student
+    # response is an array with one element for each student and one element for the teacher
+    assert_equal @students.length + 1, response.length
+
+    # teacher is the first result
+    first_result = response[0]
+    assert_equal @teacher.id, first_result["userId"]
+    assert_equal regular_level.id.to_s, first_result["id"]
+    assert_equal "passed", first_result["status"]
+
     # students are sorted by name so @student_1 should be the first result
-    assert_equal @students.length, response.length
-    assert_equal @student_1.id, response[0]["userId"]
-    assert_equal regular_level.id.to_s, response[0]["id"]
-    assert_equal "perfect", response[0]["status"]
+    second_result = response[1]
+    assert_equal @student_1.id, second_result["userId"]
+    assert_equal regular_level.id.to_s, second_result["id"]
+    assert_equal "perfect", second_result["status"]
   end
 
   test "teacher_panel_progress returns progress when called with lesson and is_bonus_lesson" do
@@ -1282,6 +1291,7 @@ class ApiControllerTest < ActionController::TestCase
 
     # create progress for student_1 on bonus_level
     create :user_level, user: @student_1, script: script, level: bonus_level, best_result: ActivityConstants::BEST_PASS_RESULT
+    create :user_level, user: @teacher, script: script, level: bonus_level, best_result: ActivityConstants::MINIMUM_PASS_RESULT
 
     get :teacher_panel_progress, params: {
       section_id: @section.id,
@@ -1294,12 +1304,21 @@ class ApiControllerTest < ActionController::TestCase
 
     response = JSON.parse(@response.body)
 
-    # response is an array with one element for each student
+    # response is an array with one element for each student and one element for the teacher
+    assert_equal @students.length + 1, response.length
+
+    # teacher is the first result
+    first_result = response[0]
+    assert_equal @teacher.id, first_result["userId"]
+    assert_equal bonus_level.id.to_s, first_result["id"]
+    # if the user has done any work on a bonus level it's summarized as perfect for the teacher panel (not sure why)
+    assert_equal "perfect", first_result["status"]
+
     # students are sorted by name so @student_1 should be the first result
-    assert_equal @students.length, response.length
-    assert_equal @student_1.id, response[0]["userId"]
-    assert_equal bonus_level.id.to_s, response[0]["id"]
-    assert_equal "perfect", response[0]["status"]
+    first_student = response[1]
+    assert_equal @student_1.id, first_student["userId"]
+    assert_equal bonus_level.id.to_s, first_student["id"]
+    assert_equal "perfect", first_student["status"]
   end
 
   test "teacher_panel_progress returns error when called by teacher not associated with section" do

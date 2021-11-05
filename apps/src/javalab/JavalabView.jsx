@@ -36,6 +36,7 @@ class JavalabView extends React.Component {
     viewMode: PropTypes.string.isRequired,
     isProjectTemplateLevel: PropTypes.bool.isRequired,
     handleClearPuzzle: PropTypes.func.isRequired,
+    onPhotoPrompterFileSelected: PropTypes.func.isRequired,
 
     // populated by redux
     isProjectLevel: PropTypes.bool.isRequired,
@@ -160,7 +161,8 @@ class JavalabView extends React.Component {
       isProjectTemplateLevel,
       handleClearPuzzle,
       canRun,
-      canTest
+      canTest,
+      onPhotoPrompterFileSelected
     } = this.props;
 
     if (isDarkMode) {
@@ -210,6 +212,7 @@ class JavalabView extends React.Component {
             bottomRightPanel={() => (
               <JavalabConsole
                 onInputMessage={onInputMessage}
+                onPhotoPrompterFileSelected={onPhotoPrompterFileSelected}
                 style={{
                   ...styles.consoleParent,
                   ...(!this.isLeftSideVisible() && {paddingBottom: 40})
