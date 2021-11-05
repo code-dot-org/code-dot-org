@@ -11,7 +11,7 @@ class ScriptTest < ActiveSupport::TestCase
     @game = create(:game)
     @unit_file = File.join(self.class.fixture_path, "test-fixture.script")
     # Level names match those in 'test.script'
-    @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game, level_num: 'custom')}
+    @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
     @unit_group = create(:unit_group)
     @unit_in_unit_group = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
@@ -296,7 +296,7 @@ class ScriptTest < ActiveSupport::TestCase
     # test that LessonActivity, ActivitySection and Objective can be seeded
     # from .script_json when is_migrated is specified in the .script file.
     # use 'custom' level num to make level key match level name.
-    create :maze, name: 'test_maze_level', level_num: 'custom'
+    create :maze, name: 'test_maze_level'
     unit_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-models.script')
     Script.setup([unit_file])
 
@@ -3364,8 +3364,8 @@ class ScriptTest < ActiveSupport::TestCase
       lesson_activity = create :lesson_activity, lesson: lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity
 
-      level1 = create :level, name: 'level1-2021', level_num: 'custom'
-      level2 = create :level, name: 'level2-2021', level_num: 'custom'
+      level1 = create :level, name: 'level1-2021'
+      level2 = create :level, name: 'level2-2021'
       create :script_level, levels: [level1], script: @standalone_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 1
       create :script_level, levels: [level2], script: @standalone_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 2
 

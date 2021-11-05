@@ -2070,7 +2070,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
                               name: 'levelbuilder can view in_development script level'
 
   def create_visible_after_script_level
-    level = create :maze, name: 'maze 1', level_num: 'custom'
+    level = create :maze, name: 'maze 1'
     script = create :script
     lesson_group = create(:lesson_group, script: script)
     lesson = create :lesson, name: 'lesson 1', script: script, lesson_group: lesson_group, visible_after: '2020-04-01 08:00:00 -0700'
@@ -2087,7 +2087,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
       Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
 
-      level = create :maze, name: 'maze 1', level_num: 'custom'
+      level = create :maze, name: 'maze 1'
       script_with_visible_after_lessons = create :script
       lesson_group = create :lesson_group, script: script_with_visible_after_lessons
 
