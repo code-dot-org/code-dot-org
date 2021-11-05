@@ -905,9 +905,9 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil Script.find_by_name('csf1').banner_image
   end
 
-  test 'professional_learning_course?' do
-    refute Script.find_by_name('flappy').professional_learning_course?
-    assert Script.find_by_name('ECSPD').professional_learning_course?
+  test 'old_professional_learning_course?' do
+    refute Script.find_by_name('flappy').old_professional_learning_course?
+    assert Script.find_by_name('ECSPD').old_professional_learning_course?
   end
 
   test 'should summarize migrated unit' do
@@ -1440,7 +1440,7 @@ class ScriptTest < ActiveSupport::TestCase
     I18n.backend.store_translations I18n.locale, custom_i18n['en']
 
     unit.save! # Need to trigger an update because i18n strings weren't loaded
-    assert unit.professional_learning_course?
+    assert unit.old_professional_learning_course?
     assert_equal 'Test plc course', unit.professional_learning_course
     assert_equal 42, unit.peer_reviews_to_complete
 
@@ -1477,7 +1477,7 @@ class ScriptTest < ActiveSupport::TestCase
     unit_names, _custom_i18n = Script.setup([unit_file])
     unit = Script.find_by!(name: unit_names.first)
 
-    assert unit.professional_learning_course?
+    assert unit.old_professional_learning_course?
     assert_equal 'Test plc course', unit.professional_learning_course
     assert_equal 42, unit.peer_reviews_to_complete
 
