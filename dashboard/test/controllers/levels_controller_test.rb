@@ -819,9 +819,9 @@ class LevelsControllerTest < ActionController::TestCase
     assert_select "#level_skin option[value='pvz'][selected='selected']"
   end
 
-  test 'should render level num in title' do
+  test 'should render level name in title' do
     get :show, params: {id: @level, game_id: @level.game}
-    assert_match /#{Regexp.quote(@level.level_num)}/, Nokogiri::HTML(@response.body).css('title').text.strip
+    assert_match /#{Regexp.quote(@level.name)}/, Nokogiri::HTML(@response.body).css('title').text.strip
   end
 
   test "should update maze data properly" do
@@ -944,7 +944,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should clone" do
     game = Game.find_by_name("Custom")
-    old = create(:level, game_id: game.id, name: "Fun Level", level_num: 'custom')
+    old = create(:level, game_id: game.id, name: "Fun Level")
     assert_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
     end
@@ -957,7 +957,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should clone without redirect" do
     game = Game.find_by_name("Custom")
-    old = create(:level, game_id: game.id, name: "Fun Level", level_num: 'custom')
+    old = create(:level, game_id: game.id, name: "Fun Level")
     assert_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)", do_not_redirect: true}
     end
@@ -989,7 +989,7 @@ class LevelsControllerTest < ActionController::TestCase
     sign_in @platformization_partner
 
     game = Game.find_by_name("Custom")
-    old = create(:level, game_id: game.id, name: "Fun Level", level_num: 'custom')
+    old = create(:level, game_id: game.id, name: "Fun Level")
     assert_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
     end

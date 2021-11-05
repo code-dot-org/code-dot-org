@@ -213,7 +213,7 @@ class Backpack extends Component {
       backpackFilenames.length === 0;
 
     return (
-      <div>
+      <>
         <JavalabButton
           icon={
             <img
@@ -233,43 +233,60 @@ class Backpack extends Component {
         />
         {dropdownOpen && (
           <div
-            style={{...styles.dropdown, ...(isDarkMode && styles.dropdownDark)}}
-            ref={ref => (this.dropdownList = ref)}
+            className="ignore-react-onclickoutside"
+            style={{
+              ...styles.dropdownContainer,
+              ...(isDarkMode && styles.dropdownDark)
+            }}
           >
             {showFiles && (
-              <div>
-                {backpackFilenames.map((filename, index) => (
-                  <div
-                    style={{
-                      ...styles.fileListItem,
-                      ...(isDarkMode && styles.fileListItemDark)
-                    }}
-                    key={`backpack-file-${index}`}
-                  >
-                    <input
-                      type="checkbox"
-                      id={`backpack-file-${index}`}
-                      name={filename}
-                      onChange={this.handleFileCheckboxChange}
-                    />
-                    <label
-                      htmlFor={`backpack-file-${index}`}
-                      style={styles.fileListLabel}
-                    >
-                      {filename}
-                    </label>
+              <>
+                <div
+                  style={styles.dropdown}
+                  ref={ref => (this.dropdownList = ref)}
+                >
+                  {/* In the case of a very long filename, this div adds styling
+                  that maintains highlighting even when scrolled to the right */}
+                  <div style={styles.listContainer}>
+                    {backpackFilenames.map((filename, index) => (
+                      <div
+                        style={{
+                          ...styles.fileListItem,
+                          ...(isDarkMode && styles.fileListItemDark)
+                        }}
+                        key={`backpack-file-${index}`}
+                      >
+                        <input
+                          type="checkbox"
+                          id={`backpack-file-${index}`}
+                          name={filename}
+                          onChange={this.handleFileCheckboxChange}
+                        />
+                        <label
+                          htmlFor={`backpack-file-${index}`}
+                          style={styles.fileListLabel}
+                        >
+                          {filename}
+                        </label>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
                 <JavalabButton
                   text={javalabMsg.import()}
                   style={styles.importButton}
                   onClick={this.handleImport}
                   isDisabled={selectedFiles.length === 0}
                 />
-              </div>
+              </>
             )}
             {backpackFilesLoading && (
-              <span className="fa fa-spin fa-spinner" style={styles.spinner} />
+              <div style={styles.spinnerContainer}>
+                <span
+                  className="fa fa-spin fa-spinner"
+                  style={styles.spinner}
+                />
+              </div>
             )}
             {backpackLoadError && (
               <div style={styles.message}>
@@ -299,29 +316,40 @@ class Backpack extends Component {
           isDarkMode={isDarkMode}
           confirmButtonText={msg.dialogOK()}
         />
-      </div>
+      </>
     );
   }
 }
 
 const styles = {
-  dropdown: {
-    position: 'absolute',
-    marginTop: 30,
-    backgroundColor: color.lightest_gray,
-    color: color.darkest_gray,
-    zIndex: 20,
-    paddingTop: 5,
-    paddingBottom: 5,
-    borderRadius: 2,
+  dropdownContainer: {
     display: 'flex',
+    position: 'absolute',
     flexDirection: 'column',
-    alignItems: 'center',
-    minWidth: 150
+    top: 30,
+    backgroundColor: color.lightest_gray,
+    zIndex: 20,
+    borderWidth: 1,
+    borderColor: color.darkest_gray,
+    borderStyle: 'solid',
+    borderTopWidth: 0,
+    borderRadius: 4,
+    maxWidth: '35%',
+    maxHeight: '80%',
+    minWidth: 150,
+    color: color.darkest_gray
+  },
+  dropdown: {
+    overflow: 'auto',
+    padding: 10
   },
   dropdownDark: {
     backgroundColor: color.darkest_gray,
-    color: color.light_gray
+    color: color.lightest_gray,
+    borderColor: color.lightest_gray
+  },
+  listContainer: {
+    width: 'fit-content'
   },
   buttonStyles: {
     cursor: 'pointer',
@@ -329,8 +357,11 @@ const styles = {
     backgroundColor: color.light_purple,
     margin: '3px 3px 3px 0px',
     height: 24,
+    borderWidth: 1,
+    borderStyle: 'solid',
+    // prevent jitter when the button is clicked
+    borderColor: color.purple,
     borderRadius: 4,
-    borderWidth: 0,
     fontSize: 13,
     color: color.white,
     padding: '0px 12px',
@@ -346,8 +377,8 @@ const styles = {
   fileListItem: {
     display: 'flex',
     flexDirection: 'row',
-    padding: '5px 10px 5px 10px',
-    width: '90%',
+    padding: '5px',
+    width: '100%',
     ':hover': {
       backgroundColor: color.lighter_gray
     }
@@ -358,13 +389,15 @@ const styles = {
     }
   },
   fileListLabel: {
-    marginLeft: 5
+    marginLeft: 5,
+    width: 'inherit'
   },
   importButton: {
     backgroundColor: color.orange,
     color: color.white,
     fontSize: 13,
-    padding: '5px 16px'
+    padding: '5px 16px',
+    width: 'fit-content'
   },
   backpackIcon: {
     height: 15,
@@ -375,7 +408,7 @@ const styles = {
   },
   message: {
     fontStyle: 'italic',
-    fontSize: 10,
+    fontSize: 12,
     lineHeight: '12px',
     padding: 10
   },
@@ -385,6 +418,9 @@ const styles = {
   importWarningConfirm: {
     marginTop: 10,
     marginBottom: 0
+  },
+  spinnerContainer: {
+    textAlign: 'center'
   }
 };
 
