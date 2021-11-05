@@ -245,7 +245,7 @@ class Backpack extends Component {
                   style={styles.dropdown}
                   ref={ref => (this.dropdownList = ref)}
                 >
-                  {/* In the case of a vary long filename, this div adds styling
+                  {/* In the case of a very long filename, this div adds styling
                   that maintains highlighting even when scrolled to the right */}
                   <div style={styles.listContainer}>
                     {backpackFilenames.map((filename, index) => (
