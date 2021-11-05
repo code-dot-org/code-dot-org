@@ -25,7 +25,7 @@ export default function CodeReviewGroupsManager({initialGroups}) {
     groups.filter(group => group.droppableId !== DROPPABLE_ID_UNASSIGNED);
 
   const onGroupNameUpdate = (droppableId, newName) => {
-    const updatedGroup = {...getGroup(droppableId), ...{name: newName}};
+    const updatedGroup = {...getGroup(droppableId), name: newName};
     const updatedGroups = updateGroups(groups, [updatedGroup]);
     setGroups(updatedGroups);
   };
