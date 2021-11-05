@@ -478,7 +478,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'cannot create custom and dsl levels with same key' do
-    level1 = create :artist, name: 'artist multi', level_num: 'custom'
+    level1 = create :artist, name: 'artist multi'
     assert_equal 'artist multi', level1.key
     e = assert_raises ActiveRecord::RecordInvalid do
       create :multi, name: 'artist multi', level_num: nil, user_id: nil
@@ -809,7 +809,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'can clone' do
-    old_level = create :level, name: 'old level', start_blocks: '<xml>foo</xml>', level_num: 'custom'
+    old_level = create :level, name: 'old level', start_blocks: '<xml>foo</xml>'
     new_level = old_level.clone_with_name('new level')
     assert_equal 'new level', new_level.name
     assert_equal '<xml>foo</xml>', new_level.start_blocks
@@ -850,7 +850,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'can clone with suffix' do
-    old_level = create :level, name: 'level', start_blocks: '<xml>foo</xml>', level_num: 'custom'
+    old_level = create :level, name: 'level', start_blocks: '<xml>foo</xml>'
     new_level = old_level.clone_with_suffix(' copy')
     assert_equal 'level copy', new_level.name
     assert_equal '<xml>foo</xml>', new_level.start_blocks
@@ -858,7 +858,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'clone with suffix replaces old suffix' do
-    level_1 = create :level, name: 'my_level_1', level_num: 'custom'
+    level_1 = create :level, name: 'my_level_1'
 
     # level_1 has no name suffix, so the new suffix is appended.
     level_2 = level_1.clone_with_suffix('_2')
@@ -872,7 +872,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'clone with suffix properly escapes suffixes' do
-    level_1 = create :level, name: 'your_level_1', level_num: 'custom'
+    level_1 = create :level, name: 'your_level_1'
 
     tricky_suffix = '!(."'
 
@@ -891,17 +891,17 @@ class LevelTest < ActiveSupport::TestCase
     new_name = 'x' * 58 + suffix
     assert_equal(70, new_name.length)
 
-    old_level = create :level, name: old_name, start_blocks: '<xml>foo</xml>', level_num: 'custom'
+    old_level = create :level, name: old_name, start_blocks: '<xml>foo</xml>'
     new_level = old_level.clone_with_suffix(suffix)
     assert_equal new_name, new_level.name
     assert_equal suffix, new_level.name_suffix
   end
 
   test 'clone with same suffix copies and shares project template level' do
-    template_level = create :level, name: 'template level', start_blocks: '<xml>template</xml>', level_num: 'custom'
-    level_1 = create :level, name: 'level 1', level_num: 'custom'
+    template_level = create :level, name: 'template level', start_blocks: '<xml>template</xml>'
+    level_1 = create :level, name: 'level 1'
     level_1.project_template_level_name = template_level.name
-    level_2 = create :level, name: 'level 2', level_num: 'custom'
+    level_2 = create :level, name: 'level 2'
     level_2.project_template_level_name = template_level.name
 
     level_1_copy = level_1.clone_with_suffix(' copy')
@@ -921,12 +921,12 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'clone with suffix copies contained levels' do
-    contained_level_1 = create :level, name: 'contained level 1', type: 'FreeResponse', level_num: 'custom'
-    contained_level_2 = create :level, name: 'contained level 2', level_num: 'custom'
+    contained_level_1 = create :level, name: 'contained level 1', type: 'FreeResponse'
+    contained_level_2 = create :level, name: 'contained level 2'
 
     # level 1 has 1 contained level
 
-    level_1 = create :level, name: 'level 1', level_num: 'custom'
+    level_1 = create :level, name: 'level 1'
     level_1.contained_level_names = [contained_level_1.name]
     level_1_copy = level_1.clone_with_suffix(' copy')
 
@@ -938,7 +938,7 @@ class LevelTest < ActiveSupport::TestCase
 
     # level 2 has 2 contained levels, one of which has already been copied
 
-    level_2 = create :level, name: 'level 2', level_num: 'custom'
+    level_2 = create :level, name: 'level 2'
     level_2.contained_level_names = [
       contained_level_1.name,
       contained_level_2.name
@@ -952,7 +952,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'clone with suffix copies level concept difficulty' do
-    level_1 = create :level, name: 'level 1', level_num: 'custom'
+    level_1 = create :level, name: 'level 1'
     level_1.assign_attributes(
       'level_concept_difficulty' => {'sequencing' => 3, 'debugging' => 5}
     )
@@ -969,7 +969,7 @@ class LevelTest < ActiveSupport::TestCase
   end
 
   test 'clone with suffix sets editor experiment' do
-    old_level = create :level, name: 'old level', level_num: 'custom'
+    old_level = create :level, name: 'old level'
     new_level = old_level.clone_with_suffix(' copy', editor_experiment: 'level-editors')
     assert_equal 'old level copy', new_level.name
     assert_equal 'level-editors', new_level.editor_experiment, 'clone_with_suffix adds editor experiment'
@@ -1078,13 +1078,13 @@ class LevelTest < ActiveSupport::TestCase
     refute level.hint_prompt_enabled?
   end
 
-  test 'validates game' do
+  test 'validates game for deprecated blockly level' do
     error = assert_raises ActiveRecord::RecordInvalid do
-      create :level, game: nil
+      create :deprecated_blockly_level, game: nil
     end
     assert_includes error.message, 'Game required for non-custom levels'
 
-    level = create :level
+    level = create :deprecated_blockly_level
     level.game = nil
     error = assert_raises ActiveRecord::RecordInvalid do
       level.save!
@@ -1166,10 +1166,10 @@ class LevelTest < ActiveSupport::TestCase
   test "get_level_for_progress returns the first contained level if the level has contained levels" do
     student = create :student
 
-    contained_level_1 = create :free_response, name: 'contained level 1', type: 'FreeResponse', level_num: 'custom'
-    contained_level_2 = create :level, name: 'contained level 2', level_num: 'custom'
+    contained_level_1 = create :free_response, name: 'contained level 1', type: 'FreeResponse'
+    contained_level_2 = create :level, name: 'contained level 2'
 
-    level = create :level, name: 'level 1', level_num: 'custom'
+    level = create :level, name: 'level 1'
     level.contained_level_names = [contained_level_1.name, contained_level_2.name]
     script_level = create :script_level, levels: [level]
 
