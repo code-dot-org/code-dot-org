@@ -71,5 +71,5 @@
 
 = render partial: 'levels/admin'
 
-- if @script && current_user.try(:teacher?) && !@script.professional_learning_course? && !@level.is_a?(NetSim)
+- if @script && current_user.try(:teacher?) && !@script.old_professional_learning_course? && !@level.is_a?(NetSim)
   = render partial: 'levels/teacher_panel'
