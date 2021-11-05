@@ -266,6 +266,11 @@ class Pd::Workshop < ApplicationRecord
     where('(DATE(ended_at) >= ?)', date)
   end
 
+  # Filters by the date the workshop was created
+  def self.created_on_or_after(date)
+    where('(DATE(created_at) >= ?)', date)
+  end
+
   # Filters those those workshops that have not yet ended, but whose
   # final session was scheduled to end more than two days ago
   def self.should_have_ended

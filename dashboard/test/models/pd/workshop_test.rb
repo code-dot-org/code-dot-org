@@ -581,6 +581,17 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
       Pd::Workshop.end_on_or_after(pivot_date).end_on_or_before(pivot_date).pluck(:id)
   end
 
+  test 'created at date filters' do
+    pivot_date = Date.today
+    # Created in the middle of the day. Since the filter is by date, this should be included in all the queries.
+    workshop_pivot = create :workshop, created_at: pivot_date + 8.hours
+    workshop_after = create :workshop, created_at: pivot_date + 1.week
+
+    # on or after
+    assert_equal [workshop_pivot, workshop_after].pluck(:id).sort,
+      Pd::Workshop.created_on_or_after(pivot_date).pluck(:id).sort
+  end
+
   test 'order_by_start' do
     # 5 workshops in date order, each with 1-5 sessions (only the first matters)
     workshops = 5.times.map do |i|
