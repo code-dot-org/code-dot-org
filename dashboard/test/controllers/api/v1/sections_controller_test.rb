@@ -1131,8 +1131,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @section.code_review_expires_at = nil
     @section.save
     post :set_code_review_enabled, params: {id: @section.id, enabled: true}
+    @section.reload
     assert_response :success
     assert_not_nil json_response["expiration"]
+    assert_equal @section.code_review_expires_at, json_response["expiration"]
   end
 
   test 'can set code review enabled to false' do
@@ -1140,8 +1142,10 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     @section.code_review_expires_at = DateTime.now
     @section.save
     post :set_code_review_enabled, params: {id: @section.id, enabled: false}
+    @section.reload
     assert_response :success
     assert_nil json_response["expiration"]
+    assert_nil @section.code_review_expires_at
   end
 
   private
