@@ -461,14 +461,16 @@ export default class PoetryLibrary extends CoreLibrary {
 
   drawTextHighlight(item) {
     const padding = 2;
-    this.p5.push();
-    this.p5.noStroke();
     const w = drawUtils.getTextWidth(this.p5, item.text, item.size);
     const h = item.size;
+
+    this.p5.push();
+    this.p5.noStroke();
     this.p5.fill(this.poemState.text.highlightColor);
     this.p5.rect(
-      item.x - w / 2 - padding, // account for ceneterd text
-      item.y - h + padding, // By default, item.x & item.y used in text() specify the lower-left corner of the text
+      // By default, item.x & item.y used in text() specify the lower-left corner of the text
+      item.x - w / 2 - padding, // - w / 2 to account for ceneterd text
+      item.y - h + padding,
       w + padding * 2,
       h + padding * 2
     );
