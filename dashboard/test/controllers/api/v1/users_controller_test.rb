@@ -182,6 +182,7 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     assert_equal teacher.id, response["id"]
     assert_equal teacher.username, response["username"]
     assert_equal "teacher", response["user_type"]
+    assert_equal false, response["is_verified_teacher"]
   end
 
   test "a get request to get school_name returns school object" do
