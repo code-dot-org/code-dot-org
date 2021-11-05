@@ -1550,6 +1550,10 @@ export default class P5Lab {
     const isSignedIn =
       getStore().getState().currentUser.signInState === SignInState.SignedIn;
 
+    // Find out whether the current app (e.g. SpriteLab, GameLab, or Poetry) wants
+    // to show the save & publish buttons in this dialog.
+    const saveToProjectGallery = this.saveToProjectGallery();
+
     this.studioApp_.displayFeedback({
       feedbackType: this.testResults,
       message: this.message,
@@ -1562,7 +1566,7 @@ export default class P5Lab {
         sharingText: msg.shareGame()
       },
       hideXButton: true,
-      saveToProjectGallery: this.saveToProjectGallery(),
+      saveToProjectGallery: saveToProjectGallery,
       disableSaveToGallery: !isSignedIn
     });
   }
