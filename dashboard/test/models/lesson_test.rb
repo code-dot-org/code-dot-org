@@ -1119,8 +1119,8 @@ class LessonTest < ActiveSupport::TestCase
     test "variants are removed when cloning lesson into another script" do
       lesson_activity = create :lesson_activity, lesson: @original_lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity
-      level1 = create :maze, name: 'level 1', level_num: 'custom'
-      level2 = create :maze, name: 'level 2', level_num: 'custom'
+      level1 = create :maze, name: 'level 1'
+      level2 = create :maze, name: 'level 2'
       sl = create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
         activity_section: activity_section, activity_section_position: 1
       sl.add_variant(level2)
@@ -1134,7 +1134,7 @@ class LessonTest < ActiveSupport::TestCase
     test "levels are cloned when new_level_suffix is passed in" do
       lesson_activity = create :lesson_activity, lesson: @original_lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity, progression_name: 'progression'
-      level1 = create :maze, name: 'level 1', level_num: 'custom'
+      level1 = create :maze, name: 'level 1'
       create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
         activity_section: activity_section, activity_section_position: 1
 
