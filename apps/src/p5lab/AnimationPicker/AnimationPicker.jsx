@@ -85,6 +85,18 @@ class AnimationPicker extends React.Component {
     }
   };
 
+  contextSpecificName = () => {
+    // Return text depending on the context of the animation picker
+    switch (this.props.pickerType) {
+      case PICKER_TYPE.spritelab:
+        return msg.costume();
+      case PICKER_TYPE.gamelab:
+        return msg.animation();
+      case PICKER_TYPE.backgrounds:
+        return msg.background();
+    }
+  };
+
   renderVisibleBody() {
     if (this.props.uploadError) {
       return (
@@ -94,18 +106,7 @@ class AnimationPicker extends React.Component {
       return <h1 style={styles.title}>{msg.animationPicker_uploading()}</h1>;
     }
 
-    // Update text depending on the context of the animation picker
-    let imageText;
-    switch (this.props.pickerType) {
-      case PICKER_TYPE.spritelab:
-        imageText = 'costumes';
-        break;
-      case PICKER_TYPE.gamelab:
-        imageText = 'animations';
-        break;
-      default:
-        imageText = 'backgrounds';
-    }
+    const contextName = this.contextSpecificName();
 
     return (
       <div>
@@ -128,7 +129,7 @@ class AnimationPicker extends React.Component {
         {this.state.exitingDialog && (
           <BaseDialog isOpen hideCloseButton={true} style={styles.dialog}>
             <h3>{msg.animationPicker_leaveSelectionTitle()}</h3>
-            <p>{msg.animationPicker_leaveSelectionText({imageText})}</p>
+            <p>{msg.animationPicker_leaveSelectionText({contextName})}</p>
 
             <DialogFooter rightAlign={true}>
               <Button
@@ -137,7 +138,7 @@ class AnimationPicker extends React.Component {
                   this.props.onClose();
                   this.setState({exitingDialog: false});
                 }}
-                color={'gray'}
+                color="gray"
               />
               <Button
                 text={msg.animationPicker_returnToLibrary()}
