@@ -5,10 +5,18 @@ import TeacherPanelContainer from '@cdo/apps/code-studio/components/progress/tea
 import SectionSelector from '../SectionSelector';
 import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {fullyLockedLessonMapping} from '@cdo/apps/code-studio/lessonLockRedux';
+import {
+  fullyLockedLessonMapping,
+  setSectionLockStatus
+} from '@cdo/apps/code-studio/lessonLockRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
-import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {
+  pageTypes,
+  setStudentsForCurrentSection,
+  setSections,
+  selectSection
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
@@ -22,9 +30,11 @@ import {
 import {reload} from '@cdo/apps/utils';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {studentShape, levelWithProgress} from './types';
+import {getStudentsForSection, queryLockStatus} from './teacherPanelData';
 
 class TeacherPanel extends React.Component {
   static propTypes = {
+    scriptId: PropTypes.number,
     unitName: PropTypes.string,
     pageType: PropTypes.oneOf([
       pageTypes.level,
@@ -48,18 +58,46 @@ class TeacherPanel extends React.Component {
     teacherId: PropTypes.number,
     exampleSolutions: PropTypes.array,
     selectUser: PropTypes.func.isRequired,
-    isTeacher: PropTypes.bool.isRequired
+    setStudentsForCurrentSection: PropTypes.func.isRequired,
+    setSections: PropTypes.func.isRequired,
+    setSectionLockStatus: PropTypes.func.isRequired,
+    selectSection: PropTypes.func.isRequired
   };
+
+  componentDidMount() {
+    this.loadInitialData();
+  }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (
-      this.props.isTeacher &&
       this.props.pageType !== pageTypes.scriptOverview && // no progress is shown on script overview page in teacher panel
       nextProps.selectedSection?.id !== this.props.selectedSection?.id
     ) {
       this.props.loadLevelsWithProgress();
     }
   }
+
+  loadInitialData = () => {
+    getStudentsForSection().then(section => {
+      section &&
+        this.props.setStudentsForCurrentSection(section.id, section.students);
+    });
+
+    queryLockStatus(this.props.scriptId).then(result => {
+      const {teacherSections, sectionLockStatus} = result;
+      // Don't dispatch setSections on script overview pages because setSections
+      // has already been dispatched on those pages with data specific to which
+      // sections are assigned to the script for the TeacherSectionSeletor.
+      if (this.props.pageType !== 'script_overview') {
+        this.props.setSections(teacherSections);
+
+        const sectionId = queryParams('section_id');
+        sectionId && this.props.selectSection(sectionId);
+      }
+
+      this.props.setSectionLockStatus(sectionLockStatus);
+    });
+  };
 
   logToFirehose = (eventName, overrideData = {}) => {
     const sectionId =
@@ -101,13 +139,8 @@ class TeacherPanel extends React.Component {
       levelsWithProgress,
       pageType,
       teacherId,
-      exampleSolutions,
-      isTeacher
+      exampleSolutions
     } = this.props;
-
-    if (!isTeacher) {
-      return null;
-    }
 
     const selectedUserId = this.getSelectedUserId();
 
@@ -299,8 +332,7 @@ export default connect(
       isLoadingLevelsWithProgress:
         state.teacherPanel.isLoadingLevelsWithProgress,
       teacherId: state.currentUser.userId,
-      exampleSolutions: state.pageConstants?.exampleSolutions,
-      isTeacher: state.currentUser.userType === 'teacher'
+      exampleSolutions: state.pageConstants?.exampleSolutions
     };
   },
   dispatch => ({
@@ -308,6 +340,16 @@ export default connect(
     selectUser: (userId, isAsync = false) => {
       updateQueryParam('user_id', userId);
       isAsync ? dispatch(queryUserProgress(userId)) : reload();
-    }
+    },
+    setStudentsForCurrentSection: (sectionId, students) => {
+      dispatch(setStudentsForCurrentSection(sectionId, students));
+    },
+    setSections: teacherSections => {
+      dispatch(setSections(teacherSections));
+    },
+    setSectionLockStatus: data => {
+      dispatch(setSectionLockStatus(data));
+    },
+    selectSection: sectionId => dispatch(selectSection(sectionId))
   })
 )(TeacherPanel);
