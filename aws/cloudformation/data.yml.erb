@@ -68,14 +68,13 @@ Resources:
   DMSReplicationInstance:
     Type: AWS::DMS::ReplicationInstance
     Properties:
-      ResourceIdentifier: export-mysql-to-redshift
+      ReplicationInstanceIdentifier: export-mysql-to-redshift
       AllowMajorVersionUpgrade: true
       AllocatedStorage: 250
       EngineVersion: 3.4.5
       MultiAZ: true
       PubliclyAccessible: false
       ReplicationInstanceClass: dms.r4.4xlarge
-      ReplicationInstanceIdentifier: !Ref AWS::StackName
       ReplicationSubnetGroupIdentifier: !ImportValue VPC-DMSSubnetGroup
       VpcSecurityGroupIds: [!ImportValue VPC-DMSSecurityGroup]
   # Note that this is an incomplete set of Policies attached to the
@@ -154,7 +153,7 @@ Resources:
     Properties:
       MigrationType: full-load
       ReplicationInstanceArn: !Ref DMSReplicationInstance
-      ReplicationTaskIdentifier: <%= task_name %>-task
+      ReplicationTaskIdentifier: <%= task_name %>
       SourceEndpointArn: !Ref AuroraCloneEndpoint
       TargetEndpointArn: !Ref RedshiftEndpoint
       ReplicationTaskSettings: !Sub |
