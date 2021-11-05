@@ -1126,6 +1126,24 @@ class Api::V1::SectionsControllerTest < ActionController::TestCase
     assert_response 400
   end
 
+  test 'can set code review enabled to true' do
+    sign_in @teacher
+    @section.code_review_expires_at = nil
+    @section.save
+    post :set_code_review_enabled, params: {id: @section.id, enabled: true}
+    assert_response :success
+    assert_not_nil json_response["expiration"]
+  end
+
+  test 'can set code review enabled to false' do
+    sign_in @teacher
+    @section.code_review_expires_at = DateTime.now
+    @section.save
+    post :set_code_review_enabled, params: {id: @section.id, enabled: false}
+    assert_response :success
+    assert_nil json_response["expiration"]
+  end
+
   private
 
   def set_up_code_review_groups
