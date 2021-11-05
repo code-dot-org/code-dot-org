@@ -2807,45 +2807,45 @@ class UserTest < ActiveSupport::TestCase
     assert @admin.authorized_teacher?
   end
 
-  test "authorized instructor" do
-    # normal teacher accounts are not automatically authorized instructors
+  test "verified instructor" do
+    # normal teacher accounts are not automatically verified instructors
     assert @teacher.teacher?
-    refute @teacher.authorized_instructor?
+    refute @teacher.verified_instructor?
 
-    # you need to be given the authorized permission
+    # you need to be given the verified permission
     real_teacher = create(:teacher)
     real_teacher.permission = UserPermission::AUTHORIZED_TEACHER
     assert real_teacher.teacher?
-    assert real_teacher.authorized_instructor?
+    assert real_teacher.verified_instructor?
 
     # or you have to be in a plc course
     create(:plc_user_course_enrollment, user: (plc_teacher = create :teacher), plc_course: create(:plc_course))
     assert plc_teacher.teacher?
-    assert plc_teacher.authorized_instructor?
+    assert plc_teacher.verified_instructor?
 
-    # admins are not authorized instructorsg
+    # admins are not verified instructorsg
     assert @admin.teacher?
-    refute @admin.authorized_instructor?
+    refute @admin.verified_instructor?
 
-    # facilitators should be authorized instructors too
+    # facilitators should be verified instructors too
     assert @facilitator.teacher?
-    assert @facilitator.authorized_instructor?
+    assert @facilitator.verified_instructor?
 
-    # code instructors should be authorized instructors too
+    # code instructors should be verified instructors too
     assert @code_instructor.teacher?
-    assert @code_instructor.authorized_instructor?
+    assert @code_instructor.verified_instructor?
 
-    #plc reviewers should be authorized instructors too
+    #plc reviewers should be verified instructors too
     assert @plc_reviewer.teacher?
-    assert @plc_reviewer.authorized_instructor?
+    assert @plc_reviewer.verified_instructor?
 
-    #levelbuilders should be authorized instructors too
+    #levelbuilders should be verified instructors too
     assert @levelbuilder.teacher?
-    assert @levelbuilder.authorized_instructor?
+    assert @levelbuilder.verified_instructor?
 
-    #students should not be authorized instructors
+    #students should not be verified instructors
     refute @student.teacher?
-    refute @student.authorized_instructor?
+    refute @student.verified_instructor?
   end
 
   test 'terms_of_service_version for teacher without version' do
