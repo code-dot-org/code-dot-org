@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-11-05 17:52:09 UTC",
+    "serialized_at": "2021-11-05 18:27:19 UTC",
     "published_state": "stable",
     "instruction_type": null,
     "instructor_audience": null,
@@ -11223,6 +11223,18 @@
       }
     },
     {
+      "name": "Design an AI App",
+      "url": "https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view",
+      "key": "design_an_ai_app_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "design_an_ai_app_1"
+      }
+    },
+    {
       "name": "Ethics & AI: Equal Access and Algorithmic Bias",
       "url": "https://www.youtube.com/watch?v=tJQSyzBUAew",
       "key": "ethics_ai_equal_access_and_algorithmic_bias",
@@ -12124,6 +12136,12 @@
       "seeding_key": {
         "lesson.key": "lesson16",
         "resource.key": "design_an_ai_app_-_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "resource.key": "design_an_ai_app_1"
       }
     },
     {
