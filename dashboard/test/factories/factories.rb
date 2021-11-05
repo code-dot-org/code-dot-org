@@ -501,7 +501,7 @@ FactoryGirl.define do
 
   factory :level, class: Blockly do
     sequence(:name) {|n| "Level_#{n}"}
-    sequence(:level_num) {|n| "1_2_#{n}"}
+    level_num 'custom'
 
     # User id must be non-nil for custom level
     user_id '1'
@@ -564,6 +564,10 @@ FactoryGirl.define do
     factory :sublevel do
       sequence(:name) {|n| "sub_level_#{n}"}
     end
+  end
+
+  factory :deprecated_blockly_level, parent: :level do
+    sequence(:level_num) {|n| "1_2_#{n}"}
   end
 
   factory :unplugged, parent: :level, class: Unplugged do
