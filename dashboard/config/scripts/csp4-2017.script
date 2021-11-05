@@ -84,8 +84,8 @@ level 'Unit 4 Lesson 9 Introduction', progression: 'Lesson Vocabulary & Resource
 lesson_group 'cspAssessment', display_name: 'Chapter Assessment'
 lesson 'Unit 4 Chapter 1 Assessment', display_name: 'Unit 4 Chapter 1 Assessment', lockable: true, has_lesson_plan: false
 variants
-  level 'csp_affirmation_intervention_4', experiments: ["rene-control-affirmation","rene-belonging-affirmation"], progression: 'Pre-test reflection'
-  level 'csp_affirmation_control_4', active: true, experiments: ["rene-control-control","rene-belonging-control"], progression: 'Pre-test reflection'
+  level 'csp_affirmation_intervention_4', active: false, progression: 'Pre-test reflection'
+  level 'csp_affirmation_control_4', progression: 'Pre-test reflection'
 endvariants
 level 'CSP Unit 4 Ch1 Cumulative Assessment MC', assessment: true
 
