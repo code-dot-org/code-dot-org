@@ -18,9 +18,11 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-10-25 22:54:48 UTC",
+    "serialized_at": "2021-11-05 18:27:19 UTC",
     "published_state": "stable",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "aiml-2021"
     }
@@ -11149,6 +11151,18 @@
       }
     },
     {
+      "name": "Create an ML App",
+      "url": "https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view",
+      "key": "create_an_ml_app",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "create_an_ml_app"
+      }
+    },
+    {
       "name": "Create an ML App - Project Guide",
       "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit",
       "key": "create_an_ml_app_-_project_guide",
@@ -11206,6 +11220,18 @@
       },
       "seeding_key": {
         "resource.key": "design_an_ai_app_-_project_guide"
+      }
+    },
+    {
+      "name": "Design an AI App",
+      "url": "https://docs.google.com/document/d/1WTnJ-vxHh0NIYOePvdYps_zoLLiGWJnD8Y9RJabxth8/view",
+      "key": "design_an_ai_app_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "design_an_ai_app_1"
       }
     },
     {
@@ -11887,6 +11913,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-18",
+        "resource.key": "create_an_ml_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-18",
         "resource.key": "create_an_ml_app_-_project_guide"
       }
     },
@@ -12104,6 +12136,12 @@
       "seeding_key": {
         "lesson.key": "lesson16",
         "resource.key": "design_an_ai_app_-_project_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson16",
+        "resource.key": "design_an_ai_app_1"
       }
     },
     {

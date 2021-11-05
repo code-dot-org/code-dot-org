@@ -1260,6 +1260,8 @@ class Script < ApplicationRecord
   #   if specified, this editor_experiment will also be applied to any newly
   #   created levels.
   def clone_with_suffix(new_suffix, options = {})
+    raise "cannot be used on migrated units. use clone_migrated_unit instead" if is_migrated
+
     new_name = "#{base_name}-#{new_suffix}"
 
     unit_filename = "#{Script.unit_directory}/#{name}.script"
@@ -1663,6 +1665,15 @@ class Script < ApplicationRecord
     summary[:lessonLevelData] = ScriptDSL.serialize_lesson_groups(self)
     summary[:preventCourseVersionChange] = prevent_course_version_change?
     summary
+  end
+
+  def summarize_for_lesson_edit
+    {
+      isLaunched: launched?,
+      courseVersionId: get_course_version&.id,
+      unitPath: script_path(self),
+      lessonExtrasAvailableForUnit: lesson_extras_available
+    }
   end
 
   # @return {Hash<string,number[]>}
@@ -2134,5 +2145,11 @@ class Script < ApplicationRecord
     if is_migrated? && !use_legacy_lesson_plans?
       Services::CurriculumPdfs.get_unit_resources_url(self)
     end
+  end
+
+  # To help teachers have more control over the pacing of certain scripts, we
+  # send students on the last level of a lesson to the unit overview page.
+  def show_unit_overview_between_lessons?
+    csd? || csp? || csa?
   end
 end
