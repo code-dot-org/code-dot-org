@@ -2144,4 +2144,10 @@ class Script < ApplicationRecord
       Services::CurriculumPdfs.get_unit_resources_url(self)
     end
   end
+
+  # To help teachers have more control over the pacing of certain scripts, we
+  # send students on the last level of a lesson to the unit overview page.
+  def show_unit_overview_between_lessons?
+    csd? || csp? || csa?
+  end
 end
