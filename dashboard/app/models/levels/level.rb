@@ -44,9 +44,15 @@ class Level < ApplicationRecord
 
   validates_length_of :name, within: 1..70
   validate :reject_illegal_chars
-  validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where.not(user_id: nil)}
+
+  # Together, these validations prevent collisions between level keys, including
+  # level keys which differ only by case, between all 3 categories of levels:
+  # custom levels, DSLDefined levels, and deprecated blockly levels. For more
+  # context on these categories and level keys, see:
+  # https://docs.google.com/document/d/1rS1ekCEVU1Q49ckh2S9lfq0tQo-m-G5KJLiEalAzPts/edit
   validates_uniqueness_of :name, case_sensitive: false, conditions: -> {where(level_num: ['custom', nil])}
   validates_uniqueness_of :level_num, scope: :game, conditions: -> {where.not(level_num: ['custom', nil])}
+
   validate :validate_game, on: [:create, :update]
 
   after_save :write_custom_level_file
@@ -232,14 +238,10 @@ class Level < ApplicationRecord
   def self.palette_categories
   end
 
-  def self.custom_levels
-    Naturally.sort_by(Level.where.not(user_id: nil), :name)
-  end
-
   # Custom levels are built in levelbuilder. Legacy levels are defined in .js.
-  # All custom levels will have a user_id, except for DSLDefined levels.
+  # All custom levels will have a 'custom' level_num, except for DSLDefined levels.
   def custom?
-    user_id.present? || is_a?(DSLDefined)
+    level_num == 'custom' || is_a?(DSLDefined)
   end
 
   def should_localize?

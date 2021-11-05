@@ -503,8 +503,6 @@ FactoryGirl.define do
     sequence(:name) {|n| "Level_#{n}"}
     level_num 'custom'
 
-    # User id must be non-nil for custom level
-    user_id '1'
     game
 
     trait :with_autoplay_video do
