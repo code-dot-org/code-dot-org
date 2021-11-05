@@ -132,7 +132,7 @@ describe('FormController', () => {
         let server;
 
         const triggerSubmit = () =>
-          form.findOne('form').props.onSubmit(new window.SubmitEvent('submit'));
+          form.findOne('form').props.onSubmit({preventDefault: sinon.stub()});
 
         const setupValid = () => {
           form = isolateComponent(<FormController {...defaultProps} />);
