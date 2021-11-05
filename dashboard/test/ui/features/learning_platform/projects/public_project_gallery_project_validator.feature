@@ -86,6 +86,6 @@ Scenario: Can See Special Topics and View More with Experiment enabled
   Given I am on "http://studio.code.org/projects/public/?enableExperiments=special-topic"
   And I wait until element "#projects-page" is visible
   Then I wait until element ".ui-project-app-type-area" is in the DOM
-  And the project gallery contains 10 project types
-  And the project gallery contains 10 view more links
+  And the project gallery contains 11 project types
+  And the project gallery contains 11 view more links
   And element ".ui-special_topic" contains text "View more Featured Topics projects"
