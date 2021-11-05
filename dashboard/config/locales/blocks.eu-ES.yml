@@ -791,6 +791,10 @@ eu:
         options:
           EFFECT:
             '"rain"': euria
+      Poetry_playSound:
+        options:
+          SOUND:
+            Break: Irten
       RyanLab_moveForward:
         text: mugitu aurrera
       RyanLab_turnLeft:

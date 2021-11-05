@@ -1,0 +1,15 @@
+name 'CSA U6L9-L1'
+title 'Check for Understanding'
+description 'Match each term to its correct definition.'
+
+question 'lexicographical'
+answer 'Answer1'
+
+question 'immutable'
+answer 'Answer2'
+
+question 'IndexOutOfBoundsException'
+answer 'Answer3'
+
+question 'ConcurrentModificationException'
+answer 'Answer4'

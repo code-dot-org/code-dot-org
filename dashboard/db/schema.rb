@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_26_204516) do
+ActiveRecord::Schema.define(version: 2021_11_03_230247) do
 
   create_table "activities", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -290,6 +290,15 @@ ActiveRecord::Schema.define(version: 2021_10_26_204516) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["storage_app_id", "project_version"], name: "index_code_review_comments_on_storage_app_id_and_version"
+  end
+
+  create_table "code_review_group_members", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
+    t.bigint "code_review_group_id", null: false
+    t.bigint "follower_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["code_review_group_id"], name: "index_code_review_group_members_on_code_review_group_id"
+    t.index ["follower_id"], name: "index_code_review_group_members_on_follower_id"
   end
 
   create_table "code_review_groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci", force: :cascade do |t|
@@ -1641,6 +1650,7 @@ ActiveRecord::Schema.define(version: 2021_10_26_204516) do
     t.boolean "tts_autoplay_enabled", default: false, null: false
     t.boolean "restrict_section", default: false
     t.boolean "code_review_enabled", default: true
+    t.text "properties"
     t.index ["code"], name: "index_sections_on_code", unique: true
     t.index ["course_id"], name: "fk_rails_20b1e5de46"
     t.index ["user_id"], name: "index_sections_on_user_id"

@@ -4,12 +4,32 @@ import {TheaterSignalType} from '@cdo/apps/javalab/constants';
 import Theater from '@cdo/apps/javalab/Theater';
 
 describe('Theater', () => {
-  let theater, playAudioSpy, imageElement, audioElement;
+  let theater,
+    playAudioSpy,
+    pauseAudioSpy,
+    imageElement,
+    audioElement,
+    onOutputMessage,
+    onNewlineMessage,
+    openPhotoPrompter,
+    closePhotoPrompter;
+
   beforeEach(() => {
+    onOutputMessage = sinon.stub();
+    onNewlineMessage = sinon.stub();
+    openPhotoPrompter = sinon.stub();
+    closePhotoPrompter = sinon.stub();
+
     playAudioSpy = sinon.spy();
+    pauseAudioSpy = sinon.spy();
     imageElement = {};
-    audioElement = {play: playAudioSpy};
-    theater = new Theater();
+    audioElement = {play: playAudioSpy, pause: pauseAudioSpy};
+    theater = new Theater(
+      onOutputMessage,
+      onNewlineMessage,
+      openPhotoPrompter,
+      closePhotoPrompter
+    );
     theater.getImgElement = () => {
       return imageElement;
     };
@@ -55,5 +75,29 @@ describe('Theater', () => {
     audioElement.oncanplaythrough();
     expect(imageElement.style.visibility).to.equal('visible');
     expect(playAudioSpy).to.have.been.called.once;
+  });
+
+  it('opens photo prompter after receiving a GET_IMAGE signal', () => {
+    const prompt = 'prompt';
+    const getImageSignal = {
+      value: TheaterSignalType.GET_IMAGE,
+      detail: {
+        prompt: prompt
+      }
+    };
+
+    theater.handleSignal(getImageSignal);
+
+    sinon.assert.calledWith(openPhotoPrompter, prompt);
+  });
+
+  it('closes photo prompter on stop', () => {
+    theater.onStop();
+    sinon.assert.calledOnce(closePhotoPrompter);
+  });
+
+  it('closes photo prompter on close', () => {
+    theater.onClose();
+    sinon.assert.calledOnce(closePhotoPrompter);
   });
 });

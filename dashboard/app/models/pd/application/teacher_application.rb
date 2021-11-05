@@ -47,6 +47,7 @@ module Pd::Application
     PROGRAMS = {
       csd: 'Computer Science Discoveries (appropriate for 6th - 10th grade)',
       csp: 'Computer Science Principles (appropriate for 9th - 12th grade, and can be implemented as an AP or introductory course)',
+      csa: 'Computer Science A (appropriate for 10th - 12th grade, and can be implemented as an AP or non-AP introductory Java programming course)'
     }.freeze
     PROGRAM_OPTIONS = PROGRAMS.values
 
@@ -589,16 +590,27 @@ module Pd::Application
           "No, I don't plan for my students to take the AP CS Principles exam"
         ],
 
+        csa_already_know: [YES, NO],
+
+        csa_phone_screen: [YES, NO],
+
+        csa_which_grades: (9..12).map(&:to_s) <<
+          "Not sure yet if my school plans to offer CSA in the #{year} school year",
+
+        csa_how_offer: [
+          'As a non-AP introductory Java programming course',
+          'As an AP course',
+          'We will offer both non-AP Java introductory and AP-level courses'
+        ],
+
         plan_to_teach: [
-          "Yes, I plan to teach this course this year (#{year}) and my administrator approves of me teaching the course",
-          "I hope to teach this course this year (#{year}) but it is not yet on the master schedule and/or my administrator has not confirmed that I will be assigned to this course",
-          "No, I don’t plan to teach this course this year (#{year}), but I hope to teach this course the following year (#{next_year(year)})",
-          "No, someone else from my school will teach this course this year (#{year})",
+          "Yes, I plan to teach this course this year (#{year})",
+          "No, I don’t plan to teach this course this year (#{year})",
           TEXT_FIELDS[:dont_know_if_i_will_teach_explain]
         ],
 
         pay_fee: [
-          'Yes, my school/district will be able to pay the full program fee.',
+          'Yes, my school/district would be able to pay the full program fee.',
           TEXT_FIELDS[:no_pay_fee],
           "I don't know."
         ],
@@ -630,30 +642,6 @@ module Pd::Application
           "No, computer science is new to my school",
           TEXT_FIELDS[:i_dont_know_explain]
         ],
-        csd_which_units: [
-          'Unit 1: Problem Solving',
-          'Unit 2: Web Development',
-          'Unit 3: Interactive Animations & Games',
-          'Unit 4: The Design Process',
-          'Unit 5: Data and Society',
-          'Unit 6: Physical Computing',
-          'All units',
-          "I'm not sure"
-        ],
-        csp_which_units: [
-          'Unit 1: Digital Information',
-          'Unit 2: The Internet',
-          'Unit 3: Intro App Design',
-          'Unit 4: Variables, Conditionals, and Functions',
-          'Unit 5: Lists, Loops and Traversals',
-          'Unit 6: Algorithms',
-          'Unit 7: Parameters, Return, and Libraries',
-          'Unit 8: AP Create Performance Task',
-          'Unit 9: Data',
-          'Unit 10: Cybersecurity and Global Impacts',
-          'All units',
-          "I'm not sure"
-        ],
         replace_which_course: [
           'CodeHS',
           'Codesters',
@@ -672,8 +660,7 @@ module Pd::Application
           'Technology Foundations',
           'We’ve created our own course',
           TEXT_FIELDS[:other_please_explain]
-        ],
-        interested_in_online_program: [YES, NO]
+        ]
       }
     end
 
@@ -706,8 +693,6 @@ module Pd::Application
         plan_to_teach
         replace_existing
 
-        interested_in_online_program
-
         gender_identity
         race
 
@@ -731,11 +716,12 @@ module Pd::Application
 
         if hash[:program] == PROGRAMS[:csd]
           required << :csd_which_grades
-          required << :csd_which_units
         elsif hash[:program] == PROGRAMS[:csp]
           required << :csp_which_grades
-          required << :csp_which_units
           required << :csp_how_offer
+        elsif hash[:program] == PROGRAMS[:csa]
+          required << :csa_which_grades
+          required << :csa_how_offer
         end
 
         if hash[:regional_partner_workshop_ids].presence
@@ -835,14 +821,27 @@ module Pd::Application
       if key == 'csd'
         [
           :csp_which_grades,
-          :csp_which_units,
           :csp_how_offer,
           :csp_ap_exam,
+          :csa_which_grades,
+          :csa_how_offer,
+          :csa_already_know,
+          :csa_phone_screen
         ]
-      else
+      elsif key == 'csp'
         [
           :csd_which_grades,
-          :csd_which_units
+          :csa_which_grades,
+          :csa_how_offer,
+          :csa_already_know,
+          :csa_phone_screen
+        ]
+      elsif key == 'csa'
+        [
+          :csp_which_grades,
+          :csp_how_offer,
+          :csp_ap_exam,
+          :csd_which_grades
         ]
       end
       )
@@ -868,8 +867,11 @@ module Pd::Application
         {
           teacher: [
             :csp_which_grades,
-            :csp_which_units,
             :csp_how_offer,
+            :csa_which_grades,
+            :csa_how_offer,
+            :csa_already_know,
+            :csa_phone_screen
           ],
           principal: [
             :share_ap_scores,
@@ -877,13 +879,30 @@ module Pd::Application
             :csp_implementation
           ]
         }
-      else
+      elsif course == 'csp'
         {
           teacher: [
             :csd_which_grades,
-            :csd_which_units
+            :csa_which_grades,
+            :csa_how_offer,
+            :csa_already_know,
+            :csa_phone_screen
           ],
           principal: [
+            :replace_which_course_csd,
+            :csd_implementation
+          ]
+        }
+      elsif course == 'csa'
+        {
+          teacher: [
+            :csp_which_grades,
+            :csp_how_offer,
+            :csd_which_grades
+          ],
+          principal: [
+            :replace_which_course_csp,
+            :csp_implementation,
             :replace_which_course_csd,
             :csd_implementation
           ]
@@ -994,10 +1013,13 @@ module Pd::Application
       elsif course == 'csp'
         meets_minimum_criteria_scores[:csp_which_grades] =
           (responses[:csp_which_grades] & options[:csp_which_grades].first(4)).any? ? YES : NO
+      elsif course == 'csa'
+        meets_minimum_criteria_scores[:csa_which_grades] =
+          (responses[:csa_which_grades] & options[:csa_which_grades].first(4)).any? ? YES : NO
       end
 
-      if responses[:plan_to_teach].in? options[:plan_to_teach].first(4)
-        meets_minimum_criteria_scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(2)) ? YES : NO
+      if responses[:plan_to_teach].in? options[:plan_to_teach].first(2)
+        meets_minimum_criteria_scores[:plan_to_teach] = responses[:plan_to_teach].in?(options[:plan_to_teach].first(1)) ? YES : NO
       end
 
       meets_minimum_criteria_scores[:replace_existing] =

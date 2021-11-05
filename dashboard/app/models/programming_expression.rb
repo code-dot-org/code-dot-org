@@ -35,6 +35,7 @@ class ProgrammingExpression < ApplicationRecord
     content
     return_value
     tips
+    palette_params
   )
 
   def key_format
@@ -72,7 +73,8 @@ class ProgrammingExpression < ApplicationRecord
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
         color: expression_config['config']['color'],
-        syntax: expression_config['config']['func'] || expression_config['config']['name']
+        syntax: expression_config['config']['func'] || expression_config['config']['name'],
+        palette_params: expression_config['paletteParams']
       }
     else
       {
@@ -81,7 +83,8 @@ class ProgrammingExpression < ApplicationRecord
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
         color: ProgrammingExpression.get_category_color(expression_config['category']),
-        syntax: syntax
+        syntax: syntax,
+        palette_params: expression_config['paletteParams']
       }
     end
   end
@@ -91,7 +94,7 @@ class ProgrammingExpression < ApplicationRecord
     if config['syntax']
       syntax = config['syntax']
     elsif config['paletteParams']
-      syntax = config['func'] + "(" + config['paletteParams'].join(', ') + ")"
+      syntax = config['func'] + "(" + config['paletteParams'].map {|p| p['name']} .join(', ') + ")"
     elsif config['block']
       syntax = config['block']
     end
@@ -191,7 +194,8 @@ class ProgrammingExpression < ApplicationRecord
       content: content || '',
       syntax: syntax || '',
       returnValue: return_value || '',
-      tips: tips || ''
+      tips: tips || '',
+      parameters: palette_params || []
     }
   end
 

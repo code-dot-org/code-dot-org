@@ -1593,6 +1593,16 @@ he:
         text: x קואורדינטות של {SPRITE}
       Mikelab_yLocationOf:
         text: y קואורדינטות של {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: גלידה
+            Stars: כוכבים
+            Fireworks: זיקוקים
+            '"rainbow"': קשת
+            '"hearts"': לבבות
+            '"flowers"': פרחים
+            '"waves"': גלים
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1603,6 +1613,9 @@ he:
         text: צור {NUM} דמויות {ANIMATION_NAME} חדשות
       Poetry_playSound:
         text: נגן צליל {SOUND}
+        options:
+          SOUND:
+            Light: אוֹר
       Poetry_setBackground:
         text: קבע צבע רקע {COLOR}
       Poetry_setBackgroundEffect:
@@ -1613,6 +1626,10 @@ he:
             '"space"': חלל
             '"stars"': כוכבים
             '"ripples"': אדוות
+            '"rain"': גשם
+            '"bubbles"': בועות
+            '"confetti"': קונפטי
+            '"hearts"': לבבות צבעוניים
           PALETTE:
             '"rainbow"': קשת
       Poetry_setBackgroundImageAs:
