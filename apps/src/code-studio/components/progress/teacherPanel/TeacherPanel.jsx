@@ -47,11 +47,13 @@ class TeacherPanel extends React.Component {
     loadLevelsWithProgress: PropTypes.func.isRequired,
     teacherId: PropTypes.number,
     exampleSolutions: PropTypes.array,
-    selectUser: PropTypes.func.isRequired
+    selectUser: PropTypes.func.isRequired,
+    isTeacher: PropTypes.bool.isRequired
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (
+      this.props.isTeacher &&
       this.props.pageType !== pageTypes.scriptOverview && // no progress is shown on script overview page in teacher panel
       nextProps.selectedSection?.id !== this.props.selectedSection?.id
     ) {
@@ -99,8 +101,13 @@ class TeacherPanel extends React.Component {
       levelsWithProgress,
       pageType,
       teacherId,
-      exampleSolutions
+      exampleSolutions,
+      isTeacher
     } = this.props;
+
+    if (!isTeacher) {
+      return null;
+    }
 
     const selectedUserId = this.getSelectedUserId();
 
@@ -292,7 +299,8 @@ export default connect(
       isLoadingLevelsWithProgress:
         state.teacherPanel.isLoadingLevelsWithProgress,
       teacherId: state.currentUser.userId,
-      exampleSolutions: state.pageConstants?.exampleSolutions
+      exampleSolutions: state.pageConstants?.exampleSolutions,
+      isTeacher: state.currentUser.userType === 'teacher'
     };
   },
   dispatch => ({
