@@ -3,47 +3,76 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Title
+# Introduction to AI and machine learning
 
-## Text level with a high-level overview of lessons 2 - 4
+#### In Lesson 1, students are introduced to AI and machine learning by training A.I. Bot to recognize patterns in fish. As students progress through the unit, they will begin to unpack this experience as they learn what is going on behind the scenes. By the end of the unit, students will have the context to understand not only what machine learning is, but how it works. 
 
-#### When students are on the computer, activities look like a series of bubbles, called **levels**, that students complete in order. Read the information below to learn more about the different types of levels found in the CS Discoveries curriculum.
+## Key terms introduced in Lesson 2
 
+* #### **Features** - the inputs that a model uses to make decisions.
+* #### **Label** - the output you are trying to decide or predict with a model.
+* #### **Model** - a computer program designed to make a decision.
+* #### **Training** - giving examples to a model so it can learn.
 
-Lessons are designed to be facilitated by teachers, not a self-paced course for students
-Include examples of what this looks like in lessons 2 - 4 
-High-level overview of each lesson (possibly dropdowns) similar to a “previously on” session
+## Overview of Lessons 2 - 4 
 
+<details>
+<summary><strong>Lesson 2</strong></summary>
 
+<img src="https://images.code.org/512405163ce36cfa828fd317ce450a51-image-1635957729663.39.36 AM.png" alt="Image of a green door game app" width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
 
+**Question of the Day:** What are the different types of machine learning? 
 
-#####  AI and Machine Learning impact our entire world, changing how we live and how we work. That's why it’s critical for all of us to understand this increasingly important technology, including not just how it’s designed and applied, but also its societal and ethical implications. Unit 7 of CS Discoveries focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts of artificial intelligence and machine learning.
+**Lesson Overview:**
 
-##
+In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called "Green Glass Door" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.
 
-<img src="https://images.code.org/c5c29ed5d000cd99987c8e829da3aa3b-image-1634828701624.gif" alt="Image of AI bot moving through the steps: choose a dataset, prepare data, train AI model, assess results"  style="padding-left: 120px; height: 250px; clear: both; margin: 0 20px 20px 0;">
+**Students will be able to:** 
+* Describe the differences between supervised and unsupervised learning.
 
-
-## Students will:
-
-* ##### Learn how machine learning models use data to make decisions.
-* ##### Create a machine learning model to solve a problem.
-* ##### Test and evaluate machine learning models for accuracy and potential bias. 
-* ##### Create an app that uses their machine learning model.
-
-### **Implementation guidance** 
-
-* ##### Complete Unit 1 Chapter 1 before starting this unit.
-* ##### This unit assumes students have seen App Lab from Unit 4: The Design Process before starting the unit. <a href="https://docs.google.com/document/d/1SkMCN4Eid3-mGoRUQkurQGJqoOJ9PydfB7uGE0xZyFA/preview" target="blank" rel="noopener noreferrer">Click here</a> to learn more about the App Lab expectations in this unit, and ways to introduce App Lab to students before starting the unit.
-* ##### This is an optional unit that can be used in place of another CS Discoveries unit - see the <a href="https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview" target="blank" rel="noopener noreferrer">Implementation Guide Guide</a> for more information
-* ##### You can view the full <a href="https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview#" target="blank" rel="noopener noreferrer">Unit Curriculum Guide</a> for more information about this unit
-
-
-### **Suggested time to complete the unit:** 5 weeks 
-##### The suggested time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd7-2021" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
+</details>
 
 <div style="clear:both"/>
 
-## Let's start learning!
+
+<details>
+
+<summary><strong>Lesson 3</strong></summary>
+
+<img src="https://images.code.org/3df14392372d770ff2d4dfae050c6e29-image-1635957745827.41.42 AM.png" alt="Image of a student activity guide" width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+
+**Question of the Day:** How is AI helping to solve problems around the world?
+
+**Lesson Overview:**
+
+In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.
+
+**Students will be able to:**
+* Describe how Artificial Intelligence is having an impact on society
+
+</details>
+
+<div style="clear:both"/>
+
+
+<details>
+
+<summary><strong>Lesson 4</strong></summary>
+
+<img src="https://images.code.org/708300a2e109c438cc5716a4a405ca36-image-1635957741359.40.25 AM.png" alt="Image of a shoe recommender app" width="200px" style="border-radius:10px; float:left; margin: 0 0 40px 40px;  padding-right: 30px;">
+
+**Question of the Day:** What strategies do computer models use to make decisions?
+
+**Lesson Overview:**
+
+In this lesson students will examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns.
+
+**Students will be able to:**
+* Describe how a model makes a decision (for example: with randomness, or a decision tree, or using data)
+* Look for patterns in data to help make a decision
+
+</details>
+
+<div style="clear:both"/>
 
 MARKDOWN

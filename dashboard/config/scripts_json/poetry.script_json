@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-10-29 22:47:39 UTC",
+    "serialized_at": "2021-11-04 00:59:34 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -72,12 +72,15 @@
     },
     {
       "key": "lesson-3",
-      "name": "User Input",
+      "name": "Playing with Words",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "In this lesson, students learn how to manipulate specific words in the text in their poems by using open-ended prompts and variables to store the user’s input. First, students explore an app with an open-ended prompt. Then students practice using variables in their code until they are able to combine text and variable blocks to create an interactive app.  \n",
+        "purpose": "- Play through the levels ahead of time to prepare for the prediction and discussion sections of the lesson.\n\n- Assign the lesson to your sections to keep track of student progress. Many levels in this module are linked to each other, so student code will carry over between lessons on certain levels. Logging in will ensure their work is saved.\n\n- Prepare one computer per student.\n\n- Prepare one copy of the handout per student. \n \n- [Optional] Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support page](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) for more information about pair programming.\n\n",
+        "student_overview": "Build an interactive app! Use prompts and user input in a creative new way. \n"
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -250,6 +253,8 @@
       "key": "5f34e0a3-6cdb-46ef-bd93-f13720b04108",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm-Up"
       },
       "seeding_key": {
         "lesson_activity.key": "5f34e0a3-6cdb-46ef-bd93-f13720b04108",
@@ -262,6 +267,8 @@
       "key": "0e2d6876-3f9f-4831-ae8a-c17c66460511",
       "position": 2,
       "properties": {
+        "duration": 40,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "0e2d6876-3f9f-4831-ae8a-c17c66460511",
@@ -782,6 +789,8 @@
       "key": "d998ae10-c36d-4ac7-9b3c-091bbb33146e",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Agenda slide.",
+        "name": "Fill-in-the-Blank Game"
       },
       "seeding_key": {
         "activity_section.key": "d998ae10-c36d-4ac7-9b3c-091bbb33146e",
@@ -789,19 +798,196 @@
       }
     },
     {
-      "key": "c0426181-580e-40af-abd7-361f5e22c3b7",
-      "position": 1,
+      "key": "a9034587-8fc3-4441-b2de-7187128812f8",
+      "position": 2,
       "properties": {
-        "progression_name": "Main Progression"
+        "description": "Today, we’re going to build on what we learned last time about adding text fields to your program. You already know how to set the title and author, add new lines to be displayed in the play space, and how to animate the mood of a poem with code. \n\nNow we’re going to learn how to change just one word in a poem by asking the user a question with a prompt and keeping track of their answer. A prompt is a message on the computer screen that waits for input from the user. Input is anything from letters, numbers, or even a mouse click that the computer is waiting for before moving on. \n\nLet’s start by playing a game, then we’ll learn how we can make this game with code!\n",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "c0426181-580e-40af-abd7-361f5e22c3b7",
+        "activity_section.key": "a9034587-8fc3-4441-b2de-7187128812f8",
+        "lesson_activity.key": "5f34e0a3-6cdb-46ef-bd93-f13720b04108"
+      }
+    },
+    {
+      "key": "47d76437-25fb-41fb-a1d6-925ee7798f79",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Fill-in-the-Blank Game slide. "
+      },
+      "seeding_key": {
+        "activity_section.key": "47d76437-25fb-41fb-a1d6-925ee7798f79",
+        "lesson_activity.key": "5f34e0a3-6cdb-46ef-bd93-f13720b04108"
+      }
+    },
+    {
+      "key": "5f5b7b15-ef63-4670-ac05-e6b355a5aa7e",
+      "position": 4,
+      "properties": {
+        "description": "Can I have two volunteers give me nouns? Remember, a noun is a person, place, or thing. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5f5b7b15-ef63-4670-ac05-e6b355a5aa7e",
+        "lesson_activity.key": "5f34e0a3-6cdb-46ef-bd93-f13720b04108"
+      }
+    },
+    {
+      "key": "3d6058aa-947d-463b-b241-7d709827ef84",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Write students’ responses on the board. Go to the next slide. Write in the nouns above their corresponding labels. Read the new poem together. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What would you say is the mood of this poem? What do you notice about how “Noun1” and “Noun2” were used in the new poem?* "
+      },
+      "seeding_key": {
+        "activity_section.key": "3d6058aa-947d-463b-b241-7d709827ef84",
+        "lesson_activity.key": "5f34e0a3-6cdb-46ef-bd93-f13720b04108"
+      }
+    },
+    {
+      "key": "7b8b52d2-2191-4059-9b13-245533f24d46",
+      "position": 6,
+      "properties": {
+        "description": "**Discussion Goal:** You can remind students that the original poem was “You are not a drop in the ocean, you are an entire ocean in one drop” to discuss the difference between the original and this new version. Ask students what the original mood was of the first poem. What about the second poem? \n\nStudents might say this game reminds them of Mad Libs, but it’s ok if they don’t bring it up. If they don’t you can refer to these as “blank space stories” throughout the lesson. Students should note that Noun1 and Noun2 are used multiple times in the poem. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b8b52d2-2191-4059-9b13-245533f24d46",
+        "lesson_activity.key": "5f34e0a3-6cdb-46ef-bd93-f13720b04108"
+      }
+    },
+    {
+      "key": "e38edc3a-d532-42a8-b6e9-47d3ef507691",
+      "position": 7,
+      "properties": {
+        "description": "Noun1 and Noun2 are labels that we used to hold space for a new word. These kinds of labels are called variables in computer code - a variable is a label for a piece of information used in an app. In this case, Noun1 was the label for our first answer and Noun2 was the label for our second answer. We could have chosen any noun for Noun1 or Noun2. \n\nLet’s look at how a variable is used in code. \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e38edc3a-d532-42a8-b6e9-47d3ef507691",
+        "lesson_activity.key": "5f34e0a3-6cdb-46ef-bd93-f13720b04108"
+      }
+    },
+    {
+      "key": "5a8d2cb3-c4ee-476b-85c7-0bc0672f3a7e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Level 1 slide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Ask students to look at the code on the slide and answer the following questions:\n\n- What do you notice about the code?\n- How is it different from what you’ve seen before? \n- How do you think it works?\n\n**Discussion Goal:** This is an opportunity for students to look closely at what each line of code says. Ask students to read parts of the code out loud and predict what will happen when they press “Run.” Take special notice of the `prompt user` block under `when run` and the variable labeled `word1`. Write students’ predictions on the board.\n\n**Do This:** Have students navigate to Level 1 and press “Run” to observe what happens. Encourage students to run the code multiple times, choosing different words each time.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n- What did you notice? \n- What if you change the word you typed?\n- What happened?\n\n**Discussion Goal:** Encourage students to compare what they noticed with what they predicted before they pressed “Run.” \n",
+        "duration": "10",
+        "name": "Open-Ended Prompts"
+      },
+      "seeding_key": {
+        "activity_section.key": "5a8d2cb3-c4ee-476b-85c7-0bc0672f3a7e",
         "lesson_activity.key": "0e2d6876-3f9f-4831-ae8a-c17c66460511"
       }
     },
     {
-      "key": "f3df6282-23b2-4bf1-b86b-777a2b928dee",
+      "key": "771d14d1-73ff-4db6-815f-be24c5080bde",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Variables video. Then play through the animated slide “How a Variable is Stored.” ",
+        "duration": "15",
+        "name": "Explore Variables",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students might benefit from a quick check for understanding at this point in the lesson. Variables can be tricky and they are used frequently in computer science and in the rest of this module. Additional whole class or individual questions might include: \n\n- How is a variable like a box? Answer: Variables can store information like a name or a number. \n- How is a variable like something else we have in class? Answer: Perhaps students have a desk or cubby with their name on it. The desk or cubby is like a “variable” that holds their information or their papers or their lunch. \n- What is a variable label? Answer: It is the name the coder gives the variable. \n- Why do we need a variable label? Answer: To keep track of the variable in case we want to use it again later. \n- In the example program in Level 1, what is being stored in the variable labeled “word1”? Answer: What the user types into the text field under the prompt. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "771d14d1-73ff-4db6-815f-be24c5080bde",
+        "lesson_activity.key": "0e2d6876-3f9f-4831-ae8a-c17c66460511"
+      }
+    },
+    {
+      "key": "4550afa5-f25b-4ccf-9b9b-8f45e0b39de6",
+      "position": 3,
+      "properties": {
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Level 2, 3, 4 - Practice slide and allow students to complete the levels on their own. \n\n\n\n\n**Circulate:** These next levels require students to drag out variable blocks from the toolbox and snap them into the correct place in the start code. Then, students practice matching variable labels to get the program to work correctly. "
+      },
+      "seeding_key": {
+        "activity_section.key": "4550afa5-f25b-4ccf-9b9b-8f45e0b39de6",
+        "lesson_activity.key": "0e2d6876-3f9f-4831-ae8a-c17c66460511"
+      }
+    },
+    {
+      "key": "299bc3f1-d10b-4f05-abd0-1c9d89fadf46",
+      "position": 4,
+      "properties": {
+        "duration": "15",
+        "name": "Build an App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "[Optional] This is an opportunity to practice pair programming. Students can be paired and given two different tasks: Student 1 (The Driver) can be the coder who navigates the platform and types, and Student 2 (The Navigator) can help plan and direct what will go in the app. The pair can collaborate on their short story or Student 2 can come up with the story for Student 1 to code. \n\nShow this [video](https://www.youtube.com/watch?v=vgkahOzFH2Q) to students about Pair Programming before they begin. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "299bc3f1-d10b-4f05-abd0-1c9d89fadf46",
+        "lesson_activity.key": "0e2d6876-3f9f-4831-ae8a-c17c66460511"
+      }
+    },
+    {
+      "key": "bbca3deb-b5f5-429a-bd85-9ab1f389f104",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Combining Text & Variables video.\n\n**Do This:** Distribute one Lesson 3 handout per student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Plan Your Short Story App” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "bbca3deb-b5f5-429a-bd85-9ab1f389f104",
+        "lesson_activity.key": "0e2d6876-3f9f-4831-ae8a-c17c66460511"
+      }
+    },
+    {
+      "key": "8a16994d-6ad9-49c0-bcbc-9e5f90dd6c20",
+      "position": 6,
+      "properties": {
+        "description": "Now you’ll be creating an interactive app that prompts the user for 2 animals, stores each answer in a variable, then creates new lines with texts and variables to tell the user a story. \n\nUse this handout to write a short story. First, choose two animals, then give the story a title and write your first name as the author. Then you’ll write a short, 4-line story, about the two animals. \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8a16994d-6ad9-49c0-bcbc-9e5f90dd6c20",
+        "lesson_activity.key": "0e2d6876-3f9f-4831-ae8a-c17c66460511"
+      }
+    },
+    {
+      "key": "a8b2374e-2fcc-4489-aac6-847c4115e097",
+      "position": 7,
+      "properties": {
+        "description": "**Circulate:** Walk around the room to help students who are feeling stuck writing their stories. Refer back to the story prompts and have students pick one, then talk out what might happen in that scenario between the two characters. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Regroup and display the next slide. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "a8b2374e-2fcc-4489-aac6-847c4115e097",
+        "lesson_activity.key": "0e2d6876-3f9f-4831-ae8a-c17c66460511"
+      }
+    },
+    {
+      "key": "55eb1f1d-daa7-4a97-8dec-6f0beab195bb",
+      "position": 8,
+      "properties": {
+        "description": "Now that you’re done writing your story, you will circle all the times you mentioned animal1 and draw a box around all the times you mentioned animal2. These will represent the times you’re going to use the variables animal1 and animal2 in your code.\n\n**Circulate:** Make sure students are circling and drawing a box around the correct animals. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Regroup and display the next slide. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "55eb1f1d-daa7-4a97-8dec-6f0beab195bb",
+        "lesson_activity.key": "0e2d6876-3f9f-4831-ae8a-c17c66460511"
+      }
+    },
+    {
+      "key": "6d3620df-a0da-4d34-b0ed-a64498a6671b",
       "position": 1,
+      "properties": {
+        "duration": "10",
+        "progression_name": "Main Progression"
+      },
+      "seeding_key": {
+        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b",
+        "lesson_activity.key": "a471eec6-1618-4bc2-a8f4-24a71d835720"
+      }
+    },
+    {
+      "key": "f3df6282-23b2-4bf1-b86b-777a2b928dee",
+      "position": 2,
       "properties": {
       },
       "seeding_key": {
@@ -1420,8 +1606,7 @@
       "properties": {
         "level_keys": [
           "poetry_module_variables_exemplar1"
-        ],
-        "progression": "Main Progression"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1431,7 +1616,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "c0426181-580e-40af-abd7-361f5e22c3b7"
+        "activity_section.key": "5a8d2cb3-c4ee-476b-85c7-0bc0672f3a7e"
       },
       "level_keys": [
         "poetry_module_variables_exemplar1"
@@ -1440,7 +1625,7 @@
     {
       "chapter": 15,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1456,7 +1641,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "c0426181-580e-40af-abd7-361f5e22c3b7"
+        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
       },
       "level_keys": [
         "poetry_module_variables_prompt"
@@ -1465,7 +1650,7 @@
     {
       "chapter": 16,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1481,7 +1666,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "c0426181-580e-40af-abd7-361f5e22c3b7"
+        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
       },
       "level_keys": [
         "poetry_module_variables_concatenation1"
@@ -1490,7 +1675,7 @@
     {
       "chapter": 17,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1506,7 +1691,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "c0426181-580e-40af-abd7-361f5e22c3b7"
+        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
       },
       "level_keys": [
         "poetry_module_variables_concatenation4"
@@ -1515,7 +1700,7 @@
     {
       "chapter": 18,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1531,7 +1716,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "c0426181-580e-40af-abd7-361f5e22c3b7"
+        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
       },
       "level_keys": [
         "poetry_module_variables_concatenation2"
@@ -1540,7 +1725,7 @@
     {
       "chapter": 19,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1556,7 +1741,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "c0426181-580e-40af-abd7-361f5e22c3b7"
+        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
       },
       "level_keys": [
         "poetry_module_variables_start"
@@ -1565,7 +1750,7 @@
     {
       "chapter": 20,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1581,7 +1766,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "c0426181-580e-40af-abd7-361f5e22c3b7"
+        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
       },
       "level_keys": [
         "poetry_module_variables_finish"
@@ -2138,7 +2323,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "c0426181-580e-40af-abd7-361f5e22c3b7"
+        "activity_section.key": "5a8d2cb3-c4ee-476b-85c7-0bc0672f3a7e"
       }
     },
     {
@@ -2150,7 +2335,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "c0426181-580e-40af-abd7-361f5e22c3b7"
+        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
       }
     },
     {
@@ -2162,7 +2347,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "c0426181-580e-40af-abd7-361f5e22c3b7"
+        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
       }
     },
     {
@@ -2174,7 +2359,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "c0426181-580e-40af-abd7-361f5e22c3b7"
+        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
       }
     },
     {
@@ -2186,7 +2371,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "c0426181-580e-40af-abd7-361f5e22c3b7"
+        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
       }
     },
     {
@@ -2198,7 +2383,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "c0426181-580e-40af-abd7-361f5e22c3b7"
+        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
       }
     },
     {
@@ -2210,7 +2395,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "c0426181-580e-40af-abd7-361f5e22c3b7"
+        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
       }
     },
     {
@@ -2418,6 +2603,30 @@
       "seeding_key": {
         "resource.key": "coding_with_poetry_modules"
       }
+    },
+    {
+      "name": "Coding with Poetry Modules",
+      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_259",
+      "key": "coding_with_poetry_modules_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "coding_with_poetry_modules_1"
+      }
+    },
+    {
+      "name": "Make an App",
+      "url": "https://docs.google.com/document/d/155sM07eG1pG0BzWKyqfeo7k9SV_6e6UHaCkjsUUHuDs/edit?usp=sharing",
+      "key": "make_an_app",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "make_an_app"
+      }
     }
   ],
   "lessons_resources": [
@@ -2431,6 +2640,18 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "coding_with_poetry_modules"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "coding_with_poetry_modules_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "make_an_app"
       }
     },
     {
@@ -2478,6 +2699,16 @@
       }
     },
     {
+      "key": "input",
+      "word": "Input",
+      "definition": "the information computers get from users, devices, or other computers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "input"
+      }
+    },
+    {
       "key": "line",
       "word": "Line",
       "definition": "(poetry) - a subdivision of a poem arranged in a row that ends at the right-hand margin.",
@@ -2495,6 +2726,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "mood"
+      }
+    },
+    {
+      "key": "output",
+      "word": "Output",
+      "definition": "the information computers give to users, devices, or other computers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "output"
       }
     },
     {
@@ -2518,6 +2759,16 @@
       }
     },
     {
+      "key": "prompt",
+      "word": "Prompt",
+      "definition": "a message on the computer screen that waits for input from the user",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "prompt"
+      }
+    },
+    {
       "key": "synonym",
       "word": "Synonym",
       "definition": "A word that has the same meaning as another word",
@@ -2525,6 +2776,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "synonym"
+      }
+    },
+    {
+      "key": "user",
+      "word": "User",
+      "definition": "In computer science, the person who will be using your app or product. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "user"
+      }
+    },
+    {
+      "key": "variable",
+      "word": "Variable",
+      "definition": "A label for a piece of information used in a program.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "variable"
       }
     }
   ],
@@ -2567,6 +2838,36 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "output"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "prompt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "user"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-5",
         "vocabulary.key": "diction"
       }
@@ -2582,6 +2883,16 @@
 
   ],
   "objectives": [
+    {
+      "key": "138073ba-2577-4cf3-b4f7-7a1b64f1433f",
+      "properties": {
+        "description": "Develop an interactive program that prompts the user for an input and reuses that input multiple times throughout a text. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "138073ba-2577-4cf3-b4f7-7a1b64f1433f"
+      }
+    },
     {
       "key": "15372854-dd30-4063-82c2-a0e68d1b7210",
       "properties": {
@@ -2613,6 +2924,16 @@
       }
     },
     {
+      "key": "2a8ec009-6ee7-42fe-8011-0d5c9bf9a747",
+      "properties": {
+        "description": "Use technology to produce and publish writing and to interact and collaborate with others"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "2a8ec009-6ee7-42fe-8011-0d5c9bf9a747"
+      }
+    },
+    {
       "key": "2e9c0640-e43f-4c4f-919c-ad67f301459f",
       "properties": {
         "description": "Use technology to produce and publish writing and to interact and collaborate with others."
@@ -2620,6 +2941,16 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "2e9c0640-e43f-4c4f-919c-ad67f301459f"
+      }
+    },
+    {
+      "key": "3d81a869-c1a0-4ab2-8205-cd6e78ac6db0",
+      "properties": {
+        "description": "Understand how word choice affects the meaning or tone of a text"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "3d81a869-c1a0-4ab2-8205-cd6e78ac6db0"
       }
     },
     {
@@ -2640,6 +2971,16 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "acd30991-2a9c-437b-8973-c49b9047c6bd"
+      }
+    },
+    {
+      "key": "b0938ec4-5aa1-4d78-910c-4d9a3f5b2161",
+      "properties": {
+        "description": "Use variables to store user data "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "b0938ec4-5aa1-4d78-910c-4d9a3f5b2161"
       }
     },
     {
@@ -2763,6 +3104,62 @@
         "lesson.key": "lesson-2",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.RI.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.W.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.RI.3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.W.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-19"
       }
     },
     {
