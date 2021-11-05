@@ -479,6 +479,9 @@
   meta_tag_twitter_title: 'Hour of Code: Join the Movement'
   meta_tag_twitter_description: 'The Hour of Code is a global movement reaching tens of millions of students of all ages in 180+ countries and over 45 languages.'
 
+  meta_tag_og_title_cs_movement: 'Hour of Code: Join the Computer Science Movement'
+  meta_tag_og_description_campaign: 'The Hour of Code is a global campaign reaching and inspiring tens of millions of students of all ages to learn computer science in 180+ countries and over 45 languages.'
+
   twitter_default_text: "I'm participating in this year's #HourOfCode, are you? @codeorg"
   twitter_donor_text: "This year's #HourOfCode is about creativity. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"
   twitter_donor_text_2019: "This year's #HourOfCode is about #CSforGood. I’m in! Are you? (Thanks %{random_donor} for supporting @codeorg)"

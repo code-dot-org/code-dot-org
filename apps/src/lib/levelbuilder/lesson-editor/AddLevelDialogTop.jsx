@@ -163,5 +163,5 @@ const styles = {
 export const UnconnectedAddLevelDialogTop = AddLevelDialogTop;
 
 export default connect(state => ({
-  searchOptions: state.searchOptions
+  searchOptions: state.levelSearchingInfo.searchOptions
 }))(AddLevelDialogTop);
