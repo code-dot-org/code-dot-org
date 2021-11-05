@@ -43,7 +43,7 @@ const ChooseYourProgram = props => {
 
   const programInfo = getProgramInfo(data.program);
   const isOffered =
-    regionalPartner &&
+    regionalPartner?.pl_programs_offered &&
     regionalPartner.pl_programs_offered[programInfo.shortName];
 
   // This should be kept consistent with the calculation logic in
@@ -81,6 +81,20 @@ const ChooseYourProgram = props => {
         <FormGroup>
           <h3>Section 2: {SectionHeaders.chooseYourProgram}</h3>
           <LabeledRadioButtons name="program" />
+
+          {data.program === PROGRAM_CSA && !isOffered && (
+            <p style={styles.error}>
+              The Computer Science A Professional Learning Program is not yet
+              offered in your region for the {YEAR} academic year. We are
+              working with our national network of Regional Partners to expand
+              the program to all regions by 2023-24.{' '}
+              {regionalPartner &&
+                `Consider applying for an
+              alternative program or reach out to ${regionalPartner.name} to let
+              them know you’re interested in joining the program next year!`}
+            </p>
+          )}
+
           {data.program === PROGRAM_CSD && (
             <LabeledCheckBoxes name="csdWhichGrades" />
           )}
@@ -115,19 +129,6 @@ const ChooseYourProgram = props => {
               <LabeledCheckBoxes name="csaWhichGrades" />
               <LabeledRadioButtons name="csaHowOffer" />
             </>
-          )}
-
-          {data.program === PROGRAM_CSA && !isOffered && (
-            <p>
-              The Computer Science A Professional Learning Program is not yet
-              offered in your region for the {YEAR} academic year. We are
-              working with our national network of Regional Partners to expand
-              the program to all regions by 2023-24.{' '}
-              {regionalPartner &&
-                `Consider applying for an
-              alternative program or reach out to ${regionalPartner.name} to let
-              them know you’re interested in joining the program next year!`}
-            </p>
           )}
 
           <p>
