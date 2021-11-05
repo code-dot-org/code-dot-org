@@ -304,7 +304,7 @@ module Services
       script = create_script_tree
       # give the new level a level key that will appear after the existing
       # level keys in the sort order.
-      new_level = create :level, name: 'xyz', level_num: 'custom'
+      new_level = create :level, name: 'xyz'
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         updated_script_level = script.script_levels.first
@@ -325,7 +325,7 @@ module Services
       script = create_script_tree
       # give the new level a level key that will appear before the existing
       # level keys in the sort order.
-      new_level = create :level, name: 'abc', level_num: 'custom'
+      new_level = create :level, name: 'abc'
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         updated_script_level = script.script_levels.first
@@ -829,7 +829,7 @@ module Services
     test 'seed deletes levels_script_levels' do
       script = create_script_tree
       old_level = script.script_levels.first.levels.first
-      new_level = create :level, level_num: 'custom'
+      new_level = create :level
       script.script_levels.first.add_variant(new_level)
       original_counts = get_counts
 
