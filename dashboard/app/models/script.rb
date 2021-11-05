@@ -1260,6 +1260,8 @@ class Script < ApplicationRecord
   #   if specified, this editor_experiment will also be applied to any newly
   #   created levels.
   def clone_with_suffix(new_suffix, options = {})
+    raise "cannot be used on migrated units. use clone_migrated_unit instead" if is_migrated
+
     new_name = "#{base_name}-#{new_suffix}"
 
     unit_filename = "#{Script.unit_directory}/#{name}.script"
