@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:12:54 UTC",
+    "serialized_at": "2021-11-04 14:00:22 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -123,7 +123,7 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "gamelab bug declare sprite in loop"
+          "gamelab bug declare sprite in loop copy"
         ],
         "lesson.key": "Game Lab Bugs",
         "lesson_group.key": "",
@@ -131,7 +131,7 @@
         "activity_section.key": "98b36608-f70f-4570-8224-d3596e737379"
       },
       "level_keys": [
-        "gamelab bug declare sprite in loop"
+        "gamelab bug declare sprite in loop copy"
       ]
     },
     {
@@ -140,6 +140,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gamelab bug text behind sprites"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -161,6 +164,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gamelab bug infinity mouse 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -182,6 +188,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gamelab bug infinity mouse 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -203,6 +212,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gamelab bug not a function"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -224,6 +236,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -245,6 +260,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -266,6 +284,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -287,6 +308,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -308,6 +332,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -329,6 +356,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -350,6 +380,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -371,6 +404,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -392,6 +428,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gamelab bug declare sprite in loop 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -411,9 +450,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "gamelab bug declare sprite in loop",
+        "level.key": "gamelab bug declare sprite in loop copy",
         "script_level.level_keys": [
-          "gamelab bug declare sprite in loop"
+          "gamelab bug declare sprite in loop copy"
         ],
         "lesson.key": "Game Lab Bugs",
         "lesson_group.key": "",
