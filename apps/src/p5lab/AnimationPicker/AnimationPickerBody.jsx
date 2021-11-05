@@ -13,14 +13,16 @@ import {
   filterOutBackgrounds
 } from '@cdo/apps/code-studio/assets/searchAssets';
 import experiments from '@cdo/apps/util/experiments';
-import Button from '@cdo/apps/templates/Button';
+import Button, {ButtonHeight} from '@cdo/apps/templates/Button';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 
 const MAX_SEARCH_RESULTS = 40;
 const MAX_HEIGHT = 460;
-const MODAL_HEADER_HEIGHT = 95;
-const MODAL_FOOTER_HEIGHT = 50;
+// Represents the height of the "Animation Library" title, Search Bar, and Categories list
+const MODAL_HEADER_HEIGHT = 35 + 30 + 25;
+// Default button height plus padding
+const MODAL_FOOTER_HEIGHT = ButtonHeight.default + 15;
 
 export default class AnimationPickerBody extends React.Component {
   static propTypes = {
@@ -201,7 +203,7 @@ export default class AnimationPickerBody extends React.Component {
       onAnimationSelectionComplete
     } = this.props;
 
-    const headerFooterOffset =
+    let headerFooterOffset =
       this.multiSelectEnabled_ && (searchQuery !== '' || categoryQuery !== '')
         ? MODAL_HEADER_HEIGHT + MODAL_FOOTER_HEIGHT
         : MODAL_HEADER_HEIGHT;
@@ -211,8 +213,11 @@ export default class AnimationPickerBody extends React.Component {
     const shouldDisplaySecondDoneButton =
       this.multiSelectEnabled_ && isMobileDevice();
 
+    if (shouldDisplaySecondDoneButton) {
+      headerFooterOffset = headerFooterOffset + MODAL_HEADER_HEIGHT;
+    }
     return (
-      <div style={{maxHeight: MAX_HEIGHT}}>
+      <div style={{height: '100%'}}>
         {shouldDisplaySecondDoneButton && (
           <Button
             text={msg.done()}
@@ -247,7 +252,10 @@ export default class AnimationPickerBody extends React.Component {
         )}
         <ScrollableList
           className="uitest-animation-picker-list"
-          style={{maxHeight: MAX_HEIGHT - headerFooterOffset}}
+          style={{
+            maxHeight: MAX_HEIGHT,
+            height: `calc(100% - ${headerFooterOffset}px`
+          }}
           onScroll={this.handleScroll}
         >
           {' '}
@@ -332,6 +340,7 @@ const styles = {
   footer: {
     display: 'flex',
     justifyContent: 'flex-end',
-    marginTop: 5
+    marginTop: 5,
+    height: MODAL_FOOTER_HEIGHT
   }
 };

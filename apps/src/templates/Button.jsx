@@ -28,7 +28,7 @@ const ButtonSize = {
   narrow: 'narrow'
 };
 
-const ButtonHeight = {
+export const ButtonHeight = {
   default: 34,
   large: 40,
   narrow: 40
