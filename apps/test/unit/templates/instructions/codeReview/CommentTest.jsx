@@ -68,22 +68,36 @@ describe('Code Review Comment', () => {
     expect(wrapper.find('.fa-check-circle')).to.have.lengthOf(1);
   });
 
-  it('shows ellipsis and comment options when viewing not as code reviewer', () => {
-    const wrapper = renderWrapper();
-    expect(wrapper.find('.fa.fa-ellipsis-h')).to.have.lengthOf(1);
+  it('displays show option for hidden resolved comment', () => {
+    const wrapper = renderWrapper({isResolved: true});
+    expect(wrapper.find('.fa-eye')).to.have.lengthOf(1);
   });
 
-  it('shows ellipsis and comment options when viewing as teacher', () => {
+  it('displays hide option for visible resolved comment', () => {
+    const wrapper = renderWrapper({isResolved: true});
+    wrapper
+      .find('a')
+      .first()
+      .invoke('onClick')();
+    expect(wrapper.find('.fa-eye-slash')).to.have.lengthOf(1);
+  });
+
+  it('displays resolve option for code owner', () => {
+    const wrapper = renderWrapper({}, {viewAsCodeReviewer: false});
+    expect(wrapper.find('.fa-check-circle')).to.have.lengthOf(1);
+  });
+
+  it('displays unresolve option for code owner', () => {
     const wrapper = renderWrapper(
-      {},
-      {viewAsCodeReviewer: true, viewAsTeacher: true}
+      {isResolved: true},
+      {viewAsCodeReviewer: false}
     );
-    expect(wrapper.find('.fa.fa-ellipsis-h')).to.have.lengthOf(1);
+    expect(wrapper.find('.fa-circle-o')).to.have.lengthOf(1);
   });
 
-  it('hides ellipsis when viewing as code reviewer', () => {
-    const wrapper = renderWrapper({}, {viewAsCodeReviewer: true});
-    expect(wrapper.find('.fa.fa-ellipsis-h')).to.have.lengthOf(0);
+  it('displays delete option for teacher', () => {
+    const wrapper = renderWrapper({}, {viewAsTeacher: true});
+    expect(wrapper.find('.fa-trash')).to.have.lengthOf(1);
   });
 
   it('displays error message when comment has error', () => {

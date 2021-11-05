@@ -4,7 +4,9 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 import LessonEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonEditor';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import reducers, {
-  init,
+  initActivities,
+  initLevelSearching,
+  initUnitInfo,
   mapActivityDataForEditor
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import createResourcesReducer, {
@@ -26,7 +28,8 @@ import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/Expandable
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
   const relatedLessons = getScriptData('relatedLessons');
-  const searchOptions = getScriptData('searchOptions');
+  const unitInfo = getScriptData('unitForLesson');
+  const levelSearchingInfo = getScriptData('levelSearchingInfo');
 
   const activities = mapActivityDataForEditor(lessonData.activities);
   const objectives = lessonData.objectives || [];
@@ -42,14 +45,9 @@ $(document).ready(function() {
   });
   const store = getStore();
 
-  store.dispatch(
-    init(
-      activities,
-      searchOptions,
-      lessonData.programmingEnvironments,
-      lessonData.lessonExtrasAvailableForUnit
-    )
-  );
+  store.dispatch(initActivities(activities));
+  store.dispatch(initLevelSearching(levelSearchingInfo));
+  store.dispatch(initUnitInfo(unitInfo));
   store.dispatch(initResources('lessonResource', lessonData.resources || []));
   store.dispatch(initVocabularies(lessonData.vocabularies || []));
   store.dispatch(
@@ -67,6 +65,7 @@ $(document).ready(function() {
           initialObjectives={objectives}
           relatedLessons={relatedLessons}
           initialLessonData={lessonData}
+          unitInfo={unitInfo}
         />
         <ExpandableImageDialog />
       </div>

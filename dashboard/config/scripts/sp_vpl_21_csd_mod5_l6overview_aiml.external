@@ -1,0 +1,25 @@
+name 'SP-VPL-21-CSD-mod5-L6overview-AIML'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 5: Classification Models
+
+## 
+
+Teacher interview inspired by this forum post. 
+
+https://forum.code.org/t/ai-lesson-4-made-digitally-friendly/34508/5
+
+Value add:
+
+* humanizes self-paced with an authentic classroom experience
+* highlights how teachers transform the lessons to meet the needs of their classroom context
+* shows how offline lessons build foundational knowledge for online lessons
+
+
+
+
+
+
+MARKDOWN
