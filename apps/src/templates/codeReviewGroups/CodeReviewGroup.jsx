@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import i18n from '@cdo/locale';
 import FontAwesome from '../FontAwesome';
 import color from '@cdo/apps/util/color';
 import StudentGroup from './StudentGroup';
@@ -21,12 +22,13 @@ export default function CodeReviewGroup({
           value={name}
           style={styles.nameInput}
           onChange={handleNameUpdate}
-          placeholder={'Enter a group name'}
+          placeholder={i18n.enterGroupName()}
         />
         <button
           style={styles.deleteButtonContainer}
           onClick={() => onDelete(droppableId)}
           type={'button'}
+          aria-label={i18n.deleteGroup()}
         >
           <FontAwesome icon={'trash'} style={styles.deleteButton} />
         </button>
