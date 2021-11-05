@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-05 18:59:39 UTC",
+    "serialized_at": "2021-11-05 22:11:12 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1704,31 +1704,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "poetry_module_variables_concatenation2"
-        ],
-        "progression": "Main Progression"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "poetry_module_variables_concatenation2"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "poetry",
-        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
-      },
-      "level_keys": [
-        "poetry_module_variables_concatenation2"
-      ]
-    },
-    {
-      "chapter": 19,
-      "position": 6,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "poetry_module_variables_start"
         ],
         "progression": "Main Progression"
@@ -1748,9 +1723,9 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 7,
-      "activity_section_position": 6,
+      "chapter": 19,
+      "position": 6,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1773,7 +1748,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1797,7 +1772,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1821,7 +1796,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1845,7 +1820,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -1869,7 +1844,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -1893,7 +1868,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -1917,7 +1892,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 26,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -1941,7 +1916,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1965,7 +1940,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1989,7 +1964,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -2013,7 +1988,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -2037,7 +2012,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -2061,7 +2036,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -2085,7 +2060,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -2109,7 +2084,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2133,30 +2108,9 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "poetry_module_modeling_exemple"
-        ],
-        "lesson.key": "lesson-6",
-        "lesson_group.key": "",
-        "script.name": "poetry",
-        "activity_section.key": "ae6120a5-7b68-4016-8288-fe73c64ebea0"
-      },
-      "level_keys": [
-        "poetry_module_modeling_exemple"
-      ]
-    },
-    {
-      "chapter": 37,
-      "position": 2,
-      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2175,6 +2129,27 @@
       },
       "level_keys": [
         "poetry_module_share"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_module_modeling_exemple"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "poetry",
+        "activity_section.key": "ae6120a5-7b68-4016-8288-fe73c64ebea0"
+      },
+      "level_keys": [
+        "poetry_module_modeling_exemple"
       ]
     }
   ],
@@ -2376,18 +2351,6 @@
         "level.key": "poetry_module_variables_concatenation4",
         "script_level.level_keys": [
           "poetry_module_variables_concatenation4"
-        ],
-        "lesson.key": "lesson-3",
-        "lesson_group.key": "",
-        "script.name": "poetry",
-        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "poetry_module_variables_concatenation2",
-        "script_level.level_keys": [
-          "poetry_module_variables_concatenation2"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -2601,9 +2564,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "poetry_module_modeling_exemple",
+        "level.key": "poetry_module_share",
         "script_level.level_keys": [
-          "poetry_module_modeling_exemple"
+          "poetry_module_share"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
@@ -2613,9 +2576,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "poetry_module_share",
+        "level.key": "poetry_module_modeling_exemple",
         "script_level.level_keys": [
-          "poetry_module_share"
+          "poetry_module_modeling_exemple"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
