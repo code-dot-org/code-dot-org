@@ -598,6 +598,48 @@ class ScriptLevelTest < ActiveSupport::TestCase
     assert_equal "/s/#{script_level.script.name}/lessons/1/levels/1", script_level.next_level_or_redirect_path_for_user(nil)
   end
 
+  # For script where show_unit_overview_between_lessons? == true
+  test 'next_level_or_redirect_path_for_user returns to unit overview at end of lesson' do
+    student = create :student
+    student.stubs(:has_pilot_experiment?).returns true
+    script_level = create_script_level_with_ancestors({})
+    script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
+    assert_equal "/s/#{script_level.script.name}", script_level.next_level_or_redirect_path_for_user(student)
+  end
+
+  # For script where show_unit_overview_between_lessons? == true
+  test 'next_level_or_redirect_path_for_user returns to lesson extras at end of lesson if available' do
+    student = create :student
+    student.stubs(:has_pilot_experiment?).returns true
+    script_level = create_script_level_with_ancestors({bonus: true})
+    script_level.script.stubs(:show_unit_overview_between_lessons?).returns true
+    assert_equal "/s/#{script_level.script.name}/lessons/1/extras", script_level.next_level_or_redirect_path_for_user(student)
+  end
+
+  # For script where show_unit_overview_between_lessons? == true
+  test 'next_level_or_redirect_path_for_user returns to next level if not end of lesson' do
+    script = create(:script, name: 'script1')
+    script.stubs(:show_unit_overview_between_lessons?).returns true
+    lesson_group = create(:lesson_group, script: script)
+
+    levels = [
+      create(:level),
+      create(:level)
+    ]
+
+    script_levels = levels.map.with_index(1) do |level, pos|
+      lesson = create(:lesson, script: script, absolute_position: pos, lesson_group: lesson_group)
+      create(:script_level, script: script, lesson: lesson, position: pos, chapter: pos, levels: [level])
+    end
+
+    script_levels[0].stubs(:end_of_lesson?).returns false
+
+    student = create :student
+    student.stubs(:has_pilot_experiment?).returns true
+
+    assert_equal script_levels[1].path, script_levels[0].next_level_or_redirect_path_for_user(student)
+  end
+
   test 'end of lesson' do
     script = Script.find_by_name('course1')
 
