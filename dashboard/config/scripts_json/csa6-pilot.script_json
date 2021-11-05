@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-04 18:03:57 UTC",
+    "serialized_at": "2021-11-04 19:13:36 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -221,6 +221,8 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
+        "overview": "Students combine their knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. Students then participate in a peer feedback session and reflect on their progress on their Neighborhood Lit Fest Project.",
+        "student_overview": "You combine your knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. You then participate in a peer feedback session and reflect on your progress on your Neighborhood Lit Fest Project. "
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -236,6 +238,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "Students apply standard algorithms they wrote for 1D and 2D arrays to `ArrayList`s. Students implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in their Neighborhood Lit Fest Project.",
+        "preparation": "* Gather chart paper and markers per group of 6-7 students\n* Gather two sticky notes per student",
+        "student_overview": "You apply standard algorithms you wrote for 1D and 2D arrays to `ArrayList`s. You implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in your Neighborhood Lit Fest Project."
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -725,6 +730,89 @@
       "seeding_key": {
         "lesson_activity.key": "e0d5c589-2a73-4b96-b83b-1d069319db75",
         "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot"
+      }
+    },
+    {
+      "key": "9fd24819-14f9-4355-bae8-6efbb0d67b51",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9fd24819-14f9-4355-bae8-6efbb0d67b51",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot"
+      }
+    },
+    {
+      "key": "7ac02f49-83c4-4103-9ddb-3826bc763919",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7ac02f49-83c4-4103-9ddb-3826bc763919",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot"
+      }
+    },
+    {
+      "key": "18620782-938e-4eac-b4f2-61ea181b1787",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18620782-938e-4eac-b4f2-61ea181b1787",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot"
+      }
+    },
+    {
+      "key": "3af6e646-a785-4b8c-9b56-37319f7f39cd",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3af6e646-a785-4b8c-9b56-37319f7f39cd",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot"
+      }
+    },
+    {
+      "key": "3dc32984-14ef-47d5-bc92-d38b8a416c5e",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3dc32984-14ef-47d5-bc92-d38b8a416c5e",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot"
+      }
+    },
+    {
+      "key": "db6134da-ef96-409e-b63e-238eee22336a",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "db6134da-ef96-409e-b63e-238eee22336a",
+        "lesson.key": "lesson-10",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa6-pilot"
       }
@@ -2691,6 +2779,259 @@
       }
     },
     {
+      "key": "21f8f4a8-54f5-4679-80b1-55a70e132697",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice about these dates?*\n\n**Discussion Goal:** Students notice the dates are the same when reading forwards and backward. Students also realize that these dates are in a row.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to define palindrome and display the prompt.\n* *Every year from 2011 to 2021 has ten consecutive palindromic dates. Can you figure those out?*\n\n**Discussion Goal:** Students note that 1-10-11 to 1-19-11 are palindromic dates, along with 2-10-12 to 2-19-21, etc.",
+        "name": "Palindromic Dates",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To guide students to the dates, have students think about the dates from the previous slide (1-10-11, 8-10-18, and\n9-19-19). Ask students how many consecutive dates after those are also palindromes. Students should notice that from 1-10-11 to 1-19-11, only the third digit is changing. They should focus on one year before trying to do all the years to notice the pattern.\n\nGuiding questions include:\n* What is the rule for the first number? (matches the last)\n* What is the rule for the second number? (matches the 2nd to last)\n* What is the rule for the third number? (it can be anything because it's in the middle)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "21f8f4a8-54f5-4679-80b1-55a70e132697",
+        "lesson_activity.key": "9fd24819-14f9-4355-bae8-6efbb0d67b51"
+      }
+    },
+    {
+      "key": "1d2a1140-86af-4cd8-a1d0-21fcad010390",
+      "position": 2,
+      "properties": {
+        "description": "Now that we have seen palindromic dates, let’s programmatically check if a `String` is a palindrome.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1d2a1140-86af-4cd8-a1d0-21fcad010390",
+        "lesson_activity.key": "9fd24819-14f9-4355-bae8-6efbb0d67b51"
+      }
+    },
+    {
+      "key": "f64ce262-2f28-4927-890a-b1c6da519e9f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How many different ways can we check if a `String` is a palindrome?*\n\n**Discussion Goal:** Students suggest checking if the `String` is equal to the reverse of the `String`. Students may suggest comparing the first character to the last character, then the second to the second to last, etc.",
+        "duration": "15",
+        "name": "Palindromes"
+      },
+      "seeding_key": {
+        "activity_section.key": "f64ce262-2f28-4927-890a-b1c6da519e9f",
+        "lesson_activity.key": "7ac02f49-83c4-4103-9ddb-3826bc763919"
+      }
+    },
+    {
+      "key": "1608cebd-de4e-44cb-be9b-73fe675e0e6c",
+      "position": 2,
+      "properties": {
+        "description": "In software engineering, there are many different ways to approach the same problem. Today we’re going to focus on one of the solutions for palindromes: checking if the `String` is equal to the reverse of the `String`.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1608cebd-de4e-44cb-be9b-73fe675e0e6c",
+        "lesson_activity.key": "7ac02f49-83c4-4103-9ddb-3826bc763919"
+      }
+    },
+    {
+      "key": "a1a09835-fffa-4e79-a6fb-fd1d7b132af3",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio. Students complete a Check for Understanding on Level 1, then implement an algorithm to create a new string with the characters reversed on Level 2.",
+        "progression_name": "Checking for Palindromes"
+      },
+      "seeding_key": {
+        "activity_section.key": "a1a09835-fffa-4e79-a6fb-fd1d7b132af3",
+        "lesson_activity.key": "7ac02f49-83c4-4103-9ddb-3826bc763919"
+      }
+    },
+    {
+      "key": "59fec122-686f-4a8f-8f60-db3235877b37",
+      "position": 4,
+      "properties": {
+        "description": "Before working towards the next benchmark, it is helpful to assess your achievement of this benchmark and to get feedback on your development so far.",
+        "duration": "20",
+        "name": "Peer Review and Feedback",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "59fec122-686f-4a8f-8f60-db3235877b37",
+        "lesson_activity.key": "7ac02f49-83c4-4103-9ddb-3826bc763919"
+      }
+    },
+    {
+      "key": "b01b01d4-d31b-4ab6-ab46-3f9b87a329e1",
+      "position": 5,
+      "properties": {
+        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Development Feedback handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify a question to frame the feedback session.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and framing questions and sharing feedback. Students should take notes on their Project Development Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Development Feedback handout."
+      },
+      "seeding_key": {
+        "activity_section.key": "b01b01d4-d31b-4ab6-ab46-3f9b87a329e1",
+        "lesson_activity.key": "7ac02f49-83c4-4103-9ddb-3826bc763919"
+      }
+    },
+    {
+      "key": "40ae7a18-77e1-423c-9323-56f2cc7f0738",
+      "position": 1,
+      "properties": {
+        "description": "We just learned a lot of new information today, which may have even answered some of the Need to Know questions you wrote down about the Neighborhood Lit Fest Project. As we progress through the unit, it is helpful to stop and note what we have learned that is related to or useful for the project.",
+        "name": "Revisiting the Need to Knows",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "40ae7a18-77e1-423c-9323-56f2cc7f0738",
+        "lesson_activity.key": "18620782-938e-4eac-b4f2-61ea181b1787"
+      }
+    },
+    {
+      "key": "c3bc05aa-4fc0-44db-b5a8-460f7ac055a7",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students review the questions they wrote in the \"Need to Know\" column on page two of their Neighborhood Lit Fest Project Planning Guide. Students add new questions to this column, check off any answered questions, and write answers to any questions in the \"Learned\" column.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they added to their chart with a partner.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If time permits, you can also have students share as a class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c3bc05aa-4fc0-44db-b5a8-460f7ac055a7",
+        "lesson_activity.key": "18620782-938e-4eac-b4f2-61ea181b1787"
+      }
+    },
+    {
+      "key": "84d8ab59-6787-4de0-b22d-d1e0167e9517",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "84d8ab59-6787-4de0-b22d-d1e0167e9517",
+        "lesson_activity.key": "18620782-938e-4eac-b4f2-61ea181b1787"
+      }
+    },
+    {
+      "key": "1e62426c-78ff-47dd-b88a-c787b0b0848d",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e62426c-78ff-47dd-b88a-c787b0b0848d",
+        "lesson_activity.key": "18620782-938e-4eac-b4f2-61ea181b1787"
+      }
+    },
+    {
+      "key": "44368ed3-40c9-46a7-ae33-34c27b6fb883",
+      "position": 1,
+      "properties": {
+        "description": "**Group:** Place students in groups of six or seven. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each group a piece of chart paper and a marker.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the rules of Simple List Vocabulary with the class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students play Simple List Vocabulary.",
+        "name": "Simple List Vocabulary",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If there is a word wall in the classroom, cover the words to prevent students from writing them down. If students struggle to come up with words,\n* Provide students with the first letter of the words.\n* Provide pictures of the words before they complete their list.\n* Provide students with code segments representing the terms.\n\nIf chart paper is not available, use blank paper and pens."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "44368ed3-40c9-46a7-ae33-34c27b6fb883",
+        "lesson_activity.key": "3af6e646-a785-4b8c-9b56-37319f7f39cd"
+      }
+    },
+    {
+      "key": "cf03fbc1-2506-47b9-bed3-5b6292f4e7cf",
+      "position": 1,
+      "properties": {
+        "description": "We have seen how we can reuse standard algorithms that we wrote to work with 1D and 2D arrays can also work with `ArrayList`s. Today we will implement a new standard algorithm and modify previous standard algorithms to work with `ArrayList`s.",
+        "duration": "15",
+        "name": "Algorithms with ArrayLists",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cf03fbc1-2506-47b9-bed3-5b6292f4e7cf",
+        "lesson_activity.key": "3dc32984-14ef-47d5-bc92-d38b8a416c5e"
+      }
+    },
+    {
+      "key": "ecdc2edb-f177-4a43-83ca-d6731e1ed6e4",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate the problem.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write pseudocode for the problem on a piece of paper, then compare their solution with another group.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 and 2 on Code Studio. On Level 1, students implement their solution by translating their pseudocode to Java, then continue to Level 2 to complete a Check for Understanding.",
+        "progression_name": "Identifying Individual Digits"
+      },
+      "seeding_key": {
+        "activity_section.key": "ecdc2edb-f177-4a43-83ca-d6731e1ed6e4",
+        "lesson_activity.key": "3dc32984-14ef-47d5-bc92-d38b8a416c5e"
+      }
+    },
+    {
+      "key": "0a2727f7-0286-46c4-b504-bd83378bde08",
+      "position": 3,
+      "properties": {
+        "description": "We have implemented algorithms used in natural language processing to analyze the structure of words and sentences, or human language syntax. NLP is also used to analyze the semantics of text to understand its meaning. For example, the sentiment or tone of a word can influence the tone of the overall message.",
+        "duration": "15",
+        "name": "Neighborhood Lit Fest Project",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0a2727f7-0286-46c4-b504-bd83378bde08",
+        "lesson_activity.key": "3dc32984-14ef-47d5-bc92-d38b8a416c5e"
+      }
+    },
+    {
+      "key": "9c87e300-20ef-4183-8f78-ef8c78496451",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define sentiment value.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 3 and 4 on Code Studio. On Level 3, students identify the overall tone of their chosen author or artist. On Level 4, students choose and implement tone in their Neighborhood Lit Fest Project.",
+        "progression_name": "Neighborhood Lit Fest Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c87e300-20ef-4183-8f78-ef8c78496451",
+        "lesson_activity.key": "3dc32984-14ef-47d5-bc92-d38b8a416c5e"
+      }
+    },
+    {
+      "key": "db913841-070e-4c9b-bb56-0781a205a9bf",
+      "position": 1,
+      "properties": {
+        "description": "You have learned a lot in this unit, and now it is time to Show What You Know! We will spend the next three days on our Neighborhood Lit Fest Project. Then we will spend a day answering an AP-style free-response question. We will then wrap up the unit with a multiple-choice assessment.",
+        "name": "Show What You Know Week Preview",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "db913841-070e-4c9b-bb56-0781a205a9bf",
+        "lesson_activity.key": "db6134da-ef96-409e-b63e-238eee22336a"
+      }
+    },
+    {
+      "key": "be3c126a-cdd7-496c-9cb3-e4a80d6a2e3c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the goals of the project workdays.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added."
+      },
+      "seeding_key": {
+        "activity_section.key": "be3c126a-cdd7-496c-9cb3-e4a80d6a2e3c",
+        "lesson_activity.key": "db6134da-ef96-409e-b63e-238eee22336a"
+      }
+    },
+    {
+      "key": "72ccd316-915c-4560-8569-139da1e25a60",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "72ccd316-915c-4560-8569-139da1e25a60",
+        "lesson_activity.key": "db6134da-ef96-409e-b63e-238eee22336a"
+      }
+    },
+    {
       "key": "c6da56c0-7bc8-4553-a8fb-45c9c470309e",
       "position": 1,
       "properties": {
@@ -4311,6 +4652,182 @@
       "chapter": 49,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Checking for Palindromes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L9-L1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "a1a09835-fffa-4e79-a6fb-fd1d7b132af3"
+      },
+      "level_keys": [
+        "CSA U6L9-L1"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Checking for Palindromes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L9-L2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "a1a09835-fffa-4e79-a6fb-fd1d7b132af3"
+      },
+      "level_keys": [
+        "CSA U6L9-L2"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L9-L3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "1e62426c-78ff-47dd-b88a-c787b0b0848d"
+      },
+      "level_keys": [
+        "CSA U6L9-L3"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Identifying Individual Digits"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L10-L1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "ecdc2edb-f177-4a43-83ca-d6731e1ed6e4"
+      },
+      "level_keys": [
+        "CSA U6L10-L1"
+      ]
+    },
+    {
+      "chapter": 53,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Identifying Individual Digits"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L10-L2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "ecdc2edb-f177-4a43-83ca-d6731e1ed6e4"
+      },
+      "level_keys": [
+        "CSA U6L10-L2"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Neighborhood Lit Fest Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L10-L3"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "9c87e300-20ef-4183-8f78-ef8c78496451"
+      },
+      "level_keys": [
+        "CSA U6L10-L3"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Neighborhood Lit Fest Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L10-L4"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "9c87e300-20ef-4183-8f78-ef8c78496451"
+      },
+      "level_keys": [
+        "CSA U6L10-L4"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U6L10-L5"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "72ccd316-915c-4560-8569-139da1e25a60"
+      },
+      "level_keys": [
+        "CSA U6L10-L5"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 1,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "progression": "Neighborhood Lit Fest Project"
@@ -4330,7 +4847,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 58,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4352,7 +4869,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 59,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4374,7 +4891,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 60,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -4396,7 +4913,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 61,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4418,7 +4935,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4440,7 +4957,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4462,7 +4979,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 64,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5063,6 +5580,102 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA U6L9-L1",
+        "script_level.level_keys": [
+          "CSA U6L9-L1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "a1a09835-fffa-4e79-a6fb-fd1d7b132af3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L9-L2",
+        "script_level.level_keys": [
+          "CSA U6L9-L2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "a1a09835-fffa-4e79-a6fb-fd1d7b132af3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L9-L3",
+        "script_level.level_keys": [
+          "CSA U6L9-L3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "1e62426c-78ff-47dd-b88a-c787b0b0848d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L10-L1",
+        "script_level.level_keys": [
+          "CSA U6L10-L1"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "ecdc2edb-f177-4a43-83ca-d6731e1ed6e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L10-L2",
+        "script_level.level_keys": [
+          "CSA U6L10-L2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "ecdc2edb-f177-4a43-83ca-d6731e1ed6e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L10-L3",
+        "script_level.level_keys": [
+          "CSA U6L10-L3"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "9c87e300-20ef-4183-8f78-ef8c78496451"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L10-L4",
+        "script_level.level_keys": [
+          "CSA U6L10-L4"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "9c87e300-20ef-4183-8f78-ef8c78496451"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U6L10-L5",
+        "script_level.level_keys": [
+          "CSA U6L10-L5"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa6-pilot",
+        "activity_section.key": "72ccd316-915c-4560-8569-139da1e25a60"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA U6L11-L1",
         "script_level.level_keys": [
           "CSA U6L11-L1"
@@ -5172,6 +5785,18 @@
       }
     },
     {
+      "name": "[KEY] U6L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1go_j41wJfluGTa9ky_rDCik-NCe38FOSuGQBoyfsJLU/edit?usp=sharing",
+      "key": "_key_u6l10_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u6l10_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] U6L1 Extra Practice",
       "url": "https://docs.google.com/document/d/1UjGAjpas-XhX8VyEeMV0eFS_iOPjTh3Vu4r5NMiNuQU/edit?usp=sharing",
       "key": "_key_u6l1_extra_practice",
@@ -5268,6 +5893,18 @@
       }
     },
     {
+      "name": "[KEY] U6L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1krFzW-dhpTUPqVZ5sS55JwIcB7m6aKJLEJxYoktfIGc/edit?usp=sharing",
+      "key": "_key_u6l9_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u6l9_extra_practice"
+      }
+    },
+    {
       "name": "Dr. Seuss Book Written by A.I.",
       "url": "https://youtu.be/DckBBDU6V4k",
       "key": "dr_seuss_book_written_by_a_i_",
@@ -5340,6 +5977,18 @@
       }
     },
     {
+      "name": "Project Development Feedback",
+      "url": "https://docs.google.com/document/d/1mLpRaL_OtHOPdsK55mkJAHq6U7oecyvrESHDIvr-BwM/edit?usp=sharing",
+      "key": "project_development_feedback_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "project_development_feedback_1"
+      }
+    },
+    {
       "name": "Project Planning Board",
       "url": "https://docs.google.com/document/d/14f5-8_ZNuL07USZspzA9qpzsZXmWUFDLIo9VHjAa5tc/edit?usp=sharing",
       "key": "project_planning_board",
@@ -5373,6 +6022,30 @@
       },
       "seeding_key": {
         "resource.key": "quiz_quiz_trade_cards"
+      }
+    },
+    {
+      "name": "Simple List Vocabulary",
+      "url": "https://docs.google.com/document/d/1QmSIYJenpb9HGVInap0uvmp1cbN8D6X6K2KtQohgYW8/edit?usp=sharing",
+      "key": "simple_list_vocabulary_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "simple_list_vocabulary_1"
+      }
+    },
+    {
+      "name": "U6L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1ybuPwGozpscu-bMRCNUdqryS_nHySi8w-qjo1YeNbkg/edit?usp=sharing",
+      "key": "u6l10_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u6l10_extra_practice"
       }
     },
     {
@@ -5472,6 +6145,18 @@
       }
     },
     {
+      "name": "U6L9 Extra Practice",
+      "url": "https://docs.google.com/document/d/1MmZY5K8hTTx9hz0-5wrReOnRLT0Z-C-uAl9LGG1w7Q8/edit?usp=sharing",
+      "key": "u6l9_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u6l9_extra_practice"
+      }
+    },
+    {
       "name": "Unit 6 Guide",
       "url": "https://docs.google.com/document/d/1adl-rqpAW8FvKofCVfMt997IVLzvzhnDW87Q3bG3t_k/edit?usp=sharing",
       "key": "unit_6_guide",
@@ -5530,6 +6215,30 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "unit_6_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_u6l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "simple_list_vocabulary_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "u6l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "resource.key": "unit_6_presentation_slides"
       }
     },
@@ -5734,6 +6443,30 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "resource.key": "unit_6_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_key_u6l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "project_development_feedback_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "u6l9_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
         "resource.key": "unit_6_presentation_slides"
       }
     }
@@ -5906,6 +6639,16 @@
       }
     },
     {
+      "key": "palindrome",
+      "word": "Palindrome",
+      "definition": "A word or phrase that reads the same backward as it does forward",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "palindrome"
+      }
+    },
+    {
       "key": "parsing",
       "word": "Parsing",
       "definition": "The process of dividing text into parts for analysis or conversion",
@@ -5943,6 +6686,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "project_backlog"
+      }
+    },
+    {
+      "key": "sentiment_value",
+      "word": "Sentiment Value",
+      "definition": "The positive or negative emotional value of a word",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sentiment_value"
       }
     },
     {
@@ -6041,6 +6794,12 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "vocabulary.key": "precondition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "sentiment_value"
       }
     },
     {
@@ -6161,6 +6920,12 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "vocabulary.key": "lexicographical_order"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "palindrome"
       }
     }
   ],
@@ -6369,6 +7134,16 @@
       }
     },
     {
+      "key": "9d84e7eb-9a00-4c2c-8cf8-f0a4e50e7a24",
+      "properties": {
+        "description": "Apply standard algorithms to `ArrayList`s"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "9d84e7eb-9a00-4c2c-8cf8-f0a4e50e7a24"
+      }
+    },
+    {
       "key": "ab1d54e2-ad10-4aa8-b826-9eef627c7e23",
       "properties": {
         "description": "Explain why a `ConcurrentModificationException` occurs"
@@ -6386,6 +7161,16 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "objective.key": "b9a8e01a-ce1a-4d72-9a46-9afa858c84fb"
+      }
+    },
+    {
+      "key": "c04782c8-e2d7-427f-9afe-a800be79605a",
+      "properties": {
+        "description": "Write standard algorithms to traverse `String`s"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "c04782c8-e2d7-427f-9afe-a800be79605a"
       }
     },
     {
@@ -6499,6 +7284,20 @@
         "lesson.key": "lesson-1",
         "framework.shortcode": "csa",
         "standard.shortcode": "MOD-2.C.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.D.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.J.1"
       }
     },
     {
@@ -6716,6 +7515,13 @@
         "lesson.key": "lesson-8",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-1.E.13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.F.1"
       }
     }
   ],
