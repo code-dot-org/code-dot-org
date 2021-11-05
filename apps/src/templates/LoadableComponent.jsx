@@ -100,6 +100,6 @@ LoadableComponent.defaultProps = {
 const styles = {
   errorMessage: {
     fontSize: 12,
-    color: color.black
+    color: color.red
   }
 };
