@@ -12,7 +12,6 @@ export default function CodeReviewGroup({
   onDelete
 }) {
   const handleNameUpdate = event => {
-    //preventdefault?
     onNameUpdate(droppableId, event.target.value);
   };
   return (
