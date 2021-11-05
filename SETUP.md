@@ -162,7 +162,7 @@ After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites
       If it complains `xcode-select: error: command line tools are already installed, use "Software Update" to install updates`, check to make sure XCode is downloaded and up to date manually.
     </details>
 
-1. Install the Java 8 JDK: `brew cask install adoptopenjdk/openjdk/adoptopenjdk8`. More info [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
+1. Install the Java 8 JDK: `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`. More info [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html).
 
 1. [Download](https://www.google.com/chrome/) and install Google Chrome, if you have not already. This is needed in order to be able to run apps tests locally.
 
@@ -443,6 +443,9 @@ If you run into an issue about mysql2 while running `bundle install` and the err
 - `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
 
 (Steps from [this github issue](https://github.com/brianmario/mysql2/issues/795#issuecomment-439579677))
+
+If you run into an error like "Don't know how to set rpath on your system, if MySQL libraries are not in path mysql2 may not load" during `bundle install` and are running on a Mac with M1, try :
+- `gem install mysql2 -v '0.5.2' -- --with-opt-dir=$(brew --prefix openssl) --with-ldflags=-L/opt/homebrew/Cellar/zstd/1.5.0/lib`
 
 #### therubyracer
 

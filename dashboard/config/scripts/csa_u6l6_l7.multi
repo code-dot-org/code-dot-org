@@ -1,0 +1,10 @@
+name 'CSA U6L6-L7'
+title 'Check for Understanding'
+
+question 'Question'
+
+wrong 'wrong answer1'
+right 'right answer'
+wrong 'wrong answer2'
+wrong 'wrong answer3'
+wrong 'wrong answer4'
