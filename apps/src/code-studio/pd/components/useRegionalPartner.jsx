@@ -47,7 +47,8 @@ const fetchRegionalPartner = ({
 };
 
 // takes {program, school, schoolZipCode, schoolState}
-// returns null if loading or error, otherwise: {id, name, group, workshops, has_csf, pl_programs_offered}
+// returns undefined if loading or null if error, otherwise: {id, name, group, workshops, has_csf, pl_programs_offered}
+// if the request succeeds but regional partner is not found, the returned rp will have nil for all values
 // see regional_partner_workshops_serializer.rb
 export const useRegionalPartner = data => {
   const {program, schoolZipCode, schoolState, school} = data;
@@ -69,7 +70,8 @@ export const useRegionalPartner = data => {
           // Update state with all the partner workshop data to display
           setLoadingPartner(false);
           setLoadError(false);
-          setPartner(partner);
+          // the api returns an object with all fields set to null if not found
+          setPartner(partner.id === null ? null : partner);
         }
       })
       .catch(() => {
@@ -81,5 +83,5 @@ export const useRegionalPartner = data => {
     };
   }, [program, schoolZipCode, schoolState, school]);
 
-  return [loadingPartner ? null : partner, loadError];
+  return [loadingPartner ? undefined : partner, loadError];
 };
