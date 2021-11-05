@@ -35,7 +35,7 @@ November 4-5, 2021
 
 Join colleagues, administrators, teachers, policy makers, and advocates to discuss K-12 Computer Science Education in Native American communities.  Learn from one another and dedicate time to developing a CS pathway in your school community.  
 
-This virtual event is held under three banners:  <a href="https://nativesintech.org/" target=_blank>Natives in Tech</a> Annual Conference, <a href="http://Code.org" target=_blank>Code.org</a>, and <a href="https://www.csedcon.com/" target=_blank>CSEdCon</a> (The Global Computer Science Education Conference).  All zoom links to be shared to registered attendees. <a href="#register">**Register here</a>**.
+This virtual event is held under three banners:  <a href="https://nativesintech.org/" target=_blank>Natives in Tech</a> Annual Conference, <a href="http://Code.org" target=_blank>Code.org</a>, and <a href="https://www.csedcon.com/" target=_blank>CSEdCon</a> (The Global Computer Science Education Conference).
 
 
 ### *Summit Schedule*
@@ -71,7 +71,3 @@ A working session for administrators and other stakeholders to take initial step
 Friday, November 5th, 1-2pm PT
  
 Come meet and engage with colleagues, administrators, teachers, policy makers, advocates. Discuss what you’ve heard in the summit, share resources and lessons learned, and more.
-
-<a id="register"></a>
-
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSenx_r_NzZAAFjmg5qD2WlqrjMZaDo6Su2EaFz1vQXLDtoYEA/viewform?embedded=true" width="640" height="2097" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
