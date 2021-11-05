@@ -202,7 +202,8 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
   # GET /api/v1/sections/<id>/code_review_groups
   # Get all code review groups and their members for this section. Also include
-  # all unassigned followers. Format is:
+  # all unassigned followers.
+  # Format is:
   # { groups: [
   #   {unassigned: true, name: 'unassigned', members: [{follower_id: 1, name: 'student_name'},...]},
   #   {id: <group-id>, name: 'group_name', members: [{follower_id: 2, name: 'student_name'},...]},
@@ -225,6 +226,15 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     unassigned_students = unassigned_students.map {|student| {follower_id: student.id, name: student.student_user.name}}
     groups_details << {unassigned: true, members: unassigned_students}
     render json: {groups: groups_details}
+  end
+
+  # POST /api/v1/sections/<id>/code_review_groups
+  def set_code_review_groups
+    @section.reset_code_review_groups(params[:groups])
+    render json: {result: 'success'}
+  # if the group data is invalid we will get a record invalid exception
+  rescue ActiveRecord::RecordInvalid
+    render json: {result: 'invalid groups'}, status: 400
   end
 
   private
