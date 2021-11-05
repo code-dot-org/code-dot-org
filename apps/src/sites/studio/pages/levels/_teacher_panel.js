@@ -10,7 +10,6 @@ import ReactDOM from 'react-dom';
 import TeacherContentToggle from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import {getHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {renderTeacherPanel} from '@cdo/apps/code-studio/teacherPanelHelpers';
-import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 
 $(document).ready(initPage);
 
@@ -21,11 +20,8 @@ function initPage() {
   const store = getStore();
 
   initViewAs(store);
-
   store.dispatch(getHiddenLessons(teacherPanelData.script_name, false));
-  if (teacherPanelData.is_verified_teacher) {
-    store.dispatch(setVerified());
-  }
+
   // Lesson Extras fail to load with this
   if (!teacherPanelData.lesson_extra) {
     renderTeacherContentToggle(store);
