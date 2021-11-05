@@ -262,7 +262,7 @@ class ScriptLevel < ApplicationRecord
       # scripts, we send students on the last level of a lesson to the unit
       # overview page.
       if end_of_lesson? &&
-        script.should_show_unit_overview_between_lessons &&
+        script.show_unit_overview_between_lessons &&
         user.has_pilot_experiment?('end-of-lesson-redirects')
         if script.lesson_extras_available
           script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
