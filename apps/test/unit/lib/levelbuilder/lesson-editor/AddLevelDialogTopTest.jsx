@@ -1,9 +1,9 @@
 import React from 'react';
+import {shallow, mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedAddLevelDialogTop as AddLevelDialogTop} from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialogTop';
 import {searchOptions} from './activitiesTestData';
 import sinon from 'sinon';
-import {isolateComponent} from 'isolate-components';
 
 describe('AddLevelDialogTop', () => {
   let defaultProps, addLevel;
@@ -47,25 +47,25 @@ describe('AddLevelDialogTop', () => {
       {'Content-Type': 'application/json;charset=UTF-8'},
       JSON.stringify(returnData)
     ]);
-    const wrapper = isolateComponent(<AddLevelDialogTop {...defaultProps} />);
+    const wrapper = mount(<AddLevelDialogTop {...defaultProps} />);
     server.respond();
 
-    expect(wrapper.findOne('Connect(ToggleGroup)').length).to.equal(1);
-    expect(wrapper.findOne('Connect(AddLevelFilters)').length).to.equal(1);
-    expect(wrapper.findOne('AddLevelTable').length).to.equal(1);
-    expect(wrapper.findOne('.fa-spin').length).to.equal(0); // no spinner
+    expect(wrapper.find('Connect(ToggleGroup)').length).to.equal(1);
+    expect(wrapper.find('Connect(AddLevelFilters)').length).to.equal(1);
+    expect(wrapper.find('AddLevelTable').length).to.equal(1);
+    expect(wrapper.find('.fa-spin').length).to.equal(0); // no spinner
 
     server.restore();
   });
 
   it('getting level data show spinner', () => {
-    const wrapper = isolateComponent(<AddLevelDialogTop {...defaultProps} />);
+    const wrapper = shallow(<AddLevelDialogTop {...defaultProps} />);
 
     // Without using setLevels this test has no level data
 
-    expect(wrapper.findOne('ToggleGroup').length).to.equal(0);
-    expect(wrapper.findOne('Connect(AddLevelFilters)').length).to.equal(0);
-    expect(wrapper.findOne('AddLevelTable').length).to.equal(0);
-    expect(wrapper.findOne('.fa-spin').length).to.equal(1);
+    expect(wrapper.find('ToggleGroup').length).to.equal(0);
+    expect(wrapper.find('Connect(AddLevelFilters)').length).to.equal(0);
+    expect(wrapper.find('AddLevelTable').length).to.equal(0);
+    expect(wrapper.find('.fa-spin').length).to.equal(1);
   });
 });
