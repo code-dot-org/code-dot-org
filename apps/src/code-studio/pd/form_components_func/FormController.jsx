@@ -348,8 +348,6 @@ const FormController = props => {
         }
         setSubmitting(false);
       });
-
-    event.preventDefault();
   };
 
   /**
