@@ -119,7 +119,7 @@ export default class CoreLibrary {
     }
     if (x + width / 2 > APP_WIDTH) {
       triangleTipX = Math.min(x, APP_WIDTH - rectangleCornerRadius);
-      x = 400 - width / 2;
+      x = APP_WIDTH - width / 2;
     }
 
     // Draw bubble.
