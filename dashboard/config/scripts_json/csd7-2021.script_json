@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-03 16:55:41 UTC",
+    "serialized_at": "2021-11-05 17:51:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -11119,6 +11119,18 @@
       }
     },
     {
+      "name": "Create an ML App",
+      "url": "https://docs.google.com/document/d/1iB8J-cuTNv00K-WSykY53O-UONmms6xxExgNXlLdVeA/view",
+      "key": "create_an_ml_app",
+      "properties": {
+        "audience": "Student",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "create_an_ml_app"
+      }
+    },
+    {
       "name": "Create an ML App - Project Guide",
       "url": "https://docs.google.com/document/d/1UAGmOyfoqr5xKjKp8SjpYRmdemNK8FWV1fcrERoeoDo/edit",
       "key": "create_an_ml_app_-_project_guide",
@@ -12148,6 +12160,12 @@
       "seeding_key": {
         "lesson.key": "Issue Statements",
         "resource.key": "issue_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mini-Project: Make a Machine Learning App",
+        "resource.key": "create_an_ml_app"
       }
     },
     {
