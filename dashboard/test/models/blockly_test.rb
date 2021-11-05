@@ -491,7 +491,7 @@ XML
 
     level = Level.create(
       name: level_name,
-      user: create(:user),
+      level_num: 'custom',
       type: 'Maze',
       authored_hints: JSON.generate(
         [
