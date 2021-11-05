@@ -79,7 +79,12 @@ const COURSE_SUFFIXES = {
 const PrincipalApprovalComponent = props => {
   const {teacherApplication, onChange, data, errors} = props;
   const [isPrivacyDialogOpen, setIsPrivacyDialogOpen] = useState(false);
-  const [regionalPartner] = useRegionalPartner(data);
+  const [regionalPartner] = useRegionalPartner({
+    program: teacherApplication.course,
+    school: teacherApplication.school_id,
+    schoolZipCode: teacherApplication.school_zip_code,
+    schoolState: teacherApplication.school_state
+  });
 
   const handleSchoolChange = selectedSchool => {
     onChange({school: selectedSchool && selectedSchool.value});
