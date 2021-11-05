@@ -44,6 +44,7 @@ $(document).ready(function() {
     opportunityStandards: createStandardsReducer('opportunityStandard')
   });
   const store = getStore();
+
   store.dispatch(initActivities(activities));
   store.dispatch(initLevelSearching(levelSearchingInfo));
   store.dispatch(initUnitInfo(unitInfo));
