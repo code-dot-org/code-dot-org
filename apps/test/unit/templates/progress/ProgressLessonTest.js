@@ -45,7 +45,7 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.html(), null);
   });
 
-  it('renders with dashed border and not faded when viewing a hidden lesson as a teacher', () => {
+  it('renders with dashed border and not faded when viewing a hidden lesson as a instructor', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
@@ -174,7 +174,7 @@ describe('ProgressLesson', () => {
     );
   });
 
-  it('has both a hidden and a locked icon for teacher when lesson is lockable and locked and hidden', () => {
+  it('has both a hidden and a locked icon for instructor when lesson is lockable and locked and hidden', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
@@ -206,7 +206,7 @@ describe('ProgressLesson', () => {
     );
   });
 
-  it('starts collapsed for student if it is not the current lesson', () => {
+  it('starts collapsed for participant if it is not the current lesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
@@ -217,7 +217,7 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.state('collapsed'), true);
   });
 
-  it('starts uncollapsed for teacher even if not the current lesson', () => {
+  it('starts uncollapsed for instructor even if not the current lesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
@@ -228,21 +228,21 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.state('collapsed'), false);
   });
 
-  it('starts uncollapsed for student if it is the current lesson', () => {
+  it('starts uncollapsed for participant if it is the current lesson', () => {
     const wrapper = shallow(
       <ProgressLesson {...defaultProps} viewAs={ViewType.Participant} />
     );
     assert.equal(wrapper.state('collapsed'), false);
   });
 
-  it('starts uncollapsed for teacher if it is the current lesson', () => {
+  it('starts uncollapsed for instructor if it is the current lesson', () => {
     const wrapper = shallow(
       <ProgressLesson {...defaultProps} viewAs={ViewType.Instructor} />
     );
     assert.equal(wrapper.state('collapsed'), false);
   });
 
-  it('uncollapses itself for student when currentLesson gets updated', () => {
+  it('uncollapses itself for participant when currentLesson gets updated', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
@@ -270,7 +270,7 @@ describe('ProgressLesson', () => {
     assert.equal(wrapper.state('collapsed'), true);
   });
 
-  it('shows student description when viewing as student', () => {
+  it('shows participant description when viewing as participant', () => {
     const wrapper = shallow(
       <ProgressLesson {...defaultProps} viewAs={ViewType.Participant} />
     );
@@ -280,7 +280,7 @@ describe('ProgressLesson', () => {
     );
   });
 
-  it('shows teacher description when viewing as teacher', () => {
+  it('shows instructor description when viewing as instructor', () => {
     const wrapper = shallow(
       <ProgressLesson {...defaultProps} viewAs={ViewType.Instructor} />
     );
@@ -336,7 +336,7 @@ describe('ProgressLesson', () => {
     );
   });
 
-  it('shows Lesson Resources button when viewing as a student and student_lesson_plan_html_url is not null', () => {
+  it('shows Lesson Resources button when viewing as a participant and student_lesson_plan_html_url is not null', () => {
     let myLesson = defaultProps.lesson;
     myLesson.student_lesson_plan_html_url = 'test-url';
     const wrapper = shallow(
@@ -350,14 +350,14 @@ describe('ProgressLesson', () => {
     delete myLesson.student_lesson_plan_html_url;
   });
 
-  it('does not show Lesson Resources button when viewing as a student and student_lesson_plan_html_url is null', () => {
+  it('does not show Lesson Resources button when viewing as a participant and student_lesson_plan_html_url is null', () => {
     const wrapper = shallow(
       <ProgressLesson {...defaultProps} viewAs={ViewType.Participant} />
     );
     assert.equal(wrapper.find('Button').length, 0);
   });
 
-  it('does not show Lesson Resources button when viewing as a teacher and student_lesson_plan_html_url is not null', () => {
+  it('does not show Lesson Resources button when viewing as a instructor and student_lesson_plan_html_url is not null', () => {
     let myLesson = defaultProps.lesson;
     myLesson.student_lesson_plan_html_url = 'test-url';
     const wrapper = shallow(
