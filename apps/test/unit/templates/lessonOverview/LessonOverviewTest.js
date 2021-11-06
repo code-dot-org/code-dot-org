@@ -96,7 +96,7 @@ describe('LessonOverview', () => {
       },
       activities: [],
       announcements: [],
-      viewAs: ViewType.Teacher,
+      viewAs: ViewType.Instructor,
       isSignedIn: true,
       hasVerifiedResources: false,
       isVerifiedTeacher: false
@@ -203,7 +203,7 @@ describe('LessonOverview', () => {
     const wrapper = shallow(
       <LessonOverview
         {...defaultProps}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
         announcements={[fakeStudentAnnouncement]}
       />
     );

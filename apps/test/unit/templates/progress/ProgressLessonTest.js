@@ -20,7 +20,7 @@ describe('ProgressLesson', () => {
     levels: fakeLevels(3),
     lessonNumber: 3,
     showTeacherInfo: false,
-    viewAs: ViewType.Teacher,
+    viewAs: ViewType.Instructor,
     lessonIsVisible: () => true,
     lessonIsLockedForUser: () => false,
     lessonIsLockedForAllStudents: () => false,
@@ -38,7 +38,7 @@ describe('ProgressLesson', () => {
       <ProgressLesson
         {...defaultProps}
         lessonIsVisible={() => false}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
       />
     );
 
@@ -49,7 +49,7 @@ describe('ProgressLesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
+        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Participant}
       />
     );
     assert.equal(wrapper.props().style.background, color.lightest_gray);
@@ -179,7 +179,7 @@ describe('ProgressLesson', () => {
       <ProgressLesson
         {...defaultProps}
         lesson={fakeLesson('lesson1', 1, true)}
-        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
+        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Participant}
         lessonIsLockedForUser={() => true}
       />
     );
@@ -210,7 +210,7 @@ describe('ProgressLesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
         currentLessonId={2}
       />
     );
@@ -221,7 +221,7 @@ describe('ProgressLesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        viewAs={ViewType.Teacher}
+        viewAs={ViewType.Instructor}
         currentLessonId={2}
       />
     );
@@ -230,14 +230,14 @@ describe('ProgressLesson', () => {
 
   it('starts uncollapsed for student if it is the current lesson', () => {
     const wrapper = shallow(
-      <ProgressLesson {...defaultProps} viewAs={ViewType.Student} />
+      <ProgressLesson {...defaultProps} viewAs={ViewType.Participant} />
     );
     assert.equal(wrapper.state('collapsed'), false);
   });
 
   it('starts uncollapsed for teacher if it is the current lesson', () => {
     const wrapper = shallow(
-      <ProgressLesson {...defaultProps} viewAs={ViewType.Teacher} />
+      <ProgressLesson {...defaultProps} viewAs={ViewType.Instructor} />
     );
     assert.equal(wrapper.state('collapsed'), false);
   });
@@ -247,7 +247,7 @@ describe('ProgressLesson', () => {
       <ProgressLesson
         {...defaultProps}
         currentLessonId={null}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
       />
     );
     assert.equal(wrapper.state('collapsed'), true);
@@ -260,7 +260,7 @@ describe('ProgressLesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
         currentLessonId={null}
       />
     );
@@ -272,7 +272,7 @@ describe('ProgressLesson', () => {
 
   it('shows student description when viewing as student', () => {
     const wrapper = shallow(
-      <ProgressLesson {...defaultProps} viewAs={ViewType.Student} />
+      <ProgressLesson {...defaultProps} viewAs={ViewType.Participant} />
     );
     assert.equal(
       wrapper.find('ProgressLessonContent').props().description,
@@ -282,7 +282,7 @@ describe('ProgressLesson', () => {
 
   it('shows teacher description when viewing as teacher', () => {
     const wrapper = shallow(
-      <ProgressLesson {...defaultProps} viewAs={ViewType.Teacher} />
+      <ProgressLesson {...defaultProps} viewAs={ViewType.Instructor} />
     );
     assert.equal(
       wrapper.find('ProgressLessonContent').props().description,
@@ -294,7 +294,7 @@ describe('ProgressLesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        viewAs={ViewType.Teacher}
+        viewAs={ViewType.Instructor}
         lesson={fakeLesson('lesson1', 1, true)}
         lockableAuthorizedLoaded={true}
         lockableAuthorized={false}
@@ -310,7 +310,7 @@ describe('ProgressLesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        viewAs={ViewType.Teacher}
+        viewAs={ViewType.Instructor}
         lesson={fakeLesson('lesson1', 1, true)}
         lockableAuthorizedLoaded={true}
         lockableAuthorized={true}
@@ -325,7 +325,7 @@ describe('ProgressLesson', () => {
     const wrapper = shallow(
       <ProgressLesson
         {...defaultProps}
-        viewAs={ViewType.Teacher}
+        viewAs={ViewType.Instructor}
         lesson={fakeLesson('lesson1', 1, true)}
         lockableAuthorizedLoaded={false}
         lockableAuthorized={null}
@@ -343,7 +343,7 @@ describe('ProgressLesson', () => {
       <ProgressLesson
         {...defaultProps}
         lesson={myLesson}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
       />
     );
     assert.equal(wrapper.find('Button').props().href, 'test-url');
@@ -352,7 +352,7 @@ describe('ProgressLesson', () => {
 
   it('does not show Lesson Resources button when viewing as a student and student_lesson_plan_html_url is null', () => {
     const wrapper = shallow(
-      <ProgressLesson {...defaultProps} viewAs={ViewType.Student} />
+      <ProgressLesson {...defaultProps} viewAs={ViewType.Participant} />
     );
     assert.equal(wrapper.find('Button').length, 0);
   });
@@ -364,7 +364,7 @@ describe('ProgressLesson', () => {
       <ProgressLesson
         {...defaultProps}
         lesson={myLesson}
-        viewAs={ViewType.Teacher}
+        viewAs={ViewType.Instructor}
       />
     );
     assert.equal(wrapper.find('Button').length, 0);

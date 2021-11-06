@@ -359,7 +359,7 @@ describe('TeacherContentToggle', () => {
 
     describe('when viewing as student', () => {
       const state = {
-        viewAs: ViewType.Student,
+        viewAs: ViewType.Participant,
         selectedSectionId: {},
         progress: {},
         teacherSections: {},
@@ -396,7 +396,7 @@ describe('TeacherContentToggle', () => {
 
     describe('when viewing as teacher', () => {
       const state = {
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         selectedSectionId: {},
         progress: {
           currentLessonId: 123,

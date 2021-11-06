@@ -13,7 +13,7 @@ import {
 
 const defaultProps = {
   announcements: [],
-  viewAs: ViewType.Teacher,
+  viewAs: ViewType.Instructor,
   width: 1000
 };
 
@@ -43,7 +43,7 @@ describe('Announcements', () => {
       <Announcements
         {...defaultProps}
         announcements={[fakeOldTeacherAnnouncement]}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
       />
     );
     assert.equal(wrapper.find(Notification).length, 0);
@@ -77,7 +77,7 @@ describe('Announcements', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
         announcements={[fakeStudentAnnouncement]}
       />
     );
@@ -88,7 +88,7 @@ describe('Announcements', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
         announcements={[
           fakeStudentAnnouncement,
           fakeTeacherAndStudentAnnouncement,

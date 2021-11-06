@@ -24,7 +24,7 @@ describe('SummaryProgressRow', () => {
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
-        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
+        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Participant}
       />
     );
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
@@ -49,7 +49,7 @@ describe('SummaryProgressRow', () => {
       <SummaryProgressRow
         {...baseProps}
         lesson={fakeLesson('Maze', 1, true)}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
         lessonIsLockedForUser={() => true}
       />
     );
@@ -75,7 +75,7 @@ describe('SummaryProgressRow', () => {
       <SummaryProgressRow
         {...baseProps}
         lesson={fakeLesson('Maze', 1, true)}
-        viewAs={ViewType.Teacher}
+        viewAs={ViewType.Instructor}
         lockableAuthorized={false}
         lessonIsLockedForUser={() => true}
       />
@@ -88,7 +88,7 @@ describe('SummaryProgressRow', () => {
       <SummaryProgressRow
         {...baseProps}
         lesson={fakeLesson('Maze', 1, true)}
-        viewAs={ViewType.Teacher}
+        viewAs={ViewType.Instructor}
         lockableAuthorized={true}
         lessonIsLockedForAllStudents={() => true}
       />
@@ -114,7 +114,7 @@ describe('SummaryProgressRow', () => {
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
         lessonIsLockedForUser={() => true}
       />
     );
@@ -129,7 +129,7 @@ describe('SummaryProgressRow', () => {
       <SummaryProgressRow
         {...baseProps}
         lesson={fakeLesson('Maze', 1, true)}
-        viewAs={ViewType.Teacher}
+        viewAs={ViewType.Instructor}
         lockableAuthorized={false}
         lessonIsLockedForUser={() => true}
       />
@@ -145,7 +145,7 @@ describe('SummaryProgressRow', () => {
       <SummaryProgressRow
         {...baseProps}
         lesson={fakeLesson('Maze', 1, true)}
-        viewAs={ViewType.Teacher}
+        viewAs={ViewType.Instructor}
         lockableAuthorized={true}
         lessonIsLockedForUser={() => false}
         lessonIsLockedForAllStudents={() => true}
@@ -161,7 +161,7 @@ describe('SummaryProgressRow', () => {
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
-        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
+        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Participant}
       />
     );
     assert.equal(
@@ -226,7 +226,7 @@ describe('SummaryProgressRow', () => {
       <SummaryProgressRow
         {...baseProps}
         lesson={fakeLesson('Maze', 1, true)}
-        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
+        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Participant}
         lessonIsLockedForUser={() => true}
       />
     );

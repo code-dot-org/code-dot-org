@@ -322,9 +322,9 @@ progress.retrieveProgress = function(scriptName, scriptData, currentLevelId) {
  * or our query string. */
 progress.initViewAs = function(store, scriptData) {
   // Default to Student, unless current user is a teacher
-  let initialViewAs = ViewType.Student;
+  let initialViewAs = ViewType.Participant;
   if (scriptData.user_type === 'teacher') {
-    initialViewAs = ViewType.Teacher;
+    initialViewAs = ViewType.Instructor;
   }
 
   // If current user is not a student (ie, a teacher or signed out), allow the

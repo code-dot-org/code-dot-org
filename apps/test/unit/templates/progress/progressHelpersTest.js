@@ -37,28 +37,28 @@ describe('progressHelpers', () => {
 
     it('returns false for hidden lessons while viewing as student', () => {
       assert.strictEqual(
-        lessonIsVisible(hiddenLesson, state, ViewType.Student),
+        lessonIsVisible(hiddenLesson, state, ViewType.Participant),
         false
       );
     });
 
     it('returns true for hidden lessons while viewing as a teacher', () => {
       assert.strictEqual(
-        lessonIsVisible(hiddenLesson, state, ViewType.Teacher),
+        lessonIsVisible(hiddenLesson, state, ViewType.Instructor),
         true
       );
     });
 
     it('returns true for non-hidden lessons while viewing as a student', () => {
       assert.strictEqual(
-        lessonIsVisible(visibleLesson, state, ViewType.Student),
+        lessonIsVisible(visibleLesson, state, ViewType.Participant),
         true
       );
     });
 
     it('returns true for non-hidden lessons while viewing as a teacher', () => {
       assert.strictEqual(
-        lessonIsVisible(visibleLesson, state, ViewType.Teacher),
+        lessonIsVisible(visibleLesson, state, ViewType.Instructor),
         true
       );
     });
@@ -71,7 +71,7 @@ describe('progressHelpers', () => {
         }
       };
       assert.strictEqual(
-        lessonIsVisible(lockableLesson, localState, ViewType.Teacher),
+        lessonIsVisible(lockableLesson, localState, ViewType.Instructor),
         true
       );
     });
@@ -101,7 +101,7 @@ describe('progressHelpers', () => {
           nonLockableLesson,
           unlockedLevels,
           state,
-          ViewType.Student
+          ViewType.Participant
         ),
         false
       );
@@ -119,7 +119,7 @@ describe('progressHelpers', () => {
           lockableLesson,
           unlockedLevels,
           localState,
-          ViewType.Student
+          ViewType.Participant
         ),
         true
       );
@@ -137,7 +137,7 @@ describe('progressHelpers', () => {
           lockableLesson,
           unlockedLevels,
           localState,
-          ViewType.Teacher
+          ViewType.Instructor
         ),
         true
       );
@@ -149,7 +149,7 @@ describe('progressHelpers', () => {
           lockableLesson,
           lockedLevels,
           state,
-          ViewType.Student
+          ViewType.Participant
         ),
         true
       );

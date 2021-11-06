@@ -184,7 +184,7 @@ class Comment extends Component {
 
 export const UnconnectedComment = Comment;
 export default connect(state => ({
-  viewAsTeacher: state.viewAs === ViewType.Teacher
+  viewAsTeacher: state.viewAs === ViewType.Instructor
 }))(Comment);
 
 const styles = {
