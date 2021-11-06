@@ -13,12 +13,16 @@ export const SET_VIEW_TYPE = 'viewAs/SET_VIEW_TYPE';
 
 export default function reducer(state = ViewType.Participant, action) {
   if (action.type === SET_VIEW_TYPE) {
-    const viewType = action.viewType;
-    if (!ViewType[viewType]) {
+    let viewType = action.viewType;
+    if (viewType === 'Teacher') {
+      viewType = 'Instructor';
+    } else if (viewType === 'Student') {
+      viewType = 'Participant';
+    } else if (!ViewType[viewType]) {
       throw new Error('unknown ViewType: ' + viewType);
     }
 
-    return action.viewType;
+    return viewType;
   }
 
   return state;
