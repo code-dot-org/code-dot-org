@@ -1,27 +1,37 @@
 name 'CSA U6 q12'
 height 'auto'
 
-wrong ‘[2, 7, 3, 5, 7]’
-wrong ‘[2, 7, 7, 3, 5, 7]’
-wrong ‘[2, 7, 5, 7] ’
-right ‘[2, 3, 5] ’
-wrong '[2, 5] '
+wrong ‘`25`’
+right ‘`35`’
+wrong ‘Nothing. The code segment will not compile because `addTen` cannot accept an `Integer` parameter.’
+wrong ‘Nothing. The code segment will not compile because the value returned by `addTen` cannot be assigned to `newNumber`.’
+wrong 'Nothing. The code segment will not compile because the `int` variable `newNumber` cannot be assigned to the `Integer` variable result.'
 
 
 
 
 teacher_markdown <<MARKDOWN
-Covered in Unit 6 Lesson 10. 
+Covered in Unit 6 Lesson 2. 
 
 MARKDOWN
 
 markdown <<MARKDOWN
-Assume a list of strings. Remove all occurrences of “7” from the list. 
+Consider the following method.
 
+```
+public int addTen(int n) {
+   return n + 10;
+}
+```
 
+The following code segment appears in a method in the same class as `addTen` method.
 
-![](https://images.code.org/e3fdcb9fcb662d8d9dec639714c06ffd-image-1634924665309.png)
+```
+Integer aNumber = 25;
+int newNumber = addTen(aNumber);
+Integer result = newNumber;
+System.out.print(result);
+```
 
-If the original list is 2 7 7 3 5 7 the output will be:
-
+What, if anything, is printed as a result of executing the code segment?
 MARKDOWN

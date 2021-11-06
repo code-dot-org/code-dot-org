@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-03 17:29:16 UTC",
+    "serialized_at": "2021-11-03 23:42:32 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1641,8 +1641,20 @@
       }
     },
     {
-      "key": "c9ddc1a8-8f33-4f4d-9fa2-7715731aaae4",
+      "key": "9a82eeff-99b0-4aa3-b7ef-d10477473a79",
       "position": 1,
+      "properties": {
+        "name": "Setup",
+        "progression_name": "Setup"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a82eeff-99b0-4aa3-b7ef-d10477473a79",
+        "lesson_activity.key": "ab18acf0-dcb4-4f89-ae74-923568b0477c"
+      }
+    },
+    {
+      "key": "c9ddc1a8-8f33-4f4d-9fa2-7715731aaae4",
+      "position": 2,
       "properties": {
         "description": "**TODO:** Think about how I want to do this. Maybe with a video prediction? Like 3-Act Math - show me hooking things up and setting up the code, then ask what do you think will happen?\n\nOr maybe show the predict level first, THEN show the video of me hooking everything up! That could be cool, but it means students have incomplete information at first. Instructions would have to be \"Think to yourself first\" - then wait to watch video before the next part",
         "name": "Predict",
@@ -1655,7 +1667,7 @@
     },
     {
       "key": "eaa6fe6c-fd94-4468-8952-ee8fddb0ca2e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "name": "Skill Building",
         "progression_name": "Skill Building"
@@ -1667,7 +1679,7 @@
     },
     {
       "key": "0201b1e4-16ad-4b16-8685-52ec4bfa56e0",
-      "position": 3,
+      "position": 4,
       "properties": {
         "name": "Practice"
       },
@@ -1678,7 +1690,7 @@
     },
     {
       "key": "48e8bedd-6b38-4ee4-bdd9-3320536e19fc",
-      "position": 4,
+      "position": 5,
       "properties": {
         "name": "Assessment",
         "progression_name": "Assessment"
@@ -1690,7 +1702,7 @@
     },
     {
       "key": "7aa7d8db-ece9-4bf3-b56d-400bee1f8a2d",
-      "position": 5,
+      "position": 6,
       "properties": {
         "name": "Challenges"
       },
@@ -3850,6 +3862,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Music - P_2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -3947,6 +3962,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Functions - P_2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4344,6 +4362,31 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - Setup_2022"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "9a82eeff-99b0-4aa3-b7ef-d10477473a79"
+      },
+      "level_keys": [
+        "CSD U6 - Board Outputs - Setup_2022"
+      ]
+    },
+    {
+      "chapter": 103,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Output - P_2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4361,8 +4404,8 @@
       ]
     },
     {
-      "chapter": 103,
-      "position": 2,
+      "chapter": 104,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -4386,8 +4429,8 @@
       ]
     },
     {
-      "chapter": 104,
-      "position": 3,
+      "chapter": 105,
+      "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
@@ -4411,8 +4454,8 @@
       ]
     },
     {
-      "chapter": 105,
-      "position": 4,
+      "chapter": 106,
+      "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
@@ -4436,8 +4479,8 @@
       ]
     },
     {
-      "chapter": 106,
-      "position": 5,
+      "chapter": 107,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4461,11 +4504,14 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 108,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 - Physical Input - P_2022"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4483,7 +4529,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 109,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4508,7 +4554,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 110,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -5744,6 +5790,18 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "csdu6-playground",
         "activity_section.key": "514759cb-16ca-4177-bd34-01a18c5f127c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U6 - Board Outputs - Setup_2022",
+        "script_level.level_keys": [
+          "CSD U6 - Board Outputs - Setup_2022"
+        ],
+        "lesson.key": "lesson-17",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "9a82eeff-99b0-4aa3-b7ef-d10477473a79"
       }
     },
     {

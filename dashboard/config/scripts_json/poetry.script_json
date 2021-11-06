@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-02 21:21:32 UTC",
+    "serialized_at": "2021-11-05 18:59:39 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -899,10 +899,28 @@
       }
     },
     {
-      "key": "299bc3f1-d10b-4f05-abd0-1c9d89fadf46",
+      "key": "4550afa5-f25b-4ccf-9b9b-8f45e0b39de6",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Combining Text & Variables video.\n**Do This:** Distribute one Lesson 3 handout per student.\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Plan Your Short Story App” slide"
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Level 2, 3, 4 - Practice slide and allow students to complete the levels on their own. \n\n\n\n\n**Circulate:** These next levels require students to drag out variable blocks from the toolbox and snap them into the correct place in the start code. Then, students practice matching variable labels to get the program to work correctly. "
+      },
+      "seeding_key": {
+        "activity_section.key": "4550afa5-f25b-4ccf-9b9b-8f45e0b39de6",
+        "lesson_activity.key": "0e2d6876-3f9f-4831-ae8a-c17c66460511"
+      }
+    },
+    {
+      "key": "299bc3f1-d10b-4f05-abd0-1c9d89fadf46",
+      "position": 4,
+      "properties": {
+        "duration": "15",
+        "name": "Build an App",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "[Optional] This is an opportunity to practice pair programming. Students can be paired and given two different tasks: Student 1 (The Driver) can be the coder who navigates the platform and types, and Student 2 (The Navigator) can help plan and direct what will go in the app. The pair can collaborate on their short story or Student 2 can come up with the story for Student 1 to code. \n\nShow this [video](https://www.youtube.com/watch?v=vgkahOzFH2Q) to students about Pair Programming before they begin. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "299bc3f1-d10b-4f05-abd0-1c9d89fadf46",
@@ -910,8 +928,19 @@
       }
     },
     {
+      "key": "bbca3deb-b5f5-429a-bd85-9ab1f389f104",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Combining Text & Variables video.\n\n**Do This:** Distribute one Lesson 3 handout per student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Plan Your Short Story App” slide"
+      },
+      "seeding_key": {
+        "activity_section.key": "bbca3deb-b5f5-429a-bd85-9ab1f389f104",
+        "lesson_activity.key": "0e2d6876-3f9f-4831-ae8a-c17c66460511"
+      }
+    },
+    {
       "key": "8a16994d-6ad9-49c0-bcbc-9e5f90dd6c20",
-      "position": 4,
+      "position": 6,
       "properties": {
         "description": "Now you’ll be creating an interactive app that prompts the user for 2 animals, stores each answer in a variable, then creates new lines with texts and variables to tell the user a story. \n\nUse this handout to write a short story. First, choose two animals, then give the story a title and write your first name as the author. Then you’ll write a short, 4-line story, about the two animals. \n",
         "remarks": true
@@ -923,7 +952,7 @@
     },
     {
       "key": "a8b2374e-2fcc-4489-aac6-847c4115e097",
-      "position": 5,
+      "position": 7,
       "properties": {
         "description": "**Circulate:** Walk around the room to help students who are feeling stuck writing their stories. Refer back to the story prompts and have students pick one, then talk out what might happen in that scenario between the two characters. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Regroup and display the next slide. \n"
       },
@@ -934,7 +963,7 @@
     },
     {
       "key": "55eb1f1d-daa7-4a97-8dec-6f0beab195bb",
-      "position": 6,
+      "position": 8,
       "properties": {
         "description": "Now that you’re done writing your story, you will circle all the times you mentioned animal1 and draw a box around all the times you mentioned animal2. These will represent the times you’re going to use the variables animal1 and animal2 in your code.\n\n**Circulate:** Make sure students are circling and drawing a box around the correct animals. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Regroup and display the next slide. ",
         "remarks": true
@@ -1575,6 +1604,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_exemplar1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1596,6 +1628,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_prompt"
+        ],
         "progression": "Main Progression"
       },
       "bonus": false,
@@ -1618,6 +1653,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_concatenation1"
+        ],
         "progression": "Main Progression"
       },
       "bonus": false,
@@ -1640,6 +1678,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_concatenation4"
+        ],
         "progression": "Main Progression"
       },
       "bonus": false,
@@ -1662,6 +1703,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_concatenation2"
+        ],
         "progression": "Main Progression"
       },
       "bonus": false,
@@ -1684,6 +1728,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_start"
+        ],
         "progression": "Main Progression"
       },
       "bonus": false,
@@ -1706,6 +1753,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_finish"
+        ],
         "progression": "Main Progression"
       },
       "bonus": false,
@@ -2086,6 +2136,27 @@
       "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_module_modeling_exemple"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "poetry",
+        "activity_section.key": "ae6120a5-7b68-4016-8288-fe73c64ebea0"
+      },
+      "level_keys": [
+        "poetry_module_modeling_exemple"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 2,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2526,6 +2597,18 @@
         "lesson_group.key": "",
         "script.name": "poetry",
         "activity_section.key": "f615a078-e4a9-4202-9b55-72a123151097"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_module_modeling_exemple",
+        "script_level.level_keys": [
+          "poetry_module_modeling_exemple"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "poetry",
+        "activity_section.key": "ae6120a5-7b68-4016-8288-fe73c64ebea0"
       }
     },
     {
