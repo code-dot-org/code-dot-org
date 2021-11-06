@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class InstructorAndParticipantAudienceTests < ActiveSupport::TestCase
+class CourseTypesTests < ActiveSupport::TestCase
   setup do
     @student = create :student
     @teacher = create :teacher
