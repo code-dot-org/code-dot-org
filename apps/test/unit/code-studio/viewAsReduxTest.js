@@ -74,7 +74,7 @@ describe('viewAs redux', () => {
       codeStudioUtils.updateQueryParam.restore();
     });
 
-    it('changes the window location when changing to Student with user_id', () => {
+    it('changes the window location when changing to particpant with user_id', () => {
       const action = changeViewType(ViewType.Participant);
       store.dispatch(action);
       assert(codeStudioUtils.queryParams.calledWith('user_id'));

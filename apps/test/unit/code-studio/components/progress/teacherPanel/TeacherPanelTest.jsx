@@ -152,7 +152,7 @@ describe('TeacherPanel', () => {
       expect(wrapper.find(StudentTable)).to.have.length(0);
     });
 
-    it('does not display StudentTable for view page as student', () => {
+    it('does not display StudentTable for view page as participant', () => {
       const wrapper = setUp({
         viewAs: ViewType.Participant,
         students: students
