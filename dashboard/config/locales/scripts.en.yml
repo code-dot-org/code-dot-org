@@ -22258,6 +22258,8 @@ en:
           lessons:
             new lesson:
               name: lesson display name
+            lesson-2:
+              name: new lesson 1
           lesson_groups:
             lesson group:
               display_name: lesson group display name
@@ -22976,8 +22978,12 @@ en:
               description_teacher: Students explore using `compareTo()` to check if `String`s are in alphabetical order. Students then work on their Neighborhood Lit Fest Project, focusing specifically on the tasks they have on their Project Planning Board.
             lesson-9:
               name: Solving Problems with Strings
+              description_student: 'You combine your knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. You then participate in a peer feedback session and reflect on your progress on your Neighborhood Lit Fest Project. '
+              description_teacher: Students combine their knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. Students then participate in a peer feedback session and reflect on their progress on their Neighborhood Lit Fest Project.
             lesson-10:
               name: Solving Problems with ArrayLists
+              description_student: You apply standard algorithms you wrote for 1D and 2D arrays to `ArrayList`s. You implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in your Neighborhood Lit Fest Project.
+              description_teacher: Students apply standard algorithms they wrote for 1D and 2D arrays to `ArrayList`s. Students implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in their Neighborhood Lit Fest Project.
             lesson-11:
               name: Neighborhood Lit Fest Project - Day 1
               description_student: You continue to develop your Neighborhood Lit Fest Project to create a story, poetry, song, or another form of literature based on analysis of work from your favorite author or artist. You first self-assess your work to evaluate your progress in completing project requirements, then write acceptance criteria for a feature in your project that a peer will test. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project.
@@ -26909,3 +26915,41 @@ en:
           description_short: ''
           description: This unit contains the CS Discoveries Post-Course Survey. This unit can be assigned after students complete their final unit in CS Discoveries.
           student_description: This unit contains a survey for when your class is finished with the units in CS Discoveries. Your teacher will tell you when it's time to take this survey.
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: Module 1 - Getting Started
+          lesson_groups: {}
+          name: csa-pl-test
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-pl-module-1-test:
+          lessons: {}
+          lesson_groups: {}
+          name: csa-pl-module-1-test
+          title: Orientation to Code.org and CSA
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-pl-module-2-test:
+          lessons: {}
+          lesson_groups: {}
+          name: csa-pl-module-2-test
+          title: Navigating Code.org’s tools
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-pl-module-3-test:
+          lessons: {}
+          lesson_groups: {}
+          name: csa-pl-module-3-test
+          title: Support with text-based programming
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

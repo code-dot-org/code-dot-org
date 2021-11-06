@@ -118,7 +118,10 @@ describe('ManageStudentsTable', () => {
     it('does renders ManageCodeReviewGroups button if section is assigned CSA', () => {
       const wrapper = shallow(
         <UnconnectedManageStudentsTable
-          {...{...DEFAULT_PROPS, ...{isSectionAssignedCSA: true}}}
+          {...{
+            ...DEFAULT_PROPS,
+            ...{isSectionAssignedCSA: true, sectionId: 101}
+          }}
         />
       );
       expect(wrapper.find(ManageCodeReviewGroups).exists()).to.be.true;

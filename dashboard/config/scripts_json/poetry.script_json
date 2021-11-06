@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-04 00:59:34 UTC",
+    "serialized_at": "2021-11-05 18:59:39 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2138,6 +2138,27 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "poetry_module_modeling_exemple"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "poetry",
+        "activity_section.key": "ae6120a5-7b68-4016-8288-fe73c64ebea0"
+      },
+      "level_keys": [
+        "poetry_module_modeling_exemple"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "poetry_module_share"
         ]
@@ -2576,6 +2597,18 @@
         "lesson_group.key": "",
         "script.name": "poetry",
         "activity_section.key": "f615a078-e4a9-4202-9b55-72a123151097"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "poetry_module_modeling_exemple",
+        "script_level.level_keys": [
+          "poetry_module_modeling_exemple"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "poetry",
+        "activity_section.key": "ae6120a5-7b68-4016-8288-fe73c64ebea0"
       }
     },
     {
