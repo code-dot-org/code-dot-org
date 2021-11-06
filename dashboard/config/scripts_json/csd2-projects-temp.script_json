@@ -4,13 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true,
       "pilot_experiment": "csd-noaccess"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:04 UTC",
+    "serialized_at": "2021-11-06 00:01:18 UTC",
     "published_state": "pilot",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csd2-projects-temp"
     }
@@ -61,21 +64,62 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "d44573d3-353f-4839-855f-8560bc86a70f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d44573d3-353f-4839-855f-8560bc86a70f",
+        "lesson.key": "HTML  Project",
+        "lesson_group.key": "",
+        "script.name": "csd2-projects-temp"
+      }
+    },
+    {
+      "key": "2221cd20-5482-4b3f-83b0-0a8bc00c372e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2221cd20-5482-4b3f-83b0-0a8bc00c372e",
+        "lesson.key": "CSS Project",
+        "lesson_group.key": "",
+        "script.name": "csd2-projects-temp"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "693763b6-dde5-4dbb-994f-4e58f2cf34ca",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "693763b6-dde5-4dbb-994f-4e58f2cf34ca",
+        "lesson_activity.key": "d44573d3-353f-4839-855f-8560bc86a70f"
+      }
+    },
+    {
+      "key": "3c596968-c40d-455e-bcb5-408288dcab11",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3c596968-c40d-455e-bcb5-408288dcab11",
+        "lesson_activity.key": "2221cd20-5482-4b3f-83b0-0a8bc00c372e"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 HTML miniproject choices"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -84,7 +128,8 @@
         ],
         "lesson.key": "HTML  Project",
         "lesson_group.key": "",
-        "script.name": "csd2-projects-temp"
+        "script.name": "csd2-projects-temp",
+        "activity_section.key": "693763b6-dde5-4dbb-994f-4e58f2cf34ca"
       },
       "level_keys": [
         "CSD U2 HTML miniproject choices"
@@ -93,12 +138,9 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 CSS miniproject choices"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -107,7 +149,8 @@
         ],
         "lesson.key": "CSS Project",
         "lesson_group.key": "",
-        "script.name": "csd2-projects-temp"
+        "script.name": "csd2-projects-temp",
+        "activity_section.key": "3c596968-c40d-455e-bcb5-408288dcab11"
       },
       "level_keys": [
         "CSD U2 CSS miniproject choices"
@@ -123,7 +166,8 @@
         ],
         "lesson.key": "HTML  Project",
         "lesson_group.key": "",
-        "script.name": "csd2-projects-temp"
+        "script.name": "csd2-projects-temp",
+        "activity_section.key": "693763b6-dde5-4dbb-994f-4e58f2cf34ca"
       }
     },
     {
@@ -134,7 +178,8 @@
         ],
         "lesson.key": "CSS Project",
         "lesson_group.key": "",
-        "script.name": "csd2-projects-temp"
+        "script.name": "csd2-projects-temp",
+        "activity_section.key": "3c596968-c40d-455e-bcb5-408288dcab11"
       }
     }
   ],

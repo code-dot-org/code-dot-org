@@ -4,13 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:19 UTC",
+    "serialized_at": "2021-11-06 00:01:19 UTC",
     "published_state": "beta",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp-pre-survey"
     }
@@ -121,21 +124,154 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "3b3bb848-afb8-4750-bba7-3351733ca555",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3b3bb848-afb8-4750-bba7-3351733ca555",
+        "lesson.key": "Anonymous student pre-survey",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    },
+    {
+      "key": "9cd9e27a-edb5-4e9c-82bf-eed4d228f69a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9cd9e27a-edb5-4e9c-82bf-eed4d228f69a",
+        "lesson.key": "Unit 1 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    },
+    {
+      "key": "132bf462-7314-4202-a30b-33a5ea607d58",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "132bf462-7314-4202-a30b-33a5ea607d58",
+        "lesson.key": "NEW Unit 1 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    },
+    {
+      "key": "6e746536-6fb2-472d-81f8-c0ce5859736a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6e746536-6fb2-472d-81f8-c0ce5859736a",
+        "lesson.key": "Unit 3 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    },
+    {
+      "key": "63362197-a802-4e73-b939-e525ff35d6dd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "63362197-a802-4e73-b939-e525ff35d6dd",
+        "lesson.key": "Unit 4 Chapter 1 Assessment",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    },
+    {
+      "key": "20d4942f-55dd-4782-9ca5-cdce2c4e3e62",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "20d4942f-55dd-4782-9ca5-cdce2c4e3e62",
+        "lesson.key": "Anonymous student survey: Taking the AP exam",
+        "lesson_group.key": "",
+        "script.name": "csp-pre-survey"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "9f4b3122-eb24-4044-a5a0-28314823f874",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9f4b3122-eb24-4044-a5a0-28314823f874",
+        "lesson_activity.key": "3b3bb848-afb8-4750-bba7-3351733ca555"
+      }
+    },
+    {
+      "key": "3b56ebc9-e268-4309-bc82-190373275cb4",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3b56ebc9-e268-4309-bc82-190373275cb4",
+        "lesson_activity.key": "9cd9e27a-edb5-4e9c-82bf-eed4d228f69a"
+      }
+    },
+    {
+      "key": "81cdb18a-b05d-47cc-b2bc-88eeb91da27c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "81cdb18a-b05d-47cc-b2bc-88eeb91da27c",
+        "lesson_activity.key": "132bf462-7314-4202-a30b-33a5ea607d58"
+      }
+    },
+    {
+      "key": "dca9a977-b749-42d3-b182-424cd206ad7a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "dca9a977-b749-42d3-b182-424cd206ad7a",
+        "lesson_activity.key": "6e746536-6fb2-472d-81f8-c0ce5859736a"
+      }
+    },
+    {
+      "key": "1b7c9176-9fef-4390-b500-ea77f95368ec",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1b7c9176-9fef-4390-b500-ea77f95368ec",
+        "lesson_activity.key": "63362197-a802-4e73-b939-e525ff35d6dd"
+      }
+    },
+    {
+      "key": "eeb928a8-8413-4d14-99ff-de14bdbb5dea",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "eeb928a8-8413-4d14-99ff-de14bdbb5dea",
+        "lesson_activity.key": "20d4942f-55dd-4782-9ca5-cdce2c4e3e62"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP pre-assessment survey"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -144,7 +280,8 @@
         ],
         "lesson.key": "Anonymous student pre-survey",
         "lesson_group.key": "",
-        "script.name": "csp-pre-survey"
+        "script.name": "csp-pre-survey",
+        "activity_section.key": "9f4b3122-eb24-4044-a5a0-28314823f874"
       },
       "level_keys": [
         "CSP pre-assessment survey"
@@ -153,13 +290,9 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 1 Ch1 Cumulative Assessment MC Group",
-          "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2"
-        ],
         "variants": {
           "CSP Unit 1 Ch1 Cumulative Assessment MC Group": {
             "active": false
@@ -174,7 +307,8 @@
         ],
         "lesson.key": "Unit 1 Chapter 1 Assessment",
         "lesson_group.key": "",
-        "script.name": "csp-pre-survey"
+        "script.name": "csp-pre-survey",
+        "activity_section.key": "3b56ebc9-e268-4309-bc82-190373275cb4"
       },
       "level_keys": [
         "CSP Unit 1 Ch1 Cumulative Assessment MC Group",
@@ -184,12 +318,9 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 2 Ch2 Cumulative Assessment MC"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -198,7 +329,8 @@
         ],
         "lesson.key": "NEW Unit 1 Chapter 1 Assessment",
         "lesson_group.key": "",
-        "script.name": "csp-pre-survey"
+        "script.name": "csp-pre-survey",
+        "activity_section.key": "81cdb18a-b05d-47cc-b2bc-88eeb91da27c"
       },
       "level_keys": [
         "CSP Unit 2 Ch2 Cumulative Assessment MC"
@@ -207,12 +339,9 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 3 Ch1 Cumulative Assessment MC Group"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -221,7 +350,8 @@
         ],
         "lesson.key": "Unit 3 Chapter 1 Assessment",
         "lesson_group.key": "",
-        "script.name": "csp-pre-survey"
+        "script.name": "csp-pre-survey",
+        "activity_section.key": "dca9a977-b749-42d3-b182-424cd206ad7a"
       },
       "level_keys": [
         "CSP Unit 3 Ch1 Cumulative Assessment MC Group"
@@ -230,12 +360,9 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 4 Ch1 Cumulative Assessment MC"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -244,7 +371,8 @@
         ],
         "lesson.key": "Unit 4 Chapter 1 Assessment",
         "lesson_group.key": "",
-        "script.name": "csp-pre-survey"
+        "script.name": "csp-pre-survey",
+        "activity_section.key": "1b7c9176-9fef-4390-b500-ea77f95368ec"
       },
       "level_keys": [
         "CSP Unit 4 Ch1 Cumulative Assessment MC"
@@ -253,12 +381,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csp_ap_questions"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -267,7 +392,8 @@
         ],
         "lesson.key": "Anonymous student survey: Taking the AP exam",
         "lesson_group.key": "",
-        "script.name": "csp-pre-survey"
+        "script.name": "csp-pre-survey",
+        "activity_section.key": "eeb928a8-8413-4d14-99ff-de14bdbb5dea"
       },
       "level_keys": [
         "csp_ap_questions"
@@ -283,7 +409,8 @@
         ],
         "lesson.key": "Anonymous student pre-survey",
         "lesson_group.key": "",
-        "script.name": "csp-pre-survey"
+        "script.name": "csp-pre-survey",
+        "activity_section.key": "9f4b3122-eb24-4044-a5a0-28314823f874"
       }
     },
     {
@@ -295,7 +422,8 @@
         ],
         "lesson.key": "Unit 1 Chapter 1 Assessment",
         "lesson_group.key": "",
-        "script.name": "csp-pre-survey"
+        "script.name": "csp-pre-survey",
+        "activity_section.key": "3b56ebc9-e268-4309-bc82-190373275cb4"
       }
     },
     {
@@ -307,7 +435,8 @@
         ],
         "lesson.key": "Unit 1 Chapter 1 Assessment",
         "lesson_group.key": "",
-        "script.name": "csp-pre-survey"
+        "script.name": "csp-pre-survey",
+        "activity_section.key": "3b56ebc9-e268-4309-bc82-190373275cb4"
       }
     },
     {
@@ -318,7 +447,8 @@
         ],
         "lesson.key": "NEW Unit 1 Chapter 1 Assessment",
         "lesson_group.key": "",
-        "script.name": "csp-pre-survey"
+        "script.name": "csp-pre-survey",
+        "activity_section.key": "81cdb18a-b05d-47cc-b2bc-88eeb91da27c"
       }
     },
     {
@@ -329,7 +459,8 @@
         ],
         "lesson.key": "Unit 3 Chapter 1 Assessment",
         "lesson_group.key": "",
-        "script.name": "csp-pre-survey"
+        "script.name": "csp-pre-survey",
+        "activity_section.key": "dca9a977-b749-42d3-b182-424cd206ad7a"
       }
     },
     {
@@ -340,7 +471,8 @@
         ],
         "lesson.key": "Unit 4 Chapter 1 Assessment",
         "lesson_group.key": "",
-        "script.name": "csp-pre-survey"
+        "script.name": "csp-pre-survey",
+        "activity_section.key": "1b7c9176-9fef-4390-b500-ea77f95368ec"
       }
     },
     {
@@ -351,7 +483,8 @@
         ],
         "lesson.key": "Anonymous student survey: Taking the AP exam",
         "lesson_group.key": "",
-        "script.name": "csp-pre-survey"
+        "script.name": "csp-pre-survey",
+        "activity_section.key": "eeb928a8-8413-4d14-99ff-de14bdbb5dea"
       }
     }
   ],

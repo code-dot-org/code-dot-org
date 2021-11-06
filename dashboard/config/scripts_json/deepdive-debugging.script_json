@@ -5,13 +5,16 @@
     "login_required": false,
     "properties": {
       "is_course": true,
+      "is_migrated": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "deepdive-debugging",
-    "serialized_at": "2021-10-25 22:53:50 UTC",
+    "serialized_at": "2021-11-06 00:01:58 UTC",
     "published_state": "preview",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "deepdive-debugging"
     }
@@ -62,21 +65,62 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "005f3c87-9202-4473-88de-b9fe81a25cbd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "005f3c87-9202-4473-88de-b9fe81a25cbd",
+        "lesson.key": "Debugging for AB Educators",
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      }
+    },
+    {
+      "key": "02819403-f7be-4826-ad97-407b9b3f2b32",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "02819403-f7be-4826-ad97-407b9b3f2b32",
+        "lesson.key": "Debugging for CDEF Educators",
+        "lesson_group.key": "",
+        "script.name": "deepdive-debugging"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "27b0c3dd-b79d-4e10-b7c1-80a74640a304",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "27b0c3dd-b79d-4e10-b7c1-80a74640a304",
+        "lesson_activity.key": "005f3c87-9202-4473-88de-b9fe81a25cbd"
+      }
+    },
+    {
+      "key": "6f4cd18c-f8e8-494a-a855-7b1a1d8b4b20",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6f4cd18c-f8e8-494a-a855-7b1a1d8b4b20",
+        "lesson_activity.key": "02819403-f7be-4826-ad97-407b9b3f2b32"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AB_debug_Laurel1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -85,7 +129,8 @@
         ],
         "lesson.key": "Debugging for AB Educators",
         "lesson_group.key": "",
-        "script.name": "deepdive-debugging"
+        "script.name": "deepdive-debugging",
+        "activity_section.key": "27b0c3dd-b79d-4e10-b7c1-80a74640a304"
       },
       "level_keys": [
         "AB_debug_Laurel1"
@@ -94,12 +139,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AB_Debug_Artist1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -108,7 +150,8 @@
         ],
         "lesson.key": "Debugging for AB Educators",
         "lesson_group.key": "",
-        "script.name": "deepdive-debugging"
+        "script.name": "deepdive-debugging",
+        "activity_section.key": "27b0c3dd-b79d-4e10-b7c1-80a74640a304"
       },
       "level_keys": [
         "AB_Debug_Artist1"
@@ -117,12 +160,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AB_Debug_PlayLab3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -131,7 +171,8 @@
         ],
         "lesson.key": "Debugging for AB Educators",
         "lesson_group.key": "",
-        "script.name": "deepdive-debugging"
+        "script.name": "deepdive-debugging",
+        "activity_section.key": "27b0c3dd-b79d-4e10-b7c1-80a74640a304"
       },
       "level_keys": [
         "AB_Debug_PlayLab3"
@@ -140,12 +181,9 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CDEF_debugging_farmer1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -154,7 +192,8 @@
         ],
         "lesson.key": "Debugging for CDEF Educators",
         "lesson_group.key": "",
-        "script.name": "deepdive-debugging"
+        "script.name": "deepdive-debugging",
+        "activity_section.key": "6f4cd18c-f8e8-494a-a855-7b1a1d8b4b20"
       },
       "level_keys": [
         "CDEF_debugging_farmer1"
@@ -163,12 +202,9 @@
     {
       "chapter": 5,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CDEF_debugging_Artist1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -177,7 +213,8 @@
         ],
         "lesson.key": "Debugging for CDEF Educators",
         "lesson_group.key": "",
-        "script.name": "deepdive-debugging"
+        "script.name": "deepdive-debugging",
+        "activity_section.key": "6f4cd18c-f8e8-494a-a855-7b1a1d8b4b20"
       },
       "level_keys": [
         "CDEF_debugging_Artist1"
@@ -186,12 +223,9 @@
     {
       "chapter": 6,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CDEF_debugging_flappy2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -200,7 +234,8 @@
         ],
         "lesson.key": "Debugging for CDEF Educators",
         "lesson_group.key": "",
-        "script.name": "deepdive-debugging"
+        "script.name": "deepdive-debugging",
+        "activity_section.key": "6f4cd18c-f8e8-494a-a855-7b1a1d8b4b20"
       },
       "level_keys": [
         "CDEF_debugging_flappy2"
@@ -216,7 +251,8 @@
         ],
         "lesson.key": "Debugging for AB Educators",
         "lesson_group.key": "",
-        "script.name": "deepdive-debugging"
+        "script.name": "deepdive-debugging",
+        "activity_section.key": "27b0c3dd-b79d-4e10-b7c1-80a74640a304"
       }
     },
     {
@@ -227,7 +263,8 @@
         ],
         "lesson.key": "Debugging for AB Educators",
         "lesson_group.key": "",
-        "script.name": "deepdive-debugging"
+        "script.name": "deepdive-debugging",
+        "activity_section.key": "27b0c3dd-b79d-4e10-b7c1-80a74640a304"
       }
     },
     {
@@ -238,7 +275,8 @@
         ],
         "lesson.key": "Debugging for AB Educators",
         "lesson_group.key": "",
-        "script.name": "deepdive-debugging"
+        "script.name": "deepdive-debugging",
+        "activity_section.key": "27b0c3dd-b79d-4e10-b7c1-80a74640a304"
       }
     },
     {
@@ -249,7 +287,8 @@
         ],
         "lesson.key": "Debugging for CDEF Educators",
         "lesson_group.key": "",
-        "script.name": "deepdive-debugging"
+        "script.name": "deepdive-debugging",
+        "activity_section.key": "6f4cd18c-f8e8-494a-a855-7b1a1d8b4b20"
       }
     },
     {
@@ -260,7 +299,8 @@
         ],
         "lesson.key": "Debugging for CDEF Educators",
         "lesson_group.key": "",
-        "script.name": "deepdive-debugging"
+        "script.name": "deepdive-debugging",
+        "activity_section.key": "6f4cd18c-f8e8-494a-a855-7b1a1d8b4b20"
       }
     },
     {
@@ -271,7 +311,8 @@
         ],
         "lesson.key": "Debugging for CDEF Educators",
         "lesson_group.key": "",
-        "script.name": "deepdive-debugging"
+        "script.name": "deepdive-debugging",
+        "activity_section.key": "6f4cd18c-f8e8-494a-a855-7b1a1d8b4b20"
       }
     }
   ],

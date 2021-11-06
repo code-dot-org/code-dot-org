@@ -5,13 +5,16 @@
     "login_required": false,
     "properties": {
       "is_course": true,
+      "is_migrated": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "pixelation",
-    "serialized_at": "2021-10-25 22:53:04 UTC",
+    "serialized_at": "2021-11-06 00:03:10 UTC",
     "published_state": "preview",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "pixelation"
     }
@@ -107,21 +110,131 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "1ff09ab3-6b2a-4d98-a027-1adcd34bcdc8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1ff09ab3-6b2a-4d98-a027-1adcd34bcdc8",
+        "lesson.key": "Black & White Pixelation Tutorial",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    },
+    {
+      "key": "c9493a12-bac9-4e42-9b0c-8cbbd0372175",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9493a12-bac9-4e42-9b0c-8cbbd0372175",
+        "lesson.key": "Black & White Pixelation Freeplay",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    },
+    {
+      "key": "c9d7c8b5-29c3-42b8-a4c0-2a9c4bf895cb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9d7c8b5-29c3-42b8-a4c0-2a9c4bf895cb",
+        "lesson.key": "Color Pixelation Tutorial",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    },
+    {
+      "key": "447e0a64-32d4-4430-b5ce-553bb8bb7c62",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "447e0a64-32d4-4430-b5ce-553bb8bb7c62",
+        "lesson.key": "Color Pixelation Examples",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    },
+    {
+      "key": "f2e00a2c-8af5-4deb-91fe-272a8ee6eecf",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f2e00a2c-8af5-4deb-91fe-272a8ee6eecf",
+        "lesson.key": "Color Pixelation Freeplay",
+        "lesson_group.key": "",
+        "script.name": "pixelation"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "7244a46f-a2ef-4a31-855c-2b7395d60544",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7244a46f-a2ef-4a31-855c-2b7395d60544",
+        "lesson_activity.key": "1ff09ab3-6b2a-4d98-a027-1adcd34bcdc8"
+      }
+    },
+    {
+      "key": "0505ba2c-0003-4ccb-bdea-840d98c425a8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0505ba2c-0003-4ccb-bdea-840d98c425a8",
+        "lesson_activity.key": "c9493a12-bac9-4e42-9b0c-8cbbd0372175"
+      }
+    },
+    {
+      "key": "8f287a00-8cf4-4191-8259-07a188ca220d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8f287a00-8cf4-4191-8259-07a188ca220d",
+        "lesson_activity.key": "c9d7c8b5-29c3-42b8-a4c0-2a9c4bf895cb"
+      }
+    },
+    {
+      "key": "294d0943-6a8c-4655-be63-a05103821ca5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "294d0943-6a8c-4655-be63-a05103821ca5",
+        "lesson_activity.key": "447e0a64-32d4-4430-b5ce-553bb8bb7c62"
+      }
+    },
+    {
+      "key": "45c78962-a97c-449e-97d5-ee2cbd039498",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "45c78962-a97c-449e-97d5-ee2cbd039498",
+        "lesson_activity.key": "f2e00a2c-8af5-4deb-91fe-272a8ee6eecf"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation 4x4 Empty"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -130,7 +243,8 @@
         ],
         "lesson.key": "Black & White Pixelation Tutorial",
         "lesson_group.key": "",
-        "script.name": "pixelation"
+        "script.name": "pixelation",
+        "activity_section.key": "7244a46f-a2ef-4a31-855c-2b7395d60544"
       },
       "level_keys": [
         "Pixelation 4x4 Empty"
@@ -139,12 +253,9 @@
     {
       "chapter": 2,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -153,7 +264,8 @@
         ],
         "lesson.key": "Black & White Pixelation Freeplay",
         "lesson_group.key": "",
-        "script.name": "pixelation"
+        "script.name": "pixelation",
+        "activity_section.key": "0505ba2c-0003-4ccb-bdea-840d98c425a8"
       },
       "level_keys": [
         "Pixelation 1"
@@ -162,12 +274,9 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 15 - Complete 3-bit color"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -176,7 +285,8 @@
         ],
         "lesson.key": "Color Pixelation Tutorial",
         "lesson_group.key": "",
-        "script.name": "pixelation"
+        "script.name": "pixelation",
+        "activity_section.key": "8f287a00-8cf4-4191-8259-07a188ca220d"
       },
       "level_keys": [
         "Pixelation - Lesson 15 - Complete 3-bit color"
@@ -185,12 +295,9 @@
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 15 - Color Shades"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -199,7 +306,8 @@
         ],
         "lesson.key": "Color Pixelation Tutorial",
         "lesson_group.key": "",
-        "script.name": "pixelation"
+        "script.name": "pixelation",
+        "activity_section.key": "8f287a00-8cf4-4191-8259-07a188ca220d"
       },
       "level_keys": [
         "Pixelation - Lesson 15 - Color Shades"
@@ -208,12 +316,9 @@
     {
       "chapter": 5,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 15 - Color Shades 4x4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -222,7 +327,8 @@
         ],
         "lesson.key": "Color Pixelation Tutorial",
         "lesson_group.key": "",
-        "script.name": "pixelation"
+        "script.name": "pixelation",
+        "activity_section.key": "8f287a00-8cf4-4191-8259-07a188ca220d"
       },
       "level_keys": [
         "Pixelation - Lesson 15 - Color Shades 4x4"
@@ -231,12 +337,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation Flappy"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -245,7 +348,8 @@
         ],
         "lesson.key": "Color Pixelation Examples",
         "lesson_group.key": "",
-        "script.name": "pixelation"
+        "script.name": "pixelation",
+        "activity_section.key": "294d0943-6a8c-4655-be63-a05103821ca5"
       },
       "level_keys": [
         "Pixelation Flappy"
@@ -254,12 +358,9 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation Bee"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -268,7 +369,8 @@
         ],
         "lesson.key": "Color Pixelation Examples",
         "lesson_group.key": "",
-        "script.name": "pixelation"
+        "script.name": "pixelation",
+        "activity_section.key": "294d0943-6a8c-4655-be63-a05103821ca5"
       },
       "level_keys": [
         "Pixelation Bee"
@@ -277,12 +379,9 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Mixing Colors"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -291,7 +390,8 @@
         ],
         "lesson.key": "Color Pixelation Freeplay",
         "lesson_group.key": "",
-        "script.name": "pixelation"
+        "script.name": "pixelation",
+        "activity_section.key": "45c78962-a97c-449e-97d5-ee2cbd039498"
       },
       "level_keys": [
         "Mixing Colors"
@@ -307,7 +407,8 @@
         ],
         "lesson.key": "Black & White Pixelation Tutorial",
         "lesson_group.key": "",
-        "script.name": "pixelation"
+        "script.name": "pixelation",
+        "activity_section.key": "7244a46f-a2ef-4a31-855c-2b7395d60544"
       }
     },
     {
@@ -318,7 +419,8 @@
         ],
         "lesson.key": "Black & White Pixelation Freeplay",
         "lesson_group.key": "",
-        "script.name": "pixelation"
+        "script.name": "pixelation",
+        "activity_section.key": "0505ba2c-0003-4ccb-bdea-840d98c425a8"
       }
     },
     {
@@ -329,7 +431,8 @@
         ],
         "lesson.key": "Color Pixelation Tutorial",
         "lesson_group.key": "",
-        "script.name": "pixelation"
+        "script.name": "pixelation",
+        "activity_section.key": "8f287a00-8cf4-4191-8259-07a188ca220d"
       }
     },
     {
@@ -340,7 +443,8 @@
         ],
         "lesson.key": "Color Pixelation Tutorial",
         "lesson_group.key": "",
-        "script.name": "pixelation"
+        "script.name": "pixelation",
+        "activity_section.key": "8f287a00-8cf4-4191-8259-07a188ca220d"
       }
     },
     {
@@ -351,7 +455,8 @@
         ],
         "lesson.key": "Color Pixelation Tutorial",
         "lesson_group.key": "",
-        "script.name": "pixelation"
+        "script.name": "pixelation",
+        "activity_section.key": "8f287a00-8cf4-4191-8259-07a188ca220d"
       }
     },
     {
@@ -362,7 +467,8 @@
         ],
         "lesson.key": "Color Pixelation Examples",
         "lesson_group.key": "",
-        "script.name": "pixelation"
+        "script.name": "pixelation",
+        "activity_section.key": "294d0943-6a8c-4655-be63-a05103821ca5"
       }
     },
     {
@@ -373,7 +479,8 @@
         ],
         "lesson.key": "Color Pixelation Examples",
         "lesson_group.key": "",
-        "script.name": "pixelation"
+        "script.name": "pixelation",
+        "activity_section.key": "294d0943-6a8c-4655-be63-a05103821ca5"
       }
     },
     {
@@ -384,7 +491,8 @@
         ],
         "lesson.key": "Color Pixelation Freeplay",
         "lesson_group.key": "",
-        "script.name": "pixelation"
+        "script.name": "pixelation",
+        "activity_section.key": "45c78962-a97c-449e-97d5-ee2cbd039498"
       }
     }
   ],

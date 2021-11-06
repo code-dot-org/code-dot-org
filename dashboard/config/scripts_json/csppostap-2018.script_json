@@ -41,58 +41,22 @@
         }
       ],
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-18/post-ap/{LESSON}",
-      "exclude_csf_column_in_legend": true,
-      "family_name": "csppostap",
-      "has_lesson_plan": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
-      "is_stable": true,
+      "is_migrated": true,
       "project_sharing": true,
-      "script_announcements": [
-        {
-          "notice": "No Lesson Plans for Chapter 2",
-          "details": "Chapter 2 of this unit does not currently have lesson plans available. \"Lesson Plan\" links for that chapter will not work as expected.",
-          "link": "",
-          "type": "information"
-        },
-        {
-          "notice": "What's Next After High School?",
-          "details": "Continue your journey with CS! Explore career and academic pathways, job and mentorship opportunities, and online courses available through our partners.",
-          "link": "https://code.org/student/hsgrads",
-          "type": "success",
-          "visibility": "Student-only"
-        },
-        {
-          "notice": "Computer Science Beyond High School",
-          "details": "It's the perfect time to help your students explore their next CS opportunities. These resources can help them explore pathways, internships, and online courses.",
-          "link": "https://code.org/student/hsgrads",
-          "type": "success",
-          "visibility": "Teacher-only"
-        },
-        {
-          "notice": "CS Principles Post-Course Survey for Students Now Open!",
-          "details": "Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
-          "link": "https://studio.code.org/s/csp-post-survey-2018",
-          "type": "bullhorn",
-          "visibility": "Student-only"
-        },
-        {
-          "notice": "CS Principles Post-Course Survey for Students Now Open!",
-          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
-          "link": "https://studio.code.org/s/csp-post-survey-2018",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
-      ],
       "student_detail_progress_view": true,
       "tts": true,
+      "use_legacy_lesson_plans": true,
       "version_year": "2018"
     },
     "new_name": null,
     "family_name": "csppostap",
-    "serialized_at": "2021-10-25 22:53:48 UTC",
+    "serialized_at": "2021-11-06 00:01:50 UTC",
     "published_state": null,
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csppostap-2018"
     }
@@ -408,21 +372,677 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "ef3aa7ea-5503-4be1-8ec7-cf1deacf70de",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ef3aa7ea-5503-4be1-8ec7-cf1deacf70de",
+        "lesson.key": "Intro to Data",
+        "lesson_group.key": "csp_postap_1",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "90a1aec2-d91a-4dc7-af25-b11386c5c671",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "90a1aec2-d91a-4dc7-af25-b11386c5c671",
+        "lesson.key": "Good and Bad Data Visualizations",
+        "lesson_group.key": "csp_postap_1",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "24a5926e-959e-4770-bb2d-ab97be5c2b4d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "24a5926e-959e-4770-bb2d-ab97be5c2b4d",
+        "lesson.key": "Making Data Visualizations",
+        "lesson_group.key": "csp_postap_1",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "8a790818-00f6-4c4a-9bfa-03b623661160",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8a790818-00f6-4c4a-9bfa-03b623661160",
+        "lesson.key": "Discover a Data Story",
+        "lesson_group.key": "csp_postap_1",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "354ac4ef-434b-49d8-b6d7-795f94512172",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "354ac4ef-434b-49d8-b6d7-795f94512172",
+        "lesson.key": "Cleaning Data",
+        "lesson_group.key": "csp_postap_1",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "e2d2d67d-53ad-43cb-98a1-fee4a59a2b11",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e2d2d67d-53ad-43cb-98a1-fee4a59a2b11",
+        "lesson.key": "Creating Summary Tables",
+        "lesson_group.key": "csp_postap_1",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "8007e992-cd03-4a25-bd26-a1fa718e3c74",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8007e992-cd03-4a25-bd26-a1fa718e3c74",
+        "lesson.key": "Project - Tell a Data Story",
+        "lesson_group.key": "csp_postap_1",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "07081e2a-f849-4570-b8f3-cbdc265a6920",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "07081e2a-f849-4570-b8f3-cbdc265a6920",
+        "lesson.key": "Chapter 1 Assessment",
+        "lesson_group.key": "csp_postap_1",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "ee920627-ac5f-45df-8ad6-1cecd3abca36",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ee920627-ac5f-45df-8ad6-1cecd3abca36",
+        "lesson.key": "Creating Javascript Objects",
+        "lesson_group.key": "csp_postap_2",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "72e2a010-1b04-4512-8dbd-5a4bab6284f9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "72e2a010-1b04-4512-8dbd-5a4bab6284f9",
+        "lesson.key": "Permanent Data Storage",
+        "lesson_group.key": "csp_postap_2",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "e33d4a10-5dbd-41bc-a168-96227a3f37f6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e33d4a10-5dbd-41bc-a168-96227a3f37f6",
+        "lesson.key": "Reading Records",
+        "lesson_group.key": "csp_postap_2",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "6aade4d3-b64c-4729-9f5f-37a48a076764",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6aade4d3-b64c-4729-9f5f-37a48a076764",
+        "lesson.key": "Deleting Records",
+        "lesson_group.key": "csp_postap_2",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "3d74444d-7888-455c-8934-c8cf046871b1",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d74444d-7888-455c-8934-c8cf046871b1",
+        "lesson.key": "Updating Records",
+        "lesson_group.key": "csp_postap_2",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "a94b63ea-3239-4ec4-b388-337a38704f9a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a94b63ea-3239-4ec4-b388-337a38704f9a",
+        "lesson.key": "Importing and Exporting Data",
+        "lesson_group.key": "csp_postap_2",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "3f9048ce-a632-4037-8e68-2e1ff59c0736",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3f9048ce-a632-4037-8e68-2e1ff59c0736",
+        "lesson.key": "Visualizing Data",
+        "lesson_group.key": "csp_postap_2",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "9f0a7969-5366-4ea4-a096-4f85797c18c6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9f0a7969-5366-4ea4-a096-4f85797c18c6",
+        "lesson.key": "Sample Apps",
+        "lesson_group.key": "csp_postap_2",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "7fefd4d8-840d-42c3-8d71-0c13a23ad737",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7fefd4d8-840d-42c3-8d71-0c13a23ad737",
+        "lesson.key": "Final Project",
+        "lesson_group.key": "csp_postap_2",
+        "script.name": "csppostap-2018"
+      }
+    },
+    {
+      "key": "6f870831-c883-4c87-90dd-4b50243f9fb7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6f870831-c883-4c87-90dd-4b50243f9fb7",
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csppostap-2018"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "f98b2940-587e-4aee-abe9-59ba884e9542",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "f98b2940-587e-4aee-abe9-59ba884e9542",
+        "lesson_activity.key": "ef3aa7ea-5503-4be1-8ec7-cf1deacf70de"
+      }
+    },
+    {
+      "key": "4a3f2eca-24f7-4368-b503-7025c9a11971",
+      "position": 2,
+      "properties": {
+        "name": "Quick Check-In",
+        "progression_name": "Quick Check-In"
+      },
+      "seeding_key": {
+        "activity_section.key": "4a3f2eca-24f7-4368-b503-7025c9a11971",
+        "lesson_activity.key": "ef3aa7ea-5503-4be1-8ec7-cf1deacf70de"
+      }
+    },
+    {
+      "key": "57d2280c-405f-4e30-9097-b59f3028f300",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "57d2280c-405f-4e30-9097-b59f3028f300",
+        "lesson_activity.key": "90a1aec2-d91a-4dc7-af25-b11386c5c671"
+      }
+    },
+    {
+      "key": "87946040-89d9-4d91-9c86-262ff00afa7e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Collection A: Good and Bad Visualizations"
+      },
+      "seeding_key": {
+        "activity_section.key": "87946040-89d9-4d91-9c86-262ff00afa7e",
+        "lesson_activity.key": "90a1aec2-d91a-4dc7-af25-b11386c5c671"
+      }
+    },
+    {
+      "key": "dc72d438-2e36-45e1-8797-de95b78027c3",
+      "position": 3,
+      "properties": {
+        "progression_name": "Collection B: Good and Bad Visualizations"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc72d438-2e36-45e1-8797-de95b78027c3",
+        "lesson_activity.key": "90a1aec2-d91a-4dc7-af25-b11386c5c671"
+      }
+    },
+    {
+      "key": "febb4511-1dcd-49d6-8447-8035c633c1b8",
+      "position": 4,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "febb4511-1dcd-49d6-8447-8035c633c1b8",
+        "lesson_activity.key": "90a1aec2-d91a-4dc7-af25-b11386c5c671"
+      }
+    },
+    {
+      "key": "0080e87e-6d30-43ac-9a92-0b2a3467c2ba",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "0080e87e-6d30-43ac-9a92-0b2a3467c2ba",
+        "lesson_activity.key": "24a5926e-959e-4770-bb2d-ab97be5c2b4d"
+      }
+    },
+    {
+      "key": "32a08154-3a0e-48ba-8fa4-b40b690412a4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Downloading the Data Set"
+      },
+      "seeding_key": {
+        "activity_section.key": "32a08154-3a0e-48ba-8fa4-b40b690412a4",
+        "lesson_activity.key": "24a5926e-959e-4770-bb2d-ab97be5c2b4d"
+      }
+    },
+    {
+      "key": "978e648e-b17d-4a4c-91f3-544c7124c8c1",
+      "position": 3,
+      "properties": {
+        "progression_name": "Making a Scatter Plot"
+      },
+      "seeding_key": {
+        "activity_section.key": "978e648e-b17d-4a4c-91f3-544c7124c8c1",
+        "lesson_activity.key": "24a5926e-959e-4770-bb2d-ab97be5c2b4d"
+      }
+    },
+    {
+      "key": "3b28c5d7-3156-4612-842f-7448b3c9f4e7",
+      "position": 4,
+      "properties": {
+        "progression_name": "Making a Line Chart"
+      },
+      "seeding_key": {
+        "activity_section.key": "3b28c5d7-3156-4612-842f-7448b3c9f4e7",
+        "lesson_activity.key": "24a5926e-959e-4770-bb2d-ab97be5c2b4d"
+      }
+    },
+    {
+      "key": "d9168c31-689b-49e0-a140-fc3c379064d9",
+      "position": 5,
+      "properties": {
+        "progression_name": "Making a Bar Chart"
+      },
+      "seeding_key": {
+        "activity_section.key": "d9168c31-689b-49e0-a140-fc3c379064d9",
+        "lesson_activity.key": "24a5926e-959e-4770-bb2d-ab97be5c2b4d"
+      }
+    },
+    {
+      "key": "50bc9684-ed08-48f5-a3f5-a56d0790bd01",
+      "position": 6,
+      "properties": {
+        "progression_name": "Editing Chart Appearance"
+      },
+      "seeding_key": {
+        "activity_section.key": "50bc9684-ed08-48f5-a3f5-a56d0790bd01",
+        "lesson_activity.key": "24a5926e-959e-4770-bb2d-ab97be5c2b4d"
+      }
+    },
+    {
+      "key": "5cac0f6a-4170-4b67-8b22-ddb86f4ff256",
+      "position": 7,
+      "properties": {
+        "progression_name": "Making Data Visualizations - Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "5cac0f6a-4170-4b67-8b22-ddb86f4ff256",
+        "lesson_activity.key": "24a5926e-959e-4770-bb2d-ab97be5c2b4d"
+      }
+    },
+    {
+      "key": "af6d6838-9e27-494c-bdda-eb48ea395814",
+      "position": 8,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "af6d6838-9e27-494c-bdda-eb48ea395814",
+        "lesson_activity.key": "24a5926e-959e-4770-bb2d-ab97be5c2b4d"
+      }
+    },
+    {
+      "key": "f59f9036-6d89-4ce9-87fe-68832975f71e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "f59f9036-6d89-4ce9-87fe-68832975f71e",
+        "lesson_activity.key": "8a790818-00f6-4c4a-9bfa-03b623661160"
+      }
+    },
+    {
+      "key": "b9282f31-1e36-4917-9429-08aaeae8d9b9",
+      "position": 2,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "b9282f31-1e36-4917-9429-08aaeae8d9b9",
+        "lesson_activity.key": "8a790818-00f6-4c4a-9bfa-03b623661160"
+      }
+    },
+    {
+      "key": "da9d8955-dd5f-4194-9176-2c41a366b992",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "da9d8955-dd5f-4194-9176-2c41a366b992",
+        "lesson_activity.key": "354ac4ef-434b-49d8-b6d7-795f94512172"
+      }
+    },
+    {
+      "key": "8995407b-ada2-4a21-b954-e2b1f242050f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Getting to Know Your Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "8995407b-ada2-4a21-b954-e2b1f242050f",
+        "lesson_activity.key": "354ac4ef-434b-49d8-b6d7-795f94512172"
+      }
+    },
+    {
+      "key": "0c2621e9-ab42-499a-889f-cda2bf3926c9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Cleaning Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "0c2621e9-ab42-499a-889f-cda2bf3926c9",
+        "lesson_activity.key": "354ac4ef-434b-49d8-b6d7-795f94512172"
+      }
+    },
+    {
+      "key": "e59c92aa-838e-46ba-ab3f-e6e270120e92",
+      "position": 4,
+      "properties": {
+        "progression_name": "Categorizing Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "e59c92aa-838e-46ba-ab3f-e6e270120e92",
+        "lesson_activity.key": "354ac4ef-434b-49d8-b6d7-795f94512172"
+      }
+    },
+    {
+      "key": "9570410f-068a-4d35-b403-3d00e3dd69e4",
+      "position": 5,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "9570410f-068a-4d35-b403-3d00e3dd69e4",
+        "lesson_activity.key": "354ac4ef-434b-49d8-b6d7-795f94512172"
+      }
+    },
+    {
+      "key": "3087381d-eeed-4dce-8d71-f3a6f515defa",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "3087381d-eeed-4dce-8d71-f3a6f515defa",
+        "lesson_activity.key": "e2d2d67d-53ad-43cb-98a1-fee4a59a2b11"
+      }
+    },
+    {
+      "key": "538ff75e-9765-4181-8433-844c4368953c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Making Pivot Tables Part 1 - The Basics"
+      },
+      "seeding_key": {
+        "activity_section.key": "538ff75e-9765-4181-8433-844c4368953c",
+        "lesson_activity.key": "e2d2d67d-53ad-43cb-98a1-fee4a59a2b11"
+      }
+    },
+    {
+      "key": "de47bcb9-2443-456c-acb1-cc816bf156a3",
+      "position": 3,
+      "properties": {
+        "progression_name": "Making Pivot Tables Part 2 - Manipulation and Visualizations"
+      },
+      "seeding_key": {
+        "activity_section.key": "de47bcb9-2443-456c-acb1-cc816bf156a3",
+        "lesson_activity.key": "e2d2d67d-53ad-43cb-98a1-fee4a59a2b11"
+      }
+    },
+    {
+      "key": "f3e084c8-e53e-46e6-8a09-40ad2858e530",
+      "position": 4,
+      "properties": {
+        "progression_name": "Making Pivot Tables Part 3"
+      },
+      "seeding_key": {
+        "activity_section.key": "f3e084c8-e53e-46e6-8a09-40ad2858e530",
+        "lesson_activity.key": "e2d2d67d-53ad-43cb-98a1-fee4a59a2b11"
+      }
+    },
+    {
+      "key": "7ce24cb6-ddbe-4325-aabf-76d0ffbd42ee",
+      "position": 5,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ce24cb6-ddbe-4325-aabf-76d0ffbd42ee",
+        "lesson_activity.key": "e2d2d67d-53ad-43cb-98a1-fee4a59a2b11"
+      }
+    },
+    {
+      "key": "9c438bf5-ef98-44ff-90d5-4444175ac12e",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c438bf5-ef98-44ff-90d5-4444175ac12e",
+        "lesson_activity.key": "8007e992-cd03-4a25-bd26-a1fa718e3c74"
+      }
+    },
+    {
+      "key": "7e715e2e-1bec-473e-9b3f-7419357bd568",
+      "position": 1,
+      "properties": {
+        "progression_name": "Pre-test reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e715e2e-1bec-473e-9b3f-7419357bd568",
+        "lesson_activity.key": "07081e2a-f849-4570-b8f3-cbdc265a6920"
+      }
+    },
+    {
+      "key": "2aef73b9-4837-4362-b189-6d1bae068dfb",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2aef73b9-4837-4362-b189-6d1bae068dfb",
+        "lesson_activity.key": "07081e2a-f849-4570-b8f3-cbdc265a6920"
+      }
+    },
+    {
+      "key": "5e140e08-7a8a-4633-8b19-5497e1d41e31",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31",
+        "lesson_activity.key": "ee920627-ac5f-45df-8ad6-1cecd3abca36"
+      }
+    },
+    {
+      "key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a",
+        "lesson_activity.key": "72e2a010-1b04-4512-8dbd-5a4bab6284f9"
+      }
+    },
+    {
+      "key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5",
+        "lesson_activity.key": "e33d4a10-5dbd-41bc-a168-96227a3f37f6"
+      }
+    },
+    {
+      "key": "2a7c0c10-a9a1-482a-a8c7-bd0fa85520bc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2a7c0c10-a9a1-482a-a8c7-bd0fa85520bc",
+        "lesson_activity.key": "6aade4d3-b64c-4729-9f5f-37a48a076764"
+      }
+    },
+    {
+      "key": "8af581bd-4244-40bf-bb36-5af3ffd99310",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8af581bd-4244-40bf-bb36-5af3ffd99310",
+        "lesson_activity.key": "3d74444d-7888-455c-8934-c8cf046871b1"
+      }
+    },
+    {
+      "key": "03a88832-59f5-4894-b0ef-950acbe7bd12",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "03a88832-59f5-4894-b0ef-950acbe7bd12",
+        "lesson_activity.key": "a94b63ea-3239-4ec4-b388-337a38704f9a"
+      }
+    },
+    {
+      "key": "a1b18219-9b32-41a1-8f3e-0af3ab541f69",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a1b18219-9b32-41a1-8f3e-0af3ab541f69",
+        "lesson_activity.key": "3f9048ce-a632-4037-8e68-2e1ff59c0736"
+      }
+    },
+    {
+      "key": "69a4742a-f728-42c2-8ed1-7cb54d705ee3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "69a4742a-f728-42c2-8ed1-7cb54d705ee3",
+        "lesson_activity.key": "9f0a7969-5366-4ea4-a096-4f85797c18c6"
+      }
+    },
+    {
+      "key": "59092d39-12aa-481f-83cb-650155ed786a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "59092d39-12aa-481f-83cb-650155ed786a",
+        "lesson_activity.key": "7fefd4d8-840d-42c3-8d71-0c13a23ad737"
+      }
+    },
+    {
+      "key": "cd588fd6-d5f7-4c03-a1f2-d943db61a1b4",
+      "position": 1,
+      "properties": {
+        "name": "Post-Course Survey Instructions",
+        "progression_name": "Post-Course Survey Instructions"
+      },
+      "seeding_key": {
+        "activity_section.key": "cd588fd6-d5f7-4c03-a1f2-d943db61a1b4",
+        "lesson_activity.key": "6f870831-c883-4c87-90dd-4b50243f9fb7"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U2L07 SFLP"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -432,7 +1052,8 @@
         ],
         "lesson.key": "Intro to Data",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "f98b2940-587e-4aee-abe9-59ba884e9542"
       },
       "level_keys": [
         "CSP U2L07 SFLP"
@@ -441,12 +1062,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csp-pulse-check-survey-3-levelgroup-U2Ch2_2018"
-        ],
         "progression": "Quick Check-In"
       },
       "bonus": false,
@@ -456,7 +1074,8 @@
         ],
         "lesson.key": "Intro to Data",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "4a3f2eca-24f7-4368-b503-7025c9a11971"
       },
       "level_keys": [
         "csp-pulse-check-survey-3-levelgroup-U2Ch2_2018"
@@ -465,12 +1084,9 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U2L10 SFLP"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -480,7 +1096,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "57d2280c-405f-4e30-9097-b59f3028f300"
       },
       "level_keys": [
         "CSP U2L10 SFLP"
@@ -489,12 +1106,9 @@
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Collection A: Good and Bad Visualizations_2018"
-        ],
         "progression": "Collection A: Good and Bad Visualizations"
       },
       "bonus": false,
@@ -504,7 +1118,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "87946040-89d9-4d91-9c86-262ff00afa7e"
       },
       "level_keys": [
         "Collection A: Good and Bad Visualizations_2018"
@@ -513,12 +1128,9 @@
     {
       "chapter": 5,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Collection B: Good and Bad Visualizations_2018"
-        ],
         "progression": "Collection B: Good and Bad Visualizations"
       },
       "bonus": false,
@@ -528,7 +1140,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "dc72d438-2e36-45e1-8797-de95b78027c3"
       },
       "level_keys": [
         "Collection B: Good and Bad Visualizations_2018"
@@ -537,12 +1150,9 @@
     {
       "chapter": 6,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L10 FR why best worst viz_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -552,7 +1162,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "febb4511-1dcd-49d6-8447-8035c633c1b8"
       },
       "level_keys": [
         "U2L10 FR why best worst viz_2018"
@@ -561,12 +1172,9 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U2L11 SFLP"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -576,7 +1184,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "0080e87e-6d30-43ac-9a92-0b2a3467c2ba"
       },
       "level_keys": [
         "CSP U2L11 SFLP"
@@ -585,12 +1194,9 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Downloading the Data Set_2018"
-        ],
         "progression": "Downloading the Data Set"
       },
       "bonus": false,
@@ -600,7 +1206,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "32a08154-3a0e-48ba-8fa4-b40b690412a4"
       },
       "level_keys": [
         "Downloading the Data Set_2018"
@@ -609,12 +1216,9 @@
     {
       "chapter": 9,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Making a Scatter Plot_2018"
-        ],
         "progression": "Making a Scatter Plot"
       },
       "bonus": false,
@@ -624,7 +1228,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "978e648e-b17d-4a4c-91f3-544c7124c8c1"
       },
       "level_keys": [
         "Making a Scatter Plot_2018"
@@ -633,12 +1238,9 @@
     {
       "chapter": 10,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Making a Line Chart_2018"
-        ],
         "progression": "Making a Line Chart"
       },
       "bonus": false,
@@ -648,7 +1250,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "3b28c5d7-3156-4612-842f-7448b3c9f4e7"
       },
       "level_keys": [
         "Making a Line Chart_2018"
@@ -657,12 +1260,9 @@
     {
       "chapter": 11,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Making a Bar Chart_2018"
-        ],
         "progression": "Making a Bar Chart"
       },
       "bonus": false,
@@ -672,7 +1272,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "d9168c31-689b-49e0-a140-fc3c379064d9"
       },
       "level_keys": [
         "Making a Bar Chart_2018"
@@ -681,12 +1282,9 @@
     {
       "chapter": 12,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Editing Chart Appearance_2018"
-        ],
         "progression": "Editing Chart Appearance"
       },
       "bonus": false,
@@ -696,7 +1294,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "50bc9684-ed08-48f5-a3f5-a56d0790bd01"
       },
       "level_keys": [
         "Editing Chart Appearance_2018"
@@ -705,12 +1304,9 @@
     {
       "chapter": 13,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Making Data Visualizations - Free Play_2018"
-        ],
         "progression": "Making Data Visualizations - Free Play"
       },
       "bonus": false,
@@ -720,7 +1316,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5cac0f6a-4170-4b67-8b22-ddb86f4ff256"
       },
       "level_keys": [
         "U4 - Making Data Visualizations - Free Play_2018"
@@ -729,12 +1326,9 @@
     {
       "chapter": 14,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L10 FR describe what you made from lesson prompt_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -744,7 +1338,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "af6d6838-9e27-494c-bdda-eb48ea395814"
       },
       "level_keys": [
         "U2L10 FR describe what you made from lesson prompt_2018"
@@ -753,12 +1348,9 @@
     {
       "chapter": 15,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U2L12 SFLP"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -768,7 +1360,8 @@
         ],
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "f59f9036-6d89-4ce9-87fe-68832975f71e"
       },
       "level_keys": [
         "CSP U2L12 SFLP"
@@ -777,12 +1370,9 @@
     {
       "chapter": 16,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L12 FR reflection on collaboration_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -792,7 +1382,8 @@
         ],
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "b9282f31-1e36-4917-9429-08aaeae8d9b9"
       },
       "level_keys": [
         "U2L12 FR reflection on collaboration_2018"
@@ -801,12 +1392,9 @@
     {
       "chapter": 17,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U2L13 SFLP"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -816,7 +1404,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "da9d8955-dd5f-4194-9176-2c41a366b992"
       },
       "level_keys": [
         "CSP U2L13 SFLP"
@@ -825,12 +1414,9 @@
     {
       "chapter": 18,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Getting to Know Your Data_2018"
-        ],
         "progression": "Getting to Know Your Data"
       },
       "bonus": false,
@@ -840,7 +1426,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "8995407b-ada2-4a21-b954-e2b1f242050f"
       },
       "level_keys": [
         "Getting to Know Your Data_2018"
@@ -849,12 +1436,9 @@
     {
       "chapter": 19,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Cleaning Data_2018"
-        ],
         "progression": "Cleaning Data"
       },
       "bonus": false,
@@ -864,7 +1448,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "0c2621e9-ab42-499a-889f-cda2bf3926c9"
       },
       "level_keys": [
         "Cleaning Data_2018"
@@ -873,12 +1458,9 @@
     {
       "chapter": 20,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Categorizing Data_2018"
-        ],
         "progression": "Categorizing Data"
       },
       "bonus": false,
@@ -888,7 +1470,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "e59c92aa-838e-46ba-ab3f-e6e270120e92"
       },
       "level_keys": [
         "Categorizing Data_2018"
@@ -897,12 +1480,9 @@
     {
       "chapter": 21,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L13 Cleaning Data MC_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -912,7 +1492,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "9570410f-068a-4d35-b403-3d00e3dd69e4"
       },
       "level_keys": [
         "U2L13 Cleaning Data MC_2018"
@@ -921,12 +1502,9 @@
     {
       "chapter": 22,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L13 FR Reflection data analysis objective_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -936,7 +1514,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "9570410f-068a-4d35-b403-3d00e3dd69e4"
       },
       "level_keys": [
         "U2L13 FR Reflection data analysis objective_2018"
@@ -945,12 +1524,9 @@
     {
       "chapter": 23,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U2L14 SFLP"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -960,7 +1536,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "3087381d-eeed-4dce-8d71-f3a6f515defa"
       },
       "level_keys": [
         "CSP U2L14 SFLP"
@@ -969,12 +1546,9 @@
     {
       "chapter": 24,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Making Pivot Tables Part 1 - The Basics_2018"
-        ],
         "progression": "Making Pivot Tables Part 1 - The Basics"
       },
       "bonus": false,
@@ -984,7 +1558,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "538ff75e-9765-4181-8433-844c4368953c"
       },
       "level_keys": [
         "Making Pivot Tables Part 1 - The Basics_2018"
@@ -993,12 +1568,9 @@
     {
       "chapter": 25,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Making Pivot Tables Part 2 - Manipulation and Visualization_2018"
-        ],
         "progression": "Making Pivot Tables Part 2 - Manipulation and Visualizations"
       },
       "bonus": false,
@@ -1008,7 +1580,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "de47bcb9-2443-456c-acb1-cc816bf156a3"
       },
       "level_keys": [
         "Making Pivot Tables Part 2 - Manipulation and Visualization_2018"
@@ -1017,12 +1590,9 @@
     {
       "chapter": 26,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4L08v2 Making Pivot Tables Part 3_2018"
-        ],
         "progression": "Making Pivot Tables Part 3"
       },
       "bonus": false,
@@ -1032,7 +1602,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "f3e084c8-e53e-46e6-8a09-40ad2858e530"
       },
       "level_keys": [
         "U4L08v2 Making Pivot Tables Part 3_2018"
@@ -1041,12 +1612,9 @@
     {
       "chapter": 27,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L14 Summary Tables MC_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1056,7 +1624,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "7ce24cb6-ddbe-4325-aabf-76d0ffbd42ee"
       },
       "level_keys": [
         "U2L14 Summary Tables MC_2018"
@@ -1065,12 +1634,9 @@
     {
       "chapter": 28,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U2L15 SFLP"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1080,7 +1646,8 @@
         ],
         "lesson.key": "Project - Tell a Data Story",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "9c438bf5-ef98-44ff-90d5-4444175ac12e"
       },
       "level_keys": [
         "CSP U2L15 SFLP"
@@ -1089,13 +1656,9 @@
     {
       "chapter": 29,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp_affirmation_control_2_2018",
-          "csp_affirmation_intervention_2_2018"
-        ],
         "progression": "Pre-test reflection",
         "variants": {
           "csp_affirmation_control_2_2018": {
@@ -1121,7 +1684,8 @@
         ],
         "lesson.key": "Chapter 1 Assessment",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "7e715e2e-1bec-473e-9b3f-7419357bd568"
       },
       "level_keys": [
         "csp_affirmation_control_2_2018",
@@ -1131,12 +1695,9 @@
     {
       "chapter": 30,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 2 Ch2 Cumulative Assessment MC_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1145,7 +1706,8 @@
         ],
         "lesson.key": "Chapter 1 Assessment",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "2aef73b9-4837-4362-b189-6d1bae068dfb"
       },
       "level_keys": [
         "CSP Unit 2 Ch2 Cumulative Assessment MC_2018"
@@ -1154,12 +1716,9 @@
     {
       "chapter": 31,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4L02 Student Lesson Introduction Video_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1168,7 +1727,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       },
       "level_keys": [
         "U4L02 Student Lesson Introduction Video_2018"
@@ -1177,12 +1737,9 @@
     {
       "chapter": 32,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Objects - eventParameter_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1191,7 +1748,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       },
       "level_keys": [
         "U4 - Objects - eventParameter_2018"
@@ -1200,12 +1758,9 @@
     {
       "chapter": 33,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Objects - dotNotation_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1214,7 +1769,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       },
       "level_keys": [
         "U4 - Objects - dotNotation_2018"
@@ -1223,12 +1779,9 @@
     {
       "chapter": 34,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Objects - createDotNotation_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1237,7 +1790,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       },
       "level_keys": [
         "U4 - Objects - createDotNotation_2018"
@@ -1246,12 +1800,9 @@
     {
       "chapter": 35,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Objects - arraysOfObjects_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1260,7 +1811,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       },
       "level_keys": [
         "U4 - Objects - arraysOfObjects_2018"
@@ -1269,12 +1821,9 @@
     {
       "chapter": 36,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Objects - accessingPropertiesInArray_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1283,7 +1832,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       },
       "level_keys": [
         "U4 - Objects - accessingPropertiesInArray_2018"
@@ -1292,12 +1842,9 @@
     {
       "chapter": 37,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Objects - exemplarContactsApp_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1306,7 +1853,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       },
       "level_keys": [
         "U4 - Objects - exemplarContactsApp_2018"
@@ -1315,12 +1863,9 @@
     {
       "chapter": 38,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Objects - readStarterCode_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1329,7 +1874,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       },
       "level_keys": [
         "U4 - Objects - readStarterCode_2018"
@@ -1338,12 +1884,9 @@
     {
       "chapter": 39,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Objects - createContactsData_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1352,7 +1895,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       },
       "level_keys": [
         "U4 - Objects - createContactsData_2018"
@@ -1361,12 +1905,9 @@
     {
       "chapter": 40,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Objects - showContact1_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1375,7 +1916,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       },
       "level_keys": [
         "U4 - Objects - showContact1_2018"
@@ -1384,12 +1926,9 @@
     {
       "chapter": 41,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Objects - showContact2_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1398,7 +1937,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       },
       "level_keys": [
         "U4 - Objects - showContact2_2018"
@@ -1407,12 +1947,9 @@
     {
       "chapter": 42,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Objects - showContact3_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1421,7 +1958,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       },
       "level_keys": [
         "U4 - Objects - showContact3_2018"
@@ -1430,12 +1968,9 @@
     {
       "chapter": 43,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Objects - pullValues_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1444,7 +1979,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       },
       "level_keys": [
         "U4 - Objects - pullValues_2018"
@@ -1453,12 +1989,9 @@
     {
       "chapter": 44,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Objects - createContactObject_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1467,7 +2000,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       },
       "level_keys": [
         "U4 - Objects - createContactObject_2018"
@@ -1476,12 +2010,9 @@
     {
       "chapter": 45,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 15,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Objects - resetIndexAndShow_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1490,7 +2021,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       },
       "level_keys": [
         "U4 - Objects - resetIndexAndShow_2018"
@@ -1499,12 +2031,9 @@
     {
       "chapter": 46,
       "position": 16,
-      "activity_section_position": null,
+      "activity_section_position": 16,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Objects - showSampleImage_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1513,7 +2042,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       },
       "level_keys": [
         "U4 - Objects - showSampleImage_2018"
@@ -1522,12 +2052,9 @@
     {
       "chapter": 47,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4L03 Student Lesson Introduction_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1536,7 +2063,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       },
       "level_keys": [
         "U4L03 Student Lesson Introduction_2018"
@@ -1545,12 +2073,9 @@
     {
       "chapter": 48,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - CreateRecord - 1_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1559,7 +2084,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       },
       "level_keys": [
         "U4 - CreateRecord - 1_2018"
@@ -1568,12 +2094,9 @@
     {
       "chapter": 49,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - CreateRecord - 2_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1582,7 +2105,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       },
       "level_keys": [
         "U4 - CreateRecord - 2_2018"
@@ -1591,12 +2115,9 @@
     {
       "chapter": 50,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - CreateRecord - 2.5_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1605,7 +2126,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       },
       "level_keys": [
         "U4 - CreateRecord - 2.5_2018"
@@ -1614,12 +2136,9 @@
     {
       "chapter": 51,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - CreateRecord - 3_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1628,7 +2147,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       },
       "level_keys": [
         "U4 - CreateRecord - 3_2018"
@@ -1637,12 +2157,9 @@
     {
       "chapter": 52,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - CreateRecord - 4_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1651,7 +2168,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       },
       "level_keys": [
         "U4 - CreateRecord - 4_2018"
@@ -1660,12 +2178,9 @@
     {
       "chapter": 53,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - CreateRecord - 5_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1674,7 +2189,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       },
       "level_keys": [
         "U4 - CreateRecord - 5_2018"
@@ -1683,12 +2199,9 @@
     {
       "chapter": 54,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Edit Data Table by Hand_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1697,7 +2210,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       },
       "level_keys": [
         "U4 - Edit Data Table by Hand_2018"
@@ -1706,12 +2220,9 @@
     {
       "chapter": 55,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - debug column names are case sensitive_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1720,7 +2231,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       },
       "level_keys": [
         "U4 - debug column names are case sensitive_2018"
@@ -1729,12 +2241,9 @@
     {
       "chapter": 56,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Add Row By Hand_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1743,7 +2252,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       },
       "level_keys": [
         "U4 - Add Row By Hand_2018"
@@ -1752,12 +2262,9 @@
     {
       "chapter": 57,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - add createRecord to contacts App_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1766,7 +2273,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       },
       "level_keys": [
         "U4 - add createRecord to contacts App_2018"
@@ -1775,12 +2283,9 @@
     {
       "chapter": 58,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - fix contacts by hand in data table_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1789,7 +2294,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       },
       "level_keys": [
         "U4 - fix contacts by hand in data table_2018"
@@ -1798,12 +2304,9 @@
     {
       "chapter": 59,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - last stage test adding contcts_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1812,7 +2315,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       },
       "level_keys": [
         "U4 - last stage test adding contcts_2018"
@@ -1821,12 +2325,9 @@
     {
       "chapter": 60,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4L04 Student Lesson Introduction_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1835,7 +2336,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       },
       "level_keys": [
         "U4L04 Student Lesson Introduction_2018"
@@ -1844,12 +2346,9 @@
     {
       "chapter": 61,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Read Record - 1_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1858,7 +2357,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       },
       "level_keys": [
         "U4 - Read Record - 1_2018"
@@ -1867,12 +2367,9 @@
     {
       "chapter": 62,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Read Record - 1.2_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1881,7 +2378,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       },
       "level_keys": [
         "U4 - Read Record - 1.2_2018"
@@ -1890,12 +2388,9 @@
     {
       "chapter": 63,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Read Record - 1.3_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1904,7 +2399,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       },
       "level_keys": [
         "U4 - Read Record - 1.3_2018"
@@ -1913,12 +2409,9 @@
     {
       "chapter": 64,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Read Record - 2_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1927,7 +2420,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       },
       "level_keys": [
         "U4 - Read Record - 2_2018"
@@ -1936,12 +2430,9 @@
     {
       "chapter": 65,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Read Record - 3_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1950,7 +2441,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       },
       "level_keys": [
         "U4 - Read Record - 3_2018"
@@ -1959,12 +2451,9 @@
     {
       "chapter": 66,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Read Record - 4.1_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1973,7 +2462,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       },
       "level_keys": [
         "U4 - Read Record - 4.1_2018"
@@ -1982,12 +2472,9 @@
     {
       "chapter": 67,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Read Record - 5_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1996,7 +2483,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       },
       "level_keys": [
         "U4 - Read Record - 5_2018"
@@ -2005,12 +2493,9 @@
     {
       "chapter": 68,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - ReadRecords - Contacts App 1_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2019,7 +2504,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       },
       "level_keys": [
         "U4 - ReadRecords - Contacts App 1_2018"
@@ -2028,12 +2514,9 @@
     {
       "chapter": 69,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Read Record - Local vs Remote Data External_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2042,7 +2525,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       },
       "level_keys": [
         "U4 - Read Record - Local vs Remote Data External_2018"
@@ -2051,12 +2535,9 @@
     {
       "chapter": 70,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - ReadRecords - Contacts App 2_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2065,7 +2546,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       },
       "level_keys": [
         "U4 - ReadRecords - Contacts App 2_2018"
@@ -2074,12 +2556,9 @@
     {
       "chapter": 71,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - ReadRecords - Contacts App 3_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2088,7 +2567,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       },
       "level_keys": [
         "U4 - ReadRecords - Contacts App 3_2018"
@@ -2097,12 +2577,9 @@
     {
       "chapter": 72,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - deleteRecord - Student Introduction_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2111,7 +2588,8 @@
         ],
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "2a7c0c10-a9a1-482a-a8c7-bd0fa85520bc"
       },
       "level_keys": [
         "U6 - deleteRecord - Student Introduction_2018"
@@ -2120,12 +2598,9 @@
     {
       "chapter": 73,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Unique Ids Explanation_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2134,7 +2609,8 @@
         ],
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "2a7c0c10-a9a1-482a-a8c7-bd0fa85520bc"
       },
       "level_keys": [
         "U4 - Unique Ids Explanation_2018"
@@ -2143,12 +2619,9 @@
     {
       "chapter": 74,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - deleteRecords 0_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2157,7 +2630,8 @@
         ],
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "2a7c0c10-a9a1-482a-a8c7-bd0fa85520bc"
       },
       "level_keys": [
         "U4 - deleteRecords 0_2018"
@@ -2166,12 +2640,9 @@
     {
       "chapter": 75,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - deleteRecords 1_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2180,7 +2651,8 @@
         ],
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "2a7c0c10-a9a1-482a-a8c7-bd0fa85520bc"
       },
       "level_keys": [
         "U4 - deleteRecords 1_2018"
@@ -2189,12 +2661,9 @@
     {
       "chapter": 76,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - deleteRecords 2 delete object_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2203,7 +2672,8 @@
         ],
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "2a7c0c10-a9a1-482a-a8c7-bd0fa85520bc"
       },
       "level_keys": [
         "U4 - deleteRecords 2 delete object_2018"
@@ -2212,12 +2682,9 @@
     {
       "chapter": 77,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - ReadRecords - Contacts App 4_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2226,7 +2693,8 @@
         ],
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "2a7c0c10-a9a1-482a-a8c7-bd0fa85520bc"
       },
       "level_keys": [
         "U4 - ReadRecords - Contacts App 4_2018"
@@ -2235,12 +2703,9 @@
     {
       "chapter": 78,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - ReadRecords - Contacts App 5 make delete work_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2249,7 +2714,8 @@
         ],
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "2a7c0c10-a9a1-482a-a8c7-bd0fa85520bc"
       },
       "level_keys": [
         "U4 - ReadRecords - Contacts App 5 make delete work_2018"
@@ -2258,12 +2724,9 @@
     {
       "chapter": 79,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - updateRecord - Student Introduction_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2272,7 +2735,8 @@
         ],
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "8af581bd-4244-40bf-bb36-5af3ffd99310"
       },
       "level_keys": [
         "U6 - updateRecord - Student Introduction_2018"
@@ -2281,12 +2745,9 @@
     {
       "chapter": 80,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - updateRecord - Default Block_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2295,7 +2756,8 @@
         ],
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "8af581bd-4244-40bf-bb36-5af3ffd99310"
       },
       "level_keys": [
         "U6 - updateRecord - Default Block_2018"
@@ -2304,12 +2766,9 @@
     {
       "chapter": 81,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - updateRecord - Callback Success Parameter_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2318,7 +2777,8 @@
         ],
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "8af581bd-4244-40bf-bb36-5af3ffd99310"
       },
       "level_keys": [
         "U6 - updateRecord - Callback Success Parameter_2018"
@@ -2327,12 +2787,9 @@
     {
       "chapter": 82,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - updateRecord - Update Nonexistent Record_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2341,7 +2798,8 @@
         ],
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "8af581bd-4244-40bf-bb36-5af3ffd99310"
       },
       "level_keys": [
         "U6 - updateRecord - Update Nonexistent Record_2018"
@@ -2350,12 +2808,9 @@
     {
       "chapter": 83,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - updateRecord - Contacts - Edit UI_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2364,7 +2819,8 @@
         ],
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "8af581bd-4244-40bf-bb36-5af3ffd99310"
       },
       "level_keys": [
         "U6 - updateRecord - Contacts - Edit UI_2018"
@@ -2373,12 +2829,9 @@
     {
       "chapter": 84,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - updateRecord - Contacts - Edit event handler_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2387,7 +2840,8 @@
         ],
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "8af581bd-4244-40bf-bb36-5af3ffd99310"
       },
       "level_keys": [
         "U6 - updateRecord - Contacts - Edit event handler_2018"
@@ -2396,12 +2850,9 @@
     {
       "chapter": 85,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - updateRecord - Contacts - Save edited contact_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2410,7 +2861,8 @@
         ],
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "8af581bd-4244-40bf-bb36-5af3ffd99310"
       },
       "level_keys": [
         "U6 - updateRecord - Contacts - Save edited contact_2018"
@@ -2419,12 +2871,9 @@
     {
       "chapter": 86,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - ImportExport - Student Introduction_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2433,7 +2882,8 @@
         ],
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "03a88832-59f5-4894-b0ef-950acbe7bd12"
       },
       "level_keys": [
         "U6 - ImportExport - Student Introduction_2018"
@@ -2442,12 +2892,9 @@
     {
       "chapter": 87,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Charts - Import Data 1_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2456,7 +2903,8 @@
         ],
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "03a88832-59f5-4894-b0ef-950acbe7bd12"
       },
       "level_keys": [
         "U4 - Charts - Import Data 1_2018"
@@ -2465,12 +2913,9 @@
     {
       "chapter": 88,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Charts - Import Data 2_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2479,7 +2924,8 @@
         ],
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "03a88832-59f5-4894-b0ef-950acbe7bd12"
       },
       "level_keys": [
         "U4 - Charts - Import Data 2_2018"
@@ -2488,12 +2934,9 @@
     {
       "chapter": 89,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Charts - Remixing Apps with Data_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2502,7 +2945,8 @@
         ],
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "03a88832-59f5-4894-b0ef-950acbe7bd12"
       },
       "level_keys": [
         "U4 - Charts - Remixing Apps with Data_2018"
@@ -2511,12 +2955,9 @@
     {
       "chapter": 90,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Charts - Export Data_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2525,7 +2966,8 @@
         ],
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "03a88832-59f5-4894-b0ef-950acbe7bd12"
       },
       "level_keys": [
         "U4 - Charts - Export Data_2018"
@@ -2534,12 +2976,9 @@
     {
       "chapter": 91,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - Charts - Student Introduction_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2548,7 +2987,8 @@
         ],
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "a1b18219-9b32-41a1-8f3e-0af3ab541f69"
       },
       "level_keys": [
         "U6 - Charts - Student Introduction_2018"
@@ -2557,12 +2997,9 @@
     {
       "chapter": 92,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Charts - drawChartFromRecords 1_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2571,7 +3008,8 @@
         ],
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "a1b18219-9b32-41a1-8f3e-0af3ab541f69"
       },
       "level_keys": [
         "U4 - Charts - drawChartFromRecords 1_2018"
@@ -2580,12 +3018,9 @@
     {
       "chapter": 93,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Charts - Scatter Chart_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2594,7 +3029,8 @@
         ],
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "a1b18219-9b32-41a1-8f3e-0af3ab541f69"
       },
       "level_keys": [
         "U4 - Charts - Scatter Chart_2018"
@@ -2603,12 +3039,9 @@
     {
       "chapter": 94,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Charts - Line Chart 1_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2617,7 +3050,8 @@
         ],
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "a1b18219-9b32-41a1-8f3e-0af3ab541f69"
       },
       "level_keys": [
         "U4 - Charts - Line Chart 1_2018"
@@ -2626,12 +3060,9 @@
     {
       "chapter": 95,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Charts - Line Chart 2_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2640,7 +3071,8 @@
         ],
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "a1b18219-9b32-41a1-8f3e-0af3ab541f69"
       },
       "level_keys": [
         "U4 - Charts - Line Chart 2_2018"
@@ -2649,12 +3081,9 @@
     {
       "chapter": 96,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Charts - drawChartFromRecords Options 1_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2663,7 +3092,8 @@
         ],
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "a1b18219-9b32-41a1-8f3e-0af3ab541f69"
       },
       "level_keys": [
         "U4 - Charts - drawChartFromRecords Options 1_2018"
@@ -2672,12 +3102,9 @@
     {
       "chapter": 97,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 - Charts - drawChartFromRecords Options 2_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2686,7 +3113,8 @@
         ],
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "a1b18219-9b32-41a1-8f3e-0af3ab541f69"
       },
       "level_keys": [
         "U4 - Charts - drawChartFromRecords Options 2_2018"
@@ -2695,12 +3123,9 @@
     {
       "chapter": 98,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - Sample Apps - Student Introduction_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2709,7 +3134,8 @@
         ],
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "69a4742a-f728-42c2-8ed1-7cb54d705ee3"
       },
       "level_keys": [
         "U6 - Sample Apps - Student Introduction_2018"
@@ -2718,12 +3144,9 @@
     {
       "chapter": 99,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - Sample Apps - User Login_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2732,7 +3155,8 @@
         ],
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "69a4742a-f728-42c2-8ed1-7cb54d705ee3"
       },
       "level_keys": [
         "U6 - Sample Apps - User Login_2018"
@@ -2741,12 +3165,9 @@
     {
       "chapter": 100,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - Sample Apps - Class Survey_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2755,7 +3176,8 @@
         ],
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "69a4742a-f728-42c2-8ed1-7cb54d705ee3"
       },
       "level_keys": [
         "U6 - Sample Apps - Class Survey_2018"
@@ -2764,12 +3186,9 @@
     {
       "chapter": 101,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - Sample Apps - Clicker Game_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2778,7 +3197,8 @@
         ],
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "69a4742a-f728-42c2-8ed1-7cb54d705ee3"
       },
       "level_keys": [
         "U6 - Sample Apps - Clicker Game_2018"
@@ -2787,12 +3207,9 @@
     {
       "chapter": 102,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - Sample Apps - Flashcards_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2801,7 +3218,8 @@
         ],
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "69a4742a-f728-42c2-8ed1-7cb54d705ee3"
       },
       "level_keys": [
         "U6 - Sample Apps - Flashcards_2018"
@@ -2810,12 +3228,9 @@
     {
       "chapter": 103,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - Final Project - Student Introduction_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2824,7 +3239,8 @@
         ],
         "lesson.key": "Final Project",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "59092d39-12aa-481f-83cb-650155ed786a"
       },
       "level_keys": [
         "U6 - Final Project - Student Introduction_2018"
@@ -2833,12 +3249,9 @@
     {
       "chapter": 104,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U6 - Final Project - Project Level_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2847,7 +3260,8 @@
         ],
         "lesson.key": "Final Project",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "59092d39-12aa-481f-83cb-650155ed786a"
       },
       "level_keys": [
         "U6 - Final Project - Project Level_2018"
@@ -2856,12 +3270,9 @@
     {
       "chapter": 105,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csp-post-survey-2018-markdown-with-link-to-survey_v2"
-        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -2871,7 +3282,8 @@
         ],
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "cd588fd6-d5f7-4c03-a1f2-d943db61a1b4"
       },
       "level_keys": [
         "csp-post-survey-2018-markdown-with-link-to-survey_v2"
@@ -2887,7 +3299,8 @@
         ],
         "lesson.key": "Intro to Data",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "f98b2940-587e-4aee-abe9-59ba884e9542"
       }
     },
     {
@@ -2898,7 +3311,8 @@
         ],
         "lesson.key": "Intro to Data",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "4a3f2eca-24f7-4368-b503-7025c9a11971"
       }
     },
     {
@@ -2909,7 +3323,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "57d2280c-405f-4e30-9097-b59f3028f300"
       }
     },
     {
@@ -2920,7 +3335,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "87946040-89d9-4d91-9c86-262ff00afa7e"
       }
     },
     {
@@ -2931,7 +3347,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "dc72d438-2e36-45e1-8797-de95b78027c3"
       }
     },
     {
@@ -2942,7 +3359,8 @@
         ],
         "lesson.key": "Good and Bad Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "febb4511-1dcd-49d6-8447-8035c633c1b8"
       }
     },
     {
@@ -2953,7 +3371,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "0080e87e-6d30-43ac-9a92-0b2a3467c2ba"
       }
     },
     {
@@ -2964,7 +3383,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "32a08154-3a0e-48ba-8fa4-b40b690412a4"
       }
     },
     {
@@ -2975,7 +3395,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "978e648e-b17d-4a4c-91f3-544c7124c8c1"
       }
     },
     {
@@ -2986,7 +3407,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "3b28c5d7-3156-4612-842f-7448b3c9f4e7"
       }
     },
     {
@@ -2997,7 +3419,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "d9168c31-689b-49e0-a140-fc3c379064d9"
       }
     },
     {
@@ -3008,7 +3431,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "50bc9684-ed08-48f5-a3f5-a56d0790bd01"
       }
     },
     {
@@ -3019,7 +3443,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5cac0f6a-4170-4b67-8b22-ddb86f4ff256"
       }
     },
     {
@@ -3030,7 +3455,8 @@
         ],
         "lesson.key": "Making Data Visualizations",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "af6d6838-9e27-494c-bdda-eb48ea395814"
       }
     },
     {
@@ -3041,7 +3467,8 @@
         ],
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "f59f9036-6d89-4ce9-87fe-68832975f71e"
       }
     },
     {
@@ -3052,7 +3479,8 @@
         ],
         "lesson.key": "Discover a Data Story",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "b9282f31-1e36-4917-9429-08aaeae8d9b9"
       }
     },
     {
@@ -3063,7 +3491,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "da9d8955-dd5f-4194-9176-2c41a366b992"
       }
     },
     {
@@ -3074,7 +3503,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "8995407b-ada2-4a21-b954-e2b1f242050f"
       }
     },
     {
@@ -3085,7 +3515,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "0c2621e9-ab42-499a-889f-cda2bf3926c9"
       }
     },
     {
@@ -3096,7 +3527,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "e59c92aa-838e-46ba-ab3f-e6e270120e92"
       }
     },
     {
@@ -3107,7 +3539,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "9570410f-068a-4d35-b403-3d00e3dd69e4"
       }
     },
     {
@@ -3118,7 +3551,8 @@
         ],
         "lesson.key": "Cleaning Data",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "9570410f-068a-4d35-b403-3d00e3dd69e4"
       }
     },
     {
@@ -3129,7 +3563,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "3087381d-eeed-4dce-8d71-f3a6f515defa"
       }
     },
     {
@@ -3140,7 +3575,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "538ff75e-9765-4181-8433-844c4368953c"
       }
     },
     {
@@ -3151,7 +3587,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "de47bcb9-2443-456c-acb1-cc816bf156a3"
       }
     },
     {
@@ -3162,7 +3599,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "f3e084c8-e53e-46e6-8a09-40ad2858e530"
       }
     },
     {
@@ -3173,7 +3611,8 @@
         ],
         "lesson.key": "Creating Summary Tables",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "7ce24cb6-ddbe-4325-aabf-76d0ffbd42ee"
       }
     },
     {
@@ -3184,7 +3623,8 @@
         ],
         "lesson.key": "Project - Tell a Data Story",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "9c438bf5-ef98-44ff-90d5-4444175ac12e"
       }
     },
     {
@@ -3196,7 +3636,8 @@
         ],
         "lesson.key": "Chapter 1 Assessment",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "7e715e2e-1bec-473e-9b3f-7419357bd568"
       }
     },
     {
@@ -3208,7 +3649,8 @@
         ],
         "lesson.key": "Chapter 1 Assessment",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "7e715e2e-1bec-473e-9b3f-7419357bd568"
       }
     },
     {
@@ -3219,7 +3661,8 @@
         ],
         "lesson.key": "Chapter 1 Assessment",
         "lesson_group.key": "csp_postap_1",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "2aef73b9-4837-4362-b189-6d1bae068dfb"
       }
     },
     {
@@ -3230,7 +3673,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       }
     },
     {
@@ -3241,7 +3685,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       }
     },
     {
@@ -3252,7 +3697,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       }
     },
     {
@@ -3263,7 +3709,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       }
     },
     {
@@ -3274,7 +3721,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       }
     },
     {
@@ -3285,7 +3733,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       }
     },
     {
@@ -3296,7 +3745,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       }
     },
     {
@@ -3307,7 +3757,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       }
     },
     {
@@ -3318,7 +3769,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       }
     },
     {
@@ -3329,7 +3781,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       }
     },
     {
@@ -3340,7 +3793,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       }
     },
     {
@@ -3351,7 +3805,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       }
     },
     {
@@ -3362,7 +3817,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       }
     },
     {
@@ -3373,7 +3829,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       }
     },
     {
@@ -3384,7 +3841,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       }
     },
     {
@@ -3395,7 +3853,8 @@
         ],
         "lesson.key": "Creating Javascript Objects",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "5e140e08-7a8a-4633-8b19-5497e1d41e31"
       }
     },
     {
@@ -3406,7 +3865,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       }
     },
     {
@@ -3417,7 +3877,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       }
     },
     {
@@ -3428,7 +3889,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       }
     },
     {
@@ -3439,7 +3901,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       }
     },
     {
@@ -3450,7 +3913,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       }
     },
     {
@@ -3461,7 +3925,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       }
     },
     {
@@ -3472,7 +3937,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       }
     },
     {
@@ -3483,7 +3949,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       }
     },
     {
@@ -3494,7 +3961,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       }
     },
     {
@@ -3505,7 +3973,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       }
     },
     {
@@ -3516,7 +3985,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       }
     },
     {
@@ -3527,7 +3997,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       }
     },
     {
@@ -3538,7 +4009,8 @@
         ],
         "lesson.key": "Permanent Data Storage",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "ea5fcdec-2b42-47b4-8a40-c02aa0cf635a"
       }
     },
     {
@@ -3549,7 +4021,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       }
     },
     {
@@ -3560,7 +4033,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       }
     },
     {
@@ -3571,7 +4045,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       }
     },
     {
@@ -3582,7 +4057,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       }
     },
     {
@@ -3593,7 +4069,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       }
     },
     {
@@ -3604,7 +4081,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       }
     },
     {
@@ -3615,7 +4093,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       }
     },
     {
@@ -3626,7 +4105,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       }
     },
     {
@@ -3637,7 +4117,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       }
     },
     {
@@ -3648,7 +4129,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       }
     },
     {
@@ -3659,7 +4141,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       }
     },
     {
@@ -3670,7 +4153,8 @@
         ],
         "lesson.key": "Reading Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "160b9adb-d27d-4f41-9a9c-8ec52e59c9d5"
       }
     },
     {
@@ -3681,7 +4165,8 @@
         ],
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "2a7c0c10-a9a1-482a-a8c7-bd0fa85520bc"
       }
     },
     {
@@ -3692,7 +4177,8 @@
         ],
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "2a7c0c10-a9a1-482a-a8c7-bd0fa85520bc"
       }
     },
     {
@@ -3703,7 +4189,8 @@
         ],
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "2a7c0c10-a9a1-482a-a8c7-bd0fa85520bc"
       }
     },
     {
@@ -3714,7 +4201,8 @@
         ],
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "2a7c0c10-a9a1-482a-a8c7-bd0fa85520bc"
       }
     },
     {
@@ -3725,7 +4213,8 @@
         ],
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "2a7c0c10-a9a1-482a-a8c7-bd0fa85520bc"
       }
     },
     {
@@ -3736,7 +4225,8 @@
         ],
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "2a7c0c10-a9a1-482a-a8c7-bd0fa85520bc"
       }
     },
     {
@@ -3747,7 +4237,8 @@
         ],
         "lesson.key": "Deleting Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "2a7c0c10-a9a1-482a-a8c7-bd0fa85520bc"
       }
     },
     {
@@ -3758,7 +4249,8 @@
         ],
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "8af581bd-4244-40bf-bb36-5af3ffd99310"
       }
     },
     {
@@ -3769,7 +4261,8 @@
         ],
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "8af581bd-4244-40bf-bb36-5af3ffd99310"
       }
     },
     {
@@ -3780,7 +4273,8 @@
         ],
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "8af581bd-4244-40bf-bb36-5af3ffd99310"
       }
     },
     {
@@ -3791,7 +4285,8 @@
         ],
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "8af581bd-4244-40bf-bb36-5af3ffd99310"
       }
     },
     {
@@ -3802,7 +4297,8 @@
         ],
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "8af581bd-4244-40bf-bb36-5af3ffd99310"
       }
     },
     {
@@ -3813,7 +4309,8 @@
         ],
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "8af581bd-4244-40bf-bb36-5af3ffd99310"
       }
     },
     {
@@ -3824,7 +4321,8 @@
         ],
         "lesson.key": "Updating Records",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "8af581bd-4244-40bf-bb36-5af3ffd99310"
       }
     },
     {
@@ -3835,7 +4333,8 @@
         ],
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "03a88832-59f5-4894-b0ef-950acbe7bd12"
       }
     },
     {
@@ -3846,7 +4345,8 @@
         ],
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "03a88832-59f5-4894-b0ef-950acbe7bd12"
       }
     },
     {
@@ -3857,7 +4357,8 @@
         ],
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "03a88832-59f5-4894-b0ef-950acbe7bd12"
       }
     },
     {
@@ -3868,7 +4369,8 @@
         ],
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "03a88832-59f5-4894-b0ef-950acbe7bd12"
       }
     },
     {
@@ -3879,7 +4381,8 @@
         ],
         "lesson.key": "Importing and Exporting Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "03a88832-59f5-4894-b0ef-950acbe7bd12"
       }
     },
     {
@@ -3890,7 +4393,8 @@
         ],
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "a1b18219-9b32-41a1-8f3e-0af3ab541f69"
       }
     },
     {
@@ -3901,7 +4405,8 @@
         ],
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "a1b18219-9b32-41a1-8f3e-0af3ab541f69"
       }
     },
     {
@@ -3912,7 +4417,8 @@
         ],
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "a1b18219-9b32-41a1-8f3e-0af3ab541f69"
       }
     },
     {
@@ -3923,7 +4429,8 @@
         ],
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "a1b18219-9b32-41a1-8f3e-0af3ab541f69"
       }
     },
     {
@@ -3934,7 +4441,8 @@
         ],
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "a1b18219-9b32-41a1-8f3e-0af3ab541f69"
       }
     },
     {
@@ -3945,7 +4453,8 @@
         ],
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "a1b18219-9b32-41a1-8f3e-0af3ab541f69"
       }
     },
     {
@@ -3956,7 +4465,8 @@
         ],
         "lesson.key": "Visualizing Data",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "a1b18219-9b32-41a1-8f3e-0af3ab541f69"
       }
     },
     {
@@ -3967,7 +4477,8 @@
         ],
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "69a4742a-f728-42c2-8ed1-7cb54d705ee3"
       }
     },
     {
@@ -3978,7 +4489,8 @@
         ],
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "69a4742a-f728-42c2-8ed1-7cb54d705ee3"
       }
     },
     {
@@ -3989,7 +4501,8 @@
         ],
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "69a4742a-f728-42c2-8ed1-7cb54d705ee3"
       }
     },
     {
@@ -4000,7 +4513,8 @@
         ],
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "69a4742a-f728-42c2-8ed1-7cb54d705ee3"
       }
     },
     {
@@ -4011,7 +4525,8 @@
         ],
         "lesson.key": "Sample Apps",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "69a4742a-f728-42c2-8ed1-7cb54d705ee3"
       }
     },
     {
@@ -4022,7 +4537,8 @@
         ],
         "lesson.key": "Final Project",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "59092d39-12aa-481f-83cb-650155ed786a"
       }
     },
     {
@@ -4033,7 +4549,8 @@
         ],
         "lesson.key": "Final Project",
         "lesson_group.key": "csp_postap_2",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "59092d39-12aa-481f-83cb-650155ed786a"
       }
     },
     {
@@ -4044,7 +4561,8 @@
         ],
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csppostap-2018"
+        "script.name": "csppostap-2018",
+        "activity_section.key": "cd588fd6-d5f7-4c03-a1f2-d943db61a1b4"
       }
     }
   ],

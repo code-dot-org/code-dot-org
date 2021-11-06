@@ -7,15 +7,18 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_course": true,
+      "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csp3-virtual",
-    "serialized_at": "2021-10-25 22:54:11 UTC",
+    "serialized_at": "2021-11-06 00:01:30 UTC",
     "published_state": "preview",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp3-virtual"
     }
@@ -127,21 +130,364 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "071dd154-56e2-4542-94f8-5cb54eeac891",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "071dd154-56e2-4542-94f8-5cb54eeac891",
+        "lesson.key": "Using Simple Commands",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-virtual"
+      }
+    },
+    {
+      "key": "44bc209b-a849-45ce-ad14-f781cce45c9a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "44bc209b-a849-45ce-ad14-f781cce45c9a",
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-virtual"
+      }
+    },
+    {
+      "key": "549771b1-b364-45c6-9671-8288f5651765",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "549771b1-b364-45c6-9671-8288f5651765",
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-virtual"
+      }
+    },
+    {
+      "key": "146814ca-4dda-4ddd-9081-5837669c3ee8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "146814ca-4dda-4ddd-9081-5837669c3ee8",
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-virtual"
+      }
+    },
+    {
+      "key": "81d15629-9aeb-456c-8740-c01f1cf5a04d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "81d15629-9aeb-456c-8740-c01f1cf5a04d",
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-virtual"
+      }
+    },
+    {
+      "key": "0451f715-0e87-4a8b-a289-f68d8ab659ef",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0451f715-0e87-4a8b-a289-f68d8ab659ef",
+        "lesson.key": "Make your own Digital Scene",
+        "lesson_group.key": "csp3_1_2018",
+        "script.name": "csp3-virtual"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "6cec60e6-a8d5-4b4f-8333-b2f1d509b567",
+      "position": 1,
+      "properties": {
+        "progression_name": "Video: Turtle Programming"
+      },
+      "seeding_key": {
+        "activity_section.key": "6cec60e6-a8d5-4b4f-8333-b2f1d509b567",
+        "lesson_activity.key": "071dd154-56e2-4542-94f8-5cb54eeac891"
+      }
+    },
+    {
+      "key": "b47153d7-5a67-484b-b476-8a857dbd3e96",
+      "position": 2,
+      "properties": {
+        "progression_name": "Using Simple Turtle Commands"
+      },
+      "seeding_key": {
+        "activity_section.key": "b47153d7-5a67-484b-b476-8a857dbd3e96",
+        "lesson_activity.key": "071dd154-56e2-4542-94f8-5cb54eeac891"
+      }
+    },
+    {
+      "key": "0cede5a6-d7be-40bc-8713-7247e0918d98",
+      "position": 3,
+      "properties": {
+        "progression_name": "Challenge: Draw a 3x3 Grid Using Turtle Commands"
+      },
+      "seeding_key": {
+        "activity_section.key": "0cede5a6-d7be-40bc-8713-7247e0918d98",
+        "lesson_activity.key": "071dd154-56e2-4542-94f8-5cb54eeac891"
+      }
+    },
+    {
+      "key": "5998ac3f-e6b0-4049-b2c2-6b6524947ed1",
+      "position": 4,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "5998ac3f-e6b0-4049-b2c2-6b6524947ed1",
+        "lesson_activity.key": "071dd154-56e2-4542-94f8-5cb54eeac891"
+      }
+    },
+    {
+      "key": "1d534df1-b6df-44c9-b41a-37f802d45039",
+      "position": 1,
+      "properties": {
+        "progression_name": "Defining and Calling Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "1d534df1-b6df-44c9-b41a-37f802d45039",
+        "lesson_activity.key": "44bc209b-a849-45ce-ad14-f781cce45c9a"
+      }
+    },
+    {
+      "key": "63513ab4-8b40-4045-b4ec-71b4948fcea6",
+      "position": 2,
+      "properties": {
+        "progression_name": "Using Functions With Turtle Commands"
+      },
+      "seeding_key": {
+        "activity_section.key": "63513ab4-8b40-4045-b4ec-71b4948fcea6",
+        "lesson_activity.key": "44bc209b-a849-45ce-ad14-f781cce45c9a"
+      }
+    },
+    {
+      "key": "c66a7461-9127-4d45-9e68-a7ba8a8b9a60",
+      "position": 3,
+      "properties": {
+        "progression_name": "Challenge: Draw a Diamond Using Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "c66a7461-9127-4d45-9e68-a7ba8a8b9a60",
+        "lesson_activity.key": "44bc209b-a849-45ce-ad14-f781cce45c9a"
+      }
+    },
+    {
+      "key": "06d7d5dc-7448-4cd5-a18e-e4807ca2572a",
+      "position": 4,
+      "properties": {
+        "progression_name": "Using Functions with Turtle Commands"
+      },
+      "seeding_key": {
+        "activity_section.key": "06d7d5dc-7448-4cd5-a18e-e4807ca2572a",
+        "lesson_activity.key": "44bc209b-a849-45ce-ad14-f781cce45c9a"
+      }
+    },
+    {
+      "key": "8cea9d30-0a92-4e30-ae15-c948f9648a3d",
+      "position": 5,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "8cea9d30-0a92-4e30-ae15-c948f9648a3d",
+        "lesson_activity.key": "44bc209b-a849-45ce-ad14-f781cce45c9a"
+      }
+    },
+    {
+      "key": "2f89c37c-e025-4397-afbb-a86b392c9a97",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introduction to Parameters"
+      },
+      "seeding_key": {
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97",
+        "lesson_activity.key": "549771b1-b364-45c6-9671-8288f5651765"
+      }
+    },
+    {
+      "key": "c95c966c-1ff0-4a44-94d9-239c24ad0b5a",
+      "position": 2,
+      "properties": {
+        "progression_name": "Make Your Own Turtle Drawing"
+      },
+      "seeding_key": {
+        "activity_section.key": "c95c966c-1ff0-4a44-94d9-239c24ad0b5a",
+        "lesson_activity.key": "549771b1-b364-45c6-9671-8288f5651765"
+      }
+    },
+    {
+      "key": "f2893129-40e0-4802-8dc4-30ca5c134af9",
+      "position": 3,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "f2893129-40e0-4802-8dc4-30ca5c134af9",
+        "lesson_activity.key": "549771b1-b364-45c6-9671-8288f5651765"
+      }
+    },
+    {
+      "key": "822bde68-3996-4b10-a087-789f174bf0d1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Functions with Parameters"
+      },
+      "seeding_key": {
+        "activity_section.key": "822bde68-3996-4b10-a087-789f174bf0d1",
+        "lesson_activity.key": "146814ca-4dda-4ddd-9081-5837669c3ee8"
+      }
+    },
+    {
+      "key": "fbdbafa4-c957-4527-a814-01a163572453",
+      "position": 2,
+      "properties": {
+        "progression_name": "Drawing Shapes With Parameters"
+      },
+      "seeding_key": {
+        "activity_section.key": "fbdbafa4-c957-4527-a814-01a163572453",
+        "lesson_activity.key": "146814ca-4dda-4ddd-9081-5837669c3ee8"
+      }
+    },
+    {
+      "key": "79a31bf5-aae6-4e62-95a7-291e1f0959ab",
+      "position": 3,
+      "properties": {
+        "progression_name": "Check Your Understanding: Defining Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "79a31bf5-aae6-4e62-95a7-291e1f0959ab",
+        "lesson_activity.key": "146814ca-4dda-4ddd-9081-5837669c3ee8"
+      }
+    },
+    {
+      "key": "2cb28657-ba87-4fb0-bc40-c4f5cfe5e5fd",
+      "position": 4,
+      "properties": {
+        "progression_name": "How to add comments to code"
+      },
+      "seeding_key": {
+        "activity_section.key": "2cb28657-ba87-4fb0-bc40-c4f5cfe5e5fd",
+        "lesson_activity.key": "146814ca-4dda-4ddd-9081-5837669c3ee8"
+      }
+    },
+    {
+      "key": "d3fdc75c-4bd2-42cb-9383-54b0982049e8",
+      "position": 5,
+      "properties": {
+        "progression_name": "Under the Sea Drawing with Parameters"
+      },
+      "seeding_key": {
+        "activity_section.key": "d3fdc75c-4bd2-42cb-9383-54b0982049e8",
+        "lesson_activity.key": "146814ca-4dda-4ddd-9081-5837669c3ee8"
+      }
+    },
+    {
+      "key": "87a49e82-43fe-47b8-80b5-cf1695759918",
+      "position": 6,
+      "properties": {
+        "progression_name": "Challenge: Continue Your Drawing With More Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "87a49e82-43fe-47b8-80b5-cf1695759918",
+        "lesson_activity.key": "146814ca-4dda-4ddd-9081-5837669c3ee8"
+      }
+    },
+    {
+      "key": "3577f298-721a-49d0-aeb6-ac1a56de96f8",
+      "position": 7,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "3577f298-721a-49d0-aeb6-ac1a56de96f8",
+        "lesson_activity.key": "146814ca-4dda-4ddd-9081-5837669c3ee8"
+      }
+    },
+    {
+      "key": "4ff983c2-3a81-46f0-8975-ed1d806a2c51",
+      "position": 1,
+      "properties": {
+        "progression_name": "Using Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "4ff983c2-3a81-46f0-8975-ed1d806a2c51",
+        "lesson_activity.key": "81d15629-9aeb-456c-8740-c01f1cf5a04d"
+      }
+    },
+    {
+      "key": "6b980c61-e5a4-4012-a251-23adbc52da05",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introduction to Loops"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b980c61-e5a4-4012-a251-23adbc52da05",
+        "lesson_activity.key": "81d15629-9aeb-456c-8740-c01f1cf5a04d"
+      }
+    },
+    {
+      "key": "ce367abd-1dd3-4208-8e70-956d5ded94f6",
+      "position": 3,
+      "properties": {
+        "progression_name": "Using Loops to Add Detail to Your Drawing"
+      },
+      "seeding_key": {
+        "activity_section.key": "ce367abd-1dd3-4208-8e70-956d5ded94f6",
+        "lesson_activity.key": "81d15629-9aeb-456c-8740-c01f1cf5a04d"
+      }
+    },
+    {
+      "key": "7ecbf269-3a6e-47b7-b3ed-4756662ab3e0",
+      "position": 4,
+      "properties": {
+        "name": "Project: Under the Sea",
+        "progression_name": "Project: Under the Sea"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ecbf269-3a6e-47b7-b3ed-4756662ab3e0",
+        "lesson_activity.key": "81d15629-9aeb-456c-8740-c01f1cf5a04d"
+      }
+    },
+    {
+      "key": "dbefb96e-6cea-41db-9767-fbdca0c37d3e",
+      "position": 1,
+      "properties": {
+        "name": "Personal Digital Scene",
+        "progression_name": "Personal Digital Scene"
+      },
+      "seeding_key": {
+        "activity_section.key": "dbefb96e-6cea-41db-9767-fbdca0c37d3e",
+        "lesson_activity.key": "0451f715-0e87-4a8b-a289-f68d8ab659ef"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp_applab_turtle_virtual"
-        ],
         "progression": "Video: Turtle Programming"
       },
       "bonus": false,
@@ -151,7 +497,8 @@
         ],
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "6cec60e6-a8d5-4b4f-8333-b2f1d509b567"
       },
       "level_keys": [
         "csp_applab_turtle_virtual"
@@ -160,12 +507,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L2 Using Simple Commands_virtual"
-        ],
         "progression": "Using Simple Turtle Commands"
       },
       "bonus": false,
@@ -175,7 +519,8 @@
         ],
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "b47153d7-5a67-484b-b476-8a857dbd3e96"
       },
       "level_keys": [
         "U3L2 Using Simple Commands_virtual"
@@ -184,12 +529,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L2_TurtleSquare_right_virtual"
-        ],
         "progression": "Using Simple Turtle Commands"
       },
       "bonus": false,
@@ -199,7 +541,8 @@
         ],
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "b47153d7-5a67-484b-b476-8a857dbd3e96"
       },
       "level_keys": [
         "U3L2_TurtleSquare_right_virtual"
@@ -208,12 +551,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L2_Turtle3by3Grid_virtual"
-        ],
         "progression": "Challenge: Draw a 3x3 Grid Using Turtle Commands"
       },
       "bonus": false,
@@ -223,7 +563,8 @@
         ],
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "0cede5a6-d7be-40bc-8713-7247e0918d98"
       },
       "level_keys": [
         "U3L2_Turtle3by3Grid_virtual"
@@ -232,12 +573,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP U3L1 Virtual CFU"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -247,7 +585,8 @@
         ],
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "5998ac3f-e6b0-4049-b2c2-6b6524947ed1"
       },
       "level_keys": [
         "CSP U3L1 Virtual CFU"
@@ -256,12 +595,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp_applab_functions_virtual"
-        ],
         "progression": "Defining and Calling Functions"
       },
       "bonus": false,
@@ -271,7 +607,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "1d534df1-b6df-44c9-b41a-37f802d45039"
       },
       "level_keys": [
         "csp_applab_functions_virtual"
@@ -280,12 +617,9 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L03 Define and use turnAround_virtual"
-        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -295,7 +629,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "63513ab4-8b40-4045-b4ec-71b4948fcea6"
       },
       "level_keys": [
         "U3L03 Define and use turnAround_virtual"
@@ -304,12 +639,9 @@
     {
       "chapter": 8,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L03 Draw a T using turnAround_virtual"
-        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -319,7 +651,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "63513ab4-8b40-4045-b4ec-71b4948fcea6"
       },
       "level_keys": [
         "U3L03 Draw a T using turnAround_virtual"
@@ -328,12 +661,9 @@
     {
       "chapter": 9,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L03 define turnRight and draw a rectangle_virtual"
-        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -343,7 +673,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "63513ab4-8b40-4045-b4ec-71b4948fcea6"
       },
       "level_keys": [
         "U3L03 define turnRight and draw a rectangle_virtual"
@@ -352,12 +683,9 @@
     {
       "chapter": 10,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L03 - draw rect function_virtual"
-        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -367,7 +695,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "63513ab4-8b40-4045-b4ec-71b4948fcea6"
       },
       "level_keys": [
         "U3L03 - draw rect function_virtual"
@@ -376,12 +705,9 @@
     {
       "chapter": 11,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L03 - draw step_virtual"
-        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -391,7 +717,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "63513ab4-8b40-4045-b4ec-71b4948fcea6"
       },
       "level_keys": [
         "U3L03 - draw step_virtual"
@@ -400,12 +727,9 @@
     {
       "chapter": 12,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L03 Three Steps_virtual"
-        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -415,7 +739,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "63513ab4-8b40-4045-b4ec-71b4948fcea6"
       },
       "level_keys": [
         "U3L03 Three Steps_virtual"
@@ -424,12 +749,9 @@
     {
       "chapter": 13,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L03 draw diamond_virtual"
-        ],
         "progression": "Challenge: Draw a Diamond Using Functions"
       },
       "bonus": false,
@@ -439,7 +761,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "c66a7461-9127-4d45-9e68-a7ba8a8b9a60"
       },
       "level_keys": [
         "U3L03 draw diamond_virtual"
@@ -448,12 +771,9 @@
     {
       "chapter": 14,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L04 - snowflake_virtual"
-        ],
         "progression": "Using Functions with Turtle Commands"
       },
       "bonus": false,
@@ -463,7 +783,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "06d7d5dc-7448-4cd5-a18e-e4807ca2572a"
       },
       "level_keys": [
         "U3L04 - snowflake_virtual"
@@ -472,12 +793,9 @@
     {
       "chapter": 15,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L04 - 3 by 3 with functions_virtual"
-        ],
         "progression": "Using Functions with Turtle Commands"
       },
       "bonus": false,
@@ -487,7 +805,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "06d7d5dc-7448-4cd5-a18e-e4807ca2572a"
       },
       "level_keys": [
         "U3L04 - 3 by 3 with functions_virtual"
@@ -496,12 +815,9 @@
     {
       "chapter": 16,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP U3L2 Virtual CFU"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -511,7 +827,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "8cea9d30-0a92-4e30-ae15-c948f9648a3d"
       },
       "level_keys": [
         "CSP U3L2 Virtual CFU"
@@ -520,12 +837,9 @@
     {
       "chapter": 17,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L06 - moveForwardwithParams_virtual"
-        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -535,7 +849,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97"
       },
       "level_keys": [
         "U3L06 - moveForwardwithParams_virtual"
@@ -544,12 +859,9 @@
     {
       "chapter": 18,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L06 Challenge 1 triangle_virtual"
-        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -559,7 +871,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97"
       },
       "level_keys": [
         "U3L06 Challenge 1 triangle_virtual"
@@ -568,12 +881,9 @@
     {
       "chapter": 19,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L06 Challenge 2 purple square_virtual"
-        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -583,7 +893,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97"
       },
       "level_keys": [
         "U3L06 Challenge 2 purple square_virtual"
@@ -592,12 +903,9 @@
     {
       "chapter": 20,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L06 Challenge 3 fill pink_virtual"
-        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -607,7 +915,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97"
       },
       "level_keys": [
         "U3L06 Challenge 3 fill pink_virtual"
@@ -616,12 +925,9 @@
     {
       "chapter": 21,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L06 Challenge 4 bullseye_virtual"
-        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -631,7 +937,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97"
       },
       "level_keys": [
         "U3L06 Challenge 4 bullseye_virtual"
@@ -640,12 +947,9 @@
     {
       "chapter": 22,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L06 Challenge 6 squiggles_virtual"
-        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -655,7 +959,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97"
       },
       "level_keys": [
         "U3L06 Challenge 6 squiggles_virtual"
@@ -664,12 +969,9 @@
     {
       "chapter": 23,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L06 Challenge 5 overlapping circles_virtual"
-        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -679,7 +981,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97"
       },
       "level_keys": [
         "U3L06 Challenge 5 overlapping circles_virtual"
@@ -688,12 +991,9 @@
     {
       "chapter": 24,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L06 Challenge 7 smiley face_virtual"
-        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -703,7 +1003,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97"
       },
       "level_keys": [
         "U3L06 Challenge 7 smiley face_virtual"
@@ -712,12 +1013,9 @@
     {
       "chapter": 25,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L06 Challenge 8 make your own_virtual"
-        ],
         "progression": "Make Your Own Turtle Drawing"
       },
       "bonus": false,
@@ -727,7 +1025,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "c95c966c-1ff0-4a44-94d9-239c24ad0b5a"
       },
       "level_keys": [
         "U3L06 Challenge 8 make your own_virtual"
@@ -736,12 +1035,9 @@
     {
       "chapter": 26,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U3L06 Assessment2_2018_2019_virtual"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -751,7 +1047,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "f2893129-40e0-4802-8dc4-30ca5c134af9"
       },
       "level_keys": [
         "U3L06 Assessment2_2018_2019_virtual"
@@ -760,12 +1057,9 @@
     {
       "chapter": 27,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp_applab_functions_parameters_virtual"
-        ],
         "progression": "Functions with Parameters"
       },
       "bonus": false,
@@ -775,7 +1069,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "822bde68-3996-4b10-a087-789f174bf0d1"
       },
       "level_keys": [
         "csp_applab_functions_parameters_virtual"
@@ -784,12 +1079,9 @@
     {
       "chapter": 28,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L08 - drawSquareWithParam_virtual"
-        ],
         "progression": "Drawing Shapes With Parameters"
       },
       "bonus": false,
@@ -799,7 +1091,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "fbdbafa4-c957-4527-a814-01a163572453"
       },
       "level_keys": [
         "U3L08 - drawSquareWithParam_virtual"
@@ -808,12 +1101,9 @@
     {
       "chapter": 29,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L07 - createTriangleParam_virtual"
-        ],
         "progression": "Drawing Shapes With Parameters"
       },
       "bonus": false,
@@ -823,7 +1113,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "fbdbafa4-c957-4527-a814-01a163572453"
       },
       "level_keys": [
         "U3L07 - createTriangleParam_virtual"
@@ -832,12 +1123,9 @@
     {
       "chapter": 30,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L08 - squareTwoParams_virtual"
-        ],
         "progression": "Drawing Shapes With Parameters"
       },
       "bonus": false,
@@ -847,7 +1135,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "fbdbafa4-c957-4527-a814-01a163572453"
       },
       "level_keys": [
         "U3L08 - squareTwoParams_virtual"
@@ -856,12 +1145,9 @@
     {
       "chapter": 31,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L08 - createTwoParamTriangle_virtual"
-        ],
         "progression": "Drawing Shapes With Parameters"
       },
       "bonus": false,
@@ -871,7 +1157,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "fbdbafa4-c957-4527-a814-01a163572453"
       },
       "level_keys": [
         "U3L08 - createTwoParamTriangle_virtual"
@@ -880,12 +1167,9 @@
     {
       "chapter": 32,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csp_U3_turtle_subgoal_q3_mc_2018_2019_virtual"
-        ],
         "progression": "Check Your Understanding: Defining Functions"
       },
       "bonus": false,
@@ -895,7 +1179,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "79a31bf5-aae6-4e62-95a7-291e1f0959ab"
       },
       "level_keys": [
         "csp_U3_turtle_subgoal_q3_mc_2018_2019_virtual"
@@ -904,12 +1189,9 @@
     {
       "chapter": 33,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L08 how to add comments_virtual"
-        ],
         "progression": "How to add comments to code"
       },
       "bonus": false,
@@ -919,7 +1201,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2cb28657-ba87-4fb0-bc40-c4f5cfe5e5fd"
       },
       "level_keys": [
         "U3L08 how to add comments_virtual"
@@ -928,12 +1211,9 @@
     {
       "chapter": 34,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L08 - introUnderTheSea_virtual"
-        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -943,7 +1223,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "d3fdc75c-4bd2-42cb-9383-54b0982049e8"
       },
       "level_keys": [
         "U3L08 - introUnderTheSea_virtual"
@@ -952,12 +1233,9 @@
     {
       "chapter": 35,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L08 - paramsToStarfish_virtual"
-        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -967,7 +1245,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "d3fdc75c-4bd2-42cb-9383-54b0982049e8"
       },
       "level_keys": [
         "U3L08 - paramsToStarfish_virtual"
@@ -976,12 +1255,9 @@
     {
       "chapter": 36,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L08 - seaGrass_virtual"
-        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -991,7 +1267,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "d3fdc75c-4bd2-42cb-9383-54b0982049e8"
       },
       "level_keys": [
         "U3L08 - seaGrass_virtual"
@@ -1000,12 +1277,9 @@
     {
       "chapter": 37,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L08 - fish_virtual"
-        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -1015,7 +1289,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "d3fdc75c-4bd2-42cb-9383-54b0982049e8"
       },
       "level_keys": [
         "U3L08 - fish_virtual"
@@ -1024,12 +1299,9 @@
     {
       "chapter": 38,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L08 - multiParamFish_virtual"
-        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -1039,7 +1311,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "d3fdc75c-4bd2-42cb-9383-54b0982049e8"
       },
       "level_keys": [
         "U3L08 - multiParamFish_virtual"
@@ -1048,12 +1321,9 @@
     {
       "chapter": 39,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L08 - randomInput_virtual"
-        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -1063,7 +1333,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "d3fdc75c-4bd2-42cb-9383-54b0982049e8"
       },
       "level_keys": [
         "U3L08 - randomInput_virtual"
@@ -1072,12 +1343,9 @@
     {
       "chapter": 40,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L08 - freePlay_virtual"
-        ],
         "progression": "Challenge: Continue Your Drawing With More Functions"
       },
       "bonus": false,
@@ -1087,7 +1355,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "87a49e82-43fe-47b8-80b5-cf1695759918"
       },
       "level_keys": [
         "U3L08 - freePlay_virtual"
@@ -1096,12 +1365,9 @@
     {
       "chapter": 41,
       "position": 15,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP U3L4 Virtual CFU"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1111,7 +1377,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "3577f298-721a-49d0-aeb6-ac1a56de96f8"
       },
       "level_keys": [
         "CSP U3L4 Virtual CFU"
@@ -1120,12 +1387,9 @@
     {
       "chapter": 42,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp_applab_loops_virtual"
-        ],
         "progression": "Using Loops"
       },
       "bonus": false,
@@ -1135,7 +1399,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "4ff983c2-3a81-46f0-8975-ed1d806a2c51"
       },
       "level_keys": [
         "csp_applab_loops_virtual"
@@ -1144,12 +1409,9 @@
     {
       "chapter": 43,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L07 - introSquare_virtual"
-        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -1159,7 +1421,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "6b980c61-e5a4-4012-a251-23adbc52da05"
       },
       "level_keys": [
         "U3L07 - introSquare_virtual"
@@ -1168,12 +1431,9 @@
     {
       "chapter": 44,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L07 - randomSquare_virtual"
-        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -1183,7 +1443,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "6b980c61-e5a4-4012-a251-23adbc52da05"
       },
       "level_keys": [
         "U3L07 - randomSquare_virtual"
@@ -1192,12 +1453,9 @@
     {
       "chapter": 45,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L07 - randomDots1_virtual"
-        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -1207,7 +1465,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "6b980c61-e5a4-4012-a251-23adbc52da05"
       },
       "level_keys": [
         "U3L07 - randomDots1_virtual"
@@ -1216,12 +1475,9 @@
     {
       "chapter": 46,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L07 - loopsWithRandom_virtual"
-        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -1231,7 +1487,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "6b980c61-e5a4-4012-a251-23adbc52da05"
       },
       "level_keys": [
         "U3L07 - loopsWithRandom_virtual"
@@ -1240,12 +1497,9 @@
     {
       "chapter": 47,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L07 - topDownDesign_virtual"
-        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -1255,7 +1509,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "ce367abd-1dd3-4208-8e70-956d5ded94f6"
       },
       "level_keys": [
         "U3L07 - topDownDesign_virtual"
@@ -1264,12 +1519,9 @@
     {
       "chapter": 48,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L07 - bubbles_virtual"
-        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -1279,7 +1531,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "ce367abd-1dd3-4208-8e70-956d5ded94f6"
       },
       "level_keys": [
         "U3L07 - bubbles_virtual"
@@ -1288,12 +1541,9 @@
     {
       "chapter": 49,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L07 - fish_virtual"
-        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -1303,7 +1553,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "ce367abd-1dd3-4208-8e70-956d5ded94f6"
       },
       "level_keys": [
         "U3L07 - fish_virtual"
@@ -1312,12 +1563,9 @@
     {
       "chapter": 50,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L07 - seaStar_virtual"
-        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -1327,7 +1575,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "ce367abd-1dd3-4208-8e70-956d5ded94f6"
       },
       "level_keys": [
         "U3L07 - seaStar_virtual"
@@ -1336,12 +1585,9 @@
     {
       "chapter": 51,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L07 - seaGrass_virtual"
-        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -1351,7 +1597,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "ce367abd-1dd3-4208-8e70-956d5ded94f6"
       },
       "level_keys": [
         "U3L07 - seaGrass_virtual"
@@ -1360,12 +1607,9 @@
     {
       "chapter": 52,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L07 - allSeaGrass_virtual"
-        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -1375,7 +1619,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "ce367abd-1dd3-4208-8e70-956d5ded94f6"
       },
       "level_keys": [
         "U3L07 - allSeaGrass_virtual"
@@ -1384,12 +1629,9 @@
     {
       "chapter": 53,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L07 - sunBeams_virtual"
-        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -1399,7 +1641,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "ce367abd-1dd3-4208-8e70-956d5ded94f6"
       },
       "level_keys": [
         "U3L07 - sunBeams_virtual"
@@ -1408,12 +1651,9 @@
     {
       "chapter": 54,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U3L07 - Free Play Loops and Random_virtual"
-        ],
         "progression": "Project: Under the Sea"
       },
       "bonus": false,
@@ -1423,7 +1663,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "7ecbf269-3a6e-47b7-b3ed-4756662ab3e0"
       },
       "level_keys": [
         "U3L07 - Free Play Loops and Random_virtual"
@@ -1432,12 +1673,9 @@
     {
       "chapter": 55,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Free_play_digital_scene_virtual"
-        ],
         "progression": "Personal Digital Scene"
       },
       "bonus": false,
@@ -1447,7 +1685,8 @@
         ],
         "lesson.key": "Make your own Digital Scene",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "dbefb96e-6cea-41db-9767-fbdca0c37d3e"
       },
       "level_keys": [
         "Free_play_digital_scene_virtual"
@@ -1463,7 +1702,8 @@
         ],
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "6cec60e6-a8d5-4b4f-8333-b2f1d509b567"
       }
     },
     {
@@ -1474,7 +1714,8 @@
         ],
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "b47153d7-5a67-484b-b476-8a857dbd3e96"
       }
     },
     {
@@ -1485,7 +1726,8 @@
         ],
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "b47153d7-5a67-484b-b476-8a857dbd3e96"
       }
     },
     {
@@ -1496,7 +1738,8 @@
         ],
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "0cede5a6-d7be-40bc-8713-7247e0918d98"
       }
     },
     {
@@ -1507,7 +1750,8 @@
         ],
         "lesson.key": "Using Simple Commands",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "5998ac3f-e6b0-4049-b2c2-6b6524947ed1"
       }
     },
     {
@@ -1518,7 +1762,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "1d534df1-b6df-44c9-b41a-37f802d45039"
       }
     },
     {
@@ -1529,7 +1774,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "63513ab4-8b40-4045-b4ec-71b4948fcea6"
       }
     },
     {
@@ -1540,7 +1786,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "63513ab4-8b40-4045-b4ec-71b4948fcea6"
       }
     },
     {
@@ -1551,7 +1798,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "63513ab4-8b40-4045-b4ec-71b4948fcea6"
       }
     },
     {
@@ -1562,7 +1810,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "63513ab4-8b40-4045-b4ec-71b4948fcea6"
       }
     },
     {
@@ -1573,7 +1822,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "63513ab4-8b40-4045-b4ec-71b4948fcea6"
       }
     },
     {
@@ -1584,7 +1834,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "63513ab4-8b40-4045-b4ec-71b4948fcea6"
       }
     },
     {
@@ -1595,7 +1846,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "c66a7461-9127-4d45-9e68-a7ba8a8b9a60"
       }
     },
     {
@@ -1606,7 +1858,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "06d7d5dc-7448-4cd5-a18e-e4807ca2572a"
       }
     },
     {
@@ -1617,7 +1870,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "06d7d5dc-7448-4cd5-a18e-e4807ca2572a"
       }
     },
     {
@@ -1628,7 +1882,8 @@
         ],
         "lesson.key": "Creating Functions",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "8cea9d30-0a92-4e30-ae15-c948f9648a3d"
       }
     },
     {
@@ -1639,7 +1894,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97"
       }
     },
     {
@@ -1650,7 +1906,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97"
       }
     },
     {
@@ -1661,7 +1918,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97"
       }
     },
     {
@@ -1672,7 +1930,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97"
       }
     },
     {
@@ -1683,7 +1942,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97"
       }
     },
     {
@@ -1694,7 +1954,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97"
       }
     },
     {
@@ -1705,7 +1966,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97"
       }
     },
     {
@@ -1716,7 +1978,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2f89c37c-e025-4397-afbb-a86b392c9a97"
       }
     },
     {
@@ -1727,7 +1990,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "c95c966c-1ff0-4a44-94d9-239c24ad0b5a"
       }
     },
     {
@@ -1738,7 +2002,8 @@
         ],
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "f2893129-40e0-4802-8dc4-30ca5c134af9"
       }
     },
     {
@@ -1749,7 +2014,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "822bde68-3996-4b10-a087-789f174bf0d1"
       }
     },
     {
@@ -1760,7 +2026,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "fbdbafa4-c957-4527-a814-01a163572453"
       }
     },
     {
@@ -1771,7 +2038,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "fbdbafa4-c957-4527-a814-01a163572453"
       }
     },
     {
@@ -1782,7 +2050,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "fbdbafa4-c957-4527-a814-01a163572453"
       }
     },
     {
@@ -1793,7 +2062,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "fbdbafa4-c957-4527-a814-01a163572453"
       }
     },
     {
@@ -1804,7 +2074,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "79a31bf5-aae6-4e62-95a7-291e1f0959ab"
       }
     },
     {
@@ -1815,7 +2086,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "2cb28657-ba87-4fb0-bc40-c4f5cfe5e5fd"
       }
     },
     {
@@ -1826,7 +2098,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "d3fdc75c-4bd2-42cb-9383-54b0982049e8"
       }
     },
     {
@@ -1837,7 +2110,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "d3fdc75c-4bd2-42cb-9383-54b0982049e8"
       }
     },
     {
@@ -1848,7 +2122,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "d3fdc75c-4bd2-42cb-9383-54b0982049e8"
       }
     },
     {
@@ -1859,7 +2134,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "d3fdc75c-4bd2-42cb-9383-54b0982049e8"
       }
     },
     {
@@ -1870,7 +2146,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "d3fdc75c-4bd2-42cb-9383-54b0982049e8"
       }
     },
     {
@@ -1881,7 +2158,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "d3fdc75c-4bd2-42cb-9383-54b0982049e8"
       }
     },
     {
@@ -1892,7 +2170,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "87a49e82-43fe-47b8-80b5-cf1695759918"
       }
     },
     {
@@ -1903,7 +2182,8 @@
         ],
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "3577f298-721a-49d0-aeb6-ac1a56de96f8"
       }
     },
     {
@@ -1914,7 +2194,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "4ff983c2-3a81-46f0-8975-ed1d806a2c51"
       }
     },
     {
@@ -1925,7 +2206,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "6b980c61-e5a4-4012-a251-23adbc52da05"
       }
     },
     {
@@ -1936,7 +2218,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "6b980c61-e5a4-4012-a251-23adbc52da05"
       }
     },
     {
@@ -1947,7 +2230,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "6b980c61-e5a4-4012-a251-23adbc52da05"
       }
     },
     {
@@ -1958,7 +2242,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "6b980c61-e5a4-4012-a251-23adbc52da05"
       }
     },
     {
@@ -1969,7 +2254,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "ce367abd-1dd3-4208-8e70-956d5ded94f6"
       }
     },
     {
@@ -1980,7 +2266,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "ce367abd-1dd3-4208-8e70-956d5ded94f6"
       }
     },
     {
@@ -1991,7 +2278,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "ce367abd-1dd3-4208-8e70-956d5ded94f6"
       }
     },
     {
@@ -2002,7 +2290,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "ce367abd-1dd3-4208-8e70-956d5ded94f6"
       }
     },
     {
@@ -2013,7 +2302,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "ce367abd-1dd3-4208-8e70-956d5ded94f6"
       }
     },
     {
@@ -2024,7 +2314,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "ce367abd-1dd3-4208-8e70-956d5ded94f6"
       }
     },
     {
@@ -2035,7 +2326,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "ce367abd-1dd3-4208-8e70-956d5ded94f6"
       }
     },
     {
@@ -2046,7 +2338,8 @@
         ],
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "7ecbf269-3a6e-47b7-b3ed-4756662ab3e0"
       }
     },
     {
@@ -2057,7 +2350,8 @@
         ],
         "lesson.key": "Make your own Digital Scene",
         "lesson_group.key": "csp3_1_2018",
-        "script.name": "csp3-virtual"
+        "script.name": "csp3-virtual",
+        "activity_section.key": "dbefb96e-6cea-41db-9767-fbdca0c37d3e"
       }
     }
   ],
