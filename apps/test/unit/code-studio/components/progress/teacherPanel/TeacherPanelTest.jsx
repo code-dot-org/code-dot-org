@@ -64,13 +64,13 @@ describe('TeacherPanel', () => {
   });
 
   describe('on unit page', () => {
-    it('initial view as student has teacher panel header and view toggle', () => {
+    it('initial view as participant has teacher panel header and view toggle', () => {
       const wrapper = setUp({viewAs: ViewType.Participant});
       expect(wrapper.contains(i18n.teacherPanel())).to.be.true;
       expect(wrapper.find(ViewAsToggle)).to.have.length(1);
     });
 
-    it('initial view as teacher has teacher panel header and view toggle', () => {
+    it('initial view as instructor has teacher panel header and view toggle', () => {
       const wrapper = setUp({viewAs: ViewType.Instructor});
       expect(wrapper.contains(i18n.teacherPanel())).to.be.true;
       expect(wrapper.find(ViewAsToggle)).to.have.length(1);
@@ -112,7 +112,7 @@ describe('TeacherPanel', () => {
     expect(wrapper.contains(i18n.teacherDashboard())).to.be.true;
   });
 
-  it('shows section selection instructions if viewing as a teacher, and has sections and lockable lessons', () => {
+  it('shows section selection instructions if viewing as a instructor, and has sections and lockable lessons', () => {
     const wrapper = setUp({
       viewAs: ViewType.Instructor,
       unitHasLockableLessons: true,
@@ -136,7 +136,7 @@ describe('TeacherPanel', () => {
   });
 
   describe('StudentTable', () => {
-    it('displays StudentTable for teacher with students', () => {
+    it('displays StudentTable for instructor with students', () => {
       const wrapper = setUp({
         viewAs: ViewType.Instructor,
         students: students
@@ -144,7 +144,7 @@ describe('TeacherPanel', () => {
       expect(wrapper.find(StudentTable)).to.have.length(1);
     });
 
-    it('does not display StudentTable for teacher with no students', () => {
+    it('does not display StudentTable for instructor with no students', () => {
       const wrapper = setUp({
         viewAs: ViewType.Instructor,
         students: []
@@ -188,7 +188,7 @@ describe('TeacherPanel', () => {
   });
 
   describe('Example Solutions', () => {
-    it('does not display example solutions if the viewType is student', () => {
+    it('does not display example solutions if the viewType is participant', () => {
       const wrapper = setUp({
         viewAs: ViewType.Participant,
         exampleSolutions: [

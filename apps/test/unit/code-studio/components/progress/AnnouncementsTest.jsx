@@ -28,7 +28,7 @@ describe('Announcements', () => {
     assert.equal(wrapper.find(Notification).length, 0);
   });
 
-  it('displays old teacher announcement for teacher', () => {
+  it('displays old teacher announcement for instructor', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
@@ -38,7 +38,7 @@ describe('Announcements', () => {
     assert.equal(wrapper.find(Notification).length, 1);
   });
 
-  it('does not display old teacher announcement for student', () => {
+  it('does not display old teacher announcement for participant', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
@@ -49,7 +49,7 @@ describe('Announcements', () => {
     assert.equal(wrapper.find(Notification).length, 0);
   });
 
-  it('displays new teacher announcement for teacher', () => {
+  it('displays new teacher announcement for instructor', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
@@ -59,7 +59,7 @@ describe('Announcements', () => {
     assert.equal(wrapper.find(Notification).length, 1);
   });
 
-  it('has only teacher announcements', () => {
+  it('has only instructor announcements', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
@@ -73,7 +73,7 @@ describe('Announcements', () => {
     assert.equal(wrapper.find(Notification).length, 2);
   });
 
-  it('has student announcement if necessary', () => {
+  it('has participant announcement if necessary', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
@@ -84,7 +84,7 @@ describe('Announcements', () => {
     assert.equal(wrapper.find(Notification).length, 1);
   });
 
-  it('has all student announcements but no teacher announcements if necessary', () => {
+  it('has all participant announcements but no instructor announcements if necessary', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
@@ -100,7 +100,7 @@ describe('Announcements', () => {
     assert.equal(wrapper.find(Notification).length, 2);
   });
 
-  it('displays teacher announcement with analytics data', () => {
+  it('displays instructor announcement with analytics data', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
