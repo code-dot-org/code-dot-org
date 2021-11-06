@@ -19,7 +19,7 @@ class TeacherFeedbackRubric extends Component {
     performance: PropTypes.string,
     isEditable: PropTypes.bool,
     onRubricChange: PropTypes.func.isRequired,
-    viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired
   };
 
   render() {
@@ -33,23 +33,23 @@ class TeacherFeedbackRubric extends Component {
 
     // RubricFields are used to display and update performance levels. When expanded,
     // the RubricField displays detailed information about the performance level. The RubricFields also
-    // have input areas for the teacher to select a performance level or for the student
+    // have input areas for the teacher to select a performance level or for the participant
     // to view the selection.
 
     let showFeedbackInputAreas, expandAllRubricFields;
     if (viewAs === ViewType.Participant) {
-      // If the student has not been evaluated by the rubric (!performance),
-      // the rubric fields are expanded to display details. If the student has
+      // If the participant has not been evaluated by the rubric (!performance),
+      // the rubric fields are expanded to display details. If the participant has
       // been evaluated the rubric, fields are collapsed by default. Except for the
       // selected performance level (see RubricField implementation below).
       expandAllRubricFields = !performance;
 
-      // Input areas are only displayed if a student has been evalutated with the rubric.
+      // Input areas are only displayed if a participant has been evalutated with the rubric.
       showFeedbackInputAreas = !!performance;
     } else if (viewAs === ViewType.Instructor) {
-      // Rubric fields are all expanded if teacher is viewing but not editing the rubric (this
-      // will happen when the teacher is viewing the level and not viewing a student's work).
-      // Rubric fields are all collapsed by default if the teacher is evaluating a student.
+      // Rubric fields are all expanded if instructor is viewing but not editing the rubric (this
+      // will happen when the instructor is viewing the level and not viewing a participants's work).
+      // Rubric fields are all collapsed by default if the instructor is evaluating a participant.
       expandAllRubricFields = !isEditable;
 
       showFeedbackInputAreas = isEditable;
