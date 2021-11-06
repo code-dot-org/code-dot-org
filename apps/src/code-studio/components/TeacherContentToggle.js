@@ -39,8 +39,8 @@ class TeacherContentToggle extends React.Component {
     $('#hidden-lesson')
       .appendTo(this.refs.hiddenMessage)
       .show();
-    // Server initially sets level-body visibility to hidden when viewAs=Student
-    // so that student view doesnt show content while we make async calls. Once
+    // Server initially sets level-body visibility to hidden when viewAs=Participant
+    // so that participant view doesnt show content while we make async calls. Once
     // this component has mounted, we move level-body into our first div, which
     // will now own toggling visibility
     $('#level-body')
