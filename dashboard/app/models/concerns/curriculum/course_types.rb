@@ -1,6 +1,6 @@
 # Model concern for common curriculum audience methods
 # To use, include in a model and call the desired method.
-module Curriculum::CourseAudiences
+module Curriculum::CourseTypes
   extend ActiveSupport::Concern
 
   # Checks if a user can be the instructor for the course. Code instructors and levelbuilders

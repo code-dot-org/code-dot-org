@@ -41,7 +41,7 @@ class Script < ApplicationRecord
   include ScriptConstants
   include SharedCourseConstants
   include SharedConstants
-  include Curriculum::CourseAudiences
+  include Curriculum::CourseTypes
   include Rails.application.routes.url_helpers
 
   include Seeded
