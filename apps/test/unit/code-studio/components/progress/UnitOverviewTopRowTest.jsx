@@ -33,7 +33,7 @@ const defaultProps = {
 };
 
 describe('UnitOverviewTopRow', () => {
-  it('renders "Try Now" for student', () => {
+  it('renders "Try Now" for participant', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
@@ -71,7 +71,7 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders "Continue" for student', () => {
+  it('renders "Continue" for participant', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
@@ -92,7 +92,7 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders "Print Certificate" for student', () => {
+  it('renders "Print Certificate" for participant', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
@@ -113,7 +113,7 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders SectionAssigner for teacher', () => {
+  it('renders SectionAssigner for instructor', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow {...defaultProps} viewAs={ViewType.Instructor} />
     );
@@ -138,7 +138,7 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders resources for teacher', () => {
+  it('renders resources for instructor', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
@@ -174,7 +174,7 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders migrated resources for teacher on a migrated script', () => {
+  it('renders migrated resources for instructor on a migrated script', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
@@ -219,7 +219,7 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders the unit calendar when showCalendar true for teacher', () => {
+  it('renders the unit calendar when showCalendar true for instructor', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
@@ -240,7 +240,7 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('does not render the unit calendar when showCalendar false for teacher', () => {
+  it('does not render the unit calendar when showCalendar false for instructor', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
@@ -260,7 +260,7 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.false;
   });
 
-  it('does not render the unit calendar for student', () => {
+  it('does not render the unit calendar for participant', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
@@ -305,7 +305,7 @@ describe('UnitOverviewTopRow', () => {
     ]);
   });
 
-  it('does not render printing option dropdown for students', () => {
+  it('does not render printing option dropdown for participants', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
