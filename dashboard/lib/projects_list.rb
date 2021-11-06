@@ -16,7 +16,7 @@ module ProjectsList
     events: %w(starwars starwarsblocks starwarsblocks_hour flappy bounce sports basketball),
     k1: ['artist_k1', 'playlab_k1'],
     dance: ['dance'],
-    poetry: ['poetry'],
+    poetry: ['poetry', 'poetry_hoc'],
     library: ['applab', 'gamelab']
   }.freeze
 
