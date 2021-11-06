@@ -103,7 +103,7 @@ export default storybook => {
         )
       },
       {
-        name: 'hidden progress lesson as teacher',
+        name: 'hidden progress lesson as instructor',
         description: 'should be white with full opacity',
         story: () => (
           <ProgressLesson
@@ -113,7 +113,7 @@ export default storybook => {
         )
       },
       {
-        name: 'hidden progress lesson as student',
+        name: 'hidden progress lesson as participant',
         description: 'should not show up',
         story: () => (
           <ProgressLesson
@@ -125,7 +125,7 @@ export default storybook => {
         )
       },
       {
-        name: 'locked lesson as verified teacher',
+        name: 'locked lesson as verified instructor',
         story: () => (
           <ProgressLesson
             {...defaultProps}
@@ -136,7 +136,7 @@ export default storybook => {
         )
       },
       {
-        name: 'unlocked lesson as verified teacher',
+        name: 'unlocked lesson as verified instructor',
         story: () => (
           <ProgressLesson
             {...defaultProps}
@@ -147,7 +147,7 @@ export default storybook => {
         )
       },
       {
-        name: 'locked lesson as unverified teacher',
+        name: 'locked lesson as unverified instructor',
         story: () => (
           <ProgressLesson
             {...defaultProps}
@@ -171,7 +171,7 @@ export default storybook => {
         )
       },
       {
-        name: 'locked lesson as student',
+        name: 'locked lesson as participant',
         story: () => (
           <ProgressLesson
             {...defaultProps}

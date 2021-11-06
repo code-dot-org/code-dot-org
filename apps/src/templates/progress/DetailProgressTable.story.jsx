@@ -58,7 +58,7 @@ export default storybook => {
       )
     },
     {
-      name: 'with hidden lesson as teacher',
+      name: 'with hidden lesson as instructor',
       description: 'lesson 2 should be white with dashed outline',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, '2')}>
@@ -67,7 +67,7 @@ export default storybook => {
       )
     },
     {
-      name: 'with hidden lesson as student',
+      name: 'with hidden lesson as participant',
       description: 'lesson 2 should be invisible',
       story: () => (
         <Provider
