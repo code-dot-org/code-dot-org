@@ -25,6 +25,19 @@ class CourseTypesTests < ActiveSupport::TestCase
     @unit_plc_reviewer_to_facilitator = create(:script, name: 'plc-reviewer-to-facilitator', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
   end
 
+  test 'unit in course should check course for if it is a pl course' do
+    assert_equal @unit_group.professional_learning_course?, @unit_in_course.professional_learning_course?
+    refute @unit_in_course.professional_learning_course?
+  end
+
+  test 'professional_learning_course? returns true for any course that does not have students as participants' do
+    refute @unit_teacher_to_students.professional_learning_course?
+    assert @unit_facilitator_to_teacher.professional_learning_course?
+    assert @unit_code_instructor_to_teacher.professional_learning_course?
+    assert @unit_plc_reviewer_to_facilitator.professional_learning_course?
+    assert @unit_code_instructor_to_teacher.professional_learning_course?
+  end
+
   test 'unit in course should check course for participant and instructor audience' do
     assert_equal @unit_group.can_be_instructor?(@teacher), @unit_in_course.can_be_instructor?(@teacher)
     assert @unit_in_course.can_be_instructor?(@teacher)
