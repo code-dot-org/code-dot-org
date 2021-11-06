@@ -391,7 +391,7 @@ describe('progressReduxTest', () => {
     // stuff like updating query param. We just want to test the core action
     // it ultimately dispatches.
     describe('setViewType', () => {
-      it('toggles to detail view when setting viewAs to Teacher', () => {
+      it('toggles to detail view when setting viewAs to instructor', () => {
         const state = {
           ...initialState,
           isSummaryView: true
