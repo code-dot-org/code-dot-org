@@ -11,7 +11,7 @@ class ScriptTest < ActiveSupport::TestCase
     @game = create(:game)
     @unit_file = File.join(self.class.fixture_path, "test-fixture.script")
     # Level names match those in 'test.script'
-    @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game, level_num: 'custom')}
+    @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
     @unit_group = create(:unit_group)
     @unit_in_unit_group = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
@@ -296,7 +296,7 @@ class ScriptTest < ActiveSupport::TestCase
     # test that LessonActivity, ActivitySection and Objective can be seeded
     # from .script_json when is_migrated is specified in the .script file.
     # use 'custom' level num to make level key match level name.
-    create :maze, name: 'test_maze_level', level_num: 'custom'
+    create :maze, name: 'test_maze_level'
     unit_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-models.script')
     Script.setup([unit_file])
 
@@ -905,9 +905,9 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil Script.find_by_name('csf1').banner_image
   end
 
-  test 'professional_learning_course?' do
-    refute Script.find_by_name('flappy').professional_learning_course?
-    assert Script.find_by_name('ECSPD').professional_learning_course?
+  test 'old_professional_learning_course?' do
+    refute Script.find_by_name('flappy').old_professional_learning_course?
+    assert Script.find_by_name('ECSPD').old_professional_learning_course?
   end
 
   test 'should summarize migrated unit' do
@@ -1440,7 +1440,7 @@ class ScriptTest < ActiveSupport::TestCase
     I18n.backend.store_translations I18n.locale, custom_i18n['en']
 
     unit.save! # Need to trigger an update because i18n strings weren't loaded
-    assert unit.professional_learning_course?
+    assert unit.old_professional_learning_course?
     assert_equal 'Test plc course', unit.professional_learning_course
     assert_equal 42, unit.peer_reviews_to_complete
 
@@ -1477,7 +1477,7 @@ class ScriptTest < ActiveSupport::TestCase
     unit_names, _custom_i18n = Script.setup([unit_file])
     unit = Script.find_by!(name: unit_names.first)
 
-    assert unit.professional_learning_course?
+    assert unit.old_professional_learning_course?
     assert_equal 'Test plc course', unit.professional_learning_course
     assert_equal 42, unit.peer_reviews_to_complete
 
@@ -3364,8 +3364,8 @@ class ScriptTest < ActiveSupport::TestCase
       lesson_activity = create :lesson_activity, lesson: lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity
 
-      level1 = create :level, name: 'level1-2021', level_num: 'custom'
-      level2 = create :level, name: 'level2-2021', level_num: 'custom'
+      level1 = create :level, name: 'level1-2021'
+      level2 = create :level, name: 'level2-2021'
       create :script_level, levels: [level1], script: @standalone_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 1
       create :script_level, levels: [level2], script: @standalone_unit, lesson: lesson, activity_section: activity_section, activity_section_position: 2
 
