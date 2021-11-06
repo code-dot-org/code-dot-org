@@ -26,16 +26,24 @@ class CourseTypesTests < ActiveSupport::TestCase
   end
 
   test 'unit in course should check course for if it is a pl course' do
-    assert_equal @unit_group.professional_learning_course?, @unit_in_course.professional_learning_course?
-    refute @unit_in_course.professional_learning_course?
+    assert_equal @unit_group.pl_course?, @unit_in_course.pl_course?
+    refute @unit_in_course.pl_course?
+  end
+
+  test 'professional_learning_course? returns true for any unit that does not have students as participants' do
+    refute @unit_teacher_to_students.pl_course?
+    assert @unit_facilitator_to_teacher.pl_course?
+    assert @unit_code_instructor_to_teacher.pl_course?
+    assert @unit_plc_reviewer_to_facilitator.pl_course?
+    assert @unit_code_instructor_to_teacher.pl_course?
   end
 
   test 'professional_learning_course? returns true for any course that does not have students as participants' do
-    refute @unit_teacher_to_students.professional_learning_course?
-    assert @unit_facilitator_to_teacher.professional_learning_course?
-    assert @unit_code_instructor_to_teacher.professional_learning_course?
-    assert @unit_plc_reviewer_to_facilitator.professional_learning_course?
-    assert @unit_code_instructor_to_teacher.professional_learning_course?
+    refute @course_teacher_to_students.pl_course?
+    assert @course_facilitator_to_teacher.pl_course?
+    assert @course_code_instructor_to_teacher.pl_course?
+    assert @course_plc_reviewer_to_facilitator.pl_course?
+    assert @course_code_instructor_to_teacher.pl_course?
   end
 
   test 'unit in course should check course for participant and instructor audience' do

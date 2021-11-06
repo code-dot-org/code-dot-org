@@ -3,6 +3,12 @@
 module Curriculum::CourseTypes
   extend ActiveSupport::Concern
 
+  included do
+    validates :instruction_type, acceptance: {accept: SharedCourseConstants::INSTRUCTION_TYPE.to_h.values, message: 'must be teacher_led or self_paced'}
+    validates :instructor_audience, acceptance: {accept: SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values, message: 'must be code instructor, plc reviewer, facilitator, or teacher'}
+    validates :participant_audience, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
+  end
+
   # Checks if a user can be the instructor for the course. Code instructors and levelbuilders
   # can be the instructors of any course. Student accounts should never be able to be the instructor
   # of any course.
@@ -43,9 +49,12 @@ module Curriculum::CourseTypes
 
   # A course is a professional learning if the participant audience is something
   # other that students and therefore teaches adults
-  def professional_learning_course?
+  #
+  # This is different than courses that use the professional learning course models
+  # those can be checked for using old_professional_learning_course?
+  def pl_course?
     # If unit is in a unit group then decide based on unit group
-    return unit_group.professional_learning_course? if is_a?(Script) && unit_group
+    return unit_group.pl_course? if is_a?(Script) && unit_group
 
     participant_audience != 'student'
   end
