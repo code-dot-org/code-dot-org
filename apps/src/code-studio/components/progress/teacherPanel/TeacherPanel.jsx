@@ -98,15 +98,15 @@ class TeacherPanel extends React.Component {
     const sectionId = selectedSection && selectedSection.id;
 
     const displaySelectedStudentInfo =
-      viewAs === ViewType.Teacher &&
+      viewAs === ViewType.Instructor &&
       !!students?.length &&
       pageType !== pageTypes.scriptOverview;
 
     const displayLevelExamples =
-      viewAs === ViewType.Teacher && exampleSolutions?.length > 0;
+      viewAs === ViewType.Instructor && exampleSolutions?.length > 0;
 
     const displayLockInfo =
-      hasSections && unitHasLockableLessons && viewAs === ViewType.Teacher;
+      hasSections && unitHasLockableLessons && viewAs === ViewType.Instructor;
 
     return (
       <TeacherPanelContainer logToFirehose={this.logToFirehose}>
@@ -185,7 +185,7 @@ class TeacherPanel extends React.Component {
               )}
             </div>
           )}
-          {viewAs === ViewType.Teacher && (students || []).length > 0 && (
+          {viewAs === ViewType.Instructor && (students || []).length > 0 && (
             <StudentTable
               levelsWithProgress={levelsWithProgress}
               students={students}

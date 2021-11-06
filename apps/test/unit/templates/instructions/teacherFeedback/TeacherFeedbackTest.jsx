@@ -67,7 +67,7 @@ describe('TeacherFeedback', () => {
         expect(rubric).to.have.length(1);
         expect(rubric.props().rubric).to.equal(RUBRIC);
         expect(rubric.props().isEditable).to.equal(true);
-        expect(rubric.props().viewAs).to.equal(ViewType.Teacher);
+        expect(rubric.props().viewAs).to.equal(ViewType.Instructor);
       });
 
       it('does not display a rubric if there is no rubric', () => {
@@ -222,7 +222,7 @@ describe('TeacherFeedback', () => {
         expect(rubric).to.have.length(1);
         expect(rubric.props().rubric).to.equal(RUBRIC);
         expect(rubric.props().isEditable).to.equal(false);
-        expect(rubric.props().viewAs).to.equal(ViewType.Student);
+        expect(rubric.props().viewAs).to.equal(ViewType.Participant);
       });
 
       it('does not display the comment area', () => {
@@ -293,7 +293,7 @@ describe('TeacherFeedback', () => {
         expect(rubric.props().rubric).to.equal(RUBRIC);
         expect(rubric.props().performance).to.equal('performanceLevel2');
         expect(rubric.props().isEditable).to.equal(false);
-        expect(rubric.props().viewAs).to.equal(ViewType.Student);
+        expect(rubric.props().viewAs).to.equal(ViewType.Participant);
       });
 
       it('renders the comment with expected props if there is a comment', () => {

@@ -54,7 +54,9 @@ export default storybook => {
     {
       name: 'LessonGroup with detail view',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+        <Provider
+          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
+        >
           <LessonGroup
             groupedLesson={groupedLesson}
             isPlc={false}
@@ -67,7 +69,7 @@ export default storybook => {
     {
       name: 'LessonGroup in teacher summary view with one hidden lesson',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, 3)}>
+        <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, 3)}>
           <LessonGroup
             groupedLesson={groupedLesson}
             isPlc={false}
@@ -80,7 +82,7 @@ export default storybook => {
     {
       name: 'LessonGroup with all lessons hidden teacher summary view',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, 1)}>
+        <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, 1)}>
           <LessonGroup
             groupedLesson={{
               lessonGroup: {
@@ -101,7 +103,7 @@ export default storybook => {
     {
       name: 'LessonGroup with no lessons teacher summary view',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, 1)}>
+        <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, 1)}>
           <LessonGroup
             groupedLesson={{
               lessonGroup: {
@@ -122,7 +124,7 @@ export default storybook => {
     {
       name: 'LessonGroup with all lessons hidden student summary view (empty)',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Student, 1)}>
+        <Provider store={createStoreWithHiddenLesson(ViewType.Participant, 1)}>
           <LessonGroup
             groupedLesson={{
               lessonGroup: {
@@ -143,7 +145,9 @@ export default storybook => {
     {
       name: 'LessonGroup in PLC',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+        <Provider
+          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
+        >
           <LessonGroup
             groupedLesson={groupedLesson}
             isPlc={true}
@@ -156,7 +160,9 @@ export default storybook => {
     {
       name: 'LessonGroup with description and big questions',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+        <Provider
+          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
+        >
           <LessonGroup
             groupedLesson={{
               ...groupedLesson,

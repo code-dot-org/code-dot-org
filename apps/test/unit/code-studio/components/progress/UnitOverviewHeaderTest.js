@@ -13,7 +13,7 @@ const defaultProps = {
   plcHeaderProps: undefined,
   announcements: [],
   isSignedIn: true,
-  viewAs: ViewType.Teacher,
+  viewAs: ViewType.Instructor,
   isVerifiedTeacher: true,
   hasVerifiedResources: false,
   scriptId: 99,
@@ -98,7 +98,7 @@ describe('UnitOverviewHeader', () => {
         {...defaultProps}
         hasVerifiedResources={true}
         isVerifiedTeacher={false}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
         announcements={[fakeStudentAnnouncement]}
       />,
       {disableLifecycleMethods: true}
@@ -167,7 +167,7 @@ describe('UnitOverviewHeader', () => {
 
   it('has correct unit description for student', () => {
     const wrapper = shallow(
-      <UnitOverviewHeader {...defaultProps} viewAs={ViewType.Student} />,
+      <UnitOverviewHeader {...defaultProps} viewAs={ViewType.Participant} />,
       {
         disableLifecycleMethods: true
       }

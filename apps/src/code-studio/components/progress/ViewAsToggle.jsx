@@ -22,7 +22,7 @@ class ViewAsToggle extends React.Component {
     // Upon loading, toggle hide-as-student appropriately (this is so that if we
     // load a page with ?viewAs=Student we still hide stuff)
     const {viewAs} = this.props;
-    $('.hide-as-student').toggle(viewAs === ViewType.Teacher);
+    $('.hide-as-student').toggle(viewAs === ViewType.Instructor);
   }
 
   onChange = viewType => {
@@ -30,14 +30,14 @@ class ViewAsToggle extends React.Component {
 
     updateQueryParam('viewAs', viewType);
 
-    if (viewType === ViewType.Student && queryParams('user_id')) {
+    if (viewType === ViewType.Participant && queryParams('user_id')) {
       // In this case, the changeViewType thunk is going to do a reload and we dont
       // want to change our UI.
     } else {
       // Ideally all the things we would want to hide would be redux backed, and
       // would just update automatically. However, we're not in such a world. Instead,
       // explicitly hide or show elements with this class name based on new toggle state.
-      $('.hide-as-student').toggle(viewType === ViewType.Teacher);
+      $('.hide-as-student').toggle(viewType === ViewType.Instructor);
     }
 
     changeViewType(viewType);
@@ -59,14 +59,14 @@ class ViewAsToggle extends React.Component {
             <button
               type="button"
               className="uitest-viewAsStudent"
-              value={ViewType.Student}
+              value={ViewType.Participant}
             >
               {commonMsg.student()}
             </button>
             <button
               type="button"
               className="uitest-viewAsTeacher"
-              value={ViewType.Teacher}
+              value={ViewType.Instructor}
             >
               {commonMsg.teacher()}
             </button>

@@ -94,11 +94,11 @@ class FeedbackStatus extends Component {
       return null;
     }
 
-    if (viewAs === ViewType.Student) {
+    if (viewAs === ViewType.Participant) {
       return this.renderStudentView();
     }
 
-    if (viewAs === ViewType.Teacher) {
+    if (viewAs === ViewType.Instructor) {
       if (
         latestFeedback.student_last_updated &&
         latestFeedback.student_last_updated > latestFeedback.created_at

@@ -48,7 +48,7 @@ describe('SummaryProgressTable', () => {
       <SummaryProgressTable
         groupedLesson={groupedLesson}
         lessonIsVisible={(lesson, viewAs) =>
-          lesson.id !== 2 || viewAs === ViewType.Teacher
+          lesson.id !== 2 || viewAs === ViewType.Instructor
         }
       />
     );
@@ -65,7 +65,7 @@ describe('SummaryProgressTable', () => {
       <SummaryProgressTable
         groupedLesson={groupedLesson}
         lessonIsVisible={(lesson, viewAs) =>
-          lesson.id !== 2 || viewAs !== ViewType.Student
+          lesson.id !== 2 || viewAs !== ViewType.Participant
         }
       />
     );

@@ -37,7 +37,7 @@ class TeacherFeedbackRubric extends Component {
     // to view the selection.
 
     let showFeedbackInputAreas, expandAllRubricFields;
-    if (viewAs === ViewType.Student) {
+    if (viewAs === ViewType.Participant) {
       // If the student has not been evaluated by the rubric (!performance),
       // the rubric fields are expanded to display details. If the student has
       // been evaluated the rubric, fields are collapsed by default. Except for the
@@ -46,7 +46,7 @@ class TeacherFeedbackRubric extends Component {
 
       // Input areas are only displayed if a student has been evalutated with the rubric.
       showFeedbackInputAreas = !!performance;
-    } else if (viewAs === ViewType.Teacher) {
+    } else if (viewAs === ViewType.Instructor) {
       // Rubric fields are all expanded if teacher is viewing but not editing the rubric (this
       // will happen when the teacher is viewing the level and not viewing a student's work).
       // Rubric fields are all collapsed by default if the teacher is evaluating a student.
@@ -70,7 +70,7 @@ class TeacherFeedbackRubric extends Component {
                 showFeedbackInputAreas={showFeedbackInputAreas}
                 expandByDefault={
                   expandAllRubricFields ||
-                  (viewAs === ViewType.Student && performance === level)
+                  (viewAs === ViewType.Participant && performance === level)
                 }
                 rubricLevel={level}
                 rubricValue={rubric[level]}

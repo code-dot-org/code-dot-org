@@ -16,7 +16,7 @@ const DEFAULT_PROPS = {
   performance: null,
   isEditable: true,
   onRubricChange: () => {},
-  viewAs: ViewType.Teacher
+  viewAs: ViewType.Instructor
 };
 
 const setUp = overrideProps => {
@@ -81,7 +81,7 @@ describe('Rubric', () => {
   describe('view as teacher', () => {
     it('RubricField prop showFeedbackInputAreas is true if isEditable = true', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         isEditable: true
       });
 
@@ -91,7 +91,7 @@ describe('Rubric', () => {
 
     it('RubricField prop showFeedbackInputAreas is false if isEditable = false', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         isEditable: false
       });
 
@@ -101,7 +101,7 @@ describe('Rubric', () => {
 
     it('RubricField prop expandByDefault is false isEditable = true', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         isEditable: true
       });
 
@@ -111,7 +111,7 @@ describe('Rubric', () => {
 
     it('RubricField prop expandByDefault is true isEditable = false', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         isEditable: false
       });
 
@@ -123,7 +123,7 @@ describe('Rubric', () => {
   describe('view as student', () => {
     it('expands rubric value with feedback', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Student,
+        viewAs: ViewType.Participant,
         isEditable: false,
         performance: 'performanceLevel2'
       });

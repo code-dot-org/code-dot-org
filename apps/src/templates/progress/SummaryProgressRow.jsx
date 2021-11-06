@@ -103,7 +103,7 @@ class SummaryProgressRow extends React.Component {
     } = this.props;
 
     // Would this lesson be hidden if we were a student?
-    const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
+    const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Participant);
     const isLockedForUser = lessonIsLockedForUser(lesson, levels, viewAs);
     const isLockedForSection = lessonIsLockedForAllStudents(lesson.id);
     const showAsLocked = isLockedForUser || isLockedForSection;
@@ -127,7 +127,7 @@ class SummaryProgressRow extends React.Component {
         <td
           style={{
             ...styles.col1,
-            ...(((hiddenForStudents && viewAs === ViewType.Student) ||
+            ...(((hiddenForStudents && viewAs === ViewType.Participant) ||
               isLockedForUser) &&
               styles.fadedCol)
           }}
@@ -145,7 +145,7 @@ class SummaryProgressRow extends React.Component {
                     ...(!showAsLocked && styles.unlockedIcon)
                   }}
                 />
-                {!showAsLocked && viewAs === ViewType.Teacher && (
+                {!showAsLocked && viewAs === ViewType.Instructor && (
                   <ReactTooltip
                     id={lockedTooltipId}
                     role="tooltip"
@@ -177,7 +177,7 @@ class SummaryProgressRow extends React.Component {
         <td
           style={{
             ...styles.col2,
-            ...(((hiddenForStudents && viewAs === ViewType.Student) ||
+            ...(((hiddenForStudents && viewAs === ViewType.Participant) ||
               isLockedForUser) &&
               styles.fadedCol)
           }}

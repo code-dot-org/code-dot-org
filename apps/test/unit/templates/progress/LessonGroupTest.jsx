@@ -19,7 +19,7 @@ const DEFAULT_PROPS = {
     levelsByLesson: []
   },
   lessonIsVisible: () => true,
-  viewAs: ViewType.Teacher
+  viewAs: ViewType.Instructor
 };
 
 describe('LessonGroup', () => {
@@ -54,7 +54,7 @@ describe('LessonGroup', () => {
       ...DEFAULT_PROPS,
       isSummaryView: true,
       lessonIsVisible: () => false,
-      viewAs: ViewType.Student
+      viewAs: ViewType.Participant
     };
     const wrapper = shallow(<LessonGroup {...props} />);
     expect(wrapper.get(0)).to.be.null;
@@ -67,7 +67,7 @@ describe('LessonGroup', () => {
         lessons: []
       },
       isSummaryView: true,
-      viewAs: ViewType.Student
+      viewAs: ViewType.Participant
     };
     const wrapper = shallow(<LessonGroup {...props} />);
     expect(wrapper.get(0)).to.be.null;
@@ -80,7 +80,7 @@ describe('LessonGroup', () => {
         lessons: []
       },
       isSummaryView: true,
-      viewAs: ViewType.Teacher
+      viewAs: ViewType.Instructor
     };
     const wrapper = shallow(<LessonGroup {...props} />);
     expect(wrapper.get(0)).to.not.be.null;

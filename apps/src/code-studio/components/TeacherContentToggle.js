@@ -70,7 +70,7 @@ class TeacherContentToggle extends React.Component {
     };
     let hasOverlayFrame = isLockedLesson || isHiddenLesson;
 
-    if (viewAs === ViewType.Student) {
+    if (viewAs === ViewType.Participant) {
       // Keep this hidden until we've made our async calls for hidden_lessons and
       // locked lessons, so that we don't flash content before hiding it
       if (!hiddenLessonsInitialized || !sectionsAreLoaded || hasOverlayFrame) {
@@ -127,7 +127,7 @@ export const mapStateToProps = state => {
   let isLockedLesson = false;
   let isHiddenLesson = false;
   const {currentLessonId} = state.progress;
-  if (viewAs === ViewType.Student) {
+  if (viewAs === ViewType.Participant) {
     const {selectedSectionId} = state.teacherSections;
 
     isLockedLesson = lessonIsLockedForAllStudents(currentLessonId, state);

@@ -19,7 +19,7 @@ const defaultProps = {
     '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
   sectionsInfo: [],
   teacherResources: [],
-  viewAs: ViewType.Teacher,
+  viewAs: ViewType.Instructor,
   scripts: [
     {
       course_id: 30,
@@ -80,7 +80,7 @@ describe('CourseOverview', () => {
       <CourseOverview
         {...defaultProps}
         isTeacher={false}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
       />
     );
     expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
@@ -105,7 +105,7 @@ describe('CourseOverview', () => {
     const wrapper = shallow(
       <CourseOverview
         {...defaultProps}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
         announcements={[fakeStudentAnnouncement]}
       />
     );
@@ -152,7 +152,7 @@ describe('CourseOverview', () => {
 
     it('is not shown while viewing as student', () => {
       const wrapper = shallow(
-        <CourseOverview {...propsToShow} viewAs={ViewType.Student} />
+        <CourseOverview {...propsToShow} viewAs={ViewType.Participant} />
       );
       assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
     });

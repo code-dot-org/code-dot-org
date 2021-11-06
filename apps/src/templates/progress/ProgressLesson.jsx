@@ -44,7 +44,7 @@ class ProgressLesson extends React.Component {
       // We want teachers to start with everything uncollapsed. For students we
       // collapse everything except current lesson
       collapsed:
-        props.viewAs !== ViewType.Teacher &&
+        props.viewAs !== ViewType.Instructor &&
         props.currentLessonId !== props.lesson.id
     };
   }
@@ -98,7 +98,7 @@ class ProgressLesson extends React.Component {
     }
 
     // Is this a hidden lesson that we still render because we're a teacher
-    const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Student);
+    const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Participant);
     const isLockedForUser = lessonIsLockedForUser(lesson, levels, viewAs);
     const isLockedForSection = lessonIsLockedForAllStudents(lesson.id);
     const showAsLocked = isLockedForUser || isLockedForSection;
@@ -117,7 +117,7 @@ class ProgressLesson extends React.Component {
     const lockedTooltipId = _.uniqueId();
 
     const description =
-      viewAs === ViewType.Teacher
+      viewAs === ViewType.Instructor
         ? lesson.description_teacher
         : lesson.description_student;
 
@@ -132,7 +132,7 @@ class ProgressLesson extends React.Component {
     // display a warning explaining that they need to be verified to unlock lessons.
     const showNotAuthorizedWarning =
       lesson.lockable &&
-      viewAs === ViewType.Teacher &&
+      viewAs === ViewType.Instructor &&
       this.props.lockableAuthorizedLoaded &&
       !this.props.lockableAuthorized;
 
@@ -147,7 +147,7 @@ class ProgressLesson extends React.Component {
         <div
           style={{
             ...styles.main,
-            ...(((hiddenForStudents && viewAs === ViewType.Student) ||
+            ...(((hiddenForStudents && viewAs === ViewType.Participant) ||
               isLockedForUser) &&
               styles.translucent)
           }}
@@ -167,7 +167,7 @@ class ProgressLesson extends React.Component {
                       ...(!showAsLocked && styles.unlockedIcon)
                     }}
                   />
-                  {!showAsLocked && viewAs === ViewType.Teacher && (
+                  {!showAsLocked && viewAs === ViewType.Instructor && (
                     <ReactTooltip
                       id={lockedTooltipId}
                       role="tooltip"
@@ -181,7 +181,7 @@ class ProgressLesson extends React.Component {
               )}
               <span>{title}</span>
             </div>
-            {viewAs === ViewType.Student &&
+            {viewAs === ViewType.Participant &&
               lesson.student_lesson_plan_html_url && (
                 <span style={styles.buttonStyle}>
                   <Button
@@ -217,7 +217,7 @@ class ProgressLesson extends React.Component {
             />
           )}
         </div>
-        {showTeacherInfo && viewAs === ViewType.Teacher && (
+        {showTeacherInfo && viewAs === ViewType.Instructor && (
           <ProgressLessonTeacherInfo
             lesson={lesson}
             lessonUrl={lessonUrl}

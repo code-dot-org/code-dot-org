@@ -32,7 +32,7 @@ export function lessonIsVisible(lesson, state, viewAs) {
     sectionId,
     lesson.id
   );
-  return !isHidden || viewAs === ViewType.Teacher;
+  return !isHidden || viewAs === ViewType.Instructor;
 }
 
 /**
@@ -54,9 +54,9 @@ export function lessonIsLockedForUser(lesson, levels, state, viewAs) {
   if (!state.currentUser.userId) {
     // Signed out user
     return true;
-  } else if (viewAs === ViewType.Teacher) {
+  } else if (viewAs === ViewType.Instructor) {
     return !state.lessonLock.lockableAuthorized;
-  } else if (viewAs === ViewType.Student) {
+  } else if (viewAs === ViewType.Participant) {
     return lessonLocked(levels);
   }
   return true;
