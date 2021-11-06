@@ -3,6 +3,9 @@
 module Curriculum::CourseAudiences
   extend ActiveSupport::Concern
 
+  # Checks if a user can be the instructor for the course. Code instructors and levelbuilders
+  # can be the instructors of any course. Student accounts should never be able to be the instructor
+  # of any course.
   def can_be_instructor?(user)
     # If unit is in a unit group then decide based on unit group audience
     return unit_group.can_be_instructor?(user) if is_a?(Script) && unit_group
@@ -21,6 +24,8 @@ module Curriculum::CourseAudiences
     false
   end
 
+  # Checks if a user can be the participant in a course. If a course has a
+  # participant_audience of students anyone should be able to be a participant in the course
   def can_be_participant?(user)
     # If unit is in a unit group then decide based on unit group audience
     return unit_group.can_be_participant?(user) if is_a?(Script) && unit_group

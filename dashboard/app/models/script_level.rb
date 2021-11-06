@@ -79,6 +79,7 @@ class ScriptLevel < ApplicationRecord
     progression
     challenge
     level_keys
+    instructor_in_training
   )
 
   # Chapter values order all the script_levels in a script.
@@ -428,6 +429,7 @@ class ScriptLevel < ApplicationRecord
       summary[:conceptDifficulty] = level.summarize_concept_difficulty
       summary[:assessment] = !!assessment
       summary[:challenge] = !!challenge
+      summary[:instructor_in_training] = !!instructor_in_training
     end
 
     if include_prev_next
