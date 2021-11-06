@@ -8,9 +8,9 @@ Scenario: Toggle on Multi Level
   Then I am on "http://studio.code.org/s/allthethings/lessons/9/levels/1"
   And I see no difference for "page load"
   And I wait to see ".submitButton"
-  Then I click selector ".uitest-viewAsStudent"
+  Then I click selector ".uitest-viewAsParticipant"
   And I see no difference for "view as student"
-  Then I click selector ".uitest-viewAsTeacher"
+  Then I click selector ".uitest-viewAsInstructor"
   And I see no difference for "view as teacher"
   Then I open the progress drop down of the current page
   And I see no difference for "progress dropdown for teacher"
@@ -34,9 +34,9 @@ Scenario: Toggle on Hidden Maze Level
   And I wait for the page to fully load
   And I see no difference for "page load"
   Then I click selector ".show-handle .fa-chevron-left"
-  Then I click selector ".uitest-viewAsStudent"
+  Then I click selector ".uitest-viewAsParticipant"
   And I see no difference for "view as student"
-  Then I click selector ".uitest-viewAsTeacher"
+  Then I click selector ".uitest-viewAsInstructor"
   And I see no difference for "view as teacher"
   And I close my eyes
 
@@ -51,10 +51,10 @@ Scenario: Toggle on Lockable Level
   And element "#locked-lesson" is not visible
   And I see no difference for "page load"
   Then I click selector ".show-handle .fa-chevron-left"
-  Then I click selector ".uitest-viewAsStudent"
+  Then I click selector ".uitest-viewAsParticipant"
   And I wait until element "#locked-lesson" is visible
   And I see no difference for "view as student while locked"
-  Then I click selector ".uitest-viewAsTeacher"
+  Then I click selector ".uitest-viewAsInstructor"
   And element "#locked-lesson" is not visible
   And element ".level-group" is visible
   And I see no difference for "view as teacher while locked"
@@ -74,11 +74,11 @@ Scenario: Toggle on Lockable Level
   And I wait until element ".level-group" is visible
   And element "#locked-lesson" is not visible
   Then I click selector ".show-handle .fa-chevron-left"
-  Then I click selector ".uitest-viewAsStudent"
+  Then I click selector ".uitest-viewAsParticipant"
   And element "#locked-lesson" is not visible
   And I see no difference for "view as student while unlocked"
 
-  Then I click selector ".uitest-viewAsTeacher"
+  Then I click selector ".uitest-viewAsInstructor"
   And element "#locked-lesson" is not visible
 
   # Click the first student
