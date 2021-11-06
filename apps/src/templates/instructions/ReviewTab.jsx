@@ -23,7 +23,7 @@ class ReviewTab extends Component {
     // Populated by redux
     codeReviewEnabled: PropTypes.bool,
     viewAsCodeReviewer: PropTypes.bool.isRequired,
-    viewAsTeacher: PropTypes.bool,
+    viewAsInstructor: PropTypes.bool,
     channelId: PropTypes.string,
     serverLevelId: PropTypes.number,
     serverScriptId: PropTypes.number
@@ -316,7 +316,10 @@ class ReviewTab extends Component {
       commentSaveInProgress,
       commentSaveError
     } = this.state;
-    if (!authorizationError && (isReadyForReview || this.props.viewAsTeacher)) {
+    if (
+      !authorizationError &&
+      (isReadyForReview || this.props.viewAsInstructor)
+    ) {
       return (
         <CommentEditor
           onNewCommentSubmit={this.onNewCommentSubmit}
@@ -349,7 +352,7 @@ class ReviewTab extends Component {
   render() {
     const {
       viewAsCodeReviewer,
-      viewAsTeacher,
+      viewAsInstructor,
       codeReviewEnabled,
       channelId
     } = this.props;
@@ -394,7 +397,7 @@ class ReviewTab extends Component {
           />
         </div>
         <div style={styles.reviewHeader}>
-          {codeReviewEnabled && !viewAsTeacher && (
+          {codeReviewEnabled && !viewAsInstructor && (
             <>
               <ReviewNavigator
                 onSelectPeer={this.onSelectPeer}
@@ -415,13 +418,16 @@ class ReviewTab extends Component {
         )}
         <div style={styles.commentsSection}>
           <div style={styles.messageText}>
-            {viewAsCodeReviewer || viewAsTeacher
+            {viewAsCodeReviewer || viewAsInstructor
               ? javalabMsg.feedbackBeginningPeer({
                   peerName: projectOwnerName
                 })
               : javalabMsg.feedbackBeginning()}
           </div>
-          {this.renderComments(comments, !(isReadyForReview || viewAsTeacher))}
+          {this.renderComments(
+            comments,
+            !(isReadyForReview || viewAsInstructor)
+          )}
           {this.renderCommentEditor(forceRecreateEditorKey)}
         </div>
       </div>
@@ -433,7 +439,7 @@ export const UnconnectedReviewTab = ReviewTab;
 export default connect(state => ({
   codeReviewEnabled: state.sectionData.section.codeReviewEnabled,
   viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
-  viewAsTeacher: state.viewAs === ViewType.Instructor,
+  viewAsInstructor: state.viewAs === ViewType.Instructor,
   channelId: state.pageConstants.channelId,
   serverLevelId: state.pageConstants.serverLevelId,
   serverScriptId: state.pageConstants.serverScriptId

@@ -17,7 +17,7 @@ class Comment extends Component {
     onDelete: PropTypes.func.isRequired,
     viewAsCodeReviewer: PropTypes.bool.isRequired,
     // Populated by Redux
-    viewAsTeacher: PropTypes.bool
+    viewAsInstructor: PropTypes.bool
   };
 
   state = {
@@ -82,7 +82,7 @@ class Comment extends Component {
   getMenuItems = () => {
     const {
       viewAsCodeReviewer,
-      viewAsTeacher,
+      viewAsInstructor,
       onDelete,
       onResolveStateToggle
     } = this.props;
@@ -108,8 +108,8 @@ class Comment extends Component {
         iconClass: isResolved ? 'circle-o' : 'check-circle'
       });
     }
-    if (viewAsTeacher) {
-      // Teachers can delete comments
+    if (viewAsInstructor) {
+      // Instructors can delete comments
       menuItems.push({
         onClick: onDelete,
         text: javalabMsg.delete(),
@@ -184,7 +184,7 @@ class Comment extends Component {
 
 export const UnconnectedComment = Comment;
 export default connect(state => ({
-  viewAsTeacher: state.viewAs === ViewType.Instructor
+  viewAsInstructor: state.viewAs === ViewType.Instructor
 }))(Comment);
 
 const styles = {

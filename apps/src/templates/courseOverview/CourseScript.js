@@ -80,16 +80,16 @@ class CourseScript extends Component {
       return null;
     }
 
-    const assignedToStudent =
+    const assignedToParticipant =
       viewAs === ViewType.Participant && assignedSectionId;
     const selectedSection = sectionsForDropdown.find(
       section => section.id === selectedSectionId
     );
-    const assignedByTeacher =
+    const assignedByInstructor =
       viewAs === ViewType.Instructor &&
       selectedSection &&
       selectedSection.scriptId === id;
-    const isAssigned = assignedToStudent || assignedByTeacher;
+    const isAssigned = assignedToParticipant || assignedByInstructor;
 
     return (
       <div
