@@ -1689,10 +1689,10 @@
     opentype.js "^0.4.9"
     reqwest "^1.1.5"
 
-"@code-dot-org/piskel@0.13.0-cdo.7":
-  version "0.13.0-cdo.7"
-  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.7.tgz#b7793889485ac953af0b268fa5545dad7c6078db"
-  integrity sha512-sdPuYTksDB2oLG/SFmCOpGf2IudUuHI30SwMyyHb6AxOUkrx+CwT6vIzqvy20Ejt6f0rK4J15HSLuojfelGqkw==
+"@code-dot-org/piskel@0.13.0-cdo.8":
+  version "0.13.0-cdo.8"
+  resolved "https://registry.yarnpkg.com/@code-dot-org/piskel/-/piskel-0.13.0-cdo.8.tgz#085226f893790d36c56bef010659f2144093c6a9"
+  integrity sha512-cVfDjshCctXNtCU+VKKf2RZGXABkal59K06ZTBhfBWd7qAJGx6BL1yeRx4iO8tsKrSK425rNrXiIHO+IDLEV5A==
   dependencies:
     messageformat "^2.3.0"
 
