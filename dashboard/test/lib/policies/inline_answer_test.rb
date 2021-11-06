@@ -70,6 +70,11 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
     assert Policies::InlineAnswer.visible?(@student, @script_level_teacher_instructed)
   end
 
+  test 'visible? returns false for PLC courses which use the PLC Course models (even for authorized teachers)' do
+    plc_script = create(:script, professional_learning_course: true)
+    refute Policies::InlineAnswer.visible?(@authorized_teacher, create(:script_level, script: plc_script))
+  end
+
   test 'visible? returns true for all kinds of users if the lesson is in readonly mode for that user' do
     unit_with_readonly = create(:script, name: 'unit-with-readonly')
     script_level = create(:script_level, script: unit_with_readonly)
