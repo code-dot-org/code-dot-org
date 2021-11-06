@@ -19,7 +19,7 @@ const DEFAULT_PROPS = {
   serverLevelId: 123,
   teacher: 5,
   latestFeedback: null,
-  viewAs: 'Teacher',
+  viewAs: ViewType.Instructor,
   verifiedTeacher: true,
   selectedSectionId: '789',
   canHaveFeedbackReviewState: true,
@@ -54,7 +54,7 @@ describe('TeacherFeedback', () => {
     expect(wrapper.isEmptyRender()).to.be.true;
   });
 
-  describe('viewed as Teacher - looking at student work', () => {
+  describe('viewed as instructor - looking at participant work', () => {
     describe('without previous feedback', () => {
       it('does not display FeedbackStatus', () => {
         const wrapper = setUp({rubric: null, latestFeedback: null});
@@ -106,7 +106,7 @@ describe('TeacherFeedback', () => {
         const wrapper = setUp({latestFeedback});
         const statusComponent = wrapper.find(FeedbackStatus);
         expect(statusComponent).to.have.length(1);
-        expect(statusComponent.props().viewAs).to.equal('Teacher');
+        expect(statusComponent.props().viewAs).to.equal('Instructor');
         expect(statusComponent.props().latestFeedback).to.equal(latestFeedback);
       });
 
@@ -179,7 +179,7 @@ describe('TeacherFeedback', () => {
     });
   });
 
-  describe('viewed as teacher - not looking at student work', () => {
+  describe('viewed as instructor - not looking at participant work', () => {
     it('displays readonly rubric if rubric exists for level', () => {
       const wrapper = setUp({isEditable: false, rubric: RUBRIC});
       const rubric = wrapper.find(Rubric);
@@ -199,9 +199,9 @@ describe('TeacherFeedback', () => {
     });
   });
 
-  describe('viewed as a Student', () => {
+  describe('viewed as a participant', () => {
     const STUDENT_PROPS = {
-      viewAs: 'Student',
+      viewAs: ViewType.Participant,
       isEditable: false
     };
     describe('without previous feedback given', () => {

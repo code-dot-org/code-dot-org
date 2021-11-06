@@ -78,7 +78,7 @@ describe('Rubric', () => {
     expect(firstRubricField.props().currentlyChecked).to.be.true;
   });
 
-  describe('view as teacher', () => {
+  describe('view as instructor', () => {
     it('RubricField prop showFeedbackInputAreas is true if isEditable = true', () => {
       const wrapper = setUp({
         viewAs: ViewType.Instructor,
@@ -120,7 +120,7 @@ describe('Rubric', () => {
     });
   });
 
-  describe('view as student', () => {
+  describe('view as participant', () => {
     it('expands rubric value with feedback', () => {
       const wrapper = setUp({
         viewAs: ViewType.Participant,
