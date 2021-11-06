@@ -26,15 +26,29 @@ describe('viewAs redux', () => {
     restoreRedux();
   });
 
-  it('can set as teacher', () => {
+  it('can set as instructor', () => {
     const action = changeViewType(ViewType.Instructor);
     store.dispatch(action);
     const nextState = store.getState();
     assert.equal(nextState.viewAs, ViewType.Instructor);
   });
 
-  it('can set as student', () => {
+  it('setting teacher redirects to instructor', () => {
+    const action = changeViewType('Teacher');
+    store.dispatch(action);
+    const nextState = store.getState();
+    assert.equal(nextState.viewAs, ViewType.Instructor);
+  });
+
+  it('can set as participant', () => {
     const action = changeViewType(ViewType.Participant);
+    store.dispatch(action);
+    const nextState = store.getState();
+    assert.equal(nextState.viewAs, ViewType.Participant);
+  });
+
+  it('setting student redirects to participant', () => {
+    const action = changeViewType('Student');
     store.dispatch(action);
     const nextState = store.getState();
     assert.equal(nextState.viewAs, ViewType.Participant);
