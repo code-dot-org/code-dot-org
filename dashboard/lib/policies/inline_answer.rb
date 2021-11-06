@@ -10,8 +10,9 @@ class Policies::InlineAnswer
 
     # Authorized instructors who are instructing the course can view answers
     script = script_level.try(:script)
+
     return true if user.verified_instructor? &&
-      script&.can_be_instructor?(user)
+      script&.can_be_instructor?(user) && !script.old_professional_learning_course?
 
     # For CSF scripts any teacher account should be able to see teacher only markdown and answers
     # even if they are not authorized
