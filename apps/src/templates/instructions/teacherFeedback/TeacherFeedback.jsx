@@ -38,7 +38,7 @@ export class TeacherFeedback extends Component {
     latestFeedback: teacherFeedbackShape,
     token: PropTypes.string,
     //Provided by Redux
-    viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     verifiedTeacher: PropTypes.bool,
     selectedSectionId: PropTypes.string,
     updateUserProgress: PropTypes.func.isRequired,
@@ -265,8 +265,8 @@ export class TeacherFeedback extends Component {
       ? latestFeedback.comment
       : placeholderWarning;
 
-    // The comment section (reivew state, comment and status) is only displayed
-    // if it's editable or if the student is viewing their feedback.
+    // The comment section (review state, comment and status) is only displayed
+    // if it's editable or if the participant is viewing their feedback.
     const displayCommentSection =
       isEditable || (viewAs === ViewType.Participant && !!latestFeedback);
 
