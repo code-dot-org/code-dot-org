@@ -153,7 +153,7 @@ describe('LessonOverview', () => {
     assert.equal(wrapper.find('Announcements').props().announcements.length, 0);
   });
 
-  it('has provided teacher announcements if necessary', () => {
+  it('has provided instructor announcements if necessary', () => {
     const wrapper = shallow(
       <LessonOverview
         {...defaultProps}
@@ -166,7 +166,7 @@ describe('LessonOverview', () => {
     assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
   });
 
-  it('shows verified resources warning if teacher is not verified and lesson has verified resources', () => {
+  it('shows verified resources warning if instructor is not verified and lesson has verified resources', () => {
     const wrapper = shallow(
       <LessonOverview
         {...defaultProps}
@@ -177,7 +177,7 @@ describe('LessonOverview', () => {
     assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
-  it('does not show verified resources warning if teacher is verified', () => {
+  it('does not show verified resources warning if instructor is verified', () => {
     const wrapper = shallow(
       <LessonOverview
         {...defaultProps}
@@ -199,7 +199,7 @@ describe('LessonOverview', () => {
     assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
   });
 
-  it('has student announcement if viewing as student', () => {
+  it('has participant announcement if viewing as participant', () => {
     const wrapper = shallow(
       <LessonOverview
         {...defaultProps}
