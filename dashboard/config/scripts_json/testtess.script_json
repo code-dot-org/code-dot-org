@@ -9,11 +9,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:17:24 UTC",
+    "serialized_at": "2021-11-04 19:27:12 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "testtess"
     }
@@ -44,6 +44,21 @@
       },
       "seeding_key": {
         "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "testtess"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "new lesson 1",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
         "lesson_group.key": "lesson group",
         "script.name": "testtess"
       }
