@@ -12,7 +12,7 @@ export const teacherDashboardUrl = (sectionId, path = '') => {
   return dashboardPrefix + sectionId + path;
 };
 
-export const scriptUrlForStudent = (sectionId, scriptName, studentId) => {
+export const scriptUrlForParticipant = (sectionId, scriptName, studentId) => {
   if (!scriptName) {
     return null;
   }

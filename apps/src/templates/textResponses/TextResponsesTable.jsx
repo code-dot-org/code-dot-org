@@ -8,7 +8,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import orderBy from 'lodash/orderBy';
 import {textResponsePropType} from './textResponsesRedux';
-import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {scriptUrlForParticipant} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 const TABLE_WIDTH = tableLayoutStyles.table.width;
 const TABLE_COLUMN_WIDTHS = {
@@ -32,7 +32,7 @@ class TextResponsesTable extends Component {
 
   studentNameFormatter = (name, {rowData}) => {
     const {sectionId, scriptName} = this.props;
-    const studentUrl = scriptUrlForStudent(
+    const studentUrl = scriptUrlForParticipant(
       sectionId,
       scriptName,
       rowData.studentId

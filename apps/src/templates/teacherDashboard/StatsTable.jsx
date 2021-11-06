@@ -8,7 +8,7 @@ import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import orderBy from 'lodash/orderBy';
 import {getSelectedScriptName} from '@cdo/apps/redux/unitSelectionRedux';
-import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {scriptUrlForParticipant} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 
 class StatsTable extends Component {
   static propTypes = {
@@ -34,7 +34,11 @@ class StatsTable extends Component {
 
   nameFormatter = (name, {rowData}) => {
     const {section, scriptName} = this.props;
-    const studentUrl = scriptUrlForStudent(section.id, scriptName, rowData.id);
+    const studentUrl = scriptUrlForParticipant(
+      section.id,
+      scriptName,
+      rowData.id
+    );
 
     if (studentUrl) {
       return (

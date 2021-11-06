@@ -67,7 +67,7 @@ export default storybook => {
     },
 
     {
-      name: 'LessonGroup in teacher summary view with one hidden lesson',
+      name: 'LessonGroup in instructor summary view with one hidden lesson',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, 3)}>
           <LessonGroup
@@ -80,7 +80,7 @@ export default storybook => {
     },
 
     {
-      name: 'LessonGroup with all lessons hidden teacher summary view',
+      name: 'LessonGroup with all lessons hidden instructor summary view',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, 1)}>
           <LessonGroup
@@ -101,7 +101,7 @@ export default storybook => {
     },
 
     {
-      name: 'LessonGroup with no lessons teacher summary view',
+      name: 'LessonGroup with no lessons instructor summary view',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, 1)}>
           <LessonGroup
@@ -122,7 +122,8 @@ export default storybook => {
     },
 
     {
-      name: 'LessonGroup with all lessons hidden student summary view (empty)',
+      name:
+        'LessonGroup with all lessons hidden participant summary view (empty)',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Participant, 1)}>
           <LessonGroup

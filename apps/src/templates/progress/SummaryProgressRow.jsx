@@ -102,8 +102,11 @@ class SummaryProgressRow extends React.Component {
       viewAs
     } = this.props;
 
-    // Would this lesson be hidden if we were a student?
-    const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Participant);
+    // Would this lesson be hidden if we were a participant?
+    const hiddenForParticipants = !lessonIsVisible(
+      lesson,
+      ViewType.Participant
+    );
     const isLockedForUser = lessonIsLockedForUser(lesson, levels, viewAs);
     const isLockedForSection = lessonIsLockedForAllStudents(lesson.id);
     const showAsLocked = isLockedForUser || isLockedForSection;
@@ -121,19 +124,19 @@ class SummaryProgressRow extends React.Component {
         style={{
           ...(!dark && styles.lightRow),
           ...(dark && styles.darkRow),
-          ...((hiddenForStudents || showAsLocked) && styles.dashedBorder)
+          ...((hiddenForParticipants || showAsLocked) && styles.dashedBorder)
         }}
       >
         <td
           style={{
             ...styles.col1,
-            ...(((hiddenForStudents && viewAs === ViewType.Participant) ||
+            ...(((hiddenForParticipants && viewAs === ViewType.Participant) ||
               isLockedForUser) &&
               styles.fadedCol)
           }}
         >
           <div style={styles.colText}>
-            {hiddenForStudents && (
+            {hiddenForParticipants && (
               <FontAwesome icon="eye-slash" style={styles.icon} />
             )}
             {lesson.lockable && (
@@ -177,7 +180,7 @@ class SummaryProgressRow extends React.Component {
         <td
           style={{
             ...styles.col2,
-            ...(((hiddenForStudents && viewAs === ViewType.Participant) ||
+            ...(((hiddenForParticipants && viewAs === ViewType.Participant) ||
               isLockedForUser) &&
               styles.fadedCol)
           }}

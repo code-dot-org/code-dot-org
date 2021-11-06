@@ -131,7 +131,7 @@ export default storybook => {
       )
     },
     {
-      name: 'second lesson is a hidden lesson, viewing as teacher',
+      name: 'second lesson is a hidden lesson, viewing as instructor',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, '2')}>
           <SummaryProgressTable
@@ -145,7 +145,7 @@ export default storybook => {
       )
     },
     {
-      name: 'third lesson is a hidden lesson, viewing as teacher',
+      name: 'third lesson is a hidden lesson, viewing as instructor',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, '3')}>
           <SummaryProgressTable
@@ -159,7 +159,7 @@ export default storybook => {
       )
     },
     {
-      name: 'second lesson is a hidden lesson, viewing as student',
+      name: 'second lesson is a hidden lesson, viewing as participant',
       description: 'Row 2 should not be visible',
       story: () => (
         <Provider
@@ -175,7 +175,7 @@ export default storybook => {
       )
     },
     {
-      name: 'third row is a hidden lesson, viewing as student',
+      name: 'third row is a hidden lesson, viewing as participant',
       description: 'Row 3 should not be visible, gray still every other row',
       story: () => (
         <Provider
@@ -191,7 +191,7 @@ export default storybook => {
       )
     },
     {
-      name: 'locked lesson in current section as teacher',
+      name: 'locked lesson in current section as instructor',
       story: () => (
         <Provider
           store={createStoreWithLockedLesson(ViewType.Instructor, true)}
@@ -212,7 +212,7 @@ export default storybook => {
       )
     },
     {
-      name: 'locked lesson as student',
+      name: 'locked lesson as participant',
       story: () => (
         <Provider store={createStoreWithLockedLesson(ViewType.Participant)}>
           <SummaryProgressTable
@@ -237,7 +237,7 @@ export default storybook => {
       )
     },
     {
-      name: 'unlocked lesson in current section as teacher',
+      name: 'unlocked lesson in current section as instructor',
       story: () => (
         <Provider
           store={createStoreWithLockedLesson(ViewType.Instructor, true)}
@@ -259,7 +259,7 @@ export default storybook => {
       )
     },
     {
-      name: 'locked, hidden lesson as teacher',
+      name: 'locked, hidden lesson as instructor',
       story: () => (
         <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, '2')}>
           <SummaryProgressTable

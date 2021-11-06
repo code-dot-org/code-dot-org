@@ -41,7 +41,7 @@ class ProgressLesson extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // We want teachers to start with everything uncollapsed. For students we
+      // We want instructors to start with everything uncollapsed. For participants we
       // collapse everything except current lesson
       collapsed:
         props.viewAs !== ViewType.Instructor &&
@@ -97,8 +97,11 @@ class ProgressLesson extends React.Component {
       return null;
     }
 
-    // Is this a hidden lesson that we still render because we're a teacher
-    const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Participant);
+    // Is this a hidden lesson that we still render because we're a instructor
+    const hiddenForParticipants = !lessonIsVisible(
+      lesson,
+      ViewType.Participant
+    );
     const isLockedForUser = lessonIsLockedForUser(lesson, levels, viewAs);
     const isLockedForSection = lessonIsLockedForAllStudents(lesson.id);
     const showAsLocked = isLockedForUser || isLockedForSection;
@@ -127,8 +130,8 @@ class ProgressLesson extends React.Component {
     // don't need to pass it separately from lesson here and in ProgressLessonTeacherInfo.
     const lessonUrl = levels[0] && levels[0].url;
 
-    // If a teacher is not verified they will not be lockableAuthorized (meaning they can't
-    // lock or unlock lessons). For a lockable lesson where teacher is not authorized, we will
+    // If a instructor is not verified they will not be lockableAuthorized (meaning they can't
+    // lock or unlock lessons). For a lockable lesson where instructor is not authorized, we will
     // display a warning explaining that they need to be verified to unlock lessons.
     const showNotAuthorizedWarning =
       lesson.lockable &&
@@ -141,13 +144,13 @@ class ProgressLesson extends React.Component {
         className="uitest-progress-lesson"
         style={{
           ...styles.outer,
-          ...((hiddenForStudents || showAsLocked) && styles.hiddenOrLocked)
+          ...((hiddenForParticipants || showAsLocked) && styles.hiddenOrLocked)
         }}
       >
         <div
           style={{
             ...styles.main,
-            ...(((hiddenForStudents && viewAs === ViewType.Participant) ||
+            ...(((hiddenForParticipants && viewAs === ViewType.Participant) ||
               isLockedForUser) &&
               styles.translucent)
           }}
@@ -155,7 +158,7 @@ class ProgressLesson extends React.Component {
           <div style={styles.heading}>
             <div style={styles.headingText} onClick={this.toggleCollapsed}>
               <FontAwesome icon={caret} style={caretStyle} />
-              {hiddenForStudents && (
+              {hiddenForParticipants && (
                 <FontAwesome icon="eye-slash" style={styles.icon} />
               )}
               {lesson.lockable && (
