@@ -40,4 +40,13 @@ module Curriculum::CourseTypes
 
     false
   end
+
+  # A course is a professional learning if the participant audience is something
+  # other that students and therefore teaches adults
+  def professional_learning_course?
+    # If unit is in a unit group then decide based on unit group
+    return unit_group.professional_learning_course? if is_a?(Script) && unit_group
+
+    participant_audience != 'student'
+  end
 end
