@@ -1,4 +1,7 @@
 Rake::Task['db:test:prepare'].enhance do
+  if ENV['UTF8']
+    system('mysql -uroot -e "ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;"')
+  end
   ActiveRecord::Base.establish_connection(:test)
   Rake::Task['db:fixtures:load'].invoke
   require 'cdo/db_utils'
