@@ -97,7 +97,7 @@ class TeacherPanel extends React.Component {
 
     const sectionId = selectedSection && selectedSection.id;
 
-    const displaySelectedStudentInfo =
+    const displaySelectedParticipantInfo =
       viewAs === ViewType.Instructor &&
       !!students?.length &&
       pageType !== pageTypes.scriptOverview;
@@ -113,7 +113,7 @@ class TeacherPanel extends React.Component {
         <h3>{i18n.teacherPanel()}</h3>
         <div style={styles.scrollable}>
           <ViewAsToggle logToFirehose={this.logToFirehose} />
-          {displaySelectedStudentInfo && (
+          {displaySelectedParticipantInfo && (
             <SelectedStudentInfo
               students={students}
               onSelectUser={id => this.onSelectUser(id, 'iterator')}
