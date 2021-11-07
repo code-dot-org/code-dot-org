@@ -264,7 +264,7 @@ describe('TeacherFeedback', () => {
 
         const statusComponent = wrapper.find(FeedbackStatus);
         expect(statusComponent).to.have.length(1);
-        expect(statusComponent.props().viewAs).to.equal('Student');
+        expect(statusComponent.props().viewAs).to.equal(ViewType.Participant);
         expect(statusComponent.props().latestFeedback).to.equal(latestFeedback);
       });
 
