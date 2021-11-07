@@ -636,13 +636,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.setHSV(312, 0.32, 0.62);
       this.appendDummyInput()
         .appendTitle(msg.setScore())
-        .appendTitle(
-          new blockly.FieldTextInput(
-            '0',
-            blockly.FieldTextInput.numberValidator
-          ),
-          'VALUE'
-        );
+        .appendTitle(new blockly.FieldNumber(0), 'VALUE');
       this.setInputsInline(true);
       this.setPreviousStatement(true);
       this.setNextStatement(true);
