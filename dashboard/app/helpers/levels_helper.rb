@@ -919,8 +919,9 @@ module LevelsHelper
     end
   end
 
+  # replace with policy
   def can_view_teacher_markdown?
-    if current_user.try(:authorized_teacher?)
+    if current_user.try(:verified_instructor?)
       true
     elsif current_user.try(:teacher?) && @script
       @script.k5_course? || @script.k5_draft_course?
