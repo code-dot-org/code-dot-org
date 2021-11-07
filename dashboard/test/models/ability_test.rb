@@ -54,9 +54,9 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
-    assert ability.cannot?(:read, @public_facilitator_to_teacher_script_level)
-    assert ability.cannot?(:read, @public_code_instructor_to_teacher_script_level)
-    assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_script_level)
+    refute ability.can?(:read, @public_facilitator_to_teacher_script_level)
+    refute ability.can?(:read, @public_code_instructor_to_teacher_script_level)
+    refute ability.can?(:read, @public_plc_reviewer_to_facilitator_script_level)
     refute ability.can?(:read, @public_teacher_to_student_script_level, {login_required: "true"})
     refute ability.can?(:read, @login_required_script_level)
   end
