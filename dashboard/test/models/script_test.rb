@@ -910,6 +910,13 @@ class ScriptTest < ActiveSupport::TestCase
     assert Script.find_by_name('ECSPD').old_professional_learning_course?
   end
 
+  test 'professional_learning_course?' do
+    refute Script.find_by_name('flappy').professional_learning_course?
+    refute Script.find_by_name('ECSPD').professional_learning_course?
+
+    assert create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).professional_learning_course?
+  end
+
   test 'should summarize migrated unit' do
     unit = create(:script, name: 'single-lesson-script', instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
     lesson_group = create(:lesson_group, key: 'key1', script: unit)
