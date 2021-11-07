@@ -152,6 +152,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.BlockSpace.prototype.registerGlobalVariables = function() {}; // Not implemented.
 
+  blocklyWrapper.getFieldForInputType = function(type) {
+    return blocklyWrapper.FieldTextInput;
+  };
+
   blocklyWrapper.getGenerator = function() {
     return blocklyWrapper.Generator.get('JavaScript');
   };
