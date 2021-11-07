@@ -19,6 +19,7 @@ import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
 import initializeVariables from './addons/cdoVariables';
 import CdoVariableMap from './addons/cdoVariableMap';
+import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
 import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
 import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
@@ -169,6 +170,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
     blocklyWrapper.blockly_.registry.Type.TOOLBOX,
     blocklyWrapper.blockly_.registry.DEFAULT,
     CdoToolbox,
+    true /* opt_allowOverrides */
+  );
+
+  blocklyWrapper.blockly_.registry.register(
+    blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
+    blocklyWrapper.blockly_.registry.DEFAULT,
+    CdoVerticalFlyout,
     true /* opt_allowOverrides */
   );
 
