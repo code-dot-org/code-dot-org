@@ -1,5 +1,5 @@
 / Show the correct answer to authorized teachers
-- if Policies::InlineAnswer.visible?(current_user, @script_level)
+- if Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
   - correct_answers = data['answers'].each_with_index.map do |answer, index|
     - next unless answer['correct']
     - letter = standalone ? nil : Multi.value_to_letter(index)

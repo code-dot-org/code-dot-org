@@ -27,58 +27,58 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
   end
 
   test 'visible? returns true for authorized teachers in unit instructed by teacher' do
-    assert Policies::InlineAnswer.visible?(@authorized_teacher, @script_level_teacher_instructed)
+    assert Policies::InlineAnswer.visible_for_script_level?(@authorized_teacher, @script_level_teacher_instructed)
   end
 
   test 'visible? returns true for authorized teachers in course instructed by teacher' do
-    assert Policies::InlineAnswer.visible?(@authorized_teacher, @script_level_teacher_instructed_in_course)
+    assert Policies::InlineAnswer.visible_for_script_level?(@authorized_teacher, @script_level_teacher_instructed_in_course)
   end
 
   test 'visible? returns true for facilitator in unit instructed by facilitator' do
-    assert Policies::InlineAnswer.visible?(@facilitator, @script_level_facilitator_instructed)
+    assert Policies::InlineAnswer.visible_for_script_level?(@facilitator, @script_level_facilitator_instructed)
   end
 
   test 'visible? returns true for plc reviewer in unit instructed by plc reviewer' do
-    assert Policies::InlineAnswer.visible?(@plc_reviewer, @script_level_plc_reviewer_instructed)
+    assert Policies::InlineAnswer.visible_for_script_level?(@plc_reviewer, @script_level_plc_reviewer_instructed)
   end
 
   test 'visible? returns true for code instructor in unit instructed by code instructor' do
-    assert Policies::InlineAnswer.visible?(@code_instructor, @script_level_code_instructor_instructed)
+    assert Policies::InlineAnswer.visible_for_script_level?(@code_instructor, @script_level_code_instructor_instructed)
   end
 
   test 'visible? returns false for if user can not instruct unit' do
-    refute Policies::InlineAnswer.visible?(@authorized_teacher, @script_level_facilitator_instructed)
+    refute Policies::InlineAnswer.visible_for_script_level?(@authorized_teacher, @script_level_facilitator_instructed)
   end
 
   test 'visible? returns true for if teacher in a K5 course' do
     Script.any_instance.stubs(:k5_course?).returns(true)
-    assert Policies::InlineAnswer.visible?(@teacher, @script_level_teacher_instructed)
+    assert Policies::InlineAnswer.visible_for_script_level?(@teacher, @script_level_teacher_instructed)
   end
 
   test 'visible? returns false for non teachers' do
-    refute Policies::InlineAnswer.visible?(@student, @script_level_teacher_instructed)
+    refute Policies::InlineAnswer.visible_for_script_level?(@student, @script_level_teacher_instructed)
   end
 
   test 'visible? returns false for non-authorized teachers' do
-    refute Policies::InlineAnswer.visible?(@teacher, @script_level_teacher_instructed)
+    refute Policies::InlineAnswer.visible_for_script_level?(@teacher, @script_level_teacher_instructed)
   end
 
   test 'visible? returns true in levelbuilder' do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    assert Policies::InlineAnswer.visible?(@student, nil)
-    assert Policies::InlineAnswer.visible?(@student, @script_level_teacher_instructed)
+    assert Policies::InlineAnswer.visible_for_script_level?(@student, nil)
+    assert Policies::InlineAnswer.visible_for_script_level?(@student, @script_level_teacher_instructed)
   end
 
   test 'visible? returns false for PLC courses which use the PLC Course models (even for authorized teachers)' do
     plc_script = create(:script, professional_learning_course: true)
-    refute Policies::InlineAnswer.visible?(@authorized_teacher, create(:script_level, script: plc_script))
+    refute Policies::InlineAnswer.visible_for_script_level?(@authorized_teacher, create(:script_level, script: plc_script))
   end
 
   test 'visible? returns true for all kinds of users if the lesson is in readonly mode for that user' do
     unit_with_readonly = create(:script, name: 'unit-with-readonly')
     script_level = create(:script_level, script: unit_with_readonly)
     create(:user_level, user: @student, level: script_level.level, script: unit_with_readonly, submitted: true, readonly_answers: true)
-    assert Policies::InlineAnswer.visible?(@student, script_level)
+    assert Policies::InlineAnswer.visible_for_script_level?(@student, script_level)
   end
 end

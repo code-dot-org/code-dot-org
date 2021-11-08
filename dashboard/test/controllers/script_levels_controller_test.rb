@@ -1404,22 +1404,6 @@ class ScriptLevelsControllerTest < ActionController::TestCase
 
   STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
 
-  test "logged out can not view teacher markdown" do
-    refute can_view_teacher_markdown?
-  end
-
-  test "can view CSF teacher markdown as non-authorized teacher" do
-    stubs(:current_user).returns(@teacher)
-    @script.stubs(:k5_course?).returns(true)
-    assert can_view_teacher_markdown?
-  end
-
-  test "students can not view CSF teacher markdown" do
-    stubs(:current_user).returns(@student)
-    @script.stubs(:k5_course?).returns(true)
-    refute can_view_teacher_markdown?
-  end
-
   test "should present single available level for single-level scriptlevels" do
     script = create(:script)
     lesson_group = create(:lesson_group, script: script)
