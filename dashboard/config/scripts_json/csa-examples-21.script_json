@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-08 14:27:16 UTC",
+    "serialized_at": "2021-11-08 18:28:42 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -276,6 +276,7 @@
       "key": "dd65e745-55aa-4e40-97f3-7b0aa7e08537",
       "position": 1,
       "properties": {
+        "progression_name": "Concert in The Theater Project [The Theater]"
       },
       "seeding_key": {
         "activity_section.key": "dd65e745-55aa-4e40-97f3-7b0aa7e08537",
@@ -633,6 +634,50 @@
       "level_keys": [
         "CSA Unit 1 Project - Student Example 12"
       ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Concert in The Theater Project [The Theater]"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 3 Project - Student Example 1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "dd65e745-55aa-4e40-97f3-7b0aa7e08537"
+      },
+      "level_keys": [
+        "CSA Unit 3 Project - Student Example 1"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Concert in The Theater Project [The Theater]"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 3 Project - Student Example 2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "dd65e745-55aa-4e40-97f3-7b0aa7e08537"
+      },
+      "level_keys": [
+        "CSA Unit 3 Project - Student Example 2"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -778,6 +823,30 @@
         "lesson_group.key": "",
         "script.name": "csa-examples-21",
         "activity_section.key": "33bcabc2-1941-43aa-8c85-9e991432ec76"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 3 Project - Student Example 1",
+        "script_level.level_keys": [
+          "CSA Unit 3 Project - Student Example 1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "dd65e745-55aa-4e40-97f3-7b0aa7e08537"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 3 Project - Student Example 2",
+        "script_level.level_keys": [
+          "CSA Unit 3 Project - Student Example 2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "csa-examples-21",
+        "activity_section.key": "dd65e745-55aa-4e40-97f3-7b0aa7e08537"
       }
     }
   ],
