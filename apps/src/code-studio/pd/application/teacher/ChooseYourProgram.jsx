@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {FormGroup, Row, Col} from 'react-bootstrap';
+import color from '@cdo/apps/util/color';
 import {
   PageLabels,
   SectionHeaders,
-  TextFields
+  TextFields,
+  Year
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {FormGroup, Row, Col} from 'react-bootstrap';
 import {
   PROGRAM_CSD,
   PROGRAM_CSP,
-  PROGRAM_CSA,
-  YEAR
+  PROGRAM_CSA
 } from './TeacherApplicationConstants';
-import color from '@cdo/apps/util/color';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {LabeledCheckBoxes} from '../../form_components_func/labeled/LabeledCheckBoxes';
 import {LabeledNumberInput} from '../../form_components_func/labeled/LabeledInput';
@@ -85,7 +85,7 @@ const ChooseYourProgram = props => {
           {data.program === PROGRAM_CSA && !isOffered && (
             <p style={styles.error}>
               The Computer Science A Professional Learning Program is not yet
-              offered in your region for the {YEAR} academic year. We are
+              offered in your region for the {Year} academic year. We are
               working with our national network of Regional Partners to expand
               the program to all regions by 2023-24.{' '}
               {regionalPartner &&
@@ -193,7 +193,7 @@ const ChooseYourProgram = props => {
               Note: {minCourseHours} or more hours of instruction per{' '}
               {programInfo.name} section are strongly recommended. We suggest
               checking with your school administration to see if additional time
-              can be allotted for this course in {YEAR}.
+              can be allotted for this course in {Year}.
             </p>
           )}
 
@@ -206,9 +206,9 @@ const ChooseYourProgram = props => {
           {showTeachingPlansNote && (
             <p style={styles.error}>
               Note: This program is designed to work best for teachers who are
-              teaching this course in the {YEAR} school year. Scholarship
+              teaching this course in the {Year} school year. Scholarship
               eligibility is dependent on whether or not you will be teaching
-              the course during the {YEAR} school year.
+              the course during the {Year} school year.
             </p>
           )}
 
