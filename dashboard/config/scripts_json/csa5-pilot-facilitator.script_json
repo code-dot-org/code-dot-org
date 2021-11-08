@@ -14,9 +14,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:57 UTC",
+    "serialized_at": "2021-11-05 13:32:41 UTC",
     "published_state": null,
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csa5-pilot-facilitator"
     }
@@ -6636,6 +6638,18 @@
       }
     },
     {
+      "name": "Enhanced for Loops and 2D Arrays",
+      "url": "https://youtu.be/8n9IUauA7k4",
+      "key": "enhanced_for_loops_and_2d_arrays",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "enhanced_for_loops_and_2d_arrays"
+      }
+    },
+    {
       "name": "FRQ Scoring Guide",
       "url": "https://docs.google.com/document/d/1r1osgQMGvpnwaR1Vhg2ZcoZ0DDztHgPrqKNIy6eUzgk/edit?usp=sharing",
       "key": "frq_scoring_guide_3",
@@ -6696,6 +6710,18 @@
       }
     },
     {
+      "name": "Row-Major Traversal",
+      "url": "https://youtu.be/eHJ50ugOLbU",
+      "key": "row-major_traversal",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "row-major_traversal"
+      }
+    },
+    {
       "name": "Shifting Elements in a 2D Array",
       "url": "https://docs.google.com/document/d/1okecHKh_jgKJGvUH2Y1X1nkREw208syphfPuGa2bpg0/edit#",
       "key": "shifting_elements_in_a_2d_array",
@@ -6741,6 +6767,18 @@
       },
       "seeding_key": {
         "resource.key": "tracing_enhanced_for_loops"
+      }
+    },
+    {
+      "name": "Two-Dimensional (2D) Arrays",
+      "url": "https://youtu.be/uvyvOALK4Oo",
+      "key": "two-dimensional_2d_arrays",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "two-dimensional_2d_arrays"
       }
     },
     {
@@ -7036,6 +7074,12 @@
     {
       "seeding_key": {
         "lesson.key": "Creating Tables of Data",
+        "resource.key": "two-dimensional_2d_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating Tables of Data",
         "resource.key": "u5l1_extra_practice"
       }
     },
@@ -7306,6 +7350,12 @@
     {
       "seeding_key": {
         "lesson.key": "Traversing a 2D Array by Rows",
+        "resource.key": "row-major_traversal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Traversing a 2D Array by Rows",
         "resource.key": "u5l2_extra_practice"
       }
     },
@@ -7325,6 +7375,12 @@
       "seeding_key": {
         "lesson.key": "Using Enhanced for Loops",
         "resource.key": "_key_u5l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Enhanced for Loops",
+        "resource.key": "enhanced_for_loops_and_2d_arrays"
       }
     },
     {
