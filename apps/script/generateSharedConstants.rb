@@ -38,9 +38,15 @@ end
 # @param [Boolean] transform_keys: (optional, default false) if true, transform the hash keys into js style lowerCamelCase.
 def generate_constants(shared_const_name, source_module: SharedConstants, transform_keys: false)
   raw = source_module.const_get(shared_const_name)
-  hash_or_array = parse_raw(raw)
-  hash_or_array = hash_or_array.deep_transform_keys {|k| k.to_s.camelize(:lower)} if transform_keys && hash_or_array.is_a?(Hash)
-  "export const #{shared_const_name.downcase.camelize} = #{JSON.pretty_generate(hash_or_array)};"
+  begin
+    hash_or_array = parse_raw(raw)
+    hash_or_array = hash_or_array.deep_transform_keys {|k| k.to_s.camelize(:lower)} if transform_keys && hash_or_array.is_a?(Hash)
+    "export const #{shared_const_name.downcase.camelize} = #{JSON.pretty_generate(hash_or_array)};"
+  rescue JSON::ParserError
+    if raw.is_a?(String)
+      "export const #{shared_const_name.downcase.camelize} = '#{raw}';"
+    end
+  end
 end
 
 # Generate a set of JS objects from their ruby equivalents
@@ -144,7 +150,7 @@ def main
 
   generate_shared_js_file(
     generate_multiple_constants(
-      %w(SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
+      %w(YEAR SECTION_HEADERS PAGE_LABELS VALID_SCORES LABEL_OVERRIDES TEXT_FIELDS MULTI_ANSWER_QUESTION_FIELDS SCOREABLE_QUESTIONS),
       source_module: Pd::TeacherApplicationConstants,
       transform_keys: true
     ),
