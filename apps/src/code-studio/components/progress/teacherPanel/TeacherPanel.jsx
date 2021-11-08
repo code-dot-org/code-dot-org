@@ -30,7 +30,10 @@ import {
 import {reload} from '@cdo/apps/utils';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {studentShape, levelWithProgress} from './types';
-import {getStudentsForSection, queryLockStatus} from './teacherPanelData';
+import {
+  getStudentsForSection,
+  queryLockStatus
+} from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 
 class TeacherPanel extends React.Component {
   static propTypes = {
