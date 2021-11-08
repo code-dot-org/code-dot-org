@@ -1,6 +1,7 @@
 {
   "browser": true,
   "curly": true,
+  "esversion": 6,
   "globals": {
     "$": true,
     "jQuery": true
