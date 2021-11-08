@@ -103,6 +103,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldImage');
   blocklyWrapper.wrapReadOnlyProperty('FieldImageDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
+  blocklyWrapper.wrapReadOnlyProperty('FieldNumber');
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
@@ -219,6 +220,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.getWorkspaceCode = function() {
     return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
+  };
+
+  blocklyWrapper.getFieldForInputType = function(type) {
+    if (type === 'Number') {
+      return blocklyWrapper.FieldNumber;
+    }
+    return blocklyWrapper.FieldTextInput;
   };
 
   // TODO - used for spritelab behavior blocks
