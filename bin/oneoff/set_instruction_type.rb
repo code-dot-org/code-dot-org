@@ -21,7 +21,7 @@ def set_instruction_type
                               else
                                 'teacher_led'
                               end
-    script.save(skip_name_format_validation: true)
+    script.update!(skip_name_format_validation: true)
     script.write_script_json
   end
 
@@ -29,7 +29,7 @@ def set_instruction_type
     # default is teacher_led so only need to update unit groups we want to be self_paced
     next unless ['self-paced-pl-csp-2021', 'self-paced-pl-csd-2021'].include?(course.name)
 
-    course.instruction_type = 'self_paced'
+    course.instruction_type = 'self_gpaced'
     course.save!
     course.write_serialization
   end
