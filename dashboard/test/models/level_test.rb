@@ -114,12 +114,6 @@ class LevelTest < ActiveSupport::TestCase
     end
   end
 
-  test "get custom levels" do
-    custom_levels = Level.custom_levels
-    assert custom_levels.include?(@custom_level)
-    assert_not custom_levels.include?(@level)
-  end
-
   test "should not allow pairing with levelgroup type levels" do
     level = Level.create({type: "LevelGroup"})
     assert_equal level.should_allow_pairing?(0), false
@@ -650,7 +644,7 @@ class LevelTest < ActiveSupport::TestCase
 
     level = Level.create(
       name: level_name,
-      user: create(:user),
+      level_num: 'custom',
       callout_json: JSON.generate(
         [
           {"callout_text": "first english markdown", "localization_key": "first"},
@@ -672,7 +666,7 @@ class LevelTest < ActiveSupport::TestCase
 
     level = Level.create(
       name: level_name,
-      user: create(:user),
+      level_num: 'custom',
       callout_json: JSON.generate(
         [
           {"callout_text": "first english markdown", "localization_key": "first"},

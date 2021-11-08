@@ -959,7 +959,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
   test "with callout defined should define callout JS" do
     script = create(:script)
     lesson_group = create(:lesson_group, script: script)
-    level = create(:level, :blockly, user_id: nil)
+    level = create :deprecated_blockly_level
     lesson = create(:lesson, script: script, lesson_group: lesson_group)
     script_level = create(:script_level, script: script, levels: [level], lesson: lesson)
 

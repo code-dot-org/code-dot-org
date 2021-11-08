@@ -22258,6 +22258,8 @@ en:
           lessons:
             new lesson:
               name: lesson display name
+            lesson-2:
+              name: new lesson 1
           lesson_groups:
             lesson group:
               display_name: lesson group display name
@@ -22976,8 +22978,12 @@ en:
               description_teacher: Students explore using `compareTo()` to check if `String`s are in alphabetical order. Students then work on their Neighborhood Lit Fest Project, focusing specifically on the tasks they have on their Project Planning Board.
             lesson-9:
               name: Solving Problems with Strings
+              description_student: 'You combine your knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. You then participate in a peer feedback session and reflect on your progress on your Neighborhood Lit Fest Project. '
+              description_teacher: Students combine their knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. Students then participate in a peer feedback session and reflect on their progress on their Neighborhood Lit Fest Project.
             lesson-10:
               name: Solving Problems with ArrayLists
+              description_student: You apply standard algorithms you wrote for 1D and 2D arrays to `ArrayList`s. You implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in your Neighborhood Lit Fest Project.
+              description_teacher: Students apply standard algorithms they wrote for 1D and 2D arrays to `ArrayList`s. Students implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in their Neighborhood Lit Fest Project.
             lesson-11:
               name: Neighborhood Lit Fest Project - Day 1
               description_student: You continue to develop your Neighborhood Lit Fest Project to create a story, poetry, song, or another form of literature based on analysis of work from your favorite author or artist. You first self-assess your work to evaluate your progress in completing project requirements, then write acceptance criteria for a feature in your project that a peer will test. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project.
@@ -26909,3 +26915,212 @@ en:
           description_short: ''
           description: This unit contains the CS Discoveries Post-Course Survey. This unit can be assigned after students complete their final unit in CS Discoveries.
           student_description: This unit contains a survey for when your class is finished with the units in CS Discoveries. Your teacher will tell you when it's time to take this survey.
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: Module 1 - Getting Started
+          lesson_groups: {}
+          name: csa-pl-test
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-pl-module-1-test:
+          lessons: {}
+          lesson_groups: {}
+          name: csa-pl-module-1-test
+          title: Orientation to Code.org and CSA
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-pl-module-2-test:
+          lessons: {}
+          lesson_groups: {}
+          name: csa-pl-module-2-test
+          title: Navigating Code.org’s tools
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-pl-module-3-test:
+          lessons: {}
+          lesson_groups: {}
+          name: csa-pl-module-3-test
+          title: Support with text-based programming
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa6-pilot-facilitator:
+          lessons:
+            Documenting Program Code:
+              name: Documenting Program Code
+              description_student: The projects you have developed throughout the course have inspired a lot of creativity in the community! A Neighborhood Lit Fest will be held to showcase creative stories, scripts, song lyrics, letters, and poems. The Neighborhood Lit Fest Project is a large project that you work on throughout the unit, and project management strategies help to organize and structure your work. You explore strategies for writing and structuring code so other software engineers can easily understand and use a Java tool to create program documentation.
+              description_teacher: Students are introduced to the Neighborhood Lit Fest Project and evaluate requirements and examples to identify questions and key features. Before beginning work on the project, students expand their understanding of program structure and commenting by identifying best practices and exploring the use of Javadocs to generate program documentation.
+            Exploring Integer and Double Objects:
+              name: Exploring Integer and Double Objects
+              description_student: You construct `Integer` and `Double` objects to represent `int` and `double` primitive values as reference values. Using the methods in the `Integer` and `Double` classes, you return the values these objects store as primitive values. You also explore the minimum and maximum values for integers to avoid overflow errors before planning the tasks you need to complete for your Neighborhood Lit Fest Project.
+              description_teacher: Students construct `Integer` and `Double` objects to represent `int` and `double` primitive values as reference values. Using the methods in the `Integer` and `Double` classes, students return the values these objects store as primitive values. Students also explore the minimum and maximum values for integers to avoid overflow errors before planning the tasks they need to complete for their Neighborhood Lit Fest Project.
+            Using ArrayLists to Store Data:
+              name: Using ArrayLists to Store Data
+              description_student: When working with arrays and lists, we sometimes encounter problems where the number of elements is unknown or the list's size constantly changes. In this lesson, you learn about `ArrayList`s and identify scenarios where this data structure is more suitable.
+              description_teacher: Students create `ArrayList`s to store `int` and `double` values. Students differentiate between `ArrayList` and one-dimensional arrays to determine which data structure is best suited for a scenario. Students add elements to an `ArrayList` and learn how autoboxing converts between primitive values and wrapper classes as they work with the data stored.
+            Working with ArrayList Data:
+              name: Working with ArrayList Data
+              description_student: You use the `ArrayList` methods `get()` and `set()` to retrieve and modify elements and learn about the `String` method `length()` to count the number of characters in a `String` object. You apply the standard algorithms you developed with 1D and 2D arrays to modify elements in an `ArrayList`. You learn how unboxing performs conversions between primitive values and wrapper classes as they work with data stored in an `ArrayList`.
+              description_teacher: 'Students work with the `get()` and `set()` methods to retrieve and modify elements in an `ArrayList` and learn about the `String` method `length()` to return the number of characters in a `String` object. They apply the standard algorithms they developed with 1D and 2D arrays to modify elements in an `ArrayList`. Students learn how unboxing performs conversions between primitive values and wrapper classes as they work with data stored in an `ArrayList`. '
+            Storing Objects in an ArrayList:
+              name: Storing Objects in an ArrayList
+              description_student: So far, you have created `ArrayList`s to store `Integer`s, `Double`s, and `String`s. Like with 1D and 2D arrays, you can also store objects that you create in an `ArrayList`. In this lesson, you create an `ArrayList` of objects to apply the standard algorithms you have used throughout the year to work with the data stored in this list.
+              description_teacher: Students create `ArrayList`s to store objects and learn about generic types in Java. Students apply the algorithms they learned with one-dimensional arrays to `ArrayList`s to find the minimum and maximum values, calculate sums and averages, or find elements that meet specific criteria.
+            Removing Data from an ArrayList:
+              name: Removing Data from an ArrayList
+              description_student: You explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. In the process, you realize when an `ArrayList` is best for a scenario or problem.
+              description_teacher: Students explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. Students then realize when an `ArrayList` is best for a scenario or problem.
+            Using String Methods:
+              name: Using String Methods
+              description_student: You explore the structure of a `String` and recall that `String`s are objects. You use the `indexOf()` and `substring()` methods to search for substrings within a `String` and to create new `String` objects from an existing `String`.
+              description_teacher: Students explore the structure of a `String` and recall that `String`s are objects. Students use the `indexOf()` and `substring()` methods to search for substrings within a `String` and to create new `String` objects from an existing `String`.
+            Comparing Strings:
+              name: Comparing Strings
+              description_student: You explore using `compareTo()` to check if `String`s are in alphabetical order. You then work on your Neighborhood Lit Fest Project, focusing specifically on the tasks you have on your Project Planning Board.
+              description_teacher: Students explore using `compareTo()` to check if `String`s are in alphabetical order. Students then work on their Neighborhood Lit Fest Project, focusing specifically on the tasks they have on their Project Planning Board.
+            Solving Problems with Strings:
+              name: Solving Problems with Strings
+              description_student: 'You combine your knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. You then participate in a peer feedback session and reflect on your progress on your Neighborhood Lit Fest Project. '
+              description_teacher: Students combine their knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. Students then participate in a peer feedback session and reflect on their progress on their Neighborhood Lit Fest Project.
+            Solving Problems with ArrayLists:
+              name: Solving Problems with ArrayLists
+              description_student: You apply standard algorithms you wrote for 1D and 2D arrays to `ArrayList`s. You implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in your Neighborhood Lit Fest Project.
+              description_teacher: Students apply standard algorithms they wrote for 1D and 2D arrays to `ArrayList`s. Students implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in their Neighborhood Lit Fest Project.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Neighborhood Lit Fest Project - Day 1
+              description_student: You continue to develop your Neighborhood Lit Fest Project to create a story, poetry, song, or another form of literature based on analysis of work from your favorite author or artist. You first self-assess your work to evaluate your progress in completing project requirements, then write acceptance criteria for a feature in your project that a peer will test. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project.
+              description_teacher: Students continue to develop their Neighborhood Lit Fest Project to create a story, poetry, song, or another form of literature based on analysis of work from their favorite author or artist. Students first self-assess their work to evaluate their progress in completing project requirements, then write acceptance criteria for a feature in their project that a peer will test. Students use the self-assessment and peer feedback to prioritize their remaining tasks and continue developing their projects.
+            Neighborhood Lit Fest Project - Day 2:
+              name: Neighborhood Lit Fest Project - Day 2
+              description_student: In the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Neighborhood Lit Fest Project.
+              description_teacher: In the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Neighborhood Lit Fest Projects.
+            Neighborhood Lit Fest Project - Day 3:
+              name: Neighborhood Lit Fest Project - Day 3
+              description_student: You make final revisions and updates based on your code reviews and Project Planning Board. You share your Neighborhood Lit Fest Project with your peers. You then celebrate your success and complete a final reflection of the development process.
+              description_teacher: Students make final revisions and updates based on their code reviews and Project Planning Board. Students share their Neighborhood Lit Fest Projects with their peers. Students then celebrate their success and complete a final reflection of the development process.
+            FRQ Day:
+              name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.
+            Assessment Day:
+              name: Assessment Day
+              description_student: In this unit, you used `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explored the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You used methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you wrote program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identified and documented preconditions and postconditions of objects and methods. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students used `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explored the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students used methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students wrote program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identified and documented preconditions and postconditions of objects and methods. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            Java Lab:
+              name: Java Lab
+              description_student: ''
+              description_teacher: ''
+              key: Java Lab
+            The Neighborhood:
+              name: The Neighborhood
+              description_student: ''
+              description_teacher: ''
+              key: The Neighborhood
+            The Theater:
+              name: The Theater
+              description_student: ''
+              description_teacher: ''
+              key: The Theater
+            The Playground:
+              name: The Playground
+              description_student: ''
+              description_teacher: ''
+              key: The Playground
+            lesson-1:
+              key: lesson-1
+              name: Documenting Program Code
+              description_student: The projects you have developed throughout the course have inspired a lot of creativity in the community! A Neighborhood Lit Fest will be held to showcase creative stories, scripts, song lyrics, letters, and poems. The Neighborhood Lit Fest Project is a large project that you work on throughout the unit, and project management strategies help to organize and structure your work. You explore strategies for writing and structuring code so other software engineers can easily understand and use a Java tool to create program documentation.
+              description_teacher: Students are introduced to the Neighborhood Lit Fest Project and evaluate requirements and examples to identify questions and key features. Before beginning work on the project, students expand their understanding of program structure and commenting by identifying best practices and exploring the use of Javadocs to generate program documentation.
+            lesson-2:
+              key: lesson-2
+              name: Exploring Integer and Double Objects
+              description_student: You construct `Integer` and `Double` objects to represent `int` and `double` primitive values as reference values. Using the methods in the `Integer` and `Double` classes, you return the values these objects store as primitive values. You also explore the minimum and maximum values for integers to avoid overflow errors before planning the tasks you need to complete for your Neighborhood Lit Fest Project.
+              description_teacher: Students construct `Integer` and `Double` objects to represent `int` and `double` primitive values as reference values. Using the methods in the `Integer` and `Double` classes, students return the values these objects store as primitive values. Students also explore the minimum and maximum values for integers to avoid overflow errors before planning the tasks they need to complete for their Neighborhood Lit Fest Project.
+            lesson-3:
+              key: lesson-3
+              name: Using ArrayLists to Store Data
+              description_student: When working with arrays and lists, we sometimes encounter problems where the number of elements is unknown or the list's size constantly changes. In this lesson, you learn about `ArrayList`s and identify scenarios where this data structure is more suitable.
+              description_teacher: Students create `ArrayList`s to store `int` and `double` values. Students differentiate between `ArrayList` and one-dimensional arrays to determine which data structure is best suited for a scenario. Students add elements to an `ArrayList` and learn how autoboxing converts between primitive values and wrapper classes as they work with the data stored.
+            lesson-4:
+              key: lesson-4
+              name: Working with ArrayList Data
+              description_student: You use the `ArrayList` methods `get()` and `set()` to retrieve and modify elements and learn about the `String` method `length()` to count the number of characters in a `String` object. You apply the standard algorithms you developed with 1D and 2D arrays to modify elements in an `ArrayList`. You learn how unboxing performs conversions between primitive values and wrapper classes as they work with data stored in an `ArrayList`.
+              description_teacher: 'Students work with the `get()` and `set()` methods to retrieve and modify elements in an `ArrayList` and learn about the `String` method `length()` to return the number of characters in a `String` object. They apply the standard algorithms they developed with 1D and 2D arrays to modify elements in an `ArrayList`. Students learn how unboxing performs conversions between primitive values and wrapper classes as they work with data stored in an `ArrayList`. '
+            lesson-5:
+              key: lesson-5
+              name: Storing Objects in an ArrayList
+              description_student: So far, you have created `ArrayList`s to store `Integer`s, `Double`s, and `String`s. Like with 1D and 2D arrays, you can also store objects that you create in an `ArrayList`. In this lesson, you create an `ArrayList` of objects to apply the standard algorithms you have used throughout the year to work with the data stored in this list.
+              description_teacher: Students create `ArrayList`s to store objects and learn about generic types in Java. Students apply the algorithms they learned with one-dimensional arrays to `ArrayList`s to find the minimum and maximum values, calculate sums and averages, or find elements that meet specific criteria.
+            lesson-6:
+              key: lesson-6
+              name: Removing Data from an ArrayList
+              description_student: You explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. In the process, you realize when an `ArrayList` is best for a scenario or problem.
+              description_teacher: Students explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. Students then realize when an `ArrayList` is best for a scenario or problem.
+            lesson-7:
+              key: lesson-7
+              name: Using String Methods
+              description_student: You explore the structure of a `String` and recall that `String`s are objects. You use the `indexOf()` and `substring()` methods to search for substrings within a `String` and to create new `String` objects from an existing `String`.
+              description_teacher: Students explore the structure of a `String` and recall that `String`s are objects. Students use the `indexOf()` and `substring()` methods to search for substrings within a `String` and to create new `String` objects from an existing `String`.
+            lesson-8:
+              key: lesson-8
+              name: Comparing Strings
+              description_student: You explore using `compareTo()` to check if `String`s are in alphabetical order. You then work on your Neighborhood Lit Fest Project, focusing specifically on the tasks you have on your Project Planning Board.
+              description_teacher: Students explore using `compareTo()` to check if `String`s are in alphabetical order. Students then work on their Neighborhood Lit Fest Project, focusing specifically on the tasks they have on their Project Planning Board.
+            lesson-9:
+              key: lesson-9
+              name: Solving Problems with Strings
+              description_student: 'You combine your knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. You then participate in a peer feedback session and reflect on your progress on your Neighborhood Lit Fest Project. '
+              description_teacher: Students combine their knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. Students then participate in a peer feedback session and reflect on their progress on their Neighborhood Lit Fest Project.
+            lesson-10:
+              key: lesson-10
+              name: Solving Problems with ArrayLists
+              description_student: You apply standard algorithms you wrote for 1D and 2D arrays to `ArrayList`s. You implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in your Neighborhood Lit Fest Project.
+              description_teacher: Students apply standard algorithms they wrote for 1D and 2D arrays to `ArrayList`s. Students implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in their Neighborhood Lit Fest Project.
+            lesson-11:
+              key: lesson-11
+              name: Neighborhood Lit Fest Project - Day 1
+              description_student: You continue to develop your Neighborhood Lit Fest Project to create a story, poetry, song, or another form of literature based on analysis of work from your favorite author or artist. You first self-assess your work to evaluate your progress in completing project requirements, then write acceptance criteria for a feature in your project that a peer will test. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project.
+              description_teacher: Students continue to develop their Neighborhood Lit Fest Project to create a story, poetry, song, or another form of literature based on analysis of work from their favorite author or artist. Students first self-assess their work to evaluate their progress in completing project requirements, then write acceptance criteria for a feature in their project that a peer will test. Students use the self-assessment and peer feedback to prioritize their remaining tasks and continue developing their projects.
+            lesson-12:
+              key: lesson-12
+              name: Neighborhood Lit Fest Project - Day 2
+              description_student: In the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Neighborhood Lit Fest Project.
+              description_teacher: In the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Neighborhood Lit Fest Projects.
+            lesson-13:
+              key: lesson-13
+              name: Neighborhood Lit Fest Project - Day 3
+              description_student: You make final revisions and updates based on your code reviews and Project Planning Board. You share your Neighborhood Lit Fest Project with your peers. You then celebrate your success and complete a final reflection of the development process.
+              description_teacher: Students make final revisions and updates based on their code reviews and Project Planning Board. Students share their Neighborhood Lit Fest Projects with their peers. Students then celebrate their success and complete a final reflection of the development process.
+            lesson-14:
+              key: lesson-14
+              name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.
+            lesson-15:
+              key: lesson-15
+              name: Assessment Day
+              description_student: In this unit, you used `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explored the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You used methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you wrote program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identified and documented preconditions and postconditions of objects and methods. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students used `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explored the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students used methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students wrote program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identified and documented preconditions and postconditions of objects and methods. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Pilot Survey
+            lessonGroup-5:
+              display_name: Sandbox
+          title: Expanding Program Capabilities
+          description: In this unit, students use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identify and document preconditions and postconditions of objects and methods.
+          student_description: In this unit, you use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identify and document preconditions and postconditions of objects and methods.
+          description_short: ''
+          description_audience: ''
