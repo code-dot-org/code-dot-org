@@ -1,5 +1,5 @@
 ---
-title: "CodeBytes: CS Mini-Lessons"
+title: CodeBytes: CS Mini-Lessons
 video_player: true
 theme: responsive
 social:
@@ -19,8 +19,8 @@ social:
 <div style="background-color: #00adbc; margin-top:50px;"><h1 style="color: #FFFFFF; padding-top: 15px; padding-bottom: 15px; padding-left: 10px; padding-right: 10px;">CodeBytes: 20 minute, mini-lessons for all ages</h1></div>
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
 
-<p>Planning for the Hour of Code? Try a <b>CodeByte</b>! CodeBytes are <font color="00adbc"><b>easy-to-digest, 20-minute interactive lessons</b></font> that stream during Computer Science Education Week, <b>December 6-12</b>.</p>
-<p>Created for Hour of Code 2020, every episode features a new lesson that blends computer science with real-world topics. Last year, five episodes (available below) guided viewers through Dance Party, AppLab, and more. This year, we're launching a single special epsiode in which students can use code to learn more about the power of language as an art form. Tune in on Tuesday, December 7, at 10 a.m. ET and again at 10 a.m. PT for this special session of CodeBytes where we'll show students how to get started with the Poem Art Hour of Code activity.</p>
+<p>Planning for the Hour of Code? Try a <b>CodeByte</b>! CodeBytes are <font color="00adbc"><b>easy-to-digest, 20-minute interactive lessons</b></font> originally created for Hour of Code 2020 to blend computer science with real-world topics. (Last year's episodes are archived below.)
+<p>This year, we're launching a single special episode in which students can use code to learn more about the power of language as an art form. Tune in on Tuesday, December 7, at 10 a.m. ET and again at 10 a.m. PT for this special session of CodeBytes where we'll show students how to get started with the Poem Art Hour of Code activity.</p>
 <center><a href="https://csteachers.org/events/csedweek-2021-inspire-am/"><button style="background-color: #ffa400;border-color: #ffa400;color: #FFFFFF;font-size: 16px;">Register Now</button></a><br></center><br>
 
 <h2>CodeBytes are great for:</h2>
@@ -42,7 +42,7 @@ social:
 </div></div>
 
 <div class="col-66" style="padding-right: 28px; padding-bottom: 20px;">
-<p>Lessons are created and led by our very own Code.org staff, many of whom were teachers themselves previously! This means you don’t need any additional resources or lesson plans in order to organize a fun and educational Hour of Code event to your class. All you and your students have to do is <a href="https://codebytes.live/now">tune in</a>!</p>
+<p>Lessons are created and led by our very own Code.org staff, many of whom were teachers themselves previously! This means you don’t need any additional resources or lesson plans in order to organize a fun and educational Hour of Code event to your class.</p>
 <p>Follow us on <a href="http://facebook.com/code.org">Facebook</a> or on <a href="http://twitter.com/codeorg">Twitter</a>.</p>
 </div>
 
@@ -64,10 +64,10 @@ social:
 <b>Recommended for grades 6-12</b>
 <p>American Sign Language (ASL) is a way to communicate without speaking. We’ll be training a computer to read sign language with our own images of ASL letters. <a href="https://teachablemachine.withgoogle.com/">Teachable Machine</a> and <a href="https://code.org/oceans">AI for Oceans</a> will be used during this lesson.</p>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
-<a href="https://youtu.be/Guc4omzHfsU"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Watch on YouTube</button></a>
+<a href="https://youtu.be/Guc4omzHfsU"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Session 1 on YouTube</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
-<a href="https://youtu.be/cSdfvjcHUuw"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Watch on YouTube</button></a>
+<a href="https://youtu.be/cSdfvjcHUuw"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Session 2 on YouTube</button></a>
 </div>
 
 </div>
@@ -86,10 +86,10 @@ social:
 <b>Recommended for grades K-5</b>
 <p>Everyone’s invited to a digital dance off as we code characters to do your favorite dance moves in <a href="http://code.org/dance">Dance Party</a>!</p>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
-<a href="https://youtu.be/qQof5yqzqfc"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Watch on YouTube</button></a>
+<a href="https://youtu.be/qQof5yqzqfc"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Session 1 on YouTube</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
-<a href="https://youtu.be/cxidDtOTe98"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Watch on YouTube</button></a>
+<a href="https://youtu.be/cxidDtOTe98"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Session 2 on YouTube</button></a>
 </div>
 
 </div>
@@ -108,10 +108,10 @@ social:
 <b>Recommended for grades 4-12</b>
 <p>A virus has infected Monster Town! We’ll code an <a href="https://studio.code.org/s/outbreak">Outbreak Simulator</a> and make predictions about what will happen to the neighbors of Monster Town.</p>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
-<a href="https://youtu.be/M7o2eYDZjr4"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Watch on YouTube</button></a>
+<a href="https://youtu.be/M7o2eYDZjr4"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Session 1 on YouTube</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
-<a href="https://youtu.be/KHte4JXFwOw"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Watch on YouTube</button></a>
+<a href="https://youtu.be/KHte4JXFwOw"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Session 2 on YouTube</button></a>
 </div>
 
 </div>
@@ -130,10 +130,10 @@ social:
 <b>Recommended for grades 6-12</b>
 <p>Want to help your community? Learn the basics of designing a simple <a href="https://studio.code.org/s/applab-intro/lessons/1/levels/1">app in AppLab</a> that you can immediately share with others.</p>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
-<a href="https://youtu.be/8JBAjuSM5M4"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Watch on YouTube</button></a>
+<a href="https://youtu.be/8JBAjuSM5M4"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Session 1 on YouTube</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
-<a href="https://youtu.be/UTMvZSe7ViU"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Watch on YouTube</button></a>
+<a href="https://youtu.be/UTMvZSe7ViU"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Session 2 on YouTube</button></a>
 </div>
 
 </div>
@@ -153,10 +153,10 @@ social:
 <b>Recommended for grades 3-7</b>
 <p>Let’s dig into the world of <a href="https://code.org/minecraft">Minecraft</a> to help the Agent activate switches, place blocks, and clear obstacles to pick up items for the journey!</p>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
-<a href="https://youtu.be/uTZchXcAd-Y"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Watch on YouTube</button></a>
+<a href="https://youtu.be/uTZchXcAd-Y"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Session 1 on YouTube</button></a>
 </div>
 <div class="col-50" style="padding-right:20px; padding-bottom: 30px;">
-<a href="https://youtu.be/yY2o8McMd2w"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Watch on YouTube</button></a>
+<a href="https://youtu.be/yY2o8McMd2w"><button style="background-color: #e7e8ea;border-color: #e7e8ea;color: #5b6770;">Session 2 on YouTube</button></a>
 </div>
 
 </div>
