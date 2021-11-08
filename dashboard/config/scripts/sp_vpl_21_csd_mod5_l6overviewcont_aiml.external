@@ -1,0 +1,12 @@
+name 'SP-VPL-21-CSD-mod5-L6overviewCont-AIML'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 6: Introduction to AI Lab Cont.
+
+Emphasize the importance of utilizing the lesson plan and class discussion - the curriculum is designed to be facilitated by a teacher, it is not designed a self-paced course for students to progress through independently
+Include a snippet from the lesson plan 
+
+![](https://images.code.org/a36157d103f66a23e053b95852981fda-image-1636146793315.13.00 PM.png)
+MARKDOWN

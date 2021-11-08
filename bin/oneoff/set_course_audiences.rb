@@ -51,7 +51,7 @@ def set_course_audiences
                                   else
                                     SharedCourseConstants::PARTICIPANT_AUDIENCE.student
                                   end
-    script.save(skip_name_format_validation: true)
+    script.update!(skip_name_format_validation: true)
     script.write_script_json
   end
 
