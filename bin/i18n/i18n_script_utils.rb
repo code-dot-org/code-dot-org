@@ -150,12 +150,7 @@ class I18nScriptUtils
     unless script.present?
       error_class = 'Could not find script in get_script_level'
       error_message = "unknown script #{route_params[:script_id].inspect} for url #{url.inspect}"
-      # [FND-1667] Uncomment this once we have enabled Honeybadger usage on the i18n-dev server.
-      # Honeybadger.notify(
-      #   error_class: error_class,
-      #   error_message: error_message
-      # )
-      puts "[#{error_class}] #{error_message}"
+      log_error(error_class, error_message)
       return nil
     end
 
@@ -176,12 +171,7 @@ class I18nScriptUtils
     else
       error_class = 'Could not identify route in get_script_level'
       error_message = "unknown route action #{route_params[:action].inspect} for url #{url.inspect}"
-      # [FND-1667] Uncomment this once we have enabled Honeybadger usage on the i18n-dev server.
-      # Honeybadger.notify(
-      #   error_class: error_class,
-      #   error_message: error_message
-      # )
-      puts "[#{error_class}] #{error_message}"
+      log_error(error_class, error_message)
       nil
     end
   end
@@ -206,23 +196,13 @@ class I18nScriptUtils
         else
           error_class = 'Could not identify route in get_level_from_url'
           error_message = "unknown route #{route_params[:controller].inspect} for url #{new_url.inspect}"
-          # [FND-1667] Uncomment this once we have enabled Honeybadger usage on the i18n-dev server.
-          # Honeybadger.notify(
-          #   error_class: error_class,
-          #   error_message: error_message
-          # )
-          puts "[#{error_class}] #{error_message}"
+          log_error(error_class, error_message)
         end
 
       unless level.present?
         error_class = 'Could not find level in get_level_from_url'
         error_message = "could not find level for url #{new_url.inspect}"
-        # [FND-1667] Uncomment this once we have enabled Honeybadger usage on the i18n-dev server.
-        # Honeybadger.notify(
-        #   error_class: error_class,
-        #   error_message: error_message
-        # )
-        puts "[#{error_class}] #{error_message}"
+        log_error(error_class, error_message)
         next
       end
 
@@ -280,12 +260,16 @@ class I18nScriptUtils
     script_name = File.basename(script_i18n_name, '.*')
     error_class = 'Destination directory for script is attempting to change'
     error_message = "Script #{script_name} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
+    log_error(error_class, error_message)
+    return true
+  end
+
+  def self.log_error(error_class, error_message)
     # [FND-1667] Uncomment this once we have enabled Honeybadger usage on the i18n-dev server.
     # Honeybadger.notify(
     #   error_class: error_class,
     #   error_message: error_message
     # )
     puts "[#{error_class}] #{error_message}"
-    return true
   end
 end
