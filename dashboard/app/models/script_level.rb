@@ -79,6 +79,7 @@ class ScriptLevel < ApplicationRecord
     progression
     challenge
     level_keys
+    instructor_in_training
   )
 
   # Chapter values order all the script_levels in a script.
@@ -208,7 +209,7 @@ class ScriptLevel < ApplicationRecord
   end
 
   def has_another_level_to_go_to?
-    if script.professional_learning_course?
+    if script.old_professional_learning_course?
       !end_of_lesson?
     else
       next_progression_level
@@ -239,7 +240,7 @@ class ScriptLevel < ApplicationRecord
       level_to_follow = level_to_follow.next_level while level_to_follow.try(:locked_or_hidden?, user)
     end
 
-    if script.professional_learning_course?
+    if script.old_professional_learning_course?
       if level.try(:plc_evaluation?)
         if Plc::EnrollmentUnitAssignment.exists?(user: user, plc_course_unit: script.plc_course_unit)
           script_preview_assignments_path(script)
@@ -258,7 +259,20 @@ class ScriptLevel < ApplicationRecord
       # to that lesson
       script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
     else
-      level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
+      # To help teachers have more control over the pacing of certain
+      # scripts, we send students on the last level of a lesson to the unit
+      # overview page.
+      if end_of_lesson? &&
+        script.show_unit_overview_between_lessons? &&
+        user.has_pilot_experiment?('end-of-lesson-redirects')
+        if script.lesson_extras_available
+          script_lesson_extras_path(script.name, (extras_lesson || lesson).relative_position)
+        else
+          script_path(script)
+        end
+      else
+        level_to_follow ? build_script_level_path(level_to_follow) : script_completion_redirect(script)
+      end
     end
   end
 
@@ -415,6 +429,7 @@ class ScriptLevel < ApplicationRecord
       summary[:conceptDifficulty] = level.summarize_concept_difficulty
       summary[:assessment] = !!assessment
       summary[:challenge] = !!challenge
+      summary[:instructor_in_training] = !!instructor_in_training
     end
 
     if include_prev_next

@@ -26,11 +26,11 @@ const ProfessionalLearningProgramRequirements = props => {
   const [regionalPartner, regionalPartnerError] = useRegionalPartner(data);
 
   const renderAssignedWorkshopList = () => {
-    if (regionalPartner.workshops.length === 0) {
+    if (regionalPartner.workshops?.length === 0) {
       return (
         <p style={styles.marginBottom}>
           <strong>
-            Summer Workshop dates have not yet been finalized for your region.
+            Summer Workshop dates have not yet been finalized for your region.{' '}
             {regionalPartner.name} will be in touch once workshop details are
             known.
           </strong>
@@ -82,7 +82,7 @@ const ProfessionalLearningProgramRequirements = props => {
           </p>
         </div>
       );
-    } else if (regionalPartner === null) {
+    } else if (regionalPartner === undefined) {
       return <Spinner />;
     } else if (regionalPartnerError) {
       return (
@@ -98,6 +98,24 @@ const ProfessionalLearningProgramRequirements = props => {
             .
           </p>
         </div>
+      );
+    } else if (regionalPartner === null) {
+      return (
+        <>
+          <p>
+            <strong>
+              There is no Regional Partner in your region at this time
+            </strong>
+          </p>
+          <p>
+            Code.org will review your application and contact you with options
+            for joining the program hosted by a Regional Partner from a
+            different region. Please note that we are not able to guarantee a
+            space for you with another Regional Partner, and you will be
+            responsible for the costs associated with traveling to that location
+            if a virtual option is not available.
+          </p>
+        </>
       );
     } else {
       // regional partner exists and is not errored

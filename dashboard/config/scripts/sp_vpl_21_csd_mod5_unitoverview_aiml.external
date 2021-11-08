@@ -5,7 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Unit overview
 
-#####  AI and machine learning impact our entire world, changing how we live and how we work. That's why it’s critical for all of us to understand this increasingly important technology, including not just how it’s designed and applied, but also its societal and ethical implications. Unit 7 of CS Discoveries focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts of artificial intelligence and machine learning.
+####  AI and machine learning impact our entire world, changing how we live and how we work. That's why it’s critical for all of us to understand this increasingly important technology, including not just how it’s designed and applied, but also its societal and ethical implications. Unit 7 of CS Discoveries focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts of artificial intelligence and machine learning.
+
+##
 
 * #### **Artificial Intelligence (AI)** - when a machine acts in ways that mimic human intelligence such as playing a game, creating works of art, having a conversation, performing routine tasks, or solving problems. 
 
