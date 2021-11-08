@@ -199,12 +199,6 @@ class Script < ApplicationRecord
     !professional_learning_course.nil?
   end
 
-  # Override the rails generated check because of the professional learning property
-  # See old_professional_learning_course? for more detials
-  def professional_learning_course?
-    pl_course?
-  end
-
   def generate_plc_objects
     if old_professional_learning_course?
       unit_group = UnitGroup.find_by_name(professional_learning_course)
