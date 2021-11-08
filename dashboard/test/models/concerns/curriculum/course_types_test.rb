@@ -30,7 +30,7 @@ class CourseTypesTests < ActiveSupport::TestCase
     refute @unit_in_course.pl_course?
   end
 
-  test 'professional_learning_course? returns true for any unit that does not have students as participants' do
+  test 'pl_course? returns true for any unit that does not have students as participants' do
     refute @unit_teacher_to_students.pl_course?
     assert @unit_facilitator_to_teacher.pl_course?
     assert @unit_code_instructor_to_teacher.pl_course?
@@ -38,7 +38,7 @@ class CourseTypesTests < ActiveSupport::TestCase
     assert @unit_code_instructor_to_teacher.pl_course?
   end
 
-  test 'professional_learning_course? returns true for any course that does not have students as participants' do
+  test 'pl_course? returns true for any course that does not have students as participants' do
     refute @course_teacher_to_students.pl_course?
     assert @course_facilitator_to_teacher.pl_course?
     assert @course_code_instructor_to_teacher.pl_course?
