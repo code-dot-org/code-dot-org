@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-01 18:48:56 UTC",
+    "serialized_at": "2021-11-08 14:27:16 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csa-examples-21"
     }
@@ -490,6 +490,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 7"
+        ],
         "progression": "Asphalt Art Project [The Neighborhood]"
       },
       "bonus": false,
@@ -512,6 +515,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 8"
+        ],
         "progression": "Asphalt Art Project [The Neighborhood]"
       },
       "bonus": false,
@@ -534,6 +540,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 9"
+        ],
         "progression": "Asphalt Art Project [The Neighborhood]"
       },
       "bonus": false,
@@ -556,6 +565,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 10"
+        ],
         "progression": "Asphalt Art Project [The Neighborhood]"
       },
       "bonus": false,
@@ -578,6 +590,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 11"
+        ],
         "progression": "Asphalt Art Project [The Neighborhood]"
       },
       "bonus": false,
@@ -600,6 +615,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Project - Student Example 12"
+        ],
         "progression": "Asphalt Art Project [The Neighborhood]"
       },
       "bonus": false,
