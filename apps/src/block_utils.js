@@ -773,13 +773,14 @@ const STANDARD_INPUT_TYPES = {
   },
   [FIELD_INPUT]: {
     addInput(blockly, block, inputConfig, currentInputRow) {
-      const fieldTextInput = new blockly.FieldTextInput(
+      const BlocklyField = Blockly.getFieldForInputType(inputConfig.type);
+      const field = new BlocklyField(
         '',
         getFieldInputChangeHandler(blockly, inputConfig.type)
       );
       currentInputRow
         .appendTitle(inputConfig.label)
-        .appendTitle(fieldTextInput, inputConfig.name);
+        .appendTitle(field, inputConfig.name);
     },
     generateCode(block, inputConfig) {
       let code = block.getTitleValue(inputConfig.name);
@@ -1219,7 +1220,7 @@ exports.createJsWrapperBlockCreator = function(
       if (eventBlock) {
         const nextBlock =
           this.nextConnection && this.nextConnection.targetBlock();
-        let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, true);
+        let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
         handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
         if (callbackParams) {
           let params = callbackParams.join(',');
