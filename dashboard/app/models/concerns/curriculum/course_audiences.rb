@@ -3,7 +3,7 @@
 module Curriculum::CourseAudiences
   extend ActiveSupport::Concern
 
-  # Checks if a user can be the instructor for the course. Code instructors and levelbuilders
+  # Checks if a user can be the instructor for the course. Universal instructors and levelbuilders
   # can be the instructors of any course. Student accounts should never be able to be the instructor
   # of any course.
   def can_be_instructor?(user)
@@ -11,7 +11,7 @@ module Curriculum::CourseAudiences
     return unit_group.can_be_instructor?(user) if is_a?(Script) && unit_group
 
     return false if user.student?
-    return true if user.permission?(UserPermission::CODE_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
+    return true if user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
 
     if instructor_audience == 'plc_reviewer'
       return user.permission?(UserPermission::PLC_REVIEWER)
