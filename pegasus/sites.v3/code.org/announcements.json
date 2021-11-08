@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "myjourney-ilm"
+    "/home": "nextsteps-support"
   },
 
   "banners": {
     "myjourney-ilm": {
-      "image": "/images/csjourneys/myjourney-ilm.png",
-      "title": "My Journey: Making Star Wars",
-      "body": "Hear how two computer science graduates use technology to help make movies and TV shows, including the many worlds of Star Wars. Recommended for grades K-5. Recording will be available the day after the live session.",
+      "image": "/images/csjourneys/nextsteps-support-dash.png",
+      "title": "Learn about the importance of support networks",
+      "body": "Give high school students the opportunity to learn about the importance of support networks to their career journey, and about steps to take to start building their own network of intentional connections.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat7",
-      "buttonId": "myjourney-ilm-details"
+      "buttonUrl": "https://code.org/csjourneys/nextsteps#event-4",
+      "buttonId": "nextsteps-support-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",
