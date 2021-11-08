@@ -1220,7 +1220,7 @@ exports.createJsWrapperBlockCreator = function(
       if (eventBlock) {
         const nextBlock =
           this.nextConnection && this.nextConnection.targetBlock();
-        let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, true);
+        let handlerCode = Blockly.JavaScript.blockToCode(nextBlock, false);
         handlerCode = Blockly.Generator.prefixLines(handlerCode, '  ');
         if (callbackParams) {
           let params = callbackParams.join(',');
