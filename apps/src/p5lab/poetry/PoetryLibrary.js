@@ -9,6 +9,7 @@ import {commands as backgroundEffects} from './commands/backgroundEffects';
 import {commands as foregroundEffects} from './commands/foregroundEffects';
 import {commands as behaviors} from './commands/behaviors';
 import spritelabCommands from '../spritelab/commands/index';
+import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 
 const OUTER_MARGIN = 50;
 const LINE_HEIGHT = 50;
@@ -30,6 +31,9 @@ export default class PoetryLibrary extends CoreLibrary {
         font: 'Arial'
       },
       frameType: undefined,
+      text: {
+        highlightColor: null
+      },
       isVisible: true,
       textEffects: [],
       // By default, start the poem animation when the program starts (frame 1)
@@ -142,6 +146,10 @@ export default class PoetryLibrary extends CoreLibrary {
         this.poemState.animationStartFrame = this.p5.World.frameCount;
         // Reset line events since we're starting the poem animation over.
         Object.values(this.lineEvents).forEach(e => (e.fired = false));
+      },
+
+      addTextHighlight(color) {
+        this.poemState.text.highlightColor = color;
       },
 
       showText() {
@@ -436,6 +444,9 @@ export default class PoetryLibrary extends CoreLibrary {
   drawFromRenderInfo(renderInfo) {
     this.p5.textFont(renderInfo.font.font);
     renderInfo.lines.forEach(item => {
+      if (item.isPoemBodyLine && this.poemState.text.highlightColor) {
+        this.drawTextHighlight(item);
+      }
       let fillColor = this.getP5Color(renderInfo.font.fill, item.alpha);
       this.p5.fill(fillColor);
       this.p5.textSize(item.size);
@@ -446,6 +457,24 @@ export default class PoetryLibrary extends CoreLibrary {
       // Draw line numbers in preview frame only
       this.drawLineNumbers(renderInfo);
     }
+  }
+
+  drawTextHighlight(item) {
+    const padding = 2;
+    const width = drawUtils.getTextWidth(this.p5, item.text, item.size);
+    const height = item.size;
+
+    this.p5.push();
+    this.p5.noStroke();
+    this.p5.fill(this.poemState.text.highlightColor);
+    this.p5.rect(
+      // By default, item.x & item.y used in text() specify the lower-left corner of the text
+      item.x - width / 2 - padding, // - w / 2 to account for centered text
+      item.y - height + padding,
+      width + padding * 2,
+      height + padding * 2
+    );
+    this.p5.pop();
   }
 
   drawLineNumbers(renderInfo) {
