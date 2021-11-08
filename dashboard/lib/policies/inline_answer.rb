@@ -3,7 +3,7 @@
 class Policies::InlineAnswer
   # Returns a boolean indicating whether or not the given user should be
   # allowed to view answers for the given script_level
-  def self.visible?(user, script_level)
+  def self.visible_for_script_level?(user, script_level)
     return true if Rails.application.config.levelbuilder_mode
     return false unless user
     return false unless script_level
