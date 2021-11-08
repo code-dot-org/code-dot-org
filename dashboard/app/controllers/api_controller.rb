@@ -383,16 +383,23 @@ class ApiController < ApplicationController
 
   # Get /api/teacher_panel_section
   def teacher_panel_section
+    teacher_sections = current_user&.sections
+
+    if teacher_sections.blank?
+      head :no_content
+      return
+    end
+
     section_id = params[:section_id].present? ? params[:section_id].to_i : nil
 
     if section_id
-      section = current_user.sections.find_by(id: section_id)
+      section = teacher_sections.find_by(id: section_id)
       if section.present?
         render json: section.summarize if section.present?
         return
       end
-    elsif current_user.sections.length == 1
-      render json: current_user.sections[0].summarize
+    elsif teacher_sections.length == 1
+      render json: teacher_sections[0].summarize
       return
     end
 

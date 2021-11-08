@@ -1379,6 +1379,21 @@ class ApiControllerTest < ActionController::TestCase
     assert_response :no_content
   end
 
+  test "teacher_panel_section returns no_content when teacher has no sections" do
+    teacher = create :teacher
+    sign_in teacher
+
+    get :teacher_panel_section
+
+    assert_response :no_content
+  end
+
+  test "teacher_panel_section returns no_content when no user is logged in" do
+    get :teacher_panel_section
+
+    assert_response :no_content
+  end
+
   test "script_structure returns summarized script" do
     overview_path = 'http://script.overview/path'
     CDO.stubs(:studio_url).returns(overview_path)
