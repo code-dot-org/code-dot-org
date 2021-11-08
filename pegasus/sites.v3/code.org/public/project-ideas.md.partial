@@ -45,14 +45,14 @@ theme: responsive
 </table>
 
 # Project Ideas for Middle and High School Students
-<p> <a href="https://code.org/educate/weblab">Web Lab<a>, <a href="https://code.org/educate/gamelab">Game Lab</a> and <a href="https://code.org/educate/applab">App Lab</a> can be used by anyone but are targeted at middle and high school students. Programming in a brand new environment can be challenging and intimidating. We recommend giving yourself sufficient time to learn to use them. Don't give up! Below you can find an overview of each tool and also how to practice using it. For more information about full course offerings, check out <a href="https://code.org/educate/csd">CS Discoveries</a> for middle school or <a href="https://code.org/educate/csp">CS Principles</a> for high school.</p>
+<p> <a href="https://code.org/educate/weblab">Web Lab<a>, <a href="https://code.org/educate/gamelab">Game Lab</a> and <a href="https://code.org/educate/applab">App Lab</a> can be used by anyone age 13+ with an account on Code.org but are targeted at middle and high school students. Programming in a brand new environment can be challenging and intimidating. We recommend giving yourself sufficient time to learn to use them. Don't give up! Below you can find an overview of each tool and also how to practice using it. For more information about full course offerings, check out <a href="https://code.org/educate/csd">CS Discoveries</a> for middle school or <a href="https://code.org/educate/csp">CS Principles</a> for high school.</p>
 <h2><a href="https://code.org/educate/weblab"><strong>Web Lab</strong></a></h2>
 <div class="col-33" style="padding-right: 20px;">
     <img src="/images/athome/web-lab.jpg">
     <p><i>Photo courtesy of Fundación Sadosky</i><p>
 </div>
 <div class="col-66">
-    <p>Web Lab is a programming environment where students can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds. Recommended for students who have completed at least Chapter 1 of <a href="https://curriculum.code.org/csd/unit2/">Web Development</a>.</p>
+    <p>Web Lab is a programming environment where students can make simple web pages using HTML and CSS. Design your web pages and share your site in seconds. Recommended for students who have completed Chapter 1 of Web Development from <a href="https://studio.code.org/courses/csd">CS Discoveries</a>.</p>
     <br>
     <p><a href="https://studio.code.org/docs/weblab/">Web Lab Documentation</a></p>
 </div>
@@ -80,7 +80,7 @@ theme: responsive
     <img src="/images/athome/game-lab.jpg">
 </div>
 <div class="col-66">
-    <p>Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other. Recommended for students who have completed at least Chapter 1 of <a href="https://curriculum.code.org/csd-19/unit3/">Interactive Animations and Games</a>.<p>
+    <p>Game Lab is a programming environment where you can make simple animations and games with objects and characters that interact with each other. Recommended for students who have completed at least Chapter 1 of Interactive Animations and Games from <a href="https://studio.code.org/courses/csd">CS Discoveries</a> or the <a href="https://studio.code.org/s/csd3-virtual">Self-Paced Introduction to Game Lab</a>.<p>
     <br>
     <p><a href="https://studio.code.org/docs/gamelab/">Game Lab Documentation</a></p>
 </div>
@@ -107,7 +107,7 @@ theme: responsive
     <img src="/images/athome/app-lab.jpg">
 </div>
 <div class="col-66">
-    <p>App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.  If you have no experience with App Lab you could get up to speed by trying out: <a href="https://studio.code.org/s/applab-intro/lessons/1/levels/1">Hour of Code - Intro to App Lab</a>.  Alternatively, the projects are suitable for students who have completed the 2nd chapter of CS Discoveries  <a href="https://curriculum.code.org/csd/unit4/">Unit 4 - The Design Process</a> or the first chapter of CS Principles <a href="https://curriculum.code.org/csp-19/unit5/">Unit 5 - Building Apps</a>.</p>
+    <p>App Lab is a programming environment where you can make simple apps. Design an app, code with blocks or JavaScript to make it work, then share your app in seconds.  If you have no experience with App Lab you could get up to speed by trying out: <a href="https://studio.code.org/s/applab-intro/lessons/1/levels/1">Hour of Code - Intro to App Lab</a> or the <a href="https://studio.code.org/s/csp5-virtual">Self-Paced Introduction to App Lab</a>. Alternatively, the projects are suitable for students who have completed The Design Process unit from <a href="https://studio.code.org/courses/csd">CS Discoveries</a> or Intro to App Design from <a href="https://studio.code.org/courses/csp">CS Principles</a>
     <br>
     <p><a href="https://studio.code.org/docs/applab/">App Lab Documentation</a></p>
 </div>
