@@ -4,12 +4,13 @@ import {
   PageLabels,
   TextFields
 } from '@cdo/apps/generated/pd/principalApprovalApplicationConstants';
+import {Year} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import LabeledFormComponent from '../../form_components/LabeledFormComponent';
 import PrivacyDialog from '../PrivacyDialog';
 import {PrivacyDialogMode} from '../../constants';
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 import {isInt, isPercent, isZipCode} from '@cdo/apps/util/formatValidation';
-import {YEAR, styles} from '../teacher/TeacherApplicationConstants';
+import {styles} from '../teacher/TeacherApplicationConstants';
 
 const MANUAL_SCHOOL_FIELDS = [
   'schoolName',
@@ -129,7 +130,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
     let showPayFeeNote =
       this.props.data.committedToMasterSchedule &&
       !this.props.data.committedToMasterSchedule.includes(
-        `Yes, I plan to include this course in the ${YEAR} master schedule`
+        `Yes, I plan to include this course in the ${Year} master schedule`
       ) &&
       this.props.data.payFee &&
       this.props.data.payFee.includes('No, ');
@@ -165,7 +166,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
             label: `Are you committed to including ${
               this.props.teacherApplication.course
             }
-                    on the master schedule in ${YEAR} if ${
+                    on the master schedule in ${Year} if ${
               this.props.teacherApplication.name
             }
                     is accepted into the program? Note: the program may be listed under a different
@@ -215,8 +216,8 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
             <div>
               <p style={styles.red}>
                 Note: To be eligible for scholarship support, your school must
-                commit to including this course in the {YEAR} master schedule.
-                If you are able to commit to offering this course in {YEAR} ,
+                commit to including this course in the {Year} master schedule.
+                If you are able to commit to offering this course in {Year} ,
                 please update your answer above before submitting in order to
                 retain scholarship eligibility.
               </p>
@@ -305,7 +306,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
           >
             {this.props.teacherApplication.course} curriculum
           </a>{' '}
-          during the {YEAR} school year. We know that administrative support is
+          during the {Year} school year. We know that administrative support is
           essential to a teacher’s ability to fully commit to a) participating
           in a yearlong Professional Learning program and b) teaching a new
           course. That’s why your approval is required for the teacher's
@@ -339,7 +340,7 @@ export default class PrincipalApprovalComponent extends LabeledFormComponent {
             label: `Do you approve of ${
               this.props.teacherApplication.name
             } participating
-                    in Code.org's ${YEAR} Professional Learning Program?`
+                    in Code.org's ${Year} Professional Learning Program?`
           }
         )}
         {this.props.data.doYouApprove !== 'No' &&
