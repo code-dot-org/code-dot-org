@@ -36,6 +36,18 @@ const getProgramInfo = program => {
   }
 };
 
+const CourseHoursLabeledNumberInput = props => {
+  return (
+    <LabeledNumberInput
+      style={{width: 100}}
+      labelWidth={{md: 8}}
+      controlWidth={{md: 4}}
+      inlineControl={true}
+      {...props}
+    />
+  );
+};
+
 const ChooseYourProgram = props => {
   const {data} = props;
 
@@ -139,40 +151,26 @@ const ChooseYourProgram = props => {
           <p>
             Please provide information about your course implementation plans.
           </p>
-          <LabeledNumberInput
+          <CourseHoursLabeledNumberInput
             name="csHowManyMinutes"
-            style={{
-              width: '100px'
-            }}
             label={PageLabels.chooseYourProgram.csHowManyMinutes.replace(
               '{{CS program}}',
               programInfo.name
             )}
-            labelWidth={{md: 8}}
-            controlWidth={{md: 4}}
-            inlineControl={true}
           />
-          <LabeledNumberInput
+          <CourseHoursLabeledNumberInput
             name="csHowManyDaysPerWeek"
-            style={{
-              width: '100px'
-            }}
             label={PageLabels.chooseYourProgram.csHowManyDaysPerWeek.replace(
               '{{CS program}}',
               programInfo.name
             )}
-            labelWidth={{md: 8}}
-            controlWidth={{md: 4}}
-            inlineControl={true}
           />
-          <LabeledNumberInput
+          <CourseHoursLabeledNumberInput
             name="csHowManyWeeksPerYear"
-            style={{
-              width: '100px'
-            }}
-            labelWidth={{md: 8}}
-            controlWidth={{md: 4}}
-            inlineControl={true}
+            label={PageLabels.chooseYourProgram.csHowManyWeeksPerYear.replace(
+              '{{CS program}}',
+              programInfo.name
+            )}
           />
           {courseHours && (
             <div style={{marginBottom: 30}}>
