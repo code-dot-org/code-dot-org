@@ -14,16 +14,18 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
     @unit_in_course = create(:script, name: 'unit-in-course')
     create(:unit_group_unit, script: @unit_in_course, unit_group: unit_group, position: 1)
     @unit_in_course.reload
-    @script_level_teacher_instructed_in_course = create(:script_level, script: unit_in_course)
+    @script_level_teacher_instructed_in_course = create(:script_level, script: @unit_in_course)
 
     @teacher_instructed_unit = create(:script, name: 'teacher-instructed-unit', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher)
-    @script_level_teacher_instructed = create(:script_level, script: teacher_instructed_unit)
+    @script_level_teacher_instructed = create(:script_level, script: @teacher_instructed_unit)
     @facilitator_instructed_unit = create(:script, name: 'facilitator-instructed-unit', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator)
-    @script_level_facilitator_instructed = create(:script_level, script: facilitator_instructed_unit)
+    @script_level_facilitator_instructed = create(:script_level, script: @facilitator_instructed_unit)
     @plc_reviewer_instructed_unit = create(:script, name: 'plc-reviewer-instructed-unit', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer)
-    @script_level_plc_reviewer_instructed = create(:script_level, script: plc_reviewer_instructed_unit)
+    @script_level_plc_reviewer_instructed = create(:script_level, script: @plc_reviewer_instructed_unit)
     @code_instructor_instructed_unit = create(:script, name: 'code-instructor-instructed-unit', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_instructor)
-    @script_level_code_instructor_instructed = create(:script_level, script: code_instructor_instructed_unit)
+    @script_level_code_instructor_instructed = create(:script_level, script: @code_instructor_instructed_unit)
+
+    @plc_models_script = create(:script, name: 'old-style-pl-course', professional_learning_course: true)
   end
 
   test 'visible_for_script_level? returns true for authorized teachers in unit instructed by teacher' do
@@ -71,8 +73,7 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
   end
 
   test 'visible_for_script_level? returns false for PLC courses which use the PLC Course models (even for authorized teachers)' do
-    plc_script = create(:script, professional_learning_course: true)
-    refute Policies::InlineAnswer.visible_for_script_level?(@authorized_teacher, create(:script_level, script: plc_script))
+    refute Policies::InlineAnswer.visible_for_script_level?(@authorized_teacher, create(:script_level, script: @plc_models_script))
   end
 
   test 'visible_for_script_level? returns true for all kinds of users if the lesson is in readonly mode for that user' do
@@ -127,7 +128,6 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
   end
 
   test 'visible_for_script? returns false for PLC courses which use the PLC Course models (even for authorized teachers)' do
-    plc_script = create(:script, professional_learning_course: true)
-    refute Policies::InlineAnswer.visible_for_script?(@authorized_teacher, plc_script)
+    refute Policies::InlineAnswer.visible_for_script?(@authorized_teacher, @plc_models_script)
   end
 end
