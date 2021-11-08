@@ -45,6 +45,8 @@ def generate_constants(shared_const_name, source_module: SharedConstants, transf
   rescue JSON::ParserError
     if raw.is_a?(String)
       "export const #{shared_const_name.downcase.camelize} = '#{raw}';"
+    else
+      raise "unrecognized raw type: #{raw.class}"
     end
   end
 end
