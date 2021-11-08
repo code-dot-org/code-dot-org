@@ -34,7 +34,7 @@ module AWS
       pegasus: {
         # NOTE: Keep this list in sync with the call to AWS::CloudFront.distribution_config in cloud_formation_stack.yml.erb.
         # CloudFormation stack should be refactored to reference this configuration in the future.
-        aliases: [CDO.pegasus_hostname, CDO.advocacy_hostname] + CDO.partners.map {|x| CDO.canonical_hostname("#{x}.code.org")},
+        aliases: [CDO.pegasus_hostname, CDO.pegasus_www_hostname, CDO.advocacy_hostname] + CDO.partners.map {|x| CDO.canonical_hostname("#{x}.code.org")},
         origin: "#{ENV['RACK_ENV']}-pegasus.code.org",
         # ACM domain name
         ssl_cert: 'code.org',
