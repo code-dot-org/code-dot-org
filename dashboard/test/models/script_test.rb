@@ -14,7 +14,7 @@ class ScriptTest < ActiveSupport::TestCase
     @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
     @unit_group = create(:unit_group)
-    @unit_in_unit_group = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
+    @unit_in_unit_group = create(:script, name: 'unit-in-unit-group', published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
     create(:unit_group_unit, position: 1, unit_group: @unit_group, script: @unit_in_unit_group)
 
     @unit_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
@@ -908,13 +908,6 @@ class ScriptTest < ActiveSupport::TestCase
   test 'old_professional_learning_course?' do
     refute Script.find_by_name('flappy').old_professional_learning_course?
     assert Script.find_by_name('ECSPD').old_professional_learning_course?
-  end
-
-  test 'professional_learning_course?' do
-    refute Script.find_by_name('flappy').professional_learning_course?
-    refute Script.find_by_name('ECSPD').professional_learning_course?
-
-    assert create(:script, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).professional_learning_course?
   end
 
   test 'should summarize migrated unit' do
