@@ -14,10 +14,12 @@ import CdoInput from './addons/cdoInput';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoPathObject from './addons/cdoPathObject';
 import CdoTheme from './addons/cdoTheme';
+import CdoToolbox from './addons/cdoToolbox';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
 import initializeVariables from './addons/cdoVariables';
 import CdoVariableMap from './addons/cdoVariableMap';
+import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
 import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
 import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
@@ -102,6 +104,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldImage');
   blocklyWrapper.wrapReadOnlyProperty('FieldImageDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
+  blocklyWrapper.wrapReadOnlyProperty('FieldNumber');
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
@@ -123,6 +126,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Input');
   blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
   blocklyWrapper.wrapReadOnlyProperty('js');
+  blocklyWrapper.wrapReadOnlyProperty('MenuItem');
   blocklyWrapper.wrapReadOnlyProperty('MetricsManager');
   blocklyWrapper.wrapReadOnlyProperty('modalBlockSpace');
   blocklyWrapper.wrapReadOnlyProperty('Msg');
@@ -139,6 +143,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
   blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('utils');
+  blocklyWrapper.wrapReadOnlyProperty('Toolbox');
   blocklyWrapper.wrapReadOnlyProperty('Touch');
   blocklyWrapper.wrapReadOnlyProperty('Trashcan');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
@@ -157,9 +162,24 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Input = CdoInput;
   blocklyWrapper.geras.PathObject = CdoPathObject;
+  blocklyWrapper.blockly_.Toolbox = CdoToolbox;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
   blocklyWrapper.blockly_.VariableMap = CdoVariableMap;
   blocklyWrapper.blockly_.WorkspaceSvg = CdoWorkspaceSvg;
+
+  blocklyWrapper.blockly_.registry.register(
+    blocklyWrapper.blockly_.registry.Type.TOOLBOX,
+    blocklyWrapper.blockly_.registry.DEFAULT,
+    CdoToolbox,
+    true /* opt_allowOverrides */
+  );
+
+  blocklyWrapper.blockly_.registry.register(
+    blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
+    blocklyWrapper.blockly_.registry.DEFAULT,
+    CdoVerticalFlyout,
+    true /* opt_allowOverrides */
+  );
 
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
@@ -208,6 +228,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.getWorkspaceCode = function() {
     return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
+  };
+
+  blocklyWrapper.getFieldForInputType = function(type) {
+    if (type === 'Number') {
+      return blocklyWrapper.FieldNumber;
+    }
+    return blocklyWrapper.FieldTextInput;
   };
 
   // TODO - used for spritelab behavior blocks
