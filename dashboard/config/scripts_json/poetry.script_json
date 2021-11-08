@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-08 19:59:11 UTC",
+    "serialized_at": "2021-11-08 22:50:38 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -96,6 +96,9 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "In this lesson, students will use their new knowledge about open-ended prompts and variables to modify their poems and create a new poem generator app. Students will discuss how random words change the meaning and mood of their poems. \n",
+        "preparation": "- Make sure students have the poems they wrote in Lesson 2 handy. \n\n- Play through the levels ahead of time to prepare for the prediction and discussion sections.\n\n- Assign the lesson to your sections to keep track of student progress. Many levels in this module are linked to each other, so student code will carry on between lessons on certain levels. Logging in will ensure their work is saved. \n\n- Prepare one computer per student\n\n- Prepare one copy of the “Plan Your Poem Generator App” handout per student.\n\n- [Optional] Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n\n",
+        "student_overview": "Use prompts and variables to make a Poem Generator App to share with your friends!"
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -281,6 +284,8 @@
       "key": "a471eec6-1618-4bc2-a8f4-24a71d835720",
       "position": 3,
       "properties": {
+        "duration": 1,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "a471eec6-1618-4bc2-a8f4-24a71d835720",
@@ -293,6 +298,8 @@
       "key": "63f7ee42-32b7-470a-a48f-f999c7939ff3",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm Up"
       },
       "seeding_key": {
         "lesson_activity.key": "63f7ee42-32b7-470a-a48f-f999c7939ff3",
@@ -305,6 +312,8 @@
       "key": "664d0362-aad3-462e-9282-2824f0647c20",
       "position": 2,
       "properties": {
+        "duration": 30,
+        "name": "Main Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "664d0362-aad3-462e-9282-2824f0647c20",
@@ -997,10 +1006,31 @@
       }
     },
     {
+      "key": "a7ed13c1-8229-4845-b880-a36e4e712a20",
+      "position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a7ed13c1-8229-4845-b880-a36e4e712a20",
+        "lesson_activity.key": "0e2d6876-3f9f-4831-ae8a-c17c66460511"
+      }
+    },
+    {
+      "key": "b0a78cb5-9842-4303-80f0-4719a112f5de",
+      "position": 12,
+      "properties": {
+        "description": "[Optional] \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Share Your App with a Partner” slide. \n\n**Discuss:** Did the user’s new input change the meaning of your story? \n\n**Discussion Goal:** Have students share how the user’s new input might have changed the meaning or mood of their story. If it didn’t, why does the student think that is? \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "b0a78cb5-9842-4303-80f0-4719a112f5de",
+        "lesson_activity.key": "0e2d6876-3f9f-4831-ae8a-c17c66460511"
+      }
+    },
+    {
       "key": "6d3620df-a0da-4d34-b0ed-a64498a6671b",
       "position": 1,
       "properties": {
-        "duration": "10"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Wrap Up slide."
       },
       "seeding_key": {
         "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b",
@@ -1011,6 +1041,8 @@
       "key": "f3df6282-23b2-4bf1-b86b-777a2b928dee",
       "position": 2,
       "properties": {
+        "description": "Congratulations! You just learned how to change the text of a story by using code. You also learned how to prompt the user for an answer and how to store and reuse that answer using a variable. \n\nNext time, you’ll create a silly poem generator app for your own poem.\n",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "f3df6282-23b2-4bf1-b86b-777a2b928dee",
@@ -1021,6 +1053,8 @@
       "key": "5a659664-9212-4840-845e-5ec3f67f8497",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Today’s Agenda\" slide.",
+        "name": "Variables Recap"
       },
       "seeding_key": {
         "activity_section.key": "5a659664-9212-4840-845e-5ec3f67f8497",
@@ -1028,8 +1062,85 @@
       }
     },
     {
-      "key": "1acaa14c-9686-400d-9431-43a4a7666ff3",
+      "key": "bcdb2191-a624-454b-b1db-10398dec81cc",
+      "position": 2,
+      "properties": {
+        "description": "Today, you’re going to use what you learned about prompts and variables in the last lesson to make your very own Poem Generator app. \n\nFirst, you’ll need to make a plan for how your app will work. Then, you’ll take the rest of the class period to code your app. \n\nAt the end of the lesson, you’ll have some time to share your app with a classmate. \n\nBefore we begin, let’s refresh our memories. Last time, you learned to use variables with text and prompts.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bcdb2191-a624-454b-b1db-10398dec81cc",
+        "lesson_activity.key": "63f7ee42-32b7-470a-a48f-f999c7939ff3"
+      }
+    },
+    {
+      "key": "0d5ed83e-c9c0-4483-ae25-06df860f105c",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Vocabulary Refresh” slide. \n**Do This:** Ask for a volunteer to read the vocabulary words on the slide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Variables\" slide.\n\n**Do This:** Ask for a volunteer to read the variables slide and play the animation while the student is reading. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *How is a variable like a container? How is a variable like something else we have in class?* \n\n**Discussion Goal:** Students should say that a variable is like a container because variables can store information like a name or a number. Encourage students to make connections between variables and other everyday objects that can be found in class. Perhaps you have a homework collection tray. The tray is like a variable and the homework is the information stored in the variable. Perhaps you have a place on your board that you put each day’s agenda. The word “Agenda” is the variable label and the description of today’s agenda is the information stored inside the variable. The name of the variable matters; it should reflect what type of information is stored in the variable. \n\n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students might benefit from a quick check for understanding at this point in the lesson. Variables can be tricky and they are used frequently in computer science and in the rest of this module. Additional whole class or individual questions might include: \n- What is a variable label? Answer: It is the name the coder gives the variable. \n- Why do we need a variable label? Answer: To keep track of the variable in case we want to use it again later. \n- What is being stored in the variable labeled “word1”? Answer: What the user types into the text field under the prompt. \n\n- Can a variable name have a space in it? No, variable labels can only be one word. \n\nIf it’s been a while since the last lesson, you can show the [Variables Video](https://youtu.be/dZR6piUb1CE) to refresh students’ memories. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0d5ed83e-c9c0-4483-ae25-06df860f105c",
+        "lesson_activity.key": "63f7ee42-32b7-470a-a48f-f999c7939ff3"
+      }
+    },
+    {
+      "key": "584e4b7d-d09f-43e0-80a1-2038a9864884",
       "position": 1,
+      "properties": {
+        "description": "**Do This:** Distribute one handout per student. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Part 1: Plan Your Poem Generator” slide. \n",
+        "duration": "8",
+        "name": "Plan Your Poem Generator"
+      },
+      "seeding_key": {
+        "activity_section.key": "584e4b7d-d09f-43e0-80a1-2038a9864884",
+        "lesson_activity.key": "664d0362-aad3-462e-9282-2824f0647c20"
+      }
+    },
+    {
+      "key": "2972e94c-64ce-40f5-9db2-133bbf932219",
+      "position": 2,
+      "properties": {
+        "description": "You will use your poem from Lesson 2 and your handouts to choose which three words in the poem you will erase and prompt the user for them instead. It’s all right to choose a word that shows up more than once in your poem. \n\nWhen you choose a word, it is easier for the user to choose a noun or an adjective. Remember, a noun is a person, place, or thing and an adjective is a word that describes a noun. So in this poem example called “Sweet Bird”, the word “bird” is a noun and the word “sweet” is describing the bird, so that’s an adjective. \n\nI’ll set the timer for 4 minutes. Write your poem in the blank space of your handout. Then choose three words to erase.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2972e94c-64ce-40f5-9db2-133bbf932219",
+        "lesson_activity.key": "664d0362-aad3-462e-9282-2824f0647c20"
+      }
+    },
+    {
+      "key": "e83fd679-917d-429a-8003-d687d4b533f6",
+      "position": 3,
+      "properties": {
+        "description": "**Circulate:** Walk around the room to check that students are choosing any word that is not a conjunction or article. Encourage students to imagine what a user might replace their blank space with. If students are happy with the scenario, they can move on to the next word. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Regroup:** Show the “Part 2: Plan your Poem Generator” slide. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e83fd679-917d-429a-8003-d687d4b533f6",
+        "lesson_activity.key": "664d0362-aad3-462e-9282-2824f0647c20"
+      }
+    },
+    {
+      "key": "b0d044b6-7f5a-4295-be92-83f552f34874",
+      "position": 4,
+      "properties": {
+        "description": "Now you’ll go back to your blank spaces, the words you erased, and write in what you would label that word. In this example, this coder erased the word “small.” That is an adjective, so this coder labeled this blank space “adjective1.” You will use these labels as variable labels in your code. Remember, different variables need to have different names! And variable names can only be one word, no spaces. \n\nI’ll set the timer for another 4 minutes. Go back to your blank spaces and write in what variable label you will give that word.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b0d044b6-7f5a-4295-be92-83f552f34874",
+        "lesson_activity.key": "664d0362-aad3-462e-9282-2824f0647c20"
+      }
+    },
+    {
+      "key": "1acaa14c-9686-400d-9431-43a4a7666ff3",
+      "position": 5,
       "properties": {
       },
       "seeding_key": {
@@ -1713,9 +1824,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_module_variables_start"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1725,7 +1833,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
+        "activity_section.key": "a7ed13c1-8229-4845-b880-a36e4e712a20"
       },
       "level_keys": [
         "poetry_module_variables_start"
@@ -1737,9 +1845,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_module_variables_finish"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1749,7 +1854,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
+        "activity_section.key": "a7ed13c1-8229-4845-b880-a36e4e712a20"
       },
       "level_keys": [
         "poetry_module_variables_finish"
@@ -2354,7 +2459,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
+        "activity_section.key": "a7ed13c1-8229-4845-b880-a36e4e712a20"
       }
     },
     {
@@ -2366,7 +2471,7 @@
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "6d3620df-a0da-4d34-b0ed-a64498a6671b"
+        "activity_section.key": "a7ed13c1-8229-4845-b880-a36e4e712a20"
       }
     },
     {
@@ -2600,6 +2705,30 @@
       }
     },
     {
+      "name": "Plan Your Poem Generator App",
+      "url": "https://docs.google.com/document/d/17lCrr1DkwZQcCeGiOsIZrYA0xScRTTycijaJVxwK__I/template/preview",
+      "key": "plan_your_poem_generator_app",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "plan_your_poem_generator_app"
+      }
+    },
+    {
+      "name": "Planning Your Poem Generator App",
+      "url": "https://youtu.be/FnO8MqJgH4k",
+      "key": "planning_your_poem_generator_app",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "planning_your_poem_generator_app"
+      }
+    },
+    {
       "name": "Variables",
       "url": "https://youtu.be/dZR6piUb1CE",
       "key": "variables",
@@ -2659,6 +2788,24 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "write_your_own_poem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "coding_with_poetry_modules"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "plan_your_poem_generator_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "planning_your_poem_generator_app"
       }
     },
     {
@@ -2875,6 +3022,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "prompt"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "variable"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-5",
         "vocabulary.key": "diction"
       }
@@ -2971,6 +3130,26 @@
       }
     },
     {
+      "key": "609b16af-ad96-4272-ae7b-109a16e28c5d",
+      "properties": {
+        "description": "Use technology to produce and publish writing and to interact and collaborate with others"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "609b16af-ad96-4272-ae7b-109a16e28c5d"
+      }
+    },
+    {
+      "key": "901a917a-bdca-4eb3-90a8-c51a32377866",
+      "properties": {
+        "description": "Develop an interactive program that prompts the user for an input "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "901a917a-bdca-4eb3-90a8-c51a32377866"
+      }
+    },
+    {
       "key": "acd30991-2a9c-437b-8973-c49b9047c6bd",
       "properties": {
         "description": "Develop programs that respond to timed events."
@@ -3008,6 +3187,26 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "b2c333fa-5e25-45f6-a3d8-d304d6a2ebcd"
+      }
+    },
+    {
+      "key": "c549e875-8a78-4f99-9d64-8e82c4845004",
+      "properties": {
+        "description": "Use variables to store user data"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "c549e875-8a78-4f99-9d64-8e82c4845004"
+      }
+    },
+    {
+      "key": "d04d3363-e0ec-4aba-8f18-98db7cc4ae86",
+      "properties": {
+        "description": "Modify a previously written work for a new purpose"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "d04d3363-e0ec-4aba-8f18-98db7cc4ae86"
       }
     },
     {
@@ -3165,6 +3364,90 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.L.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.L.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.W.10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.W.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.L.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.L.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.W.10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.W.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-IC-19"
       }
