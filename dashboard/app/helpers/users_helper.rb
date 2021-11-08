@@ -192,7 +192,7 @@ module UsersHelper
   private def merge_script_progress(user_data, user, script, exclude_level_progress = false)
     return user_data unless user
 
-    if script.professional_learning_course?
+    if script.old_professional_learning_course?
       user_data[:professionalLearningCourse] = true
       unit_assignment = Plc::EnrollmentUnitAssignment.find_by(user: user, plc_course_unit: script.plc_course_unit)
       if unit_assignment
