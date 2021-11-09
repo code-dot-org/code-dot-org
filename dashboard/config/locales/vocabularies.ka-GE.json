@@ -35,6 +35,9 @@
         "debugging/aquatic/unversioned": {
           "word": "გამართვა"
         },
+        "condition/aquatic/unversioned": {
+          "word": "პირობა"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "პირობითი ბრძანებები"
         },
@@ -67,6 +70,9 @@
         },
         "debugging/basketball/unversioned": {
           "word": "გამართვა"
+        },
+        "code/poem-art/unversioned": {
+          "word": "კოდი"
         },
         "sprite/coursef/2021": {
           "word": "სპრაიტი"
@@ -116,6 +122,9 @@
         "conditionals/coursed/2021": {
           "word": "პირობითი ბრძანებები"
         },
+        "condition/coursed/2021": {
+          "word": "პირობა"
+        },
         "debugging/express/2021": {
           "word": "გამართვა"
         },
@@ -124,6 +133,9 @@
         },
         "sprite/express/2021": {
           "word": "სპრაიტი"
+        },
+        "condition/express/2021": {
+          "word": "პირობა"
         },
         "conditionals/express/2021": {
           "word": "პირობითი ბრძანებები"
@@ -151,6 +163,9 @@
         },
         "function/coursee/2021": {
           "word": "ფუნქცია"
+        },
+        "condition/coursee/2021": {
+          "word": "პირობა"
         },
         "conditionals/coursee/2021": {
           "word": "პირობითი ბრძანებები"
