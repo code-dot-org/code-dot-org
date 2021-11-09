@@ -25,7 +25,7 @@ class AnimationTab extends React.Component {
     hideAnimationNames: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
     labType: PropTypes.oneOf(Object.keys(P5LabType)).isRequired,
-    pickerType: PropTypes.oneOf(PICKER_TYPE).isRequired,
+    pickerType: PropTypes.oneOf(Object.values(PICKER_TYPE)).isRequired,
 
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,

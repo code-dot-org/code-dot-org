@@ -52,7 +52,7 @@ class AnimationPicker extends React.Component {
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
     canDraw: PropTypes.bool.isRequired,
-    pickerType: PropTypes.oneOf(Object.entries(PICKER_TYPE)).isRequired,
+    pickerType: PropTypes.oneOf(Object.values(PICKER_TYPE)).isRequired,
 
     // Provided via Redux
     visible: PropTypes.bool.isRequired,
