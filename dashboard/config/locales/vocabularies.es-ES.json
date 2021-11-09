@@ -265,19 +265,41 @@
           "word": "Aprendizaje automático",
           "definition": "Cómo las computadoras reconocen patrones y toman decisiones sin ser programadas explícitamente"
         },
+        "code/poem-art/unversioned": {
+          "word": "Código",
+          "definition": "(v) escribir instrucciones para un ordenador."
+        },
+        "event/poem-art/unversioned": {
+          "word": "Evento",
+          "definition": "una acción que hace que algo suceda."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Programa",
+          "definition": "Una serie de pasos que han sido codificados de manera que puedan ser ejecutados por una máquina."
+        },
+        "mood/poem-art/unversioned": {
+          "word": "Estado de ánimo",
+          "definition": "la expresión de un sentimiento, una atmósfera o una emoción en el arte o la escritura."
+        },
+        "line/poem-art/unversioned": {
+          "word": "Línea",
+          "definition": "(poesía) - la subdivisión de un poema dispuesta en una fila que termina en el margen derecho. "
+        },
         "event/outbreak/unversioned": {
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
         },
         "sprite/coursef/2021": {
-          "word": "Sprite"
+          "word": "Sprite",
+          "definition": "Gráfico en pantalla con ubicación, tamaño y apariencia."
         },
         "user/coursef/2021": {
           "word": "Usuario",
           "definition": "Alguien que utiliza un objeto, incluido software y hardware."
         },
         "behavior/coursef/2021": {
-          "word": "Comportamiento"
+          "word": "Comportamiento",
+          "definition": "Acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
         },
         "program/coursef/2021": {
           "word": "Programa",
@@ -295,8 +317,13 @@
           "word": "Variable",
           "definition": "un marcador de posición para una información que puede cambiar."
         },
+        "prompt/coursef/2021": {
+          "word": "Prompt",
+          "definition": "Un mensaje en la pantalla del ordenador que espera la entrada del usuario."
+        },
         "input/coursef/2021": {
-          "word": "Entrada"
+          "word": "Entrada",
+          "definition": "La información que los ordenadores obtienen de los usuarios."
         },
         "loop/coursef/2021": {
           "word": "Bucle",
@@ -557,6 +584,10 @@
           "word": "Condicionales",
           "definition": "sentencias que solo se ejecutan bajo ciertas condiciones."
         },
+        "pseudocode/coursed/2021": {
+          "word": "pseudocódigo",
+          "definition": "Descripción en lenguaje sencillo de los pasos de un algoritmo"
+        },
         "condition/coursed/2021": {
           "word": "Condición",
           "definition": "algo que un programa verifica para ver si es verdadero antes de permitir una acción."
@@ -564,6 +595,10 @@
         "while_loop/coursed/2021": {
           "word": "Bucles mientras",
           "definition": "un bucle que se sigue repitiendo mientras una condición es verdadera."
+        },
+        "until/coursed/2021": {
+          "word": "Hasta",
+          "definition": "Un comando que te dice que hagas algo solo hasta el punto de que algo se haga realidad."
         },
         "algorithm/express/2021": {
           "word": "Algoritmo",
@@ -590,14 +625,19 @@
           "definition": "el arte de crear un programa."
         },
         "behavior/express/2021": {
-          "word": "Comportamiento"
+          "word": "Comportamiento",
+          "definition": "Acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
         },
         "sprite/express/2021": {
-          "word": "Sprite"
+          "word": "Sprite",
+          "definition": "Gráfico en pantalla con ubicación, tamaño y apariencia."
         },
         "event/express/2021": {
           "word": "Evento",
           "definition": "una acción que hace que algo suceda."
+        },
+        "code/express/2021": {
+          "definition": "escribir código o escribir instrucciones para un equipo."
         },
         "loop/express/2021": {
           "word": "Bucle",
@@ -623,6 +663,10 @@
           "word": "Bucles mientras",
           "definition": "un bucle que se sigue repitiendo mientras una condición es verdadera."
         },
+        "until/express/2021": {
+          "word": "Hasta",
+          "definition": "Un comando que te dice que hagas algo solo hasta el punto de que algo se haga realidad."
+        },
         "function/express/2021": {
           "word": "Función",
           "definition": "código que puedes llamar fácilmente una y otra vez."
@@ -630,6 +674,10 @@
         "variable/express/2021": {
           "word": "Variable",
           "definition": "un marcador de posición para una información que puede cambiar."
+        },
+        "prompt/express/2021": {
+          "word": "preguntar",
+          "definition": "Un mensaje en la pantalla del ordenador que espera la entrada del usuario."
         },
         "for_loop/express/2021": {
           "word": "Bucles desde",
@@ -704,10 +752,16 @@
           "definition": "una acción que hace que algo suceda."
         },
         "behavior/coursee/2021": {
-          "word": "Comportamiento"
+          "word": "Comportamiento",
+          "definition": "Acción que realiza un sprite de forma continua hasta que se le indica que se detenga."
+        },
+        "algorithm/coursee/2021": {
+          "word": "algoritmo",
+          "definition": "Una lista de pasos para finalizar una tarea"
         },
         "sprite/coursee/2021": {
-          "word": "Sprite"
+          "word": "Sprite",
+          "definition": "Gráfico en pantalla con ubicación, tamaño y apariencia."
         },
         "event/coursee/2021": {
           "word": "Evento",

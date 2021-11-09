@@ -10802,7 +10802,8 @@ es-ES:
           feedback: Incorrecto. El alien azul comenzará a moverse hacia arriba y hacia
             abajo en la pantalla.
         questions:
-        - {}
+        - text: Fíjate bien en el código de abajo. ¿Qué ocurrirá después de hacer
+            clic en el alienígena?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: La granjera recogerá dos calabazas.

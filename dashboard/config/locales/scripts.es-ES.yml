@@ -4885,6 +4885,7 @@ es:
           student_description: Construye tu propia versión de Minecraft. Crea tus
             propias versiones de las gallinas, ovejas, Creepers, zombis y más.
         flappy-impact-study:
+          title: Código Flappy con Encuesta
           lessons:
             Pre Hour of Code Survey:
               name: Encuesta previa a la Hora del Código
@@ -5168,6 +5169,7 @@ es:
             Post Hour of Code Survey:
               name: Encuesta posterior a la Hora del Código
         hoc-impact-study:
+          title: Laberinto Clásico con Encuesta
           description_short: "¡Prueba los fundamentos de la informática con muchos
             personajes divertidos!"
           lessons:
@@ -26274,6 +26276,9 @@ es:
               key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
                 Computación
+            lesson-1:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
           lesson_groups:
             csd2_1v2:
               display_name: 'Capítulo 1: Creación de páginas Web'
@@ -26610,6 +26615,9 @@ es:
               key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
                 Computación
+            lesson-1:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imágenes y animaciones'
@@ -26763,6 +26771,9 @@ es:
               name: Errores y Características
             Updating Your Prototype:
               name: Actualizando tu Prototipo
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
           lesson_groups:
             csd4_1:
               display_name: 'Capítulo 1: Diseño orientado al usuario'
@@ -27005,6 +27016,9 @@ es:
                 imágenes de peces generadas al azar. Estos datos de entrenamiento
                 se utilizan para un modelo de aprendizaje automático que luego debería
                 ser capaz de clasificar nuevas imágenes por sí mismo."
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
           lesson_groups:
             csd5_1:
               display_name: 'Capítulo 1: Representación de la información'
@@ -27203,6 +27217,9 @@ es:
               name: Prueba posterior al proyecto
             CS Discoveries Post Course survey:
               key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
+            CS Discoveries Post-Course Survey:
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
                 Computación
           lesson_groups:
@@ -32571,6 +32588,24 @@ es:
               display_name: "¡Demuestra lo que sabes!"
           name: csa5-piloto
         csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Laboratorio Java
+            The Neighborhood:
+              name: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+            The Playground:
+              name: Tratando los Datos como Tipos Diferentes
+            lesson-14:
+              name: Día FRQ
+            lesson-15:
+              name: Día de evaluación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
           name: csa6-piloto
         csa7-pilot:
           name: csa7-piloto
@@ -33541,6 +33576,9 @@ es:
                 del día:** ¿Cómo puedo utilizar el Proceso de Resolución de Problemas
                 para crear una aplicación de \"Inteligencia Artificial para el Bienestar
                 Social\"?"
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la
+                Computación
           lesson_groups:
             lessonGroup-2:
               display_name: Capítulo 1 - Aprendizaje Automático
@@ -35701,6 +35739,8 @@ es:
           lessons:
             lesson-6:
               name: Círculo de Poesía
+            lesson-7:
+              name: Condicionales
         spelling-bee:
           lessons:
             lesson-1:
@@ -35731,3 +35771,42 @@ es:
               name: 'Unidad 5: Proyectos '
             lesson-6:
               name: 'Unidad 6: Proyectos '
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Encuesta de final de curso
+          name: csd-encuesta-fin-curso-2021
+          title: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+          description: Esta unidad contiene la encuesta fin de curso de Descubrimientos
+            CS. Esta unidad puede ser asignada después de que los estudiantes completen
+            su unidad final en Descubrimientos CS.
+          student_description: Esta unidad contiene una encuesta para cuando tu clase
+            haya terminado con las unidades de Descubrimientos CS. Tu profesor te
+            dirá cuándo es el momento de realizar esta encuesta.
+        csa6-pilot-facilitator:
+          lessons:
+            FRQ Day:
+              name: Día FRQ
+            Assessment Day:
+              name: Día de evaluación
+            Java Lab:
+              name: Laboratorio Java
+              key: Laboratorio Java
+            The Neighborhood:
+              name: Clases y Objetos
+              key: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+              key: Utilización de comandos
+            The Playground:
+              name: Tratando los Datos como Tipos Diferentes
+              key: Tratando los Datos como Tipos Diferentes
+            lesson-14:
+              name: Día FRQ
+            lesson-15:
+              name: Día de evaluación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"

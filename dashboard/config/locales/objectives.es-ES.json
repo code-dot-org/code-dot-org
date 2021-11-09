@@ -77,6 +77,21 @@
         "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
           "description": "Piensa acerca de cómo el prejuicio humano juega un papel en el aprendizaje automático."
         },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "Crea nuevos sprites y asígnales disfraces y ubicaciones."
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "Crea una animación interactiva utilizando sprites y eventos."
+        },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": "Desarrollar programas que respondan a eventos cronometrados."
+        },
+        "1e1c0724-7d86-4304-a73b-6f083be036fc": {
+          "description": "Ilustrar los cambios de humor de un poema."
+        },
+        "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f": {
+          "description": "Representar el lenguaje figurado y literal en un texto."
+        },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
           "description": "Reconocer lo que se espera cuando los alumnos entran en el laboratorio de informática."
         },
@@ -110,14 +125,35 @@
         "cb9ec256-91d1-4dde-8cff-69bdb063aa0a": {
           "description": "Programar soluciones a los problemas que surgen al diseñar una mascota virtual, entre ellos, cómo alimentarla."
         },
+        "8cbf109a-b450-420b-973a-db9efd47f61f": {
+          "description": "Decida qué tipos de declaraciones están bien decir en línea y cuáles no."
+        },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "Declare una variable"
+        },
+        "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
+          "description": "Asignar un valor a una variable"
+        },
+        "41ddf297-8c92-42c1-8157-97ba0660483d": {
+          "description": "Llama a una variable varias veces en un programa."
+        },
+        "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
+          "description": "Determine la relación entre cómo se define, almacena y recupera una variable cuando pulsamos «Ejecutar» en un programa."
         },
         "28d3cc79-4aea-431d-a445-745e75e747d8": {
           "description": "Usar variables para contener palabras y frases."
         },
+        "66e1fe88-3957-437f-a065-66909844fcd1": {
+          "description": "Utilice variables junto con las indicaciones."
+        },
         "a81623bb-ffd8-467f-be3f-5488e42ea5f8": {
           "description": "Usar variables para contener palabras y frases."
+        },
+        "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
+          "description": "Utilice variables junto con las indicaciones."
+        },
+        "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
+          "description": "Cree un programa informático interactivo que responda a las entradas del usuario."
         },
         "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
           "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
@@ -142,6 +178,39 @@
         },
         "931f4770-e471-4bf8-a79a-b9a7c9d14890": {
           "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
+        },
+        "059b2997-3d05-4186-8450-066fceeb8c5b": {
+          "description": "Identificar áreas en las que pueden utilizar variables para modificar cantidades durante el tiempo de ejecución. "
+        },
+        "9d4ac105-0b5b-4e05-9a32-af6177abfb6c": {
+          "description": "Examine el código para encontrar lugares en los que las variables se pueden sustituir por valores específicos."
+        },
+        "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
+          "description": "Determine el valor inicial, el valor de detención y el valor de escalón para un «bucle for»."
+        },
+        "1e676bcd-e312-4827-88ce-d6befc87d61c": {
+          "description": "Ilustra los valores de contador que se alcanzan cada vez a través de un «bucle for» durante el tiempo de ejecución."
+        },
+        "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
+          "description": "Determine el valor inicial, el valor de detención y el valor de escalón para un bucle for."
+        },
+        "01f5efc8-bcf1-4dd9-b50a-6ba1abf40d06": {
+          "description": "Reconoce cuándo usar un bucle for y cuándo usar otros bucles, como los bucles repeat y while."
+        },
+        "68c038c1-990a-4009-ad61-619ba6ea71af": {
+          "description": "Utilice bucles for para cambiar el bucle varias veces con valores diferentes."
+        },
+        "7ad09074-8899-4330-bb54-6a00c5164299": {
+          "description": "Reconoce cuándo usar un bucle for y cuándo usar otros bucles, como los bucles repeat y while."
+        },
+        "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
+          "description": "Utilizar una simulación por ordenador para recopilar datos sobre un modelo"
+        },
+        "519c1444-230e-4182-a4eb-09414a7d09fb": {
+          "description": "Crear un gráfico de doble línea para comparar datos sobre dos fuentes diferentes"
+        },
+        "16dabf47-0051-4143-834c-067bb8fb605c": {
+          "description": "Realizar y probar una predicción modificando variables de simulación"
         },
         "f748f186-f152-468e-9f51-48bee23c44db": {
           "description": "Discute el papel que juega la inteligencia artificial en sus vidas."
@@ -521,6 +590,9 @@
         "dfde2f15-333a-4ca0-942e-eb7642ea3239": {
           "description": "Verificar el trabajo realizado por los compañeros de equipo."
         },
+        "8dba466d-d809-49c6-8f60-218c27964411": {
+          "description": "Identificar signos de frustración "
+        },
         "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
           "description": "Leer y comprender el código dado."
         },
@@ -641,6 +713,9 @@
         "36081e5f-1a5d-4102-a1de-27865168ee09": {
           "description": "Dividir formas complejas en partes simples."
         },
+        "090bc5c3-f9cb-4aea-bc89-a1dd85c9d196": {
+          "description": "Define «sprite» como un personaje u objeto de la pantalla que se puede mover y cambiar."
+        },
         "09281dd0-4b33-4537-9543-a2377bc2f923": {
           "description": "Crear nuevos sprites y asignarles disfraces y comportamientos."
         },
@@ -658,6 +733,12 @@
         },
         "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969": {
           "description": "Desarrollar programas que respondan a las entradas de los usuarios."
+        },
+        "203638b5-ded8-4023-be3e-f66dfbdc6f8f": {
+          "description": "Crea una mascota virtual interactiva usando eventos, comportamientos, variables y arte personalizado."
+        },
+        "f5e7cf67-bc19-4175-82b0-f449d09551d4": {
+          "description": "Programe soluciones a los problemas que surgen al diseñar una mascota virtual, como alimentarla o controlar su felicidad."
         },
         "21ba9121-5cce-4ebe-8a8e-a04dae7f9c09": {
           "description": "Desarrollar programas que respondan a eventos cronometrados"
@@ -755,6 +836,12 @@
         "5bbd5970-dd02-4100-b9c4-6d051ec9bba2": {
           "description": "Utilizar funciones predeterminadas para completar tareas que se repiten mucho."
         },
+        "ef77d0c7-ef92-4f67-85fc-b9e4c8d14c49": {
+          "description": "Acciones Utilice variables para contener palabras y frases."
+        },
+        "077a5626-d78c-4ae2-9620-e0558a2ab8cf": {
+          "description": "Utilice variables junto con las indicaciones."
+        },
         "16854174-125c-4c79-9a42-064ef84535e3": {
           "description": "Asignar valores a las variables existentes."
         },
@@ -763,6 +850,24 @@
         },
         "f1d6a4e2-cc10-4b3a-8c31-27e6972846a4": {
           "description": "Usar variables para cambiar valores dentro de un bucle."
+        },
+        "a80a4857-3cff-46f5-9fc5-63a3969a4631": {
+          "description": "Identificar áreas en las que pueden utilizar variables para modificar cantidades durante el tiempo de ejecución. "
+        },
+        "dd4add89-b2d6-4b12-a073-6ec56b4c6de1": {
+          "description": "Examine el código para encontrar lugares en los que las variables se pueden sustituir por valores específicos."
+        },
+        "14d7681c-8e63-4c4f-9bb8-4bbd17910ef2": {
+          "description": "Determine el valor inicial, el valor de detención y el valor de escalón para un bucle for."
+        },
+        "3abab07c-e404-45d4-ab89-f92a34c68356": {
+          "description": "Reconoce cuándo usar un bucle for y cuándo usar otros bucles, como los bucles repeat y while."
+        },
+        "1b705c64-cbba-4dfe-8d47-549eb6754326": {
+          "description": "Utilice bucles for para cambiar el bucle varias veces con valores diferentes."
+        },
+        "a5169230-8faf-4492-bc49-ca11dca864fa": {
+          "description": "Reconoce cuándo usar un bucle for y cuándo usar otros bucles, como los bucles repeat y while."
         },
         "db7a8439-bc00-43ef-a9a8-2067da8dbda6": {
           "description": "Superar los obstáculos, como limitaciones de tiempo o errores."
@@ -848,11 +953,35 @@
         "9ea5d8fd-1b7d-4655-b4b1-75fd09545838": {
           "description": "Compartir un artefacto creativo con otros estudiantes."
         },
+        "a937dee9-2cd3-4978-8f88-09f8af577395": {
+          "description": "empezar a hacer conexiones sobre una nueva forma de escribir programas"
+        },
+        "88e512c1-9ce0-4aaf-9dab-e0f2716c73ae": {
+          "description": "Define «sprite» como un personaje u objeto de la pantalla que se puede mover y cambiar."
+        },
         "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
           "description": "Crear nuevos sprites y asignarles disfraces y comportamientos."
         },
         "57a5eb7e-bd65-420e-b1b5-65a796565f9b": {
           "description": "Identificar acciones que se correlacionan con eventos de entrada."
+        },
+        "ce28bc63-1bc8-4239-985b-43ff3a8b98ea": {
+          "description": "Crea una animación interactiva utilizando sprites, comportamientos y eventos."
+        },
+        "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
+          "description": "Identifica las razones por las que la gente comparte información sobre sí misma en Internet."
+        },
+        "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
+          "description": "Explica la diferencia entre información privada y personal."
+        },
+        "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
+          "description": "Explica por qué es arriesgado compartir información privada en línea."
+        },
+        "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
+          "description": "Elegir qué información sobre ellos mismos es segura para compartir en línea."
+        },
+        "3ab2d965-5fe5-4a1e-b745-8118e6815776": {
+          "description": "Crear un programa informático interactivo que exprese quiénes son ellos con texto e imágenes personalizadas."
         },
         "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
           "description": "Identificar los beneficios de usar una estructura de bucles en lugar de la repetición manual."
