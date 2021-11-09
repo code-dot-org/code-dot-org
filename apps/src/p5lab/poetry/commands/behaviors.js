@@ -1,45 +1,53 @@
 import * as utils from './utils';
 
+function getSprite(spriteArg) {
+  const sprites = this.getSpriteArray(spriteArg);
+  if (sprites.length === 0) {
+    // This happens if the sprite was deleted within the same frame, so we
+    // should just no-op
+    return;
+  } else if (sprites.length > 1) {
+    // This shouldn't happen because we call behaviors by sprite id so there
+    // should only be one sprite.
+    console.warn('Multiple sprites for behavior');
+    return;
+  } else {
+    return sprites[0];
+  }
+}
+
 // These functions are duplicated from https://levelbuilder-studio.code.org/functions
 // In Sprite Lab, behaviors are defined using blockly so that students can edit
 // the behavior functions. In Poetry, we just need the function definitions, we don't
 // need them to be editable by students.
 export const commands = {
   fluttering(spriteArg) {
-    const sprite = this.getSpriteArray(spriteArg)[0];
+    const sprite = getSprite.call(this, spriteArg);
     if (!sprite) {
-      // This happens if the sprite was deleted within the same frame, so we
-      // should just no-op
       return;
     }
     sprite.y += utils.randomInt(-1, 1);
   },
 
   growing(spriteArg) {
-    const sprite = this.getSpriteArray(spriteArg)[0];
+    const sprite = getSprite.call(this, spriteArg);
     if (!sprite) {
-      // This happens if the sprite was deleted within the same frame, so we
-      // should just no-op
       return;
     }
     sprite.setScale(sprite.getScale() + 1 / 100);
   },
 
   jittering(spriteArg) {
-    const sprite = this.getSpriteArray(spriteArg)[0];
+    const sprite = getSprite.call(this, spriteArg);
     if (!sprite) {
-      // This happens if the sprite was deleted within the same frame, so we
-      // should just no-op
       return;
     }
     sprite.setScale(sprite.getScale() + utils.randomInt(-1, 1) / 100);
   },
 
   moving_north_and_looping(spriteArg) {
-    const sprite = this.getSpriteArray(spriteArg)[0];
+    const sprite = getSprite.call(this, spriteArg);
     if (!sprite) {
-      // This happens if the sprite was deleted within the same frame, so we
-      // should just no-op
       return;
     }
     sprite.y -= sprite.speed;
@@ -49,10 +57,8 @@ export const commands = {
   },
 
   moving_south_and_looping(spriteArg) {
-    const sprite = this.getSpriteArray(spriteArg)[0];
+    const sprite = getSprite.call(this, spriteArg);
     if (!sprite) {
-      // This happens if the sprite was deleted within the same frame, so we
-      // should just no-op
       return;
     }
     sprite.y += sprite.speed;
@@ -62,10 +68,8 @@ export const commands = {
   },
 
   moving_east_and_looping(spriteArg) {
-    const sprite = this.getSpriteArray(spriteArg)[0];
+    const sprite = getSprite.call(this, spriteArg);
     if (!sprite) {
-      // This happens if the sprite was deleted within the same frame, so we
-      // should just no-op
       return;
     }
     sprite.mirrorX(1);
@@ -77,10 +81,8 @@ export const commands = {
   },
 
   moving_west_and_looping(spriteArg) {
-    const sprite = this.getSpriteArray(spriteArg)[0];
+    const sprite = getSprite.call(this, spriteArg);
     if (!sprite) {
-      // This happens if the sprite was deleted within the same frame, so we
-      // should just no-op
       return;
     }
     sprite.mirrorX(-1);
@@ -92,46 +94,38 @@ export const commands = {
   },
 
   shrinking(spriteArg) {
-    const sprite = this.getSpriteArray(spriteArg)[0];
+    const sprite = getSprite.call(this, spriteArg);
     if (!sprite) {
-      // This happens if the sprite was deleted within the same frame, so we
-      // should just no-op
       return;
     }
     sprite.setScale(sprite.getScale() - 1 / 100);
   },
 
   spinning_left(spriteArg) {
-    const sprite = this.getSpriteArray(spriteArg)[0];
+    const sprite = getSprite.call(this, spriteArg);
     if (!sprite) {
-      // This happens if the sprite was deleted within the same frame, so we
-      // should just no-op
       return;
     }
     sprite.rotation -= 6;
   },
 
   spinning_right(spriteArg) {
-    const sprite = this.getSpriteArray(spriteArg)[0];
+    const sprite = getSprite.call(this, spriteArg);
     if (!sprite) {
-      // This happens if the sprite was deleted within the same frame, so we
-      // should just no-op
       return;
     }
     sprite.rotation += 6;
   },
 
   swimming_left_and_right(spriteArg) {
+    const sprite = getSprite.call(this, spriteArg);
+    if (!sprite) {
+      return;
+    }
     if (!this.p5.edges) {
       this.p5.createEdgeSprites();
     }
 
-    const sprite = this.getSpriteArray(spriteArg)[0];
-    if (!sprite) {
-      // This happens if the sprite was deleted within the same frame, so we
-      // should just no-op
-      return;
-    }
     if (sprite.direction === 0) {
       sprite.mirrorX(1);
     } else if (sprite.direction === 180) {
@@ -148,16 +142,14 @@ export const commands = {
   },
 
   wandering(spriteArg) {
+    const sprite = getSprite.call(this, spriteArg);
+    if (!sprite) {
+      return;
+    }
     if (!this.p5.edges) {
       this.p5.createEdgeSprites();
     }
 
-    const sprite = this.getSpriteArray(spriteArg)[0];
-    if (!sprite) {
-      // This happens if the sprite was deleted within the same frame, so we
-      // should just no-op
-      return;
-    }
     if (utils.randomInt(0, 100) < 20) {
       sprite.direction = (sprite.direction + utils.randomInt(-25, 25)) % 360;
     }
@@ -178,10 +170,8 @@ export const commands = {
   },
 
   wobbling(spriteArg) {
-    const sprite = this.getSpriteArray(spriteArg)[0];
+    const sprite = getSprite.call(this, spriteArg);
     if (!sprite) {
-      // This happens if the sprite was deleted within the same frame, so we
-      // should just no-op
       return;
     }
     if (utils.randomInt(0, 100) < 50) {
