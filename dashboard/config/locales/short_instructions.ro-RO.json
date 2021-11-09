@@ -855,8 +855,8 @@
         "CourseF_outbreak2": "Schimbă monștrii sănătoși în monștrii bolnavi atunci când sunt atinși.",
         "CourseF_outbreak3": "Schimbă monștrii în monștri cu mască facială atunci când apeși pe ei.",
         "CourseF_outbreak4": "Schimbă numărul și dimensiunea monștrilor pentru simularea ta.",
-        "CourseF_outbreak6": "Fă ca toți monștrii bolnavi să înceapă să se vindece atunci când un monstru sănătos atinge un monstru bolnav.",
-        "CourseF_outbreak7": "Adaugă un procent de șansă ca monștrii să se îmbolnăvească oricând monștrii sănătoți se atingde monștrii bolnavi. Fă asta pentru toate combinațiile e monștrii cu și fără măști.",
+        "CourseF_outbreak6": "Adaugă un procent de șansă pentru ca monștrii să se îmbolnăvească ori de câte ori monștrii sănătoși ating monștrii bolnavi. Fă asta pentru toate combinațiile de monștri cu și fără măști.",
+        "CourseF_outbreak7": "Creează un costum nou pentru monștrii cu imunitate la virus și folosește-l în simularea ta.",
         "CourseF_outbreak8": "Creează un nou costum pentru monștrii cu imunitate la virus și utilizează-l pentru simularea ta.",
         "HOC 2018 Level_12_2021": "Proiectează propriul tău mediu acvatic, așa cum vrei tu!",
         "Overworld Avoid Monsters_2021": "Intalnirea unui Vierme nu este o idee buna.\nMergeti cu atentie pe langa ei si ajungeti in siguranta in casa.",
@@ -890,7 +890,7 @@
         "courseF_bee_for8_2021": "Ati prins ideea! Care ar trebui sa fie variabila voastra crescatoare pentru a colecta 3, 6, 9, 12 sau 15 randuri de polen?\\\r",
         "courseF_bee_for_challenge2_2021": "Rezolvă acest puzzle folosind cât mai puține blocuri posibil.",
         "CourseF_outbreak5": "Schimbă numărul și dimensiunea monștrilor pentru simularea ta.",
-        "international_outbreak_freeplay": "Distribuie un mesaj cu simularea ta."
+        "international_outbreak_freeplay": "Adu proiectului tău orice modificări sau îmbunătățiri ai dori. "
       }
     }
   }

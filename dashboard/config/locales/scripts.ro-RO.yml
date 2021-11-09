@@ -11092,6 +11092,10 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -11231,6 +11235,8 @@ ro:
           lessons:
             lesson-12:
               name: Instrumente
+            lesson-17:
+              name: Consolă
             lesson-18:
               name: Widget-uri
           lesson_groups:
@@ -11281,12 +11287,24 @@ ro:
               name: Widget-uri
             lesson-2:
               name: Instrumente
+        poetry:
+          lessons:
+            lesson-7:
+              name: Condiţionale
         spelling-bee:
           lessons:
             lesson-1:
               name: Albina de Ortografie
           title: Albina de Ortografie
         csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Chestionar după curs
+        csa6-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut

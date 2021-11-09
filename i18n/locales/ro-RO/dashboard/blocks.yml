@@ -1627,9 +1627,7 @@ ro:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Îngheţată
-            Stars: Stele
-            Fireworks: Artificii
+            '"placeholder"': Artificii
             '"rainbow"': Curcubeu
             '"hearts"': Inimi
             '"flowers"': Flori
@@ -1644,7 +1642,7 @@ ro:
         text: PlaySound {SOUND}
         options:
           SOUND:
-            Light: Lumină
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Lumină
       Poetry_setBackground:
         text: setează culoarea de fundal la {COLOR}
       Poetry_setBackgroundEffect:
