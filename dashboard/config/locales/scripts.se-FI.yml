@@ -9414,3 +9414,8 @@ se:
           lessons:
             lesson-1:
               name: Stávengilvu
+          title: Stávengilvu
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sisdoallu

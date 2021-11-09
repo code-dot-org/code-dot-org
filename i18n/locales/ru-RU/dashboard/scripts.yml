@@ -6064,6 +6064,12 @@ ru:
               name: Курс F
             csf:
               name: Основы информатики
+            sprites_in_action_2021:
+              name: 'Лаборатория Спроайтов: спрайты в действии'
+            text_and_prompts_2021:
+              name: 'Лаборатория спрайтов: текст и подсказки'
+            minitoolbox_2021:
+              name: 'Лаборатория Спрайтов: Много Спрайтов'
         virustest:
           title: Симулятор эпидемии
           description_short: Используйте Sprite Lab для создания симулятора эпидемии вируса.
@@ -6073,9 +6079,13 @@ ru:
               name: AI для океанов
             visualizing:
               name: Визуализация данных
+            intro-categorical:
+              name: Введение в AI лаборатории
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
+              name: Программирование симулятора
+            Outbreak:
               name: Программирование симулятора
           lesson_groups:
             outbreak:
@@ -6787,10 +6797,16 @@ ru:
             cspSurvey2020:
               display_name: Опрос
         aiml-2021:
+          lessons:
+            lesson5:
+              name: Введение в AI лаборатории
           lesson_groups:
             lessonGroup-4:
               display_name: Опрос
         csd7-2021:
+          lessons:
+            Introduction to AI Lab:
+              name: Введение в AI лаборатории
           lesson_groups:
             lessonGroup-4:
               display_name: Опрос
@@ -6956,11 +6972,12 @@ ru:
               name: Виджеты
             lesson-2:
               name: Инструменты
-        poetry:
-          lessons:
-            lesson-3:
-              name: Переменные
         spelling-bee:
           lessons:
             lesson-1:
               name: Пчела
+          title: Пчела
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое

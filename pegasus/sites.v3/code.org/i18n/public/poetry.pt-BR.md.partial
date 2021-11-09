@@ -1,0 +1,30 @@
+---
+title: Poesia
+video_player: true
+theme: responsive
+style_min: true
+---
+
+# Codificando com Poesia
+
+{{ tutorial_promo2, heading: "Codificando com Poesia", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background.jpg", left_heading: "Humor de estudo", left_description: "A primeira aula do Módulo Codificação com Poesia, e uma ótima atividade de uma hora que explora o clima de um poema.", left_specs: "", left_button_url: "/moodstudy", left_button_text: "Saiba mais", right_heading: "Módulo de codificação com poesia", right_description: "Vá além da primeira hora com conteúdo extenso de poesia em cinco aulas.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Saiba mais" }}
+
+## Aprenda mais sobre Codificando com Poesia
+
+No módulo Coddificando com Poesia em CS Connections, estudantes passarão a ver dois tópicos: Computer Science e Poesia através de um novo prisma. Em cinco classes, estudantes de quarta à oitava série irão construir um programa capaz de gerar poemas com o objetivo de recitar differentes versões de um haiku que eles irão escrever. Estudantes irão testar os seus programas com os seus colegas de classe, e completar o projeto compartilhando os poemas gerados.
+
+Através dessa atividate de construir um gerador de poemas, estudante aprendem como computaores obtem informações de usuários, armazenam essa informação na memória e geram um resultado esperado. Escrevendo seus próprios haikus, estudantes exploran elementos de poesia como gramática e escolha de palavras.
+
+Essa atividade é a primeira lição no modulo Codificando com Poesia do currículo de Ciência da Computacão.
+
+## Criações de alunos em destaque
+
+{{ featured_project, title: "Cor da moeda", author: "M", age: "13+", image: "images/csc/poetry/creation0.png", url: "/about" }}
+{{ featured_project, title: "Simulação do mundo real", author: "D", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project, title: "ROBOT", author: "B", age: "18+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project, title: "EVADE", author: "W", age: "13+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project, title: "Proteja o castelo", author: "S", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project, title: "Remix: meu projeto", author: "K", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project, title: "ping pong", author: "V", age: "18+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ featured_project, title: "Primeiro jogo", author: "C", age: "13+", image: "images/csc/poetry/creation0.png", url: "/" }}
+{{ clearfix }}

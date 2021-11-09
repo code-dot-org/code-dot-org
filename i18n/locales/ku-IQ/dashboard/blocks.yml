@@ -1249,10 +1249,21 @@ ku:
         text: پۆتانی xی {SPRITE}
       Mikelab_yLocationOf:
         text: پۆتانی yی {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: دۆندرمە
+            Stars: ئەستێرە
+            Fireworks: یاری ئاگرین
+            '"rainbow"': پەلكەزێرینە
+            '"hearts"': دڵ
       Poetry_makeNewSpriteAnon:
         text: سپرایتێکی {ANIMATION_NAME} نوێ دروست بکە لە {LOCATION}
       Poetry_playSound:
         text: دەنگ هەڵکەر {SOUND}
+        options:
+          SOUND:
+            Light: ڕووناکی
       Poetry_setBackground:
         text: ڕەنگی پاشبنەما دیاریبکە {COLOR}
       Poetry_setBackgroundEffect:
@@ -1261,6 +1272,9 @@ ku:
             '"colors"': ڕەنگ
             '"space"': بۆشایی ئاسمان
             '"stars"': ئەستێرە
+            '"rain"': باران
+            '"bubbles"': بڵق
+            '"confetti"': بڕشتی کاغەز
           PALETTE:
             '"rainbow"': پەلكەزێرینە
       Poetry_setBackgroundImageAs:

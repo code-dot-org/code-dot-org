@@ -4,13 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS in Algebra Legacy"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:57 UTC",
+    "serialized_at": "2021-11-02 14:28:55 UTC",
     "published_state": "beta",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "algebraFacilitator"
     }
@@ -91,21 +94,108 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "4502b5e0-0d57-42d0-a555-2b5d7e836383",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4502b5e0-0d57-42d0-a555-2b5d7e836383",
+        "lesson.key": "Introduction to PD",
+        "lesson_group.key": "",
+        "script.name": "algebraFacilitator"
+      }
+    },
+    {
+      "key": "d4f75782-5b18-44a9-95c5-76ae44f2e39a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d4f75782-5b18-44a9-95c5-76ae44f2e39a",
+        "lesson.key": "Why Computer Science belongs in Algebra",
+        "lesson_group.key": "",
+        "script.name": "algebraFacilitator"
+      }
+    },
+    {
+      "key": "291fe22e-bc85-4ebe-a499-19744add1256",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "291fe22e-bc85-4ebe-a499-19744add1256",
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraFacilitator"
+      }
+    },
+    {
+      "key": "329ae890-e519-42e7-a928-07909e519b04",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "329ae890-e519-42e7-a928-07909e519b04",
+        "lesson.key": "Teacher Dashboard",
+        "lesson_group.key": "",
+        "script.name": "algebraFacilitator"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "d4c4fa05-d34e-4493-a00e-a1ed2288cd5f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d4c4fa05-d34e-4493-a00e-a1ed2288cd5f",
+        "lesson_activity.key": "4502b5e0-0d57-42d0-a555-2b5d7e836383"
+      }
+    },
+    {
+      "key": "3517f517-9274-4c6f-95fb-880677cdd2b6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3517f517-9274-4c6f-95fb-880677cdd2b6",
+        "lesson_activity.key": "d4f75782-5b18-44a9-95c5-76ae44f2e39a"
+      }
+    },
+    {
+      "key": "df469421-82f7-44f8-87de-8a69a678dd7d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d",
+        "lesson_activity.key": "291fe22e-bc85-4ebe-a499-19744add1256"
+      }
+    },
+    {
+      "key": "6f7f07bb-5b30-4a24-bcb2-d4352ce53cf1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6f7f07bb-5b30-4a24-bcb2-d4352ce53cf1",
+        "lesson_activity.key": "329ae890-e519-42e7-a928-07909e519b04"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -114,7 +204,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "d4c4fa05-d34e-4493-a00e-a1ed2288cd5f"
       },
       "level_keys": [
         "PDAlg Intro"
@@ -123,12 +214,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS tour"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -137,7 +225,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "d4c4fa05-d34e-4493-a00e-a1ed2288cd5f"
       },
       "level_keys": [
         "PDECS tour"
@@ -146,12 +235,9 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg functions"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -160,7 +246,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "3517f517-9274-4c6f-95fb-880677cdd2b6"
       },
       "level_keys": [
         "PDAlg functions"
@@ -169,12 +256,9 @@
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg hard video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -183,7 +267,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "3517f517-9274-4c6f-95fb-880677cdd2b6"
       },
       "level_keys": [
         "PDAlg hard video"
@@ -192,12 +277,9 @@
     {
       "chapter": 5,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg functional"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -206,7 +288,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "3517f517-9274-4c6f-95fb-880677cdd2b6"
       },
       "level_keys": [
         "PDAlg functional"
@@ -215,12 +298,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Blocks Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -229,7 +309,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       },
       "level_keys": [
         "PDAlg Blocks Video"
@@ -238,12 +319,9 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -252,7 +330,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       },
       "level_keys": [
         "Calc Circles of Eval 1"
@@ -261,12 +340,9 @@
     {
       "chapter": 8,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -275,7 +351,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       },
       "level_keys": [
         "Calc Circles of Eval 2"
@@ -284,12 +361,9 @@
     {
       "chapter": 9,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -298,7 +372,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       },
       "level_keys": [
         "Calc Circles of Eval 3"
@@ -307,12 +382,9 @@
     {
       "chapter": 10,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -321,7 +393,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       },
       "level_keys": [
         "Calc Circles of Eval 5"
@@ -330,12 +403,9 @@
     {
       "chapter": 11,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -344,7 +414,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       },
       "level_keys": [
         "Calc Circles of Eval 6"
@@ -353,12 +424,9 @@
     {
       "chapter": 12,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -367,7 +435,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       },
       "level_keys": [
         "Calc Circles of Eval 7"
@@ -376,12 +445,9 @@
     {
       "chapter": 13,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -390,7 +456,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       },
       "level_keys": [
         "Calc Circles of Eval 8"
@@ -399,12 +466,9 @@
     {
       "chapter": 14,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 9"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -413,7 +477,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       },
       "level_keys": [
         "Calc Circles of Eval 9"
@@ -422,12 +487,9 @@
     {
       "chapter": 15,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -436,7 +498,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       },
       "level_keys": [
         "Calc Circles of Eval Free Play"
@@ -445,12 +508,9 @@
     {
       "chapter": 16,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDK5 Teacher Dashboard 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -459,7 +519,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "6f7f07bb-5b30-4a24-bcb2-d4352ce53cf1"
       },
       "level_keys": [
         "PDK5 Teacher Dashboard 1"
@@ -468,12 +529,9 @@
     {
       "chapter": 17,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDK5 Teacher Dashboard 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -482,7 +540,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "6f7f07bb-5b30-4a24-bcb2-d4352ce53cf1"
       },
       "level_keys": [
         "PDK5 Teacher Dashboard 2"
@@ -491,12 +550,9 @@
     {
       "chapter": 18,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Teacher Dashboard"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -505,7 +561,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "6f7f07bb-5b30-4a24-bcb2-d4352ce53cf1"
       },
       "level_keys": [
         "PDAlg Teacher Dashboard"
@@ -521,7 +578,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "d4c4fa05-d34e-4493-a00e-a1ed2288cd5f"
       }
     },
     {
@@ -532,7 +590,8 @@
         ],
         "lesson.key": "Introduction to PD",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "d4c4fa05-d34e-4493-a00e-a1ed2288cd5f"
       }
     },
     {
@@ -543,7 +602,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "3517f517-9274-4c6f-95fb-880677cdd2b6"
       }
     },
     {
@@ -554,7 +614,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "3517f517-9274-4c6f-95fb-880677cdd2b6"
       }
     },
     {
@@ -565,7 +626,8 @@
         ],
         "lesson.key": "Why Computer Science belongs in Algebra",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "3517f517-9274-4c6f-95fb-880677cdd2b6"
       }
     },
     {
@@ -576,7 +638,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       }
     },
     {
@@ -587,7 +650,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       }
     },
     {
@@ -598,7 +662,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       }
     },
     {
@@ -609,7 +674,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       }
     },
     {
@@ -620,7 +686,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       }
     },
     {
@@ -631,7 +698,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       }
     },
     {
@@ -642,7 +710,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       }
     },
     {
@@ -653,7 +722,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       }
     },
     {
@@ -664,7 +734,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       }
     },
     {
@@ -675,7 +746,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "df469421-82f7-44f8-87de-8a69a678dd7d"
       }
     },
     {
@@ -686,7 +758,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "6f7f07bb-5b30-4a24-bcb2-d4352ce53cf1"
       }
     },
     {
@@ -697,7 +770,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "6f7f07bb-5b30-4a24-bcb2-d4352ce53cf1"
       }
     },
     {
@@ -708,7 +782,8 @@
         ],
         "lesson.key": "Teacher Dashboard",
         "lesson_group.key": "",
-        "script.name": "algebraFacilitator"
+        "script.name": "algebraFacilitator",
+        "activity_section.key": "6f7f07bb-5b30-4a24-bcb2-d4352ce53cf1"
       }
     }
   ],

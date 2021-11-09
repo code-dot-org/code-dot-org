@@ -2,9 +2,17 @@
   "func": "rect",
   "category": "Canvas",
   "paletteParams": [
-    "x",
-    "y",
-    "width",
-    "height"
+    {
+      "name": "x"
+    },
+    {
+      "name": "y"
+    },
+    {
+      "name": "width"
+    },
+    {
+      "name": "height"
+    }
   ]
 }

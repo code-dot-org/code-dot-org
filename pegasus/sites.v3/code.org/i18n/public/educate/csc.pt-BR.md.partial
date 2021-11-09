@@ -1,0 +1,50 @@
+---
+title: 'CS Connections: "Conexões de Ciência da Computação"'
+video_player: true
+theme: responsive
+style_min: true
+---
+
+# Conexões de Ciência da Computação
+
+Nosso currículo mais recente faz as conexões entre o aprendizado de ciência da computação e outras disciplinas como matemática, artes da linguagem, ciências e estudos sociais. Por meio do "CS Connections", as salas de aula do ensino fundamental e médio exploram seus assuntos habituais de maneiras novas e empolgantes!
+
+{{ tutorial_promo2, heading: "Novas Atividades da Hora do Código", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_background.jpg", left_heading: "Humor de estudo", left_description: "Aprenda sobre ciência da computação e poesia criando um poema animado.", left_specs: "", left_button_url: "/moodstudy", left_button_text: "Começar", right_heading: "Olá Mundo", right_description: "Aprenda os fundamentos da ciência da computação com Sprite Lab", right_specs: "", right_button_url: "/helloworld", right_button_text: "Começar" }}
+{{ clearfix }}
+
+## Módulos
+
+Os módulos do CS Connections são uma série estruturada de lições que integram o aprendizado da ciência da computação às áreas principais, como matemática, ELA e ciências. Esses módulos estão alinhados aos padrões das disciplinas e culminam em um projeto transcurricular.
+
+Eles são perfeitos para professores que desejam incorporar a ciência da computação em seus planos de aula para outras disciplinas, bem como para educadores de ciência da computação que desejam reforçar o que os alunos estão aprendendo em outras disciplinas.
+
+{{ csc_module, title: "Codificando com Poesia", grades: "3+", subject: "ELA", duration: "5 horas", description: "Os alunos exploram os elementos da poesia e os fundamentos da codificação construindo um gerador de poemas baseado em um poema que escrevem.", button_text: "Saiba mais", url: "/about" }}
+{{ clearfix }}
+
+<em>Estamos trabalhando em mais módulos para ajudar a trazer a ciência da computação para ainda mais disciplinas. Existe um assunto específico que você gostaria de ver a seguir? Deixe-nos saber!</em>
+
+## Projetos em aberto
+
+Continue fazendo conexões entre ciência da computação e disciplinas tradicionais com nossos projetos transcurriculares. Eles levam apenas 1-2 horas de instrução para serem concluídos e são ideais para qualquer professor que queira desenvolver projetos de tópicos específicos para caber em seu currículo existente.
+
+<em>Dica: Esses projetos exigem algum conhecimento dos fundamentos da ciência da computação, portanto, recomendamos concluir nossa atividade Hello World Hour of Code antes de começar!</em>
+
+{{ csc_module, title: "Ecossistemas", grades: "3+", subject: "Ciência", duration: "1-2 horas", description: "Usando habilidades básicas de codificação, os alunos criam um modelo interativo de um ecossistema que explora como diferentes animais, plantas e organismos afetam uns aos outros. Este modelo também pode ser adaptado em interações entre a geosfera, biosfera, hidrosfera e / ou atmosfera.", button_text: "Saiba mais", url: "/" }}
+{{ csc_module, title: "Ciclos", grades: "3+", subject: "Ciência", duration: "1-2 horas", description: "Passe de ovo a girino e rã com este projeto, no qual os alunos usam código para criar um modelo de um ciclo científico - como o ciclo de vida de um sapo ou a transferência de energia!", button_text: "Saiba mais", url: "/" }}
+{{ csc_module, title: "Estudo de Personagem", grades: "3+", subject: "ELA", duration: "1-2 horas", description: "Toda ação tem uma reação! Não, isso não é física - este projeto permite que os alunos usem código para construir uma cena de uma história que mostra como as ações de um personagem afetam a cadeia de eventos.", button_text: "Saiba mais", url: "/" }}
+{{ csc_module, title: "Moral da história", grades: "3+", subject: "ELA", duration: "1-2 horas", description: "O que há entre "Era uma vez" e "Fim?” Os alunos codificam um aplicativo interativo que conta uma história e sua moral. Os alunos podem aplicar essa habilidade a qualquer história, conto popular, livro ou fábula.", button_text: "Saiba mais", url: "/" }}
+{{ clearfix }}
+
+## Lições de transição
+
+Nossas aulas de transição fornecem uma maneira rápida e interessante de fazer uma conexão entre a ciência da computação e outras disciplinas. Essas aulas não exigem nenhum conhecimento prévio de ciência da computação, então são perfeitas para qualquer professor que queira incorporar o aprendizado essencial do século 20 ao currículo tradicional ou motivar os alunos com novas maneiras empolgantes de aprender matérias mais antigas.
+
+
+{{ csc_module, title: "Surto", grades: "5+", subject: "Ciência", duration: "2 horas", description: "Houve um surto na Monster Town! Ao criar uma simulação para estudar como um surto se comporta, os alunos pensam como um cientista, desenvolvendo uma hipótese, testando-a e interpretando dados para ajudar os cidadãos de Monster Town.", button_text: "Saiba mais", url: "/" }}
+{{ csc_module, title: "Soletrando com Bee", grades: "K+", subject: "ELA", duration: "1 hora", description: "D-I-V-E-R-S-Ã-O-! Nesta lição, os alunos usam habilidades básicas de codificação para dizer a Bee onde B-U-Z-Z a fim de soletrar palavras em uma grade cheia de letras.", button_text: "Saiba mais", url: "/" }}
+{{ csc_module, title: "Contando com Laurel", grades: "K+", subject: "Matemática", duration: "1 hora", description: "É uma caça ao tesouro! Os alunos vão praticar a contagem e adição ao codificar com loops para ajudar Laurel a coletar joias em uma grade do labirinto.", button_text: "Saiba mais", url: "/" }}
+{{ csc_module, title: "Expoentes e binários", grades: "6+", subject: "Matemática", duration: "1 hora", description: "Os alunos praticam a avaliação de expressões com expoentes para comparar e contrastar os valores de posição entre o sistema numérico de base 10 que usamos todos os dias e o sistema binário de base 2 usado por computadores.", button_text: "Saiba mais", url: "/" }}
+{{ csc_module, title: "Algoritmos e funções matemáticas", grades: "9+", subject: "Matemática", duration: "1 hora", description: "Os alunos aprendem sobre a notação Big O lendo gráficos e estendendo tabelas de funções. Os alunos descrevem as eficiências de algoritmos exponenciais versus algoritmos lineares e polinomiais.", button_text: "Saiba mais", url: "/" }}
+{{ csc_module, title: "Código de Ética da AI", grades: "6+", subject: "ELA ou Humanidades", duration: "1 hora", description: "Depois de pesquisar as potenciais armadilhas éticas da inteligência artificial (IA), os alunos trabalham juntos para desenvolver um recurso de classe“ Código de Ética de IA ”.", button_text: "Saiba mais", url: "/" }}
+{{ csc_module, title: "Visualização de dados", grades: "9+", subject: "Matemática", duration: "1 hora", description: "Esta lição apresenta aos alunos a ferramenta Data Visualizer no App Lab, bem como dois tipos de gráficos importantes: um gráfico de barras e um histograma. Ao longo da aula, os alunos desenvolverão habilidades no uso dessa ferramenta e na leitura de dados.", button_text: "Saiba mais", url: "/" }}
+{{ clearfix }}

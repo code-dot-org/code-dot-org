@@ -4965,6 +4965,8 @@ nl:
           lessons:
             Virus Simulation for Code Bytes:
               name: Een simulatie programmeren
+            Outbreak:
+              name: Een simulatie programmeren
           lesson_groups:
             outbreak:
               display_name: Uitbraaksimulatie
@@ -5791,11 +5793,12 @@ nl:
               name: Widgets
             lesson-2:
               name: Hulpmiddelen
-        poetry:
-          lessons:
-            lesson-3:
-              name: Variabelen
         spelling-bee:
           lessons:
             lesson-1:
               name: Spellingswedstrijd
+          title: Spellingswedstrijd
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content

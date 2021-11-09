@@ -7963,6 +7963,8 @@ it:
           lessons:
             Virus Simulation for Code Bytes:
               name: Codifica di una simulazione
+            Outbreak:
+              name: Codifica di una simulazione
           lesson_groups:
             outbreak:
               display_name: Simulazione di epidemia
@@ -7977,6 +7979,8 @@ it:
               name: Introduzione al Laboratorio dei Personaggi
             Virus Simulation for Code Bytes:
               name: Codifica di una simulazione
+            Making Sprites:
+              name: Creazione di personaggi
             Sprites in Action:
               name: Personaggi in azione
             End of Course Project:
@@ -8595,6 +8599,7 @@ it:
               description_student: Preparati a creare il tuo prossimo capolavoro. Qui userai i cicli con contatore per creare immagini sbalorditive.
               description_teacher: In questa lezione, gli studenti continuano ad esercitarsi con i cicli, questa volta con l'Artista. Gli studenti completeranno gli esercizi combinando i concetti di variabili, cicli e cicli con contatore per creare progetti complessi. Alla fine avranno la possibilità di creare il proprio progetto in un esercizio libero.
             Virtual Pet:
+              key: Animale virtuale
               name: 'Mini progetto: Animaletto Virtuale'
             End of Course Project:
               key: Progetto di fine corso
@@ -8602,6 +8607,8 @@ it:
               description_student: Progetti così grandi richiedono tempo e molta pianificazione. Trova la tua ispirazione, sviluppa un piano e libera la tua creatività!
             lesson-6:
               name: Introduzione al Laboratorio dei Personaggi
+            lesson-7:
+              name: Creazione di personaggi
             lesson-8:
               name: Personaggi in azione
             lesson-5:
@@ -8733,6 +8740,8 @@ it:
               description_student: Sgranchisciti le dita per programmare alla grande! È ora di iniziare a realizzare il tuo progetto.
             lesson-1:
               name: Ballando col codice
+            lesson-2:
+              name: Creazione di personaggi
             lesson-3:
               name: Personaggi in azione
           lesson_groups:
@@ -8812,6 +8821,8 @@ it:
               name: Codifica di una simulazione
             Course F Introduction:
               name: Introduzione al Laboratorio dei Personaggi
+            Making Sprites:
+              name: Creazione di personaggi
             Sprites in Action:
               name: Personaggi in azione
             introducing-spritelab:
@@ -9141,13 +9152,14 @@ it:
               name: Componenti
             lesson-2:
               name: Strumenti
-        poetry:
-          lessons:
-            lesson-3:
-              name: Variabili
         spelling-bee:
           lessons:
             lesson-1:
               name: Ape Sapiente
+          title: Ape Sapiente
         outbreak-csc:
           title: Epidemia
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto

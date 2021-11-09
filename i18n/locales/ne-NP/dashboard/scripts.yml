@@ -2600,11 +2600,12 @@ ne:
               display_name: Content
             lessonGroup-2:
               display_name: Content
-        poetry:
-          lessons:
-            lesson-3:
-              name: Variables
         spelling-bee:
           lessons:
             lesson-1:
               name: Spelling Bee
+          title: Spelling Bee
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content

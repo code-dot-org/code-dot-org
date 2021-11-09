@@ -29,6 +29,12 @@
         "oceans/Oceans": {
           "student_overview": "Résumé du Tutoriel : Tout d'abord, les élèves classent les objets en tant que \"poisson\" ou \"pas poisson\" pour tenter d'éliminer les déchets de l'océan. Ensuite, les élèves élargiront leur ensemble de données d'entraînement pour inclure d'autres créatures marines. Dans la deuxième partie de l'activité, les élèves choisiront leurs propres étiquettes à appliquer aux images de poissons générés aléatoirement. Ces données de formation sont utilisées pour un modèle d'apprentissage automatique qui devrait ensuite être capable d'étiqueter de nouvelles images par ses propres moyens."
         },
+        "outbreak/Outbreak": {
+          "overview": "Cette leçon combine le **renforcement des compétences** autour d'événements avec un **mini-projet** où les élèves peuvent créer leur propre simulation informatique dans Sprite Lab. Ils étudieront la simulation pour comprendre à quelle vitesse un virus peut se propager et ce qui peut être fait pour le ralentir. ",
+          "preparation": "",
+          "purpose": "Dans la leçon précédente, les élèves ont collecté et interprété les données d'une simulation simple. Dans cette leçon, les ils suivront des instructions pour coder leur propre modèle de simulation. Les connaissances préalables des élèves sur les épidémies de virus dans le monde réel seront appliquées à un scénario fictif. ",
+          "student_overview": "Un virus est arrivé à Monster Town ! Apprenez à créer un simulateur de virus et aidez les monstres à guérir. "
+        },
         "jigsaw/Jigsaw": {
           "overview": "Cette leçon donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique. Elle commence par une brève discussion les initiant aux manières, dans le laboratoire informatique, puis ils progresseront dans l'utilisation d'un ordinateur pour résoudre des énigmes en ligne.",
           "student_overview": "Clique et fais glisser pour terminer les énigmes."
@@ -58,7 +64,7 @@
           "student_overview": "Dans cette leçon, les élèves créeront un Animal de Compagnie Virtuel interactif dont l'apparence et le comportements correspondront à leurs souhaits. Les élèves utiliseront l'outil « Costumes » du Labo des Lutins pour personnaliser l'apparence de leur animal de compagnie. Ils utiliseront ensuite des événements, des comportements et d'autres concepts qu'ils ont appris afin de donner vie à leur animal !"
         },
         "coursef-2021/lesson-2": {
-          "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nCette leçon a été créée à l'origine par Common Sense Education. [Learn more.][2]\n\nÀ mesure que les enfants grandissent, ils commenceront naturellement à communiquer davantage en ligne. Mais certaines choses de ce qu'ils voient pourraient les blesser, les atrister, les mettre en colère ou leur faire peur. Aidez vos élèves à développer de l'empathie pour les autres et à apprendre des stratégies à utiliser lorsqu'ils sont confrontés à la cyberintimidation. ",
+          "overview": " [\\[common sense education](https://www.commonsense.org)][1]\n\nCette leçon a été créée à l'origine par Common Sense Education. [Learn more.][2]\n\nÀ mesure que les enfants grandissent, ils commenceront naturellement à communiquer davantage en ligne. Mais certaines choses de ce qu'ils voient pourraient les blesser, les atrister, les mettre en colère ou leur faire peur. Aidez vos élèves à développer de l'empathie pour les autres et à apprendre des stratégies à utiliser lorsqu'ils sont confrontés à la cyberintimidation. ",
           "preparation": "-   Réviser les supports pédagogiques.\n-   Imprimez le(s) document(s) pour chaque élève.\n-   Préparez une longue ficelle (ou corde) et du papier pour la classe. ",
           "purpose": "Common Sense Education a créé cette leçon pour enseigner aux élèves ce qu'ils doivent faire lorsque quelqu'un utilise un langage méchant ou blessant sur Internet. ",
           "student_overview": "Le harcèlement n'est jamais acceptable. Cette leçon vous apprendra ce qui est et n'est pas acceptable de dire en ligne."
@@ -71,7 +77,7 @@
         },
         "coursef-2021/lesson-10": {
           "overview": "Dans cette leçon de **renforcement des compétences**, les étudiants s'entraîneront avec les variables dans Sprite Lab. ",
-          "preparation": "Jouez entre les niveaux et passez en revue les diapositives du cours.",
+          "preparation": "Naviguez à travers les niveaux et passez en revue les diapositives de la leçon. ",
           "purpose": "On utilisera des variables dans ce cours pour stocker et modifier des données. À ce stade, les élèves vont simplement stocker et récupérer des valeurs sans les modifier. Dans les cours suivants, ils stockeront des valeurs numériques et les modifieront au fil du temps pour suivre des éléments tels que le score d'un joueur dans un jeu. ",
           "student_overview": "Dans ce cours, vous vous entraînerez avec des variables dans Sprite Lab. "
         },
@@ -84,6 +90,7 @@
         "coursef-2021/Loops with the Artist": {
           "overview": "Regardez les visages des étudiants s'illuminer alors qu'ils créent leurs propres motifs, magnifiques, en utilisant un petit nombre de blocs et d'autocollants numériques ! Cette leçon s'appuie sur la compréhension des boucles des leçons précédentes et donne aux élèves une chance d'être vraiment créatifs. Cette activité est fantastique pour produire des artefacts pour des portefeuilles ou des conférences parents/enseignants.",
           "preparation": "",
+          "purpose": "Les élèves s'exerceront à utiliser des boucles, un concept qui sera revisité au cours des prochaines leçons. ",
           "student_overview": "Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !"
         },
         "coursef-2021/Variables that Change in Artist": {
@@ -146,10 +153,13 @@
           "student_overview": "T'es-tu déjà demandé comment l'information circule sur Internet ? C'est pas de la magie ! Cette leçon t'apprendra les bases du fonctionnement d'Internet."
         },
         "coursef-2021/End of Course Project": {
+          "overview": "Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !",
+          "preparation": "Passez du temps à créer votre propre projet avec Artist et Sprite Lab. Familiarisez-vous avec les capacités et les limites de chaque outil.\n\n-   Modifiez la rubrique pour l'adapter aux objectifs de votre classe et imprimez une copie pour chaque élève.\n-   Modifiez la feuille de travail de conception de projet pour l'adapter à votre classe et imprimez un paquet pour chaque élève.",
+          "purpose": "Les élèves sont peut-être prêts à se lancer directement dans la construction de leurs projets, mais cette leçon les aidera à transformer leurs idées en plans. Cette structure gardera les rêveurs ancrés et éclairera le chemin pour ceux qui se sentent perdus. Donnez-leur suffisamment de temps pour construire et réviser leurs projets. Les essais et erreurs inévitablement impliqués dans cette leçon enseigneront la résolution de problèmes et la persévérance. ",
           "student_overview": "Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !"
         },
         "courseb-2021/Digital Trails": {
-          "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nCette leçon a été créée à l'origine par Common Sense Education. [Learn more.][2]\n\nEst-ce que ce que vous faites en ligne reste toujours en ligne ? Les élèves apprennent que les informations qu'ils partagent en ligne laissent une empreinte numérique ou une « trace ». Selon la façon dont ils le gèrent, ce sentier peut être grand ou petit, nuisible ou utile. Les élèves comparent différentes pistes et réfléchissent de manière critique aux types d'informations qu'ils souhaitent laisser derrière eux. ",
+          "overview": " [\\[common sense education](https://www.commonsense.org)][1]\n\nCette leçon a été créée à l'origine par Common Sense Education. [Learn more.][2]\n\nEst-ce que ce que vous faites en ligne reste toujours en ligne ? Les élèves apprennent que les informations qu'ils partagent en ligne laissent une empreinte numérique ou une « trace ». Selon la façon dont ils le gèrent, ce sentier peut être grand ou petit, nuisible ou utile. Les élèves comparent différentes pistes et réfléchissent de manière critique aux types d'informations qu'ils souhaitent laisser derrière eux. ",
           "preparation": "-   Réviser les supports pédagogiques.\n-   Imprimez le(s) document(s) pour chaque élève. ",
           "purpose": "Common Sense Education a créé cette leçon pour enseigner aux élèves les « empreintes numériques » et les informations qu'ils peuvent avoir dans la leur. ",
           "student_overview": "Découvre ton empreinte numérique et comment rester en sécurité lorsque tu visites des sites Web. "
@@ -168,10 +178,14 @@
         },
         "courseb-2021/Programming in Maze": {
           "overview": "En utilisant des personnages de L'Âge de Glace, les élèves développeront des algorithmes séquentiels pour déplacer Scrat d'un côté d'un labyrinthe au gland, de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble dans une séquence linéaire, les faisant se déplacer tout droit, tourner à gauche ou tourner à droite.",
+          "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Recherchez ou réimprimez les fournitures pour **\\*Happy Maps**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   Coupez suffisamment de **\\*Manipulatifs** de chaque direction (N, S, E, O) pour donner deux ensembles à chaque paire d'élèves (si vous choisissez l'option de transition #1). ",
+          "purpose": "Dans cette leçon, les étlèves développeront leurs compétences en programmation sur une plate-forme informatique. Le format basé sur des blocs de ces puzzles les aide à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe. ",
           "student_overview": "Crée des programmes pour aider l'Angry Bird à se déplacer à travers le labyrinthe."
         },
         "courseb-2021/Programming in Harvester": {
           "overview": "Les élèves appliqueront les concepts de programmation qu'ils ont appris à l'environnement de la Moissonneuse. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d'algorithme séquentiel et commenceront à utiliser le processus de débogage. ",
+          "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "purpose": "Dans cette leçon, les élèves développeront des compétences de débogage et continueront à développer leurs compétences en programmation.",
           "student_overview": "Aide la Moissonneuse à ramasser les légumes le long d'un chemin."
         },
         "courseb-2021/Loops: Getting Loopy": {
@@ -215,6 +229,18 @@
           "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques énigmes à faire en groupe avec votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette activité en ligne, les élèves apprendront à utiliser les événements dans le Labo du Jeu. Ils commenceront par former le chevalier de sorte qu'il se déplace lorsqu'une touche fléchée est enfoncée, et termineront avec la possibilité de mettre en valeur le reste des compétences qu'ils ont acquises, tout au long de ce cours, y compris la séquence et la boucle, dans le cadre de l'énigme du jeu libre final.",
           "student_overview": "Utilise des événements pour créer une histoire ou un jeu interactif."
+        },
+        "courseb-2021/lesson-1": {
+          "overview": "Dans cette leçon **projet**, les élèves appliquent ce qu'ils ont appris sur le séquençage et des événements dans un projet ouvert avec Play Lab.",
+          "preparation": "-   Codez vos propres projets Play Lab à l'avance pour inspirer les élèves !",
+          "purpose": "Cette leçon donne aux élèves une dernière occasion d'utiliser de manière créative leurs nouvelles compétences en informatique. ",
+          "student_overview": "Crée ton propre jeu ou ta propre histoire !"
+        },
+        "coursea-2021/Safety in My Online Neighborhood": {
+          "overview": "[\\[common sense education](https://www.commonsense.org)][1]\n\nCette leçon a été créée à l'origine par Common Sense Education. [Learn more.][2]\n\nLa puissance d'Internet permet aux étudiants de découvrir et de visiter des endroits qu'ils ne pourraient peut-être pas voir en personne. Mais, tout comme pour voyager dans le monde réel, il est important d'être en sécurité lorsque vous voyagez en ligne. Lors de cette excursion virtuelle, les enfants peuvent s'entraîner à rester en sécurité lors d'aventures en ligne. ",
+          "preparation": "-   Réviser les supports pédagogiques.\n-   Imprimez le(s) document(s) pour chaque élève.\n-   (Facultatif) Imprimez une affiche de poème pour l'affichage en classe. ",
+          "purpose": "Common Sense Education a créé cette leçon pour enseigner aux élèves comment ils peuvent se déplacer en ligne en toute sécurité. ",
+          "student_overview": "Apprenez à vous déplacer en ligne en toute sécurité."
         },
         "coursea-2021/Learn to Drag and Drop": {
           "overview": "Cette leçon donnera aux élèves une idée de ce à quoi s'attendre lorsqu'ils se dirigeront vers le laboratoire informatique. Elle commence par une brève discussion les initiant aux manières, dans le laboratoire informatique, puis ils progresseront dans l'utilisation d'un ordinateur pour résoudre des énigmes en ligne.",
@@ -289,23 +315,27 @@
           "student_overview": "Racontez une histoire avec l'Artiste ! "
         },
         "coursec-2021/Putting a STOP to Online Meanness": {
-          "overview": " [\\[common sense education](https://creativecommons.org/)][1]\n\nCette leçon a été créée à l'origine par Common Sense Education. [En savoir plus.][2]\n\nInternet regorge de toutes sortes de personnes intéressantes, mais parfois, certaines d'entre elles peuvent être méchantes les unes envers les autres. Avec ce jeu de rôle, aidez vos élèves à comprendre pourquoi il est souvent plus facile d'être méchant en ligne qu'en personne, et comment gérer la méchanceté en ligne lorsqu'ils la voient. ",
+          "overview": " [\\[common sense education](https://www.commonsense.org)][1]\n\nCette leçon a été créée à l'origine par Common Sense Education. [En savoir plus.][2]\n\nInternet regorge de toutes sortes de personnes intéressantes, mais parfois, certaines d'entre elles peuvent être méchantes les unes envers les autres. Avec ce jeu de rôle, aidez vos élèves à comprendre pourquoi il est souvent plus facile d'être méchant en ligne qu'en personne, et comment gérer la méchanceté en ligne lorsqu'ils la voient. ",
           "preparation": "-   Réviser les supports pédagogiques.\n-   Imprimez le(s) document(s) pour chaque élève.\n-   Apportez un animal en peluche ou un jouet en classe. ",
           "purpose": "\"Éducation logique\" a créé cette leçon pour enseigner aux élèves la méchanceté et ce qu'ils doivent faire s'ils la rencontrent en ligne. ",
           "student_overview": "Dans cette leçon, vous découvrirez la méchanceté et ce qu'il faut faire si vous la rencontrez en ligne. "
         },
         "coursec-2021/Programming: My Robotic Friends": {
           "overview": "En utilisant un ensemble de symboles à la place du code, les élèves concevront des algorithmes pour demander à un \"robot\" d'empiler différents modèles de tasses. Les étudiants participeront à tour de rôle en tant que robot, répondant uniquement à l'algorithme défini par leurs pairs. Ce segment enseigne aux étudiants la connexion entre les symboles et les actions, la différence entre un algorithme et un programme, et la compétence précieuse de débogage.",
+          "preparation": "-   Préparez une pile de 20 gobelets en papier (ou trapèzes en papier) pour chaque groupe de 2-3 élèves.\n-   Affichez les symboles de **\\*Symbol Key** auxquels les élèves peuvent se référer tout au long de la leçon.\n-   (Facultatif) Imprimez une **\\*Idées d'empilage de tasses** par groupe de 2-3 élèves.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.",
           "purpose": "Cette leçon débranchée rassemble la classe en une même équipe, avec une tâche simple à accomplir : amener un \"robot\" à empiler des tasses dans un modèle spécifique. Cette activité jette les bases de la programmation que les étudiants feront tout au long du cours, car ils apprennent l'importance de définir un algorithme clairement communiqué.",
           "student_overview": "Dans cette leçon, tu prétendras que tes camarades de classe sont des robots et tu les programmes afin qu'il construisent des modèles de tasses empilées."
         },
         "coursec-2021/Programming in Maze": {
           "overview": "En utilisant des personnages du jeu Angry Birds, les élèves développeront des algorithmes séquentiels pour déplacer un oiseau d'un côté d'un labyrinthe au cochon, de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble, dans une séquence linéaire, les faisant se déplacer tout droit, tourner à gauche ou tourner à droite.",
+          "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques énigmes à faire en groupe avec votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les élèves développeront des compétences de programmation et de débogage sur une plate-forme informatique. Le format de ces énigmes, basé sur des blocs, aide les élèves à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe.",
           "student_overview": "En savoir plus sur les séquences et les algorithmes avec Angry Birds."
         },
         "coursec-2021/Debugging in Maze": {
           "overview": "Le débogage est un élément essentiel de l'apprentissage de la programmation. Dans cette leçon, les élèves rencontreront des énigmes qui ont été résolues de manière incorrecte. Ils devront parcourir le code existant pour identifier les erreurs, y compris les boucles incorrectes, les blocs manquants, les blocs inutiles et les blocs qui ne fonctionnent pas.",
+          "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques énigmes à faire en groupe avec votre classe.\n-   Revoir **\\*Conseils d'activité principale de CS Fundamentals - Recommandations de leçon**.\n-   Consultez le **\\*Guide de débogage** de la page de présentation du programme de ce cours avec la classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.",
+          "purpose": "Il se peut que les élèves de votre classe deviennent frustrés, par cette leçon, en raison de l'essence du débogage. Le débogage est un concept très important pour la programmation informatique. Les informaticiens doivent vraiment savoir comment aborder les bugs, dans leurs propres programmes. Le débogage oblige les élèves à reconnaître les problèmes et à les surmonter, tout en développant une pensée critique et des compétences en résolution de problèmes.",
           "student_overview": "Trouvez des problèmes dans les énigme et exerce tes compétences de débogage."
         },
         "coursec-2021/Programming in Collector": {
@@ -346,11 +376,14 @@
         },
         "coursec-2021/Events: The Big Event": {
           "overview": "Les élèves apprendront bientôt que les événements sont un excellent moyen d'ajouter de la flexibilité à un algorithme pré-écrit. Parfois, vous voulez que votre programme soit en mesure de répondre à l'utilisateur exactement quand l'utilisateur le souhaite. Les événements peuvent rendre votre programme plus intéressant et interactif.",
+          "preparation": "-   Imprimer ou afficher le **\\*Event Controller**.\n-   Imprimez une **\\*Évaluation** par élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.",
+          "purpose": "Aujourd'hui, les élèves apprendront à distinguer les événements des actions. Les élèves verront des activités interrompues par un \"bouton\" enfoncé sur une télécommande papier. En voyant cet événement, la classe réagira avec une action unique. Les événements sont largement utilisés dans la programmation et devraient être facilement reconnaissables après cette leçon.",
           "student_overview": "Jouer un jeu amusant pour découvrir les événements. "
         },
         "coursec-2021/Build a Flappy Game": {
           "overview": "Dans cette étape spéciale, les élèves peuvent créer leur propre jeu d'Oiseaux Flappy en utilisant des gestionnaires d'événements pour détecter les clics de souris et les collisions d'objets. À la fin du niveau, les élèves seront capables de personnaliser leur jeu en changeant les visuels ou les règles.",
           "preparation": "",
+          "purpose": "Les événements sont très fréquents dans les programmes informatiques. Dans cette leçon, les élèves développeront leur compréhension des événements en créant un jeu_d_'Oiseaux Flappy. Les élèves apprendront à faire bouger leur personnage à travers l'écran, à créer des bruits et à réagir aux obstacles, en fonction des événements initiés par l'utilisateur.",
           "student_overview": "Construis ton propre jeu d'Oiseaux Flappy, comme te le souhaites, puis partage-le avec tes amis !"
         },
         "coursec-2021/Events in Play Lab": {
@@ -361,6 +394,8 @@
         },
         "coursec-2021/Picturing Data": {
           "overview": "Les données peuvent être utilisées pour aider les élèves à comprendre leur monde et à répondre à des questions intéressantes. Dans cette leçon, les élèves collecteront des données à partir d'un projet du Labo du Jeu et les visualiseront à l'aide de différents types de graphiques.",
+          "preparation": "-   Imprimez une **\\*feuille de travail** pour chaque élève.\n-   Essayez la leçon d'aujourd'hui sur Code Studio. Ceci est destiné à être utilisé comme un outil pour l'activité d'aujourd'hui. Soyez prêt à le projeter dans la classe ou à permettre aux élèves de le visiter sur leur propre ordinateur.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.",
+          "purpose": "Les ordinateurs ont été créés pour aider à traiter les données. Il existe une quantité croissante de données dans le monde, il est donc important de pouvoir les lire et les analyser. Cette leçon est là pour s'assurer que les étudiants sachent bien recueillir, visualiser et analyser un petit ensemble de données.",
           "student_overview": "Les données peuvent être utilisées pour aider les élèves à comprendre leur monde et à répondre à des questions intéressantes. Dans cette leçon, les élèves collecteront des données à partir d'un projet du Labo du Jeu et les visualiseront à l'aide de différents types de graphiques."
         },
         "coursec-2021/Binary Bracelets": {
@@ -376,10 +411,14 @@
           "student_overview": "Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet."
         },
         "coursed-2021/lesson-5": {
+          "overview": " [\\[common sense education](https://www.commonsense.org)][1]\n\nCette leçon a été créée à l'origine par [Common Sense Education][2].\n\nDes mots de passe en ligne plus forts et plus sécurisés sont une bonne idée pour tout le monde. Mais comment pouvons-nous aider les enfants à créer de meilleurs mots de passe et à s'en souvenir ? Utilisez les conseils de cette leçon pour aider les enfants à créer des mots de passe à la fois sécurisés et mémorisables. ",
+          "preparation": "-   Réviser les supports pédagogiques.\n-   Imprimez le(s) document(s) pour chaque élève.\n-   Préparer du papier à lettres ou des cahiers pour les élèves.",
+          "purpose": "Common Sense Education a créé cette leçon pour enseigner aux étudiants comment des bons mots de passe peuvent les aider à protéger leur vie privée.",
           "student_overview": "Dans cette leçon, tu apprendras comment les mots de passe protègent vos informations et comment créer un bon mot de passe."
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
           "overview": "En se « programmant » les uns les autres pour dessiner des images, les élèves ont l'opportunité de découvrir certains des concepts de base de la programmation d'une manière amusante et accessible. La classe commencera par demander aux élèves d'utiliser des symboles pour s'instruire mutuellement à colorier des carrés sur du papier millimétré, dans le but de reproduire une image existante. S'il reste du temps, la leçon peut se conclure par des images que les élèves créent eux-mêmes.  ",
+          "preparation": "-   (Facultatif) Regardez la vidéo **\\*Leçon en action**.\n-   Imprimez une **\\*feuille de travail** et **\\*évaluation** pour chaque élève.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "L'objectif de cette activité est de développer des compétences de pensée critique et d'excitation pour le cours, tout en introduisant certains des concepts fondamentaux de programmation qui seront utilisés tout au long du cours. En introduisant des concepts de base, tels que le séquençage et les algorithmes, à la classe, dans une activité débranchée, les étudiants qui sont intimidés par les ordinateurs peuvent encore construire une base de compréhension sur ces sujets. Dans cette leçon, les élèves apprendront comment développer un algorithme et l'encoder dans un programme. ",
           "student_overview": "Dans cette leçon, tu programmeras votre camarade de classe pour dessiner des images !"
         },
@@ -409,10 +448,13 @@
         },
         "coursed-2021/Build a Star Wars Game": {
           "overview": "Dans cette leçon, les élèves s'entraîneront à utiliser des événements pour créer un jeu qu'ils peuvent partager en ligne. Avec R2-D2 et d'autres personnages de Star Wars, les élèves seront guidés à travers les événements, puis auront l'opportunité de créer leur propre jeu.",
+          "preparation": "-   Parcourez les énigmes et trouvez les zones à problèmes potentiels.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "purpose": "CS Fundamentals ne consiste pas simplement à enseigner l'informatique, il s'agit de la rendre à la fois amusante et passionnante. Dans cette série, les élèves découvriront des événements en utilisant des personnages connus de _Star Wars_. Ces énigmes brouillent les frontières entre \"apprendre\" et \"s'amuser\". En outre, les étudiants apprendront à reconnaître les pratiques de programmation régulières dans les jeux afin que, lorsqu'ils jouent à des jeux à la maison, ils puissent voir les principes informatiques courants utilisés. ",
           "student_overview": "Sens la force au fur et à mesure que tu construis ton propre jeu Star Wars, dans cette leçon."
         },
         "coursed-2021/Dance Party": {
           "overview": "Dans cette leçon, les élèves programmeront leur propre soirée dansante interactive. Cette activité nécessite du son car l'outil a été conçu pour répondre à la musique.",
+          "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   Voyez s'il y a besoin d'écouteurs pour cette activité audio. ",
           "purpose": "Cette leçon présente les concepts principaux de CS relatifs au codage et à la programmation d'événements (utilisation de blocs).",
           "student_overview": "Il est temps de célébrer ! Dans cette leçon, tu programmeras ta propre soirée dansante interactive."
         },
@@ -449,23 +491,29 @@
         "coursed-2021/Conditionals in Bee": {
           "overview": "Jusqu'à ce point, les étudiants ont écrit du code qui s'exécute exactement de la même manière à chaque exécution - fiable, mais pas très flexible. Dans cette leçon, votre classe commencera à coder avec des conditions, leur permettant d'écrire du code qui fonctionne différemment en fonction des conditions spécifiques rencontrées par le programme.",
           "preparation": "",
+          "purpose": "Après avoir été initiés aux conditions dans « Conditions avec cartes », les élèves vont maintenant s'entraîner à les utiliser dans leurs programmes. Les blocs \"if / else\" permettront un programme plus flexible. L'abeille ne récoltera le nectar _si_ il y a une fleur ou fera du miel _si_ il y a une ruche.",
           "student_overview": "Maintenant que tu comprends les conditions, il est temps de programmer l'Abeille pour les utiliser lors de la collecte de miel et de nectar. "
         },
         "coursed-2021/While Loops in Farmer": {
+          "overview": "Dans cette leçon de **renforcement des compétences**, les élèves travailleront à combler des trous et à creuser de la terre dans Farmer, mais ils ne connaîtront pas la taille des trous ou la hauteur des monticules de terre. Pour résoudre ces énigmes, les élèves utiliseront un nouveau type de boucle.",
           "preparation": "",
+          "purpose": "Au fur et à mesure que vos élèves approfondissent leurs connaissances des boucles, ils rencontreront des problèmes où une commande doit être répétée, mais on ne sait pas combien de fois elle doit être répétée. C'est là les boucles `tant que` entrent en jeu. Dans la leçon d'aujourd'hui, les élèves développeront la compréhension d'un débutant des boucles basées sur les conditions, et élargiront également leurs connaissances des boucles, en général.",
           "student_overview": "Les boucles sont si utiles dans le codage. Cette leçon t'apprendra un nouveau type de boucle : les boucles tant que !"
         },
         "coursed-2021/Until Loops in Maze": {
           "overview": "Dans cette leçon, les élèves découvriront les boucles `jusqu'à ce que`. Les étudiants construiront des programmes qui feront répéter des actions au personnage principal `jusqu'à ce qu'`'il atteigne le point d'arrêt désiré.",
           "preparation": "",
+          "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les connaissances des boucles, en y ajoutant la condition \"until\" (tant que). En jumelant ces concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs.",
           "student_overview": "Tu peux faire des choses incroyables lorsque tu utilises des boucles `jusqu'à ce que` !"
         },
         "coursed-2021/End of Course Project": {
+          "overview": "Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !",
           "purpose": "Cette leçon offre aux élèves un espace pour créer un projet issu de leur propre conception, en utilisant un processus étape par étape qui nécessite une planification mais permet également une grande créativité. ",
           "student_overview": "Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet."
         },
         "express-2021/Programming with Angry Birds": {
           "overview": "En utilisant des personnages du jeu Angry Birds, les élèves développeront des algorithmes séquentiels pour déplacer un oiseau d'un côté d'un labyrinthe au cochon, de l'autre côté. Pour ce faire, ils empileront des blocs de code ensemble, dans une séquence linéaire, les faisant se déplacer tout droit, tourner à gauche ou tourner à droite.",
+          "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   (Facultatif) Choisissez quelques énigmes à faire en groupe avec votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette leçon, les étlèves développeront leurs compétences en programmation sur une plate-forme informatique. Le format basé sur des blocs de ces puzzles les aide à apprendre la séquence et les concepts, sans avoir à se soucier de perfectionner la syntaxe. ",
           "student_overview": "En savoir plus sur les séquences et les algorithmes avec Angry Birds."
         },
@@ -513,43 +561,56 @@
         },
         "express-2021/lesson-1": {
           "overview": "Dans cette leçon, les élèves programmeront leur propre soirée dansante interactive. Cette activité nécessite du son car l'outil a été conçu pour répondre à la musique.",
+          "preparation": "-   Résolvez les énigmes pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion.\n-   Voyez s'il y a besoin d'écouteurs pour cette activité audio. ",
           "purpose": "Cette leçon présente les concepts principaux de CS relatifs au codage et à la programmation d'événements (utilisation de blocs).",
           "student_overview": "Il est temps de célébrer ! Dans cette leçon, tu programmeras ta propre soirée dansante interactive."
         },
         "express-2021/Loops with Rey and BB-8": {
+          "overview": "Cette leçon de **renforcement des compétences** propose aux élèves d'utiliser des boucles pour aider le personnage de _Star Wars_ _BB-8_ à traverser efficacement un labyrinthe.",
+          "preparation": "-   Résolvez les énigmes pour voir si cela pose problème à votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "purpose": "Dans cette leçon, les élèves apprendront les boucles et comment les implémenter dans le code Blockly. L'utilisation de boucles est une compétence importante en programmation car la répétition manuelle des commandes est fastidieuse et inefficace. Avec les puzzles Code.org, les élèves apprendront à ajouter des instructions aux boucles existantes, à rassembler le code répété en boucles et à reconnaître les modèles qui doivent être bouclés. Il convient de noter que les élèves seront confrontés à des énigmes avec de nombreuses solutions différentes. Cela ouvrira des discussions sur les différentes façons de résoudre des énigmes avec des avantages et des inconvénients à chaque approche.",
           "student_overview": "Aide BB-8 à travers des labyrinthes en utilisant des boucles ! "
         },
         "express-2021/Sticker Art with Loops": {
           "overview": "Regardez les visages des étudiants s'illuminer alors qu'ils créent leurs propres motifs, magnifiques, en utilisant un petit nombre de blocs et d'autocollants numériques ! Cette leçon s'appuie sur la compréhension des boucles des leçons précédentes et donne aux élèves une chance d'être vraiment créatifs. Cette activité est fantastique pour produire des artefacts pour des portefeuilles ou des conférences parents/enseignants.",
+          "preparation": "-   Entraînez-vous à créer votre propre design. Notez à quel point ces niveaux sont différents de tout ce qui a précédé.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette série met en valeur la puissance des boucles avec des motifs créatifs et personnels.  Présentée comme une séquence soutenue par un projet, cette progression permettra aux étudiants de construire sur leur propre travail et de créer des artefacts étonnants.",
           "student_overview": "Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !"
         },
         "express-2021/Nested Loops in Maze": {
           "overview": "Dans cette activité en ligne, les étudiants auront l'occasion de pousser leur compréhension des boucles à un tout autre niveau. En jouant avec l'Abeille et les Plantes vs Zombies, les élèves apprendront à programmer une boucle pour qu'elle soit à l'intérieur d'une autre boucle. Ils seront également encouragés à comprendre comment peu de changements dans l'une ou l'autre boucle affecteront leur programme quand ils cliqueront sur \"Exécuter\".",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "purpose": "Dans cette introduction aux boucles imbriquées, les élèves sortiront de leur zone de confort pour créer des solutions plus efficaces aux énigmes.\n\nDans les énigmes précédentes, les boucles poussaient les élèves à reconnaître la répétition. Ici, ils apprendront à reconnaître des modèles _dans_ des modèles qui se répètent pour développer ces boucles imbriquées. Cette étape commence par encourager les élèves à essayer de résoudre un puzzle où le code est énervant et trop complexe pour être écrit sur le long terme. Après qu'une vidéo présente les boucles imbriquées, on montre aux élèves un exemple et on leur demande de prédire ce qu'il se passera lorsqu'une boucle sera mise à l'intérieur d'une autre. Cette progression conduit à beaucoup de pratique pour que les étudiants se solidifient et développent leur compréhension du bouclage en programmation. ",
           "student_overview": "Des boucles à l'intérieur de boucles à l'intérieur de boucles. Qu'est-ce que cela signifie ? Cette leçon t'apprendra ce qui se passe lorsque tu crées une boucle imbriquée."
         },
         "express-2021/Snowflakes with Anna and Elsa": {
           "overview": "Maintenant que les élèves savent comment superposer leurs boucles, ils peuvent créer tant de belles choses.  Cette leçon guidera les élèves à travers une série d'exercices pour les aider à créer leurs propres images, prêtes pour le portfolio, en utilisant les excellentes compétences d'Anna et Elsa en patinage sur glace !",
+          "preparation": "-   Parcourez le cours pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Dans cette série, les élèves mettrons en pratique les boucles d'imbrication, tout en créant des images qu'ils seront ravis de partager. En commençant par une poignée d'instructions, les élèves prendront leurs propres décisions lorsqu'il s'agira de créer des dessins pour la répétition. Ils les feront alors tourner d'une variété de façons, et finiront avec une œuvre d'art vraiment unique.",
           "student_overview": "Anna et Elsa ont d'excellentes compétences en patinage sur glace, mais ont besoin de ton aide pour créer des motifs dans la glace. Utilise des boucles imbriquées pour créer quelque chose de super COOL. "
         },
         "express-2021/Looking Ahead with Minecraft ": {
           "overview": "Cette leçon a été créée, à l'origine, pour Hour of Code, aux côtés de l'Équipe Minecraft. Les étudiants auront la chance de mettre en pratique des idées qu'ils ont apprises jusqu'à présent, ainsi que de profiter d'un aperçu des conditions !",
+          "preparation": "-   Parcourez les énigmes associées à cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles pour présenter les conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
           "student_overview": "Évite la lave! Ici, tu vas commencer à apprendre dac que sont les conditions dans le monde de Minecraft."
         },
         "express-2021/If/Else with Bee": {
           "overview": "Jusqu'à ce point, les étudiants ont écrit du code qui s'exécute exactement de la même manière à chaque exécution - fiable, mais pas très flexible. Dans cette leçon, votre classe commencera à coder avec des conditions, leur permettant d'écrire du code qui fonctionne différemment en fonction des conditions spécifiques rencontrées par le programme.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "purpose": "Les élèves s'exerceront à utiliser des conditions dans leurs programmes. Les blocs if / else permettront un programme plus flexible. L'abeille ne récoltera le nectar _si_ il y a une fleur ou fera du miel _si_ il y a une ruche.",
           "student_overview": "Maintenant que tu comprends les conditions, il est temps de programmer l'Abeille pour les utiliser lors de la collecte de miel et de nectar. "
         },
         "express-2021/While Loops with the Farmer": {
+          "overview": "Dans cette leçon de **renforcement des compétences**, les élèves travailleront à combler des trous et à creuser de la terre dans Farmer, mais ils ne connaîtront pas la taille des trous ou la hauteur des monticules de terre. Pour résoudre ces énigmes, les élèves utiliseront un nouveau type de boucle.",
           "preparation": "-   Parcourez les énigmes pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "purpose": "Au fur et à mesure que vos élèves approfondissent leurs connaissances des boucles, ils rencontreront des problèmes où une commande doit être répétée, mais on ne sait pas combien de fois elle doit être répétée. C'est là les boucles `tant que` entrent en jeu. Dans la leçon d'aujourd'hui, les élèves développeront la compréhension d'un débutant des boucles basées sur les conditions, et élargiront également leurs connaissances des boucles, en général.",
           "student_overview": "Les boucles sont si utiles dans le codage. Cette leçon t'apprendra un nouveau type de boucle : les boucles tant que !"
         },
         "express-2021/Conditionals in Minecraft: Voyage Aquatic": {
           "overview": "Cette leçon a été créée, à l'origine, pour Hour of Code, aux côtés de l'Équipe Minecraft. Les étudiants auront la chance de mettre en pratique des idées qu'ils ont apprises jusqu'à présent, ainsi que de profiter d'un aperçu des conditions !",
+          "preparation": "-   Parcourez les énigmes associées à cette leçon pour trouver les problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
+          "purpose": "Cette série d'énigmes permettra de consolider et de s'appuyer sur les aquis des boucles et des conditions. En jumelant ces deux concepts, les élèves seront en mesure d'explorer le potentiel de création de programmes complexes et novateurs dans un environnement nouveau et passionnant.",
           "student_overview": "Ici, tu découvriras les conditions dans le monde de Minecraft."
         },
         "express-2021/Until Loops in Maze": {
@@ -600,10 +661,12 @@
         },
         "express-2021/For Loops with Artist": {
           "overview": "Dans cette leçon, les élèves continuent de s'entrainer sur les boucles, cette fois avec l'Artiste. Les élèves résoudront des énigmes en combinant les idées de variables, de boucles et de boucles Pour pour créer des concepts complexes. À la fin, ils auront la chance de créer leur propre art dans un niveau de jeu libre.",
+          "preparation": "-   Parcourez le cours pour trouver des problèmes potentiels pour votre classe.\n-   Assurez-vous que chaque élève ait bien un journal de réflexion. ",
           "purpose": "La créativité et la pensée critique se conjuguent magnifiquement, dans cette leçon. Les étudiants continueront leur pratique avec des boucles Pour et des variables, pendant qu'ils créeront des images à couper le souffle. Cette leçon inspire un esprit créatif tout en enseignant des concepts de base de l'informatique.",
           "student_overview": "Prépare-toi à réaliser ton prochain chef-d'œuvre. Ici, tu utiliseras des boucles « pour » pour faire des images à couper le souffle."
         },
         "express-2021/End of Course Project": {
+          "overview": "Cette leçon **projet** guide les élèves dans le processus de conception, de développement et de présentation de nouveaux projets !",
           "purpose": "Cette leçon offre aux élèves un espace pour créer un projet issu de leur propre conception, en utilisant un processus étape par étape qui nécessite une planification mais permet également une grande créativité. ",
           "student_overview": "Préparez ces mains pour beaucoup de codage ! Il est temps de commencer à construire ton projet."
         },
@@ -627,6 +690,7 @@
         },
         "pre-express-2021/Programming in Harvester": {
           "overview": "Les élèves appliqueront les concepts de programmation qu'ils ont appris à l'environnement de la Moissonneuse. Maintenant, au lieu de simplement amener le personnage à un but, les étudiants doivent collecter du maïs en utilisant un nouveau bloc. Les étudiants continueront à développer des compétences d'algorithme séquentiel et commenceront à utiliser le processus de débogage. ",
+          "purpose": "Dans cette leçon, les élèves développeront des compétences de débogage et continueront à développer leurs compétences en programmation.",
           "student_overview": "Aide la Moissonneuse à ramasser les légumes le long d'un chemin."
         },
         "pre-express-2021/Loops with Scrat": {
@@ -686,6 +750,7 @@
         "coursee-2021/Programming and Loops with the Artist": {
           "overview": "Regardez les visages des étudiants s'illuminer alors qu'ils créent leurs propres motifs, magnifiques, en utilisant un petit nombre de blocs et d'autocollants numériques ! Cette leçon s'appuie sur la compréhension des boucles des leçons précédentes et donne aux élèves une chance d'être vraiment créatifs. Cette activité est fantastique pour produire des artefacts pour des portefeuilles ou des conférences parents/enseignants.",
           "preparation": "",
+          "purpose": "Les élèves s'exerceront à utiliser des boucles, un concept qui sera revisité au cours des prochaines leçons. ",
           "student_overview": "Dans cette leçon, les boucles facilitent la création d'images cool avec Artiste !"
         },
         "coursee-2021/Nested Loops in Artist": {
@@ -733,6 +798,7 @@
         },
         "coursee-2021/End of Course Project": {
           "overview": "Les quatre leçons suivantes offrent aux étudiants l'occasion de mettre leurs compétences en codage à profit dans un projet de synthèse. Ce projet les aidera, chacun, à acquérir de l'expérience avec le codage et à produire un exemplaire à partager avec leurs pairs et leurs proches. Durant cette expérience, conçue pour durer plusieurs leçons ou plusieurs semaines, les élèves passeront du temps à explorer la réflexion en groupes, à en apprendre davantage sur le processus de conception, à construire et à présenter leur travail final. Dans la phase d'exploration, les étudiants seront en mesure de voir des exemples préconstruits de projets, à la fois dans Artiste et le Labo du Jeu, pour s’inspirer. Ensuite, les élèves apprendront le processus de conception et comment le mettre en œuvre dans leurs propres projets. Ils auront alors l'opportunité de créer leur propre projet, soit dans Artiste soit dans le Labo du Jeu (c'est probablement la plus longue phase du projet). Enfin, les étudiants pourront présenter leur travail achevé à leurs pairs.",
+          "purpose": "Les élèves sont peut-être prêts à se lancer directement dans la construction de leurs projets, mais cette leçon les aidera à transformer leurs idées en plans. Cette structure gardera les rêveurs ancrés et éclairera le chemin pour ceux qui se sentent perdus. Donnez-leur suffisamment de temps pour construire et réviser leurs projets. Les essais et erreurs inévitablement impliqués dans cette leçon enseigneront la résolution de problèmes et la persévérance. ",
           "student_overview": "Des projets aussi importants prennent du temps et beaucoup de planification. Trouve ton inspiration, développe un plan et libère ta créativité !"
         }
       }

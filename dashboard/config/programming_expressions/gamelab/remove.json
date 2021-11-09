@@ -2,7 +2,9 @@
   "func": "remove",
   "category": "Groups",
   "paletteParams": [
-    "sprite"
+    {
+      "name": "sprite"
+    }
   ],
   "params": [
     "sprite"

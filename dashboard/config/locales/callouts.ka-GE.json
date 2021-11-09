@@ -177,13 +177,13 @@
           "Infinity_move_right_runbutton": "დაამატეთ ბლოკი \"გადაადგილება\" აქ"
         },
         "Infinity_repeat": {
-          "Infinity_repeat_callout": "მოათავსეთ ბლოკი \"გადაადგილება\" აქ"
+          "Infinity_repeat_callout": "მოათავსეთ ბლოკი „გადაადგილება“ აქ"
         },
         "MC HOC 2016 Level 2-2": {
-          "craft2_run_button_callout": "როდესაც მზად იქნებით, დააჭირეთ \"გაშვებას\", რათა გამოსცადოთ თქვენი პროგრამა."
+          "craft2_run_button_callout": "როდესაც მზად იქნებით, დააჭირეთ „გაშვებას“, რათა გამოცადოთ პროგრამა."
         },
         "MC HOC 2016 New Walk": {
-          "MC_HOC_2016_New_Walk_callout2": "დააჭირეთ \"გაშვებას\", რათა დაიწყოთ მოძრაობა."
+          "MC_HOC_2016_New_Walk_callout2": "დააჭირეთ „გაშვებას,“ მოძრაობის დაიწყებისთვის."
         },
         "NEW Course 4 Artist Functions 3": {
           "NEW_Course_4_Artist_Functions_3_1": "დააკლიკეთ აქ, რათა დაარედაქტიროთ ახალი ფუნქცია, რათა მან შექმნას კვადრატი."
@@ -804,6 +804,27 @@
         },
         "courseE_farmer_functions1_2021": {
           "courseE_farmer_functions1_2": "ამჯერად ინსტრუმენტების პანელი ოდნავ განსხვავებულადაა ორგანიზებული. დააწკაპუნეთ განსხვავებულ კატეგორიებს, რათა ნახოთ, რომელი ბლოკები გაქვთ."
+        },
+        "courseC_starWars_loops2": {
+          "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
+        },
+        "courseC_starWars_loops2_2018": {
+          "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
+        },
+        "courseC_starWars_loops2_2019": {
+          "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
+        },
+        "courseC_starWars_loops2_2020": {
+          "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
+        },
+        "courseC_starWars_loops2_copy": {
+          "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
+        },
+        "courseC_starWars_loops2_dani": {
+          "courseC_starWars_loops2": "ასეთი ბლოკი მხოლოდ ერთი გაქვთ ამ თავსატეხში."
         }
       }
     }

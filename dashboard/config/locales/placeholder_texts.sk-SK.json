@@ -354,15 +354,11 @@
         },
         "courseF_text_choice_events": {
           "c529a06c3f8518b63ff6dfac482b335c": "Pomenuj túto planétu:",
-          "44506356d48394cd903b579df9de9117": ", pozemšťan!",
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moja otázka"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moja otázka",
+          "44506356d48394cd903b579df9de9117": ", pozemšťan!"
         },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moja otázka"
-        },
-        "courseF_text_choice_interview": {
-          "5bd698afd23bccde289bb0b4aa72a518": "Pomenuj robota.",
-          "34088af1fb721900963462375b3bbe23": "a som robot!"
         },
         "courseF_text_choice_multiprompt": {
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kto má dnes narodeniny?",
@@ -424,6 +420,10 @@
         },
         "courseF_variables_madlib_finish": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moja otázka"
+        },
+        "courseF_text_choice_interview": {
+          "5bd698afd23bccde289bb0b4aa72a518": "Pomenuj robota.",
+          "34088af1fb721900963462375b3bbe23": "a som robot!"
         }
       }
     }

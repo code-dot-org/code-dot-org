@@ -2416,11 +2416,8 @@ gl:
           lessons:
             lesson-1:
               name: Visión xeral
-        poetry:
-          lessons:
-            lesson-3:
-              name: Variables
         spelling-bee:
           lessons:
             lesson-1:
               name: Abella que Soletrea
+          title: Abella que Soletrea

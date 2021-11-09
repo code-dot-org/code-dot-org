@@ -4,7 +4,9 @@
   "type": "value",
   "nativeIsAsync": true,
   "paletteParams": [
-    "pin"
+    {
+      "name": "pin"
+    }
   ],
   "params": [
     "\"D4\""

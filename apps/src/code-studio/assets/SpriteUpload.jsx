@@ -9,7 +9,13 @@ import {
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 
 const SpriteLocation = makeEnum('library', 'level');
-const UploadStatus = makeEnum('fail', 'success', 'filenameOverride', 'none');
+const UploadStatus = makeEnum(
+  'fail',
+  'success',
+  'filenameOverride',
+  'badFilename',
+  'none'
+);
 
 // Levelbuilder tool for adding sprites to the Spritelab animation library.
 export default class SpriteUpload extends React.Component {
@@ -102,11 +108,24 @@ export default class SpriteUpload extends React.Component {
       filePreviewURL: URL.createObjectURL(file)
     });
 
-    this.determineIfSpriteAlreadyExists(
-      spriteAvailability,
-      file.name.split('.')[0],
-      category
-    );
+    // Filename cannot contain spaces or capital letters
+    let filenameIsInvalid = file.name.includes(' ') || /[A-Z]/.test(file.name);
+
+    if (filenameIsInvalid) {
+      this.setState({
+        uploadStatus: {
+          status: UploadStatus.badFilename,
+          message:
+            'Filenames cannot contain capital letters or spaces. Please rename the sprite and reupload.'
+        }
+      });
+    } else {
+      this.determineIfSpriteAlreadyExists(
+        spriteAvailability,
+        file.name.split('.')[0],
+        category
+      );
+    }
   };
 
   handleCategoryChange = event => {
@@ -202,13 +221,17 @@ export default class SpriteUpload extends React.Component {
       metadata
     } = this.state;
 
+    const badImageFile =
+      uploadStatus.status === UploadStatus.filenameOverride ||
+      uploadStatus.status === UploadStatus.badFilename;
+
     // Only display the upload button when the user has uploaded an image and generated metadata
     const uploadButtonDisabled =
       spriteAvailability === '' ||
       (spriteAvailability === SpriteLocation.library && category === '') ||
       filename === '' ||
       metadata === '' ||
-      uploadStatus.status === UploadStatus.filenameOverride;
+      badImageFile;
 
     const uploadSuccessful = uploadStatus.status === UploadStatus.success;
 
@@ -266,6 +289,7 @@ export default class SpriteUpload extends React.Component {
           </h2>
           <label>
             <h3>Select Sprite to Add to Library:</h3>
+            <p>Filename cannot contain spaces or capital letters.</p>
             <input
               type="file"
               accept="image/png"
@@ -278,7 +302,7 @@ export default class SpriteUpload extends React.Component {
             <h3>Image Preview:</h3>
             <img ref="spritePreview" src={filePreviewURL} />
           </label>
-          {uploadStatus.status === UploadStatus.filenameOverride && (
+          {badImageFile && (
             <p
               style={{
                 ...styles.uploadStatusMessage,

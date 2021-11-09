@@ -515,22 +515,25 @@
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Încheiere"
         },
-        "197fed33-dc42-4fc0-8d20-e84b09292caa": {
-          "tips": [
-            null
-          ]
-        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
           "tips": [
             null
           ]
         },
-        "f86ae28c-7f78-4f08-a649-8abf70a55601": {
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "name": "Reflecţie"
+        },
+        "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
+          "name": "Introducere"
+        },
+        "385c2c6a-f7e4-4c90-b081-7030d22193ed": {
           "progression_name": "Bine ai venit în Orașul Monștrilor"
         },
-        "cc3be08b-bfb2-4e05-9b83-29d4a81f2b7d": {
-          "name": "Joc la liber",
+        "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Joc la liber"
+        },
+        "b8e884f1-eae0-4138-8778-0972f90e34d9": {
+          "name": "Reflecţie"
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
@@ -1303,6 +1306,9 @@
         "b8bea90c-e431-4f96-846f-733476b53374": {
           "name": "Reflecţie"
         },
+        "d0b1e312-6130-4320-b109-3d4290b36cac": {
+          "description": "**Atât de mobil**\n\n-   Dați elevilor imagini cu acțiuni sau mișcări de dans pe care le pot face.\n-   Puneți elevii să aranjeze mișcări și să aduge bucle la coregrafia propriului dans.\n-   Partajați dansurile cu întreaga clasă.\n\n**Reconectează**\n\n-   Găsiți niște filmulețe pe YouTube a unor dansuri populare care se repetă.\n-   Poate clasa dumneavoastră să găsească buclele (repetițiile)?\n-   Încercați același lucru cu cântece!"
+        },
         "dacd64e5-3f26-48ad-9e50-3d2eaca56292": {
           "name": "Introducere"
         },
@@ -1792,6 +1798,9 @@
         },
         "8953de3d-a49f-4c4f-81e4-bcfbbc0baa3e": {
           "name": "Reflecţie"
+        },
+        "0562eeb9-b4a4-457c-b549-dfc5950ba9f6": {
+          "description": "**Atât de mobil**\n\n-   Dați elevilor imagini cu acțiuni sau mișcări de dans pe care le pot face.\n-   Puneți elevii să aranjeze mișcări și să aduge bucle la coregrafia propriului dans.\n-   Partajați dansurile cu întreaga clasă.\n\n**Reconectează**\n\n-   Găsiți niște filmulețe pe YouTube a unor dansuri populare care se repetă.\n-   Poate clasa dumneavoastră să găsească buclele (repetițiile)?\n-   Încercați același lucru cu cântece!"
         },
         "63067b3c-f088-46f7-a3af-7feb4225a2ac": {
           "name": "Introducere"

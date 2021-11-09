@@ -1786,10 +1786,6 @@
         "courseF_text_choice_conversation": {
           "text_generic_finish": "Hotovo? Ak áno, stlač tlačidlo 'Dokončiť'. Ak nie, vyber možnosť 'Obnoviť', uprav svoj kód a znova stlač tlačidlo 'Spustiť'."
         },
-        "courseF_text_choice_title": {
-          "title_block": "Tu pohľadaj dva nové bloky!",
-          "text_answer_finish": "Zobrazila sa úvodná obrazovka na 3 sekundy? Ak áno, stlač tlačidlo 'Dokončiť'. Ak nie, vyber možnosť 'Obnoviť', uprav svoj kód a znova stlač tlačidlo 'Spustiť'."
-        },
         "courseF_text_concat": {
           "join_blocks": "Tu pohľadaj nové bloky!"
         },
@@ -1870,6 +1866,13 @@
         },
         "courseF_label_predict": {
           "variablesPredict": "Pozorne sa pozri na kód pod týmto miestom."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Tu pohľadaj dva nové bloky!",
+          "text_answer_finish": "Zobrazila sa úvodná obrazovka na 3 sekundy? Ak áno, stlač tlačidlo 'Dokončiť'. Ak nie, vyber možnosť 'Obnoviť', uprav svoj kód a znova stlač tlačidlo 'Spustiť'."
+        },
+        "CSDU4 - Design Mode - 3": {
+          "": "Použi blok \"setText\" na zmenu textu položky \"Label\""
         }
       }
     }

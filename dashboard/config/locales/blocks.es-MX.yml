@@ -47,7 +47,7 @@ es-MX:
         text: después {TIMESTAMP} {UNIT}
         options:
           UNIT:
-            '"measures"': medidas
+            '"measures"': compases
             '"seconds"': segundos
       Dancelab_changeColorBy:
         text: cambiar {COLOR} {METHOD} por {AMOUNT}
@@ -212,18 +212,18 @@ es-MX:
             MOVES.ThisOrThat: Esto o aquello
             MOVES.Rest: Ninguna
       Dancelab_everyMeasuresRange:
-        text: 'repetir cada {N} medidas después de {START} '
+        text: 'repetir cada {N} compases después de {START} '
       Dancelab_everySeconds:
         text: 'repetir cada {N} {UNIT} '
         options:
           UNIT:
-            '"measures"': medidas
+            '"measures"': compases
             '"seconds"': segundos
       Dancelab_everySecondsRange:
         text: 'cada {N} {UNIT} desde {START} hasta {STOP} '
         options:
           UNIT:
-            measures: Medidas
+            measures: Compases
             seconds: Segundos
       Dancelab_everyVerseChorus:
         text: 'cada {UNIT} '
@@ -253,7 +253,7 @@ es-MX:
         text: hora actual en {UNIT}
         options:
           UNIT:
-            '"measures"': medidas
+            '"measures"': compases
             '"seconds"': segundos
       Dancelab_ifDanceIs:
         text: |-
@@ -278,10 +278,12 @@ es-MX:
           {DO1} {DO2}
         options:
           UNIT:
-            '"measures"': medidas
+            '"measures"': compases
             '"seconds"': segundos
           OP:
+            '">"': ">"
             '"<"': "\\<"
+            '"="': "="
       Dancelab_jumpTo:
         text: "{SPRITE} saltar a {LOCATION}"
         options:
@@ -468,7 +470,7 @@ es-MX:
       Dancelab_mixColors:
         text: mezclar {COLOR1} y {COLOR2}
       Dancelab_nMeasures:
-        text: "{N} medidas"
+        text: "{N} compases"
       Dancelab_onPointerDown:
         text: puntero hacia abajo
       Dancelab_onPointerDrag:
@@ -952,6 +954,12 @@ es-MX:
         text: establecer
       Dancelab_whenSetup2:
         text: establecer
+      Dancelab_whenSetupSong:
+        options:
+          SONG:
+            '"macklemore90"': Macklemore - Can't Hold Us
+            '"hammer"': MC Hammer - U Can't Touch This
+            '"peas"': The Black Eyed Peas - I Got a Feeling
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} comienza {BEHAVIOR}
       gamelab_addTarget:
@@ -991,7 +999,7 @@ es-MX:
             '"when"': cuando
             '"while"': mientras
       gamelab_clickedOn:
-        text: cuando {SPRITE} haz clic
+        text: cuando se hace clic en {SPRITE}
       gamelab_clickedSpritePointer:
         text: "{SPRITE}"
       gamelab_comment:
@@ -1702,7 +1710,7 @@ es-MX:
             "{x: 100, y: 300}": abajo a la izquierda
             "{x: 300, y: 300}": abajo a la derecha
       Mikelab_whenClickedOn:
-        text: cuando {SPRITE} haz clic
+        text: cuando se hace clic en {SPRITE}
       Mikelab_whenKeyPressed:
         text: al pulsar {KEY}
         options:
@@ -1769,6 +1777,16 @@ es-MX:
         text: Configurar Monster Town con{COUNT}monstruos
       Outbreak_stopMoving:
         text: los monstruos dejan de moverse
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Helado
+            Stars: Estrellas
+            Fireworks: Fuegos artificiales
+            '"rainbow"': Arcoíris
+            '"hearts"': Corazones
+            '"flowers"': Flores
+            '"waves"': Olas
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1780,6 +1798,10 @@ es-MX:
         text: hacer {NUM} nuevos sprites de {ANIMATION_NAME}
       Poetry_playSound:
         text: reproducirSonido {SOUND}
+        options:
+          SOUND:
+            Break: Interrumpir
+            Light: Luz
       Poetry_setBackground:
         text: establecer color de fondo {COLOR}
       Poetry_setBackgroundEffect:
@@ -1790,6 +1812,10 @@ es-MX:
             '"space"': Espacio
             '"stars"': Estrellas
             '"ripples"': Ondas
+            '"rain"': Lluvia
+            '"bubbles"': Burbujas
+            '"confetti"': Confeti
+            '"hearts"': Corazones coloridos
           PALETTE:
             '"rainbow"': Arcoíris
       Poetry_setBackgroundImageAs:

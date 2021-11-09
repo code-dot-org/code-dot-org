@@ -681,6 +681,13 @@ pt-BR:
           <hr>
 
           ** Agora você tenta! **
+        teacher_markdown: "### Planejamento vem primeiro\n\nAlguns estudantes gostam
+          de mexer no Modo Programação desde o início, mas para esta lição vamos focar
+          apenas em planejar um prototipo da Interface de Usuário. Lembre os estudantes
+          que eles vão chegar na parte de programação logo mais. Estes primeiros passos
+          permitirão aos alunos construir uma tela de sua própria concepção utilizando
+          todos os elementos disponíveis no App Lab, sem precisarem se preocupar com
+          o aplicativ o em si que estão desenvolvendo. "
       CSD - Getters and Setters:
         markdown: |
           # Getters e Setters
@@ -3851,6 +3858,10 @@ pt-BR:
 
 
 
+        teacher_markdown: |-
+          #### Desenvolvendo bons Hábitos de Programação
+
+          Seguir convenções claras e consistentes de nomes é um hábito importante a ser desenvolvido, mas os benefícios raramente são imediatamente óbvios para os estudantes. A longo prazo, vale muito a pena aderir às boas práticas de nomenclaturas, particularmente porque salvará sua própria sanidade quando chegar a hora de ler os programas de seus alunos, mas também simplificará o processo de combinar a tela de cada aluno em uma aplicação completa da equipe.
       ConditionalsWithCards-Unplugged:
         markdown: |
           # Condicionais com Cartas
@@ -4623,6 +4634,10 @@ pt-BR:
           <strong>Ideia chave: Múltiplas Telas - Área de Códificação Única.</strong> Teste é o código que trata o evento "clique" para uma <em>imagem que está localizada em uma tela diferente</em> - a <em>goodbyeScreen</em>. Você não pode ver a image neste momento, ou a tela, porque a tela não está selecionada. Entretanto, o código para ela é colocado aqui.</p>
 
           </div>
+        teacher_markdown: |-
+          #### De Cartões para Telas
+
+          Para simplificar o processo de prototipagem, as equipes podem pensar em cada cartão que criaram na Prototipagem de Papel como uma tela separada na iteração do App Lab de sua aplicação. Na realidade, telas que são muito semelhantes podem muitas vezes ser desenvolvidas como uma única tela com conteúdo que muda com base na interação do usuário. Na próxima lição, os alunos verão alguns exemplos de como isso pode funcionar, mas não se espera que eles tenham incorporado esse tipo de funcionalidade neste projeto.
       MyLoopyRoboticFriends-Unplugged:
         markdown: |
           # Meus Amigos Robôs Entrelaçados
@@ -6019,6 +6034,30 @@ pt-BR:
           é <strong>chamada pelo sistema</strong> ao mesmo tempo em que um evento
           específico ocorre. Funções callback são um padrão comum em programação orientada
           a eventos.</p>\n</div>\n\n\n### Você irá experimentar isto em seguida!\n\n"
+        teacher_markdown: "#### Focando no essencial\n\nHá muito material para digerir
+          aqui, e muitos dos detalhes sobre o funcionamento de eventos no App Lab
+          não são essenciais para a compreensão desse módulo. Se os estudantes tiverem
+          difucldade na programação dentro do App Lab, concentre-se nos seguintes
+          pontos fundamentais:\n\n* O loop de desenho `draw` nunca executa para sempre\n*
+          O bloco `onEvent()` define:\n\t* o ID de um elemento\n    * um evento (por
+          exemplo, \"click\" ou \"mouseover\")\n    * código que deve ser executado
+          sempre que o evento ocorrer (esse código é uma chamada de função anônima,
+          ou anonymous callback function., e é representado por um bloco verde)\n*
+          O bloco de código dentro de `onEvent()` é executado sempre que o evento
+          especificado ocorre\n\n#### Relação com o Game Lab\n\nNo Game Lab, podemos
+          usar o código a seguir para verificar se o sprite chamado \"button\" foi
+          clicado, e tomar alguma atitude a respeito:\n\n    function draw() {\n    \tif
+          (mousePressedOver(button)) {\n       \t\t// Fazer algo\n       \t}\n    }\n\n\nNo
+          App Lab, quando você tem um botão chamado \"button\", podemos escrever o
+          seguinte código para fazer o mesmo:\n\n\n    onEvent(\"button\", \"click\",
+          function () {\n    \t// Fazer algo\n    });\n\nNo exemplo do App Lab, a
+          função é apenas mais um parâmetro que passamos para a função onEvent, e
+          esse parâmetro por no caso é em si uma função. Também poderíamos definir
+          a função separadamente e escrever o código da seguinte forma:\n\n    function
+          doSomething() {\n    \t// Fazer algo\n    }\n    \n    onEvent(\"button\",
+          \"click\", doSomething);\n\n\nNesse segundo exemplo, note que ao passarmos
+          a função `doSomething` para a função `onEvent`, nós _não_ incluímos os parênteses
+          ao final. Isso é porque estamos passando a função em si como um objeto.\n"
       ScreenOutTheMean-Unplugged:
         markdown: |
           # Identifique o Perturbador
@@ -8994,7 +9033,7 @@ pt-BR:
         markdown: |-
           #Minha Vizinhança Online
 
-          ##Como você vai a lugares online seguros?
+          ##Como você vai com segurança à lugares online?
       csd-post-survey-2017-levelgroup:
         title: Pesquisa de estudantes ao final do curso do CS Discoveries
       csd-post-survey-2017-levelgroup_2018:
@@ -10935,7 +10974,7 @@ pt-BR:
         markdown: |-
           #Minha Vizinhança Online
 
-          ##Como você vai a lugares online seguros?
+          ##Como você vai com segurança à lugares online?
       express_EOC_2021:
         description: Você alcançou o final do Curso E! Escolha um projeto para criar.
       grade2_multi_collector_A_predict1_2021:
@@ -10955,3 +10994,11 @@ pt-BR:
         questions:
         - text: Olhe para este código cuidadosamente. O que você acha que irá acontecer
             quando este programa for executado?
+      CSD Interactive Animations and Games Post-Project Test:
+        title: Teste Pós-Projeto de Animações e Jogos Interativos
+      courseF_intro_apps:
+        description: Bem-vindo aos Fundamentos da Ciência da Computação! Estes projetos
+          foram todos criados com o Sprite Lab. Experimente eles agora para ver o
+          que é possível. Ao final deste curso, você conseguirá criar os seus próprios
+          projetos como esses... e mais!
+        display_name: Aplicativos Sprite Lab

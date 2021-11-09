@@ -2847,11 +2847,12 @@ hy:
               display_name: պարունակություն
             lessonGroup-2:
               display_name: պարունակություն
-        poetry:
-          lessons:
-            lesson-3:
-              name: փոփոխականների
         spelling-bee:
           lessons:
             lesson-1:
               name: Spelling Bee
+          title: Spelling Bee
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: պարունակություն

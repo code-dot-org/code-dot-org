@@ -6,7 +6,7 @@ import javalabMsg from '@cdo/javalab/locale';
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import {commentShape} from './commentShape';
-import CommentOptions from './CommentOptions';
+import InlineDropdownMenu from '@cdo/apps/templates/InlineDropdownMenu';
 import Tooltip from '@cdo/apps/templates/Tooltip';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
@@ -20,17 +20,18 @@ class Comment extends Component {
     viewAsTeacher: PropTypes.bool
   };
 
-  state = {isShowingCommentOptions: false};
-
-  onDelete = () => {
-    this.setState({isShowingCommentOptions: false});
-    this.props.onDelete();
+  state = {
+    hideResolved: true
   };
 
-  onResolve = () => {
-    this.setState({isShowingCommentOptions: false});
-    this.props.onResolveStateToggle();
-  };
+  componentDidUpdate(prevProps) {
+    // We always hide the comment when it changes to resolved.
+    // We never hide a comment that is unresolved.
+    // A user can choose to show/hide a comment that is resolved.
+    if (!prevProps.comment.isResolved && this.props.comment.isResolved) {
+      this.setState({hideResolved: true});
+    }
+  }
 
   renderName = () => {
     const {
@@ -72,6 +73,63 @@ class Comment extends Component {
     return <div style={styles.error}>{javalabMsg.commentUpdateError()}</div>;
   };
 
+  toggleHideResolved = () => {
+    this.setState(state => {
+      return {hideResolved: !state.hideResolved};
+    });
+  };
+
+  getMenuItems = () => {
+    const {
+      viewAsCodeReviewer,
+      viewAsTeacher,
+      onDelete,
+      onResolveStateToggle
+    } = this.props;
+    const {isResolved} = this.props.comment;
+    const {hideResolved} = this.state;
+    let menuItems = [];
+    if (isResolved) {
+      // resolved comments can be collapsed/expanded
+      menuItems.push({
+        onClick: this.toggleHideResolved,
+        text: hideResolved ? msg.show() : msg.hide(),
+        iconClass: hideResolved ? 'eye' : 'eye-slash'
+      });
+    }
+    if (!viewAsCodeReviewer) {
+      // Code owners can resolve/unresolve comment
+      // TODO: Allow teachers to resolve/unresolve comments too
+      menuItems.push({
+        onClick: onResolveStateToggle,
+        text: isResolved
+          ? javalabMsg.markIncomplete()
+          : javalabMsg.markComplete(),
+        iconClass: isResolved ? 'circle-o' : 'check-circle'
+      });
+    }
+    if (viewAsTeacher) {
+      // Teachers can delete comments
+      menuItems.push({
+        onClick: onDelete,
+        text: javalabMsg.delete(),
+        iconClass: 'trash'
+      });
+    }
+
+    return menuItems.map((item, index) => {
+      return (
+        <a onClick={item.onClick} key={index}>
+          <span
+            style={styles.icon}
+            className={'fa fa-fw fa-' + item.iconClass}
+          />
+          <span style={styles.text}>{item.text}</span>
+        </a>
+      );
+    });
+  };
+
   render() {
     const {
       commentText,
@@ -81,57 +139,43 @@ class Comment extends Component {
       isResolved,
       hasError
     } = this.props.comment;
-    const {viewAsCodeReviewer, viewAsTeacher} = this.props;
 
-    const {isShowingCommentOptions} = this.state;
+    const {hideResolved} = this.state;
 
     return (
       <div
         style={{
           ...styles.commentContainer,
-          ...(isFromOlderVersionOfProject &&
-            styles.olderVersionCommentTextColor)
+          ...((isFromOlderVersionOfProject || isResolved) && styles.lessVisible)
         }}
       >
         <div style={styles.commentHeaderContainer}>
+          {isResolved && (
+            <i className="fa fa-check-circle" style={styles.check} />
+          )}
           {this.renderName()}
           <span style={styles.rightAlignedCommentHeaderSection}>
             <span style={styles.timestamp}>
               {this.renderFormattedTimestamp(timestampString)}
             </span>
-            {isResolved && <i className="fa fa-check" style={styles.check} />}
-            {(viewAsTeacher || !viewAsCodeReviewer) && (
-              <i
-                className="fa fa-ellipsis-h"
-                style={styles.ellipsisMenu}
-                onClick={() =>
-                  this.setState({
-                    isShowingCommentOptions: !isShowingCommentOptions
-                  })
-                }
-              >
-                {isShowingCommentOptions && (
-                  <CommentOptions
-                    isResolved={isResolved}
-                    onResolveStateToggle={() => this.onResolve()}
-                    onDelete={() => this.onDelete()}
-                  />
-                )}
-              </i>
-            )}
+            <InlineDropdownMenu icon="fa fa-ellipsis-h">
+              {this.getMenuItems()}
+            </InlineDropdownMenu>
           </span>
         </div>
-        <div
-          id={'code-review-comment-body'}
-          style={{
-            ...styles.comment,
-            ...(isFromTeacher && styles.commentFromTeacher),
-            ...(isFromOlderVersionOfProject &&
-              styles.olderVersionCommentBackgroundColor)
-          }}
-        >
-          {commentText}
-        </div>
+        {!(isResolved && hideResolved) && (
+          <div
+            className="code-review-comment-body"
+            style={{
+              ...styles.comment,
+              ...(isFromTeacher && styles.commentFromTeacher),
+              ...((isFromOlderVersionOfProject || isResolved) &&
+                styles.lessVisibleBackgroundColor)
+            }}
+          >
+            {commentText}
+          </div>
+        )}
         {hasError && this.renderErrorMessage()}
       </div>
     );
@@ -143,12 +187,6 @@ export default connect(state => ({
   viewAsTeacher: state.viewAs === ViewType.Teacher
 }))(Comment);
 
-const sharedIconStyles = {
-  fontSize: 18,
-  lineHeight: '18px',
-  margin: '0 0 0 5px'
-};
-
 const styles = {
   name: {
     fontFamily: '"Gotham 5r"'
@@ -159,13 +197,11 @@ const styles = {
   nameSuffix: {
     fontStyle: 'italic'
   },
-  ellipsisMenu: {
-    ...sharedIconStyles,
-    cursor: 'pointer'
-  },
   check: {
-    ...sharedIconStyles,
-    color: color.green
+    position: 'absolute',
+    left: '-18px',
+    lineHeight: '18px',
+    fontSize: '15px'
   },
   comment: {
     clear: 'both',
@@ -179,8 +215,8 @@ const styles = {
   commentFromTeacher: {
     backgroundColor: color.lightest_cyan
   },
-  olderVersionCommentTextColor: {color: color.light_gray},
-  olderVersionCommentBackgroundColor: {backgroundColor: color.background_gray},
+  lessVisible: {color: color.light_gray},
+  lessVisibleBackgroundColor: {backgroundColor: color.background_gray},
   timestamp: {
     fontStyle: 'italic',
     margin: '0 5px'
@@ -197,5 +233,7 @@ const styles = {
     color: color.white,
     margin: '5px 0',
     padding: '10px 12px'
-  }
+  },
+  text: {padding: '0 5px'},
+  icon: {fontSize: '18px'}
 };

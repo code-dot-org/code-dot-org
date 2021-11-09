@@ -2,8 +2,27 @@
   "mr-IN": {
     "data": {
       "lessons": {
+        "artist/Artist": {
+          "student_overview": "आर्टीस्टचे प्रोग्रॅमिंग करून सुंदर प्रतिमा तयार करणे"
+        },
         "oceans/Oceans": {
           "student_overview": "ट्युटोरीयल सारांश: आधी विद्यार्थी महासागरातून कचरा काढून टाकण्याचा प्रयत्न करण्यासाठी ऑब्जेक्टचे \"मासा आहे\" किंवा \"मासा नाही\" असे वर्गीकरण करतील. नंतर, विद्यार्थ्यांना पाण्यातील इतर प्राणी समाविष्ट करण्यासाठी त्यांच्या ट्रेनिंग सेटचा विस्तार करावा लागेल. कृतीच्या दुसऱ्या भागात, विद्यार्थी यादृच्छिकपणे तयार केलेल्या माशांच्या इमेजेसना लागू करण्यासाठी त्यांची स्वत:ची लेबल्स निवडतील.हा ट्रेनिंग डेटा मशीन लर्निंग मॉडेलसाठी वापरला जाईल आणि मग ते नवीन इमेजेसना स्वत: लेबल करू शकेल."
+        },
+        "outbreak/Outbreak": {
+          "purpose": "मागच्या धड्यामध्ये, विद्यार्थ्यांनी एका साध्या सिम्युलेशनमधून डेटा गोळा केला आणि त्याचा अर्थ लावला. या धड्यात, विद्यार्थी त्यांचे स्वत:चे सिम्युलेशन मॉडेल तयार करण्यासाठी सूचनांचे पालन करतील. विद्यार्थ्यांचे प्रत्येक जगातील विषाणू उद्रेकाबद्दलचे पूर्वज्ञान काल्पनिक प्रसंगासाठी वापरले जाईल."
+        },
+        "jigsaw/Jigsaw": {
+          "student_overview": "कोडी पूर्ण करण्यासाठी क्लिक करा आणि ड्रॅग करा."
+        },
+        "coursef-2021/lesson-7": {
+          "preparation": "लेव्हल्स द्वारे खेळा आणि \\***\\* धड्याच्या स्लाइड्सचे पुनरावलोकन करा**."
+        },
+        "coursef-2021/lesson-8": {
+          "preparation": "लेव्हल नुसार खेळा आणि लेसन स्लाइडचे पुनरावलोकन करा."
+        },
+        "coursef-2021/lesson-10": {
+          "preparation": "लेव्हल नुसार खेळा आणि लेसन स्लाइडचे पुनरावलोकन करा.",
+          "student_overview": "या धड्यामध्ये तुम्ही स्प्राईट लॅबमधील व्हेरिएबल्ससह सराव कराल."
         },
         "coursef-2021/Variables that Change in Bee": {
           "student_overview": "या मधमाशीला व्हेरिएबल्स आवडतात!"
@@ -11,8 +30,158 @@
         "coursef-2021/lesson-5": {
           "purpose": "मागच्या धड्यामध्ये, विद्यार्थ्यांनी एका साध्या सिम्युलेशनमधून डेटा गोळा केला आणि त्याचा अर्थ लावला. या धड्यात, विद्यार्थी त्यांचे स्वत:चे सिम्युलेशन मॉडेल तयार करण्यासाठी सूचनांचे पालन करतील. विद्यार्थ्यांचे प्रत्येक जगातील विषाणू उद्रेकाबद्दलचे पूर्वज्ञान काल्पनिक प्रसंगासाठी वापरले जाईल."
         },
+        "courseb-2021/Move It, Move It": {
+          "student_overview": "तुमच्या वर्गमित्रांना एका ठिकाणाहून काळजीपूर्वक पाऊल ठेवण्यासाठी प्रोग्राम करा."
+        },
+        "courseb-2021/Programming in Harvester": {
+          "student_overview": "हार्वेस्टरला एका मार्गावर भाज्या गोळा करण्यात मदत करा."
+        },
+        "courseb-2021/Loops in Harvester": {
+          "student_overview": "हार्वेस्टरला लूप वापरून आणखी गोळा करण्यात मदत करा!"
+        },
+        "courseb-2021/Loops in Collector": {
+          "student_overview": "खुल्या गुहेत खजिना गोळा करण्यासाठी लॉरेल अॅडव्हेंचरर प्रोग्राम करा."
+        },
+        "courseb-2021/Loops in Artist": {
+          "student_overview": "इमेजेस पूर्ण करण्यासाठी पॅटर्न आणि लूप वापरा."
+        },
+        "courseb-2021/The Right App": {
+          "student_overview": "आपले स्वतःचे स्मार्टफोन अॅप स्केच करा."
+        },
+        "courseb-2021/Events: The Big Event": {
+          "student_overview": "जेव्हा तुमचा शिक्षक एका विशाल रिमोटवर बटण दाबतो तेव्हा हलवा किंवा ओरडा."
+        },
+        "courseb-2021/Events in Play Lab": {
+          "student_overview": "कथा  किंवा इंटरॲक्टीव्ह गेम  तयार करण्यासाठी इव्हेंटचा वापर करा."
+        },
+        "courseb-2021/lesson-1": {
+          "preparation": "विद्यार्थ्यांना प्रेरित करण्यासाठी तुमचा स्वतःचा प्ले लॅब प्रोजेक्ट आधीच कोड करा!",
+          "student_overview": "आपली स्वतःची स्टोरी किंवा गेम तयार करा."
+        },
+        "coursea-2021/Safety in My Online Neighborhood": {
+          "student_overview": "सुरक्षितपणे ऑनलाईन ठिकाणी कसे जायचे ते शिका."
+        },
+        "coursea-2021/Learn to Drag and Drop": {
+          "student_overview": "कोडी पूर्ण करण्यासाठी क्लिक करा आणि ड्रॅग करा."
+        },
+        "coursea-2021/Programming: Happy Maps": {
+          "student_overview": "फळाला फ्लर्ब मिळवण्यासाठी सूचना लिहा."
+        },
+        "coursea-2021/Sequencing with Scrat": {
+          "student_overview": "अक्रोनपर्यंत पोहोचण्यासाठी प्रोग्राम स्क्रॅट"
+        },
+        "coursea-2021/Programming in Ice Age": {
+          "student_overview": "स्क्रॅटला एकोर्नपर्यंत पोहोचण्यास मदत करण्यासाठी प्रोग्राम लिहा."
+        },
+        "coursea-2021/Programming with Rey and BB-8": {
+          "student_overview": "स्क्रॅप मेटलला गोळा करण्यासाठी BB-8 ला मदत करा"
+        },
+        "coursea-2021/Loops: Happy Loops": {
+          "student_overview": "लूप वापरून फ्लर्बला मोठ्या समस्या सोडवण्यात मदत करा."
+        },
+        "coursea-2021/Loops in Ice Age": {
+          "student_overview": "लूप वापरून स्क्रॅटला अधिक जमीन कव्हर करण्यास मदत करा."
+        },
+        "coursea-2021/Ocean Scene with Loops": {
+          "student_overview": "इमेजेस पूर्ण करण्यासाठी लूप्स आणि पॅटर्न वापरा."
+        },
+        "coursea-2021/Events in Play Lab": {
+          "student_overview": "आपली स्वतःची गेम किंवा स्टोरी तयार करा."
+        },
+        "coursea-2021/lesson-1": {
+          "student_overview": "आर्टीस्ट सोबत एक गोष्ट सांगा!"
+        },
+        "coursec-2021/Programming in Maze": {
+          "student_overview": "_अँग्री बर्ड्स_ सह अनुक्रम आणि अल्गोरिदम बद्दल जाणून घ्या."
+        },
+        "coursec-2021/Programming in Artist": {
+          "student_overview": "आर्टीस्टचे प्रोग्रॅमिंग करून सुंदर प्रतिमा तयार करणे"
+        },
+        "coursec-2021/Loops with Rey and BB-8": {
+          "student_overview": "लुप्स वापरून मेझेस द्वारे _BB-8_ ला मदत करा!"
+        },
+        "coursec-2021/Events: The Big Event": {
+          "student_overview": "इव्हेंटबद्दल जाणून घेण्यासाठी एक मजेदार गेम खेळा."
+        },
+        "coursec-2021/Events in Play Lab": {
+          "student_overview": "सर्जनशील व्हा आणि प्ले लॅबमध्ये गेम बनवा!"
+        },
+        "coursed-2021/Algorithms: Graph Paper Programming": {
+          "student_overview": "या धड्यामध्ये, तुम्ही तुमच्या वर्गमित्रांना चित्र काढण्यासाठी प्रोग्राम कराल!"
+        },
+        "coursed-2021/Build a Star Wars Game": {
+          "student_overview": "या धड्यामध्ये तुम्ही तुमचा स्वतःचा स्टार वॉर्स गेम तयार करता ती शक्ती जाणवा"
+        },
+        "express-2021/Programming with Angry Birds": {
+          "student_overview": "_अँग्री बर्ड्स_ सह अनुक्रम आणि अल्गोरिदम बद्दल जाणून घ्या."
+        },
+        "express-2021/Creating Art with Code": {
+          "student_overview": "आर्टीस्टचे प्रोग्रॅमिंग करून सुंदर प्रतिमा तयार करणे"
+        },
+        "express-2021/Swimming Fish in Sprite Lab": {
+          "student_overview": "स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून घ्या."
+        },
+        "express-2021/lesson-2": {
+          "preparation": "लेव्हल्स द्वारे खेळा आणि \\***\\* धड्याच्या स्लाइड्सचे पुनरावलोकन करा**."
+        },
+        "express-2021/lesson-3": {
+          "preparation": "लेव्हल नुसार खेळा आणि लेसन स्लाइडचे पुनरावलोकन करा."
+        },
+        "express-2021/Loops with Rey and BB-8": {
+          "student_overview": "लुप्स वापरून मेझेस द्वारे _BB-8_ ला मदत करा!"
+        },
+        "express-2021/Until Loops in Maze": {
+          "student_overview": "जेव्हा तुम्ही अंटील लूप वापरता तेव्हा तुम्ही काही आश्चर्यकारक गोष्टी करू शकता!"
+        },
+        "express-2021/Functions with Artist": {
+          "student_overview": "फंक्शन्ससह जटिल ड्रॉइंग्स अधिक सहज बनवा!"
+        },
+        "express-2021/lesson-4": {
+          "preparation": "लेव्हल नुसार खेळा आणि लेसन स्लाइडचे पुनरावलोकन करा.",
+          "student_overview": "या धड्यामध्ये तुम्ही स्प्राईट लॅबमधील व्हेरिएबल्ससह सराव कराल."
+        },
         "express-2021/Changing Variables with Bee": {
           "student_overview": "या मधमाशीला व्हेरिएबल्स आवडतात!"
+        },
+        "pre-express-2021/Learn to Drag and Drop": {
+          "student_overview": "कोडी पूर्ण करण्यासाठी क्लिक करा आणि ड्रॅग करा."
+        },
+        "pre-express-2021/Sequencing with Scrat": {
+          "preparation": "प्रत्येक विद्यार्थ्याकडे रिफ्लेक्शन जर्नल असल्याची खात्री करा.",
+          "student_overview": "अक्रोनपर्यंत पोहोचण्यासाठी प्रोग्राम स्क्रॅट"
+        },
+        "pre-express-2021/Programming in Harvester": {
+          "student_overview": "हार्वेस्टरला एका मार्गावर भाज्या गोळा करण्यात मदत करा."
+        },
+        "pre-express-2021/Loops with Scrat": {
+          "student_overview": "लूप वापरून स्क्रॅटला अधिक जमीन कव्हर करण्यास मदत करा."
+        },
+        "pre-express-2021/Ocean Scene with Loops": {
+          "student_overview": "इमेजेस पूर्ण करण्यासाठी लूप्स आणि पॅटर्न वापरा."
+        },
+        "pre-express-2021/Drawing Gardens with Loops": {
+          "student_overview": "इमेजेस पूर्ण करण्यासाठी पॅटर्न आणि लूप वापरा."
+        },
+        "pre-express-2021/On the Move with Events": {
+          "student_overview": "आपली स्वतःची गेम किंवा स्टोरी तयार करा."
+        },
+        "pre-express-2021/A Royal Battle with Events": {
+          "student_overview": "कथा  किंवा इंटरॲक्टीव्ह गेम  तयार करण्यासाठी इव्हेंटचा वापर करा."
+        },
+        "coursee-2021/Learning Sprites with Sprite Lab": {
+          "student_overview": "स्प्राइट कसे तयार करावे आणि संपादित करावे ते जाणून घ्या."
+        },
+        "coursee-2021/Alien Dance Party with Sprite Lab": {
+          "student_overview": "वर्गमित्रांसह शेयर केला जाऊ शकतो असा इंटरॲक्टीव्ह प्रोजेक्ट तयार करा."
+        },
+        "coursee-2021/lesson-4": {
+          "student_overview": "सायबर गुंडगिरी पाहिल्यावर आपण अपस्टेंडर कसे राहू शकता हे शिका "
+        },
+        "coursee-2021/Functions in Artist": {
+          "student_overview": "फंक्शन्ससह जटिल ड्रॉइंग्स अधिक सहज बनवा!"
+        },
+        "coursee-2021/Conditionals in Minecraft: Voyage Aquatic": {
+          "student_overview": "येथे तुम्ही _माईनक्राफ्ट_ च्या जगातील कंडिशनल्सबद्दल जाणून घ्याल"
         }
       }
     }

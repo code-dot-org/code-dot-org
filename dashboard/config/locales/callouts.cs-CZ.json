@@ -852,6 +852,15 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Nový blok!",
           "poetry_remove_sprite": "Nový blok!"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "Pomocí tohoto bloku můžete sebrat poklad."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Toto číslo Vám říká, kolik těchto bloků můžete v tomto hlavolamu použít."
+        },
+        "coursea_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
         }
       }
     }

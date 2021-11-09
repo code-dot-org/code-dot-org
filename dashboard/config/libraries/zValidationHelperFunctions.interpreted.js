@@ -22,7 +22,7 @@ function setSuccessTime(criteria){
   if (!validationProps.successTime) {
     var success = true;
     for (var criterion in criteria) {
-      if (!criteria[criterion]) { //was just (!criterion)
+      if ((!criteria[criterion])) {
         success = false;
         break;
       }
@@ -201,7 +201,7 @@ function checkSpritesTouching(spriteIds){
  */
 function checkActiveSpeech(spriteIds){
   for (var spriteId in spriteIds) {
-    if(getProp({ id: spriteId }, "speech")){
+    if(getSpeechForSpriteId(spriteId)){
       return true;
     }
   }
@@ -218,7 +218,7 @@ function checkActiveSpeech(spriteIds){
 function checkAllSpritesSay(spriteIds){
   var numSpritesWithSayBlocks = 0;
   for (var spriteId in spriteIds) {
-    if(getProp({ id: spriteId }, "speech")){
+    if(getSpeechForSpriteId(spriteId)){
       numSpritesWithSayBlocks = numSpritesWithSayBlocks + 1;
     }
   }
@@ -287,8 +287,7 @@ function getClickedSpriteId(eventLog, prevEventLogLength){
   if (eventLog.length > prevEventLogLength) {
     var currentEvent = eventLog[eventLog.length - 1];
     var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
-    if ((currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) &&
-        clickedSpriteId) {
+    if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
       return clickedSpriteId;
     }
   }
@@ -307,7 +306,7 @@ function checkSpriteSay(eventLog, prevEventLogLength){
     var currentEvent = eventLog[eventLog.length - 1];
     if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
       for (var spriteId in spriteIds) {
-        if (getProp({id: spriteId}, "speech") && getProp({id: spriteId}, "timeout")==120) {
+        if (getSpeechForSpriteId(spriteId) && spriteSpeechRenderedThisFrame(spriteId)) {
           // clicked sprite caused speech in some sprite
           return true;
         }
@@ -331,8 +330,9 @@ function getClickedSpriteIdCausedSpeech(eventLog, prevEventLogLength){
     var currentEvent = eventLog[eventLog.length - 1];
     var clickedSpriteId = parseInt(currentEvent.split(" ")[1]);
     if (currentEvent.includes("whenClick: ") || currentEvent.includes("whileClick: ")) {
+      var spriteIds = getSpriteIdsInUse();
       for (var spriteId in spriteIds) {
-        if (getProp({id: spriteId}, "speech") && getProp({id: spriteId}, "timeout")==120) {
+        if (getSpeechForSpriteId(spriteId) && spriteSpeechRenderedThisFrame(spriteId)) {
           // clicked sprite caused speech in some sprite
           return clickedSpriteId;
         }
@@ -413,7 +413,7 @@ new method - check if clicked sprite starts speaking
 new method
 
 for (var spriteId in spriteIds) {
-        if (getProp({id: spriteId}, "speech") && getProp({id: spriteId}, "timeout")==120) {
+        if (getSpeechForSpriteId(spriteId) && spriteSpeechRenderedThisFrame(spriteId)) {
           // clicked sprite caused speech in some sprite
           return true;
         }
@@ -447,9 +447,38 @@ function drawProgressBar(status){
       fill(PASS_COLOR);
       rect(0,PLAYSPACE_SIZE - 10,((World.frameCount-validationProps.successTime)*PLAYSPACE_SIZE/WAIT_TIME),10);
       break;
+    case "newEventFail":
+      fill(FAIL_COLOR);
+      rect(0,PLAYSPACE_SIZE - 10,((World.frameCount-validationProps.vars.delay)*PLAYSPACE_SIZE/WAIT_TIME),10);
+      break;
+    case "newEventPass":
+      fill(PASS_COLOR);
+      rect(0,PLAYSPACE_SIZE - 10,((World.frameCount-validationProps.vars.delay)*PLAYSPACE_SIZE/WAIT_TIME),10);
+      break;
     case "challengePass":
     //Do something for challengePass
   }
 
   pop();
+}
+
+/**
+ * Uses delay variable logic to determine which progress bar to draw
+ * in the playspace.
+ */
+function determineAndDrawProgressBar(successTime, delay){
+  //console.log("delay: " + delay);
+  if (!successTime) {
+    if (delay && delay > 0) {
+      drawProgressBar("newEventFail");
+    } else {
+      drawProgressBar("fail");
+    }
+  } else {
+    if (delay && delay > 0) {
+      drawProgressBar("newEventPass");
+    } else {
+      drawProgressBar("pass");
+    }
+  }
 }

@@ -1184,6 +1184,8 @@ de:
               name: Enthaltene Level
             ML Fish:
               name: ML Fisch
+            Java Lab:
+              name: Java Lab
         algebraPD2b:
           description: 'Phase 2 Online: Gemischtes Sommerstudium'
           description_short: 'Phase 2 Online: Gemischtes Sommerstudium'
@@ -25713,6 +25715,8 @@ de:
           lessons:
             Virus Simulation for Code Bytes:
               name: Programmierung einer Simulation
+            Outbreak:
+              name: Programmierung einer Simulation
           lesson_groups:
             outbreak:
               display_name: Ausbruchssimulation
@@ -29021,6 +29025,8 @@ de:
           lessons:
             lesson-20:
               name: Prüfungstag
+            lesson-24:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -29028,6 +29034,8 @@ de:
           lessons:
             lesson-15:
               name: Prüfungstag
+            lesson-16:
+              name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Inhalt
@@ -29035,6 +29043,8 @@ de:
           lessons:
             lesson-15:
               name: Prüfungstag
+            lesson-17:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -29042,6 +29052,8 @@ de:
           lessons:
             lesson-15:
               name: Prüfungstag
+            lesson-16:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -29049,6 +29061,8 @@ de:
           lessons:
             lesson-15:
               name: Prüfungstag
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -29411,6 +29425,8 @@ de:
           lessons:
             Assessment Day:
               name: Prüfungstag
+            lesson-1:
+              name: Java Lab
             lesson-20:
               name: Prüfungstag
           lesson_groups:
@@ -29422,6 +29438,8 @@ de:
               name: Prüfungstag
             lesson-15:
               name: Prüfungstag
+            lesson-1:
+              name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Inhalt
@@ -29429,6 +29447,8 @@ de:
           lessons:
             Assessment Day:
               name: Prüfungstag
+            lesson-1:
+              name: Java Lab
             lesson-15:
               name: Prüfungstag
           lesson_groups:
@@ -29438,6 +29458,8 @@ de:
           lessons:
             Assessment Day:
               name: Prüfungstag
+            lesson-1:
+              name: Java Lab
             lesson-15:
               name: Prüfungstag
           lesson_groups:
@@ -29449,6 +29471,8 @@ de:
               name: Prüfungstag
             lesson-15:
               name: Prüfungstag
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Inhalt
@@ -29490,13 +29514,17 @@ de:
               name: Widgets
             lesson-2:
               name: Werkzeuge
-        poetry:
-          lessons:
-            lesson-3:
-              name: Variablen
         spelling-bee:
           lessons:
             lesson-1:
               name: Buchstabierwettbewerb
+          title: Buchstabierwettbewerb
         outbreak-csc:
           title: Ausbruch
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: Prüfungstag
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Inhalt

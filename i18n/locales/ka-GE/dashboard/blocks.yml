@@ -826,6 +826,10 @@ ka:
             '"down"': ქვედა ისარი
             '"left"': მარცხენა ისარი
             '"right"': მარჯვენა ისარი
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"rainbow"': ცისარტყელა
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -904,23 +908,56 @@ ka:
             '"s"': s
             '"d"': d
       craft_ifPath:
+        text: |-
+          თუ გზა არის {DIR}
+          {STATEMENT}
         options:
           DIR:
             "'ahead'": წინ
       craft_ifStandingOn:
+        text: |-
+          თუ დგახარ {TYPE}
+          {STATEMENT}
         options:
           TYPE:
+            "'blueCoralBlock'": ლურჯი მარჯანი
+            "'redCoralBlock'": წითელი მარჯანი
             "'sand'": ქვიშა
+            "'wool_blue'": ღრმა წყალი
             "'planksOak'": მუხის ფიცრები
+            "'seaLantern'": ზღვის სანათი
       craft_ifStandingOnLimit:
+        text: |-
+          თუ დგახარ {TYPE}
+          {STATEMENT}
         options:
           TYPE:
             "'sand'": ქვიშა
+            "'seaLantern'": ზღვის სანათი
       craft_moveForward:
         text: წინ გადაადგილება
+      craft_placeBlock:
+        text: მოათავსე {blockType}
+        options:
+          blockType:
+            '"seaLantern"': ზღვის სანათი
+      craft_placePrismarine:
+        text: პრიზმარინის მოთავსება
       craft_placeTorch:
         text: ჩირაღდნის დაყენება
+      craft_repeatUntilConduit:
+        text: |-
+          გაიმეორე არხის დასრულებამდე
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          მიზნამდე გაიმეორე
+          {STATEMENT}
+      craft_spawnEntity:
+        text: შექმენი {ENTITY}
       craft_turn:
+        text: მობრუნდი {DIR}
         options:
           DIR:
             right: მარჯვნივ ↻
+            left: მარცხნივ ↺

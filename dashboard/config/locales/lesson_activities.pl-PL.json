@@ -146,6 +146,9 @@
         "9bd1489e-8bf5-45a9-828f-e8fab79d8331": {
           "name": "Zajęcia (30-45 minut)"
         },
+        "09d516b6-38b7-42e0-900c-5d427b051b65": {
+          "name": "Zakończenie (5 minut)"
+        },
         "a68f63ef-48f2-45b4-bf99-0c33d870bebc": {
           "name": "Wersja rozszerzona"
         },
@@ -178,6 +181,9 @@
         },
         "301e5420-a6e3-46c3-a76f-c2e042652974": {
           "name": "Zajęcia (30-45 minut)"
+        },
+        "efd4f483-32c2-4810-96fd-186649c2efe2": {
+          "name": "Zakończenie (5 minut)"
         },
         "4e2ce993-660e-4574-9264-448e234c4bac": {
           "name": "Wersja rozszerzona"
@@ -212,6 +218,9 @@
         "d1fb8b1b-235a-41a7-bfb9-8c916983bb68": {
           "name": "Zajęcia (30-45 minut)"
         },
+        "d77010f1-4c38-4b28-8b5f-ef931622b016": {
+          "name": "Zakończenie (5 minut)"
+        },
         "5b9c8e29-d3c4-475c-a174-4fe663db40ba": {
           "name": "Wersja rozszerzona"
         },
@@ -245,6 +254,9 @@
         "e5b705f9-3922-4d59-bf2f-99d6ef0ef0ed": {
           "name": "Zajęcia (30-45 minut)"
         },
+        "e2022e4c-66f9-4cac-9970-3e5bbf582f66": {
+          "name": "Zakończenie (5 minut)"
+        },
         "1f6b7c7a-3d21-4f80-8f9b-85df513a85ef": {
           "name": "Wersja rozszerzona"
         },
@@ -268,6 +280,9 @@
         },
         "e12c8da3-986d-488b-bed5-a7bb9e95e393": {
           "name": "Poziomy"
+        },
+        "2f9c446a-0802-48b0-91ff-a7df9fe4afe2": {
+          "name": "Zakończenie (5 minut)"
         },
         "42552407-b313-4fc4-9163-e6a8e4a6029d": {
           "name": "Wersja rozszerzona"
@@ -305,8 +320,14 @@
         "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
           "name": "Zakończenie"
         },
-        "06dfaf3b-e495-4577-baa6-883a782e198f": {
-          "name": "Poziomy"
+        "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
+          "name": "Rozgrzewka"
+        },
+        "a4b68e1c-d78c-455c-922f-2fd57f697f58": {
+          "name": "Główna aktywność"
+        },
+        "fdab57b2-566f-4f6f-a42d-967cf95bc73a": {
+          "name": "Zakończenie"
         },
         "f652e4d2-c712-4cff-a011-f1dcea192263": {
           "name": "Rozgrzewka"
@@ -1070,9 +1091,6 @@
         "67be50b8-f120-4f1d-ad22-06b84dba994c": {
           "name": "Zakończenie"
         },
-        "4d3409a1-dc66-4033-87ad-1484af8ab342": {
-          "name": "Sprawdzian opcjonalny"
-        },
         "c401b0f4-97af-418d-b58b-a58493c7570c": {
           "name": "Wersja rozszerzona"
         },
@@ -1171,9 +1189,6 @@
         },
         "cfe48524-90b5-4f5a-89d7-58f662bfc5be": {
           "name": "Zakończenie"
-        },
-        "69460e12-7295-400a-8fc1-135a17d25118": {
-          "name": "Rozgrzewka"
         },
         "e63db04a-81d6-4b49-80b5-4afab4df2a05": {
           "name": "Główna aktywność"

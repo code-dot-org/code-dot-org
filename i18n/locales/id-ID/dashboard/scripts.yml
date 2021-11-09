@@ -15983,6 +15983,8 @@ id:
           lessons:
             Virus Simulation for Code Bytes:
               name: Membuat Kode Simulasi
+            Outbreak:
+              name: Membuat Kode Simulasi
           lesson_groups:
             outbreak:
               display_name: Simulasi Wabah
@@ -18280,11 +18282,15 @@ id:
               name: Widget
             lesson-2:
               name: Tool
-        poetry:
-          lessons:
-            lesson-3:
-              name: variabel
         spelling-bee:
           lessons:
             lesson-1:
               name: Spelling Bee
+          title: Spelling Bee
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: Hari Penilaian
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Konten

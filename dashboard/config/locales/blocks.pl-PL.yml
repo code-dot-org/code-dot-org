@@ -1869,8 +1869,40 @@ pl:
         text: załóż Miasto Potworów z [COUNT] [0] potworami
       Outbreak_stopMoving:
         text: potwory zatrzymują się
+      Poetry_addFrame:
+        text: dodaj zarys {BRUSH}
+        options:
+          BRUSH:
+            Metal Frame: Metalowa rama
+            Bold: Pogrubiony
+            Shadow Box: Pudełko cienia
+            Gilded: Pozłacany
+            Beaded: Zroszony
+            Beveled: Skośny
+            Wood Frame: Drewniana rama
+            Bamboo: Bambus
+            Decorative: Pismo dekoracyjne
+            Donuts: Pączki
+            Ice Cream: Lody
+            Fire: Ogień
+            Water: Woda
+            Leaves: Liście
+            Stars: Gwiazdy
+            Fireworks: Fajerwerki
+            '"rainbow"': Tęcza
+            '"hearts"': Serca
+            '"flowers"': Kwiaty
+            '"zigzag"': Zig-Zag
+            '"swirls"': Wiry
+            '"pawPrints"': Odciski łap
+            '"waves"': Fale
+            '"brick"': Cegła
       Poetry_addLine:
         text: dodaj linię {LINE}
+      Poetry_addTextHighlight:
+        text: dodaj wyróżnienie tekstu
+      Poetry_animateText:
+        text: animowany tekst
       Poetry_destroy:
         text: usuń {ANIMATION_NAME}
       Poetry_hideText:
@@ -1887,27 +1919,53 @@ pl:
         text: zrobić nowy {ANIMATION_NAME} sprite w {LOCATION}
       Poetry_makeNumSprites:
         text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
-      Poetry_playSound:
-        text: PlaySound {SOUND}
+      Poetry_playMusic:
+        text: graj muzykę {SOUND}
         options:
           SOUND:
-            '"sound://category_bell/bells_win_low.mp3"': Dzwon
-            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Jasny
+            Calm: spokojny
+            Campfire: Ognisko
+            Drizzle: Mżawka
             '"sound://category_background/fire_burning.mp3"': Kominek
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': Las
             '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': Harfy
+            Haunted: Nawiedzany
+            Hum: Szum
+            Mission: Misja
             '"sound://category_nature/summer_night_loop.mp3"': Noc
             '"sound://category_background/ocean_waves.mp3"': Ocean
             '"sound://category_background/rain_thunderstorm_calm.mp3"': Deszczowy
             '"sound://category_background/rainforest_ambient_sound.mp3"': Deszczowy
               las
+            Riding: Jazda konna
             '"sound://category_background/wavering_wind.mp3"': Senny
-            '"sound://category_background/typewriter.mp3"': Maszyna do pisania
+            Slow: Powoli
             '"sound://category_background/waterfall.mp3"': Wodospad
+      Poetry_playSound:
+        text: PlaySound {SOUND}
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Jasny
+            Bell: Dzwon
+            Boing: Boing
+            Bubble: Bąbelki
+            Chatter: Gadać
+            Deflate: Siadać
+            Fail: Upadek
+            Flutter: Trzepotanie
+            Jump: Skok
+            Light: Jasne
+            Poof: Puszysty
+            Scan: Skan
+            '"sound://category_background/typewriter.mp3"': Maszyna do pisania
+            Vibrant: Wibrujący
+            Win: Zwycięstwo
+            Whirl: Wir
+            Wind Chimes: Dzwonki wietrzne
       Poetry_randomWord:
         text: losowe słowo
       Poetry_setAuthor:
-        text: ustaw autora wiersza {AUTHOR}
+        text: ustaw autora {AUTHOR}
       Poetry_setBackground:
         text: ustaw kolor tła {COLOR}
       Poetry_setBackgroundEffect:
@@ -1922,7 +1980,11 @@ pl:
             '"fadeColors"': Zanikanie kolorów
             '"blooming"': Rozkwiecony
             '"ripples"': Fale
-            '"clouds"': Chmury
+            '"clouds"': Pochmurno
+            '"rain"': Deszcz
+            '"bubbles"': Bąbelki
+            '"confetti"': Konfetti
+            '"hearts"': Kolorowe Serca
           PALETTE:
             '"rainbow"': Tęcza
             '"grayscale"': Czarny i biały
@@ -1947,10 +2009,11 @@ pl:
             '"Courier"': Courier
             '"Arial Black"': Arial Black
             '"Impact"': Impact
+            '"Cursive"': Pochyły
       Poetry_setFontColor:
         text: ustaw kolor czcionki {FILL}
       Poetry_setForegroundEffect:
-        text: wykonaj efekt pierwszego planu {EFFECT}
+        text: wykonaj efekt {EFFECT}
         options:
           EFFECT:
             '"rain"': Deszcz
@@ -1961,26 +2024,6 @@ pl:
             '"starburst"': Rozprysk
             '"glass"': Rozbijające się szkło
             '"twinkling"': Migotliwy
-      Poetry_setPoem:
-        text: ustaw wiersz {POEM}
-        options:
-          POEM:
-            '"---"': "---"
-            '"hafez"': Mój wspaniały obraz
-            '"carroll_1"': Błysk, Błysk, Mała gwiazda
-            '"rumi_1"': Śpiewaj
-            '"field"': Wynken, Blynken, and Nod
-            '"carroll_2"': Krokodyl
-            '"twain"': Ciepłe letnie słońce
-            '"wordsworth"': Wędrowałem samotnie jak chmura
-            '"carroll_3"': Jabberwocky
-            '"rios"': Nie wchodź do biblioteki
-            '"rumi_2"': Ocean
-            '"hughes_1"': Wariacje snów
-            '"hughes"': Harlem
-            '"hopler"': W ogrodzie
-            '"lomeli"': Zwróć
-            '"singer"': Opiekanie pianek
       Poetry_setPrompt:
         text: monituj użytkownika {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} o zmienną {VAR}
       Poetry_setPromptWithChoices:
@@ -2000,7 +2043,7 @@ pl:
             '"flyTop"': lecieć z góry
             '"flyBottom"': lecieć z dołu
       Poetry_setTitle:
-        text: ustaw tytuł wiersza {TITLE}
+        text: ustaw tytuł {TITLE}
       Poetry_showText:
         text: pokaż tekst
       Poetry_startBehavior:

@@ -870,6 +870,36 @@
           "wandering": "เคลื่อนที่",
           "moving north": "เคลื่อนที่ไปทางเหนือ",
           "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "poetry_hoc_addSprites": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "poetry_hoc_exemplar1": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "poetry_hoc_exemplar2": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "poetry_hoc_freeplay": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "wandering": "เคลื่อนที่",
+          "moving north": "เคลื่อนที่ไปทางเหนือ",
+          "moving with arrow keys": "เคลื่อนไหวด้วยปุ่มลูกศร"
         }
       }
     }

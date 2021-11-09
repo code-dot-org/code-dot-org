@@ -145,12 +145,7 @@ With an academic background in neuroscience and education, <strong>Erin Bond</st
 <br>
 As Director of Software Engineering at <a href="https://www.irobot.com/" target="_blank">iRobot</a>, <strong>Eva Moscat</strong> is responsible for the Robot Operating System department, including connectivity, embedded Linux, manufacturing, and engineering tools. Eva is an immigrant from the Dominican Republic; through her culture and socioeconomic upbringing, she mentors children with a similar background in STEM. Eva is inspired daily by her husband and her newborn son. In her free time, she enjoys watching anime, playing basketball, and building her sneaker collection.</p>
 
-<a href="https://www.eventbrite.com/e/my-journey-building-robots-registration-168115226167" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
-
+<a href="https://code.zoom.us/rec/play/UWwtmCEMDWOpbFxlKieBu4oavUKGS5_ygXzTaEKqlPkZyOIoGMOX2W5AhOHqYNe2lzj4RixyrIP4DKuF.6Vh6XO0EndHG2rQq" target="_blank"><button>Watch the chat</button></a>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
@@ -169,12 +164,7 @@ taken to www.eventbrite.com.</i></p>
 <br>
 <strong>Olawale Oladehin</strong> is the Head of Worldwide Solutions Architects – IoT (Internet of Things) at <a href="https://www.amazon.com/" target="_blank">Amazon</a>. He has 15 years of experience working across ecommerce, video, and embedded systems. He has a passion for helping customers innovate through technology to achieve their business outcomes. He holds a Bachelor’s degree in Computer Science from Princeton University.</p>
 
-<a href="https://www.eventbrite.com/e/my-journey-building-the-internet-of-things-registration-167369924951" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
-
+<a href="https://code.zoom.us/rec/play/OyiE4iEmxoSRj2X6dY_zqXsHerdNMeJShzIsxBUtlGm9EQiYWp2pR5k7jcWkI04LR1W7QHhhw-f19DYi.hLv-PlDHZoKcMgzY" target="_blank"><button>Watch the chat</button></a>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
@@ -195,15 +185,10 @@ taken to www.eventbrite.com.</i></p>
 <br>
 <br>
 <strong>Ini Oladosu</strong> joined <a href="https://www.ilm.com/" target="_blank">Industrial Light & Magic</a> in 2020 as a Production Assistant. He was born in Port Harcourt, Nigeria before immigrating to Calgary, Canada with his family in 2000. Between 2019 and 2021, Ini co-wrote and co-produced his debut short film, <i>Framed</i>. The film has been selected into various film festivals and most recently won the award for Best Edit at the 2021 London International Monthly Film Festival.</p>
-
-<a href="https://www.eventbrite.com/e/my-journey-making-star-wars-registration-166863869325" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
-
+<i>Recording not currently available.</i>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
+
 
 <a id="chat8"></a>
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Using Roblox to empower students</h3>

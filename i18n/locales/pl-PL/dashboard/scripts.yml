@@ -16465,6 +16465,10 @@ pl:
           lessons:
             Virus Simulation for Code Bytes:
               name: Symulowanie symulacji
+            Outbreak:
+              name: Symulowanie symulacji
+              description_student: W Mieście Potworów pojawił się wirus! Naucz się tworzyć symulator wirusów i pomóż potworom wrócić do zdrowia.
+              description_teacher: 'Na tej lekcji uczniowie utworzą symulator epidemii przy użyciu zdarzeń. Zapoznają się z symulacją, aby zrozumieć, jak szybko wirus może się rozprzestrzeniać i co można zrobić, aby spowolnić zarażanie. '
           lesson_groups:
             outbreak:
               display_name: Symulowanie przerwania
@@ -19008,6 +19012,8 @@ pl:
               name: Java Lab
             The Theater:
               name: Korzystanie z poleceń
+            lesson-16:
+              name: Tworzenie tablic z danymi
           lesson_groups:
             lessonGroup-2:
               display_name: Treści
@@ -20458,8 +20464,6 @@ pl:
             lesson-1:
               key: lekcja 1
               name: Tworzenie tablic z danymi
-              description_student: Na poprzednich lekcjach używałeś tablic jednowymiarowych (1D) do przechowywania wartości tego samego typu. Dzisiaj dowiesz się, jak tworzyć i używać dwuwymiarowych (2D) tablic, tablic przechowujących tablice tego samego typu. Tablice 2D są przydatne do przechowywania danych reprezentowanych w postaci tabeli. Na tej lekcji użyjesz tablic 2D do przechowywania danych reprezentujących ekspansję biznesową projektu Mercury Pastries Food Truck.
-              description_teacher: Uczniowie poznają budowę dwuwymiarowych (2D) tablic oraz identyfikują podobieństwa i różnice między tablicami 1D i 2D. Tworzą tablice 2D do przechowywania elementów „int” i „double” za pomocą słowa kluczowego „new” i list inicjalizacji, aby reprezentować rozszerzony inwentarz projektu Mercury Pastries Food Truck. Uzyskują dostęp do poszczególnych elementów i modyfikują je, odwołując się do wartości indeksów wierszy i kolumn w celu uzyskania i oceny danych przechowywanych w tablicy 2D.
             lesson-2:
               key: lekcja 2
               name: Trawersowanie tablicy 2D wierszami
@@ -20614,6 +20618,10 @@ pl:
               name: Projekt
             lesson-20:
               name: Funkcje + Funkcje z parametrami
+              description_teacher: |-
+                -   Wymaga wprowadzenia funkcji, a następnie funkcji z parametrami.
+                -   Będzie musiał zobaczyć film o edycji oryginalnych funkcji
+                -   W obecnym programie nauczania, funkcje z poziomami parametrów są ściśle związane z muzyką i akcelerometrem, więc warto uwzględnić je tutaj w postępie jednostki
           lesson_groups:
             lessonGroup-3:
               display_name: Szablony
@@ -20633,12 +20641,20 @@ pl:
           title: Witaj świecie
         csa-u7-dev:
           lessons:
+            lesson-1:
+              name: Pisanie metod spełniających warunki
+            lesson-5:
+              name: Projekt sekwencji tytułów
             lesson-2:
               name: Widżety
             lesson-3:
               name: Narzędzia
             lesson-4:
               name: Badanie obiektów całkowitych i podwójnych
+            lesson-6:
+              name: Odkrywanie składników metody i funkcjonalności
+            lesson-7:
+              name: Używanie odniesień do obiektów jako parametrów
             lesson-8:
               name: Metody przeciążania
             lesson-9:
@@ -20784,8 +20800,6 @@ pl:
               name: Sztuka poezji
             lesson-2:
               name: Zakoduj swój własny wiersz
-            lesson-3:
-              name: Zmienne
             lesson-4:
               name: Zbuduj generator wierszy
             lesson-5:
@@ -20798,7 +20812,9 @@ pl:
           lessons:
             lesson-1:
               name: Literująca Pszczółka
+              description_student: Pomóż pszczółce przeliterować nowe słowa!
           name: spelling-bee
+          title: CSC - Literująca pszczółka
         outbreak-csc:
           lessons:
             lesson-1:
@@ -20808,10 +20824,75 @@ pl:
           name: outbreak-csc
           title: Epidemia
         explore-data-1:
+          lessons:
+            lesson-1:
+              name: Eksploracja wykresów pudełkowych i histogramów
+              description_student: Utwórz wykresy słupkowe i histogramy w wizualizerze danych w App Lab.
           name: explore-data-1
+          title: Eksploracja wykresów pudełkowych i histogramów
         counting-csc:
           lessons:
             lesson-1:
               name: Liczenie z Laurel
+              description_student: Pomóż Laurel, poszukiwaczce skarbów, liczyć i dodawać kroki, aby zbierać klejnoty!
           name: counting-csc
           title: Liczenie z Laurel
+        csa5-exemplars:
+          lessons:
+            lesson-1:
+              name: Tworzenie tablic z danymi
+            lesson-2:
+              name: Trawersowanie tablicy 2D wierszami
+            lesson-3:
+              name: Trawersowanie tablicy 2D kolumnami
+            lesson-4:
+              name: Stosowanie ulepszonych pętli
+            lesson-5:
+              name: Ocena tablic 2D
+            lesson-6:
+              name: Stosowanie standardowych algorytmów
+            lesson-7:
+              name: Przesuwanie elementów
+            lesson-8:
+              name: Znajdowanie duplikatów
+            lesson-9:
+              name: Poszukiwanie elementów
+            lesson-10:
+              name: Projekt Zrównoważonego Sąsiedztwa - Dzień 1
+            lesson-11:
+              name: Projekt Zrównoważonego Sąsiedztwa - Dzień 2
+            lesson-12:
+              name: Projekt Zrównoważonego Sąsiedztwa - Dzień 3
+            lesson-13:
+              name: Dzień FRQ
+            lesson-14:
+              name: Dzień sprawdzianu
+            lesson-15:
+              name: Odwracanie elementów
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+          name: csa5-exemplars
+          title: Jednostka 5 – Organizacja nadania obiektów [Exemplars]
+        csa-examples-21:
+          lessons:
+            lesson-1:
+              name: Jednostka 1 Projekty
+            lesson-2:
+              name: Jednostka 2 Projekty
+            lesson-3:
+              name: Jednostka 3 Projekty
+            lesson-4:
+              name: Jednostka 4 Projekty
+            lesson-5:
+              name: Jednostka 5 Projekty
+            lesson-6:
+              name: Jednostka 6 Projekty
+            lesson-7:
+              name: Jednostka 7 Projekty
+            lesson-8:
+              name: Jednostka 8 Projekty
+          name: csa-examples-21
+          title: Przykłady projektów jednostek CSA [2021-2022]
