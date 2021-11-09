@@ -1564,9 +1564,7 @@ sv:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Glass
-            Stars: Stjärnor
-            Fireworks: Fyrverkerier
+            '"placeholder"': Fyrverkerier
             '"rainbow"': Regnbåge
             '"hearts"': Hjärtan
             '"flowers"': Blommor
@@ -1581,7 +1579,7 @@ sv:
         text: PlaySound {SOUND}
         options:
           SOUND:
-            Light: Ljus
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Ljus
       Poetry_setBackground:
         text: ange bakgrundsfärg {COLOR}
       Poetry_setBackgroundEffect:
