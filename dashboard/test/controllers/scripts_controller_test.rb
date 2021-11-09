@@ -1650,6 +1650,16 @@ class ScriptsControllerTest < ActionController::TestCase
   end
 
   class LessonVisibleAfterTest < ActionController::TestCase
+    setup do
+      @unit = create :script
+      lesson_group = create :lesson_group, script: @unit
+      lesson = create :lesson, name: 'lesson 1', lesson_group: lesson_group, script: @unit, visible_after: '2020-04-01 08:00:00 -0700'
+      activity = create :lesson_activity, lesson: lesson
+      section = create :activity_section, lesson_activity: activity
+      level = create :level
+      create :script_level, lesson: lesson, activity_section: section, activity_section_position: 1, levels: [level]
+    end
+
     test "levelbuilder does not see visible after warning if lesson does not have visible_after property" do
       sign_in create(:levelbuilder)
 
@@ -1662,11 +1672,7 @@ class ScriptsControllerTest < ActionController::TestCase
       Timecop.freeze(Time.new(2020, 4, 2))
       sign_in create(:levelbuilder)
 
-      create(:level, name: "Level 1")
-      unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-      Script.setup([unit_file])
-
-      get :show, params: {id: 'test-fixture-visible-after'}
+      get :show, params: {id: @unit.name}
       assert_response :success
       refute response.body.include? 'visible after'
       Timecop.return
@@ -1676,11 +1682,7 @@ class ScriptsControllerTest < ActionController::TestCase
       Timecop.freeze(Time.new(2020, 3, 27))
       sign_in create(:levelbuilder)
 
-      create(:level, name: "Level 1")
-      unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-      Script.setup([unit_file])
-
-      get :show, params: {id: 'test-fixture-visible-after'}
+      get :show, params: {id: @unit.name}
       assert_response :success
       assert response.body.include? 'The lesson lesson 1 will be visible after'
       Timecop.return
@@ -1690,11 +1692,7 @@ class ScriptsControllerTest < ActionController::TestCase
       Timecop.freeze(Time.new(2020, 3, 27))
       sign_in create(:student)
 
-      create(:level, name: "Level 1")
-      unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-      Script.setup([unit_file])
-
-      get :show, params: {id: 'test-fixture-visible-after'}
+      get :show, params: {id: @unit.name}
       assert_response :success
       refute response.body.include? 'visible after'
       Timecop.return
@@ -1704,11 +1702,7 @@ class ScriptsControllerTest < ActionController::TestCase
       Timecop.freeze(Time.new(2020, 3, 27))
       sign_in create(:teacher)
 
-      create(:level, name: "Level 1")
-      unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-      Script.setup([unit_file])
-
-      get :show, params: {id: 'test-fixture-visible-after'}
+      get :show, params: {id: @unit.name}
       assert_response :success
       refute response.body.include? 'visible after'
       Timecop.return
