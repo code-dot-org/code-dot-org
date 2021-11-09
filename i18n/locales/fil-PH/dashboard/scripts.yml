@@ -12143,6 +12143,8 @@ fil:
               name: Buod
         csa-u6-dev:
           lessons:
+            lesson-17:
+              name: Console
             lesson-18:
               name: Mga Widget
         csdu6-playground:
@@ -12159,6 +12161,10 @@ fil:
           lessons:
             lesson-1:
               name: Mga Widget
+        poetry:
+          lessons:
+            lesson-7:
+              name: Mga conditional
         spelling-bee:
           lessons:
             lesson-1:
