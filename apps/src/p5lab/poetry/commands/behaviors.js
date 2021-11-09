@@ -7,21 +7,41 @@ import * as utils from './utils';
 export const commands = {
   fluttering(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
+    if (!sprite) {
+      // This happens if the sprite was deleted within the same frame, so we
+      // should just no-op
+      return;
+    }
     sprite.y += utils.randomInt(-1, 1);
   },
 
   growing(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
+    if (!sprite) {
+      // This happens if the sprite was deleted within the same frame, so we
+      // should just no-op
+      return;
+    }
     sprite.setScale(sprite.getScale() + 1 / 100);
   },
 
   jittering(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
+    if (!sprite) {
+      // This happens if the sprite was deleted within the same frame, so we
+      // should just no-op
+      return;
+    }
     sprite.setScale(sprite.getScale() + utils.randomInt(-1, 1) / 100);
   },
 
   moving_north_and_looping(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
+    if (!sprite) {
+      // This happens if the sprite was deleted within the same frame, so we
+      // should just no-op
+      return;
+    }
     sprite.y -= sprite.speed;
     if (sprite.y < -50) {
       sprite.y = 450;
@@ -30,6 +50,11 @@ export const commands = {
 
   moving_south_and_looping(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
+    if (!sprite) {
+      // This happens if the sprite was deleted within the same frame, so we
+      // should just no-op
+      return;
+    }
     sprite.y += sprite.speed;
     if (sprite.y > 450) {
       sprite.y = -50;
@@ -38,6 +63,11 @@ export const commands = {
 
   moving_east_and_looping(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
+    if (!sprite) {
+      // This happens if the sprite was deleted within the same frame, so we
+      // should just no-op
+      return;
+    }
     sprite.mirrorX(1);
 
     sprite.x += sprite.speed;
@@ -48,6 +78,11 @@ export const commands = {
 
   moving_west_and_looping(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
+    if (!sprite) {
+      // This happens if the sprite was deleted within the same frame, so we
+      // should just no-op
+      return;
+    }
     sprite.mirrorX(-1);
 
     sprite.x -= sprite.speed;
@@ -58,16 +93,31 @@ export const commands = {
 
   shrinking(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
+    if (!sprite) {
+      // This happens if the sprite was deleted within the same frame, so we
+      // should just no-op
+      return;
+    }
     sprite.setScale(sprite.getScale() - 1 / 100);
   },
 
   spinning_left(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
+    if (!sprite) {
+      // This happens if the sprite was deleted within the same frame, so we
+      // should just no-op
+      return;
+    }
     sprite.rotation -= 6;
   },
 
   spinning_right(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
+    if (!sprite) {
+      // This happens if the sprite was deleted within the same frame, so we
+      // should just no-op
+      return;
+    }
     sprite.rotation += 6;
   },
 
@@ -77,6 +127,11 @@ export const commands = {
     }
 
     const sprite = this.getSpriteArray(spriteArg)[0];
+    if (!sprite) {
+      // This happens if the sprite was deleted within the same frame, so we
+      // should just no-op
+      return;
+    }
     if (sprite.direction === 0) {
       sprite.mirrorX(1);
     } else if (sprite.direction === 180) {
@@ -98,6 +153,11 @@ export const commands = {
     }
 
     const sprite = this.getSpriteArray(spriteArg)[0];
+    if (!sprite) {
+      // This happens if the sprite was deleted within the same frame, so we
+      // should just no-op
+      return;
+    }
     if (utils.randomInt(0, 100) < 20) {
       sprite.direction = (sprite.direction + utils.randomInt(-25, 25)) % 360;
     }
@@ -119,6 +179,11 @@ export const commands = {
 
   wobbling(spriteArg) {
     const sprite = this.getSpriteArray(spriteArg)[0];
+    if (!sprite) {
+      // This happens if the sprite was deleted within the same frame, so we
+      // should just no-op
+      return;
+    }
     if (utils.randomInt(0, 100) < 50) {
       sprite.rotation = utils.randomInt(-1, 1);
     }
