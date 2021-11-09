@@ -2773,6 +2773,10 @@ da:
           lessons:
             lesson-2:
               name: Værktøjer
+        poetry:
+          lessons:
+            lesson-7:
+              name: Betingelser
         spelling-bee:
           lessons:
             lesson-1:
