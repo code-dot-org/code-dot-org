@@ -41,7 +41,7 @@ class Script < ApplicationRecord
   include ScriptConstants
   include SharedCourseConstants
   include SharedConstants
-  include Curriculum::CourseAudiences
+  include Curriculum::CourseTypes
   include Rails.application.routes.url_helpers
 
   include Seeded
@@ -154,9 +154,6 @@ class Script < ApplicationRecord
     }
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values.push(nil), message: 'must be nil, in_development, pilot, beta, preview or stable'}
-  validates :instruction_type, acceptance: {accept: SharedCourseConstants::INSTRUCTION_TYPE.to_h.values.push(nil), message: 'must be nil, teacher_led or self_paced'}
-  validates :instructor_audience, acceptance: {accept: SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values.push(nil), message: 'must be nil, code instructor, plc reviewer, facilitator, or teacher'}
-  validates :participant_audience, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values.push(nil), message: 'must be nil, facilitator, teacher, or student'}
 
   def prevent_new_duplicate_levels(old_dup_level_keys = [])
     new_dup_level_keys = duplicate_level_keys - old_dup_level_keys
@@ -1236,6 +1233,7 @@ class Script < ApplicationRecord
       if destination_unit_group
         raise 'Destination unit group must be in a course version' if destination_unit_group.course_version.nil?
         UnitGroupUnit.create!(unit_group: destination_unit_group, script: copied_unit, position: destination_unit_group.default_units.length + 1)
+        destination_unit_group.write_serialization
         copied_unit.reload
       else
         copied_unit.is_course = true

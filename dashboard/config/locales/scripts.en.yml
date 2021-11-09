@@ -26681,8 +26681,8 @@ en:
               description_teacher: "In this lesson, students learn how to manipulate specific words in the text in their poems by using open-ended prompts and variables to store the user’s input. First, students explore an app with an open-ended prompt. Then students practice using variables in their code until they are able to combine text and variable blocks to create an interactive app.  \n"
             lesson-4:
               name: Build a Poem Generator
-              description_student: 
-              description_teacher: 
+              description_student: Use prompts and variables to make a Poem Generator App to share with your friends!
+              description_teacher: "In this lesson, students will use their new knowledge about open-ended prompts and variables to modify their poems and create a new poem generator app. Students will discuss how random words change the meaning and mood of their poems. \n"
             lesson-5:
               name: Choosing Words Carefully
               description_student: Make your app even better! Change your poem generator app by adding words you want the user to choose from.
