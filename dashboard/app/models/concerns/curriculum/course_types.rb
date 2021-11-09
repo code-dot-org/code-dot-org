@@ -5,11 +5,11 @@ module Curriculum::CourseTypes
 
   included do
     validates :instruction_type, acceptance: {accept: SharedCourseConstants::INSTRUCTION_TYPE.to_h.values, message: 'must be teacher_led or self_paced'}
-    validates :instructor_audience, acceptance: {accept: SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values, message: 'must be code instructor, plc reviewer, facilitator, or teacher'}
+    validates :instructor_audience, acceptance: {accept: SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values, message: 'must be universal instructor, plc reviewer, facilitator, or teacher'}
     validates :participant_audience, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
   end
 
-  # Checks if a user can be the instructor for the course. Code instructors and levelbuilders
+  # Checks if a user can be the instructor for the course. universal instructors and levelbuilders
   # can be the instructors of any course. Student accounts should never be able to be the instructor
   # of any course.
   def can_be_instructor?(user)
@@ -17,7 +17,7 @@ module Curriculum::CourseTypes
     return unit_group.can_be_instructor?(user) if is_a?(Script) && unit_group
 
     return false if user.student?
-    return true if user.permission?(UserPermission::CODE_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
+    return true if user.permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || user.permission?(UserPermission::LEVELBUILDER)
 
     if instructor_audience == 'plc_reviewer'
       return user.permission?(UserPermission::PLC_REVIEWER)
