@@ -1472,9 +1472,7 @@ ur:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: آئس کریم
-            Stars: ستارہ
-            Fireworks: آتش بازی
+            '"placeholder"': آتش بازی
             '"rainbow"': قوس قزح
             '"hearts"': دل
             '"flowers"': پھول
@@ -1489,7 +1487,7 @@ ur:
         text: پلے آواز {SOUND}
         options:
           SOUND:
-            Light: روشنی
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': روشنی
       Poetry_setBackground:
         text: پس منظر رنگ {COLOR} سیٹ کریں
       Poetry_setBackgroundEffect:
