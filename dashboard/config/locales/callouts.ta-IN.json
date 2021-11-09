@@ -271,7 +271,8 @@
           "hello_world_new": "புதிய தொகுதி!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "புதிய தொகுதி!"
+          "hello_world_new": "புதிய தொகுதி!",
+          "hello_world_new_block": "புதிய தொகுதி!!!! "
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "புதிய தொகுதி!"
@@ -316,7 +317,8 @@
         "poetry_hoc_freeplay": {
           "poetry_burst": "புதிய தொகுதி!",
           "poetry_multiple_sprites": "புதிய தொகுதி!",
-          "poetry_new_block": "புதிய தொகுதி!"
+          "poetry_new_block": "புதிய தொகுதி!",
+          "poetry_selector": "ஏதேனும் ஒரு கவிதையைத் தேர்ந்தெடுங்கள் அல்லது உங்களுடையதை உள்ளிடவும்!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "புதிய தொகுதி!"
@@ -359,6 +361,164 @@
         },
         "courseF_editable_madlib": {
           "visualizationResizeBar": "விளையாடும் பகுதியின் அளவை மாற்ற 3 புள்ளிகளை இழுக்கவும்."
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "உங்கள் திட்டத்தில் புதிய ஆடைகளைச் சேர்க்க இங்கே கிளிக் செய்யவும்! "
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "உங்கள் திட்டத்தில் புதிய ஆடைகளைச் சேர்க்க இங்கே கிளிக் செய்யவும்! "
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "எப்போது என்பதை மாற்ற முயற்சிக்கவும். "
+        },
+        "courseF_events_conflict": {
+          "stops_block": "புதிய தொகுதிகள் இங்கே! "
+        },
+        "courseF_events_key": {
+          "whenKey": "இங்கே காணப்படும் புதிய நிகழ்வுத் தொகுதியைப் பயன்படுத்தவும்."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "இந்த தொகுதி தவறான வரிசையில் உள்ளது. "
+        },
+        "courseF_events_time": {
+          "events_category": "நிகழ்வுகள் வகையைத் திறக்க இங்கே கிளிக் செய்யவும். "
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "இந்த புள்ளியின் கீழே உள்ள குறியீட்டை உற்றுப் பாருங்கள். "
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "நடத்தை வகையைத் திறக்க இங்கே கிளிக் செய்யவும்."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Sprites வகையைத் திறக்க இங்கே கிளிக் செய்யவும்."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "இருப்பிட வகையைத் திறக்க இங்கே கிளிக் செய்யவும்."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "இங்கே ஒரு புதிய தொகுதியைத் தேடுங்கள். "
+        },
+        "courseF_text_answer": {
+          "answered_block": "இங்கே ஒரு புதிய தொகுதியைத் தேடுங்கள்! "
+        },
+        "courseF_text_choice_title": {
+          "title_block": "இரண்டு புதிய தொகுதிகளை இங்கே தேடுங்கள்! "
+        },
+        "courseF_text_concat": {
+          "join_blocks": "புதிய தொகுதிகளை இங்கே தேடுங்கள்! "
+        },
+        "courseF_text_events": {
+          "events_category": "நிகழ்வுகள் வகையைத் திறக்க இங்கே கிளிக் செய்யவும். "
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "உடனடி தொகுதியை இங்கே கண்டறியவும்!"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "இந்த புள்ளியின் கீழே உள்ள குறியீட்டை உற்றுப் பாருங்கள். "
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "புதிய பின்னணியை அமைக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "கீழே உள்ள நடத்தைகளில் ஒன்றைக் கொண்டு இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "குறியீட்டை இயக்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "இந்த நிகழ்வுத் தொகுதியை உங்கள் பணியிடத்தில் சேர்க்கவும். "
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "உங்கள் திட்டத்தில் ஆடைகளைச் சேர்க்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_animals_location": {
+          "pin": "பின்  "
+        },
+        "helloworld_animals_multi": {
+          "pin": "பின்  "
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "உருவங்களை பேச இந்த தொகுதியை பயன்படுத்தவும். ",
+          "hello_world_make_sprite": "ஸ்பிரைட்டை உருவாக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "புதிய பின்னணியை அமைக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "கீழே உள்ள நடத்தைகளில் ஒன்றைக் கொண்டு இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "குறியீட்டை இயக்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "இந்த நிகழ்வுத் தொகுதியை உங்கள் பணியிடத்தில் சேர்க்கவும். "
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "உங்கள் திட்டத்தில் ஆடைகளைச் சேர்க்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_emoji_location": {
+          "pin": "பின்  "
+        },
+        "helloworld_emoji_multi": {
+          "pin": "பின்  "
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "உருவங்களை பேச இந்த தொகுதியை பயன்படுத்தவும். ",
+          "hello_world_make_sprite": "ஸ்பிரைட்டை உருவாக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "புதிய பின்னணியை அமைக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "கீழே உள்ள நடத்தைகளில் ஒன்றைக் கொண்டு இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_food_click": {
+          "hw_Run": "குறியீட்டை இயக்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "இந்த நிகழ்வுத் தொகுதியை உங்கள் பணியிடத்தில் சேர்க்கவும். "
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "உங்கள் திட்டத்தில் ஆடைகளைச் சேர்க்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_food_location": {
+          "pin": "பின்  "
+        },
+        "helloworld_food_multi": {
+          "pin": "பின்  "
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "உருவங்களை பேச இந்த தொகுதியை பயன்படுத்தவும். ",
+          "hello_world_make_sprite": "ஸ்பிரைட்டை உருவாக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "புதிய பின்னணியை அமைக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "கீழே உள்ள நடத்தைகளில் ஒன்றைக் கொண்டு இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "குறியீட்டை இயக்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "இந்த நிகழ்வுத் தொகுதியை உங்கள் பணியிடத்தில் சேர்க்கவும். "
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "உங்கள் திட்டத்தில் ஆடைகளைச் சேர்க்க இங்கே கிளிக் செய்யவும். "
+        },
+        "helloworld_retro_location": {
+          "pin": "பின்  "
+        },
+        "helloworld_retro_multi": {
+          "pin": "பின்  "
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "உருவங்களை பேச இந்த தொகுதியை பயன்படுத்தவும். ",
+          "hello_world_make_sprite": "ஸ்பிரைட்டை உருவாக்க இந்தத் தொகுதியைப் பயன்படுத்தவும். "
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "குறியீடு தொகுதிகளை இங்கே கண்டறியவும். ",
+          "pause_button": "இந்தப் பொத்தான் மூலம் உங்கள் அனிமேஷனைச் சோதிக்கவும். "
         }
       }
     }

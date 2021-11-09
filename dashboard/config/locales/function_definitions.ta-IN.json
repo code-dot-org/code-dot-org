@@ -1639,6 +1639,11 @@
           "jump": {
             "name": "குதி"
           }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "விளையாட்டு மீட்டமை "
+          }
         }
       }
     }

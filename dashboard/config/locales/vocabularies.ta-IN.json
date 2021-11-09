@@ -259,6 +259,16 @@
           "word": "இயந்திர வழி கற்றல்",
           "definition": "வெளிப்படையாக திட்டமிடப்படாமல் கணினிகள் வடிவங்களை அங்கீகரித்து முடிவுகளை எடுப்பது எப்படி"
         },
+        "code/poem-art/unversioned": {
+          "word": "நிரல்தொடர்"
+        },
+        "event/poem-art/unversioned": {
+          "word": "நிகழ்வு",
+          "definition": "ஏதாவது நடக்க காரணமான செயல்."
+        },
+        "program/poem-art/unversioned": {
+          "word": "திட்டம்"
+        },
         "event/outbreak/unversioned": {
           "word": "நிகழ்வு",
           "definition": "ஏதாவது நடக்க காரணமான செயல்."
