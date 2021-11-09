@@ -80,41 +80,48 @@ class AnimationPickerListItem extends React.Component {
     return (
       <div
         style={rootStyle}
-        onClick={onClick}
-        className="uitest-animation-picker-item"
+        onFocus={() => this.setState({hover: true})}
+        onBlur={() => this.setState({hover: false})}
         onMouseEnter={() => this.setState({hover: true})}
         onMouseLeave={() => this.setState({hover: false})}
       >
-        <div style={thumbnailStyleWithHover}>
-          {animationProps && (
-            <AnimationPreview
-              animationProps={animationProps}
-              sourceUrl={animationProps.sourceUrl}
-              width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-              height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
-              playBehavior={!playAnimations ? PlayBehavior.NEVER_PLAY : null}
-              onPreviewLoad={() => this.setState({loaded: true})}
-            />
-          )}
-          {icon && <i className={'fa fa-' + icon} />}
-          {category && (
-            <img
-              className={category}
-              style={styles.categoryImage}
-              src={iconImageSrc}
-            />
-          )}
-        </div>
+        <button
+          style={thumbnailStyleWithHover}
+          onClick={onClick}
+          className={category}
+          type="button"
+        >
+          <div>
+            {animationProps && (
+              <AnimationPreview
+                animationProps={animationProps}
+                sourceUrl={animationProps.sourceUrl}
+                width={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+                height={THUMBNAIL_SIZE - 2 * THUMBNAIL_BORDER_WIDTH}
+                playBehavior={!playAnimations ? PlayBehavior.NEVER_PLAY : null}
+                onPreviewLoad={() => this.setState({loaded: true})}
+              />
+            )}
+            {icon && <i className={'fa fa-' + icon} />}
+            {category && (
+              <img
+                className={category}
+                style={styles.categoryImage}
+                src={iconImageSrc}
+              />
+            )}
+          </div>
+          {animationProps &&
+            loaded &&
+            (hover || selected) &&
+            multiSelectEnabled && (
+              <i
+                className={multiSelectIconClassName}
+                style={multiSelectIconStyle}
+              />
+            )}
+        </button>
         {label && <div style={labelStyle}>{label}</div>}
-        {animationProps &&
-          loaded &&
-          (hover || selected) &&
-          multiSelectEnabled && (
-            <i
-              className={multiSelectIconClassName}
-              style={multiSelectIconStyle}
-            />
-          )}
       </div>
     );
   }
@@ -125,18 +132,25 @@ const styles = {
     float: 'left',
     width: THUMBNAIL_SIZE,
     textAlign: 'center',
-    marginRight: 10,
-    marginBottom: 10,
-    position: 'relative'
+    margin: '1px 1px 10px 1px',
+    position: 'relative',
+    border: 0,
+    paddingRight: 10,
+    outline: 'none'
   },
   thumbnail: {
     height: THUMBNAIL_SIZE,
+    width: '100%',
     borderStyle: 'solid',
     borderColor: color.light_gray,
     borderWidth: THUMBNAIL_BORDER_WIDTH,
     borderRadius: 12,
     padding: '2px',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    background: 'none',
+    boxShadow: 'none',
+    margin: '0px 0px 0px 0px',
+    outline: 'none'
   },
   thumbnailIcon: {
     color: color.white,
@@ -147,11 +161,15 @@ const styles = {
     ':hover': {
       backgroundColor: color.light_purple,
       borderColor: color.light_purple
+    },
+    ':focus': {
+      backgroundColor: color.light_purple,
+      borderColor: color.light_purple
     }
   },
   label: {
     marginTop: 3,
-    fontSize: '90%',
+    fontSize: 12,
     whiteSpace: 'nowrap',
     overflow: 'hidden'
   },
@@ -168,6 +186,7 @@ const styles = {
     position: 'absolute',
     borderStyle: 'solid',
     borderWidth: '2px',
+    fontSize: HOVER_PLUS_SIZE,
     height: HOVER_PLUS_SIZE,
     width: HOVER_PLUS_SIZE,
     borderRadius: 5,

@@ -1,6 +1,7 @@
 import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import commands from './commands/index';
+import {APP_HEIGHT, APP_WIDTH} from '../constants';
 
 export default class CoreLibrary {
   constructor(p5) {
@@ -100,8 +101,33 @@ export default class CoreLibrary {
     width = Math.max(width, 50);
     const height = lines.length * textSize + padding * 2;
 
+    let triangleSize = 10;
+    let triangleTipX = x;
+    // The number of pixels used to create the rounded corners of the speech bubble:
+    const rectangleCornerRadius = 8;
+
+    // For the calculations below, keep in mind that x and y are located at the horizontal center and the top of the sprite, respectively.
+    // In other words, x and y indicate the default position of the bubble's triangular tip.
+    y = Math.min(y, APP_HEIGHT);
+    if (y - height - triangleSize < 1) {
+      triangleSize = Math.max(1, y - height);
+      y = height + triangleSize;
+    }
+    if (x - width / 2 < 1) {
+      triangleTipX = Math.max(x, rectangleCornerRadius + triangleSize);
+      x = width / 2;
+    }
+    if (x + width / 2 > APP_WIDTH) {
+      triangleTipX = Math.min(x, APP_WIDTH - rectangleCornerRadius);
+      x = APP_WIDTH - width / 2;
+    }
+
     // Draw bubble.
-    const {minY} = drawUtils.speechBubble(this.p5, x, y, width, height);
+    const {minY} = drawUtils.speechBubble(this.p5, x, y, width, height, {
+      triangleSize,
+      triangleTipX,
+      rectangleCornerRadius
+    });
 
     // Draw text within bubble.
     drawUtils.multilineText(this.p5, lines, x, minY + padding, textSize, {
@@ -275,8 +301,17 @@ export default class CoreLibrary {
       sprite.name = name;
     }
 
-    sprite.direction = 0;
-    sprite.speed = 5;
+    sprite.direction = opts.direction || 0;
+    sprite.rotation = opts.rotation || 0;
+    sprite.speed = opts.speed || 5;
+    sprite.lifetime = opts.lifetime || -1;
+    if (opts.delay) {
+      sprite.delay = opts.delay;
+    }
+    if (opts.initialAngle) {
+      sprite.initialAngle = opts.initialAngle;
+    }
+
     sprite.baseScale = 1;
     sprite.setScale = function(scale) {
       sprite.scale = scale * sprite.baseScale;
@@ -296,7 +331,7 @@ export default class CoreLibrary {
         );
       sprite.scale *= sprite.baseScale;
     }
-    sprite.setScale(this.defaultSpriteSize / 100);
+    sprite.setScale((opts.scale || this.defaultSpriteSize) / 100);
 
     // If there are any whenSpriteCreated events, call the callback immediately
     // so that the event happens during the same draw loop frame.

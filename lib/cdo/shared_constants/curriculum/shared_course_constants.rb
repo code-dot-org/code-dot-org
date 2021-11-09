@@ -21,7 +21,7 @@ module SharedCourseConstants
   # Used to determine who can teach a course
   INSTRUCTOR_AUDIENCE = OpenStruct.new(
     {
-      code_instructor: "code_instructor",
+      universal_instructor: "universal_instructor",
       plc_reviewer: "plc_reviewer",
       facilitator: "facilitator",
       teacher: "teacher"

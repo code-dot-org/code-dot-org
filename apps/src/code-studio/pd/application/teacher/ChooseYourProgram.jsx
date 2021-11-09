@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {FormGroup, Row, Col} from 'react-bootstrap';
+import color from '@cdo/apps/util/color';
 import {
   PageLabels,
   SectionHeaders,
-  TextFields
+  TextFields,
+  Year
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {FormGroup, Row, Col} from 'react-bootstrap';
 import {
   PROGRAM_CSD,
   PROGRAM_CSP,
-  PROGRAM_CSA,
-  YEAR
+  PROGRAM_CSA
 } from './TeacherApplicationConstants';
-import color from '@cdo/apps/util/color';
 import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
 import {LabeledCheckBoxes} from '../../form_components_func/labeled/LabeledCheckBoxes';
 import {LabeledNumberInput} from '../../form_components_func/labeled/LabeledInput';
@@ -21,41 +21,30 @@ import {
   LabeledRadioButtonsWithAdditionalTextFields
 } from '../../form_components_func/labeled/LabeledRadioButtons';
 import {FormContext} from '../../form_components_func/FormComponent';
+import {useRegionalPartner} from '../../components/useRegionalPartner';
 
-const getMinCourseHours = program => {
+const getProgramInfo = program => {
   switch (program) {
     case PROGRAM_CSD:
-      return 50;
+      return {name: 'CS Discoveries', shortName: 'csd', minCourseHours: 50};
     case PROGRAM_CSP:
-      return 100;
+      return {name: 'CS Principles', shortName: 'csp', minCourseHours: 100};
     case PROGRAM_CSA:
-      return 140;
+      return {name: 'CSA', shortName: 'csa', minCourseHours: 140};
     default:
-      return 0;
+      return {name: 'CS Program', shortName: 'cs', minCourseHours: 0};
   }
 };
 
 const ChooseYourProgram = props => {
   const {data} = props;
 
-  const regionalPartner = null; // TODO useRegionalPartner
+  const [regionalPartner] = useRegionalPartner(data);
 
-  const isOffered = program => {
-    return true; // TODO look up regional partner
-  };
-
-  const getNameForSelectedProgram = () => {
-    switch (data.program) {
-      case PROGRAM_CSD:
-        return 'CS Discoveries';
-      case PROGRAM_CSP:
-        return 'CS Principles';
-      case PROGRAM_CSA:
-        return 'CSA';
-      default:
-        return 'CS Program';
-    }
-  };
+  const programInfo = getProgramInfo(data.program);
+  const isOffered =
+    regionalPartner?.pl_programs_offered &&
+    regionalPartner.pl_programs_offered[programInfo.shortName];
 
   // This should be kept consistent with the calculation logic in
   // dashboard/app/models/pd/application/teacher_application.rb.
@@ -73,8 +62,7 @@ const ChooseYourProgram = props => {
   }
 
   let belowMinCourseHours = false;
-  let program = data.program;
-  let minCourseHours = getMinCourseHours(program);
+  let minCourseHours = programInfo.minCourseHours;
   if (courseHours !== null && courseHours < minCourseHours) {
     belowMinCourseHours = true;
   }
@@ -93,6 +81,20 @@ const ChooseYourProgram = props => {
         <FormGroup>
           <h3>Section 2: {SectionHeaders.chooseYourProgram}</h3>
           <LabeledRadioButtons name="program" />
+
+          {data.program === PROGRAM_CSA && !isOffered && (
+            <p style={styles.error}>
+              The Computer Science A Professional Learning Program is not yet
+              offered in your region for the {Year} academic year. We are
+              working with our national network of Regional Partners to expand
+              the program to all regions by 2023-24.{' '}
+              {regionalPartner &&
+                `Consider applying for an
+              alternative program or reach out to ${regionalPartner.name} to let
+              them know you’re interested in joining the program next year!`}
+            </p>
+          )}
+
           {data.program === PROGRAM_CSD && (
             <LabeledCheckBoxes name="csdWhichGrades" />
           )}
@@ -129,19 +131,6 @@ const ChooseYourProgram = props => {
             </>
           )}
 
-          {data.program === PROGRAM_CSA && !isOffered(data.program) && (
-            <p>
-              The Computer Science A Professional Learning Program is not yet
-              offered in your region for the {YEAR} academic year. We are
-              working with our national network of Regional Partners to expand
-              the program to all regions by 2023-24.{' '}
-              {regionalPartner &&
-                `Consider applying for an
-              alternative program or reach out to ${regionalPartner.name} to let
-              them know you’re interested in joining the program next year!`}
-            </p>
-          )}
-
           <p>
             <strong>Course hours =</strong> (number of minutes of one class){' '}
             <strong> X </strong> (number of days per week the class will be
@@ -157,7 +146,7 @@ const ChooseYourProgram = props => {
             }}
             label={PageLabels.chooseYourProgram.csHowManyMinutes.replace(
               '{{CS program}}',
-              getNameForSelectedProgram()
+              programInfo.name
             )}
             labelWidth={{md: 8}}
             controlWidth={{md: 4}}
@@ -170,7 +159,7 @@ const ChooseYourProgram = props => {
             }}
             label={PageLabels.chooseYourProgram.csHowManyDaysPerWeek.replace(
               '{{CS program}}',
-              getNameForSelectedProgram()
+              programInfo.name
             )}
             labelWidth={{md: 8}}
             controlWidth={{md: 4}}
@@ -202,9 +191,9 @@ const ChooseYourProgram = props => {
           {belowMinCourseHours && (
             <p style={{color: 'red'}}>
               Note: {minCourseHours} or more hours of instruction per{' '}
-              {getNameForSelectedProgram()} section are strongly recommended. We
-              suggest checking with your school administration to see if
-              additional time can be allotted for this course in {YEAR}.
+              {programInfo.name} section are strongly recommended. We suggest
+              checking with your school administration to see if additional time
+              can be allotted for this course in {Year}.
             </p>
           )}
 
@@ -217,9 +206,9 @@ const ChooseYourProgram = props => {
           {showTeachingPlansNote && (
             <p style={styles.error}>
               Note: This program is designed to work best for teachers who are
-              teaching this course in the {YEAR} school year. Scholarship
+              teaching this course in the {Year} school year. Scholarship
               eligibility is dependent on whether or not you will be teaching
-              the course during the {YEAR} school year.
+              the course during the {Year} school year.
             </p>
           )}
 
@@ -234,7 +223,7 @@ const ChooseYourProgram = props => {
               name="replaceWhichCourse"
               label={PageLabels.chooseYourProgram.replaceWhichCourse.replace(
                 '{{CS program}}',
-                getNameForSelectedProgram()
+                programInfo.name
               )}
               textFieldMap={{
                 [TextFields.iDontKnowExplain]: 'other'
@@ -282,13 +271,16 @@ ChooseYourProgram.processPageData = data => {
   const changes = {};
 
   if (data.program) {
-    uniqueRequiredFields
-      .filter(program => program !== data.program)
-      .forEach(field => {
+    const otherPrograms = Object.keys(uniqueRequiredFields).filter(
+      program => program !== data.program
+    );
+    otherPrograms.forEach(otherProgram => {
+      uniqueRequiredFields[otherProgram].forEach(field => {
         changes[field] = undefined;
       });
+    });
   }
-  // the follow are unique to csa but not required
+  // the following are unique to csa but not required
   if (data.program && data.program !== PROGRAM_CSA) {
     changes.csaAlreadyKnow = undefined;
     changes.csaPhoneScreen = undefined;

@@ -7,9 +7,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:53:34 UTC",
+    "serialized_at": "2021-11-07 00:06:23 UTC",
     "published_state": "beta",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "new-express"
     }
@@ -2985,7 +2987,12 @@
         "level_keys": [
           "courseC_flappy_events1",
           "flappy_1"
-        ]
+        ],
+        "variants": {
+          "courseC_flappy_events1": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3011,7 +3018,12 @@
         "level_keys": [
           "courseC_flappy_events2",
           "flappy_2"
-        ]
+        ],
+        "variants": {
+          "courseC_flappy_events2": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3037,7 +3049,12 @@
         "level_keys": [
           "courseC_flappy_events3",
           "flappy_3"
-        ]
+        ],
+        "variants": {
+          "courseC_flappy_events3": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3063,7 +3080,12 @@
         "level_keys": [
           "courseC_flappy_events4",
           "flappy_4"
-        ]
+        ],
+        "variants": {
+          "courseC_flappy_events4": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3089,7 +3111,12 @@
         "level_keys": [
           "courseC_flappy_events5",
           "flappy_5"
-        ]
+        ],
+        "variants": {
+          "courseC_flappy_events5": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3115,7 +3142,12 @@
         "level_keys": [
           "courseC_flappy_events6",
           "flappy_6"
-        ]
+        ],
+        "variants": {
+          "courseC_flappy_events6": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3141,7 +3173,12 @@
         "level_keys": [
           "courseC_flappy_events7",
           "flappy_7"
-        ]
+        ],
+        "variants": {
+          "courseC_flappy_events7": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3167,7 +3204,12 @@
         "level_keys": [
           "courseC_flappy_events8",
           "flappy_8"
-        ]
+        ],
+        "variants": {
+          "courseC_flappy_events8": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3193,7 +3235,12 @@
         "level_keys": [
           "courseC_flappy_events9",
           "flappy_9"
-        ]
+        ],
+        "variants": {
+          "courseC_flappy_events9": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3219,7 +3266,12 @@
         "level_keys": [
           "courseC_flappy_events10",
           "flappy_11"
-        ]
+        ],
+        "variants": {
+          "courseC_flappy_events10": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3245,7 +3297,12 @@
         "level_keys": [
           "bounce_1",
           "courseD_bounce_events1s"
-        ]
+        ],
+        "variants": {
+          "courseD_bounce_events1s": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3271,7 +3328,12 @@
         "level_keys": [
           "bounce_2",
           "courseD_bounce_events2s"
-        ]
+        ],
+        "variants": {
+          "courseD_bounce_events2s": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3297,7 +3359,12 @@
         "level_keys": [
           "bounce_5",
           "courseD_bounce_events5s"
-        ]
+        ],
+        "variants": {
+          "courseD_bounce_events5s": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3323,7 +3390,12 @@
         "level_keys": [
           "bounce_6",
           "courseD_bounce_events6s"
-        ]
+        ],
+        "variants": {
+          "courseD_bounce_events6s": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3349,7 +3421,12 @@
         "level_keys": [
           "bounce_7",
           "courseD_bounce_events7s"
-        ]
+        ],
+        "variants": {
+          "courseD_bounce_events7s": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3375,7 +3452,12 @@
         "level_keys": [
           "bounce_10",
           "courseD_bounce_events10s"
-        ]
+        ],
+        "variants": {
+          "courseD_bounce_events10s": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3401,7 +3483,12 @@
         "level_keys": [
           "bounce_11",
           "courseD_bounce_events11s"
-        ]
+        ],
+        "variants": {
+          "courseD_bounce_events11s": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -3427,7 +3514,12 @@
         "level_keys": [
           "bounce_12",
           "courseD_bounce_events12s"
-        ]
+        ],
+        "variants": {
+          "courseD_bounce_events12s": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
