@@ -23302,6 +23302,8 @@ tr:
             CS Discoveries Post Course survey:
               key: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
               name: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+            lesson-1:
+              name: Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi
           lesson_groups:
             csd2_1v2:
               display_name: 'Bölüm 1: Web sayfası oluşturma'
@@ -23394,6 +23396,8 @@ tr:
             CS Discoveries Post Course survey:
               key: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
               name: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+            lesson-1:
+              name: Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi
           lesson_groups:
             csd3_1:
               display_name: 'Bölüm 1: Resim ve animasyon'
@@ -23461,6 +23465,8 @@ tr:
             CS Discoveries Post Course survey:
               key: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
               name: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+            CS Discoveries Post-Course Survey:
+              name: Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi
           lesson_groups:
             csd4_1:
               display_name: 'Bölüm 1: Kullanıcı merkezli tasarım'
@@ -23531,6 +23537,8 @@ tr:
             CS Discoveries Post Course survey:
               key: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
               name: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+            CS Discoveries Post-Course Survey:
+              name: Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi
           lesson_groups:
             csd5_1:
               display_name: 'Bölüm 1: Bilgileri gösterme'
@@ -23688,6 +23696,8 @@ tr:
             CS Discoveries Post Course survey:
               key: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
               name: Bilgisayar Bilimi Keşifleri Kurs Sonrası anketi
+            CS Discoveries Post-Course Survey:
+              name: Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi
           lesson_groups:
             csd6_1:
               display_name: 'Bölüm 1: Donanım çıktısı'
@@ -26202,6 +26212,13 @@ tr:
           lesson_groups:
             lessonGroup-2:
               display_name: İçerik
+        csa6-pilot:
+          lessons:
+            lesson-15:
+              name: Değerlendirme Günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -26306,6 +26323,8 @@ tr:
                 **Günün Sorusu:** Bilgisayarlar sayısal verilerle tahmin yapmayı nasıl öğrenir?
             Survey Planning:
               name: Veri toplama tasarımı
+            CS Discoveries Post-Course Survey:
+              name: Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi
           lesson_groups:
             lessonGroup-4:
               display_name: Anket
@@ -26616,6 +26635,10 @@ tr:
               name: Araçlar
             lesson-2:
               name: Araçlar
+        poetry:
+          lessons:
+            lesson-7:
+              name: Koşullar
         spelling-bee:
           lessons:
             lesson-1:
@@ -26626,6 +26649,20 @@ tr:
         csa5-exemplars:
           lessons:
             lesson-14:
+              name: Değerlendirme Günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: İçerik
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Kurs-Sonrası Anketi
+          title: Bilgisayar Bilimi Keşifleri Kurs Sonrası Anketi
+        csa6-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Değerlendirme Günü
+            lesson-15:
               name: Değerlendirme Günü
           lesson_groups:
             lessonGroup-2:

@@ -1998,6 +1998,28 @@
         },
         "courseF_variables_predict": {
           "variablesPredict": "Aşağıdaki koda dikkatlice bakın."
+        },
+        "courseA_EOC_playlab_animals": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people": {
+          "question_mark": "?"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Programını burada yavaşlatabilirsin."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Kodunuzda her seferinde bir blok ile adım adım ilerlemeyi deneyin."
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "Soruyu yanıtladığınızda arka planın rengi değişti mi? Öyleyse, 'Bitir'e basın. Değilse, 'Sıfırla'ya basın, kodunuzu değiştirin, ve yeniden 'Çalıştır'a basın."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Burada iki yeni blok ara!",
+          "text_answer_finish": "Bir başlık ekranı 3 saniye göründü mü? Öyleyse, 'Bitir'e basın. Değilse, 'Sıfırla'ya basın, kodunuzu değiştirin, ve yeniden 'Çalıştır'a basın."
         }
       }
     }
