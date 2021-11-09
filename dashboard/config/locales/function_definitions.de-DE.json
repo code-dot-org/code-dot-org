@@ -3869,6 +3869,18 @@
               "length": "Länge",
               "sides": "Kanten"
             }
+          },
+          "small flower": {
+            "name": "kleine Blume"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "LOGISCHE BLUMEN2"
+          },
+          "LOGIC FLOWER": {
+            "name": "LOGISCHE BLUME"
+          },
+          "LOGIC FLOWERS": {
+            "name": "LOGISCHE BLUMEN"
           }
         },
         "Course F: Artist Project_Flowers_examples_2021": {
@@ -4369,6 +4381,11 @@
               "direction": "Richtung",
               "nectars": "Nektar"
             }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "Spiel zurücksetzen"
           }
         }
       }

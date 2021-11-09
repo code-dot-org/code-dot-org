@@ -1957,6 +1957,108 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Neuer Block!",
           "poetry_remove_sprite": "Neuer Block!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Klicke hier, um neue Kostüme zu deinem Projekt hinzuzufügen!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Klicke hier, um neue Kostüme zu deinem Projekt hinzuzufügen!"
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Du kannst dein Programm hier verlangsamen."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Versuche, deinen Code Block für Block durchzugehen."
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Drücke zuerst die Run-Taste!",
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Drücke zuerst die Run-Taste!",
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Drücke zuerst die Run-Taste!",
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Drücke zuerst die Run-Taste!",
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Versuche, „wenn“ in „während“ zu ändern."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Es gibt neue Blöcke!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Verwende den neuen Ereignisblock, den du hier findest."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Dieser Block befindet sich in der falschen Reihenfolge."
+        },
+        "courseF_events_time": {
+          "events_category": "Klicke hier, um die Kategorie Ereignisse zu öffnen."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Untersuche den nachfolgenden Code unter diesem Punkt."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Klicke hier, um die Kategorie Verhaltensweisen zu öffnen."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Klicke hier, um die Kategorie Sprites zu öffnen."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Klicke hier, um die Kategorie Standorte zu öffnen."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Hier findest du einen neuen Block."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Hier findest du einen neuen Block!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "Hat sich die Farbe des Hintergrunds geändert, als du die Frage beantwortet hast? Wenn ja, drücke auf \"Fertigstellen\". Wenn nicht, drücke 'Reset', ändere deinen Code und drücke erneut 'Run'."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Bist du fertig? Wenn ja, drücke auf \"Fertigstellen\". Wenn nicht, drücke 'Zurücksetzen', ändere deinen Code und drücke erneut 'Ausführen'."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Hier findest du zwei neue Blöcke!",
+          "text_answer_finish": "Wurde ein Titelbildschirm für 3 Sekunden angezeigt? Wenn ja, drücke auf \"Beenden\". Wenn nicht, drücke 'Zurücksetzen', ändere deinen Code und drücke erneut 'Ausführen'."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Hier findest du neue Blöcke!"
+        },
+        "courseF_text_events": {
+          "events_category": "Klicke hier, um die Kategorie Ereignisse zu öffnen."
+        },
+        "courseF_text_print": {
+          "print_block": "Hier findest du den Block \"Drucken\"!",
+          "text_print_finish": "Wurde deine Nachricht oben gedruckt? Wenn ja, drücke auf \"Fertigstellen\". Wenn nicht, drücke 'Zurücksetzen', ändere deinen Code und drücke erneut 'Ausführen'."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Hier findest du den Block \"Aufforderung\"!"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Untersuche den nachfolgenden Code unter diesem Punkt."
         }
       }
     }

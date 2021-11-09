@@ -206,12 +206,25 @@
         "machine_learning/oceans/unversioned": {
           "word": "Maschinelles Lernen"
         },
+        "code/poem-art/unversioned": {
+          "word": "Code"
+        },
+        "event/poem-art/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Programm"
+        },
         "event/outbreak/unversioned": {
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "sprite/coursef/2021": {
           "word": "Sprite"
+        },
+        "user/coursef/2021": {
+          "word": "Benutzer"
         },
         "behavior/coursef/2021": {
           "word": "Verhalten"
@@ -221,7 +234,8 @@
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "algorithm/coursef/2021": {
-          "word": "Algorithmus"
+          "word": "Algorithmus",
+          "definition": "Liste von Schritten zur Erledigung der Aufgabe."
         },
         "event/coursef/2021": {
           "word": "Ereignis",
