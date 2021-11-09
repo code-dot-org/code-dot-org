@@ -47,7 +47,7 @@ class UserTest < ActiveSupport::TestCase
     @teacher = create :teacher
     @student = create :student
     @facilitator = create :facilitator
-    @code_instructor = create :code_instructor
+    @universal_instructor = create :universal_instructor
     @plc_reviewer = create :plc_reviewer
     @levelbuilder = create :levelbuilder
   end
@@ -2831,9 +2831,9 @@ class UserTest < ActiveSupport::TestCase
     assert @facilitator.teacher?
     assert @facilitator.verified_instructor?
 
-    # code instructors should be verified instructors too
-    assert @code_instructor.teacher?
-    assert @code_instructor.verified_instructor?
+    # universal instructors should be verified instructors too
+    assert @universal_instructor.teacher?
+    assert @universal_instructor.verified_instructor?
 
     #plc reviewers should be verified instructors too
     assert @plc_reviewer.teacher?
