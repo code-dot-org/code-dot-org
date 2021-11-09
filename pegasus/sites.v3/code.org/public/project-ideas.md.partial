@@ -91,7 +91,15 @@ elementary-school) to find the right course for your age and skill level.
 </table>
 
 # Project Ideas for Middle and High School Students
-[Web Lab](https://code.org/educate/weblab), [Game Lab](https://code.org/educate/gamelab) and [App Lab](https://code.org/educate/applab) can be used by anyone age 13+ with an account on Code.org but are targeted at middle and high school students. Programming in a brand new environment can be challenging and intimidating. We recommend giving yourself sufficient time to learn to use them. Don't give up! Below you can find an overview of each tool and also how to practice using it. For more information about full course offerings, check out [CS Discoveries](https://code.org/educate/csd)for middle school or [CS Principles](https://code.org/educate/csp) for high school.
+[Web Lab](https://code.org/educate/weblab), [Game Lab](https://code.org/educate/
+gamelab) and [App Lab](https://code.org/educate/applab) can be used by anyone
+age 13+ with an account on Code.org but are targeted at middle and high school
+students. Programming in a brand new environment can be challenging and
+intimidating. We recommend giving yourself sufficient time to learn to use
+them. Don't give up! Below you can find an overview of each tool and also how
+to practice using it. For more information about full course offerings, check
+out [CS Discoveries](https://code.org/educate/csd)for middle school or [CS
+Principles](https://code.org/educate/csp) for high school.
 
 ## [**Web Lab**](https://code.org/educate/weblab)
 <div class="col-33" style="padding-right: 20px;">
@@ -203,75 +211,75 @@ elementary-school) to find the right course for your age and skill level.
     </tr>
   </thead>
   <tbody>
-      <tr>
-          <td>
-            <h3><strong>No Sprites Animation Challenge</strong></h3>
-            <p>
-              Test your understanding of variables and the draw loop by
-              creating an animated scene without any sprites!
-            </p>
-            <img src="/images/athome/no-sprites.gif" style="max-width:50%"/>
-            <br>
-            <br>
-            <p>
-              <a href="https://docs.google.com/document/d/1JGmqwOUr-9LgjbbaEqVK8AQsHSQWvyjgHOJ-9CblU6o/edit#heading=h.jornae4vwl7p">
-                More Details
-              </a>
-            </p>
-            <p>
-              <a href="https://docs.google.com/document/d/1PyqSvPvg01usv6uS1lf-E_kLHAf59iWteyALUqOlEgM/edit#">
-                Project Guide
-              </a>
-            </p>
-          </td>
-          <td>
-            <h3>
-              <strong>Randomized Image Creator</strong>
-            </h3>
-            <p>
-              Apply knowledge of user input and the draw loop to create on-
-              demand randomized images.
-            </p>
-            <img src="/images/athome/random-image.gif" style="max-width:50%"/>
-            <br>
-            <br>
-            <p>
-              <a href="https://docs.google.com/document/d/
-                1QGIvapBacMyvHVRDrLH179DEkjOMUBrv7Zh6OYz_Vyo/edit#">
-                More Details
-              </a>
-            </p>
-            <p>
-              <a href="https://docs.google.com/document/d/1-
-                aSVaGYgQFymtLse8oQg1QXdWohbIYzLysfCFJhlRRk/edit#">
-                Project Guide
-              </a>
-            </p>
-          </td>
-          <td>
-            <h3><strong>Teach a Science Concept</strong></h3>
-            <p>
-              Create your own pixel animations and add text to create an
-              interactive presentation about a science concept - or any other
-              topic!
-            </p>
-            <img src="/images/athome/science-concept.gif" style="max-width:50%"/>
-            <br>
-            <br>
-            <p>
-              <a href="https://docs.google.com/document/d/
-                1gevkecZBDUb49KptVE3IqfU1E8Ov5zjbR73bnETsI8g/edit#">
-                More Details
-              </a>
-            </p>
-            <p>
-              <a href="https://docs.google.com/document/d/
-                1mgpQfAsMGJFZlHQwzX0ePIlI8cx8zejLZb0HOwlN95A/edit#">
-                Project Guide
-              </a>
-            </p>
-          </td>
-      </tr>
+    <tr>
+      <td>
+        <h3><strong>No Sprites Animation Challenge</strong></h3>
+        <p>
+          Test your understanding of variables and the draw loop by
+          creating an animated scene without any sprites!
+        </p>
+        <img src="/images/athome/no-sprites.gif" style="max-width:50%"/>
+        <br>
+        <br>
+        <p>
+          <a href="https://docs.google.com/document/d/1JGmqwOUr-9LgjbbaEqVK8AQsHSQWvyjgHOJ-9CblU6o/edit#heading=h.jornae4vwl7p">
+            More Details
+          </a>
+        </p>
+        <p>
+          <a href="https://docs.google.com/document/d/1PyqSvPvg01usv6uS1lf-E_kLHAf59iWteyALUqOlEgM/edit#">
+            Project Guide
+          </a>
+        </p>
+      </td>
+      <td>
+        <h3>
+          <strong>Randomized Image Creator</strong>
+        </h3>
+        <p>
+          Apply knowledge of user input and the draw loop to create on-
+          demand randomized images.
+        </p>
+        <img src="/images/athome/random-image.gif" style="max-width:50%"/>
+        <br>
+        <br>
+        <p>
+          <a href="https://docs.google.com/document/d/
+            1QGIvapBacMyvHVRDrLH179DEkjOMUBrv7Zh6OYz_Vyo/edit#">
+            More Details
+          </a>
+        </p>
+        <p>
+          <a href="https://docs.google.com/document/d/1-
+            aSVaGYgQFymtLse8oQg1QXdWohbIYzLysfCFJhlRRk/edit#">
+            Project Guide
+          </a>
+        </p>
+      </td>
+      <td>
+        <h3><strong>Teach a Science Concept</strong></h3>
+        <p>
+          Create your own pixel animations and add text to create an
+          interactive presentation about a science concept - or any other
+          topic!
+        </p>
+        <img src="/images/athome/science-concept.gif" style="max-width:50%"/>
+        <br>
+        <br>
+        <p>
+          <a href="https://docs.google.com/document/d/
+            1gevkecZBDUb49KptVE3IqfU1E8Ov5zjbR73bnETsI8g/edit#">
+            More Details
+          </a>
+        </p>
+        <p>
+          <a href="https://docs.google.com/document/d/
+            1mgpQfAsMGJFZlHQwzX0ePIlI8cx8zejLZb0HOwlN95A/edit#">
+            Project Guide
+          </a>
+        </p>
+      </td>
+    </tr>
   </tbody>
 </table>
 <div style="clear: both; margin-bottom: 40px"></div>
@@ -302,61 +310,61 @@ elementary-school) to find the right course for your age and skill level.
 </div>
 <div style="clear: both; margin-bottom: 20px"></div>
 <table>
-    <thead>
-        <tr>
-            <th>App Lab Project Ideas</th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-              <h3><strong>Sound Board</strong></h3>
-              <p>Create an app with buttons to play different sounds.</p>
-              <img src="/images/athome/sound-board.png" style="max-width:50%"/>
-              <br>
-              <br>
-              <p>
-                <a href="https://docs.google.com/document/d/
-                1dixTiXXJbIdMlDX0yfMiFMWiXl6Sdzv0QNeMon9XAy8/edit">
-                  More Details
-                </a>
-              </p>
-            </td>
-            <td>
-              <h3><strong>Flash Card / Self-Quiz App</strong></h3>
-              <p>
-                Use this app to create flashcards to learn a new subject or
-                practice for a test.
-              </p>
-              <img src="/images/athome/flash-card.png" style="max-width:50%"/>
-              <br>
-              <br>
-              <p>
-                <a href="https://docs.google.com/document/d/17g--
-                4H9RdixrJ67EHwwFj1wfT7GeUsQzvBNf2SteNqc/edit#">
-                  More Details
-                </a>
-              </p>
-            </td>
-            <td>
-              <h3><strong>Sneaky Hidden Puzzle</strong></h3>
-              <p>
-                To win, the player must click on an object that is visually “hidden” on the screen.
-              </p>
-              <img
-                src="/images/athome/hidden-puzzle.png" style="max-width:50%"
-              />
-              <br>
-              <br>
-              <p>
-                <a href="https://docs.google.com/document/d/18Dv1b6rcuvfFgPgwBOP9lKBzOj8G4cB-ePOzW1DmtNw/edit">
-                  More Details
-                </a>
-              </p>
-            </td>
-        </tr>
-    </tbody>
+  <thead>
+      <tr>
+          <th>App Lab Project Ideas</th>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <h3><strong>Sound Board</strong></h3>
+        <p>Create an app with buttons to play different sounds.</p>
+        <img src="/images/athome/sound-board.png" style="max-width:50%"/>
+        <br>
+        <br>
+        <p>
+          <a href="https://docs.google.com/document/d/
+          1dixTiXXJbIdMlDX0yfMiFMWiXl6Sdzv0QNeMon9XAy8/edit">
+            More Details
+          </a>
+        </p>
+      </td>
+      <td>
+        <h3><strong>Flash Card / Self-Quiz App</strong></h3>
+        <p>
+          Use this app to create flashcards to learn a new subject or
+          practice for a test.
+        </p>
+        <img src="/images/athome/flash-card.png" style="max-width:50%"/>
+        <br>
+        <br>
+        <p>
+          <a href="https://docs.google.com/document/d/17g--
+          4H9RdixrJ67EHwwFj1wfT7GeUsQzvBNf2SteNqc/edit#">
+            More Details
+          </a>
+        </p>
+      </td>
+      <td>
+        <h3><strong>Sneaky Hidden Puzzle</strong></h3>
+        <p>
+          To win, the player must click on an object that is visually “hidden” on the screen.
+        </p>
+        <img
+          src="/images/athome/hidden-puzzle.png" style="max-width:50%"
+        />
+        <br>
+        <br>
+        <p>
+          <a href="https://docs.google.com/document/d/18Dv1b6rcuvfFgPgwBOP9lKBzOj8G4cB-ePOzW1DmtNw/edit">
+            More Details
+          </a>
+        </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 <div style="clear: both; margin-bottom: 40px"></div>
