@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-08 22:50:38 UTC",
+    "serialized_at": "2021-11-09 19:58:18 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -43,7 +43,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n",
-        "preparation": "- Review and complete the online tutorial yourself: [Poem Art](http://studio.code.org/s/poem-art).\n \n- Be sure to try the activities first before asking your students to complete them. \n- Check your technology and decide if you need to troubleshoot anything in advance.\n- Some levels require sound to play. Hand out headphones ahead of time. \n\n- [Optional] 2 sticky notes per student for the Assessment.\n",
+        "preparation": "- Review and complete the online tutorial yourself: [Poem Art](http://studio.code.org/s/poem-art).\n \n- Be sure to try the activities first before asking your students to complete them. \n- Check your technology and decide if you need to troubleshoot anything in advance.\n- Some levels require sound to play. Hand out headphones ahead of time. \n\n- [Optional] 2 sticky notes per student for the Assessment.\n- [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n",
         "student_overview": "Poetry is making art with words. Add visual effects and images to your own animated poem. "
       },
       "seeding_key": {
@@ -115,7 +115,7 @@
       "relative_position": 5,
       "properties": {
         "overview": "In this lesson, students create a poem generator app with multiple-choice prompts to guide the user to pick a carefully chosen word. Students will plan which words they will replace in their poems, choose three new multiple-choice words per prompt, and then program their poem generator using new multiple-choice prompts with events.\n",
-        "purpose": "- Play through the levels ahead of time to prepare for the prediction and discussion sections of the lesson.\n\n- Assign the lesson to your sections to keep track of student progress. Many levels in this module are linked to each other, so student code will carry over between lessons on certain levels. Logging in will ensure their work is saved.\n\n- Prepare one computer per student.\n\n- Prepare one copy of the handout per student.\n- [Optional] Prepare one thesaurus per student or a few for students to share.\n \n- [Optional] Prepare one set of headphones per student. \n",
+        "preparation": "- Play through the levels ahead of time to prepare for the prediction and discussion sections of the lesson.\n\n- Assign the lesson to your sections to keep track of student progress. Many levels in this module are linked to each other, so student code will carry over between lessons on certain levels. Logging in will ensure their work is saved.\n\n- Prepare one computer per student.\n\n- Prepare one copy of the handout per student.\n- [Optional] Prepare one thesaurus per student or a few for students to share.\n \n- [Optional] Prepare one set of headphones per student. \n",
         "student_overview": "Make your app even better! Change your poem generator app by adding words you want the user to choose from."
       },
       "seeding_key": {
@@ -299,7 +299,7 @@
       "position": 1,
       "properties": {
         "duration": 5,
-        "name": "Warm Up"
+        "name": "Warm-Up"
       },
       "seeding_key": {
         "lesson_activity.key": "63f7ee42-32b7-470a-a48f-f999c7939ff3",
@@ -326,6 +326,8 @@
       "key": "41c19047-fb4b-4fe3-af78-bd943e9ff113",
       "position": 3,
       "properties": {
+        "duration": 10,
+        "name": "Wrap-Up"
       },
       "seeding_key": {
         "lesson_activity.key": "41c19047-fb4b-4fe3-af78-bd943e9ff113",
@@ -911,7 +913,7 @@
       "key": "4550afa5-f25b-4ccf-9b9b-8f45e0b39de6",
       "position": 3,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Level 2, 3, 4 - Practice slides. Students can either complete the levels on their own or go through the slides and levels as a whole class.\n\n\n\n\n**Circulate:** These next levels require students to drag out variable blocks from the toolbox and snap them into the correct place in the start code. Then, students practice matching variable labels to get the program to work correctly. "
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Level 2, 3 and 4 - Practice slides. Students can either complete the levels on their own or go through the slides and levels as a whole class.\n\n\n\n\n**Circulate:** These next levels require students to drag out variable blocks from the toolbox and snap them into the correct place in the start code. Then, students practice matching variable labels to get the program to work correctly. "
       },
       "seeding_key": {
         "activity_section.key": "4550afa5-f25b-4ccf-9b9b-8f45e0b39de6",
@@ -940,7 +942,7 @@
       "key": "bbca3deb-b5f5-429a-bd85-9ab1f389f104",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Combining Text & Variables video.\n\n**Do This:** Distribute one Lesson 3 handout per student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Plan Your Short Story App” slide"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Combining Text & Variables\" video.\n\n**Do This:** Distribute one Lesson 3 handout per student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Plan Your Short Story App” slide"
       },
       "seeding_key": {
         "activity_section.key": "bbca3deb-b5f5-429a-bd85-9ab1f389f104",
@@ -1077,11 +1079,11 @@
       "key": "0d5ed83e-c9c0-4483-ae25-06df860f105c",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Vocabulary Refresh” slide. \n**Do This:** Ask for a volunteer to read the vocabulary words on the slide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Variables\" slide.\n\n**Do This:** Ask for a volunteer to read the variables slide and play the animation while the student is reading. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *How is a variable like a container? How is a variable like something else we have in class?* \n\n**Discussion Goal:** Students should say that a variable is like a container because variables can store information like a name or a number. Encourage students to make connections between variables and other everyday objects that can be found in class. Perhaps you have a homework collection tray. The tray is like a variable and the homework is the information stored in the variable. Perhaps you have a place on your board that you put each day’s agenda. The word “Agenda” is the variable label and the description of today’s agenda is the information stored inside the variable. The name of the variable matters; it should reflect what type of information is stored in the variable. \n\n\n\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Vocabulary Refresh” slide. \n\n**Do This:** Ask for a volunteer to read the vocabulary words on the slide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Variables\" slide.\n\n**Do This:** Ask for a volunteer to read the variables slide and play the animation while the student is reading. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *How is a variable like a container? How is a variable like something else we have in class?* \n\n**Discussion Goal:** Students should say that a variable is like a container because variables can store information like a name or a number. Encourage students to make connections between variables and other everyday objects that can be found in class. Perhaps you have a homework collection tray. The tray is like a variable and the homework is the information stored in the variable. Perhaps you have a place on your board that you put each day’s agenda. The word “Agenda” is the variable label and the description of today’s agenda is the information stored inside the variable. The name of the variable matters; it should reflect what type of information is stored in the variable. \n\n\n\n",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Students might benefit from a quick check for understanding at this point in the lesson. Variables can be tricky and they are used frequently in computer science and in the rest of this module. Additional whole class or individual questions might include: \n- What is a variable label? Answer: It is the name the coder gives the variable. \n- Why do we need a variable label? Answer: To keep track of the variable in case we want to use it again later. \n- What is being stored in the variable labeled “word1”? Answer: What the user types into the text field under the prompt. \n\n- Can a variable name have a space in it? No, variable labels can only be one word. \n\nIf it’s been a while since the last lesson, you can show the [Variables Video](https://youtu.be/dZR6piUb1CE) to refresh students’ memories. \n"
+            "markdown": "**Deja vu:** Students might benefit from a quick check for understanding at this point in the lesson. Variables can be tricky and they are used frequently in computer science and in the rest of this module. Additional whole class or individual questions might include: \n- What is a variable label? Answer: It is the name the coder gives the variable. \n- Why do we need a variable label? Answer: To keep track of the variable in case we want to use it again later. \n- What is being stored in the variable labeled “word1”? Answer: What the user types into the text field under the prompt. \n\n- Can a variable name have a space in it? No, variable labels can only be one word. \n\nIf it’s been a while since the last lesson, you can show the [Variables Video](https://youtu.be/dZR6piUb1CE) to refresh students’ memories. \n"
           }
         ]
       },
@@ -1119,7 +1121,7 @@
       "key": "e83fd679-917d-429a-8003-d687d4b533f6",
       "position": 3,
       "properties": {
-        "description": "**Circulate:** Walk around the room to check that students are choosing any word that is not a conjunction or article. Encourage students to imagine what a user might replace their blank space with. If students are happy with the scenario, they can move on to the next word. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Regroup:** Show the “Part 2: Plan your Poem Generator” slide. \n"
+        "description": "**Circulate:** Walk around the room to check that students are choosing any word that is not a conjunction or article. Encourage students to imagine what a user might replace their blank space. If students are happy with the scenario, they can move on to the next word. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Regroup:** Show the “Part 2: Plan your Poem Generator” slide. \n"
       },
       "seeding_key": {
         "activity_section.key": "e83fd679-917d-429a-8003-d687d4b533f6",
@@ -1139,9 +1141,88 @@
       }
     },
     {
-      "key": "1acaa14c-9686-400d-9431-43a4a7666ff3",
+      "key": "bac695ce-09fa-4c49-8c82-15d105fcb7c7",
       "position": 5,
       "properties": {
+        "description": "**Circulate:** Help students label their words. Check to see if they have more than one label that is the same and add numbers to the end of the label name to differentiate between two verbs, nouns, adjectives, etc (noun1, noun2, noun 3). If a student could prompt the user for something more specific than a noun (e.g. an animal), encourage them to label their variable “animal” instead of “noun.” \n\n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "bac695ce-09fa-4c49-8c82-15d105fcb7c7",
+        "lesson_activity.key": "664d0362-aad3-462e-9282-2824f0647c20"
+      }
+    },
+    {
+      "key": "5c7d274a-4160-45bb-be9a-8013778c519f",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Regroup:** Show Level 2 alongside the “Level 2 - Example Program” slide. ",
+        "duration": "5",
+        "name": "Example Program"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c7d274a-4160-45bb-be9a-8013778c519f",
+        "lesson_activity.key": "664d0362-aad3-462e-9282-2824f0647c20"
+      }
+    },
+    {
+      "key": "d2e93892-f472-4e48-a893-476b760d5759",
+      "position": 7,
+      "properties": {
+        "description": "Let’s look at this example program. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d2e93892-f472-4e48-a893-476b760d5759",
+        "lesson_activity.key": "664d0362-aad3-462e-9282-2824f0647c20"
+      }
+    },
+    {
+      "key": "2b82d3d0-093f-44df-bb2b-c428271d130a",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** Ask students to look at the code on the slide and answer the following question:\n- *What do you predict will happen in this program when it is run?*\n\n**Discussion Goal:** This is an opportunity for students to look closely at what each line of code says. Ask students to read parts of the code out loud and predict what will happen when they press “Run.” Take special notice of the variable labels and where the variable is used throughout the example. Write students’ predictions on the board.\n\n**Do This:** Press “Run” and ask for volunteers to give answers to each prompt. Play the example program 2-3 times as a class and read each new iteration of the poem out loud. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b82d3d0-093f-44df-bb2b-c428271d130a",
+        "lesson_activity.key": "664d0362-aad3-462e-9282-2824f0647c20"
+      }
+    },
+    {
+      "key": "60e811f6-813a-4c53-ad5b-b2697035f870",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** “Planning Your Poem Generator Video” slide to the class and show the video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Code Studio:** Have students log in to their Code Studio accounts and start at Level 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Show the “Levels 3, 4, 5, 6  - Your Turn” slide. \n",
+        "duration": "17",
+        "name": "Your Turn"
+      },
+      "seeding_key": {
+        "activity_section.key": "60e811f6-813a-4c53-ad5b-b2697035f870",
+        "lesson_activity.key": "664d0362-aad3-462e-9282-2824f0647c20"
+      }
+    },
+    {
+      "key": "d53bc5f0-79b5-4be3-88b7-8e11b12a98d5",
+      "position": 10,
+      "properties": {
+        "description": "Now it’s your turn to build your own Poem Generator App using the handout in front of you as a guide. \n\nAt the bottom of your handout, you have a to-do list. \n\n- Add three prompts to your program\n- Choose a variable name to store the user’s input for each prompt\n- Use an event to trigger your title, author, and poem lines to show in the play space \n- Make sure your title, author, and poem lines are in the right order\n- Make sure your variables are in the right place\n- Don’t forget to use an `animate text` block\n- Add some effects and sprites to your new app\n\nTake the next 15 minutes to complete Levels 3-6 on your own. As you complete each task, put a checkmark in the box so I know where you are in the process.\n\nI’ll set the time now.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d53bc5f0-79b5-4be3-88b7-8e11b12a98d5",
+        "lesson_activity.key": "664d0362-aad3-462e-9282-2824f0647c20"
+      }
+    },
+    {
+      "key": "1acaa14c-9686-400d-9431-43a4a7666ff3",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log in to their Code Studio accounts and start at Level 3.\n\n**Circulate:** As you walk around the room, ask students to check off tasks as they complete them. Encourage students to check their code by clicking “Run” and interacting with their program. \n\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Differentiation tip:** As you circle the classroom, take a mental note of which level students are on by the 7-minute mark. Consider some of the following options for differentiation: \n\n1.  Pull out a small group who might need more guided instruction to a separate table and work through the code step-by-step with them. \n\n2.  Ask a student who is done with their program to user test their program with a student who is feeling stuck. Ask them to work together to debug any code. \n\n3.  Pair Program: Ask elbow partners who might benefit from talking through their code out loud to work together by methodically working on one person’s program and then the other person’s program. One student should be the driver, while the other is the navigator. [See Preparation Section at the top of this lesson plan for more details]. Optional: Show this [video](https://www.youtube.com/watch?v=vgkahOzFH2Q) to students about Pair Programming before they begin. "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1acaa14c-9686-400d-9431-43a4a7666ff3",
@@ -1152,9 +1233,65 @@
       "key": "02904a96-4af7-4f61-b8ff-a3dfff5ef095",
       "position": 1,
       "properties": {
+        "duration": "9",
+        "name": "Share Out",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "There are two ways to quickly share student work. \n- (1) If you are signed in and your students are in your class section, you can navigate to Level 6, open your Teacher Panel, and find the student’s name to access their work. [Click here to learn more about the Teacher Panel](https://support.code.org/hc/en-us/articles/360047703872-How-do-I-view-a-student-s-code-on-an-individual-level-).\n- (2) Tell students to click the “Share” button on the last level and post the link on your LMS or other shared space.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "02904a96-4af7-4f61-b8ff-a3dfff5ef095",
+        "lesson_activity.key": "41c19047-fb4b-4fe3-af78-bd943e9ff113"
+      }
+    },
+    {
+      "key": "902a645d-5c8a-4e40-9ed1-64ad7dbd0b3c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Part 1: Share Out” slide. \n\n**Do This:** Ask for a volunteer to share their program with the class. Pull up their project and play through it as a whole class, asking other students to answer each prompt. \n\n**Discuss:** *What did you notice about the words the user chose?*\n\n**Discussion Goal:** Encourage students to talk about the feeling or mood the new poem has with the random words scattered throughout the poem. *Does the poem make sense? What feeling did you have after reading that poem?* \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Part 2: Share Out” slide. \n\n**Do This:** Ask the poem’s author to read the original poem. \n\n**Discuss:** Compare and contrast the mood of the original poem with the new version of the poem. \n\n**Discussion Goal:** Students should come to the conclusion that the new version of the poem might be very different from the original poem. "
+      },
+      "seeding_key": {
+        "activity_section.key": "902a645d-5c8a-4e40-9ed1-64ad7dbd0b3c",
+        "lesson_activity.key": "41c19047-fb4b-4fe3-af78-bd943e9ff113"
+      }
+    },
+    {
+      "key": "046772dd-a101-4064-b273-148252b3e5cf",
+      "position": 3,
+      "properties": {
+        "description": "Sometimes, we want to use random words, like when we want a silly, funny poem or when we want to add an element of surprise to the reader. Other times, like when we’re writing poetry, we want to choose our words carefully because there is a specific feeling or mood the poet is trying to create. \n\nThis was a great discussion on the different situations where we might want to use random words and when we might want to choose our words carefully. \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "046772dd-a101-4064-b273-148252b3e5cf",
+        "lesson_activity.key": "41c19047-fb4b-4fe3-af78-bd943e9ff113"
+      }
+    },
+    {
+      "key": "971d623d-a274-41a5-9b84-4e419679cdf1",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Final slide",
+        "duration": "1",
+        "name": "Closing"
+      },
+      "seeding_key": {
+        "activity_section.key": "971d623d-a274-41a5-9b84-4e419679cdf1",
+        "lesson_activity.key": "41c19047-fb4b-4fe3-af78-bd943e9ff113"
+      }
+    },
+    {
+      "key": "f503b0a4-bd5d-43e1-8ba5-ba23ab2aea77",
+      "position": 5,
+      "properties": {
+        "description": "Today, you created a Poem Generator App that produces a random poem every time a user plays it. Next time, we’ll learn how to code an app that creates an interactive poem with carefully chosen words. \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f503b0a4-bd5d-43e1-8ba5-ba23ab2aea77",
         "lesson_activity.key": "41c19047-fb4b-4fe3-af78-bd943e9ff113"
       }
     },
@@ -1174,10 +1311,21 @@
       "key": "5cb4e206-edd8-4e23-bacb-bd2301c7acbc",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Warm-Up slides.\n\nToday’s Agenda:\n- Build an app with carefully chosen words\n- Make your app respond to a user’s input\n\n <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the code from Level 1. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n- Predict what will happen in this program\n\n**Discussion Goal:** Allow students to inspect the code and discuss what they think might happen. Write student predictions on the board. \n\n**Do This:** Have students navigate to Level 1 and press “Run” to observe what happens.\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n- What did you notice? \n- Why would we want to use a prompt like this one? \n\n**Discussion Goal:** After playing through the app, encourage students to compare and contrast what they predicted would happen and what actually happened. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Warm-Up slides.\n\nToday’s Agenda:\n- Build an app with carefully chosen words\n- Make your app respond to a user’s input\n\n <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the code from Level 1. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n- Predict what will happen in this program\n\n**Discussion Goal:** Allow students to inspect the code and discuss what they think might happen. Write student predictions on the board. \n\n**Do This:** Have students navigate to Level 1 and press “Run” to observe what happens.\n"
       },
       "seeding_key": {
         "activity_section.key": "5cb4e206-edd8-4e23-bacb-bd2301c7acbc",
+        "lesson_activity.key": "f2b36c3d-7c53-4928-9ccb-4896c7730961"
+      }
+    },
+    {
+      "key": "55f0c322-41c8-4a16-9209-5286f2455e5b",
+      "position": 3,
+      "properties": {
+        "description": "\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**\n- *What did you notice?* \n- *Why would we want to use a prompt like this one?* \n\n**Discussion Goal:** After playing through the app, encourage students to compare and contrast what they predicted would happen and what actually happened. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "55f0c322-41c8-4a16-9209-5286f2455e5b",
         "lesson_activity.key": "f2b36c3d-7c53-4928-9ccb-4896c7730961"
       }
     },
@@ -1203,7 +1351,7 @@
       "key": "57b4a404-7f04-4c35-ac3a-a82037ca64fb",
       "position": 2,
       "properties": {
-        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Your Turn slide.\n\n**Do This:** Pass out the handout for this lesson. Show the “Plan Your Program” slide on the board."
+        "description": " <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Your Turn\" slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Distribute the handout for this lesson. Show the “Plan Your Program” slide on the board."
       },
       "seeding_key": {
         "activity_section.key": "57b4a404-7f04-4c35-ac3a-a82037ca64fb",
@@ -1226,7 +1374,7 @@
       "key": "0dcf4a63-3547-4ed1-9409-8db799d80dde",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Part 1: Plan Your Program slide.\n\n**Do This:** Read the definition of each term. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Part 1: Plan Your Program\" slide.\n\n**Do This:** Read the definition of each term. "
       },
       "seeding_key": {
         "activity_section.key": "0dcf4a63-3547-4ed1-9409-8db799d80dde",
@@ -1249,7 +1397,7 @@
       "key": "18a5110d-6594-4785-8a19-23e83d02ec3c",
       "position": 6,
       "properties": {
-        "description": "**Discuss:** Let’s look at the columns right now. \n- Do you think the “Option 1” column has words that are synonyms, antonyms, or random words in relation to the words they chose from their poem?\n- What about the column labeled “Option 2”?\n- What about the column labeled “Option 3”? \n\n**Discussion Goal:** Have students raise their hands to answer which column has which type of word. They should identify that Option 1 contains antonyms, Option 2 contains synonyms, and Option 3 contains random words. As you go through the columns, reinforce the meaning of “synonym” and “antonym”. For example, you might ask students if they can think of another word that might be a synonym, antonym, or random word for “small”.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Part 2: Plan Your Program slide. Let students double check their work.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Part 3: “Plan your Program” slide.\n"
+        "description": "**Discuss:** *Let’s look at the columns right now.* \n- *Do you think the “Option 1” column has words that are synonyms, antonyms, or random words in relation to the words they chose from their poem?*\n- *What about the column labeled “Option 2”?*\n- *What about the column labeled “Option 3”?*\n\n**Discussion Goal:** Have students raise their hands to answer which column has which type of word. They should identify that Option 1 contains antonyms, Option 2 contains synonyms, and Option 3 contains random words. As you go through the columns, reinforce the meaning of “synonym” and “antonym”. For example, you might ask students if they can think of another word that might be a synonym, antonym, or random word for “small”.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Part 2: Plan Your Program\" slide. Let students double check their work.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Part 3: Plan your Program” slide.\n"
       },
       "seeding_key": {
         "activity_section.key": "18a5110d-6594-4785-8a19-23e83d02ec3c",
@@ -1314,7 +1462,7 @@
       "key": "b4a9ea4b-66a9-456f-b476-151f5d7d8dfe",
       "position": 11,
       "properties": {
-        "description": "To recap how a variable is stored, first the user will click “Run.” Then, the app will ask the user to “Choose an adjective” from these three choices: “large”, “tiny”, and “spiky.” \n\nLet’s say the user chooses “spiky.” That word will be stored in this variable labeled “word1.” Remember, the coder needs to label the variable ahead of time so the computer knows where to look for the user’s input. \n\nWhen all the prompts are answered, this line with text and the “word1” variable will display in the Play Space. \n\nThe user will see “The spiky, sweet bird sings” in the first line. \n\nNow it’s your turn to practice using and matching variables to store the user’s input.\n",
+        "description": "To recap how a variable is stored, first the user will click “Run.” Then, the app will ask the user to “Choose an adjective” from these three choices: “large”, “tiny”, and “spiky.” \n\nLet’s say the user chooses “spiky.” That word will be stored in this variable labeled “word1.” Remember, the coder needs to label the variable ahead of time so the computer knows where to look for the user’s input. \n\nWhen all the prompts are answered, this line with text and the “word1” variable will display in the Play Space. \n\nThe user will see “The spiky, sweet bird sings” in the first line. \n\nNow it’s your turn to practice matching variables.\n",
         "remarks": true
       },
       "seeding_key": {
@@ -1337,7 +1485,7 @@
       "key": "ee3894b4-e1ca-40db-9394-be155dc2b208",
       "position": 13,
       "properties": {
-        "description": "**Circulate:** Remind students to match the variable in their prompt with the variable in their event. This will require them to take apart pieces of their previous project and keep track of which prompt, which variable name, and which choices go where. Help students debug their code by making sure their new multiple-choice prompt blocks match their handouts. If a student hasn’t completed any part of their handout, have them finish that first before starting to debug their code. ",
+        "description": "**Circulate:** Remind students to match the variable in their prompt with the variable in their event. This will require them to take apart pieces of their previous project and keep track of which prompt, which variable name, and which choice goes where. Help students debug their code by making sure their new multiple-choice prompt blocks match their handouts. If a student hasn’t completed any part of their handout, have them finish that first before starting to debug their code. ",
         "tips": [
           {
             "type": "teachingTip",
@@ -1354,7 +1502,7 @@
       "key": "12f6de87-770d-48f0-b883-833ad568e13b",
       "position": 14,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Level 5 slide. \n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Level 5\" slide. \n",
         "duration": "10",
         "name": "Illustrating Your Poem"
       },
@@ -1367,7 +1515,7 @@
       "key": "e9809e2c-31f8-4af6-9934-7285ea6cda4c",
       "position": 15,
       "properties": {
-        "description": "For the remainder of our coding time, add in background effects, foreground effects, and sprites to create an atmosphere that illustrates the mood and characters in your poem. Remember that you don’t want to create any sprites or backgrounds that relate only to one of the user’s choices. For example, if there is a choice between the word “bunny” and the word “crab” and you made a crab sprite, but the user chooses bunny, the illustration no longer makes sense. ",
+        "description": "For the remainder of our coding time, add in background effects, foreground effects, and sprites to create an atmosphere that illustrates the mood and characters in your poem. Remember that you don’t want to create any sprites or backgrounds that relate only to one of the user’s choices. For example, if there is a choice between the word “bunny” and the word “crab” and you made a crab sprite, but the user chooses bunny, the illustration no longer makes sense.",
         "remarks": true
       },
       "seeding_key": {
@@ -1390,7 +1538,8 @@
       "key": "9a4aa3ee-4864-4e8f-b4e3-ee8299b03fe9",
       "position": 1,
       "properties": {
-        "description": "Amazing work, coders! \n\nNext time, we’ll share the apps we developed with each other. \n"
+        "description": "Amazing work, coders! \n\nNext time, we’ll share the apps we developed with each other. \n",
+        "remarks": true
       },
       "seeding_key": {
         "activity_section.key": "9a4aa3ee-4864-4e8f-b4e3-ee8299b03fe9",
@@ -1761,6 +1910,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_prompt"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1782,6 +1934,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_concatenation1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1803,6 +1958,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_concatenation4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1824,6 +1982,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_start"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1845,6 +2006,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_finish"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1878,7 +2042,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "1acaa14c-9686-400d-9431-43a4a7666ff3"
+        "activity_section.key": "2b82d3d0-093f-44df-bb2b-c428271d130a"
       },
       "level_keys": [
         "poetry_module_generator_pause"
@@ -1902,7 +2066,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "1acaa14c-9686-400d-9431-43a4a7666ff3"
+        "activity_section.key": "2b82d3d0-093f-44df-bb2b-c428271d130a"
       },
       "level_keys": [
         "poetry_module_generator_exemplar"
@@ -1911,7 +2075,7 @@
     {
       "chapter": 22,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1935,7 +2099,7 @@
     {
       "chapter": 23,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1959,7 +2123,7 @@
     {
       "chapter": 24,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1983,7 +2147,7 @@
     {
       "chapter": 25,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2010,9 +2174,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_module_choices_exemplar"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2022,7 +2183,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "7ad545da-2313-415e-adfc-388a7d4093ec"
+        "activity_section.key": "5cb4e206-edd8-4e23-bacb-bd2301c7acbc"
       },
       "level_keys": [
         "poetry_module_choices_exemplar"
@@ -2483,7 +2644,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "1acaa14c-9686-400d-9431-43a4a7666ff3"
+        "activity_section.key": "2b82d3d0-093f-44df-bb2b-c428271d130a"
       }
     },
     {
@@ -2495,7 +2656,7 @@
         "lesson.key": "lesson-4",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "1acaa14c-9686-400d-9431-43a4a7666ff3"
+        "activity_section.key": "2b82d3d0-093f-44df-bb2b-c428271d130a"
       }
     },
     {
@@ -2555,7 +2716,7 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "7ad545da-2313-415e-adfc-388a7d4093ec"
+        "activity_section.key": "5cb4e206-edd8-4e23-bacb-bd2301c7acbc"
       }
     },
     {
@@ -2669,6 +2830,18 @@
   ],
   "resources": [
     {
+      "name": "Choosing Words Carefully",
+      "url": "https://docs.google.com/document/d/1DSrj-0lOxfPwzjAbj1PJ10kLsgDQzseINm6zMTXbN7s/template/preview",
+      "key": "choosing_words_carefully",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "choosing_words_carefully"
+      }
+    },
+    {
       "name": "Coding with Poetry Modules",
       "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_259",
       "key": "coding_with_poetry_modules",
@@ -2702,6 +2875,18 @@
       },
       "seeding_key": {
         "resource.key": "combining_text_and_variables"
+      }
+    },
+    {
+      "name": "Multiple Choice Prompts",
+      "url": "https://youtu.be/T_JP-FypyfY",
+      "key": "multiple_choice_prompts",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "multiple_choice_prompts"
       }
     },
     {
@@ -2811,7 +2996,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "choosing_words_carefully"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "resource.key": "coding_with_poetry_modules"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "multiple_choice_prompts"
       }
     }
   ],
@@ -2822,6 +3019,16 @@
 
   ],
   "vocabularies": [
+    {
+      "key": "antonym",
+      "word": "Antonym",
+      "definition": "A word that has the opposite meaning of another word ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "antonym"
+      }
+    },
     {
       "key": "code",
       "word": "Code",
@@ -3035,6 +3242,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "vocabulary.key": "antonym"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "vocabulary.key": "diction"
       }
     },
@@ -3225,7 +3438,7 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "framework.shortcode": "ccela",
-        "standard.shortcode": "3.RL.4"
+        "standard.shortcode": "4.RL.4"
       }
     },
     {
@@ -3491,6 +3704,13 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "framework.shortcode": "ccela",
+        "standard.shortcode": "5.L.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "ccela",
         "standard.shortcode": "5.L.5"
       }
     },
@@ -3506,6 +3726,13 @@
         "lesson.key": "lesson-5",
         "framework.shortcode": "ccela",
         "standard.shortcode": "5.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.W.10"
       }
     },
     {
