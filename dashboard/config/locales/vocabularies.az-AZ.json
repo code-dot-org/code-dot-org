@@ -198,6 +198,16 @@
         "machine_learning/oceans/unversioned": {
           "word": "Avtomatlaşdırılmış Öyrənmə"
         },
+        "code/poem-art/unversioned": {
+          "word": "Kod"
+        },
+        "event/poem-art/unversioned": {
+          "word": "Hadisə",
+          "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Proqram"
+        },
         "event/outbreak/unversioned": {
           "word": "Hadisə",
           "definition": "Bir şeyin baş verməsinə səbəb olan hərəkət."

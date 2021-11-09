@@ -6540,6 +6540,14 @@ az:
               display_name: Məzmun
           name: csa5-pilot
         csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
+            lesson-15:
+              name: Qiymətləndirmə günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
           name: csa6-pilot
         csa7-pilot:
           name: csa7-pilot
@@ -7139,6 +7147,8 @@ az:
               name: Özünün Şeirini kodlaşdır
             lesson-5:
               name: Söz Seçimi
+            lesson-7:
+              name: Şərti ifadələr
           name: poeziya
           title: Kompüter Elmləri və Şeir
         spelling-bee:
@@ -7172,3 +7182,38 @@ az:
               name: Bölmə 5 Layihələri
             lesson-6:
               name: Bölmə 6 Layihələri
+        csa6-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Qiymətləndirmə günü
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            lesson-1:
+              key: dərs-1
+            lesson-2:
+              key: dərs-2
+            lesson-5:
+              key: dərs-5
+            lesson-6:
+              key: dərs-6
+            lesson-7:
+              key: dərs-7
+            lesson-9:
+              key: dərs-9
+            lesson-10:
+              key: dərs-10
+            lesson-11:
+              key: dərs-11
+            lesson-12:
+              key: dərs-12
+            lesson-13:
+              key: dərs-13
+            lesson-14:
+              key: dərs-14
+            lesson-15:
+              key: dərs-15
+              name: Qiymətləndirmə günü
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Məzmun
