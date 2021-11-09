@@ -463,7 +463,28 @@
             null
           ]
         },
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "Fő tevékenység (régi)"
+        },
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "Fő tevékenység (új)"
+        },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "description": "_Ezzel a tevékenységgel egy interaktív világot fogtok létrehozni vicces karakterekkel, úgynevezett manókkal. A manók szövege beszédbuborékokban jelenik meg, ahogyan azt egy képregényben vagy grafikus regényben lehet látni, és megtanuljátok azt is, hogy amikor ti vagy más rákattint egy figurára, akkor ők automatikusan reagáljanak._\n\n\\_ Ma „kódot” fogtok írni, ami nem jelent mást, mint olyan utasításokat, amelyeket a számítógép megért. Amikor történetet írtok, alaposan át kell gondolni, milyen szavakat használtok. Amikor kódot írtok, alaposan át kell gondolni, milyen utasításokat adtok a számítógépnek.",
+          "tips": [
+            "A Kódolás órájára nem érdemes sokat készülni, vagy hosszú bevezést mondani. Különösen a fiatal tanulók esetében a legjobb gyorsan belevágni."
+          ]
+        },
+        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
+          "description": "Íme néhány tipp, amely segíthet a tanulóknak, függetlenül attól, hogy milyen szinten vannak\n\n-   **Együttműködés a szomszédokkal:** Bátorítsa a diákokat, hogy ha elakadnak, beszéljenek a szomszédjukkal. Azt is meg lehet fontolni, hogy a diákok korától és képességeitől függően az osztályt párokba rendezi, és az órát a [páros programozás](https://youtu.be/vgkahOzFH2Q) segítségével tartja meg.  \n\n-   **Instrukciók elolvasása:** Az instrukciók általában hasznos tippeket adnak a szintek teljesítéséhez. Mielőtt válaszolna a diákok kérdéseire, ellenőrizze, hogy figyelmesen elolvasták az instrukciókat, a tippeket, megnézték a videókat és a kezdő kódot.\n\n<img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\">**Elakadtak? Nézzék meg a tippeket:** Minden szint tartalmaz egy-egy tippet, tanácsot a szint teljesítéséhez, beleértve azt is, hogy milyen kódblokkokat kell kipróbálni. \n\n-   **Nem kell sietni, nyugodtan lehet kísérletezni:** Az instrukciókban általában közlik a diákokkal, hogy mit kell tenniük, de ők bátran kipróbálhatják a saját ötleteiket is."
+        },
+        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
+          "description": "Ha egy csoport vagy egy diák hamarabb végez, bátorítsa őket, hogy folytassák a projekt építését az utolsó szinten. Ha a diákok nem tudják, hogy mit kell még tenniük, kérdésekkel segítheti őket:\n\n-   Milyen más manókat tudnátok még hozzáadni a projekthez?\n-   Átnéztétek már a jelmeztárat, vagy kipróbáltátok, hogy saját manójelmezt rajzoljatok?\n-   Mit mondhatnának még a manóitok?\n-   Mit csináljanak a manóitok, amikor rákattintotok?\n-   Kérje meg a diákokat, hogy osszák meg ötleteiket, tanuljanak egymástól. A [code.org/learn](https://code.org/learn) oldalon kipróbálhatnak egy másik leckét is."
+        },
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "description": "#### Összefoglaló értékelés\n\nKérje meg a tanulókat, hogy gondolják végig, mi is történt azon a napon. Mit tanultak a kódolásról? A manókról? Az eseményekről?\n\nMit gondolnak a számítástechnikáról és a kódolásról egy órányi foglalkozás után?\n\n#### Következő lépések\n\nMondja el a diákoknak, hogy ha tetszett nekik a mai tevékenység, számos lehetőségük van a kódolás folytatására. Látogasson el a [CS Connections](https://code.org/educate/csc) oldalra, ahol ötleteket talál arra vonatkozóan, hogyan lehet az informatikát más tantárgyakba integrálni, vagy nézze meg a [Képzések általános iskolák számára](https://code.org/educate/curriculum/elementary-school) kiadványunkat."
+        },
+        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "tips": [
             null
           ]

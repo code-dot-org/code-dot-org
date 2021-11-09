@@ -4058,6 +4058,10 @@ hu:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -4213,12 +4217,20 @@ hu:
           lessons:
             lesson-2:
               name: Eszközök
+        poetry:
+          lessons:
+            lesson-7:
+              name: Feltételek
         spelling-bee:
           lessons:
             lesson-1:
               name: Betüző méh
           title: Betüző méh
         csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Tartalom
+        csa6-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Tartalom
