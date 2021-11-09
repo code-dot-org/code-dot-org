@@ -1615,10 +1615,43 @@
           "moving forward": "avancer"
         },
         "helloworld_retro_behaviors": {
-          "moving with arrow keys": "se déplacer avec les touches de direction"
+          "moving with arrow keys": "se déplacer en utilisant les touches de direction",
+          "wandering": "Mouvement aléatoire",
+          "moving east": "aller vers l'Est",
+          "spinning left": "tourner à gauche ",
+          "spinning right": "tourner à droite",
+          "shrinking": "contracter",
+          "growing": "agrandir",
+          "moving south": "aller vers le Sud",
+          "swimming left and right": "nager à gauche et à droite ",
+          "moving north": "aller vers le Nord",
+          "jittering": "tresaillir",
+          "moving west": "aller vers l'Ouest",
+          "patrolling": "patrouiller ",
+          "driving with arrow keys": "conduire en utilisant les touches de direction",
+          "fluttering": "flottement",
+          "wobbling": "vaciller",
+          "moving west and looping": "aller vers l'Ouest et tourner en boucles",
+          "moving east and looping": "aller vers l'Est et tourner en boucles",
+          "moving north and looping": "aller vers le Nord et tourner en boucles",
+          "moving south and looping": "aller vers le Sud et tourner en boucles"
         },
         "helloworld_retro_events": {
-          "moving forward": "avancer"
+          "moving forward": "avancer",
+          "patrolling": "patrouille",
+          "growing": "agrandir",
+          "moving west": "aller vers l'Ouest",
+          "spinning right": "tourner à droite",
+          "moving east": "aller vers l'Est",
+          "moving north": "aller vers le Nord",
+          "moving south": "aller vers le Sud",
+          "jittering": "tresaillir",
+          "wandering": "Mouvement aléatoire",
+          "shrinking": "contracter",
+          "spinning left": "tourner à gauche",
+          "fluttering": "flottement",
+          "moving west and looping": "aller vers l'Ouest et tourner en boucles",
+          "moving east and looping": "aller vers l'Est et tourner en boucles"
         },
         "helloworld_animals_sounds": {
           "moving with arrow keys": "se déplacer avec les touches de direction"
@@ -1633,7 +1666,26 @@
           "moving with arrow keys": "se déplacer avec les touches de direction"
         },
         "helloworld_retro_sounds": {
-          "moving with arrow keys": "se déplacer avec les touches de direction"
+          "moving with arrow keys": "se déplacer en utilisant les touches de direction",
+          "wandering": "Mouvement aléatoire",
+          "moving east": "aller vers l'Est",
+          "spinning left": "tourner à gauche ",
+          "spinning right": "tourner à droite",
+          "shrinking": "contracter",
+          "growing": "agrandir",
+          "moving south": "aller vers le Sud",
+          "swimming left and right": "nager à gauche et à droite ",
+          "moving north": "aller vers le Nord",
+          "jittering": "tresaillir",
+          "moving west": "aller vers l'Ouest",
+          "patrolling": "patrouiller ",
+          "driving with arrow keys": "conduire en utilisant les touches de direction",
+          "fluttering": "flottement",
+          "wobbling": "vaciller",
+          "moving west and looping": "aller vers l'Ouest et tourner en boucles",
+          "moving east and looping": "aller vers l'Est et tourner en boucles",
+          "moving north and looping": "aller vers le Nord et tourner en boucles",
+          "moving south and looping": "aller vers le Sud et tourner en boucles"
         },
         "poetry_hoc_spriteSizes": {
           "moving with arrow keys": "se déplacer avec les touches de direction"
@@ -1652,6 +1704,34 @@
         },
         "poetry_hoc_spriteBehaviors": {
           "moving with arrow keys": "se déplacer avec les touches de direction"
+        },
+        "helloworld_retro_backgrounds": {
+          "swimming left and right": "nager à gauche et à droite",
+          "shrinking": "contracter",
+          "patrolling": "patrouiller ",
+          "wandering": "Mouvement aléatoire",
+          "growing": "agrandir",
+          "jittering": "tresaillir",
+          "moving east": "aller vers l'Est",
+          "moving north": "aller vers le Nord",
+          "moving south": "aller vers le Sud",
+          "moving west": "aller vers l'Ouest",
+          "spinning right": "tourner à droite"
+        },
+        "helloworld_retro_costumes": {
+          "moving east": "aller vers l'Est",
+          "spinning left": "tourner à gauche ",
+          "spinning right": "tourner à droite",
+          "shrinking": "contracter",
+          "growing": "agrandir",
+          "moving south": "aller vers le Sud",
+          "moving north": "aller vers le Nord",
+          "jittering": "tresaillir",
+          "moving west": "aller vers l'Ouest",
+          "fluttering": "flottement",
+          "wobbling": "vaciller",
+          "moving west and looping": "aller vers l'Ouest et tourner en boucles",
+          "moving east and looping": "aller vers l'Est et tourner en boucles"
         }
       }
     }

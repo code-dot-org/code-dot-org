@@ -53,6 +53,15 @@
         "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
           "description": "Raisonner sur la façon dont le biais humain joue un rôle dans l'apprentissage automatique."
         },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "Créez de nouveaux lutins et attribuez-leur des costumes et des emplacements."
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "Créez une animation interactive en utilisant des lutins et des événements."
+        },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": "Développer des programmes qui répondent aux événements chronométrés."
+        },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
           "description": "Reconnaître ce qu'on attend d'eux lorsqu'ils passent au labo informatique."
         },

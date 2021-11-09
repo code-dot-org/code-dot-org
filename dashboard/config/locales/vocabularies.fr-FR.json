@@ -265,6 +265,16 @@
           "word": "Apprentissage Automatique",
           "definition": "Comment les ordinateurs reconnaissent des modèles et prennent des décisions sans être explicitement programmés"
         },
+        "code/poem-art/unversioned": {
+          "word": "Code"
+        },
+        "event/poem-art/unversioned": {
+          "word": "Évènement",
+          "definition": "Action qui provoque quelque chose."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Programme"
+        },
         "event/outbreak/unversioned": {
           "word": "Évènement",
           "definition": "Action qui provoque quelque chose."
