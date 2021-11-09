@@ -1365,9 +1365,7 @@ se:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: LákcaJiekŋa
-            Stars: Násttit
-            Fireworks: Dollarusonat
+            '"placeholder"': Dollarusonat
             '"rainbow"': Arvedávgi
             '"hearts"': Váimmut
             '"flowers"': Lieđit
@@ -1380,7 +1378,7 @@ se:
         text: čuojatJiena {SOUND}
         options:
           SOUND:
-            Light: Čuovga
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Čuovga
       Poetry_setBackground:
         text: bija duogábeal-ivnni {COLOR}
       Poetry_setBackgroundEffect:
