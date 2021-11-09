@@ -14800,6 +14800,8 @@ mn:
             CS Discoveries Post Course survey:
               key: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+            lesson-1:
+              name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
           lesson_groups:
             cspSurvey:
               display_name: Судалгаа
@@ -14869,6 +14871,8 @@ mn:
             CS Discoveries Post Course survey:
               key: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+            lesson-1:
+              name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
           lesson_groups:
             csd3_1:
               display_name: '1-р бүлэг: Зураг ба анимэйшн'
@@ -14930,6 +14934,8 @@ mn:
             CS Discoveries Post Course survey:
               key: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+            CS Discoveries Post-Course Survey:
+              name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
           lesson_groups:
             csd4_1:
               display_name: '1-р бүлэг: Хэрэглэгч төвтэй дизайн'
@@ -14989,6 +14995,8 @@ mn:
               name: Төслийн дараах тест
             CS Discoveries Post Course survey:
               key: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+              name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+            CS Discoveries Post-Course Survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
           lesson_groups:
             csd5_1:
@@ -15063,6 +15071,8 @@ mn:
               name: Төслийн дараах тест
             CS Discoveries Post Course survey:
               key: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+              name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
+            CS Discoveries Post-Course Survey:
               name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
           lesson_groups:
             csd6_1:
@@ -16420,6 +16430,8 @@ mn:
           lessons:
             Survey Planning:
               name: Өгөгдөл цуглуулах ажлыг зохион бүтээх
+            CS Discoveries Post-Course Survey:
+              name: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
           lesson_groups:
             lessonGroup-4:
               display_name: Судалгаа
@@ -16612,8 +16624,17 @@ mn:
           lessons:
             lesson-1:
               name: Виджетүүд
+        poetry:
+          lessons:
+            lesson-7:
+              name: Нөхцлүүд
         spelling-bee:
           lessons:
             lesson-1:
               name: Зөв бичих дүрэм заах зөгий
           title: Зөв бичих дүрэм заах зөгий
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Хичээлийн дараах судалгаа
+          title: КШУ-ны нээлтүүд Хичээлийн дараах судалгаа
