@@ -2251,6 +2251,10 @@ sl:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -2338,12 +2342,20 @@ sl:
               display_name: Vsebina
             lessonGroup-2:
               display_name: Vsebina
+        poetry:
+          lessons:
+            lesson-7:
+              name: Pogoji
         spelling-bee:
           lessons:
             lesson-1:
               name: Čebelica črkuje besede
           title: Čebelica črkuje besede
         csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Vsebina
+        csa6-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Vsebina
