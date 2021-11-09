@@ -1,9 +1,21 @@
-# Model concern for common curriculum audience methods
+# Model concern for common course type methods.
+#
+# Course Types are determined by the audience of the course, the instruction type of
+# the course or both. For example pl courses are any course that is taught to
+# adults (participant_audience is not students). A self paced pl course (participant_audience is not students)
+# is pl course that has the instruction_type of self-paced.
+#
 # To use, include in a model and call the desired method.
-module Curriculum::CourseAudiences
+module Curriculum::CourseTypes
   extend ActiveSupport::Concern
 
-  # Checks if a user can be the instructor for the course. Universal instructors and levelbuilders
+  included do
+    validates :instruction_type, acceptance: {accept: SharedCourseConstants::INSTRUCTION_TYPE.to_h.values, message: 'must be teacher_led or self_paced'}
+    validates :instructor_audience, acceptance: {accept: SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values, message: 'must be universal instructor, plc reviewer, facilitator, or teacher'}
+    validates :participant_audience, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
+  end
+
+  # Checks if a user can be the instructor for the course. universal instructors and levelbuilders
   # can be the instructors of any course. Student accounts should never be able to be the instructor
   # of any course.
   def can_be_instructor?(user)
@@ -39,5 +51,17 @@ module Curriculum::CourseAudiences
     end
 
     false
+  end
+
+  # A course is a professional learning course if the participant audience is something
+  # other than students(it teaches adults)
+  #
+  # This is different than courses that use the professional learning course models
+  # those can be checked for using old_professional_learning_course?
+  def pl_course?
+    # If unit is in a unit group then decide based on unit group
+    return unit_group.pl_course? if is_a?(Script) && unit_group
+
+    participant_audience != 'student'
   end
 end

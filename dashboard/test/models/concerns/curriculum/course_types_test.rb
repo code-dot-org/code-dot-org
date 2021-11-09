@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class InstructorAndParticipantAudienceTests < ActiveSupport::TestCase
+class CourseTypesTests < ActiveSupport::TestCase
   setup do
     @student = create :student
     @teacher = create :teacher
@@ -23,6 +23,27 @@ class InstructorAndParticipantAudienceTests < ActiveSupport::TestCase
     @unit_facilitator_to_teacher = create(:script, name: 'unit-facilitator-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     @unit_universal_instructor_to_teacher = create(:script, name: 'universal-instructor-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher)
     @unit_plc_reviewer_to_facilitator = create(:script, name: 'plc-reviewer-to-facilitator', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator)
+  end
+
+  test 'unit in course should check course for if it is a pl course' do
+    assert_equal @unit_group.pl_course?, @unit_in_course.pl_course?
+    refute @unit_in_course.pl_course?
+  end
+
+  test 'pl_course? returns true for any unit that does not have students as participants' do
+    refute @unit_teacher_to_students.pl_course?
+    assert @unit_facilitator_to_teacher.pl_course?
+    assert @unit_universal_instructor_to_teacher.pl_course?
+    assert @unit_plc_reviewer_to_facilitator.pl_course?
+    assert @unit_universal_instructor_to_teacher.pl_course?
+  end
+
+  test 'pl_course? returns true for any course that does not have students as participants' do
+    refute @course_teacher_to_students.pl_course?
+    assert @course_facilitator_to_teacher.pl_course?
+    assert @course_universal_instructor_to_teacher.pl_course?
+    assert @course_plc_reviewer_to_facilitator.pl_course?
+    assert @course_universal_instructor_to_teacher.pl_course?
   end
 
   test 'unit in course should check course for participant and instructor audience' do
