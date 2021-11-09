@@ -369,7 +369,6 @@ module LevelsHelper
     use_blockly = !use_droplet && !use_netsim && !use_weblab && !use_javalab
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
-    use_google_blockly = @level.uses_google_blockly? || view_options[:useGoogleBlockly]
     render partial: 'levels/apps_dependencies',
       locals: {
         app: app_options[:app],
@@ -386,6 +385,10 @@ module LevelsHelper
         preload_asset_list: @level.try(:preload_asset_list),
         static_asset_base_path: app_options[:baseUrl]
       }
+  end
+
+  def use_google_blockly
+    @level.uses_google_blockly? || view_options[:useGoogleBlockly] || DCDO.get('uses_google_blockly', []).map(&:downcase).include?(@level.class.to_s.downcase)
   end
 
   # Options hash for Widget
