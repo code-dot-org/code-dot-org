@@ -17,9 +17,7 @@ import {
 import AnimationPickerBody from './AnimationPickerBody.jsx';
 import HiddenUploader from '@cdo/apps/code-studio/components/HiddenUploader';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
-import Button from '@cdo/apps/templates/Button';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-
+import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 // Some operating systems round their file sizes, so max size is 101KB even
 // though our error message says 100KB, to help users avoid confusion.
 const MAX_UPLOAD_SIZE = 101000;
@@ -126,27 +124,25 @@ class AnimationPicker extends React.Component {
           canDraw={this.props.canDraw}
           selectedAnimations={this.props.selectedAnimations}
         />
-        {this.state.exitingDialog && (
-          <BaseDialog isOpen hideCloseButton={true} style={styles.dialog}>
-            <h3>{msg.animationPicker_leaveSelectionTitle()}</h3>
-            <p>{msg.animationPicker_leaveSelectionText({contextName})}</p>
-
-            <DialogFooter rightAlign={true}>
-              <Button
-                text={msg.animationPicker_discardSelection()}
-                onClick={() => {
-                  this.props.onClose();
-                  this.setState({exitingDialog: false});
-                }}
-                color="gray"
-              />
-              <Button
-                text={msg.animationPicker_returnToLibrary()}
-                onClick={() => this.setState({exitingDialog: false})}
-              />
-            </DialogFooter>
-          </BaseDialog>
-        )}
+        <StylizedBaseDialog
+          title={msg.animationPicker_leaveSelectionTitle()}
+          isOpen={this.state.exitingDialog}
+          hideCloseButton={true}
+          handleClose={() => {
+            this.setState({exitingDialog: false});
+          }}
+          cancellationButtonText={msg.animationPicker_discardSelection()}
+          handleCancellation={() => {
+            this.props.onClose();
+            this.setState({exitingDialog: false});
+          }}
+          confirmationButtonText={msg.animationPicker_returnToLibrary()}
+          handleConfirmation={() => {
+            this.setState({exitingDialog: false});
+          }}
+          style={styles.dialog}
+          body={<p>{msg.animationPicker_leaveSelectionText({contextName})}</p>}
+        />
       </div>
     );
   }
