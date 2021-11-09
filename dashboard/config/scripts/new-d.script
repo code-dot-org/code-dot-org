@@ -32,35 +32,35 @@ level 'courseD_collector_debugging9a'
 lesson 'Events in Bounce', display_name: 'Events in Bounce', has_lesson_plan: false
 variants
   level 'bounce_1'
-  level 'courseD_bounce_events1s'
+  level 'courseD_bounce_events1s', active: false
 endvariants
 variants
   level 'bounce_2'
-  level 'courseD_bounce_events2s'
+  level 'courseD_bounce_events2s', active: false
 endvariants
 variants
   level 'bounce_5'
-  level 'courseD_bounce_events5s'
+  level 'courseD_bounce_events5s', active: false
 endvariants
 variants
   level 'bounce_6'
-  level 'courseD_bounce_events6s'
+  level 'courseD_bounce_events6s', active: false
 endvariants
 variants
   level 'bounce_7'
-  level 'courseD_bounce_events7s'
+  level 'courseD_bounce_events7s', active: false
 endvariants
 variants
   level 'bounce_10'
-  level 'courseD_bounce_events10s'
+  level 'courseD_bounce_events10s', active: false
 endvariants
 variants
   level 'bounce_11'
-  level 'courseD_bounce_events11s'
+  level 'courseD_bounce_events11s', active: false
 endvariants
 variants
   level 'bounce_12'
-  level 'courseD_bounce_events12s'
+  level 'courseD_bounce_events12s', active: false
 endvariants
 
 lesson 'Loops in Ice Age', display_name: 'Loops in Ice Age', has_lesson_plan: false
