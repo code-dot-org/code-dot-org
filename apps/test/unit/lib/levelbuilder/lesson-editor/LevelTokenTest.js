@@ -24,7 +24,8 @@ const defaultScriptLevel = {
   kind: 'puzzle',
   assessment: false,
   challenge: false,
-  bonus: false
+  bonus: false,
+  instructor_in_training: false
 };
 
 describe('LevelToken', () => {
@@ -84,6 +85,8 @@ describe('LevelTokenContents', () => {
     expect(wrapper.containsMatchingElement(<span>assessment</span>)).to.be
       .false;
     expect(wrapper.containsMatchingElement(<span>bonus</span>)).to.be.false;
+    expect(wrapper.containsMatchingElement(<span>instructor in training</span>))
+      .to.be.false;
     expect(wrapper.containsMatchingElement(<span>challenge</span>)).to.be.false;
     expect(wrapper.containsMatchingElement(<span>variants</span>)).to.be.false;
   });
@@ -104,6 +107,16 @@ describe('LevelTokenContents', () => {
       <LevelTokenContents {...defaultProps} scriptLevel={tempScriptLevel} />
     );
     expect(wrapper.containsMatchingElement(<span>bonus</span>)).to.be.true;
+  });
+
+  it('shows instructor in training indicator when instructor in training', () => {
+    let tempScriptLevel = _.cloneDeep(defaultScriptLevel);
+    tempScriptLevel.instructor_in_training = true;
+    const wrapper = shallow(
+      <LevelTokenContents {...defaultProps} scriptLevel={tempScriptLevel} />
+    );
+    expect(wrapper.containsMatchingElement(<span>instructor in training</span>))
+      .to.be.true;
   });
 
   it('shows challenge indicator when challenge', () => {

@@ -5,10 +5,13 @@
     "csa2-pilot-facilitator",
     "csa3-pilot-facilitator",
     "csa4-pilot-facilitator",
-    "csa5-pilot-facilitator"
+    "csa5-pilot-facilitator",
+    "csa6-pilot-facilitator"
   ],
   "published_state": "pilot",
   "instruction_type": "teacher_led",
+  "participant_audience": "student",
+  "instructor_audience": "teacher",
   "properties": {
     "family_name": "csa-pilot-facilitator",
     "has_numbered_units": true,
