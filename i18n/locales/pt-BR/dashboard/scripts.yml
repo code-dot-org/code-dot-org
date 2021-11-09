@@ -15551,6 +15551,8 @@ pt:
             CS Discoveries Post Course survey:
               key: Pesquisa do CS Discoveries pós curso
               name: Pesquisa do CS Discoveries pós curso
+            lesson-1:
+              name: Pesquisa pós-curso da CS Discoveries
           lesson_groups:
             cspSurvey:
               display_name: Questionário
@@ -15629,6 +15631,8 @@ pt:
             CS Discoveries Post Course survey:
               key: Pesquisa do CS Discoveries pós curso
               name: Pesquisa do CS Discoveries pós curso
+            lesson-1:
+              name: Pesquisa pós-curso da CS Discoveries
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imagens e Amimações'
@@ -15690,6 +15694,8 @@ pt:
             CS Discoveries Post Course survey:
               key: Pesquisa do CS Discoveries pós curso
               name: Pesquisa do CS Discoveries pós curso
+            CS Discoveries Post-Course Survey:
+              name: Pesquisa pós-curso da CS Discoveries
           lesson_groups:
             csd4_1:
               display_name: 'Capítulo 1: Desenho orientado ao usuário'
@@ -15750,6 +15756,8 @@ pt:
             CS Discoveries Post Course survey:
               key: Pesquisa do CS Discoveries pós curso
               name: Pesquisa do CS Discoveries pós curso
+            CS Discoveries Post-Course Survey:
+              name: Pesquisa pós-curso da CS Discoveries
           lesson_groups:
             csd5_1:
               display_name: 'Capítulo 1: Representando Informação'
@@ -15824,6 +15832,8 @@ pt:
             CS Discoveries Post Course survey:
               key: Pesquisa do CS Discoveries pós curso
               name: Pesquisa do CS Discoveries pós curso
+            CS Discoveries Post-Course Survey:
+              name: Pesquisa pós-curso da CS Discoveries
           lesson_groups:
             csd6_1:
               display_name: 'Capítulo 1: Programando com Hardware'
@@ -17257,6 +17267,13 @@ pt:
           lesson_groups:
             lessonGroup-2:
               display_name: Conteúdo
+        csa6-pilot:
+          lessons:
+            lesson-15:
+              name: Dia de Avaliação
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -17339,6 +17356,8 @@ pt:
           lessons:
             Survey Planning:
               name: Projetando a coleta de dados
+            CS Discoveries Post-Course Survey:
+              name: Pesquisa pós-curso da CS Discoveries
           lesson_groups:
             lessonGroup-4:
               display_name: Questionário
@@ -17652,6 +17671,10 @@ pt:
               name: Ferramentas
             lesson-3:
               name: Exemplos
+        poetry:
+          lessons:
+            lesson-7:
+              name: Condições
         spelling-bee:
           lessons:
             lesson-1:
@@ -17660,6 +17683,20 @@ pt:
         csa5-exemplars:
           lessons:
             lesson-14:
+              name: Dia de Avaliação
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Pesquisa Pós-Curso
+          title: Pesquisa pós-curso da CS Discoveries
+        csa6-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Dia de Avaliação
+            lesson-15:
               name: Dia de Avaliação
           lesson_groups:
             lessonGroup-2:

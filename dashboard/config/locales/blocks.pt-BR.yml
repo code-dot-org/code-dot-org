@@ -1732,9 +1732,7 @@ pt:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Sorvete
-            Stars: Estrelas
-            Fireworks: Fogos de artifício
+            '"placeholder"': Fogos de artifício
             '"rainbow"': Arco-íris
             '"hearts"': Corações
             '"flowers"': Flores
@@ -1750,8 +1748,8 @@ pt:
         text: reproduzir som {SOUND}
         options:
           SOUND:
-            Break: Pausa
-            Light: Claro
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Pausa
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Claro
       Poetry_setBackground:
         text: definir a cor do plano de fundo {COLOR}
       Poetry_setBackgroundEffect:
