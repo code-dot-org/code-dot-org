@@ -23993,6 +23993,7 @@ uz:
             debugging:
               display_name: Nosozliklarni bartaraf etish (Debugging)
         csd1-2021:
+          title: Muammolarni yechish va hisoblash ('21-'22)
           description_short: "  Learn how humans work with computers to solve problems."
           lessons:
             CS Discoveries Pre-survey:
@@ -24284,6 +24285,8 @@ uz:
             CS Discoveries Post Course survey:
               key: Informatika kashfiyotlari kursidan keyingi so'rovnoma
               name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+            lesson-1:
+              name: CS Discoveries Post-Course Survey
           lesson_groups:
             csd2_1v2:
               big_questions: "-   Nima uchun odamlar veb-saytlarni yaratadilar? \n-
@@ -24428,6 +24431,8 @@ uz:
             CS Discoveries Post Course survey:
               key: Informatika kashfiyotlari kursidan keyingi so'rovnoma
               name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+            lesson-1:
+              name: CS Discoveries Post-Course Survey
           lesson_groups:
             csd3_1:
               display_name: 'Chapter 1: Images and Animations'
@@ -24518,6 +24523,8 @@ uz:
             CS Discoveries Post Course survey:
               key: Informatika kashfiyotlari kursidan keyingi so'rovnoma
               name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
           lesson_groups:
             csd4_1:
               display_name: 'Chapter 1: User Centered Design'
@@ -24611,6 +24618,8 @@ uz:
             CS Discoveries Post Course survey:
               key: Informatika kashfiyotlari kursidan keyingi so'rovnoma
               name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
           lesson_groups:
             csd5_1:
               display_name: 'Chapter 1: Representing Information'
@@ -24799,6 +24808,8 @@ uz:
             CS Discoveries Post Course survey:
               key: Informatika kashfiyotlari kursidan keyingi so'rovnoma
               name: Informatika kashfiyotlari kursidan keyingi so'rovnoma
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
           lesson_groups:
             csd6_1:
               display_name: 'Chapter 1: Programming with Hardware'
@@ -27335,6 +27346,13 @@ uz:
           lesson_groups:
             lessonGroup-2:
               display_name: Kontent
+        csa6-pilot:
+          lessons:
+            lesson-15:
+              name: Baholash kuni
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -27457,6 +27475,8 @@ uz:
                 Bu o'quvchilarni yakuniy loyihaga tayyorlaydigan besh kunlik darslar ketma-ketligidagi ikkinchi dars. Bu darsda talabalar boshqa o'quvchilar jamoasi o'z maktabidagi klublar asosida klub tavsiya etuvchi dastur yaratmoqchi ekanliklarini bilib oladilar. Talabalar ushbu ishga yordam berish uchun qaysi savollar eng foydali bo'lishini o'ylashadi, so'ng so'rovnoma tuzish uchun Google Form shablonidan foydalanishni o'rganadilar. Talabalarning ushbu darsda qilgan qadamlari, talabalarning yakuniy loyihada bajaradigan qadamlari bilan bir xil.
 
                 \*\* Kun savoli: \*\* Qanday qilib men mashinalar o'rganishi (ML) ilovasiga ma'lumot to'plash uchun so'rovnoma tuzishim mumkin?
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
           lesson_groups:
             lessonGroup-4:
               display_name: Survey
@@ -27755,6 +27775,10 @@ uz:
               name: Vidjetlar
             lesson-2:
               name: Asboblar
+        poetry:
+          lessons:
+            lesson-7:
+              name: Shartli bayonotlar
         spelling-bee:
           lessons:
             lesson-1:
@@ -27763,6 +27787,20 @@ uz:
         csa5-exemplars:
           lessons:
             lesson-14:
+              name: Baholash kuni
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Kontent
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Post-Course Survey
+          title: CS Discoveries Post-Course Survey
+        csa6-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: Baholash kuni
+            lesson-15:
               name: Baholash kuni
           lesson_groups:
             lessonGroup-2:

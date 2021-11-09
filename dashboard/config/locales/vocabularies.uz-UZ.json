@@ -265,6 +265,16 @@
           "word": "Mashinalar o‘rganishi",
           "definition": "Kompyuterlar aniq dasturlashtirilmasdan naqshlarni tanishi va qarorlarni qabul qila olishi uslublari"
         },
+        "code/poem-art/unversioned": {
+          "word": "Kod"
+        },
+        "event/poem-art/unversioned": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Dastur"
+        },
         "event/outbreak/unversioned": {
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
