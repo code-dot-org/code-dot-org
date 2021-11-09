@@ -138,27 +138,13 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders resources for teacher', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow
-        {...defaultProps}
-        viewAs={ViewType.Teacher}
-        teacherResources={[
-          {
-            type: ResourceType.curriculum,
-            link: 'https://example.com/a'
-          },
-          {
-            type: ResourceType.vocabulary,
-            link: 'https://example.com/b'
-          }
-        ]}
-      />
-    );
-    expect(
-      wrapper.containsMatchingElement(
-        <ResourcesDropdown
-          resources={[
+  describe('teacher resources', () => {
+    it('renders resources for teacher', () => {
+      const wrapper = shallow(
+        <UnitOverviewTopRow
+          {...defaultProps}
+          viewAs={ViewType.Teacher}
+          teacherResources={[
             {
               type: ResourceType.curriculum,
               link: 'https://example.com/a'
@@ -168,38 +154,34 @@ describe('UnitOverviewTopRow', () => {
               link: 'https://example.com/b'
             }
           ]}
-          useMigratedResources={false}
         />
-      )
-    ).to.be.true;
-  });
+      );
+      expect(
+        wrapper.containsMatchingElement(
+          <ResourcesDropdown
+            resources={[
+              {
+                type: ResourceType.curriculum,
+                link: 'https://example.com/a'
+              },
+              {
+                type: ResourceType.vocabulary,
+                link: 'https://example.com/b'
+              }
+            ]}
+            useMigratedResources={false}
+          />
+        )
+      ).to.be.true;
+    });
 
-  it('renders migrated resources for teacher on a migrated script', () => {
-    const wrapper = shallow(
-      <UnitOverviewTopRow
-        {...defaultProps}
-        viewAs={ViewType.Teacher}
-        isMigrated={true}
-        migratedTeacherResources={[
-          {
-            id: 1,
-            key: 'curriculum',
-            name: 'Curriculum',
-            url: 'https://example.com/a'
-          },
-          {
-            id: 2,
-            key: 'vocabulary',
-            name: 'Vocabulary',
-            url: 'https://example.com/b'
-          }
-        ]}
-      />
-    );
-    expect(
-      wrapper.containsMatchingElement(
-        <ResourcesDropdown
-          migratedResources={[
+    it('renders migrated resources for teacher on a migrated script', () => {
+      const wrapper = shallow(
+        <UnitOverviewTopRow
+          {...defaultProps}
+          viewAs={ViewType.Teacher}
+          isMigrated={true}
+          migratedTeacherResources={[
             {
               id: 1,
               key: 'curriculum',
@@ -213,10 +195,30 @@ describe('UnitOverviewTopRow', () => {
               url: 'https://example.com/b'
             }
           ]}
-          useMigratedResources={true}
         />
-      )
-    ).to.be.true;
+      );
+      expect(
+        wrapper.containsMatchingElement(
+          <ResourcesDropdown
+            migratedResources={[
+              {
+                id: 1,
+                key: 'curriculum',
+                name: 'Curriculum',
+                url: 'https://example.com/a'
+              },
+              {
+                id: 2,
+                key: 'vocabulary',
+                name: 'Vocabulary',
+                url: 'https://example.com/b'
+              }
+            ]}
+            useMigratedResources={true}
+          />
+        )
+      ).to.be.true;
+    });
   });
 
   it('renders the unit calendar when showCalendar true for teacher', () => {
