@@ -25,6 +25,9 @@
         "exploring_apps/coursef/2021": {
           "name": "Prozkoumávání aplikací"
         },
+        "introducing_sprite_lab_1/coursef/2021": {
+          "url": "https://youtu.be/yd-9xZ275dM"
+        },
         "exploring_apps_1/coursef/2021": {
           "name": "Prozkoumávání aplikací"
         },
@@ -34,11 +37,23 @@
         "sprite_lab_documentation/coursef/2021": {
           "url": "https://studio.code.org/docs/spritelab/"
         },
+        "the_power_of_words_lesson_slides/coursef/2021": {
+          "name": "Moc slov: Snímky k lekci"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "name": "Moc slova: Moc slova"
+        },
+        "the_power_of_words_words_can_hurt/coursef/2021": {
+          "name": "Moc slov: Slova mohou zraňovat"
+        },
         "the_power_of_words_lesson_quiz/coursef/2021": {
           "name": "Moc slov: Kvíz k lekci"
         },
         "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
           "name": "Moc slov: Kvíz k lekci"
+        },
+        "variables_blank_space_stories/coursef/2021": {
+          "name": "Proměnné: Příběhy z prázdného místa"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
           "name": "Příběhy prázdného prostoru"
@@ -52,18 +67,30 @@
         "user_input_programs/coursef/2021": {
           "name": "Programy uživatelského vstupu"
         },
+        "mini_project_user_input_programs/coursef/2021": {
+          "name": "Miniprojekt: Programy vstupu uživatele"
+        },
         "teacher_sandbox_level/coursef/2021": {
-          "name": "Úroveň sandboxu učitele"
+          "name": "Úroveň sandboxu učitele",
+          "url": "https://studio.code.org/levels/27300"
+        },
+        "mini_project_user_input_programs_1/coursef/2021": {
+          "name": "Miniprojekt: Programy vstupu uživatele"
         },
         "pause_and_think_online/coursef/2021": {
-          "name": "Online pauza a zamyšlení"
+          "name": "Online pauza a zamyšlení",
+          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "For cyklus zábavy",
           "url": "https://youtu.be/mX857v5B4gE"
         },
+        "flf-assessment-teacher-key/coursef/2021": {
+          "name": "Pro zábavný okruh - klíč k hodnocení"
+        },
         "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "For cyklus zábavy"
+          "name": "For cyklus zábavy",
+          "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
           "name": "For cyklus zábavy"
@@ -95,6 +122,9 @@
           "name": "Internet",
           "url": "https://youtu.be/mFOUbqYv1Sc"
         },
+        "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "Karty s IP adresou a typem doručení"
+        },
         "csf-internet-assessment/coursef/2021": {
           "name": "Internet"
         },
@@ -111,9 +141,18 @@
         "final-project-design-worksheet/coursef/2021": {
           "name": "Finální design projektu"
         },
+        "rubric-csf-final-projects/coursef/2021": {
+          "name": "Závěrečný projekt základů CS"
+        },
         "csta_standards_mapping/coursef/2021": {
           "name": "Mapování standardů CSTA",
           "url": "https://studio.code.org/s/coursef-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursef/2021": {
+          "name": "Pokyny pro společný základ a NGSS"
+        },
+        "cross-curricular_extension_activities_1/coursef/2021": {
+          "name": "Rozšiřující aktivity napříč předměty"
         },
         "course_vocabulary/coursef/2021": {
           "name": "Slovníček kurzu",
@@ -137,6 +176,21 @@
         "sprite_lab_documentation_1/coursef/2021": {
           "url": "https://studio.code.org/docs/spritelab/"
         },
+        "virtual_lesson_modifications/coursef/2021": {
+          "name": "Modifikace virtuální lekce"
+        },
+        "digital-trails-lesson-slides/courseb/2021": {
+          "name": "Digitální stezky: Prezentace z lekcí"
+        },
+        "digital-trails-follow-the-digital-trail/courseb/2021": {
+          "name": "Digitální stezky: Následování digitální stezky"
+        },
+        "digital-trails-digital-trail-squares/courseb/2021": {
+          "name": "Digitální stezky: Čtverce digitálních stezek"
+        },
+        "digital-trails-animal-tracks/courseb/2021": {
+          "name": "Digitální stezky: Stopy zvířat"
+        },
         "mimi-activity/courseb/2021": {
           "name": "Pohyb, pohyb"
         },
@@ -149,14 +203,26 @@
         "teacher-video-move-it/courseb/2021": {
           "name": "Přesuň to, Přesuň to"
         },
+        "feeling_faces_emotion_image/courseb/2021": {
+          "name": "Obrázek emoce projevené na obličeji"
+        },
         "feeling-faces-image/courseb/2021": {
           "name": "Tváře s pocity"
         },
         "jigsaw/courseb/2021": {
-          "name": "Procvičování přetahování"
+          "name": "Procvičování přetahování",
+          "url": "https://studio.code.org/s/jigsaw"
+        },
+        "class-section-video/courseb/2021": {
+          "name": "Jak vytvořit sekci třídy na Code.org",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+        },
+        "course-ab-blockly-blocks/courseb/2021": {
+          "name": "Offline bloky (třídy K-1)"
         },
         "pair-programming-vid/courseb/2021": {
-          "name": "Párové programování"
+          "name": "Párové programování",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "wiggles_-_gonoodle/courseb/2021": {
           "name": "Třepání – GoNoodle"
@@ -169,6 +235,9 @@
         },
         "compass-rose/courseb/2021": {
           "name": "Růžice kompasu"
+        },
+        "feeling_faces_-_emotion_image/courseb/2021": {
+          "name": "Obličeje s pocity – obrázek emoce"
         },
         "stevie_and_the_big_project/courseb/2021": {
           "name": "Stevie a Velký projekt"
@@ -190,8 +259,12 @@
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Bláznění s cykly"
         },
+        "csf-lesson-recommend/courseb/2021": {
+          "name": "Tipy k hlavní aktivitě základů CS"
+        },
         "common-sense-media-pause-think/courseb/2021": {
-          "name": "Online pauza a zamyšlení"
+          "name": "Online pauza a zamyšlení",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "the-right-app-scenarios/courseb/2021": {
           "name": "Správné scénáře aplikace"
@@ -206,9 +279,24 @@
         "assessment-answer-big-event/courseb/2021": {
           "name": "Velká událost"
         },
+        "the_big_event_courses_a_b_/courseb/2021": {
+          "name": "Velká událost (kurzy A a B)"
+        },
+        "play_lab_project_planning_guide/courseb/2021": {
+          "name": "Průvodce plánováním laboratorního projektu"
+        },
+        "play_lab_project_planning_guide_1/courseb/2021": {
+          "name": "Průvodce plánováním laboratorního projektu"
+        },
         "csta_standards_mapping/courseb/2021": {
           "name": "Mapování standardů CSTA",
           "url": "https://studio.code.org/s/courseb-2021/standards"
+        },
+        "common_core_and_ngss_guidance/courseb/2021": {
+          "name": "Pokyny pro společný základ a NGSS"
+        },
+        "cross-curricular_extension_activities/courseb/2021": {
+          "name": "Rozšiřující aktivity napříč předměty"
         },
         "course_vocabulary/courseb/2021": {
           "name": "Slovníček kurzu",
@@ -229,14 +317,34 @@
         "teacher_forum_1/courseb/2021": {
           "url": "https://forum.code.org/c/csf/"
         },
+        "virtual_lesson_modifications/courseb/2021": {
+          "name": "Modifikace virtuální lekce"
+        },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": "Bezpečnost v mém online sousedství: Snímky z lekce"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": "Bezpečnost v mém online sousedství: Moje online sousedství"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "Bezpečnost v mém online sousedství: Bezpečnost: Pravidla!"
+        },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "Bezpečnost v mém online sousedství: Chvilka zastavení a zamyšlení"
+        },
         "pair-programming-vid/coursea/2021": {
-          "name": "Párové programování"
+          "name": "Párové programování",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "20_20_20_rule/coursea/2021": {
           "name": "Pravidlo 20/20/20"
         },
         "wiggles-go_noodle/coursea/2021": {
           "name": "Nudle Wiggles-Go"
+        },
+        "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "name": "Začínáme – vytvoření oddílu třídy",
+          "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
         },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Šťastné mapy",
@@ -251,26 +359,56 @@
         "happy-map-game-pieces/coursea/2021": {
           "name": "Dílky hry Veselá mapa"
         },
+        "feeling_faces_-_emotion_image/coursea/2021": {
+          "name": "Obličeje s pocity – obrázek emoce"
+        },
+        "course-ab-blockly-blocks/coursea/2021": {
+          "name": "Offline bloky (třídy K-1)"
+        },
         "20_20_20_rule_1/coursea/2021": {
           "name": "Pravidlo 20/20/20"
         },
         "wiggles_-_gonoodle/coursea/2021": {
           "name": "Třepání – GoNoodle"
         },
+        "csf_debugging_k1_blocks/coursea/2021": {
+          "name": "Ladění pomocí tlačítka kroku",
+          "url": "https://videos.code.org/csf/debugging-k1-blocks.mp4"
+        },
+        "feeling_faces_emotion_image/coursea/2021": {
+          "name": "Obrázek emoce projevené na obličeji"
+        },
+        "feeling_faces_-_emotion_image_1/coursea/2021": {
+          "name": "Obličeje s pocity – obrázek emoce"
+        },
         "happy-map-cards-xl/coursea/2021": {
           "name": "Veselé karty s mapou XL"
+        },
+        "happy-map-game-pieces-bonus-pack/coursea/2021": {
+          "name": "Bonusové balení herních dílků veselé mapy"
+        },
+        "feeling_faces_emotion_image_1/coursea/2021": {
+          "name": "Obrázek emoce projevené na obličeji"
         },
         "feeling-faces-image/coursea/2021": {
           "name": "Tváře s pocity"
         },
         "pair-programming/coursea/2021": {
-          "name": "Párové programování"
+          "name": "Párové programování",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "feeling_faces_emotion_image_2/coursea/2021": {
+          "name": "Obrázek emoce projevené na obličeji"
         },
         "csf_lesson_recommendations/coursea/2021": {
           "name": "Doporučení pro lekci CSF"
         },
         "common-sense-media-pause-think/coursea/2021": {
-          "name": "Online pauza a zamyšlení"
+          "name": "Online pauza a zamyšlení",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
+        "feeling_faces_emotion_image_3/coursea/2021": {
+          "name": "Obrázek emoce projevené na obličeji"
         },
         "csf_lesson_recommendations_1/coursea/2021": {
           "name": "Doporučení pro lekci CSF"
@@ -285,12 +423,36 @@
         "assessment-answer-big-event/coursea/2021": {
           "name": "Velká událost"
         },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "Velká událost (kurzy A a B)"
+        },
+        "feeling_faces_-_emotion_image_2/coursea/2021": {
+          "name": "Obličeje s pocity – obrázek emoce"
+        },
+        "csf-lesson-recommend/coursea/2021": {
+          "name": "Tipy k hlavní aktivitě základů CS"
+        },
+        "feeling_faces_-_emotion_image_3/coursea/2021": {
+          "name": "Obličeje s pocity – obrázek emoce"
+        },
         "csf_lesson_recommendations_2/coursea/2021": {
           "name": "Doporučení pro lekci CSF"
+        },
+        "artist_project_planning_guide/coursea/2021": {
+          "name": "Průvodce plánováním uměleckého projektu"
+        },
+        "artist_project_planning_guide_1/coursea/2021": {
+          "name": "Průvodce plánováním uměleckého projektu"
         },
         "csta_standards_mapping/coursea/2021": {
           "name": "Mapování standardů CSTA",
           "url": "https://studio.code.org/s/coursea-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursea/2021": {
+          "name": "Pokyny pro společný základ a NGSS"
+        },
+        "cross-curricular_extension_activities/coursea/2021": {
+          "name": "Rozšiřující aktivity napříč předměty"
         },
         "course_vocabulary/coursea/2021": {
           "name": "Slovníček kurzu",
@@ -311,6 +473,15 @@
         "teacher_forum_1/coursea/2021": {
           "url": "https://forum.code.org/c/csf/"
         },
+        "virtual_lesson_modifications/coursea/2021": {
+          "name": "Modifikace virtuální lekce"
+        },
+        "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
+          "name": "Dát STOP online zlovolnostem: Prezentace z lekce"
+        },
+        "putting-a-stop-to-online-meanness-stop-online-meanness/coursec/2021": {
+          "name": "Dát STOP online zlovolnostem: STOP online zlovolnostem"
+        },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Moji robotičtí přátelé"
         },
@@ -328,13 +499,18 @@
           "name": "Moji robotičtí přátelé"
         },
         "c2-maze-bridge/coursec/2021": {
-          "name": "Stránka s přemostěním bludiště"
+          "name": "Stránka s přemostěním bludiště",
+          "url": "https://drive.google.com/file/d/19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS/view"
         },
         "unplugged-maze-blocks/coursec/2021": {
           "name": "Odpojené bloky bludiště"
         },
         "pair-programming-vid/coursec/2021": {
-          "name": "Párové programování"
+          "name": "Párové programování",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "csf-lesson-recommend/coursec/2021": {
+          "name": "Tipy k hlavní aktivitě základů CS"
         },
         "debugging_guide/coursec/2021": {
           "name": "Průvodce laděním"
@@ -351,6 +527,9 @@
         "csf-turns-angles-doc/coursec/2021": {
           "name": "Zatáčky a úhly"
         },
+        "feeling_faces_emotion_image/coursec/2021": {
+          "name": "Obrázek emoce projevené na obličeji"
+        },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Velká událost",
           "url": "https://youtu.be/u0WV9shCoak"
@@ -365,17 +544,29 @@
           "name": "Velká událost (kurz C)"
         },
         "pause_and_think_online/coursec/2021": {
-          "name": "Online pauza a zamyšlení"
+          "name": "Online pauza a zamyšlení",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
+        "open-ended_programming_levels/coursec/2021": {
+          "name": "Otevřené úrovně programování"
+        },
+        "open-ended_programming_levels_1/coursec/2021": {
+          "name": "Otevřené úrovně programování"
+        },
+        "right-app-scenarios/coursec/2021": {
+          "name": "Grafické znázornění dat z herní laboratoře"
         },
         "csf-bit-byte-video/coursec/2021": {
-          "name": "Bity vs. bajty"
+          "name": "Bity vs. bajty",
+          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Binární náramky",
           "url": "https://youtu.be/3S2YfoO4_CM"
         },
         "lesson-in-action-binary-bracelets/coursec/2021": {
-          "name": "Binární náramky"
+          "name": "Binární náramky",
+          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
         },
         "csf-binary-bracelets-activity/coursec/2021": {
           "name": "Binární náramky"
@@ -386,9 +577,21 @@
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Binární náramky"
         },
+        "play-lab-project-planning-guide-exemplar/coursec/2021": {
+          "name": "Přehrát průvodce plánováním laboratorního projektu (příklad)"
+        },
+        "play-lab-project-guide/coursec/2021": {
+          "name": "Průvodce plánováním laboratorního projektu"
+        },
         "csta_standards_mapping/coursec/2021": {
           "name": "Mapování standardů CSTA",
           "url": "https://studio.code.org/s/coursec-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursec/2021": {
+          "name": "Pokyny pro společný základ a NGSS"
+        },
+        "cross-curricular_extension_activities/coursec/2021": {
+          "name": "Rozšiřující aktivity napříč předměty"
         },
         "course_vocabulary/coursec/2021": {
           "name": "Slovníček kurzu",
@@ -408,6 +611,30 @@
         },
         "teacher_forum_1/coursec/2021": {
           "url": "https://forum.code.org/c/csf/"
+        },
+        "virtual_lesson_modifications/coursec/2021": {
+          "name": "Modifikace virtuální lekce"
+        },
+        "password_power-up_lesson_slides/coursed/2021": {
+          "name": "Posílení hesla: Prezentace z lekce"
+        },
+        "password_power-up_power-up_your_password/coursed/2021": {
+          "name": "Posílení hesla: Posilte své heslo"
+        },
+        "password_power-up_power-up_your_password_answer_key/coursed/2021": {
+          "name": "Posílení hesla: Posilte své heslo"
+        },
+        "password_power-up_lesson_quiz/coursed/2021": {
+          "name": "Posílení hesla: Kvíz k lekci"
+        },
+        "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "name": "Posílení hesla: Kvíz k lekci"
+        },
+        "password_power-up_if_then_scenarios/coursed/2021": {
+          "name": "Posílení hesla: Scénáře Poku... Pak"
+        },
+        "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
+          "name": "Posílení hesla: Scénáře Poku... Pak"
         },
         "graph-paper-programming/coursed/2021": {
           "name": "Programování na čtverečkovaném papíru"
@@ -430,7 +657,8 @@
           "name": "Programování na čtverečkovaném papíru"
         },
         "pair-programming-vid/coursed/2021": {
-          "name": "Párové programování"
+          "name": "Párové programování",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
           "name": "Štafetové programování"
@@ -456,26 +684,42 @@
           "name": "Bloky bez připojení (kurzy C až F)"
         },
         "pause_and_think_online/coursed/2021": {
-          "name": "Online pauza a zamyšlení"
+          "name": "Online pauza a zamyšlení",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
+        },
+        "open-ended_programming_levels/coursed/2021": {
+          "name": "Otevřené úrovně programování"
+        },
+        "open-ended_programming_levels_1/coursed/2021": {
+          "name": "Otevřené úrovně programování"
         },
         "dance-party-project-guide/coursed/2021": {
           "name": "Průvodce projektem taneční párty"
         },
         "dance_party_unplugged/coursed/2021": {
-          "name": "Taneční večírek: bez připojení"
+          "name": "Taneční večírek: bez připojení",
+          "url": "https://curriculum.code.org/hoc/unplugged/4/"
+        },
+        "open-ended_programming_levels_2/coursed/2021": {
+          "name": "Otevřené úrovně programování"
         },
         "feeling-faces-image/coursed/2021": {
           "name": "Tváře s pocity"
         },
         "pause_and_think_online_1/coursed/2021": {
-          "name": "Online pauza a zamyšlení"
+          "name": "Online pauza a zamyšlení",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
           "name": "Podmínky s kartami",
           "url": "https://youtu.be/UymN4lTL50s"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "Podmínky s kartami"
+          "name": "Podmínky s kartami",
+          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
+        },
+        "csf-conditionals-with-cards-sample-program/coursed/2021": {
+          "name": "Ukázkový program Podmínky s kartami"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
           "name": "Podmínky s kartami"
@@ -487,11 +731,22 @@
         "assessment-answer-conditionals-cards/coursed/2021": {
           "name": "Podmínky s kartami"
         },
+        "course-d-project-planning-guide-1/coursed/2021": {
+          "name": "CSF Kurz D Průvodce plánováním projektu na konci kurzu"
+        },
         "csta_standards_mapping/coursed/2021": {
-          "name": "Mapování standardů CSTA"
+          "name": "Mapování standardů CSTA",
+          "url": "https://studio.code.org/s/coursed-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursed/2021": {
+          "name": "Pokyny pro společný základ a NGSS"
+        },
+        "cross-curricular_extension_activities/coursed/2021": {
+          "name": "Rozšiřující aktivity napříč předměty"
         },
         "course_vocabulary/coursed/2021": {
-          "name": "Slovníček kurzu"
+          "name": "Slovníček kurzu",
+          "url": "https://studio.code.org/s/coursed-2021/vocab"
         },
         "implementation_guide/coursed/2021": {
           "name": "Příručka pro provedení"
@@ -508,11 +763,18 @@
         "teacher_forum_1/coursed/2021": {
           "url": "https://forum.code.org/c/csf/"
         },
+        "virtual_lesson_modifications/coursed/2021": {
+          "name": "Modifikace virtuální lekce"
+        },
         "unplugged_maze_blocks/express/2021": {
           "name": "Odpojené bloky bludiště"
         },
         "pair_programming/express/2021": {
-          "name": "Párové programování"
+          "name": "Párové programování",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "unplugged_blocks_courses_c-f_/express/2021": {
+          "name": "Bloky bez připojení (kurzy C až F)"
         },
         "artist_introduction/express/2021": {
           "name": "Představení umělce"
@@ -522,6 +784,10 @@
         },
         "turns_angles_1/express/2021": {
           "name": "Zatáčky a úhly"
+        },
+        "swimming_fish_teacher_sandbox/express/2021": {
+          "name": "Sandbox učitele plavajících ryb",
+          "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/express/2021": {
           "url": "https://studio.code.org/docs/spritelab/"
@@ -533,13 +799,27 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "pause_and_think_online/express/2021": {
-          "name": "Online pauza a zamyšlení"
+          "name": "Online pauza a zamyšlení",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "dance-party-project-guide/express/2021": {
           "name": "Průvodce projektem taneční párty"
         },
+        "open-ended_programming_levels/express/2021": {
+          "name": "Otevřené úrovně programování"
+        },
         "pair_programming_video/express/2021": {
-          "name": "Video k párovému programování"
+          "name": "Video k párovému programování",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "unplugged_blocks_courses_c-f__1/express/2021": {
+          "name": "Bloky bez připojení (kurzy C až F)"
+        },
+        "unplugged_blocks_courses_c-f__2/express/2021": {
+          "name": "Bloky bez připojení (kurzy C až F)"
+        },
+        "unplugged_blocks_courses_c-f__3/express/2021": {
+          "name": "Bloky bez připojení (kurzy C až F)"
         },
         "unplugged_blocks_courses_c-f__4/express/2021": {
           "name": "Bloky bez připojení (kurzy C až F)"
@@ -553,6 +833,12 @@
         "variables_video/express/2021": {
           "name": "Proměnné",
           "url": "https://youtu.be/DI7DprN4FtE"
+        },
+        "csf-express-end-of-course-project-planning-guide/express/2021": {
+          "name": "CSF Express: Průvodce plánováním projektu na konci kurzu"
+        },
+        "rubric-csf-final-projects/express/2021": {
+          "name": "Závěrečný projekt základů CS"
         },
         "csta_standards_mapping/express/2021": {
           "name": "Mapování standardů CSTA",
@@ -569,7 +855,12 @@
           "name": "Průvodce laděním"
         },
         "pair-programming-vid/pre-express/2021": {
-          "name": "Párové programování"
+          "name": "Párové programování",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "class-section-video/pre-express/2021": {
+          "name": "Jak vytvořit sekci třídy na Code.org",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
         },
         "feeling-faces-image/pre-express/2021": {
           "name": "Tváře s pocity"
@@ -581,13 +872,16 @@
           "name": "Třepání – GoNoodle"
         },
         "common-sense-media-pause-think/pre-express/2021": {
-          "name": "Online pauza a zamyšlení"
+          "name": "Online pauza a zamyšlení",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "csta_standards_mapping/pre-express/2021": {
-          "name": "Mapování standardů CSTA"
+          "name": "Mapování standardů CSTA",
+          "url": "https://studio.code.org/s/pre-express-2021/standards"
         },
         "course_vocabulary/pre-express/2021": {
-          "name": "Slovníček kurzu"
+          "name": "Slovníček kurzu",
+          "url": "https://studio.code.org/s/pre-express-2021/vocab"
         },
         "teacher_forum_1/pre-express/2021": {
           "url": "https://forum.code.org/c/csf/"
@@ -598,8 +892,30 @@
         "follow_the_algorithm/coursee/2021": {
           "name": "Postupujte podle algoritmu"
         },
+        "swimming-fish-teacher-sandbox/coursee/2021": {
+          "name": "Sandbox učitele plavajících ryb",
+          "url": "https://studio.code.org/levels/18623"
+        },
         "sprite_lab_documentation/coursee/2021": {
           "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
+          "name": "Buďte super digitálním občanem: Prezentace lekce"
+        },
+        "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
+          "name": "Buďte super digitálním občanem: Super digitální občan"
+        },
+        "private-and-personal-information-lesson-slides/coursee/2021": {
+          "name": "Soukromé a osobní údaje: Snímky z lekce"
+        },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "name": "Soukromé a osobní údaje: Výstupní lístek"
+        },
+        "private-and-personal-information-lesson-quiz/coursee/2021": {
+          "name": "Soukromé a osobní údaje: Kvíz k lekci"
+        },
+        "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
+          "name": "Soukromé a osobní údaje: Kvíz k lekci"
         },
         "common-sense-media-pause-think/coursee/2021": {
           "name": "Online pauza a zamyšlení",
@@ -607,6 +923,13 @@
         },
         "about_me_planning_guide/coursee/2021": {
           "name": "Průvodce plánováním O mně"
+        },
+        "digital-sharing-lesson/coursee/2021": {
+          "name": "Plán lekce digitálního sdílení"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "name": "Etika digitálního sdílení (video)",
+          "url": "https://www.youtube.com/watch?v=o_oDsBeBxko"
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "Zatáčky a úhly"
@@ -618,6 +941,19 @@
           "name": "Psaní písní s funkcemi",
           "url": "https://youtu.be/5iDCKkI6y2Y"
         },
+        "lesson-in-action-songwriting/coursee/2021": {
+          "name": "Offline funkce: Psaní písní",
+          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw"
+        },
+        "csf-songwriting-worksheets/coursee/2021": {
+          "name": "Offline funkce: Psaní písní"
+        },
+        "csf-songwriting-assessment/coursee/2021": {
+          "name": "Offline funkce: Psaní písní"
+        },
+        "assessment-answer-songwriting/coursee/2021": {
+          "name": "Offline funkce: Psaní písní"
+        },
         "course-cf-blockly-blocks/coursee/2021": {
           "name": "Bloky bez připojení (kurzy C až F)"
         },
@@ -625,14 +961,30 @@
           "name": "Návrh pro přístupnost"
         },
         "types_of_disabilities/coursee/2021": {
-          "name": "Typy postižení"
+          "name": "Typy postižení",
+          "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/"
+        },
+        "end-of-course-project-guide/coursee/2021": {
+          "name": "Průvodce projekty na zakončení kurzu"
+        },
+        "rubric-csf-final-projects/coursee/2021": {
+          "name": "Závěrečný projekt základů CS"
         },
         "design-process/coursee/2021": {
           "name": "Proces návrhu"
         },
+        "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
+          "name": "72 kreativních způsobů, jak mohou žáci předvést své znalosti"
+        },
         "csta_standards_mapping/coursee/2021": {
           "name": "Mapování standardů CSTA",
           "url": "https://studio.code.org/s/coursee-2021/standards"
+        },
+        "common_core_and_ngss_guidance/coursee/2021": {
+          "name": "Pokyny pro společný základ a NGSS"
+        },
+        "cross-curricular_extension_activities/coursee/2021": {
+          "name": "Rozšiřující aktivity napříč předměty"
         },
         "course_vocabulary/coursee/2021": {
           "name": "Slovníček kurzu",
@@ -655,6 +1007,9 @@
         },
         "sprite_lab_documentation_1/coursee/2021": {
           "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "virtual_lesson_modifications/coursee/2021": {
+          "name": "Modifikace virtuální lekce"
         }
       }
     }

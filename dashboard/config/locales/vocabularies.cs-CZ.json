@@ -155,6 +155,15 @@
         "machine_learning/oceans/unversioned": {
           "word": "Strojové učení"
         },
+        "code/poem-art/unversioned": {
+          "word": "Kód"
+        },
+        "event/poem-art/unversioned": {
+          "word": "Událost"
+        },
+        "program/poem-art/unversioned": {
+          "word": "Program "
+        },
         "event/outbreak/unversioned": {
           "word": "Událost"
         },
@@ -162,28 +171,33 @@
           "word": "Modely a simulace"
         },
         "sprite/coursef/2021": {
-          "word": "Sprite"
+          "word": "Sprite",
+          "definition": "Obrázek na obrazovce s místem, velikostí a vzhledem."
         },
         "user/coursef/2021": {
-          "word": "Uživatel"
+          "word": "Uživatel",
+          "definition": "Někdo, kdo používá nějaký objekt, včetně softwaru a hardwaru."
         },
         "program/coursef/2021": {
           "word": "Program "
         },
         "algorithm/coursef/2021": {
-          "word": "Algoritmus"
+          "word": "Algoritmus",
+          "definition": "Seznam kroků k dokončení úkolu."
         },
         "event/coursef/2021": {
           "word": "Událost"
         },
         "variable/coursef/2021": {
-          "word": "Proměnná"
+          "word": "Proměnná",
+          "definition": "Popisek informace použité v programu."
         },
         "prompt/coursef/2021": {
           "word": "Výzva"
         },
         "input/coursef/2021": {
-          "word": "Vstup"
+          "word": "Vstup",
+          "definition": "Informace, které počítače získávají od uživatelů."
         },
         "loop/coursef/2021": {
           "word": "Cyklus"
@@ -211,7 +225,8 @@
           "word": "Pakety"
         },
         "servers/coursef/2021": {
-          "word": "Servery"
+          "word": "Servery",
+          "definition": "Počítače, které existují pouze proto, aby poskytovaly věci ostatním."
         },
         "url/coursef/2021": {
           "word": "URL"
@@ -220,13 +235,15 @@
           "word": "DSL/Kabel"
         },
         "fiber_optic_cable/coursef/2021": {
-          "word": "Kabel s optickým vláknem"
+          "word": "Kabel s optickým vláknem",
+          "definition": "Připojení, které k přenosu informací využívá světlo"
         },
         "ip_address/coursef/2021": {
           "word": "IP adresa"
         },
         "wi_fi/coursef/2021": {
-          "word": "Wi-Fi"
+          "word": "Wi-Fi",
+          "definition": "Bezdrátový způsob přenosu informací pomocí rádiových vln."
         },
         "define/coursef/2021": {
           "word": "Definuj"
@@ -242,10 +259,12 @@
           "definition": "Pokus něco udělat"
         },
         "algorithm/courseb/2021": {
-          "word": "Algoritmus"
+          "word": "Algoritmus",
+          "definition": "Seznam kroků k dokončení úkolu."
         },
         "bug/courseb/2021": {
-          "word": "Chyba"
+          "word": "Chyba",
+          "definition": "Část programu, která nefunguje správně."
         },
         "debugging/courseb/2021": {
           "word": "Ladění"
@@ -261,16 +280,19 @@
           "word": "Roznožka"
         },
         "double_click/courseb/2021": {
-          "word": "Dvojí kliknutí"
+          "word": "Dvojí kliknutí",
+          "definition": "Velmi rychle stiskněte tlačítko myši"
         },
         "program/courseb/2021": {
           "word": "Program "
         },
         "programming/courseb/2021": {
-          "word": "Programování"
+          "word": "Programování",
+          "definition": "Umění vytvoření programu"
         },
         "persistence/courseb/2021": {
-          "word": "Perzistence"
+          "word": "Perzistence",
+          "definition": "Opakování znovu a znovu, i když je něco velmi těžké."
         },
         "loop/courseb/2021": {
           "word": "Cyklus"
@@ -283,7 +305,8 @@
           "word": "Událost"
         },
         "algorithm/coursea/2021": {
-          "word": "Algoritmus"
+          "word": "Algoritmus",
+          "definition": "Seznam kroků k dokončení úkolu."
         },
         "debugging/coursea/2021": {
           "word": "Ladění"
@@ -302,13 +325,16 @@
           "word": "Roznožka"
         },
         "double_click/coursea/2021": {
-          "word": "Dvojí kliknutí"
+          "word": "Dvojí kliknutí",
+          "definition": "Velmi rychle stiskněte tlačítko myši"
         },
         "bug/coursea/2021": {
-          "word": "Chyba"
+          "word": "Chyba",
+          "definition": "Část programu, která nefunguje správně."
         },
         "programming/coursea/2021": {
-          "word": "Programování"
+          "word": "Programování",
+          "definition": "Umění vytvoření programu"
         },
         "loop/coursea/2021": {
           "word": "Cyklus"
@@ -321,10 +347,12 @@
           "word": "Událost"
         },
         "algorithm/coursec/2021": {
-          "word": "Algoritmus"
+          "word": "Algoritmus",
+          "definition": "Seznam kroků k dokončení úkolu."
         },
         "bug/coursec/2021": {
-          "word": "Chyba"
+          "word": "Chyba",
+          "definition": "Část programu, která nefunguje správně."
         },
         "debugging/coursec/2021": {
           "word": "Ladění"
@@ -336,7 +364,8 @@
           "word": "Sekvence"
         },
         "programming/coursec/2021": {
-          "word": "Programování"
+          "word": "Programování",
+          "definition": "Umění vytvoření programu"
         },
         "loop/coursec/2021": {
           "word": "Cyklus"
@@ -349,16 +378,19 @@
           "word": "Událost"
         },
         "binary/coursec/2021": {
-          "word": "Binární"
+          "word": "Binární",
+          "definition": "Způsob vyjádření informací pomocí pouze dvou možností."
         },
         "algorithm/coursed/2021": {
-          "word": "Algoritmus"
+          "word": "Algoritmus",
+          "definition": "Seznam kroků k dokončení úkolu."
         },
         "program/coursed/2021": {
           "word": "Program "
         },
         "bug/coursed/2021": {
-          "word": "Chyba"
+          "word": "Chyba",
+          "definition": "Část programu, která nefunguje správně."
         },
         "debugging/coursed/2021": {
           "word": "Ladění"
@@ -367,13 +399,15 @@
           "word": "Cyklus"
         },
         "programming/coursed/2021": {
-          "word": "Programování"
+          "word": "Programování",
+          "definition": "Umění vytvoření programu"
         },
         "frustrated/coursed/2021": {
           "word": "Znechucený"
         },
         "persistence/coursed/2021": {
-          "word": "Perzistence"
+          "word": "Perzistence",
+          "definition": "Opakování znovu a znovu, i když je něco velmi těžké."
         },
         "event/coursed/2021": {
           "word": "Událost"
@@ -389,22 +423,26 @@
           "word": "Podmínky"
         },
         "pseudocode/coursed/2021": {
-          "word": "pseudokód"
+          "word": "pseudokód",
+          "definition": "Srozumitelný popis kroků algoritmu"
         },
         "condition/coursed/2021": {
           "word": "Podmínka"
         },
         "while_loop/coursed/2021": {
-          "word": "Cyklus Zatím"
+          "word": "Cyklus Zatím",
+          "definition": "Smyčka, která se opakuje, dokud je podmínka pravdivá."
         },
         "until/coursed/2021": {
           "word": "Do"
         },
         "algorithm/express/2021": {
-          "word": "Algoritmus"
+          "word": "Algoritmus",
+          "definition": "Seznam kroků k dokončení úkolu."
         },
         "bug/express/2021": {
-          "word": "Chyba"
+          "word": "Chyba",
+          "definition": "Část programu, která nefunguje správně."
         },
         "debugging/express/2021": {
           "word": "Ladění"
@@ -416,13 +454,18 @@
           "word": "Program "
         },
         "programming/express/2021": {
-          "word": "Programování"
+          "word": "Programování",
+          "definition": "Umění vytvoření programu"
         },
         "sprite/express/2021": {
-          "word": "Sprite"
+          "word": "Sprite",
+          "definition": "Obrázek na obrazovce s místem, velikostí a vzhledem."
         },
         "event/express/2021": {
           "word": "Událost"
+        },
+        "code/express/2021": {
+          "definition": " psát kód nebo psát pokyny pro počítač."
         },
         "loop/express/2021": {
           "word": "Cyklus"
@@ -441,7 +484,8 @@
           "word": "Podmínky"
         },
         "while_loop/express/2021": {
-          "word": "Cyklus Zatím"
+          "word": "Cyklus Zatím",
+          "definition": "Smyčka, která se opakuje, dokud je podmínka pravdivá."
         },
         "until/express/2021": {
           "word": "Do"
@@ -450,7 +494,8 @@
           "word": "Funkce"
         },
         "variable/express/2021": {
-          "word": "Proměnná"
+          "word": "Proměnná",
+          "definition": "Popisek informace použité v programu."
         },
         "prompt/express/2021": {
           "word": "výzva"
@@ -482,13 +527,16 @@
           "word": "Roznožka"
         },
         "double_click/pre-express/2021": {
-          "word": "Dvojí kliknutí"
+          "word": "Dvojí kliknutí",
+          "definition": "Velmi rychle stiskněte tlačítko myši"
         },
         "algorithm/pre-express/2021": {
-          "word": "Algoritmus"
+          "word": "Algoritmus",
+          "definition": "Seznam kroků k dokončení úkolu."
         },
         "bug/pre-express/2021": {
-          "word": "Chyba"
+          "word": "Chyba",
+          "definition": "Část programu, která nefunguje správně."
         },
         "debugging/pre-express/2021": {
           "word": "Ladění"
@@ -497,10 +545,12 @@
           "word": "Program "
         },
         "programming/pre-express/2021": {
-          "word": "Programování"
+          "word": "Programování",
+          "definition": "Umění vytvoření programu"
         },
         "persistence/pre-express/2021": {
-          "word": "Perzistence"
+          "word": "Perzistence",
+          "definition": "Opakování znovu a znovu, i když je něco velmi těžké."
         },
         "loop/pre-express/2021": {
           "word": "Cyklus"
@@ -513,10 +563,12 @@
           "word": "Událost"
         },
         "algorithm/coursee/2021": {
-          "word": "algoritmus"
+          "word": "algoritmus",
+          "definition": "Seznam kroků k dokončení úkolu"
         },
         "sprite/coursee/2021": {
-          "word": "Sprite"
+          "word": "Sprite",
+          "definition": "Obrázek na obrazovce s místem, velikostí a vzhledem."
         },
         "event/coursee/2021": {
           "word": "Událost"
@@ -541,7 +593,8 @@
           "word": "Podmínky"
         },
         "while_loop/coursee/2021": {
-          "word": "Cyklus Zatím"
+          "word": "Cyklus Zatím",
+          "definition": "Smyčka, která se opakuje, dokud je podmínka pravdivá."
         },
         "define/coursee/2021": {
           "word": "Definuj"

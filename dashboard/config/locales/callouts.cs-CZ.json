@@ -795,7 +795,8 @@
           "hello_world_new": "Nový blok!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Nový blok!"
+          "hello_world_new": "Nový blok!",
+          "hello_world_new_block": "Nový blok!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "Nový blok!"
@@ -861,6 +862,9 @@
         },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Po sklapnutí všech bloků dohromady znovu stiskněte „Spustit“ a spusťte tak svůj program."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Dostaňte herce k této vlajce, abyste se dostali na další úroveň."
         }
       }
     }

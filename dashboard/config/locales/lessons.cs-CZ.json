@@ -24,8 +24,17 @@
           "overview": "Tato lekce dá studentům představu o tom, co mohou očekávat, když se vydají do počítačové laboratoře. Začne to krátkou diskusí, která je obeznámí se zvyklostmi zavedenými  v počítačové laboratoři, načež pokročí k užívání počítače při řešení online hlavolamů.",
           "student_overview": " Hlavolamy dokončete kliknutím a potažením."
         },
+        "coursef-2021/lesson-7": {
+          "preparation": "Projděte si jednotlivé úrovně a zopakujte si **\\*prezentace přednášky**."
+        },
+        "coursef-2021/lesson-8": {
+          "preparation": "Přehrajte si jednotlivé úrovně a prohlédněte si snímky lekcí."
+        },
         "coursef-2021/lesson-2": {
           "student_overview": "Šikana není nikdy v pořádku. Tato lekce Vás poučí o tom, co je a co není správné říkat online."
+        },
+        "coursef-2021/lesson-10": {
+          "preparation": "Přehrajte si jednotlivé úrovně a prohlédněte si snímky lekcí."
         },
         "coursef-2021/Loops with the Artist": {
           "overview": "Tato lekce **budování dovedností** přenáší důraz od Laboratoře sprajtů k Umělci, novému nástroji, který budou  studenti zkoumat v průběhu ostatku tohoto kurzu."
@@ -235,6 +244,12 @@
         "express-2021/Swimming Fish in Sprite Lab": {
           "student_overview": "Naučte se vytvářet a upravovat sprajty."
         },
+        "express-2021/lesson-2": {
+          "preparation": "Projděte si jednotlivé úrovně a zopakujte si **\\*prezentace přednášky**."
+        },
+        "express-2021/lesson-3": {
+          "preparation": "Přehrajte si jednotlivé úrovně a prohlédněte si snímky lekcí."
+        },
         "express-2021/lesson-1": {
           "overview": "V této lekci studenti naprogramují svůj vlastní interaktivní taneční večírek. Tato aktivita vyžaduje zvuk, protože tento nástroj byl vytvořený tak, aby reagoval na hudbu.",
           "student_overview": "Je čas oslavovat! V této lekci naprogramujete svůj vlastní interaktivní taneční večírek."
@@ -274,6 +289,9 @@
         "express-2021/Functions with Harvester": {
           "student_overview": "Funkce Vám ušetří spoustu práce, až budete pomáhat farmářce s její úrodou!"
         },
+        "express-2021/lesson-4": {
+          "preparation": "Přehrajte si jednotlivé úrovně a prohlédněte si snímky lekcí."
+        },
         "express-2021/Variables with Artist": {
           "overview": "V této lekci **budování dovedností** budou studenti zkoumat vytváření opakujících se návrhů pomocí proměnných v prostředí Umělec. Studenti se dozvědí, jak proměnné usnadňují psaní programového kódu a zvyšují jeho čitelnost. Po hlavolamech s nápovědou budou studenti končit na úrovni volného hraní tak, aby ukázali, co se naučili, a aby vytvářeli nové návrhy.",
           "student_overview": "V této lekci budete vytvářet kresby pomocí proměnných, které se budou měnit za chodu programu."
@@ -289,6 +307,7 @@
           "student_overview": " Hlavolamy dokončete kliknutím a potažením."
         },
         "pre-express-2021/Sequencing with Scrat": {
+          "preparation": "-   Ujistěte se, že každý student má deník reflexí.",
           "student_overview": "Naprogramujte Scrata tak, aby dosáhl na žalud."
         },
         "pre-express-2021/Programming in Harvester": {
