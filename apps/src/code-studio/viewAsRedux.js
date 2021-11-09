@@ -16,8 +16,10 @@ export default function reducer(state = ViewType.Participant, action) {
     let viewType = action.viewType;
     if (viewType === 'Teacher') {
       viewType = 'Instructor';
+      updateQueryParam('viewAs', 'Instructor');
     } else if (viewType === 'Student') {
       viewType = 'Participant';
+      updateQueryParam('viewAs', 'Participant');
     } else if (!ViewType[viewType]) {
       throw new Error('unknown ViewType: ' + viewType);
     }
