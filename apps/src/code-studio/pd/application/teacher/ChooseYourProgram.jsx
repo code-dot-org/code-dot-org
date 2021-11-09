@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {FormGroup, Row, Col} from 'react-bootstrap';
-import color from '@cdo/apps/util/color';
 import {
   PageLabels,
   SectionHeaders,
@@ -39,7 +38,7 @@ const getProgramInfo = program => {
 const CourseHoursLabeledNumberInput = props => {
   return (
     <LabeledNumberInput
-      style={{width: 100}}
+      style={styles.numberInput}
       labelWidth={{md: 8}}
       controlWidth={{md: 4}}
       inlineControl={true}
@@ -323,6 +322,9 @@ ChooseYourProgram.getErrorMessages = data => {
 const styles = {
   error: {
     color: 'rgb(204, 0, 0)'
+  },
+  numberInput: {
+    width: 100
   }
 };
 
