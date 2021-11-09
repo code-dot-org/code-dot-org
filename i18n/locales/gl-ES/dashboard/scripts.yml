@@ -2416,6 +2416,10 @@ gl:
           lessons:
             lesson-1:
               name: Visión xeral
+        poetry:
+          lessons:
+            lesson-7:
+              name: Condicionais
         spelling-bee:
           lessons:
             lesson-1:
