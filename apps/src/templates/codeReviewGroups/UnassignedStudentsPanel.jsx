@@ -56,9 +56,9 @@ export const GROUPS_CONTAINER_STYLE = {
   display: 'flex',
   flexDirection: 'column',
   height: 355,
-  overflow: 'scroll',
+  overflow: 'auto',
   border: `1px solid ${color.lightest_gray}`,
-  padding: '20px 10px 0 5px'
+  padding: '10px 4px 0 0'
 };
 
 const styles = {
