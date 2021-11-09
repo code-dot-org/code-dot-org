@@ -1657,60 +1657,62 @@ class ScriptsControllerTest < ActionController::TestCase
     refute response.body.include? 'visible after'
   end
 
-  test "levelbuilder does not see visible after warning if lesson has visible_after property that is in the past" do
-    Timecop.freeze(Time.new(2020, 4, 2))
-    sign_in create(:levelbuilder)
+  class LessonVisibleAfterTest < ActionController::TestCase
+    test "levelbuilder does not see visible after warning if lesson has visible_after property that is in the past" do
+      Timecop.freeze(Time.new(2020, 4, 2))
+      sign_in create(:levelbuilder)
 
-    create(:level, name: "Level 1")
-    unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-    Script.setup([unit_file])
+      create(:level, name: "Level 1")
+      unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+      Script.setup([unit_file])
 
-    get :show, params: {id: 'test-fixture-visible-after'}
-    assert_response :success
-    refute response.body.include? 'visible after'
-    Timecop.return
-  end
+      get :show, params: {id: 'test-fixture-visible-after'}
+      assert_response :success
+      refute response.body.include? 'visible after'
+      Timecop.return
+    end
 
-  test "levelbuilder sees visible after warning if lesson has visible_after property that is in the future" do
-    Timecop.freeze(Time.new(2020, 3, 27))
-    sign_in create(:levelbuilder)
+    test "levelbuilder sees visible after warning if lesson has visible_after property that is in the future" do
+      Timecop.freeze(Time.new(2020, 3, 27))
+      sign_in create(:levelbuilder)
 
-    create(:level, name: "Level 1")
-    unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-    Script.setup([unit_file])
+      create(:level, name: "Level 1")
+      unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+      Script.setup([unit_file])
 
-    get :show, params: {id: 'test-fixture-visible-after'}
-    assert_response :success
-    assert response.body.include? 'The lesson lesson 1 will be visible after'
-    Timecop.return
-  end
+      get :show, params: {id: 'test-fixture-visible-after'}
+      assert_response :success
+      assert response.body.include? 'The lesson lesson 1 will be visible after'
+      Timecop.return
+    end
 
-  test "student does not see visible after warning if lesson has visible_after property" do
-    Timecop.freeze(Time.new(2020, 3, 27))
-    sign_in create(:student)
+    test "student does not see visible after warning if lesson has visible_after property" do
+      Timecop.freeze(Time.new(2020, 3, 27))
+      sign_in create(:student)
 
-    create(:level, name: "Level 1")
-    unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-    Script.setup([unit_file])
+      create(:level, name: "Level 1")
+      unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+      Script.setup([unit_file])
 
-    get :show, params: {id: 'test-fixture-visible-after'}
-    assert_response :success
-    refute response.body.include? 'visible after'
-    Timecop.return
-  end
+      get :show, params: {id: 'test-fixture-visible-after'}
+      assert_response :success
+      refute response.body.include? 'visible after'
+      Timecop.return
+    end
 
-  test "teacher does not see visible after warning if lesson has visible_after property" do
-    Timecop.freeze(Time.new(2020, 3, 27))
-    sign_in create(:teacher)
+    test "teacher does not see visible after warning if lesson has visible_after property" do
+      Timecop.freeze(Time.new(2020, 3, 27))
+      sign_in create(:teacher)
 
-    create(:level, name: "Level 1")
-    unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-    Script.setup([unit_file])
+      create(:level, name: "Level 1")
+      unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
+      Script.setup([unit_file])
 
-    get :show, params: {id: 'test-fixture-visible-after'}
-    assert_response :success
-    refute response.body.include? 'visible after'
-    Timecop.return
+      get :show, params: {id: 'test-fixture-visible-after'}
+      assert_response :success
+      refute response.body.include? 'visible after'
+      Timecop.return
+    end
   end
 
   test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}
