@@ -2397,6 +2397,10 @@ lv:
           lessons:
             lesson-1:
               name: Pārskats
+        poetry:
+          lessons:
+            lesson-7:
+              name: Sazarojumi
         spelling-bee:
           lessons:
             lesson-1:
