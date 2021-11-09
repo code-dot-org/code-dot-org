@@ -181,11 +181,11 @@ FactoryGirl.define do
         end
       end
 
-      factory :code_instructor do
-        sequence(:name) {|n| "Code Instructor #{n}"}
-        sequence(:email) {|n| "test_code_instructor_#{n}@example.com.xx"}
-        after(:create) do |code_instructor|
-          code_instructor.permission = UserPermission::CODE_INSTRUCTOR
+      factory :universal_instructor do
+        sequence(:name) {|n| "Universal Instructor #{n}"}
+        sequence(:email) {|n| "test_universal_instructor_#{n}@example.com.xx"}
+        after(:create) do |universal_instructor|
+          universal_instructor.permission = UserPermission::UNIVERSAL_INSTRUCTOR
         end
       end
 
