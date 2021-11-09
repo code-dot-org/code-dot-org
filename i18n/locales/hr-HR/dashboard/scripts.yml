@@ -2534,6 +2534,10 @@ hr:
           lessons:
             lesson-1:
               name: Pregled
+        poetry:
+          lessons:
+            lesson-7:
+              name: Uvjeti
         spelling-bee:
           lessons:
             lesson-1:
