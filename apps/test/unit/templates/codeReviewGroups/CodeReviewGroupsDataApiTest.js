@@ -5,7 +5,7 @@ import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeRe
 
 describe('CodeReviewGroupsDataApi', () => {
   const sectionId = 101;
-  let serverGroupsResponse, clientGroupsList, post, getJSON, api;
+  let serverGroupsResponse, clientGroupsList, postJSON, getJSON, api;
 
   beforeEach(() => {
     serverGroupsResponse = {
@@ -38,13 +38,14 @@ describe('CodeReviewGroupsDataApi', () => {
         members: [{followerId: 3, name: 'student3'}]
       }
     ];
-    post = sinon.stub($, 'post');
+
+    postJSON = sinon.stub();
     getJSON = sinon.stub($, 'getJSON');
     api = new CodeReviewGroupsDataApi(sectionId);
+    api.postJSON = postJSON;
   });
 
   afterEach(() => {
-    post.restore();
     getJSON.restore();
   });
 
@@ -70,11 +71,11 @@ describe('CodeReviewGroupsDataApi', () => {
     api.setCodeReviewGroups(clientGroupsList);
 
     sinon.assert.calledWith(
-      post,
+      postJSON,
       `/api/v1/sections/${sectionId}/code_review_groups`
     );
 
-    const data = post.getCall(0).args[1];
+    const data = postJSON.getCall(0).args[1];
     expect(serverGroupsResponse).to.deep.equal(data);
   });
 
@@ -82,7 +83,7 @@ describe('CodeReviewGroupsDataApi', () => {
     api.setCodeReviewEnabled(true);
 
     sinon.assert.calledWith(
-      post,
+      postJSON,
       `/api/v1/sections/${sectionId}/code_review_enabled`,
       {enabled: true}
     );
