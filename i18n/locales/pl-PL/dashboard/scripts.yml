@@ -176,7 +176,7 @@ pl:
           lessons:
             Play Lab:
               name: Lab Gier
-              description_student: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
+              description_student: Na tej lekcji uczniowie zapoznają się z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego.
               description_teacher: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
           student_description: Utwórz historyjkę lub grę z Play Lab!
         artist:
@@ -349,7 +349,7 @@ pl:
           lessons:
             Infinity:
               name: Disney Infinity Play Lab
-              description_student: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
+              description_student: Na tej lekcji uczniowie zapoznają się z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego.
               description_teacher: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
           student_description: Użyj Play Lab, by utworzyć historyjkę lub grę z postaciami z Disney Infinity w rolach głównych.
         algebrademo:
@@ -1621,7 +1621,7 @@ pl:
           lessons:
             Ice Age Play Lab:
               name: Epoka Lodowcowa w Play Lab
-              description_student: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
+              description_student: Na tej lekcji uczniowie zapoznają się z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego.
               description_teacher: Podczas tej lekcji uczniowie zdobywają wstępne doświadczenie z informatyką i tworzą grę przy użyciu podstawowego kodu blokowego. Ta lekcja została zaprojektowana dla uczniów klas średnich, w wieku 10-16 lat, ale można ją dostosować dla młodszych lub starszych uczniów korzystając z podanych sugestii zróżnicowania.
           student_description: Utwórz historyjkę lub grę z pomoc Epoki Lodowcotej w Play Lab!
         CSPPD3-Unit3:
@@ -1702,6 +1702,10 @@ pl:
             Hour of Code 2015:
               name: Godzina Kodowania 2015
               description_student: Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja ma dwie wersje.
+              description_teacher: |-
+                Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja ma dwie wersje. Ta wersja używa zarówno bloków przeciągnij i upuść, jak i JavaScript. Uczniowie muszą umieć pisać na klawiaturze. Dla starszych uczniów korzystających z komputerów nauka JavaScript może być świetną zabawą i stanowić dodatkowe wyzwanie. Ta wersja samouczka jest również świetna, jeśli masz w klasie uczniów, którzy już nauczyli się trochę kodowania. Polecany dla uczniów powyżej 11 roku życia.
+
+                [Wersja w Blockly](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) jest również dostępna i zalecana dla uczniów korzystających z urządzeń mobilnych bez klawiatury, młodszych uczniów i studentów zagranicznych.
           student_description: Dowiedz się, jak programować droidy i utwórz własną grę Star Wars w galaktyce daleko, daleko.
         starwarsblocks:
           title: 'Star Wars: Tworzenie Galaktyki za pomocą kodu (Blockly)'
@@ -1719,6 +1723,8 @@ pl:
           lessons:
             Hour of Code 2015:
               name: Godzina Kodowania 2015
+              description_student: Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka, ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę. Uczniowie szkół średnich w większości ukończą samouczek i na koniec będą mieli trochę czasu, aby zagrać w dowolną grę.
+              description_teacher: Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka, ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę. Uczniowie szkół średnich w większości ukończą samouczek i na koniec będą mieli trochę czasu, aby zagrać w dowolną grę.
           student_description: Użyj bloków kodu, by zabrać Steva lub Alexa na przygodę w świecie gry Minecraft.
         oceans:
           title: AI dla oceanów
@@ -1728,7 +1734,7 @@ pl:
             Oceans:
               name: Oceany
               description_student: 'Podsumowanie samouczka: Najpierw uczniowie klasyfikują przedmioty jako "ryba" lub "nie ryba" próbując zebrać śmieci z oceanu. Następnie będą musieli poszerzyć zakres swoich danych treningowych tak, aby uwzględnić stworzenia morskie, które należą do środowiska wodnego. W drugiej części ćwiczenia uczniowie będą wybierać swoje własne etykiety do zastosowania w obrazkach losowo wygenerowanych ryb. Z tych danych treningowych korzysta się na potrzeby modelu uczenia maszynowego, który powinien potem być w stanie oznaczać nowe obrazy we własnym zakresie.'
-              description_teacher: Po pierwsze, uczniowie klasyfikują przedmioty jako „ryby” lub „nie ryby”, aby spróbować usunąć śmieci z oceanu. Następnie rozszerzają zestaw danych treningowych o inne stworzenia morskie. W drugiej części ćwiczenia uczniowie wybiorą własne etykiety do nałożenia na obrazy losowo generowanych ryb. Te dane treningowe są używane w modelu uczenia maszynowego, który następnie powinien być w stanie samodzielnie oznaczać nowe obrazy.
+              description_teacher: Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Po pierwsze, klasyfikują przedmioty jako „ryby” lub „nie ryby”, aby spróbować usunąć śmieci z oceanu. Następnie, będą musieli rozszerzyć swój zestaw danych treningowych o inne stworzenia morskie, które znajdują się w wodzie. W drugiej części ćwiczenia, wybiorą własne etykiety, które zastosują do obrazów losowo generowanych ryb. Te dane treningowe są używane w modelu uczenia maszynowego, który powinien być w stanie samodzielnie oznaczać nowe obrazy.
           student_description: Poznaj sposób, w jaki sztuczna inteligencja i uczenie maszynowe mogą być wykorzystywana do zajmowania się problemami całego świata.
         CSPPD3-Unit3-pt2:
           title: 'Podstawy informatyki: Jednostka 3 Wyzwania zawodowego rozwoju'
@@ -3742,6 +3748,8 @@ pl:
           lessons:
             Minecraft Hour of Code Designer:
               name: Minecraft w Godzinie Kodowania - Projektant
+              description_student: Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka, ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę. Uczniowie szkół średnich w większości ukończą samouczek i na koniec będą mieli trochę czasu, aby zagrać w dowolną grę.
+              description_teacher: Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka, ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę. Uczniowie szkół średnich w większości ukończą samouczek i na koniec będą mieli trochę czasu, aby zagrać w dowolną grę.
           student_description: Zaprogramuj zwierzęta i inne stworzenia Minecraftu we własnej wersji gry Minecrafta.
         flappy-impact-study:
           lessons:
@@ -6170,6 +6178,16 @@ pl:
               name: Wprowadzenie do laboratorium aplikacji - Pierwsze kroki
             Intro to App Lab:
               name: Wprowadzenie do App Lab
+              description_student: |-
+                Na końcu samouczka będziesz mógł rozszerzyć projekt, który zacząłeś budować, do aplikacji „Wybierz własną przygodę”, „Kartka z życzeniami” lub „Quiz osobowości”. Możesz także kontynuować tworzenie kolejnych projektów prezentowanych na stronie code.org/applab.
+
+                Baw się, kończąc Godzinę Kodowania z App Lab!
+              description_teacher: |-
+                Ten samouczek ma na celu szybkie wprowadzenie środowiska programistycznego App Lab jako zaawansowanego narzędzia do tworzenia i udostępniania aplikacji. Samouczek uczy uczniów tworzenia i kontrolowania przycisków, tekstu, obrazów, dźwięków i ekranów w JavaScript za pomocą bloków lub tekstu. Pod koniec samouczka uczniowie mają czas na rozszerzenie projektu, który rozpoczęli, w aplikację „Wybierz własną przygodę”, „Kartka z życzeniami” lub „Quiz osobowości”. Mogą również kontynuować tworzenie kolejnych projektów prezentowanych na stronie code.org/applab.
+
+                Baw się, kończąc Godzinę Kodowania z App Lab!
+
+                **Adekwatność do wieku:** Samouczek jest przeznaczony dla uczniów powyżej 13 roku życia. Ponieważ umożliwia on uczniom przesyłanie niestandardowych dźwięków i obrazów, młodzi uczniowie nie powinni korzystać z niego bez nadzoru. Aby chronić prywatność uczniów, jeśli uczniowie mają mniej niż 13 lat, nie będą mogli korzystać z tego samouczka, chyba że najpierw skonfigurujesz dla nich konta w sekcji, którą zarządzasz.
             'Lesson 1: App Lab Intro':
               name: 'Lekcja 1: Wprowadzenie do App Lab'
           student_description: Stwórz własną aplikację w JavaScript za pomocą programowania blokowego lub w tekście. Jeśli już kiedyś programowałeś przy użyciu bloków, podnieś swoje umiejętności na kolejny poziom.
@@ -6792,6 +6810,7 @@ pl:
               name: 'Minecraft: Podróż Bohatera. Godzina Kodowania'
             Minecraft Hour of Code:
               name: 'Minecraft: Podróż Bohatera'
+              description_teacher: Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka, ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę. Uczniowie szkół średnich w większości ukończą samouczek i na koniec będą mieli trochę czasu, aby zagrać w dowolną grę.
           student_description: Minecraft powraca na Godzinę Kodowania z najnowszą serią zadań! Koduj podróżując po świecie Minecraftu.
         applab-intro-staging:
           title: Wprowadzenie do inscenizacji App Lab
@@ -9186,6 +9205,7 @@ pl:
           lessons:
             Aquatic:
               name: 'Minecraft: Wodna podróż'
+              description_teacher: Na tej lekcji uczniowie w każdym wieku mogą zapoznać się z kodowaniem i informatyką w bezpiecznym, wspierającym ich środowisku. Ta lekcja jest odpowiednia dla wszystkich uczniów, którzy potrafią czytać (w wieku 6+). Młodsi uczniowie prawdopodobnie nie ukończą samouczka, ale będą mieli mnóstwo zabawy, pracując nad łamigłówkami przez godzinę. Uczniowie szkół średnich w większości ukończą samouczek i na koniec będą mieli trochę czasu, aby zagrać w dowolną grę.
           student_description: Minecraft powraca z zupełnie nowymi zajęciami! Wykorzystaj swoją kreatywność i umiejętność rozwiązywania problemów, aby odkrywać i budować podwodne światy za pomocą kodu.
         sconyers:
           title: Plac zabaw Tracey
@@ -16721,6 +16741,8 @@ pl:
             CS Discoveries Post Course survey:
               key: Odkrycia informatyki Ankieta po kursie
               name: Odkrycia informatyki Ankieta po kursie
+            lesson-1:
+              name: Ankieta po kursie Odkrycia Informatyki
           lesson_groups:
             csd2_1v2:
               display_name: 'Rozdział 1: Tworzenie stron internetowych'
@@ -16839,6 +16861,8 @@ pl:
             CS Discoveries Post Course survey:
               key: Odkrycia informatyki Ankieta po kursie
               name: Odkrycia informatyki Ankieta po kursie
+            lesson-1:
+              name: Ankieta po kursie Odkrycia Informatyki
           lesson_groups:
             csd3_1:
               display_name: 'Rozdział 1: Obrazy i animacje'
@@ -16927,6 +16951,8 @@ pl:
               name: Błędy i właściwości
             Updating Your Prototype:
               name: Aktualizacja Twojego prototypu
+            CS Discoveries Post-Course Survey:
+              name: Ankieta po kursie Odkrycia Informatyki
           lesson_groups:
             csd4_1:
               display_name: 'Rozdział 1: Projektowanie zorientowane na użytkownika'
@@ -17003,6 +17029,8 @@ pl:
               name: Odkrycia informatyki Ankieta po kursie
             Data and Machine Learning:
               name: Dane i uczenie maszynowe
+            CS Discoveries Post-Course Survey:
+              name: Ankieta po kursie Odkrycia Informatyki
           lesson_groups:
             csd5_1:
               display_name: 'Rozdział 1: Reprezentowanie Informacji'
@@ -17087,6 +17115,8 @@ pl:
             CS Discoveries Post Course survey:
               key: Odkrycia informatyki Ankieta po kursie
               name: Odkrycia informatyki Ankieta po kursie
+            CS Discoveries Post-Course Survey:
+              name: Ankieta po kursie Odkrycia Informatyki
           lesson_groups:
             csd6_1:
               display_name: 'Rozdział 1: Programowanie sprzętowe'
@@ -19023,6 +19053,42 @@ pl:
               display_name: Piaskownica
           name: csa5-pilotaż
         csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
+            The Theater:
+              name: Korzystanie z poleceń
+            lesson-1:
+              name: Dokumentowanie kodu programu
+            lesson-2:
+              name: Badanie obiektów całkowitych i podwójnych
+            lesson-3:
+              name: Używanie list w tablicy do przechowywania danych
+            lesson-4:
+              name: Pracując z danymi w liście w tablicy
+            lesson-5:
+              name: Przechowując obiekty w liście w tablicy
+            lesson-6:
+              name: Usuwanie danych z listy w tablicy
+            lesson-7:
+              name: Stosowanie metod łańcuchów
+            lesson-8:
+              name: Porównywanie łańcuchów
+            lesson-9:
+              name: Rozwiązywanie problemów z łańcuchami
+            lesson-10:
+              name: Rozwiązywanie problemów z listami w tablicy
+            lesson-14:
+              name: Dzień FRQ
+            lesson-15:
+              name: Dzień sprawdzianu
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Piaskownica
           name: csa6-pilotaż
         csa7-pilot:
           name: csa7-pilotaż
@@ -19327,6 +19393,8 @@ pl:
               name: Ankieta po jednostce
             Post-Unit Survey:
               name: Ankieta po jednostce
+            CS Discoveries Post-Course Survey:
+              name: Ankieta po kursie Odkrycia Informatyki
           lesson_groups:
             lessonGroup-2:
               display_name: Rozdział 1 - Uczenie maszynowe
@@ -20806,6 +20874,8 @@ pl:
               name: Dobór słów
             lesson-6:
               name: Koło poezji
+            lesson-7:
+              name: Zdania z warunkami
           name: poezja
           title: Informatyka i Poezja
         spelling-bee:
@@ -20813,6 +20883,7 @@ pl:
             lesson-1:
               name: Literująca Pszczółka
               description_student: Pomóż pszczółce przeliterować nowe słowa!
+              description_teacher: "Ta lekcja opiera się na wcześniejszych czynnościach związanych z pisownią i rozpoznawaniem wielkich liter. Pisownia z pszczołą pomaga uczniom w przedszkolu i pierwszej klasie ćwiczyć śledzenie i liczenie sekwencji liter, które tworzą słowa. Używają serii poleceń kodowania, aby przesunąć pszczołę ortograficzną po siatce liter, aby przeliterować słowa. Uczniowie uczą się, jak używać bloków kodowania typu „przeciągnij i upuść”, aby poruszać swoją postacią, oraz znaczenie sekwencjonowania poleceń we właściwej kolejności, aby mogli przeliterować słowo.\n\n#### Wymagane umiejętności\n\nTa lekcja nie ma na celu wprowadzenia uczniów do alfabetu, sekwencje liter tworzące słowa lub liczenie. Uczniowie powinni wejść na tę lekcję z wcześniejszą wiedzą i umiejętnościami, aby móc:\n\n-   rozpoznawać wielkie litery alfabetu.\n-   rozpoznawać i liczyć do 10 za pomocą palców, przedmiotów lub manipulacji.\n-   rozpoznać, że słowa składają się z ciągu liter."
           name: spelling-bee
           title: CSC - Literująca pszczółka
         outbreak-csc:
@@ -20828,6 +20899,7 @@ pl:
             lesson-1:
               name: Eksploracja wykresów pudełkowych i histogramów
               description_student: Utwórz wykresy słupkowe i histogramy w wizualizerze danych w App Lab.
+              description_teacher: "Ta lekcja opiera się na koncepcjach wykresów słupkowych i histogramów, które zostały już przedstawione uczniom. Uczniowie przećwiczą wyciąganie wniosków z wykresów i nauczą się używać Wizualizatora danych w App Lab do tworzenia dwóch różnych rodzajów wykresów: wykresu słupkowego i histogramu. To narzędzie ma na celu szybkie łączenie uczniów z rzeczywistymi zestawami danych i ułatwia tworzenie wizualizacji na podstawie danych bez uczenia się, jak poruszać się po bardziej złożonym narzędziu. Będą również mieli dostęp do kilku rzeczywistych zbiorów danych, których będą mogli używać do tworzenia swoich wykresów.\n\nLekcja zaczyna się od szybkiego przejrzenia, dlaczego wykresy są przydatne do przeglądania danych. Następnie uczniowie ćwiczą tworzenie wykresu słupkowego w wizualizatorze danych w App Lab. Następnie uczą się, jak tworzyć histogramy do tworzenia wykresów w sytuacjach, w których wykresy słupkowe mogą nie być przydatne. Uczniowie mają wtedy szansę poznać różne zestawy danych ze świata rzeczywistego i zobaczyć, jak tworzenie wykresów może pomóc w przekazywaniu informacji na temat, na którym im zależy.\n\n#### Wymagane umiejętności i słownictwo\n\nTa lekcja ma na celu wzbogacenie lub wzmocnienie istniejących lekcji na temat wykresów słupkowych i histogramów. Nie ma na celu przedstawiania uczniom nowych podstawowych treści. Uczniowie powinni przystąpić do tej lekcji z następującą wcześniejszą zdobytą wiedzą i umiejętnościami:\n\n-   Wiedzieć, jak czytać wykres słupkowy, rozumiejąc, co oznaczają wartości na osiach x i y\n-   Wiedzieć, jak czytać histogram, rozumiejąc, co reprezentuje zakres wartości"
           name: explore-data-1
           title: Eksploracja wykresów pudełkowych i histogramów
         counting-csc:
@@ -20835,6 +20907,7 @@ pl:
             lesson-1:
               name: Liczenie z Laurel
               description_student: Pomóż Laurel, poszukiwaczce skarbów, liczyć i dodawać kroki, aby zbierać klejnoty!
+              description_teacher: "Ta lekcja opiera się na wcześniejszych czynnościach obejmujących liczenie i reprezentowanie dodawania. Liczenie z Laurel pomaga uczniom w przedszkolu i pierwszej klasie w ćwiczeniu liczenia i dodawania, gdy używają pętli, aby pomóc Laurel, poszukiwaczce skarbów, zbierać klejnoty na siatce labiryntu. Używają serii poleceń kodowania, aby poprowadzić Laurel przez siatkę w celu zbierania klejnotów, wykorzystując blok „powtórz”, który wymaga od nich zliczenia, ile kroków powinna wykonać Laurel, a następnie reprezentują tę liczbę za pomocą prawidłowej liczby w bloku kodu.\n\n#### Wymagane umiejętności\n\nTa lekcja nie ma na celu zapoznanie uczniów z liczbami, liczeniem lub dodawaniem. Uczniowie powinni przystąpić do tej lekcji z pewną wcześniejszą wiedzą i umiejętnościami, aby móc:\n\n-   rozpoznawać i liczyć liczby do 10 za pomocą obrazów, palców lub manipulacji.\n-   dodawać obiekty, obrazy, palce lub manipulacje w sumie do 10."
           name: counting-csc
           title: Liczenie z Laurel
         csa5-exemplars:
@@ -20896,3 +20969,92 @@ pl:
               name: Jednostka 8 Projekty
           name: csa-examples-21
           title: Przykłady projektów jednostek CSA [2021-2022]
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Ankieta po odbyciu kursu
+          name: csd-post-survey-2021
+          title: Ankieta po kursie Odkrycia Informatyki
+          description: Ta jednostka zawiera ankietę na zakończenie kursu Odkrycia informatyki. Ta jednostka może zostać przypisana po ukończeniu przez uczniów ostatniej jednostki w tym kursie.
+          student_description: Ta jednostka zawiera ankietę na zakończenie przez Twoją klasę jednostek kursu Odkrycia informatyki. Twój nauczyciel poinformuje Cię, kiedy nadejdzie czas, aby wypełnić tę ankietę.
+        csa6-pilot-facilitator:
+          lessons:
+            Documenting Program Code:
+              name: Dokumentowanie kodu programu
+            Exploring Integer and Double Objects:
+              name: Badanie obiektów całkowitych i podwójnych
+            Using ArrayLists to Store Data:
+              name: Używanie list w tablicy do przechowywania danych
+            Working with ArrayList Data:
+              name: Pracując z danymi w liście w tablicy
+            Storing Objects in an ArrayList:
+              name: Przechowując obiekty w liście w tablicy
+            Removing Data from an ArrayList:
+              name: Usuwanie danych z listy w tablicy
+            Using String Methods:
+              name: Stosowanie metod łańcuchów
+            Comparing Strings:
+              name: Porównywanie łańcuchów
+            Solving Problems with Strings:
+              name: Rozwiązywanie problemów z łańcuchami
+            Solving Problems with ArrayLists:
+              name: Rozwiązywanie problemów z listami w tablicy
+            FRQ Day:
+              name: Dzień FRQ
+            Assessment Day:
+              name: Dzień sprawdzianu
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
+            The Theater:
+              name: Korzystanie z poleceń
+              key: Korzystanie z poleceń
+            lesson-1:
+              key: lekcja 1
+              name: Dokumentowanie kodu programu
+            lesson-2:
+              key: lekcja 2
+              name: Badanie obiektów całkowitych i podwójnych
+            lesson-3:
+              key: lekcja 3
+              name: Używanie list w tablicy do przechowywania danych
+            lesson-4:
+              key: lekcja 4
+              name: Pracując z danymi w liście w tablicy
+            lesson-5:
+              key: lekcja 5
+              name: Przechowując obiekty w liście w tablicy
+            lesson-6:
+              key: lekcja 6
+              name: Usuwanie danych z listy w tablicy
+            lesson-7:
+              key: lekcja 7
+              name: Stosowanie metod łańcuchów
+            lesson-8:
+              key: lekcja 8
+              name: Porównywanie łańcuchów
+            lesson-9:
+              key: lekcja 9
+              name: Rozwiązywanie problemów z łańcuchami
+            lesson-10:
+              key: lekcja 10
+              name: Rozwiązywanie problemów z listami w tablicy
+            lesson-11:
+              key: lekcja 11
+            lesson-12:
+              key: lekcja 12
+            lesson-13:
+              key: lekcja 13
+            lesson-14:
+              key: lekcja 14
+              name: Dzień FRQ
+            lesson-15:
+              key: lekcja 15
+              name: Dzień sprawdzianu
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Treści
+            lessonGroup-3:
+              display_name: Pokaż, co wiesz
+            lessonGroup-5:
+              display_name: Piaskownica
