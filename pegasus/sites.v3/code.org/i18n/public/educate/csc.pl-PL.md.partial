@@ -1,8 +1,7 @@
 ---
 title: Powiązania z informatyką
-video_player: true
 theme: responsive
-style_min: true
+set_dir: true
 ---
 
 # Powiązania z informatyką
@@ -16,35 +15,32 @@ Nasz najnowszy program nauczania łączy naukę informatyki z innymi przedmiotam
 
 Moduły Powiązań z informatyką to uporządkowane ciągi lekcji, które integrują naukę informatyki z podstawowymi obszarami tematycznymi, takimi jak matematyka, ELA i nauki ścisłe. Moduły te są dostosowane do standardów różnych przedmiotów i kończą się projektem międzyprzedmiotowym.
 
-Są idealne dla nauczycieli, którzy chcą włączyć informatykę do swoich planów lekcji na inne przedmioty, a także dla nauczycieli informatyki, którzy chcą wzmocnić to, czego uczniowie uczą się na innych przedmiotach.
+Są idealne dla nauczycieli, którzy chcą włączyć informatykę do swoich planów lekcji dotyczących innych przedmiotów, a także dla nauczycieli informatyki, którzy chcą wzmocnić to, czego uczniowie uczą się na innych przedmiotach.
 
-{{ csc_module, tytuł: "Kodowanie z poezją", klasy: "3+", przedmiot: "ELA", czas trwania: "5 godzin", opis: "Uczniowie poznają elementy poezji i podstawy kodowania budując generator wierszy oparty na wierszu, który piszą.", button_text: "Dowiedz się więcej", url: "/about" }}
+{{ csc_module, tytuł: "Kodowanie z poezją", obraz: "/images/fill-400x100/csc/landing/module_poetry.png", klasy: "3+", przedmiot: "ELA", czas trwania: "5 godzin" , opis: "Uczniowie poznają elementy poezji i podstawy kodowania, budując generator wierszy na podstawie napisanego przez siebie wiersza.", button_text: "Dowiedz się więcej", url: "/about" }}
 {{ clearfix }}
-
-<em>Pracujemy nad większą liczbą modułów, które pomogą wprowadzić informatykę do jeszcze większej liczby przedmiotów. Czy jest jakiś konkretny temat, który chciałbyś zobaczyć w następnej kolejności? Daj nam znać!</em>
 
 ## Otwarte projekty
 
 Kontynuuj tworzenie powiązań między informatyką a tradycyjnymi przedmiotami dzięki naszym projektom międzyprzedmiotowym. Zajmują one tylko 1-2 godziny instruktażowe i są idealne dla wszystkich nauczycieli, którzy chcą opracować projekty tematyczne, które pasują do istniejącego programu nauczania.
 
-<em>Wskazówka: te projekty wymagają pewnego zrozumienia podstaw informatyki, dlatego zalecamy ukończenie naszej Hello World w ramach Godziny kodowania przed rozpoczęciem!</em>
+<em>Tip: These projects require some understanding of computer science basics, so we recommend completing our Hello World Hour of Code activity before getting started!</em>
 
-{{ csc_module, tytuł: "Ekosystemy", klasy: "3+", przedmiot: "Przyroda", czas trwania: "1-2 godziny", opis: "Dzięki podstawowym umiejętnościom kodowania uczniowie tworzą interaktywny model ekosystemu, który bada jak różne zwierzęta, rośliny i organizmy wpływają na siebie nawzajem. Ten model można również dostosować do interakcji między geosferą, biosferą, hydrosferą i/lub atmosferą.", button_text: "Dowiedz się więcej", url: "/" }}
-{{ csc_module, tytuł: "Cykle", klasy: "3+", przedmiot: "Przyroda", czas trwania: "1-2 godziny", opis: "Przejdź od jajka przez kijankę do żaby z tym projektem, w którym uczniowie używają kodu do stworzenia modelu cyklu naukowego — takiego jak, cykl życia żaby lub transfer energii!", button_text: "Dowiedz się więcej", url: "/" }}
-{{ csc_module, tytuł: "Studia charakteru", klasy: "3+", przedmiot: "ELA", czas trwania: "1-2 godzin", opis: "Każdej akcji towarzyszy reakcja! Nie, to nie jest fizyka — ten projekt pozwala uczniom wykorzystać kod do zbudowania sceny z historii, która pokazuje, jak działania jednej postaci wpływają na łańcuch zdarzeń.", button_text: "Dowiedz się więcej", url: "/" }}
-{{ csc_module, tytuł: "Story Morals", klasy: "3+", temat: "ELA", czas trwania: "1-2 godziny", opis: "Co jest między „Pewnego razu” a „Koniec?” Uczniowie kodują interaktywną aplikację, która opowiada historię i jej morały. Uczniowie mogą zastosować tę umiejętność do dowolnej opowieści, baśni ludowej, książki lub bajki.", button_text: "Dowiedz się więcej", url: "/" }}
+{{csc_module, tytuł: "Ekosystemy", obraz: "/images/csc/landing/project_ecosystems.png", klasy: "3+", przedmiot: "Przyroda", czas trwania: "1-2 godziny", opis: " Korzystając z podstawowych umiejętności kodowania, uczniowie tworzą interaktywny model ekosystemu, który bada, jak różne zwierzęta, rośliny i organizmy wpływają na siebie nawzajem. Ten model można również dostosować do interakcji między geosferą, biosferą, hydrosferą i/lub atmosferą.", button_text: "Dowiedz się więcej", url: "/" }}
+{{csc_module, tytuł: "Cykle", klasy: "3+", obraz: "/images/csc/landing/project_cycles.png", przedmiot: "Przyroda", czas trwania: "1-2 godziny", opis: " Przejdź od jajka przez kijankę do żaby dzięki temu projektowi, w którym uczniowie za pomocą kodu tworzą model cyklu naukowego - na przykład cykl życia żaby lub transfer energii!", button_text:" Dowiedz się więcej", url:" / "}}
+{{csc_module, tytuł: "Badanie postaci", obraz: "/images/csc/landing/project_characterstudy.png", klasy: "3+", przedmiot: "ELA", czas trwania: "1-2 godziny", opis: „Każda akcja ma reakcję! Nie, to nie jest fizyka - ten projekt pozwala uczniom wykorzystać kod do zbudowania sceny z historii, która pokazuje, jak działania jednej postaci wpływają na łańcuch zdarzeń.", button_text:" Dowiedz się więcej ", url:" / "}}
+{{csc_module, tytuł: "Story Morals", obraz: "/images/csc/landing/project_storymorals.jpg", klasy: "3+", przedmiot: "ELA", czas trwania: "1-2 godziny", opis: "Co jest między \"Dawno, dawno temu\" a \"Koniec? \"Uczniowie kodują interaktywną aplikację, która opowiada historię i jej morały. Uczniowie mogą zastosować tę umiejętność do dowolnej opowieści, opowieści ludowej, książki lub bajki. ”, button_text:" Dowiedz się więcej ”, url:" / "}}
 {{ clearfix }}
 
 ## Lekcje pomostowe
 
-Nasze lekcje pomostowe zapewniają szybki i interesujący sposób na połączenie informatyki z innymi przedmiotami. Lekcje te nie wymagają wcześniejszej znajomości informatyki, więc są idealne dla każdego nauczyciela, który chce włączyć podstawową naukę XX wieku do tradycyjnego programu nauczania lub umotywować uczniów nowymi ekscytującymi sposobami uczenia się starszych przedmiotów.
+Nasze lekcje pomostowe zapewniają szybki i interesujący sposób na połączenie informatyki z innymi przedmiotami. These lessons don't require any prior knowledge of computer science, so they're perfect for any teacher who wants to incorporate essential 21st century learning into traditional curriculum or motivate students with new exciting ways to learn older subjects.
 
 
-{{ csc_module, tytuł: "Pandemia", klasy: "5+", przedmiot: "Przyroda", czas trwania: "2 godziny", opios: „W Mieście Potworów wybuchła epidemia! Tworząc symulację, aby zbadać, jak zachowuje się epidemia, uczniowie myślą jak naukowiec, opracowując hipotezę, testując ją i interpretując dane, aby pomóc mieszkańcom Miasta potworów.", button_text: "Dowiedz się więcej", url: "/ " }}
-{{ csc_module, tytuł: "Literowanie z pszczółką", klasy: "K+", przedmiot: "ELA", czas trwania: "1 godzina", opis: "F-U-N! Na tej lekcji uczniowie używają podstawowych umiejętności kodowania, aby powiedzieć pszczółce, gdzie należy B-U-Z-Z, aby przeliterować słowa w siatce wypełnionej literami.", button_text: "Dowiedz się więcej", url: "/" }}
-{{ csc_module, tytuł: "Obliczenia z Laurel", klasy: "K+", przedmiot: "Matematyka", czas trwania "1 godzina", opis: "To poszukiwanie skarbów! Uczniowie będą ćwiczyć liczenie i dodawanie podczas kodowania za pomocą pętli, aby pomóc Laurel zbierać klejnoty w siatce labiryntu.", button_text: "Dowiedz się więcej", url: "/" }}
-{{ csc_module, tytuł: "Wykładniki i wartości binarne", klasy: "6+", przedmiot: "Matematyka", czas trwania: "1 godzina", opis: "Uczniowie ćwiczą obliczanie wyrażeń z wykładnikami w celu porównania i kontrastowania wartości miejsc między system liczbowy base-10, którego używamy na co dzień i system binarny base-2 używany przez komputery.", button_text: "Dowiedz się więcej", url: "/" }}
-{{ csc_module, tytuł: "Algorytmy i funkcje matematyczne", klasy: "9+", przedmiot: "Matematyka", czas trwania: "1 godzina", opis: "Uczniowie poznają notację Big O czytając wykresy i rozszerzając tabele funkcyjne. Uczniowie opisują efektywność algorytmów wykładniczych w porównaniu z algorytmami liniowymi i wielomianowymi.", button_text: "Dowiedz się więcej", url: "/" }}
-{{ csc_module, tytuł: "Kodeks Etyki AI", klasy: "6+", przedmiot: "ELA lub Humanistyka", czas trwania: "1 godzina", opis: "Po zbadaniu potencjalnych etycznych pułapek sztucznej inteligencji (AI) , uczniowie wspólnie tworzą zasób klasy „Kodeks etyki AI”., button_text: "Dowiedz się więcej", url: "/" }}
-{{ csc_module, title: "Wizualizacja danych", klasy: "9+", temat: "Matematyka", czas trwania: "1 godzina", opis: "Ta lekcja wprowadza uczniów do Wizualizera danych w App Lab oraz dwa ważne typy wykresów: wykres słupkowy i histogram. W trakcie lekcji uczniowie będą rozwijać umiejętności korzystania z tego narzędzia i czytania danych.", button_text: "Dowiedz się więcej", url: "/" }}
+{{ csc_module, title: "Spelling with Bee", image: "/images/fill-400x100/csc/landing/lesson_spellingbee.png", grades: "K+", subject: "ELA", duration: "1 hour", description: "F-U-N! In this lesson, students use basic coding skills to tell Bee where to B-U-Z-Z in order to spell words on a letter-filled grid.", button_text: "Learn more", url: "/" }}
+{{ csc_module, title: "Counting with Laurel", image: "/images/fill-400x100/csc/landing/lesson_countingwithlaurel.png", grades: "K+", subject: "Math", duration: "1 hour", description: "It's a treasure hunt! Students will practice counting and adding when they code with loops to help Laurel collect gems across a maze grid.", button_text: "Learn more", url: "/" }}
+{{ csc_module, title: "AI Code of Ethics", image: "/images/fill-400x100/csc/landing/lesson_aiethics.png", grades: "9+", subject: "ELA or Humanities", duration: "1 hour", description: "After researching the potential ethical pitfalls of artificial intelligence (AI), students work together to develop a class \"AI Code of Ethics\" resource.", button_text: "Learn more", url: "/" }}
+{{ csc_module, title: "Data Visualization", image: "/images/fill-400x100/csc/landing/lesson_datavisualization.png", grades: "6+", subject: "Math", duration: "1 hour", description: "This lesson introduces students to the Data Visualizer tool in App Lab as well as two important chart types: a bar chart and a histogram. Over the course of the lesson, students will build skills in using this tool and in reading data.", button_text: "Learn more", url: "/" }}
 {{ clearfix }}
+
+<em>inished a CS Connection activity and/or looking for more options for your classroom? Please share your feedback and ideas for more lessons here!</em>

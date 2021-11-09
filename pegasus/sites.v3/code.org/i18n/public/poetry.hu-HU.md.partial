@@ -1,23 +1,24 @@
 ---
-title: Poetry
-video_player: true
+title: Költészet
 theme: responsive
-style_min: true
+set_dir: true
 ---
 
-# Coding with Poetry
+# Kódolás költészettel
 
-{{ tutorial_promo2, heading: "Coding with Poetry", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background.jpg", left_heading: "Mood study", left_description: "The first lesson of the Coding with Poetry Module, and a great one hour activity that explores the mood of a poem.", left_specs: "", left_button_url: "/moodstudy", left_button_text: "Learn more", right_heading: "Coding with Poetry module", right_description: "Go beyond the first hour with extended poetry content full five lessons.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Learn more" }}
+{{ tutorial_promo2, heading: "Kódolás költészettel", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background.jpg", left_heading: "Hangulattanulmány", left_description: "A Kódolás költészettel modul első leckéje, és egy nagyszerű egyórás tevékenység, amely egy vers hangulatát vizsgálja.", left_specs: "", left_button_url: "/moodstudy", left_button_text: "Részletes információk", right_heading: "Kódolás költészettel modul", right_description: "Túlmutat az első órán, bővebb verses tartalom teljes öt leckével.", right_specs: "", right_button_url: "/hellóvilág", right_button_text: "Részletes információk" }}
 
-## Learn more about Coding with Poetry
+## További információk a Kódolás költészettel modulról
 
-In the Coding with Poetry module in CS Connections, students will be able to see two subjects—computer science and poetry—in a new way. Over the course of five lessons, 4-8th-grade students build a poem-generating program to recite different versions of a haiku they wrote. Then, students test their programs with their classmates and complete the project by sharing their user-generated poems in a poetry circle.
+A CS Connections Kódolás költészettel moduljában a diákok két tantárgyat - az informatikát és a költészetet - új megközelítésben láthatják. Az öt lecke során a 4-8. osztályos tanulók egy versgeneráló programot készítenek, amely egy általuk írt haiku különböző változatait szavalja el. Ezután a diákok tesztelik programjaikat osztálytársaikkal, majd a projektet azzal fejezik be, hogy egy költői körben megosztják egymással a felhasználó által generált verseket.
 
-By building a poem generator, students learn about how computers take in user input, store it in memory, and output a desired product. By writing their own haikus, students explore elements of poetry like grammar, mood, and word choice.
+A versgenerátor megépítésével a tanulók megismerik, hogy számítógépek hogyan veszik a felhasználói bemenetet, tárolják el azt a memóriában, és hogyan adják ki a kívánt terméket. Saját haikuk megírásával a tanulók a költészet különböző elemeit fedezik fel, például a nyelvtan, a hangulatot és a szóválasztást.
 
-Our Poem Art Hour of Code activity is also the first lesson in the Coding with Poetry module of our Computer Science Connections curriculum.
+<em>Our Poem Art Hour of Code activity is also the first lesson in the Coding with Poetry module of our Computer Science Connections curriculum. <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">Register here for a special session of CodeBytes</a> on Tuesday, December 7, at 10 a.m. ET and again at 10 a.m. PT; we'll show students how to get started with the Poem Art Hour of Code activity.</em>
 
-## Featured Student Creations
+{{ teacher_info, heading: "Információ tanároknak", title: "Hogyan lehet a tanulást folytatni a Kódolás költészettel után?", description: "Az új CS Connections tantervünkben több olyan tevékenységek található, amelyek az ELA-t és az informatikát ötvözik, és meg lehet nézni, hogy milyen kapcsolat van az informatika és más tantárgyak, például a matematika, a természettudományok és a társadalomismeret között, ezek mind be lehet vinni az osztályba.", button_text: "További információk" }}
+
+## Kiemelt diákalkotások
 
 {{ featured_project, title: "Coin color", author: "M", age: "13+", image: "images/csc/poetry/creation0.png", url: "/about" }}
 {{ featured_project, title: "Real world simulation", author: "D", age: "8+", image: "images/csc/poetry/creation0.png", url: "/" }}
