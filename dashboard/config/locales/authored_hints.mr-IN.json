@@ -1211,7 +1211,9 @@
           "playlab_up": "तुमच्या पात्राला वर जायला लावण्यासाठी, तुम्ही हे ब्लॉक्स जोडू शकता:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">1</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
           "playlab_down": "तुमच्या पात्राला खाली जायला लावण्यासाठी, तुम्ही हे ब्लॉक्स जोडू शकता:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">4</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
           "playlab_left": "तुमच्या पात्राला डावीकडे जायला लावण्यासाठी, तुम्ही हे ब्लॉक्स जोडू शकता:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">8</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
-          "playlab_right": "तुमच्या पात्राला उजवीकडे जायला लावण्यासाठी, तुम्ही हे ब्लॉक्स जोडू शकता:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml>"
+          "playlab_right": "तुमच्या पात्राला उजवीकडे जायला लावण्यासाठी, तुम्ही हे ब्लॉक्स जोडू शकता:\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n      <block type=\"studio_move\">\n        <title name=\"SPRITE\">0</title>\n        <title name=\"DIR\">2</title>\n      </block>\n    </next>\n  </block>\n  </xml>",
+          "courseE_playLab_scaffold1_b": "तुमच्याकडे चार `when arrow` इव्हेंट ब्लॉक्स असले पाहिजेत आणि हालचाल करण्यासाठी प्रत्येकाच्या खाली एक दिशा असली पाहिजे.",
+          "courseE_playLab_scaffold1_c": "तुमचे पूर्ण झाले की तुम्ही ॲरो कीज वापरून तुमच्या हिरोला हालचाल करायला लावायला हवे."
         },
         "courseF_events_choice_pufferfish": {
           "changeProp": "तुम्हाला या ब्लॉकचीसुद्धा गरज आहे: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -1229,10 +1231,13 @@
           "courseF_bee_variables_3_2021_1": "पॅटर्न सुरू ठेवण्यासाठी, रिपीट्सची संख्ज्या वाढवा:\n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_artist_variables8_2021": {
-          "courseF_artist_variables8_a": "<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml> ब्लॉक\n\nतुमच्या लूपमध्ये शेवटी घालण्याचा प्रयत्न करा."
+          "courseF_artist_variables8_a": "<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml> ब्लॉक\n\nतुमच्या लूपमध्ये शेवटी घालण्याचा प्रयत्न करा.",
+          "courseF_artist_variables8_b": "तुमचा त्रिकोणासाठीचा कोड `set length` ब्लॉकने आणि 150 पिक्सेल्सपासून सुरू करण्याचे लक्षात ठेवा.",
+          "courseF_artist_variables8_c": "तुमचा त्रिकोण काढण्यासाठी  `repeat` लूप वापरण्याचे सुनिश्चित करा."
         },
         "courseF_artist_variables9_2021": {
-          "courseF_artist_variables9_b": "'लांबी' बदलणारा ब्लॉक तुमच्या लूपच्या आत असेल हे सुनिश्चित करा म्हणजे रेषा मोठ्या होत राहतील."
+          "courseF_artist_variables9_b": "'लांबी' बदलणारा ब्लॉक तुमच्या लूपच्या आत असेल हे सुनिश्चित करा म्हणजे रेषा मोठ्या होत राहतील.",
+          "courseF_artist_variables9_a": "या कोड्यासाठी, तुम्हाला लूप किती वेळा रिपीट होईल ते बदलावे लागेल."
         },
         "courseF_artist_variablesFP_2021": {
           "polygon_table": "इतर बहुभुजाकृती करून पाहण्याचा प्रयत्न करायचा आहे?\n\nतुमच्या `repeat` मध्ये बाजूच्या संख्येचा वापर करा आणि तुमच्या `turn` ब्लॉकमध्ये कोन जोडा.\nहे करून पाहा:\n\n|   आकार  | बाजू |  कोन |\n| :-----: | :--: | :--: |\n| त्रिकोण |   3  | 120° |\n|   चौरस  |   4  |  90° |\n|  पंचकोन |   5  |  72° |\n|  षटकोन  |   6  |  60° |\n| अष्टकोन |   8  |  45° |\n|  नवभुज  |   9  |  40° |\n|  दशभुज  |  10  |  36° |"
@@ -1326,7 +1331,9 @@
           "courseA_artist_loops2_b": "हे कोडे सोडवण्यासाठी हा <xml><block type=\"simple_move_right\"/></xml> ब्लॉक वापरा."
         },
         "courseA_artist_loops7_2021": {
-          "courseA_artist_loops7_c": "लक्षात ठेवा, तुम्ही <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> लूपच्या आत 1 पेक्षा जास्त ब्लॉक्स वापरू शकता."
+          "courseA_artist_loops7_c": "लक्षात ठेवा, तुम्ही <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">???</title>\n  </block></xml> लूपच्या आत 1 पेक्षा जास्त ब्लॉक्स वापरू शकता.",
+          "courseA_artist_loops7_a": "लूप कुठे लिहायचे ते समजत नाही आहे? पायरी-पायरीने कोड लिहिण्याचा प्रयत्न करा आणि पॅटर्न शोधा.",
+          "courseA_artist_loops7_b": "आधी एका लाटेसाठी कोड लिहा, मग दुसऱ्या दोन लाटा काढण्यासाठी तो रिपीट करा."
         },
         "courseA_collector_loops_challenge1_2021": {
           "courseA_collector_loops_challenge1_a": "काहीतरी चुकले असे वाटले तर प्रत्येक लूपमधील संख्या बदलून पहा.",
@@ -1511,10 +1518,12 @@
         },
         "courseB_iceage_loops8_2021": {
           "courseB_iceage_loops8_a": "मूव्हमेंट ब्लॉक्स बरोबर आहेत का? तुम्ही अजून काय बदलू शकता?",
-          "courseB_iceage_loops8_b": "पहिला लूप **3** वेळा रिपीट झाला पाहिजे, दुसरा लूप **5** वेळा रिपीट झाला पाहिजे, तिसरा लूप **4**वेळा रिपीट झाला पाहिजे आणि शेवटचा लूप **4**वेळा रिपीट झाला पाहिजे."
+          "courseB_iceage_loops8_b": "पहिला लूप **3** वेळा रिपीट झाला पाहिजे, दुसरा लूप **5** वेळा रिपीट झाला पाहिजे, तिसरा लूप **4**वेळा रिपीट झाला पाहिजे आणि शेवटचा लूप **4**वेळा रिपीट झाला पाहिजे.",
+          "courseB_iceage_loops8_c": "स्क्रॅटला या मार्गाने जायला मदत करण्यासाठी लूप्स वापरा."
         },
         "courseB_playlab_events4_2021": {
-          "courseB_playlab_events4_b": "हा ब्लॉक सरदाराला डावीकडे जायला लावतो.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>"
+          "courseB_playlab_events4_b": "हा ब्लॉक सरदाराला डावीकडे जायला लावतो.\n\n<xml>\n<block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events4_a": "ही इव्हेंट डाव्या ॲरोचे नियंत्रण करते:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block>\n  </xml>"
         },
         "courseB_playlab_events5_2021": {
           "courseB_playlab_events5_a": "हा इव्हेंट ब्लॉक उजव्या ॲरोचे नियंत्रण करतो:\n\n<xml>\n  <block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n  </block>\n  </xml>",
@@ -1549,7 +1558,9 @@
         "courseC_artist_prog7_2021": {
           "courseC_artist_prog7_a": "प्रत्येक कोन एकतर 45 किंवा 90 अंश आहे.",
           "courseC_artist_prog7_b": "पहिली पायरी बरोबर होते आहे का?\\\nदुसऱ्या पायरीचे काय?\\\nकुठे चुकते आहे?",
-          "courseC_artist_prog7_c": "तुम्हाला कोणता कोन आवश्यक आहे हे पाहण्यासाठी तुम्ही 'turn' ब्लॉक्समधला ड्रॉपडाऊन मेनू वापरू शकता!"
+          "courseC_artist_prog7_c": "तुम्हाला कोणता कोन आवश्यक आहे हे पाहण्यासाठी तुम्ही 'turn' ब्लॉक्समधला ड्रॉपडाऊन मेनू वापरू शकता!",
+          "courseC_artist_prog7_d": "तुम्ही हे कराल:\n\n-   पुढे जा\n-   उजवीकडे 45 अंश वळा\n-   पुढे जा\n-   उजवीकडे 90 अंश वळा\n-   पुढे जा\n-   उजवीकडे 45 अंश वळा\n\nहा पॅटर्न 2 वेळा रिपीट करा!",
+          "courseC_artist_prog7_e": "चूक होण्याची भीती बाळगू नका! ब्लॉक्स जोडत राहा आणि जरी तुम्ही अजून कोडे सोडवले आहे असे तुम्हाला वाटत नसेल तरीही काय घडते ते पहाण्यासाठी कोड रन करत राहा."
         },
         "courseD_bee_nestedLoops2_2021": {
           "courseD_bee_nestedLoops2_a": "हे कोडे सोडवण्यासाठी, तुम्हाला एका 'repeat' लूपच्या आत किमान एक 'repeat' लूप नेस्ट करावा लागेल.",
@@ -1583,16 +1594,21 @@
         "courseF_artist_for_challenge2_2021": {
           "courseF_artist_for_challenge2_a": "`set color with red, green, blue` ब्लॉक वापरून रंग बदलता येतो. लाल हा 255 ला कॉन्स्टंट सेट करण्यात आला आहे, हिरव्याचे मूल्य नेहमी 'काऊंटर' इतके असते आणि  निळ्याचे मूल्य नेहमी `255 - काऊंटर` इतके असते.",
           "courseF_artist_for_challenge2_b": "हा कोड तुम्हाला वाटतो त्यापेक्षा सोपा आहे. फक्त फॉर लूपच्या आत रंग सेट करा, पुढे जा आणि वळा. ",
-          "courseF_artist_for_challenge2_d": "**सोल्युशन:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)"
+          "courseF_artist_for_challenge2_d": "**सोल्युशन:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"controls_for_counter\" inline=\"true\">\n          <mutation counter=\"counter\"></mutation>\n            <value name=\"FROM\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">5</title>\n              </block>\n            </value>\n            <value name=\"TO\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">250</title>\n              </block>\n            </value>\n            <value name=\"BY\">\n              <block type=\"math_number\">\n                <title name=\"NUM\">2</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n                <value name=\"COLOUR\">\n                  <block type=\"colour_rgb\" inline=\"false\">\n                    <value name=\"RED\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">255</title>\n                      </block>\n                    </value>\n                    <value name=\"GREEN\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <value name=\"BLUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">MINUS</title>\n                        <value name=\"A\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">255</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                  </block>\n                </value>\n                <next>\n                  <block type=\"draw_move\" inline=\"true\">\n                    <title name=\"DIR\">moveForward</title>\n                    <value name=\"VALUE\">\n                      <block type=\"variables_get\">\n                        <title name=\"VAR\">counter</title>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"draw_turn\" inline=\"true\">\n                        <title name=\"DIR\">turnRight</title>\n                        <value name=\"VALUE\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">80</title>\n                          </block>\n                        </value>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>\n\n![](<https://images.code.org/4ce89e8d907f670408c3705f040e8677-image-1497728974326.49.09 PM.png>)",
+          "courseF_artist_for_challenge2_c": "`for loop` 5 पासून 250 पर्यंत 2 च्या टप्प्याने जातो."
         },
         "courseF_bee_for10_2021": {
-          "courseF_bee_for10_a": "तुम्हाला किती पायऱ्या जाण्याची गरज आहे आणि किती परागकण गोळा करायचे आहेत त्यामध्ये तुम्हाला काही पॅटर्न दिसतो का?"
+          "courseF_bee_for10_a": "तुम्हाला किती पायऱ्या जाण्याची गरज आहे आणि किती परागकण गोळा करायचे आहेत त्यामध्ये तुम्हाला काही पॅटर्न दिसतो का?",
+          "courseF_bee_for10_b": "फुलांच्या पहिल्या संचात एकूण **14 फुले** आहेत. हा पहिला संच मिळवण्यासाठी मधमाशी **7 चौरस** (किंवा 14 चौरस भागिले 2) खाली गेली पाहिजे. पुढच्या संचात किती फुले आहेत आणि तिथे पोचण्यासाठी मधमाशीला किती चौरस जावे लागेल?",
+          "courseF_bee_for10_c": "या कोड्यात, फुलांच्या पहिल्या संचांमध्ये **14** फुले आहेत, दुसऱ्या संचांमध्ये **10** फुले आहेत, तिसऱ्या संचात  **6** फुले आहेत आणि चौथ्या संचात **2** फुले आहेत.\n\nया  चित्रात,हे लक्षात घ्या की **7** लाल चौरस आहेत, **5** केशरी चौरस आहेत, **3** हिरवे चौरस आहेत आणि **1** निळा ब्लॉक आहे.\n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nसंख्यांचे एकमेकांशी काय नाते आहे?",
+          "courseF_bee_for10_d": "तुम्हाला 2 रिपीट्स वापरावे लागतील, एकामध्ये math ब्लॉक वापरा."
         },
         "courseF_bee_for11_2021": {
           "courseF_bee_for11_a": "15 वजा 12 म्हणजे किती? \\\n12 वजा 9 म्हणजे किती?\n\nतुम्हाला पॅटर्न दिसतो का?"
         },
         "courseF_bee_for2_2021": {
-          "courseF_bee_for2_b": "दोन लूप्सच्या मध्ये पुढे जायचे लक्षात ठेवा म्हणजे तुम्ही प्रत्येक फुलापर्यंत पोचू शकता.  "
+          "courseF_bee_for2_b": "दोन लूप्सच्या मध्ये पुढे जायचे लक्षात ठेवा म्हणजे तुम्ही प्रत्येक फुलापर्यंत पोचू शकता.  ",
+          "courseF_bee_for2_a": "जर तुमचा गोंधळ झाला असेल तर एकावेळी एका फुलावर काम करा आणि सारखे टेस्टिंग करा."
         },
         "courseF_bee_for4_2021": {
           "courseF_bee_for4_a": "हे कोडे सोडवण्यासाठी 1 ते 7 पर्यंत जाणारा आणि 1 ने वाढणारा 'for' लूप वापरा.",
@@ -1623,6 +1639,713 @@
           "courseF_bee_for9_a": " 'काऊंटर' व्हेरीएबल वापरून थोडे गणित करायचा प्रयत्न करा.\n\nतुम्हाला जेवढे परागकण गोळा करायचे आहेत तेवढी संख्या होण्यासाठी प्रत्येक फुलाजवळ काऊंटरचे काय केले पाहिजे?",
           "courseF_bee_for9_c": "असे दिसते की जर कोडे सोडवायचे असेल तर तुम्हाला प्रत्येक लूपच्या इटरेशनच्या सुरुवातीला मधमाशीला वळवावे लागेल.",
           "courseF_bee_for9_b": "**लक्षात ठेवा:** जर तुमचा लूप चढत्या क्रमाने मोजत असेल तर प्रत्येक वेळी इन्क्रीमेंट तुमच्या 'काऊंटर' व्हेरीएबलमध्ये मिळवली जाईल."
+        },
+        "courseA_artist_loops3_2021": {
+          "courseA_artist_loops3_a": "काय चुकते आहे ते पहाण्यासाठी तुमच्या प्रोग्रॅममधून तुमच्या बोटाने हळूहळू मार्ग गिरवा.",
+          "courseA_artist_loops3_b": "तुम्हाला हे कोडे सोडवण्यासाठी यासारखा ब्लॉक वापरायचा असेल.\n\n![](<https://images.code.org/16a3ab2e639eacee18ee5405ed9966dc-image-1498670745551.24.49 AM.png>)"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_a": "जर तुम्हाला हा लूप 4 पेक्षा जास्त वेळा रिपीट करायचा असेल तर तुम्ही ब्लॉकच्या वरची संख्या बदलू शकता.",
+          "courseA_artist_loops4_b": "तुम्ही फक्त एक <xml><block type=\"simple_move_right\"/></xml>\n\nब्लॉक वापरू शकत असल्यामुळे, तो <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"2-6\">5</title></block></xml> लूपच्या आत घालण्याचा प्रयत्न करा."
+        },
+        "courseA_artist_loops5_2021": {
+          "courseA_artist_loops5_a": "हे कोडे पूर्ण करण्यासाठी तुम्ही <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ब्लॉक्सबद्दल जे काही शिकलात ते वापरण्याचा प्रयत्न करा! ",
+          "courseA_artist_loops5_b": "जर तुम्हाला हा लूप 4 पेक्षा जास्त वेळा रिपीट करायचा असेल तर तुम्ही ब्लॉकच्या वरची संख्या बदलू शकता.",
+          "courseA_artist_loops5_c": "तुम्ही फक्त एक <xml><block type=\"simple_move_right\"/></xml>\n\nब्लॉक वापरू शकत असल्यामुळे, तो <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> लूपच्या आत घालण्याचा प्रयत्न करा."
+        },
+        "courseA_artist_loops6_2021": {
+          "courseA_artist_loops6_a": "टेकडी कशी तयार करायची कळत नाही आहे? प्रत्येक ब्लॉक काय काढतो ते पाहण्यासाठी ब्लॉक्सबरोबर खेळून पहा. ",
+          "courseA_artist_loops6_b": "हे कोडे सोडवण्यासाठी तुम्हाला 2 दिशांमध्ये 2 ब्लॉक्स लागतील."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_a": "तुमच्यासाठी काय लिहिले आहे ते पाहण्यासाठी कोड रन करून पहा.",
+          "courseA_artist_loops8_b": "तुम्हाला दिलेला कोड तुम्ही लूप कसा करू शकता?",
+          "courseA_artist_loops8_c": "कोड काय करतो आहे?\\\nत्याने काय करणे अपेक्षित आहे?\\\nते तुम्हाला काय सांगते?"
+        },
+        "courseA_artist_loops9_2021": {
+          "courseA_artist_loops9_a": "उरलेला जिना काढण्यासाठी तुम्हाला दिलेल्या कोडमध्ये अजून एक ब्लॉक जोडा.",
+          "courseA_artist_loops9_b": "तुम्ही जोडलेला ब्लॉक \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block>\n</xml>\n\nलूपच्या आत गेला पाहिजे.",
+          "courseA_artist_loops9_c": "तुम्हाला लूप कुठे लिहायचे ते समजत नसेल तर तुमचा कोड पायरी-पायरीने लिहिण्याचा प्रयत्न करा आणि पॅटर्न्स शोधा."
+        },
+        "courseA_artist_loops_challenge2a_2021": {
+          "courseA_artist_loops_challenge2_a": "या <xml>  <block type=\"simple_move_up_left\"/></xml> सारखे ब्लॉक्स तुमच्या आर्टीस्टला एका तिरक्या रेषेत जायला मदत करतील!",
+          "courseA_artist_loops_challenge2_b": "तुमचा एक तंबू पूर्ण झाला की दुसऱ्यापर्यंत जाण्यासाठी दोन वेळा 'उडी मारा'! ",
+          "courseA_artist_loops_challenge2_c": "हे कोडे पूर्ण करण्यासाठी तुमचे सर्व ब्लॉक्स एका लूपच्या आत असणे आवश्यक आहे."
+        },
+        "courseA_harvester_seq1_2021": {
+          "courseA_harvester_seq1_a": "हार्वेस्टरला कणीस सापडले की त्याला ते खुडायला मदत करण्यासाठी हा ब्लॉक वापरा!\n\n<xml>\n  <block type=\"harvester_corn\"/>\n</xml>",
+          "courseA_harvester_seq1_b": "कणसापर्यंत पोचण्यासाठी हार्वेस्टरला 3 वेळा पूर्वेकडे जावे लागेल. हा ब्लॉक वापरा:\n\n <xml>\n  <block type=\"maze_moveEast\"/>\n</xml>"
+        },
+        "courseA_harvester_seq2_2021": {
+          "courseA_harvester_seq2_a": "कणीस खुडण्यासाठी <xml><block type=\"harvester_corn\"/></xml> वापरायला विसरू नका!",
+          "courseA_harvester_seq2_b": "सोल्युशन शोधण्यासाठी कागदावर पायऱ्या लिहिण्याचा प्रयत्न करा!"
+        },
+        "courseA_harvester_seq3_2021": {
+          "courseA_harvester_seq3_a": "तुमच्या हा ब्लॉक वापरायचे लक्षात होते का?\n\n<xml><block type=\"harvester_corn\"/></xml>",
+          "courseA_harvester_seq3_b": "पायऱ्या मोठ्याने म्हणून बघा आणि त्यातून तुम्हाला उत्तर शोधायला मदत मिळते का पहा."
+        },
+        "courseA_harvester_seq4_2021": {
+          "courseA_harvester_seq4_a": "हार्वेस्टर आणि कणसामध्ये किती स्पेसेस आहेत? तुमच्या वर्कस्पेसमध्ये आधीपासून किती ब्लॉक्स आहेत?",
+          "courseA_harvester_seq4_b": "तुम्हाला पाच 'पूर्वकडे जा' ब्लॉक्स आणि एक 'कणीस खुडा' ब्लॉक लागेल:\n\n<xml><block type=\"harvester_corn\"/></xml>"
+        },
+        "courseA_harvester_seq5_2021": {
+          "courseA_harvester_seq5_a": "कोणता ब्लॉक हार्वेस्टरला चुकीच्या दिशेने हलवतो?",
+          "courseA_harvester_seq5_b": "तुम्ही एक ब्लॉक हलवणे आवश्यक आहे.",
+          "courseA_harvester_seq5_c": "हा ब्लॉक कचऱ्यात टाका!\n\n<xml><block type=\"maze_moveNorth\"/></xml>"
+        },
+        "courseA_harvester_seq6_2021": {
+          "courseA_harvester_seq6_a": "तुम्ही अडकला असाल तर, पायऱ्या मोठ्याने म्हणून बघा. त्यामुळे तुम्हाला योग्य मार्ग शोधायला मदत होऊ शकते."
+        },
+        "courseA_harvester_seq7_2021": {
+          "courseA_harvester_seq7_a": "हे कोडे 2 भागात सोडवा, एक भाग कॉर्नरच्या आधीचा आणि एक भाग कॉर्नरच्या नंतरचा.",
+          "courseA_harvester_seq7_b": "अवघड जातेय? हा मार्ग हार्वेस्टरने घेतला पाहिजे."
+        },
+        "courseA_playLab_events2_2021": {
+          "courseA_playLab_events2_a": "कुत्र्याला काहीतरी म्हणायला लावणारा ब्लॉक शोधा.",
+          "courseA_playLab_events2_b": "हे कोडे पूर्ण करण्यासाठी तुम्हाला हा कोड आवश्यक आहे:\n\n<xml>\n<block type=\"when_run\" movable=\"false\" deletable=\"false\">\n<next>\n<block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</next>\n</block>\n</xml>"
+        },
+        "courseA_playLab_events3_2021": {
+          "courseA_playLab_events3_a": "<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">8</title>\n  </block></xml> ब्लॉक बाहेर ड्रॅग करा आणि तो  <xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">left</title>\n  </block></xml> च्या तळाशी जोडा",
+          "courseA_playLab_events3_b": "तुमचा प्रोग्रॅम लिहून झाल्यावर होरेला ध्वजापर्यंत नेण्यासाठी डावीकडची ॲरो की वापरायचे लक्षात ठेवा. जेव्हा ध्वज हिरवा होतो तेव्हा तुमचे काम झाले!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playLab_events4_a": "होरेला उजवीकडे जायला लावण्यासाठी तुम्हाला हा इव्हेंट ब्लॉक लागेल:\n\n<xml><block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></xml>",
+          "courseA_playLab_events4_b": "हे कोडे पूर्ण करण्यासाठी तुम्हाला हा कोड लागेल:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">right</title>\n    <next>\n  <block type=\"studio_move\">\n    <title name=\"SPRITE\">1</title>\n    <title name=\"DIR\">2</title>\n  </block></next></block></xml>"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_a": "होरेला वर आणि खाली जायला लावण्यासाठी तुम्हाला हे इव्हेंट ब्लॉक्स लागतील:\n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">up</title>\n  </block></xml>\n\nआणि \n\n<xml><block type=\"studio_whenArrow\">\n    <title name=\"VALUE\">down</title>\n  </block></xml>",
+          "courseA_playLab_events5_b": "ब्लॉकमधील चित्रावर क्लिक करून आणि एक नवीन की निवडून तुम्ही इव्हेंट ॲरोसाठी की बदलू शकता हे तुम्हाला माहीत आहे का?\n\n![](https://images.code.org/b010b6a8131689af53b33148753c15b4-image-1492639642316.gif)"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_a": "होरेवर क्लिक केल्यावर त्याला काहीतरी करायला लावण्यासाठी तुम्हाला हा इव्हेंट ब्लॉक लागेल:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>",
+          "courseA_playLab_events6_b": "पार्श्वभूमी बदलण्यासाठी तुम्ही हा ब्लॉक वापराल:\n\n<xml><block type=\"studio_setBackground\">\n    <title name=\"VALUE\">random</title>\n  </block></xml>",
+          "courseA_playLab_events6_c": "एखादा रँडम आवाज काढण्यासाठी तुम्ही हा ब्लॉक वापराल:\n\n<xml><block type=\"studio_playSound\">\n    <title name=\"SOUND\">random</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events7_2021": {
+          "courseA_playLab_events7_a": "जेव्हा पात्रे एकमेकांना धडकतात, तेव्हा काय होते याचे नियंत्रण करण्यासाठी हा ब्लॉक वापरा.\n\n<xml><block type=\"studio_whenSpriteCollided\">\n    <title name=\"SPRITE1\">1</title>\n    <title name=\"SPRITE2\">0</title>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge1_2021": {
+          "courseA_playlab_events_challenge1_a": "तुम्ही रॉबिनवर क्लिक केल्यावर वॅडल्स पेंग्विन दाखवा!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_b": "तुम्ही वॅडल्सवर क्लिक केल्यावर बू भूत दाखवा!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">3</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">4</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_c": "तुम्ही बूवर क्लिक केल्यावर जेडन हा फझी राक्षस दाखवा!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">4</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">5</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_d": "तुम्ही राक्षसावर क्लिक केल्यावर स्पिफ रोबो दाखवा!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">6</title>\n      </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge1_e": "शेवटी, तुम्ही स्पिफवर क्लिक केल्यावर वेन्डेल जादूगार दाखवा!\n\n <xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">7</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge2_2021": {
+          "courseA_playlab_events_challenge2_a": "तुम्ही पक्ष्याला गायला लावू शकता.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">2</title>\n            <title name=\"TEXT\">Tweet</title>\n          </block>\n    </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_b": "तुम्ही रोबोला बीप आवाज काढायला लावू शकता.\n\n<xml>\n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">6</title>\n    <next>\n      \n          <block type=\"studio_playSound\">\n            <title name=\"SOUND\">winpoint</title>\n          </block>\n        </next>\n  </block></xml>",
+          "courseA_playlab_events_challenge2_c": "तुम्ही चिडलेल्या राक्षसाला गुरगुरायला लावू शकता.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "1": "जर स्क्रॅट तुम्हाला पाहिजे ते करत नसेल तर दोन्ही ब्लॉक्स एकमेकांना व्यवस्थित जोडले आहेत, हे सुनिश्चित करा आणि मग पुन्हा \"Run\" क्लिक करा.",
+          "2": "चूक करायला घाबरू नका! काहीतरी करायचा प्रयत्न करा आणि जर ते होत नसेल तर दुसरे काहीतरी करून बघा!"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_a": "जेव्हा तुम्ही खजिन्यावर उभे असाल तेव्हा <xml><block type=\"collector_collect_simplified\"/></xml> ब्लॉक खजिना गोळा करण्यासाठी वापरता येईल."
+        },
+        "courseB_collector_loops2_2021": {
+          "courseB_collector_loops2_a": "तुम्ही कोणता खजिना गोळा करण्यापूर्वी तुम्हाला हालचाल करावी लागेल.",
+          "courseB_collector_loops2_b": "जेव्हा तुम्ही खजिन्याच्या जागी पोचाल तेव्हा तो गोळा करण्यासाठी <xml><block type=\"collector_collect\"/></xml> ब्लॉक वापरा."
+        },
+        "courseB_collector_loops3_2021": {
+          "courseB_collector_prog3_a": "तुमचा खजिना गोळा करण्यासाठी <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">5</title></block></xml> ब्लॉक वापरण्याचा प्रयत्न करा.",
+          "courseB_collector_prog3_b": "लक्षात ठेवा, तुम्ही एका रिपीट लूपच्या आत एकापेक्षा जास्त ब्लॉक्स वापरू शकता."
+        },
+        "courseB_collector_loops4_2021": {
+          "courseB_collector_loops4_a": "कुठे चुकते आहे ते शोधण्यासाठी स्टेप बटण वापरण्याचा प्रयत्न करा.",
+          "courseB_collector_loops4_b": "लॉरेल किती दूर जाते, हे बदलण्यासाठी, लूप किती वेळा रन होतो ती संख्या बदला.",
+          "courseB_collector_loops4_c": "लॉरेलला खाली चालत जावे लागेल आणि तिने 'रिपीट' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> लूप संपवल्यावर खजिना गोळा करावा लागेल!"
+        },
+        "courseB_collector_loops5_2021": {
+          "courseB_collector_loops5_a": "काम पूर्ण करण्यासाठी एकापेक्षा जास्त लूप्स वापरा.",
+          "courseB_collector_loops5_b": "कोड काय करतो ते पाहण्यासाठी तो एक-दोन वेळा रन करायचा प्रयत्न करा."
+        },
+        "courseB_collector_loops6_2021": {
+          "courseB_collector_loops6_a": "काय चुकते आहे ते कळत नाही आहे? तुमच्या प्रोग्रॅममधील एकावेळी एक ब्लॉक रन करण्यासाठी \"स्टेप\" बटण वापरा.",
+          "courseB_collector_loops6_b": "तुम्ही \"3\" वर क्लिक करून आणि वेगळी संख्या निवडून रिपीट लूप कितीवेळा रन होतो ती संख्या बदलू शकता.",
+          "courseB_collector_loops6_c": "तुम्हाला हे कोडे सोडवण्यासाठी 3 'रिपीट' <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml> चा वापर करायचा असेल.",
+          "courseB_collector_loops6_d": "तुमचा गोंधळ उडाला असेल तर या कोड्याचे 3 भागात विभाजन करण्याचा प्रयत्न करा."
+        },
+        "courseB_collector_loops7_2021": {
+          "courseB_collector_loops7_a": "तुम्हाला कोडे सोडवणे अवघड जात असेल तर तुम्हाला उत्तर काढण्यास मदत होण्यासाठी कोडे कागदावर काढण्याचा प्रयत्न करा.",
+          "courseB_collector_loops7_b": "तुम्हाला हे कोडे सोडवण्यासाठी 3 रिपीट लूप्स लागतील आणि शेवटी अतिरिक्त खजिना विसरू नका!"
+        },
+        "courseB_collector_loops8_2021": {
+          "courseB_collector_loops8_challenge_a": "तुम्हाला रिपीट लूप्स कुठे लिहायचे ते समजत नसेल तर पायरी-पायरीने कोड लिहिण्याचा प्रयत्न करा आणि पॅटर्न शोधा."
+        },
+        "courseB_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "तुटलेल्या बर्फापासून सावध राहा! स्क्रॅट पाण्यात पडू शकतो!",
+          "courseB_iceage_loops10_b": "तुम्ही अडकला असाल तर, पायऱ्या मोठ्याने म्हणून बघा किंवा त्या कागदावर लिहून बघा. तुम्हाला काही पॅटर्न्स दिसतात का?",
+          "courseB_iceage_loops10_c": "हे एक मोठे कोडे आहे! हा मार्ग अनुसरा."
+        },
+        "courseB_iceage_loops9_2021": {
+          "courseB_iceage_loops9_a": "अवघड वाटतेय? या कोड्याचे छोट्या तुकड्यांमध्ये विभाजन करण्याचा प्रयत्न करा. तुम्ही कोडींग करत असताना तुमचे कोडे रन करायला घाबरू नका!",
+          "courseB_iceage_loops9_b": "तुमच्या अंतिम कोडमध्ये **4** लूप्स असले पाहिजेत.",
+          "courseB_iceage_loops9_c": "स्क्रॅटने एकॉर्नपर्यंत जाण्यासाठी हा मार्ग घेतला पाहिजे."
+        },
+        "courseB_playlab_events2_2021": {
+          "courseB_playlab_events2_a": "डेझीला काहीतरी म्हणायला सांगण्यासाठी हा ब्लॉक आहे:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n  </xml>"
+        },
+        "courseB_playlab_events3_2021": {
+          "courseB_playlab_events3_a": "तुम्ही इव्हेंट जोडण्यासाठी हा ब्लॉक वापरला पाहिजे:\n\n<xml>\n<block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">0</title>\n  </block>\n  </xml>",
+          "courseB_playlab_events3_b": "डेझीचा मूड बदलण्यासाठी तुम्हाला हा ब्लॉक आवश्यक आहे:\n\n<xml>\n<block type=\"studio_setSpriteEmotion\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">random</title>\n  </block>\n  </xml>"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "courseE_playLab_scaffold1_a": "पात्र स्टेजला जोडण्यासाठी `set actor 1 to ??? image` ब्लॉक वापरता येईल.",
+          "courseE_playLab_scaffold1_b": "तुमचे पात्र प्रोग्रॅमच्या सुरुवातीला दिसण्यासाठी `when run` च्या खाली `set actor` ब्लॉक ठेवा.",
+          "courseE_playLab_scaffold1_c": "तुमच्या दृश्यासाठी एक पार्श्वभूमी निवडण्यासाठी `set ??? background` वापरा."
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "courseE_playLab_scaffold4_a": "पॉईंट जोडण्यासाठी `score point` वापरा आणि पॉईंट वजा करण्यासाठी `remove point` वापरा."
+        },
+        "courseC_PlayLab_events1_2021": {
+          "courseC_PlayLab_events1_a": "हा ब्लॉक `when run` ब्लॉकला जोडा:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>"
+        },
+        "courseC_PlayLab_events2_2021": {
+          "courseC_PlayLab_events2_a": "यातील दोन ब्लॉक्स `when run` ब्लॉकला जोडा:\n\n<xml>\n  <block type=\"studio_saySpriteChoices\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Hi there.</title>\n  </block>\n</xml>",
+          "courseC_PlayLab_events2_b": "कोणते पात्र बोलते हे बदलण्यासाठी दुसऱ्या `actor __ say`ब्लॉकमधील ड्रॉपडाऊन वापरा."
+        },
+        "courseC_PlayLab_events3_2021": {
+          "courseC_PlayLab_events3_a": "हे कोडे सोडवण्यासाठी तुम्ही होरेला सुमारे 25 पिक्सेल्स उजवीकडे नेणे आवश्यक आहे.",
+          "courseC_PlayLab_events3_b": "एखाद्या पात्राला हलवेल असा एखादा ब्लॉक टूलबॉक्समध्ये आहे का?",
+          "courseC_PlayLab_events3_c": "हा ब्लॉक `when run` ब्लॉकला जोडा:\n\n<xml>\n<block type=\"studio_moveDistance\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"DIR\">2</title>\n    <title name=\"DISTANCE\">25</title>\n  </block>\n</xml>"
+        },
+        "courseC_PlayLab_events4_2021": {
+          "courseC_PlayLab_events4_b": "\"Run\" बटण क्लिक केल्यावर, ऑलिव्ह मांजरापर्यंत पोचण्यासाठी होरेने उजवीकडे **100** पिक्सेल्स जाणे आवश्यक आहे.",
+          "courseC_PlayLab_events4_a": "हे कोडे सोडवण्यासाठी तुम्ही `when actor touches` इव्हेंटला 'actor \\_\\_ say\\` ब्लॉक जोडणे आवश्यक आहे."
+        },
+        "courseC_PlayLab_events5_2021": {
+          "courseC_PlayLab_events5_a": "\"What's new?\" मजकूर शोधण्यासाठी तुम्हाला `actor say` ब्लॉकमधील ड्रॉपडाऊन मेनूवर क्लिक करावे लागेल.",
+          "courseC_PlayLab_events5_b": "प्रोग्रॅम चालतो आहे न हे पहाण्यासाठी तुम्ही तो रन केल्यावर ऑक्टाव्हियावर क्लिक करा!"
+        },
+        "courseC_PlayLab_events6_2021": {
+          "courseC_PlayLab_events6_a": "प्रत्येक हिरव्या `when arrow` ब्लॉकच्या खाली एक कृती असली पाहिजे.",
+          "courseC_PlayLab_events6_b": "वॅडल्स कोणत्या दिशेत जातो ते बदलण्यासाठी `move actor 1` ब्लॉकमधला ड्रॉप डाऊन मेनू वापरा.",
+          "courseC_PlayLab_events6_c": "तुमचे झाले की तुम्ही तुमच्या कॉम्प्युटरवरच्या ॲरो कीज वापरून वॅडल्सला इकडेतिकडे फिरवू शकाल!"
+        },
+        "courseC_PlayLab_events7_2021": {
+          "courseC_PlayLab_events7_a": "हे कोडे सोडवण्यासाठी `repeat forever` लूपच्या आत `move actor 2 up 400 pixels` ब्लॉक आणि `move actor 2 down 400 pixels` ब्लॉक हे दोन्ही ब्लॉक्स वापरा.",
+          "courseC_PlayLab_events7_b": "`repeat forever` लूप इतर कोणत्याही इव्हेंट ब्लॉक्सना जोडण्याची गरज नाही; तो आपापला रन होईल."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_a": "हे योग्यप्रकारे घडवण्यासाठी तुम्हाला `when actor touches` ब्लॉकला ब्लॉक्स जोडावे लागतील.",
+          "courseC_PlayLab_events8_b": "टूलबॉक्समधील `actor say` आणि `play sound` ब्लॉक्सची तुम्हाला मदत होईल!   "
+        },
+        "courseC_PlayLab_events9_2021": {
+          "courseC_PlayLab_events9_a": "हे कोडे सोडवण्यासाठी तुम्हाला `score point` ब्लॉकची मदत होईल.",
+          "courseC_PlayLab_events9_b": "तुमचा नवीन `when actor touches` ब्लॉक पात्र **1** आणि पात्र **3** म्हणेल अशी खात्री करा.",
+          "courseC_PlayLab_events9_c": "तुमच्या वर्कस्पेसमध्ये एकाच वेळी एकापेक्षा जास्त `when actor touches` इव्हेंट्स असू शकतात, त्यामुळे तुम्हाला पहिली इव्हेंट काढून टाकायची गरज नाही!"
+        },
+        "courseC_PlayLab_eventsA_2021": {
+          "courseC_PlayLab_eventsA_a": "हे कोडे सोडवण्यासाठी `set background` block आणि the `set actor to a ____ speed` ब्लॉक्स वापरा.",
+          "courseC_PlayLab_eventsA_b": "हे कोडे सोडवण्यासाठी तुम्हाला विशेषत: `when run` इव्हेंट ब्लॉक वर्कस्पेसमध्ये ड्रॅग करावा लागेल."
+        },
+        "courseC_PlayLab_eventsA_embed_2021": {
+          "courseC_PlayLab_eventsA_a": "पेंग्विनला हलवण्यासाठी ॲरो कीज वापरा. ही पातळी पूर्ण करण्यासाठी तुम्ही काही कोड लिहिणे आवश्यक नाही."
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "idea1": "_एखादी कल्पना हवी आहे?_\n\n**तिथे कोण आहे?** यादृच्छिक इमेजेस्बरोबर पात्रे दृश्यमाना करा, म्हणजे नंतर कोण येणार आहे ते कोणालाही कळणार नाही.",
+          "idea2": "_एखादी कल्पना हवी आहे?_\n\n**साहसावर जाणे** - पार्श्वभूमी बदला, नंतर पात्रांना ती आत्ता कुठे आहेत, त्याबद्दल बोलायला लावा.",
+          "idea3": "_एखादी कल्पना हवी आहे?_\n\n**पिनबॉल?** - एका पात्राला ॲरो कीज वापरून हालचाल करायला लावा (`when up arrow`, `when down arrow` ब्लॉक्स वापरा), नंतर जेव्हा ते स्क्रीन वरील इतर पात्रांना धडकते तेव्हा वेगवेगळे आवाज काढा."
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge_a": "गेम स्पेसमध्ये पात्रांना विविध ठिकाणी हलवण्यासाठी तुम्ही हा ब्लॉक वापरू शकता.\n\n<xml> <block type=\"studio_setSpritePosition\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">12</title>\n  </block></xml>",
+          "courseC_PlayLab_events_challenge_b": "जेव्हा खेळाडू कोणात्याही एका पात्राला स्पर्श करतो तेव्हा `set actor 1 to the middle left position` वापरण्याचा प्रयत्न करा. त्यामुळे गेम रिसेट होईल आणि खेळाडू प्रयत्न करत राहील!",
+          "courseC_PlayLab_events_challenge_c": "गेम अधिक सोपा किंवा अधिक आव्हानात्मक बनवण्यासाठी तुम्ही विविध पात्रांचा वेग बदलण्याचासुद्धा प्रयत्न करू शकता!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
+        },
+        "courseC_artist_loops1a_2021": {
+          "courseC_artist_loops1a_a": "तुम्हाला आवश्यक असलेला पहिला ब्लॉक हा आहे:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
+          "courseC_artist_loops1a_b": "स्टिकरचे चित्र काढण्यासाठी हा ब्लॉक वापरा!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops1b_2021": {
+          "courseC_artist_loops1b_a": "तुम्हाला हा पहिला ब्लॉक लागेल:\n\n<xml>\n  <block type=\"draw_turn_by_constant_dropdown\">\n    <title name=\"DIR\">???</title>\n    <title name=\"VALUE\" config=\"45,60,90,120,180\">???</title>\n  </block>\n</xml>\n\nतुम्ही डावे किंवा उजवे आणि कोणत्याही संख्येत अंश निवडू शकता."
+        },
+        "courseC_artist_loops2a_2021": {
+          "courseC_artist_loops2a_a": "तुमच्या लूपमध्ये तुम्ही मध्यभागी उडी मारू शकता, मग वळू शकता आणि मग स्टिकरचे चित्र काढू शकता.",
+          "courseC_artist_loops2a_b": "'repeat' लूप किती वेळा रिपीट होईल ते बदलण्यासाठी लूपच्या वर असलेल्या संख्येवर क्लिक करा आणि तो बदला."
+        },
+        "courseC_artist_loops3a_2021": {
+          "courseC_artist_loops3a_a": "पहिल्या स्टिकरनंतर तुम्ही तुमच्या लूपच्या आत फक्त एक ब्लॉक जोडाल.",
+          "courseC_artist_loops3a_b": "तुमचा प्रोग्रॅम असा दिसला पाहिजे!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"sticker\">\n                        <title name=\"VALUE\">Dog</title>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>\n\nतुम्ही तुमच्या आवडीचे कोणतेही स्टिकर्स लावू शकता!"
+        },
+        "courseC_artist_loops4a_2021": {
+          "courseC_artist_loops4a_a": "पुढे उडी मारण्यासाठी हा ब्लॉक वापरा:\n\n<xml>\n<block type=\"jump_by_constant\">\n    <title name=\"DIR\">jumpForward</title>\n    <title name=\"VALUE\">???</title>\n  </block>\n</xml>\n\nकिती लांब ते बदलायला विसरू नका!",
+          "courseC_artist_loops4a_b": "तुमचा प्रोग्रॅम असा दिसला पाहिजे!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">???</title>\n        <statement name=\"DO\">\n          <block type=\"jump_to\">\n            <title name=\"VALUE\">13</title>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">???</title>\n                <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                <next>\n                  <block type=\"sticker\">\n                    <title name=\"VALUE\">Cat</title>\n                    <next>\n                      <block type=\"jump_by_constant\">\n                        <title name=\"DIR\">jumpForward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"sticker\">\n                            <title name=\"VALUE\">Dog</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops5b_2021": {
+          "courseC_artist_loops5b_a": "तुमच्या रेषांचा पॅटर्न सेट करण्यासाठी हा ब्लॉक वापरा:\n\n<xml>\n<block type=\"draw_line_style_pattern\">\n    <title name=\"VALUE\">DEFAULT</title>\n  </block>\n</xml>",
+          "courseC_artist_loops5b_b": "वरीलप्रमाणे एक डिझाईन तयार करण्यासाठी, तुम्ही जितके पुढे जाल तितकेच तुम्हाला मागे यावे लागेल.",
+          "courseC_artist_loops5b_c": "तुमचा प्रोग्रॅम असा दिसला पाहिजे!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_line_style_pattern\">\n        <title name=\"VALUE\">rainbowLine</title>\n        <next>\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"jump_to\">\n                <title name=\"VALUE\">13</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">???</title>\n                    <next>\n                      <block type=\"draw_move_by_constant\">\n                        <title name=\"DIR\">moveBackward</title>\n                        <title name=\"VALUE\">???</title>\n                        <next>\n                          <block type=\"draw_turn_by_constant_dropdown\">\n                            <title name=\"DIR\">???</title>\n                            <title name=\"VALUE\" config=\"1,2,5,10,12,20,30,45,60,90,120,180\">???</title>\n                            <next>\n                              <block type=\"sticker\">\n                                <title name=\"VALUE\">Cat</title>\n                                <next>\n                                  <block type=\"jump_by_constant\">\n                                    <title name=\"DIR\">jumpForward</title>\n                                    <title name=\"VALUE\">???</title>\n                                    <next>\n                                      <block type=\"sticker\">\n                                        <title name=\"VALUE\">Dog</title>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </statement>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseC_artist_loops6a_2021": {
+          "courseC_artist_loops6a_a": "वरच्यासारखे एक डिझाईन तयार करण्यासाठी, प्रत्येक दोन स्टिकरमध्ये 75 पिक्सेल्सपेक्षा कमी पुढच्या दिशेत उडी मारा."
+        },
+        "courseC_artist_loops7a_2021": {
+          "courseC_artist_loops7a_a": "एका वर्तुळात 360 अंश असतात. तुम्ही जितक्या वेळा रिपीट करता तेव्हा तुमच्या वळण्याच्या वेळी अंशांची पट करा.\nती 360 अंश आहे का?\nहे चालते आहे का पाहण्यासाठी सुचवलेली रोटेशन्स तपासा!"
+        },
+        "courseC_artist_prog2_2021": {
+          "courseC_artist_prog2_a": "*\"जर तुम्ही <xml><block type=\"draw_move_by_constant\"><title name=\"DIR\">moveForward</title><title name=\"VALUE\">100</title></block></xml> ब्लॉक वापरलात तर मी एक रेष काढेन.\"* ",
+          "courseC_artist_prog2_b": "कोपऱ्यात वळताना समस्या येते आहे? <xml><block type=\"draw_turn_by_constant_dropdown\"><title name=\"DIR\">turnRight</title><title name=\"VALUE\" config=\"45,60,90,120,180\">90</title></block></xml> ब्लॉक वापरा."
+        },
+        "courseC_artist_prog3_2021": {
+          "courseC_artist_prog3_a": "ही खिडकी तयार करण्यासाठी, फक्त 100 पिक्सेल्स बाजू असलेला एक चौरस काढा.\n\n-   पुढे जा\n-   वळा\n-   पुढे जा\n-   वळा\n-   पुढे जा\n-   वळा\n-   पुढे जा",
+          "courseC_artist_prog3_b": "कोड अजून थोडा लहान करायचा आहे? या कोड्यात एक लूप वापरायचा प्रयत्न करा."
+        },
+        "courseC_artist_prog5_2021": {
+          "courseC_artist_prog5_a": "काय चुकते आहे ते पाहण्यासाठी तुम्ही कोडची एक एक ओळ रन करेपर्यंत स्लायडर हळूहळू शेवटपर्यंत खाली न्या.",
+          "courseC_artist_prog5_b": "चूक होण्याची भीती बाळगू नका! ब्लॉक्स जोडत राहा आणि जरी तुम्ही अजून कोडे सोडवले आहे असे तुम्हाला वाटत नसेल तरीही काय घडते ते पहाण्यासाठी कोड रन करत राहा.",
+          "courseC_artist_prog5_c": "तुम्ही ब्लॉक्समधील मेनू वापरून ब्लॉक्स काय करतात ते बदलू शकता!",
+          "courseC_artist_prog5_d": "प्रत्येक वळण उजवीकडे 90 अंशात असले पाहिजे."
+        },
+        "courseC_artist_prog6_2021": {
+          "courseC_artist_prog6_a": "आर्टीस्ट त्याची पहिली रेष काढण्यासाठी आधीच योग्य दिशेला तोंड करून उभा आहे. ",
+          "courseC_artist_prog6_b": "हा हिरा म्हणजे खरेतर एका टोकावर उभा असलेला एक चौरसच आहे.",
+          "courseC_artist_prog6_c": "हा हिरा म्हणजे एक चौरसच असल्यामुळे, कोपऱ्यांवर 90 अंशात वळायला विसरू नका.   "
+        },
+        "courseC_artist_prog_challenge1_2021": {
+          "courseC_artist_prog_challenge1_a": "तुम्ही एक रेष मध्यभागी असलेला हा आयत काढू शकता किंवा दोन स्वतंत्र चौरस काढू शकता!"
+        },
+        "courseC_artist_prog_challenge2a_2021": {
+          "courseC_artist_prog_challenge2_a": "तुम्ही पहिली रेष काढल्यावर, दुसरी रेष काढण्यापूर्वी डावीकडे वळा.",
+          "courseC_artist_prog_challenge2_b": "तुम्ही दुसरी रेष काढल्यावर, तिसरी रेष काढण्यापूर्वी उजवीकडे वळा."
+        },
+        "courseC_collector_loops_challenge2_2021": {
+          "courseC_maze_loops_challenge2_b": "लूप्स वापरा म्हणजे तुमचे 'collect' ब्लॉक्स संपणार नाहीत!"
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_a": "जेव्हा तुम्ही खजिन्याच्या जागी उभे असाल तेव्हा तो गोळा करण्यासाठी <xml><block type=\"collector_collect\"/></xml> ब्लॉक वापरा.",
+          "courseC_collector_prog1_b": "सगळ्यात सोपे सोल्युशन असेल एकदा पुढे जाणे आणि मग खजिना गोळा करणे."
+        },
+        "courseC_collector_prog2_2021": {
+          "courseC_collector_prog2_a": "तुमचा प्रोग्रॅम अजून लहान करण्यासाठी तुम्ही चार <xml><block type=\"maze_move\"><title name=\"DIR\">moveForward</title></block></xml> ब्लॉक्स वापरू शकता किंवा  <xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> ब्लॉक वापरू शकता.",
+          "courseC_collector_prog2_b": "चूक होण्याची भीती बाळगू नका! ब्लॉक्स जोडत राहा आणि जरी तुम्ही अजून कोडे सोडवले आहे असे तुम्हाला वाटत नसेल तरीही काय घडते ते पहाण्यासाठी कोड रन करत राहा."
+        },
+        "courseC_collector_prog3_2021": {
+          "courseC_collector_prog3_a": "जे ब्लॉक्स <xml><block type=\"when_run\"/></xml> ब्लॉकला जोडलेले आहेत, फक्त तेवढेच ब्लॉक्स प्रोग्रॅम रन करेल.",
+          "courseC_collector_prog3_b": "तुमच्या कोडमधील एकावेळी एक ओळ रन करण्यासाठी \"Step\" बटण वापरण्याचा प्रयत्न करा. कोड कुठे चुकतो आहे ते तुम्हाला कळते आहे का?",
+          "courseC_collector_prog3_c": "तुम्हाला हे कोडे सोडवण्यात अडचणी येत असतील तर मूव्ह्ज एका कागदावर लिहिण्याचा प्रयत्न करा."
+        },
+        "courseC_collector_prog4_2021": {
+          "courseC_collector_prog4_a": "तुम्ही अडकलात तर आधी कागदावर पायऱ्या लिहून पाहा.",
+          "courseC_collector_prog4_b": "चूक होण्याची भीती बाळगू नका! ब्लॉक्स जोडत राहा आणि जरी तुम्ही अजून कोडे सोडवले आहे असे तुम्हाला वाटत नसेल तरीही काय घडते ते पहाण्यासाठी कोड रन करत राहा.",
+          "courseC_collector_prog4_c": "मार्गासाठी हा पर्याय वापरून पहा."
+        },
+        "courseC_collector_prog5_2021": {
+          "courseC_collector_prog5_a": "\"पहिली पायरी बरोबर होते आहे का?\nदुसऱ्या पायरीचे काय?\nकुठे चुकते आहे?\"",
+          "courseC_collector_prog5_b": "जर तुम्ही एक बग दुरुस्त केलात आणि तरीसुद्धा प्रोग्रॅम नीट काम करत नसेल तर अधिक बग्ज शोधण्यासाठी वरील पायऱ्या वापरा.",
+          "courseC_collector_prog5_c": "तुम्ही अडकलात तर आधी कागदावर पायऱ्या लिहून पाहा.",
+          "courseC_collector_prog5_d": "खजिना गोळा करण्यासाठी हा मार्ग अनुसरा."
+        },
+        "courseC_collector_prog6_2021": {
+          "courseC_collector_prog6_a": "काय चुकते आहे हे तुम्हाला समजेल का?\n\nतुमच्या कोडची एक एक ओळ रन करून एरर्स शोधण्यासाठी \"Step\" बटण वापरण्याचा प्रयत्न करा.",
+          "courseC_collector_prog6_b": "अडकलाय? खजिना गोळा करण्यासाठी हा मार्ग अनुसरून पहा."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_a": "आधीपासूनच वर्कस्पेसमध्ये खूप चांगला कोड आहे. हे कोडे सोडवण्यासाठी तुम्हाला त्यातला काही डिलीट करायची गरज नाही.",
+          "courseC_collector_prog7_b": "ॲडव्हेंचररला  योग्य दिशेत नेण्यासाठी तुम्हाला आवश्यक असलेला ब्लॉक दिसत नाही आहे? टूलबॉक्समधून एक पुल करा.",
+          "courseC_collector_prog7_c": "सगळा खजिना गोळा करण्यासाठीचा मार्ग दिसण्यात अडचण येते आहे? हा मार्ग वापरून पहा!"
+        },
+        "courseC_collector_prog_challenge1_2021": {
+          "courseC_collector_prog_challenge1_a": "तुम्ही अतिरिक्त खजिना गोळा करण्यासाठी 'collect' ब्लॉक अनेकवेळा वापरू शकता. "
+        },
+        "courseC_collector_prog_challenge2_2021": {
+          "courseC_collector_prog_challenge1_a": "तुम्ही प्रत्येक स्पेससाठी एकापेक्षा जास्त `collect` ब्लॉक्स वापरू शकता.",
+          "courseC_collector_prog_challenge1_b": "रस्ता चुकलात? कोडे सोडवण्यासाठी या मार्गाने जाऊन पहा!"
+        },
+        "courseC_flappy_events1_2021": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+        },
+        "courseC_flappy_events2_2021": {
+          "courseC_flappy_events2_a": "तुम्हाला आता जो ब्लॉक जोडण्यासाठी आवश्यक आहे तो आहे `set speed`.",
+          "courseC_flappy_events2_b": "हे कोडे सोडवण्यासाठी `set speed` ब्लॉक `when run` ब्लॉकला जोडा."
+        },
+        "courseC_flappy_events3_2021": {
+          "courseC_flappy_events3_a": "जेव्हा एखादी गोष्ट योग्यप्रकारे काम करत नसते तेव्हा तुमचे ब्लॉक्स वर्कस्पेसमधील योग्य इव्हेंट्सना जोडले असल्याची खात्री करा."
+        },
+        "courseC_flappy_events4_2021": {
+          "courseC_flappy_events4_a": "हे कोडे सोडवण्यासाठी `end game` ब्लॉक `when hit an obstacle` ला जोडा."
+        },
+        "courseC_flappy_events5_2021": {
+          "courseC_flappy_events5_a": "ही पातळी उत्तीर्ण करण्यासाठी तुम्हाला `score a point` ब्लॉक वापरावा लागेल."
+        },
+        "courseC_flappy_events6_2021": {
+          "courseC_flappy_events6_a": "`flap a ____ amount` ब्लॉक `when click` इव्हेंटला जोडण्याचा प्रयत्न करा."
+        },
+        "courseC_flappy_events7_2021": {
+          "courseC_flappy_events7_a": "तुम्ही `set scene` ब्लॉक वापरून पार्श्वभूमी बदलू शकता."
+        },
+        "courseC_flappy_events8_2021": {
+          "courseC_flappy_events8_a": "ही पातळी उत्तीर्ण करण्यासाठी `when pass obstacle` इव्हेंटच्या खाली दुसरा `set scene` ब्लॉक जोडण्याचा प्रयत्न करा."
+        },
+        "courseC_flappy_events9_2021": {
+          "courseC_flappy_events9_a": "ही पातळी उत्तीर्ण करण्यासाठी `when hit an obstacle` इव्हेंटला `set score 0` ब्लॉकला जोडा. "
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_a": "एकदा तुम्ही भोपळ्यापर्यंत पोचलात की तो तोडण्यासाठी <xml><block type=\"harvester_pumpkin\"/></xml> वापरा.",
+          "courseC_harvester_loops1_b": "चौरसातून एकापेक्षा जास्त भोपळे तोडण्यासाठी तुम्ही <xml><block type=\"harvester_pumpkin\"/></xml> ब्लॉकमध्ये लूप वापरू शकता."
+        },
+        "courseC_harvester_loops2_2021": {
+          "courseC_harvester_loops2_a": "तुम्ही अडकलात तर पायऱ्या कागदावर लिहायचा आणि रिपीट होणारे पॅटर्न्स शोधायचा प्रयत्न करा.",
+          "courseC_harvester_loops2_b": "तुम्हाला एका 'रिपीट' लूपनंतर दुसऱ्या लूपची गरज पडेल.",
+          "courseC_harvester_loops2_c": "एक लूप `move forward` कमांड रिपीट करेल आणि दुसरा `pick pumpkin` कमांड रिपीट करेल."
+        },
+        "courseC_harvester_loops3_2021": {
+          "courseC_harvester_loops3_a": "चूक होण्याची भीती बाळगू नका! ब्लॉक्स जोडत राहा आणि जरी तुम्ही अजून कोडे सोडवले नसेल तरीही काय घडते ते पहाण्यासाठी कोड रन करत राहा.",
+          "courseC_harvester_loops3_b": "पहिल्या काही भोपाळयांसाठी तुम्ही मागच्या कोड्याच्या कोडसारखाच कोड वापरू शकता. नंतर तुम्हाला कोणत्या दिशेत वळावे लागेल?",
+          "courseC_harvester_loops3_c": "जर तुम्हाला तुमचा कोड सोपा करायचा असेल तर तुम्ही एका लूपच्या आत दुसरा लूप लिहू शकता! याला **नेस्टेड लूप** असे म्हणतात."
+        },
+        "courseC_harvester_loops4_2021": {
+          "courseC_harvester_loops4_a": "कणीस खुडण्यासाठी नवीन `pick corn` ब्लॉक वापरा.",
+          "courseC_harvester_loops4_b": "तुम्ही तुमच्या कोडमध्ये एकापेक्षा जास्त रिपीट लूप्स वापरू शकता, काही कणसे खुडण्यासाठी आणि काही भोपळे तोडण्यासाठी.",
+          "courseC_harvester_loops4_c": "जर तुम्हाला तुमचा कोड सोपा करायचा असेल तर तुम्ही एका लूपच्या आत दुसरा लूप लिहू शकता! याला **नेस्टेड लूप** असे म्हणतात."
+        },
+        "courseC_harvester_loops5_2021": {
+          "courseC_harvester_loops5_a": "तुम्ही अडकलात तर सगळ्या प्रोग्रॅमचे चित्र काढायचा आणि रिपीट होणारे पॅटर्न्स शोधायचा प्रयत्न करा.",
+          "courseC_harvester_loops5_b": "ही जिन्याची पायरी इतर कोड्यांमध्ये होती तशी ओळखीची वाटतेय का? हालचाली तशाच असल्या पाहिजेत, मात्र जाताना वाटेतली पिके गोळा करण्याचे लक्षात ठेवा."
+        },
+        "courseC_harvester_loops6_2021": {
+          "courseC_harvester_loops6_a": "लक्षात ठेवा, तुम्ही एका रिपीट लूपच्या आत एकापेक्षा जास्त ब्लॉक्स घालू शकता.",
+          "courseC_harvester_loops6_b": "कणसांच्या ओळीच्या शेवटी वळायला विसरू नका."
+        },
+        "courseC_harvester_loops7_2021": {
+          "courseC_harvester_loops7_a": "तुम्ही हे कोडे दोन प्रकारे सोडवू शकता, एकतर आधी कणीस मिळवा किंवा आधी भोपळे मिळवा.",
+          "courseC_harvester_loops7_b": "हे कोडे सोडवण्यासाठी तुम्हाला अनेक 'repeat' लूप्स लागतील."
+        },
+        "courseC_harvester_loops8_2021": {
+          "courseC_harvester_loops8_a": "ही जिन्याची पायरी इतर कोड्यामध्ये होती तशी ओळखीची वाटतेय का? हालचाली तशाच असल्या पाहिजेत, मात्र जाताना वाटेतली पिके गोळा करण्याचे लक्षात ठेवा.",
+          "courseC_harvester_loops8_b": "जर तुम्हाला तुमचा कोड अजून सोपा करायचा असेल तर तुम्ही एका 'repeat' लूपच्या आत दुसरा लूप लिहू शकता! याला **नेस्टेड लूप** असे म्हणतात."
+        },
+        "courseC_harvester_loops_challenge1a_2021": {
+          "courseC_harvester_loops_challenge1_a": "हे लूपशिवाय खूपच अवघड आहे!",
+          "courseC_harvester_loops_challenge1_b": "तुम्ही हवे तितक्या वेळा `move forward` आणि `pick corn` रिपीट करू शकता, मग प्रत्येक वळणावर 'उजवीकडे वळा'. ",
+          "courseC_harvester_loops_challenge1_c": "मधले कणीस गोळा करण्याचा सर्वोत्तम मार्ग एका 'repeat' ब्लॉकच्या आत दुसरा 'repeat' ब्लॉक  वापरतो.\n\n<xml><block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">4</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></xml>"
+        },
+        "courseC_harvester_loops_challenge2_2021": {
+          "courseC_harvester_loops_challenge2_a": "हे सोडवण्याचा एक मार्ग नागमोडी दिसतो. दुसरा मार्ग सर्पाकृती दिसतो! या सारख्या कोड्यासाठी अनेक वेगवेगळी सोल्युशन्स आहेत. सातत्य ठेवा!",
+          "courseC_harvester_loops_challenge2_b": "तुम्ही हवे तितक्या वेळा `move forward` आणि `pick lettuce` रिपीट करू शकता, मग प्रत्येक वळणावर वळा.",
+          "courseC_harvester_loops_challenge2_c": "हे कोडे फक्त 20 ब्लॉक्स वापरून पूर्ण करण्यासाठी नागमोडी पॅटर्न दोनदा रिपीट करता येईल!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
+          "courseC_harvester_loops_challenge2_d": "सर्पाकृती पॅटर्नचे फक्त 18 ब्लॉक्स वापरून कोडींग करता येईल!"
+        },
+        "courseC_maze_debugging1_2021": {
+          "courseC_maze_debugging1_a": "-   पहिल्या पायरीनंतर सगळे बरोबर होते आहे का?\n-   दुसऱ्या पायरीनंतरसुद्धा तो बरोबर चालतो आहे का?\n-   कुठे चुकते आहे?",
+          "courseC_maze_debugging1_b": "हे कोडे पूर्ण करण्यासाठी तुम्हाला हा 1 ब्लॉक जोडावा लागेल."
+        },
+        "courseC_maze_debugging2_2021": {
+          "courseC_maze_debugging2_a": "वर्कस्पेसमध्ये बराच मौल्यवान कोड आहे. तो सगळा काढून टाकून नव्याने सुरुवात करू नका!",
+          "courseC_maze_debugging2_b": "-   पहिल्या पायरीनंतर सगळे बरोबर होते आहे का?\n-   दुसऱ्या पायरीनंतरसुद्धा कोड बरोबर चालतो आहे का?\n-   कुठे चुकते आहे?",
+          "courseC_maze_debugging2_c": "काय चुकले ते कळत नाही? काय घडते ते पाहण्यासाठी कोड रन करण्याचा प्रयत्न करा."
+        },
+        "courseC_maze_debugging3_2021": {
+          "courseC_maze_debugging3_a": "तुमच्या कोडमधून एक ब्लॉक काढून टाकण्यासाठी, सगळे ब्लॉक्स वर्कस्पेसच्या दुसऱ्या भागात ड्रॅग करा.\n\nतुम्हाला काढून टाकायचा असलेला ब्लॉक परत टूलबॉक्समध्ये ड्रॅग करा.\n\nशेवटी, तुमचे इतर ब्लॉक्स त्यांच्या जागेवर ठेवा.\n\n![](https://images.code.org/bbafa5a100505b2b99a3f43ad3195471-image-1479933232821.gif)",
+          "courseC_maze_debugging3_b": "काय चुकले ते कळत नाही? काय घडते ते पाहण्यासाठी एक-दोनदा कोड रन करण्याचा प्रयत्न करा."
+        },
+        "courseC_maze_debugging4_2021": {
+          "courseC_maze_debugging4_a": "एकावेळी एक सूचना वापरण्यासाठी \"Step\" बटण वापरा. त्यामुळे तुम्हाला कोणत्या ओळीवर चूक झाली आहे ते कळायला मदत होते आहे का?",
+          "courseC_maze_debugging4_b": "एका वळणामुळे स्क्रॅट चुकीच्या दिशेने जातो आहे. कोणत्या ते तुम्हाला कळते आहे का?"
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_a": "वर्कस्पेसमध्ये अनेक उपयुक्त ब्लॉक्स आधीपासूनच आहेत. ते सगळे काढून टाकू नका!\n\nकोडमधून जाण्यासाठी \"Step\" बटण वापरा आणि कोड कुठे चुकतो आहे ते शोधा.",
+          "courseC_maze_debugging5_c": "ड्रॉपडाऊनवर क्लिक करून तुम्ही टर्न ब्लॉकची दिशा बदलू शकता.",
+          "courseC_maze_debugging5_b": "स्क्रॅटने काय केले पाहिजे ते मोठ्याने म्हणून पहा. ते वर्कस्पेसमधल्या कोडप्रमाणेच आहे का? काय चुकते आहे?"
+        },
+        "courseC_maze_debugging6_2021": {
+          "courseC_maze_debugging6_a": "-   स्क्रॅटने काय केले पाहिजे?\n-   स्क्रॅट काय करतो आहे?\n-   ते तुम्हाला काय सांगते?",
+          "courseC_maze_debugging6_b": "एकदा तुम्हाला पहिला बग सापडला आणि तुम्ही तो दुरुस्त केलात की पुन्हा डीबगिंग प्रक्रियेतून जा आणि दुसरा बग शोधा.\n\nप्रोग्रॅम नीट काम करेपर्यंत ही प्रक्रिया पुन्हा पुन्हा करा!"
+        },
+        "courseC_maze_debugging7_2021": {
+          "courseC_maze_debugging7_a": "-   पहिली पायरी बरोबर होते आहे का?\n-   दुसऱ्या पायरीचे काय?\n-   कुठे चुकते आहे?",
+          "courseC_maze_debugging7_b": "प्रोग्रॅमची एक एक ओळ रन करायला \"Step\" बटण वापरायला विसरू नका!",
+          "courseC_maze_debugging7_c": "तुम्हाला पहिला बग सापडला आणि तुम्ही तो दुरुस्त केलात की पुढचा बग शोधण्यासाठी पुन्हा डीबगिंग प्रक्रिया वापरा.\n\nप्रोग्रॅम नीट काम करेपर्यंत ही प्रक्रिया पुन्हा पुन्हा करा!"
+        },
+        "courseC_maze_debugging_challenge1_2021": {
+          "courseC_maze_debugging_challenge1_a": "डावीकडे का उजवीकडे? तुम्ही ठरवायचे!",
+          "courseC_maze_debugging_challenge1_b": "स्क्रॅटचा मार्ग आयताकृती आहे! त्याला दरवेळी एकाच दिशेला वळावे लागेल.",
+          "courseC_maze_debugging_challenge1_c": "जर तुम्ही अडकला असाल तर तुम्ही नेहमीच पहिल्यापासून सुरुवात करू शकता आणि नवीन मार्ग शोधू शकता!"
+        },
+        "courseC_maze_debugging_challenge2_2021": {
+          "courseC_maze_debugging_challenge2_b": "तुम्ही अडकलात तर कोड डीबग करायचा प्रयत्न करा. कुठे चुकते आहे?",
+          "courseC_maze_debugging_challenge2_c": "फक्त पुढे जाऊन आणि चार वेळा वळून तुम्ही दोन वेगवेगळे मार्ग घेऊ शकता. जर तुम्हाला लूप वापरण्याचा एक मार्ग सापडला तर अजूनही काही असू शकतात!\n\n![](<https://images.code.org/8a4665671cda35fea1f629a5bcc39e26-image-1493502743154.48.05 PM.png>)"
+        },
+        "courseC_maze_loops_challenge1a_2021": {
+          "courseC_maze_loops_challenge1_a": "त्याचा मार्गाचा दोन वेगवेगळ्या तुकड्यांच्या स्वरूपात विचार करा. प्रत्येकात एक पॅटर्न आहे जो तुम्ही रिपीट करू शकता.",
+          "courseC_maze_loops_challenge1_b": "जिन्याचा पॅटर्न रिपीट करण्यासाठी लूप्स कसे वापरायचे ते तुमच्या लक्षात आहे का?"
+        },
+        "courseC_maze_programming1_2021": {
+          "courseC_maze_programming1_0": "सगळे ब्लॉक्स पूर्णपणे जोडले आहेत, हे सुनिश्चित करा, मग पुन्हा \"Run\" क्लिक करा. "
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_a": "<xml><block type=\"maze_moveForward\"/></xml> ब्लॉक वापरण्यासाठी, तो टूलबॉक्समधून बाहेर ड्रॅग करा आणि तो <xml><block type=\"when_run\"/></xml> ब्लॉकला जोडा. ",
+          "courseC_maze_programming2_b": "सगळे ब्लॉक्स पूर्णपणे जोडले आहेत, हे सुनिश्चित करा, मग पुन्हा \"Run\" क्लिक करा. "
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_a": "कोडमध्ये काय चुकते आहे हे पाहण्यासाठी आधी हा कोड रन करायचा प्रयत्न करा.",
+          "courseC_maze_programming3_b": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nहा ब्लॉक तुमच्या कोडमधून काढून टाकण्यासाठी, सगळे ब्लॉक्स वर्कस्पेसच्या दुसऱ्या भागात ड्रॅग करा.\n\nतुम्हाला काढून टाकायचा असलेला ब्लॉक परत टूलबॉक्समध्ये ड्रॅग करा.\n\nशेवटी, तुमचे इतर ब्लॉक्स त्यांच्या जागेवर ठेवा."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_a": "हे लक्षात ठेवा की जेव्हा तुम्ही वळता तेव्हा तुम्ही _पक्ष्याच्या_ दृष्टीकोनातून वळता. जर तुम्ही उजवीकडे वळलात तर पक्षी खालच्या दिशेने जाईल.",
+          "courseC_maze_programming4_b": "मार्गाचे अनुसरण करण्यासाठी:\n\n-   पुढे जा\n-   एका बाजूला वळा\n-   पुढे जा\n-   उलट्या बाजूला वळा\n-   पुढे जा"
+        },
+        "courseC_maze_programming5_2021": {
+          "courseC_maze_programming5_a": "तुमच्या कोडमधली एक एक ओळ रन करण्यासाठी \"Step\" बटण वापरून पहा. तुम्ही पुढे काय केले पाहिजे हे तुम्हाला कळेल का?",
+          "courseC_maze_programming5_b": "हे कोडे पूर्ण करण्यासाठी पक्ष्याला एकदा वळणे आवश्यक आहे. कोणत्या दिशेने हे तुम्हाला कळेल का?",
+          "courseC_maze_programming5_c": "सोल्युशनमध्ये दोन `move forward` ब्लॉक्स, एक वळण आणि अजून दोन `move forward` ब्लॉक्स असतील."
+        },
+        "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "हे कोडे सोडवायचे दोन मार्ग आहेत!",
+          "courseC_maze_programming6_b": "पक्ष्यापासून डुकरापर्यंत तुमच्या बोटाने मार्ग आखा, तुम्ही कोणत्या पायऱ्यांचे अनुसरण केलेत?",
+          "courseC_maze_programming6_c": "लक्षात ठेवा तुम्हाला आधी वळावे लागेल, कारण पक्षी भिंतीकडे तोंड करून जायला सुरुवात करतो.",
+          "courseC_maze_programming6_d": "अडकल्यासारखे वाटतेय? हा मार्ग पहा!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_a": "एकेक ब्लॉकमधून जाण्यासाठी \"Step\" बटण वापरायला विसरू नका आणि एरर्स शोधा.",
+          "courseC_maze_programming7_b": "तुम्हाला हे कोडे सोडवण्यात अडचणी येत असतील तर मूव्ह्ज एका कागदावर लिहिण्याचा प्रयत्न करा."
+        },
+        "courseC_maze_programming8_2021": {
+          "courseC_maze_programming8_a": "तुम्ही अडकलात तर तुमच्या कोडची एका पाठोपाठ एक ओळ रन करण्यासाठी \"Step\" बटण वापरू शकता हे विसरू नका.",
+          "courseC_maze_programming8_b": "चूक होण्याची भीती बाळगू नका! ब्लॉक्स जोडत राहा आणि जरी तुम्ही अजून कोडे सोडवले आहे असे तुम्हाला वाटत नसेल तरीही काय घडते ते पहाण्यासाठी कोड रन करत राहा."
+        },
+        "courseC_maze_programming_challenge1_2021": {
+          "courseC_maze_programming_challenge1_a": "डुकरापर्यंत पोचण्याचे अनेक मार्ग आहेत. मार्ग शोधण्यासाठी तुमच्या बोटाचा वापरा करा आणि मग त्याचा प्रोग्रॅम लिहा!"
+        },
+        "courseC_maze_programming_challenge2_2021": {
+          "courseC_maze_programming_challenge2_a": "_'जर तुम्ही मला मागच्या दिशेत पाठवलेत तर मी योग्य प्रकारे वळेन याची खास खबरदारी घ्या!\"_",
+          "courseC_maze_programming_challenge2_b": "सगळ्यात छोट्या सोल्युशनमध्ये फक्त 5 ब्लॉक्स वापरले आहेत, पण त्यात हा ब्लॉक वापरला आहे:\n\n<xml><block type=\"controls_repeat_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>"
+        },
+        "courseD_artist_1_2021": {
+          "courseD_artist_project1_a": "तुम्हाला कोणता कोन आवश्यक आहे हे पाहण्यासाठी 'turn' ब्लॉक्समधला ड्रॉप डाऊन मेनू वापरा!"
+        },
+        "courseD_artist_2_2021": {
+          "courseD_artist_project1_a": "तुम्हाला कोणता कोन आवश्यक आहे हे पाहण्यासाठी 'turn' ब्लॉक्समधला ड्रॉप डाऊन मेनू वापरा!"
+        },
+        "courseD_artist_nestedLoops3_2021": {
+          "courseD_artist_nestedLoops3_b": "हे कोडे पटकन सोडवण्यासाठी नेस्टेड लूप वापरायला विसरू नका."
+        },
+        "courseD_bee_conditionals3_2021": {
+          "courseD_bee_conditionals3_a": "प्रत्येक जागी फूल आहे किंवा काहीच नाही हे शोधण्यासाठी 'if' स्टेटमेंट वापरण्याची खात्री करा.",
+          "courseD_bee_conditionals3_c": "चूक होण्याची भीती बाळगू नका! ब्लॉक्स जोडत राहा आणि जरी तुम्ही अजून कोडे सोडवले नसेल तरीही काय घडते ते पहाण्यासाठी कोड रन करत राहा."
+        },
+        "courseD_bee_conditionals4_2021": {
+          "courseD_bee_conditionals4_a": "तुम्हाला संपूर्ण मार्ग दिसत असला तरीही तुम्ही तरीसुद्धा प्रत्येक स्पेसला तिच्यावर एक ढग आहे अशाप्रकारे वागवू शकता.",
+          "courseD_bee_conditionals4_b": "परागकण आहे का हे पाहण्याकरता प्रत्येक स्पेस तपासण्यासाठी तुमच्या लूपमध्ये `if` स्टेटमेंट वापरा.  "
+        },
+        "courseD_bee_conditionals5_2021": {
+          "courseD_bee_conditionals5_a": "जर तुम्ही `if at flower` ब्लॉक वापरलात, तर तुम्ही हे नेस्टेड लूप वापरून सोडवू शकता. डाव्या आणि खालच्या मार्गांसाठी एक प्रोग्रॅम लिहा आणि मग सगळे पुन्हा एकदा करा!",
+          "courseD_bee_conditionals5_c": "या मार्गावरून जाणे सुरू ठेवण्यासाठी मधमाशीला 'पुढे जावे' लागेल. ती जाईल तशी तिला फूल शोधावे लागेल. 'जर ठीथे फूल असेल' तर मधमाशीला 'परागकण मिळायला हवा'."
+        },
+        "courseD_bee_conditionals6_2021": {
+          "courseD_bee_conditionals6_a": "प्रत्येक ढगाच्या खाली मधाचे पोळे आहे का हे तपासण्यासाठी `if` स्टेटमेंट वापरण्याची खात्री करा.",
+          "courseD_bee_conditionals6_b": "अशावेळी, तुम्ही ढगांखाली फुले तपासणे आवश्यक नाही.",
+          "courseD_bee_conditionals6_c": "तुमचा कोड अधिक सोपा करण्यासाठी तुम्ही एखादा लूप वापरू शकता का?"
+        },
+        "courseD_bee_conditionals7_2021": {
+          "courseD_bee_conditionals7_a": "**लक्षात ठेवा:** हे कोडे रन केले की प्रत्येक वेळी बदलते.\n\nहे आव्हान सोडवण्यासाठी तुम्ही कंडीशनल ब्लॉक (`if/else`) वापराल.",
+          "courseD_bee_conditionals7_b": "जर ढगाखाली फूल नसेल तर तिथे मधाचे पोळे असले पाहिजे, त्यामुळे तुम्ही रिकाम्या जागेचा विचार करण्याची गरज नाही."
+        },
+        "courseD_bee_conditionals7_predict2_2021": {
+          "courseD_bee_conditionals7_a": "**लक्षात ठेवा:** हे कोडे रन केले की प्रत्येक वेळी बदलते.\n\nहे आव्हान सोडवण्यासाठी तुम्ही कंडीशनल ब्लॉक (`if/else`) वापराल."
+        },
+        "courseD_bee_conditionals8_2021": {
+          "courseD_bee_conditionals8_a": "**लक्षात ठेवा:** हे कोडे रन केले की प्रत्येक वेळी बदलते.\n\nहे आव्हान सोडवण्यासाठी तुम्ही कंडीशनल ब्लॉक (`if` किंवा `if/else`) वापराल.",
+          "courseD_bee_conditionals8_b": "हे कोडे अवघड आहे, कारण तुम्ही फक्त एकच कंडीशनल वापरून रिकामे चौरस, परागकण, _आणि_मध तपासू शकत नाही."
+        },
+        "courseD_bee_nestedLoops1_2021": {
+          "courseD_bee_nestedLoops1_a": "नीट काम करत नाही? प्रत्येक ओळीला काय घडते ते पाहण्यासाठी \"Step\" बटण वापरण्याचा प्रयत्न करा. ",
+          "courseD_bee_nestedLoops1_b": "आधी चौरसाची एक बाजू तयार करण्यासाठी कोड लिहिण्याचा प्रयत्न करा. सगळे परागकण गोळा करण्यासाठी तुम्ही हे लूप करू शकता का?",
+          "courseD_bee_nestedLoops1_c": "तुम्ही फुलासह चौरसावर असाल तेव्हा `get nectar`ब्लॉक वापरण्याचे लक्षात ठेवा."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "courseD_bee_nestedLoops1_a": "नीट काम करत नाही? प्रत्येक ओळीला काय घडते ते पाहण्यासाठी \"Step\" बटण वापरण्याचा प्रयत्न करा.",
+          "courseD_bee_nestedLoops1_c": "तुम्ही फुलासह चौरसावर असाल तेव्हा `get nectar`ब्लॉक वापरण्याचे लक्षात ठेवा."
+        },
+        "courseD_bee_nestedLoops7_2021": {
+          "courseD_bee_nestedLoops7_a": "तुम्हाला 'move forward' ब्लॉक असलेल्या दुसऱ्या 'repeat' ब्लॉकच्या आत 'get nectar' ब्लॉक रिपीट करावा लागेल.",
+          "courseD_bee_nestedLoops7_b": "हे कोडे सोडवण्यासाठी तुम्हाला उपलब्ध असलेले सगळे तीन 'repeat' ब्लॉक्स वापरावे लागतील. ",
+          "courseD_bee_nestedLoops7_c": "तुमच्या ब्लॉक्सचे तीन स्तरात नेस्टिंग करा, असे:\n\n-   रिपीट 4\n    -   रिपीट 3\n        -   रिपीट 12\n            -   परागकण मिळवा\n        -   पुढे जा\n    -   उजवीकडे जा"
+        },
+        "courseD_bounce_events10s_2021": {
+          "courseD_bounce_events10s_a": "तुमच्या कोडमध्ये या दोन्ही इव्हेंट्स असल्या पाहिजेत:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">swish</title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">whistle</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next></block></xml>"
+        },
+        "courseD_bounce_events11s_2021": {
+          "courseD_bounce_events11s_a": "जेव्हा गेम सुरू होईल तेव्हा तुम्हाला एक बॉल फेकावा लागेल, जेव्हा तुम्ही बॉल बास्केटमध्ये घालता आणि जेव्हा हात बॉलपर्यंत पोचत नाही, तेव्हा तुम्ही बॉल फेकणे आवश्यक आहे."
+        },
+        "courseD_bounce_events12s_2021": {
+          "courseD_bounce_events12s_a": "तुम्ही बास्केटबॉल किंवा हाताचा वेग वाढवण्यासाठी ते ब्लॉक्स `when run` इव्हेंटला जोडू शकता.",
+          "courseD_bounce_events12s_b": "प्रत्येक शॉट 2 पॉईंट्सचा करण्याचा आणि टीमचा लोगो तुमच्या गावातल्या टीमच्या लोगोप्रमाणे करण्याचा प्रयत्न करा! "
+        },
+        "courseD_bounce_events1s_2021": {
+          "courseD_bounce_events1s_a": "हा गेम नीट चालण्यासाठी तुम्ही `when left arrow` इव्हेंटला `move left` ब्लॉक जोडणे आवश्यक आहे:\n\n <xml> <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n\n   </xml>",
+          "courseD_bounce_events1s_b": "हे कोडे सोडवण्यासाठी \"Run\" दाबायला आणि हात बास्केटपर्यंत पोचवायला विसरू नका."
+        },
+        "courseD_bounce_events2s_2021": {
+          "courseD_bounce_events2s_a": "हे नीट काम करण्यासाठी तुमच्याकडे `move` इव्हेंट्सच्या दोन सेट्सचा कोड आवश्यक आहे:\n\n<xml>\n  <block type=\"bounce_whenLeft\" deletable=\"false\" x=\"20\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveLeft\"/>\n    </next>\n  </block>\n  <block type=\"bounce_whenRight\" deletable=\"false\" x=\"180\" y=\"20\">\n    <next>\n      <block type=\"bounce_moveRight\"/>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseD_bounce_events5s_2021": {
+          "courseD_bounce_events5s_a": "हे कोडे सोडवण्यासाठी तुम्ही हात हलवण्याची गरज नाही.",
+          "courseD_bounce_events5s_b": "तुम्ही तुमच्या वर्कस्पेसमध्ये हा कोड जोडल्याची खात्री करा:\n\n<xml>  <block type=\"bounce_whenPaddleCollided\" deletable=\"false\"> <next> <block type=\"bounce_bounceBall\"/></next></block></xml>"
+        },
+        "courseD_bounce_events6s_2021": {
+          "courseD_bounce_events6s_a": "तुमच्याकडे अशी दिसणारी इव्हेंट आहे का?\n\n<xml><block type=\"bounce_whenWallCollided\" deletable=\"false\"><next><block type=\"bounce_bounceBall\"></block></next></block></block></xml>",
+          "courseD_bounce_events6s_b": "तुम्ही जर कोड योग्यप्रकारे लिहिला असेल तर तुम्हाला जिंकण्यासाठी हात हलवण्याची गरज पडणार नाही."
+        },
+        "courseD_bounce_events7s_2021": {
+          "courseD_bounce_events7s_a": "तुम्हाला वाटले तर तुम्ही अजून आवाज जोडू शकता!"
+        },
+        "courseD_collector_debugging1a_2021": {
+          "courseD_collector_debugging1_a": "पहिल्या पायरीला सगळे बरोबर आहे का हे पहाण्यासाठी \"Step\" बटण वापरा.\n\nदुसऱ्या पायरीला काय होते आहे?\n\nकुठे चुकते आहे?",
+          "courseD_collector_debugging1_c": "तुम्ही खजिन्यापर्यंत पोचलात की तो गोळा करायला 'collect' ब्लॉक वापरण्याचे लक्षात ठेवा."
+        },
+        "courseD_collector_debugging2a_2021": {
+          "courseD_collector_debugging2a_a": "पहिल्या पायरीला सगळे बरोबर आहे का हे पहाण्यासाठी \"Step\" बटण वापरा.\n\nदुसऱ्या पायरीला काय होते आहे?\n\nकुठे चुकते आहे?",
+          "courseD_collector_debugging2a_c": "काय घडते आहे?\n\nकाय घडणे अपेक्षित आहे?\n\nते तुम्हाला काय सांगते?"
+        },
+        "courseD_collector_debugging3a_2021": {
+          "courseD_collector_debugging3_a": "एखाद्या ठिकाणी लॉरेल काही चुकीची गोष्ट करतो आहे का? तुम्ही ते ब्लॉक्स बदलता तेव्हा काय होते?"
+        },
+        "courseD_collector_debugging4a_2021": {
+          "courseD_collector_debugging4_a": "डीबगिंग प्रक्रिया सलग दोन-तीन वेळा वापरण्याचा प्रयत्न करा.\n\nपहिली समस्या कशामुळे येते?\n\nएकदा समस्या दूर केल्यावर, काय चुकते?",
+          "courseD_collector_debugging4_b": "जिन्याच्या पायरीचा पटर्न कसा तयार करायचा हे समजणे तुम्हाला अवघड जात असेल तर तो तुमच्या बोटाने गिरवण्याचा आणि कमांड्स मोठ्याने म्हणायचा प्रयत्न करा.\n\nवळणांच्या दिशेने बोट दाखवायला विसरू नका!"
+        },
+        "courseD_collector_debugging5a_2021": {
+          "courseD_collector_debugging5a_a": "हे काय करते आहे?\nत्याने काय करणे अपेक्षित आहे?\nते तुम्हाला काय सांगते?",
+          "courseD_collector_debugging5a_b": "तुम्ही खजिन्याची पहिली ओळ गोळा केल्यावर, आता तुमच्या कोडमध्ये काय उरले आहे?"
+        },
+        "courseD_collector_debugging6a_2021": {
+          "courseD_collector_debugging6_a": "\"Step\" बटण कोड रन करण्याचा प्रयत्न करा. पहिल्या पायरीला सगळे बरोबर घडते आहे का?\n\nदुसऱ्या पायरीला काय होते आहे?\n\nकुठे चुकते आहे?",
+          "courseD_collector_debugging6_b": "असे दिसते की तुम्हाला आवश्यक असलेले सर्व ब्लॉक्स वर्कस्पेसमध्ये आहेत. खूपच गोंधळ होत असेल तर \"start over\" वर क्लिक करण्याचा प्रयत्न करा."
+        },
+        "courseD_farmer_condLoops_challenge1_2021": {
+          "courseD_farmer_condLoops_challenge1_a": "या आव्हानात \"Step\" बटण अतिशय उपयुक्त ठरू शकते."
+        },
+        "courseD_farmer_while3_2021": {
+          "courseD_farmer_while3_a": "इथे तुम्हाला तुमचा कोड सोपा करण्यासाठी लूप मदत करू शकतो."
+        },
+        "courseD_farmer_while8_2021": {
+          "courseD_farmer_conditionals8_a": "तुम्हाला एकापेक्षा जास्त 'while' लूप वापरावा लागणार आहे. "
+        },
+        "courseD_iceage_loops1_2021": {
+          "courseD_iceage_loops1_a": "तुटलेल्या बर्फापासून सावध राहा! स्क्रॅट त्यातून थेट पडू शकतो!",
+          "courseD_iceage_loops1_b": "तुम्हाला हा ब्लॉक वापरावा लागेल:\n\n<xml><block type=\"maze_moveForward\"/></xml>"
+        },
+        "courseD_iceage_loops2_2021": {
+          "courseD_iceage_loops2_a": "हे कोडे 2 भागात सोडवा, एक भाग कॉर्नरच्या आधीचा आणि एक भाग कॉर्नरच्या नंतरचा.",
+          "courseD_iceage_loops2_b": "तुम्ही अडकला असाल तर, पायऱ्या मोठ्याने म्हणून बघा.",
+          "courseD_iceage_loops2_c": "स्क्रॅटला एकॉर्नपर्यंत पोचवण्यासाठी हा मार्ग वापरा."
+        },
+        "courseD_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "हा नवीन ब्लॉक वापरा!\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
+          "courseB_iceage_loops3_b": "कोड रिपीट करण्यासाठी, `repeat` लूप ड्रॅग करा, नंतर तुम्हाला रिपीट करायचा असलेला ब्लॉक त्याच्या आत घाला."
+        },
+        "courseD_iceage_loops4_2021": {
+          "courseD_iceage_loops4_a": "काय घडते ते पाहण्यासाठी तुमचा कोड रन करायला घाबरू  नका!",
+          "courseD_iceage_loops4_b": "स्क्रॅटला एकॉर्नपर्यंत पोचवण्यासाठी लागणाऱ्या पायऱ्या लिहिण्याचा प्रयत्न करा. तुम्हाला पॅटर्न दिसतो का?",
+          "courseD_iceage_loops4_c": "स्क्रॅट या मार्गाने गेला पाहिजे."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_a": "रेडच्या दृष्टीकोनातून तुम्ही उजवीकडे किमाव डावीकडे वळू शकता. जर तुमचे तोंड उजवीकडे असेल, तर उजवीकडे वळल्यावर तुमचे तोंड खालच्या दिशेला होईल.",
+          "courseC_maze_programming4_b": "या मार्गावरून जाण्यासाठी, पुढे जा आणि एका बाजूला वळा, मग पुन्हा पुढे जा आणि विरुद्ध बाजूला वळा.\nएकॉर्नपर्यंत पोचण्यासाठी अजून एकदा पुढे जा."
+        },
+        "courseD_maze_intro5a_2021": {
+          "courseC_maze_programming5_a": "तुमच्या कोडमधली एक एक ओळ रन करण्यासाठी \"Step\" बटण वापरून पहा. तुम्ही पुढे काय केले पाहिजे हे तुम्हाला कळेल का?",
+          "courseC_maze_programming5_b": "लक्षात ठेवा की वळणे पक्ष्याच्या दृष्टीकोनातून आहेत.",
+          "courseC_maze_programming5_c": "चूक होण्याची भीती बाळगू नका! ब्लॉक्स जोडत राहा आणि जरी तुम्ही अजून कोडे सोडवले आहे असे तुम्हाला वाटत नसेल तरीही काय घडते ते पहाण्यासाठी कोड रन करत राहा."
+        },
+        "courseD_maze_nestedLoops3_2021": {
+          "courseD_maze_nestedLoops3_a": "हे कोडे सोडवण्यासाठी, तुम्हाला एका 'repeat' लूपच्या आत दुसरा 'repeat' लूप \"नेस्ट\" करावा लागेल.",
+          "courseD_maze_nestedLoops3_b": "लूप्स कुठे लिहायचे ते समजत नाही आहे? पायरी-पायरीने कोड लिहिण्याचा प्रयत्न करा आणि पॅटर्न शोधा.",
+          "courseD_maze_nestedLoops3_c": "एका सरळ मार्गासाठी कोड लिहिण्याचा प्रयत्न करा. तुम्ही सूर्यफुलापर्यंत पोचण्यासाठी हे लूप करू शकता का?"
+        },
+        "courseD_maze_nestedLoops4_2021": {
+          "courseD_maze_nestedLoops4_a": "मेझमधून हा मार्ग वापरण्याचा प्रयत्न करा.\n\n![](https://images.code.org/565dbbcaf5862da0f60e54195820e814-image-1505961491245.36.09.png)"
+        },
+        "courseD_maze_nestedLoops6_2021": {
+          "courseD_maze_nestedLoops6_b": "'repeat' लूप्स नेस्ट केल्यामुळे वापरलेल्या ब्लॉक्सची संख्या कमी करायला मदत होते. ",
+          "courseD_maze_nestedLoops6_c": "हे कोडे सोडवण्यासाठी नेस्टेड 'repeat' लूप्सचे दोन संच लागतील."
+        },
+        "courseD_maze_ramp1_2021": {
+          "courseC_maze_programming1_a": "जर पक्षी डुकरापर्यंत पोचत नसेल तर सगळे तिन्ही ब्लॉक्स एकमेकांना पूर्णपणे जोडले आहेत हे सुनिश्चित करा, नंतर पुन्हा \"Run\" क्लिक करा.",
+          "courseC_maze_programming1_b": "चूक होण्याची भीती बाळगू नका! ब्लॉक्स जोडत राहा आणि जरी तुम्ही अजून कोडे सोडवले आहे असे तुम्हाला वाटत नसेल तरीही काय घडते ते पहाण्यासाठी कोड रन करत राहा."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_a": "`move forward` ब्लॉक वापरण्यासाठी, तो टूलबॉक्समधून वर्कस्पेसमध्ये ड्रॅग करा आणि तो `when run` ब्लॉकला जोडा.",
+          "courseC_maze_programming2_b": "सगळे तिन्ही ब्लॉक्स एकत्र क्लिक केल्याची आणि ते `when run` ब्लॉकला जोडल्याची खात्री करा."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_a": "![](https://images.code.org/afddde0e99d5d270c658de0c03dd6e2c-image-1481174000309.gif)\n\nहा ब्लॉक तुमच्या कोडमधून काढून टाकण्यासाठी, त्याच्याखालचे सगळे ब्लॉक्स उजवीकडे ड्रॅग करा आणि वर्कस्पेसमध्ये काही वेळ तसेच राहू द्या.\n\nतुम्हाला काढून टाकायच्या असलेल्या ब्लॉकवर क्लिक करा आणि तो परत टूलबॉक्समध्ये ड्रॅग करा.\n\nशेवटी, तुमचे इतर ब्लॉक्स त्यांच्या जागेवर ठेवा."
+        },
+        "courseD_maze_ramp5_2021": {
+          "courseC_maze_programming5_a": "तुमच्या कोडमधली एक एक ओळ रन करण्यासाठी \"Step\" बटण वापरून पहा. तुम्ही पुढे काय केले पाहिजे हे तुम्हाला कळेल का?",
+          "courseC_maze_programming5_b": "लक्षात ठेवा की वळणे पक्ष्याच्या दृष्टीकोनातून आहेत.",
+          "courseC_maze_programming5_c": "चूक होण्याची भीती बाळगू नका! ब्लॉक्स जोडत राहा आणि जरी तुम्ही अजून कोडे सोडवले आहे असे तुम्हाला वाटत नसेल तरीही काय घडते ते पहाण्यासाठी कोड रन करत राहा."
+        },
+        "courseD_maze_ramp5b_2021": {
+          "courseC_maze_programming5_a": "तुमच्या कोडमधली एक एक ओळ रन करण्यासाठी \"Step\" बटण वापरून पहा. तुम्ही पुढे काय केले पाहिजे हे तुम्हाला कळेल का?",
+          "courseC_maze_programming5_b": "लक्षात ठेवा की वळणे पक्ष्याच्या दृष्टीकोनातून आहेत.",
+          "courseC_maze_programming5_c": "चूक होण्याची भीती बाळगू नका! ब्लॉक्स जोडत राहा आणि जरी तुम्ही अजून कोडे सोडवले आहे असे तुम्हाला वाटत नसेल तरीही काय घडते ते पहाण्यासाठी कोड रन करत राहा."
+        },
+        "courseD_maze_until1_2021": {
+          "courseD_maze_until1_b": "हे कोडे सोडवण्यासाठी नेस्टेड लूप वापरण्याचा प्रयत्न करा."
+        },
+        "courseD_maze_until3_2021": {
+          "courseD_maze_until3_a": "-   तुमचा कोड काय करतो आहे?\n-   त्याने काय करणे अपेक्षित आहे?\n-   ते तुम्हाला काय सांगते?",
+          "courseD_maze_until3_d": "तुमचा कोड अजून लहान करण्यासाठी `repeat until` ब्लॉक वापरायला विसरू नका."
+        },
+        "courseD_maze_until4_2021": {
+          "courseD_maze_until4_c": "तुमचा कोड अजून लहान करण्यासाठी `repeat until` ब्लॉक वापरायला विसरू नका."
+        },
+        "courseE_artist_functions8_2021": {
+          "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_b": "भोपळ्यापर्यंत पोचण्यासाठी `repeat until` ब्लॉक वापरा!"
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_a": "तुम्ही यासारखे चित्र काढू शकता का:\n\n![](https://images.code.org/efee6df2a8840c89fa535bef72e9e45f-image-1530131926453.png)"
+        },
+        "courseF_artist_for6_2021": {
+          "courseF_artist_for6_a": "तुमचा 'for' लूप 15 ते 300 पर्यंत 15 च्या टप्प्याने मोजेल.",
+          "courseF_artist_for6_b": "या 'for' लूपमध्ये `move forward` आणि `turn` ब्लॉक जोडा.",
+          "courseF_artist_for6_c": "तुम्हाला फक्त 'turn' ब्लॉकमधील अंशांची संख्या बदलायची आहे."
+        },
+        "courseF_artist_for7_2021": {
+          "courseF_artist_for7_a": "या कोड्यातील पेन जास्त बारीक आहे. सुरू करण्यापूर्वी तुम्हाला ते '1' ला सेट करावे लागेल.",
+          "courseF_artist_for7_b": "हे स्पायरल डावीकडे वळण्याऐवजी उजवीकडे वळत आहे, याची नोंद घ्या!",
+          "courseF_artist_for7_c": "या कोड्यातील 'for' लूप 15 ते 300 पर्यंत 2 च्या टप्प्याने जातो.",
+          "courseF_artist_for7_d": "ही इमेज फक्त 89 अंश वळून तयार करण्यात आली आहे."
+        },
+        "courseF_artist_for_challenge1_2021": {
+          "courseF_artist_for_challenge1_d": "**सोल्युशन:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"draw_width\" inline=\"false\">\n        <value name=\"WIDTH\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <next>\n          <block type=\"draw_colour\" inline=\"true\" id=\"draw-color\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_picker\">\n                <title name=\"COLOUR\">#0000cd</title>\n              </block>\n            </value>\n            <next>\n              <block type=\"controls_for_counter\" inline=\"true\">\n              <mutation counter=\"counter\"></mutation>\n                <value name=\"FROM\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <value name=\"TO\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">350</title>\n                  </block>\n                </value>\n                <value name=\"BY\">\n                  <block type=\"math_number\">\n                    <title name=\"NUM\">50</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"alpha\" inline=\"true\" id=\"alpha\">\n                    <value name=\"VALUE\">\n                      <block type=\"math_arithmetic\" inline=\"true\">\n                        <title name=\"OP\">DIVIDE</title>\n                        <value name=\"A\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <value name=\"B\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">2</title>\n                          </block>\n                        </value>\n                      </block>\n                    </value>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"math_number\">\n                            <title name=\"NUM\">4</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"draw_move\" inline=\"true\">\n                            <title name=\"DIR\">moveForward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"variables_get\">\n                                <title name=\"VAR\">counter</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                              </block>\n                            </next>\n                          </block>\n                        </statement>\n                        <next>\n                          <block type=\"jump\" inline=\"true\">\n                            <title name=\"DIR\">jumpBackward</title>\n                            <value name=\"VALUE\">\n                              <block type=\"math_number\">\n                                <title name=\"NUM\">25</title>\n                              </block>\n                            </value>\n                            <next>\n                              <block type=\"draw_turn\" inline=\"true\">\n                                <title name=\"DIR\">turnRight</title>\n                                <value name=\"VALUE\">\n                                  <block type=\"math_number\">\n                                    <title name=\"NUM\">90</title>\n                                  </block>\n                                </value>\n                                <next>\n                                  <block type=\"jump\" inline=\"true\">\n                                    <title name=\"DIR\">jumpBackward</title>\n                                    <value name=\"VALUE\">\n                                      <block type=\"math_number\">\n                                        <title name=\"NUM\">25</title>\n                                      </block>\n                                    </value>\n                                    <next>\n                                      <block type=\"draw_turn\" inline=\"true\">\n                                        <title name=\"DIR\">turnLeft</title>\n                                        <value name=\"VALUE\">\n                                          <block type=\"math_number\">\n                                            <title name=\"NUM\">90</title>\n                                          </block>\n                                        </value>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </statement>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_artist_variables10_2021": {
+          "courseF_artist_variables10_a": "या पातळीला मजा करा! तुम्ही तुमच्या कोड्यात कोणते छोटे बदल करू शकता ते पहा.",
+          "courseF_artist_variables10_b": "तुम्ही अनेक गोष्टी करून पाहू शकता आणि तुमचा कोड अनेकवेळा रन करू शकता."
+        },
+        "courseF_artist_variables7_2021": {
+          "courseF_artist_variables7_a": " `set length` वापरून तुमचा कोड सुरू करा. व्हेरीएबलची लांबी 150 ला सेट करा.",
+          "courseF_artist_variables7_b": "तुमचा त्रिकोणासाठीचा कोड अजून सोपा बनवण्यासाठी तुम्ही 'repeat' लूप वापरू शकता. ",
+          "courseF_artist_variables7_c": "त्रिकोणाच्या कडा तयार करण्यासाठी तुम्ही डावीकडे 120 अंश वळाल."
+        },
+        "courseF_bee_for1_2021": {
+          "courseF_bee_for1_b": "सर्व परागकण गोळा करण्यासाठी तुम्हाला तुमच्या 'repeat' लूपमध्ये दोन ब्लॉक्स आवश्यक आहेत."
+        },
+        "courseF_bee_for_challenge2_2021": {
+          "courseF_bee_for_challenge2_a": "हालचाल करण्यासाठी हा पर्याय पहा:\n\n![](https://images.code.org/07fa7bdbbaaae3ecf2663a360b3e87d7-image-1469726373660.png)",
+          "courseF_bee_for_challenge2_b": "दोन 'for' लूप्स वापरून पहा: एक वर चढण्यासाठी आणि परागकण मिळवण्यासाठी तर दुसरा खाली उतरण्यासाठी  आणि मध तयार करण्यासाठी.",
+          "courseF_bee_for_challenge2_d": "**सोल्युशन:**\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_for\" inline=\"true\">\n        <title name=\"VAR\">counter</title>\n        <value name=\"FROM\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <value name=\"TO\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">3</title>\n          </block>\n        </value>\n        <value name=\"BY\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">1</title>\n          </block>\n        </value>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat_ext\" inline=\"true\">\n            <value name=\"TIMES\">\n              <block type=\"variables_get\">\n                <title name=\"VAR\">counter</title>\n              </block>\n            </value>\n            <statement name=\"DO\">\n              <block type=\"maze_moveForward\"/>\n            </statement>\n            <next>\n              <block type=\"controls_repeat_ext\" inline=\"true\">\n                <value name=\"TIMES\">\n                  <block type=\"variables_get\">\n                    <title name=\"VAR\">counter</title>\n                  </block>\n                </value>\n                <statement name=\"DO\">\n                  <block type=\"maze_nectar\"/>\n                </statement>\n                <next>\n                  <block type=\"maze_turn\">\n                    <title name=\"DIR\">turnLeft</title>\n                    <next>\n                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                        <value name=\"TIMES\">\n                          <block type=\"variables_get\">\n                            <title name=\"VAR\">counter</title>\n                          </block>\n                        </value>\n                        <statement name=\"DO\">\n                          <block type=\"maze_moveForward\"/>\n                        </statement>\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnRight</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n        <next>\n          <block type=\"maze_turn\">\n            <title name=\"DIR\">turnRight</title>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n                <next>\n                  <block type=\"controls_for\" inline=\"true\">\n                    <title name=\"VAR\">counter</title>\n                    <value name=\"FROM\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <value name=\"TO\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">10</title>\n                      </block>\n                    </value>\n                    <value name=\"BY\">\n                      <block type=\"math_number\">\n                        <title name=\"NUM\">2</title>\n                      </block>\n                    </value>\n                    <statement name=\"DO\">\n                      <block type=\"maze_moveForward\">\n                        <next>\n                          <block type=\"maze_turn\">\n                            <title name=\"DIR\">turnLeft</title>\n                            <next>\n                              <block type=\"maze_moveForward\">\n                                <next>\n                                  <block type=\"maze_turn\">\n                                    <title name=\"DIR\">turnRight</title>\n                                    <next>\n                                      <block type=\"controls_repeat_ext\" inline=\"true\">\n                                        <value name=\"TIMES\">\n                                          <block type=\"variables_get\">\n                                            <title name=\"VAR\">counter</title>\n                                          </block>\n                                        </value>\n                                        <statement name=\"DO\">\n                                          <block type=\"maze_honey\"/>\n                                        </statement>\n                                      </block>\n                                    </next>\n                                  </block>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block>\n                    </statement>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_text_concat": {
+          "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_animals_multi": {
+          "cat_xml": "प्रत्येक ब्लॉकमध्ये वेशभूषा जुळत असल्याचे सुनिश्चित करा.\n\n\\[ब्लॉकली ब्लॉक[0]"
+        },
+        "helloworld_animals_say": {
+          "hello-world-first-solution-bear": "अस्वलाला काहीतरी सांगण्यासाठी, याप्रमाणे कोडचे ब्लॉक्स जोडा:\n\n\\[ब्लॉकली ब्लॉक[0]"
+        },
+        "helloworld_emoji_say": {
+          "hello-world-first-solution-emoji": "इमोजीला काहीतरी सांगण्यासाठी, याप्रमाणे कोडचे ब्लॉक कनेक्ट करा:\n\n\\[ब्लॉकली ब्लॉक[0]"
+        },
+        "helloworld_food_say": {
+          "hello-world-first-solution-pizza": "पिझ्झा बनवण्यासाठी हे सांगण्यासाठी, कोडचे ब्लॉक्स यासारखे कनेक्ट करा:\n\n[ब्लॉकली ब्लॉक] [0]"
         }
       }
     }

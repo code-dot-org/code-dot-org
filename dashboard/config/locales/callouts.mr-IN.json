@@ -403,7 +403,8 @@
           "hello_world_new": "नवीन ब्लॉक!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "नवीन ब्लॉक!"
+          "hello_world_new": "नवीन ब्लॉक!",
+          "hello_world_new_block": "नवीन ब्लॉक!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "नवीन ब्लॉक!"
@@ -490,6 +491,114 @@
         },
         "courseF_events_predict": {
           "behaviors_edit": "हे बिहेवियर कसे काम करते ते पाहण्यासाठी इथे क्लिक करा."
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "ही संख्या तुम्हाला यातील किती ब्लॉक्स तुम्ही या कोड्यात वापरू शकता, ते सांगते."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "ही संख्या म्हणजे अंतिम उत्तरात या प्रकारचा फक्त एक ब्लॉक वापरता येईल."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "तुम्हाला माहिती आहे का की जेव्हा गरज असेल तेव्हा तुम्ही एका रेषेवर काही काढू शकता?"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "हे कॉलआऊट आहे"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "इव्हेंट ॲरोची दिशा बदलण्यासाठी येथे क्लिक करा."
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "त्यामुळे तुम्ही एक 'रँडम' आवाज निवडू शकाल, म्हणजे तुम्ही ऐकेपर्यंत कोणता आवाज येईल हे तुम्हाला माहीत नसेल!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "सगळे ब्लॉक्स जोडल्यावर, तुमचा प्रोग्रॅम सुरू करण्यासाठी \"Run\" दाबा. "
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "खजिना गोळा करण्यासाठी हा ब्लॉक वापरा."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "पुढच्या पातळीपर्यंत जाण्यासाठी पात्राला या ध्वजापर्यंत पोचवा."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "जेव्हा वॅडल्स आणि चॉम्पचा एकमेकांना स्पर्श होतो तेव्हा हा ब्लॉक वापरा!"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "ब्लॉक्समुळे तुम्ही पात्रांना गेम स्पेसमधील वेगवेगळ्या ठिकाणी हलवू शकता."
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "हा ब्लॉक या प्रोजेक्टसाठी खूप महत्त्वाचा आहे. तो नक्की वापरा!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "हे तुमच्या प्रोग्रॅमच्या मध्यभागी जोडा. "
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "तुम्हाला टूलबॉक्समध्ये काही नवीन ब्लॉक्स दिसत आहेत का? काळजी करू नका, ते कसे वापरायचे हे आम्ही तुम्हाला दुसऱ्या धड्यात दाखवू."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "तुम्हाला गरज असेल तर तुम्ही टूलबॉक्समधून अजून ब्लॉक्स घेऊ शकता!"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "भोपळ्यावरील चार ही संख्या तुम्हाला दाखवते की अजून चार भोपळे तोडण्यासाठी उपलब्ध आहेत. "
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "हे ब्लॉक्स लॉक केलेले आहेत आणि काढून टाकता येत नाहीत!"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "टूलबॉक्समधील ब्लॉक्स तुमच्या वर्कस्पेसमध्ये ड्रॅग करा."
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "सगळे ब्लॉक्स जोडल्यावर, तुमचा प्रोग्रॅम सुरू करण्यासाठी \"Run\" दाबा. "
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "हा टूलबॉक्स आहे. इथे तुम्हाला तुमची कोडी पूर्ण करण्यासाठी अतिरिक्त ब्लॉक्स दिसतील. "
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "अतिरिक्त ब्लॉक्स फेकून देण्यासाठी तुम्ही ते टूलबॉक्समध्ये ड्रॅग करू शकता.  ",
+          "courseC_maze_programming3_3": "हे ब्लॉक्स दगड आहेत आणि ते फेकून देता येत नाहीत."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "ही तुमच्या ब्लॉकची मर्यादा आहे. तुमच्याकडे वापरण्यासाठी किती ब्लॉक्स शिल्लक आहेत, हे ती तुम्हाला सांगते."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "या ब्लॉक्सवर संख्या नाही आहेत. तुम्ही हवे तितके ब्लॉक्स वापरू शकता! "
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "हे तुमचे पहिले आव्हानात्मक कोडे आहे! ते अवघड असणे अपेक्षित आहे आणि त्यासाठी अनेक प्रयत्न करावे लागू शकतात.",
+          "courseC_maze_programming7_2": "हे ब्लॉक्स दगडापासून बनवलेले आहेत आणि ते फेकून देता येत नाहीत."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "ही तुमच्या ब्लॉकची मर्यादा आहे. तुमच्याकडे वापरण्यासाठी किती ब्लॉक्स शिल्लक आहेत, हे ती तुम्हाला सांगते."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "या ब्लॉक्सवर संख्या नाही आहेत. तुम्ही हवे तितके ब्लॉक्स वापरू शकता! "
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "सगळे ब्लॉक्स जोडल्यावर, तुमचा प्रोग्रॅम सुरू करण्यासाठी \"Run\" दाबा."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "हा टूलबॉक्स आहे. इथे तुम्हाला तुमची कोडी पूर्ण करण्यासाठी अतिरिक्त ब्लॉक्स दिसतील."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "अतिरिक्त ब्लॉक्स फेकून देण्यासाठी तुम्ही ते टूलबॉक्समध्ये ड्रॅग करू शकता.",
+          "stone_block_2": "ग्रे ब्लॉक्स फेकून देता येत नाहीत."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "या ब्लॉक्सवर संख्या नाही आहेत. तुम्ही हवे तितके ब्लॉक्स वापरू शकता! "
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "ही भाजी अज्ञात आहे. तुम्ही प्रोग्रॅम रन केला की प्रत्येकवेळी ती बदलते."
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "ही भाजी अज्ञात आहे. तुम्ही प्रोग्रॅम रन केला की प्रत्येकवेळी ती बदलते."
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "तुमच्या कोडसाठी अजून जागा तयार करण्यासाठी टूलबॉक्स \"कॅटेगरी\" मोडमध्ये आहे. 'for' लूप्स इथे आहेत."
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "तुम्हाला तुमचे व्हेरीएबल्स इथे खाली दिसतील!"
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "टूलबॉक्समधील ब्लॉक्स तुमच्या वर्कस्पेसमध्ये ड्रॅग करा."
         }
       }
     }
