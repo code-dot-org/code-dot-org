@@ -29,6 +29,11 @@
         "oceans/Oceans": {
           "student_overview": "Riepilogo del tutorial: i primi studenti classificano gli oggetti come \"pesce\" o \"non pesce\" per tentare di rimuovere la spazzatura dall'oceano. Quindi, gli studenti dovranno espandere il loro set di dati di addestramento per includere altre creature marine che appartengono all'acqua. Nella seconda parte dell'attività, gli studenti sceglieranno le proprie etichette da applicare alle immagini di pesci generati casualmente. Questi dati di addestramento vengono utilizzati per un modello di apprendimento automatico che dovrebbe quindi essere in grado di etichettare le nuove immagini da soli."
         },
+        "hello-world-food/lesson-1": {
+          "overview": "In questa sessione, gli studenti impareranno le base dell'informatica programmando nel Laboratorio dei personaggi, uno strumento che si può usare per creare divertenti progetti d'immaginazione. Gli studenti impareranno a creare e animare i personaggi e a renderli interattivi usando gli eventi. \n\nCi sono molte versioni di questa lezione. Ogni versione insegna gli stessi concetti, ma presenta diverse immagini per attrarre studenti diversi. Per maggiori informazioni, visita  [Hello World landing page.](https://code.org/helloworld)",
+          "preparation": "-   Allenati con gli esercizi per trovare le potenziali aree problematiche per la tua lezione.\n-   Usa le risorse in [CS Connections](https://code.org/educate/csc) per creare un piano e imparare di più sull'informatica dopo un tutorial iniziale.",
+          "purpose": "Questa lezione ha lo scopo di preparare gli studenti per creare semplici progetti di programmazione nel Laboratorio dei personaggi. Con questa abilità, gli studenti sarebbero quindi in grado di creare progetti su qualsiasi argomento, tra cui un altro argomento scolastico o qualcosa di personalmente pertinente. Visita [CS Connections](https://code.org/educate/csc) per avere idee su come integrare l'informatica in altre tematiche."
+        },
         "jigsaw/Jigsaw": {
           "overview": "Questa lezione darà agli studenti un'idea di cosa aspettarsi quando andranno nel laboratorio di informatica. Si comincia con una breve discussione introduttiva sui comportamenti da tenere in laboratorio, poi gli studenti inizieranno ad utilizzare un computer per completare degli esercizi online."
         },

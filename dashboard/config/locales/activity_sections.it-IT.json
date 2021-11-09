@@ -564,16 +564,42 @@
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Riscaldamento"
         },
+        "59df14b7-1344-480b-8b6b-3fc94684b8bc": {
+          "name": "Ćwiczenie główne (stare)"
+        },
+        "3d1e45e9-9dd0-476b-b864-f0d86d0827b6": {
+          "name": "Attività principale (Nuovo)"
+        },
         "50216925-6742-400e-b45a-2de4cd3b63f2": {
           "name": "Conclusione"
         },
         "de7dca58-f7d8-448f-84cf-41d215d2bf11": {
+          "description": "_In questa attività, ti divertirai creando un mondo interattivo con personaggi divertenti. Sarai in grado di far parlare i personaggi con le nuvolette dei fumetti così come le vedi nei giornaletti o fotoromanzi, imparerai a farli rispondere automaticamente quando tu o qualcun altro cliccate su di loro._\n\n_Oggi scriverai un \"codice\", possia un insieme di istruzioni che un computer può capire. Quando scrivi una storia, devi pensare attentamente alle parole da usare. Quando scrivi il codice, dovrai pensare attentamente alle istruzioni che stai dando al computer._",
+          "tips": [
+            "Vorrai trascorrere pochissimo tempo nel caricamento frontale o nell'intruduzione della tua Ora di codice. Soprattuto con i giovani studenti è meglio lanciarsi il più velocemente possibile."
+          ]
+        },
+        "7acfc985-03d8-4d14-b244-203f8cbf4843": {
+          "description": "Questi sono alcuni consigli che dovrebbero aiutare gli studenti indipendentemente dal livello a cui stanno lavorando\n\n-   **Collabora con i vicini:** incoraggia gli studenti a controllare con un vicino quando si bloccano. In base all'età e alle capacità dei tuoi studenti, potresti considerare di dividere formalmente la tua classe in coppie, per completare il tutorial utilizzando [pair programming](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Leggi le istruzioni:** le istruzioni forniscono solitamente consigli utili su come completare il livello. Prima di dare la risposta agli studenti, assicurati che abbiano letto attentamente le istruzioni, i suggerimenti, i video e qualsiasi codice per principianti.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Sei bloccato? Cerca dei suggerimenti:** oggni include un suggerimento con un consigli su come superare il livello, inclusi quali blocchi del codice da provare. \n\n-   **Prenditi il tuo tempo e prova.** Generalmente le istruzioni informano gli studenti su cosa fare, ma devono anche sentirsi liberi di provare a mettere in pratica le loro idee."
+        },
+        "2edc03d3-b9a7-4c1b-a046-16fa43b3a7a3": {
+          "description": "Se un gruppo o una persona finisce in anticipo, incoraggialo a continuare a lavorare al suo progetto nell'ultimo livello. Se gli studenti non sono sicuri su cos'altro fare, puoi rivolgere loro le seguenti domanda:\n\n-   Quali altri personaggi potresti aggiungere al tuo progetto?\n-   Hai controllato la galleria degli indumenti o hai provato a disegnare l'indumento del tuo personaggio?\n-   Cos'altro potresti far dire ai tuoi personaggi?\n-   Cosa dovrebbero fare i tuoi personaggi quando si clicca su di loro?\n-   Invita gli studenti a condividere le loro idee e a imparare gli uni dagli altri. Possono anche provare un altro tutorial visitando [code.org/learn](https://code.org/learn)."
+        },
+        "b68a11cc-930a-4803-beca-1d4f49ede378": {
+          "name": "Riflessione",
+          "description": "#### Interrogazione\n\nChiedi agli studenti di riflettere sulle attività del giorno. Cosa hanno imparato dalla programmazione? Personaggi? Eventi?\n\nCosa pensano dell'informatica e della programmazione dopo aver trascorso un'ora in esplorazione?\n\n#### Passaggi successivi\n\nFai sapere agli studenti che se si sono divertiti con l'attività di oggi, hanno molte opzioni per continuare a programmare. Visita [CS Connections](https://code.org/educate/csc) per avere idee su come integrare l'informartica in altre materie o scopri di più sui nostri corsi [course offerings for elementary schools](https://code.org/educate/curriculum/elementary-school)."
+        },
+        "330f29ec-379e-4f4e-ae58-4163b1afca6c": {
+          "progression_name": "Usare Getter e Setter"
+        },
+        "f090c505-7c09-4e19-bcf4-b219f24eae45": {
+          "name": "Proprietà Elemento UI",
+          "progression_name": "Proprietà Elemento UI"
+        },
+        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "tips": [
             null
           ]
-        },
-        "b68a11cc-930a-4803-beca-1d4f49ede378": {
-          "name": "Riflessione"
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Introduzione"

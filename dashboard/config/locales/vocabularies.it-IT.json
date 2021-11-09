@@ -265,6 +265,16 @@
           "word": "Cos'è l'Apprendimento Automatico (Machine Learning)",
           "definition": "In che modo i computer riconoscono certi modelli e prendono decisioni senza essere programmati esplicitamente"
         },
+        "code/poem-art/unversioned": {
+          "word": "Codice"
+        },
+        "event/poem-art/unversioned": {
+          "word": "Evento",
+          "definition": "Un'azione che fa accadere qualcosa."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Programma"
+        },
         "event/outbreak/unversioned": {
           "word": "Evento",
           "definition": "Un'azione che fa accadere qualcosa."
