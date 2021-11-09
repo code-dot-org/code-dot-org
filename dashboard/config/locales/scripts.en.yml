@@ -26660,7 +26660,7 @@ en:
               description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the 5-lesson module called [Coding with Poetry](http://code.org/poetry). By the end of the Coding with Poetry module, students will write their own poems and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s CS Connections curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n"
           lesson_groups: {}
           name: poem-art
-          title: ''
+          title: Poem Art
           description_audience: ''
           description_short: ''
           description: ''
@@ -26694,9 +26694,9 @@ en:
               description_student: 
               description_teacher: 
             lesson-7:
-              name: Conditionals
-              description_student: 
-              description_teacher: 
+              name: Responding to Words
+              description_student: Make the app respond to what the user chooses in exciting new ways.
+              description_teacher: In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.
           lesson_groups: {}
           name: poetry
           title: Computer Science and Poetry
