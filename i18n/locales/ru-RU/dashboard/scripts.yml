@@ -347,7 +347,7 @@ ru:
             'Programming Concept: Loops':
               name: 'Понятие программирования: циклы'
             Reflection:
-              name: Рефлексия
+              name: Размышление
             Teacher Dashboard:
               name: Панель управления учителя
             Unplugged lessons:
@@ -794,6 +794,8 @@ ru:
               name: Ссылки на учебный план
             Sprite Lab:
               name: Лаборатория Спрайтов
+            Java Lab:
+              name: Java Lab
         algebraPD2b:
           description: 'Этап 2 онлайн: Смешанное летнее обучение'
           description_short: 'Этап 2 онлайн: Смешанное летнее обучение'
@@ -972,6 +974,8 @@ ru:
           lessons:
             Getting Started:
               name: Приступить к работе
+        cspunit4draft:
+          description_short: Данные
         ScienceP3OLPT2:
           lessons:
             Welcome!:
@@ -1286,6 +1290,8 @@ ru:
           lessons:
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
             Velocity:
@@ -1359,6 +1365,8 @@ ru:
           lessons:
             Design Mode:
               name: Режим дизайна
+        CSDU1-Draft:
+          description_short: Решение проблем
         CSDU2-Draft:
           lessons:
             Digital Footprint:
@@ -1367,6 +1375,8 @@ ru:
               name: Введение в HTML
             Peer Review:
               name: Рецензирование
+        CSDU5-Draft:
+          description_short: Данные
         CSF_Secret_Sample_Story:
           description_audience: Возраст 8-18 лет+
         MikeTest:
@@ -1550,6 +1560,8 @@ ru:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
             Plotting Shapes:
@@ -1560,6 +1572,8 @@ ru:
               name: Спрайты
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
         grade2:
           description_audience: Возраст 5-18 лет
           lessons:
@@ -1681,6 +1695,8 @@ ru:
               name: Цифровое присутствие
             Lists:
               name: Списки
+            Headings:
+              name: Заголовки
         csp2-support:
           lesson_groups:
             required:
@@ -1702,6 +1718,9 @@ ru:
               display_name: 'Глава 2: Прототипирование приложения'
             csd_survey:
               display_name: Опрос после окончания курса
+          lessons:
+            Linking Screens:
+              name: Связывание окон
         minecraft:
           title: Редактор для «Часа Кода» Minecraft
           description_short: Создайте игру Minecraft. Придумайте собственные варианты курицы, овцы, криперов, зомби и других существ.
@@ -2011,6 +2030,10 @@ ru:
               name: 'Проект: Прототип Инновации'
             Map:
               name: Карта
+            Board Events:
+              name: События на доске
+            Getting Properties:
+              name: Обретение свойств
             Arrays and For Loops:
               name: Множества и цикл for
             Functions with Parameters:
@@ -2030,6 +2053,8 @@ ru:
             csd5_2:
               display_name: 'Глава 2: Решение информационных проблем'
           lessons:
+            Combining Representations:
+              name: Комбинирование представлений
             Representing Images:
               name: Представление изображений
             ASCII and Binary Representation:
@@ -2086,10 +2111,18 @@ ru:
               name: Датчик Приложений
             'Project: Prototype an Innovation':
               name: 'Проект: Прототип Инновации'
+            Board Events:
+              name: События на доске
+            Getting Properties:
+              name: Обретение свойств
             Arrays and For Loops:
               name: Множества и цикл for
             Functions with Parameters:
               name: Процедуры с параметрами
+            Board Events_:
+              name: События на доске
+            Getting Properties_:
+              name: Обретение свойств
             Analog Input_:
               name: Иной ввод
             Arrays and For Loops_:
@@ -2109,10 +2142,14 @@ ru:
               name: Рисование фигур
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
         csd5-2017:
@@ -2128,6 +2165,8 @@ ru:
               name: ASCII и Двоичное Представление
             Representing Images:
               name: Представление изображений
+            Combining Representations:
+              name: Комбинирование представлений
             Making Decisions with Data:
               name: Использование данных для принятия решений
             Representing Numbers:
@@ -2136,12 +2175,16 @@ ru:
               name: 8-битные числа
             Encryption:
               name: Шифрование
+            Keeping Data Secret:
+              name: Сохранение данных в тайне
         csd3-old:
           lessons:
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
         csd1-old:
@@ -2172,10 +2215,14 @@ ru:
               name: Спрайты
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
             'null':
@@ -2269,7 +2316,7 @@ ru:
             Events in Play Lab:
               name: События в Лаборатории игр
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
           student_description: Изучите основы информатики и интернет-безопасности. В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
         coursec-2017:
           title: Курс С
@@ -2752,6 +2799,9 @@ ru:
               display_name: 'Глава 1: Пользовательский дизайн'
             csd4_2:
               display_name: 'Глава 2: Прототипирование приложения'
+          lessons:
+            Linking Screens:
+              name: Связывание окон
         applab-intro:
           title: Введение в Лабораторию приложений
           lessons:
@@ -2982,6 +3032,8 @@ ru:
               name: Представления чисел
             8-bit Numbers:
               name: 8-битные числа
+            Combining Representations:
+              name: Комбинирование представлений
             Making Decisions with Data:
               name: Использование данных для принятия решений
         csd4-old:
@@ -3169,10 +3221,14 @@ ru:
               name: Спрайты
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
         csd3-2018:
@@ -3192,12 +3248,18 @@ ru:
               name: Спрайты
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
         csd2-2018:
           lesson_groups:
             csd2_1:
@@ -3207,10 +3269,14 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
+            Headings:
+              name: Заголовки
             Digital Footprint:
               name: Цифровое присутствие
             Lists:
               name: Списки
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
         coursea-2018:
           assignment_family_title: Курс A
           description: Изучите основы информатики и интернет-безопасности. В конце курса создайте свою собственную игру или историю, которой сможете поделиться.
@@ -3278,7 +3344,7 @@ ru:
             'Conditionals: Conditionals with Cards':
               name: 'Условные операторы: условные операторы с картами'
             While Loops in Farmer:
-              name: Цикл while в Фермере
+              name: Циклы «пока» со Сборщицей урожая
             Conditionals in Minecraft:
               name: Условные операторы в игре Minecraft
             'Variables: Envelope Variables':
@@ -3360,7 +3426,7 @@ ru:
             Programming in Maze:
               name: Программирование в Лабиринте
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
             Loops in Collector:
               name: Циклы в Собирателе
             Loops in Artist:
@@ -3449,6 +3515,10 @@ ru:
               name: Процедуры с параметрами\_
             'Project: Prototype an Innovation_':
               name: 'Проект: Прототип Инновации\_'
+            Board Events:
+              name: События на доске
+            Getting Properties:
+              name: Обретение свойств
             Analog Input:
               name: Иной ввод
             Arrays and For Loops:
@@ -3457,6 +3527,8 @@ ru:
               name: Процедуры с параметрами
             'Project: Prototype an Innovation':
               name: 'Проект: Прототип Инновации'
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
         coursee-2018:
           assignment_family_title: Курс E
           description_audience: 'Возраст: 8-12'
@@ -3674,6 +3746,11 @@ ru:
               display_name: 'Глава 2: Прототипирование приложения'
             cspSurvey:
               display_name: Опрос
+          lessons:
+            Linking Screens:
+              name: Связывание окон
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
         csd5-2018:
           lesson_groups:
             csd5_1:
@@ -3689,8 +3766,14 @@ ru:
               name: Представление изображений
             Representing Numbers:
               name: Представления чисел
+            Keeping Data Secret:
+              name: Сохранение данных в тайне
+            Combining Representations:
+              name: Комбинирование представлений
             Making Decisions with Data:
               name: Использование данных для принятия решений
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
         csp2-2018:
           lesson_groups:
             csp2_1_2018:
@@ -3956,7 +4039,7 @@ ru:
             Copyright and Creativity:
               name: Честность в творчестве и игре
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
             Loops in Ice Age:
               name: Циклы со Скратом
             'Persistence & Frustration: Stevie and the Big Project':
@@ -3993,6 +4076,10 @@ ru:
           lessons:
             Aquatic:
               name: 'Майнкрафт: Водное путешествие'
+        sconyers:
+          lessons:
+            Linking Screens:
+              name: Связывание окон
         dance--draft:
           lessons:
             Dance Party:
@@ -4023,6 +4110,8 @@ ru:
               display_name: Продвинуться
             csf_variables:
               display_name: Переменные
+            csf_data:
+              display_name: Данные
             csf_for_loops:
               display_name: Циклы с параметром
             csf_internet:
@@ -4235,10 +4324,14 @@ ru:
               description_teacher: Посмотрите как загораются глаза учеников, когда они создают свои великолепные изображения с помощью небольшого количества блоков и цифровых этикеток! Этот урок основывается на понимании циклов, полученном в ходе предыдущих уроков, и дает ученикам возможность настоящего творчества. Это занятие – прекрасная возможность создания произведений искусства для портфолио или для собраний родителей или учителей.
             Conditionals in Minecraft:
               name: Условные операторы в игре Minecraft
+            Access Ability:
+              name: Разработка для обеспечения доступности
             Digital Sharing:
               name: Публикация цифровых произведений
             Simon Says:
               name: Саймон говорит
+            Designing for Accessibility:
+              name: Разработка для обеспечения доступности
             Songwriting:
               name: Написание песен
         express-2019:
@@ -4269,7 +4362,7 @@ ru:
             Nested Loops in Bee:
               name: Вложенные циклы в Лабиринте
             While Loops in Farmer:
-              name: Цикл while в Фермере
+              name: Циклы «пока» со Сборщицей урожая
             Conditionals with Cards:
               name: Условные выражения с картами
             Screen Out the Mean:
@@ -4352,6 +4445,8 @@ ru:
               display_name: Циклы
             csf_events:
               display_name: События
+            csf_data:
+              display_name: Данные
           lessons:
             Programming in Maze:
               description_student: Изучайте последовательности и алгоритмы с Angry Birds.
@@ -4446,7 +4541,7 @@ ru:
             Programming in Ice Age:
               name: Программирование со Скратом
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
               description_teacher: В ходе этого урока учащиеся будут использовать свои вновь приобретенные навыки программирования на более сложном уровне, программируя более сложные перемещения с помощью BB-8.
             Sequencing with Scrat:
               name: Последовательность в "Скрат"
@@ -4476,7 +4571,7 @@ ru:
               name: Твой цифровой след
               description_teacher: Этот урок, подготовленный в сотрудничестве с **Common Sense Education**, помогает ученикам понять аналогии между безопасностью в реальном мире и при посещении сайтов в интернете. Ученики также усвоят, что информация, которую они размещают онлайн оставляет цифровой отпечаток или "след". Этот след может быть большим или маленьким, полезным или вредным в зависимости от того, как им управляют.
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
             Loops in Ice Age:
               name: Циклы в ледниковом периоде
             Loops in Collector:
@@ -4515,7 +4610,7 @@ ru:
             Your Digital Footprint:
               name: Твой цифровой след
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
             Loops in Ice Age:
               name: Циклы со Скратом
             Loops in Collector:
@@ -4549,6 +4644,8 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
+            Headings:
+              name: Заголовки
             Digital Footprint:
               name: Цифровое присутствие
             Lists:
@@ -4570,10 +4667,14 @@ ru:
               name: Спрайты
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
         csd4-2019:
@@ -4586,6 +4687,9 @@ ru:
               display_name: 'Глава 2: Решение информационных проблем'
             cspSurvey:
               display_name: Опрос
+          lessons:
+            Linking Screens:
+              name: Связывание окон
         csd5-2019:
           lesson_groups:
             csd5_1:
@@ -4601,6 +4705,10 @@ ru:
               name: Представление изображений
             Representing Numbers:
               name: Представления чисел
+            Keeping Data Secret:
+              name: Сохранение данных в тайне
+            Combining Representations:
+              name: Комбинирование представлений
             Making Decisions with Data:
               name: Использование данных для принятия решений
         csd6-2019:
@@ -4612,6 +4720,10 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
+            Board Events:
+              name: События на доске
+            Getting Properties:
+              name: Обретение свойств
             Analog Input:
               name: Иной ввод
             Arrays and For Loops:
@@ -4951,12 +5063,16 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
+            Headings:
+              name: Заголовки
             Digital Footprint:
               name: Цифровое присутствие
             Lists:
               name: Списки
             CSS Classes:
               name: CSS классы
+            Linking Pages:
+              name: Связывание страниц
         csd3-pilot:
           lesson_groups:
             csd3_1:
@@ -4974,10 +5090,14 @@ ru:
               name: Спрайты
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
             Random Numbers:
@@ -5009,7 +5129,7 @@ ru:
             Programming in Maze:
               name: Программирование в Лабиринте
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
             Loops in Ice Age:
               name: Циклы в ледниковом периоде
             Ocean Scene with Loops:
@@ -5342,10 +5462,14 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
+            Headings:
+              name: Заголовки
             Digital Footprint:
               name: Цифровое присутствие
             CSS Classes:
               name: CSS классы
+            Linking Pages:
+              name: Связывание страниц
         csd1-2020:
           lesson_groups:
             cspSurvey:
@@ -5369,6 +5493,9 @@ ru:
               display_name: 'Глава 2: Решение информационных проблем'
             cspSurvey:
               display_name: Опрос
+          lessons:
+            Linking Screens:
+              name: Связывание окон
         csd5-2020:
           lesson_groups:
             csd5_1:
@@ -5384,6 +5511,10 @@ ru:
               name: Представление изображений
             Representing Numbers:
               name: Представления чисел
+            Keeping Data Secret:
+              name: Сохранение данных в тайне
+            Combining Representations:
+              name: Комбинирование представлений
             Making Decisions with Data:
               name: Использование данных для принятия решений
         csd6-2020:
@@ -5395,6 +5526,10 @@ ru:
             cspSurvey:
               display_name: Опрос
           lessons:
+            Board Events:
+              name: События на доске
+            Getting Properties:
+              name: Обретение свойств
             Analog Input:
               name: Иной ввод
             Arrays and For Loops:
@@ -5420,10 +5555,14 @@ ru:
               name: Случайные числа
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
             Text:
@@ -5460,7 +5599,7 @@ ru:
             Programming in Ice Age:
               name: Программирование со Скратом
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
               description_teacher: В ходе этого урока учащиеся будут использовать свои вновь приобретенные навыки программирования на более сложном уровне, программируя более сложные перемещения с помощью BB-8.
             'Loops: Happy Loops':
               name: Счастливые циклы
@@ -5529,6 +5668,8 @@ ru:
               display_name: Циклы
             csf_events:
               display_name: События
+            csf_data:
+              display_name: Данные
           lessons:
             Screen Out the Mean:
               name: Барьер против негатива
@@ -5652,6 +5793,8 @@ ru:
               name: Саймон говорит
             Private and Personal Information:
               name: Private and Personal Information
+            Access Ability:
+              name: Разработка для обеспечения доступности
             Nested Loops in Bee:
               name: Вложенные циклы в Лабиринте
               description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит вам, что происходит, когда вы помещаете цикл внутри другого цикла.
@@ -5670,6 +5813,8 @@ ru:
             Digital Sharing:
               name: Публикация цифровых произведений
               description_teacher: Предоставленный курсу "Основы компьютерных наук" сотрудниками сайта Copyright and Creativity ("Авторские права и творчество"), этот урок призван объяснить учащимся проблемы и преимущества уважения права собственности и авторского права, особенно в цифровой среде. Учащимся следует объяснить, что, не уважая прав артистов, невозможно быть этичным цифровым гражданином.
+            Designing for Accessibility:
+              name: Разработка для обеспечения доступности
         coursef-2020:
           title: Курс F (2020)
           description_short: Изучи все понятия в Основах компьютерных наук и создай собственную картинку, игру или историю!
@@ -5681,6 +5826,8 @@ ru:
               display_name: Цифровое гражданство
             csf_variables:
               display_name: Переменные
+            csf_data:
+              display_name: Данные
             csf_for_loops:
               display_name: Циклы с параметром
             csf_sprites:
@@ -5778,7 +5925,7 @@ ru:
             Nested Loops in Maze:
               name: Вложенные циклы в Лабиринте
             While Loops with the Farmer:
-              name: Цикл while в Фермере
+              name: Циклы «пока» со Сборщицей урожая
             Changing Variables with Artist:
               name: Переменные в Художнике
             For Loops with Bee:
@@ -5803,7 +5950,7 @@ ru:
             Programming in Maze:
               name: Программирование в Лабиринте
             Programming with Rey and BB-8:
-              name: Программирование с Рееем и BB-8
+              name: Программирование с Реем и BB-8
               description_teacher: В ходе этого урока учащиеся будут использовать свои вновь приобретенные навыки программирования на более сложном уровне, программируя более сложные перемещения с помощью BB-8.
             Spelling Bee:
               name: Пчела
@@ -5903,6 +6050,8 @@ ru:
             csd2_2:
               display_name: 'Глава 2: Дизайн и CSS'
           lessons:
+            Headings:
+              name: Заголовки
             Digital Footprint:
               name: Цифровое присутствие
             CSS Classes:
@@ -5932,10 +6081,14 @@ ru:
             csd3_2:
               display_name: 'Глава 2: Создание игры'
           lessons:
+            Example Projects:
+              name: Примеры проектов
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
         code-break:
@@ -6009,10 +6162,14 @@ ru:
               name: Текст
             Conditionals:
               name: Условные команды
+            Keyboard Input:
+              name: Ввод с клавиатуры
             Velocity:
               name: Скорость
             Collision Detection:
               name: Обнаружение столкновений
+            Collisions:
+              name: Столкновения
             Functions:
               name: функции
           lesson_groups:
@@ -6099,6 +6256,8 @@ ru:
           lessons:
             Course F Introduction:
               name: Представляем Лабораторию спрайтов
+            lesson-3:
+              name: 'Мини-проект: Программы с пользовательским вводом'
             Virus Simulation for Code Bytes:
               name: Программирование симулятора
             Making Sprites:
@@ -6131,12 +6290,20 @@ ru:
               display_name: 'Глава 2: Компьютеры и решение проблем'
         csd2-2021:
           lessons:
+            Headings:
+              key: Заголовки
+              name: Заголовки
             Digital Footprint:
               key: Цифровое присутствие
               name: Цифровое присутствие
             CSS Classes:
               key: CSS классы
               name: CSS классы
+            Linking Pages:
+              key: Связывание страниц
+              name: Связывание страниц
+            lesson-1:
+              name: 'Занимательная информатика: опрос по окончании курса'
           lesson_groups:
             cspSurvey:
               display_name: Опрос
@@ -6160,15 +6327,23 @@ ru:
             Conditionals:
               key: Условные команды
               name: Условные команды
+            Keyboard Input:
+              key: Ввод с клавиатуры
+              name: Ввод с клавиатуры
             Velocity:
               key: Скорость
               name: Скорость
             Collision Detection:
               key: Обнаружение столкновений
               name: Обнаружение столкновений
+            Collisions:
+              key: Столкновения
+              name: Столкновения
             Functions:
               key: функции
               name: функции
+            lesson-1:
+              name: 'Занимательная информатика: опрос по окончании курса'
           lesson_groups:
             csd3_1:
               display_name: 'Глава 1: Изображения и анимации'
@@ -6177,6 +6352,11 @@ ru:
             cspSurvey:
               display_name: Опрос
         csd4-2021:
+          lessons:
+            Linking Screens:
+              key: Связывание окон
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
           lesson_groups:
             csd4_1:
               display_name: 'Глава 1: Пользовательский дизайн'
@@ -6197,9 +6377,17 @@ ru:
             Representing Numbers:
               key: Представления чисел
               name: Представления чисел
+            Keeping Data Secret:
+              key: Сохранение данных в тайне
+              name: Сохранение данных в тайне
+            Combining Representations:
+              key: Комбинирование представлений
+              name: Комбинирование представлений
             Making Decisions with Data:
               key: Использование данных для принятия решений
               name: Использование данных для принятия решений
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
           lesson_groups:
             csd5_1:
               display_name: 'Глава 1: Представление информации'
@@ -6209,6 +6397,12 @@ ru:
               display_name: Опрос
         csd6-2021:
           lessons:
+            Board Events:
+              key: События на доске
+              name: События на доске
+            Getting Properties:
+              key: Обретение свойств
+              name: Обретение свойств
             Analog Input:
               key: Иной ввод
               name: Иной ввод
@@ -6220,6 +6414,8 @@ ru:
               name: Процедуры с параметрами
             'Project: Prototype an Innovation':
               key: 'Проект: Прототип Инновации'
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
           lesson_groups:
             csd6_1:
               display_name: 'Глава 1: Программирование с оборудованием'
@@ -6321,8 +6517,8 @@ ru:
             Programming in Ice Age:
               name: Программирование со Скратом
             Programming with Rey and BB-8:
-              key: Программирование с Рееем и BB-8
-              name: Программирование с Рееем и BB-8
+              key: Программирование с Реем и BB-8
+              name: Программирование с Реем и BB-8
             'Loops: Happy Loops':
               name: Счастливые циклы
               description_teacher: Циклы - это очень полезный и мощный инструмент в программировании. Чтобы понять, насколько полезными могут быть циклы, ученикам нужно будет водить, чтобы найти более простой способ решить повседневные проблемы.
@@ -6419,6 +6615,8 @@ ru:
               display_name: Циклы
             csf_events:
               display_name: События
+            csf_data:
+              display_name: Данные
         coursed-2021:
           title: Курс D (2021)
           description_audience: 'Возраст: 7-11'
@@ -6490,6 +6688,8 @@ ru:
             Private and Personal Information:
               key: Private and Personal Information
               name: Private and Personal Information
+            About Me:
+              name: 'Мини-проект: Обо мне'
             Digital Sharing:
               key: Публикация цифровых произведений
               name: Публикация цифровых произведений
@@ -6508,7 +6708,11 @@ ru:
               description_teacher: Одним из самых великолепных структур в мире компьютерной науки является функция.  Функции (иногда называемые процедурами) - это мини-программы, которые можно использовать снова и снова внутри большой программы. Этот урок поможет учащимся интуитивно понять, почему объединение частей кода в функцию является такой полезной практикой.
             Functions in Harvester:
               key: Функции в игре "Жнец"
+            Designing for Accessibility:
+              key: Разработка для обеспечения доступности
+              name: Разработка для обеспечения доступности
             lesson-1:
+              name: Разработка для обеспечения доступности
               description_student: 'Узнай о значении доступности и эмпатии путем коллективного обсуждения и разработки решений в области доступа для гипотетических приложений. '
           lesson_groups:
             ramp_up:
@@ -6529,6 +6733,8 @@ ru:
           description_short: Изучи все понятия в Основах компьютерных наук и создай собственную картинку, игру или историю!
           description_audience: 'Возраст: 9-13'
           lessons:
+            Loops with the Artist:
+              key: Циклы с Художником
             Nested Loops in the Maze:
               name: Вложенные циклы в Лабиринте
               description_student: Цикл внутри цикла. Что это значит? Этот урок объяснит вам, что происходит, когда вы помещаете цикл внутри другого цикла.
@@ -6563,6 +6769,9 @@ ru:
               name: Цикл for в Художнике
             Virtual Pet:
               key: Виртуальный питомец
+              name: 'Мини-проект: Виртуальный питомец'
+            lesson-1:
+              name: Разработка для обеспечения доступности
             lesson-6:
               name: Представляем Лабораторию спрайтов
               description_student: Вы будете обсуждать роль компьютеров и технологий в вашей жизни с акцентом на том, как приложения и инструменты позволяют пользователям выбирать способы их использования.
@@ -6572,6 +6781,8 @@ ru:
               name: Спрайты в действии
             lesson-2:
               name: Digital Citizenship
+            lesson-11:
+              name: 'Мини-проект: Программы с пользовательским вводом'
           lesson_groups:
             ramp_up:
               display_name: Спрайты
@@ -6601,7 +6812,7 @@ ru:
               key: Вложенные циклы в Лабиринте
               name: Вложенные циклы в Лабиринте
             While Loops with the Farmer:
-              key: Цикл while в Фермере
+              key: Циклы «пока» со Сборщицей урожая
               name: Цикл while в Фермере
             Changing Variables with Artist:
               key: Переменные в Художнике
@@ -6620,7 +6831,7 @@ ru:
               name: Спрайты в действии
           lesson_groups:
             csf_warmup:
-              display_name: Подготовка
+              display_name: Разминка
             csf_sequencing:
               display_name: Последовательность действий
             csf_loops:
@@ -6649,8 +6860,8 @@ ru:
               name: Последовательность в "Скрат"
               description_student: Запрограммируйте Скрета, чтобы добраться до желудя.
             Programming with Rey and BB-8:
-              key: Программирование с Рееем и BB-8
-              name: Программирование с Рееем и BB-8
+              key: Программирование с Реем и BB-8
+              name: Программирование с Реем и BB-8
             Loops with Scrat:
               key: Циклы со Скратом
               name: Циклы со Скратом
@@ -6682,6 +6893,8 @@ ru:
               name: Спрайты в действии
             introducing-spritelab:
               name: Представляем Лабораторию спрайтов
+            user-input-programs:
+              name: 'Мини-проект: Программы с пользовательским вводом'
           lesson_groups:
             ramp_up:
               display_name: Введение
@@ -6694,6 +6907,10 @@ ru:
             variables:
               display_name: Переменные
         csd4-preview-2021:
+          lessons:
+            Linking Screens:
+              key: Связывание окон
+              name: Связывание окон
           lesson_groups:
             csd4_1:
               display_name: 'Глава 1: Пользовательский дизайн'
@@ -6716,6 +6933,12 @@ ru:
             Representing Numbers:
               key: Представления чисел
               name: Представления чисел
+            Keeping Data Secret:
+              key: Сохранение данных в тайне
+              name: Сохранение данных в тайне
+            Combining Representations:
+              key: Комбинирование представлений
+              name: Комбинирование представлений
             Making Decisions with Data:
               key: Использование данных для принятия решений
               name: Использование данных для принятия решений
@@ -6731,22 +6954,44 @@ ru:
           description: Используйте Sprite Lab для программирования симулятора эпидемии вируса.
           student_description: Используйте Sprite Lab для программирования симулятора эпидемии вируса.
         csa1-pilot:
+          lessons:
+            lesson-24:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
         csa2-pilot:
+          lessons:
+            lesson-16:
+              name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Содержимое
         csa3-pilot:
+          lessons:
+            lesson-17:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
         csa4-pilot:
+          lessons:
+            lesson-16:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
         csa5-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
@@ -6807,6 +7052,8 @@ ru:
           lessons:
             Introduction to AI Lab:
               name: Введение в AI лаборатории
+            CS Discoveries Post-Course Survey:
+              name: 'Занимательная информатика: опрос по окончании курса'
           lesson_groups:
             lessonGroup-4:
               display_name: Опрос
@@ -6887,7 +7134,7 @@ ru:
         ai-lab:
           lessons:
             lesson-3:
-              name: Test
+              name: Тест
         dlp21-csp-mod4:
           lesson_groups:
             lessonGroup-2:
@@ -6910,6 +7157,8 @@ ru:
           lessons:
             lesson-12:
               name: Инструменты
+            lesson-17:
+              name: Консоль
             lesson-18:
               name: Виджеты
           lesson_groups:
@@ -6918,27 +7167,44 @@ ru:
             lessonGroup-3:
               display_name: Проект
         csa1-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
         csa2-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java Lab
           lesson_groups:
             lesson group:
               display_name: Содержимое
         csa3-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
         csa4-pilot-facilitator:
+          lessons:
+            lesson-1:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
         csa5-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
         csdu6-playground:
           lessons:
+            lesson-9:
+              name: Цветные светодиоды
             lesson-19:
               name: Проект
         csa-u7-dev:
@@ -6972,12 +7238,29 @@ ru:
               name: Виджеты
             lesson-2:
               name: Инструменты
+        poetry:
+          lessons:
+            lesson-7:
+              name: Условные команды
         spelling-bee:
           lessons:
             lesson-1:
               name: Пчела
           title: Пчела
         csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Содержимое
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Опрос после окончания курса
+          title: 'Занимательная информатика: опрос по окончании курса'
+        csa6-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java Lab
+              key: Java Lab
           lesson_groups:
             lessonGroup-2:
               display_name: Содержимое
