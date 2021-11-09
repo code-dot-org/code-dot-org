@@ -3625,6 +3625,118 @@
         "courseB_maze_seq_challenge2_2021": {
           "courseB_maze_seq_challenge2_a": "Bạn không cần phải thêm hoặc bớt khối để giải bài tập này.",
           "courseB_maze_seq_challenge2_b": "Hãy sắp xếp lại các khối và đi theo mẫu bậc thang."
+        },
+        "helloworld_animals_backgrounds": {
+          "hello_world_background": "Bạn có thể đổi hình nền bằng cách nối một khối `set background` (đặt hình nền) dưới một khối sự kiện `when clicked` (khi nhấp chuột):\n\n[blockly block][0]"
+        },
+        "helloworld_animals_behaviors": {
+          "storyboard_behavior_example": "_Lưu ý:_ Để cho nhân vật một hành vi, bạn cần dùng khối `sprite begins` (nhân vật bắt đầu) với một trong các khối hành vi màu xanh lá, chẳng hạn như `spinning right` (xoay phải).\n\n[blockly block][0]"
+        },
+        "helloworld_animals_click": {
+          "hw_no_changes": "Ở cấp độ này, bạn không cần thay đổi gì trong mã lệnh."
+        },
+        "helloworld_animals_costumes": {
+          "hello_world_costumes": "Hãy thử nối một khối `change costume` (đổi trang phục) dưới một khối sự kiện `when clicked` (khi nhấp chuột).\n\n[blockly block][0]"
+        },
+        "helloworld_animals_events": {
+          "hello_world_click": "Nối khối `say` (nói) bên dưới khối sự kiện `when click` (khi nhấp chuột):\n\n[blockly block][0]"
+        },
+        "helloworld_animals_location": {
+          "location_pin_hint": "Để thay đổi vị trí nhân vật, nhấn vào ghim trên khối vị trí, rồi nhấp chuột vào vị trí mà bạn muốn nhân vật di chuyển.\n\n[][0]"
+        },
+        "helloworld_animals_multi": {
+          "cat_xml": "Hãy đảm bảo trang phục khớp với từng khối.\n\n[blockly block][0]"
+        },
+        "helloworld_animals_say": {
+          "hello-world-first-solution-bear": "Để cho chú gấu nói điều gì đó, hãy nối các khối mã lệnh như sau:\n\n[blockly block][0]"
+        },
+        "helloworld_animals_sizes": {
+          "storyboard_setProp": "Để đổi kích thước nhân vật chỉ một lần, bạn có thể dùng khối này:\n\n[blockly block][0]",
+          "storyboard_changePropBy": "Nếu bạn muốn đổi kích thước nhân vật nhiều lần (bằng sự kiện), hãy dùng khối này:\n\n[blockly block][0]"
+        },
+        "helloworld_emoji_backgrounds": {
+          "hello_world_background": "Bạn có thể đổi hình nền bằng cách nối một khối `set background` (đặt hình nền) dưới một khối sự kiện `when clicked` (khi nhấp chuột):\n\n[blockly block][0]"
+        },
+        "helloworld_emoji_behaviors": {
+          "storyboard_behavior_example": "_Lưu ý:_ Để cho nhân vật một hành vi, bạn cần dùng khối `sprite begins` (nhân vật bắt đầu) với một trong các khối hành vi màu xanh lá, chẳng hạn như `spinning right` (xoay phải).\n\n[blockly block][0]"
+        },
+        "helloworld_emoji_click": {
+          "hw_no_changes": "Ở cấp độ này, bạn không cần thay đổi gì trong mã lệnh."
+        },
+        "helloworld_emoji_costumes": {
+          "hello_world_costumes": "Hãy thử nối một khối `change costume` (đổi trang phục) dưới một khối sự kiện `when clicked` (khi nhấp chuột).\n\n[blockly block][0]"
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click": "Nối khối `say` (nói) bên dưới khối sự kiện `when click` (khi nhấp chuột):\n\n[blockly block][0]"
+        },
+        "helloworld_emoji_location": {
+          "location_pin_hint": "Để thay đổi vị trí nhân vật, nhấn vào ghim trên khối vị trí, rồi nhấp chuột vào vị trí mà bạn muốn nhân vật di chuyển.\n\n[][0]"
+        },
+        "helloworld_emoji_multi": {
+          "storyboard_costume": "Đảm bảo trang phục khớp với từng nhân vật.\n[blockly block][0]"
+        },
+        "helloworld_emoji_say": {
+          "hello-world-first-solution-emoji": "Để cho emoji nói điều gì đó, hãy nối các khối mã lệnh như sau:\n\n[blockly block][0]"
+        },
+        "helloworld_emoji_sizes": {
+          "storyboard_setProp": "Để đổi kích thước nhân vật chỉ một lần, bạn có thể dùng khối này:\n\n[blockly block][0]",
+          "storyboard_changePropBy": "Nếu bạn muốn đổi kích thước nhân vật nhiều lần (bằng sự kiện), hãy dùng khối này:\n\n[blockly block][0]"
+        },
+        "helloworld_food_backgrounds": {
+          "hello_world_background": "Bạn có thể đổi hình nền bằng cách nối một khối `set background` (đặt hình nền) dưới một khối sự kiện `when clicked` (khi nhấp chuột):\n\n[blockly block][0]"
+        },
+        "helloworld_food_behaviors": {
+          "storyboard_behavior_example": "_Lưu ý:_ Để cho nhân vật một hành vi, bạn cần dùng khối `sprite begins` (nhân vật bắt đầu) với một trong các khối hành vi màu xanh lá, chẳng hạn như `spinning right` (xoay phải).\n\n[blockly block][0]"
+        },
+        "helloworld_food_click": {
+          "hw_no_changes": "Ở cấp độ này, bạn không cần thay đổi gì trong mã lệnh."
+        },
+        "helloworld_food_costumes": {
+          "hello_world_costumes": "Hãy thử nối một khối `change costume` (đổi trang phục) dưới một khối sự kiện `when clicked` (khi nhấp chuột).\n\n[blockly block][0]"
+        },
+        "helloworld_food_events": {
+          "hello_world_click": "Nối khối `say` (nói) bên dưới khối sự kiện `when click` (khi nhấp chuột):\n\n[blockly block][0]"
+        },
+        "helloworld_food_location": {
+          "location_pin_hint": "Để thay đổi vị trí nhân vật, nhấn vào ghim trên khối vị trí, rồi nhấp chuột vào vị trí mà bạn muốn nhân vật di chuyển.\n\n[][0]"
+        },
+        "helloworld_food_multi": {
+          "storyboard_costume": "Đảm bảo trang phục khớp với từng nhân vật.\n[blockly block][0]"
+        },
+        "helloworld_food_say": {
+          "hello-world-first-solution-pizza": "Để cho bánh pizza nói điều gì đó, hãy nối các khối mã lệnh như sau:\n\n[blockly block][0]"
+        },
+        "helloworld_food_sizes": {
+          "storyboard_setProp": "Để đổi kích thước nhân vật chỉ một lần, bạn có thể dùng khối này:\n\n[blockly block][0]",
+          "storyboard_changePropBy": "Nếu bạn muốn đổi kích thước nhân vật nhiều lần (bằng sự kiện), hãy dùng khối này:\n\n[blockly block][0]"
+        },
+        "helloworld_retro_backgrounds": {
+          "hello_world_background": "Bạn có thể đổi hình nền bằng cách nối một khối `set background` (đặt hình nền) dưới một khối sự kiện `when clicked` (khi nhấp chuột):\n\n[blockly block][0]"
+        },
+        "helloworld_retro_behaviors": {
+          "storyboard_behavior_example": "_Lưu ý:_ Để cho nhân vật một hành vi, bạn cần dùng khối `sprite begins` (nhân vật bắt đầu) với một trong các khối hành vi màu xanh lá, chẳng hạn như `spinning right` (xoay phải).\n\n[blockly block][0]"
+        },
+        "helloworld_retro_click": {
+          "hw_no_changes": "Ở cấp độ này, bạn không cần thay đổi gì trong mã lệnh."
+        },
+        "helloworld_retro_costumes": {
+          "hello_world_costumes": "Hãy thử nối một khối `change costume` (đổi trang phục) dưới một khối sự kiện `when clicked` (khi nhấp chuột).\n\n[blockly block][0]"
+        },
+        "helloworld_retro_events": {
+          "hello_world_click": "Nối khối `say` (nói) bên dưới khối sự kiện `when click` (khi nhấp chuột):\n\n[blockly block][0]"
+        },
+        "helloworld_retro_location": {
+          "location_pin_hint": "Để thay đổi vị trí nhân vật, nhấn vào ghim trên khối vị trí, rồi nhấp chuột vào vị trí mà bạn muốn nhân vật di chuyển.\n\n[][0]"
+        },
+        "helloworld_retro_multi": {
+          "storyboard_costume": "Đảm bảo trang phục khớp với từng nhân vật.\n[blockly block][0]"
+        },
+        "helloworld_retro_say": {
+          "hello-world-first-solution-retrocreature": "Để cho tạo vật này nói điều gì đó, hãy nối các khối mã lệnh như sau:\n\n[blockly block][0]"
+        },
+        "helloworld_retro_sizes": {
+          "hw_retro_setProp": "Để đổi kích thước nhân vật chỉ một lần, bạn có thể dùng khối này:\n\n[blockly block][0]",
+          "hw_retro_changePropBy": "Nếu bạn muốn đổi kích thước nhân vật nhiều lần (bằng sự kiện), hãy dùng khối này:\n\n[blockly block][0]"
         }
       }
     }

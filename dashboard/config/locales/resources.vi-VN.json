@@ -171,10 +171,12 @@
           "name": "Di chuyển liên tục"
         },
         "feeling_faces_emotion_image/courseb/2021": {
-          "name": "Hình ảnh cảm xúc trên khuôn mặt"
+          "name": "Hình ảnh cảm xúc trên khuôn mặt",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling-faces-image/courseb/2021": {
-          "name": "Khuôn mặt cảm xúc"
+          "name": "Khuôn mặt cảm xúc",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "jigsaw/courseb/2021": {
           "name": "Thực hành kéo và thả"
@@ -201,7 +203,8 @@
           "name": "Biểu tượng la bàn"
         },
         "feeling_faces_-_emotion_image/courseb/2021": {
-          "name": "Khuôn mặt cảm xúc – Ảnh biểu tượng cảm xúc"
+          "name": "Khuôn mặt cảm xúc – Ảnh biểu tượng cảm xúc",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "unplugged-video-getting-loopy/courseb/2021": {
           "name": "Tạo vòng lặp"
@@ -215,8 +218,14 @@
         "assessment-answer-getting-loopy/courseb/2021": {
           "name": "Tạo vòng lặp"
         },
+        "csf-lesson-recommend/courseb/2021": {
+          "name": "Nguyên tắc cơ bản của KHMT Mẹo tiến hành hoạt động chính"
+        },
         "common-sense-media-pause-think/courseb/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
+        },
+        "the-right-app-scenarios/courseb/2021": {
+          "name": "Các kịch bản ứng dụng phù hợp"
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Sự kiện lớn"
@@ -226,6 +235,15 @@
         },
         "assessment-answer-big-event/courseb/2021": {
           "name": "Sự kiện lớn"
+        },
+        "the_big_event_courses_a_b_/courseb/2021": {
+          "name": "Sự kiện lớn (Khóa học A, B)"
+        },
+        "play_lab_project_planning_guide/courseb/2021": {
+          "name": "Hướng dẫn lập kế hoạch dự án Play Lab"
+        },
+        "play_lab_project_planning_guide_1/courseb/2021": {
+          "name": "Hướng dẫn lập kế hoạch dự án Play Lab"
         },
         "csta_standards_mapping/courseb/2021": {
           "name": "Cấu trúc Tiêu chuẩn CSTA"
@@ -257,6 +275,12 @@
         "virtual_lesson_modifications/courseb/2021": {
           "name": "Sửa đổi bài học trực tuyến"
         },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": "Giữ an toàn trong môi trường trực tuyến của tôi: Slide bài học"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "Giữ an toàn trong môi trường trực tuyến của tôi: An toàn là trên hết!"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "Lập trình đôi"
         },
@@ -266,11 +290,18 @@
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Bản đồ thú vị"
         },
+        "happy-map-cards/coursea/2021": {
+          "name": "Thẻ Bản đồ vui vẻ"
+        },
+        "activity-answer-happy-maps/coursea/2021": {
+          "name": "Thẻ Bản đồ vui vẻ"
+        },
         "happy-map-game-pieces/coursea/2021": {
           "name": "Mảnh ghép trò chơi Bản đồ hạnh phúc"
         },
         "feeling_faces_-_emotion_image/coursea/2021": {
-          "name": "Khuôn mặt cảm xúc – Ảnh biểu tượng cảm xúc"
+          "name": "Khuôn mặt cảm xúc – Ảnh biểu tượng cảm xúc",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/view"
         },
         "course-ab-blockly-blocks/coursea/2021": {
           "name": "Khối Blockly không dùng thiết bị điện tử (Lớp K-1)"
@@ -282,25 +313,34 @@
           "name": "Ngọ nguật - GoNoodle"
         },
         "feeling_faces_emotion_image/coursea/2021": {
-          "name": "Hình ảnh cảm xúc trên khuôn mặt"
+          "name": "Hình ảnh cảm xúc trên khuôn mặt",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling_faces_-_emotion_image_1/coursea/2021": {
-          "name": "Khuôn mặt cảm xúc – Ảnh biểu tượng cảm xúc"
+          "name": "Khuôn mặt cảm xúc – Ảnh biểu tượng cảm xúc",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "happy-map-cards-xl/coursea/2021": {
+          "name": "Thẻ Bản đồ vui vẻ XL"
         },
         "feeling_faces_emotion_image_1/coursea/2021": {
-          "name": "Hình ảnh cảm xúc trên khuôn mặt"
+          "name": "Hình ảnh cảm xúc trên khuôn mặt",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "feeling-faces-image/coursea/2021": {
-          "name": "Khuôn mặt cảm xúc"
+          "name": "Khuôn mặt cảm xúc",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "feeling_faces_emotion_image_2/coursea/2021": {
-          "name": "Hình ảnh cảm xúc trên khuôn mặt"
+          "name": "Hình ảnh cảm xúc trên khuôn mặt",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "common-sense-media-pause-think/coursea/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
         },
         "feeling_faces_emotion_image_3/coursea/2021": {
-          "name": "Hình ảnh cảm xúc trên khuôn mặt"
+          "name": "Hình ảnh cảm xúc trên khuôn mặt",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Sự kiện lớn"
@@ -311,11 +351,25 @@
         "assessment-answer-big-event/coursea/2021": {
           "name": "Sự kiện lớn"
         },
+        "the_big_event_courses_a_b_/coursea/2021": {
+          "name": "Sự kiện lớn (Khóa học A, B)"
+        },
         "feeling_faces_-_emotion_image_2/coursea/2021": {
-          "name": "Khuôn mặt cảm xúc – Ảnh biểu tượng cảm xúc"
+          "name": "Khuôn mặt cảm xúc – Ảnh biểu tượng cảm xúc",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "csf-lesson-recommend/coursea/2021": {
+          "name": "Nguyên tắc cơ bản của KHMT Mẹo tiến hành hoạt động chính"
         },
         "feeling_faces_-_emotion_image_3/coursea/2021": {
-          "name": "Khuôn mặt cảm xúc – Ảnh biểu tượng cảm xúc"
+          "name": "Khuôn mặt cảm xúc – Ảnh biểu tượng cảm xúc",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit"
+        },
+        "artist_project_planning_guide/coursea/2021": {
+          "name": "Hướng dẫn lập kế hoạch dự án Họa sĩ"
+        },
+        "artist_project_planning_guide_1/coursea/2021": {
+          "name": "Hướng dẫn lập kế hoạch dự án Họa sĩ"
         },
         "csta_standards_mapping/coursea/2021": {
           "name": "Cấu trúc Tiêu chuẩn CSTA"
@@ -347,6 +401,9 @@
         "virtual_lesson_modifications/coursea/2021": {
           "name": "Sửa đổi bài học trực tuyến"
         },
+        "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
+          "name": "Hãy dùng phương pháp STOP với hành vi tiêu cực trên mạng: Slide bài học"
+        },
         "csf-mrf-cup-spacing/coursec/2021": {
           "name": "Bạn bè robot của tôi"
         },
@@ -365,6 +422,9 @@
         "pair-programming-vid/coursec/2021": {
           "name": "Lập trình đôi"
         },
+        "csf-lesson-recommend/coursec/2021": {
+          "name": "Nguyên tắc cơ bản của KHMT Mẹo tiến hành hoạt động chính"
+        },
         "debugging_guide/coursec/2021": {
           "name": "Hướng dẫn sửa lỗi"
         },
@@ -372,7 +432,8 @@
           "name": "Học phần không dùng thiết bị điện tử (Khoá học C-F)"
         },
         "feeling_faces_emotion_image/coursec/2021": {
-          "name": "Hình ảnh cảm xúc trên khuôn mặt"
+          "name": "Hình ảnh cảm xúc trên khuôn mặt",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs"
         },
         "unplugged-video-big-event/coursec/2021": {
           "name": "Sự kiện lớn"
@@ -383,8 +444,14 @@
         "assessment-answer-big-event/coursec/2021": {
           "name": "Sự kiện lớn"
         },
+        "the_big_event_course_c_/coursec/2021": {
+          "name": "Sự kiện lớn (Khóa học C)"
+        },
         "pause_and_think_online/coursec/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
+        },
+        "right-app-scenarios/coursec/2021": {
+          "name": "Dữ liệu đồ thị từ Play Lab"
         },
         "unplugged-video-binary-bracelets/coursec/2021": {
           "name": "Vòng đeo tay nhị phân"
@@ -400,6 +467,12 @@
         },
         "assessment-answer-binary-bracelets/coursec/2021": {
           "name": "Vòng đeo tay nhị phân"
+        },
+        "play-lab-project-planning-guide-exemplar/coursec/2021": {
+          "name": "Hướng dẫn lập kế hoạch dự án Play Lab (mẫu)"
+        },
+        "play-lab-project-guide/coursec/2021": {
+          "name": "Hướng dẫn lập kế hoạch dự án Play Lab"
         },
         "csta_standards_mapping/coursec/2021": {
           "name": "Cấu trúc Tiêu chuẩn CSTA"
@@ -430,6 +503,9 @@
         },
         "virtual_lesson_modifications/coursec/2021": {
           "name": "Sửa đổi bài học trực tuyến"
+        },
+        "password_power-up_lesson_slides/coursed/2021": {
+          "name": "Nâng cấp mật khẩu: Slide bài học"
         },
         "graph-paper-programming/coursed/2021": {
           "name": "lập trình đồ thị trên giấy"
@@ -476,11 +552,18 @@
         "pause_and_think_online/coursed/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
         },
+        "dance-party-project-guide/coursed/2021": {
+          "name": "Hướng dẫn dự án Bữa tiệc khiêu vũ"
+        },
         "feeling-faces-image/coursed/2021": {
-          "name": "Khuôn mặt cảm xúc"
+          "name": "Khuôn mặt cảm xúc",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "pause_and_think_online_1/coursed/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
+        },
+        "course-d-project-planning-guide-1/coursed/2021": {
+          "name": "Hướng dẫn lập kế hoạch dự án tổng kết khóa học NTCB của KHMT Khóa học D"
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "Cấu trúc Tiêu chuẩn CSTA"
@@ -515,11 +598,30 @@
         "pair_programming/express/2021": {
           "name": "Lập trình đôi"
         },
+        "unplugged_blocks_courses_c-f_/express/2021": {
+          "name": "Học phần không dùng thiết bị điện tử (Khoá học C-F)"
+        },
         "making_sprites/express/2021": {
-          "name": "Tạo nhân vật"
+          "name": "Tạo nhân vật",
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
+        },
+        "sprites_in_action/express/2021": {
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
         },
         "pause_and_think_online/express/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
+        },
+        "dance-party-project-guide/express/2021": {
+          "name": "Hướng dẫn dự án Bữa tiệc khiêu vũ"
+        },
+        "unplugged_blocks_courses_c-f__1/express/2021": {
+          "name": "Học phần không dùng thiết bị điện tử (Khoá học C-F)"
+        },
+        "unplugged_blocks_courses_c-f__2/express/2021": {
+          "name": "Học phần không dùng thiết bị điện tử (Khoá học C-F)"
+        },
+        "unplugged_blocks_courses_c-f__3/express/2021": {
+          "name": "Học phần không dùng thiết bị điện tử (Khoá học C-F)"
         },
         "unplugged_blocks_courses_c-f__4/express/2021": {
           "name": "Học phần không dùng thiết bị điện tử (Khoá học C-F)"
@@ -532,6 +634,9 @@
         },
         "variables_video/express/2021": {
           "name": "Các biến"
+        },
+        "csf-express-end-of-course-project-planning-guide/express/2021": {
+          "name": "Hướng dẫn lập kế hoạch dự án tổng kết khóa học NTCB của KHMT Cấp tốc"
         },
         "rubric-csf-final-projects/express/2021": {
           "name": "Dự án cuối cùng về Nguyên tắc cơ bản của KHMT"
@@ -555,7 +660,8 @@
           "name": "Cách tạo nhóm đòa tạo trên Code.org"
         },
         "feeling-faces-image/pre-express/2021": {
-          "name": "Khuôn mặt cảm xúc"
+          "name": "Khuôn mặt cảm xúc",
+          "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/"
         },
         "20_20_20_rule/pre-express/2021": {
           "name": "Quy tắc 20/20/20"
@@ -578,6 +684,9 @@
         "follow_the_algorithm/coursee/2021": {
           "name": "Làm theo thuật toán"
         },
+        "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
+          "name": "Trở thành một công dân kỹ thuật số tuyệt vời: Slide bài học"
+        },
         "private-and-personal-information-lesson-slides/coursee/2021": {
           "name": "Thông tin cá nhân và riêng tư: Slide bài học"
         },
@@ -596,11 +705,20 @@
         "common-sense-media-pause-think/coursee/2021": {
           "name": "Tạm dừng và suy nghĩ về môi trường trực tuyến"
         },
+        "digital-sharing-lesson/coursee/2021": {
+          "name": "Giáo án Chia sẻ nội dung số"
+        },
+        "digital-sharing-video/coursee/2021": {
+          "name": "Chia sẻ nội dung số có đạo đức (Video)"
+        },
         "course-cf-blockly-blocks/coursee/2021": {
           "name": "Học phần không dùng thiết bị điện tử (Khoá học C-F)"
         },
         "designing_for_accessibility_1/coursee/2021": {
           "name": "Thiết kế cho trợ năng"
+        },
+        "end-of-course-project-guide/coursee/2021": {
+          "name": "Hướng dẫn Dự án tổng kết khóa học"
         },
         "rubric-csf-final-projects/coursee/2021": {
           "name": "Dự án cuối cùng về Nguyên tắc cơ bản của KHMT"

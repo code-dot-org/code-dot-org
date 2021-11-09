@@ -13670,6 +13670,10 @@ vi:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -13863,6 +13867,8 @@ vi:
               name: Tổng quan
         csa-u6-dev:
           lessons:
+            lesson-17:
+              name: Bảng điều khiển
             lesson-18:
               name: Vật dụng
         csa1-pilot-facilitator:
@@ -14029,6 +14035,10 @@ vi:
           lessons:
             lesson-1:
               name: Vật dụng
+        poetry:
+          lessons:
+            lesson-7:
+              name: Điều kiện
         spelling-bee:
           lessons:
             lesson-1:
@@ -14037,6 +14047,14 @@ vi:
         outbreak-csc:
           title: Dịch bệnh bùng phát
         csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Nội dung
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Khảo sát sau khoá học
+        csa6-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Nội dung

@@ -11,6 +11,9 @@
         "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
           "description": "Lý do định kiến của con người đóng vai trò quan trọng trong máy học."
         },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": "Phát triển các chương trình phản ứng với các sự kiện theo thời gian."
+        },
         "5b8eb232-7326-4c4d-8507-0c2da9642581": {
           "description": "Mô tả tầm quan trọng của người dùng trong quá trình thiết kế."
         },
@@ -185,11 +188,62 @@
         "4576e06e-56f1-4e32-a81d-7bbfea125273": {
           "description": "Chuyển hành động thành chuỗi lệnh."
         },
+        "d5f927b9-727a-423e-90d3-80faad21aa34": {
+          "description": "Xác định và định vị lỗi trong chương trình."
+        },
+        "6c67256a-a8d5-4a57-9744-092686fb01a0": {
+          "description": "Lặp lại các hành động do giáo viên thực hiện."
+        },
+        "368e8edc-290d-4737-a616-a543e5298c66": {
+          "description": "Chuyển chương trình hình ảnh thành điệu nhảy thực tế."
+        },
+        "ddb96aa7-a52d-41d7-b253-8f0d1533e093": {
+          "description": "Chuyển chuỗi gồm nhiều hành động thành vòng lặp."
+        },
         "b7345cb5-cb6f-4bed-b9c8-4db24c6fb0c4": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
         },
+        "b8432810-ae14-4baf-9acb-e56ad1f8995f": {
+          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi nhỏ nhất có thể lặp lại."
+        },
+        "8293f536-510e-44a0-880b-397b3f97deeb": {
+          "description": "Tạo chương trình làm nhiệm vụ nhất định lặp lại một chuỗi lệnh."
+        },
+        "cb89ffb0-ef91-48ea-a77a-90e59e45c73e": {
+          "description": "Sử dụng kết hợp các lệnh trình tự và lặp lại để đi đến cuối mê cung."
+        },
         "1a658eb5-9957-4d23-9736-ba85ea545c5e": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "b46842b6-02c4-4fd5-abff-6180d77a5c55": {
+          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi nhỏ nhất có thể lặp lại."
+        },
+        "f7153703-ec15-4ce5-943e-02e2f2ebcfef": {
+          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
+        },
+        "8b2f225a-f9d2-4ac4-9adf-bc978b347f34": {
+          "description": "Phân tách một hình khối thành dạng chuỗi lặp lại lớn nhất của hình đó."
+        },
+        "61329a99-1c0a-414f-9694-78f7f9c81372": {
+          "description": "Tạo chương trình vẽ các hình khối phức tạp bằng cách lặp lại các chuỗi đơn giản."
+        },
+        "11d46ade-3342-4157-932b-ce46acd1e6b4": {
+          "description": "Liệt kê một số ví dụ khác nhau về các ứng dụng trên điện thoại thông minh."
+        },
+        "595564b5-94b4-4104-9613-05eadc30663e": {
+          "description": "Đề xuất công nghệ cho người khác dựa trên nhu cầu riêng của họ."
+        },
+        "b0a4edfa-fd6a-48fc-8421-3ae80769aed3": {
+          "description": "Vận dụng sự đồng cảm và sáng tạo để thiết kế công nghệ cho người khác."
+        },
+        "7b0ddd26-468b-4ca1-8d08-444c0563f8c6": {
+          "description": "Lặp lại các lệnh do giáo viên đưa ra."
+        },
+        "3997dff6-b815-412c-b3b5-52d4bd1fc019": {
+          "description": "Ghi nhận các hành động của giáo viên như là tín hiệu để bắt đầu các lệnh."
+        },
+        "86c93634-0b7d-46de-82dd-50b86576bd56": {
+          "description": "Thực hành phân biệt các hành động được xác định trước và các hành động theo hướng sự kiện."
         },
         "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
           "description": "Làm mẫu các hành vi phù hợp trong phòng máy tính"
@@ -197,20 +251,80 @@
         "6df3d067-06bb-4e95-856f-ef980543a15e": {
           "description": "Thử nghiệm với các thao tác lập trình dựa trên khối tiêu chuẩn như: nhấp chuột, kéo và thả, v.v."
         },
+        "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
+          "description": "Xây dựng chương trình bằng cách tổ chức lại các hành động theo trình tự"
+        },
+        "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
+          "description": "Xây dựng một chương trình máy tính từ một tập hợp các chỉ dẫn bằng văn bản"
+        },
         "632bd918-c124-4f4c-892e-980cdc07b3bf": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "ea6a44e1-0175-4ecc-a257-4489b703c063": {
+          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi nhỏ nhất có thể lặp lại."
+        },
+        "a49fa168-3cd7-4918-a60a-4c4031dd0116": {
+          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
+        },
+        "97a73553-b88a-4b23-9b9f-0ef644cfcb4c": {
+          "description": "Phân tách một hình khối thành dạng chuỗi lặp lại lớn nhất của hình đó."
+        },
+        "66267233-8532-4f63-aea5-3a214dac119a": {
+          "description": "Tạo chương trình vẽ các hình khối phức tạp bằng cách lặp lại các chuỗi đơn giản."
+        },
+        "134f184c-8865-44d2-8921-5740c749bcd5": {
+          "description": "Lặp lại các lệnh do giáo viên đưa ra."
+        },
+        "b7973aec-afbf-4f81-820c-daced7731b0f": {
+          "description": "Ghi nhận các hành động của giáo viên như là tín hiệu để bắt đầu các lệnh."
+        },
+        "3ec1a741-277f-46fb-9ec1-e358f399dab4": {
+          "description": "Thực hành phân biệt các hành động được xác định trước và các hành động theo hướng sự kiện."
+        },
+        "30ef895d-12fa-4348-8cd8-4c2bef269e9f": {
+          "description": "Xác định các cách để trả lời ngôn từ tiêu cực trên mạng, sử dụng phương pháp S-T-O-P."
         },
         "560e14ee-7390-4244-aee5-a0c2737112e5": {
           "description": "Chuyển hành động thành chuỗi lệnh."
         },
+        "5ced3389-52c6-4f9c-a8da-2e997e0008da": {
+          "description": "Xác định và định vị lỗi trong chương trình."
+        },
         "46288097-dbab-437f-897c-4e14352ae388": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "dea9fd7a-8b64-4d36-90a4-1eee89ea355a": {
+          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi lớn nhất có thể lặp lại."
+        },
+        "8e76410f-b4db-446b-88c0-00013d9c05bd": {
+          "description": "Sử dụng kết hợp các lệnh trình tự và lặp lại để đi đến cuối mê cung."
+        },
+        "ff15ce2c-8445-442a-89f0-7a50e741850a": {
+          "description": "Viết chương trình làm nhiệm vụ nhất định lặp lại một lệnh duy nhất."
         },
         "bf154cd9-0914-43c2-b895-030de92d1427": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
         },
         "b27f9553-dc95-452c-a4ee-dc69db0fc913": {
           "description": "Phân biệt các lệnh cần lặp lại trong vòng lặp và các lệnh cần dùng riêng."
+        },
+        "74ce2354-89e9-4396-8cf5-5f9a43e02bd4": {
+          "description": "Lặp lại các lệnh do giáo viên đưa ra."
+        },
+        "529f5b68-c1dc-494b-bfa9-1ada0412cf78": {
+          "description": "Ghi nhận chuyển động của giáo viên như là tín hiệu để bắt đầu các lệnh."
+        },
+        "7232c8de-da31-441a-84c9-cabef4ea8fc0": {
+          "description": "Thực hành phân biệt các hành động được xác định trước và các hành động theo hướng sự kiện."
+        },
+        "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
+          "description": "Định nghĩa thuật ngữ “mật khẩu” và mô tả mục đích của mật khẩu."
+        },
+        "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
+          "description": "Thực hành tạo mật khẩu mạnh và dễ nhớ."
+        },
+        "14389c2c-96ea-4be1-8347-46e7d19dd1ff": {
+          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi lớn nhất có thể lặp lại."
         },
         "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
@@ -230,6 +344,9 @@
         "8c021568-46ed-4243-a4d1-f2037138c01a": {
           "description": "Chuyển hành động thành chuỗi lệnh."
         },
+        "0b8dec87-ba78-4165-9d84-f91dc1fbc6df": {
+          "description": "Xác định và định vị lỗi trong chương trình."
+        },
         "09281dd0-4b33-4537-9543-a2377bc2f923": {
           "description": "Tạo các nhân vật mới và gán cho họ trang phục và hành vi."
         },
@@ -248,8 +365,20 @@
         "422b4e75-8ff9-4f2e-b4f8-e6f1fdea3969": {
           "description": "Phát triển các chương trình phản ứng với dữ liệu đầu vào của người dùng."
         },
+        "203638b5-ded8-4023-be3e-f66dfbdc6f8f": {
+          "description": "Tạo thú cưng ảo tương tác bằng cách sử dụng sự kiện, hành vi, biến và hình ảnh tùy chỉnh."
+        },
+        "f5e7cf67-bc19-4175-82b0-f449d09551d4": {
+          "description": "Lập trình giải pháp cho các vấn đề phát sinh khi thiết kế thú cưng ảo, chẳng hạn như cho ăn hoặc theo dõi tâm trạng của chúng."
+        },
         "f66d5b0d-f5b6-441f-b3c0-c24a7a857912": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "d41cb934-ead6-42d0-a3c6-3a692fa53626": {
+          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi lớn nhất có thể lặp lại."
+        },
+        "19dc83bf-d44c-4e6b-a7ac-c11ada6cb656": {
+          "description": "Sử dụng kết hợp các lệnh trình tự và lặp lại để đi đến cuối mê cung."
         },
         "7304a528-6a3a-4670-9e66-1438d26c3fc2": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
@@ -265,6 +394,9 @@
         },
         "aca03fc9-6f07-4b4a-9b83-26e9ff32ce1f": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
+        },
+        "ef77d0c7-ef92-4f67-85fc-b9e4c8d14c49": {
+          "description": "Hành động dùng biến để giữ các từ và cụm từ."
         },
         "077a5626-d78c-4ae2-9620-e0558a2ab8cf": {
           "description": "Dùng biến kết hợp với lời nhắc."
@@ -305,14 +437,56 @@
         "a5a52414-42a7-4b32-897b-819a70572328": {
           "description": "Chuyển hành động thành chuỗi lệnh."
         },
+        "7ef6d077-67aa-4a8b-b27b-ab3697654abc": {
+          "description": "Xây dựng chương trình bằng cách tổ chức lại các hành động theo trình tự"
+        },
+        "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0": {
+          "description": "Xây dựng một chương trình máy tính từ một tập hợp các chỉ dẫn bằng văn bản"
+        },
         "620da514-ad6e-4049-a9d3-d189a79af01e": {
           "description": "Chuyển hành động thành chuỗi lệnh."
+        },
+        "adabe26f-78e0-47f4-92b2-535a38f53f15": {
+          "description": "Xác định và định vị lỗi trong chương trình."
         },
         "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
         },
+        "8fef5927-aacf-4340-b4c3-d221ebe3f13a": {
+          "description": "Chia nhỏ một chuỗi chỉ dẫn dài thành chuỗi nhỏ nhất có thể lặp lại."
+        },
+        "2ebb5323-fe4a-4611-9fbf-01444afb8720": {
+          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
+        },
+        "6aac3c12-4427-43d1-877c-727d0665ab49": {
+          "description": "Phân tách một hình khối thành dạng chuỗi lặp lại lớn nhất của hình đó."
+        },
+        "6dbab2fb-7a17-4269-885e-84768be03a1f": {
+          "description": "Tạo chương trình vẽ các hình khối phức tạp bằng cách lặp lại các chuỗi đơn giản."
+        },
+        "57f261f3-7603-47fc-b704-9d99a4c4c00a": {
+          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
+        },
+        "066b586a-0b6b-4a9f-875d-ce788d7f2197": {
+          "description": "Phân tách một hình khối thành dạng chuỗi lặp lại lớn nhất của hình đó."
+        },
+        "dc83123d-d493-40aa-a543-9daa1421c2c8": {
+          "description": "Tạo chương trình vẽ các hình khối phức tạp bằng cách lặp lại các chuỗi đơn giản."
+        },
         "bd575116-1370-4f4c-bc5a-a81472d6ab61": {
           "description": "Tạo các nhân vật mới và gán cho họ trang phục và hành vi."
+        },
+        "33b4a09f-5e7c-4e05-84e6-414b2424ef68": {
+          "description": "Xác định lý do tại sao mọi người chia sẻ thông tin về bản thân trên mạng."
+        },
+        "c89aa3e0-f0ba-4188-b2b3-39731a6d0fac": {
+          "description": "Giải thích sự khác biệt giữa thông tin cá nhân và riêng tư."
+        },
+        "ffeaa29c-8d0a-47c0-be5b-275f8a01e138": {
+          "description": "Giải thích tại sao việc chia sẻ thông tin riêng tư trên mạng có rủi ro."
+        },
+        "c217a50f-4aa2-4eb7-998d-7d06b38bdd93": {
+          "description": "Hãy chọn thông tin về bản thân có thể chia sẻ trực tuyến."
         },
         "5d061773-3d1d-4dc1-866b-66a878b9b5e4": {
           "description": "Xác định lợi ích của việc sử dụng cấu trúc vòng lặp thay vì lặp lại thủ công."
@@ -320,11 +494,17 @@
         "c94bf0ed-de3d-428d-b6af-f3d9283d6b81": {
           "description": "Phân biệt các lệnh cần lặp lại trong vòng lặp và các lệnh cần dùng riêng."
         },
+        "da653a73-7c1c-4402-ab24-e14e4adf72d1": {
+          "description": "Đếm số lần lặp lại hành động và biểu diễn dưới dạng vòng lặp."
+        },
         "5b77c883-5479-4cfe-a31a-605957dd083d": {
           "description": "Chia các nhiệm vụ phức tạp thành các phần nhỏ hơn có thể lặp lại."
         },
         "cc7b3a7a-21b5-4450-9b38-e85bb5c378bc": {
           "description": "Học cách lập kế hoạch trước cho công việc đang cần hoàn thành."
+        },
+        "63070ef2-2aab-4493-a65f-7516e7aadb98": {
+          "description": "Giải thích ảnh hưởng do giới hạn của hệ thống đến thiết kế dự án."
         },
         "45927b72-922a-4845-8b40-2458a92372f5": {
           "description": "Mô tả cách thỏa hiệp để giúp dự án đi đúng hướng và truyền cảm hứng sáng tạo."

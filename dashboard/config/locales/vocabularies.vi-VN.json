@@ -199,6 +199,16 @@
           "word": "Học máy",
           "definition": "Cách máy tính nhận ra mẫu và đưa ra quyết định mà không cần được lập trình cụ thể"
         },
+        "code/poem-art/unversioned": {
+          "word": "Mã"
+        },
+        "event/poem-art/unversioned": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "program/poem-art/unversioned": {
+          "word": "Chương trình"
+        },
         "event/outbreak/unversioned": {
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
@@ -348,6 +358,10 @@
           "word": "Lập trình",
           "definition": "Đó là nghệ thuật sáng tạo chương trình."
         },
+        "persistence/courseb/2021": {
+          "word": "Sự kiên trì",
+          "definition": "Cố gắng hết lần này đến lần khác, ngay cả khi tình huống vô cùng khó khăn."
+        },
         "loop/courseb/2021": {
           "word": "Vòng lặp",
           "definition": "Hành động lặp đi lặp lại một việc."
@@ -470,6 +484,13 @@
           "word": "Lập trình",
           "definition": "Đó là nghệ thuật sáng tạo chương trình."
         },
+        "frustrated/coursed/2021": {
+          "word": "Bực bội"
+        },
+        "persistence/coursed/2021": {
+          "word": "Sự kiên trì",
+          "definition": "Cố gắng hết lần này đến lần khác, ngay cả khi tình huống vô cùng khó khăn."
+        },
         "event/coursed/2021": {
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
@@ -536,6 +557,7 @@
           "definition": "Nhãn cho một phần thông tin dùng trong chương trình."
         },
         "prompt/express/2021": {
+          "word": "lời nhắc",
           "definition": "Thông báo trên màn hình máy tính chờ người dùng nhập dữ liệu đầu vào."
         },
         "for_loop/express/2021": {
@@ -594,6 +616,10 @@
           "word": "Lập trình",
           "definition": "Đó là nghệ thuật sáng tạo chương trình."
         },
+        "persistence/pre-express/2021": {
+          "word": "Sự kiên trì",
+          "definition": "Cố gắng hết lần này đến lần khác, ngay cả khi tình huống vô cùng khó khăn."
+        },
         "loop/pre-express/2021": {
           "word": "Vòng lặp",
           "definition": "Hành động lặp đi lặp lại một việc."
@@ -609,6 +635,10 @@
         "behavior/coursee/2021": {
           "word": "Hành vi",
           "definition": "Hành động mà nhân vật thực hiện liên tục cho đến khi được yêu cầu dừng lại."
+        },
+        "algorithm/coursee/2021": {
+          "word": "thuật toán",
+          "definition": "Danh sách các bước để hoàn thành nhiệm vụ."
         },
         "sprite/coursee/2021": {
           "word": "Nhân vật",
