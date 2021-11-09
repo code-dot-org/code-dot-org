@@ -3331,6 +3331,7 @@ class ScriptTest < ActiveSupport::TestCase
     end
 
     test 'can copy a standalone unit into a unit group' do
+      UnitGroup.any_instance.expects(:write_serialization).once
       cloned_unit = @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
       assert_equal 2, @unit_group.default_units.count
       assert_equal 'coursename2-2021', @unit_group.default_units[1].name
