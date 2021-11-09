@@ -6249,6 +6249,9 @@ th:
             lesson-1:
               name: ภาพรวม
         csa-u6-dev:
+          lessons:
+            lesson-17:
+              name: แผงหน้าปัด
           lesson_groups:
             lessonGroup-3:
               display_name: โปรเจกต์
@@ -6260,6 +6263,10 @@ th:
           lesson_groups:
             lessonGroup-3:
               display_name: โปรเจกต์
+        poetry:
+          lessons:
+            lesson-7:
+              name: เงื่อนไข
         spelling-bee:
           lessons:
             lesson-1:
