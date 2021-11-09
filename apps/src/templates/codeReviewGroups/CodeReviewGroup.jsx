@@ -19,7 +19,7 @@ export default function CodeReviewGroup({
     <div style={styles.groupContainer}>
       <div style={styles.headerContainer}>
         <input
-          value={name}
+          value={name || ''}
           style={styles.nameInput}
           onChange={handleNameUpdate}
           placeholder={i18n.enterGroupName()}
@@ -45,7 +45,7 @@ export default function CodeReviewGroup({
 CodeReviewGroup.propTypes = {
   droppableId: PropTypes.string.isRequired,
   members: PropTypes.array.isRequired,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   onNameUpdate: PropTypes.func.isRequired,
   onDelete: PropTypes.func.isRequired
 };

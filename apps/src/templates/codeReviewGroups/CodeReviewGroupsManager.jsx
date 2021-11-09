@@ -32,24 +32,35 @@ export default function CodeReviewGroupsManager({initialGroups}) {
 
   const onGroupDelete = droppableId => {
     // First, take all group members from deleted group and put them in unassigned group
-    const updatedUnassignedGroup = unassignAllFromGroup(droppableId);
+    const updatedUnassignedGroup = unassignAllFromGroup(
+      getUnassignedGroup(),
+      droppableId
+    );
     const updatedGroups = updateGroups(groups, [updatedUnassignedGroup]);
 
     setGroups(updatedGroups.filter(group => group.droppableId !== droppableId));
   };
 
-  // we need a method that iterates through all assigned groups,
-  // takes all of their members and puts them in the unassigned group,
-  // empties the member list for all assigned groups,
-  // and sets state to this new list of groups.
+  const unassignAll = () => {
+    let updatedUnassignedGroup = {...getUnassignedGroup()};
+    getAssignedGroups().forEach(group => {
+      updatedUnassignedGroup = unassignAllFromGroup(
+        updatedUnassignedGroup,
+        group.droppableId
+      );
+    });
 
-  // currently, this takes a group that we want to move all of the members to unassigned,
-  // and returns the updated unassigned group with the new members.
-  // it does not remove the members from the provided group.
-  const unassignAllFromGroup = droppableId => {
-    const updatedUnassignedGroup = {...getUnassignedGroup()};
-    const unassignedGroup = getGroup(droppableId);
-    updatedUnassignedGroup.members.push(...unassignedGroup.members);
+    const updatedAssignedGroups = getAssignedGroups().map(group => ({
+      ...group,
+      members: []
+    }));
+    setGroups([...updatedAssignedGroups, updatedUnassignedGroup]);
+  };
+
+  const unassignAllFromGroup = (existingUnassignedGroup, droppableId) => {
+    const updatedUnassignedGroup = {...existingUnassignedGroup};
+    const groupBeingUnassigned = getGroup(droppableId);
+    updatedUnassignedGroup.members.push(...groupBeingUnassigned.members);
 
     return updatedUnassignedGroup;
   };
@@ -96,7 +107,10 @@ export default function CodeReviewGroupsManager({initialGroups}) {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div style={styles.dragAndDropContainer}>
-        <UnassignedStudentsPanel unassignedGroup={getUnassignedGroup()} />
+        <UnassignedStudentsPanel
+          unassignedGroup={getUnassignedGroup()}
+          onUnassignAllClick={unassignAll}
+        />
         <AssignedStudentsPanel
           groups={getAssignedGroups()}
           onCreateGroupClick={() => {

@@ -6,7 +6,10 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabButton from '@cdo/apps/javalab/JavalabButton';
 import StudentGroup from './StudentGroup';
 
-export default function UnassignedStudentsPanel({unassignedGroup}) {
+export default function UnassignedStudentsPanel({
+  unassignedGroup,
+  onUnassignAllClick
+}) {
   // TO DO: implement unassigning students and style
   // https://codedotorg.atlassian.net/browse/CSA-1028
   return (
@@ -14,7 +17,7 @@ export default function UnassignedStudentsPanel({unassignedGroup}) {
       <div style={styles.header}>
         <span>{i18n.unassignedStudents()}</span>
         <JavalabButton
-          onClick={() => {}}
+          onClick={onUnassignAllClick}
           icon={<FontAwesome icon="times" className="fa" />}
           text={i18n.unassignAll()}
           style={styles.button}
@@ -32,7 +35,8 @@ export default function UnassignedStudentsPanel({unassignedGroup}) {
 }
 
 UnassignedStudentsPanel.propTypes = {
-  unassignedGroup: PropTypes.object.isRequired
+  unassignedGroup: PropTypes.object.isRequired,
+  onUnassignAllClick: PropTypes.func.isRequired
 };
 
 export const HEADER_STYLE = {
