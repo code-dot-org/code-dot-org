@@ -8,8 +8,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-11 00:29:11 UTC",
+    "serialized_at": "2021-10-25 22:54:52 UTC",
     "published_state": "beta",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csa3-exemplars"
     }
@@ -1712,6 +1713,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L2-2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1733,6 +1737,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L3-2 Exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1754,6 +1761,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L4-2 Placeholder"
+        ]
       },
       "bonus": false,
       "seeding_key": {

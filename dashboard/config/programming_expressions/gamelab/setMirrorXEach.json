@@ -2,7 +2,9 @@
   "func": "setMirrorXEach",
   "category": "Groups",
   "paletteParams": [
-    "dir"
+    {
+      "name": "dir"
+    }
   ],
   "params": [
     "-1"

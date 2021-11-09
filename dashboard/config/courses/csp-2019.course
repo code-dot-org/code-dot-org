@@ -11,6 +11,7 @@
     "csppostap-2019"
   ],
   "published_state": "stable",
+  "instruction_type": "teacher_led",
   "properties": {
     "family_name": "csp",
     "has_verified_resources": true,

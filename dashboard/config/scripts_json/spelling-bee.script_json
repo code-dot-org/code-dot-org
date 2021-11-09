@@ -4,16 +4,20 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true,
       "curriculum_umbrella": "CSC",
       "has_verified_resources": true,
-      "version_year": "2021",
-      "is_course": true
+      "is_course": true,
+      "is_migrated": true,
+      "tts": true,
+      "version_year": "2021"
     },
     "new_name": null,
     "family_name": "spelling-bee",
-    "serialized_at": "2021-10-13 22:42:41 UTC",
+    "serialized_at": "2021-11-03 16:54:27 UTC",
     "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "spelling-bee"
     }
@@ -614,8 +618,8 @@
       "url": "https://docs.google.com/presentation/d/1WFZy1MO89Tx6gk1_K6NV4YrMNMKHEy5rbW9bKqw_Bs4/edit?usp=sharing",
       "key": "spelling_with_the_bee",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "spelling_with_the_bee"
@@ -626,8 +630,8 @@
       "url": "https://docs.google.com/document/d/18AsuOZcLliSa3wF9xS1glgirm6EQ2WgLWgGry2QKGQo/edit",
       "key": "warm_up_spelling_with_the_bee_-_worksheet",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "warm_up_spelling_with_the_bee_-_worksheet"
@@ -638,8 +642,8 @@
       "url": "https://docs.google.com/document/d/1rkI8TRw-8xN7K-8EiVfBgm_a9evB_vaKh6fZyu38j0k/edit",
       "key": "wrap_up_spelling_with_the_bee_-_worksheet",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "wrap_up_spelling_with_the_bee_-_worksheet"
@@ -717,6 +721,20 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "K.RF.1.b"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "K.RF.1.d"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-10"
       }
@@ -733,20 +751,6 @@
         "lesson.key": "lesson-1",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "K.RF.1.b"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "ccela",
-        "standard.shortcode": "K.RF.1.d"
       }
     }
   ],

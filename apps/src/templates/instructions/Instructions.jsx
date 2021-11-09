@@ -15,7 +15,6 @@ import i18n from '@cdo/locale';
  */
 export default class Instructions extends React.Component {
   static propTypes = {
-    // TODO: make instructions required?
     instructions: PropTypes.string,
     imgURL: PropTypes.string,
     authoredHints: PropTypes.element,

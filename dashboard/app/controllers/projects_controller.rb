@@ -267,7 +267,7 @@ class ProjectsController < ApplicationController
   private def initial_data
     data = {
       name: 'Untitled Project',
-      level: polymorphic_url([params[:key], 'project_projects'])
+      level: polymorphic_url([params[:key].to_sym, :project_projects])
     }
     default_image_url = STANDALONE_PROJECTS[params[:key]][:default_image_url]
     data[:thumbnailUrl] = default_image_url if default_image_url
@@ -324,7 +324,7 @@ class ProjectsController < ApplicationController
       disallowed_html_tags: disallowed_html_tags
     )
 
-    if params[:key] == 'artist'
+    if ['artist', 'spritelab'].include? params[:key]
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
     end
 

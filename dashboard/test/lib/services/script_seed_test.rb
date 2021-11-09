@@ -28,7 +28,7 @@ module Services
 
       filename = File.join(self.class.fixture_path, 'test-serialize-seeding-json.script_json')
       # Uncomment the following line to update test-serialize-seeding-json.script_json
-      #File.write(filename, ScriptSeed.serialize_seeding_json(script))
+      # File.write(filename, ScriptSeed.serialize_seeding_json(script))
 
       expected = JSON.parse(File.read(filename))
       actual = JSON.parse(ScriptSeed.serialize_seeding_json(script))
@@ -302,12 +302,37 @@ module Services
 
     test 'seed updates levels_script_levels' do
       script = create_script_tree
-      new_level = create :level
+      # give the new level a level key that will appear after the existing
+      # level keys in the sort order.
+      new_level = create :level, name: 'xyz'
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         updated_script_level = script.script_levels.first
         updated_script_level.add_variant(new_level)
         assert_equal 2, script.script_levels.first.levels.count
+        level_keys = script.script_levels.first.levels.map(&:key)
+        assert_equal level_keys, level_keys.sort
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      assert_equal 2, script.script_levels.first.levels.count
+    end
+
+    test 'seed updates levels_script_levels when level keys are out of order' do
+      script = create_script_tree
+      # give the new level a level key that will appear before the existing
+      # level keys in the sort order.
+      new_level = create :level, name: 'abc'
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        updated_script_level = script.script_levels.first
+        updated_script_level.add_variant(new_level)
+        assert_equal 2, script.script_levels.first.levels.count
+        level_keys = script.script_levels.first.levels.map(&:key)
+        refute_equal level_keys, level_keys.sort
       end
 
       ScriptSeed.seed_from_json(json)
@@ -401,6 +426,7 @@ module Services
         lesson = script.lessons.first
         lesson.vocabularies.first.update!(definition: 'updated definition')
         key = Vocabulary.sanitize_key("#{lesson.name}-vocab-3")
+        # uniquify_key always produces a key later in the sort order
         key = Vocabulary.uniquify_key(key, script.course_version.id)
         lesson.vocabularies.create(
           word: 'new word',
@@ -408,6 +434,43 @@ module Services
           definition: "new definition",
           course_version: script.course_version
         )
+        vocab_keys = lesson.vocabularies.map(&:key)
+        assert_equal vocab_keys, vocab_keys.sort
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      lesson = script.lessons.first
+      assert_equal(
+        ['word', 'word', 'new word'],
+        lesson.vocabularies.map(&:word)
+      )
+      assert_equal(
+        ['updated definition', 'definition', 'new definition'],
+        lesson.vocabularies.map(&:definition)
+      )
+    end
+
+    test 'seed updates lesson vocabularies with out of order keys' do
+      script = create_script_tree
+      CourseOffering.add_course_offering(script)
+      assert script.course_version
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        lesson.vocabularies.first.update!(definition: 'updated definition')
+        # choose a key earlier in the sort order
+        key = 'abc'
+        lesson.vocabularies.create(
+          word: 'new word',
+          key: key,
+          definition: "new definition",
+          course_version: script.course_version
+        )
+        vocab_keys = lesson.vocabularies.map(&:key)
+        refute_equal vocab_keys, vocab_keys.sort
       end
 
       ScriptSeed.seed_from_json(json)
@@ -430,12 +493,42 @@ module Services
 
       # create the programming expression outside of the rollback block, because unlike vocab
       # or resources, the seed process will not re-create the programming expression for us.
-      new_programming_expression = create :programming_expression, key: 'new-block'
+      # choose a key later in the sort order than existing keys.
+      new_programming_expression = create :programming_expression, key: 'xyz'
 
       expected_keys = [
         script.lessons.first.programming_expressions.last.key,
         new_programming_expression.key
       ]
+      assert_equal expected_keys, expected_keys.sort
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        lesson.programming_expressions.first.destroy
+        lesson.programming_expressions.push(new_programming_expression)
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      lesson = script.lessons.first
+      assert_equal expected_keys, lesson.programming_expressions.map(&:key)
+    end
+
+    test 'seed updates lesson programming expressions with out of order keys' do
+      script = create_script_tree
+
+      # create the programming expression outside of the rollback block, because unlike vocab
+      # or resources, the seed process will not re-create the programming expression for us.
+      # choose a key earlier in the sort order than existing keys.
+      new_programming_expression = create :programming_expression, key: 'abc'
+
+      expected_keys = [
+        script.lessons.first.programming_expressions.last.key,
+        new_programming_expression.key
+      ]
+      refute_equal expected_keys, expected_keys.sort
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         lesson = script.lessons.first
@@ -456,7 +549,11 @@ module Services
 
       # create the standard outside of the rollback block, because unlike vocab
       # or resources, the seed process will not re-create the standard for us.
-      new_standard = create :standard, description: 'New Standard'
+      #
+      # lesson standards are sorted by seeding_key. give the new standard a
+      # framework shortcode and shortcode that will make it appear after the
+      # existing standards in the sort order.
+      new_standard = create :standard, framework: @framework, shortcode: 'xyz', description: 'New Standard'
 
       expected_descriptions = [
         script.lessons.first.standards.last.description,
@@ -467,6 +564,8 @@ module Services
         lesson = script.lessons.first
         lesson.standards.first.destroy
         lesson.standards.push(new_standard)
+        shortcodes = lesson.standards.map(&:shortcode)
+        assert_equal shortcodes, shortcodes.sort
       end
 
       ScriptSeed.seed_from_json(json)
@@ -477,12 +576,49 @@ module Services
       assert_equal expected_descriptions, lesson.standards.map(&:description)
     end
 
+    test 'seed reorders existing lesson standards by key' do
+      script = create_script_tree
+
+      # give the new standard a shortcode that will make it appear before the
+      # existing standards in the sort order.
+      new_standard = create :standard, framework: @framework, shortcode: 'abc', description: 'New Standard'
+
+      expected_shortcodes = [
+        new_standard.shortcode,
+        script.lessons.first.standards.last.shortcode,
+      ]
+
+      expected_descriptions = [
+        new_standard.description,
+        script.lessons.first.standards.last.description,
+      ]
+
+      _script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        lesson.standards.first.destroy
+        lesson.standards.push(new_standard)
+        shortcodes = lesson.standards.map(&:shortcode)
+        refute_equal shortcodes, shortcodes.sort
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      lesson = script.lessons.first
+      assert_equal expected_shortcodes, lesson.standards.map(&:shortcode)
+      assert_equal expected_descriptions, lesson.standards.map(&:description)
+    end
+
     test 'seed updates lesson opportunity standards' do
       script = create_script_tree
 
       # create the standard outside of the rollback block, because unlike vocab
       # or resources, the seed process will not re-create the standard for us.
-      new_standard = create :standard, description: 'New Standard'
+      #
+      # opportunity standards are sorted by seeding_key. give the new standard
+      # a framework shortcode and shortcode that will make it appear after the
+      # existing standards in the sort order.
+      new_standard = create :standard, framework: @framework, shortcode: 'xyz', description: 'New Standard'
 
       expected_descriptions = [
         script.lessons.first.opportunity_standards.last.description,
@@ -493,6 +629,8 @@ module Services
         lesson = script.lessons.first
         lesson.opportunity_standards.first.destroy
         lesson.opportunity_standards.push(new_standard)
+        shortcodes = lesson.opportunity_standards.map(&:shortcode)
+        assert_equal shortcodes, shortcodes.sort
       end
 
       ScriptSeed.seed_from_json(json)
@@ -500,6 +638,46 @@ module Services
 
       assert_script_trees_equal script_with_changes, script
       lesson = script.lessons.first
+      assert_equal expected_descriptions, lesson.opportunity_standards.map(&:description)
+    end
+
+    test 'seed does not reorder existing opportunity standards by key' do
+      script = create_script_tree
+
+      # give the new standard a shortcode that will make it appear before the
+      # existing standards in the sort order.
+      new_standard = create :standard, framework: @framework, shortcode: 'abc', description: 'New Standard'
+
+      # when the order of the serialized lessons_opportunity_standards changes,
+      # the sort order of opportunity standards in the database is preserved.
+      # strangely, the same is not true for lessons_standards. this may be
+      # related to the fact that LessonsOpportunityStandard contains an id
+      # column, while LessonsStandard does not.
+
+      expected_shortcodes = [
+        script.lessons.first.opportunity_standards.last.shortcode,
+        new_standard.shortcode,
+      ]
+
+      expected_descriptions = [
+        script.lessons.first.opportunity_standards.last.description,
+        new_standard.description,
+      ]
+
+      script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
+        lesson = script.lessons.first
+        lesson.opportunity_standards.first.destroy
+        lesson.opportunity_standards.push(new_standard)
+        shortcodes = lesson.opportunity_standards.map(&:shortcode)
+        refute_equal shortcodes, shortcodes.sort
+      end
+
+      ScriptSeed.seed_from_json(json)
+      script = Script.with_seed_models.find(script.id)
+
+      assert_script_trees_equal script_with_changes, script
+      lesson = script.lessons.first
+      assert_equal expected_shortcodes, lesson.opportunity_standards.map(&:shortcode)
       assert_equal expected_descriptions, lesson.opportunity_standards.map(&:description)
     end
 
@@ -651,7 +829,7 @@ module Services
     test 'seed deletes levels_script_levels' do
       script = create_script_tree
       old_level = script.script_levels.first.levels.first
-      new_level = create :level, level_num: 'custom'
+      new_level = create :level
       script.script_levels.first.add_variant(new_level)
       original_counts = get_counts
 
@@ -1106,7 +1284,11 @@ module Services
       num_standards_per_lesson: 2,
       with_unit_group: false
     )
-      name_prefix ||= SecureRandom.uuid
+      # Avoid randomly generated characters at the start of the name prefix,
+      # to help avoid flaky tests. The name_prefix gets used in various fields,
+      # and the sort order of those fields can affect the order of the
+      # serialized output.
+      name_prefix ||= "uuid-#{SecureRandom.uuid}"
       # TODO: how can this be simplified and/or moved into factories.rb?
       script = create(
         :script,

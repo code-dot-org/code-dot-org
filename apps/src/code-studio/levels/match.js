@@ -1,7 +1,7 @@
 /* global jQuery, CDOSounds */
 
 import React from 'react';
-import {MatchErrorDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {LegacyMatchErrorDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
 import {registerGetResult, onAnswerChanged} from './codeStudioLevels';
 
 jQuery.fn.swap = function(b) {
@@ -82,7 +82,7 @@ export default class Match {
     return {
       response: response,
       result: !wrongAnswer,
-      errorDialog: wrongAnswer ? <MatchErrorDialog /> : null,
+      errorDialog: wrongAnswer ? <LegacyMatchErrorDialog /> : null,
       valid
     };
   }

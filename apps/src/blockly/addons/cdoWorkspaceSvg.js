@@ -1,4 +1,5 @@
 import GoogleBlockly from 'blockly/core';
+import {ToolboxType} from '../constants';
 
 export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   registerGlobalVariables(variableList) {
@@ -16,7 +17,30 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     }
   }
 
-  /** Add trashcan to flyout instead of block canvas
+  /**
+   * The way toolboxes work in Blockly is kind of confusing, this helper function
+   * is intended to make it easier to tell what kind of toolbox is in use.
+   * Part of the issue is that the word "toolbox" is slightly overloaded to encompass
+   * both Toolbox and Flyout objects. In this description I use lower-case toolbox
+   * to refer to the area of the workspace where blocks come from and upper-case
+   * Toolbox to refer to instances of the Toolbox class.
+   * There are two kinds of toolboxes we use in levels: categorized and uncategorized.
+   * Categorized toolboxes are instances of the Toolbox class. When a category
+   * is selected, the Toolbox opens a Flyout that displays the blocks in that category.
+   * Uncategorized toolboxes are instances of the Flyout class that just display
+   * all of the available blocks.
+   */
+  getToolboxType() {
+    if (this.flyout_) {
+      return ToolboxType.UNCATEGORIZED;
+    } else if (this.toolbox_) {
+      return ToolboxType.CATEGORIZED;
+    } else {
+      return ToolboxType.UNKNOWN;
+    }
+  }
+
+  /** Instantiate trashcan, but don't add it to the workspace SVG.
    * @override
    */
   addTrashcan() {
@@ -26,8 +50,23 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     /** @type {Blockly.Trashcan} */
     this.trashcan = new Blockly.Trashcan(this);
     var svgTrashcan = this.trashcan.createDom();
-    this.flyout_.svgGroup_.appendChild(svgTrashcan);
-    this.hideTrashcan();
+
+    switch (this.getToolboxType()) {
+      case ToolboxType.UNCATEGORIZED: {
+        const trashcanHolder = Blockly.utils.dom.createSvgElement('svg', {
+          id: 'trashcanHolder',
+          height: 125,
+          style: 'position: absolute; display: none;'
+        });
+        trashcanHolder.appendChild(svgTrashcan);
+        this.flyout_.svgGroup_.appendChild(trashcanHolder);
+        break;
+      }
+      case ToolboxType.CATEGORIZED:
+        // The Toolbox will add the trashcan to its SVG when its DOM element
+        // is created (see CdoToolbox.js).
+        break;
+    }
   }
   addUnusedBlocksHelpListener(helpClickFunc) {
     Blockly.mainBlockSpace.addChangeListener(Blockly.Events.disableOrphans);
@@ -52,8 +91,12 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     return Blockly.mainBlockSpace.getMetrics().toolboxWidth;
   }
 
-  // Use visibility:hidden not display:none to hide the trashcan so that it still takes up space, which is important
-  // for how the lid opening works.
+  /**
+   * Use visibility:hidden not display:none for the toolbox contents so that
+   * Blockly's metrics calculations for toolbox dimensions still work as expected.
+   * Use display:none not visibility:hidden for the trashcan element so that
+   * it doesn't interfere with click events on the toolbox categories.
+   */
   hideTrashcan() {
     /**
      * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
@@ -71,11 +114,13 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
      * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
      */
     Array.prototype.forEach.call(
-      document.querySelectorAll('.blocklyTrash'),
+      document.querySelectorAll('.blocklyToolboxContents'),
       function(x) {
-        x.style.visibility = 'hidden';
+        x.style.visibility = 'visible';
       }
     );
+
+    document.querySelector('#trashcanHolder').style.display = 'none';
   }
 
   isReadOnly() {
@@ -99,11 +144,13 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
      * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
      */
     Array.prototype.forEach.call(
-      document.querySelectorAll('.blocklyTrash'),
+      document.querySelectorAll('.blocklyToolboxContents'),
       function(x) {
-        x.style.visibility = 'visible';
+        x.style.visibility = 'hidden';
       }
     );
+
+    document.querySelector('#trashcanHolder').style.display = 'block';
   }
   traceOn() {} // TODO
 }

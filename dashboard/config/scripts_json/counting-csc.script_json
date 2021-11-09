@@ -4,17 +4,21 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true,
-      "hideable_lessons": true,
       "curriculum_umbrella": "CSC",
+      "hideable_lessons": true,
       "include_student_lesson_plans": true,
-      "version_year": "2021",
-      "is_course": true
+      "is_course": true,
+      "is_migrated": true,
+      "tts": true,
+      "version_year": "2021"
     },
     "new_name": null,
     "family_name": "counting-csc",
-    "serialized_at": "2021-10-13 22:41:38 UTC",
+    "serialized_at": "2021-11-03 17:13:56 UTC",
     "published_state": "in_development",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "counting-csc"
     }
@@ -771,8 +775,8 @@
       "url": "https://docs.google.com/presentation/d/1aW3JWOJQtHjM3GJQJQ79F045mTJEF6s_pCFrMY1o2Ac/edit",
       "key": "counting_with_laurel",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "counting_with_laurel"
@@ -783,8 +787,8 @@
       "url": "https://docs.google.com/document/d/1I7CVVUQ-yCnbfArdaetZbaKoF29NyizNjo5OkX983rM/edit",
       "key": "warm-up_counting_with_laurel_worksheet",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "warm-up_counting_with_laurel_worksheet"
@@ -795,8 +799,8 @@
       "url": "https://docs.google.com/document/d/1XwbuYmCf_f50TgfsU1cFLNlFe5lxnej89DdZWE9ghN0/edit",
       "key": "wrap-up_counting_with_laurel_-_worksheet",
       "properties": {
-        "type": "Activity Guide",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Activity Guide"
       },
       "seeding_key": {
         "resource.key": "wrap-up_counting_with_laurel_-_worksheet"
@@ -870,13 +874,13 @@
   ],
   "objectives": [
     {
-      "key": "a4af9688-b756-4200-a331-0ea0af87c057",
+      "key": "1e9896d4-2b9f-4b4c-9ab6-5402214b30c0",
       "properties": {
-        "description": "Count up to 10 and represent the value with the correct numeral."
+        "description": "Break down a long sequence of instructions into repeatable sequences."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "objective.key": "a4af9688-b756-4200-a331-0ea0af87c057"
+        "objective.key": "1e9896d4-2b9f-4b4c-9ab6-5402214b30c0"
       }
     },
     {
@@ -890,17 +894,31 @@
       }
     },
     {
-      "key": "1e9896d4-2b9f-4b4c-9ab6-5402214b30c0",
+      "key": "a4af9688-b756-4200-a331-0ea0af87c057",
       "properties": {
-        "description": "Break down a long sequence of instructions into repeatable sequences."
+        "description": "Count up to 10 and represent the value with the correct numeral."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "objective.key": "1e9896d4-2b9f-4b4c-9ab6-5402214b30c0"
+        "objective.key": "a4af9688-b756-4200-a331-0ea0af87c057"
       }
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "K.CC.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "ccmath",
+        "standard.shortcode": "K.OA.1"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -920,20 +938,6 @@
         "lesson.key": "lesson-1",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "K.CC.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "ccmath",
-        "standard.shortcode": "K.OA.1"
       }
     }
   ],

@@ -4,13 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "ECS Support"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:59 UTC",
+    "serialized_at": "2021-11-02 14:29:47 UTC",
     "published_state": "beta",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "ecs-unit2"
     }
@@ -121,21 +124,167 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "d83b577a-10d4-4242-824e-582c5657c58e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d83b577a-10d4-4242-824e-582c5657c58e",
+        "lesson.key": "Getting Started",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit2"
+      }
+    },
+    {
+      "key": "1cfc32a6-9f45-4682-b560-876a968af9f7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1cfc32a6-9f45-4682-b560-876a968af9f7",
+        "lesson.key": "Intro to Unit 2",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit2"
+      }
+    },
+    {
+      "key": "986e0012-e86b-4ebe-8a6d-664c59709384",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "986e0012-e86b-4ebe-8a6d-664c59709384",
+        "lesson.key": "Teaching Strategies",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit2"
+      }
+    },
+    {
+      "key": "b462ef8a-f20c-49ad-9d57-4b19cbb3b486",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b462ef8a-f20c-49ad-9d57-4b19cbb3b486",
+        "lesson.key": "Lesson Overviews",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit2"
+      }
+    },
+    {
+      "key": "b5822f62-e0fa-40ff-a51e-f63f96c8c7c0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b5822f62-e0fa-40ff-a51e-f63f96c8c7c0",
+        "lesson.key": "Unit 2 Challenge",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit2"
+      }
+    },
+    {
+      "key": "513ed027-42b9-4414-b60e-73fa1a057dfa",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "513ed027-42b9-4414-b60e-73fa1a057dfa",
+        "lesson.key": "Close & Next Steps",
+        "lesson_group.key": "",
+        "script.name": "ecs-unit2"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "19c5a9da-738e-4658-a155-510369af4a35",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "19c5a9da-738e-4658-a155-510369af4a35",
+        "lesson_activity.key": "d83b577a-10d4-4242-824e-582c5657c58e"
+      }
+    },
+    {
+      "key": "e355960c-4182-4589-a7ab-767c685034e5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e355960c-4182-4589-a7ab-767c685034e5",
+        "lesson_activity.key": "1cfc32a6-9f45-4682-b560-876a968af9f7"
+      }
+    },
+    {
+      "key": "de6c94ab-0c87-469f-a999-2d56b806d64b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b",
+        "lesson_activity.key": "986e0012-e86b-4ebe-8a6d-664c59709384"
+      }
+    },
+    {
+      "key": "acde6768-5131-4685-b3d3-a1acd995468b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b",
+        "lesson_activity.key": "b462ef8a-f20c-49ad-9d57-4b19cbb3b486"
+      }
+    },
+    {
+      "key": "dc96266a-7a6a-4c3b-8ad4-a2909fab983f",
+      "position": 1,
+      "properties": {
+        "progression_name": "ECS Unit 2 Challenge Selection"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc96266a-7a6a-4c3b-8ad4-a2909fab983f",
+        "lesson_activity.key": "b5822f62-e0fa-40ff-a51e-f63f96c8c7c0"
+      }
+    },
+    {
+      "key": "894ae23d-a173-435c-9e6a-55fe96478e9c",
+      "position": 2,
+      "properties": {
+        "name": "ECS Unit 2 Challenge Submission",
+        "progression_name": "ECS Unit 2 Challenge Submission"
+      },
+      "seeding_key": {
+        "activity_section.key": "894ae23d-a173-435c-9e6a-55fe96478e9c",
+        "lesson_activity.key": "b5822f62-e0fa-40ff-a51e-f63f96c8c7c0"
+      }
+    },
+    {
+      "key": "3a52e93f-8fbe-4263-a904-00ba2d630106",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3a52e93f-8fbe-4263-a904-00ba2d630106",
+        "lesson_activity.key": "513ed027-42b9-4414-b60e-73fa1a057dfa"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECS Phase 3 Welcome"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -144,7 +293,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "19c5a9da-738e-4658-a155-510369af4a35"
       },
       "level_keys": [
         "ECS Phase 3 Welcome"
@@ -153,12 +303,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECS Phase 3 Overview"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -167,7 +314,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "19c5a9da-738e-4658-a155-510369af4a35"
       },
       "level_keys": [
         "ECS Phase 3 Overview"
@@ -176,12 +324,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS tour"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -190,7 +335,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "19c5a9da-738e-4658-a155-510369af4a35"
       },
       "level_keys": [
         "PDECS tour"
@@ -199,12 +345,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PD check your progress"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -213,7 +356,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "19c5a9da-738e-4658-a155-510369af4a35"
       },
       "level_keys": [
         "PD check your progress"
@@ -222,12 +366,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD Unit 2 Outline"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -236,7 +377,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "19c5a9da-738e-4658-a155-510369af4a35"
       },
       "level_keys": [
         "ECSPD Unit 2 Outline"
@@ -245,12 +387,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD P3 Plan"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -259,7 +398,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "19c5a9da-738e-4658-a155-510369af4a35"
       },
       "level_keys": [
         "ECSPD P3 Plan"
@@ -268,12 +408,9 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD Unit2 Connections"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -282,7 +419,8 @@
         ],
         "lesson.key": "Intro to Unit 2",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "e355960c-4182-4589-a7ab-767c685034e5"
       },
       "level_keys": [
         "ECSPD Unit2 Connections"
@@ -291,12 +429,9 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD Unit 2 Lesson Overview"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -305,7 +440,8 @@
         ],
         "lesson.key": "Intro to Unit 2",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "e355960c-4182-4589-a7ab-767c685034e5"
       },
       "level_keys": [
         "ECSPD Unit 2 Lesson Overview"
@@ -314,12 +450,9 @@
     {
       "chapter": 9,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Forum-ECSPD-Unit 2-Teaching Practice"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -328,7 +461,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b"
       },
       "level_keys": [
         "Forum-ECSPD-Unit 2-Teaching Practice"
@@ -337,12 +471,9 @@
     {
       "chapter": 10,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD Unit 2 Growth"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -351,7 +482,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b"
       },
       "level_keys": [
         "ECSPD Unit 2 Growth"
@@ -360,12 +492,9 @@
     {
       "chapter": 11,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD Phase 3 - Unit 2 - Teaching Practice"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -374,7 +503,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b"
       },
       "level_keys": [
         "ECSPD Phase 3 - Unit 2 - Teaching Practice"
@@ -383,12 +513,9 @@
     {
       "chapter": 12,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD Growth Mindset Student Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -397,7 +524,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b"
       },
       "level_keys": [
         "ECSPD Growth Mindset Student Video"
@@ -406,12 +534,9 @@
     {
       "chapter": 13,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD What Is Problem Solving"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -420,7 +545,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b"
       },
       "level_keys": [
         "ECSPD What Is Problem Solving"
@@ -429,12 +555,9 @@
     {
       "chapter": 14,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD Real Life Problem Solving"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -443,7 +566,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b"
       },
       "level_keys": [
         "ECSPD Real Life Problem Solving"
@@ -452,12 +576,9 @@
     {
       "chapter": 15,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD Find Learning Strategy"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -466,7 +587,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b"
       },
       "level_keys": [
         "ECSPD Find Learning Strategy"
@@ -475,12 +597,9 @@
     {
       "chapter": 16,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD strategies"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -489,7 +608,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b"
       },
       "level_keys": [
         "ECSPD strategies"
@@ -498,12 +618,9 @@
     {
       "chapter": 17,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ecs unit 2 introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -512,7 +629,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       },
       "level_keys": [
         "ecs unit 2 introduction"
@@ -521,12 +639,9 @@
     {
       "chapter": 18,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD U2 D 1-2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -535,7 +650,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       },
       "level_keys": [
         "ECSPD U2 D 1-2"
@@ -544,12 +660,9 @@
     {
       "chapter": 19,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD U2 D 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -558,7 +671,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       },
       "level_keys": [
         "ECSPD U2 D 3"
@@ -567,12 +681,9 @@
     {
       "chapter": 20,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD U2 D 4-6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -581,7 +692,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       },
       "level_keys": [
         "ECSPD U2 D 4-6"
@@ -590,12 +702,9 @@
     {
       "chapter": 21,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD U2 D 7-9 Intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -604,7 +713,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       },
       "level_keys": [
         "ECSPD U2 D 7-9 Intro"
@@ -613,12 +723,9 @@
     {
       "chapter": 22,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD U2 D 10-12 Intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -627,7 +734,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       },
       "level_keys": [
         "ECSPD U2 D 10-12 Intro"
@@ -636,12 +744,9 @@
     {
       "chapter": 23,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD Binary Odometer"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -650,7 +755,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       },
       "level_keys": [
         "ECSPD Binary Odometer"
@@ -659,12 +765,9 @@
     {
       "chapter": 24,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U1L5 How the Internet Works - Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -673,7 +776,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       },
       "level_keys": [
         "U1L5 How the Internet Works - Video"
@@ -682,12 +786,9 @@
     {
       "chapter": 25,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD U2 D 13-14 Intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -696,7 +797,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       },
       "level_keys": [
         "ECSPD U2 D 13-14 Intro"
@@ -705,12 +807,9 @@
     {
       "chapter": 26,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD Linear vs Binary Search Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -719,7 +818,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       },
       "level_keys": [
         "ECSPD Linear vs Binary Search Video"
@@ -728,12 +828,9 @@
     {
       "chapter": 27,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD U2 D 15-16 Intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -742,7 +839,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       },
       "level_keys": [
         "ECSPD U2 D 15-16 Intro"
@@ -751,12 +849,9 @@
     {
       "chapter": 28,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD U2L1516 Sorting Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -765,7 +860,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       },
       "level_keys": [
         "ECSPD U2L1516 Sorting Video"
@@ -774,12 +870,9 @@
     {
       "chapter": 29,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD U2 D 17 Intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -788,7 +881,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       },
       "level_keys": [
         "ECSPD U2 D 17 Intro"
@@ -797,12 +891,9 @@
     {
       "chapter": 30,
       "position": 14,
-      "activity_section_position": null,
+      "activity_section_position": 14,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD U2 D 18-21 Intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -811,7 +902,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       },
       "level_keys": [
         "ECSPD U2 D 18-21 Intro"
@@ -820,12 +912,10 @@
     {
       "chapter": 31,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD What is the Challenge"
-        ]
+        "progression": "ECS Unit 2 Challenge Selection"
       },
       "bonus": false,
       "seeding_key": {
@@ -834,7 +924,8 @@
         ],
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "dc96266a-7a6a-4c3b-8ad4-a2909fab983f"
       },
       "level_keys": [
         "ECSPD What is the Challenge"
@@ -843,12 +934,10 @@
     {
       "chapter": 32,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD U2 Challenges"
-        ]
+        "progression": "ECS Unit 2 Challenge Selection"
       },
       "bonus": false,
       "seeding_key": {
@@ -857,7 +946,8 @@
         ],
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "dc96266a-7a6a-4c3b-8ad4-a2909fab983f"
       },
       "level_keys": [
         "ECSPD U2 Challenges"
@@ -866,12 +956,9 @@
     {
       "chapter": 33,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECS Unit 2 Challenge Selection"
-        ],
         "progression": "ECS Unit 2 Challenge Selection"
       },
       "bonus": false,
@@ -881,7 +968,8 @@
         ],
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "dc96266a-7a6a-4c3b-8ad4-a2909fab983f"
       },
       "level_keys": [
         "ECS Unit 2 Challenge Selection"
@@ -890,12 +978,10 @@
     {
       "chapter": 34,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSD3-u5 do the challenge"
-        ]
+        "progression": "ECS Unit 2 Challenge Submission"
       },
       "bonus": false,
       "seeding_key": {
@@ -904,7 +990,8 @@
         ],
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "894ae23d-a173-435c-9e6a-55fe96478e9c"
       },
       "level_keys": [
         "ECSD3-u5 do the challenge"
@@ -913,12 +1000,10 @@
     {
       "chapter": 35,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD3-u2 create your extension"
-        ]
+        "progression": "ECS Unit 2 Challenge Submission"
       },
       "bonus": false,
       "seeding_key": {
@@ -927,7 +1012,8 @@
         ],
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "894ae23d-a173-435c-9e6a-55fe96478e9c"
       },
       "level_keys": [
         "CSPPD3-u2 create your extension"
@@ -936,12 +1022,10 @@
     {
       "chapter": 36,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD3-u2 reflect on challenge"
-        ]
+        "progression": "ECS Unit 2 Challenge Submission"
       },
       "bonus": false,
       "seeding_key": {
@@ -950,7 +1034,8 @@
         ],
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "894ae23d-a173-435c-9e6a-55fe96478e9c"
       },
       "level_keys": [
         "CSPPD3-u2 reflect on challenge"
@@ -959,12 +1044,10 @@
     {
       "chapter": 37,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD3-u2 expectations"
-        ]
+        "progression": "ECS Unit 2 Challenge Submission"
       },
       "bonus": false,
       "seeding_key": {
@@ -973,7 +1056,8 @@
         ],
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "894ae23d-a173-435c-9e6a-55fe96478e9c"
       },
       "level_keys": [
         "CSPPD3-u2 expectations"
@@ -982,12 +1066,9 @@
     {
       "chapter": 38,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECS Unit 2 Challenge Submission"
-        ],
         "progression": "ECS Unit 2 Challenge Submission"
       },
       "bonus": false,
@@ -997,7 +1078,8 @@
         ],
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "894ae23d-a173-435c-9e6a-55fe96478e9c"
       },
       "level_keys": [
         "ECS Unit 2 Challenge Submission"
@@ -1006,12 +1088,9 @@
     {
       "chapter": 39,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD Challenge Reflection"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1020,7 +1099,8 @@
         ],
         "lesson.key": "Close & Next Steps",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "3a52e93f-8fbe-4263-a904-00ba2d630106"
       },
       "level_keys": [
         "ECSPD Challenge Reflection"
@@ -1036,7 +1116,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "19c5a9da-738e-4658-a155-510369af4a35"
       }
     },
     {
@@ -1047,7 +1128,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "19c5a9da-738e-4658-a155-510369af4a35"
       }
     },
     {
@@ -1058,7 +1140,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "19c5a9da-738e-4658-a155-510369af4a35"
       }
     },
     {
@@ -1069,7 +1152,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "19c5a9da-738e-4658-a155-510369af4a35"
       }
     },
     {
@@ -1080,7 +1164,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "19c5a9da-738e-4658-a155-510369af4a35"
       }
     },
     {
@@ -1091,7 +1176,8 @@
         ],
         "lesson.key": "Getting Started",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "19c5a9da-738e-4658-a155-510369af4a35"
       }
     },
     {
@@ -1102,7 +1188,8 @@
         ],
         "lesson.key": "Intro to Unit 2",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "e355960c-4182-4589-a7ab-767c685034e5"
       }
     },
     {
@@ -1113,7 +1200,8 @@
         ],
         "lesson.key": "Intro to Unit 2",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "e355960c-4182-4589-a7ab-767c685034e5"
       }
     },
     {
@@ -1124,7 +1212,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b"
       }
     },
     {
@@ -1135,7 +1224,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b"
       }
     },
     {
@@ -1146,7 +1236,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b"
       }
     },
     {
@@ -1157,7 +1248,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b"
       }
     },
     {
@@ -1168,7 +1260,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b"
       }
     },
     {
@@ -1179,7 +1272,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b"
       }
     },
     {
@@ -1190,7 +1284,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b"
       }
     },
     {
@@ -1201,7 +1296,8 @@
         ],
         "lesson.key": "Teaching Strategies",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "de6c94ab-0c87-469f-a999-2d56b806d64b"
       }
     },
     {
@@ -1212,7 +1308,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       }
     },
     {
@@ -1223,7 +1320,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       }
     },
     {
@@ -1234,7 +1332,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       }
     },
     {
@@ -1245,7 +1344,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       }
     },
     {
@@ -1256,7 +1356,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       }
     },
     {
@@ -1267,7 +1368,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       }
     },
     {
@@ -1278,7 +1380,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       }
     },
     {
@@ -1289,7 +1392,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       }
     },
     {
@@ -1300,7 +1404,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       }
     },
     {
@@ -1311,7 +1416,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       }
     },
     {
@@ -1322,7 +1428,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       }
     },
     {
@@ -1333,7 +1440,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       }
     },
     {
@@ -1344,7 +1452,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       }
     },
     {
@@ -1355,7 +1464,8 @@
         ],
         "lesson.key": "Lesson Overviews",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "acde6768-5131-4685-b3d3-a1acd995468b"
       }
     },
     {
@@ -1366,7 +1476,8 @@
         ],
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "dc96266a-7a6a-4c3b-8ad4-a2909fab983f"
       }
     },
     {
@@ -1377,7 +1488,8 @@
         ],
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "dc96266a-7a6a-4c3b-8ad4-a2909fab983f"
       }
     },
     {
@@ -1388,7 +1500,8 @@
         ],
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "dc96266a-7a6a-4c3b-8ad4-a2909fab983f"
       }
     },
     {
@@ -1399,7 +1512,8 @@
         ],
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "894ae23d-a173-435c-9e6a-55fe96478e9c"
       }
     },
     {
@@ -1410,7 +1524,8 @@
         ],
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "894ae23d-a173-435c-9e6a-55fe96478e9c"
       }
     },
     {
@@ -1421,7 +1536,8 @@
         ],
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "894ae23d-a173-435c-9e6a-55fe96478e9c"
       }
     },
     {
@@ -1432,7 +1548,8 @@
         ],
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "894ae23d-a173-435c-9e6a-55fe96478e9c"
       }
     },
     {
@@ -1443,7 +1560,8 @@
         ],
         "lesson.key": "Unit 2 Challenge",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "894ae23d-a173-435c-9e6a-55fe96478e9c"
       }
     },
     {
@@ -1454,7 +1572,8 @@
         ],
         "lesson.key": "Close & Next Steps",
         "lesson_group.key": "",
-        "script.name": "ecs-unit2"
+        "script.name": "ecs-unit2",
+        "activity_section.key": "3a52e93f-8fbe-4263-a904-00ba2d630106"
       }
     }
   ],
