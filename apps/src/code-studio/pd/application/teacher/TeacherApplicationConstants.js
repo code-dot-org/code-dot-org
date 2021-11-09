@@ -7,8 +7,6 @@ const PROGRAM_CSP =
 const PROGRAM_CSA =
   'Computer Science A (appropriate for 10th - 12th grade, and can be implemented as an AP or non-AP introductory Java programming course)';
 
-const YEAR = '2021-2022';
-
 const styles = {
   indented: {
     marginLeft: 20
@@ -18,7 +16,7 @@ const styles = {
   },
   questionText: {
     fontSize: 14,
-    lineHeight: '20px',
+    lineHeight: 20,
     fontWeight: 'bold'
   },
   checkBoxAfterButtonList: {
@@ -37,4 +35,4 @@ const styles = {
   }
 };
 
-export {PROGRAM_CSD, PROGRAM_CSP, PROGRAM_CSA, YEAR, styles};
+export {PROGRAM_CSD, PROGRAM_CSP, PROGRAM_CSA, styles};
