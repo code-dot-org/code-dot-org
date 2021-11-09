@@ -207,23 +207,31 @@
         },
         "coursea-2021/Programming in Ice Age": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan terus membangunkan kemahiran algoritma berjujukan.",
+          "preparation": "-   Main melalui teka-teki bertujuan mencari mana-mana kawasan bermasalah yang berpotensi untuk kelas anda.\n-   (Pilihan) Pilih beberapa teka-teki untuk dilakukan secara berkumpulan dengan seluruh kelas anda.\n-   Pastikan setiap pelajar mempunyai jurnal renungan.",
           "purpose": "Dalam pelajaran ini, pelajar akan membangunkan kemahiran pengaturcaraan dan penyahpepijatan dengan menggunakan platform komputer. Format teka-teki berasaskan blok ini membantu pelajar mempelajari tentang jujukan dan konsep, tanpa perlu bimbang menyempurnakan sintaks.",
           "student_overview": "Tulis program untuk membantu Scrat mendapatkan buah oak."
         },
         "coursea-2021/Programming with Rey and BB-8": {
           "overview": "Dalam pelajaran **membina kemahiran** ini, pelajar akan menggunakan kemahiran pengaturcaraan yang baharu diperoleh mereka dengan cara yang lebih rumit untuk menavigasi kursus yang sukar dengan BB-8\\_.",
+          "preparation": "-   Main teka-teki yang sepadan dengan pelajaran ini bertujuan mencari mana-mana kawasan masalah yang berpotensi untuk kelas anda.\n-   Semak **\\*Petua Aktiviti Utama Asas CS - Saranan Pelajaran**.\n-   Pastikan setiap pelajar mempunyai Jurnal Renungan.",
+          "purpose": "Bersama matlamat memindahkan pengetahuan, pelajaran ini memberi pelajar persekitaran baharu untuk berlatih kemahiran yang telah mereka pupuk. Peminat _Star Wars_ akan melompat gembira apabila melihat teka-teki ini. Setiap teka-teki dalam siri ini telah ditambah untuk memberikan pemahaman yang lebih mendalam mengenai konsep asas yang akan mereka gunakan sepanjang kursus ini.",
           "student_overview": "Bantu BB-8 mengumpulkan logam sekerap."
         },
         "coursea-2021/Loops: Happy Loops": {
+          "preparation": "-   Cetak **\\*Lembaran Kerja** untuk dipaparkan di dalam kelas\n-   Untuk setiap kumpulan yang mempunyai 2-3 ahli, cetak satu daripada setiap: **\\*Bahagian Kecil permainan, \\*Lembaran Kerja XL dan \\*Manipulatif Pek Bonus**.\n-   Pastikan setiap pelajar mempunyai Jurnal Renungan.",
+          "purpose": "Pelajaran ini berfungsi sebagai pengenalan kepada gelung. Gelung membolehkan pelajar memudahkan kod mereka dengan mengumpulkan perintah yang perlu diulang. Pelajar akan membangunkan kemahiran pemikiran kritikal dengan memerhatikan pengulangan dalam pergerakan rakan sekelas mereka dan menentukan bilangan perintah yang perlu diulangi. Dengan melihat \"Peta Bahagia\" lagi, pelajar akan mendapat peluang mengaitkan konsep lama seperti penjujukan dengan konsep baharu iaitu gelung berulang.",
           "student_overview": "Bantu Flurb menyelesaikan masalah yang lebih besar dengan menggunakan gelung."
         },
         "coursea-2021/Loops in Ice Age": {
+          "preparation": "-   Semak pelajaran nirplag sebelumnya dan bangunkan soalan untuk mengingatkan pelajar sebab gelung digunakan.\n-   (Pilihan) Pilih beberapa teka-teki untuk dilakukan secara berkumpulan dengan seluruh kelas anda.\n-   Kumpulkan bekalan daripada Gelung Bahagia sebelumnya untuk digunakan semula untuk mula memanas\n-   Pastikan setiap pelajar mempunyai Jurnal Renungan.",
+          "purpose": "Dalam pelajaran ini, pelajar akan mempelajari lebih banyak tentang gelung dan cara melaksanakannya dalam kod Blockly. Menggunakan gelung adalah kemahiran penting dalam pengaturcaraan kerana mengulangi perintah secara manual membosankan dan tidak cekap. Dengan teka-teki Code.org ini, pelajar akan belajar menambah arahan kepada gelung sedia ada, mengumpulkan kod berulang ke dalam gelung dan mengenali corak yang perlu diulangi.",
           "student_overview": "Bantu Scrat menutup lebih banyak tanah dengan menggunakan gelung."
         },
         "coursea-2021/Loops in Collector": {
           "student_overview": "Bantu pengembara Laurel mengumpulkan harta karun di bawah tanah."
         },
         "coursea-2021/Ocean Scene with Loops": {
+          "purpose": "Pelajaran ini memberikan perspektif berbeza mengenai cara gelung boleh mencipta sesuatu dalam pengaturcaraan. Pelajar juga boleh merenung sejenak mengenai ketidakcekapan pengaturcaraan tanpa gelung di sini kerana banyak blok diperlukan oleh atur cara tanpa bantuan gelung `berulang`.",
           "student_overview": "Gunakan gelung dan corak untuk menyiapkan imej."
         },
         "coursea-2021/Events: The Big Event": {
@@ -234,6 +242,9 @@
         "coursea-2021/Events in Play Lab": {
           "purpose": "Pelajar akan membangunkan pemahaman mereka mengenai acara dengan menggunakan Makmal Mainan hari ini. Acara adalah sangat biasa dalam kebanyakan atur cara komputer. Dalam aktiviti ini, pelajar akan menggunakan acara untuk membuat watak bergerak di sekeliling skrin, membuat bunyi bising dan mengubah latar belakang berdasarkan acara yang dimulakan pengguna.",
           "student_overview": "Cipta permainan dan cerita anda sendiri."
+        },
+        "coursea-2021/lesson-1": {
+          "preparation": "-   Tulis dan kodkan cerita anda sendiri untuk Artis terlebih dahulu bertujuan memberikan inspirasi kepada pelajar!"
         },
         "coursec-2021/Putting a STOP to Online Meanness": {
           "overview": " [\\[common sense education](https://www.commonsense.org)][1]\n\nPelajaran ini pada asalnya dibuat oleh Pendidikan yang Munasabah. [Learn more.][2]\n\nInternet dipenuhi dengan semua jenis individu yang menarik, tetapi kadang-kadang, sebilangan daripada mereka boleh menjadi zalim antara satu sama lain. Dengan peranan ini, bantu pelajar anda memahami sebab lebih mudah bersikap zalim dalam talian daripada bersemuka dan cara menangani kekejian dalam talian apabila mereka melihatnya.",
@@ -330,6 +341,7 @@
           "student_overview": "Masa untuk meraikan! Dalam pelajaran ini, anda akan mengatur cara majlis tari-menari berinteraktif anda sendiri."
         },
         "coursed-2021/Loops in Ice Age": {
+          "purpose": "Dalam pelajaran ini, pelajar akan mempelajari lebih banyak tentang gelung dan cara melaksanakannya dalam kod Blockly. Menggunakan gelung adalah kemahiran penting dalam pengaturcaraan kerana mengulangi perintah secara manual membosankan dan tidak cekap. Dengan teka-teki Code.org ini, pelajar akan belajar menambah arahan kepada gelung sedia ada, mengumpulkan kod berulang ke dalam gelung dan mengenali corak yang perlu diulangi.",
           "student_overview": "Dalam pelajaran ini, anda akan menggunakan blok ulangan untuk membantu Scrat mendapatkan buah oak secekap yang mungkin."
         },
         "coursed-2021/Loops in Artist": {

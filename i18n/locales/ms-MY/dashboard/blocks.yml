@@ -1472,9 +1472,7 @@ ms:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Aiskrim
-            Stars: Bintang
-            Fireworks: Bunga Api
+            '"placeholder"': Bunga Api
             '"rainbow"': Pelangi
             '"hearts"': Hati
             '"flowers"': Bunga
@@ -1485,7 +1483,7 @@ ms:
         text: PlaySound {SOUND}
         options:
           SOUND:
-            Light: Lampu
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Lampu
       Poetry_setBackground:
         text: tetapkan warna {COLOR} latar belakang
       Poetry_setBackgroundEffect:

@@ -5571,6 +5571,10 @@ ms:
               name: Projek Pengurusan Storan Kejiranan - Hari 2
             lesson-13:
               name: Projek Pengurusan Storan Kejiranan - Hari 3
+        poetry:
+          lessons:
+            lesson-7:
+              name: Bersyarat
         spelling-bee:
           lessons:
             lesson-1:

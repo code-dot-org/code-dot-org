@@ -197,6 +197,16 @@
         "machine_learning/oceans/unversioned": {
           "definition": "Cara komputer mengenali corak dan membuat keputusan tanpa diatur cara secara tidak tersirat"
         },
+        "code/poem-art/unversioned": {
+          "word": "Kod"
+        },
+        "event/poem-art/unversioned": {
+          "word": "Acara",
+          "definition": "Tindakan yang menyebabkan sesuatu berlaku."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Atur Cara"
+        },
         "event/outbreak/unversioned": {
           "word": "Acara",
           "definition": "Tindakan yang menyebabkan sesuatu berlaku."
@@ -592,6 +602,7 @@
           "definition": "Tindakan berterusan yang dilakukan oleh peperi sehingga disuruh berhenti."
         },
         "algorithm/coursee/2021": {
+          "word": "algoritma",
           "definition": "Senarai langkah untuk menyelesaikan tugas"
         },
         "sprite/coursee/2021": {
