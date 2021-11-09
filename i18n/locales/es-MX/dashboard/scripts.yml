@@ -1405,6 +1405,7 @@ es-MX:
               name: "¡Bienvenidos al curso!"
             Wrap Up and Next Steps:
               name: Cierre y próximos pasos
+        odometer: {}
         asUnplugged:
           description_audience: De 6 a 13 años
           lessons:
@@ -3787,6 +3788,7 @@ es-MX:
               name: 'Minecraft: Hora del Código para diseñar'
           student_description: Diseña un juego Minecraft. Crea tus propias versiones de gallinas, ovejas, Creepers, zombis y muchos más personajes.
         flappy-impact-study:
+          title: Código Flappy con Encuesta
           lessons:
             Pre Hour of Code Survey:
               name: Encuesta previa a la Hora del Código
@@ -4063,6 +4065,7 @@ es-MX:
             Post Hour of Code Survey:
               name: Encuesta posterior a la Hora del Código
         hoc-impact-study:
+          title: Laberinto Clásico con Encuesta
           description_short: "¡Prueba los fundamentos de las ciencias de la computación con muchos personajes divertidos!"
           lessons:
             Pre Hour of Code Survey:
@@ -4287,6 +4290,7 @@ es-MX:
               name: Medir el aprendizaje de los estudiantes
           student_description: Se trata de un conjunto de apoyos en línea organizados en un Curso de Aprendizaje Profesional para los profesores de CSP que se preparan para enseñar la Unidad 5.
           name: apoyo a csp5
+        csp6-support: {}
         csppostap-2017:
           title: CSP Post-AP - Bases de datos y cómo usar datos en tus aplicaciones ('17-'18)
           description_short: Aprende a recolectar y utilizar datos en aplicaciones del Laboratorio de aplicaciones.
@@ -4324,6 +4328,7 @@ es-MX:
               name: Innovaciones informáticas
             Input Unplugged:
               name: Entrada sin conexión
+            '': {}
         gamelab-demo:
           lessons:
             Simple Sprite Movement:
@@ -6115,6 +6120,7 @@ es-MX:
               name: otro
             Thanks:
               name: Gracias
+            '': {}
         csp-pre-survey-test-2017:
           lessons:
             new stage:
@@ -7681,6 +7687,7 @@ es-MX:
               name: Juego de ninjas vs. piratas
             'Unplugged: Binary':
               name: Imágenes binarias
+            Artist Binary: {}
             Loops in Ice Age:
               name: Bucles de la Era de Hielo
             Nested Loops in Frozen:
@@ -16738,6 +16745,8 @@ es-MX:
             CS Discoveries Post Course survey:
               key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+            lesson-1:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
           lesson_groups:
             csd2_1v2:
               display_name: 'Capítulo 1: Creación de páginas Web'
@@ -16920,6 +16929,8 @@ es-MX:
             CS Discoveries Post Course survey:
               key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+            lesson-1:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
           lesson_groups:
             csd3_1:
               display_name: 'Capítulo 1: Imágenes y animaciones'
@@ -17024,6 +17035,8 @@ es-MX:
               name: Errores y Características
             Updating Your Prototype:
               name: Actualizando tu Prototipo
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
           lesson_groups:
             csd4_1:
               display_name: 'Capítulo 1: Diseño orientado al usuario'
@@ -17144,6 +17157,8 @@ es-MX:
                 **Pregunta del día: ¿Cómo pueden "aprender" las máquinas?**\\r
                 \\r
                 En esta lección, se explica a los alumnos los conceptos de inteligencia artificial y aprendizaje automático mediante el widget AI for Oceans. En primer lugar, los alumnos clasifican los objetos como "peces" o "no peces" para intentar eliminar la basura del océano. A continuación, los alumnos tendrán que ampliar su conjunto de datos de entrenamiento para incluir otras criaturas marinas que pertenecen al agua. En la segunda parte de la actividad, los alumnos elegirán sus propias clasificaciones para aplicarlas a imágenes de peces generadas al azar. Estos datos de entrenamiento se utilizan para un modelo de aprendizaje automático que luego debería ser capaz de clasificar nuevas imágenes por sí mismo.
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
           lesson_groups:
             csd5_1:
               display_name: 'Capítulo 1: Representación de la información'
@@ -17232,6 +17247,8 @@ es-MX:
               name: Prueba posterior al proyecto
             CS Discoveries Post Course survey:
               key: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+            CS Discoveries Post-Course Survey:
               name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
           lesson_groups:
             csd6_1:
@@ -19393,6 +19410,7 @@ es-MX:
               name: Día de evaluación
               description_student: En esta unidad, has creado objetos y definido variables de instancia para representar atributos. Has explorado la creación y el uso de constructores para establecer valores para estos atributos y cómo trabajar con los datos almacenados en los objetos. Has implementado métodos "accessor" y "mutator" para acceder y modificar los valores almacenados en las variables de instancia y has escrito métodos `toString` para obtener información sobre el estado del objeto. Utilizaste la clase `Scanner` para obtener la entrada del usuario y utilizarla como datos del programa para crear y trabajar con tus objetos. Has aprendido a utilizar tipos de datos, operadores y expresiones y a implementar la encapsulación de datos y el diseño orientado a objetos. Ahora, debes evaluar tu logro de los objetivos de aprendizaje y habilidades de la unidad en una evaluación de opción múltiple.
               description_teacher: En esta unidad, los alumnos desarrollaron una comprensión de la encapsulación de datos y las decisiones de diseño orientado a objetos para construir un programa que respondiera a las necesidades del camión de comida del Proyecto Pastelería Mercurio. Los alumnos crearon objetos con variables de instancia apropiadas en función de las necesidades del programa, al tiempo que exploraron los tipos de datos, las variables y las expresiones para trabajar con los datos de los objetos. Los alumnos también han desarrollado métodos accessor, mutator y `toString` para recuperar, modificar y generar datos de objetos. A lo largo de la unidad, los alumnos utilizaron la clase `Scanner` para obtener información del usuario y ampliar la interactividad de sus programas. Ahora, los alumnos evalúan el logro de los objetivos de aprendizaje de la unidad y las habilidades en una evaluación de opción múltiple.
+            lesson-1: {}
             lesson-16:
               name: Laboratorio Java
             lesson-17:
@@ -19469,6 +19487,7 @@ es-MX:
                 -   Practicar la calificación de un FRQ con una rúbrica de calificación
             lesson-15:
               name: Día de evaluación
+            lesson-16: {}
             lesson-17:
               name: Laboratorio Java
             lesson-18:
@@ -19551,6 +19570,7 @@ es-MX:
               name: Utilización de comandos
             The Playground:
               name: Tratando los Datos como Tipos Diferentes
+            lesson-16: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -19558,6 +19578,24 @@ es-MX:
               display_name: "¡Demuestra lo que sabes!"
           name: csa5-piloto
         csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Laboratorio Java
+            The Neighborhood:
+              name: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+            The Playground:
+              name: Tratando los Datos como Tipos Diferentes
+            lesson-14:
+              name: Día FRQ
+            lesson-15:
+              name: Día de evaluación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"
           name: csa6-piloto
         csa7-pilot:
           name: csa7-piloto
@@ -19910,6 +19948,7 @@ es-MX:
               name: Diseño de recolección de datos
             lesson-23:
               name: Entrenar el Modelo a partir de Datos Buenos
+            lesson-1: {}
           name: iaml-2021
           lesson_groups:
             lessonGroup-2:
@@ -20025,6 +20064,9 @@ es-MX:
                 Para concluir esta unidad, los alumnos desarrollan una aplicación de Inteligencia Artificial que aborda el problema social que han retomado a lo largo de la unidad. Después de ver una aplicación de ejemplo, los alumnos siguen una guía de proyecto para completar esta actividad de varios días. En el primer paso, los alumnos preparan los datos que utilizarán para entrenar su modelo en Laboratorio de Inteligencia Artificial. Después de entrenar, probar y generar una tarjeta de modelo, exportan su modelo a Laboratorio de Aplicaciones para su desarrollo. Aquí utilizan su modelo para crear una aplicación fácil de usar basada en su maqueta de la lección anterior, "Planificación de la aplicación". Los alumnos realizan una revisión por parte de sus compañeros y hacen las actualizaciones necesarias a sus proyectos antes de preparar una presentación a la clase.\\r
                 \\r
                 **Pregunta del día:** ¿Cómo puedo utilizar el Proceso de Resolución de Problemas para crear una aplicación de "Inteligencia Artificial para el Bienestar Social"?
+            Post-Unit Survey: {}
+            CS Discoveries Post-Course Survey:
+              name: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
           lesson_groups:
             lessonGroup-2:
               display_name: Capítulo 1 - Aprendizaje Automático
@@ -20162,6 +20204,7 @@ es-MX:
               name: Acceso y Uso de los Planes de Estudio
             lesson-4:
               name: Bienvenidos
+            lesson-5: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Bienvenidos
@@ -20238,12 +20281,14 @@ es-MX:
           name: autodidáctico-pl-csd5-2021
         self-paced-pl-csd6-2021:
           lessons:
+            lesson-1: {}
             lesson-2:
               name: 'Preparación para la Enseñanza de la Unidad 1: Resolución de Problemas y Computación'
             lesson-3:
               name: 'Unidad 2: desarrollo web'
             lesson-4:
               name: Preparación para Enseñar la Unidad 3
+            lesson-5: {}
             lesson-6:
               name: Los datos y la sociedad
             lesson-7:
@@ -20354,9 +20399,13 @@ es-MX:
           title: 'V1\_Póster Interactivo: Autoexpresión'
           description_short: '(Hay que cambiar el nombre) Proyecto de Póster Interactivo en formato " Sobre Mí " para HoC - V1 '
         poster-draft:
+          lessons:
+            lesson-1: {}
           name: cartel-borrador
           student_description: '(Hay que cambiar el nombre) Proyecto de Póster Interactivo en formato " Sobre Mí " para HoC - V1 '
         poembot:
+          lessons:
+            lesson-1: {}
           name: botpoema
           title: Botpoema
         outbreak-module:
@@ -20394,6 +20443,9 @@ es-MX:
               name: Casos de Borde
             lesson-15:
               name: Resumen de la Ingeniería de Software
+            lesson-16: {}
+            lesson-17: {}
+            lesson-18: {}
             lesson-19:
               name: Día FRQ
             lesson-20:
@@ -20407,6 +20459,7 @@ es-MX:
           title: Unidad 1 - Programación Orientada a Objetos [Exemplars]
         csa2-exemplars:
           lessons:
+            lesson-1: {}
             lesson-2:
               name: Cómo usar variables
             lesson-3:
@@ -20443,6 +20496,8 @@ es-MX:
           name: csa2-ejemplos
           title: Unidad 2 - Dando Estado a Objetos [Exemplars]
         csa-videos:
+          lessons:
+            lesson-24: {}
           lesson_groups:
             lessonGroup-3:
               display_name: Recursos
@@ -20478,6 +20533,9 @@ es-MX:
               name: Resolviendo Problemas con Arrays
             lesson-10:
               name: Manipulando Elementos en un Array
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
             lesson-14:
               name: Día FRQ
             lesson-15:
@@ -20491,20 +20549,43 @@ es-MX:
           lessons:
             lesson-1:
               name: Laboratorio de Inteligencia Artificial
+            lesson-2: {}
             lesson-3:
               name: Prueba
           title: Laboratorio de Inteligencia Artificial
+        poster-experiment:
+          lessons:
+            lesson-1: {}
         tesspltest:
           lessons:
             lesson-2:
               name: Lección 2
+        tesspl2: {}
+        sb-pt-cont:
+          lessons:
+            lesson-1: {}
+        sb-pt-exp:
+          lessons:
+            lesson-1: {}
+        dc-standalone:
+          lessons:
+            lesson-1: {}
+        sb-chardev-v1:
+          lessons:
+            lesson-1: {}
         dlp21-csp-mod4:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Etapa 1
             lessonGroup-3:
               display_name: Etapa 2
         dlp21-csp-mod1:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
           title: Módulo 1 de Aprendizaje Profundo de Principios de Ciencias de la Computación
         dlp21-csd:
           lesson_groups:
@@ -20517,6 +20598,31 @@ es-MX:
               display_name: Módulo 3
             lessonGroup-5:
               display_name: Módulo 4
+        dlp21-csd-mod1:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+        dlp21-csd-mod2:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+        dlp21-csd-mod3:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+        dlp21-csd-mod4:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+        dlp21-csp-mod2:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+        dlp21-csp-mod3:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+        dlp21-overview: {}
         dlp21-csd-overview:
           lessons:
             lesson-1:
@@ -20527,6 +20633,17 @@ es-MX:
               name: Resumen
         csa-u6-dev:
           lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-7: {}
+            lesson-11: {}
             lesson-12:
               name: Herramientas
             lesson-13:
@@ -20540,6 +20657,17 @@ es-MX:
               display_name: Lecciones
             lessonGroup-3:
               display_name: Proyecto
+        hello-world-draft:
+          lessons:
+            lesson-1: {}
+        csa-self-paced-pl:
+          lessons:
+            Navigating the Code.org learning platform: {}
+            Navigating lesson plans and resources: {}
+            Navigating support: {}
+            lesson-4: {}
+            lesson-3: {}
+            lesson-8: {}
         csa1-pilot-facilitator:
           lessons:
             Welcome to CSA:
@@ -20758,6 +20886,7 @@ es-MX:
               name: Día de evaluación
               description_student: En esta unidad, has creado objetos y definido variables de instancia para representar atributos. Has explorado la creación y el uso de constructores para establecer valores para estos atributos y cómo trabajar con los datos almacenados en los objetos. Has implementado métodos "accessor" y "mutator" para acceder y modificar los valores almacenados en las variables de instancia y has escrito métodos `toString` para obtener información sobre el estado del objeto. Utilizaste la clase `Scanner` para obtener la entrada del usuario y utilizarla como datos del programa para crear y trabajar con tus objetos. Has aprendido a utilizar tipos de datos, operadores y expresiones y a implementar la encapsulación de datos y el diseño orientado a objetos. Ahora, debes evaluar tu logro de los objetivos de aprendizaje y habilidades de la unidad en una evaluación de opción múltiple.
               description_teacher: En esta unidad, los alumnos desarrollaron una comprensión de la encapsulación de datos y las decisiones de diseño orientado a objetos para construir un programa que respondiera a las necesidades del camión de comida del Proyecto Pastelería Mercurio. Los alumnos crearon objetos con variables de instancia apropiadas en función de las necesidades del programa, al tiempo que exploraron los tipos de datos, las variables y las expresiones para trabajar con los datos de los objetos. Los alumnos también han desarrollado métodos accessor, mutator y `toString` para recuperar, modificar y generar datos de objetos. A lo largo de la unidad, los alumnos utilizaron la clase `Scanner` para obtener información del usuario y ampliar la interactividad de sus programas. Ahora, los alumnos evalúan el logro de los objetivos de aprendizaje de la unidad y las habilidades en una evaluación de opción múltiple.
+            Unit 2 Pilot Survey: {}
             new lesson:
               key: nueva lección
               description_student: 'A través de nuestras experiencias en El Barrio, sabemos que las clases y los objetos son componentes clave del lenguaje de programación Java. ¿Pero cómo hacen las clases para crear objetos exactamente? En esta lección, descubrirás cómo se crea un objeto y aprenderás sobre un proceso llamado encapsulación de datos. '
@@ -20885,6 +21014,7 @@ es-MX:
                 -   Practicar la calificación de un FRQ con una rúbrica de calificación
             Assessment Day:
               name: Día de evaluación
+            Unit 3 Pilot Survey: {}
             lesson-1:
               name: Laboratorio Java
             lesson-2:
@@ -20940,6 +21070,7 @@ es-MX:
                 -   Practicar la calificación de un FRQ con una rúbrica de calificación
             lesson-15:
               name: Día de evaluación
+            lesson-16: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -21030,6 +21161,14 @@ es-MX:
               name: Día FRQ
             Assessment Day:
               name: Día de evaluación
+            lesson-1: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
             lesson-14:
               name: Día FRQ
             lesson-15:
@@ -21047,31 +21186,73 @@ es-MX:
               display_name: Contenido
             lessonGroup-3:
               display_name: "¡Demuestra lo que sabes!"
+        poetry-hoc:
+          lessons:
+            lesson-1: {}
         csdu6-playground:
           lessons:
             lesson-1:
               name: Plantilla
             lesson-2:
               name: Innovaciones en computación
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
             lesson-9:
               name: LEDs de colores
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
             lesson-13:
               name: Acelerómetro
+            lesson-14: {}
+            lesson-15: {}
+            lesson-17: {}
+            lesson-16: {}
+            lesson-18: {}
             lesson-19:
               name: Proyecto
+            lesson-20: {}
+        hello-world-food: {}
         csa-u7-dev:
           lessons:
+            lesson-1: {}
+            lesson-5: {}
             lesson-2:
               name: Widgets
             lesson-3:
               name: Herramientas
             lesson-4:
               name: Ejemplos
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Lecciones
             lessonGroup-3:
               display_name: Proyecto
+        hello-world-animals:
+          lessons:
+            lesson-1: {}
+        hello-world-emoji:
+          lessons:
+            lesson-1: {}
+        hello-world-retro:
+          lessons:
+            lesson-1: {}
+        hello-world-batman:
+          lessons:
+            lesson-1: {}
         csa4-exemplars:
           lessons:
             new lesson:
@@ -21080,6 +21261,7 @@ es-MX:
               name: Utiliza las Bibliotecas Existentes para Añadir Capacidades
             lesson-2:
               name: Resolviendo Problemas con la Clase de Matemáticas
+            lesson-3: {}
             lesson-4:
               name: Comparando Valores para Tomar Decisiones
             lesson-5:
@@ -21094,6 +21276,7 @@ es-MX:
               name: Usando Operadores Lógicos
             lesson-10:
               name: Aplicando las Leyes de De Morgan a las Expresiones Booleanas
+            lesson-11: {}
             lesson-12:
               name: El Barrio - Proyecto de fiesta vecinal - Día 2
             lesson-13:
@@ -21128,6 +21311,18 @@ es-MX:
           description_audience: cursos de Kinder a 12vo
           description: Los estudiantes aprenderán que los eventos son una forma útil de controlar cuándo ocurre una acción e incluso que se pueden usar para que varias cosas actúen de forma sincronizada. En programación, puedes utilizar eventos para responder a un usuario que lo controla (como presionar botones o hacer clic con el ratón). Los eventos pueden hacer que tu programa sea más interesante e interactivo.
           student_description: Los estudiantes aprenderán a pensar en controlar sus acciones mediante eventos. Los eventos se utilizan mucho en programación y deberían ser fáciles de reconocer después de esta lección.
+        csc-things:
+          lessons:
+            lesson-1: {}
+        poetry-hoc2:
+          lessons:
+            lesson-1: {}
+        poetry-hoc3:
+          lessons:
+            lesson-1: {}
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1: {}
         csa-u8-dev:
           lessons:
             lesson-1:
@@ -21136,10 +21331,14 @@ es-MX:
               name: Herramientas
             lesson-3:
               name: Ejemplos
+        poem-art: {}
         poetry:
           lessons:
+            lesson-4: {}
             lesson-6:
               name: Círculo de Poesía
+            lesson-7:
+              name: Condicionales
         spelling-bee:
           lessons:
             lesson-1:
@@ -21147,12 +21346,27 @@ es-MX:
           title: Concurso de ortografía
         outbreak-csc:
           title: Epidemia
+        explore-data-1: {}
+        counting-csc: {}
         csa5-exemplars:
           lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
             lesson-13:
               name: Día FRQ
             lesson-14:
               name: Día de evaluación
+            lesson-15: {}
           lesson_groups:
             lessonGroup-2:
               display_name: Contenido
@@ -21162,6 +21376,7 @@ es-MX:
           lessons:
             lesson-1:
               name: Unidad 1 Proyectos
+            lesson-2: {}
             lesson-3:
               name: 'Unidad 3: Proyectos '
             lesson-4:
@@ -21170,3 +21385,44 @@ es-MX:
               name: 'Unidad 5: Proyectos '
             lesson-6:
               name: 'Unidad 6: Proyectos '
+            lesson-7: {}
+            lesson-8: {}
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Encuesta posterior al curso
+          name: csd-encuesta-fin-curso-2021
+          title: Encuesta de fin de curso de Descubrimientos de Ciencias de la Computación
+          description: Esta unidad contiene la encuesta fin de curso de Descubrimientos CS. Esta unidad puede ser asignada después de que los estudiantes completen su unidad final en Descubrimientos CS.
+          student_description: Esta unidad contiene una encuesta para cuando tu clase haya terminado con las unidades de Descubrimientos CS. Tu profesor te dirá cuándo es el momento de realizar esta encuesta.
+        csa-pl-test: {}
+        csa-pl-module-1-test: {}
+        csa-pl-module-2-test: {}
+        csa-pl-module-3-test: {}
+        csa6-pilot-facilitator:
+          lessons:
+            FRQ Day:
+              name: Día FRQ
+            Assessment Day:
+              name: Día de evaluación
+            Java Lab:
+              name: Laboratorio Java
+              key: Laboratorio Java
+            The Neighborhood:
+              name: Clases y Objetos
+              key: Clases y Objetos
+            The Theater:
+              name: Utilización de comandos
+              key: Utilización de comandos
+            The Playground:
+              name: Tratando los Datos como Tipos Diferentes
+              key: Tratando los Datos como Tipos Diferentes
+            lesson-14:
+              name: Día FRQ
+            lesson-15:
+              name: Día de evaluación
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenido
+            lessonGroup-3:
+              display_name: "¡Demuestra lo que sabes!"

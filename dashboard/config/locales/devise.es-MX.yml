@@ -53,6 +53,7 @@ es-MX:
         tu nueva dirección de correo electrónico.
       updated: Tu cuenta se ha actualizado correctamente.
     sessions:
+      signed_in: CHUỖI NGUỒN
       signed_out: Has cerrado tu sesión con éxito.
     unlocks:
       send_instructions: Recibirás un correo electrónico con instrucciones para confirmar
