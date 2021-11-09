@@ -3268,6 +3268,10 @@ fi:
           lessons:
             lesson-1:
               name: Pienoisohjelmat
+        poetry:
+          lessons:
+            lesson-7:
+              name: Ehtolausekkeet
         spelling-bee:
           lessons:
             lesson-1:
