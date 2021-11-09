@@ -34,7 +34,7 @@ export default function OrderableList({
   return (
     <div>
       {list.map((item, idx) => (
-        <div key={item.key}>
+        <div key={item.key} style={styles.item}>
           {' '}
           <div style={styles.controls}>
             {idx !== 0 && (
@@ -60,7 +60,12 @@ export default function OrderableList({
           {renderItem(item, (key, value) => updateItem(idx, key, value))}
         </div>
       ))}
-      <Button onClick={addItem} text={addButtonText} color="gray" />
+      <Button
+        onClick={addItem}
+        text={addButtonText}
+        color="gray"
+        style={styles.button}
+      />
     </div>
   );
 }
@@ -73,11 +78,17 @@ OrderableList.propTypes = {
 };
 
 const styles = {
-  controls: {
-    display: 'flex'
+  button: {
+    marginLeft: 0
   },
   controlButton: {
     margin: '0px 5px',
     cursor: 'pointer'
+  },
+  controls: {
+    display: 'flex'
+  },
+  item: {
+    paddingBottom: 15
   }
 };
