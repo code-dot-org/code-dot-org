@@ -44,16 +44,19 @@ export const HEADER_STYLE = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  padding: '0 5px',
+  padding: '5px 10px 5px 5px',
   border: `1px solid ${color.lighter_gray}`,
-  background: color.lightest_gray
+  background: color.lightest_gray,
+  fontFamily: '"Gotham 5r", sans-serif',
+  fontSize: 14
 };
 
 export const BUTTON_STYLE = {
   backgroundColor: color.lightest_gray,
   color: color.dark_charcoal,
   borderRadius: 4,
-  border: `1px solid ${color.dark_charcoal}`
+  border: `1px solid ${color.dark_charcoal}`,
+  fontSize: 14
 };
 
 export const GROUPS_CONTAINER_STYLE = {
