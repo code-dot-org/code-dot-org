@@ -83,6 +83,10 @@ class Flappy < Blockly
     JS
   end
 
+  def uses_google_blockly?
+    true
+  end
+
   def toolbox(type)
     <<-XML.strip_heredoc.chomp
       <block type="flappy_flap"></block>
