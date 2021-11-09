@@ -1435,6 +1435,12 @@ pl-PL:
   coursed-2020_gradelevel: Klasa 8+
   coursee-2020_gradelevel: W wieku 8-12
   coursef-2020_gradelevel: W wieku 9-13
+  coursea-2021_gradelevel: W wieku 4-7
+  courseb-2021_gradelevel: W wieku 5-8
+  coursec-2021_gradelevel: W wieku 6-10
+  coursed-2021_gradelevel: Klasa 8+
+  coursee-2021_gradelevel: W wieku 8-12
+  coursef-2021_gradelevel: W wieku 9-13
   accelerated_gradelevel: W wieku 10-18
   codeorg_platformtext: Nowoczesne przeglądarki, smartfony, tablety
   codeintl_platformtext: Nowoczesne przeglądarki, smartfony, tablety
@@ -2668,3 +2674,4 @@ pl-PL:
   ai_cognimates_description: Platforma edukacyjna AI do tworzenia gier, programowania
     robotów i szkolenia.
   ai_try_activity: Spróbuj aktywności
+  outbreak_tile_title: Epidemia

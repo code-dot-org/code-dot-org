@@ -1439,6 +1439,12 @@ fr-FR:
   coursed-2020_gradelevel: 4ème ou plus
   coursee-2020_gradelevel: De 8 à 12 ans
   coursef-2020_gradelevel: Seconde ou plus
+  coursea-2021_gradelevel: CM2 ou plus
+  courseb-2021_gradelevel: 6ème ou plus
+  coursec-2021_gradelevel: 5ème ou plus
+  coursed-2021_gradelevel: 4ème ou plus
+  coursee-2021_gradelevel: De 8 à 12 ans
+  coursef-2021_gradelevel: Seconde ou plus
   accelerated_gradelevel: De 10 à 18 ans
   codeorg_platformtext: Navigateurs récents, smartphones, tablettes
   codeintl_platformtext: Navigateurs récents, smartphones, tablettes
@@ -2610,3 +2616,4 @@ fr-FR:
     et d’obtenir les compétences nécessaires pour réussir au XXIe siècle.
   ai_activity: Activité
   ai_description: Description 
+  outbreak_tile_title: Épidémie
