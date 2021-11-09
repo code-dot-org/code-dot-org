@@ -5380,6 +5380,10 @@ nl:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -5583,6 +5587,8 @@ nl:
           lessons:
             lesson-12:
               name: Hulpmiddelen
+            lesson-17:
+              name: Console
             lesson-18:
               name: Widgets
           lesson_groups:
@@ -5644,12 +5650,20 @@ nl:
               name: Widgets
             lesson-2:
               name: Hulpmiddelen
+        poetry:
+          lessons:
+            lesson-7:
+              name: Voorwaardelijke instructies
         spelling-bee:
           lessons:
             lesson-1:
               name: Spellingswedstrijd
           title: Spellingswedstrijd
         csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        csa6-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
