@@ -1649,15 +1649,15 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/dogs2"
   end
 
-  test "levelbuilder does not see visible after warning if lesson does not have visible_after property" do
-    sign_in create(:levelbuilder)
-
-    get :show, params: {id: 'course1'}
-    assert_response :success
-    refute response.body.include? 'visible after'
-  end
-
   class LessonVisibleAfterTest < ActionController::TestCase
+    test "levelbuilder does not see visible after warning if lesson does not have visible_after property" do
+      sign_in create(:levelbuilder)
+
+      get :show, params: {id: 'course1'}
+      assert_response :success
+      refute response.body.include? 'visible after'
+    end
+
     test "levelbuilder does not see visible after warning if lesson has visible_after property that is in the past" do
       Timecop.freeze(Time.new(2020, 4, 2))
       sign_in create(:levelbuilder)
