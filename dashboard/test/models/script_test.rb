@@ -14,7 +14,7 @@ class ScriptTest < ActiveSupport::TestCase
     @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
     @unit_group = create(:unit_group)
-    @unit_in_unit_group = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
+    @unit_in_unit_group = create(:script, name: 'unit-in-unit-group', published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
     create(:unit_group_unit, position: 1, unit_group: @unit_group, script: @unit_in_unit_group)
 
     @unit_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
