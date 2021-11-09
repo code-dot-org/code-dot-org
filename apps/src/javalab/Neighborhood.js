@@ -180,9 +180,8 @@ export default class Neighborhood {
 
   // Multiplier on the time per action or step at execution time.
   getPegmanSpeedMultiplier() {
-    // The slider goes from 0 to 1. We scale the speed slider value to be between -1/3 and -1 2/3
-    // and return 8 to the power of that scaled value to get a multiplier between 2 (slowest) and
-    // ~0.03 (fastest).
-    return Math.pow(8, -2 * this.speedSlider.getValue() + 1 / 3);
+    // The slider goes from 0 to 1. We scale the speed slider value to be between
+    // 2 (slowest) and 0 (fastest).
+    return -2 * this.speedSlider.getValue() + 2;
   }
 }

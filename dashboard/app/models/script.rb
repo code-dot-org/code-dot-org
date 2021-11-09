@@ -41,6 +41,7 @@ class Script < ApplicationRecord
   include ScriptConstants
   include SharedCourseConstants
   include SharedConstants
+  include Curriculum::CourseAudiences
   include Rails.application.routes.url_helpers
 
   include Seeded
@@ -157,14 +158,15 @@ class Script < ApplicationRecord
   validates :instructor_audience, acceptance: {accept: SharedCourseConstants::INSTRUCTOR_AUDIENCE.to_h.values.push(nil), message: 'must be nil, code instructor, plc reviewer, facilitator, or teacher'}
   validates :participant_audience, acceptance: {accept: SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values.push(nil), message: 'must be nil, facilitator, teacher, or student'}
 
-  def prevent_duplicate_levels
-    reload
+  def prevent_new_duplicate_levels(old_dup_level_keys = [])
+    new_dup_level_keys = duplicate_level_keys - old_dup_level_keys
+    raise "new duplicate levels detected in unit: #{new_dup_level_keys}" if new_dup_level_keys.any?
+  end
 
-    unless levels.count == levels.uniq.count
-      levels_by_key = levels.map(&:key).group_by {|key| key}
-      duplicate_keys = levels_by_key.select {|_key, values| values.count > 1}.keys
-      raise "duplicate levels detected: #{duplicate_keys.to_json}"
-    end
+  def duplicate_level_keys
+    return [] if levels.count == levels.uniq.count
+    levels_by_key = levels.map(&:key).group_by {|key| key}
+    levels_by_key.select {|_key, values| values.count > 1}.keys
   end
 
   include SerializedProperties
@@ -189,8 +191,20 @@ class Script < ApplicationRecord
     UNIT_JSON_DIRECTORY
   end
 
+  # We have two different ways to create professional learning courses
+  # You can create them in the normal curriculum model or you can create
+  # them using the PLC course models(which build on top of the normal curriculum model).
+  # We are moving toward everything being on the normal curriculum model. Until
+  # then the only courses that should be on the PLC course models are ones previous created
+  # and new courses that need the peer review system which is part of the PLC course models.
+  #
+  # This returns true if a course uses the PLC course models.
+  def old_professional_learning_course?
+    !professional_learning_course.nil?
+  end
+
   def generate_plc_objects
-    if professional_learning_course?
+    if old_professional_learning_course?
       unit_group = UnitGroup.find_by_name(professional_learning_course)
       unless unit_group
         unit_group = UnitGroup.new(name: professional_learning_course)
@@ -1260,6 +1274,8 @@ class Script < ApplicationRecord
   #   if specified, this editor_experiment will also be applied to any newly
   #   created levels.
   def clone_with_suffix(new_suffix, options = {})
+    raise "cannot be used on migrated units. use clone_migrated_unit instead" if is_migrated
+
     new_name = "#{base_name}-#{new_suffix}"
 
     unit_filename = "#{Script.unit_directory}/#{name}.script"
@@ -1572,7 +1588,7 @@ class Script < ApplicationRecord
       instructorAudience: get_instructor_audience,
       participantAudience: get_participant_audience,
       loginRequired: login_required,
-      plc: professional_learning_course?,
+      plc: old_professional_learning_course?,
       hideable_lessons: hideable_lessons?,
       disablePostMilestone: disable_post_milestone?,
       isHocScript: hoc?,
@@ -1629,7 +1645,7 @@ class Script < ApplicationRecord
     # Filter out lessons that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
     summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
-    summary[:professionalLearningCourse] = professional_learning_course if professional_learning_course?
+    summary[:professionalLearningCourse] = professional_learning_course if old_professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
     summary[:calendarLessons] = filtered_lessons.map(&:summarize_for_calendar)
 
@@ -1670,7 +1686,8 @@ class Script < ApplicationRecord
       isLaunched: launched?,
       courseVersionId: get_course_version&.id,
       unitPath: script_path(self),
-      lessonExtrasAvailableForUnit: lesson_extras_available
+      lessonExtrasAvailableForUnit: lesson_extras_available,
+      isProfessionalLearningCourse: false #TODO(dmcavoy): update once audiences for courses are set
     }
   end
 
