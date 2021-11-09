@@ -1,6 +1,7 @@
 import {ScrollOptions} from '@blockly/plugin-scroll-options';
 import {BlocklyVersion} from '@cdo/apps/constants';
 import styleConstants from '@cdo/apps/styleConstants';
+import * as utils from '@cdo/apps/utils';
 import CdoBlockDragger from './addons/cdoBlockDragger';
 import CdoBlockSvg from './addons/cdoBlockSvg';
 import initializeCdoConstants from './addons/cdoConstants';
@@ -257,7 +258,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
       BLOCK_SPACE_SCROLLED: 'blockSpaceScrolled',
       RUN_BUTTON_CLICKED: 'runButtonClicked'
     },
-    onMainBlockSpaceCreated: () => {}, // TODO
+    onMainBlockSpaceCreated: callback => {
+      if (Blockly.mainBlockSpace) {
+        callback();
+      } else {
+        document.addEventListener(
+          Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED,
+          callback
+        );
+      }
+    },
+
     createReadOnlyBlockSpace: (container, xml, options) => {
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
@@ -315,6 +326,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }px)`;
     blocklyWrapper.editBlocks = opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
+
+    document.dispatchEvent(
+      utils.createEvent(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED)
+    );
 
     const scrollOptionsPlugin = new ScrollOptions(workspace);
     scrollOptionsPlugin.init();
