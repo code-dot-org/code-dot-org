@@ -2682,8 +2682,8 @@
         "CourseF_outbreak2": "Ubah monster yang sehat menjadi monster sakit saat mereka bersentuhan.",
         "CourseF_outbreak3": "Ubah monster menjadi monster dengan masker wajah saat Anda mengekliknya.",
         "CourseF_outbreak4": "Ubah jumlah dan ukuran sprite monster untuk simulasi Anda.",
-        "CourseF_outbreak6": "Buat semua monster yang sakit mulai pulih saat monster yang sehat menyentuh monster yang sakit.",
-        "CourseF_outbreak7": "Tambahkan persentase peluang bagi monster untuk  sakit setiap kali monster sehat menyentuh monster yang sakit. Lakukan ini untuk semua kombinasi monster dengan dan tanpa masker.",
+        "CourseF_outbreak6": "Tambahkan persentase peluang bagi monster untuk  sakit setiap kali monster sehat menyentuh monster yang sakit. Lakukan hal ini untuk semua kombinasi monster yang memakai dan tidak memakai masker.",
+        "CourseF_outbreak7": "Buat kostum baru untuk monster yang kebal terhadap virus dan gunakan dalam simulasimu.",
         "CourseF_outbreak8": "Buat kostum baru bagi monster yang kebal dengan virus dan gunakan dalam simulasi Anda.",
         "Dance Party 2_2021": "Ganti blok perilaku di blok 'sprite begins' menjadi blok berbeda yang membuat alien mulai berputar!",
         "Dance Party 4_2021": "Buat sprite ketiga yang tampak seperti alien kuning, buat dia berdansa ketika diklik, dan atur semua alien Anda untuk berdiri di garis horizontal.",
@@ -3210,7 +3210,7 @@
         "ramp_artist_loops9_2021": "Pecahkan puzzle ini dengan menggambar sebuah persegi.",
         "courseC_artist_prog_challenge2a_2021": "_\"Bantu saya mengecat garis-garis kuning di jalan ini!\"_",
         "CourseF_outbreak5": "Ubah jumlah dan ukuran sprite monster untuk simulasi Anda.",
-        "international_outbreak_freeplay": "Bagikan pesan dengan simulasi Anda."
+        "international_outbreak_freeplay": "Buat perubahan atau perbaikan ke proyekmu jika diinginkan."
       }
     }
   }
