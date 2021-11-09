@@ -1663,7 +1663,9 @@ class ScriptsControllerTest < ActionController::TestCase
     test "levelbuilder does not see visible after warning if lesson does not have visible_after property" do
       sign_in create(:levelbuilder)
 
-      get :show, params: {id: 'course1'}
+      @unit.lessons.first.update!(visible_after: nil)
+
+      get :show, params: {id: @unit.name}
       assert_response :success
       refute response.body.include? 'visible after'
     end
