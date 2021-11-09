@@ -1782,6 +1782,10 @@ bn:
           lessons:
             lesson-1:
               name: সংক্ষিপ্ত বিবরণ
+        poetry:
+          lessons:
+            lesson-7:
+              name: শর্তযুক্ত
         spelling-bee:
           lessons:
             lesson-1:
