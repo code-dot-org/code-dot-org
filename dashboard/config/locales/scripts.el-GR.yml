@@ -3306,6 +3306,10 @@ el:
           lesson_groups:
             lessonGroup-3:
               display_name: Έργο
+        poetry:
+          lessons:
+            lesson-7:
+              name: Συνθήκες
         spelling-bee:
           lessons:
             lesson-1:
