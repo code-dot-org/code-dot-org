@@ -70,7 +70,8 @@ class ProgrammingExpressionsController < ApplicationController
       :syntax,
       :return_value,
       :tips,
-      parameters: [:name, :type, :required, :description]
+      parameters: [:name, :type, :required, :description],
+      examples: [:name, :description, :code, :app, :appDisplayType, :appEmbedHeight]
     )
     transformed_params
   end
