@@ -30,9 +30,9 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 ## 在社群網絡媒體張貼訊息。
 
-[![圖片](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![圖片](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![圖片](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![圖片](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 [![圖片](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![圖片](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -86,7 +86,7 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 ** 主題行: **加入我和超過1億學生的一個《編程一小時》 <br />
 
-電腦到處都是，正在改變這個星球上的每個行業。 But only 47% of all high schools teach computer science. 好消息是我們正在改變此現狀！ 如果你去年聽說過一小時玩程式（Hour of Code）活動，你也許知道它創下了些紀錄。 超過 1 億名學生已經體驗過一小時玩程式課程。
+電腦到處都是，正在改變這個星球上的每個行業。 But only 51% of all high schools teach computer science. 好消息是我們正在改變此現狀！ 如果你去年聽說過一小時玩程式（Hour of Code）活動，你也許知道它創下了些紀錄。 超過 1 億名學生已經體驗過一小時玩程式課程。
 
 因為《編程一小時》，計算機科學已經登上谷歌，MSN，雅虎和迪斯尼的主頁。 超過 100 個合作夥伴共同支持這項活動。 世界上每個蘋果專賣店都會舉辦一個《編程一小時》, 而且像奧巴馬總統和加拿大總理賈斯廷·特魯多這樣的領導人寫了他們的第一行編程作為競選活動的一部分。
 
@@ -112,7 +112,7 @@ Between {{ campaign_date/short }}, ten percent of students around the world will
 
 學生將創建自己的應用程序或遊戲, 他們可以顯示給他們的父母, 我們也會打印《編程一小時》的證書, 他們可以帶回家。 而且, 這很有趣! 通過互動、動手的活動，學生將以淺顯易懂的方式學習計算思維技能。
 
-電腦到處都是，正在改變這個星球上的每個行業。 But only 47% of all high schools teach computer science. 好消息是我們正在改變此現狀！ 如果您以前聽過有關《編程一小時》的信息, 您可能知道它創造了歷史-全世界有超過1億的學生嘗試了《編程一小時》。 Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+電腦到處都是，正在改變這個星球上的每個行業。 But only 51% of all high schools teach computer science. 好消息是我們正在改變此現狀！ 如果您以前聽過有關《編程一小時》的信息, 您可能知道它創造了歷史-全世界有超過1億的學生嘗試了《編程一小時》。 Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
 You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
 
@@ -128,7 +128,7 @@ You can read more about the event at http://hourofcode.com. Or, let us know if y
 
 我們生活在一個被科技環繞的世界。 而且我們知道我們的學生無論選擇長大後進入什麼領域，他們取得成功的能力都日漸取決於理解科技運作的原理。
 
-But only a tiny fraction of us are learning **how** technology works. Only 47% of all high schools teach computer science.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools teach computer science.
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). 全世界已經有超過 1 億名學生體驗了一小時玩程式課程。 我們的《編程一小時》聲明[學校名稱] 已經準備好教這些21世紀的基礎技能。 為了持續帶來編程活動給您的學生們，我們希望把《編程一小時》可以辦得更加盛大。 我鼓勵你擔任志工，透過社群平台傳播這個消息。並請考慮在社群內舉辦更多的一小時玩程式活動。
 
@@ -146,11 +146,11 @@ See http://hourofcode.com/{{ country_language }} for details, and help spread th
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. 好消息是我們正在改變此狀況。
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. 好消息是我們正在改變此狀況。
 
 因為《編程一小時》，計算機科學已經登上谷歌，MSN，雅虎和迪斯尼的主頁。 超過 100 個合作夥伴共同支持這項活動。 世界上每個蘋果專賣店都有舉辦過《編程一小時》。 甚至連奧巴馬總統也曾在競選活動中寫下了自己的第一行編程。
 
-這就是 [學校名稱] 有 [X 人數] 名學生都參加史上最大規模的學習活動的原因：電腦科學教育周（12 月 3 日至 9 日）中的程式設計一小時。
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 6-12).
 
 我誠邀您參加我們的開幕式，來看看孩子們如何在[日期] 開始他們的編程之旅。
 
