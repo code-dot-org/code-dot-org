@@ -159,7 +159,7 @@ const addDroppableIdToGroup = group => {
 };
 
 // Exported for a test
-export const getAssignedGroupDroppableId = id => `${DROPPABLE_ID_PREFIX}${id}`;
+export const getAssignedGroupDroppableId = id => DROPPABLE_ID_PREFIX + id;
 
 // TO DO: present a modal that allows a user to select a group name before creating it.
 // We need to generate a unique identifier for each group that is generated on the client
