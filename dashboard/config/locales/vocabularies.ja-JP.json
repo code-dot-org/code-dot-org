@@ -265,6 +265,16 @@
           "word": "機械学習",
           "definition": "コンピュータがどのようにパターンを認識し、明示的にプログラムされずに意思決定を行う方法"
         },
+        "code/poem-art/unversioned": {
+          "word": "コード"
+        },
+        "event/poem-art/unversioned": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "program/poem-art/unversioned": {
+          "word": "プログラム"
+        },
         "event/outbreak/unversioned": {
           "word": "イベント",
           "definition": "何かを引き起こすアクション。"

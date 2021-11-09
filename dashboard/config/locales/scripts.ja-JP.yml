@@ -16170,6 +16170,8 @@ ja:
             CS Discoveries Post Course survey:
               key: CS発見 コース後アンケート
               name: CS発見 コース後アンケート
+            lesson-1:
+              name: CS発見 コース後アンケート
           lesson_groups:
             csd2_1v2:
               display_name: '第1章: ウェブページの作成'
@@ -16262,6 +16264,8 @@ ja:
             CS Discoveries Post Course survey:
               key: CS発見 コース後アンケート
               name: CS発見 コース後アンケート
+            lesson-1:
+              name: CS発見 コース後アンケート
           lesson_groups:
             csd3_1:
               display_name: '第 1 章: 画像とアニメーション'
@@ -16323,6 +16327,8 @@ ja:
               name: プロジェクト後のテスト
             CS Discoveries Post Course survey:
               key: CS発見 コース後アンケート
+              name: CS発見 コース後アンケート
+            CS Discoveries Post-Course Survey:
               name: CS発見 コース後アンケート
           lesson_groups:
             csd4_1:
@@ -16386,6 +16392,8 @@ ja:
               name: プロジェクト後のテスト
             CS Discoveries Post Course survey:
               key: CS発見 コース後アンケート
+              name: CS発見 コース後アンケート
+            CS Discoveries Post-Course Survey:
               name: CS発見 コース後アンケート
           lesson_groups:
             csd5_1:
@@ -16462,6 +16470,8 @@ ja:
               name: プロジェクト後のテスト
             CS Discoveries Post Course survey:
               key: CS発見 コース後アンケート
+              name: CS発見 コース後アンケート
+            CS Discoveries Post-Course Survey:
               name: CS発見 コース後アンケート
           lesson_groups:
             csd6_1:
@@ -18055,6 +18065,15 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Javaラボ
+            lesson-15:
+              name: 評価日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -18135,6 +18154,8 @@ ja:
           lessons:
             Survey Planning:
               name: データ収集の設計
+            CS Discoveries Post-Course Survey:
+              name: CS発見 コース後アンケート
           lesson_groups:
             lessonGroup-4:
               display_name: アンケート
@@ -18445,6 +18466,10 @@ ja:
               name: ウィジェット
             lesson-2:
               name: ツール
+        poetry:
+          lessons:
+            lesson-7:
+              name: 条件
         spelling-bee:
           lessons:
             lesson-1:
@@ -18455,6 +18480,23 @@ ja:
         csa5-exemplars:
           lessons:
             lesson-14:
+              name: 評価日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: コース終了後アンケート
+          title: CS発見 コース後アンケート
+        csa6-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: 評価日
+            Java Lab:
+              name: Javaラボ
+              key: Javaラボ
+            lesson-15:
               name: 評価日
           lesson_groups:
             lessonGroup-2:

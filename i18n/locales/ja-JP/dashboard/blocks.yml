@@ -1163,7 +1163,6 @@ ja:
             '"pop"': ポップ
             '"rain"': 雨
             '"spiral"': スパイラル
-            '"zigzag"': ジグザグ
       gamelab_makeNewSpriteAnon:
         text: 新しくする {ANIMATION_NAME} スプライト {LOCATION}
       gamelab_makeNumSprites:
@@ -1846,9 +1845,7 @@ ja:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: アイスクリーム
-            Stars: 星
-            Fireworks: 花火
+            '"placeholder"': 花火
             '"rainbow"': 虹
             '"hearts"': ハート
             '"flowers"': フラワー
@@ -1882,10 +1879,8 @@ ja:
         options:
           SOUND:
             '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': 明るい
-            Light: 光
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': 光
             '"sound://category_background/typewriter.mp3"': タイプライター
-      Poetry_randomWord:
-        text: 無作為の言葉
       Poetry_setAuthor:
         text: 詩の書き手を {AUTHOR} にセット
       Poetry_setBackground:
