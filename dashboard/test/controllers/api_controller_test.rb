@@ -79,7 +79,7 @@ class ApiControllerTest < ActionController::TestCase
     # UserLevel.create!(level_id: level.id, user_id: student.id, script_id: script.id, level_source: level_source)
   end
 
-  test "example_solutions should call ScriptLevel get_example_solution" do
+  test "example_solutions should return expected example solutions" do
     STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
@@ -94,6 +94,39 @@ class ApiControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal '["https://studio.code.org/projects/dance/example-1/view","https://studio.code.org/projects/dance/example-2/view"]', @response.body
+  end
+
+  test "example_solutions should return expected example solutions when section id is empty" do
+    STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    teacher = create :authorized_teacher
+    sign_in teacher
+
+    level = create(:level, :blockly, :with_ideal_level_source)
+    script_level = create :script_level, levels: [level]
+
+    get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: ""}
+
+    assert_response :success
+    assert_equal '["http://test-studio.code.org/s/bogus-script-4/lessons/1/levels/1?solution=true"]', @response.body
+  end
+
+  test "example_solutions should return expected example solutions when section id is present" do
+    STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    teacher = create :authorized_teacher
+    sign_in teacher
+
+    section = create :section
+    level = create(:level, :blockly, :with_ideal_level_source)
+    script_level = create :script_level, levels: [level]
+
+    get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
+
+    assert_response :success
+    assert_equal "[\"http://test-studio.code.org/s/bogus-script-4/lessons/1/levels/1?section_id=#{section.id}\\u0026solution=true\"]", @response.body
   end
 
   test "should get text_responses for section with default script" do

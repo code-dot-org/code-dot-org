@@ -315,46 +315,59 @@ async function loadAppAsync(appOptions) {
     }?section_id=${sectionId}`
   );
 
-  try {
-    const [data, exampleSolutions] = await Promise.all([
-      userAppOptionsRequest,
-      exampleSolutionsRequest
-    ]);
+  const [
+    userAppOptionsResponse,
+    exampleSolutionsResponse
+  ] = await Promise.allSettled([
+    userAppOptionsRequest,
+    exampleSolutionsRequest
+  ]);
 
-    appOptions.exampleSolutions = exampleSolutions;
-    appOptions.disableSocialShare = data.disableSocialShare;
+  if (exampleSolutionsResponse.status === 'rejected') {
+    console.error(
+      'Could not load example solutions with error: ',
+      exampleSolutionsResponse.reason
+    );
+  } else {
+    appOptions.exampleSolutions = exampleSolutionsResponse.value;
+  }
 
-    // We do not need to process data.progress here because labs do not use
-    // the level progress data directly. (The progress bubbles in the header
-    // of the level pages are rendered by header.build in header.js.)
-
-    if (data.lastAttempt) {
-      appOptions.level.lastAttempt = data.lastAttempt.source;
-    } else if (!data.signedIn) {
-      // User is not signed in, load last attempt from session storage.
-      appOptions.level.lastAttempt = clientState.sourceForLevel(
-        appOptions.scriptName,
-        appOptions.serverProjectLevelId || appOptions.serverLevelId
-      );
-    }
-
-    appOptions.level.isNavigator = data.isNavigator;
-    if (data.pairingDriver) {
-      appOptions.level.pairingDriver = data.pairingDriver;
-      appOptions.level.pairingAttempt = data.pairingAttempt;
-      appOptions.level.pairingChannelId = data.pairingChannelId;
-    }
-
-    if (data.channel) {
-      appOptions.channel = data.channel;
-      appOptions.reduceChannelUpdates = data.reduceChannelUpdates;
-      return await loadProjectAndCheckAbuse(appOptions);
-    } else {
-      return appOptions;
-    }
-  } catch (err) {
+  if (userAppOptionsResponse.status === 'rejected') {
     // TODO: Show an error to the user here? (LP-1815)
-    console.error('Could not load user progress.');
+    console.error('Could not load app options');
+    return appOptions;
+  }
+
+  const data = userAppOptionsResponse.value;
+
+  appOptions.disableSocialShare = data.disableSocialShare;
+
+  // We do not need to process data.progress here because labs do not use
+  // the level progress data directly. (The progress bubbles in the header
+  // of the level pages are rendered by header.build in header.js.)
+
+  if (data.lastAttempt) {
+    appOptions.level.lastAttempt = data.lastAttempt.source;
+  } else if (!data.signedIn) {
+    // User is not signed in, load last attempt from session storage.
+    appOptions.level.lastAttempt = clientState.sourceForLevel(
+      appOptions.scriptName,
+      appOptions.serverProjectLevelId || appOptions.serverLevelId
+    );
+  }
+
+  appOptions.level.isNavigator = data.isNavigator;
+  if (data.pairingDriver) {
+    appOptions.level.pairingDriver = data.pairingDriver;
+    appOptions.level.pairingAttempt = data.pairingAttempt;
+    appOptions.level.pairingChannelId = data.pairingChannelId;
+  }
+
+  if (data.channel) {
+    appOptions.channel = data.channel;
+    appOptions.reduceChannelUpdates = data.reduceChannelUpdates;
+    return await loadProjectAndCheckAbuse(appOptions);
+  } else {
     return appOptions;
   }
 }
