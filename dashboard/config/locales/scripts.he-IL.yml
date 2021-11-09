@@ -3912,8 +3912,16 @@ he:
               name: ווידג'טים
             lesson-2:
               name: כלים
+        poetry:
+          lessons:
+            lesson-7:
+              name: תנאים
         spelling-bee:
           lessons:
             lesson-1:
               name: תחרות איות
           title: תחרות איות
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: סקר שלאחר הקורס
