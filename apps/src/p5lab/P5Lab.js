@@ -1540,6 +1540,16 @@ export default class P5Lab {
   }
 
   /**
+   * Override to change whether the current app wants to show the
+   * save & publish buttons in the "finish" feedback dialog, shown
+   * by calling this.studioApp_.displayFeedback() in
+   * displayFeedback_(), below.
+   */
+  saveToProjectGallery() {
+    return false;
+  }
+
+  /**
    * App specific displayFeedback function that calls into
    * this.studioApp_.displayFeedback when appropriate
    */

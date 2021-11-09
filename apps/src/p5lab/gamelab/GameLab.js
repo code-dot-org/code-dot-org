@@ -19,12 +19,6 @@ export default class GameLab extends P5Lab {
     return P5LabType.GAMELAB;
   }
 
-  // We don't want levels that show the finish dialog using
-  // this.studioApp_.displayFeedback to show the save & publish buttons.
-  saveToProjectGallery() {
-    return false;
-  }
-
   init(config) {
     if (!this.studioApp_) {
       throw new Error('GameLab requires a StudioApp');
