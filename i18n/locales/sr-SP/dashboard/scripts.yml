@@ -2270,6 +2270,10 @@ sr:
           lessons:
             lesson-1:
               name: Преглед
+        poetry:
+          lessons:
+            lesson-7:
+              name: Кондиционали
         spelling-bee:
           lessons:
             lesson-1:
