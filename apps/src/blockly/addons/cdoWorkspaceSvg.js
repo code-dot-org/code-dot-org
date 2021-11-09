@@ -7,6 +7,10 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     this.getVariableMap().addVariables(variableList);
   }
 
+  getContainer() {
+    return this.svgGroup_.parentNode;
+  }
+
   clear() {
     super.clear();
 

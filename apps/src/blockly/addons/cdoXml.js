@@ -88,6 +88,10 @@ export default function initializeBlocklyXml(blocklyWrapper) {
      * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
      */
     Array.prototype.forEach.call(xml.childNodes, function(xmlChild) {
+      if (xmlChild.tagName.toLowerCase() !== 'block') {
+        // skip non-block xml elements
+        return;
+      }
       const blockly_block = Blockly.Xml.domToBlock(xmlChild, blockSpace);
       const x = parseInt(xmlChild.getAttribute('x'), 10);
       const y = parseInt(xmlChild.getAttribute('y'), 10);
