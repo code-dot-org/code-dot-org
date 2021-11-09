@@ -1,5 +1,5 @@
 import {assert} from 'chai';
-import {stub} from 'sinon';
+import sinon, {stub} from 'sinon';
 import reducer, {
   ViewType,
   changeViewType
@@ -12,6 +12,7 @@ import {
 } from '@cdo/apps/redux';
 import * as appsUtils from '@cdo/apps/utils';
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
+import {expect} from '../../util/reconfiguredChai';
 
 describe('viewAs redux', () => {
   // Create a store so that we get the benefits of our thunk middleware
@@ -20,9 +21,12 @@ describe('viewAs redux', () => {
     stubRedux();
     registerReducers({viewAs: reducer});
     store = getStore();
+
+    sinon.stub(codeStudioUtils, 'updateQueryParam');
   });
 
   afterEach(() => {
+    codeStudioUtils.updateQueryParam.restore();
     restoreRedux();
   });
 
@@ -38,6 +42,9 @@ describe('viewAs redux', () => {
     store.dispatch(action);
     const nextState = store.getState();
     assert.equal(nextState.viewAs, ViewType.Instructor);
+    expect(
+      codeStudioUtils.updateQueryParam
+    ).to.have.been.calledOnce.and.calledWith('viewAs', 'Instructor');
   });
 
   it('can set as participant', () => {
@@ -52,6 +59,9 @@ describe('viewAs redux', () => {
     store.dispatch(action);
     const nextState = store.getState();
     assert.equal(nextState.viewAs, ViewType.Participant);
+    expect(
+      codeStudioUtils.updateQueryParam
+    ).to.have.been.calledOnce.and.calledWith('viewAs', 'Participant');
   });
 
   it('does not allow for invalid view types', () => {
@@ -65,13 +75,11 @@ describe('viewAs redux', () => {
     before(() => {
       stub(appsUtils, 'reload');
       stub(codeStudioUtils, 'queryParams').callsFake(() => 'fake_user_id');
-      stub(codeStudioUtils, 'updateQueryParam');
     });
 
     after(() => {
       appsUtils.reload.restore();
       codeStudioUtils.queryParams.restore();
-      codeStudioUtils.updateQueryParam.restore();
     });
 
     it('changes the window location when changing to particpant with user_id', () => {
