@@ -4072,6 +4072,13 @@ bg:
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -4262,12 +4269,24 @@ bg:
               name: Инструменти
             lesson-3:
               name: Примери
+        poetry:
+          lessons:
+            lesson-7:
+              name: Условия
         spelling-bee:
           lessons:
             lesson-1:
               name: Правопис
           title: Правопис
         csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Съдържание
+        csa6-pilot-facilitator:
+          lessons:
+            Java Lab:
+              name: Java (Джава) Практически Урок
+              key: Java (Джава) Практически Урок
           lesson_groups:
             lessonGroup-2:
               display_name: Съдържание
