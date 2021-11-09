@@ -18,8 +18,6 @@ import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 
 const MAX_SEARCH_RESULTS = 40;
-const MAX_HEIGHT = 460;
-const HEADER_FOOTER_OFFSET_PADDING = 10;
 
 export default class AnimationPickerBody extends React.Component {
   static propTypes = {
@@ -42,57 +40,12 @@ export default class AnimationPickerBody extends React.Component {
   state = {
     searchQuery: '',
     categoryQuery: '',
-    currentPage: 0,
-    headerOffset: HEADER_FOOTER_OFFSET_PADDING,
-    categoryHeight: 0,
-    footerHeight: 0
+    currentPage: 0
   };
 
   componentDidMount() {
+    this.scrollListContainer = React.createRef();
     this.multiSelectEnabled_ = experiments.isEnabled(experiments.MULTISELECT);
-    // Calculate the space taken up by the title and search bar. Title and search bar are visible in all states of
-    // animation picker body.
-    let headerOffset = HEADER_FOOTER_OFFSET_PADDING;
-
-    if (this.refs && this.refs.animationPicker_title) {
-      headerOffset += this.refs.animationPicker_title.clientHeight;
-    }
-
-    if (this.refs && this.refs.animationPicker_searchBar) {
-      headerOffset += this.refs.animationPicker_searchBar.clientHeight;
-    }
-
-    this.setState({headerOffset: headerOffset});
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    // Calculate the space take up by the category breadcrumbs and footer 'done' button. Only visible when search
-    // is engaged or category is selected.
-
-    // Determine if category or search changed.
-    if (
-      prevState.searchQuery !== this.state.searchQuery ||
-      prevState.categoryQuery !== this.state.categoryQuery
-    ) {
-      // Determine if category or search state is engaged.
-      if (this.state.searchQuery !== '' || this.state.categoryQuery !== '') {
-        if (this.refs && this.refs.animationPicker_categories) {
-          this.setState({
-            categoryHeight: this.refs.animationPicker_categories.clientHeight
-          });
-        }
-
-        if (
-          this.multiSelectEnabled_ &&
-          this.refs &&
-          this.refs.animationPicker_footer
-        ) {
-          this.setState({
-            footerHeight: this.refs.animationPicker_footer.clientHeight
-          });
-        }
-      }
-    }
   }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -143,7 +96,8 @@ export default class AnimationPickerBody extends React.Component {
     const {currentPage, results, pageCount} = this.state;
     const nextPage = currentPage + 1;
     if (
-      scrollWindow.scrollTop + MAX_HEIGHT >= scrollWindow.scrollHeight * 0.9 &&
+      scrollWindow.scrollTop + this.scrollListContainer.current.clientHeight >=
+        scrollWindow.scrollHeight * 0.9 &&
       (!pageCount || nextPage <= pageCount)
     ) {
       let {results: newResults, pageCount} = this.searchAssetsWrapper(nextPage);
@@ -246,19 +200,11 @@ export default class AnimationPickerBody extends React.Component {
       onAnimationSelectionComplete
     } = this.props;
 
-    let paddingOffset = this.state.headerOffset;
-    if (searchQuery !== '' || categoryQuery !== '') {
-      paddingOffset += this.state.categoryHeight + this.state.footerHeight;
-    }
-
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
     const shouldDisplaySecondDoneButton =
       this.multiSelectEnabled_ && isMobileDevice();
 
-    if (shouldDisplaySecondDoneButton) {
-      paddingOffset += this.state.footerHeight;
-    }
     return (
       <div style={{height: '100%'}}>
         {shouldDisplaySecondDoneButton && (
@@ -297,47 +243,46 @@ export default class AnimationPickerBody extends React.Component {
             )}
           </div>
         )}
-        <ScrollableList
-          className="uitest-animation-picker-list"
-          style={{
-            maxHeight: MAX_HEIGHT,
-            height: `calc(100% - ${paddingOffset}px`
-          }}
-          onScroll={this.handleScroll}
-        >
-          {' '}
-          {(searchQuery !== '' || categoryQuery !== '') &&
-            results.length === 0 && (
-              <div style={styles.emptyResults}>
-                {msg.animationPicker_noResultsFound()}
+        <div ref={this.scrollListContainer}>
+          <ScrollableList
+            className="uitest-animation-picker-list"
+            style={{maxHeight: '55vh'}}
+            onScroll={this.handleScroll}
+          >
+            {' '}
+            {(searchQuery !== '' || categoryQuery !== '') &&
+              results.length === 0 && (
+                <div style={styles.emptyResults}>
+                  {msg.animationPicker_noResultsFound()}
+                </div>
+              )}
+            {((searchQuery === '' && categoryQuery === '') ||
+              (results.length === 0 && this.props.canDraw)) && (
+              <div>
+                <AnimationPickerListItem
+                  label={msg.animationPicker_drawYourOwn()}
+                  icon="pencil"
+                  onClick={onDrawYourOwnClick}
+                />
+                {!hideUploadOption && (
+                  <AnimationPickerListItem
+                    label={msg.animationPicker_uploadImage()}
+                    icon="upload"
+                    onClick={onUploadClick}
+                  />
+                )}
               </div>
             )}
-          {((searchQuery === '' && categoryQuery === '') ||
-            (results.length === 0 && this.props.canDraw)) && (
-            <div>
-              <AnimationPickerListItem
-                label={msg.animationPicker_drawYourOwn()}
-                icon="pencil"
-                onClick={onDrawYourOwnClick}
-              />
-              {!hideUploadOption && (
-                <AnimationPickerListItem
-                  label={msg.animationPicker_uploadImage()}
-                  icon="upload"
-                  onClick={onUploadClick}
-                />
+            {searchQuery === '' &&
+              categoryQuery === '' &&
+              this.animationCategoriesRendering()}
+            {(searchQuery !== '' || categoryQuery !== '') &&
+              this.animationItemsRendering(
+                results || [],
+                this.multiSelectEnabled_
               )}
-            </div>
-          )}
-          {searchQuery === '' &&
-            categoryQuery === '' &&
-            this.animationCategoriesRendering()}
-          {(searchQuery !== '' || categoryQuery !== '') &&
-            this.animationItemsRendering(
-              results || [],
-              this.multiSelectEnabled_
-            )}
-        </ScrollableList>
+          </ScrollableList>
+        </div>
         {this.multiSelectEnabled_ &&
           (searchQuery !== '' || categoryQuery !== '') && (
             <div style={styles.footer} ref="animationPicker_footer">
