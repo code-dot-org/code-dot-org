@@ -1540,9 +1540,7 @@ ga:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Uachtair Reoite
-            Stars: Réaltaí
-            Fireworks: Tinte ealaíne
+            '"placeholder"': Tinte ealaíne
             '"rainbow"': Tuar ceatha
             '"hearts"': Croíthe
             '"flowers"': Bláthanna
@@ -1556,7 +1554,7 @@ ga:
       Poetry_playSound:
         options:
           SOUND:
-            Light: Sorcha
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Sorcha
       Poetry_setBackground:
         text: 'socraigh dath an chúlra: {COLOR}'
       Poetry_setBackgroundEffect:
