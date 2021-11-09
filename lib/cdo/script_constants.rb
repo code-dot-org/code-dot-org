@@ -104,6 +104,12 @@ module ScriptConstants
       HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
       DANCE_PARTY_NAME = 'dance'.freeze, # 2018 hour of code
       DANCE_PARTY_EXTRAS_NAME = 'dance-extras'.freeze, # 2018 hour of code
+      OUTBREAK = 'outbreak'.freeze, # 2021 hour of code
+      POEM_ART = 'poem-art'.freeze, # 2021 hour of code
+      HELLO_WORLD_FOOD = 'hello-world-food'.freeze, # 2021 hour of code
+      HELLO_WORLD_ANIMALS = 'hello-world-animals'.freeze, # 2021 hour of code
+      HELLO_WORLD_EMOJI = 'hello-world-emoji'.freeze, # 2021 hour of code
+      HELLO_WORLD_RETRO = 'hello-world-retro'.freeze, # 2021 hour of code
     ],
     csf_international: [
       COURSE1_NAME = 'course1'.freeze,
@@ -269,17 +275,10 @@ module ScriptConstants
     DEEPDIVE_DEBUGGING = 'deepdive-debugging'.freeze,
     FREQUENCY_ANALYSIS = 'frequency_analysis'.freeze,
     GAMELAB = 'gamelab'.freeze,
-    HELLO_WORLD_FOOD = 'hello-world-food'.freeze,
-    HELLO_WORLD_ANIMALS = 'hello-world-animals'.freeze,
-    HELLO_WORLD_EMOJI = 'hello-world-emoji'.freeze,
-    HELLO_WORLD_RETRO = 'hello-world-retro'.freeze,
     K1HOC_2017 = 'k1hoc2017'.freeze,
     NETSIM = 'netsim'.freeze,
     ODOMETER = 'odometer'.freeze,
-    OUTBREAK = 'outbreak'.freeze,
     PIXELATION = 'pixelation'.freeze,
-    POEM_ART = 'poem-art'.freeze,
-    POETRY_HOC3 = 'poetry-hoc3'.freeze,
     VIGENERE = 'vigenere'.freeze,
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
     K5_ONLINEPD = 'K5-OnlinePD'.freeze,
