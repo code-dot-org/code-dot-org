@@ -206,7 +206,7 @@ export default class AnimationPickerBody extends React.Component {
       this.multiSelectEnabled_ && isMobileDevice();
 
     return (
-      <div style={{height: '100%'}}>
+      <div style={{marginBottom: 10}}>
         {shouldDisplaySecondDoneButton && (
           <Button
             text={msg.done()}
