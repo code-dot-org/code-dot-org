@@ -1428,6 +1428,12 @@ de-DE:
   coursed-2020_gradelevel: Ab 8. Klasse
   coursee-2020_gradelevel: Alter 8-12
   coursef-2020_gradelevel: Alter 9-13
+  coursea-2021_gradelevel: Alter 4-7
+  courseb-2021_gradelevel: Alter 5-8
+  coursec-2021_gradelevel: Alter 6-10
+  coursed-2021_gradelevel: Ab 8. Klasse
+  coursee-2021_gradelevel: Alter 8-12
+  coursef-2021_gradelevel: Alter 9-13
   accelerated_gradelevel: 'Alter: 10-18'
   codeorg_platformtext: Moderne Browser, Smartphones, Tablets
   codeintl_platformtext: Moderne Browser, Smartphones, Tablets
@@ -2549,3 +2555,4 @@ de-DE:
     die Fähigkeiten zu erlernen, um im 21. Jahrhundert erfolgreich zu sein.
   ai_activity: Aufgabe
   ai_description: Beschreibung
+  outbreak_tile_title: Ausbruch

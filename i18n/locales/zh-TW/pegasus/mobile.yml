@@ -1075,6 +1075,12 @@
   coursed-2020_gradelevel: 年級 8+
   coursee-2020_gradelevel: 年齡 8-12
   coursef-2020_gradelevel: 年齡 9-13
+  coursea-2021_gradelevel: 年齡 4-7
+  courseb-2021_gradelevel: 年齡 5-8
+  coursec-2021_gradelevel: 年齡 6-10
+  coursed-2021_gradelevel: 年級 8+
+  coursee-2021_gradelevel: 年齡 8-12
+  coursef-2021_gradelevel: 年齡 9-13
   accelerated_gradelevel: "年齡 10-18"
   codeorg_platformtext: "主流的瀏覽器、手機、平板"
   codeintl_platformtext: "主流的瀏覽器、手機、平板"
@@ -1754,3 +1760,4 @@
   ai_elements: "人工智慧的要素"
   ai_elements_description: "由Reaktor和赫爾辛基大學共同製作的免費線上課程。"
   ai_try_activity: "嘗試紀錄"
+  outbreak_tile_title: "疫情爆發"

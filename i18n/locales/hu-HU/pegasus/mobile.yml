@@ -840,6 +840,12 @@
   coursed-2020_gradelevel: 8+ évfolyam
   coursee-2020_gradelevel: 8-tól 12 éves korig
   coursef-2020_gradelevel: 9-től 13 éves korig
+  coursea-2021_gradelevel: 4-től 7 éves korig
+  courseb-2021_gradelevel: 5-tól 8 éves korig
+  coursec-2021_gradelevel: 6-tól 10 éves korig
+  coursed-2021_gradelevel: 8+ évfolyam
+  coursee-2021_gradelevel: 8-tól 12 éves korig
+  coursef-2021_gradelevel: 9-től 13 éves korig
   accelerated_gradelevel: "10-től 18 éves korig"
   codeorg_platformtext: "Modern böngészők, okostelefonok, tabletek"
   codeintl_platformtext: "Modern böngészők, okostelefonok, tabletek"

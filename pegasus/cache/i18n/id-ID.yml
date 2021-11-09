@@ -1446,6 +1446,12 @@ id-ID:
   coursed-2020_gradelevel: Kelas 8+
   coursee-2020_gradelevel: Usia 8-12
   coursef-2020_gradelevel: Usia 9-13
+  coursea-2021_gradelevel: Usia 4-7
+  courseb-2021_gradelevel: Usia 5-8
+  coursec-2021_gradelevel: Usia 6-10
+  coursed-2021_gradelevel: Kelas 8+
+  coursee-2021_gradelevel: Usia 8-12
+  coursef-2021_gradelevel: Usia 9-13
   accelerated_gradelevel: Usia 10 + (setelah Kursus 3)
   codeorg_platformtext: Browser modern, smartphone, tablet
   codeintl_platformtext: Browser modern, smartphone, tablet

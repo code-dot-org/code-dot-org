@@ -1270,6 +1270,12 @@ ka-GE:
   coursed-2020_gradelevel: კლასები 8+
   coursee-2020_gradelevel: ასაკი 8-12
   coursef-2020_gradelevel: 9-13 წელი
+  coursea-2021_gradelevel: 4-7 წელი
+  courseb-2021_gradelevel: 5-8 წელი
+  coursec-2021_gradelevel: 6-10 წელი
+  coursed-2021_gradelevel: კლასები 8+
+  coursee-2021_gradelevel: ასაკი 8-12
+  coursef-2021_gradelevel: 9-13 წელი
   accelerated_gradelevel: 'ასაკი: 10-18'
   codeorg_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
   codeintl_platformtext: თანამედროვე ბრაუზერები, სმარტფონები, პლანშეტები
@@ -2040,6 +2046,7 @@ ka-GE:
   footer_donate: შემოწირულობა
   footer_support: დახმარება და თემი
   footer_terms: პირობები
+  ai_for_oceans: AI ოკეანეებისთვის
   ai_for_oceans_lesson_plan: გაკვეთილის გეგმა
   ai_activity: აქტივობა
   ai_description: აღწერა

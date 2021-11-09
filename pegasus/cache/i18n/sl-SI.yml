@@ -862,6 +862,12 @@ sl-SI:
   coursed-2020_gradelevel: 8. razred in višje
   coursee-2020_gradelevel: Starost 8-12
   coursef-2020_gradelevel: Starost 9-13
+  coursea-2021_gradelevel: Starost 4-7
+  courseb-2021_gradelevel: Starost 5-8
+  coursec-2021_gradelevel: Starost 6-10
+  coursed-2021_gradelevel: 8. razred in višje
+  coursee-2021_gradelevel: Starost 8-12
+  coursef-2021_gradelevel: Starost 9-13
   accelerated_gradelevel: Starost 10-18
   codeorg_platformtext: Sodobni brskalniki, pametni telefoni, tablice
   codeintl_platformtext: Sodobni brskalniki, pametni telefoni, tablice

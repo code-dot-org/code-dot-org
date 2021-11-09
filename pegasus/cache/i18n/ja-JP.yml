@@ -1164,6 +1164,12 @@ ja-JP:
   coursed-2020_gradelevel: 中学2年生以上向け
   coursee-2020_gradelevel: 8才-12才
   coursef-2020_gradelevel: 9～13 歳
+  coursea-2021_gradelevel: 4～7 歳
+  courseb-2021_gradelevel: 5～8 歳
+  coursec-2021_gradelevel: 6～10 歳
+  coursed-2021_gradelevel: 中学2年生以上向け
+  coursee-2021_gradelevel: 8才-12才
+  coursef-2021_gradelevel: 9～13 歳
   accelerated_gradelevel: 10-18 才
   codeorg_platformtext: 最新ブラウザ、スマート フォン、タブレット
   codeintl_platformtext: 最新ブラウザ、スマート フォン、タブレット
@@ -1858,3 +1864,4 @@ ja-JP:
   ai_microsoft_thanks: 21世紀で成功するためにすべての子供たちにコンピューター サイエンスとスキルを学ぶ機会を確実に与えるという私たちのビジョンと使命をサポートしてくれたMicrosoftに感謝します。
   ai_activity: アクティビティ
   ai_description: 説明
+  outbreak_tile_title: 大流行

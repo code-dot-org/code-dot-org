@@ -999,6 +999,8 @@
   iceage_name: "La Era de Hielo"
   minecraft_name: "Minecraft"
   starwarsblocks_name: "La guerra de las galaxias (bloques)"
+  hoc-impact-study_name: Laberinto Clásico con Encuesta
+  flappy-impact-study_name: Código Flappy con Encuesta
   hoc-encryption_name: Cifrado simple
   text-compression_name: Compresión de texto
   applab_name: "Laboratorio de Aplicaciones"
@@ -1091,6 +1093,12 @@
   coursed-2020_gradelevel: Grado 8 +
   coursee-2020_gradelevel: Edad 8-12
   coursef-2020_gradelevel: De 9 a 13 años
+  coursea-2021_gradelevel: De 4 a 7 años
+  courseb-2021_gradelevel: De 5 a 8 años
+  coursec-2021_gradelevel: Edades de 6 a 10 años
+  coursed-2021_gradelevel: Grado 8 +
+  coursee-2021_gradelevel: Edad 8-12
+  coursef-2021_gradelevel: De 9 a 13 años
   accelerated_gradelevel: "Edades de 10 a 18 años"
   codeorg_platformtext: "Cualquier navegador moderno, smartphone, tableta"
   codeintl_platformtext: "Cualquier navegador moderno, smartphone, tableta"
@@ -1790,3 +1798,4 @@
   ai_cognimates: "Cognimates"
   ai_cognimates_description: "Una plataforma educativa de IA para crear juegos, programar robots y entrenar."
   ai_try_activity: "Prueba la actividad"
+  outbreak_tile_title: "Brote"
