@@ -1,8 +1,7 @@
 ---
 title: Poesia
-video_player: true
 theme: responsive
-style_min: true
+set_dir: true
 ---
 
 # Codificando com Poesia
@@ -11,11 +10,13 @@ style_min: true
 
 ## Aprenda mais sobre Codificando com Poesia
 
-No módulo Coddificando com Poesia em CS Connections, estudantes passarão a ver dois tópicos: Computer Science e Poesia através de um novo prisma. Em cinco classes, estudantes de quarta à oitava série irão construir um programa capaz de gerar poemas com o objetivo de recitar differentes versões de um haiku que eles irão escrever. Estudantes irão testar os seus programas com os seus colegas de classe, e completar o projeto compartilhando os poemas gerados.
+In the Coding with Poetry module in CS Connections, students will be able to see two subjects - computer science and poetry - in a new way. Em cinco classes, estudantes de quarta à oitava série irão construir um programa capaz de gerar poemas com o objetivo de recitar differentes versões de um haiku que eles irão escrever. Estudantes irão testar os seus programas com os seus colegas de classe, e completar o projeto compartilhando os poemas gerados.
 
 Através dessa atividate de construir um gerador de poemas, estudante aprendem como computaores obtem informações de usuários, armazenam essa informação na memória e geram um resultado esperado. Escrevendo seus próprios haikus, estudantes exploran elementos de poesia como gramática e escolha de palavras.
 
-Essa atividade é a primeira lição no modulo Codificando com Poesia do currículo de Ciência da Computacão.
+<em>Our Poem Art Hour of Code activity is also the first lesson in the Coding with Poetry module of our Computer Science Connections curriculum. <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">Register here for a special session of CodeBytes</a> on Tuesday, December 7, at 10 a.m. ET and again at 10 a.m. PT; we'll show students how to get started with the Poem Art Hour of Code activity.</em>
+
+{{ teacher_info, heading: "Teacher Info", title: "How to continue learning after Coding with Poetry", description: "In our new CS Connections curriculum, explore additional activities that combine ELA and computer science, and check out even more connections between computer science and other subjects like math, science, and social studies that you can bring into your classroom.", button_text: "Learn more" }}
 
 ## Criações de alunos em destaque
 

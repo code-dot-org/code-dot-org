@@ -1,8 +1,7 @@
 ---
 title: Poezja
-video_player: true
 theme: responsive
-style_min: true
+set_dir: true
 ---
 
 # Kodowanie z Poezją
@@ -15,7 +14,9 @@ W module Kodowanie z Poezją w Powiązaniach z informatyką, uczniowie będą mo
 
 Budując generator wierszy, uczniowie poznają, w jaki sposób komputery pobierają dane wejściowe użytkownika, przechowują je w pamięci i wytwarzają pożądany produkt. Pisząc własne haiku, uczniowie odkrywają elementy poezji, takie jak gramatyka, nastrój i dobór słów.
 
-Nasze ćwiczenie, poświęcone Sztuce Poezji w ramach Godziny Kodowania, to także pierwsza lekcja w module Kodowanie z poezją naszego programu nauczania Powiązań z informatyką.
+<em>Our Poem Art Hour of Code activity is also the first lesson in the Coding with Poetry module of our Computer Science Connections curriculum. <a href="https://csteachers.org/events/csedweek-2021-inspire-am/">Register here for a special session of CodeBytes</a> on Tuesday, December 7, at 10 a.m. ET and again at 10 a.m. PT; we'll show students how to get started with the Poem Art Hour of Code activity.</em>
+
+{{ teacher_info, heading: "Teacher Info", title: "How to continue learning after Coding with Poetry", description: "In our new CS Connections curriculum, explore additional activities that combine ELA and computer science, and check out even more connections between computer science and other subjects like math, science, and social studies that you can bring into your classroom.", button_text: "Learn more" }}
 
 ## Wyróżnione utwory uczniów
 
