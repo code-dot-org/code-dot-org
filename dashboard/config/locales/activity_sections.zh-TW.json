@@ -575,6 +575,30 @@
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
           "name": "反思"
         },
+        "7197ddf8-89bf-4b3a-86d9-1f424a1d1b0a": {
+          "progression_name": "回應使用者輸入的內容"
+        },
+        "a81e104f-4588-40de-bce6-a309993c9bd4": {
+          "progression_name": "多螢幕應用程式"
+        },
+        "43a2cde3-0ad9-4dc0-87df-db17a8f9e789": {
+          "progression_name": "Getter 與 Setter"
+        },
+        "330f29ec-379e-4f4e-ae58-4163b1afca6c": {
+          "progression_name": "使用 取屬性函式（Getters） 跟設定屬性函式（Setters）"
+        },
+        "432cf1e5-be20-4ba1-a6b5-617481522694": {
+          "progression_name": "getNumber"
+        },
+        "f090c505-7c09-4e19-bcf4-b219f24eae45": {
+          "name": "操作介面元素屬性",
+          "progression_name": "操作介面元素屬性"
+        },
+        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
+          "tips": [
+            null
+          ]
+        },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "介紹"
         },
