@@ -61,7 +61,7 @@ export function scrollTo(element, scrollTop, animate = 400) {
  * @see convertXmlToBlockly
  */
 export function shrinkBlockSpaceContainer(blockSpace, withPadding) {
-  const container = blockSpace.blockSpaceEditor.getSVGElement().parentNode;
+  const container = blockSpace.getContainer();
 
   // calculate the minimum required size for the container
   const metrics = blockSpace.getMetrics();
