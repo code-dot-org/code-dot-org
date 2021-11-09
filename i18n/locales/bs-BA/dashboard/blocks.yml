@@ -1189,9 +1189,7 @@ bs:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Sladoled
-            Stars: Zvijezde
-            Fireworks: Vatromet
+            '"placeholder"': Vatromet
             '"rainbow"': Duge
             '"hearts"': Srca
       Poetry_makeBurst:
@@ -1201,7 +1199,7 @@ bs:
       Poetry_playSound:
         options:
           SOUND:
-            Light: Svjetlo
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Svjetlo
       Poetry_setBackground:
         text: podesi boju pozadine {COLOR}
       Poetry_setBackgroundEffect:
