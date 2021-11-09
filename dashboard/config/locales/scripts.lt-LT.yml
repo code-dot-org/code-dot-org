@@ -2905,6 +2905,10 @@ lt:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -3023,12 +3027,20 @@ lt:
               display_name: Turinys
             lessonGroup-2:
               display_name: Turinys
+        poetry:
+          lessons:
+            lesson-7:
+              name: Sąlyginiai sakiniai
         spelling-bee:
           lessons:
             lesson-1:
               name: Rašanti bitė
           title: Rašanti bitė
         csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Turinys
+        csa6-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Turinys
