@@ -306,6 +306,26 @@
           "word": "crwdns2700837:0crwdne2700837:0",
           "definition": "crwdns2700839:0crwdne2700839:0"
         },
+        "code/poem-art/unversioned": {
+          "word": "crwdns2710929:0crwdne2710929:0",
+          "definition": "crwdns2710931:0crwdne2710931:0"
+        },
+        "event/poem-art/unversioned": {
+          "word": "crwdns2710933:0crwdne2710933:0",
+          "definition": "crwdns2710935:0crwdne2710935:0"
+        },
+        "program/poem-art/unversioned": {
+          "word": "crwdns2710937:0crwdne2710937:0",
+          "definition": "crwdns2710939:0crwdne2710939:0"
+        },
+        "mood/poem-art/unversioned": {
+          "word": "crwdns2710941:0crwdne2710941:0",
+          "definition": "crwdns2710943:0crwdne2710943:0"
+        },
+        "line/poem-art/unversioned": {
+          "word": "crwdns2710945:0crwdne2710945:0",
+          "definition": "crwdns2710947:0crwdne2710947:0"
+        },
         "event/outbreak/unversioned": {
           "word": "crwdns2700937:0crwdne2700937:0",
           "definition": "crwdns2700939:0crwdne2700939:0"

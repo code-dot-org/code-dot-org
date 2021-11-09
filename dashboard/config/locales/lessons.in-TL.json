@@ -152,6 +152,11 @@
           "purpose": "crwdns2710465:0[0]crwdne2710465:0",
           "student_overview": "crwdns2710467:0crwdne2710467:0"
         },
+        "poem-art/lesson-1": {
+          "overview": "crwdns2710883:0[0]crwdne2710883:0",
+          "preparation": "crwdns2710885:0[0]crwdnd2710885:0[Optional]crwdne2710885:0",
+          "student_overview": "crwdns2710887:0crwdne2710887:0"
+        },
         "outbreak/Outbreak": {
           "overview": "crwdns2700887:0crwdne2700887:0",
           "preparation": "crwdns2700889:0crwdne2700889:0",
