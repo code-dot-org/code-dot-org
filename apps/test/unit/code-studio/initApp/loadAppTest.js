@@ -38,6 +38,7 @@ describe('loadApp.js', () => {
     sinon.stub(project, 'getSharingDisabled').returns(false);
   });
   beforeEach(() => {
+    sinon.stub(clientState, 'queryParams').returns(undefined);
     sinon.stub($, 'ajax').callsFake(() => ({
       done: successCallback => ({
         fail: failureCallback => {
@@ -66,38 +67,26 @@ describe('loadApp.js', () => {
     window.appOptions = oldAppOptions;
   });
   afterEach(() => {
+    clientState.queryParams.restore();
     $.ajax.restore();
   });
+
+  const stubQueryParams = (paramName, paramValue) => {
+    clientState.queryParams.restore(); // restore the default stub
+    sinon
+      .stub(clientState, 'queryParams')
+      .callsFake(param => (param === paramName ? paramValue : undefined));
+  };
 
   const stubAppOptionsRequests = (
     appOptions,
     userAppOptionsResponse = {signedIn: false},
     exampleSolutionsResponse = []
   ) => {
-    const {
-      scriptName,
-      lessonPosition,
-      levelPosition,
-      serverLevelId,
-      serverScriptLevelId,
-      levelRequiresChannel,
-      channel
-    } = appOptions;
-
     $.ajax.restore();
     const ajaxStub = sinon.stub($, 'ajax');
-    ajaxStub
-      .withArgs(
-        `/api/user_app_options/${scriptName}/${lessonPosition}/${levelPosition}/${serverLevelId}?get_channel_id=${!!levelRequiresChannel &&
-          !channel}`
-      )
-      .returns(userAppOptionsResponse);
-
-    ajaxStub
-      .withArgs(
-        `/api/example_solutions/${serverScriptLevelId}/${serverLevelId}?section_id=`
-      )
-      .returns(exampleSolutionsResponse);
+    ajaxStub.onCall(0).returns(userAppOptionsResponse);
+    ajaxStub.onCall(1).returns(exampleSolutionsResponse);
   };
 
   it('loads attempt stored under server level id', done => {
@@ -133,21 +122,13 @@ describe('loadApp.js', () => {
     const appOptionsData = document.createElement('script');
     appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
     document.body.appendChild(appOptionsData);
-    const queryParamsStub = sinon
-      .stub(clientState, 'queryParams')
-      .callsFake(param => {
-        if (param === 'solution') {
-          return 'true';
-        }
-        return undefined;
-      });
+    stubQueryParams('solution', 'true');
 
     loadAppOptions().then(() => {
       expect(window.appOptions.level.lastAttempt).to.be.undefined;
       expect(readLevelId).to.be.undefined;
 
       document.body.removeChild(appOptionsData);
-      queryParamsStub.restore();
       done();
     });
   });
@@ -156,23 +137,17 @@ describe('loadApp.js', () => {
     const appOptionsData = document.createElement('script');
     appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
     document.body.appendChild(appOptionsData);
-    const queryParamsStub = sinon
-      .stub(clientState, 'queryParams')
-      .callsFake(param => {
-        if (param === 'user_id') {
-          return 'true';
-        }
-        return undefined;
-      });
+    stubQueryParams('user_id', '12345');
 
-    loadAppOptions().then(() => {
-      expect(window.appOptions.level.lastAttempt).to.be.undefined;
-      expect(readLevelId).to.be.undefined;
+    loadAppOptions()
+      .then(() => {
+        expect(window.appOptions.level.lastAttempt).to.be.undefined;
+        expect(readLevelId).to.be.undefined;
 
-      document.body.removeChild(appOptionsData);
-      queryParamsStub.restore();
-      done();
-    });
+        document.body.removeChild(appOptionsData);
+        done();
+      })
+      .catch(err => done(err));
   });
 
   it('passes get_channel_id true to load user progress if appOptions has levelRequiresChannel true and no channel', done => {
@@ -196,11 +171,13 @@ describe('loadApp.js', () => {
     appOptionsData.setAttribute('data-appoptions', JSON.stringify(appOptions));
     document.body.appendChild(appOptionsData);
 
-    loadAppOptions().then(() => {
-      expect(window.appOptions.channel).to.equal(responseChannel);
-      document.body.removeChild(appOptionsData);
-      done();
-    });
+    loadAppOptions()
+      .then(() => {
+        expect(window.appOptions.channel).to.equal(responseChannel);
+        document.body.removeChild(appOptionsData);
+        done();
+      })
+      .catch(err => done(err));
   });
 
   it('calls example_solutions endpoint and sets example solutions to appOptions', done => {
