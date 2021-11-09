@@ -1378,9 +1378,7 @@
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Iskrem
-            Stars: Stjerner
-            Fireworks: Fyrverkeri
+            '"placeholder"': Fyrverkeri
             '"rainbow"': Regnbue
             '"hearts"': Hjerter
       Poetry_makeBurst:
@@ -1391,7 +1389,7 @@
         text: spillLyd {SOUND}
         options:
           SOUND:
-            Light: Lys
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Lys
       Poetry_setBackground:
         text: sett bakgrunnsfarge {COLOR}
       Poetry_setBackgroundEffect:

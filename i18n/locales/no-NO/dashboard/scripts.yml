@@ -3570,6 +3570,10 @@
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -3709,12 +3713,20 @@
           lessons:
             lesson-1:
               name: Moduler
+        poetry:
+          lessons:
+            lesson-7:
+              name: Betingelser
         spelling-bee:
           lessons:
             lesson-1:
               name: Stavekonkurranse
           title: Stavekonkurranse
         csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Innhold
+        csa6-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Innhold
