@@ -28,9 +28,9 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 ## 利用社交媒体发布
 
-[![图片](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![图片](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![图片](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![图片](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![图片](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![图片](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![图片](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![图片](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![图片](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![图片](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 [![图片](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![图片](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![图片](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -84,7 +84,7 @@ A new poster set is available featuring Malala, Stephen Curry, Shakira and more!
 
 ** 主题行: **加入我和超过1亿学生的一个《编程一小时》 <br />
 
-计算机无所不在，它正改变着世界上的工业。 But only 47% of all high schools teach computer science. 好消息是我们正在改变此现状！ 如果你之前听说过编程一小时，你可能知道它创造了历史。 超过 1 亿学生尝试过编程一小时。
+计算机无所不在，它正改变着世界上的工业。 But only 51% of all high schools teach computer science. 好消息是我们正在改变此现状！ 如果你之前听说过编程一小时，你可能知道它创造了历史。 超过 1 亿学生尝试过编程一小时。
 
 因为《编程一小时》，计算机科学已经登上谷歌，MSN，雅虎和迪斯尼的主页。 超过100位合作伙伴共同支持这项活动。 世界上每个苹果专卖店都会举办一个《编程一小时》, 而且像奥巴马总统和加拿大总理贾斯廷·特鲁多这样的领导人写了他们的第一行编程作为竞选活动的一部分。
 
@@ -110,7 +110,7 @@ Between {{ campaign_date/short }}, ten percent of students around the world will
 
 学生将创建自己的应用程序或游戏, 他们可以显示给他们的父母, 我们也会打印《编程一小时》的证书, 他们可以带回家。 而且, 这很有趣! 通过互动、动手的活动，学生将以浅显易懂的方式学习计算思维技能。
 
-计算机无所不在，它正改变着世界上的工业。 But only 47% of all high schools teach computer science. 好消息是我们正在改变此现状！ 如果您以前听过有关《编程一小时》的信息, 您可能知道它创造了历史-全世界有超过1亿的学生尝试了《编程一小时》。 Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
+计算机无所不在，它正改变着世界上的工业。 But only 51% of all high schools teach computer science. 好消息是我们正在改变此现状！ 如果您以前听过有关《编程一小时》的信息, 您可能知道它创造了历史-全世界有超过1亿的学生尝试了《编程一小时》。 Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
 You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
 
@@ -126,7 +126,7 @@ You can read more about the event at http://hourofcode.com. Or, let us know if y
 
 我们生活在一个被科技包围的世界。 同时我们也知道我们的学生长大后无论选进入什么领域，他们取得成功的能力都将越来越多地取决于他们对于科技如何运作的理解。
 
-But only a tiny fraction of us are learning **how** technology works. Only 47% of all high schools teach computer science.
+But only a fraction of us are learning **how** technology works. Only 51% of all high schools teach computer science.
 
 That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). 全世界已经有超过1亿名学生体验了编程一小时。 我们的《编程一小时》声明[学校名称] 已经准备好教这些21世纪的基础技能。 为了持续带来更多的编程活动给同学们，我们希望把编程一小时可以办得更加盛大。 我鼓励你们志愿去接触当地媒体，在你的社交媒体频道上分享消息，并在小区尝试组织其他的编程一小时活动。
 
@@ -144,11 +144,11 @@ See http://hourofcode.com/{{ country_language }} for details, and help spread th
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. 好消息是，我们正在着手改变现状。
+Computers are everywhere, changing every industry on the planet, but only 51% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. 好消息是，我们正在着手改变现状。
 
 因为《编程一小时》，计算机科学已经登上谷歌，MSN，雅虎和迪斯尼的主页。 超过100位合作伙伴共同支持这项活动。 世界上每个苹果专卖店都有举办过《编程一小时》。 甚至连奥巴马总统也曾在竞选活动中写下了自己的第一行编码。
 
-这就是 [SCHOOL NAME] 有 [X number] 名学生都参加史上最大规模的学习活动的原因：计算机科学教育周（12 月 3 日至 9 日）中的编程一小时。
+That’s why every one of the [X number] students at [SCHOOL NAME] are joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week (December 6-12).
 
 我诚邀您参加我们的开幕式，来看看孩子们如何在[日期] 开始他们的编程之旅。
 

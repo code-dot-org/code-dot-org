@@ -22,7 +22,7 @@ The Hour of Code is a one-hour introduction to computer science designed to demy
 - [When you're hosting an event](#hosting-an-event)
 - [Spread the word about the Hour of Code](#promote-hour-of-code)
 - [More ways to support the Hour of Code](#support-hour-of-code)
-- [Volunteer FAQ](#faq)
+- [志愿者常见问题](#faq)
 
 Whether you volunteer virtually, in-person, or with your company, your efforts can make a huge impact on the way students view computer science and their own potential. Take a look at our [volunteer toolkit if you still have questions]({{ localized_files/hoc_volunteer_toolkit }}).
 
@@ -238,7 +238,7 @@ For more suggestions on how to support Code.org and the Hour of Code, visit [Cod
 
 <a id="faq"></a>
 
-## Volunteering FAQ
+## 志愿常见问题
 
 ### 还没有老师联系我，我该如何做志愿者？
 
