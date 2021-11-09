@@ -79,6 +79,12 @@ module ScriptConstants
       # with code_s matching the script name (in quotes) in this list.
 
       nil,
+      POEM_ART = 'poem-art'.freeze, # 2021 hour of code
+      OUTBREAK = 'outbreak'.freeze, # 2021 hour of code
+      HELLO_WORLD_FOOD = 'hello-world-food'.freeze, # 2021 hour of code
+      HELLO_WORLD_ANIMALS = 'hello-world-animals'.freeze, # 2021 hour of code
+      HELLO_WORLD_EMOJI = 'hello-world-emoji'.freeze, # 2021 hour of code
+      HELLO_WORLD_RETRO = 'hello-world-retro'.freeze, # 2021 hour of code
       DANCE_PARTY_2019_NAME = 'dance-2019'.freeze, # 2019 hour of code
       DANCE_PARTY_EXTRAS_2019_NAME = 'dance-extras-2019'.freeze, # 2019 hour of code
       OCEANS_NAME = 'oceans'.freeze,
@@ -104,12 +110,6 @@ module ScriptConstants
       HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
       DANCE_PARTY_NAME = 'dance'.freeze, # 2018 hour of code
       DANCE_PARTY_EXTRAS_NAME = 'dance-extras'.freeze, # 2018 hour of code
-      OUTBREAK = 'outbreak'.freeze, # 2021 hour of code
-      POEM_ART = 'poem-art'.freeze, # 2021 hour of code
-      HELLO_WORLD_FOOD = 'hello-world-food'.freeze, # 2021 hour of code
-      HELLO_WORLD_ANIMALS = 'hello-world-animals'.freeze, # 2021 hour of code
-      HELLO_WORLD_EMOJI = 'hello-world-emoji'.freeze, # 2021 hour of code
-      HELLO_WORLD_RETRO = 'hello-world-retro'.freeze, # 2021 hour of code
     ],
     csf_international: [
       COURSE1_NAME = 'course1'.freeze,
