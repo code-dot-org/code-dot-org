@@ -585,11 +585,10 @@ class SectionTest < ActiveSupport::TestCase
     end
     group_1_name = 'new_group_1'
     group_2_name = 'new_group_2'
-    # Parameters are represented as hashes
-    new_groups = {
-      '0' => {name: group_1_name, members: {'0' => {follower_id: followers[0].id}}},
-      '1' => {name: group_2_name, members: {'0' => {follower_id: followers[2].id}, '1' => {follower_id: followers[3].id}}}
-    }
+    new_groups = [
+      {name: group_1_name, members: [{follower_id: followers[0].id}]},
+      {name: group_2_name, members: [{follower_id: followers[2].id}, {follower_id: followers[3].id}]}
+    ]
     code_review_group_section.reset_code_review_groups(new_groups)
     code_review_group_section.reload
 
@@ -602,10 +601,9 @@ class SectionTest < ActiveSupport::TestCase
     set_up_code_review_groups
 
     new_group_name = 'new_group'
-    # Parameters are represented as hashes
-    new_groups = {
-      '0' => {name: new_group_name, members: {'0' => {follower_id: @followers[0].id}, '1' => {follower_id: @followers[1].id}}},
-    }
+    new_groups = [
+      {name: new_group_name, members: [{follower_id: @followers[0].id}, {follower_id: @followers[1].id}]},
+    ]
 
     @code_review_group_section.reset_code_review_groups(new_groups)
     @code_review_group_section.reload

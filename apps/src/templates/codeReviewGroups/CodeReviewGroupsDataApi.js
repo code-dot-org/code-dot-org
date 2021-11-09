@@ -12,16 +12,30 @@ export default class CodeReviewGroupsDataApi {
   }
 
   setCodeReviewGroups(groups) {
-    return $.post(`/api/v1/sections/${this.sectionId}/code_review_groups`, {
-      groups: this.convertGroupsToSnakeCase(groups)
-    });
+    return this.postJSON(
+      `/api/v1/sections/${this.sectionId}/code_review_groups`,
+      {
+        groups: this.convertGroupsToSnakeCase(groups)
+      }
+    );
   }
 
   setCodeReviewEnabled(enabled) {
-    return $.post(`/api/v1/sections/${this.sectionId}/code_review_enabled`, {
-      enabled
-    });
+    return this.postJSON(
+      `/api/v1/sections/${this.sectionId}/code_review_enabled`,
+      {
+        enabled
+      }
+    );
   }
+
+  postJSON = (url, data) =>
+    $.ajax({
+      url,
+      type: 'POST',
+      contentType: 'application/json',
+      data: JSON.stringify(data)
+    });
 
   /**
    * Converts code review groups JSON data from the server by performing
