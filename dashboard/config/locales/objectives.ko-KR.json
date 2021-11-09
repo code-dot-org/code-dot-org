@@ -2,6 +2,12 @@
   "ko-KR": {
     "data": {
       "objectives": {
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "새 스프라이트를 만들고 의상과 위치를 배정하세요."
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "스프라이트와 이벤트로 인터액티브한 애니메이션을 만드세요."
+        },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "변수를 선언하시오"
         },

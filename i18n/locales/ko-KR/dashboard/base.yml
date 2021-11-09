@@ -168,7 +168,14 @@ ko:
     user_type_button: "계정 유형 업데이트"
     user_type_label: "계정 유형"
     user_type_student: "student"
-    user_type_teacher: "선생님"
+    user_type_student_desc: "모든 과정과 활동 탐구:"
+    user_type_student_ability_1: "진도와 프로젝트 저장"
+    user_type_student_ability_2: "교사의 학급 섹션에 가입"
+    user_type_teacher: "교사"
+    user_type_teacher_ability_1: "학급 섹션 만들기"
+    user_type_teacher_ability_2: "학생 작업 배정 및 추적"
+    user_type_teacher_ability_3: "전문가 학습에 등록"
+    user_type_teacher_ability_4: "교사 포럼 상에서 상호작용"
     field_is_required: "이(가) 필요합니다."
     accept_terms: "계정 만들기에 동의해야 합니다."
     error: "오류가 발생하였습니다."
@@ -553,7 +560,6 @@ ko:
     none: '응답 안 함'
   user_type:
     student: 'student'
-    teacher: '선생님'
   footer:
     thank_you: '우리는 Code Studio를 만드는데 도움을 주신 <a href="https://code.org/about/donors"> 기증자</a>, <a href="https://code.org/about/partners"> 파트너</a>, <a href="https://code.org/about/team"> 확장된 팀</a>, 비디오 캐스트 및 <a href="https://code.org/about/advisors"> 교육 고문</a> 들의 지원에 감사 드립니다.'
     help_from_html: '특히 이 자료를 만드는 데 도움을 준 구글, 마이크로 소프트, 페이스북, 트위터의 엔지니어들을 칭찬하고 싶습니다.'

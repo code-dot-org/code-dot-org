@@ -1652,9 +1652,7 @@ ko:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: 아이스크림
-            Stars: 별
-            Fireworks: 불꽃놀이
+            '"placeholder"': 불꽃놀이
             '"rainbow"': 무지개
             '"hearts"': 하트
             '"flowers"': 꽃
@@ -1671,7 +1669,7 @@ ko:
         text: Playsound {SOUND}
         options:
           SOUND:
-            Light: 빛
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': 빛
       Poetry_setBackground:
         text: 배경색 {COLOR} 설정
       Poetry_setBackgroundEffect:

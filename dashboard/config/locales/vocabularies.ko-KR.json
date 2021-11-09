@@ -74,6 +74,9 @@
         "machine_learning/oceans/unversioned": {
           "word": "머신 러닝"
         },
+        "code/poem-art/unversioned": {
+          "word": "코드"
+        },
         "sprite/coursef/2021": {
           "word": "스프라이트",
           "definition": "위치와 크기, 외형을 가진 화면 위 그래픽"
