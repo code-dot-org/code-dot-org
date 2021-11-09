@@ -33,14 +33,11 @@ Please have any interested teachers reach out to sung[at]code.org to be added to
 ## Indigenous Communities & K-12 CS Education Virtual Summit
 November 4-5, 2021
 
-Join colleagues, administrators, teachers, policy makers, and advocates to discuss K-12 Computer Science Education in Native American communities.  Learn from one another and dedicate time to developing a CS pathway in your school community.  
+This summit brough together colleagues, administrators, teachers, policy makers, and advocates to discuss K-12 Computer Science Education in Native American communities.  Video recordings of two sessions will be added below.  More resources discussed at the summit to be shared soon.    
 
-This virtual event is held under three banners:  <a href="https://nativesintech.org/" target=_blank>Natives in Tech</a> Annual Conference, <a href="http://Code.org" target=_blank>Code.org</a>, and <a href="https://www.csedcon.com/" target=_blank>CSEdCon</a> (The Global Computer Science Education Conference).
+This virtual event was held under three banners:  <a href="https://nativesintech.org/" target=_blank>Natives in Tech</a> Annual Conference, <a href="http://Code.org" target=_blank>Code.org</a>, and <a href="https://www.csedcon.com/" target=_blank>CSEdCon</a> (The Global Computer Science Education Conference).
 
 
-### *Summit Schedule*
-
- 
 **Kickoff & Keynote: _<br>“First Steps to CS Education in Our K-12 Schools: Solving Broadband”_**<br>
 Thursday, November 4th, 1-2pm PT 
  
@@ -53,7 +50,6 @@ Chief Programs Officer | Code.org
 Keynote: <b>Kimball Sekaquaptewa</b><br>
 Chief Technology Officer | Sante Fe Indian School<br>
 ![Keynote](/Kimball2.png)<br><br>
-
 
 
 ![Keynote](/NAIPIpanel.png) 

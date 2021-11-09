@@ -57,6 +57,9 @@ export default class PoetryLibrary extends CoreLibrary {
 
       // Override the draw loop
       executeDrawLoopAndCallbacks() {
+        // Make sure we start each frame with a clean slate.
+        this.p5.background('white');
+
         this.backgroundEffect();
         this.runBehaviors();
         this.runEvents();
