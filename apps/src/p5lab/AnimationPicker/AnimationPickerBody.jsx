@@ -214,20 +214,16 @@ export default class AnimationPickerBody extends React.Component {
             color={Button.ButtonColor.orange}
           />
         )}
-        <h1 style={dialogStyles.title} ref="animationPicker_title">
-          {msg.animationPicker_title()}
-        </h1>
+        <h1 style={dialogStyles.title}>{msg.animationPicker_title()}</h1>
         {!is13Plus && !hideUploadOption && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
-        <div ref="animationPicker_searchBar">
-          <SearchBar
-            placeholderText={msg.animationSearchPlaceholder()}
-            onChange={evt => this.onSearchQueryChange(evt.target.value)}
-          />
-        </div>
+        <SearchBar
+          placeholderText={msg.animationSearchPlaceholder()}
+          onChange={evt => this.onSearchQueryChange(evt.target.value)}
+        />
         {(searchQuery !== '' || categoryQuery !== '') && (
-          <div style={styles.navigation} ref="animationPicker_categories">
+          <div style={styles.navigation}>
             {categoryQuery !== '' && (
               <div style={styles.breadCrumbs}>
                 {this.props.navigable && (
@@ -285,7 +281,7 @@ export default class AnimationPickerBody extends React.Component {
         </div>
         {this.multiSelectEnabled_ &&
           (searchQuery !== '' || categoryQuery !== '') && (
-            <div style={styles.footer} ref="animationPicker_footer">
+            <div style={styles.footer}>
               <Button
                 text={msg.done()}
                 onClick={onAnimationSelectionComplete}
