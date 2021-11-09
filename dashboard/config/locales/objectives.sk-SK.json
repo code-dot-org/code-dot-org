@@ -38,6 +38,9 @@
         "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
           "description": "Vytvárať pomocou kódu tanečné animácie"
         },
+        "ba0eef71-97bc-4525-824e-3abc2087dbaf": {
+          "description": "Vytvárať programy, ktoré reagujú na udalosti podmienené časom."
+        },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
           "description": "Rozpoznať, čo sa od nich očakáva, keď prichádzajú do počítačovej učebne."
         },
@@ -74,6 +77,15 @@
         "8cbf109a-b450-420b-973a-db9efd47f61f": {
           "description": "Rozhodnite, aké druhy výrokov je prípustné povedať na internete a aké nie."
         },
+        "7c2d78e6-377a-491c-9be0-3378e4a9357e": {
+          "description": "Priradiť hodnotu k premennej"
+        },
+        "41ddf297-8c92-42c1-8157-97ba0660483d": {
+          "description": "Zavolať premennú viackrát v rámci programu"
+        },
+        "55e42aa4-7f88-4f0f-9d90-97716ef3ab75": {
+          "description": "Zistiť vzťah medzi spôsobom definovania, uloženia a načítania premennej po spustení programu"
+        },
         "28d3cc79-4aea-431d-a445-745e75e747d8": {
           "description": "Používať premenné na ukladanie slov a slovných spojení."
         },
@@ -85,6 +97,9 @@
         },
         "8dbf18d9-ed4b-4068-91a3-6d1c2bee531d": {
           "description": "Používať premenné v kombinácii s výzvami."
+        },
+        "a1e3a5d5-d609-4c1f-a4ef-6000a4335957": {
+          "description": "Vytvorenie interaktívneho počítačového programu, ktorý reaguje na vstup od používateľov."
         },
         "0272de44-fd6e-4cc0-a5f1-b4f21a96d21b": {
           "description": "Identifikovať, aké výhody má použitie cyklovej štruktúry v porovnaní s manuálnym opakovaním."
@@ -119,6 +134,9 @@
         "f0d9f34e-7686-4f9b-a29c-4a6bae1c038d": {
           "description": "Určiť začiatočnú, konečnú a prírastkovú hodnotu v cykle „for“."
         },
+        "1e676bcd-e312-4827-88ce-d6befc87d61c": {
+          "description": "Vyjadriť hodnoty počítadla pri každom opakovaní cyklu „for“ počas vykonávania programu."
+        },
         "a4f6a65a-de1d-4d51-9429-b3b381919b84": {
           "description": "Určiť začiatočnú, konečnú a prírastkovú hodnotu v cykle „for“."
         },
@@ -130,6 +148,21 @@
         },
         "7ad09074-8899-4330-bb54-6a00c5164299": {
           "description": "Rozlíšiť, kedy je vhodné použiť cyklus „for“ a kedy iné druhy cyklov, napríklad cyklus „opakuj“ či „pokiaľ“."
+        },
+        "081b1c52-9a72-44ac-a10e-86f0ebec4c43": {
+          "description": "Zhromaždiť údaje o modeli pomocou počítačovej simulácie."
+        },
+        "519c1444-230e-4182-a4eb-09414a7d09fb": {
+          "description": "Vytvoriť graf s dvomi čiarami na porovnanie údajov z dvoch rôznych zdrojov."
+        },
+        "16dabf47-0051-4143-834c-067bb8fb605c": {
+          "description": "Vytvoriť a overiť predpovede úpravou premenných simulácie."
+        },
+        "03137644-b4a2-4c28-8a6a-9de5c407a8f1": {
+          "description": "Uvedomiť si zložitosť posielania správ cez internet."
+        },
+        "e94042c1-9793-4fe8-8ce9-1a76bc63f161": {
+          "description": "Preložiť URL adresy na IP adresy."
         },
         "12c53e25-70d7-4192-a97a-da08dd673338": {
           "description": "Naučiť sa vopred naplánovať riešenie zadania. "
@@ -196,6 +229,15 @@
         },
         "ae68c8b9-0188-48da-a066-b89a819b67e2": {
           "description": "Prekonávať prekážky, ako sú časové limity či chyby v kóde."
+        },
+        "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
+          "description": "Zoznámte sa s internetom ako prostriedkom, pomocou ktorého je možné navštevovať ďaleké miesta a učiť sa nové veci."
+        },
+        "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
+          "description": "Priblížte si podobnosť medzi pravidlami bezpečného správania sa online a v skutočnom svete."
+        },
+        "ba49206c-c099-4994-be57-1f8744273eaf": {
+          "description": "Vysvetlite pravidlá bezpečného cestovania internetom."
         },
         "9727a876-04d5-4ae0-a904-13cd594e2fac": {
           "description": "Rozpoznať, čo sa od nich očakáva, keď prichádzajú do počítačovej učebne."
@@ -320,6 +362,12 @@
         "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
           "description": "Precvičiť si vytváranie silného a zapamätateľného hesla."
         },
+        "3c4b51d5-b72f-42df-a55a-86c146214424": {
+          "description": "Premeniť zoznam krokov na program"
+        },
+        "16d1e174-7b4d-4b5e-a7be-9d4399743d19": {
+          "description": "Vysvetliť limity toho, keď problémy prenášame z ľudskej reči do jazyka strojov"
+        },
         "69023643-6dd6-4d71-b31a-d2dff7952ea7": {
           "description": "Usporiadať príkazy na pohyb ako postupnosť krokov v programe."
         },
@@ -329,11 +377,32 @@
         "14389c2c-96ea-4be1-8347-46e7d19dd1ff": {
           "description": "Rozložiť dlhý sled inštrukcií na čo najdlhší sled inštrukcií, ktorý sa dá opakovať."
         },
+        "8a0addda-b47f-4551-8c82-9115be3c130d": {
+          "description": "Definovať myšlienky pomocou kódu a symbolov."
+        },
+        "dfde2f15-333a-4ca0-942e-eb7642ea3239": {
+          "description": "Kontrolovať prácu ostatných členov tímu."
+        },
+        "8dba466d-d809-49c6-8f60-218c27964411": {
+          "description": "Odhaliť známky frustrácie."
+        },
+        "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
+          "description": "Prečítať a porozumieť kódu, s ktorým sa stretnú."
+        },
+        "71cede4e-3e93-41d6-a422-f2443f756a61": {
+          "description": "Identifikovať chybu a problémy, ktoré v programe spôsobuje."
+        },
+        "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e": {
+          "description": "Opísať a realizovať plán na ladenie programu."
+        },
         "3b4a2468-e182-4060-861f-2a922730445b": {
           "description": "Identifikuj akcie, ktoré súvisia so vstupnými udalosťami. "
         },
         "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
           "description": "Podeliť sa o kreatívny výtvor s ostatnými žiakmi."
+        },
+        "bafea2a8-7a23-4046-9360-77d760c54c2b": {
+          "description": "Vytvoriť animovanú interaktívnu hru pomocou postupností a udalostí."
         },
         "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
           "description": "Identifikuj akcie, ktoré súvisia so vstupnými udalosťami. "
@@ -373,6 +442,9 @@
         },
         "494526f8-7392-4788-9126-b2e2dd53b241": {
           "description": "Určiť, či je podmienka splnená alebo nie."
+        },
+        "3f9795a0-e52c-4fcd-ade0-d436facf382c": {
+          "description": "Prejsť si program a predpovedať jeho výsledok, ak sú určené vstupné údaje."
         },
         "f3746860-8db9-414b-bd6e-5d2503fc81b4": {
           "description": "Zadefinovať, za akých podmienok sa určité časti programu majú spustiť a za akých nie."

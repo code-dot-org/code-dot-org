@@ -66,6 +66,10 @@
           "purpose": "Premenné sa v tomto kurze budú používať na ukladanie a upravovanie údajov. V tomto bode budú žiaci jednoducho ukladať a využívať hodnoty bez toho, aby ich menili. V neskorších lekciách budú žiaci ukladať číselné hodnoty a postupne ich upravovať napríklad na to, aby hráčovi v hre počítali skóre.",
           "student_overview": "V tejto lekcii si precvičíš používanie premenných v Sprite Labe."
         },
+        "coursef-2021/lesson-11": {
+          "preparation": "-   Vytlačte si príručku k plánovania alebo každému žiakovi poskytnite jej digitálnu kópiu. Predtým ju skontrolujte pre prípad, že by ste ju chceli prispôsobiť potrebám vašich žiakov.\n\n-   Vopred skontrolujte možnosti na úrovni 3, aby ste sa oboznámili s postupom, ktorý budú musieť žiaci dodržať.\n\n-   Táto lekcia sa môže natiahnuť na viacero vyučovacích hodín. Naplánujte preto osnovu vopred.",
+          "purpose": "V tejto lekcii nie sú žiadne nové zručnosti ani koncepty, ale žiakom dáva príležitosť kreatívnym spôsobom využiť, čo sa naučili."
+        },
         "coursef-2021/Loops with the Artist": {
           "overview": "Sledujte nadšenie na tvárach vašich študentov ako si vytvoria nádherné obrázky pomocou malého počtu blokov a digitálnych pečiatok. Táto lekcia stavia na pochopení cyklov v predchádzajúcej lekcii a dáva študentom príležitosť naplno prejaviť svoju kreativitu. Táto aktivita tiež predstavuje vynikajúcu príležitosť na tvorbu diel pre portfólio, či ako ukážku pre rodičov. ",
           "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
@@ -79,7 +83,8 @@
           "student_overview": "V tejto lekcii budeš vytvárať obrázky pomocou premenných, ktoré sa po spustení programu menia."
         },
         "coursef-2021/Nested Loops in the Maze": {
-          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky."
+          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "Táto lekcia ukazuje (alebo opakuje), ako fungujú hlavolamy so včelami, a predstavuje žiakom koncept _vnorených cyklov_. V ďalšej lekcii sa vrátime k premenným."
         },
         "coursef-2021/Variables that Change in Bee": {
           "overview": "Táto lekcia na **budovanie zručností** žiakom pomôže pochopiť, ako sa pomocou premenných vytvárajú dynamickejšie programy, keďže umožňujú menenie hodnôt aj po spustení programu.",
@@ -88,7 +93,8 @@
           "student_overview": "Táto včela miluje premenné!"
         },
         "coursef-2021/For Loop Fun": {
-          "preparation": "-   Pozrite si \\*_\\\\_video \\*\\*.\n-   Vytlačte jeden **\\*pracovný hárok** pre každú skupinu.\n-   Vytlačte **\\*hodnotenie** pre každého žiaka.\n-   Uistite sa, že každý žiak má zápisník na poznámky."
+          "preparation": "-   Pozrite si \\*_\\\\_video \\*\\*.\n-   Vytlačte jeden **\\*pracovný hárok** pre každú skupinu.\n-   Vytlačte **\\*hodnotenie** pre každého žiaka.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "V tomto bode už žiaci úplne zvládli cykly. Dnes sa naučia o ďalšom type cyklu, ktorý sa používa v programovaní. Cyklus „for“ opakuje príkazy určený počet krát, ale tiež sleduje hodnoty, cez ktoré prechádza. Napríklad cyklus „for“, ktorý začína hodnotou 4 a končí hodnotou 8 a má hodnotu kroku 1, sa zopakuje 4 krát, ale zaznamenajú sa aj hodnoty 4, 5, 6 a 7 na použitie inde. Použitím tejto štruktúry s premennými možno vytvoriť naozaj fantastické programy. Dnes si žiaci osvoja len základy cyklu „for“, než sa ponoria do programovania s týmito cyklami!"
         },
         "coursef-2021/For Loops in Bee": {
           "overview": "Táto lekcia zameraná na **budovanie zručností** sa zameriava na cykly a používanie riadiacej premennej na riešenie zložitejších úloh.",
@@ -104,13 +110,20 @@
         },
         "coursef-2021/Simulating Experiments": {
           "overview": "Spustením jednoduchej simulácie v Sprite Lab si študenti vyskúšajú, ako je možné pomocou výpočtov zhromažďovať údaje, ktoré identifikujú trendy alebo vzory. Po opakovanom spustení simulácie budú mať študenti možnosť predpovedať, ako môže zmena premennej v simulácii ovplyvniť výsledok, a potom túto hypotézu otestovať.",
+          "preparation": "-   Určte, či budú žiaci spúšťať simulácie na svojom vlastnom počítači alebo spolu ako trieda.\n-   Ak je to potrebné, pripravte si dve simulácie v tejto lekcii na premietanie.",
+          "purpose": "Mnohé vedné odbory používajú počítačové technológie na spúšťanie modelov a simulácií na uskutočňovanie pokusov, zhromažďovanie údajov a analýzu údajov s cieľom získať z nich poznatky. Hoci je simulácia v tejto lekcii celkom jednoduchá, môže žiakom poslúžiť ako odrazový mostík, aby dokázali pochopiť, ako sa sofistikovanejšie výpočtové modely môžu používať na testovanie hypotéz.",
           "student_overview": "Spusti simulácie na počítači a experimentuj zmenou premenných."
         },
         "coursef-2021/lesson-5": {
           "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky."
         },
+        "coursef-2021/AI for Oceans": {
+          "purpose": "Cieľom tejto lekcie je poskytnúť žiakom rýchly úvod do strojového učenia, čo je typ umelej inteligencie. Žiaci preskúmajú, ako sa používajú trénovacie údaje na to, aby model strojového učenia dokázal klasifikovať nové údaje. Žiaci by mali získať pozitívne skúsenosti počas tohto kurzu a, čo je ešte dôležitejšie, mali by byť motivovaní ďalej sa učiť informatiku. "
+        },
         "coursef-2021/Internet": {
-          "overview": "I keď mnoho ľudí denne internet používa, veľa z nich nevie, ako funguje. V tejto lekcii budú študenti predstierať, že prechádzajú cez internet a to tak, že sa budú učiť o pripojeniach, URL aj IP adresách a DNS."
+          "overview": "I keď mnoho ľudí denne internet používa, veľa z nich nevie, ako funguje. V tejto lekcii budú študenti predstierať, že prechádzajú cez internet a to tak, že sa budú učiť o pripojeniach, URL aj IP adresách a DNS.",
+          "preparation": "-   Pozrite si video **\\*Internet** pre učiteľov.\n-   Vytlačte dostatočný počet **\\*kartičiek s adresou IP a kartičiek s typom doručenia** pre každú skupinu.\n-   Vytlačte jedno hodnotenie \\*\\*\\*Internet\\*\\* pre každého žiaka.\n-   Otvorte internetovú stránku (napríklad **\\*get-site-ip.com**.\n-   Uistite sa, že každý študent má zápisník na poznámky.",
+          "purpose": "Ak ste sa venovali každej lekcii v tomto kurze, potom každý žiak vo vašej triede používal internet... Ale koľkí z nich vedia, ako funguje? Ak sa žiaci o internete dozvedia viac, lepšie pochopia jeho nekonečné možnosti."
         },
         "coursef-2021/End of Course Project": {
           "overview": "Táto lekcia s **projektom** prevedie žiakov procesom navrhovania, vytvárania a prezentácie nových projektov.",
@@ -166,6 +179,7 @@
         },
         "coursea-2021/Learn to Drag and Drop": {
           "overview": "Táto lekcia zameraná na **budovanie zručností** poskytne študentom predstavu o tom, čo očakávať, keď prvýkrát prídu do počítačovej učebne. Začína krátkou diskusiou, ktorá im predstaví základy správania v počítačovej učebni, a potom budú obiť on‑line úlohy pomocou počítača.",
+          "preparation": "-   Pozrite si video **\\*Ako vytvoriť sekciu triedy** na portáli Code.org - video pre učiteľov. Vytvorte si vlastnú sekciu triedy a uistite sa, že všetci žiaci dostali kartičku s prístupovým kódom.\n-   Skontrolujte, či majú všetci žiaci prístup k Lekcii 2 zo svojich zariadení. Zvážte, či nie je vhodné skryť ďalšie lekcie, aby žiaci nepostupovali prirýchlo.\n-   Požiadajte školského správcu IT, aby vám vytvoril prepojenie na sekciu triedy priamo na pracovnej ploche počítača.\n-   Prezrite si ďalší obsah súvisiaci s bezpečnosťou online na webovej stránke združenia Common Sense Education.",
           "purpose": "Hlavným cieľom tejto lekcie je umožniť žiakom, aby sa zlepšovali v práci s počítačom. Pokrytím najzákladnejších funkcií počítača, ako je klikanie, presúvanie a púšťanie, stierame rozdiely medzi žiakmi a dávame všetkým možnosť zvládnuť budúce úlohy rovnako dobre. Táto lekcia tiež poskytuje skvelú príležitosť predstaviť žiakom základné termíny týkajúce sa počítačového hardvéru, napríklad „myš“, „touchpad“ či „dotyková obrazovka“ (v závislosti od toho, aké zariadenia používate).",
           "student_overview": "Dokonči úlohy presúvaním objektov."
         },
@@ -249,6 +263,7 @@
           "purpose": "Organizácia Common Sense Education túto lekciu vytvorila s cieľom ukázať žiakom, ako dokážu silné heslá ochrániť ich súkromie."
         },
         "coursed-2021/Algorithms: Graph Paper Programming": {
+          "preparation": "-   (Nepovinné) Pozrite si video **\\*Lekcia v akcii**.\n-   Vytlačte pre každého žiaka jeden **\\*pracovný list** a jednu **\\*hodnotenú úlohu**.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
           "purpose": "Cieľom tejto aktivity je vzbudiť nadšenie pre kurz a predstaviť základné koncepty programovania, ktoré budú používané počas celého kurzu. Úvodná hodina zámerne predstavuje postupnosti krokov a algoritmy Bez počítača – týmto spôsobom si môžu aj žiaci, ktorí nemajú skúsenosti s počítačmi (prípadne z nich majú obavy) vybudovať základné pochopenie týchto dôležitých tém. V tejto lekcii sa žiaci naučia vytvoriť algoritmus a preložiť ho do programu. "
         },
         "coursed-2021/Introduction to Online Puzzles": {
@@ -256,27 +271,47 @@
           "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
           "purpose": "Uznávame, že každá trieda má spektrum porozumenia pre každý predmet. Niektorí študenti vo vašej triede môžu byť počítačovými mágmi, zatiaľ čo iní nemajú veľa skúseností. Aby sme vytvorili rovnakú oblasť hrania (a učenia), vyvinuli sme túto \"zrýchlenú fázu\" pre kurz D. Tento kurz môže byť použitý buď ako úvod alebo ako opakovanie, ako používať Code.org a základné koncepty počítačovej vedy. Táto časť zahŕňa všetky predpoklady potrebné na začatie kurzu D."
         },
+        "coursed-2021/Relay Programming": {
+          "preparation": "-   Pozrite si **\\*video pre učiteľov**.\n-   Nájdite si na túto aktivitu veľký voľný priestor, napríklad telocvičňu či vonkajšie ihrisko.\n-   Vytlačte pre každú skupinu jeden **\\*balíček k aktivite**.\n-   Rozdajte každej skupine dostatok papierov a pier/ceruziek.\n-   Vytlačte jeden pre každého žiaka jeden **\\*pracovný list**.\n-   Uistite sa, že každý študent má zápisník na poznámky.",
+          "purpose": "Tímová práca je v informatike veľmi dôležitá. Namiesto toho, aby žiaci pracovali samostatne, píšu a ladia svoj kód spoločne v tímoch. V tejto lekcii sa žiaci naučia pracovať spolu čo najúčinnejšie.\n\nTáto aktivita vytvára aj pocit naliehavosti, ktorý žiakov naučí využívať dostupný čas čo najlepšie a vyhýbať sa chybám bez toho, ako príliš zaostali. Táto skúsenosť môže byť pre žiakov mierne stresujúca (čo je očakávané). Uistite sa, že vaši žiaci majú nástroje potrebné na to, aby sa vyrovnali s pocitom frustrácie."
+        },
         "coursed-2021/Debugging in Collector": {
           "overview": "\"V rámci tejto aktivity budú študenti trénovať ladenie v prostredí „zberateľov“. Študenti sa naučia čítať a editovať kód a opravovať hádanky jednoduchými algoritmami, slučkami a vnorenými slučkami.\"",
-          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky."
+          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "Cieľom tejto lekcie je naučiť žiakov, že pri nadobúdaní novej zručnosti sú zlyhania úplne normálne. Žiaci dostanú vopred pripravené programy, ktoré však nefungujú, a dostanú za úlohu opraviť ich. Tento proces zvaný „ladenie“ žiakom pomáha nadobudnúť nesmierne dôležité zručnosti riešenia problémov a kritického myslenia. Získané zručnosti si so sebou potom prenesú aj do náročnejších programovacích projektov."
+        },
+        "coursed-2021/Events in Bounce": {
+          "preparation": "-   Uistite sa, že každý žiak má zápisník na poznámky.\n-   Prejdite si všetky úlohy v tejto lekcii, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické.\n-   Prečítajte si **\\*prezentáciu** (žiakom ju ukážete na konci hodiny).",
+          "purpose": "Udalosti sú v počítačových programoch – najmä videohrách – veľmi bežné.  \n\nV tejto lekcii si budú žiaci rozvíjať svoje poznatky o udalostiach tým, že naprogramujú športovú počítačovú hru. Žiaci sa naučia, ako naprogramovať pohyb ruky pomocou šípok a ako naprogramovať, aby sa pri stretnutí objektov ozval zvuk. Na konci budú mať príležitosť prispôsobiť si hru tak, aby bola jedinečnejšia."
         },
         "coursed-2021/Build a Star Wars Game": {
           "overview": "V tejto lekcii si študenti precvičia využitie udalostí na vytvorenie hry, ktorú môžu zdieľať online. R2-D2 a ďalšie postavy zo Star Wars (Hviezdnych vojen) študentov prevedú konceptom udalostí a potom im ponechajú priestor na vytvorenie vlastnej hry.",
+          "preparation": "-   Prejdite si všetky úlohy, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "Kurz Základy informatiky nie je iba o vyučovaní informatiky – jeho dôležitou súčasťou je dosiahnuť, aby bola informatika pre žiakov zábavná. V tejto lekcii sa žiaci budú učiť o udalostiach prostredníctvom obľúbených postáv z _Hviezdnych vojen_. V týchto úlohách sa stiera hranica medzi učením a zábavou. Žiaci sa zároveň naučia rozoznávať v hrách časté programovacie postupy, vďaka čomu budú môcť tieto bežné informatické princípy pozorovať aj pri hraní počítačových hier doma.",
           "student_overview": "Nech ťa sila sprevádza pri tvorení tvojej vlastnej hry Star Wars."
         },
         "coursed-2021/Dance Party": {
           "overview": "V tejto lekcii zameranej na **budovanie zručností** budú žiaci programovať interaktívnu tanečnú párty.",
+          "preparation": "-   Prejdite si všetky úlohy, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické.\n-   Uistite sa, že každý žiak má zápisník na poznámky.\n-   Zamyslite sa, či by sa žiakom nezišli slúchadlá. Táto aktivita je postavená na zvuku.",
           "purpose": "V tejto lekcii sa žiaci zoznámia so základnými informatickými konceptmi programovania a tvorenia udalostí (pomocou blokov).",
           "student_overview": "Je čas na oslavu! V tejto lekcii si naprogramuješ vlastnú interaktívnu tanečnú párty."
         },
+        "coursed-2021/Loops in Ice Age": {
+          "preparation": "-   (Voliteľné) Vyberte zopár úloh, ktoré bude celá trieda robiť spoločne.\n-   Uistite sa, že každý žiak má zápisník na poznámky."
+        },
         "coursed-2021/Loops in Artist": {
-          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky."
+          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "Táto lekcia prostredníctvom rozličných úloh motivuje žiakov k tomu, aby sa zamysleli nad tým, prečo sú cykly `opakuj` praktickejšie než rozpisovanie kódu."
         },
         "coursed-2021/Nested Loops in Bee": {
           "overview": "V tejto lekcii zameranej na **budovanie zručností** sa budú žiaci učiť, ako naprogramovať cyklus vnorený v ďalšom cykle.",
-          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky."
+          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "V rámci tohto úvodu do vnorených cyklov budú žiaci musieť vyjsť zo svojej komfortnej zóny, aby dokázali úlohy riešiť efektívnejšie.  \n\nV predchádzajúcich úlohách cykly motivovali žiakov k tomu, aby sa naučili rozoznávať opakujúci sa kód. Tentokrát sa naučia rozoznávať vzory opakujúce sa _vnútri_ ďalších opakujúcich sa vzoroch, a vytvárať tak vnorené cykly. Táto úroveň sa na začiatku motivuje žiakov k tomu, aby sa pokúsili vyriešiť úroveň, v ktorej je rozpisovanie celého kódu otravné a náročné. Po prezretí videa, ktoré predstavuje koncept vnorených cyklov, sa žiaci oboznámia s príkladom a dostanú za úlohu predpovedať, čo sa stane, ak cyklus umiestnime do iného cyklu. V rámci tejto lekcie budú mať žiaci množstvo príležitostí precvičiť a upevniť si svoje poznatky o programovaní pomocou cyklov."
         },
         "coursed-2021/Conditionals with Cards": {
+          "overview": "V rámci tejto hodiny na **vytvorenie kontextu** žiaci spíšu pravidlá jednoduchých kartových hier pomocou _podmienených príkazov (ak/inak)_.",
+          "preparation": "-   Pripravte si balíčky kariet alebo niečo podobné.\n-   Vytlačte alebo premietnite **\\*ukážkové programy**.\n-   Vytlačte každému žiakovi jednu **\\*hodnotenú úlohu**.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "Na učení podmienených príkazov je výborné, že žiaci už tento koncept poznajú zo svojho každodenného života. \n\nTáto lekcia spája informatiku s bežným životom tým, že využíva schopnosť žiakov vyhodnotiť, či je podmienka splnená alebo nie. Žiaci sa naučia pomocou podmieneného príkazu „ak“ určiť, kedy sa má príkaz vykonať, a pomocou podmieneného príkazu „ak/inak“ určiť, kedy sa má príkaz vykonať a čo sa má udiať v opačnom prípade. Žiaci možno nebudú poznať slovné spojenie „podmienené príkazy“, no väčšina z nich bude rozumieť, ako pomocou podmieneného príkazu „if“ zabezpečiť, aby sa nejaká akcia vykonala iba vtedy, keď treba.",
           "student_overview": "Je čas na hru, v ktorej budeš zbierať body len za určitých podmienok!"
         },
         "coursed-2021/lesson-6": {
@@ -288,6 +323,7 @@
         "coursed-2021/Conditionals in Bee": {
           "overview": "V tejto lekcii zameranej na **budovanie zručností** budú žiaci pokračovať v programovaní s podmienkami, vďaka ktorým budú môcť vytvárať kód fungujúci rôzne v závislosti od konkrétnych situácií, s ktorými sa program stretne.",
           "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "Potom, čo sa žiaci oboznámili s podmienenými príkazmi v lekcii Podmienky s kartami, si teraz použitie ich použitie vo svojich programoch. Bloky „ak/inak“ im umožnia vytvárať flexibilnejšie programy. Včela bude zbierať nektár iba _ak_  sa nachádza pri kvete a vyrábať med iba _ak_ sa nachádza pri pláste.",
           "student_overview": "Teraz, keď už rozumieš podmieneným príkazom, nadišiel čas naprogramovať včelu tak, aby pomocou podmienených príkazov mohla vyrábať med a zbierať nektár."
         },
         "coursed-2021/While Loops in Farmer": {
@@ -297,10 +333,12 @@
           "student_overview": "Cykly sú pri programovaní veľmi užitočné. V tejto lekcii sa na preto naučíš používať nový druh cyklov – cykly „pokiaľ“!"
         },
         "coursed-2021/Until Loops in Maze": {
-          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky."
+          "preparation": "-   Prejdite cez hlavolamy a nájdite potenciálne problémové oblasti pre vašu triedu.\n-   Uistite sa, že každý žiak má zápisník na poznámky.",
+          "purpose": "Tento súbor úloh slúži na upevnenie a rozšírenie poznatkov o cykloch, keďže predstavuje podmienku `až kým`. Vďaka spojeniu týchto dvoch konceptov žiaci dostanú príležitosť vyskúšať si vytváranie zložitých a inovatívnych programov."
         },
         "coursed-2021/End of Course Project": {
           "overview": "Táto lekcia s **projektom** prevedie žiakov procesom navrhovania, vytvárania a prezentácie nových projektov.",
+          "preparation": "-   Prejdite si všetky úlohy, aby ste identifikovali miesta, ktoré by pre vašu triedu mohli byť problematické.\n-   Vytlačte pre každého žiaka (alebo dvojicu) jedného **\\*sprievodcu plánovaním záverečného projektu**.\n-   (Nepovinné) Vyplňte si vlastného sprievodcu plánovaním a naprogramujte podľa neho projekt, ktorý ukážete žiakom.",
           "purpose": "Táto lekcia poskytuje žiakom priestor na vytvorenie vlastného projektu. Využívať na to budú podrobný postup, ktorý si od nich vyžaduje plánovanie, no zároveň im dáva aj veľkú tvorivú slobodu. ",
           "student_overview": "Priprav sa na veľa kódovania! Je načase vytvoriť tvoj projekt."
         },

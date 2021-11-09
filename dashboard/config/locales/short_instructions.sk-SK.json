@@ -2440,8 +2440,8 @@
         "CourseF_outbreak2": "Zmeňte zdravé príšery na choré, ak dôjde k ich dotyku.",
         "CourseF_outbreak3": "Zmeňte príšery na príšery s tvárovými maskami kliknutím na ne.",
         "CourseF_outbreak4": "Zmeňte počet a veľkosť príšeriek vo svojej simulácii.",
-        "CourseF_outbreak6": "Nechajte, aby sa všetky choré príšery začali zotavovať, keď sa zdravá príšera dotkne chorej príšery.",
-        "CourseF_outbreak7": "Zadajte percentuálnu šancu, že príšery ochorejú, kedykoľvek sa zdravé príšery dotknú chorých príšer. Urobte to pre všetky kombinácie príšer s maskami aj bez masiek.",
+        "CourseF_outbreak6": "Zadajte percentuálnu šancu, že príšery ochorejú, kedykoľvek sa zdravé príšery dotknú chorých príšer. Urobte to pre všetky kombinácie príšer s maskami aj bez masiek.",
+        "CourseF_outbreak7": "Vytvorte nový kostým pre príšery imúnne voči vírusu a použite ho pri svojej simulácii.",
         "CourseF_outbreak8": "Vytvorte nový kostým pre príšery imúnne voči vírusu a použite ho pri svojej simulácii.",
         "Dance Party 2_2021": "Zmeň správanie v bloku `___ začne ___` tak, aby sa mimozemšťan začal točiť dokola.",
         "Dance Party 4_2021": "Vytvor tretiu postavičku, ktorá vyzerá ako žltý mimozemšťan, donúť ju tancovať, keď na ňu klikneš a umiestni všetkých svojich mimozemšťanov do jednej línie. ",
@@ -2955,7 +2955,7 @@
         "courseA_collector_loops_challenge2kp_2021": "Ak chceš prejsť tento level, pozbieraj aspoň **3** drahokamy.",
         "courseC19_playLab_sample1_2021": "O chvíľu začneš pracovať na záverečnom projekte. Skôr, než začneš, venuj chvíľu pozornosti ukážkovým projektom.",
         "courseC19_playLab_sample2_2021": "O chvíľu začneš pracovať na záverečnom projekte. Skôr, než začneš, venuj chvíľu pozornosti ukážkovým projektom.",
-        "international_outbreak_freeplay": "Zdieľajte správu so svojou simuláciou.",
+        "international_outbreak_freeplay": "Urobte vo svojom projekte akékoľvek zmeny alebo vylepšenia, ktoré chcete. ",
         "ramp_artist_loops1_2021": "Túto úlohu dokončíš vtedy, keď sa posunieš vpred o 60 pixelov.",
         "ramp_artist_loops2_2021": "Urob päť krokov dopredu a nakresli túto farebnú čiaru.",
         "ramp_artist_loops3_2021": "Pomocou cyklu `opakuj` nakresli päť farebných čiar.",
@@ -3034,7 +3034,8 @@
         "courseF_text_choice_interview": "Oprav chybu tak, aby sa text zobrazoval správne.",
         "courseF_text_choice_multiprompt": "Oprav chybu tak, aby sa text zobrazoval správne.",
         "courseF_text_choice_title": "Pridaj do svojho programu veľký text pomocou úvodnej obrazovky. Potom úvodnú obrazovku skry pomocou udalosti.",
-        "CSDU4 - Design Mode - 16": "Pridajte obslužnú rutinu udalosti pre tlačidlo pomocou odkazu „Vložiť a zobraziť“ na karte Udalosti režimu dizajnu. (Kliknutím zobrazíte úplné pokyny)."
+        "CSDU4 - Design Mode - 16": "Pridajte obslužnú rutinu udalosti pre tlačidlo pomocou odkazu „Vložiť a zobraziť“ na karte Udalosti režimu dizajnu. (Kliknutím zobrazíte úplné pokyny).",
+        "Dance Party 3_2021": "Vytvor novú postavičku, ktorá vyzerá ako iný mimozemšťan. Potom jej prikáž správať sa podľa tvojich predstáv, keď na ňu klikneš."
       }
     }
   }

@@ -7484,6 +7484,8 @@ sk:
             'End of Course Project: Create a Play Lab Game':
               name: Záverečný projekt
               description_student: Priprav sa na veľa kódovania! Je načase vytvoriť tvoj projekt.
+            Password Power-Up:
+              name: Silnejšie heslá
           student_description: Vytvor programy s postupnosťami, cyklami a udalosťami. Prelož svoje iniciály do binárneho kódu, preskúmaj rôzne techniky riešenia problémov a nauč sa, ako reagovať na kyber šikanu. Na konci kurzu si vytvoríš svoju vlastnú hru alebo príbeh, ktoré budeš môcť zdieľať!
         coursed-2020:
           title: Kurz D (2019)
@@ -8236,7 +8238,7 @@ sk:
             text_and_prompts_2021:
               name: 'Sprite Lab: Text a výzvy'
             minitoolbox_2021:
-              name: 'Sprite Lab: Veľa objektov sprite'
+              name: 'Sprite Lab: Veľa sprajtov'
         virustest:
           title: Prebieha simulácia nákazy
           description_short: Pomocou programu Sprite Lab vytvorte simuláciu nákazy vírusom
@@ -8268,6 +8270,8 @@ sk:
               name: Predstavenie Sprite Labu
             lesson-2:
               name: Text a výzvy
+            lesson-3:
+              name: 'Miniprojekt: Programy reagujúce na vstupy používateľa'
             Virus Simulation for Code Bytes:
               name: Kódovanie nákazy
             Making Sprites:
@@ -8355,6 +8359,8 @@ sk:
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
               name: 'Objavujeme informatiku: Záverečný dotazník'
+            lesson-1:
+              name: 'Objavujeme informatiku: Záverečný dotazník'
           lesson_groups:
             cspSurvey:
               display_name: Dotazník
@@ -8431,6 +8437,8 @@ sk:
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
               name: 'Objavujeme informatiku: Záverečný dotazník'
+            lesson-1:
+              name: 'Objavujeme informatiku: Záverečný dotazník'
           lesson_groups:
             csd3_1:
               display_name: 'Kapitola 1: Obrázky a animácie'
@@ -8447,6 +8455,8 @@ sk:
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
               name: 'Objavujeme informatiku: Záverečný dotazník'
+            CS Discoveries Post-Course Survey:
+              name: 'Objavujeme informatiku: Záverečný dotazník'
           lesson_groups:
             csd4_1:
               display_name: 'Kapitola 1: Užívateľsky orientovaný dizajn'
@@ -8460,6 +8470,8 @@ sk:
           lessons:
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+            CS Discoveries Post-Course Survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
           lesson_groups:
             csd5_1:
@@ -8475,6 +8487,8 @@ sk:
               name: Funkcie s parametrami
             CS Discoveries Post Course survey:
               key: 'Objavujeme informatiku: Záverečný dotazník'
+              name: 'Objavujeme informatiku: Záverečný dotazník'
+            CS Discoveries Post-Course Survey:
               name: 'Objavujeme informatiku: Záverečný dotazník'
           lesson_groups:
             csd6_1:
@@ -8674,6 +8688,9 @@ sk:
           description_short: Nauč sa základy informatiky a vytvor si vlastné obrázky, príbehy a hry.
           description_audience: 'Vek: 6-10'
           lessons:
+            Password Power-Up:
+              key: Silnejšie heslá
+              name: Silnejšie heslá
             'Programming: My Robotic Friends':
               key: 'Programovanie: Moji robotickí kamaráti'
               name: Moji robotickí kamaráti (ml.)
@@ -8826,6 +8843,8 @@ sk:
               name: Pohľad do budúcnosti s Minecraftom
               description_student: Nespadni do lávy! V tejto lekcii sa oboznámiš s podmienenými príkazmi vo svete _Minecraftu_.
               description_teacher: V tejto lekcii zameranej na **budovanie zručností** žiaci dostanú príležitosť precvičiť si koncepty, ktoré sa naučili doteraz, a vyskúšať si využitie podmienených príkazov!
+            lesson-5:
+              name: Silnejšie heslá
             lesson-1:
               name: Objav silu slov
               description_student: Šikana nikdy nie je v poriadku. Počas tejto lekcie sa naučíte, čo je OK povedať na internete a čo nie.
@@ -9051,6 +9070,8 @@ sk:
             lesson-2:
               name: Objav silu slov
               description_student: Šikana nikdy nie je v poriadku. Počas tejto lekcie sa naučíte, čo je OK povedať na internete a čo nie.
+            lesson-11:
+              name: 'Miniprojekt: Programy reagujúce na vstupy používateľa'
           lesson_groups:
             ramp_up:
               display_name: Objekt "sprite"
@@ -9319,6 +9340,8 @@ sk:
               name: Predstavenie Sprite Labu
             blank-space-stories:
               name: Príbehy na doplnenie
+            user-input-programs:
+              name: 'Miniprojekt: Programy reagujúce na vstupy používateľa'
           lesson_groups:
             ramp_up:
               display_name: Úvod
@@ -9389,6 +9412,10 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -9455,6 +9482,8 @@ sk:
           lessons:
             Introduction to AI Lab:
               name: Úvod do UI Labu
+            CS Discoveries Post-Course Survey:
+              name: 'Objavujeme informatiku: Záverečný dotazník'
           lesson_groups:
             lessonGroup-4:
               display_name: Dotazník
@@ -9600,12 +9629,25 @@ sk:
               name: Widgety
             lesson-2:
               name: Nástroje
+        poetry:
+          lessons:
+            lesson-7:
+              name: Podmienky
         spelling-bee:
           lessons:
             lesson-1:
               name: Včela Hláskovanie
           title: Včela Hláskovanie
         csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Obsah
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Hodnotenie kurzu
+          title: 'Objavujeme informatiku: Záverečný dotazník'
+        csa6-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
               display_name: Obsah

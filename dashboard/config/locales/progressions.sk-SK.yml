@@ -145,6 +145,8 @@ sk:
       'Mini-Project: Snowflake #2': 'Mini-Projekt: Snehová vločka č.2'
       'Mini-Project: Swimming Fish': 'Mini-Projekt: Plávajúca ryba'
       'Mini-Project: Swimming Fish (continued)': 'Mini-Projekt: Plávajúca ryba (pokračovanie)'
+      'Mini-Project: User Input Programs': 'Miniprojekt: Programy reagujúce na vstupy
+        používateľa'
       'Mini-Project: Virtual Pet': 'Mini-Projekt: Virtuálny maznáčik'
       'Mini-project: Chase Game': 'Mini-Projekt: Naháňačka'
       'Mini-project: Flappy Game': 'Mini projekt: Hra s Flappym'
@@ -177,7 +179,7 @@ sk:
       Post-Course Survey Instructions: Inštrukcie pre vypĺňanie dotazníka po kurze
       Practice: Cvičenie
       Predict: Predvídať
-      Prediction: Predpoklad
+      Prediction: Predpoveď
       Problem Solving: Riešenie problémov
       Programming with Rey and BB-8: Programovanie s Rey a BB-8
       Programs that Repeat: Opakujúce sa programy
@@ -196,7 +198,7 @@ sk:
       Repeat Blocks with the Artist: Opakujúce sa bloky s umelcom
       Repeat Unit Statements: Repeat until (Opakuj pokiaľ neplatí) príkazy
       Repeat Until Statements: Repeat until (Opakuj pokiaľ neplatí) príkazy
-      Review: Zrevidovať
+      Review: Opakovanie
       Revise Artist Project: Zreviduj projekt Umelec
       Revise Sprite Lab Project: Reviduj Sprite Lab projekt
       Robot Doodle: Robotova čmáranica
@@ -261,6 +263,7 @@ sk:
       'Video: Introduction to Sprites': 'Video: Predstavenie objeku Sprite'
       'Video: Problem Solving Process': 'Video: Proces riešenia problémov'
       'Video: Sprite Movement': 'Video: Pohyb "sprite" objektu'
+      'Video: Sprites in Action': 'Video: Sprajty v akcii'
       'Video: Velocity': 'Video: Rýchlosť'
       'Video: What Makes a Computer, a Computer?': 'Video: Čo robí počítač počítačom?'
       Warm Up: Úvodná aktivita

@@ -5581,12 +5581,16 @@ sk-SK:
         answers:
         - text: Nestane sa nič.
           feedback: Nesprávne. Mimozemšťan sa začne pohybovať hore a dole po obrazovke.
-        - feedback: Nesprávne. Mimozemšťan sa začne pohybovať hore a dole po obrazovke.
-        - correct: true
+        - text: Mimozemšťan sa začne pohybovať sprava doľava.
+          feedback: Nesprávne. Mimozemšťan sa začne pohybovať hore a dole po obrazovke.
+        - text: Mimozemšťan sa začne pohybovať hore a dole po obrazovke.
+          correct: true
           feedback: Správne!
-        - {}
+        - text: Mimozemšťan zmizne navrchu obrazovky.
+          feedback: Nesprávne. Modrý mimozemšťan sa začne pohybovať hore a dole po
+            obrazovke.
         questions:
-        - {}
+        - text: Pozri sa pozorne na tento kód.  Čo sa stane, keď klikneš na mimozemšťana?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: Záhradníčka pozbiera dve tekvice.

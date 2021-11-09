@@ -57,7 +57,10 @@
         "courseF_sprites_ship": "Precvič si pohybovanie postavami a používanie správania.",
         "courseF_text_choice_interview": "V kóde sa vyskytla chyba, kvôli ktorej robot nehovorí to, čo má. Nájdi chybu a oprav ju.",
         "courseF_text_choice_multiprompt": "V kóde sa vyskytla chyba, pre ktorú táto pohľadnica nefunguje správne. Nájdi chybu a oprav ju.",
-        "courseF_text_choice_title": "Úvodné obrazovky sú ďalší spôsob, ako do programu pridať text. Tu si ich môžeš vyskúšať!"
+        "courseF_text_choice_title": "Úvodné obrazovky sú ďalší spôsob, ako do programu pridať text. Tu si ich môžeš vyskúšať!",
+        "CourseF_outbreak6": "Nie vždy dochádza k prenosu vírusu a masky tiež úplne nezastavia jeho prenos. Vylepšite svoju simuláciu tak, že infekcie sa budú vyskytovať náhodne.",
+        "CourseF_outbreak7": "Zabráňte tomu, aby vaši škriatkovia ochoreli tak, že im poskytnete imunitu.",
+        "international_outbreak_freeplay": "Pokračujte s rovnakými blokmi, ktoré už poznáte!"
       }
     }
   }

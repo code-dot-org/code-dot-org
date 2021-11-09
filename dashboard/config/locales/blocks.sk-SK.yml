@@ -1749,9 +1749,7 @@ sk:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Zmrzlina
-            Stars: Hviezdy
-            Fireworks: Ohňostroj
+            '"placeholder"': Ohňostroj
             '"rainbow"': Dúha
             '"hearts"': Srdiečka
             '"flowers"': Kvety
@@ -1769,7 +1767,7 @@ sk:
         text: playSound {SOUND}
         options:
           SOUND:
-            Light: Svetlý
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Svetlý
       Poetry_setBackground:
         text: nastav farbu pozadia {COLOR}
       Poetry_setBackgroundEffect:

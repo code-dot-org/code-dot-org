@@ -77,7 +77,8 @@
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz"
         },
         "variables_blank_space_stories/coursef/2021": {
-          "name": "Premenné: Príbehy na doplnenie"
+          "name": "Premenné: Príbehy na doplnenie",
+          "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview"
         },
         "blank_space_stories_-_worksheet/coursef/2021": {
           "name": "Príbehy na doplnenie",
@@ -96,42 +97,59 @@
           "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
         },
         "mini_project_user_input_programs/coursef/2021": {
-          "name": "Miniprojekt: Programy reagujúce na vstupy používateľa"
+          "name": "Miniprojekt: Programy reagujúce na vstupy používateľa",
+          "url": "https://docs.google.com/presentation/d/1AGDl6WPPsPId6J3GXjySlvFJMaLDnt0P9Tu6ujjZeG0/edit#slide=id.gc6acec9c41_0_68"
+        },
+        "teacher_sandbox_level/coursef/2021": {
+          "name": "Úroveň Priestor učiteľa",
+          "url": "https://studio.code.org/levels/27300"
         },
         "mini_project_user_input_programs_1/coursef/2021": {
-          "name": "Miniprojekt: Programy reagujúce na vstupy používateľa"
+          "name": "Miniprojekt: Programy reagujúce na vstupy používateľa",
+          "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview"
         },
         "pause_and_think_online/coursef/2021": {
           "name": "Pause and Think Online",
           "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Zábava s cyklami \"for\""
+          "name": "Zábava s cyklami \"for\"",
+          "url": "https://youtu.be/mX857v5B4gE"
+        },
+        "flf-assessment-teacher-key/coursef/2021": {
+          "name": "Zábava s cyklami „for“ - kľúč k hodnoteniu",
+          "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Zábava s cyklami \"for\""
+          "name": "Zábava s cyklami \"for\"",
+          "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Zábava s cyklami \"for\""
+          "name": "Zábava s cyklami \"for\"",
+          "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "Zábava s cyklami \"for\""
+          "name": "Zábava s cyklami \"for\"",
+          "url": "https://docs.google.com/document/d/1DPEOgWHVAAfnLXhuBWDw51nnGy1qSV9QPj9L2rUrvv8/edit"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "Zábava s cyklami \"for\""
+          "name": "Zábava s cyklami \"for\"",
+          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit"
         },
         "course-cf-blockly-blocks/coursef/2021": {
           "name": " Bloky na použitie bez počítača (kurzy C – F)",
           "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "running-simulations/coursef/2021": {
-          "name": "Vytváranie simulácií"
+          "name": "Vytváranie simulácií",
+          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
         },
         "unplugged-video-internet/coursef/2021": {
           "name": "Internet",
           "url": "https://youtu.be/mFOUbqYv1Sc"
         },
         "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
+          "name": "Kartičky s adresou IP a kartičky s typom doručenia",
           "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
         },
         "csf-internet-assessment/coursef/2021": {
@@ -311,6 +329,22 @@
           "name": "Úpravy virtuálnych lekcií",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
+        "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
+          "name": "Bezpečnosť v mojej online štvrti: Prezentácia z lekcie",
+          "url": "https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit"
+        },
+        "safety-in-my-online-neighborhood-my-online-neighborhood/coursea/2021": {
+          "name": "Bezpečnosť v mojej online štvrti: Moja online štvrť",
+          "url": "https://www.commonsense.org/education/videos/my-online-neighborhood"
+        },
+        "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
+          "name": "Bezpečnosť v mojej online štvrti: Bezpečnosť: to je ono!",
+          "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit"
+        },
+        "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
+          "name": "Bezpečnosť v mojej online štvrti: Chvíľa na zamyslenie",
+          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/"
+        },
         "pair-programming-vid/coursea/2021": {
           "name": "Programovanie v páre"
         },
@@ -397,8 +431,12 @@
         "csf-mrf-paper-trapezoid-template/coursec/2021": {
           "name": "Moji robotickí kamaráti"
         },
+        "c2-maze-bridge/coursec/2021": {
+          "url": "https://drive.google.com/file/d/19Ul9ruPQ6bHr3sfqnacMMmCGOekTXPYS/view"
+        },
         "unplugged-maze-blocks/coursec/2021": {
-          "name": "Bloky bludiska bez počítača"
+          "name": "Bloky bludiska bez počítača",
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
         },
         "pair-programming-vid/coursec/2021": {
           "name": "Programovanie v páre"
@@ -500,24 +538,31 @@
           "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "password_power-up_lesson_slides/coursed/2021": {
+          "name": "Silnejšie heslá: prezentácia k lekcii",
           "url": "https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit"
         },
         "password_power-up_power-up_your_password/coursed/2021": {
+          "name": "Silnejšie heslá: ako si vytvoriť silnejšie heslo",
           "url": "https://docs.google.com/document/d/1ihf7K4Kjupe3C0wrzzgUa-a9paNserfCfMAS2oj7178/edit"
         },
         "password_power-up_power-up_your_password_answer_key/coursed/2021": {
+          "name": "Silnejšie heslá: ako si vytvoriť silnejšie heslo",
           "url": "https://docs.google.com/document/d/1xxq5HBQZ5HQy6u5O5823HTjerEuxiOc9ueCiDEyUQo8/edit"
         },
         "password_power-up_lesson_quiz/coursed/2021": {
+          "name": "Silnejšie heslá: kvíz k lekcii",
           "url": "https://docs.google.com/forms/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy"
         },
         "password_power-up_lesson_quiz_answer_key/coursed/2021": {
+          "name": "Silnejšie heslá: kvíz k lekcii",
           "url": "https://www.commonsense.org/education/digital-citizenship/quiz/password-power-up-lesson-quiz"
         },
         "password_power-up_if_then_scenarios/coursed/2021": {
+          "name": "Silnejšie heslá: situácie ak/tak",
           "url": "https://docs.google.com/document/d/1JeZtFU6hMFTYITAAPaA_CRmOVknvkcKZQszL6u7DRG4/edit"
         },
         "password_power-up_if_then_scenarios_answer_key/coursed/2021": {
+          "name": "Silnejšie heslá: situácie ak/tak",
           "url": "https://docs.google.com/document/d/1yrL1rD9eCSEYAvsM8XiL5g-uKpqizYwAk73_6ddZOAQ/edit"
         },
         "graph-paper-programming/coursed/2021": {
@@ -619,6 +664,7 @@
           "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
+          "name": "Podmienky s kartami: ukážkový program",
           "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
@@ -634,6 +680,7 @@
           "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
         },
         "course-d-project-planning-guide-1/coursed/2021": {
+          "name": "Základy informatiky: kurz D – Sprievodca plánovaním záverečného projektu v expresnom kurze",
           "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
         },
         "csta_standards_mapping/coursed/2021": {
@@ -764,7 +811,7 @@
           "url": "https://youtu.be/DI7DprN4FtE"
         },
         "csf-express-end-of-course-project-planning-guide/express/2021": {
-          "name": "Základy informatiky – Sprievodca plánovaním záverečného projektu v expresnom kurze",
+          "name": "Základy informatiky: expresný kurz – Sprievodca plánovaním záverečného projektu v expresnom kurze",
           "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
         },
         "rubric-csf-final-projects/express/2021": {
