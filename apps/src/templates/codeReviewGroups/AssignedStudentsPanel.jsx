@@ -3,11 +3,19 @@ import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabButton from '@cdo/apps/javalab/JavalabButton';
-import StudentGroup from './StudentGroup';
-import color from '@cdo/apps/util/color';
-import {HEADER_STYLE, BUTTON_STYLE} from './UnassignedStudentsPanel';
+import CodeReviewGroup from './CodeReviewGroup';
+import {
+  HEADER_STYLE,
+  BUTTON_STYLE,
+  GROUPS_CONTAINER_STYLE
+} from './UnassignedStudentsPanel';
 
-export default function AssignedStudentsPanel({groups, onCreateGroupClick}) {
+export default function AssignedStudentsPanel({
+  groups,
+  onCreateGroupClick,
+  onGroupNameUpdate,
+  onGroupDelete
+}) {
   // TO DO: style and add small pop-up to get group name from teacher when creating a group.
   // https://codedotorg.atlassian.net/browse/CSA-1033
   return (
@@ -25,10 +33,13 @@ export default function AssignedStudentsPanel({groups, onCreateGroupClick}) {
       <div style={styles.groupsContainer}>
         {groups.map(group => {
           return (
-            <StudentGroup
+            <CodeReviewGroup
               droppableId={group.droppableId}
               members={group.members}
               key={group.droppableId}
+              name={group.name}
+              onNameUpdate={onGroupNameUpdate}
+              onDelete={onGroupDelete}
             />
           );
         })}
@@ -39,7 +50,9 @@ export default function AssignedStudentsPanel({groups, onCreateGroupClick}) {
 
 AssignedStudentsPanel.propTypes = {
   groups: PropTypes.array.isRequired,
-  onCreateGroupClick: PropTypes.func.isRequired
+  onCreateGroupClick: PropTypes.func.isRequired,
+  onGroupNameUpdate: PropTypes.func.isRequired,
+  onGroupDelete: PropTypes.func.isRequired
 };
 
 const styles = {
@@ -48,11 +61,5 @@ const styles = {
   },
   header: HEADER_STYLE,
   button: BUTTON_STYLE,
-  groupsContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    height: 355,
-    overflow: 'scroll',
-    border: `1px solid ${color.lightest_gray}`
-  }
+  groupsContainer: GROUPS_CONTAINER_STYLE
 };

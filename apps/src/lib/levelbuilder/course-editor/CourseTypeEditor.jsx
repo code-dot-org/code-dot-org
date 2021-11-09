@@ -12,7 +12,7 @@ import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEdit
 const INSTRUCTOR_AUDIENCE_DISPLAY_NAMES = {
   [InstructorAudience.teacher]: 'Teacher',
   [InstructorAudience.facilitator]: 'Facilitator',
-  [InstructorAudience.code_instructor]: 'Code Instructor',
+  [InstructorAudience.universal_instructor]: 'Universal Instructor',
   [InstructorAudience.plc_reviewer]: 'PLC Reviewer'
 };
 

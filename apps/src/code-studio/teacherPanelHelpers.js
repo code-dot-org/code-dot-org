@@ -7,11 +7,10 @@ import {
 import {Provider} from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {reload} from '@cdo/apps/utils';
-import {updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {setStudentsForCurrentSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import TeacherPanel from './components/progress/teacherPanel/TeacherPanel';
+import $ from 'jquery';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 
 /**
  * Render our teacher panel that shows up on our course overview page.
@@ -19,39 +18,18 @@ import TeacherPanel from './components/progress/teacherPanel/TeacherPanel';
 export function renderTeacherPanel(
   store,
   scriptId,
-  section,
   scriptName,
-  sectionData = null,
-  pageType = null,
-  isAsync = false
+  pageType = null
 ) {
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
 
-  if (section && section.students) {
-    store.dispatch(setStudentsForCurrentSection(section.id, section.students));
-  }
-
-  const onSelectUser = id => {
-    updateQueryParam('user_id', id);
-    isAsync ? store.dispatch(queryUserProgress(id)) : reload();
-  };
-
-  const getSelectedUserId = () => {
-    const userIdStr = queryString.parse(location.search).user_id;
-    const selectedUserId = userIdStr ? parseInt(userIdStr, 10) : null;
-    return selectedUserId;
-  };
+  queryStudentsForSection(store);
+  queryLockStatus(store, scriptId, pageType);
 
   ReactDOM.render(
     <Provider store={store}>
-      <TeacherPanel
-        sectionData={sectionData}
-        onSelectUser={onSelectUser}
-        scriptName={scriptName}
-        getSelectedUserId={getSelectedUserId}
-        pageType={pageType}
-      />
+      <TeacherPanel unitName={scriptName} pageType={pageType} />
     </Provider>,
     div
   );
@@ -62,7 +40,7 @@ export function renderTeacherPanel(
  * Query the server for lock status of this teacher's students
  * @returns {Promise} when finished
  */
-export function queryLockStatus(store, scriptId, pageType) {
+function queryLockStatus(store, scriptId, pageType) {
   return new Promise((resolve, reject) => {
     $.ajax('/api/lock_status', {
       data: {script_id: scriptId}
@@ -88,4 +66,25 @@ export function queryLockStatus(store, scriptId, pageType) {
       resolve();
     });
   });
+}
+
+function queryStudentsForSection(store) {
+  const sectionId = queryParams('section_id');
+
+  let request = '/api/teacher_panel_section';
+  if (sectionId) {
+    request += `?section_id=${sectionId}`;
+  }
+
+  $.ajax(request)
+    .success((section, status) => {
+      if (status !== 'nocontent') {
+        store.dispatch(
+          setStudentsForCurrentSection(section.id, section.students)
+        );
+      }
+    })
+    .fail(err => {
+      console.log(err);
+    });
 }

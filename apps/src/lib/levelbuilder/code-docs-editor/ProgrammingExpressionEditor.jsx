@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
+import OrderableList from './OrderableList';
+import ExampleEditor from './ExampleEditor';
+import ParameterEditor from './ParameterEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import {navigateToHref} from '@cdo/apps/utils';
+import {createUuid, navigateToHref} from '@cdo/apps/utils';
 import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 
@@ -20,6 +23,24 @@ function useProgrammingExpression(initialProgrammingExpression) {
   return [programmingExpression, updateProgrammingExpression];
 }
 
+function renderParameterEditor(param, updateFunc) {
+  return (
+    <ParameterEditor
+      parameter={param}
+      update={(key, value) => updateFunc(key, value)}
+    />
+  );
+}
+
+function renderExampleEditor(example, updateFunc) {
+  return (
+    <ExampleEditor
+      example={example}
+      updateExample={(key, value) => updateFunc(key, value)}
+    />
+  );
+}
+
 export default function ProgrammingExpressionEditor({
   initialProgrammingExpression,
   environmentCategories
@@ -30,6 +51,10 @@ export default function ProgrammingExpressionEditor({
     key,
     ...remainingProgrammingExpression
   } = initialProgrammingExpression;
+  remainingProgrammingExpression.parameters.forEach(
+    p => (p.key = createUuid())
+  );
+  remainingProgrammingExpression.examples.forEach(e => (e.key = createUuid()));
   const [
     programmingExpression,
     updateProgrammingExpression
@@ -178,6 +203,22 @@ export default function ProgrammingExpressionEditor({
           helpTip="List of tips for using this code documentation"
         />
       </CollapsibleEditorSection>
+      <CollapsibleEditorSection title="Parameters" collapsed>
+        <OrderableList
+          list={programmingExpression.parameters}
+          setList={list => updateProgrammingExpression('parameters', list)}
+          addButtonText="Add Another Parameter"
+          renderItem={renderParameterEditor}
+        />
+      </CollapsibleEditorSection>
+      <CollapsibleEditorSection title="Examples" collapsed>
+        <OrderableList
+          list={programmingExpression.examples || []}
+          setList={list => updateProgrammingExpression('examples', list)}
+          addButtonText="Add Another Example"
+          renderItem={renderExampleEditor}
+        />
+      </CollapsibleEditorSection>
       <SaveBar
         handleSave={save}
         isSaving={isSaving}
@@ -199,7 +240,9 @@ const programmingExpressionShape = PropTypes.shape({
   content: PropTypes.string,
   syntax: PropTypes.string,
   returnValue: PropTypes.string,
-  tips: PropTypes.string
+  tips: PropTypes.string,
+  parameters: PropTypes.arrayOf(PropTypes.object).isRequired,
+  examples: PropTypes.arrayOf(PropTypes.object).isRequired
 });
 
 ProgrammingExpressionEditor.propTypes = {

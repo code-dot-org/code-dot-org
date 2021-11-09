@@ -1,8 +1,8 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import {expect} from '../../../../../util/reconfiguredChai';
 import {UnconnectedTeacherPanel as TeacherPanel} from '@cdo/apps/code-studio/components/progress/teacherPanel/TeacherPanel';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import viewAs, {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
 import i18n from '@cdo/locale';
@@ -12,13 +12,14 @@ import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import $ from 'jquery';
 import sinon from 'sinon';
+import * as utils from '@cdo/apps/code-studio/utils';
+import {Provider} from 'react-redux';
+import {createStore, combineReducers} from 'redux';
 
 const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
 
 const DEFAULT_PROPS = {
-  onSelectUser: () => {},
-  getSelectedUserId: () => {},
-  sectionData: null,
+  selectUser: () => {},
   unitName: 'A unit',
   pageType: pageTypes.level,
   viewAs: ViewType.Student,
@@ -30,6 +31,7 @@ const DEFAULT_PROPS = {
   students: null,
   levelsWithProgress: [],
   loadLevelsWithProgress: () => {},
+  teacherId: 5,
   exampleSolutions: []
 };
 
@@ -159,6 +161,57 @@ describe('TeacherPanel', () => {
       });
       expect(wrapper.find(StudentTable)).to.have.length(0);
     });
+
+    it('calls selectUser when user is clicked with isAsync true when on overview page', () => {
+      const store = createStore(combineReducers({viewAs}), {
+        viewAs: ViewType.Teacher
+      });
+
+      const selectUserStub = sinon.stub();
+      const overrideProps = {
+        selectUser: selectUserStub,
+        viewAs: ViewType.Teacher,
+        students: students,
+        pageType: pageTypes.scriptOverview
+      };
+      const props = {...DEFAULT_PROPS, ...overrideProps};
+
+      const wrapper = mount(
+        <Provider store={store}>
+          <TeacherPanel {...props} />
+        </Provider>
+      );
+
+      const secondStudentInTable = wrapper.find('tr').at(1);
+      secondStudentInTable.simulate('click');
+
+      expect(selectUserStub).to.have.been.calledWith(1, true);
+    });
+
+    it('calls selectUser when user is clicked with isAsync false when on level page', () => {
+      const store = createStore(combineReducers({viewAs}), {
+        viewAs: ViewType.Teacher
+      });
+
+      const selectUserStub = sinon.stub();
+      const overrideProps = {
+        selectUser: selectUserStub,
+        viewAs: ViewType.Teacher,
+        students: students,
+        pageType: pageTypes.level
+      };
+      const props = {...DEFAULT_PROPS, ...overrideProps};
+      const wrapper = mount(
+        <Provider store={store}>
+          <TeacherPanel {...props} />
+        </Provider>
+      );
+
+      const secondStudentInTable = wrapper.find('tr').at(1);
+      secondStudentInTable.simulate('click');
+
+      expect(selectUserStub).to.have.been.calledWith(1, false);
+    });
   });
 
   describe('SelectedStudentInfo', () => {
@@ -166,25 +219,30 @@ describe('TeacherPanel', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
         students: students,
-        getSelectedUserId: () => 0
+        pageType: pageTypes.scriptOverview
       });
 
       expect(wrapper.find(SelectedStudentInfo)).to.have.length(0);
     });
 
-    it('on level displays SelectedStudentInfo when student selected', () => {
+    it('on level displays SelectedStudentInfo when students have loaded, passes expected props', () => {
+      sinon
+        .stub(utils, 'queryParams')
+        .withArgs('user_id')
+        .returns('1');
+
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
         students: students,
-        getSelectedUserId: () => 1,
-        sectionData: {
-          section: {
-            students: students
-          }
-        }
+        teacherId: 5
       });
 
-      expect(wrapper.find(SelectedStudentInfo)).to.have.length(1);
+      const selectedStudentComponent = wrapper.find(SelectedStudentInfo);
+      expect(selectedStudentComponent).to.have.length(1);
+      expect(selectedStudentComponent.props().teacherId).to.equal(5);
+      expect(selectedStudentComponent.props().selectedUserId).to.equal(1);
+
+      utils.queryParams.restore();
     });
   });
 
@@ -205,12 +263,7 @@ describe('TeacherPanel', () => {
         students: students,
         exampleSolutions: [
           'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
-        ],
-        sectionData: {
-          section: {
-            students: students
-          }
-        }
+        ]
       });
 
       expect(wrapper.find('Button')).to.have.length(1);
@@ -220,12 +273,7 @@ describe('TeacherPanel', () => {
       const wrapper = setUp({
         viewAs: ViewType.Teacher,
         students: students,
-        exampleSolutions: null,
-        sectionData: {
-          section: {
-            students: students
-          }
-        }
+        exampleSolutions: null
       });
 
       expect(wrapper.find('Button')).to.have.length(0);

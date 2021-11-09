@@ -191,9 +191,22 @@ export default class BaseDialog extends React.Component {
 
     return (
       <div className={wrapperClassNames}>
-        <div className={modalBackdropClassNames} onClick={this.closeDialog} />
+        <div
+          className={modalBackdropClassNames}
+          style={styles.modalBackdrop}
+          onClick={this.closeDialog}
+        />
         {body}
       </div>
     );
   }
 }
+
+const styles = {
+  modalBackdrop: {
+    top: -15,
+    right: -15,
+    bottom: -15,
+    left: -15
+  }
+};

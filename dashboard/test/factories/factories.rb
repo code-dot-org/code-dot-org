@@ -181,11 +181,11 @@ FactoryGirl.define do
         end
       end
 
-      factory :code_instructor do
-        sequence(:name) {|n| "Code Instructor #{n}"}
-        sequence(:email) {|n| "test_code_instructor_#{n}@example.com.xx"}
-        after(:create) do |code_instructor|
-          code_instructor.permission = UserPermission::CODE_INSTRUCTOR
+      factory :universal_instructor do
+        sequence(:name) {|n| "Universal Instructor #{n}"}
+        sequence(:email) {|n| "test_universal_instructor_#{n}@example.com.xx"}
+        after(:create) do |universal_instructor|
+          universal_instructor.permission = UserPermission::UNIVERSAL_INSTRUCTOR
         end
       end
 
@@ -501,10 +501,8 @@ FactoryGirl.define do
 
   factory :level, class: Blockly do
     sequence(:name) {|n| "Level_#{n}"}
-    sequence(:level_num) {|n| "1_2_#{n}"}
+    level_num 'custom'
 
-    # User id must be non-nil for custom level
-    user_id '1'
     game
 
     trait :with_autoplay_video do
@@ -564,6 +562,10 @@ FactoryGirl.define do
     factory :sublevel do
       sequence(:name) {|n| "sub_level_#{n}"}
     end
+  end
+
+  factory :deprecated_blockly_level, parent: :level do
+    sequence(:level_num) {|n| "1_2_#{n}"}
   end
 
   factory :unplugged, parent: :level, class: Unplugged do
@@ -1333,6 +1335,7 @@ FactoryGirl.define do
   factory :regional_partner do
     sequence(:name) {|n| "Partner#{n}"}
     group 1
+    pl_programs_offered ['CSD', 'CSP']
   end
 
   factory :regional_partner_with_mappings, parent: :regional_partner do

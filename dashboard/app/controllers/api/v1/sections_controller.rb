@@ -200,6 +200,51 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: {key: site_key}
   end
 
+  # GET /api/v1/sections/<id>/code_review_groups
+  # Get all code review groups and their members for this section. Also include
+  # all unassigned followers.
+  # Format is:
+  # { groups: [
+  #   {unassigned: true, name: 'unassigned', members: [{follower_id: 1, name: 'student_name'},...]},
+  #   {id: <group-id>, name: 'group_name', members: [{follower_id: 2, name: 'student_name'},...]},
+  #   ...
+  # ]}
+  def code_review_groups
+    groups = @section.code_review_groups
+    groups_details = []
+    assigned_follower_ids = []
+    groups.each do |group|
+      members = []
+      group.members.each do |member|
+        members << {follower_id: member.follower_id, name: member.name}
+        assigned_follower_ids << member.follower_id
+      end
+      groups_details << {id: group.id, name: group.name, members: members}
+    end
+
+    unassigned_students = @section.followers.where.not(id: assigned_follower_ids)
+    unassigned_students = unassigned_students.map {|student| {follower_id: student.id, name: student.student_user.name}}
+    groups_details << {unassigned: true, members: unassigned_students}
+    render json: {groups: groups_details}
+  end
+
+  # POST /api/v1/sections/<id>/code_review_groups
+  def set_code_review_groups
+    @section.reset_code_review_groups(params[:groups])
+    render json: {result: 'success'}
+  # if the group data is invalid we will get a record invalid exception
+  rescue ActiveRecord::RecordInvalid
+    render json: {result: 'invalid groups'}, status: 400
+  end
+
+  # POST /api/v1/sections/<id>/code_review_enabled
+  def set_code_review_enabled
+    enable_code_review = params[:enabled].to_bool
+    @section.update_code_review_expiration(enable_code_review)
+    @section.save
+    render json: {result: 'success', expiration: @section.code_review_expires_at}
+  end
+
   private
 
   def find_follower

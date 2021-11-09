@@ -40,7 +40,9 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       content: 'a longer description of the code',
       syntax: 'block()',
       returnValue: 'none',
-      tips: 'some tips on how to use this block'
+      tips: 'some tips on how to use this block',
+      parameters: [{name: "id", type: "string", required: true, description: "description"}, {name: "text"}],
+      examples: [{name: 'example 1', appEmbedHeight: '300px'}]
     }
     assert_response :ok
     programming_expression.reload
@@ -53,6 +55,8 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     assert_equal 'block()', programming_expression.syntax
     assert_equal 'none', programming_expression.return_value
     assert_equal 'some tips on how to use this block', programming_expression.tips
+    assert_equal [{name: 'id', type: 'string', required: 'true', description: 'description'}, {name: 'text'}].to_json, programming_expression.palette_params.to_json
+    assert_equal [{name: 'example 1', appEmbedHeight: '300px'}].to_json, programming_expression.examples.to_json
   end
 
   test 'data is passed down to edit page' do

@@ -1334,6 +1334,13 @@ class User < ApplicationRecord
 
   alias :verified_teacher? :authorized_teacher?
 
+  def verified_instructor?
+    # You are an verified instructor if you are a universal_instructor, plc_reviewer, facilitator, authorized_teacher, or levelbuiler
+    permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || permission?(UserPermission::PLC_REVIEWER) ||
+      permission?(UserPermission::FACILITATOR) || permission?(UserPermission::AUTHORIZED_TEACHER) ||
+      permission?(UserPermission::LEVELBUILDER)
+  end
+
   def student_of_authorized_teacher?
     teachers.any?(&:authorized_teacher?)
   end
