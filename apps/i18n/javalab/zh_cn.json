@@ -1,7 +1,14 @@
 {
   "addAComment": "添加评论",
+  "allFilesCompile": "所有文件编译！",
   "cancel": "取消",
+  "commit": "提交",
+  "commitNotes": "提交注释",
+  "commitNotesPlaceholder": "在这里输入关于这个提交的注释...",
+  "compileFailed": "编译失败",
+  "compiling": "编译...",
   "delete": "刪除",
   "import": "导入",
+  "includeFiles": "包含文件",
   "saving": "正在保存......"
 }

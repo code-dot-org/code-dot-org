@@ -1,6 +1,13 @@
 {
+  "allFilesCompile": "Všechny soubory kompilovaly!",
   "cancel": "Zrušit",
+  "commit": "Potvrdit",
+  "commitNotes": "Potvrdit poznámky",
+  "commitNotesPlaceholder": "Sem zadejte poznámky o tomto potvrzení...",
+  "compileFailed": "Kompilace selhala",
+  "compiling": "Kompiluji...",
   "delete": "Odstranit",
   "import": "Importovat",
+  "includeFiles": "Zahrnout soubory",
   "saving": "Ukládání..."
 }

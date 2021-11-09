@@ -1,4 +1,10 @@
 {
+  "clicked": "क्लिक केले आहे",
+  "clickedSprite": "स्प्राइट क्लिक केलेले ",
+  "new": "नवीन",
+  "newSprite": "नवीन स्प्राइट",
+  "object": "वस्तू",
+  "objectSprite": "ऑब्जेक्ट स्प्राइट",
   "outbreakChangeHealthy": "राक्षस स्प्राईट्सची संख्या बदलण्याचा प्रयत्न करा.",
   "outbreakChangeSize": "सगळया स्प्राईट्सचा आकार वेगवेगळा सेट करण्याचा प्रयत्न करा.",
   "outbreakClickHealthy": "कोणतेही निरोगी राक्षस मास्क्स घालत नव्हते. *\"Run\"* दाबल्यावर स्प्राईट्वर क्लिक करा आणि तुमच्याकडे योग्य कोड असल्याचे सुनिश्चित करा:\n <xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>",
@@ -14,5 +20,6 @@
   "outbreakSubjectPointer": "`change costume` ब्लॉकमधील रिकाम्या जागेऐवजी सब्जेक्ट ब्लॉक वापरा.\n <xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>",
   "outbreakSuccess": "तुम्ही ही पातळी पूर्ण केली आहे. जेव्हा तुम्ही पुढच्या आव्हानासाठी तयार असाल तेव्हा, सुरू ठेवा दाबा.",
   "outbreakUseCostume": "तुमचा नवीन स्प्राईट पोशाख तुमच्या सिम्युलेशनमध्ये दिसला नाही. जर तुम्हाला हिंट हवी असेल तर लाईटबल्बवर क्लिक करा. ",
-  "outbreakWander": "तुमचे स्प्राईट्स हालचाल करायला तयार आहेत. <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml> वापरून सगळ्या स्प्राईट्सना भटकायला लावा. हा ब्लॉक तुम्ही स्प्राईट्स तयार *केल्यानंतर* वापरा."
+  "outbreakWander": "तुमचे स्प्राईट्स हालचाल करायला तयार आहेत. <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml> वापरून सगळ्या स्प्राईट्सना भटकायला लावा. हा ब्लॉक तुम्ही स्प्राईट्स तयार *केल्यानंतर* वापरा.",
+  "subject": "विषय"
 }

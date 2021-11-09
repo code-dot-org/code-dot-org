@@ -1,6 +1,18 @@
 {
+  "addAComment": "Tambahkan komentar",
+  "authorLabel": "penulis",
+  "allFilesCompile": "Semua File Kompilasi!",
+  "backpackFileNameConflictWarning": "Menyimpan akan menimpa file yang ada di backpack kamu",
+  "backpackLabel": "Backpack",
+  "backpackListLoadError": "Terjadi kesalahan saat memuat backpack kamu. Coba lagi.",
+  "backpackListLoadErrorMessageCommitDialog": "Coba tutup dan buka kembali dialog ini.",
+  "backpackErrorTitle": "Terjadi kesalahan",
+  "backpackSaveErrorMessage": "Silakan coba lagi",
   "cancel": "Batal",
+  "clearConsole": "Hapus Konsol",
+  "classNotFound": "Kesalahan: satu atau lebih file Java Anda tidak memiliki definisi kelas.",
   "delete": "Hapus",
+  "genericErrorMessage": "Silakan coba lagi",
   "import": "Impor",
   "saving": "Menyimpan..."
 }
