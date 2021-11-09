@@ -1,4 +1,10 @@
-# Model concern for common curriculum audience methods
+# Model concern for common course type methods.
+#
+# Course Types are determined by the audience of the course, the instruction type of
+# the course or both. For example pl courses are any course that is taught to
+# adults (participant_audience is not students). A self paced pl course (participant_audience is not students)
+# is pl course that has the instruction_type of self-paced.
+#
 # To use, include in a model and call the desired method.
 module Curriculum::CourseTypes
   extend ActiveSupport::Concern
@@ -47,8 +53,8 @@ module Curriculum::CourseTypes
     false
   end
 
-  # A course is a professional learning if the participant audience is something
-  # other that students and therefore teaches adults
+  # A course is a professional learning course if the participant audience is something
+  # other than students(it teaches adults)
   #
   # This is different than courses that use the professional learning course models
   # those can be checked for using old_professional_learning_course?
