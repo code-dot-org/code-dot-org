@@ -28,7 +28,7 @@
 %div!= hoc_s(:hoc_faq_devices_a_markdown, markdown: :inline, locals: {codeorg_url: codeorg_url('/'), partner_url: 'code.org', unplugged_url: codeorg_url('/curriculum/unplugged')})
 
 %h2= hoc_s(:hoc_faq_need_computers_q)
-%div!= hoc_s(:hoc_faq_need_computers_a_markdown, markdown: :inline, locals: {codeorg_url: codeorg_url('/'), pair_programming_research: 'http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning', pair_programming_video: 'https://www.youtube.com/watch?v=vgkahOzFH2Q', unplugged_url: codeorg_url('/curriculum/unplugged')})
+%div!= hoc_s(:hoc_faq_need_computers_a_markdown, markdown: true, locals: {codeorg_url: codeorg_url('/'), pair_programming_research: 'http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning', pair_programming_video: 'https://www.youtube.com/watch?v=vgkahOzFH2Q', unplugged_url: codeorg_url('/curriculum/unplugged')})
 
 -if @country == 'us'
   %h2= hoc_s(:hoc_faq_logo_q)
