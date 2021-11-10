@@ -48,6 +48,9 @@ Student.propTypes = {
   index: PropTypes.number.isRequired
 };
 
+/**
+ * Custom drag handle icon: six dots in two columns
+ */
 function DragHandle(props) {
   return (
     <div {...props} style={handleStyles.container}>
