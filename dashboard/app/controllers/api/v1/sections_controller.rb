@@ -237,6 +237,14 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: {result: 'invalid groups'}, status: 400
   end
 
+  # POST /api/v1/sections/<id>/code_review_enabled
+  def set_code_review_enabled
+    enable_code_review = params[:enabled].to_bool
+    @section.update_code_review_expiration(enable_code_review)
+    @section.save
+    render json: {result: 'success', expiration: @section.code_review_expires_at}
+  end
+
   private
 
   def find_follower
