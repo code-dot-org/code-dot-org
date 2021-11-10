@@ -109,7 +109,7 @@ class ApiControllerTest < ActionController::TestCase
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: ""}
 
     assert_response :success
-    assert_equal '["http://test-studio.code.org/s/bogus-script-4/lessons/1/levels/1?solution=true"]', @response.body
+    assert_equal "[\"http://test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?solution=true\"]", @response.body
   end
 
   test "example_solutions should return expected example solutions when section id is present" do
@@ -126,7 +126,7 @@ class ApiControllerTest < ActionController::TestCase
     get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
 
     assert_response :success
-    assert_equal "[\"http://test-studio.code.org/s/bogus-script-4/lessons/1/levels/1?section_id=#{section.id}\\u0026solution=true\"]", @response.body
+    assert_equal "[\"http://test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?section_id=#{section.id}\\u0026solution=true\"]", @response.body
   end
 
   test "should get text_responses for section with default script" do
