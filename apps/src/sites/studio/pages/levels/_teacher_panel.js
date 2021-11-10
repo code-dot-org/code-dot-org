@@ -42,7 +42,6 @@ function initPage() {
     teacherPanelData.script_id,
     teacherPanelData.section,
     teacherPanelData.script_name,
-    teacherPanelData,
     teacherPanelData.page_type
   );
 }
