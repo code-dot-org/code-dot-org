@@ -1,4 +1,11 @@
 export default function initializeGenerator(blocklyWrapper) {
+  blocklyWrapper.JavaScript.translateVarName = function(name) {
+    return Blockly.JavaScript.nameDB_.getName(
+      name,
+      Blockly.VARIABLE_CATEGORY_NAME
+    );
+  };
+
   // This function was a custom addition in CDO Blockly, so we need to add it here
   // so that our code generation logic still works with Google Blockly
   blocklyWrapper.Generator.blockSpaceToCode = function(name, opt_typeFilter) {

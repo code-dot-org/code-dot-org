@@ -91,6 +91,7 @@ Dashboard::Application.routes.draw do
         get 'student_script_ids'
         get 'code_review_groups'
         post 'code_review_groups', to: 'sections#set_code_review_groups'
+        post 'code_review_enabled', to: 'sections#set_code_review_enabled'
       end
       collection do
         get 'membership'
@@ -722,6 +723,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/script_standards/:script', to: 'api#script_standards'
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/api/teacher_panel_progress/:section_id', to: 'api#teacher_panel_progress'
+  get '/api/teacher_panel_section', to: 'api#teacher_panel_section'
   get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
   get '/api/user_app_options/:script/:lesson_position/:level_position/:level', to: 'api#user_app_options', as: 'user_app_options'

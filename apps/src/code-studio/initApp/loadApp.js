@@ -308,14 +308,18 @@ async function loadAppAsync(appOptions) {
 
   // Kick off userAppOptionsRequest before awaiting exampleSolutionsRequest to ensure requests
   // are made in parallel
-  const userAppOptionsRequest = $.ajax(
-    `/api/user_app_options` +
+  const userAppOptionsRequest = $.ajax({
+    url:
+      `/api/user_app_options` +
       `/${appOptions.scriptName}` +
       `/${appOptions.lessonPosition}` +
       `/${appOptions.levelPosition}` +
-      `/${appOptions.serverLevelId}` +
-      `?get_channel_id=${shouldGetChannelId}`
-  );
+      `/${appOptions.serverLevelId}`,
+    data: {
+      user_id: clientState.queryParams('user_id'),
+      get_channel_id: shouldGetChannelId
+    }
+  });
 
   try {
     const exampleSolutions = await exampleSolutionsRequest;
@@ -332,9 +336,18 @@ async function loadAppAsync(appOptions) {
 
     appOptions.disableSocialShare = data.disableSocialShare;
 
-    // We do not need to process data.progress here because labs do not use
-    // the level progress data directly. (The progress bubbles in the header
-    // of the level pages are rendered by header.build in header.js.)
+    if (data.isStarted) {
+      appOptions.level.isStarted = data.isStarted;
+    }
+    if (data.skipInstructionsPopup) {
+      appOptions.level.skipInstructionsPopup = data.skipInstructionsPopup;
+    }
+    if (data.readonlyWorkspace) {
+      appOptions.readonlyWorkspace = data.readonlyWorkspace;
+    }
+    if (data.callouts) {
+      appOptions.callouts = data.callouts;
+    }
 
     if (data.lastAttempt) {
       appOptions.level.lastAttempt = data.lastAttempt.source;
