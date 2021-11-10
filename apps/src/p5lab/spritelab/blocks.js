@@ -86,8 +86,8 @@ const customInputTypes = {
       icon.textContent = '\uf276';
       const button = new Blockly.FieldButton(
         icon,
-        updateValue => {
-          getLocation(loc => {
+        (updateValue, eventId) => {
+          getLocation(eventId, loc => {
             if (loc) {
               button.setValue(JSON.stringify(loc));
             }

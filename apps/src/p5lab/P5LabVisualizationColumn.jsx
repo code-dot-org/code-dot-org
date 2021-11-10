@@ -26,7 +26,8 @@ import {
   cancelLocationSelection,
   selectLocation,
   updateLocation,
-  isPickingLocation
+  isPickingLocation,
+  getLocationPickerEventId
 } from './redux/locationPicker';
 import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
@@ -47,6 +48,7 @@ class P5LabVisualizationColumn extends React.Component {
     spriteLab: PropTypes.bool.isRequired,
     awaitingContainedResponse: PropTypes.bool.isRequired,
     pickingLocation: PropTypes.bool.isRequired,
+    locationPickerEventId: PropTypes.number,
     showGrid: PropTypes.bool.isRequired,
     toggleShowGrid: PropTypes.func.isRequired,
     cancelPicker: PropTypes.func.isRequired,
@@ -218,7 +220,16 @@ class P5LabVisualizationColumn extends React.Component {
         {this.props.pickingLocation && (
           <div
             className={'modal-backdrop'}
-            onClick={() => this.props.cancelPicker()}
+            onClick={e => {
+              if (
+                e?.nativeEvent?.pointerId === this.props.locationPickerEventId
+              ) {
+                // This is the same click event that opened the location picker,
+                // so we shouldn't cancel immediately.
+                return;
+              }
+              this.props.cancelPicker();
+            }}
           />
         )}
       </div>
@@ -244,6 +255,7 @@ export default connect(
     awaitingContainedResponse: state.runState.awaitingContainedResponse,
     showGrid: state.gridOverlay,
     pickingLocation: isPickingLocation(state.locationPicker),
+    locationPickerEventId: getLocationPickerEventId(state.locationPicker),
     consoleMessages: state.textConsole,
     isRtl: state.isRtl
   }),

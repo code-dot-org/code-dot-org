@@ -55,11 +55,11 @@ export default class FieldButton extends GoogleBlockly.Field {
     }
   }
 
-  showEditor_() {
+  showEditor_(e) {
     if (!this.buttonHandler_) {
       return;
     }
-    this.buttonHandler_(this.setValue.bind(this));
+    this.buttonHandler_(this.setValue.bind(this), e.pointerId);
   }
 
   updateWidth_() {
