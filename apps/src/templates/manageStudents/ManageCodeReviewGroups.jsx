@@ -4,6 +4,7 @@ import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import CodeReviewGroupsLoader from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsLoader';
+import CodeReviewGroupsStatusToggle from '../codeReviewGroups/CodeReviewGroupsStatusToggle';
 
 const DIALOG_WIDTH = 1000;
 
@@ -15,6 +16,15 @@ export default function ManageCodeReviewGroups({
 
   const openDialog = () => setIsDialogOpen(true);
   const onDialogClose = () => setIsDialogOpen(false);
+
+  const renderFooter = buttons => {
+    return (
+      <div>
+        <CodeReviewGroupsStatusToggle />
+        {buttons}
+      </div>
+    );
+  };
 
   return (
     <div style={{...styles.buttonContainer, ...buttonContainerStyle}}>
@@ -33,6 +43,7 @@ export default function ManageCodeReviewGroups({
         isOpen={isDialogOpen}
         handleClose={onDialogClose}
         fixedWidth={DIALOG_WIDTH}
+        renderFooter={renderFooter}
       />
     </div>
   );
