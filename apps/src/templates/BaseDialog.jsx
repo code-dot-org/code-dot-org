@@ -32,6 +32,7 @@ export default class BaseDialog extends React.Component {
     style: PropTypes.object,
     soundPlayer: PropTypes.object,
     overflow: PropTypes.string,
+    // Temporary prop until AnimationPickerBody is redesigned
     backdropStyle: PropTypes.object
   };
 
