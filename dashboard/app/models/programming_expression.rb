@@ -30,6 +30,7 @@ class ProgrammingExpression < ApplicationRecord
   serialized_attrs %w(
     color
     syntax
+    image_url
     short_description
     external_documentation
     content
@@ -190,6 +191,7 @@ class ProgrammingExpression < ApplicationRecord
       name: name,
       category: category,
       programmingEnvironmentName: programming_environment.name,
+      imageUrl: image_url,
       shortDescription: short_description || '',
       externalDocumentation: external_documentation || '',
       content: content || '',

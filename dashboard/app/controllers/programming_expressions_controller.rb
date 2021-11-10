@@ -64,6 +64,7 @@ class ProgrammingExpressionsController < ApplicationController
     transformed_params = transformed_params.permit(
       :name,
       :category,
+      :image_url,
       :short_description,
       :external_documentation,
       :content,
@@ -71,7 +72,7 @@ class ProgrammingExpressionsController < ApplicationController
       :return_value,
       :tips,
       parameters: [:name, :type, :required, :description],
-      examples: [:name, :description, :code, :app, :appDisplayType, :appEmbedHeight]
+      examples: [:name, :description, :code, :app, :imageUrl, :appDisplayType, :appEmbedHeight]
     )
     transformed_params
   end
