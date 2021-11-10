@@ -14,8 +14,8 @@
 - if current_user
   - if current_user.teacher?
     #teacher_reminders
-      - unless current_user.accepted_latest_terms?
-        = render partial: 'layouts/implicit_new_user_terms_interstitial'
+      -# - unless current_user.accepted_latest_terms?
+      -#   = render partial: 'layouts/implicit_new_user_terms_interstitial'
       - if show_diversity_survey? SurveyResult::DIVERSITY_2021
         = render partial: 'home/survey_diversity'
 
