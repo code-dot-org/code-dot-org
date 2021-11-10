@@ -55,32 +55,39 @@ export const useRegionalPartner = data => {
   const [loadingPartner, setLoadingPartner] = useState(true);
   const [loadError, setLoadError] = useState(false);
   const [partner, setPartner] = useState(null);
-  // cache this debounced function so that it is more easily testable
-  const debouncedFetch = useCallback(
-    debounce(
-      data =>
-        fetchRegionalPartner(data)
-          .then(partner => {
-            // Update state with all the partner workshop data to display
-            setLoadingPartner(false);
-            setLoadError(false);
-            // the api returns an object with all fields set to null if not found
-            setPartner(partner.id === null ? null : partner); // TODO(tim): potential issue where requests are fulfilled out of order
-          })
-          .catch(() => {
-            setLoadingPartner(false);
-            setLoadError(true);
-          }),
-      500,
-      {leading: true}
-    ),
-    []
-  );
+  const [searchTerm, setSearchTerm] = useState({
+    program,
+    schoolZipCode,
+    schoolState,
+    school
+  });
+  const debouncedSetSearchTerm = useCallback(debounce(setSearchTerm, 500), [
+    setSearchTerm
+  ]);
+  useEffect(() => {
+    debouncedSetSearchTerm({
+      program,
+      schoolZipCode,
+      schoolState,
+      school
+    });
+  }, [program, schoolZipCode, schoolState, school]);
 
   // load regional partner whenever parameters change
   useEffect(() => {
-    debouncedFetch(data);
-  }, [program, schoolZipCode, schoolState, school]);
+    fetchRegionalPartner(searchTerm)
+      .then(partner => {
+        // Update state with all the partner workshop data to display
+        setLoadingPartner(false);
+        setLoadError(false);
+        // the api returns an object with all fields set to null if not found
+        setPartner(partner.id === null ? null : partner);
+      })
+      .catch(() => {
+        setLoadingPartner(false);
+        setLoadError(true);
+      });
+  }, [searchTerm]);
 
   return [loadingPartner ? undefined : partner, loadError];
 };
