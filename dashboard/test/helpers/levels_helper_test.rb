@@ -252,14 +252,6 @@ class LevelsHelperTest < ActionView::TestCase
     refute use_google_blockly
   end
 
-  test 'use_google_blockly is true if level.uses_google_blockly?' do
-    Level.any_instance.stubs(:uses_google_blockly?).returns(true)
-    @level = build :level
-    assert use_google_blockly
-
-    Level.unstub(:uses_google_blockly?)
-  end
-
   test 'use_google_blockly is true if useGoogleBlockly is set in view_options' do
     view_options(useGoogleBlockly: true)
     @level = build :level
@@ -268,14 +260,25 @@ class LevelsHelperTest < ActionView::TestCase
     reset_view_options
   end
 
-  test 'use_google_blockly is true if level class name is in DCDO uses_google_blockly config' do
-    DCDO.stubs(:get).with('uses_google_blockly', []).returns(['GamelabJr'])
+  test 'use_google_blockly is true if level.uses_google_blockly?' do
+    Level.any_instance.stubs(:uses_google_blockly?).returns(true)
+    @level = build :level
+    assert use_google_blockly
+
+    Level.unstub(:uses_google_blockly?)
+  end
+
+  test 'use_google_blockly is false if level.uses_google_blockly? but disable_google_blockly is set' do
+    GamelabJr.any_instance.stubs(:uses_google_blockly?).returns(true)
     @level = build :spritelab
     assert use_google_blockly
 
+    DCDO.stubs(:get).with('disable_google_blockly', []).returns(['GamelabJr'])
+    refute use_google_blockly
+
     # Should be case insensitive
-    DCDO.stubs(:get).with('uses_google_blockly', []).returns(['gamelabjr'])
-    assert use_google_blockly
+    DCDO.stubs(:get).with('disable_google_blockly', []).returns(['gamelabjr'])
+    refute use_google_blockly
 
     DCDO.unstub(:get)
   end
