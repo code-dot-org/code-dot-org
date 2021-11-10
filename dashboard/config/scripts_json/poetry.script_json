@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-09 22:43:55 UTC",
+    "serialized_at": "2021-11-10 19:38:09 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -151,6 +151,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.",
+        "preparation": "- Prepare one computer per student.\n- Prepare one copy of the “Share Your App” handout per student.\n- Make sure students have a copy of their original poem handy for this lesson.  \n- Divide the class into pairs for the Poetry Pair-Share activity.\n- [Optional, especially for remote teaching] Determine whether you need to set up a digital document or shared online space to post each student’s app URL (see teacher template in “Links”). \n",
+        "student_overview": "Share your new poem apps with your friends! "
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -428,9 +431,25 @@
       "key": "8bfe4f7c-b3fb-45e7-9ae9-cca80ea71941",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm-Up"
       },
       "seeding_key": {
         "lesson_activity.key": "8bfe4f7c-b3fb-45e7-9ae9-cca80ea71941",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "poetry"
+      }
+    },
+    {
+      "key": "b0de3b9b-b440-4178-a0a8-116ce226179d",
+      "position": 2,
+      "properties": {
+        "duration": 20,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d",
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "poetry"
@@ -1672,7 +1691,13 @@
       "key": "34e0bea9-1c29-4aea-885e-042881929075",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Allow students to complete levels 2-3 on their own. \n\n**Circulate:** Students should have their handouts from previous lessons to help guide their work. Make sure students have (1) chosen words that make sense for their poem, like using the correct part of speech or the correct tense, (2) that their prompt and conditional variables match, (3) that students add a conditional under the event they coded. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Allow students to complete levels 2-3 on their own. \n\n**Circulate:** Students should have their handouts from previous lessons to help guide their work. Make sure students have (1) chosen words that make sense for their poem, like using the correct part of speech or the correct tense, (2) that their prompt and conditional variables match, (3) that students add a conditional under the event they coded. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Debugging tips for variables:\n\n- Students should name their variable when filling out their prompt (e.g. “food”) and then use the dropdown menu in the if-statement to find the variable name (e.g. “food”)  that matches the one in the prompt. Students should not rename the same variable each time they call it. \n- Variable names can’t have spaces. Use camelCase instead (i.e. the first word is not capitalized but every new word after it is, no spaces between words, like “newWord”.) \n- If the wrong variable is being called, have students talk through their code with you to find the bug (e.g. “Prompt the user with ‘Enter a food’ for a variable named “food.” When line 2 shows, see if the variable “food” is “sandwich.” If that’s true, do a pop effect of 10 sandwiches.” \n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "34e0bea9-1c29-4aea-885e-042881929075",
@@ -1723,10 +1748,112 @@
       "key": "ae6120a5-7b68-4016-8288-fe73c64ebea0",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Today’s Agenda” slide.",
+        "name": "Get Ready"
       },
       "seeding_key": {
         "activity_section.key": "ae6120a5-7b68-4016-8288-fe73c64ebea0",
         "lesson_activity.key": "8bfe4f7c-b3fb-45e7-9ae9-cca80ea71941"
+      }
+    },
+    {
+      "key": "b268239c-41f2-4d9f-84c0-eeac52139036",
+      "position": 2,
+      "properties": {
+        "description": "Last class, we finished adding prompts, variables, and effects to our poem apps. Today, we’ll share our work with our classmates. First, play through your own app to make sure it works the way you expect. \n\nYou have 5 minutes to make any finishing touches to your app. Five minutes is enough time to make small changes or debug the code you wrote. Try to resist the urge to re-write large parts of your code. When the timer is up, wait for directions for the next step.\n\nI will start the timer now. \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b268239c-41f2-4d9f-84c0-eeac52139036",
+        "lesson_activity.key": "8bfe4f7c-b3fb-45e7-9ae9-cca80ea71941"
+      }
+    },
+    {
+      "key": "db25d962-bcbc-4f15-b289-d35c56fef25f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Getting Ready” slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Set a 5-minute timer. Make sure students: \n- Go to Level 1 \n- Click “Run” and play their app\n- Make any last-minute changes\n- Expand their playspace by clicking and dragging the three dots to the right of their playspace (see gif on slide) \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**For remote teaching:** \nThis activity requires partner work. If students are not able to physically switch computers, you will need a shared document with links to each student’s project. Tell students a URL is a web address to a website; this URL will lead to a shareable version of your poem app. Direct students to click the “Share” button on the last level and post the link on your LMS or other shared space, like the “Student URL Sharing Document”. Students can keep adding more to their projects even after they have shared their project link."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "db25d962-bcbc-4f15-b289-d35c56fef25f",
+        "lesson_activity.key": "8bfe4f7c-b3fb-45e7-9ae9-cca80ea71941"
+      }
+    },
+    {
+      "key": "220ab711-f2e6-4b6d-b690-a4b70a7fd489",
+      "position": 1,
+      "properties": {
+        "description": "Today we are going to share our poem apps together. While we play each other’s apps, we want to think about constructive feedback that might help the app programmer make their app even better. ",
+        "duration": "5",
+        "name": "Why is Feedback Important?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "220ab711-f2e6-4b6d-b690-a4b70a7fd489",
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d"
+      }
+    },
+    {
+      "key": "8c4ee6f2-2fc9-43c8-ad2e-b9205ef7e362",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “What is Constructive Feedback” slide.\n\n**Discuss:**\n- *What is constructive feedback?* \n- *Why is it important to present our poems and get feedback?*\n- *How do you show respect when someone is presenting?*\n\n**Discussion Goal:**  Make sure students understand that constructive feedback is respectful, helpful, and specific. Encourage students to discuss how opportunities for feedback gives them space to reflect on and improve both their poem and their code. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8c4ee6f2-2fc9-43c8-ad2e-b9205ef7e362",
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d"
+      }
+    },
+    {
+      "key": "357d83de-58e1-40c5-a433-5b40a4cc3251",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Modeling Constructive Feedback” slide.",
+        "duration": "5",
+        "name": "Modeling Constructive Feedback"
+      },
+      "seeding_key": {
+        "activity_section.key": "357d83de-58e1-40c5-a433-5b40a4cc3251",
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d"
+      }
+    },
+    {
+      "key": "c4f65c85-c779-4071-985b-f62f616fb5eb",
+      "position": 4,
+      "properties": {
+        "description": "When we pair up, you will test out your partner’s poem app. Then you’ll write them feedback on what you thought about the app. \n\nRemember to keep your comments constructive and respectful.\n\nAs you play through the app you will think about a “glow”, a “grow”, and a “question” you can write for your partner. A “glow” is something they did well, a “grow” is something they can change or improve, and a “question” is something you want to know more about.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c4f65c85-c779-4071-985b-f62f616fb5eb",
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d"
+      }
+    },
+    {
+      "key": "c82adb39-0aa6-4078-ad05-98e967ce979d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**"
+      },
+      "seeding_key": {
+        "activity_section.key": "c82adb39-0aa6-4078-ad05-98e967ce979d",
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d"
+      }
+    },
+    {
+      "key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95",
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d"
       }
     }
   ],
@@ -2337,6 +2464,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choices_exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2454,6 +2584,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_conditionals_exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2475,6 +2608,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_conditionals_practice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2496,6 +2632,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_conditionals_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2517,9 +2656,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_module_share"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2529,7 +2665,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "ae6120a5-7b68-4016-8288-fe73c64ebea0"
+        "activity_section.key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95"
       },
       "level_keys": [
         "poetry_module_share"
@@ -2541,9 +2677,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_module_modeling_exemple"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2553,7 +2686,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "ae6120a5-7b68-4016-8288-fe73c64ebea0"
+        "activity_section.key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95"
       },
       "level_keys": [
         "poetry_module_modeling_exemple"
@@ -2966,7 +3099,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "ae6120a5-7b68-4016-8288-fe73c64ebea0"
+        "activity_section.key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95"
       }
     },
     {
@@ -2978,11 +3111,23 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "ae6120a5-7b68-4016-8288-fe73c64ebea0"
+        "activity_section.key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95"
       }
     }
   ],
   "resources": [
+    {
+      "name": "[Optional] Student URL Sharing Document",
+      "url": "https://docs.google.com/document/d/1DNcBWminB8MmyLQC4fIWrLZ8uI9HR7d4W3HuuclIpB0/template/preview",
+      "key": "_optional_student_url_sharing_document",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_student_url_sharing_document"
+      }
+    },
     {
       "name": "Choosing Words Carefully",
       "url": "https://docs.google.com/document/d/1DSrj-0lOxfPwzjAbj1PJ10kLsgDQzseINm6zMTXbN7s/template/preview",
@@ -3077,6 +3222,18 @@
       },
       "seeding_key": {
         "resource.key": "planning_your_poem_generator_app"
+      }
+    },
+    {
+      "name": "Share Your App!",
+      "url": "https://docs.google.com/document/d/1CW-IkOnFTTPD038tVzGrifGVoMZKUgzrGecP5jsZo8I/template/preview",
+      "key": "share_your_app_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "share_your_app_"
       }
     },
     {
@@ -3179,6 +3336,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_optional_student_url_sharing_document"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "coding_with_poetry_modules"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "share_your_app_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-7",
         "resource.key": "coding_with_poetry_-_conditionals"
       }
@@ -3225,6 +3400,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "key": "constructive_feedback",
+      "word": "Constructive feedback",
+      "definition": "Respectful comments that help someone improve their work",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constructive_feedback"
       }
     },
     {
@@ -3295,6 +3480,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "poetry"
+      }
+    },
+    {
+      "key": "poetry_circle",
+      "word": "Poetry Circle",
+      "definition": "A safe and creative space to test out new poems and get constructive feedback from others",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "poetry_circle"
       }
     },
     {
@@ -3453,6 +3648,18 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "vocabulary.key": "synonym"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "constructive_feedback"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "poetry_circle"
       }
     },
     {

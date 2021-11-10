@@ -26691,8 +26691,8 @@ en:
 '
             lesson-6:
               name: Poetry Circle
-              description_student: 
-              description_teacher: 
+              description_student: 'Share your new poem apps with your friends! '
+              description_teacher: In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.
             lesson-7:
               name: Responding to Words
               description_student: Make the app respond to what the user chooses in exciting new ways.
