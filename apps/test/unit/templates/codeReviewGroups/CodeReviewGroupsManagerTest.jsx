@@ -11,7 +11,11 @@ import UnassignedStudentsPanel from '@cdo/apps/templates/codeReviewGroups/Unassi
 import {DragDropContext} from 'react-beautiful-dnd';
 
 describe('Code Review Groups Manager', () => {
-  let wrapper, assignedGroups, unassignedGroup, draggedMember;
+  let wrapper,
+    draggedMember,
+    confirmDefaultBeforeActionExpectations,
+    getAssignedGroup,
+    getUnassignedGroup;
 
   beforeEach(() => {
     // We are unable to get Enzyme's mount and React Beautiful DnD to work properly.
@@ -23,12 +27,19 @@ describe('Code Review Groups Manager', () => {
     // and assert on props representing the state of the code review groups
     // (assignedGroups and unassignedGroup).
     wrapper = shallow(<CodeReviewGroupsManager initialGroups={groups} />);
-    assignedGroups = wrapper.find(AssignedStudentsPanel).props().groups;
-    unassignedGroup = wrapper.find(UnassignedStudentsPanel).props()
-      .unassignedGroup;
+    getAssignedGroup = index =>
+      wrapper.find(AssignedStudentsPanel).props().groups[index];
+    getUnassignedGroup = () =>
+      wrapper.find(UnassignedStudentsPanel).props().unassignedGroup;
 
     // Pick an arbitrary group member to drag around.
-    draggedMember = assignedGroups[0].members[1];
+    draggedMember = getAssignedGroup(0).members[1];
+
+    confirmDefaultBeforeActionExpectations = () => {
+      expect(getUnassignedGroup().members.length).to.equal(4);
+      expect(getAssignedGroup(0).members.length).to.equal(4);
+      expect(getAssignedGroup(1).members.length).to.equal(4);
+    };
   });
 
   it('moves group member between code review groups', () => {
@@ -37,17 +48,16 @@ describe('Code Review Groups Manager', () => {
       destination: {droppableId: getAssignedGroupDroppableId(2), index: 1}
     };
 
-    expect(assignedGroups[0].members.length).to.equal(4);
-    expect(assignedGroups[1].members.length).to.equal(4);
-    expect(assignedGroups[0].members[1].followerId).to.equal(
+    confirmDefaultBeforeActionExpectations();
+    expect(getAssignedGroup(0).members[1].followerId).to.equal(
       draggedMember.followerId
     );
 
     wrapper.find(DragDropContext).invoke('onDragEnd')(dragResult);
 
-    expect(assignedGroups[0].members.length).to.equal(3);
-    expect(assignedGroups[1].members.length).to.equal(5);
-    expect(assignedGroups[1].members[1].followerId).to.equal(
+    expect(getAssignedGroup(0).members.length).to.equal(3);
+    expect(getAssignedGroup(1).members.length).to.equal(5);
+    expect(getAssignedGroup(1).members[1].followerId).to.equal(
       draggedMember.followerId
     );
   });
@@ -58,15 +68,15 @@ describe('Code Review Groups Manager', () => {
       destination: {droppableId: getAssignedGroupDroppableId(1), index: 0}
     };
 
-    expect(assignedGroups[0].members.length).to.equal(4);
-    expect(assignedGroups[0].members[1].followerId).to.equal(
+    confirmDefaultBeforeActionExpectations();
+    expect(getAssignedGroup(0).members[1].followerId).to.equal(
       draggedMember.followerId
     );
 
     wrapper.find(DragDropContext).invoke('onDragEnd')(dragResult);
 
-    expect(assignedGroups[0].members.length).to.equal(4);
-    expect(assignedGroups[0].members[0].followerId).to.equal(
+    expect(getAssignedGroup(0).members.length).to.equal(4);
+    expect(getAssignedGroup(0).members[0].followerId).to.equal(
       draggedMember.followerId
     );
   });
@@ -76,15 +86,15 @@ describe('Code Review Groups Manager', () => {
       source: {droppableId: getAssignedGroupDroppableId(1), index: 1}
     };
 
-    expect(assignedGroups[0].members.length).to.equal(4);
-    expect(assignedGroups[0].members[1].followerId).to.equal(
+    confirmDefaultBeforeActionExpectations();
+    expect(getAssignedGroup(0).members[1].followerId).to.equal(
       draggedMember.followerId
     );
 
     wrapper.find(DragDropContext).invoke('onDragEnd')(dragResult);
 
-    expect(assignedGroups[0].members.length).to.equal(4);
-    expect(assignedGroups[0].members[1].followerId).to.equal(
+    expect(getAssignedGroup(0).members.length).to.equal(4);
+    expect(getAssignedGroup(0).members[1].followerId).to.equal(
       draggedMember.followerId
     );
   });
@@ -95,17 +105,16 @@ describe('Code Review Groups Manager', () => {
       destination: {droppableId: DROPPABLE_ID_UNASSIGNED, index: 0}
     };
 
-    expect(assignedGroups[0].members.length).to.equal(4);
-    expect(unassignedGroup.members.length).to.equal(4);
-    expect(assignedGroups[0].members[1].followerId).to.equal(
+    confirmDefaultBeforeActionExpectations();
+    expect(getAssignedGroup(0).members[1].followerId).to.equal(
       draggedMember.followerId
     );
 
     wrapper.find(DragDropContext).invoke('onDragEnd')(dragResult);
 
-    expect(assignedGroups[0].members.length).to.equal(3);
-    expect(unassignedGroup.members.length).to.equal(5);
-    expect(unassignedGroup.members[0].followerId).to.equal(
+    expect(getAssignedGroup(0).members.length).to.equal(3);
+    expect(getUnassignedGroup().members.length).to.equal(5);
+    expect(getUnassignedGroup().members[0].followerId).to.equal(
       draggedMember.followerId
     );
   });
@@ -116,21 +125,30 @@ describe('Code Review Groups Manager', () => {
       destination: {droppableId: getAssignedGroupDroppableId(1), index: 0}
     };
 
-    draggedMember = unassignedGroup.members[1];
+    draggedMember = getUnassignedGroup().members[1];
 
-    expect(unassignedGroup.members.length).to.equal(4);
-    expect(assignedGroups[0].members.length).to.equal(4);
-    expect(unassignedGroup.members[1].followerId).to.equal(
+    confirmDefaultBeforeActionExpectations();
+    expect(getUnassignedGroup().members[1].followerId).to.equal(
       draggedMember.followerId
     );
 
     wrapper.find(DragDropContext).invoke('onDragEnd')(dragResult);
 
-    expect(unassignedGroup.members.length).to.equal(3);
-    expect(assignedGroups[0].members.length).to.equal(5);
-    expect(assignedGroups[0].members[0].followerId).to.equal(
+    expect(getUnassignedGroup().members.length).to.equal(3);
+    expect(getAssignedGroup(0).members.length).to.equal(5);
+    expect(getAssignedGroup(0).members[0].followerId).to.equal(
       draggedMember.followerId
     );
+  });
+
+  it('unassigns all group members', () => {
+    confirmDefaultBeforeActionExpectations();
+    wrapper.find(UnassignedStudentsPanel).invoke('onUnassignAllClick')();
+
+    wrapper.find(AssignedStudentsPanel).props().groups;
+    expect(getUnassignedGroup().members.length).to.equal(12);
+    expect(getAssignedGroup(0).members).to.be.empty;
+    expect(getAssignedGroup(1).members).to.be.empty;
   });
 });
 

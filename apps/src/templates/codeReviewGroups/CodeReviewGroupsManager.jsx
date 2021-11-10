@@ -43,7 +43,7 @@ export default function CodeReviewGroupsManager({initialGroups}) {
   };
 
   const unassignAll = () => {
-    let updatedUnassignedGroup = {...getUnassignedGroup()};
+    let updatedUnassignedGroup = _.cloneDeep(getUnassignedGroup());
     getAssignedGroups().forEach(group => {
       updatedUnassignedGroup = unassignAllFromGroup(
         updatedUnassignedGroup,
@@ -59,7 +59,7 @@ export default function CodeReviewGroupsManager({initialGroups}) {
   };
 
   const unassignAllFromGroup = (existingUnassignedGroup, droppableId) => {
-    const updatedUnassignedGroup = {...existingUnassignedGroup};
+    const updatedUnassignedGroup = _.cloneDeep(existingUnassignedGroup);
     const groupBeingUnassigned = getGroup(droppableId);
     updatedUnassignedGroup.members.push(...groupBeingUnassigned.members);
 
@@ -132,7 +132,7 @@ CodeReviewGroupsManager.propTypes = {
 // Reorders members in a group if member dragged elsewhere in the same group.
 // Returns a copied, updated group.
 const reorder = (group, startIndex, endIndex) => {
-  const result = {...group};
+  const result = _.cloneDeep(group);
   const [removed] = result.members.splice(startIndex, 1);
   result.members.splice(endIndex, 0, removed);
 
@@ -147,8 +147,8 @@ const move = (
   droppableSourceIndex,
   droppableDestinationIndex
 ) => {
-  const updatedSource = {...source};
-  const updatedDest = {...destination};
+  const updatedSource = _.cloneDeep(source);
+  const updatedDest = _.cloneDeep(destination);
   const [removed] = updatedSource.members.splice(droppableSourceIndex, 1);
 
   updatedDest.members.splice(droppableDestinationIndex, 0, removed);
@@ -159,7 +159,7 @@ const move = (
 // Returns a copied list of groups
 // with updated versions of the provided changedGroups (ie, with more, less, or reordered members).
 const updateGroups = (groups, changedGroups) => {
-  const updatedGroups = [...groups];
+  const updatedGroups = _.cloneDeep(groups);
 
   changedGroups.forEach(changedGroup => {
     const updatedGroupIndex = updatedGroups.findIndex(
@@ -183,7 +183,6 @@ const addDroppableIdToGroup = group => {
 // Exported for a test
 export const getAssignedGroupDroppableId = id => DROPPABLE_ID_PREFIX + id;
 
-// TO DO: present a modal that allows a user to select a group name before creating it.
 // We need to generate a unique identifier for each group that is generated on the client
 // before we save it -- use a timestamp for this unique identifier.
 const generateNewGroup = () => {
