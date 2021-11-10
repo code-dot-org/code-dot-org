@@ -23,7 +23,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-04 23:52:34 UTC",
+    "serialized_at": "2021-11-09 20:48:02 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -335,7 +335,7 @@
       "key": "lesson-15",
       "name": "Assessment Day",
       "absolute_position": 15,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {

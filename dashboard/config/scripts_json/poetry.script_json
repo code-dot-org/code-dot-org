@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-09 19:58:18 UTC",
+    "serialized_at": "2021-11-10 19:38:09 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -126,12 +126,16 @@
     },
     {
       "key": "lesson-7",
-      "name": "Conditionals",
+      "name": "Responding to Words",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.",
+        "preparation": " - Make sure students have their handouts from previous lessons for reference. \n- Play through the levels ahead of time to prepare for the prediction and discussion sections.\n- To keep track of student progress, assign the lesson to your class sections.. Many levels in this module are linked to each other, so student code will carry on between lessons on certain levels. Logging in will ensure their work is saved. \n- Prepare one computer per student.\n",
+        "purpose": "This is an optional lesson that extends student understanding of programming concepts in this module. Forty-five minutes is the suggested timeframe, but this lesson is intentionally open-ended so students can go at their own pace. Students spend the majority of the class in free play levels, tinkering with their code; the lesson can be shortened or extended as needed.  \n\nAnother use for this lesson might be to allow extra time for students who want to continue building their app from any previous lesson. Conditionals could be an extension activity for early finishers. \n",
+        "student_overview": "Make the app respond to what the user chooses in exciting new ways."
       },
       "seeding_key": {
         "lesson.key": "lesson-7",
@@ -147,6 +151,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.",
+        "preparation": "- Prepare one computer per student.\n- Prepare one copy of the “Share Your App” handout per student.\n- Make sure students have a copy of their original poem handy for this lesson.  \n- Divide the class into pairs for the Poetry Pair-Share activity.\n- [Optional, especially for remote teaching] Determine whether you need to set up a digital document or shared online space to post each student’s app URL (see teacher template in “Links”). \n",
+        "student_overview": "Share your new poem apps with your friends! "
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -161,7 +168,7 @@
       "position": 1,
       "properties": {
         "duration": 5,
-        "name": "Warm Up"
+        "name": "Warm-Up"
       },
       "seeding_key": {
         "lesson_activity.key": "df34a68d-ef1b-4ccb-b066-6f6207449f4f",
@@ -189,7 +196,7 @@
       "position": 3,
       "properties": {
         "duration": 5,
-        "name": "Wrap Up"
+        "name": "Wrap-Up"
       },
       "seeding_key": {
         "lesson_activity.key": "e4124685-960f-4956-a266-9083044eab86",
@@ -203,7 +210,7 @@
       "position": 1,
       "properties": {
         "duration": 5,
-        "name": "Warm Up"
+        "name": "Warm-Up"
       },
       "seeding_key": {
         "lesson_activity.key": "4ad0c598-baa0-4322-bdfa-021965ece14f",
@@ -243,7 +250,7 @@
       "position": 4,
       "properties": {
         "duration": 10,
-        "name": "Wrap Up"
+        "name": "Wrap-Up"
       },
       "seeding_key": {
         "lesson_activity.key": "013b597e-a541-40f3-9730-4e5eea44294a",
@@ -285,7 +292,7 @@
       "position": 3,
       "properties": {
         "duration": 1,
-        "name": "Wrap Up"
+        "name": "Wrap-Up"
       },
       "seeding_key": {
         "lesson_activity.key": "a471eec6-1618-4bc2-a8f4-24a71d835720",
@@ -382,6 +389,8 @@
       "key": "9288b987-32bd-4d02-8d04-75a824d6e505",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm-Up"
       },
       "seeding_key": {
         "lesson_activity.key": "9288b987-32bd-4d02-8d04-75a824d6e505",
@@ -391,12 +400,56 @@
       }
     },
     {
+      "key": "60cff850-7608-423f-ad65-6017f2a7f3cc",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "60cff850-7608-423f-ad65-6017f2a7f3cc",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "poetry"
+      }
+    },
+    {
+      "key": "da7f731b-db90-4a16-bebd-e99dcdc73388",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "da7f731b-db90-4a16-bebd-e99dcdc73388",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "poetry"
+      }
+    },
+    {
       "key": "8bfe4f7c-b3fb-45e7-9ae9-cca80ea71941",
       "position": 1,
       "properties": {
+        "duration": 5,
+        "name": "Warm-Up"
       },
       "seeding_key": {
         "lesson_activity.key": "8bfe4f7c-b3fb-45e7-9ae9-cca80ea71941",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "poetry"
+      }
+    },
+    {
+      "key": "b0de3b9b-b440-4178-a0a8-116ce226179d",
+      "position": 2,
+      "properties": {
+        "duration": 20,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d",
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "poetry"
@@ -589,7 +642,7 @@
       "key": "48349326-4044-407a-a00e-8c214fdae663",
       "position": 1,
       "properties": {
-        "description": "Use this warm up activity to activate prior knowledge and discuss why we write poetry. This discussion should get students ready to write their own poems later in the lesson. \n"
+        "description": "Use this warm-up activity to activate prior knowledge and discuss why we write poetry. This discussion should get students ready to write their own poems later in the lesson. \n"
       },
       "seeding_key": {
         "activity_section.key": "48349326-4044-407a-a00e-8c214fdae663",
@@ -1547,23 +1600,260 @@
       }
     },
     {
-      "key": "f615a078-e4a9-4202-9b55-72a123151097",
+      "key": "43936583-994e-4405-b33a-8adc87eaccd1",
       "position": 1,
       "properties": {
+        "description": "Today, you’ll add to the code in your Poem Generator App to make it more responsive to what the user chooses. \nLet’s look at some examples. \n\n",
+        "name": "Explore an Example App",
+        "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "f615a078-e4a9-4202-9b55-72a123151097",
+        "activity_section.key": "43936583-994e-4405-b33a-8adc87eaccd1",
         "lesson_activity.key": "9288b987-32bd-4d02-8d04-75a824d6e505"
+      }
+    },
+    {
+      "key": "9cb78ab8-cb74-47ba-9f76-265552e1434f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Level 1 in Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "9cb78ab8-cb74-47ba-9f76-265552e1434f",
+        "lesson_activity.key": "9288b987-32bd-4d02-8d04-75a824d6e505"
+      }
+    },
+    {
+      "key": "14b93e0f-7489-4e86-abc2-bdc5ce6abb6b",
+      "position": 3,
+      "properties": {
+        "description": "**Do this:** Play through the example app a few times, choosing different options. \n\n**Discuss:**\n*What do you notice about this app?* \n*How is it different from the apps we saw before?* \n\n**Discussion Goal:** Students should notice that the foods that appear change based on the choices that they make. Students may say things like “if the user chooses ‘salad’ then the background changes and a bunch of salads burst from the bottom of the screen.” Guide students to use the words “if” and “then” when they talk about what the app is doing. \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Discussing code in plain language without actually writing it is called **pseudocode** and is something programmers do all the time. It helps them create a plan before creating an app, similar to how students have used worksheets and visual guides throughout this unit to plan their program. Students don’t need to know the term pseudocode, but it can be helpful if students wonder why we do so much planning and discussing before coding."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "14b93e0f-7489-4e86-abc2-bdc5ce6abb6b",
+        "lesson_activity.key": "9288b987-32bd-4d02-8d04-75a824d6e505"
+      }
+    },
+    {
+      "key": "c4d0fa13-8b25-4893-9707-0c94097ae1bd",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show “Level 1 - Example Program” slide.\n\n**Discuss:**\n \n- *Read this code out loud.* \n- *How does this code work?* \n- *What does it do in the program?*\n\n**Discussion Goal:** Point out to students the construction of the conditional. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "c4d0fa13-8b25-4893-9707-0c94097ae1bd",
+        "lesson_activity.key": "9288b987-32bd-4d02-8d04-75a824d6e505"
+      }
+    },
+    {
+      "key": "aae0825f-42d6-4463-bae8-e018bb24396a",
+      "position": 5,
+      "properties": {
+        "description": "A conditional is code that checks to see if a condition is true. The condition in this first chunk of code is “if food equals salad.” The computer is checking to see if the value (what is stored) in this variable named “food” is the word “salad.” If that’s true, then the computer will run the code inside this conditional. If it’s not true, the computer will move on to see if the next condition is true. \n\nIf none of them are true, the computer will do nothing. \n\nLet’s watch this video to see the code in action.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "aae0825f-42d6-4463-bae8-e018bb24396a",
+        "lesson_activity.key": "9288b987-32bd-4d02-8d04-75a824d6e505"
+      }
+    },
+    {
+      "key": "33c17806-88ec-4c97-8051-de9098c81424",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Watch the \"Conditionals\" video together.",
+        "name": "Conditionals"
+      },
+      "seeding_key": {
+        "activity_section.key": "33c17806-88ec-4c97-8051-de9098c81424",
+        "lesson_activity.key": "60cff850-7608-423f-ad65-6017f2a7f3cc"
+      }
+    },
+    {
+      "key": "72d13e2c-ffda-41b9-adaa-2c045f37f5bb",
+      "position": 2,
+      "properties": {
+        "description": "Now it’s your turn to add conditionals to your poem generator app so it responds to what the user chooses. In the next two levels, you can use different effects or sprites based on the words the user chooses. \n\nI’ll set the time for 30 minutes so you can add conditionals and all the final touches to your program.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "72d13e2c-ffda-41b9-adaa-2c045f37f5bb",
+        "lesson_activity.key": "60cff850-7608-423f-ad65-6017f2a7f3cc"
+      }
+    },
+    {
+      "key": "34e0bea9-1c29-4aea-885e-042881929075",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Allow students to complete levels 2-3 on their own. \n\n**Circulate:** Students should have their handouts from previous lessons to help guide their work. Make sure students have (1) chosen words that make sense for their poem, like using the correct part of speech or the correct tense, (2) that their prompt and conditional variables match, (3) that students add a conditional under the event they coded. ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Debugging tips for variables:\n\n- Students should name their variable when filling out their prompt (e.g. “food”) and then use the dropdown menu in the if-statement to find the variable name (e.g. “food”)  that matches the one in the prompt. Students should not rename the same variable each time they call it. \n- Variable names can’t have spaces. Use camelCase instead (i.e. the first word is not capitalized but every new word after it is, no spaces between words, like “newWord”.) \n- If the wrong variable is being called, have students talk through their code with you to find the bug (e.g. “Prompt the user with ‘Enter a food’ for a variable named “food.” When line 2 shows, see if the variable “food” is “sandwich.” If that’s true, do a pop effect of 10 sandwiches.” \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "34e0bea9-1c29-4aea-885e-042881929075",
+        "lesson_activity.key": "60cff850-7608-423f-ad65-6017f2a7f3cc"
+      }
+    },
+    {
+      "key": "ba01ecdd-5f7e-46aa-aac3-19beb0c2eb1b",
+      "position": 1,
+      "properties": {
+        "name": "Share Out",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "There are two ways to quickly share student work. \n\n- (1) If you are signed in and your students are in your class section, you can navigate to Level 3, open your Teacher Panel, and find the student’s name to access their work. [Click here to learn more about the Teacher Panel](https://support.code.org/hc/en-us/articles/360047703872-How-do-I-view-a-student-s-code-on-an-individual-level-).\n\n- (2) Tell students to click the “Share” button on the last level and post the link on your LMS or other shared space.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ba01ecdd-5f7e-46aa-aac3-19beb0c2eb1b",
+        "lesson_activity.key": "da7f731b-db90-4a16-bebd-e99dcdc73388"
+      }
+    },
+    {
+      "key": "3275649a-4bb4-4927-94fb-e20e82ec83fe",
+      "position": 2,
+      "properties": {
+        "description": "**Discussion:** Ask for a volunteer to share their program with the class. \n- What effects and sprites did this coder add to match the poem they wrote? \n- How did these effects add to or change the feeling of the poem? \n- Did anything surprise you? \n\n**Discussion Goal:** Ask students to make connections between certain words or phrases that convey a particular mood and the effects the programmer chose to add to the atmosphere of the poem. Discuss whether any sprite, effect, color choice, or sound was surprising to the class. Give the volunteer a chance to explain why they might have chosen one color/effect over another. Have a discussion about how art can be interpreted in many ways."
+      },
+      "seeding_key": {
+        "activity_section.key": "3275649a-4bb4-4927-94fb-e20e82ec83fe",
+        "lesson_activity.key": "da7f731b-db90-4a16-bebd-e99dcdc73388"
+      }
+    },
+    {
+      "key": "6884058e-d46a-451e-a32e-83c75a72bbda",
+      "position": 3,
+      "properties": {
+        "description": "Well done, coders! \n \nNext time, we’ll share our apps with each other! \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6884058e-d46a-451e-a32e-83c75a72bbda",
+        "lesson_activity.key": "da7f731b-db90-4a16-bebd-e99dcdc73388"
       }
     },
     {
       "key": "ae6120a5-7b68-4016-8288-fe73c64ebea0",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Today’s Agenda” slide.",
+        "name": "Get Ready"
       },
       "seeding_key": {
         "activity_section.key": "ae6120a5-7b68-4016-8288-fe73c64ebea0",
         "lesson_activity.key": "8bfe4f7c-b3fb-45e7-9ae9-cca80ea71941"
+      }
+    },
+    {
+      "key": "b268239c-41f2-4d9f-84c0-eeac52139036",
+      "position": 2,
+      "properties": {
+        "description": "Last class, we finished adding prompts, variables, and effects to our poem apps. Today, we’ll share our work with our classmates. First, play through your own app to make sure it works the way you expect. \n\nYou have 5 minutes to make any finishing touches to your app. Five minutes is enough time to make small changes or debug the code you wrote. Try to resist the urge to re-write large parts of your code. When the timer is up, wait for directions for the next step.\n\nI will start the timer now. \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "b268239c-41f2-4d9f-84c0-eeac52139036",
+        "lesson_activity.key": "8bfe4f7c-b3fb-45e7-9ae9-cca80ea71941"
+      }
+    },
+    {
+      "key": "db25d962-bcbc-4f15-b289-d35c56fef25f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Getting Ready” slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Set a 5-minute timer. Make sure students: \n- Go to Level 1 \n- Click “Run” and play their app\n- Make any last-minute changes\n- Expand their playspace by clicking and dragging the three dots to the right of their playspace (see gif on slide) \n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**For remote teaching:** \nThis activity requires partner work. If students are not able to physically switch computers, you will need a shared document with links to each student’s project. Tell students a URL is a web address to a website; this URL will lead to a shareable version of your poem app. Direct students to click the “Share” button on the last level and post the link on your LMS or other shared space, like the “Student URL Sharing Document”. Students can keep adding more to their projects even after they have shared their project link."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "db25d962-bcbc-4f15-b289-d35c56fef25f",
+        "lesson_activity.key": "8bfe4f7c-b3fb-45e7-9ae9-cca80ea71941"
+      }
+    },
+    {
+      "key": "220ab711-f2e6-4b6d-b690-a4b70a7fd489",
+      "position": 1,
+      "properties": {
+        "description": "Today we are going to share our poem apps together. While we play each other’s apps, we want to think about constructive feedback that might help the app programmer make their app even better. ",
+        "duration": "5",
+        "name": "Why is Feedback Important?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "220ab711-f2e6-4b6d-b690-a4b70a7fd489",
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d"
+      }
+    },
+    {
+      "key": "8c4ee6f2-2fc9-43c8-ad2e-b9205ef7e362",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “What is Constructive Feedback” slide.\n\n**Discuss:**\n- *What is constructive feedback?* \n- *Why is it important to present our poems and get feedback?*\n- *How do you show respect when someone is presenting?*\n\n**Discussion Goal:**  Make sure students understand that constructive feedback is respectful, helpful, and specific. Encourage students to discuss how opportunities for feedback gives them space to reflect on and improve both their poem and their code. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8c4ee6f2-2fc9-43c8-ad2e-b9205ef7e362",
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d"
+      }
+    },
+    {
+      "key": "357d83de-58e1-40c5-a433-5b40a4cc3251",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Modeling Constructive Feedback” slide.",
+        "duration": "5",
+        "name": "Modeling Constructive Feedback"
+      },
+      "seeding_key": {
+        "activity_section.key": "357d83de-58e1-40c5-a433-5b40a4cc3251",
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d"
+      }
+    },
+    {
+      "key": "c4f65c85-c779-4071-985b-f62f616fb5eb",
+      "position": 4,
+      "properties": {
+        "description": "When we pair up, you will test out your partner’s poem app. Then you’ll write them feedback on what you thought about the app. \n\nRemember to keep your comments constructive and respectful.\n\nAs you play through the app you will think about a “glow”, a “grow”, and a “question” you can write for your partner. A “glow” is something they did well, a “grow” is something they can change or improve, and a “question” is something you want to know more about.\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c4f65c85-c779-4071-985b-f62f616fb5eb",
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d"
+      }
+    },
+    {
+      "key": "c82adb39-0aa6-4078-ad05-98e967ce979d",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**"
+      },
+      "seeding_key": {
+        "activity_section.key": "c82adb39-0aa6-4078-ad05-98e967ce979d",
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d"
+      }
+    },
+    {
+      "key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95",
+      "position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95",
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d"
       }
     }
   ],
@@ -2174,6 +2464,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choices_exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2303,7 +2596,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "f615a078-e4a9-4202-9b55-72a123151097"
+        "activity_section.key": "9cb78ab8-cb74-47ba-9f76-265552e1434f"
       },
       "level_keys": [
         "poetry_module_conditionals_exemplar"
@@ -2312,7 +2605,7 @@
     {
       "chapter": 32,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2327,7 +2620,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "f615a078-e4a9-4202-9b55-72a123151097"
+        "activity_section.key": "34e0bea9-1c29-4aea-885e-042881929075"
       },
       "level_keys": [
         "poetry_module_conditionals_practice"
@@ -2336,7 +2629,7 @@
     {
       "chapter": 33,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2351,7 +2644,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "f615a078-e4a9-4202-9b55-72a123151097"
+        "activity_section.key": "34e0bea9-1c29-4aea-885e-042881929075"
       },
       "level_keys": [
         "poetry_module_conditionals_freeplay"
@@ -2363,9 +2656,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_module_share"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2375,7 +2665,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "ae6120a5-7b68-4016-8288-fe73c64ebea0"
+        "activity_section.key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95"
       },
       "level_keys": [
         "poetry_module_share"
@@ -2387,9 +2677,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_module_modeling_exemple"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2399,7 +2686,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "ae6120a5-7b68-4016-8288-fe73c64ebea0"
+        "activity_section.key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95"
       },
       "level_keys": [
         "poetry_module_modeling_exemple"
@@ -2776,7 +3063,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "f615a078-e4a9-4202-9b55-72a123151097"
+        "activity_section.key": "9cb78ab8-cb74-47ba-9f76-265552e1434f"
       }
     },
     {
@@ -2788,7 +3075,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "f615a078-e4a9-4202-9b55-72a123151097"
+        "activity_section.key": "34e0bea9-1c29-4aea-885e-042881929075"
       }
     },
     {
@@ -2800,7 +3087,7 @@
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "f615a078-e4a9-4202-9b55-72a123151097"
+        "activity_section.key": "34e0bea9-1c29-4aea-885e-042881929075"
       }
     },
     {
@@ -2812,7 +3099,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "ae6120a5-7b68-4016-8288-fe73c64ebea0"
+        "activity_section.key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95"
       }
     },
     {
@@ -2824,11 +3111,23 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "ae6120a5-7b68-4016-8288-fe73c64ebea0"
+        "activity_section.key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95"
       }
     }
   ],
   "resources": [
+    {
+      "name": "[Optional] Student URL Sharing Document",
+      "url": "https://docs.google.com/document/d/1DNcBWminB8MmyLQC4fIWrLZ8uI9HR7d4W3HuuclIpB0/template/preview",
+      "key": "_optional_student_url_sharing_document",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_student_url_sharing_document"
+      }
+    },
     {
       "name": "Choosing Words Carefully",
       "url": "https://docs.google.com/document/d/1DSrj-0lOxfPwzjAbj1PJ10kLsgDQzseINm6zMTXbN7s/template/preview",
@@ -2839,6 +3138,18 @@
       },
       "seeding_key": {
         "resource.key": "choosing_words_carefully"
+      }
+    },
+    {
+      "name": "Coding with Poetry - Conditionals",
+      "url": "https://youtu.be/PXTc4gglFng",
+      "key": "coding_with_poetry_-_conditionals",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "coding_with_poetry_-_conditionals"
       }
     },
     {
@@ -2911,6 +3222,18 @@
       },
       "seeding_key": {
         "resource.key": "planning_your_poem_generator_app"
+      }
+    },
+    {
+      "name": "Share Your App!",
+      "url": "https://docs.google.com/document/d/1CW-IkOnFTTPD038tVzGrifGVoMZKUgzrGecP5jsZo8I/template/preview",
+      "key": "share_your_app_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "share_your_app_"
       }
     },
     {
@@ -3010,6 +3333,36 @@
         "lesson.key": "lesson-5",
         "resource.key": "multiple_choice_prompts"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_optional_student_url_sharing_document"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "coding_with_poetry_modules"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "share_your_app_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "coding_with_poetry_-_conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "coding_with_poetry_modules"
+      }
     }
   ],
   "scripts_resources": [
@@ -3037,6 +3390,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "code"
+      }
+    },
+    {
+      "key": "conditionals",
+      "word": "Conditionals",
+      "definition": "If-statements that only run under certain conditions.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "key": "constructive_feedback",
+      "word": "Constructive feedback",
+      "definition": "Respectful comments that help someone improve their work",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "constructive_feedback"
       }
     },
     {
@@ -3110,6 +3483,16 @@
       }
     },
     {
+      "key": "poetry_circle",
+      "word": "Poetry Circle",
+      "definition": "A safe and creative space to test out new poems and get constructive feedback from others",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "poetry_circle"
+      }
+    },
+    {
       "key": "program",
       "word": "Program",
       "definition": "A series of steps that have been coded into something that can be run by a machine.",
@@ -3127,6 +3510,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "prompt"
+      }
+    },
+    {
+      "key": "pseudocode_optional_",
+      "word": "Pseudocode (optional)",
+      "definition": "A simple way of writing computer code in English.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pseudocode_optional_"
       }
     },
     {
@@ -3256,6 +3649,30 @@
         "lesson.key": "lesson-5",
         "vocabulary.key": "synonym"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "constructive_feedback"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "poetry_circle"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "vocabulary.key": "pseudocode_optional_"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -3353,6 +3770,16 @@
       }
     },
     {
+      "key": "7a2deb99-d3eb-4871-ab97-780150661934",
+      "properties": {
+        "description": "Use technology to produce and publish writing and to interact and collaborate with others."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "7a2deb99-d3eb-4871-ab97-780150661934"
+      }
+    },
+    {
       "key": "901a917a-bdca-4eb3-90a8-c51a32377866",
       "properties": {
         "description": "Develop an interactive program that prompts the user for an input "
@@ -3413,6 +3840,16 @@
       }
     },
     {
+      "key": "cb6cc073-7797-44ac-a709-da7109b7f41f",
+      "properties": {
+        "description": "Use conditional logic to change the flow of a program depending on user inputs."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "cb6cc073-7797-44ac-a709-da7109b7f41f"
+      }
+    },
+    {
       "key": "d04d3363-e0ec-4aba-8f18-98db7cc4ae86",
       "properties": {
         "description": "Modify a previously written work for a new purpose"
@@ -3430,6 +3867,16 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "objective.key": "dc337c5c-3857-489b-9dad-8620387757f0"
+      }
+    },
+    {
+      "key": "ec063c9d-bdba-474a-8497-7c53edf38492",
+      "properties": {
+        "description": "Make connections between text and a visual presentation of that text, identifying where visual representations reflect specific descriptions in the text."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "objective.key": "ec063c9d-bdba-474a-8497-7c53edf38492"
       }
     }
   ],
@@ -3494,7 +3941,21 @@
       "seeding_key": {
         "lesson.key": "lesson-2",
         "framework.shortcode": "ccela",
+        "standard.shortcode": "4.L.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "ccela",
         "standard.shortcode": "4.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.L.3.a"
       }
     },
     {
@@ -3745,6 +4206,48 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.L.5.c"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.L.5.c"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-12"
       }
