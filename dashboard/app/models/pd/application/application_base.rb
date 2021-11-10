@@ -57,7 +57,7 @@ module Pd::Application
     INCOMPLETE = 'Incomplete'.freeze
 
     COMMON_OPTIONS = {
-      title: %w(Mr. Mrs. Ms. Dr.),
+      title: %w(Mr. Mrs. Ms. Mx. Dr.),
 
       state: get_all_states_with_dc.to_h.values,
 
