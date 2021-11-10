@@ -1,3 +1,9 @@
+---
+title: Native American and Indigenous Peoples Initiative
+theme: responsive
+video_player: true
+---
+
 <link href="/shared/css/course-blocks.css", type="text/css", rel="stylesheet"></link>
 
 <style>
@@ -9,6 +15,8 @@
 # Native American and Indigenous Peoples Initiative
 
 Native American communities have unique experiences, barriers, and challenges in offering and fully engaging in computer science (CS) education in their K-12 systems. Data gathered in the <a href="https://code.org/yourschool/about" target=_blank>K-12 Computer Science Access Report</a> shows that Native American students are far less likely to attend a school that offers computer science (51% as opposed to the next lowest access group, Black students at 70%). This is even more significant than it seems since many students attending schools with access are likely attending schools in or near urban centers. Therefore, the disparity is even larger for Native American students attending school within rural and majority native communities. 
+
+![All High Schools](/51allHS.png) ![Disparities by race/ethnicity](/Disp_race.png) ![Reservation High Schools](/ReservationHS.png) 
 
 To close these access gaps, Code.org and others across the CS education landscape must: 
 
@@ -49,21 +57,14 @@ Chief Programs Officer | Code.org
 
 Keynote: <b>Kimball Sekaquaptewa</b><br>
 Chief Technology Officer | Sante Fe Indian School<br>
-![Keynote](/Kimball2.png)<br><br>
 
+<div class="col-50" style="padding-top:30px;">
+<div style="max-width:100%; position:relative;">{{ naipi_kimball }}</div>
+<div class="col-50" style="padding-top:30px;">
+<div style="max-width:100%; position:relative;">{{ naipi_panel2021 }}</div>
 
-![Keynote](/NAIPIpanel.png) 
+<div style="clear: both;"></div>
 <br><br>
 
-
-**_CS Pathways in Our Communities: Workshop_**<br>
-Friday, November 5th, 9-11am PT
- 
-A working session for administrators and other stakeholders to take initial steps toward developing a K-12 computer science education pathway for their local community schools.
-<br>
-<br>
-
-**_Community Discussion and Networking_**<br>
-Friday, November 5th, 1-2pm PT
- 
-Come meet and engage with colleagues, administrators, teachers, policy makers, advocates. Discuss what you’ve heard in the summit, share resources and lessons learned, and more.
+**Resources**<br>
+Resources to come
