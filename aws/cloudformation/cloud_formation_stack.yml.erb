@@ -434,7 +434,7 @@ Resources:
       BlockDeviceMappings:
         - DeviceName: /dev/sda1
           Ebs:
-            VolumeSize: <%= rack_env?(:production) ? 128 : 64 %>
+            VolumeSize: <%= rack_env?(:adhoc) ? 64 : 256 %>
             VolumeType: gp2
       UserData:
         Fn::Base64: !Sub |
