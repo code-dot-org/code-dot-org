@@ -27262,3 +27262,19 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+        hello-world-animals-2021:
+          lessons:
+            Hello World:
+              name: Hello World
+              description_student: 
+              description_teacher: 
+            lesson-1:
+              key: lesson-1
+              name: Hello World
+              description_student: ''
+              description_teacher: ''
+          title: Hello World
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
