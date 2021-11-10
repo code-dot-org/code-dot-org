@@ -1,5 +1,5 @@
 import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
+import {assert, expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedAddLevelDialogTop as AddLevelDialogTop} from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialogTop';
 import {searchOptions} from './activitiesTestData';
 import sinon from 'sinon';
@@ -51,7 +51,7 @@ describe('AddLevelDialogTop', () => {
     expect(wrapper.findOne('Connect(ToggleGroup)'));
     expect(wrapper.findOne('Connect(AddLevelFilters)'));
     expect(wrapper.findOne('AddLevelTable'));
-    expect(!wrapper.exists('.fa-spin')); // no spinner
+    expect(!wrapper.exists('FontAwesome')); // no spinner
 
     server.restore();
   });
@@ -64,6 +64,7 @@ describe('AddLevelDialogTop', () => {
     expect(!wrapper.exists('ToggleGroup'));
     expect(!wrapper.exists('Connect(AddLevelFilters)'));
     expect(!wrapper.exists('AddLevelTable'));
-    expect(wrapper.findOne('.fa-spin'));
+    expect(wrapper.exists('FontAwesome'));
+    assert.equal(wrapper.findOne('FontAwesome').props.className, 'fa-spin');
   });
 });

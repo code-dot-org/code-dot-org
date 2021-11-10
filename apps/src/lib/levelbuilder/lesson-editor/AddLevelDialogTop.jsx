@@ -51,7 +51,6 @@ function AddLevelDialogTop(props) {
       method: 'GET',
       contentType: 'application/json;charset=UTF-8'
     }).done((data, _, request) => {
-      console.log(data.levels);
       setLevels(data.levels);
       setNumPages(data.numPages);
       setLoadingLevels(false);
