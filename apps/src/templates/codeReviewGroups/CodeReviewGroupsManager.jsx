@@ -190,6 +190,7 @@ export const getAssignedGroupDroppableId = id => DROPPABLE_ID_PREFIX + id;
 const generateNewGroup = () => {
   return {
     droppableId: `${DROPPABLE_ID_PREFIX}${new Date().getTime()}`,
+    name: '',
     members: []
   };
 };
