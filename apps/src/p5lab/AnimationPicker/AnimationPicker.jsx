@@ -127,7 +127,7 @@ class AnimationPicker extends React.Component {
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}
           isOpen={this.state.exitingDialog}
-          //backdropExtension={15}
+          backdropExtension={15}
           hideCloseButton={true}
           handleClose={() => {
             this.setState({exitingDialog: false});
