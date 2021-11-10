@@ -118,7 +118,7 @@
       text = @lesson.localized_title
     else
       lesson = @lesson || @script_level.lesson
-      text = @script.professional_learning_course? ? lesson.localized_name : lesson.localized_title
+      text = @script.old_professional_learning_course? ? lesson.localized_name : lesson.localized_title
     end
 
     # Pass along section_id param so that when teacher moves between lesson

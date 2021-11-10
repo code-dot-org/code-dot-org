@@ -14,7 +14,7 @@ class ScriptTest < ActiveSupport::TestCase
     @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
     @unit_group = create(:unit_group)
-    @unit_in_unit_group = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
+    @unit_in_unit_group = create(:script, name: 'unit-in-unit-group', published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
     create(:unit_group_unit, position: 1, unit_group: @unit_group, script: @unit_in_unit_group)
 
     @unit_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
@@ -905,9 +905,9 @@ class ScriptTest < ActiveSupport::TestCase
     assert_nil Script.find_by_name('csf1').banner_image
   end
 
-  test 'professional_learning_course?' do
-    refute Script.find_by_name('flappy').professional_learning_course?
-    assert Script.find_by_name('ECSPD').professional_learning_course?
+  test 'old_professional_learning_course?' do
+    refute Script.find_by_name('flappy').old_professional_learning_course?
+    assert Script.find_by_name('ECSPD').old_professional_learning_course?
   end
 
   test 'should summarize migrated unit' do
@@ -1440,7 +1440,7 @@ class ScriptTest < ActiveSupport::TestCase
     I18n.backend.store_translations I18n.locale, custom_i18n['en']
 
     unit.save! # Need to trigger an update because i18n strings weren't loaded
-    assert unit.professional_learning_course?
+    assert unit.old_professional_learning_course?
     assert_equal 'Test plc course', unit.professional_learning_course
     assert_equal 42, unit.peer_reviews_to_complete
 
@@ -1477,7 +1477,7 @@ class ScriptTest < ActiveSupport::TestCase
     unit_names, _custom_i18n = Script.setup([unit_file])
     unit = Script.find_by!(name: unit_names.first)
 
-    assert unit.professional_learning_course?
+    assert unit.old_professional_learning_course?
     assert_equal 'Test plc course', unit.professional_learning_course
     assert_equal 42, unit.peer_reviews_to_complete
 
@@ -3331,6 +3331,7 @@ class ScriptTest < ActiveSupport::TestCase
     end
 
     test 'can copy a standalone unit into a unit group' do
+      UnitGroup.any_instance.expects(:write_serialization).once
       cloned_unit = @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
       assert_equal 2, @unit_group.default_units.count
       assert_equal 'coursename2-2021', @unit_group.default_units[1].name

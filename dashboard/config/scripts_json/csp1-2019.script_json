@@ -40,9 +40,11 @@
     },
     "new_name": null,
     "family_name": "csp1",
-    "serialized_at": "2021-10-25 22:53:57 UTC",
+    "serialized_at": "2021-11-07 00:04:05 UTC",
     "published_state": null,
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp1-2019"
     }
@@ -430,7 +432,12 @@
           "csp_socialBelonging_control_2019",
           "csp_socialBelonging_intervention_2019"
         ],
-        "progression": "Reflection: starting out in computer science"
+        "progression": "Reflection: starting out in computer science",
+        "variants": {
+          "csp_socialBelonging_intervention_2019": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
