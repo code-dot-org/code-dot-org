@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-10 19:38:09 UTC",
+    "serialized_at": "2021-11-10 20:25:47 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -450,6 +450,20 @@
       },
       "seeding_key": {
         "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "poetry"
+      }
+    },
+    {
+      "key": "2120af7e-ea58-4b84-94c8-cd9b6ccde4e2",
+      "position": 3,
+      "properties": {
+        "duration": 20,
+        "name": "Wrap-Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2120af7e-ea58-4b84-94c8-cd9b6ccde4e2",
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "poetry"
@@ -1839,7 +1853,7 @@
       "key": "c82adb39-0aa6-4078-ad05-98e967ce979d",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the “Level 2 - Example App” slide and open Code Studio - Lesson 7: Level 2 in another window. Keep a copy of the “Share Your App” handout nearby to gesture to where students should fill out their glow, grow, and question."
       },
       "seeding_key": {
         "activity_section.key": "c82adb39-0aa6-4078-ad05-98e967ce979d",
@@ -1850,10 +1864,119 @@
       "key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95",
       "position": 6,
       "properties": {
+        "description": "Let me model an example of how you will test out the app and write feedback.\n\nAs I’m playing through this example, I notice the first image is of a rainbow and the second image is of a couch with rain and a sad noise. This makes me feel like the poet is sad to be inside instead of outside on a lovely day. \n\n- A “glow” I have for you is: “I like that you include images that match the mood of the poem.”\n\n I also notice that the coder repeats the word choice “birds” twice and repeats some sounds. \n- A “grow” I have for you is: “Have you tried adding in more variety to your effects and word choice?”\n\n Lastly, I notice these first few options have two synonyms and then an antonym. I wonder if I should choose a positive-sounding word or a negative-sounding one.\n- A “question” I still have is: “Can you tell me more about the words you decided to include?”\n",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can also provide examples and non-examples of feedback:\n- Helpful: “I notice a bug with one of your effects. Have you tried adding a “Sprite Stops Growing” block?”\n- Specific: “I like that you include an event block that makes the salad sprite pop up on line 3.”\n- Non-example: “I don’t like your zebra sprite.”\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95",
         "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d"
+      }
+    },
+    {
+      "key": "e5cc05b1-3b2b-4cff-a0e2-6eab525a542b",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the ”Test Your Partner’s App” slide.  \n\n**Do This:** Distribute one “Share Your App” handout per student. Read the “Modeling Constructive Feedback” prompts from the handout. Make sure students understand how to give respectful feedback to their classmates. \n\n",
+        "duration": "10",
+        "name": "Poetry Pair-Share"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5cc05b1-3b2b-4cff-a0e2-6eab525a542b",
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d"
+      }
+    },
+    {
+      "key": "75c265cb-d66d-46cc-8182-5062f33d4403",
+      "position": 8,
+      "properties": {
+        "description": "Now you are going to share your apps. As you play through your partner’s app, you will observe the choices they made and write feedback for them on your handout.\n\nWhen you and your partner have finished testing out each other’s apps and writing feedback on your handout, you will share your feedback with your partner.\n\nYou have 10 minutes to try their app and write any feedback, I’ll start the timer now. \n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "75c265cb-d66d-46cc-8182-5062f33d4403",
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d"
+      }
+    },
+    {
+      "key": "972b438f-6cd9-4de4-9cd9-5a932c0c2fd9",
+      "position": 9,
+      "properties": {
+        "description": "**Do This:** Divide the class into pairs. Have each student switch seats (or computers) with their partner, play through their partner’s app, write feedback, and share their feedback with their partner after they complete the handout. \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "972b438f-6cd9-4de4-9cd9-5a932c0c2fd9",
+        "lesson_activity.key": "b0de3b9b-b440-4178-a0a8-116ce226179d"
+      }
+    },
+    {
+      "key": "2ead642a-0235-4159-8490-17cf1afde34e",
+      "position": 1,
+      "properties": {
+        "duration": "19",
+        "name": "Poetry Circle",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "How to display student work from your Teacher Panel:\n\nIf you are signed in and your students are in your class section, you can navigate to Level 1 of Lesson 7, open your Teacher Panel, and find the student’s name to access their work. [Click here to learn more about the Teacher Panel](https://support.code.org/hc/en-us/articles/360047703872-How-do-I-view-a-student-s-code-on-an-individual-level-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2ead642a-0235-4159-8490-17cf1afde34e",
+        "lesson_activity.key": "2120af7e-ea58-4b84-94c8-cd9b6ccde4e2"
+      }
+    },
+    {
+      "key": "54a8e757-2e90-4792-a0a8-d1fe58b9476b",
+      "position": 2,
+      "properties": {
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Poetry Circle” slide\n\n**Do This:** Read the Poetry Circle slide aloud. Ask one student to volunteer to share their poem app with the class. \n\n**Display:** Project the student volunteer’s poem app \n\n**Do This:** Have the rest of the class vote on options to create a new \"class generated\" poem. Have the volunteer student read their original poem aloud. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the \"Class Discussion\" slide.\n\n**Discuss:**\n\n- For the Class Discussion:\n  -  *Which word changed the meaning or feeling of the poem the most?* \n  -  *How did the visuals or the audio contribute to the poem’s mood?* \n\n- For the poet/programmer\n  - *Did the class interact with your app in the way you predicted?*\n  - *Is there anything you still need to debug or change?*\n\n**Discussion Goal:** This is a final wrap-up of the Computer Science and Poetry Unit. Students should understand how specific word choices shape the meaning or tone of a poem. They should also be able to make connections between the content of the poem and the visual and audio effects used.  \n\n[Optional] **Do This:** If you have time, ask for more student volunteers to share their apps and repeat the class discussion. \n\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "54a8e757-2e90-4792-a0a8-d1fe58b9476b",
+        "lesson_activity.key": "2120af7e-ea58-4b84-94c8-cd9b6ccde4e2"
+      }
+    },
+    {
+      "key": "1172de91-19c4-4c71-a0d7-a269ed414242",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Celebrate” slide\n",
+        "duration": "1",
+        "name": "Celebrate"
+      },
+      "seeding_key": {
+        "activity_section.key": "1172de91-19c4-4c71-a0d7-a269ed414242",
+        "lesson_activity.key": "2120af7e-ea58-4b84-94c8-cd9b6ccde4e2"
+      }
+    },
+    {
+      "key": "d37ea872-0052-4054-86e4-3ec3e09ad023",
+      "position": 4,
+      "properties": {
+        "description": "Thank you everyone for sharing your poem apps and your feedback with your classmates! It’s time to take a bow. Great job, coders!\n",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d37ea872-0052-4054-86e4-3ec3e09ad023",
+        "lesson_activity.key": "2120af7e-ea58-4b84-94c8-cd9b6ccde4e2"
+      }
+    },
+    {
+      "key": "f5110d30-c277-4d3d-8303-8d467b9841f9",
+      "position": 5,
+      "properties": {
+        "description": "**Do This:** Have all students stand up and take a bow, give everyone a clap (or soft snaps). \n"
+      },
+      "seeding_key": {
+        "activity_section.key": "f5110d30-c277-4d3d-8303-8d467b9841f9",
+        "lesson_activity.key": "2120af7e-ea58-4b84-94c8-cd9b6ccde4e2"
       }
     }
   ],
@@ -2665,7 +2788,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95"
+        "activity_section.key": "db25d962-bcbc-4f15-b289-d35c56fef25f"
       },
       "level_keys": [
         "poetry_module_share"
@@ -2674,7 +2797,7 @@
     {
       "chapter": 35,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
       },
@@ -2686,7 +2809,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95"
+        "activity_section.key": "c82adb39-0aa6-4078-ad05-98e967ce979d"
       },
       "level_keys": [
         "poetry_module_modeling_exemple"
@@ -3099,7 +3222,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95"
+        "activity_section.key": "db25d962-bcbc-4f15-b289-d35c56fef25f"
       }
     },
     {
@@ -3111,7 +3234,7 @@
         "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "poetry",
-        "activity_section.key": "78ea129c-8000-4b75-b7c2-fb7e36aa8a95"
+        "activity_section.key": "c82adb39-0aa6-4078-ad05-98e967ce979d"
       }
     }
   ],
@@ -4208,6 +4331,76 @@
         "lesson.key": "lesson-5",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.L.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.L.5.c"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "4.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.L.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.L.5.c"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "ccela",
+        "standard.shortcode": "5.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-20"
       }
     },
     {
