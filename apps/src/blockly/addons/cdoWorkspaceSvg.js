@@ -7,6 +7,10 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     this.getVariableMap().addVariables(variableList);
   }
 
+  getContainer() {
+    return this.svgGroup_.parentNode;
+  }
+
   clear() {
     super.clear();
 
@@ -36,7 +40,7 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     } else if (this.toolbox_) {
       return ToolboxType.CATEGORIZED;
     } else {
-      return ToolboxType.UNKNOWN;
+      return ToolboxType.NONE;
     }
   }
 
@@ -88,7 +92,15 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     return super.getAllBlocks().filter(block => !block.disabled);
   }
   getToolboxWidth() {
-    return Blockly.mainBlockSpace.getMetrics().toolboxWidth;
+    const metrics = this.getMetrics();
+    switch (this.getToolboxType()) {
+      case ToolboxType.CATEGORIZED:
+        return metrics.toolboxWidth;
+      case ToolboxType.UNCATEGORIZED:
+        return metrics.flyoutWidth;
+      case ToolboxType.NONE:
+        return 0;
+    }
   }
 
   /**
@@ -98,6 +110,11 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
    * it doesn't interfere with click events on the toolbox categories.
    */
   hideTrashcan() {
+    // If there's no toolbox, there's no trashcan.
+    if (this.getToolboxType() === ToolboxType.NONE) {
+      return;
+    }
+
     /**
      * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
      * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach
@@ -128,6 +145,11 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
   }
   setEnableToolbox() {} // TODO - called by StudioApp, not sure whether it's still needed.
   showTrashcan() {
+    // If there's no toolbox, there's no trashcan.
+    if (this.getToolboxType() === ToolboxType.NONE) {
+      return;
+    }
+
     /**
      * NodeList.forEach() is not supported on IE. Use Array.prototype.forEach.call() as a workaround.
      * https://developer.mozilla.org/en-US/docs/Web/API/NodeList/forEach

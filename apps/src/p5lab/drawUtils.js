@@ -22,8 +22,11 @@ export function getTextWidth(p5, text, size) {
 /**
  * Draw a speech bubble - a P5 shape comprised of a rectangle
  * with a triangle at the bottom. The x/y values will be the
- * tip of the triangle, and the bubble body will be centered above
- * the triangle.
+ * bottom center of the bubble body, including the height added
+ * by the triangle. With the default config values, the triangle
+ * will have a size of 10 and align to the center of the bubble body.
+ * Other passed config values allow the triangle to be adjusted,
+ * such as when a sprite is close to the edge of the app canvas.
  *
  * Note: The bubble body and triangle stroke outlines will overlap if the width:triangleSize
  * ratio is too low (e.g., the width is too narrow and triangle is too large). Consider
@@ -36,6 +39,8 @@ export function getTextWidth(p5, text, size) {
  * @param {Number} width
  * @param {Number} height
  * @param {Number} config.triangleSize
+ * @param {Number} config.triangleTipX
+ * @param {Number} config.rectangleCornerRadius
  * @param {String} config.fill
  * @param {Number} config.strokeWeight
  * @param {Number} config.stroke
@@ -47,7 +52,14 @@ export function speechBubble(
   y,
   width,
   height,
-  {triangleSize = 10, fill = 'white', strokeWeight = 2, stroke = 'gray'} = {}
+  {
+    triangleSize = 10,
+    triangleTipX = x,
+    rectangleCornerRadius = 8,
+    fill = 'white',
+    strokeWeight = 2,
+    stroke = 'gray'
+  } = {}
 ) {
   const minX = x - width / 2;
   const minY = y - height - triangleSize;
@@ -58,12 +70,19 @@ export function speechBubble(
   p5.strokeWeight(strokeWeight);
   p5.fill(fill);
   p5.beginShape();
-  p5.rect(minX, minY, width, height, 8);
+  p5.rect(minX, minY, width, height, rectangleCornerRadius);
   p5.stroke(fill);
-  p5.triangle(x - triangleSize, maxY, x, maxY, x, y);
+  p5.triangle(
+    triangleTipX - triangleSize,
+    maxY,
+    triangleTipX,
+    maxY,
+    triangleTipX,
+    y
+  );
   p5.stroke(stroke);
-  p5.line(x, maxY, x, y);
-  p5.line(x, y, x - triangleSize - 1, maxY);
+  p5.line(triangleTipX, maxY, triangleTipX, y);
+  p5.line(triangleTipX, y, triangleTipX - triangleSize - 1, maxY);
   p5.endShape(p5.CLOSE);
   p5.pop();
 
