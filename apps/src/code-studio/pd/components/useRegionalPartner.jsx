@@ -75,18 +75,26 @@ export const useRegionalPartner = data => {
 
   // load regional partner whenever parameters change
   useEffect(() => {
+    let cancelled = false;
     fetchRegionalPartner(searchTerm)
       .then(partner => {
         // Update state with all the partner workshop data to display
-        setLoadingPartner(false);
-        setLoadError(false);
-        // the api returns an object with all fields set to null if not found
-        setPartner(partner.id === null ? null : partner);
+        if (!cancelled) {
+          setLoadingPartner(false);
+          setLoadError(false);
+          // the api returns an object with all fields set to null if not found
+          setPartner(partner.id === null ? null : partner);
+        }
       })
       .catch(() => {
-        setLoadingPartner(false);
-        setLoadError(true);
+        if (!cancelled) {
+          setLoadingPartner(false);
+          setLoadError(true);
+        }
       });
+    return () => {
+      cancelled = true;
+    };
   }, [searchTerm]);
 
   return [loadingPartner ? undefined : partner, loadError];
