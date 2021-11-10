@@ -25,7 +25,7 @@ const getRegionalPartnerData = () => {
   return [regionalPartnerData, regionalPartnerError];
 };
 
-const GOOD_RESPONSE = {name: 'reginald partner'};
+const GOOD_RESPONSE = {id: 1, name: 'reginald partner'};
 
 const mockApiResponse = (status = 200, body = {}) => {
   return new window.Response(JSON.stringify(body), {
@@ -37,6 +37,8 @@ const mockApiResponse = (status = 200, body = {}) => {
 describe('useRegionalPartner tests', () => {
   let clock, fetchStub, debounceStub;
   beforeEach(() => {
+    regionalPartnerData = undefined;
+    regionalPartnerError = false;
     clock = sinon.useFakeTimers();
     fetchStub = sinon.stub(window, 'fetch');
     debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
@@ -113,6 +115,7 @@ describe('useRegionalPartner tests', () => {
       );
       await clock.runAllAsync();
     });
+
     const [regionalPartner, regionalPartnerError] = getRegionalPartnerData(
       rendered
     );
