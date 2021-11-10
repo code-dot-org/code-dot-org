@@ -6,7 +6,8 @@ import UnassignedStudentsPanel from './UnassignedStudentsPanel';
 import AssignedStudentsPanel from './AssignedStudentsPanel';
 
 const DROPPABLE_ID_PREFIX = 'groupId';
-const DROPPABLE_ID_UNASSIGNED = 'unassigned';
+// Exported for a test
+export const DROPPABLE_ID_UNASSIGNED = 'unassigned';
 
 // Provides "drag and drop context" that allows us to drag
 // code review group members between groups as teachers arrange their students into code review groups.
@@ -15,7 +16,7 @@ const DROPPABLE_ID_UNASSIGNED = 'unassigned';
 // https://github.com/atlassian/react-beautiful-dnd
 export default function CodeReviewGroupsManager({initialGroups}) {
   const [groups, setGroups] = useState(
-    initialGroups.map(group => addDroppableIdToGroup(group))
+    _.cloneDeep(initialGroups).map(group => addDroppableIdToGroup(group))
   );
 
   const getGroup = droppableId =>
@@ -23,6 +24,28 @@ export default function CodeReviewGroupsManager({initialGroups}) {
   const getUnassignedGroup = () => getGroup(DROPPABLE_ID_UNASSIGNED);
   const getAssignedGroups = () =>
     groups.filter(group => group.droppableId !== DROPPABLE_ID_UNASSIGNED);
+
+  const onGroupNameUpdate = (droppableId, newName) => {
+    const updatedGroup = {...getGroup(droppableId), name: newName};
+    const updatedGroups = updateGroups(groups, [updatedGroup]);
+    setGroups(updatedGroups);
+  };
+
+  const onGroupDelete = droppableId => {
+    // First, take all group members from deleted group and put them in unassigned group
+    const updatedUnassignedGroup = unassignAllFromGroup(droppableId);
+    const updatedGroups = updateGroups(groups, [updatedUnassignedGroup]);
+
+    setGroups(updatedGroups.filter(group => group.droppableId !== droppableId));
+  };
+
+  const unassignAllFromGroup = droppableId => {
+    const updatedUnassignedGroup = {...getUnassignedGroup()};
+    const unassignedGroup = getGroup(droppableId);
+    updatedUnassignedGroup.members.push(...unassignedGroup.members);
+
+    return updatedUnassignedGroup;
+  };
 
   function onDragEnd(result) {
     const {source, destination} = result;
@@ -72,6 +95,8 @@ export default function CodeReviewGroupsManager({initialGroups}) {
           onCreateGroupClick={() => {
             setGroups([generateNewGroup(), ...groups]);
           }}
+          onGroupNameUpdate={onGroupNameUpdate}
+          onGroupDelete={onGroupDelete}
         />
       </div>
     </DragDropContext>
@@ -128,10 +153,13 @@ const addDroppableIdToGroup = group => {
   if (group.unassigned) {
     group.droppableId = DROPPABLE_ID_UNASSIGNED;
   } else {
-    group.droppableId = `${DROPPABLE_ID_PREFIX}${group.id}`;
+    group.droppableId = getAssignedGroupDroppableId(group.id);
   }
   return group;
 };
+
+// Exported for a test
+export const getAssignedGroupDroppableId = id => DROPPABLE_ID_PREFIX + id;
 
 // TO DO: present a modal that allows a user to select a group name before creating it.
 // We need to generate a unique identifier for each group that is generated on the client

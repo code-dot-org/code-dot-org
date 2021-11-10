@@ -10,7 +10,7 @@ describe('ParameterEditor', () => {
   beforeEach(() => {
     updateSpy = sinon.spy();
     defaultProps = {
-      item: {
+      parameter: {
         name: 'param1',
         type: 'string',
         required: false,
