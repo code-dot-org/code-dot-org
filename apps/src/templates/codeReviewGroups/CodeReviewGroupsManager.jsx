@@ -33,7 +33,7 @@ export default function CodeReviewGroupsManager({initialGroups}) {
 
   const onGroupDelete = droppableId => {
     // First, take all group members from deleted group and put them in unassigned group
-    const updatedUnassignedGroup = unassignAllFromGroup(
+    const updatedUnassignedGroup = copyMembersIntoUnassigned(
       getUnassignedGroup(),
       getGroup(droppableId)
     );
@@ -45,7 +45,7 @@ export default function CodeReviewGroupsManager({initialGroups}) {
   const unassignAll = () => {
     let updatedUnassignedGroup = _.cloneDeep(getUnassignedGroup());
     getAssignedGroups().forEach(group => {
-      updatedUnassignedGroup = unassignAllFromGroup(
+      updatedUnassignedGroup = copyMembersIntoUnassigned(
         updatedUnassignedGroup,
         group
       );
@@ -58,7 +58,7 @@ export default function CodeReviewGroupsManager({initialGroups}) {
     setGroups([...updatedAssignedGroups, updatedUnassignedGroup]);
   };
 
-  const unassignAllFromGroup = (
+  const copyMembersIntoUnassigned = (
     existingUnassignedGroup,
     groupBeingUnassigned
   ) => {
