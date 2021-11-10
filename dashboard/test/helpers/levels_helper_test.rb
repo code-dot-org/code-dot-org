@@ -247,6 +247,39 @@ class LevelsHelperTest < ActionView::TestCase
     assert_not_equal channel, get_channel_for(level, script.id)
   end
 
+  test 'uses_google_blockly is false if not set' do
+    @level = build :level
+    refute use_google_blockly
+  end
+
+  test 'use_google_blockly is true if level.uses_google_blockly?' do
+    Level.any_instance.stubs(:uses_google_blockly?).returns(true)
+    @level = build :level
+    assert use_google_blockly
+
+    Level.unstub(:uses_google_blockly?)
+  end
+
+  test 'use_google_blockly is true if useGoogleBlockly is set in view_options' do
+    view_options(useGoogleBlockly: true)
+    @level = build :level
+    assert use_google_blockly
+
+    reset_view_options
+  end
+
+  test 'use_google_blockly is true if level class name is in DCDO uses_google_blockly config' do
+    DCDO.stubs(:get).with('uses_google_blockly', []).returns(['GamelabJr'])
+    @level = build :spritelab
+    assert use_google_blockly
+
+    # Should be case insensitive
+    DCDO.stubs(:get).with('uses_google_blockly', []).returns(['gamelabjr'])
+    assert use_google_blockly
+
+    DCDO.unstub(:get)
+  end
+
   test 'applab levels should not load channel when viewing student solution of a student without a channel' do
     # two different users
     @user = create :user
