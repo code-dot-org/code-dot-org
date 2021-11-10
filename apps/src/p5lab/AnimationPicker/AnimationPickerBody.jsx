@@ -95,9 +95,8 @@ export default class AnimationPickerBody extends React.Component {
     const scrollWindow = event.target;
     const {currentPage, results, pageCount} = this.state;
     const nextPage = currentPage + 1;
-    const scrollContainerHeight = this.scrollListContainer?.current
-      ? this.scrollListContainer.current.clientHeight
-      : 0;
+    const scrollContainerHeight =
+      this.scrollListContainer.current?.clientHeight || 0;
     if (
       scrollWindow.scrollTop + scrollContainerHeight >=
         scrollWindow.scrollHeight * 0.9 &&
