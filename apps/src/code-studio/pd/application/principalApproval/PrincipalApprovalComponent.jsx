@@ -432,6 +432,8 @@ PrincipalApprovalComponent.getDynamicallyRequiredFields = data => {
         requiredFields.push('replaceWhichCourseCsd');
       } else if (data.course === 'Computer Science Principles') {
         requiredFields.push('replaceWhichCourseCsp');
+      } else if (data.course === 'Computer Science A') {
+        requiredFields.push('replaceWhichCourseCsa');
       }
     }
   }
