@@ -27230,3 +27230,19 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+        hello-world-food-2021:
+          lessons:
+            Hello World:
+              name: Hello World
+              description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
+              description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
+            lesson-1:
+              key: lesson-1
+              name: Hello World
+              description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
+              description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
+          title: Hello World
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
