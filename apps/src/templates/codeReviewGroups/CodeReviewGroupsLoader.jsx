@@ -11,7 +11,7 @@ export default function CodeReviewGroupsLoader({sectionId}) {
         const api = new CodeReviewGroupsDataApi(sectionId);
         api
           .getCodeReviewGroups()
-          .then(groups => onLoadSuccess([convertGroupData(groups)]))
+          .then(groups => onLoadSuccess([groups]))
           .fail(error => onLoadError());
       }}
       loadArgs={[sectionId]}
@@ -20,21 +20,6 @@ export default function CodeReviewGroupsLoader({sectionId}) {
       )}
     />
   );
-}
-
-/**
- * Converts code review groups JSON data from the server by performing
- * any necessary JSON key conversions from snake case to camel case
- */
-function convertGroupData(groups) {
-  for (let group of groups) {
-    group.members = group.members.map(member => {
-      let converted = {...member, followerId: member.follower_id};
-      delete converted.follower_id;
-      return converted;
-    });
-  }
-  return groups;
 }
 
 CodeReviewGroupsLoader.propTypes = {
