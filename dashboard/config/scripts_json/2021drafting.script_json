@@ -4,18 +4,22 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_course": true,
       "teacher_resources": [
         [
           "lessonPlans",
           "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"
         ]
-      ]
+      ],
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-10-25 22:54:17 UTC",
+    "family_name": "2021drafting",
+    "serialized_at": "2021-11-10 21:41:56 UTC",
     "published_state": "beta",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "2021drafting"
     }
