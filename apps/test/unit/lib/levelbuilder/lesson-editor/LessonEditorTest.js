@@ -68,7 +68,8 @@ describe('LessonEditor', () => {
       unitInfo: {
         isLaunched: false,
         courseVersionId: 1,
-        unitPath: '/s/my-script/'
+        unitPath: '/s/my-script/',
+        isProfessionalLearningCourse: false
       },
       initialLessonData: {
         id: 1,
