@@ -145,7 +145,6 @@ describe('Code Review Groups Manager', () => {
     confirmDefaultBeforeActionExpectations();
     wrapper.find(UnassignedStudentsPanel).invoke('onUnassignAllClick')();
 
-    wrapper.find(AssignedStudentsPanel).props().groups;
     expect(getUnassignedGroup().members.length).to.equal(12);
     expect(getAssignedGroup(0).members).to.be.empty;
     expect(getAssignedGroup(1).members).to.be.empty;
