@@ -67,13 +67,14 @@ class ScriptConstantsTest < Minitest::Test
   end
 
   def test_assignable_info
-    assert_equal 7, ScriptConstants.assignable_info({name: 'dance-2019'})[:position]
-    assert_equal 8, ScriptConstants.assignable_info({name: 'dance-extras-2019'})[:position]
-    assert_equal 9, ScriptConstants.assignable_info({name: 'oceans'})[:position]
-    assert_equal 10, ScriptConstants.assignable_info({name: 'aquatic'})[:position]
-    assert_equal 11, ScriptConstants.assignable_info({name: 'hero'})[:position]
-    assert_equal 12, ScriptConstants.assignable_info({name: 'mc'})[:position]
-    assert_equal 13, ScriptConstants.assignable_info({name: 'minecraft'})[:position]
+    dance_index = 6
+    assert_equal dance_index, ScriptConstants.assignable_info({name: 'dance-2019'})[:position]
+    assert_equal dance_index + 1, ScriptConstants.assignable_info({name: 'dance-extras-2019'})[:position]
+    assert_equal dance_index + 2, ScriptConstants.assignable_info({name: 'oceans'})[:position]
+    assert_equal dance_index + 3, ScriptConstants.assignable_info({name: 'aquatic'})[:position]
+    assert_equal dance_index + 4, ScriptConstants.assignable_info({name: 'hero'})[:position]
+    assert_equal dance_index + 5, ScriptConstants.assignable_info({name: 'mc'})[:position]
+    assert_equal dance_index + 6, ScriptConstants.assignable_info({name: 'minecraft'})[:position]
   end
 
   def test_congrats_page

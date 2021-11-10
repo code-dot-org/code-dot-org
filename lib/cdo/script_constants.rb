@@ -80,7 +80,6 @@ module ScriptConstants
 
       nil,
       POEM_ART = 'poem-art'.freeze, # 2021 hour of code
-      OUTBREAK = 'outbreak'.freeze, # 2021 hour of code
       HELLO_WORLD_FOOD = 'hello-world-food'.freeze, # 2021 hour of code
       HELLO_WORLD_ANIMALS = 'hello-world-animals'.freeze, # 2021 hour of code
       HELLO_WORLD_EMOJI = 'hello-world-emoji'.freeze, # 2021 hour of code
@@ -278,6 +277,7 @@ module ScriptConstants
     K1HOC_2017 = 'k1hoc2017'.freeze,
     NETSIM = 'netsim'.freeze,
     ODOMETER = 'odometer'.freeze,
+    OUTBREAK = 'outbreak'.freeze,
     PIXELATION = 'pixelation'.freeze,
     VIGENERE = 'vigenere'.freeze,
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
