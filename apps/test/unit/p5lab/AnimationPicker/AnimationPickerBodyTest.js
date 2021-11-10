@@ -69,7 +69,7 @@ describe('AnimationPickerBody', function() {
     it('fetches next results if scrolled through 90% of content', () => {
       const mockEvent = {
         target: {
-          scrollTop: 30,
+          scrollTop: 450,
           scrollHeight: 500
         }
       };
