@@ -27140,3 +27140,93 @@ en:
           student_description: 'Conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of your choice. '
           description_short: 'In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. '
           description_audience: grades 6-12
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the 5-lesson module called [Coding with Poetry](http://code.org/poetry). By the end of the Coding with Poetry module, students will write their own poems and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s CS Connections curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n"
+            lesson-1:
+              key: lesson-1
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the 5-lesson module called [Coding with Poetry](http://code.org/poetry). By the end of the Coding with Poetry module, students will write their own poems and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s CS Connections curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n"
+          title: Poem Art
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        poetry-2021:
+          lessons:
+            Poem Art:
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n"
+            Code Your Own Poem:
+              name: Code Your Own Poem
+              description_student: 'Write your own poem and then animate it using code! '
+              description_teacher: 'In this CS and ELA integrated lesson, students will build on their previous learning about poetry by developing their own short poem. Then, students will work on their computers to animate their poems with code. In lesson 1, students used a poem dropdown menu to choose the poem they wanted to animate. In this lesson, students will use `set title`, `set author`, `add line`, and `animate text` blocks of code to change what text appears in their Playspace. '
+            Playing with Words:
+              name: Playing with Words
+              description_student: "Build an interactive app! Use prompts and user input in a creative new way. \n"
+              description_teacher: "In this lesson, students learn how to manipulate specific words in the text in their poems by using open-ended prompts and variables to store the user’s input. First, students explore an app with an open-ended prompt. Then students practice using variables in their code until they are able to combine text and variable blocks to create an interactive app.  \n"
+            Build a Poem Generator:
+              name: Build a Poem Generator
+              description_student: Use prompts and variables to make a Poem Generator App to share with your friends!
+              description_teacher: "In this lesson, students will use their new knowledge about open-ended prompts and variables to modify their poems and create a new poem generator app. Students will discuss how random words change the meaning and mood of their poems. \n"
+            Choosing Words Carefully:
+              name: Choosing Words Carefully
+              description_student: Make your app even better! Change your poem generator app by adding words you want the user to choose from.
+              description_teacher: 'In this lesson, students create a poem generator app with multiple-choice prompts to guide the user to pick a carefully chosen word. Students will plan which words they will replace in their poems, choose three new multiple-choice words per prompt, and then program their poem generator using new multiple-choice prompts with events.
+
+'
+            Responding to Words:
+              name: Responding to Words
+              description_student: Make the app respond to what the user chooses in exciting new ways.
+              description_teacher: In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.
+            Poetry Circle:
+              name: Poetry Circle
+              description_student: 'Share your new poem apps with your friends! '
+              description_teacher: In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.
+            lesson-1:
+              key: lesson-1
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n"
+            lesson-2:
+              key: lesson-2
+              name: Code Your Own Poem
+              description_student: 'Write your own poem and then animate it using code! '
+              description_teacher: 'In this CS and ELA integrated lesson, students will build on their previous learning about poetry by developing their own short poem. Then, students will work on their computers to animate their poems with code. In lesson 1, students used a poem dropdown menu to choose the poem they wanted to animate. In this lesson, students will use `set title`, `set author`, `add line`, and `animate text` blocks of code to change what text appears in their Playspace. '
+            lesson-3:
+              key: lesson-3
+              name: Playing with Words
+              description_student: "Build an interactive app! Use prompts and user input in a creative new way. \n"
+              description_teacher: "In this lesson, students learn how to manipulate specific words in the text in their poems by using open-ended prompts and variables to store the user’s input. First, students explore an app with an open-ended prompt. Then students practice using variables in their code until they are able to combine text and variable blocks to create an interactive app.  \n"
+            lesson-4:
+              key: lesson-4
+              name: Build a Poem Generator
+              description_student: Use prompts and variables to make a Poem Generator App to share with your friends!
+              description_teacher: "In this lesson, students will use their new knowledge about open-ended prompts and variables to modify their poems and create a new poem generator app. Students will discuss how random words change the meaning and mood of their poems. \n"
+            lesson-5:
+              key: lesson-5
+              name: Choosing Words Carefully
+              description_student: Make your app even better! Change your poem generator app by adding words you want the user to choose from.
+              description_teacher: 'In this lesson, students create a poem generator app with multiple-choice prompts to guide the user to pick a carefully chosen word. Students will plan which words they will replace in their poems, choose three new multiple-choice words per prompt, and then program their poem generator using new multiple-choice prompts with events.
+
+'
+            lesson-7:
+              key: lesson-7
+              name: Responding to Words
+              description_student: Make the app respond to what the user chooses in exciting new ways.
+              description_teacher: In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.
+            lesson-6:
+              key: lesson-6
+              name: Poetry Circle
+              description_student: 'Share your new poem apps with your friends! '
+              description_teacher: In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.
+          title: Computer Science and Poetry
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
