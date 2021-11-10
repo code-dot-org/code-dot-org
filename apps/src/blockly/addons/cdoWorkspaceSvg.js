@@ -92,7 +92,15 @@ export default class WorkspaceSvg extends GoogleBlockly.WorkspaceSvg {
     return super.getAllBlocks().filter(block => !block.disabled);
   }
   getToolboxWidth() {
-    return Blockly.mainBlockSpace.getMetrics().toolboxWidth;
+    const metrics = this.getMetrics();
+    switch (this.getToolboxType()) {
+      case ToolboxType.CATEGORIZED:
+        return metrics.toolboxWidth;
+      case ToolboxType.UNCATEGORIZED:
+        return metrics.flyoutWidth;
+      case ToolboxType.NONE:
+        return 0;
+    }
   }
 
   /**

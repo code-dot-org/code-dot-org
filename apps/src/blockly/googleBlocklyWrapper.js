@@ -147,6 +147,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Toolbox');
   blocklyWrapper.wrapReadOnlyProperty('Touch');
   blocklyWrapper.wrapReadOnlyProperty('Trashcan');
+  blocklyWrapper.wrapReadOnlyProperty('VARIABLE_CATEGORY_NAME');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('VariableMap');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
