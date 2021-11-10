@@ -24,7 +24,8 @@ export const sectionDataPropType = PropTypes.shape({
   codeReviewEnabled: PropTypes.bool,
   isAssignedCSA: PropTypes.bool,
   lessonExtras: PropTypes.bool,
-  ttsAutoplayEnabled: PropTypes.bool
+  ttsAutoplayEnabled: PropTypes.bool,
+  codeReviewExpiresAt: PropTypes.object
 });
 
 /**
@@ -51,7 +52,10 @@ export const setSection = section => {
     codeReviewEnabled: section.code_review_enabled,
     isAssignedCSA: section.is_assigned_csa,
     lessonExtras: section.lesson_extras,
-    ttsAutoplayEnabled: section.tts_autoplay_enabled
+    ttsAutoplayEnabled: section.tts_autoplay_enabled,
+    codeReviewExpiresAt: section.code_review_expires_at
+      ? Date.parse(section.code_review_expires_at)
+      : null
   };
   return {type: SET_SECTION, section: filteredSectionData};
 };
