@@ -55,12 +55,9 @@ export const useRegionalPartner = data => {
   const [loadingPartner, setLoadingPartner] = useState(true);
   const [loadError, setLoadError] = useState(false);
   const [partner, setPartner] = useState(null);
-  const [searchTerm, setSearchTerm] = useState({
-    program,
-    schoolZipCode,
-    schoolState,
-    school
-  });
+
+  // debounce the search term to prevent making too many calls as input changes
+  const [searchTerm, setSearchTerm] = useState(null);
   const debouncedSetSearchTerm = useCallback(debounce(setSearchTerm, 500), [
     setSearchTerm
   ]);
@@ -75,6 +72,9 @@ export const useRegionalPartner = data => {
 
   // load regional partner whenever parameters change
   useEffect(() => {
+    if (searchTerm === null) {
+      return;
+    }
     let cancelled = false;
     fetchRegionalPartner(searchTerm)
       .then(partner => {
