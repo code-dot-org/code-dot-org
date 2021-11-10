@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import OrderableList from './OrderableList';
+import ExampleEditor from './ExampleEditor';
+import ParameterEditor from './ParameterEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
@@ -21,6 +23,24 @@ function useProgrammingExpression(initialProgrammingExpression) {
   return [programmingExpression, updateProgrammingExpression];
 }
 
+function renderParameterEditor(param, updateFunc) {
+  return (
+    <ParameterEditor
+      parameter={param}
+      update={(key, value) => updateFunc(key, value)}
+    />
+  );
+}
+
+function renderExampleEditor(example, updateFunc) {
+  return (
+    <ExampleEditor
+      example={example}
+      updateExample={(key, value) => updateFunc(key, value)}
+    />
+  );
+}
+
 export default function ProgrammingExpressionEditor({
   initialProgrammingExpression,
   environmentCategories
@@ -34,6 +54,7 @@ export default function ProgrammingExpressionEditor({
   remainingProgrammingExpression.parameters.forEach(
     p => (p.key = createUuid())
   );
+  remainingProgrammingExpression.examples.forEach(e => (e.key = createUuid()));
   const [
     programmingExpression,
     updateProgrammingExpression
@@ -47,22 +68,13 @@ export default function ProgrammingExpressionEditor({
       return;
     }
     setIsSaving(true);
-    const copiedParameters = programmingExpression.parameters.map(p => {
-      const copied = {...p};
-      delete copied.key;
-      return copied;
-    });
-    const programmingExpressionToSave = {
-      ...programmingExpression,
-      parameters: copiedParameters
-    };
     fetch(`/programming_expressions/${id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json',
         'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
       },
-      body: JSON.stringify(programmingExpressionToSave)
+      body: JSON.stringify(programmingExpression)
     })
       .then(response => {
         setIsSaving(false);
@@ -196,6 +208,15 @@ export default function ProgrammingExpressionEditor({
           list={programmingExpression.parameters}
           setList={list => updateProgrammingExpression('parameters', list)}
           addButtonText="Add Another Parameter"
+          renderItem={renderParameterEditor}
+        />
+      </CollapsibleEditorSection>
+      <CollapsibleEditorSection title="Examples" collapsed>
+        <OrderableList
+          list={programmingExpression.examples || []}
+          setList={list => updateProgrammingExpression('examples', list)}
+          addButtonText="Add Another Example"
+          renderItem={renderExampleEditor}
         />
       </CollapsibleEditorSection>
       <SaveBar
@@ -220,7 +241,8 @@ const programmingExpressionShape = PropTypes.shape({
   syntax: PropTypes.string,
   returnValue: PropTypes.string,
   tips: PropTypes.string,
-  parameters: PropTypes.arrayOf(PropTypes.object).isRequired
+  parameters: PropTypes.arrayOf(PropTypes.object).isRequired,
+  examples: PropTypes.arrayOf(PropTypes.object).isRequired
 });
 
 ProgrammingExpressionEditor.propTypes = {

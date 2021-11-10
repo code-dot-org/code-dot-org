@@ -22,7 +22,7 @@ import CodeWorkspace from '@cdo/apps/templates/CodeWorkspace';
 import {allowAnimationMode} from './stateQueries';
 import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
-import AnimationPicker from './AnimationPicker/AnimationPicker';
+import AnimationPicker, {PICKER_TYPE} from './AnimationPicker/AnimationPicker';
 import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
 import experiments from '@cdo/apps/util/experiments';
 
@@ -55,9 +55,19 @@ class P5LabView extends React.Component {
     currentUserType: PropTypes.string
   };
 
-  state = {
-    libraryManifest: {}
-  };
+  constructor(props) {
+    super(props);
+
+    // Indicate the context of the animation picker
+    let projectType = this.props.isBlockly
+      ? PICKER_TYPE.spritelab
+      : PICKER_TYPE.gamelab;
+
+    this.state = {
+      libraryManifest: {},
+      projectType
+    };
+  }
 
   getChannelId() {
     if (dashboard && dashboard.project) {
@@ -153,6 +163,11 @@ class P5LabView extends React.Component {
               defaultQuery={this.props.isBackground ? defaultQuery : undefined}
               hideBackgrounds={hideBackgrounds}
               canDraw={canDraw}
+              pickerType={
+                this.props.isBackground
+                  ? PICKER_TYPE.backgrounds
+                  : this.state.projectType
+              }
             />
           )}
         </div>
@@ -183,6 +198,7 @@ class P5LabView extends React.Component {
         hideAnimationNames={this.props.isBlockly}
         hideBackgrounds={this.props.isBlockly}
         labType={this.props.labType}
+        pickerType={this.state.projectType}
       />
     ) : (
       undefined

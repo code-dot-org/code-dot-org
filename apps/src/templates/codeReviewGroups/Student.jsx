@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Draggable} from 'react-beautiful-dnd';
 import color from '@cdo/apps/util/color';
-import {grid} from './StudentGroup';
 
 // A Student is a component that
 // can be dragged between StudentGroups
@@ -51,10 +50,9 @@ Student.propTypes = {
 
 const getStudentStyle = (isDragging, draggableStyle) => ({
   userSelect: 'none',
-  padding: grid * 2,
+  padding: 16,
   color: color.dark_charcoal,
   width: 'auto',
-  height: '20px',
   border: `1px solid ${color.lighter_gray}`,
 
   // change background colour if dragging
