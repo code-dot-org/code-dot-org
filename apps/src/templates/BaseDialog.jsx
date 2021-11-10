@@ -31,7 +31,8 @@ export default class BaseDialog extends React.Component {
     bodyClassName: PropTypes.string,
     style: PropTypes.object,
     soundPlayer: PropTypes.object,
-    overflow: PropTypes.string
+    overflow: PropTypes.string,
+    backdropExtension: PropTypes.number
   };
 
   componentDidMount() {
@@ -151,6 +152,17 @@ export default class BaseDialog extends React.Component {
       .filter(className => !!className)
       .join(' ');
 
+    let modalBackdrop;
+    let backdropExtension = this.props.backdropExtension;
+    if (backdropExtension) {
+      modalBackdrop = {
+        top: -backdropExtension,
+        right: -backdropExtension,
+        bottom: -backdropExtension,
+        left: -backdropExtension
+      };
+    }
+
     let body = (
       <div
         style={bodyStyle}
@@ -193,7 +205,7 @@ export default class BaseDialog extends React.Component {
       <div className={wrapperClassNames}>
         <div
           className={modalBackdropClassNames}
-          style={styles.modalBackdrop}
+          style={modalBackdrop}
           onClick={this.closeDialog}
         />
         {body}
@@ -201,12 +213,3 @@ export default class BaseDialog extends React.Component {
     );
   }
 }
-
-const styles = {
-  modalBackdrop: {
-    top: -15,
-    right: -15,
-    bottom: -15,
-    left: -15
-  }
-};
