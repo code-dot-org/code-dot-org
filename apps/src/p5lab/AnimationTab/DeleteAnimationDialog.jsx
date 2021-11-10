@@ -8,16 +8,29 @@ export default class DeleteAnimationDialog extends React.Component {
   static propTypes = {
     onDelete: PropTypes.func.isRequired,
     onCancel: PropTypes.func.isRequired,
-    isOpen: PropTypes.bool.isRequired
+    isOpen: PropTypes.bool.isRequired,
+    labType: PropTypes.string.isRequired
   };
 
   render() {
+    let assetType;
+    switch (this.props.labType) {
+      case 'GAMELAB':
+        assetType = i18n.animation();
+        break;
+      case 'SPRITELAB':
+        assetType = i18n.costume();
+        break;
+      case 'POETRY':
+        assetType = i18n.costume();
+        break;
+    }
     return (
       <Dialog
         isOpen={this.props.isOpen}
         handleClose={this.props.onCancel}
-        title={i18n.deleteAsset({assetType: i18n.animation()})}
-        body={i18n.deleteAssetConfirm({assetType: i18n.animation()})}
+        title={i18n.deleteAsset({assetType})}
+        body={i18n.deleteAssetConfirm({assetType})}
       >
         <Buttons>
           <Cancel onClick={this.props.onCancel}>{i18n.cancel()}</Cancel>
