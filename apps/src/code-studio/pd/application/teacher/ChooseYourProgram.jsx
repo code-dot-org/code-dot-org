@@ -227,7 +227,7 @@ const ChooseYourProgram = props => {
                 programInfo.name
               )}
               textFieldMap={{
-                [TextFields.iDontKnowExplain]: 'other'
+                [TextFields.otherPleaseExplain]: 'other'
               }}
             />
           )}
