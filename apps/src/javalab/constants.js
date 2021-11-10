@@ -70,8 +70,12 @@ export const NeighborhoodExceptionType = makeEnum(
 );
 
 export const TheaterSignalType = {
+  // This message contains the url to an audio element
   AUDIO_URL: 'AUDIO_URL',
-  VISUAL_URL: 'VISUAL_URL'
+  // This message contains the url to a visual element
+  VISUAL_URL: 'VISUAL_URL',
+  // Get an image from the user via Prompter
+  GET_IMAGE: 'GET_IMAGE'
 };
 
 export const StatusMessageType = {
