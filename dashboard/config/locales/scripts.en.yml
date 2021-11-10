@@ -24300,13 +24300,18 @@ en:
           description_short: ''
           description: ''
         self-paced-pl-csp1-2021:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Welcome to Code.org
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: self-paced-pl-csp1-2021
-          title: ''
+          title: 'Module 1: Welcome'
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Principles.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          student_description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Principles.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
         self-paced-pl-csp2-2021:
           lessons: {}
           lesson_groups: {}

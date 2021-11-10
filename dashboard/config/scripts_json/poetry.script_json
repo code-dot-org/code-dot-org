@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-10 21:09:26 UTC",
+    "serialized_at": "2021-11-10 23:16:32 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -3241,6 +3241,30 @@
   ],
   "resources": [
     {
+      "name": "[Optional] Poem App",
+      "url": "https://docs.google.com/document/d/1zf6k1Xv4xWYneho7kOzUGLW9Cy-JKxJIdk70p6ftB1o/template/preview",
+      "key": "_optional_poem_app",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_poem_app"
+      }
+    },
+    {
+      "name": "[Optional] Poem App",
+      "url": "https://docs.google.com/document/d/1zf6k1Xv4xWYneho7kOzUGLW9Cy-JKxJIdk70p6ftB1o/template/preview",
+      "key": "_optional_poem_app_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "_optional_poem_app_1"
+      }
+    },
+    {
       "name": "[Optional] Student URL Sharing Document",
       "url": "https://docs.google.com/document/d/1DNcBWminB8MmyLQC4fIWrLZ8uI9HR7d4W3HuuclIpB0/template/preview",
       "key": "_optional_student_url_sharing_document",
@@ -3401,6 +3425,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "_optional_poem_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "coding_with_poetry_modules_1"
       }
     },
@@ -3420,6 +3450,12 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "write_your_own_poem"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_optional_poem_app_1"
       }
     },
     {
