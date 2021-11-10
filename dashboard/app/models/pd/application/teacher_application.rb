@@ -876,7 +876,9 @@ module Pd::Application
           principal: [
             :share_ap_scores,
             :replace_which_course_csp,
-            :csp_implementation
+            :replace_which_course_csa,
+            :csp_implementation,
+            :csa_implementation
           ]
         }
       elsif course == 'csp'
@@ -890,7 +892,9 @@ module Pd::Application
           ],
           principal: [
             :replace_which_course_csd,
-            :csd_implementation
+            :replace_which_course_csa,
+            :csd_implementation,
+            :csa_implementation
           ]
         }
       elsif course == 'csa'
@@ -1174,7 +1178,7 @@ module Pd::Application
       principal_response = principal_approval.sanitize_form_data_hash
 
       response = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ")
-      replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd).compact.join(', ')
+      replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd, :replace_which_course_csa).compact.join(', ')
       # Sub out :: for : because "I don't know:" has a colon on the end
       replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
 
