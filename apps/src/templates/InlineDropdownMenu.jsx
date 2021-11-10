@@ -57,7 +57,7 @@ export class InlineDropdownMenu extends Component {
     const {children, icon} = this.props;
     const {isOpen} = this.state;
     if (children === undefined || children.length === 0) {
-      return;
+      return null;
     }
 
     return (
