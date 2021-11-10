@@ -387,8 +387,16 @@ module LevelsHelper
       }
   end
 
+  # As we migrate labs from CDO to Google Blockly, there are multiple ways to determine which version a lab uses:
+  #  1. The corresponding inherited Level model can override Level#uses_google_blockly?. This option is for labs that
+  #     have fully transitioned to Google Blockly.
+  #  2. Setting the useGoogleBlockly view_option, usually configured by a URL parameter.
+  #  3. The 'uses_google_blockly' DCDO flag, which contains an array of strings corresponding to model class names.
+  #     This option is for labs that are in transition and need an "emergency switch" to go back to CDO Blockly.
   def use_google_blockly
-    @level.uses_google_blockly? || view_options[:useGoogleBlockly] || DCDO.get('uses_google_blockly', []).map(&:downcase).include?(@level.class.to_s.downcase)
+    return true if @level.uses_google_blockly?
+    return true if view_options[:useGoogleBlockly]
+    DCDO.get('uses_google_blockly', []).map(&:downcase).include?(@level.class.to_s.downcase)
   end
 
   # Options hash for Widget
