@@ -1,6 +1,7 @@
 import {ScrollOptions} from '@blockly/plugin-scroll-options';
 import {BlocklyVersion} from '@cdo/apps/constants';
 import styleConstants from '@cdo/apps/styleConstants';
+import * as utils from '@cdo/apps/utils';
 import CdoBlockDragger from './addons/cdoBlockDragger';
 import CdoBlockSvg from './addons/cdoBlockSvg';
 import initializeCdoConstants from './addons/cdoConstants';
@@ -19,6 +20,7 @@ import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
 import initializeVariables from './addons/cdoVariables';
 import CdoVariableMap from './addons/cdoVariableMap';
+import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
 import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
 import initializeBlocklyXml from './addons/cdoXml';
 import initializeCss from './addons/cdoCss';
@@ -103,6 +105,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldImage');
   blocklyWrapper.wrapReadOnlyProperty('FieldImageDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
+  blocklyWrapper.wrapReadOnlyProperty('FieldNumber');
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
@@ -172,6 +175,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
     true /* opt_allowOverrides */
   );
 
+  blocklyWrapper.blockly_.registry.register(
+    blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
+    blocklyWrapper.blockly_.registry.DEFAULT,
+    CdoVerticalFlyout,
+    true /* opt_allowOverrides */
+  );
+
   // These are also wrapping read only properties, but can't use wrapReadOnlyProperty
   // because the alias name is not the same as the underlying property name.
   Object.defineProperty(blocklyWrapper, 'mainBlockSpace', {
@@ -221,6 +231,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
   };
 
+  blocklyWrapper.getFieldForInputType = function(type) {
+    if (type === 'Number') {
+      return blocklyWrapper.FieldNumber;
+    }
+    return blocklyWrapper.FieldTextInput;
+  };
+
   // TODO - used for spritelab behavior blocks
   blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};
 
@@ -241,7 +258,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
       BLOCK_SPACE_SCROLLED: 'blockSpaceScrolled',
       RUN_BUTTON_CLICKED: 'runButtonClicked'
     },
-    onMainBlockSpaceCreated: () => {}, // TODO
+    onMainBlockSpaceCreated: callback => {
+      if (Blockly.mainBlockSpace) {
+        callback();
+      } else {
+        document.addEventListener(
+          Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED,
+          callback
+        );
+      }
+    },
+
     createReadOnlyBlockSpace: (container, xml, options) => {
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
@@ -299,6 +326,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }px)`;
     blocklyWrapper.editBlocks = opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
+
+    document.dispatchEvent(
+      utils.createEvent(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED)
+    );
 
     const scrollOptionsPlugin = new ScrollOptions(workspace);
     scrollOptionsPlugin.init();
