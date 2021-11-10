@@ -7,6 +7,8 @@ import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWith
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import Button from '@cdo/apps/templates/Button';
+import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 import {createUuid, navigateToHref} from '@cdo/apps/utils';
 import $ from 'jquery';
 import color from '@cdo/apps/util/color';
@@ -62,6 +64,7 @@ export default function ProgrammingExpressionEditor({
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
+  const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
 
   const save = () => {
     if (isSaving) {
@@ -112,6 +115,18 @@ export default function ProgrammingExpressionEditor({
       <label>
         Key (Used in URLs)
         <input value={key} readOnly style={styles.textInput} />
+      </label>
+      <label>
+        Image
+        <Button
+          onClick={() => setUploadImageDialogOpen(true)}
+          text="Choose Image"
+          color="gray"
+          icon="plus-circle"
+        />
+        {programmingExpression.imageUrl && (
+          <span>{programmingExpression.imageUrl}</span>
+        )}
       </label>
       <label>
         Short Description
@@ -225,6 +240,12 @@ export default function ProgrammingExpressionEditor({
         lastSaved={lastUpdated}
         error={error}
         handleView={() => navigateToHref('/')}
+      />
+      <UploadImageDialog
+        isOpen={uploadImageDialogOpen}
+        handleClose={() => setUploadImageDialogOpen(false)}
+        uploadImage={imgUrl => updateProgrammingExpression('imageUrl', imgUrl)}
+        allowExpandable={false}
       />
     </div>
   );

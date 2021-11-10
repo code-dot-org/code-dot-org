@@ -59,6 +59,14 @@ describe('ProgrammingExpressionEditor', () => {
         .props().readOnly
     ).to.be.true;
 
+    // Image upload
+    expect(
+      wrapper
+        .find('Button')
+        .at(0)
+        .props().text
+    ).to.equal('Choose Image');
+
     // short description
     expect(
       wrapper
@@ -126,6 +134,14 @@ describe('ProgrammingExpressionEditor', () => {
       'Add Another Example'
     );
     expect(orderableExampleList.props().list.length).to.equal(1);
+  });
+
+  it('shows upload image dialog when choose image button is pressed', () => {
+    const wrapper = shallow(<ProgrammingExpressionEditor {...defaultProps} />);
+    const uploadButton = wrapper.find('Button').first();
+    expect(uploadButton).to.not.be.null;
+    uploadButton.simulate('click');
+    expect(wrapper.find('UploadImageDialog').length).to.equal(1);
   });
 
   it('attempts to save when save is pressed', () => {
