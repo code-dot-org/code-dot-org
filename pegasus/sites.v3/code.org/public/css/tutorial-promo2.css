@@ -2,6 +2,7 @@
   width: 100%;
   padding-left: 5px;
   position: relative;
+  margin: 20px 0px;
 }
 
 .background-img {
@@ -95,6 +96,11 @@ html[dir= 'rtl']  .left-tutorial{
 
   .img-container {
     padding: 0px 5px;
+  }
+
+  .tutorial-promo-container h1 {
+    margin-left: 25px;
+    margin-right: 25px;
   }
 }
 
