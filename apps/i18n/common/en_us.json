@@ -438,6 +438,8 @@
   "courseCatalogTitle": "Course Catalog",
   "courseExplorerHeading": "Recommended Code.org courses",
   "courseExplorerDescription": "Courses from Code.org for students in grades K-12 and professional learning for teachers.",
+  "courseInfoCscHeading": "CS Connections - Cross curricular learning ",
+  "courseInfoCscDescription": "This curriculum makes the connections between learning computer science and traditional subjects like math, language arts, science, and social studies. Through CS Connections, any classroom can explore its usual subjects in exciting new ways!",
   "courses": "Courses",
   "coursesCardAction": "Find a course",
   "coursesCardDescription": "Find a new course to keep challenging yourself.",
