@@ -19,10 +19,10 @@ export default function ManageCodeReviewGroups({
 
   const renderFooter = buttons => {
     return (
-      <div style={styles.footer}>
+      <>
         <CodeReviewGroupsStatusToggle />
-        {buttons}
-      </div>
+        <div>{buttons}</div>
+      </>
     );
   };
 
@@ -44,6 +44,7 @@ export default function ManageCodeReviewGroups({
         handleClose={onDialogClose}
         fixedWidth={DIALOG_WIDTH}
         renderFooter={renderFooter}
+        footerJustification="space-between"
       />
     </div>
   );
