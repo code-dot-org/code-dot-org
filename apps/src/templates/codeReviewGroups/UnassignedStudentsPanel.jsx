@@ -6,7 +6,10 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import JavalabButton from '@cdo/apps/javalab/JavalabButton';
 import StudentGroup from './StudentGroup';
 
-export default function UnassignedStudentsPanel({unassignedGroup}) {
+export default function UnassignedStudentsPanel({
+  unassignedGroup,
+  onUnassignAllClick
+}) {
   // TO DO: implement unassigning students and style
   // https://codedotorg.atlassian.net/browse/CSA-1028
   return (
@@ -14,7 +17,7 @@ export default function UnassignedStudentsPanel({unassignedGroup}) {
       <div style={styles.header}>
         <span>{i18n.unassignedStudents()}</span>
         <JavalabButton
-          onClick={() => {}}
+          onClick={onUnassignAllClick}
           icon={<FontAwesome icon="times" className="fa" />}
           text={i18n.unassignAll()}
           style={styles.button}
@@ -32,7 +35,8 @@ export default function UnassignedStudentsPanel({unassignedGroup}) {
 }
 
 UnassignedStudentsPanel.propTypes = {
-  unassignedGroup: PropTypes.object.isRequired
+  unassignedGroup: PropTypes.object.isRequired,
+  onUnassignAllClick: PropTypes.func.isRequired
 };
 
 export const HEADER_STYLE = {
@@ -40,16 +44,19 @@ export const HEADER_STYLE = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  padding: '0 5px',
+  padding: '5px 10px 5px 5px',
   border: `1px solid ${color.lighter_gray}`,
-  background: color.lightest_gray
+  background: color.lightest_gray,
+  fontFamily: '"Gotham 5r", sans-serif',
+  fontSize: 14
 };
 
 export const BUTTON_STYLE = {
   backgroundColor: color.lightest_gray,
   color: color.dark_charcoal,
   borderRadius: 4,
-  border: `1px solid ${color.dark_charcoal}`
+  border: `1px solid ${color.dark_charcoal}`,
+  fontSize: 14
 };
 
 export const GROUPS_CONTAINER_STYLE = {
@@ -57,7 +64,8 @@ export const GROUPS_CONTAINER_STYLE = {
   flexDirection: 'column',
   height: 355,
   overflow: 'scroll',
-  border: `1px solid ${color.lightest_gray}`
+  border: `1px solid ${color.lightest_gray}`,
+  padding: '20px 10px 0 5px'
 };
 
 const styles = {

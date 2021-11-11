@@ -119,7 +119,7 @@ def hoc_get_locale_code
   Languages.get_hoc_locale_by_unique_language(@language)
 end
 
-# hourofcode.com calls this to translate tutorial's languages attribute
+# code.org and hourofcode.com's /learn pages call this to translate tutorial's languages attribute
 def hoc_language(lang_codes_str)
   return '' unless lang_codes_str
 

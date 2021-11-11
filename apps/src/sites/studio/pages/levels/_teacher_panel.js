@@ -9,11 +9,8 @@ import {Provider} from 'react-redux';
 import ReactDOM from 'react-dom';
 import TeacherContentToggle from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import {getHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {
-  renderTeacherPanel,
-  queryLockStatus
-} from '@cdo/apps/code-studio/teacherPanelHelpers';
-import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {renderTeacherPanel} from '@cdo/apps/code-studio/teacherPanelHelpers';
+import TeachersOnly from '@cdo/apps/code-studio/components/TeachersOnly';
 
 $(document).ready(initPage);
 
@@ -23,33 +20,23 @@ function initPage() {
 
   const store = getStore();
 
-  initViewAs(store);
-  queryLockStatus(
-    store,
-    teacherPanelData.script_id,
-    teacherPanelData.page_type
-  );
+  const query = queryString.parse(location.search);
+  const initialViewAs = query.viewAs || ViewType.Teacher;
+  store.dispatch(setViewType(initialViewAs));
+
   store.dispatch(getHiddenLessons(teacherPanelData.script_name, false));
-  if (teacherPanelData.is_verified_teacher) {
-    store.dispatch(setVerified());
-  }
+
   // Lesson Extras fail to load with this
   if (!teacherPanelData.lesson_extra) {
     renderTeacherContentToggle(store);
   }
+
   renderTeacherPanel(
     store,
     teacherPanelData.script_id,
-    teacherPanelData.section,
     teacherPanelData.script_name,
     teacherPanelData.page_type
   );
-}
-
-function initViewAs(store) {
-  const query = queryString.parse(location.search);
-  const initialViewAs = query.viewAs || ViewType.Teacher;
-  store.dispatch(setViewType(initialViewAs));
 }
 
 function renderTeacherContentToggle(store) {
@@ -60,8 +47,10 @@ function renderTeacherContentToggle(store) {
   const isBlocklyOrDroplet = !!(window.appOptions && appOptions.app);
 
   ReactDOM.render(
-    <Provider store={getStore()}>
-      <TeacherContentToggle isBlocklyOrDroplet={isBlocklyOrDroplet} />
+    <Provider store={store}>
+      <TeachersOnly>
+        <TeacherContentToggle isBlocklyOrDroplet={isBlocklyOrDroplet} />
+      </TeachersOnly>
     </Provider>,
     element
   );
