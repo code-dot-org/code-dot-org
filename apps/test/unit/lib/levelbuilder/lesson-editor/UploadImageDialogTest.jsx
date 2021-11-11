@@ -50,6 +50,13 @@ describe('UploadImageDialog', () => {
       .find('input')
       .first()
       .simulate('change', {target: {files: ['filedata']}});
+    expect(
+      wrapper
+        .find('Button')
+        .last()
+        .props().disabled
+    ).to.be.true;
+
     expect(handleClose.callCount).to.equal(0);
     expect(uploadImage.callCount).to.equal(0);
 
