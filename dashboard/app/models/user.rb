@@ -2371,7 +2371,7 @@ class User < ApplicationRecord
       curriculums: curriculums_being_taught.any? ? curriculums_being_taught.to_json : nil,
       has_attended_pd: has_attended_pd?,
       within_us: within_united_states?,
-      school_percent_frl_40_plus: school_stats.present? ? school_stats.frl_eligible_percent >= 40 : nil,
+      school_percent_frl_40_plus: school_stats&.frl_eligible_percent.present? ? school_stats.frl_eligible_percent >= 40 : nil,
       school_title_i: school_stats&.title_i_status
     }
   end
