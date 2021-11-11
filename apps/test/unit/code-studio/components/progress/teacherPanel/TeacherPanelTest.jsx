@@ -35,7 +35,8 @@ const DEFAULT_PROPS = {
   setStudentsForCurrentSection: () => {},
   setSections: () => {},
   setSectionLockStatus: () => {},
-  selectSection: () => {}
+  selectSection: () => {},
+  setViewType: () => {}
 };
 
 const setUp = overrideProps => {
@@ -149,6 +150,18 @@ describe('TeacherPanel', () => {
     expect(setStudentsForCurrentSectionStub).to.have.been.calledWith(55, []);
 
     teacherPanelData.getStudentsForSection.restore();
+  });
+
+  it('calls setViewType default to teacher', async () => {
+    const setViewTypeStub = sinon.stub();
+    const overrideProps = {
+      pageType: pageTypes.scriptOverview,
+      setViewType: setViewTypeStub
+    };
+
+    await setUpWithMount(overrideProps);
+
+    expect(setViewTypeStub).to.have.been.calledWith(ViewType.Teacher);
   });
 
   it('loads initial data and calls get/set lock status', async () => {
