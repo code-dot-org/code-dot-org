@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Dialog, {Buttons, Cancel, Confirm} from '@cdo/apps/templates/Dialog';
 import i18n from '@cdo/locale';
+import {P5LabType} from '../constants';
 
 export default class DeleteAnimationDialog extends React.Component {
   static propTypes = {
@@ -13,16 +14,15 @@ export default class DeleteAnimationDialog extends React.Component {
   };
 
   render() {
-    const P5LabType = this.props.labType;
     let assetType;
-    switch (P5LabType) {
-      case 'GAMELAB':
+    switch (this.props.labType) {
+      case P5LabType.GAMELAB:
         assetType = i18n.animation();
         break;
-      case 'SPRITELAB':
+      case P5LabType.SPRITELAB:
         assetType = i18n.costume();
         break;
-      case 'POETRY':
+      case P5LabType.POETRY:
         assetType = i18n.costume();
         break;
     }
