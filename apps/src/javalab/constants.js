@@ -88,7 +88,8 @@ export const StatusMessageType = {
 
 export const InputMessageType = {
   SYSTEM_IN: 'SYSTEM_IN',
-  PLAYGROUND: 'PLAYGROUND'
+  PLAYGROUND: 'PLAYGROUND',
+  THEATER: 'THEATER'
 };
 
 export const SoundExceptionType = makeEnum(
