@@ -1117,6 +1117,27 @@ module Services
       assert_equal serialized['serialized_at'].to_i, Time.parse(script.seeded_from).to_i
     end
 
+    test 'seed rejects bad plc module name' do
+      unit = create :script
+      lesson_group = create :lesson_group, script: unit, key: 'bad_module_type', display_name: "Bad Module Type"
+      lesson = create :lesson, lesson_group: lesson_group, script: unit
+      activity = create :lesson_activity, lesson: lesson
+      section = create :activity_section, lesson_activity: activity
+      level = create :level
+      create :script_level, script: unit, lesson: lesson, activity_section: section, activity_section_position: 1, levels: [level]
+
+      # must skip callbacks, or generate_plc_objects will fail.
+      unit.update_columns(properties: unit.properties.merge(professional_learning_course: true))
+
+      unit.reload
+      json = ScriptSeed.serialize_seeding_json(unit)
+
+      e = assert_raises ActiveRecord::RecordInvalid do
+        ScriptSeed.seed_from_json(json)
+      end
+      assert_equal 'Validation failed: Module type is not included in the list', e.message
+    end
+
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)
       script_with_change = json = nil
       Script.transaction do
