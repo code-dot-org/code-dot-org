@@ -1,8 +1,6 @@
 /* global appOptions */
 
 import $ from 'jquery';
-import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import queryString from 'query-string';
 import {getStore} from '@cdo/apps/redux';
 import React from 'react';
 import {Provider} from 'react-redux';
@@ -14,15 +12,14 @@ import TeachersOnly from '@cdo/apps/code-studio/components/TeachersOnly';
 
 $(document).ready(initPage);
 
+// This function is called for all users (teachers and students) because for cached pages
+// the client determines whether the user is a teacher and may not have data in redux
+// yet when teacher_panel initPage is called.
 function initPage() {
   const script = document.querySelector('script[data-teacherpanel]');
   const teacherPanelData = JSON.parse(script.dataset.teacherpanel);
 
   const store = getStore();
-
-  const query = queryString.parse(location.search);
-  const initialViewAs = query.viewAs || ViewType.Teacher;
-  store.dispatch(setViewType(initialViewAs));
 
   store.dispatch(getHiddenLessons(teacherPanelData.script_name, false));
 

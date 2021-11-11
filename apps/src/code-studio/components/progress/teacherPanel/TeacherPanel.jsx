@@ -9,7 +9,7 @@ import {
   fullyLockedLessonMapping,
   setSectionLockStatus
 } from '@cdo/apps/code-studio/lessonLockRedux';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 import {
   pageTypes,
@@ -64,10 +64,14 @@ class TeacherPanel extends React.Component {
     setStudentsForCurrentSection: PropTypes.func.isRequired,
     setSections: PropTypes.func.isRequired,
     setSectionLockStatus: PropTypes.func.isRequired,
-    selectSection: PropTypes.func.isRequired
+    selectSection: PropTypes.func.isRequired,
+    setViewType: PropTypes.func.isRequired
   };
 
   componentDidMount() {
+    const initialViewAs = queryParams('viewAs') || ViewType.Teacher;
+    this.props.setViewType(initialViewAs);
+
     this.loadInitialData();
   }
 
@@ -353,6 +357,7 @@ export default connect(
     setSectionLockStatus: data => {
       dispatch(setSectionLockStatus(data));
     },
-    selectSection: sectionId => dispatch(selectSection(sectionId))
+    selectSection: sectionId => dispatch(selectSection(sectionId)),
+    setViewType: initialViewAs => dispatch(setViewType(initialViewAs))
   })
 )(TeacherPanel);
