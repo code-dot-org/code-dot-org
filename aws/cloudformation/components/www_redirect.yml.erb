@@ -32,18 +32,17 @@
 
   RedirectCachePolicy:
     Type: AWS::CloudFront::CachePolicy
-      Properties: 
-        CachePolicyConfig: 
-          Name: RedirectCachePolicy
-          ParametersInCacheKeyAndForwardedToOrigin: 
-              CookiesConfig: 
-                CookieBehavior: none
-              HeadersConfig: 
-                HeaderBehavior: whitelist
-                Headers:
-                  - Origin
-              QueryStringsConfig: 
-                QueryStringBehavior: all
+    Properties:
+      Name: RedirectCachePolicy
+      ParametersInCacheKeyAndForwardedToOrigin: 
+          CookiesConfig: 
+            CookieBehavior: none
+          HeadersConfig: 
+            HeaderBehavior: whitelist
+            Headers:
+              - Origin
+          QueryStringsConfig: 
+            QueryStringBehavior: all
 
   WwwRedirectLambda:
     Type: AWS::Lambda::Function
