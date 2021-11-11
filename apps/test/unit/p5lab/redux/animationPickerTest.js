@@ -202,31 +202,15 @@ describe('animationPicker', function() {
       restoreRedux();
     });
 
-    it('adds to the selectedAnimations object when called with multiSelect', function() {
-      getStore().dispatch(pickLibraryAnimation(testAnimation, true));
-
-      let newState = getStore().getState().animationPicker;
-      expect(Object.keys(newState.selectedAnimations).length).to.equal(1);
-    });
-
-    it('does not add to the selectedAnimation object when multiSelect is not provided', function() {
+    it('adds to the selectedAnimations object', function() {
       getStore().dispatch(pickLibraryAnimation(testAnimation));
-      let newState = getStore().getState().animationPicker;
-      expect(Object.keys(newState.selectedAnimations).length).to.equal(0);
-    });
 
-    it('removes from the selectedAnimations object when called with multiSelect', function() {
-      getStore().dispatch(pickLibraryAnimation(testAnimation, true));
       let newState = getStore().getState().animationPicker;
       expect(Object.keys(newState.selectedAnimations).length).to.equal(1);
-
-      getStore().dispatch(pickLibraryAnimation(testAnimation, true));
-      newState = getStore().getState().animationPicker;
-      expect(Object.keys(newState.selectedAnimations).length).to.equal(0);
     });
 
-    it('does not remove from the selectedAnimation object when multiSelect is not provided', function() {
-      getStore().dispatch(pickLibraryAnimation(testAnimation, true));
+    it('removes from the selectedAnimations object', function() {
+      getStore().dispatch(pickLibraryAnimation(testAnimation));
       let newState = getStore().getState().animationPicker;
       expect(Object.keys(newState.selectedAnimations).length).to.equal(1);
 
