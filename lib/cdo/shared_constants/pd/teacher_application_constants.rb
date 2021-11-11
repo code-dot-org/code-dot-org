@@ -74,8 +74,8 @@ module Pd
         csp_how_offer: 'How will you offer CS Principles?',
         csa_already_know: 'Have you previously taught CS or have you learned CS yourself?',
         csa_phone_screen: clean_multiline(
-          'Are you able to independently write a function (or procedure) with one or more
-          parameters and that uses conditional logic, loops, and an array (or list)?'
+          'Are you able to independently write and debug an error-free function (or procedure) with
+          one or more parameters and that uses conditional logic, loops, and an array (or list)?'
         ),
         csa_which_grades: clean_multiline(
           "To which grades does your school plan to offer CSA in the #{YEAR} school year?
