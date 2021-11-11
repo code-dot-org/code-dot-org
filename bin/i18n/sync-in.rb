@@ -82,6 +82,20 @@ def get_i18n_strings(level)
       end
     end
 
+    # parse markdown properties for potential placeholder texts
+    documents = []
+    %w(
+      short_instructions
+      long_instructions
+    ).each do |prop|
+      documents.push level.try(prop) if level.try(prop)
+    end
+    i18n_strings['placeholder_texts'] = Hash.new unless documents.empty?
+    documents.each do |document|
+      processed_doc = Nokogiri::HTML(document, &:noblanks)
+      i18n_strings['placeholder_texts'].merge! get_placeholder_texts(processed_doc, 'text', ['TEXT'])
+    end
+
     level_xml = Nokogiri::XML(level.to_xml, &:noblanks)
     blocks = level_xml.xpath('//blocks').first
     if blocks
@@ -136,7 +150,7 @@ def get_i18n_strings(level)
       end
 
       ## Placeholder texts
-      i18n_strings['placeholder_texts'] = Hash.new
+      i18n_strings['placeholder_texts'] = i18n_strings['placeholder_texts'] || Hash.new
       i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'text', ['TEXT'])
       i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'studio_ask', ['TEXT'])
       i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'studio_showTitleScreen', %w(TEXT TITLE))
@@ -161,9 +175,9 @@ def get_i18n_strings(level)
   i18n_strings.delete_if {|_, value| value.blank?}
 end
 
-def get_placeholder_texts(blocks, block_type, title_names)
+def get_placeholder_texts(document, block_type, title_names)
   results = {}
-  blocks.xpath("//block[@type=\"#{block_type}\"]").each do |block|
+  document.xpath("//block[@type=\"#{block_type}\"]").each do |block|
     title_names.each do |title_name|
       title = block.at_xpath("./title[@name=\"#{title_name}\"]")
 
