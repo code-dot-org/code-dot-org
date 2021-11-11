@@ -27179,7 +27179,7 @@ en:
               description_student: "Build an interactive app! Use prompts and user input in a creative new way. \n"
               description_teacher: "In this lesson, students learn how to manipulate specific words in the text in their poems by using open-ended prompts and variables to store the user’s input. First, students explore an app with an open-ended prompt. Then students practice using variables in their code until they are able to combine text and variable blocks to create an interactive app.  \n"
             Build a Poem Generator:
-              name: Build a Poem Generator
+              name: Build a Poem Generator App
               description_student: Use prompts and variables to make a Poem Generator App to share with your friends!
               description_teacher: "In this lesson, students will use their new knowledge about open-ended prompts and variables to modify their poems and create a new poem generator app. Students will discuss how random words change the meaning and mood of their poems. \n"
             Choosing Words Carefully:
@@ -27274,6 +27274,7 @@ en:
           description_short: ''
           description_audience: ''
           lesson_groups: {}
+          name: hello-world-emoji-2021
         hello-world-animals-2021:
           lessons:
             Hello World:
@@ -27291,6 +27292,7 @@ en:
           description_short: ''
           description_audience: ''
           lesson_groups: {}
+          name: hello-world-animals-2021
         hello-world-retro-2021:
           lessons:
             Hello World:
@@ -27308,3 +27310,4 @@ en:
           description_short: ''
           description_audience: ''
           lesson_groups: {}
+          name: hello-world-retro-2021
