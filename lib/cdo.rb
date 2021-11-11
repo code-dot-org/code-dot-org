@@ -79,10 +79,6 @@ module Cdo
       canonical_hostname('code.org')
     end
 
-    def pegasus_www_hostname
-      canonical_hostname('www.code.org')
-    end
-
     def hourofcode_hostname
       canonical_hostname('hourofcode.com')
     end
