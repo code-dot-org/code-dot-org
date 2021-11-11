@@ -1,6 +1,6 @@
 class UpdateVersionYearOnUnversionedHocScripts2021 < ActiveRecord::Migration[5.2]
   def up
-    ['spelling-bee', 'counting-csc', 'explore-data-1'].each do |script_name|
+    ['spelling-bee', 'counting-csc', 'explore-data-1', 'hello-world-food', 'hello-world-animals', 'hello-world-emoji', 'hello-world-retro'].each do |script_name|
       script = Script.find_by(name: script_name)
       script.properties[:version_year] = "unversioned"
       script.save!
@@ -13,7 +13,7 @@ class UpdateVersionYearOnUnversionedHocScripts2021 < ActiveRecord::Migration[5.2
   end
 
   def down
-    ['spelling-bee', 'counting-csc', 'explore-data-1'].each do |script_name|
+    ['spelling-bee', 'counting-csc', 'explore-data-1', 'hello-world-food', 'hello-world-animals', 'hello-world-emoji', 'hello-world-retro'].each do |script_name|
       script = Script.find_by(name: script_name)
       script.properties[:version_year] = "2021"
       script.save!
