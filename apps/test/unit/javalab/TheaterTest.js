@@ -1,10 +1,11 @@
 import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
-import {TheaterSignalType, InputMessageType} from '@cdo/apps/javalab/constants';
-import Theater, {
-  UPLOAD_SUCCESS_MESSAGE,
-  UPLOAD_ERROR_MESSAGE
-} from '@cdo/apps/javalab/Theater';
+import {
+  TheaterSignalType,
+  InputMessageType,
+  InputMessage
+} from '@cdo/apps/javalab/constants';
+import Theater from '@cdo/apps/javalab/Theater';
 
 describe('Theater', () => {
   let theater,
@@ -135,7 +136,7 @@ describe('Theater', () => {
     sinon.assert.calledWith(
       onJavabuilderMessage,
       InputMessageType.THEATER,
-      UPLOAD_ERROR_MESSAGE
+      InputMessage.UPLOAD_ERROR
     );
   });
 
@@ -159,7 +160,7 @@ describe('Theater', () => {
     sinon.assert.calledWith(
       onJavabuilderMessage,
       InputMessageType.THEATER,
-      UPLOAD_SUCCESS_MESSAGE
+      InputMessage.UPLOAD_SUCCESS
     );
 
     onJavabuilderMessage.reset();
@@ -167,7 +168,7 @@ describe('Theater', () => {
     sinon.assert.calledWith(
       onJavabuilderMessage,
       InputMessageType.THEATER,
-      UPLOAD_ERROR_MESSAGE
+      InputMessage.UPLOAD_ERROR
     );
   });
 });

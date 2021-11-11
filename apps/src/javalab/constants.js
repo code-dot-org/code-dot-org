@@ -92,6 +92,12 @@ export const InputMessageType = {
   THEATER: 'THEATER'
 };
 
+export const InputMessage = {
+  // Theater-specific messages
+  UPLOAD_SUCCESS: 'UPLOAD_SUCCESS',
+  UPLOAD_ERROR: 'UPLOAD_ERROR'
+};
+
 export const SoundExceptionType = makeEnum(
   'INVALID_AUDIO_FILE_FORMAT',
   'MISSING_AUDIO_DATA'
