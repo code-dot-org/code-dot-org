@@ -6,9 +6,9 @@ set_dir: true
 
 # Computer Science Connections
 
-Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways!
+Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways! <em>(Teachers: See the CS Connections curriculum guide <a href="https://docs.google.com/document/d/1O3g2QoMn41gDoUXmKhrXCkU_djJhGs_T_9XZpgiS4T8/edit#">here</a>.)</em>
 
-{{ tutorial_promo2, heading: "New Hour of Code activities", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_background.jpg", left_heading: "Mood study", left_description: "Learn about computer science and poetry by creating an animated poem.", left_specs: "", left_button_url: "/moodstudy", left_button_text: "Start", right_heading: "Hello World", right_description: "Learn computer science fundamentals with Sprite Lab", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start" }}
+{{ tutorial_promo2, heading: "New Hour of Code activities", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_background.jpg", left_heading: "Poem Art", left_description: "Express yourself! Use code to create animated poems.", left_specs: "", left_button_url: "/moodstudy", left_button_text: "Start", right_heading: "Hello World", right_description: "Choose from four fun themes to code interactive characters in a world you create.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start" }}
 {{ clearfix }}
 
 ## Modules
