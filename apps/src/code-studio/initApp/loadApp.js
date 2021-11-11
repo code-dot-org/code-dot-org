@@ -281,6 +281,18 @@ async function loadAppAsync(appOptions) {
     return appOptions;
   }
 
+  // Special case -- If the level is not cached, not channel-backed, and the
+  // user is signed-out, load source code from session storage.
+  // TODO: Refactor the logic in this function so this isn't a special case
+  // and the code to load last attempt from session storage isn't duplicated.
+  if (!appOptions.publicCaching && !appOptions.channel && !appOptions.userId) {
+    // User is not signed in, load last attempt from session storage.
+    appOptions.level.lastAttempt = clientState.sourceForLevel(
+      appOptions.scriptName,
+      appOptions.serverProjectLevelId || appOptions.serverLevelId
+    );
+  }
+
   // If this is not a cached page, all appOptions (including user-specific values)
   // are returned in the page and we can finish loading the app.
   if (!appOptions.publicCaching) {
