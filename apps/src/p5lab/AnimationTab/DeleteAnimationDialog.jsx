@@ -13,8 +13,9 @@ export default class DeleteAnimationDialog extends React.Component {
   };
 
   render() {
+    const P5LabType = this.props.labType;
     let assetType;
-    switch (this.props.labType) {
+    switch (P5LabType) {
       case 'GAMELAB':
         assetType = i18n.animation();
         break;
