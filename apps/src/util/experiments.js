@@ -37,8 +37,6 @@ experiments.OPT_IN_EMAIL_REG_PARTNER = 'optInEmailRegPartner';
 experiments.MULTISELECT = 'multiselect';
 experiments.CODE_REVIEW_GROUPS = 'codeReviewGroups';
 experiments.JAVALAB_UNIT_TESTS = 'javalabUnitTests';
-experiments.COSTUME_TAB_A = 'costumeTabA';
-experiments.COSTUME_TAB_B = 'costumeTabB';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,
