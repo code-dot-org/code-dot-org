@@ -13,7 +13,7 @@ export const getStudentsForSection = async () => {
     // This API returns with "No Content" when there is no section to be loaded
     // for the teacher panel, checking "OK" ensures a section was returned
     if (response.statusText === 'OK') {
-      return response.json();
+      return await response.json();
     }
   } catch (err) {
     console.log(err);
