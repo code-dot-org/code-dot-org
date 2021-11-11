@@ -19,11 +19,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import progress from './progress';
 import {getStore} from '../redux';
-import {
-  setUserSignedIn,
-  setInitialData
-} from '@cdo/apps/templates/currentUserRedux';
-import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
+import {asyncLoadUserData} from '@cdo/apps/templates/currentUserRedux';
 
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
@@ -172,18 +168,7 @@ function setupReduxSubscribers(store) {
 setupReduxSubscribers(getStore());
 
 function setUpGlobalData(store) {
-  fetch('/api/v1/users/current')
-    .then(response => response.json())
-    .then(data => {
-      store.dispatch(setUserSignedIn(data.is_signed_in));
-      if (data.is_signed_in) {
-        store.dispatch(setInitialData(data));
-        data.is_verified_teacher && store.dispatch(setVerified());
-      }
-    })
-    .catch(err => {
-      console.log(err);
-    });
+  store.dispatch(asyncLoadUserData());
 }
 setUpGlobalData(getStore());
 
