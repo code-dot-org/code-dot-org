@@ -221,7 +221,7 @@ const AboutYou = props => {
           </p>
           <LabeledInput name="streetAddress" />
           <LabeledInput name="city" />
-          <LabeledInput name="state" />
+          <LabeledSelect name="state" placeholder="Select a state" />
           <LabeledInput name="zipCode" />
 
           <LabeledCheckBoxes name="previousUsedCurriculum" />
