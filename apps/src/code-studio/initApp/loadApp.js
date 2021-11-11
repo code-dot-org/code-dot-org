@@ -266,7 +266,6 @@ async function loadAppAsync(appOptions) {
   setupApp(appOptions);
 
   var isViewingSolution = clientState.queryParams('solution') === 'true';
-  var isViewingStudentAnswer = !!clientState.queryParams('user_id');
 
   if (
     appOptions.share &&
@@ -282,22 +281,22 @@ async function loadAppAsync(appOptions) {
     return appOptions;
   }
 
-  if (appOptions.channel || isViewingStudentAnswer) {
+  // If this is not a cached page, all appOptions (including user-specific values)
+  // are returned in the page and we can finish loading the app.
+  if (!appOptions.publicCaching) {
     return loadProjectAndCheckAbuse(appOptions);
   }
+
+  // Disable social share by default on publicly-cached pages, because we don't know
+  // if the user is underage until we get data back from /api/user_app_options/ and we
+  // should err on the side of not showing social links
+  appOptions.disableSocialShare = true;
 
   // If the level requires a channel but no channel was passed from the server through app_options,
   // that indicates that the level was cached and the channel id needs to be loaded client-side
   // through the user_progress request
   const shouldGetChannelId =
     !!appOptions.levelRequiresChannel && !appOptions.channel;
-
-  if (appOptions.publicCaching) {
-    // Disable social share by default on publicly-cached pages, because we don't know
-    // if the user is underage until we get data back from /api/user_app_options/ and we
-    // should err on the side of not showing social links
-    appOptions.disableSocialShare = true;
-  }
 
   const userAppOptionsRequest = $.ajax({
     url:

@@ -484,7 +484,7 @@ class ApiController < ApplicationController
       # TODO: There are many other user-specific values in app_options that may
       # need to be sent down.  See LP-2086 for a list of potential values.
 
-      response[:disableSocialShare] = !!user.under_13?
+      response[:disableSocialShare] = user.under_13?
       response.merge!(progress_app_options(script, level, user))
     else
       response[:signedIn] = false
