@@ -16,6 +16,7 @@ export default function UploadImageDialog({
   const [imgUrl, setImgUrl] = useState(undefined);
   const [expandable, setExpandable] = useState(false);
   const [error, setError] = useState(undefined);
+  const [isUploading, setIsUploading] = useState(false);
 
   const resetState = () => {
     setImgUrl(undefined);
@@ -25,6 +26,7 @@ export default function UploadImageDialog({
 
   const handleChange = e => {
     resetState();
+    setIsUploading(true);
 
     // assemble upload data
     const formData = new FormData();
@@ -41,21 +43,21 @@ export default function UploadImageDialog({
     })
       .then(response => response.json())
       .then(handleResult)
-      .catch(handleError);
+      .catch(err => {
+        setError(err);
+        setIsUploading(false);
+      });
   };
 
   const handleResult = result => {
     if (result && result.newAssetUrl) {
       setImgUrl(result.newAssetUrl);
     } else if (result && result.message) {
-      handleError(result.message);
+      setError(result.message);
     } else {
-      handleError(result);
+      setError(result);
     }
-  };
-
-  const handleError = error => {
-    setError(error);
+    setIsUploading(false);
   };
 
   const handleDialogClose = () => {
@@ -108,6 +110,7 @@ export default function UploadImageDialog({
         onClick={handleCloseAndSave}
         color={Button.ButtonColor.orange}
         className="save-upload-image-button"
+        disabled={isUploading}
       />
     </LessonEditorDialog>
   );
