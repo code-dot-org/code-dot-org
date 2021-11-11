@@ -426,7 +426,8 @@ class Blockly < Level
   end
 
   def localized_long_instructions
-    get_localized_property("long_instructions")
+    localized_long_instructions = get_localized_property("long_instructions")
+    localized_markdown_with_placeholder_texts(localized_long_instructions)
   end
 
   def localized_authored_hints
@@ -464,7 +465,8 @@ class Blockly < Level
 
   def localized_short_instructions
     if custom?
-      loc_val = get_localized_property("short_instructions")
+      loc_instructions = get_localized_property("short_instructions")
+      loc_val = localized_markdown_with_placeholder_texts(loc_instructions)
       unless I18n.en? || loc_val.nil?
         return loc_val
       end
@@ -624,7 +626,7 @@ class Blockly < Level
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
-  # Localizing placeholder texts in all possible block types.
+  # Localizing placeholder texts in all possible block types within xml.
   # @param blocks [String]
   # @return [String]
   # @see unit test for an example of blocks that contain placeholder texts.
@@ -639,13 +641,27 @@ class Blockly < Level
     block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
+  # Localizing placeholder texts in all possible block types within markdown.
+  # @param markdown [String]
+  # @return [String]
+  # @see unit test for an example of blocks that contain placeholder texts.
+  def localized_markdown_with_placeholder_texts(markdown)
+    return if markdown.nil?
+    markdown_xml = Nokogiri::HTML(markdown, &:noblanks)
+
+    localize_placeholder_texts(markdown_xml, 'text', ['TEXT'])
+
+    ## make sure below returns correct format
+    markdown_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
   # Localizing placeholder texts in one block type.
-  # @param block_xml [Nokogiri::XML::Document]
+  # @param document [Nokogiri::XML::Document, Nokogiri::HTML::Document]
   # @param block_type [String]
   # @param title_names [Array<String>]
   # @return [Nokogiri::XML::Document]
-  def localize_placeholder_texts(block_xml, block_type, title_names)
-    block_xml.xpath("//block[@type=\"#{block_type}\"]").each do |block|
+  def localize_placeholder_texts(document, block_type, title_names)
+    document.xpath("//block[@type=\"#{block_type}\"]").each do |block|
       title_names.each do |title_name|
         title = block.at_xpath("./title[@name=\"#{title_name}\"]")
         next unless title&.content&.present?
@@ -662,7 +678,7 @@ class Blockly < Level
         title.content = localized_text if localized_text
       end
     end
-    block_xml
+    document
   end
 
   def self.base_url
