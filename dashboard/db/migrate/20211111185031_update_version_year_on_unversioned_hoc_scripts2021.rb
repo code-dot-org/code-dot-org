@@ -9,9 +9,6 @@ class UpdateVersionYearOnUnversionedHocScripts2021 < ActiveRecord::Migration[5.2
       script.course_version.display_name = "unversioned"
       script.course_version.key = "unversioned"
       script.course_version.save!
-
-      script.reload
-      script.write_script_json
     end
   end
 
@@ -25,9 +22,6 @@ class UpdateVersionYearOnUnversionedHocScripts2021 < ActiveRecord::Migration[5.2
       script.course_version.display_name = "2021"
       script.course_version.key = "2021"
       script.course_version.save!
-
-      script.reload
-      script.write_script_json
     end
   end
 end
