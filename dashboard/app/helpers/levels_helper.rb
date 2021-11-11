@@ -179,15 +179,11 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
     view_options(public_caching: @public_caching)
-
-    is_caching_exception = request ? ScriptConfig.uncached_script_level_path?(request.path) : false
-    is_cached_level = @public_caching && !is_caching_exception
 
     level_requires_channel = (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
     # If the level is cached, the channel is loaded client-side in loadApp.js
-    if level_requires_channel && !is_cached_level
+    if level_requires_channel && !@public_caching
       view_options(
         channel: get_channel_for(@level, @script&.id, @user),
         reduce_channel_updates: @script ?
