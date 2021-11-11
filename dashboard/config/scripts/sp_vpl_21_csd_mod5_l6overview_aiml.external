@@ -9,7 +9,8 @@ markdown <<MARKDOWN
 
 ## Lesson overview 
 
-##### In this lesson students will dive into the AI Lab tool for the first time, where they select features to train a model that predicts a given label. They start by exploring AI Lab and training a model to recognize shapes. Then they pretend they have been hired by several restaurants who would like to make recommendations to new customers based on survey data they’re collected, go through each dataset, and use data visualization tools to identify features with high relationships in the data.
+##### In this lesson students will dive into the AI Lab tool for the first time, where they will select features to train a model that predicts a given label. They will start by exploring AI Lab and training a model to recognize shapes. After training their first model, students will pretend that they have been hired by restaurants to make recommendations to new customers based on survey data. To do this, students will use data sets and visualization tools to identify features to use to train machine learning models to make recommendations. 
+
 
 ##### **Question of the Day:** How can we use machine learning to make recommendations?
 
@@ -26,7 +27,7 @@ markdown <<MARKDOWN
 
 ## Using data visualization tools
 
-##### Students will then move into AI Lab where they will use data visualizations to determine which features will be most helpful in training AI Bot to predict the correct shape name. The goal is for students to notice that the number of sides has a 100% relationship with each shape making this feature a good feature to use to train AI Bot to predict shapes. Students may also notice additional patterns in the data, for example: small shapes tend to be triangles, or circles are only pink or yellow. 
+##### Students will then move into AI Lab where they will use data visualizations to determine which features will be most helpful in training A.I. Bot to predict the correct shape name. The goal is for students to notice that the number of sides has a 100% relationship with each shape making this feature a good feature to use to train A.I. Bot to predict shapes. Students may also notice additional patterns in the data, for example: small shapes tend to be triangles, or circles are only pink or yellow. 
 
 ##
 

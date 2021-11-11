@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {FormGroup, Row, Col} from 'react-bootstrap';
-import color from '@cdo/apps/util/color';
 import {
   PageLabels,
   SectionHeaders,
@@ -34,6 +33,18 @@ const getProgramInfo = program => {
     default:
       return {name: 'CS Program', shortName: 'cs', minCourseHours: 0};
   }
+};
+
+const CourseHoursLabeledNumberInput = props => {
+  return (
+    <LabeledNumberInput
+      style={styles.numberInput}
+      labelWidth={{md: 8}}
+      controlWidth={{md: 4}}
+      inlineControl={true}
+      {...props}
+    />
+  );
 };
 
 const ChooseYourProgram = props => {
@@ -110,7 +121,7 @@ const ChooseYourProgram = props => {
             <>
               <LabeledRadioButtons name="csaAlreadyKnow" required={false} />
               {data.csaAlreadyKnow === 'No' && (
-                <p style={{color: 'red'}}>
+                <p style={styles.error}>
                   We don’t recommend this program for teachers completely new to
                   CS. Consider starting with CS Principles Professional Learning
                   or plan for additional onboarding in preparation for this
@@ -119,7 +130,7 @@ const ChooseYourProgram = props => {
               )}
               <LabeledRadioButtons name="csaPhoneScreen" required={false} />
               {data.csaPhoneScreen === 'No' && (
-                <p style={{color: 'red'}}>
+                <p style={styles.error}>
                   We recommend deepening your content knowledge prior to
                   starting this program. This can be accomplished by completing
                   some additional onboarding that will be shared with you once
@@ -139,40 +150,26 @@ const ChooseYourProgram = props => {
           <p>
             Please provide information about your course implementation plans.
           </p>
-          <LabeledNumberInput
+          <CourseHoursLabeledNumberInput
             name="csHowManyMinutes"
-            style={{
-              width: '100px'
-            }}
             label={PageLabels.chooseYourProgram.csHowManyMinutes.replace(
               '{{CS program}}',
               programInfo.name
             )}
-            labelWidth={{md: 8}}
-            controlWidth={{md: 4}}
-            inlineControl={true}
           />
-          <LabeledNumberInput
+          <CourseHoursLabeledNumberInput
             name="csHowManyDaysPerWeek"
-            style={{
-              width: '100px'
-            }}
             label={PageLabels.chooseYourProgram.csHowManyDaysPerWeek.replace(
               '{{CS program}}',
               programInfo.name
             )}
-            labelWidth={{md: 8}}
-            controlWidth={{md: 4}}
-            inlineControl={true}
           />
-          <LabeledNumberInput
+          <CourseHoursLabeledNumberInput
             name="csHowManyWeeksPerYear"
-            style={{
-              width: '100px'
-            }}
-            labelWidth={{md: 8}}
-            controlWidth={{md: 4}}
-            inlineControl={true}
+            label={PageLabels.chooseYourProgram.csHowManyWeeksPerYear.replace(
+              '{{CS program}}',
+              programInfo.name
+            )}
           />
           {courseHours && (
             <div style={{marginBottom: 30}}>
@@ -189,7 +186,7 @@ const ChooseYourProgram = props => {
             </div>
           )}
           {belowMinCourseHours && (
-            <p style={{color: 'red'}}>
+            <p style={styles.error}>
               Note: {minCourseHours} or more hours of instruction per{' '}
               {programInfo.name} section are strongly recommended. We suggest
               checking with your school administration to see if additional time
@@ -324,7 +321,10 @@ ChooseYourProgram.getErrorMessages = data => {
 
 const styles = {
   error: {
-    color: color.red
+    color: 'rgb(204, 0, 0)'
+  },
+  numberInput: {
+    width: 100
   }
 };
 

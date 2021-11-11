@@ -8,18 +8,16 @@ import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle
 import i18n from '@cdo/locale';
 import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import $ from 'jquery';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/code-studio/utils';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
+import * as teacherPanelData from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 
 const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
 
 const DEFAULT_PROPS = {
-  selectUser: () => {},
   unitName: 'A unit',
   pageType: pageTypes.level,
   viewAs: ViewType.Student,
@@ -32,39 +30,33 @@ const DEFAULT_PROPS = {
   levelsWithProgress: [],
   loadLevelsWithProgress: () => {},
   teacherId: 5,
-  exampleSolutions: []
+  exampleSolutions: [],
+  selectUser: () => {},
+  setStudentsForCurrentSection: () => {},
+  setSections: () => {},
+  setSectionLockStatus: () => {},
+  selectSection: () => {}
 };
-
-const sectionScriptLevelData = [
-  {
-    id: '11',
-    userId: 1,
-    status: LevelStatus.not_tried,
-    passed: false,
-    levelNumber: 1,
-    kind: 'puzzle'
-  }
-];
 
 const setUp = overrideProps => {
   const props = {...DEFAULT_PROPS, ...overrideProps};
   return shallow(<TeacherPanel {...props} />);
 };
 
+const setUpWithMount = async overrideProps => {
+  const store = createStore(combineReducers({viewAs}), {
+    viewAs: ViewType.Teacher
+  });
+
+  const props = {...DEFAULT_PROPS, ...overrideProps};
+  return await mount(
+    <Provider store={store}>
+      <TeacherPanel {...props} />
+    </Provider>
+  );
+};
+
 describe('TeacherPanel', () => {
-  beforeEach(() => {
-    sinon.stub($, 'ajax').returns({
-      done: successCallback => {
-        successCallback(sectionScriptLevelData);
-        return {fail: () => {}};
-      }
-    });
-  });
-
-  afterEach(() => {
-    $.ajax.restore();
-  });
-
   describe('on unit page', () => {
     it('initial view as student has teacher panel header and view toggle', () => {
       const wrapper = setUp({viewAs: ViewType.Student});
@@ -135,6 +127,61 @@ describe('TeacherPanel', () => {
     expect(wrapper.contains(i18n.dontForget())).to.be.true;
     expect(wrapper.contains(i18n.lockFollowing())).to.be.true;
     expect(wrapper.contains('lesson1')).to.be.true;
+  });
+
+  it('loads initial data and calls get/set students for section', async () => {
+    sinon.stub(teacherPanelData, 'getStudentsForSection').returns(
+      Promise.resolve({
+        id: 55,
+        students: []
+      })
+    );
+
+    const setStudentsForCurrentSectionStub = sinon.stub();
+    const overrideProps = {
+      viewAs: ViewType.Teacher,
+      pageType: pageTypes.scriptOverview,
+      setStudentsForCurrentSection: setStudentsForCurrentSectionStub
+    };
+
+    await setUpWithMount(overrideProps);
+
+    expect(setStudentsForCurrentSectionStub).to.have.been.calledWith(55, []);
+
+    teacherPanelData.getStudentsForSection.restore();
+  });
+
+  it('loads initial data and calls get/set lock status', async () => {
+    const teacherSections = [{id: 1, name: 'CSF section'}];
+    const sectionLockStatus = {
+      '1': {
+        section_id: 1,
+        section_name: 'CSF section',
+        lessons: []
+      }
+    };
+
+    sinon.stub(teacherPanelData, 'queryLockStatus').returns(
+      Promise.resolve({
+        teacherSections,
+        sectionLockStatus
+      })
+    );
+
+    const setSectionsStub = sinon.stub();
+    const setSectionLockStatusStub = sinon.stub();
+    const overrideProps = {
+      viewAs: ViewType.Teacher,
+      pageType: pageTypes.level,
+      setSections: setSectionsStub,
+      setSectionLockStatus: setSectionLockStatusStub
+    };
+    await setUpWithMount(overrideProps);
+
+    expect(setSectionsStub).to.have.been.calledWith(teacherSections);
+    expect(setSectionLockStatusStub).to.have.been.calledWith(sectionLockStatus);
+
+    teacherPanelData.queryLockStatus.restore();
   });
 
   describe('StudentTable', () => {
