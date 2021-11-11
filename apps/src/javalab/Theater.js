@@ -1,13 +1,10 @@
 import {
   TheaterSignalType,
   STATUS_MESSAGE_PREFIX,
-  InputMessageType
+  InputMessageType,
+  InputMessage
 } from './constants';
 import javalabMsg from '@cdo/javalab/locale';
-
-// Exported for tests
-export const UPLOAD_SUCCESS_MESSAGE = 'UPLOAD_SUCCESS';
-export const UPLOAD_ERROR_MESSAGE = 'UPLOAD_ERROR';
 
 export default class Theater {
   constructor(
@@ -110,7 +107,10 @@ export default class Theater {
       // The upload URL should be provided when opening the prompter, so if
       // it is somehow not set, we are in an invalid scenario.
       console.warn('No upload URL available. Cannot upload prompter image.');
-      this.onJavabuilderMessage(InputMessageType.THEATER, UPLOAD_ERROR_MESSAGE);
+      this.onJavabuilderMessage(
+        InputMessageType.THEATER,
+        InputMessage.UPLOAD_ERROR
+      );
       return;
     }
 
@@ -120,13 +120,13 @@ export default class Theater {
       xhr => {
         this.onJavabuilderMessage(
           InputMessageType.THEATER,
-          UPLOAD_SUCCESS_MESSAGE
+          InputMessage.UPLOAD_SUCCESS
         );
       },
       xhr => {
         this.onJavabuilderMessage(
           InputMessageType.THEATER,
-          UPLOAD_ERROR_MESSAGE
+          InputMessage.UPLOAD_ERROR
         );
       }
     );
