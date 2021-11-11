@@ -1,12 +1,20 @@
-import {TheaterSignalType, STATUS_MESSAGE_PREFIX} from './constants';
+import {
+  TheaterSignalType,
+  STATUS_MESSAGE_PREFIX,
+  InputMessageType
+} from './constants';
 import javalabMsg from '@cdo/javalab/locale';
+
+const UPLOAD_SUCCESS_MESSAGE = 'UPLOAD_SUCCESS';
+const UPLOAD_ERROR_MESSAGE = 'UPLOAD_ERROR';
 
 export default class Theater {
   constructor(
     onOutputMessage,
     onNewlineMessage,
     openPhotoPrompter,
-    closePhotoPrompter
+    closePhotoPrompter,
+    onJavabuilderMessage
   ) {
     this.canvas = null;
     this.context = null;
@@ -14,7 +22,9 @@ export default class Theater {
     this.onNewlineMessage = onNewlineMessage;
     this.openPhotoPrompter = openPhotoPrompter;
     this.closePhotoPrompter = closePhotoPrompter;
+    this.onJavabuilderMessage = onJavabuilderMessage;
     this.loadEventsFinished = 0;
+    this.prompterUploadUrl = null;
   }
 
   handleSignal(data) {
@@ -34,6 +44,7 @@ export default class Theater {
       }
       case TheaterSignalType.GET_IMAGE: {
         // Open the photo prompter
+        this.prompterUploadUrl = data.detail.uploadUrl;
         this.openPhotoPrompter(data.detail.prompt);
         break;
       }
@@ -94,6 +105,39 @@ export default class Theater {
   }
 
   onPhotoPrompterFileSelected(photo) {
-    // TODO: Send photo file information back to Javabuilder.
+    if (!this.prompterUploadUrl) {
+      // The upload URL should be provided when opening the prompter, so if
+      // it is somehow not set, we are in an invalid scenario.
+      console.error('No upload URL available. Cannot upload prompter image.');
+      this.onJavabuilderMessage(InputMessageType.THEATER, UPLOAD_ERROR_MESSAGE);
+      return;
+    }
+
+    this.uploadFile(
+      this.prompterUploadUrl,
+      photo,
+      xhr => {
+        this.onJavabuilderMessage(
+          InputMessageType.THEATER,
+          UPLOAD_SUCCESS_MESSAGE
+        );
+      },
+      xhr => {
+        this.onJavabuilderMessage(
+          InputMessageType.THEATER,
+          UPLOAD_ERROR_MESSAGE
+        );
+      }
+    );
   }
+
+  uploadFile = (uploadUrl, fileData, onSuccess, onError) => {
+    // Use XHR directly (rather than ajax) so we can upload binary file data directly
+    const xhr = new XMLHttpRequest();
+    xhr.open('PUT', uploadUrl, true);
+    xhr.onload = onSuccess;
+    xhr.onerror = onError;
+
+    xhr.send(fileData);
+  };
 }
