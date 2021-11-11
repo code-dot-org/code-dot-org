@@ -7,11 +7,12 @@
       "curriculum_umbrella": "CSC",
       "is_course": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2021"
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-10 21:09:13 UTC",
+    "serialized_at": "2021-11-11 19:51:07 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -42,7 +43,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n",
+        "overview": "In this CS and ELA integrated lesson for new coders, students will animate a poem with code to illustrate the mood of a poem. Students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n",
         "preparation": "- Review and complete the online tutorial yourself: [Poem Art](http://studio.code.org/s/poem-art).\n \n- Be sure to try the activities first before asking your students to complete them. \n- Check your technology and decide if you need to troubleshoot anything in advance.\n- Some levels require sound to play. Hand out headphones ahead of time. \n\n- [Optional] 2 sticky notes per student for the Assessment.\n- [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n",
         "student_overview": "Poetry is making art with words. Add visual effects and images to your own animated poem. "
       },
@@ -1378,7 +1379,7 @@
       "key": "69bddf9b-be08-4faf-af38-d58a5968ce2c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Warm-Up slides.\n\nToday’s Agenda:\n- Build an app with carefully chosen words\n- Make your app respond to a user’s input\n\n <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the code from Level 1. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n- Predict what will happen in this program\n\n**Discussion Goal:** Allow students to inspect the code and discuss what they think might happen. Write student predictions on the board. \n\n**Do This:** Have students navigate to Level 1 and press “Run” to observe what happens.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Warm-Up slides.\n\nToday’s Agenda:\n- Build an app with carefully chosen words\n\n <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the code from Level 1. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n- Predict what will happen in this program\n\n**Discussion Goal:** Allow students to inspect the code and discuss what they think might happen. Write student predictions on the board. \n\n**Do This:** Have students navigate to Level 1 and press “Run” to observe what happens.\n"
       },
       "seeding_key": {
         "activity_section.key": "69bddf9b-be08-4faf-af38-d58a5968ce2c",
@@ -1987,6 +1988,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_backgroundEffects"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2008,6 +2012,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2029,6 +2036,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_sounds"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2050,6 +2060,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_events1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2071,6 +2084,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2092,6 +2108,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_addSprites"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2113,6 +2132,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteBehaviors"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2134,6 +2156,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteSizes"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2155,6 +2180,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2176,6 +2204,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_animate_pause"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2197,6 +2228,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_animate_addline"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2218,6 +2252,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_animate_poem"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2239,6 +2276,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_animate_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2260,6 +2300,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_exemplar1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2281,6 +2324,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_prompt"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2302,6 +2348,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_concatenation1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2323,6 +2372,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_concatenation4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2344,6 +2396,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_start"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2365,6 +2420,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_variables_finish"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2386,6 +2444,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_generator_pause"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2407,6 +2468,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_generator_exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2428,6 +2492,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_generator_prompt"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2449,6 +2516,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_generator_event"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2470,6 +2540,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_generator_concatenation"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2491,6 +2564,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_generator_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2512,6 +2588,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choices_exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2533,6 +2612,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choices_practice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2554,6 +2636,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choices_variables"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2575,6 +2660,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choice_prompts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2596,6 +2684,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_choices_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2617,6 +2708,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_conditionals_exemplar"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2638,6 +2732,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_conditionals_practice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2659,6 +2756,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_conditionals_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2680,6 +2780,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_share"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2701,6 +2804,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_modeling_exemple"
+        ]
       },
       "bonus": false,
       "seeding_key": {

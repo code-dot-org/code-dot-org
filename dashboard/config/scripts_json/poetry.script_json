@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-10 23:16:32 UTC",
+    "serialized_at": "2021-11-11 19:46:30 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -43,7 +43,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n",
+        "overview": "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n",
         "preparation": "- Review and complete the online tutorial yourself: [Poem Art](http://studio.code.org/s/poem-art).\n \n- Be sure to try the activities first before asking your students to complete them. \n- Check your technology and decide if you need to troubleshoot anything in advance.\n- Some levels require sound to play. Hand out headphones ahead of time. \n\n- [Optional] 2 sticky notes per student for the Assessment.\n- [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n",
         "student_overview": "Poetry is making art with words. Add visual effects and images to your own animated poem. "
       },
@@ -79,8 +79,9 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "assessment_opportunities": "[[Optional] Poem App Rubric](https://docs.google.com/document/d/1zf6k1Xv4xWYneho7kOzUGLW9Cy-JKxJIdk70p6ftB1o/template/preview)",
         "overview": "In this lesson, students learn how to manipulate specific words in the text in their poems by using open-ended prompts and variables to store the user’s input. First, students explore an app with an open-ended prompt. Then students practice using variables in their code until they are able to combine text and variable blocks to create an interactive app.  \n",
-        "preparation": "- Play through the levels ahead of time to prepare for the prediction and discussion sections of the lesson.\n\n- Assign the lesson to your sections to keep track of student progress. Many levels in this module are linked to each other, so student code will carry over between lessons on certain levels. Logging in will ensure their work is saved.\n\n- Prepare one computer per student.\n\n- Prepare one copy of the handout per student. \n \n- [Optional] Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support page](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) for more information about pair programming.\n\n",
+        "preparation": "- Play through the levels ahead of time to prepare for the prediction and discussion sections of the lesson.\n\n- Assign the lesson to your sections to keep track of student progress. Many levels in this module are linked to each other, so student code will carry over between lessons on certain levels. Logging in will ensure their work is saved.\n\n- Prepare one computer per student.\n\n- Prepare one copy of the handout per student. \n- Modify the rubric to fit your class goals and print out a copy for each student.\n \n- [Optional] Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support page](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) for more information about pair programming.\n\n",
         "student_overview": "Build an interactive app! Use prompts and user input in a creative new way. \n"
       },
       "seeding_key": {
@@ -91,14 +92,15 @@
     },
     {
       "key": "lesson-4",
-      "name": "Build a Poem Generator",
+      "name": "Build a Poem Generator App",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "assessment_opportunities": "[[Optional] Poem App Rubric](https://docs.google.com/document/d/1zf6k1Xv4xWYneho7kOzUGLW9Cy-JKxJIdk70p6ftB1o/template/preview)",
         "overview": "In this lesson, students will use their new knowledge about open-ended prompts and variables to modify their poems and create a new poem generator app. Students will discuss how random words change the meaning and mood of their poems. \n",
-        "preparation": "- Make sure students have the poems they wrote in Lesson 2 handy. \n\n- Play through the levels ahead of time to prepare for the prediction and discussion sections.\n\n- Assign the lesson to your sections to keep track of student progress. Many levels in this module are linked to each other, so student code will carry on between lessons on certain levels. Logging in will ensure their work is saved. \n\n- Prepare one computer per student\n\n- Prepare one copy of the “Plan Your Poem Generator App” handout per student.\n\n- [Optional] Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n\n",
+        "preparation": "- Make sure students have the poems they wrote in Lesson 2 handy. \n\n- Play through the levels ahead of time to prepare for the prediction and discussion sections.\n\n- Assign the lesson to your sections to keep track of student progress. Many levels in this module are linked to each other, so student code will carry on between lessons on certain levels. Logging in will ensure their work is saved. \n\n- Prepare one computer per student\n\n- Prepare one copy of the “Plan Your Poem Generator App” handout per student.\n- Modify the rubric to fit your class goals and print out a copy for each student.\n\n- [Optional] Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n\n",
         "student_overview": "Use prompts and variables to make a Poem Generator App to share with your friends!"
       },
       "seeding_key": {
@@ -115,8 +117,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "assessment_opportunities": "[[Optional] Poem App Rubric](https://docs.google.com/document/d/1zf6k1Xv4xWYneho7kOzUGLW9Cy-JKxJIdk70p6ftB1o/template/preview)",
         "overview": "In this lesson, students create a poem generator app with multiple-choice prompts to guide the user to pick a carefully chosen word. Students will plan which words they will replace in their poems, choose three new multiple-choice words per prompt, and then program their poem generator using new multiple-choice prompts with events.\n",
-        "preparation": "- Play through the levels ahead of time to prepare for the prediction and discussion sections of the lesson.\n\n- Assign the lesson to your sections to keep track of student progress. Many levels in this module are linked to each other, so student code will carry over between lessons on certain levels. Logging in will ensure their work is saved.\n\n- Prepare one computer per student.\n\n- Prepare one copy of the handout per student.\n- [Optional] Prepare one thesaurus per student or a few for students to share.\n \n- [Optional] Prepare one set of headphones per student. \n",
+        "preparation": "- Play through the levels ahead of time to prepare for the prediction and discussion sections of the lesson.\n\n- Assign the lesson to your sections to keep track of student progress. Many levels in this module are linked to each other, so student code will carry over between lessons on certain levels. Logging in will ensure their work is saved.\n\n- Prepare one computer per student.\n\n- Prepare one copy of the handout per student.\n- Modify the rubric to fit your class goals and print out a copy for each student.\n- [Optional] Prepare one thesaurus per student or a few for students to share.\n \n- [Optional] Prepare one set of headphones per student. \n",
         "student_overview": "Make your app even better! Change your poem generator app by adding words you want the user to choose from."
       },
       "seeding_key": {
@@ -133,8 +136,9 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "assessment_opportunities": "[[Optional] Poem App Rubric](https://docs.google.com/document/d/1zf6k1Xv4xWYneho7kOzUGLW9Cy-JKxJIdk70p6ftB1o/template/preview)",
         "overview": "In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.",
-        "preparation": " - Make sure students have their handouts from previous lessons for reference. \n- Play through the levels ahead of time to prepare for the prediction and discussion sections.\n- To keep track of student progress, assign the lesson to your class sections.. Many levels in this module are linked to each other, so student code will carry on between lessons on certain levels. Logging in will ensure their work is saved. \n- Prepare one computer per student.\n",
+        "preparation": " - Make sure students have their handouts from previous lessons for reference. \n- Play through the levels ahead of time to prepare for the prediction and discussion sections.\n- To keep track of student progress, assign the lesson to your class sections.. Many levels in this module are linked to each other, so student code will carry on between lessons on certain levels. Logging in will ensure their work is saved. \n- Prepare one computer per student.\n- Modify the rubric to fit your class goals and print out a copy for each student.\n",
         "purpose": "This is an optional lesson that extends student understanding of programming concepts in this module. Forty-five minutes is the suggested timeframe, but this lesson is intentionally open-ended so students can go at their own pace. Students spend the majority of the class in free play levels, tinkering with their code; the lesson can be shortened or extended as needed.  \n\nAnother use for this lesson might be to allow extra time for students who want to continue building their app from any previous lesson. Conditionals could be an extension activity for early finishers. \n",
         "student_overview": "Make the app respond to what the user chooses in exciting new ways."
       },
@@ -152,8 +156,9 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "assessment_opportunities": "[[Optional] Poem App Rubric](https://docs.google.com/document/d/1zf6k1Xv4xWYneho7kOzUGLW9Cy-JKxJIdk70p6ftB1o/template/preview)",
         "overview": "In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.",
-        "preparation": "- Prepare one computer per student.\n- Prepare one copy of the “Share Your App” handout per student.\n- Make sure students have a copy of their original poem handy for this lesson.  \n- Divide the class into pairs for the Poetry Pair-Share activity.\n- [Optional, especially for remote teaching] Determine whether you need to set up a digital document or shared online space to post each student’s app URL (see teacher template in “Links”). \n",
+        "preparation": "- Prepare one computer per student.\n- Prepare one copy of the “Share Your App” handout per student.\n- Modify the rubric to fit your class goals and print out a copy for each student.\n- Make sure students have a copy of their original poem handy for this lesson.  \n- Divide the class into pairs for the Poetry Pair-Share activity.\n- [Optional, especially for remote teaching] Determine whether you need to set up a digital document or shared online space to post each student’s app URL (see teacher template in “Links”). \n",
         "student_overview": "Share your new poem apps with your friends! "
       },
       "seeding_key": {
@@ -2780,6 +2785,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_share"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2801,6 +2809,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_module_modeling_exemple"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3255,13 +3266,13 @@
     {
       "name": "[Optional] Poem App",
       "url": "https://docs.google.com/document/d/1zf6k1Xv4xWYneho7kOzUGLW9Cy-JKxJIdk70p6ftB1o/template/preview",
-      "key": "_optional_poem_app_1",
+      "key": "_optional_poem_app_2",
       "properties": {
         "audience": "Teacher",
         "type": "Rubric"
       },
       "seeding_key": {
-        "resource.key": "_optional_poem_app_1"
+        "resource.key": "_optional_poem_app_2"
       }
     },
     {
@@ -3373,6 +3384,54 @@
       }
     },
     {
+      "name": "Poem Art 1 - Introduction",
+      "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+      "key": "poem_art_1_-_introduction",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "poem_art_1_-_introduction"
+      }
+    },
+    {
+      "name": "Poem Art 2 - Events",
+      "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
+      "key": "poem_art_2_-_events",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "poem_art_2_-_events"
+      }
+    },
+    {
+      "name": "Poem Art 3 - Imagery",
+      "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
+      "key": "poem_art_3_-_imagery",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "poem_art_3_-_imagery"
+      }
+    },
+    {
+      "name": "Poem Art 4 - Celebration",
+      "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
+      "key": "poem_art_4_-_celebration",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "poem_art_4_-_celebration"
+      }
+    },
+    {
       "name": "Share Your App!",
       "url": "https://docs.google.com/document/d/1CW-IkOnFTTPD038tVzGrifGVoMZKUgzrGecP5jsZo8I/template/preview",
       "key": "share_your_app_",
@@ -3418,6 +3477,30 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "poem_art_1_-_introduction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "poem_art_2_-_events"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "poem_art_3_-_imagery"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "poem_art_4_-_celebration"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "coding_with_poetry_modules"
       }
@@ -3455,7 +3538,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-4",
-        "resource.key": "_optional_poem_app_1"
+        "resource.key": "_optional_poem_app"
       }
     },
     {
@@ -3479,6 +3562,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "_optional_poem_app_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "resource.key": "choosing_words_carefully"
       }
     },
@@ -3497,6 +3586,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-6",
+        "resource.key": "_optional_poem_app"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
         "resource.key": "_optional_student_url_sharing_document"
       }
     },
@@ -3510,6 +3605,12 @@
       "seeding_key": {
         "lesson.key": "lesson-6",
         "resource.key": "share_your_app_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "resource.key": "_optional_poem_app"
       }
     },
     {
