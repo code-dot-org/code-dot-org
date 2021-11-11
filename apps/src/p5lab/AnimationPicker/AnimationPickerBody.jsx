@@ -12,7 +12,6 @@ import {
   searchAssets,
   filterOutBackgrounds
 } from '@cdo/apps/code-studio/assets/searchAssets';
-import experiments from '@cdo/apps/util/experiments';
 import Button from '@cdo/apps/templates/Button';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
@@ -45,7 +44,6 @@ export default class AnimationPickerBody extends React.Component {
 
   componentDidMount() {
     this.scrollListContainer = React.createRef();
-    this.multiSelectEnabled_ = experiments.isEnabled(experiments.MULTISELECT);
   }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -168,23 +166,17 @@ export default class AnimationPickerBody extends React.Component {
     ));
   }
 
-  animationItemsRendering(animations, isMultiSelectEnabled) {
+  animationItemsRendering(animations) {
     return animations.map(animationProps => (
       <AnimationPickerListItem
         key={animationProps.sourceUrl}
         label={this.props.hideAnimationNames ? undefined : animationProps.name}
         animationProps={animationProps}
-        onClick={() =>
-          this.props.onPickLibraryAnimation(
-            animationProps,
-            isMultiSelectEnabled
-          )
-        }
+        onClick={() => this.props.onPickLibraryAnimation(animationProps)}
         playAnimations={this.props.playAnimations}
         selected={this.props.selectedAnimations.some(
           e => e.sourceUrl === animationProps.sourceUrl
         )}
-        multiSelectEnabled={this.multiSelectEnabled_}
       />
     ));
   }
@@ -204,8 +196,7 @@ export default class AnimationPickerBody extends React.Component {
 
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
-    const shouldDisplaySecondDoneButton =
-      this.multiSelectEnabled_ && isMobileDevice();
+    const shouldDisplaySecondDoneButton = isMobileDevice();
 
     return (
       <div style={{marginBottom: 10}}>
@@ -275,22 +266,18 @@ export default class AnimationPickerBody extends React.Component {
               categoryQuery === '' &&
               this.animationCategoriesRendering()}
             {(searchQuery !== '' || categoryQuery !== '') &&
-              this.animationItemsRendering(
-                results || [],
-                this.multiSelectEnabled_
-              )}
+              this.animationItemsRendering(results || [])}
           </ScrollableList>
         </div>
-        {this.multiSelectEnabled_ &&
-          (searchQuery !== '' || categoryQuery !== '') && (
-            <div style={styles.footer}>
-              <Button
-                text={msg.done()}
-                onClick={onAnimationSelectionComplete}
-                color={Button.ButtonColor.orange}
-              />
-            </div>
-          )}
+        {(searchQuery !== '' || categoryQuery !== '') && (
+          <div style={styles.footer}>
+            <Button
+              text={msg.done()}
+              onClick={onAnimationSelectionComplete}
+              color={Button.ButtonColor.orange}
+            />
+          </div>
+        )}
       </div>
     );
   }
