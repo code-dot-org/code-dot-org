@@ -272,6 +272,7 @@ export default class AnimationPickerBody extends React.Component {
         {(searchQuery !== '' || categoryQuery !== '') && (
           <div style={styles.footer}>
             <Button
+              className="ui-test-selector-done-button"
               text={msg.done()}
               onClick={onAnimationSelectionComplete}
               color={Button.ButtonColor.orange}
