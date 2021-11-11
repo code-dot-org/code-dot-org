@@ -107,15 +107,16 @@ export default class JavabuilderConnection {
         lineBreakCount = 1;
         break;
       case StatusMessageType.TIMEOUT_WARNING:
-        // need to test this
         message = javalabMsg.timeoutWarning();
         lineBreakCount = 1;
         break;
       case StatusMessageType.TIMEOUT:
-        // need to test this
-        // is this akin to "onexit"? should we execute onexit() here?
         message = javalabMsg.timeout();
-        lineBreakCount = 1;
+        // This should be the last message that Javalab receives,
+        // so add an extra line break to separate status messages
+        // from consecutive runs.
+        lineBreakCount = 2;
+        this.onTimeout();
         break;
       case StatusMessageType.EXITED:
         this.onNewlineMessage();
@@ -197,6 +198,10 @@ export default class JavabuilderConnection {
     this.onNewlineMessage();
     this.handleExecutionFinished();
     console.error(`[error] ${error.message}`);
+  }
+
+  onTimeout() {
+    this.setIsRunning(false);
   }
 
   // Send a message across the websocket connection to Javabuilder
