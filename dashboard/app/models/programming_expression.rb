@@ -38,6 +38,7 @@ class ProgrammingExpression < ApplicationRecord
     tips
     palette_params
     examples
+    video_key
   )
 
   def key_format
@@ -192,6 +193,7 @@ class ProgrammingExpression < ApplicationRecord
       category: category,
       programmingEnvironmentName: programming_environment.name,
       imageUrl: image_url,
+      videoKey: video_key,
       shortDescription: short_description || '',
       externalDocumentation: external_documentation || '',
       content: content || '',
