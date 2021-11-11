@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-11 19:46:30 UTC",
+    "serialized_at": "2021-11-11 20:10:13 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -627,7 +627,7 @@
       "key": "2ae1e21d-a631-475a-8dc1-1fbf0026f39a",
       "position": 1,
       "properties": {
-        "description": "If you enjoyed learning to code today, you can continue learning by visiting code.org/learn. If you want to share what you made with your friends and family, click the “Share” button and send the link to whoever you like!",
+        "description": "If you enjoyed learning to code today, you can continue learning by visiting [code.org/learn](https://code.org/learn). If you want to share what you made with your friends and family, click the “Share” button and send the link to whoever you like!",
         "remarks": true
       },
       "seeding_key": {
