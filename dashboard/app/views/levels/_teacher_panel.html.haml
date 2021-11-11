@@ -2,6 +2,7 @@
 - data[:script_name] = @script.name
 - data[:script_id] = @script.id
 - data[:lesson_extra] = @lesson_extras
+- data[:is_verified_teacher] = @current_user.authorized_teacher?
 
 - if @lesson_extras
   - data[:page_type] = 'lesson_extras'

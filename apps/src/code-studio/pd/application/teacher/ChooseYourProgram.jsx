@@ -119,22 +119,26 @@ const ChooseYourProgram = props => {
 
           {data.program === PROGRAM_CSA && (
             <>
-              <LabeledRadioButtons name="csaAlreadyKnow" required={false} />
+              <LabeledRadioButtons name="csaAlreadyKnow" />
               {data.csaAlreadyKnow === 'No' && (
                 <p style={styles.error}>
                   We don’t recommend this program for teachers completely new to
-                  CS. Consider starting with CS Principles Professional Learning
-                  or plan for additional onboarding in preparation for this
-                  program.
+                  CS. If possible, consider teaching CS Principles in the
+                  upcoming school year and applying for our CS Principles
+                  Professional Learning program. If this is not possible, plan
+                  to spend at least 40 hours learning foundational CS concepts
+                  prior to attending our professional learning for CSA.
                 </p>
               )}
-              <LabeledRadioButtons name="csaPhoneScreen" required={false} />
+              <LabeledRadioButtons name="csaPhoneScreen" />
               {data.csaPhoneScreen === 'No' && (
                 <p style={styles.error}>
                   We recommend deepening your content knowledge prior to
                   starting this program. This can be accomplished by completing
-                  some additional onboarding that will be shared with you once
-                  accepted to the program.
+                  some additional onboarding prior to attending the CSA
+                  Professional Learning program. Your regional partner will
+                  share this with you after you have been accepted into the
+                  program.
                 </p>
               )}
               <LabeledCheckBoxes name="csaWhichGrades" />
@@ -223,7 +227,7 @@ const ChooseYourProgram = props => {
                 programInfo.name
               )}
               textFieldMap={{
-                [TextFields.iDontKnowExplain]: 'other'
+                [TextFields.otherPleaseExplain]: 'other'
               }}
             />
           )}
@@ -247,7 +251,12 @@ ChooseYourProgram.associatedFields = [
 const uniqueRequiredFields = {
   [PROGRAM_CSD]: ['csdWhichGrades'],
   [PROGRAM_CSP]: ['cspWhichGrades', 'cspHowOffer'],
-  [PROGRAM_CSA]: ['csaWhichGrades', 'csaHowOffer']
+  [PROGRAM_CSA]: [
+    'csaWhichGrades',
+    'csaHowOffer',
+    'csaAlreadyKnow',
+    'csaPhoneScreen'
+  ]
 };
 
 ChooseYourProgram.getDynamicallyRequiredFields = data => {
@@ -277,12 +286,6 @@ ChooseYourProgram.processPageData = data => {
       });
     });
   }
-  // the following are unique to csa but not required
-  if (data.program && data.program !== PROGRAM_CSA) {
-    changes.csaAlreadyKnow = undefined;
-    changes.csaPhoneScreen = undefined;
-  }
-
   if (data.replaceExisting !== 'Yes') {
     changes.replaceWhichCourse = undefined;
   }
