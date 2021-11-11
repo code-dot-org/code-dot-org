@@ -5,8 +5,9 @@ import {
 } from './constants';
 import javalabMsg from '@cdo/javalab/locale';
 
-const UPLOAD_SUCCESS_MESSAGE = 'UPLOAD_SUCCESS';
-const UPLOAD_ERROR_MESSAGE = 'UPLOAD_ERROR';
+// Exported for tests
+export const UPLOAD_SUCCESS_MESSAGE = 'UPLOAD_SUCCESS';
+export const UPLOAD_ERROR_MESSAGE = 'UPLOAD_ERROR';
 
 export default class Theater {
   constructor(
@@ -108,7 +109,7 @@ export default class Theater {
     if (!this.prompterUploadUrl) {
       // The upload URL should be provided when opening the prompter, so if
       // it is somehow not set, we are in an invalid scenario.
-      console.error('No upload URL available. Cannot upload prompter image.');
+      console.warn('No upload URL available. Cannot upload prompter image.');
       this.onJavabuilderMessage(InputMessageType.THEATER, UPLOAD_ERROR_MESSAGE);
       return;
     }
