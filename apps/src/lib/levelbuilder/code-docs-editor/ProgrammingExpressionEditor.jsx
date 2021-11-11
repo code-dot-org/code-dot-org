@@ -45,7 +45,8 @@ function renderExampleEditor(example, updateFunc) {
 
 export default function ProgrammingExpressionEditor({
   initialProgrammingExpression,
-  environmentCategories
+  environmentCategories,
+  videoOptions
 }) {
   // We don't want to update id or key
   const {
@@ -115,6 +116,23 @@ export default function ProgrammingExpressionEditor({
       <label>
         Key (Used in URLs)
         <input value={key} readOnly style={styles.textInput} />
+      </label>
+      <label>
+        Video
+        <select
+          value={programmingExpression.videoKey || ''}
+          onChange={e =>
+            updateProgrammingExpression('videoKey', e.target.value)
+          }
+          style={styles.selectInput}
+        >
+          <option value={''}>---</option>
+          {videoOptions.map(video => (
+            <option key={video.key} value={video.key}>
+              {video.name}
+            </option>
+          ))}
+        </select>
       </label>
       <label>
         Image
@@ -268,7 +286,8 @@ const programmingExpressionShape = PropTypes.shape({
 
 ProgrammingExpressionEditor.propTypes = {
   initialProgrammingExpression: programmingExpressionShape.isRequired,
-  environmentCategories: PropTypes.arrayOf(PropTypes.string).isRequired
+  environmentCategories: PropTypes.arrayOf(PropTypes.string).isRequired,
+  videoOptions: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 const styles = {
@@ -287,6 +306,7 @@ const styles = {
     color: '#555',
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
+    marginBottom: 0,
     marginLeft: 5
   }
 };

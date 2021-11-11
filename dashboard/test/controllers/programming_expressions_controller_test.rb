@@ -35,6 +35,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       key: programming_expression.key,
       name: 'new name',
       category: 'world',
+      videoKey: 'video-key',
       imageUrl: 'image.code.org/foo',
       shortDescription: 'short description of code',
       externalDocumentation: 'google.com',
@@ -50,6 +51,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
 
     assert_equal 'new name', programming_expression.name
     assert_equal 'world', programming_expression.category
+    assert_equal 'video-key', programming_expression.video_key
     assert_equal 'image.code.org/foo', programming_expression.image_url
     assert_equal 'short description of code', programming_expression.short_description
     assert_equal 'google.com', programming_expression.external_documentation

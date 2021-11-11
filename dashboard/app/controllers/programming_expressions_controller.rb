@@ -64,6 +64,7 @@ class ProgrammingExpressionsController < ApplicationController
     transformed_params = transformed_params.permit(
       :name,
       :category,
+      :video_key,
       :image_url,
       :short_description,
       :external_documentation,
