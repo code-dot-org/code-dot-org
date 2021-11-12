@@ -106,7 +106,6 @@ export default class Theater {
     if (!this.prompterUploadUrl) {
       // The upload URL should be provided when opening the prompter, so if
       // it is somehow not set, we are in an invalid scenario.
-      console.warn('No upload URL available. Cannot upload prompter image.');
       this.onJavabuilderMessage(
         InputMessageType.THEATER,
         InputMessage.UPLOAD_ERROR
