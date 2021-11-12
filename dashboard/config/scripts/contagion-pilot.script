@@ -1,6 +1,9 @@
 teacher_resources [["lessonPlans", "https://docs.google.com/document/d/1wBceXwfyyJKqjKmSQaT_DlyLXlLG3qd3Qm_yL0mNgi8/edit?usp=sharing"]]
+family_name 'contagion-pilot'
+version_year 'unversioned'
 published_state 'pilot'
 pilot_experiment 'contagion-pilot'
+is_course true
 
 lesson_group 'contagion', display_name: 'Contagion'
 lesson 'how things spread', display_name: 'How Things Spread', has_lesson_plan: false

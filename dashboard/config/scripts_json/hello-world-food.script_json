@@ -7,14 +7,17 @@
       "curriculum_umbrella": "CSC",
       "is_course": true,
       "is_migrated": true,
+      "redirect_to": "hello-world-food-2021",
       "tts": true,
-      "version_year": "2021"
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "hello-world-food",
-    "serialized_at": "2021-10-25 22:54:58 UTC",
+    "serialized_at": "2021-11-10 21:22:00 UTC",
     "published_state": "beta",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "hello-world-food"
     }
