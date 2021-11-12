@@ -50,7 +50,6 @@ function CodeReviewGroupsStatusToggle({
           isToggledOn={isToggledOn}
           onToggle={toggleEnableCodeReview}
           label={i18n.enableCodeReview()}
-          disabled={saveInProgress}
         />
         {saveInProgress && <Spinner style={styles.spinner} size="medium" />}
         {saveError && (
@@ -76,6 +75,8 @@ CodeReviewGroupsStatusToggle.propTypes = {
   sectionId: PropTypes.number,
   setCodeReviewExpiration: PropTypes.func
 };
+
+export const UnconnectedCodeReviewGroupsStatusToggle = CodeReviewGroupsStatusToggle;
 
 export default connect(
   state => ({

@@ -9,8 +9,7 @@ class ToggleSwitch extends React.Component {
   static propTypes = {
     isToggledOn: PropTypes.bool.isRequired,
     onToggle: PropTypes.func.isRequired,
-    label: PropTypes.string.isRequired,
-    disabled: PropTypes.bool.isRequired
+    label: PropTypes.string.isRequired
   };
 
   render() {
