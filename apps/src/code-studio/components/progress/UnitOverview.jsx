@@ -62,6 +62,7 @@ class UnitOverview extends React.Component {
     scriptOverviewPdfUrl: PropTypes.string,
     scriptResourcesPdfUrl: PropTypes.string,
     showUnversionedRedirectWarning: PropTypes.bool,
+    showNoSaveWarning: PropTypes.bool,
 
     // redux provided
     perLevelResults: PropTypes.object.isRequired,
@@ -132,7 +133,8 @@ class UnitOverview extends React.Component {
       isMigrated,
       scriptOverviewPdfUrl,
       scriptResourcesPdfUrl,
-      showUnversionedRedirectWarning
+      showUnversionedRedirectWarning,
+      showNoSaveWarning
     } = this.props;
 
     const displayRedirectDialog =
@@ -184,6 +186,7 @@ class UnitOverview extends React.Component {
               versions={versions}
               courseName={courseName}
               userId={userId}
+              showNoSaveWarning={showNoSaveWarning}
             />
             {showCalendar && viewAs === ViewType.Teacher && (
               <div className="unit-calendar-for-printing print-only">

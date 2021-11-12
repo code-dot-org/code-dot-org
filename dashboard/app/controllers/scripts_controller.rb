@@ -49,6 +49,7 @@ class ScriptsController < ApplicationController
       @sections_with_assigned_info = sections&.map {|section| section.merge!({"isAssigned" => section[:script_id] == @script.id})}
     end
 
+    @show_no_save_warning = !Gatekeeper.allows('postMilestone', where: {script_name: @script.name}, default: true)
     @show_unversioned_redirect_warning = !!session[:show_unversioned_redirect_warning] && !@script.is_course
     session[:show_unversioned_redirect_warning] = false
 

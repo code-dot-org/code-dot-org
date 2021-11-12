@@ -39,6 +39,7 @@ class UnitOverviewHeader extends Component {
     showScriptVersionWarning: PropTypes.bool,
     showRedirectWarning: PropTypes.bool,
     showHiddenUnitWarning: PropTypes.bool,
+    showNoSaveWarning: PropTypes.bool,
     courseName: PropTypes.string,
     versions: PropTypes.arrayOf(assignmentVersionShape).isRequired,
     userId: PropTypes.number,
@@ -109,7 +110,8 @@ class UnitOverviewHeader extends Component {
       courseName,
       userId,
       isVerifiedTeacher,
-      hasVerifiedResources
+      hasVerifiedResources,
+      showNoSaveWarning
     } = this.props;
 
     const displayVerifiedResources =
@@ -154,6 +156,14 @@ class UnitOverviewHeader extends Component {
               script_id: scriptId,
               user_id: userId
             }}
+          />
+        )}
+        {showNoSaveWarning && (
+          <Notification
+            type={NotificationType.failure}
+            notice={i18n.noSaveWarning()}
+            details={i18n.noSaveWarningDetails()}
+            dismissible={false}
           />
         )}
         {userId && <StudentFeedbackNotification studentId={userId} />}
