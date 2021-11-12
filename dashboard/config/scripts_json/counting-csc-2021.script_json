@@ -1,6 +1,6 @@
 {
   "script": {
-    "name": "counting-csc",
+    "name": "counting-csc-2021",
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
@@ -9,19 +9,17 @@
       "include_student_lesson_plans": true,
       "is_course": true,
       "is_migrated": true,
-      "redirect_to": "counting-csc-2021",
-      "tts": true,
-      "version_year": "unversioned"
+      "version_year": "2021"
     },
     "new_name": null,
     "family_name": "counting-csc",
-    "serialized_at": "2021-11-12 12:35:08 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-11-12 12:34:52 UTC",
+    "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {
-      "script.name": "counting-csc"
+      "script.name": "counting-csc-2021"
     }
   },
   "lesson_groups": [
@@ -33,13 +31,13 @@
       },
       "seeding_key": {
         "lesson_group.key": "",
-        "script.name": "counting-csc"
+        "script.name": "counting-csc-2021"
       }
     }
   ],
   "lessons": [
     {
-      "key": "lesson-1",
+      "key": "Counting with Laurel",
       "name": "Counting with Laurel",
       "absolute_position": 1,
       "lockable": false,
@@ -51,59 +49,59 @@
         "student_overview": "Help Laurel, the treasure hunter, count and add steps to collect gems!"
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc"
+        "script.name": "counting-csc-2021"
       }
     }
   ],
   "lesson_activities": [
     {
-      "key": "8a00e35f-038b-4fb0-b85b-79b22953b2bd",
+      "key": "ab6900a4-d55e-4b44-a579-3e549b058eba",
       "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "8a00e35f-038b-4fb0-b85b-79b22953b2bd",
-        "lesson.key": "lesson-1",
+        "lesson_activity.key": "ab6900a4-d55e-4b44-a579-3e549b058eba",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc"
+        "script.name": "counting-csc-2021"
       }
     },
     {
-      "key": "1e16fd42-9561-4ec9-a85f-464f8ddcb658",
+      "key": "6aa256f0-389b-446d-86a6-bbe77eb68399",
       "position": 2,
       "properties": {
         "duration": 30,
         "name": "Main Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "1e16fd42-9561-4ec9-a85f-464f8ddcb658",
-        "lesson.key": "lesson-1",
+        "lesson_activity.key": "6aa256f0-389b-446d-86a6-bbe77eb68399",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc"
+        "script.name": "counting-csc-2021"
       }
     },
     {
-      "key": "3914a045-61d6-4c93-b71d-89018a22723a",
+      "key": "0fc661ca-6daf-4778-94a1-5412e9ce217e",
       "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "3914a045-61d6-4c93-b71d-89018a22723a",
-        "lesson.key": "lesson-1",
+        "lesson_activity.key": "0fc661ca-6daf-4778-94a1-5412e9ce217e",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc"
+        "script.name": "counting-csc-2021"
       }
     }
   ],
   "activity_sections": [
     {
-      "key": "2c418e94-1663-4a58-8a9f-574cb4a3898f",
+      "key": "5c069462-7dbf-49ea-b51f-b6ef282e03f3",
       "position": 1,
       "properties": {
         "name": "Introduction",
@@ -115,24 +113,24 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "2c418e94-1663-4a58-8a9f-574cb4a3898f",
-        "lesson_activity.key": "8a00e35f-038b-4fb0-b85b-79b22953b2bd"
+        "activity_section.key": "5c069462-7dbf-49ea-b51f-b6ef282e03f3",
+        "lesson_activity.key": "ab6900a4-d55e-4b44-a579-3e549b058eba"
       }
     },
     {
-      "key": "7aa7bd19-8bfb-4f16-bb88-b4443caab034",
+      "key": "4d8ddbac-bc5f-45fb-875a-4577d9ddef84",
       "position": 2,
       "properties": {
         "description": "Today we are using code to help Laurel count and collect gems. Let’s warm up by counting up to ten using our fingers to get ready to help Laurel.  Ready? 1, 2, 3 …10.  Let’s do that again.  Ready?  1, 2, 3 ...10.  ",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "7aa7bd19-8bfb-4f16-bb88-b4443caab034",
-        "lesson_activity.key": "8a00e35f-038b-4fb0-b85b-79b22953b2bd"
+        "activity_section.key": "4d8ddbac-bc5f-45fb-875a-4577d9ddef84",
+        "lesson_activity.key": "ab6900a4-d55e-4b44-a579-3e549b058eba"
       }
     },
     {
-      "key": "37f18d15-9420-4404-bf01-89984652ab9c",
+      "key": "832534be-0d9f-4307-b81f-5aa7577ca638",
       "position": 1,
       "properties": {
         "description": "####Modeling a Think Aloud\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out the warm-up worksheet to students. Display the first puzzle on the slides.",
@@ -145,93 +143,93 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "37f18d15-9420-4404-bf01-89984652ab9c",
-        "lesson_activity.key": "1e16fd42-9561-4ec9-a85f-464f8ddcb658"
+        "activity_section.key": "832534be-0d9f-4307-b81f-5aa7577ca638",
+        "lesson_activity.key": "6aa256f0-389b-446d-86a6-bbe77eb68399"
       }
     },
     {
-      "key": "7f7186bf-7a57-4e08-b016-c1a0c474b360",
+      "key": "298743fd-eae1-496e-ab67-cdae006a7e14",
       "position": 2,
       "properties": {
         "description": "**Do This:** Model for students your thinking process out loud when going through the actions and steps to help Laurel collect her gems. Share with students that they will think out loud as they help Laurel in later puzzles.\n\n**Say:** *As I’m getting ready to help Laurel, I should think about...*\n- *counting how many gems I want Laurel to collect.*\n- *counting how many steps Laurel should take to collect the gems.*\n- *pointing in the direction Laurel should take to collect the gems.*\n\nComplete the first problem as a class, modeling how to draw the arrows for Laurel’s movement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Think Pair Share:** Have students try the next problem individually or with a partner, then display the puzzle on the slides and discuss it as a class. Ask students to explain their thinking.\n\n\n\n"
       },
       "seeding_key": {
-        "activity_section.key": "7f7186bf-7a57-4e08-b016-c1a0c474b360",
-        "lesson_activity.key": "1e16fd42-9561-4ec9-a85f-464f8ddcb658"
+        "activity_section.key": "298743fd-eae1-496e-ab67-cdae006a7e14",
+        "lesson_activity.key": "6aa256f0-389b-446d-86a6-bbe77eb68399"
       }
     },
     {
-      "key": "34101fb1-8c25-48ad-80e9-8128bc9a8d3a",
+      "key": "4aaa7148-1a1b-4b97-bfef-4f0caaa0170d",
       "position": 3,
       "properties": {
         "description": "####Solving Puzzles with Code\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Introduction to Maze Puzzles video as a class.",
         "progression_name": "Video: Introduction to Maze Puzzles"
       },
       "seeding_key": {
-        "activity_section.key": "34101fb1-8c25-48ad-80e9-8128bc9a8d3a",
-        "lesson_activity.key": "1e16fd42-9561-4ec9-a85f-464f8ddcb658"
+        "activity_section.key": "4aaa7148-1a1b-4b97-bfef-4f0caaa0170d",
+        "lesson_activity.key": "6aa256f0-389b-446d-86a6-bbe77eb68399"
       }
     },
     {
-      "key": "cdf431db-9a1d-4333-9f25-fb22d630f091",
+      "key": "1ff15821-2109-49bf-986c-406b979dd035",
       "position": 4,
       "properties": {
         "description": "**(Optional) Pair Students:** Have students work in pairs to complete the puzzles, where one person controls the computer and the other person describes how to solve the puzzle. This is sometimes called Pair Programming, and you can consider showing this [Pair Programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) video to help students engage in this activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open up the second puzzle. Students can start working through levels two through five.\n\n\n\n\n**Levels 2-3:** These levels are meant to introduce the Maze and drag-and-drop environment to your students before returning to the collector puzzles with Laurel. Use this as an opportunity to help troubleshoot any tech issues or confusion around how to drag-and-drop blocks in these levels.",
         "progression_name": "Maze Practice"
       },
       "seeding_key": {
-        "activity_section.key": "cdf431db-9a1d-4333-9f25-fb22d630f091",
-        "lesson_activity.key": "1e16fd42-9561-4ec9-a85f-464f8ddcb658"
+        "activity_section.key": "1ff15821-2109-49bf-986c-406b979dd035",
+        "lesson_activity.key": "6aa256f0-389b-446d-86a6-bbe77eb68399"
       }
     },
     {
-      "key": "46ed427e-1273-4090-9fee-37bf0f0cdb77",
+      "key": "5ff4f004-7859-4466-9a46-f4fc32418bc9",
       "position": 5,
       "properties": {
         "progression_name": "Video: The Collector"
       },
       "seeding_key": {
-        "activity_section.key": "46ed427e-1273-4090-9fee-37bf0f0cdb77",
-        "lesson_activity.key": "1e16fd42-9561-4ec9-a85f-464f8ddcb658"
+        "activity_section.key": "5ff4f004-7859-4466-9a46-f4fc32418bc9",
+        "lesson_activity.key": "6aa256f0-389b-446d-86a6-bbe77eb68399"
       }
     },
     {
-      "key": "84799498-ed29-4eef-a7c5-45e803b0313c",
+      "key": "9dcf3b44-566d-43bb-8649-cf1f93cae27d",
       "position": 6,
       "properties": {
         "progression_name": "Practice"
       },
       "seeding_key": {
-        "activity_section.key": "84799498-ed29-4eef-a7c5-45e803b0313c",
-        "lesson_activity.key": "1e16fd42-9561-4ec9-a85f-464f8ddcb658"
+        "activity_section.key": "9dcf3b44-566d-43bb-8649-cf1f93cae27d",
+        "lesson_activity.key": "6aa256f0-389b-446d-86a6-bbe77eb68399"
       }
     },
     {
-      "key": "a2b1656d-cdd9-49c1-8808-3bca9140bd4d",
+      "key": "d6304714-1c7c-4482-9397-2c4c62008e3c",
       "position": 7,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:**  Regroup the class to watch the Repeat Block video together. If some students are still working on the Maze levels, it's okay to skip them ahead to the Collector levels.",
         "progression_name": "Video: The Repeat Block"
       },
       "seeding_key": {
-        "activity_section.key": "a2b1656d-cdd9-49c1-8808-3bca9140bd4d",
-        "lesson_activity.key": "1e16fd42-9561-4ec9-a85f-464f8ddcb658"
+        "activity_section.key": "d6304714-1c7c-4482-9397-2c4c62008e3c",
+        "lesson_activity.key": "6aa256f0-389b-446d-86a6-bbe77eb68399"
       }
     },
     {
-      "key": "a61f7370-8907-4a93-8617-345ead283c49",
+      "key": "fe20899d-5c5c-4c09-8c3a-539dbe3b7ce6",
       "position": 8,
       "properties": {
         "description": "**Model:** Continue to the next level as a class. Model for students how to use the Repeat block to solve the puzzle, emphasizing the relationship between counting and the number that goes into the top of the repeat block.",
         "progression_name": "Model Level"
       },
       "seeding_key": {
-        "activity_section.key": "a61f7370-8907-4a93-8617-345ead283c49",
-        "lesson_activity.key": "1e16fd42-9561-4ec9-a85f-464f8ddcb658"
+        "activity_section.key": "fe20899d-5c5c-4c09-8c3a-539dbe3b7ce6",
+        "lesson_activity.key": "6aa256f0-389b-446d-86a6-bbe77eb68399"
       }
     },
     {
-      "key": "2708da1f-1279-4a7b-92c5-5df00921fe17",
+      "key": "00d75b0d-dd06-4b2c-a1bb-bf023a536330",
       "position": 9,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students continue to work through the levels in Code Studio.",
@@ -244,44 +242,44 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "2708da1f-1279-4a7b-92c5-5df00921fe17",
-        "lesson_activity.key": "1e16fd42-9561-4ec9-a85f-464f8ddcb658"
+        "activity_section.key": "00d75b0d-dd06-4b2c-a1bb-bf023a536330",
+        "lesson_activity.key": "6aa256f0-389b-446d-86a6-bbe77eb68399"
       }
     },
     {
-      "key": "b9cf9060-68c1-4070-bc45-27f7037d983d",
+      "key": "0e80d175-d736-4827-aa74-0ef955df30cf",
       "position": 10,
       "properties": {
         "description": "While students work through levels, you can use these strategies to support a productive classroom environment and support students who may get stuck.\n- **Take Your Time:** Encourage students to take their time and experiment. Staying on a level and tinkering with their code is highly encouraged. \n- **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- **Read the Instructions:** The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level. \n- **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. \n\n",
         "name": "General Support"
       },
       "seeding_key": {
-        "activity_section.key": "b9cf9060-68c1-4070-bc45-27f7037d983d",
-        "lesson_activity.key": "1e16fd42-9561-4ec9-a85f-464f8ddcb658"
+        "activity_section.key": "0e80d175-d736-4827-aa74-0ef955df30cf",
+        "lesson_activity.key": "6aa256f0-389b-446d-86a6-bbe77eb68399"
       }
     },
     {
-      "key": "b6cf49d2-a18c-4288-ba1a-848c081650a4",
+      "key": "38a6572f-7a20-4d58-834c-c6ae5ff44f28",
       "position": 1,
       "properties": {
         "name": "Math Talk",
         "progression_name": "Math Talk"
       },
       "seeding_key": {
-        "activity_section.key": "b6cf49d2-a18c-4288-ba1a-848c081650a4",
-        "lesson_activity.key": "3914a045-61d6-4c93-b71d-89018a22723a"
+        "activity_section.key": "38a6572f-7a20-4d58-834c-c6ae5ff44f28",
+        "lesson_activity.key": "0fc661ca-6daf-4778-94a1-5412e9ce217e"
       }
     },
     {
-      "key": "24bae88f-77be-4be4-bdf7-d922de329dd0",
+      "key": "35aeef87-2f5b-4190-8b75-3a108f4935b9",
       "position": 2,
       "properties": {
         "description": "**Do This:** Pass out the Wrap Up worksheet to each student.\n\nGuide the Math Talk with the whole class by using the example in the Wrap-Up worksheet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _How many gems should Laurel collect?  How many steps should Laurel take to collect the gems?_\n\nAs you discuss these prompts with students, incorporate concepts of addition into the discussion by pointing out the different gems along Laurel’s path (West, South, then West again). Students can use manipulatives (ie: blocks, fingers) or images from the handout to help explain their reasoning. Consider the following prompts as part of this discussion:\n\n- *Show me with your fingers how many gems Laurel should collect going West? Going South? Going West Again.*\n- *What if Laurel collects the first three gems, how many more gems should Laurel collect to finish the puzzle?*\n  - For this type of question, using directions might help students develop multiple ways to show collecting gems such as 3 + 5 + 2 ( three west, five south, two west).\n",
         "progression_name": "Math Talk"
       },
       "seeding_key": {
-        "activity_section.key": "24bae88f-77be-4be4-bdf7-d922de329dd0",
-        "lesson_activity.key": "3914a045-61d6-4c93-b71d-89018a22723a"
+        "activity_section.key": "35aeef87-2f5b-4190-8b75-3a108f4935b9",
+        "lesson_activity.key": "0fc661ca-6daf-4778-94a1-5412e9ce217e"
       }
     }
   ],
@@ -292,9 +290,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-laurel-1"
-        ],
         "progression": "Video: Introduction to Maze Puzzles"
       },
       "bonus": false,
@@ -302,10 +297,10 @@
         "script_level.level_keys": [
           "csc-laurel-1"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "34101fb1-8c25-48ad-80e9-8128bc9a8d3a"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "4aaa7148-1a1b-4b97-bfef-4f0caaa0170d"
       },
       "level_keys": [
         "csc-laurel-1"
@@ -317,9 +312,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-laurel-2"
-        ],
         "progression": "Maze Practice"
       },
       "bonus": false,
@@ -327,10 +319,10 @@
         "script_level.level_keys": [
           "csc-laurel-2"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "cdf431db-9a1d-4333-9f25-fb22d630f091"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "1ff15821-2109-49bf-986c-406b979dd035"
       },
       "level_keys": [
         "csc-laurel-2"
@@ -342,9 +334,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-laurel-3"
-        ],
         "progression": "Maze Practice"
       },
       "bonus": false,
@@ -352,10 +341,10 @@
         "script_level.level_keys": [
           "csc-laurel-3"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "cdf431db-9a1d-4333-9f25-fb22d630f091"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "1ff15821-2109-49bf-986c-406b979dd035"
       },
       "level_keys": [
         "csc-laurel-3"
@@ -367,9 +356,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-laurel-4"
-        ],
         "progression": "Video: The Collector"
       },
       "bonus": false,
@@ -377,10 +363,10 @@
         "script_level.level_keys": [
           "csc-laurel-4"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "46ed427e-1273-4090-9fee-37bf0f0cdb77"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "5ff4f004-7859-4466-9a46-f4fc32418bc9"
       },
       "level_keys": [
         "csc-laurel-4"
@@ -392,9 +378,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-laurel-5"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -402,10 +385,10 @@
         "script_level.level_keys": [
           "csc-laurel-5"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "84799498-ed29-4eef-a7c5-45e803b0313c"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "9dcf3b44-566d-43bb-8649-cf1f93cae27d"
       },
       "level_keys": [
         "csc-laurel-5"
@@ -417,9 +400,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-laurel-6"
-        ],
         "progression": "Video: The Repeat Block"
       },
       "bonus": false,
@@ -427,10 +407,10 @@
         "script_level.level_keys": [
           "csc-laurel-6"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "a2b1656d-cdd9-49c1-8808-3bca9140bd4d"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "d6304714-1c7c-4482-9397-2c4c62008e3c"
       },
       "level_keys": [
         "csc-laurel-6"
@@ -442,9 +422,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-laurel-7"
-        ],
         "progression": "Model Level"
       },
       "bonus": false,
@@ -452,10 +429,10 @@
         "script_level.level_keys": [
           "csc-laurel-7"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "a61f7370-8907-4a93-8617-345ead283c49"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "fe20899d-5c5c-4c09-8c3a-539dbe3b7ce6"
       },
       "level_keys": [
         "csc-laurel-7"
@@ -467,9 +444,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-laurel-8"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -477,10 +451,10 @@
         "script_level.level_keys": [
           "csc-laurel-8"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "2708da1f-1279-4a7b-92c5-5df00921fe17"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "00d75b0d-dd06-4b2c-a1bb-bf023a536330"
       },
       "level_keys": [
         "csc-laurel-8"
@@ -492,9 +466,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-laurel-9"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -502,10 +473,10 @@
         "script_level.level_keys": [
           "csc-laurel-9"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "2708da1f-1279-4a7b-92c5-5df00921fe17"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "00d75b0d-dd06-4b2c-a1bb-bf023a536330"
       },
       "level_keys": [
         "csc-laurel-9"
@@ -517,9 +488,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-laurel-10"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -527,10 +495,10 @@
         "script_level.level_keys": [
           "csc-laurel-10"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "2708da1f-1279-4a7b-92c5-5df00921fe17"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "00d75b0d-dd06-4b2c-a1bb-bf023a536330"
       },
       "level_keys": [
         "csc-laurel-10"
@@ -542,9 +510,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-laurel-11"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -552,10 +517,10 @@
         "script_level.level_keys": [
           "csc-laurel-11"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "2708da1f-1279-4a7b-92c5-5df00921fe17"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "00d75b0d-dd06-4b2c-a1bb-bf023a536330"
       },
       "level_keys": [
         "csc-laurel-11"
@@ -567,9 +532,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc-laurel-12"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -577,10 +539,10 @@
         "script_level.level_keys": [
           "csc-laurel-12"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "2708da1f-1279-4a7b-92c5-5df00921fe17"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "00d75b0d-dd06-4b2c-a1bb-bf023a536330"
       },
       "level_keys": [
         "csc-laurel-12"
@@ -592,9 +554,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc - stop math talk"
-        ],
         "progression": "Math Talk"
       },
       "bonus": false,
@@ -602,10 +561,10 @@
         "script_level.level_keys": [
           "csc - stop math talk"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "b6cf49d2-a18c-4288-ba1a-848c081650a4"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "38a6572f-7a20-4d58-834c-c6ae5ff44f28"
       },
       "level_keys": [
         "csc - stop math talk"
@@ -619,10 +578,10 @@
         "script_level.level_keys": [
           "csc-laurel-1"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "34101fb1-8c25-48ad-80e9-8128bc9a8d3a"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "4aaa7148-1a1b-4b97-bfef-4f0caaa0170d"
       }
     },
     {
@@ -631,10 +590,10 @@
         "script_level.level_keys": [
           "csc-laurel-2"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "cdf431db-9a1d-4333-9f25-fb22d630f091"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "1ff15821-2109-49bf-986c-406b979dd035"
       }
     },
     {
@@ -643,10 +602,10 @@
         "script_level.level_keys": [
           "csc-laurel-3"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "cdf431db-9a1d-4333-9f25-fb22d630f091"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "1ff15821-2109-49bf-986c-406b979dd035"
       }
     },
     {
@@ -655,10 +614,10 @@
         "script_level.level_keys": [
           "csc-laurel-4"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "46ed427e-1273-4090-9fee-37bf0f0cdb77"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "5ff4f004-7859-4466-9a46-f4fc32418bc9"
       }
     },
     {
@@ -667,10 +626,10 @@
         "script_level.level_keys": [
           "csc-laurel-5"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "84799498-ed29-4eef-a7c5-45e803b0313c"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "9dcf3b44-566d-43bb-8649-cf1f93cae27d"
       }
     },
     {
@@ -679,10 +638,10 @@
         "script_level.level_keys": [
           "csc-laurel-6"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "a2b1656d-cdd9-49c1-8808-3bca9140bd4d"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "d6304714-1c7c-4482-9397-2c4c62008e3c"
       }
     },
     {
@@ -691,10 +650,10 @@
         "script_level.level_keys": [
           "csc-laurel-7"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "a61f7370-8907-4a93-8617-345ead283c49"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "fe20899d-5c5c-4c09-8c3a-539dbe3b7ce6"
       }
     },
     {
@@ -703,10 +662,10 @@
         "script_level.level_keys": [
           "csc-laurel-8"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "2708da1f-1279-4a7b-92c5-5df00921fe17"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "00d75b0d-dd06-4b2c-a1bb-bf023a536330"
       }
     },
     {
@@ -715,10 +674,10 @@
         "script_level.level_keys": [
           "csc-laurel-9"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "2708da1f-1279-4a7b-92c5-5df00921fe17"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "00d75b0d-dd06-4b2c-a1bb-bf023a536330"
       }
     },
     {
@@ -727,10 +686,10 @@
         "script_level.level_keys": [
           "csc-laurel-10"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "2708da1f-1279-4a7b-92c5-5df00921fe17"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "00d75b0d-dd06-4b2c-a1bb-bf023a536330"
       }
     },
     {
@@ -739,10 +698,10 @@
         "script_level.level_keys": [
           "csc-laurel-11"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "2708da1f-1279-4a7b-92c5-5df00921fe17"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "00d75b0d-dd06-4b2c-a1bb-bf023a536330"
       }
     },
     {
@@ -751,10 +710,10 @@
         "script_level.level_keys": [
           "csc-laurel-12"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "2708da1f-1279-4a7b-92c5-5df00921fe17"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "00d75b0d-dd06-4b2c-a1bb-bf023a536330"
       }
     },
     {
@@ -763,10 +722,10 @@
         "script_level.level_keys": [
           "csc - stop math talk"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "lesson_group.key": "",
-        "script.name": "counting-csc",
-        "activity_section.key": "b6cf49d2-a18c-4288-ba1a-848c081650a4"
+        "script.name": "counting-csc-2021",
+        "activity_section.key": "38a6572f-7a20-4d58-834c-c6ae5ff44f28"
       }
     }
   ],
@@ -811,19 +770,19 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "resource.key": "counting_with_laurel"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "resource.key": "warm-up_counting_with_laurel_worksheet"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "resource.key": "wrap-up_counting_with_laurel_-_worksheet"
       }
     }
@@ -859,13 +818,13 @@
   "lessons_vocabularies": [
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "vocabulary.key": "loop"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "vocabulary.key": "repeat"
       }
     }
@@ -875,68 +834,68 @@
   ],
   "objectives": [
     {
-      "key": "1e9896d4-2b9f-4b4c-9ab6-5402214b30c0",
-      "properties": {
-        "description": "Break down a long sequence of instructions into repeatable sequences."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "1e9896d4-2b9f-4b4c-9ab6-5402214b30c0"
-      }
-    },
-    {
-      "key": "393b95d0-16f7-4566-a92d-a43bc501e183",
-      "properties": {
-        "description": "Represent addition in various ways (with objects, images, verbal explanations)."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "393b95d0-16f7-4566-a92d-a43bc501e183"
-      }
-    },
-    {
-      "key": "a4af9688-b756-4200-a331-0ea0af87c057",
+      "key": "201cdcd6-c8bd-471c-9eda-5277136fb0a6",
       "properties": {
         "description": "Count up to 10 and represent the value with the correct numeral."
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "a4af9688-b756-4200-a331-0ea0af87c057"
+        "lesson.key": "Counting with Laurel",
+        "objective.key": "201cdcd6-c8bd-471c-9eda-5277136fb0a6"
+      }
+    },
+    {
+      "key": "84b777bb-8614-4638-9b9d-e9cd05a4cfb5",
+      "properties": {
+        "description": "Break down a long sequence of instructions into repeatable sequences."
+      },
+      "seeding_key": {
+        "lesson.key": "Counting with Laurel",
+        "objective.key": "84b777bb-8614-4638-9b9d-e9cd05a4cfb5"
+      }
+    },
+    {
+      "key": "fcd6b269-1f32-4ba3-9864-89780815be93",
+      "properties": {
+        "description": "Represent addition in various ways (with objects, images, verbal explanations)."
+      },
+      "seeding_key": {
+        "lesson.key": "Counting with Laurel",
+        "objective.key": "fcd6b269-1f32-4ba3-9864-89780815be93"
       }
     }
   ],
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "framework.shortcode": "ccmath",
         "standard.shortcode": "K.CC.4"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "framework.shortcode": "ccmath",
         "standard.shortcode": "K.OA.1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-10"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Counting with Laurel",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-14"
       }

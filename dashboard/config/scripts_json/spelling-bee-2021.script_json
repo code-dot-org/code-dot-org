@@ -1,6 +1,6 @@
 {
   "script": {
-    "name": "spelling-bee",
+    "name": "spelling-bee-2021",
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
@@ -8,19 +8,17 @@
       "has_verified_resources": true,
       "is_course": true,
       "is_migrated": true,
-      "redirect_to": "spelling-bee-2021",
-      "tts": true,
-      "version_year": "unversioned"
+      "version_year": "2021"
     },
     "new_name": null,
     "family_name": "spelling-bee",
-    "serialized_at": "2021-11-12 12:33:34 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-11-12 12:33:21 UTC",
+    "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {
-      "script.name": "spelling-bee"
+      "script.name": "spelling-bee-2021"
     }
   },
   "lesson_groups": [
@@ -32,13 +30,13 @@
       },
       "seeding_key": {
         "lesson_group.key": "",
-        "script.name": "spelling-bee"
+        "script.name": "spelling-bee-2021"
       }
     }
   ],
   "lessons": [
     {
-      "key": "lesson-1",
+      "key": "Spelling Bee",
       "name": "Spelling Bee",
       "absolute_position": 1,
       "lockable": false,
@@ -50,59 +48,59 @@
         "student_overview": "Help the bee spell new words!\n"
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee"
+        "script.name": "spelling-bee-2021"
       }
     }
   ],
   "lesson_activities": [
     {
-      "key": "9d73f5ff-0d1e-4c3f-8970-cbe5fe9f1e83",
+      "key": "70bf5b0e-2334-4c9b-ac05-f1f32efef41a",
       "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "9d73f5ff-0d1e-4c3f-8970-cbe5fe9f1e83",
-        "lesson.key": "lesson-1",
+        "lesson_activity.key": "70bf5b0e-2334-4c9b-ac05-f1f32efef41a",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee"
+        "script.name": "spelling-bee-2021"
       }
     },
     {
-      "key": "7e5e4cba-57ed-46f8-a240-8d24496f4055",
+      "key": "464dfbe6-40d1-4244-ab8d-d920c52b2e6b",
       "position": 2,
       "properties": {
         "duration": 30,
         "name": "Main Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "7e5e4cba-57ed-46f8-a240-8d24496f4055",
-        "lesson.key": "lesson-1",
+        "lesson_activity.key": "464dfbe6-40d1-4244-ab8d-d920c52b2e6b",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee"
+        "script.name": "spelling-bee-2021"
       }
     },
     {
-      "key": "29e42f11-42f6-4062-9f73-8d9d1126ac8b",
+      "key": "798be860-af43-48a5-b329-d81547dfe9cf",
       "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "29e42f11-42f6-4062-9f73-8d9d1126ac8b",
-        "lesson.key": "lesson-1",
+        "lesson_activity.key": "798be860-af43-48a5-b329-d81547dfe9cf",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee"
+        "script.name": "spelling-bee-2021"
       }
     }
   ],
   "activity_sections": [
     {
-      "key": "36ff2e51-91b2-4a5f-b453-47d452dfa2a4",
+      "key": "7fbce178-f450-4bb9-9ac3-7e841fe1d93b",
       "position": 1,
       "properties": {
         "name": "Introduction",
@@ -114,12 +112,12 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "36ff2e51-91b2-4a5f-b453-47d452dfa2a4",
-        "lesson_activity.key": "9d73f5ff-0d1e-4c3f-8970-cbe5fe9f1e83"
+        "activity_section.key": "7fbce178-f450-4bb9-9ac3-7e841fe1d93b",
+        "lesson_activity.key": "70bf5b0e-2334-4c9b-ac05-f1f32efef41a"
       }
     },
     {
-      "key": "aeff926e-e2d5-4f64-a62d-fbacfa3d2cb0",
+      "key": "f96c94fd-02c1-4aec-a7d7-755fd69c22be",
       "position": 2,
       "properties": {
         "description": "Today we are helping the bee find and count letters to make words using code. Let’s warm up by counting and reading letters to get ready to help the bee. Let’s count up to ten using our fingers.  Ready? 1, 2, 3…10.  Next, let’s review the alphabet to help us read the letters we are using in the lesson today.  Ready?  A, B, C...Z",
@@ -132,12 +130,12 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "aeff926e-e2d5-4f64-a62d-fbacfa3d2cb0",
-        "lesson_activity.key": "9d73f5ff-0d1e-4c3f-8970-cbe5fe9f1e83"
+        "activity_section.key": "f96c94fd-02c1-4aec-a7d7-755fd69c22be",
+        "lesson_activity.key": "70bf5b0e-2334-4c9b-ac05-f1f32efef41a"
       }
     },
     {
-      "key": "a89449e9-b434-4f73-8a42-f79f6706b4da",
+      "key": "54806b1c-cb69-4767-a9a1-5c64fc3bc253",
       "position": 1,
       "properties": {
         "description": "####Modeling a Think Aloud\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out the warm-up worksheet to students. Display the first puzzle on the slides.\n",
@@ -150,35 +148,35 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "a89449e9-b434-4f73-8a42-f79f6706b4da",
-        "lesson_activity.key": "7e5e4cba-57ed-46f8-a240-8d24496f4055"
+        "activity_section.key": "54806b1c-cb69-4767-a9a1-5c64fc3bc253",
+        "lesson_activity.key": "464dfbe6-40d1-4244-ab8d-d920c52b2e6b"
       }
     },
     {
-      "key": "19e61718-de1b-4694-8b77-f0e50cdf025a",
+      "key": "b629a893-20dc-4649-b655-cf952fb6465b",
       "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Model your thinking process out loud  for students when going through the actions and steps to help the bee find words. Share with students that they will think out loud as they help the bee find words\n\n**Say:**  *As I’m getting ready to help the bee, I should think about...*\n- *counting how many letters are in the word.*\n- *reading what the word is.*\n- *pointing in the direction the bee should take to spell the word.*\n\nComplete the first problem as a class, modeling how to draw the arrows for the bee's movement.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Think Pair Share:** Have students try the next problem individually or with a partner, then display the puzzle on the slides and discuss it as a class. Ask students to explain their thinking.\n  \n\n\n"
       },
       "seeding_key": {
-        "activity_section.key": "19e61718-de1b-4694-8b77-f0e50cdf025a",
-        "lesson_activity.key": "7e5e4cba-57ed-46f8-a240-8d24496f4055"
+        "activity_section.key": "b629a893-20dc-4649-b655-cf952fb6465b",
+        "lesson_activity.key": "464dfbe6-40d1-4244-ab8d-d920c52b2e6b"
       }
     },
     {
-      "key": "c926433f-27e3-4ab2-b6c4-c529f9ed98da",
+      "key": "38075598-1e8d-49dd-9e3d-bb4105db9411",
       "position": 3,
       "properties": {
         "description": "####Solving Puzzles with Code\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the Introduction to Maze Puzzles video as a class.",
         "progression_name": "Introduction to Maze Puzzles"
       },
       "seeding_key": {
-        "activity_section.key": "c926433f-27e3-4ab2-b6c4-c529f9ed98da",
-        "lesson_activity.key": "7e5e4cba-57ed-46f8-a240-8d24496f4055"
+        "activity_section.key": "38075598-1e8d-49dd-9e3d-bb4105db9411",
+        "lesson_activity.key": "464dfbe6-40d1-4244-ab8d-d920c52b2e6b"
       }
     },
     {
-      "key": "003aaeb9-81cb-43d0-b361-6c5d8343067b",
+      "key": "25be421b-0cd7-45e1-9536-bf9e39a56c29",
       "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Open the first level of this activity on your computer in front of the class. A short video will play at first introducing students to these bee puzzles.\n\n**Model:** Model for students how to complete the level. Point out that this puzzle is the same as the puzzle on their warm-up. Ask students to describe how you should move the blocks and connect them to complete the puzzle.\n\n",
@@ -191,34 +189,34 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "003aaeb9-81cb-43d0-b361-6c5d8343067b",
-        "lesson_activity.key": "7e5e4cba-57ed-46f8-a240-8d24496f4055"
+        "activity_section.key": "25be421b-0cd7-45e1-9536-bf9e39a56c29",
+        "lesson_activity.key": "464dfbe6-40d1-4244-ab8d-d920c52b2e6b"
       }
     },
     {
-      "key": "865bfb38-4d08-454a-9242-7dc35527823c",
+      "key": "50ff932f-62e1-4b84-bd79-05d3353027a2",
       "position": 5,
       "properties": {
         "description": "**(Optional) Pair Students:** Have students work in pairs to complete the puzzles, where one person controls the computer and the other person describes how to solve the puzzle. This is sometimes called Pair Programming, and you can consider showing this [Pair Programming](https://www.youtube.com/watch?v=vgkahOzFH2Q) video to help students engage in this activity.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio and open up the third puzzle. Students can start working through these levels at their own pace.\n"
       },
       "seeding_key": {
-        "activity_section.key": "865bfb38-4d08-454a-9242-7dc35527823c",
-        "lesson_activity.key": "7e5e4cba-57ed-46f8-a240-8d24496f4055"
+        "activity_section.key": "50ff932f-62e1-4b84-bd79-05d3353027a2",
+        "lesson_activity.key": "464dfbe6-40d1-4244-ab8d-d920c52b2e6b"
       }
     },
     {
-      "key": "eac4530d-2f28-4baa-8d71-044aec131570",
+      "key": "9aeca0ab-7832-49cc-a9c9-c18d977ec430",
       "position": 6,
       "properties": {
         "description": "**Level 3:** This level is identical to the warm-up that students completed as a class. Since students already have the correct answers from the warm-up, use this as an opportunity to help troubleshoot any tech issues or confusion around how to drag-and-drop blocks in the levels.\n"
       },
       "seeding_key": {
-        "activity_section.key": "eac4530d-2f28-4baa-8d71-044aec131570",
-        "lesson_activity.key": "7e5e4cba-57ed-46f8-a240-8d24496f4055"
+        "activity_section.key": "9aeca0ab-7832-49cc-a9c9-c18d977ec430",
+        "lesson_activity.key": "464dfbe6-40d1-4244-ab8d-d920c52b2e6b"
       }
     },
     {
-      "key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec",
+      "key": "b11860db-c778-4f4f-9e03-aad787930cb7",
       "position": 7,
       "properties": {
         "progression_name": "Practice",
@@ -230,36 +228,36 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec",
-        "lesson_activity.key": "7e5e4cba-57ed-46f8-a240-8d24496f4055"
+        "activity_section.key": "b11860db-c778-4f4f-9e03-aad787930cb7",
+        "lesson_activity.key": "464dfbe6-40d1-4244-ab8d-d920c52b2e6b"
       }
     },
     {
-      "key": "22809c62-55b8-490d-acfb-5d4af4540f23",
+      "key": "0393ba8d-a6ce-4bb2-a215-47275673d5a7",
       "position": 8,
       "properties": {
         "description": "While students work through levels, you can use these strategies to support a productive classroom environment and support students who may get stuck.\n- **Take Your Time:** Encourage students to take their time and experiment. Staying on a level and tinkering with their code is highly encouraged. \n- **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).\n- **Read the Instructions:** The instructions are bulleted points on how to complete the level. If a student feels stuck, ask them to read the instructions out loud to you and ask them to repeat back what the instructions say in their own words. \n  - <img src=\"https://images.code.org/5b99c663ad6632fe64c9da69d6805c2b-text-to-speech.PNG\" style=\"height: 25px;\"> Students can also click on this text-to-speech icon to hear the instructions read aloud.\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Look for hints**: Most levels include at least one hint with more explicit details about how to pass the level. \n- **Celebrate bugs:** Getting a bug in your code is a natural part of the coding process. If the program isn’t doing what they expected, ask the student to first tell you what they want to happen, click run to observe what is actually happening, then find the place in their code that caused the discrepancy. Remember to celebrate finding bugs and fixing bugs. Getting a bug means students are doing a great job building a more complex program. \n\n",
         "name": "General Support"
       },
       "seeding_key": {
-        "activity_section.key": "22809c62-55b8-490d-acfb-5d4af4540f23",
-        "lesson_activity.key": "7e5e4cba-57ed-46f8-a240-8d24496f4055"
+        "activity_section.key": "0393ba8d-a6ce-4bb2-a215-47275673d5a7",
+        "lesson_activity.key": "464dfbe6-40d1-4244-ab8d-d920c52b2e6b"
       }
     },
     {
-      "key": "77080cc8-ae95-481d-a927-0bbe3c87e4f5",
+      "key": "fc9fb933-aa4e-496b-b867-aa9bcbff2e28",
       "position": 1,
       "properties": {
         "name": "Math Talk",
         "progression_name": "Math Talk"
       },
       "seeding_key": {
-        "activity_section.key": "77080cc8-ae95-481d-a927-0bbe3c87e4f5",
-        "lesson_activity.key": "29e42f11-42f6-4062-9f73-8d9d1126ac8b"
+        "activity_section.key": "fc9fb933-aa4e-496b-b867-aa9bcbff2e28",
+        "lesson_activity.key": "798be860-af43-48a5-b329-d81547dfe9cf"
       }
     },
     {
-      "key": "aa8608c7-3ac7-4d50-acbe-88941ee158ce",
+      "key": "18193bcb-bc78-44e8-b054-6c0f8a868f24",
       "position": 2,
       "properties": {
         "description": "\n**Do This:** Give each student a Wrap Up worksheet.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How many letters will the bee need to find in order to spell the word SQUARE?  How many steps should the bee take to spell the word SQUARE?*\n\nThe goal of the Math Talk is to incorporate addition into the discussion using manipulatives (e.g. blocks, fingers, or images on the handout). Consider the following prompts as part of this discussion:\n- *Show me with your fingers how many letters are in the word SQUARE?*\n\n-  *What direction should the bee take to spell the word SQUARE?*\n\n- *How many steps should the bee take to the [East, West, North, or South]?*\n\n- Consider including and discussing the number zero to represent no steps in a certain direction. For example, the bee would take zero steps North to spell SQUARE.  \n\n- Use directions to help students develop multiple ways to show the total number of letters in a word.  \n\n  - SQUARE has six letters (3 + 3; three letters South, three letters East).\n\n  - Show me with your fingers another way to make six (two fingers one hand, four fingers with another hand, etc).\n",
@@ -271,8 +269,8 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "aa8608c7-3ac7-4d50-acbe-88941ee158ce",
-        "lesson_activity.key": "29e42f11-42f6-4062-9f73-8d9d1126ac8b"
+        "activity_section.key": "18193bcb-bc78-44e8-b054-6c0f8a868f24",
+        "lesson_activity.key": "798be860-af43-48a5-b329-d81547dfe9cf"
       }
     }
   ],
@@ -283,9 +281,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Intro Maze Spelling with Bee"
-        ],
         "progression": "Introduction to Maze Puzzles"
       },
       "bonus": false,
@@ -293,10 +288,10 @@
         "script_level.level_keys": [
           "Intro Maze Spelling with Bee"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "c926433f-27e3-4ab2-b6c4-c529f9ed98da"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "38075598-1e8d-49dd-9e3d-bb4105db9411"
       },
       "level_keys": [
         "Intro Maze Spelling with Bee"
@@ -308,9 +303,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:CustomMaze:wordsearch_k_1"
-        ],
         "progression": "Model Level"
       },
       "bonus": false,
@@ -318,10 +310,10 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_1"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "003aaeb9-81cb-43d0-b361-6c5d8343067b"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "25be421b-0cd7-45e1-9536-bf9e39a56c29"
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_1"
@@ -333,9 +325,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:CustomMaze:wordsearch_k_6"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -343,10 +332,10 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_6"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "b11860db-c778-4f4f-9e03-aad787930cb7"
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_6"
@@ -358,9 +347,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:CustomMaze:wordsearch_k_13"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -368,10 +354,10 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_13"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "b11860db-c778-4f4f-9e03-aad787930cb7"
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_13"
@@ -383,9 +369,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:CustomMaze:wordsearch_k_20"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -393,10 +376,10 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_20"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "b11860db-c778-4f4f-9e03-aad787930cb7"
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_20"
@@ -408,9 +391,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:CustomMaze:wordsearch_k_2"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -418,10 +398,10 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_2"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "b11860db-c778-4f4f-9e03-aad787930cb7"
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_2"
@@ -433,9 +413,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:CustomMaze:wordsearch_k_3"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -443,10 +420,10 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_3"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "b11860db-c778-4f4f-9e03-aad787930cb7"
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_3"
@@ -458,9 +435,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "blockly:CustomMaze:wordsearch_k_4"
-        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -468,10 +442,10 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_4"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "b11860db-c778-4f4f-9e03-aad787930cb7"
       },
       "level_keys": [
         "blockly:CustomMaze:wordsearch_k_4"
@@ -483,9 +457,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csc - stop math talk"
-        ],
         "progression": "Math Talk"
       },
       "bonus": false,
@@ -493,10 +464,10 @@
         "script_level.level_keys": [
           "csc - stop math talk"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "77080cc8-ae95-481d-a927-0bbe3c87e4f5"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "fc9fb933-aa4e-496b-b867-aa9bcbff2e28"
       },
       "level_keys": [
         "csc - stop math talk"
@@ -510,10 +481,10 @@
         "script_level.level_keys": [
           "Intro Maze Spelling with Bee"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "c926433f-27e3-4ab2-b6c4-c529f9ed98da"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "38075598-1e8d-49dd-9e3d-bb4105db9411"
       }
     },
     {
@@ -522,10 +493,10 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_1"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "003aaeb9-81cb-43d0-b361-6c5d8343067b"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "25be421b-0cd7-45e1-9536-bf9e39a56c29"
       }
     },
     {
@@ -534,10 +505,10 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_6"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "b11860db-c778-4f4f-9e03-aad787930cb7"
       }
     },
     {
@@ -546,10 +517,10 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_13"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "b11860db-c778-4f4f-9e03-aad787930cb7"
       }
     },
     {
@@ -558,10 +529,10 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_20"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "b11860db-c778-4f4f-9e03-aad787930cb7"
       }
     },
     {
@@ -570,10 +541,10 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_2"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "b11860db-c778-4f4f-9e03-aad787930cb7"
       }
     },
     {
@@ -582,10 +553,10 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_3"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "b11860db-c778-4f4f-9e03-aad787930cb7"
       }
     },
     {
@@ -594,10 +565,10 @@
         "script_level.level_keys": [
           "blockly:CustomMaze:wordsearch_k_4"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "6d168bab-1c66-474c-8c12-e9b3c7d66aec"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "b11860db-c778-4f4f-9e03-aad787930cb7"
       }
     },
     {
@@ -606,10 +577,10 @@
         "script_level.level_keys": [
           "csc - stop math talk"
         ],
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "lesson_group.key": "",
-        "script.name": "spelling-bee",
-        "activity_section.key": "77080cc8-ae95-481d-a927-0bbe3c87e4f5"
+        "script.name": "spelling-bee-2021",
+        "activity_section.key": "fc9fb933-aa4e-496b-b867-aa9bcbff2e28"
       }
     }
   ],
@@ -654,19 +625,19 @@
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "resource.key": "spelling_with_the_bee"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "resource.key": "warm_up_spelling_with_the_bee_-_worksheet"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "resource.key": "wrap_up_spelling_with_the_bee_-_worksheet"
       }
     }
@@ -688,68 +659,68 @@
   ],
   "objectives": [
     {
-      "key": "c2d9c02b-dcde-4e27-80ea-3a3ad2146ad1",
-      "properties": {
-        "description": "Recognize written words are represented by specific sequences of letters."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "c2d9c02b-dcde-4e27-80ea-3a3ad2146ad1"
-      }
-    },
-    {
-      "key": "c34bb4ca-25ae-4a5f-bfdd-9b5ad3f863be",
-      "properties": {
-        "description": "Recognize upper-case letters of the alphabet."
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "c34bb4ca-25ae-4a5f-bfdd-9b5ad3f863be"
-      }
-    },
-    {
-      "key": "dbf6ddbd-03dc-4d92-bdd1-b753477742e5",
+      "key": "09cddb24-dca5-4afe-8705-1e8dbd3475e2",
       "properties": {
         "description": "Arrange movement commands in a sequence to spell words on a grid."
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "dbf6ddbd-03dc-4d92-bdd1-b753477742e5"
+        "lesson.key": "Spelling Bee",
+        "objective.key": "09cddb24-dca5-4afe-8705-1e8dbd3475e2"
+      }
+    },
+    {
+      "key": "184ee035-48b3-4e47-8011-41a0ad16cd9d",
+      "properties": {
+        "description": "Recognize upper-case letters of the alphabet."
+      },
+      "seeding_key": {
+        "lesson.key": "Spelling Bee",
+        "objective.key": "184ee035-48b3-4e47-8011-41a0ad16cd9d"
+      }
+    },
+    {
+      "key": "e5e9f2ff-2485-45b5-b7fe-d33f8b1c9477",
+      "properties": {
+        "description": "Recognize written words are represented by specific sequences of letters."
+      },
+      "seeding_key": {
+        "lesson.key": "Spelling Bee",
+        "objective.key": "e5e9f2ff-2485-45b5-b7fe-d33f8b1c9477"
       }
     }
   ],
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "framework.shortcode": "ccela",
         "standard.shortcode": "K.RF.1.b"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "framework.shortcode": "ccela",
         "standard.shortcode": "K.RF.1.d"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-10"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "lesson-1",
+        "lesson.key": "Spelling Bee",
         "framework.shortcode": "csta",
         "standard.shortcode": "1A-AP-14"
       }
