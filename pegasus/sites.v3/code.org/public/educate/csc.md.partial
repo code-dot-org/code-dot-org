@@ -9,7 +9,7 @@ set_dir: true
 Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways! <em>(Teachers: See the CS Connections curriculum guide <a href="https://docs.google.com/document/d/1O3g2QoMn41gDoUXmKhrXCkU_djJhGs_T_9XZpgiS4T8/edit#">here</a>.)</em>
 
 ## Try out CS Connections with these activities for Hour of Code
-{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", left_heading: "Mood study", left_description: "Express yourself! Use code to create animated poems.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Hello World", right_description: "Choose from four fun themes to code interactive characters in a world you create.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start"}}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Mood study", left_description: "Express yourself! Use code to create animated poems.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Hello World", right_description: "Choose from four fun themes to code interactive characters in a world you create.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start"}}
 {{ clearfix }}
 
 ## Modules
@@ -18,8 +18,7 @@ CS Connections modules are a structured series of lessons that integrate compute
 
 They're perfect for teachers who'd like to incorporate computer science into their lesson plans for other subjects, as well as CS educators who want to reinforce what students are learning in other subjects.
 
-{{ csc_module, title: "Coding with Poetry", image: "/images/fill-400x100/csc/landing/module_poetry.png", grades: "3+", subject: "ELA", duration: "5 hours", description: "Students explore the elements of poetry and the basics of coding by building a poem generator based off a poem they write.", button_text: "Learn more", url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher" }}
-{{ clearfix }}
+{{ tutorial_promo2_single_course, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", grades: "3+", subject: "ELA", duration: "5 hours", box_background_color: "rgb(0,0,0,0.4)", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry-2021/?viewAs=Teacher", right_button_text: "Learn more" }}
 
 ## Open-ended projects
 
