@@ -206,8 +206,8 @@ export default connect(
     onPickNewAnimation() {
       dispatch(pickNewAnimation());
     },
-    onPickLibraryAnimation(animation, isMultiSelectEnabled) {
-      dispatch(pickLibraryAnimation(animation, isMultiSelectEnabled));
+    onPickLibraryAnimation(animation) {
+      dispatch(pickLibraryAnimation(animation));
     },
     onUploadStart(data) {
       if (data.files[0].size >= MAX_UPLOAD_SIZE) {
