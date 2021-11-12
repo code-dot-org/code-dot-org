@@ -26,7 +26,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-05 18:25:44 UTC",
+    "serialized_at": "2021-11-11 04:31:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3759,7 +3759,7 @@
       "key": "6c43539f-8ba5-43e6-93fa-9bc34d0e4d75",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is one example from today of how human's can influence the machine learning process?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is one example from today of how humans can influence the machine learning process?_",
         "name": "Journal"
       },
       "seeding_key": {

@@ -172,6 +172,7 @@ class P5LabVisualizationColumn extends React.Component {
               onPointerMove={this.pickerPointerMove}
               onPointerUp={this.pickerPointerUp}
               elementRef={el => (this.divGameLab = el)}
+              onMouseUp={this.pickerPointerUp}
             />
             <VisualizationOverlay
               width={APP_WIDTH}

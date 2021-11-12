@@ -46,7 +46,10 @@ class AnimationTab extends React.Component {
         >
           <div style={styles.animationsColumn}>
             <P5LabVisualizationHeader labType={this.props.labType} />
-            <AnimationList hideBackgrounds={this.props.hideBackgrounds} />
+            <AnimationList
+              hideBackgrounds={this.props.hideBackgrounds}
+              labType={this.props.labType}
+            />
           </div>
           <div style={styles.editorColumn}>
             <PiskelEditor style={styles.piskelEl} />
