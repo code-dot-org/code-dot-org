@@ -121,7 +121,21 @@ class Homepage
     end
 
     hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
-    if hoc_mode == "actual-hoc"
+
+    if show_single_hero(request) == "csc"
+      [
+        {
+          text: "homepage_banner_text_link",
+          type: "cta_button_solid_yellow",
+          url: "/educate/csc",
+        },
+        {
+          text: "homepage_action_text_try_it",
+          type: "cta_button_solid_grey",
+          url: "/hourofcode/overview"
+        }
+      ]
+    elsif hoc_mode == "actual-hoc"
       [
         {
           text: "get_started",

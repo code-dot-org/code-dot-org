@@ -1,28 +1,17 @@
 :ruby
   hoc_mode = DCDO.get("hoc_mode", CDO.default_hoc_mode)
-  hoc_cse_enable_svg = false # DCDO.get("hoc_cse_enable_svg", false)
   show_single_hero = Homepage.show_single_hero(request)
   heroes_arranged, hero_display_time = Homepage.get_heroes_arranged(request)
   actions = Homepage.get_actions(request)
 
 :css
-  .cse-hero-message-line2 {
+  .csc-hero-message-line2 {
     font-size: 52px;
   }
 
   @media screen and (min-width: 576px) and (max-width: 900px) {
-    .cse-hero-message-line2 {
+    .csc-hero-message-line2 {
       font-size: 38px;
-    }
-  }
-
-  #cse-main-actions {
-    _box-shadow: 0px 0px 20px 20px rgb(255 255 255), 0px 0px 20px 20px rgb(255 255 255);
-  }
-
-  @media screen and (max-width: 970px) {
-    #cse-main-actions {
-      _box-shadow: 0px 0px 20px 10px rgb(255 255 255), 0px 0px 20px 10px rgb(255 255 255);
     }
   }
 
@@ -37,10 +26,8 @@
     .hero-message-line1{style: "color: black; font-size: 28px; line-height: 28px; padding-bottom: 20px; font-family: 'Gotham 4r', sans-serif", dir: "auto"}
       = hoc_s(:codeorg_homepage_hoc_is_coming)
     %div{style: "padding-bottom: 20px; text-align: center"}
-      %span.hero-message-line2.cse-hero-message-line2{style: "color: black; line-height: 1.2em; font-family: 'Gotham 5r', sans-serif", dir: "auto"}<
-        - hoc_s(:codeorg_homepage_csc_title).each_char do |c|
-          - color = csc_colors.sample
-          %span{style: "color: rgb(#{color[:r]}, #{color[:g]}, #{color[:b]})"}>= c
+      %span.hero-message-line2.csc-hero-message-line2{style: "color: black; line-height: 1.2em; font-family: 'Gotham 5r', sans-serif", dir: "auto"}<
+        = hoc_s(:codeorg_homepage_csc_title)
       %div{style: "margin-top: 20px"}
         = hoc_s(:codeorg_homepage_csc_long)
     %img.phone-feature{src: "/shared/images/fit-1200/hoc-csc-arrows.png", style: "width: 100%; padding-bottom: 20px"}
@@ -100,9 +87,9 @@
 
   - if ["soon-hoc", "actual-hoc"].include?(hoc_mode)
     #actions{style: "padding-top: 0px; padding-left: 0px; padding-right: 0px"}
-      #bars{style: "display: flex; max-width: 1240px; margin: 0 auto;"}
+      #bars{style: "display: flex; max-width: 1600px; margin: 0 auto;"}
         #left-bars-img.col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-csc-left-fade-wide.png); background-position: 100% 50%; background-size: cover; background-repeat: no-repeat"}
-        #cse-main-actions.col-33{style: "z-index: 1; background-color: white; padding-top: 40px"}
+        #csc-main-actions.col-33{style: "z-index: 1; background-color: white; padding-top: 40px"}
           = main_actions
         #right-bars-img.col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-csc-right-fade-wide.png); background-position: 0% 50%; background-size: cover; background-repeat: no-repeat"}
       %svg#left-bars-svg.tablet-feature{viewBox: "0 0 235 250", style: "opacity: 0; position: absolute; width: 0; height: 0"}
@@ -226,22 +213,4 @@
     currentImage = nextImage;
 
     showQuote(lastImage, currentImage);
-  }
-
-- if ["soon-hoc", "actual-hoc"].include?(hoc_mode) && hoc_cse_enable_svg
-  %script{src: "/js/cse-bars.js"}
-
-:javascript
-  $(document).ready(function() {
-    setInterval(
-      updateTitleColor,
-      1000
-    );
-  });
-
-  function updateTitleColor() {
-    let r = Math.floor(Math.random() * 255);
-    let g = Math.floor(Math.random() * 255);
-    let b = Math.floor(Math.random() * 255);
-    //$(".hero-message-line2").css('color', "rgb(" + r + "," + g + "," + b + ")");
   }
