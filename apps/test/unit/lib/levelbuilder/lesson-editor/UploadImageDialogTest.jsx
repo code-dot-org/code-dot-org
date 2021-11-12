@@ -52,10 +52,17 @@ describe('UploadImageDialog', () => {
       .simulate('change', {target: {files: ['filedata']}});
     expect(
       wrapper
+        .find('input')
+        .first()
+        .props().disabled
+    ).to.be.true;
+    expect(
+      wrapper
         .find('Button')
         .last()
         .props().disabled
     ).to.be.true;
+    expect(wrapper.find('FontAwesome').length).to.equal(1);
 
     expect(handleClose.callCount).to.equal(0);
     expect(uploadImage.callCount).to.equal(0);
