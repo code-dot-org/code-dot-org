@@ -5,6 +5,7 @@
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
+      "is_course": true,
       "pilot_experiment": "20-21-virtual-AYW-CSP",
       "student_detail_progress_view": true,
       "teacher_resources": [
@@ -21,11 +22,11 @@
           "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing"
         ]
       ],
-      "version_year": "2021"
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-10-29 23:14:08 UTC",
+    "family_name": "vpl-csp-2021",
+    "serialized_at": "2021-11-10 21:47:51 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

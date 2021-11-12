@@ -14,19 +14,23 @@
         }
       ],
       "hideable_lessons": true,
+      "is_course": true,
       "pilot_experiment": "csf-2021-pilot",
       "teacher_resources": [
         [
           "lessonPlans",
           "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"
         ]
-      ]
+      ],
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-10-25 22:54:41 UTC",
+    "family_name": "csf-2021-pilot",
+    "serialized_at": "2021-11-10 21:45:21 UTC",
     "published_state": "pilot",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csf-2021-pilot"
     }

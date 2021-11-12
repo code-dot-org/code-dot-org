@@ -55,19 +55,31 @@ export const useRegionalPartner = data => {
   const [loadingPartner, setLoadingPartner] = useState(true);
   const [loadError, setLoadError] = useState(false);
   const [partner, setPartner] = useState(null);
-  // cache this debounced function so that it is more easily testable
-  const debouncedFetch = useCallback(
-    debounce(fetchRegionalPartner, 500, {leading: true}),
-    []
-  );
+
+  // debounce the search term to prevent making too many calls as input changes
+  const [searchTerm, setSearchTerm] = useState(null);
+  const debouncedSetSearchTerm = useCallback(debounce(setSearchTerm, 500), [
+    setSearchTerm
+  ]);
+  useEffect(() => {
+    debouncedSetSearchTerm({
+      program,
+      schoolZipCode,
+      schoolState,
+      school
+    });
+  }, [program, schoolZipCode, schoolState, school]);
 
   // load regional partner whenever parameters change
   useEffect(() => {
+    if (searchTerm === null) {
+      return;
+    }
     let cancelled = false;
-    debouncedFetch(data)
+    fetchRegionalPartner(searchTerm)
       .then(partner => {
+        // Update state with all the partner workshop data to display
         if (!cancelled) {
-          // Update state with all the partner workshop data to display
           setLoadingPartner(false);
           setLoadError(false);
           // the api returns an object with all fields set to null if not found
@@ -75,13 +87,15 @@ export const useRegionalPartner = data => {
         }
       })
       .catch(() => {
-        setLoadingPartner(false);
-        setLoadError(true);
+        if (!cancelled) {
+          setLoadingPartner(false);
+          setLoadError(true);
+        }
       });
     return () => {
       cancelled = true;
     };
-  }, [program, schoolZipCode, schoolState, school]);
+  }, [searchTerm]);
 
   return [loadingPartner ? undefined : partner, loadError];
 };
