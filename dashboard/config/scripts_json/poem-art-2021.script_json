@@ -12,8 +12,8 @@
     },
     "new_name": null,
     "family_name": "poem-art",
-    "serialized_at": "2021-11-11 21:45:43 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2021-11-12 17:36:02 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -326,6 +326,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar1"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -348,6 +351,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_sounds"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -370,6 +376,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_events1"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -392,6 +401,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar2"
+        ],
         "progression": "Example"
       },
       "bonus": false,
@@ -414,6 +426,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_addSprites"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -436,6 +451,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteBehaviors"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -458,6 +476,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteSizes"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -480,6 +501,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_freeplay"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
