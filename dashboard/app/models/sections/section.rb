@@ -404,7 +404,12 @@ class Section < ApplicationRecord
   end
 
   def code_review_enabled?
-    code_review_enabled.nil? ? true : code_review_enabled
+    if DCDO.get('code_review_groups_enabled', false)
+      return false if code_review_expires_at.nil?
+      return code_review_expires_at > Time.now.utc
+    else
+      return code_review_enabled.nil? ? true : code_review_enabled
+    end
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,
@@ -429,7 +434,7 @@ class Section < ApplicationRecord
   end
 
   def update_code_review_expiration(enable_code_review)
-    self.code_review_expires_at = enable_code_review ? DateTime.now + 90.days : nil
+    self.code_review_expires_at = enable_code_review ? Time.now.utc + 90.days : nil
   end
 
   private
