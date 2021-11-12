@@ -6,7 +6,7 @@ set_dir: true
 
 # Coding with Poetry
 
-{{ tutorial_promo2, heading: "Coding with Poetry", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background.jpg", left_heading: "Mood study", left_description: "The first lesson of the Coding with Poetry Module, and a great one hour activity that explores the mood of a poem.", left_specs: "", left_button_url: "/moodstudy", left_button_text: "Learn more", right_heading: "Coding with Poetry module", right_description: "Go beyond the first hour with extended poetry content full five lessons.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Learn more" }}
+{{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/poetry/tutorial_promo2_background_poetry.jpg", text_color: "white", box_background_color: "rgb(0,0,0,0.4)", left_heading: "Poem Art", left_description: "Add art and animation to a classic poem in this Hour of Code activity!", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art/reset", left_button_text: "Start", right_heading: "Coding with Poetry", right_description: "Connect computer science and poetry in your classroom with this series of lessons.", right_specs: "", right_button_url: "https://studio.code.org/s/poetry", right_button_text: "Learn more" }}
 
 ## Learn more about Coding with Poetry
 
