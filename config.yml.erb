@@ -457,11 +457,8 @@ daemon: <%=name == 'production-daemon'%>
 image_optim: <%=chef_managed && !ci_test%>
 
 # Used to export data on professional learning to gsheets
-applications_2020_2021_gsheet_key: !Secret
 enrollments_summer_2020_gsheet_key:
-applications_2021_2022_gsheet_key: !Secret
 csf_workshop_attendance_gsheet_key: !Secret
-applications_2022_2023_gsheet_key: !Secret
 
 # Referenced in Chef config, but not sure if they are still used anywhere?
 # TODO: verify these are intentionally no longer used and remove references from Chef config.
