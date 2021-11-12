@@ -93,16 +93,18 @@ const ChooseYourProgram = props => {
           <h3>Section 2: {SectionHeaders.chooseYourProgram}</h3>
           <LabeledRadioButtons name="program" />
 
-          {data.program === PROGRAM_CSA && !isOffered && (
+          {data.program === PROGRAM_CSA && regionalPartner && !isOffered && (
             <p style={styles.error}>
-              The Computer Science A Professional Learning Program is not yet
-              offered in your region for the {Year} academic year. We are
-              working with our national network of Regional Partners to expand
-              the program to all regions by 2023-24.{' '}
-              {regionalPartner &&
-                `Consider applying for an
-              alternative program or reach out to ${regionalPartner.name} to let
-              them know you’re interested in joining the program next year!`}
+              <strong>
+                The Regional Partner in your region is not offering Computer
+                Science A at this time.{' '}
+              </strong>
+              Code.org will review your application and contact you with options
+              for joining a national cohort of Computer Science A teachers. If
+              accepted into the program, travel may be required to attend a
+              weeklong in-person summer workshop. If so, travel and
+              accommodation will be provided by Code.org. Academic year
+              workshops for the national cohort will be hosted virtually.
             </p>
           )}
 
