@@ -88,7 +88,7 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
 11. [Check your rmagick version](#rmagick)
 12. Set up your local MySQL server
    1. Force link 5.7 version via `brew link mysql@5.7 --force`
-   2. Start mysql with `brew services start mysql`, which uses [Homebrew services](https://github.com/Homebrew/homebrew-services) to manage things for you.
+   2. Start mysql with `brew services start mysql@5.7`, which uses [Homebrew services](https://github.com/Homebrew/homebrew-services) to manage things for you.
 13. Set up rbenv
    3.  Run `rbenv init`
    4.  add `eval "$(rbenv init - zsh)"` to your "~/.zshrc"
