@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-04 19:13:36 UTC",
+    "serialized_at": "2021-11-11 19:37:08 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -274,6 +274,7 @@
       "relative_position": 12,
       "properties": {
         "overview": "In the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Neighborhood Lit Fest Projects.",
+        "preparation": "* Print copies of the Project Development Feedback handout (one per student)",
         "student_overview": "In the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Neighborhood Lit Fest Project."
       },
       "seeding_key": {
@@ -308,7 +309,7 @@
       "relative_position": 14,
       "properties": {
         "overview": "Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.",
-        "preparation": "* Print copies of the FRQ Writing handout (one per student)\n* Print copies of the FRQ Scoring Guide handout (one per student)",
+        "preparation": "* Print copies of the FRQ Writing handout (one per student)\n* Print copies of the Java Quick Reference (one per student)\n* Print copies of the FRQ Scoring Guide handout (one per student)",
         "student_overview": "You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines."
       },
       "seeding_key": {
@@ -321,7 +322,7 @@
       "key": "lesson-15",
       "name": "Assessment Day",
       "absolute_position": 15,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
@@ -3035,7 +3036,7 @@
       "key": "c6da56c0-7bc8-4553-a8fb-45c9c470309e",
       "position": 1,
       "properties": {
-        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. Students will have three class periods to develop and refine their program. Lessons 11, 12, and 13 collectively include instructions for managing each day of the three-day project worktime.\n\nIf there is not enough time for the three-day project worktime, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Neighborhood Lit Fest Project 1 Day Lesson Plan**](https://docs.google.com/document/d/1lowVzuRk_YJ2ctT5Njh7AZBYnlLQCo3YjHpAZG1t1wU/edit?usp=sharing). Direct students to develop their program on Code Studio in Lesson 13 so they can submit their project. While the one-day option covers the learning objectives and goals, it shortens development time. Consider this tradeoff when deciding which version to use."
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. Students will have three class periods to develop and refine their program. Lessons 11, 12, and 13 collectively include instructions for managing each day of the three-day project worktime.\n\nIf there is not enough time for the three-day project work time, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Neighborhood Lit Fest Project 1 Day Lesson Plan**](https://docs.google.com/document/d/1lowVzuRk_YJ2ctT5Njh7AZBYnlLQCo3YjHpAZG1t1wU/edit?usp=sharing). Direct students to develop their program on Code Studio in Lesson 13 so they can submit their project. While the one-day option covers the learning objectives and goals, it shortens development time. Consider this tradeoff when deciding which version to use."
       },
       "seeding_key": {
         "activity_section.key": "c6da56c0-7bc8-4553-a8fb-45c9c470309e",
@@ -3598,6 +3599,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L1"
+        ],
         "progression": "Neighborhood Lit Fest Exemplars"
       },
       "bonus": false,
@@ -3620,6 +3624,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L2"
+        ],
         "progression": "Documenting Program Code"
       },
       "bonus": false,
@@ -3642,6 +3649,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L1-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3664,6 +3674,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L1"
+        ],
         "progression": "Predict: Using Numbers from a File"
       },
       "bonus": false,
@@ -3686,6 +3699,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L2"
+        ],
         "progression": "Using Integer and Double"
       },
       "bonus": false,
@@ -3708,6 +3724,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L3"
+        ],
         "progression": "Using Integer and Double"
       },
       "bonus": false,
@@ -3730,6 +3749,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L4"
+        ],
         "progression": "Going Beyond Integer Limits"
       },
       "bonus": false,
@@ -3752,6 +3774,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L5"
+        ],
         "progression": "Going Beyond Integer Limits"
       },
       "bonus": false,
@@ -3774,6 +3799,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3796,6 +3824,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L1"
+        ],
         "progression": "ArrayList Initialization"
       },
       "bonus": false,
@@ -3818,6 +3849,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L2"
+        ],
         "progression": "ArrayList Initialization"
       },
       "bonus": false,
@@ -3840,6 +3874,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L3"
+        ],
         "progression": "Predict: Adding Items to an ArrayList"
       },
       "bonus": false,
@@ -3862,6 +3899,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L4"
+        ],
         "progression": "Creating File Objects"
       },
       "bonus": false,
@@ -3884,6 +3924,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L5"
+        ],
         "progression": "Reading Data from a File"
       },
       "bonus": false,
@@ -3906,6 +3949,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L6"
+        ],
         "progression": "Reading Data from a File"
       },
       "bonus": false,
@@ -3928,6 +3974,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L3-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3950,6 +3999,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L1"
+        ],
         "progression": "Predict: Getting Values from an ArrayList"
       },
       "bonus": false,
@@ -3972,6 +4024,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L2"
+        ],
         "progression": "Retrieving Values from an ArrayList"
       },
       "bonus": false,
@@ -3994,6 +4049,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L3"
+        ],
         "progression": "Predict: Changing Values in an ArrayList"
       },
       "bonus": false,
@@ -4016,6 +4074,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L4"
+        ],
         "progression": "Changing Values in an ArrayList"
       },
       "bonus": false,
@@ -4038,6 +4099,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L5"
+        ],
         "progression": "Changing Values in an ArrayList"
       },
       "bonus": false,
@@ -4060,6 +4124,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L6"
+        ],
         "progression": "Changing Values in an ArrayList"
       },
       "bonus": false,
@@ -4082,6 +4149,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L4-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4104,6 +4174,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L1"
+        ],
         "progression": "ArrayLists of Objects"
       },
       "bonus": false,
@@ -4126,6 +4199,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L2"
+        ],
         "progression": "ArrayLists of Objects"
       },
       "bonus": false,
@@ -4148,6 +4224,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L3"
+        ],
         "progression": "ArrayLists of Objects"
       },
       "bonus": false,
@@ -4170,6 +4249,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L5-L4"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4192,6 +4274,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L1"
+        ],
         "progression": "Predict: Removing Values"
       },
       "bonus": false,
@@ -4214,6 +4299,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L2"
+        ],
         "progression": "Predict: Using an Enhanced for Loop"
       },
       "bonus": false,
@@ -4236,6 +4324,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L3"
+        ],
         "progression": "Predict: Removing with an Enhanced for Loop"
       },
       "bonus": false,
@@ -4258,6 +4349,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L4"
+        ],
         "progression": "Removing Values from an ArrayList"
       },
       "bonus": false,
@@ -4280,6 +4374,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L5"
+        ],
         "progression": "Removing Values from an ArrayList"
       },
       "bonus": false,
@@ -4302,6 +4399,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L6"
+        ],
         "progression": "Removing Values from an ArrayList"
       },
       "bonus": false,
@@ -4324,6 +4424,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L6-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4346,6 +4449,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L1"
+        ],
         "progression": "Predict: Finding Words and Sentences"
       },
       "bonus": false,
@@ -4368,6 +4474,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L2"
+        ],
         "progression": "Analyzing Text"
       },
       "bonus": false,
@@ -4390,6 +4499,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L3"
+        ],
         "progression": "Analyzing Text"
       },
       "bonus": false,
@@ -4412,6 +4524,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L4"
+        ],
         "progression": "Predict: Creating Substrings"
       },
       "bonus": false,
@@ -4434,6 +4549,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L5"
+        ],
         "progression": "Identifying Parts of Speech"
       },
       "bonus": false,
@@ -4456,6 +4574,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L6"
+        ],
         "progression": "Identifying Parts of Speech"
       },
       "bonus": false,
@@ -4478,6 +4599,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L7"
+        ],
         "progression": "Identifying Parts of Speech"
       },
       "bonus": false,
@@ -4500,6 +4624,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L7-L8"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4522,6 +4649,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L1"
+        ],
         "progression": "Predict: Comparing Strings"
       },
       "bonus": false,
@@ -4544,6 +4674,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8_l2"
+        ],
         "progression": "Comparing Strings"
       },
       "bonus": false,
@@ -4566,6 +4699,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L3"
+        ],
         "progression": "Comparing Strings"
       },
       "bonus": false,
@@ -4588,6 +4724,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L4"
+        ],
         "progression": "Comparing Strings"
       },
       "bonus": false,
@@ -4610,6 +4749,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L5"
+        ],
         "progression": "Neighborhood Lit Fest Project"
       },
       "bonus": false,
@@ -4632,6 +4774,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L8-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4654,6 +4799,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L1"
+        ],
         "progression": "Checking for Palindromes"
       },
       "bonus": false,
@@ -4676,6 +4824,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L2"
+        ],
         "progression": "Checking for Palindromes"
       },
       "bonus": false,
@@ -4698,6 +4849,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L9-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4720,6 +4874,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L1"
+        ],
         "progression": "Identifying Individual Digits"
       },
       "bonus": false,
@@ -4742,6 +4899,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L2"
+        ],
         "progression": "Identifying Individual Digits"
       },
       "bonus": false,
@@ -4764,6 +4924,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L3"
+        ],
         "progression": "Neighborhood Lit Fest Project"
       },
       "bonus": false,
@@ -4786,6 +4949,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L4"
+        ],
         "progression": "Neighborhood Lit Fest Project"
       },
       "bonus": false,
@@ -4808,6 +4974,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L10-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4830,6 +4999,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L11-L1"
+        ],
         "progression": "Neighborhood Lit Fest Project"
       },
       "bonus": false,
@@ -4852,6 +5024,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L12-L1"
+        ],
         "progression": "Neighborhood Lit Fest Project"
       },
       "bonus": false,
@@ -4874,6 +5049,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U6L13-L1"
+        ],
         "progression": "Neighborhood Lit Fest Project"
       },
       "bonus": false,
@@ -4896,6 +5074,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 6 Pilot Assessment 2021"
+        ],
         "progression": "Unit 6 Assessment"
       },
       "bonus": false,
@@ -4918,6 +5099,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
         "progression": "Java Lab"
       },
       "bonus": false,
@@ -4940,6 +5124,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -4962,6 +5149,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Theater Sandbox"
+        ],
         "progression": "The Theater"
       },
       "bonus": false,
@@ -4984,6 +5174,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Playground Sandbox"
+        ],
         "progression": "The Playground"
       },
       "bonus": false,
