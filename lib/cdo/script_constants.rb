@@ -70,11 +70,11 @@ module ScriptConstants
       PRE_READER_EXPRESS_2021_NAME = 'pre-express-2021'.freeze,
     ],
     csc_2021: [
-      SPELLING_BEE_2021_NAME = 'spelling-bee-2021'.freeze,
+      POETRY_2021_NAME = 'poetry-2021'.freeze,
+      AI_ETHICS_2021_NAME = 'ai-ethics-2021'.freeze,
       COUNTING_CSC_2021_NAME = 'csc-counting-2021'.freeze,
       EXPLORE_DATA_1_2021_NAME = 'explore-data-1-2021'.freeze,
-      AI_ETHICS_2021_NAME = 'ai-ethics-2021'.freeze,
-      POETRY_2021_NAME = 'poetry-2021'.freeze
+      SPELLING_BEE_2021_NAME = 'spelling-bee-2021'.freeze
     ],
     aiml_2021: [
       AIML_2021_NAME = 'aiml-2021'.freeze,
