@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 
 import LessonEditorDialog from './LessonEditorDialog';
@@ -78,7 +79,12 @@ export default function UploadImageDialog({
       <h2>Upload Image</h2>
 
       {imgUrl && <img src={imgUrl} />}
-      <input type="file" name="file" onChange={handleChange} />
+      <input
+        type="file"
+        name="file"
+        onChange={handleChange}
+        disabled={isUploading}
+      />
 
       {error && (
         <div className="alert alert-error" role="alert">
@@ -104,14 +110,20 @@ export default function UploadImageDialog({
         </label>
       )}
       <hr />
-
-      <Button
-        text={i18n.closeAndSave()}
-        onClick={handleCloseAndSave}
-        color={Button.ButtonColor.orange}
-        className="save-upload-image-button"
-        disabled={isUploading}
-      />
+      <div style={{display: 'flex'}}>
+        <Button
+          text={i18n.closeAndSave()}
+          onClick={handleCloseAndSave}
+          color={Button.ButtonColor.orange}
+          className="save-upload-image-button"
+          disabled={isUploading}
+        />{' '}
+        {isUploading && (
+          <div style={styles.spinner}>
+            <FontAwesome icon="spinner" className="fa-spin" />
+          </div>
+        )}
+      </div>
     </LessonEditorDialog>
   );
 }
@@ -129,5 +141,9 @@ const styles = {
   },
   label: {
     margin: '10px 0'
+  },
+  spinner: {
+    fontSize: 25,
+    padding: 10
   }
 };
