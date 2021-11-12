@@ -75,7 +75,12 @@ export function PoemEditor(props) {
 
   const onSave = () => {
     const closeAndSave = () =>
-      props.handleClose({title, author, lines: poem.split('\n')});
+      props.handleClose({
+        key: msg.enterMyOwn(),
+        title,
+        author,
+        lines: poem.split('\n')
+      });
 
     utils
       .findProfanity(
@@ -142,24 +147,30 @@ function PoemSelector(props) {
 
   const onChange = e => {
     const poemKey = e.value;
-    const poem = getPoem(poemKey);
-
     if (poemKey === msg.enterMyOwn()) {
       setIsOpen(true);
-    } else if (poem) {
+      return;
+    }
+
+    let poem;
+    if (poemKey === msg.chooseAPoem()) {
+      poem = {
+        key: msg.chooseAPoem(),
+        author: '',
+        title: '',
+        lines: []
+      };
+    } else {
+      poem = getPoem(poemKey);
+    }
+
+    if (poem) {
       props.onChangePoem(poem);
       project.saveSelectedPoem(poem);
     }
   };
 
-  const getDropdownValue = () => {
-    const poem = getPoem(props.selectedPoem.key);
-    if (poem) {
-      return poem.key;
-    } else {
-      return msg.enterMyOwn();
-    }
-  };
+  const getDropdownValue = () => props.selectedPoem.key;
 
   const getPoemOptions = () => {
     const options = Object.keys(POEMS)
@@ -168,6 +179,8 @@ function PoemSelector(props) {
       .map(poem => ({value: poem.key, label: poem.title}));
     // Add option to create your own poem to the top of the dropdown.
     options.unshift({value: msg.enterMyOwn(), label: msg.enterMyOwn()});
+    // Add blank option that just says "Choose a Poem" to the top of the dropdown.
+    options.unshift({value: msg.chooseAPoem(), label: msg.chooseAPoem()});
     return options;
   };
 
