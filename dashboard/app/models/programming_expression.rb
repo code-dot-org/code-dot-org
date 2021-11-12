@@ -36,6 +36,7 @@ class ProgrammingExpression < ApplicationRecord
     return_value
     tips
     palette_params
+    examples
   )
 
   def key_format
@@ -195,7 +196,8 @@ class ProgrammingExpression < ApplicationRecord
       syntax: syntax || '',
       returnValue: return_value || '',
       tips: tips || '',
-      parameters: palette_params || []
+      parameters: palette_params || [],
+      examples: examples || []
     }
   end
 
