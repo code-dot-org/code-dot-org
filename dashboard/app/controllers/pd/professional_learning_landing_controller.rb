@@ -25,4 +25,10 @@ class Pd::ProfessionalLearningLandingController < ApplicationController
       summarized_plc_enrollments: summarized_plc_enrollments
     }.compact
   end
+
+  def applications_closed
+    # true when teacher applications are closed site-wide
+    closed = Rails.env.production? && !current_user.try(:workshop_admin?) && Gatekeeper.disallows('pd_teacher_application')
+    render json: closed
+  end
 end
