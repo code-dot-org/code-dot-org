@@ -14,7 +14,7 @@ class ScriptTest < ActiveSupport::TestCase
     @levels = (1..8).map {|n| create(:level, name: "Level #{n}", game: @game)}
 
     @unit_group = create(:unit_group)
-    @unit_in_unit_group = create(:script, published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
+    @unit_in_unit_group = create(:script, name: 'unit-in-unit-group', published_state: SharedCourseConstants::PUBLISHED_STATE.beta)
     create(:unit_group_unit, position: 1, unit_group: @unit_group, script: @unit_in_unit_group)
 
     @unit_2017 = create :script, name: 'script-2017', family_name: 'family-cache-test', version_year: '2017'
@@ -1490,13 +1490,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal 1, course_unit.plc_learning_modules.count
     assert_equal lm, course_unit.plc_learning_modules.first
     assert_equal Plc::LearningModule::CONTENT_MODULE, lm.module_type
-  end
-
-  test 'expect error on bad module types' do
-    unit_file = File.join(self.class.fixture_path, 'test-bad-plc-module.script')
-    assert_raises ActiveRecord::RecordInvalid do
-      Script.setup([unit_file])
-    end
   end
 
   test 'unit name format validation' do
@@ -3331,6 +3324,7 @@ class ScriptTest < ActiveSupport::TestCase
     end
 
     test 'can copy a standalone unit into a unit group' do
+      UnitGroup.any_instance.expects(:write_serialization).once
       cloned_unit = @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
       assert_equal 2, @unit_group.default_units.count
       assert_equal 'coursename2-2021', @unit_group.default_units[1].name

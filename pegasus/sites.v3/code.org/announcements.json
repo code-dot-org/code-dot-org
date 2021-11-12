@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "nextsteps-support"
+    "/home": "myjourney-lacma"
   },
 
   "banners": {
-    "myjourney-ilm": {
-      "image": "/images/csjourneys/nextsteps-support-dash.png",
-      "title": "Learn about the importance of support networks",
-      "body": "Give high school students the opportunity to learn about the importance of support networks to their career journey, and about steps to take to start building their own network of intentional connections.",
+    "myjourney-lacma": {
+      "image": "/images/csjourneys/lacma-dash.png",
+      "title": "My Journey: Art + Tech",
+      "body": "Learn how the program team at LA County Museum of Art makes space for artists to explore the intersections of art and emerging technologies. Recommended for grades K-5. Recording will be available the day after the live session.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/nextsteps#event-4",
-      "buttonId": "nextsteps-support-details"
+      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat9",
+      "buttonId": "myjourney-lacma-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",
