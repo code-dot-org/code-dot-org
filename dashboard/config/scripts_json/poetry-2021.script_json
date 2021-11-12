@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-11 19:51:07 UTC",
+    "serialized_at": "2021-11-11 23:05:40 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -91,7 +91,7 @@
     },
     {
       "key": "Build a Poem Generator",
-      "name": "Build a Poem Generator",
+      "name": "Build a Poem Generator App",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
@@ -545,7 +545,8 @@
       "key": "8f5b63d0-f3c5-43ab-a8e3-9e0ad1291897",
       "position": 2,
       "properties": {
-        "description": "####Level-by-Level Support (40 minutes)\n**Level 1:** Encourage students to read through the poem. Then ask students to find a background color or effect that matches the tone of the poem they chose. "
+        "description": "####Level-by-Level Support (40 minutes)\n**Level 1:** Encourage students to read through the poem. Then ask students to find a background color or effect that matches the tone of the poem they chose. ",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "8f5b63d0-f3c5-43ab-a8e3-9e0ad1291897",
@@ -556,7 +557,8 @@
       "key": "b393acce-c8c6-4f70-9a6b-d40a754b3176",
       "position": 3,
       "properties": {
-        "description": "**Level 2:** In this exemplar, students should read the poem on their own first, then press Run. You can ask the student whether the sound and effects the programmer chose matched the mood of the poem. Ask students to elaborate on their answer. "
+        "description": "**Level 2:** In this exemplar, students should read the poem on their own first, then press Run. You can ask the student whether the sound and effects the programmer chose matched the mood of the poem. Ask students to elaborate on their answer. ",
+        "progression_name": "Exemple"
       },
       "seeding_key": {
         "activity_section.key": "b393acce-c8c6-4f70-9a6b-d40a754b3176",
@@ -567,7 +569,8 @@
       "key": "f65da528-d751-4286-9f60-995703cf5fc5",
       "position": 4,
       "properties": {
-        "description": "**Level 3:** This level introduces sound. Students can use headphones if they have them. "
+        "description": "**Level 3:** This level introduces sound. Students can use headphones if they have them. ",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "f65da528-d751-4286-9f60-995703cf5fc5",
@@ -578,7 +581,8 @@
       "key": "c3848348-0bda-4f4a-a9a2-de1b267c252d",
       "position": 5,
       "properties": {
-        "description": "**Level 4:** Ask students to read the poem and find the line where the poem’s mood shifts or if there is a new image that the poet introduces. Use the event block to add corresponding effects to the identified lines of the poem."
+        "description": "**Level 4:** Ask students to read the poem and find the line where the poem’s mood shifts or if there is a new image that the poet introduces. Use the event block to add corresponding effects to the identified lines of the poem.",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "c3848348-0bda-4f4a-a9a2-de1b267c252d",
@@ -589,7 +593,8 @@
       "key": "a86c5b40-f840-456d-9720-b560d678ad45",
       "position": 6,
       "properties": {
-        "description": "**Level 5:** In this exemplar, students should read the poem on their own first, then press Run. Ask the student whether the images matched the words of the poem. Ask them to elaborate on their answer. "
+        "description": "**Level 5:** In this exemplar, students should read the poem on their own first, then press Run. Ask the student whether the images matched the words of the poem. Ask them to elaborate on their answer. ",
+        "progression_name": "Example"
       },
       "seeding_key": {
         "activity_section.key": "a86c5b40-f840-456d-9720-b560d678ad45",
@@ -600,7 +605,8 @@
       "key": "6eabbb6b-86f7-4754-8eb4-73d2eab99b83",
       "position": 7,
       "properties": {
-        "description": "**Levels 6, 7, 8:** See “Celebrate bugs” under the General Support section. Encourage students to build programs with more than one transition with their event blocks. "
+        "description": "**Levels 6, 7, 8:** See “Celebrate bugs” under the General Support section. Encourage students to build programs with more than one transition with their event blocks. ",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "6eabbb6b-86f7-4754-8eb4-73d2eab99b83",
@@ -611,7 +617,8 @@
       "key": "b92d8cf0-3d22-4743-9161-bada9ef1bcb6",
       "position": 8,
       "properties": {
-        "description": "**Level 9:** Encourage students to read through all the poems in the dropdown menu to find one they like. Tell students that they can share what they make in this final level with their friends and family. Now is the time to put all the coding and ELA skills together! "
+        "description": "**Level 9:** Encourage students to read through all the poems in the dropdown menu to find one they like. Tell students that they can share what they make in this final level with their friends and family. Now is the time to put all the coding and ELA skills together! ",
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "b92d8cf0-3d22-4743-9161-bada9ef1bcb6",
@@ -756,7 +763,8 @@
       "key": "12f1637e-ff75-4a30-b4a0-1489d79c81cd",
       "position": 2,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the code from Level 2.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Ask students to look at the code on the slide and answer the following questions:\n\n- What do you notice about the code?\n- How is it different from what you’ve seen before? \n- How do you think it works?\n\n**Discussion Goal:** This is an opportunity for students to look closely at what each line of code says. Ask students to read parts of the code out loud and predict what will happen when they press “Run.” Take special notice of the `animate text` block in the last line of code. Write students’ predictions on the board.\n\n**Do This:** Have students navigate to Level 2 and press “Run” to observe what happens. Encourage students to modify parts of the code and press “Run” again.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n- What did you notice? \n- What if you change something in the code and press “Run” again?\n- What happened?\n\n**Discussion Goal:** Encourage students to compare what they noticed with what they predicted before they pressed “Run.” \n\n\n\n"
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the code from Level 2.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Ask students to look at the code on the slide and answer the following questions:\n\n- What do you notice about the code?\n- How is it different from what you’ve seen before? \n- How do you think it works?\n\n**Discussion Goal:** This is an opportunity for students to look closely at what each line of code says. Ask students to read parts of the code out loud and predict what will happen when they press “Run.” Take special notice of the `animate text` block in the last line of code. Write students’ predictions on the board.\n\n**Do This:** Have students navigate to Level 2 and press “Run” to observe what happens. Encourage students to modify parts of the code and press “Run” again.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n- What did you notice? \n- What if you change something in the code and press “Run” again?\n- What happened?\n\n**Discussion Goal:** Encourage students to compare what they noticed with what they predicted before they pressed “Run.” \n\n\n\n",
+        "progression_name": "Pause"
       },
       "seeding_key": {
         "activity_section.key": "12f1637e-ff75-4a30-b4a0-1489d79c81cd",
@@ -764,8 +772,19 @@
       }
     },
     {
-      "key": "7d66b82b-3d10-461e-b79b-c0eeb170215d",
+      "key": "96c86903-96a3-4408-8794-30a5c7edf98f",
       "position": 3,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "96c86903-96a3-4408-8794-30a5c7edf98f",
+        "lesson_activity.key": "cb6c3200-82c2-4ed3-a7f5-78defaa20060"
+      }
+    },
+    {
+      "key": "7d66b82b-3d10-461e-b79b-c0eeb170215d",
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the slides for Levels 3 and 4. "
       },
@@ -776,7 +795,7 @@
     },
     {
       "key": "b9fa3071-d758-4778-9000-af7cfeedd7a2",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "You are ready to animate your poem! The slide shows an example of what the code for a finished poem looks like. You will need one `set title` block, one `set author` block, and one `add line` block for each line of your poem.  Don’t forget to add the `animate poem` block at the end to make sure your poem shows up in the playspace when you press “Run”. \n\nOnce you’re finished with Level 3, click “Continue” and move on to animating your poem. In level 4, you can add backgrounds or effects to your poem, just like you did in the first lesson.\n",
         "remarks": true
@@ -788,7 +807,7 @@
     },
     {
       "key": "5a110cca-f061-4b88-8801-69f2a7d999f5",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "**Circulate:**",
         "tips": [
@@ -805,7 +824,7 @@
     },
     {
       "key": "581d911d-514f-4159-8ae8-f8151bd0f36d",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "Guiding questions to push students further: \n- I see that you added X to your code, what does that match within your poem? \n- I really like the way you wrote about X. What effect or sprite would match that image or feeling of the poem you wrote? \n\nGuiding questions for students who need help debugging: \n- Tell me what you want your program to do. Press “Run.” \n- What is it currently doing? \n- Where do you think the bug is in your code? \n"
       },
@@ -816,8 +835,9 @@
     },
     {
       "key": "976571b7-f9b0-4dff-91af-b2d98ab2598f",
-      "position": 7,
+      "position": 8,
       "properties": {
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "976571b7-f9b0-4dff-91af-b2d98ab2598f",
@@ -951,7 +971,8 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Level 1 slide. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Ask students to look at the code on the slide and answer the following questions:\n\n- What do you notice about the code?\n- How is it different from what you’ve seen before? \n- How do you think it works?\n\n**Discussion Goal:** This is an opportunity for students to look closely at what each line of code says. Ask students to read parts of the code out loud and predict what will happen when they press “Run.” Take special notice of the `prompt user` block under `when run` and the variable labeled `word1`. Write students’ predictions on the board.\n\n**Do This:** Have students navigate to Level 1 and press “Run” to observe what happens. Encourage students to run the code multiple times, choosing different words each time.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n- What did you notice? \n- What if you change the word you typed?\n- What happened?\n\n**Discussion Goal:** Encourage students to compare what they noticed with what they predicted before they pressed “Run.” \n",
         "duration": "10",
-        "name": "Open-Ended Prompts"
+        "name": "Open-Ended Prompts",
+        "progression_name": "Example"
       },
       "seeding_key": {
         "activity_section.key": "8f2ba81d-c2a9-45dd-bc85-4fbd6b28c01d",
@@ -981,7 +1002,8 @@
       "key": "52d8300a-d571-4d74-a6a5-d25021c5a6cf",
       "position": 3,
       "properties": {
-        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Level 2, 3 and 4 - Practice slides. Students can either complete the levels on their own or go through the slides and levels as a whole class.\n\n\n\n\n**Circulate:** These next levels require students to drag out variable blocks from the toolbox and snap them into the correct place in the start code. Then, students practice matching variable labels to get the program to work correctly. "
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Level 2, 3 and 4 - Practice slides. Students can either complete the levels on their own or go through the slides and levels as a whole class.\n\n\n\n\n**Circulate:** These next levels require students to drag out variable blocks from the toolbox and snap them into the correct place in the start code. Then, students practice matching variable labels to get the program to work correctly. ",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "52d8300a-d571-4d74-a6a5-d25021c5a6cf",
@@ -1079,6 +1101,7 @@
       "key": "b99aea39-9a9a-4e8f-8f45-b8889b5048b0",
       "position": 11,
       "properties": {
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "b99aea39-9a9a-4e8f-8f45-b8889b5048b0",
@@ -1248,7 +1271,8 @@
       "key": "141cd404-becc-4e8f-a3ad-1db6eb0b41db",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** Ask students to look at the code on the slide and answer the following question:\n- *What do you predict will happen in this program when it is run?*\n\n**Discussion Goal:** This is an opportunity for students to look closely at what each line of code says. Ask students to read parts of the code out loud and predict what will happen when they press “Run.” Take special notice of the variable labels and where the variable is used throughout the example. Write students’ predictions on the board.\n\n**Do This:** Press “Run” and ask for volunteers to give answers to each prompt. Play the example program 2-3 times as a class and read each new iteration of the poem out loud. \n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** Ask students to look at the code on the slide and answer the following question:\n- *What do you predict will happen in this program when it is run?*\n\n**Discussion Goal:** This is an opportunity for students to look closely at what each line of code says. Ask students to read parts of the code out loud and predict what will happen when they press “Run.” Take special notice of the variable labels and where the variable is used throughout the example. Write students’ predictions on the board.\n\n**Do This:** Press “Run” and ask for volunteers to give answers to each prompt. Play the example program 2-3 times as a class and read each new iteration of the poem out loud. \n",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "141cd404-becc-4e8f-a3ad-1db6eb0b41db",
@@ -1285,6 +1309,7 @@
       "position": 11,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log in to their Code Studio accounts and start at Level 3.\n\n**Circulate:** As you walk around the room, ask students to check off tasks as they complete them. Encourage students to check their code by clicking “Run” and interacting with their program. \n\n\n",
+        "progression_name": "Free Play",
         "tips": [
           {
             "type": "teachingTip",
@@ -1379,7 +1404,8 @@
       "key": "69bddf9b-be08-4faf-af38-d58a5968ce2c",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Warm-Up slides.\n\nToday’s Agenda:\n- Build an app with carefully chosen words\n\n <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the code from Level 1. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n- Predict what will happen in this program\n\n**Discussion Goal:** Allow students to inspect the code and discuss what they think might happen. Write student predictions on the board. \n\n**Do This:** Have students navigate to Level 1 and press “Run” to observe what happens.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Warm-Up slides.\n\nToday’s Agenda:\n- Build an app with carefully chosen words\n\n <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the code from Level 1. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n- Predict what will happen in this program\n\n**Discussion Goal:** Allow students to inspect the code and discuss what they think might happen. Write student predictions on the board. \n\n**Do This:** Have students navigate to Level 1 and press “Run” to observe what happens.\n",
+        "progression_name": "Example"
       },
       "seeding_key": {
         "activity_section.key": "69bddf9b-be08-4faf-af38-d58a5968ce2c",
@@ -1542,7 +1568,8 @@
       "key": "b02c9ef2-cfeb-44bf-a7b1-b8dcb66874b7",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete levels 2-4 on their own. Remind students to use their handouts as a guide for level 4. "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete levels 2-4 on their own. Remind students to use their handouts as a guide for level 4. ",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "b02c9ef2-cfeb-44bf-a7b1-b8dcb66874b7",
@@ -1584,6 +1611,7 @@
       "position": 15,
       "properties": {
         "description": "For the remainder of our coding time, add in background effects, foreground effects, and sprites to create an atmosphere that illustrates the mood and characters in your poem. Remember that you don’t want to create any sprites or backgrounds that relate only to one of the user’s choices. For example, if there is a choice between the word “bunny” and the word “crab” and you made a crab sprite, but the user chooses bunny, the illustration no longer makes sense.",
+        "progression_name": "Free Play",
         "remarks": true
       },
       "seeding_key": {
@@ -1631,7 +1659,8 @@
       "key": "a74b90e1-dd93-4648-b48f-622b150eff50",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Level 1 in Code Studio."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Level 1 in Code Studio.",
+        "progression_name": "Example"
       },
       "seeding_key": {
         "activity_section.key": "a74b90e1-dd93-4648-b48f-622b150eff50",
@@ -1707,6 +1736,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Allow students to complete levels 2-3 on their own. \n\n**Circulate:** Students should have their handouts from previous lessons to help guide their work. Make sure students have (1) chosen words that make sense for their poem, like using the correct part of speech or the correct tense, (2) that their prompt and conditional variables match, (3) that students add a conditional under the event they coded. ",
+        "progression_name": "Practice",
         "tips": [
           {
             "type": "teachingTip",
@@ -1716,6 +1746,17 @@
       },
       "seeding_key": {
         "activity_section.key": "05e2e8a1-12b6-4304-9891-4102e85185a4",
+        "lesson_activity.key": "f42d8170-984c-4a13-b7cc-431f549daa54"
+      }
+    },
+    {
+      "key": "027a0515-2442-4e0c-8c3b-b45c8349e5a3",
+      "position": 4,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "027a0515-2442-4e0c-8c3b-b45c8349e5a3",
         "lesson_activity.key": "f42d8170-984c-4a13-b7cc-431f549daa54"
       }
     },
@@ -1788,6 +1829,7 @@
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the “Getting Ready” slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Set a 5-minute timer. Make sure students: \n- Go to Level 1 \n- Click “Run” and play their app\n- Make any last-minute changes\n- Expand their playspace by clicking and dragging the three dots to the right of their playspace (see gif on slide) \n",
+        "progression_name": "Free Play",
         "tips": [
           {
             "type": "teachingTip",
@@ -1854,7 +1896,8 @@
       "key": "0722b791-464f-44af-9812-93e4740eb876",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the “Level 2 - Example App” slide and open Code Studio - Lesson 7: Level 2 in another window. Keep a copy of the “Share Your App” handout nearby to gesture to where students should fill out their glow, grow, and question."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the “Level 2 - Example App” slide and open Code Studio - Lesson 7: Level 2 in another window. Keep a copy of the “Share Your App” handout nearby to gesture to where students should fill out their glow, grow, and question.",
+        "progression_name": "Example"
       },
       "seeding_key": {
         "activity_section.key": "0722b791-464f-44af-9812-93e4740eb876",
@@ -1990,7 +2033,8 @@
       "properties": {
         "level_keys": [
           "poetry_hoc_backgroundEffects"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2014,7 +2058,8 @@
       "properties": {
         "level_keys": [
           "poetry_hoc_exemplar1"
-        ]
+        ],
+        "progression": "Exemple"
       },
       "bonus": false,
       "seeding_key": {
@@ -2038,7 +2083,8 @@
       "properties": {
         "level_keys": [
           "poetry_hoc_sounds"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2062,7 +2108,8 @@
       "properties": {
         "level_keys": [
           "poetry_hoc_events1"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2086,7 +2133,8 @@
       "properties": {
         "level_keys": [
           "poetry_hoc_exemplar2"
-        ]
+        ],
+        "progression": "Example"
       },
       "bonus": false,
       "seeding_key": {
@@ -2110,7 +2158,8 @@
       "properties": {
         "level_keys": [
           "poetry_hoc_addSprites"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2134,7 +2183,8 @@
       "properties": {
         "level_keys": [
           "poetry_hoc_spriteBehaviors"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2158,7 +2208,8 @@
       "properties": {
         "level_keys": [
           "poetry_hoc_spriteSizes"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2182,7 +2233,8 @@
       "properties": {
         "level_keys": [
           "poetry_hoc_freeplay"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -2206,7 +2258,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_animate_pause"
-        ]
+        ],
+        "progression": "Pause"
       },
       "bonus": false,
       "seeding_key": {
@@ -2225,12 +2278,10 @@
     {
       "chapter": 11,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_module_animate_addline"
-        ]
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2240,7 +2291,7 @@
         "lesson.key": "Code Your Own Poem",
         "lesson_group.key": "",
         "script.name": "poetry-2021",
-        "activity_section.key": "12f1637e-ff75-4a30-b4a0-1489d79c81cd"
+        "activity_section.key": "96c86903-96a3-4408-8794-30a5c7edf98f"
       },
       "level_keys": [
         "poetry_module_animate_addline"
@@ -2254,7 +2305,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_animate_poem"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -2278,7 +2330,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_animate_freeplay"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -2302,7 +2355,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_variables_exemplar1"
-        ]
+        ],
+        "progression": "Example"
       },
       "bonus": false,
       "seeding_key": {
@@ -2326,7 +2380,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_variables_prompt"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2350,7 +2405,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_variables_concatenation1"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2374,7 +2430,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_variables_concatenation4"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2398,7 +2455,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_variables_start"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -2422,7 +2480,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_variables_finish"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -2446,7 +2505,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_generator_pause"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2470,7 +2530,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_generator_exemplar"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2494,7 +2555,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_generator_prompt"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -2518,7 +2580,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_generator_event"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -2542,7 +2605,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_generator_concatenation"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -2566,7 +2630,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_generator_freeplay"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -2590,7 +2655,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_choices_exemplar"
-        ]
+        ],
+        "progression": "Example"
       },
       "bonus": false,
       "seeding_key": {
@@ -2614,7 +2680,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_choices_practice"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2638,7 +2705,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_choices_variables"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2662,7 +2730,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_choice_prompts"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -2686,7 +2755,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_choices_freeplay"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -2710,7 +2780,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_conditionals_exemplar"
-        ]
+        ],
+        "progression": "Example"
       },
       "bonus": false,
       "seeding_key": {
@@ -2734,7 +2805,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_conditionals_practice"
-        ]
+        ],
+        "progression": "Practice"
       },
       "bonus": false,
       "seeding_key": {
@@ -2753,12 +2825,10 @@
     {
       "chapter": 33,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "poetry_module_conditionals_freeplay"
-        ]
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -2768,7 +2838,7 @@
         "lesson.key": "Responding to Words",
         "lesson_group.key": "",
         "script.name": "poetry-2021",
-        "activity_section.key": "05e2e8a1-12b6-4304-9891-4102e85185a4"
+        "activity_section.key": "027a0515-2442-4e0c-8c3b-b45c8349e5a3"
       },
       "level_keys": [
         "poetry_module_conditionals_freeplay"
@@ -2782,7 +2852,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_share"
-        ]
+        ],
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
@@ -2806,7 +2877,8 @@
       "properties": {
         "level_keys": [
           "poetry_module_modeling_exemple"
-        ]
+        ],
+        "progression": "Example"
       },
       "bonus": false,
       "seeding_key": {
@@ -2953,7 +3025,7 @@
         "lesson.key": "Code Your Own Poem",
         "lesson_group.key": "",
         "script.name": "poetry-2021",
-        "activity_section.key": "12f1637e-ff75-4a30-b4a0-1489d79c81cd"
+        "activity_section.key": "96c86903-96a3-4408-8794-30a5c7edf98f"
       }
     },
     {
@@ -3217,7 +3289,7 @@
         "lesson.key": "Responding to Words",
         "lesson_group.key": "",
         "script.name": "poetry-2021",
-        "activity_section.key": "05e2e8a1-12b6-4304-9891-4102e85185a4"
+        "activity_section.key": "027a0515-2442-4e0c-8c3b-b45c8349e5a3"
       }
     },
     {
@@ -3343,6 +3415,54 @@
       }
     },
     {
+      "name": "Poem Art 1 - Introduction ",
+      "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=2",
+      "key": "poem_art_1_-_introduction",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "poem_art_1_-_introduction"
+      }
+    },
+    {
+      "name": "Poem Art 2 - Events",
+      "url": "https://www.youtube.com/watch?v=XGwYYUEb6jQ&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=3",
+      "key": "poem_art_2_-_events",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "poem_art_2_-_events"
+      }
+    },
+    {
+      "name": "Poem Art 3 - Imagery",
+      "url": "https://www.youtube.com/watch?v=doy1aIuV-5U&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=4",
+      "key": "poem_art_3_-_imagery",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "poem_art_3_-_imagery"
+      }
+    },
+    {
+      "name": "Poem Art 4 - Celebration ",
+      "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo&list=PLzdnOPI1iJNejQxcqExd1cWJnPEBPGCqf&index=5",
+      "key": "poem_art_4_-_celebration",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "poem_art_4_-_celebration"
+      }
+    },
+    {
       "name": "Share Your App!",
       "url": "https://docs.google.com/document/d/1CW-IkOnFTTPD038tVzGrifGVoMZKUgzrGecP5jsZo8I/template/preview",
       "key": "share_your_app_",
@@ -3450,6 +3570,30 @@
       "seeding_key": {
         "lesson.key": "Poem Art",
         "resource.key": "coding_with_poetry_modules"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Poem Art",
+        "resource.key": "poem_art_1_-_introduction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Poem Art",
+        "resource.key": "poem_art_2_-_events"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Poem Art",
+        "resource.key": "poem_art_3_-_imagery"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Poem Art",
+        "resource.key": "poem_art_4_-_celebration"
       }
     },
     {
