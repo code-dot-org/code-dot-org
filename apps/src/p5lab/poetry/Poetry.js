@@ -75,7 +75,7 @@ export default class Poetry extends SpriteLab {
       flowers: 'flower-purple',
       gilded: 'gilded',
       hearts: 'heart-pink',
-      iceCream: 'iceCream',
+      iceCream: 'ice-cream',
       leaves: 'leaves',
       metal: 'metal',
       pawPrints: 'pawprint',
