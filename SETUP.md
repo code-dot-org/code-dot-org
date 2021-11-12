@@ -68,36 +68,37 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
 5. Install **Redis** via `brew install redis`
 6. Install **MySql 5.7** via `brew install mysql@5.7`
 7. Install the **Java 8 JSK**
-   1. Either explicitly via `brew cask install adoptopenjdk/openjdk/adoptopenjdk8`
+   1. Either explicitly via `brew cask install adoptopenjdk/openjdk/adoptopenjdk8` or for M1 in Rosetta, `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
    2. Or by installing [sdkman](https://sdkman.io/) and installing a suitable JDK. Similar to **rbenv** and **nvm**, **sdkman** allows you to switch between versions of Java.
       1. Different versions will be available depending on your system architecture, use `sdk list java` to identify a Java 8 JDK available for ARM architecture.
-      3. `sdk default java <installed version>` to ensure it is the default for future shells.
-8. Install **rbenv**
-   1. For non M1 systems, `rbenv install 2.5.0` should be sufficient
+      2. `sdk default java <installed version>` to ensure it is the default for future shells.
+8. Install **rbenv** via `brew install rbenv`
+9. Install **Ruby 2.5.0**
+   1. For non-M1 systems, `rbenv install 2.5.0` should be sufficient
    2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
       ```sh
       export optflags="-Wno-error=implicit-function-declaration"; export LDFLAGS="-L/opt/homebrew/opt/libffi/lib"; export CPPFLAGS="-I/opt/homebrew/opt/libffi/include"; export PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" | rbenv install 2.5.0
       ```
-9. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See https://leancrew.com/all-this/2017/01/pdftk/ and https://github.com/turforlag/homebrew-cervezas/pull/1 for more information about pdftk on macOS.
+10. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See https://leancrew.com/all-this/2017/01/pdftk/ and https://github.com/turforlag/homebrew-cervezas/pull/1 for more information about pdftk on macOS.
    ```
    curl -O https://raw.githubusercontent.com/zph/homebrew-cervezas/master/pdftk.rb
    brew install ./pdftk.rb
    rm ./pdftk.rb
    ```
-10. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils sqlite parallel tidy-html5`
-11. [Check your rmagick version](#rmagick)
-12. Set up your local MySQL server
+11. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils sqlite parallel tidy-html5`
+12. [Check your rmagick version](#rmagick)
+13. Set up your local MySQL server
    1. Force link 5.7 version via `brew link mysql@5.7 --force`
    2. Start mysql with `brew services start mysql@5.7`, which uses [Homebrew services](https://github.com/Homebrew/homebrew-services) to manage things for you.
-13. Set up rbenv
+14. Set up rbenv
    3.  Run `rbenv init`
    4.  add `eval "$(rbenv init - zsh)"` to your "~/.zshrc"
    5.  Run `source ~/.zshrc` to pick up these changes immediately
-14. Install **Ruby 2.5.0**
+15. Install **Ruby 2.5.0**
     1.  Run `rbenv install 2.5.0`
     2.  Set the global version of Ruby via `rbenv global 2.5.0`
     3.  Install shims for all Ruby executables via `rbenv rehash`. [Learn more about this command](https://github.com/rbenv/rbenv#rbenv-rehash).
-15. Install Node Version Manager and install Node
+16. Install Node Version Manager and install Node
     1. Install NVM via `brew install nvm`
     2. Running `nvm install` or `nvm use` within the project directory will install and use the specified version
     3. Running `nvm alias default $(cat ./.nvmrc)` will set your default node version for future shells.
@@ -110,11 +111,11 @@ These steps are for OSX devices, including Apple Macbooks running on [Apple Sili
        # You are now back in the original shell, run `arch` to confirm
        nvm use && nvm alias default $(cat ./.nvmrc)
        ```
-16. Install **yarn** via `npm install -g yarn@1.22.5`
-17. Install **OpenSSL**
+17. Install **yarn** via `npm install -g yarn@1.22.5`
+18. Install **OpenSSL**
     1.  Run `brew install openssl`
     2.  Following the instructions in the output, run a form of `exportLIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
-18. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
+19. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
 Return to the [Overview](#overview) to continue installation. Note that there are additional steps for Apple Silicon when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
 
