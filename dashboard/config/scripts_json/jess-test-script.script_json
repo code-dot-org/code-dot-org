@@ -5,6 +5,8 @@
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
+      "is_course": true,
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -23,12 +25,15 @@
           "https://studio.code.org/my-professional-learning"
         ]
       ],
-      "student_detail_progress_view": true
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-09-30 13:40:26 UTC",
+    "family_name": "jess-test-script",
+    "serialized_at": "2021-11-10 21:45:54 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "jess-test-script"
     }
@@ -2582,30 +2587,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "VPL - CSD - M7 - U6L2 Level 1"
-        ],
-        "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL - CSD - M7 - U6L2 Level 1"
-        ],
-        "lesson.key": "Module 7",
-        "lesson_group.key": "",
-        "script.name": "jess-test-script"
-      },
-      "level_keys": [
-        "VPL - CSD - M7 - U6L2 Level 1"
-      ]
-    },
-    {
-      "chapter": 102,
-      "position": 8,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "VPL - CSD - M7 - U6L2 Level 2"
         ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
@@ -2624,8 +2605,8 @@
       ]
     },
     {
-      "chapter": 103,
-      "position": 9,
+      "chapter": 102,
+      "position": 8,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -2648,8 +2629,8 @@
       ]
     },
     {
-      "chapter": 104,
-      "position": 10,
+      "chapter": 103,
+      "position": 9,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -2672,8 +2653,8 @@
       ]
     },
     {
-      "chapter": 105,
-      "position": 11,
+      "chapter": 104,
+      "position": 10,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -2696,8 +2677,8 @@
       ]
     },
     {
-      "chapter": 106,
-      "position": 12,
+      "chapter": 105,
+      "position": 11,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -2720,8 +2701,8 @@
       ]
     },
     {
-      "chapter": 107,
-      "position": 13,
+      "chapter": 106,
+      "position": 12,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -2744,8 +2725,8 @@
       ]
     },
     {
-      "chapter": 108,
-      "position": 14,
+      "chapter": 107,
+      "position": 13,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -2768,8 +2749,8 @@
       ]
     },
     {
-      "chapter": 109,
-      "position": 15,
+      "chapter": 108,
+      "position": 14,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -2792,8 +2773,8 @@
       ]
     },
     {
-      "chapter": 110,
-      "position": 16,
+      "chapter": 109,
+      "position": 15,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -2816,8 +2797,8 @@
       ]
     },
     {
-      "chapter": 111,
-      "position": 17,
+      "chapter": 110,
+      "position": 16,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -2840,8 +2821,8 @@
       ]
     },
     {
-      "chapter": 112,
-      "position": 18,
+      "chapter": 111,
+      "position": 17,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -2864,56 +2845,8 @@
       ]
     },
     {
-      "chapter": 113,
-      "position": 19,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "VPL - CSD Module 7 - Alternative Unit"
-        ],
-        "progression": "Preview: Alternate Units to Unit 6 (~10 mins)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL - CSD Module 7 - Alternative Unit"
-        ],
-        "lesson.key": "Module 7",
-        "lesson_group.key": "",
-        "script.name": "jess-test-script"
-      },
-      "level_keys": [
-        "VPL - CSD Module 7 - Alternative Unit"
-      ]
-    },
-    {
-      "chapter": 114,
-      "position": 20,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "VPL - CSD Module 8 - Alternative Unit"
-        ],
-        "progression": "Preview: Alternate Units to Unit 6 (~10 mins)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL - CSD Module 8 - Alternative Unit"
-        ],
-        "lesson.key": "Module 7",
-        "lesson_group.key": "",
-        "script.name": "jess-test-script"
-      },
-      "level_keys": [
-        "VPL - CSD Module 8 - Alternative Unit"
-      ]
-    },
-    {
-      "chapter": 115,
-      "position": 21,
+      "chapter": 112,
+      "position": 18,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -2936,7 +2869,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 113,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2960,7 +2893,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 114,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -2984,7 +2917,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 115,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -3008,7 +2941,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 116,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -3032,7 +2965,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 117,
       "position": 5,
       "activity_section_position": null,
       "assessment": false,
@@ -3056,7 +2989,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 118,
       "position": 6,
       "activity_section_position": null,
       "assessment": false,
@@ -3080,7 +3013,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 119,
       "position": 7,
       "activity_section_position": null,
       "assessment": false,
@@ -3104,7 +3037,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 120,
       "position": 8,
       "activity_section_position": null,
       "assessment": false,
@@ -3128,7 +3061,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 121,
       "position": 9,
       "activity_section_position": null,
       "assessment": false,
@@ -3152,7 +3085,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 122,
       "position": 10,
       "activity_section_position": null,
       "assessment": false,
@@ -3176,32 +3109,8 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 123,
       "position": 11,
-      "activity_section_position": null,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "VPL - CSD Module 7 - Equity Journey"
-        ],
-        "progression": "Equity Journey (~5 mins)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "VPL - CSD Module 7 - Equity Journey"
-        ],
-        "lesson.key": "Module 8",
-        "lesson_group.key": "",
-        "script.name": "jess-test-script"
-      },
-      "level_keys": [
-        "VPL - CSD Module 7 - Equity Journey"
-      ]
-    },
-    {
-      "chapter": 127,
-      "position": 12,
       "activity_section_position": null,
       "assessment": false,
       "properties": {
@@ -4327,17 +4236,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD - M7 - U6L2 Level 1",
-        "script_level.level_keys": [
-          "VPL - CSD - M7 - U6L2 Level 1"
-        ],
-        "lesson.key": "Module 7",
-        "lesson_group.key": "",
-        "script.name": "jess-test-script"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "VPL - CSD - M7 - U6L2 Level 2",
         "script_level.level_keys": [
           "VPL - CSD - M7 - U6L2 Level 2"
@@ -4459,28 +4357,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "VPL - CSD Module 7 - Alternative Unit",
-        "script_level.level_keys": [
-          "VPL - CSD Module 7 - Alternative Unit"
-        ],
-        "lesson.key": "Module 7",
-        "lesson_group.key": "",
-        "script.name": "jess-test-script"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "VPL - CSD Module 8 - Alternative Unit",
-        "script_level.level_keys": [
-          "VPL - CSD Module 8 - Alternative Unit"
-        ],
-        "lesson.key": "Module 7",
-        "lesson_group.key": "",
-        "script.name": "jess-test-script"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "VPL - CSD - Module 7 Wrap Up",
         "script_level.level_keys": [
           "VPL - CSD - Module 7 Wrap Up"
@@ -4594,17 +4470,6 @@
         "level.key": "VPL - CSD M8 Conclusions and Connections Reflection",
         "script_level.level_keys": [
           "VPL - CSD M8 Conclusions and Connections Reflection"
-        ],
-        "lesson.key": "Module 8",
-        "lesson_group.key": "",
-        "script.name": "jess-test-script"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "VPL - CSD Module 7 - Equity Journey",
-        "script_level.level_keys": [
-          "VPL - CSD Module 7 - Equity Journey"
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",

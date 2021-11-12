@@ -1,5 +1,8 @@
 teacher_resources [["lessonPlans", "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"]]
+family_name '2021drafting'
+version_year 'unversioned'
 published_state 'beta'
+is_course true
 
 lesson_group 'introduction', display_name: 'Introduction'
 lesson_group_description 'Explore projects created with Sprite Lab. Learn the basics of coding with sprites and events!'
@@ -93,6 +96,7 @@ level 'spritelab_speech_prototype_mike', progression: 'Speech Bubbles'
 level 'spritelab_speech_prototype_mike2', progression: 'Speech Bubbles'
 level 'spritelab_validation_testing', progression: 'Validation String testing'
 level 'effect block template', progression: 'Create your own burst effect'
+level 'spritelab_no_sprites', progression: 'Blank Costumes Project'
 
 lesson_group 'Loom Levels', display_name: 'Loom Levels'
 lesson 'video', display_name: 'Sprite Lab Videos', has_lesson_plan: false

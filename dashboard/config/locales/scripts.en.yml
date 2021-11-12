@@ -574,6 +574,8 @@ en:
           lessons:
             Jigsaw:
               name: Jigsaw
+              description_student: Click and drag to finish the puzzles.
+              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
           student_description: Try our Jigsaw tutorial.
         step:
           title: Step
@@ -4693,6 +4695,8 @@ en:
               name: Functions in Bee
             Functions in Farmer:
               name: Functions in Farmer
+              description_student: 
+              description_teacher: 
             Determine the Concept in Bee:
               name: Determine the Concept in Bee
             Build a Play Lab Game:
@@ -8031,6 +8035,8 @@ en:
               name: 'Loops: My Loopy Robotic Friends'
             Loops in Artist:
               name: Loops in Artist
+              description_student: 
+              description_teacher: 
             Nested Loops:
               name: Nested Loops
             Nested Loops with Frozen:
@@ -14700,6 +14706,8 @@ en:
           lessons:
             Game Lab Bugs:
               name: Game Lab Bugs
+              description_student: 
+              description_teacher: 
             Immovable Crab:
               name: Immovable Crab
           student_description: ''
@@ -18980,6 +18988,10 @@ en:
           lessons:
             Virus Simulation for Code Bytes:
               name: Coding a Simulation
+            Outbreak:
+              name: Coding a Simulation
+              description_student: A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy.
+              description_teacher: 'This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. '
           lesson_groups:
             outbreak:
               display_name: Outbreak Simulation
@@ -19375,6 +19387,10 @@ en:
               name: CS Discoveries Post Course survey
               description_student: 
               description_teacher: 
+            lesson-1:
+              name: CS Discoveries Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csd2_1v2:
               display_name: 'Chapter 1: Creating Webpages'
@@ -19587,6 +19603,10 @@ en:
               name: CS Discoveries Post Course survey
               description_student: 
               description_teacher: 
+            lesson-1:
+              name: CS Discoveries Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csd3_1:
               display_name: 'Chapter 1: Images and Animations'
@@ -19764,6 +19784,10 @@ en:
               description_teacher: "**Question of the Day: How can I track my work while we make updates to our app?**\n \nTeams make a decision about how they will incorporate updates to their app, then they begin updating their app based on their post-its from yesterday’s lesson. They use a “To Do / Doing / Done” chart to organize their work and track their progress. Teams spend the majority of the class working on updating their app, with time at the end to re-combine into a single app if necessary.\n"
             Build a Paper Prototype:
               name: Build a Paper Prototype
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csd4_1:
               display_name: 'Chapter 1: User Centered Design'
@@ -19919,6 +19943,10 @@ en:
               name: Data and Machine Learning
               description_student: "**Question of the Day: How can machines \"learn\"?**\n\nIn this lesson, you get to work with Artificial Intelligence and learn about Machine Learning. "
               description_teacher: "**Question of the Day: How can machines \"learn\"?**\r\n\r\nIn this lesson, students are introduced to the concepts of Artificial Intelligence and Machine Learning using the AI for Oceans widget. First students classify objects as either \"fish\" or \"not fish\" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own."
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             csd5_1:
               display_name: 'Chapter 1: Representing Information'
@@ -20056,6 +20084,10 @@ en:
             CS Discoveries Post Course survey:
               key: CS Discoveries Post Course survey
               name: CS Discoveries Post Course survey
+              description_student: 
+              description_teacher: 
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
               description_student: 
               description_teacher: 
           lesson_groups:
@@ -20747,8 +20779,8 @@ en:
             Create PT - Make a Plan:
               key: Create PT - Make a Plan
               name: Create PT   Make a Plan
-              description_student: This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT. It contains activities to help students understand the requirements of the task, as well as activities to help them narrow down and brainstorm ideas for their actual project.
-              description_teacher: "This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT. It contains activities to help students understand the requirements of the task, as well as activities to help them narrow down and brainstorm ideas for their actual project.\r\n\r\nThe lesson concludes by providing students with resources to make a plan to complete the task staring in the next lesson."
+              description_student: This lesson uses the Create PT Survival Guide to help narrow down and brainstorm ideas for the actual project.
+              description_teacher: This lesson uses the Create PT Survival Guide to help students narrow down and brainstorm ideas for their actual project. The lesson concludes by providing students with resources to make a plan to complete the task starting in the next lesson.
             Create PT - Complete the Task:
               key: Create PT - Complete the Task
               name: Create PT - Complete the Task (12 hrs)
@@ -20756,8 +20788,8 @@ en:
               description_teacher: "It is finally time for students to take on the Create Performance Task. For a total of 12 class hours, students should work on their projects with only types of teacher support allowed (essentially: Advise on process, don’t influence or evaluate ideas).  Students may also work with a collaborative partner in *in development of their program* - written responses must be done on their own.\r\n\r\nThe lesson includes reminders about how you can interact with students while they are working on their projects, and suggestions about time line. The Create PT requires a minimum of 12 hours of class time.  At the end, students will submit their program code, program video, and written responses through their AP digital portfolio."
             lesson-4:
               name: Create PT Deep Dive
-              description_student: 
-              description_teacher: This lesson will be updated in Fall 2021 to reflect updates to the Create PT.
+              description_student: This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT.
+              description_teacher: 'This lesson is designed to introduce the nuances of the Create PT, and begin to provide some answers to the questions that will inevitably arise. The Create PT is in many ways straightforward: you complete a self-directed programming project and respond to prompts about your program and process. As you dig into the details of the task, however, you quickly come across some of the nuances of individual components of the task and how they''re scored. '
           lesson_groups: {}
           name: csp8-2021
           student_description: 'In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
@@ -20919,7 +20951,7 @@ en:
               name: Safety in My Online Neighborhood
               description_student: Learn how to go places safely online.
               description_teacher: |-
-                [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -21007,7 +21039,7 @@ en:
               name: Digital Trails
               description_student: 'Learn about your digital footprint and how to stay safe when visiting websites. '
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -21101,7 +21133,7 @@ en:
               name: Putting a STOP to Online Meanness
               description_student: In this lesson, you'll learn about meanness and what to do if you encounter it online.
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -21322,7 +21354,7 @@ en:
               name: Password Power-Up
               description_student: In this lesson, you'll learn about how passwords protect your information, and how to make a good password.
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
@@ -21401,7 +21433,7 @@ en:
               name: Private and Personal Information
               description_student: The internet is fun and exciting, but it's important to stay safe too. This lesson teaches you the difference between information that is safe to share and information that is private.
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -21467,7 +21499,7 @@ en:
               name: Be A Super Digital Citizen
               description_student: Learn how you can be an upstander when you see cyberbullying.
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -21639,7 +21671,7 @@ en:
               name: The Power of Words
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -22226,6 +22258,8 @@ en:
           lessons:
             new lesson:
               name: lesson display name
+            lesson-2:
+              name: new lesson 1
           lesson_groups:
             lesson group:
               display_name: lesson group display name
@@ -22776,6 +22810,10 @@ en:
               name: The Playground
               description_student: 
               description_teacher: 
+            lesson-20:
+              name: Unit 4 Pilot Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -22783,6 +22821,8 @@ en:
               display_name: Show What You Know
             lessonGroup-4:
               display_name: Sandbox
+            lessonGroup-5:
+              display_name: Pilot Survey
           name: csa4-pilot
           title: Expanding Program Logic
           description_audience: ''
@@ -22833,19 +22873,53 @@ en:
               description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `SepiaImage` class that applies a sepia effect on an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             lesson-11:
               name: A Sustainable Neighborhood Project - Day 1
+              description_student: For this project, you develop a concert in The Theater about your chosen sustainable goal. You begin by choosing a new image filter or effect and writing pseudocode for its algorithm. You then begin the first iteration of your project.
+              description_teacher: For this project, students develop a concert in The Theater about their chosen sustainable goal. Students begin by choosing a new image filter or effect and writing pseudocode for its algorithm. Students then begin the first iteration of their project.
             lesson-12:
               name: A Sustainable Neighborhood Project - Day 2
+              description_student: In the previous lesson, you completed the first iteration of your concert. Today, you complete the second iteration of your project and reflect with a group as you prepare for the final development of your Sustainable Neighborhood Concert. You self-assess your work against the project rubric and create a final priority list for your last iteration.
+              description_teacher: In the previous lesson, students completed the first iteration of their concert. Students complete the second iteration of their project and reflect with a group as they prepare for the final development of their Sustainable Neighborhood Concert. Students self-assess their work against the project rubric and create a final priority list for their last iteration.
             lesson-13:
               name: A Sustainable Neighborhood Project - Day 3
+              description_student: You complete your last iteration and present your concert to your peers. You finish the project with a final reflection and celebrate your identity as a software engineer.
+              description_teacher: Students complete their last iteration and present their concert to their peers. Students finish the project with a final reflection and celebrate their identity as software engineers.
             lesson-14:
               name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.
             lesson-15:
               name: Assessment Day
+              description_student: In this unit, you used two-dimensional (2D) arrays to expand storage and organization capabilities in your programs. You identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you previously developed to access and manipulate elements. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students used two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            Java Lab:
+              name: Java Lab
+              description_student: 
+              description_teacher: 
+            The Neighborhood:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
+            The Theater:
+              name: The Theater
+              description_student: 
+              description_teacher: 
+            The Playground:
+              name: The Playground
+              description_student: 
+              description_teacher: 
+            lesson-16:
+              name: Unit 5 Pilot Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandbox
+            lessonGroup-5:
+              display_name: Pilot Survey
           name: csa5-pilot
           title: Giving Objects Organization
           description_audience: ''
@@ -22853,14 +22927,98 @@ en:
           description: In this unit, students use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements.
           student_description: In this unit, you use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. You identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you developed in Unit 3 to access and manipulate elements.
         csa6-pilot:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            Java Lab:
+              name: Java Lab
+              description_student: 
+              description_teacher: 
+            The Neighborhood:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
+            The Theater:
+              name: The Theater
+              description_student: 
+              description_teacher: 
+            The Playground:
+              name: The Playground
+              description_student: 
+              description_teacher: 
+            lesson-1:
+              name: Documenting Program Code
+              description_student: The projects you have developed throughout the course have inspired a lot of creativity in the community! A Neighborhood Lit Fest will be held to showcase creative stories, scripts, song lyrics, letters, and poems. The Neighborhood Lit Fest Project is a large project that you work on throughout the unit, and project management strategies help to organize and structure your work. You explore strategies for writing and structuring code so other software engineers can easily understand and use a Java tool to create program documentation.
+              description_teacher: Students are introduced to the Neighborhood Lit Fest Project and evaluate requirements and examples to identify questions and key features. Before beginning work on the project, students expand their understanding of program structure and commenting by identifying best practices and exploring the use of Javadocs to generate program documentation.
+            lesson-2:
+              name: Exploring Integer and Double Objects
+              description_student: You construct `Integer` and `Double` objects to represent `int` and `double` primitive values as reference values. Using the methods in the `Integer` and `Double` classes, you return the values these objects store as primitive values. You also explore the minimum and maximum values for integers to avoid overflow errors before planning the tasks you need to complete for your Neighborhood Lit Fest Project.
+              description_teacher: Students construct `Integer` and `Double` objects to represent `int` and `double` primitive values as reference values. Using the methods in the `Integer` and `Double` classes, students return the values these objects store as primitive values. Students also explore the minimum and maximum values for integers to avoid overflow errors before planning the tasks they need to complete for their Neighborhood Lit Fest Project.
+            lesson-3:
+              name: Using ArrayLists to Store Data
+              description_student: When working with arrays and lists, we sometimes encounter problems where the number of elements is unknown or the list's size constantly changes. In this lesson, you learn about `ArrayList`s and identify scenarios where this data structure is more suitable.
+              description_teacher: Students create `ArrayList`s to store `int` and `double` values. Students differentiate between `ArrayList` and one-dimensional arrays to determine which data structure is best suited for a scenario. Students add elements to an `ArrayList` and learn how autoboxing converts between primitive values and wrapper classes as they work with the data stored.
+            lesson-4:
+              name: Working with ArrayList Data
+              description_student: You use the `ArrayList` methods `get()` and `set()` to retrieve and modify elements and learn about the `String` method `length()` to count the number of characters in a `String` object. You apply the standard algorithms you developed with 1D and 2D arrays to modify elements in an `ArrayList`. You learn how unboxing performs conversions between primitive values and wrapper classes as they work with data stored in an `ArrayList`.
+              description_teacher: 'Students work with the `get()` and `set()` methods to retrieve and modify elements in an `ArrayList` and learn about the `String` method `length()` to return the number of characters in a `String` object. They apply the standard algorithms they developed with 1D and 2D arrays to modify elements in an `ArrayList`. Students learn how unboxing performs conversions between primitive values and wrapper classes as they work with data stored in an `ArrayList`. '
+            lesson-5:
+              name: Storing Objects in an ArrayList
+              description_student: So far, you have created `ArrayList`s to store `Integer`s, `Double`s, and `String`s. Like with 1D and 2D arrays, you can also store objects that you create in an `ArrayList`. In this lesson, you create an `ArrayList` of objects to apply the standard algorithms you have used throughout the year to work with the data stored in this list.
+              description_teacher: Students create `ArrayList`s to store objects and learn about generic types in Java. Students apply the algorithms they learned with one-dimensional arrays to `ArrayList`s to find the minimum and maximum values, calculate sums and averages, or find elements that meet specific criteria.
+            lesson-6:
+              name: Removing Data from an ArrayList
+              description_student: You explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. In the process, you realize when an `ArrayList` is best for a scenario or problem.
+              description_teacher: Students explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. Students then realize when an `ArrayList` is best for a scenario or problem.
+            lesson-7:
+              name: Using String Methods
+              description_student: You explore the structure of a `String` and recall that `String`s are objects. You use the `indexOf()` and `substring()` methods to search for substrings within a `String` and to create new `String` objects from an existing `String`.
+              description_teacher: Students explore the structure of a `String` and recall that `String`s are objects. Students use the `indexOf()` and `substring()` methods to search for substrings within a `String` and to create new `String` objects from an existing `String`.
+            lesson-8:
+              name: Comparing Strings
+              description_student: You explore using `compareTo()` to check if `String`s are in alphabetical order. You then work on your Neighborhood Lit Fest Project, focusing specifically on the tasks you have on your Project Planning Board.
+              description_teacher: Students explore using `compareTo()` to check if `String`s are in alphabetical order. Students then work on their Neighborhood Lit Fest Project, focusing specifically on the tasks they have on their Project Planning Board.
+            lesson-9:
+              name: Solving Problems with Strings
+              description_student: 'You combine your knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. You then participate in a peer feedback session and reflect on your progress on your Neighborhood Lit Fest Project. '
+              description_teacher: Students combine their knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. Students then participate in a peer feedback session and reflect on their progress on their Neighborhood Lit Fest Project.
+            lesson-10:
+              name: Solving Problems with ArrayLists
+              description_student: You apply standard algorithms you wrote for 1D and 2D arrays to `ArrayList`s. You implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in your Neighborhood Lit Fest Project.
+              description_teacher: Students apply standard algorithms they wrote for 1D and 2D arrays to `ArrayList`s. Students implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in their Neighborhood Lit Fest Project.
+            lesson-11:
+              name: Neighborhood Lit Fest Project - Day 1
+              description_student: You continue to develop your Neighborhood Lit Fest Project to create a story, poetry, song, or another form of literature based on analysis of work from your favorite author or artist. You first self-assess your work to evaluate your progress in completing project requirements, then write acceptance criteria for a feature in your project that a peer will test. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project.
+              description_teacher: Students continue to develop their Neighborhood Lit Fest Project to create a story, poetry, song, or another form of literature based on analysis of work from their favorite author or artist. Students first self-assess their work to evaluate their progress in completing project requirements, then write acceptance criteria for a feature in their project that a peer will test. Students use the self-assessment and peer feedback to prioritize their remaining tasks and continue developing their projects.
+            lesson-12:
+              name: Neighborhood Lit Fest Project - Day 2
+              description_student: In the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Neighborhood Lit Fest Project.
+              description_teacher: In the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Neighborhood Lit Fest Projects.
+            lesson-13:
+              name: Neighborhood Lit Fest Project - Day 3
+              description_student: You make final revisions and updates based on your code reviews and Project Planning Board. You share your Neighborhood Lit Fest Project with your peers. You then celebrate your success and complete a final reflection of the development process.
+              description_teacher: Students make final revisions and updates based on their code reviews and Project Planning Board. Students share their Neighborhood Lit Fest Projects with their peers. Students then celebrate their success and complete a final reflection of the development process.
+            lesson-14:
+              name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.
+            lesson-15:
+              name: Assessment Day
+              description_student: In this unit, you used `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explored the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You used methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you wrote program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identified and documented preconditions and postconditions of objects and methods. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students used `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explored the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students used methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students wrote program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identified and documented preconditions and postconditions of objects and methods. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Pilot Survey
+            lessonGroup-5:
+              display_name: Sandbox
           name: csa6-pilot
-          title: ''
+          title: Expanding Program Capabilities
           description_audience: ''
           description_short: ''
-          description: ''
-          student_description: ''
+          description: In this unit, students use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identify and document preconditions and postconditions of objects and methods.
+          student_description: In this unit, you use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identify and document preconditions and postconditions of objects and methods.
         csa7-pilot:
           lessons: {}
           lesson_groups: {}
@@ -23147,6 +23305,8 @@ en:
               name: 'Module 7: Tools and structure in Unit 9 - Data'
             Module 8:
               name: 'Module 8: Building community and preparing students for the AP Exam'
+            lesson-9:
+              name: Getting Started 1
           lesson_groups:
             lesson group:
               display_name: lesson group display name
@@ -23398,7 +23558,10 @@ en:
             Innovations in AI:
               name: Innovations in AI
               description_student: Research different examples of how Artificial Intelligence is being used to solve problems in the world.
-              description_teacher: In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.
+              description_teacher: |-
+                In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.
+
+                **Question of the Day:** How is AI helping to solve problems around the world?
             Patterns in Data:
               name: Patterns in Data
               description_student: Explore three different ways computers can make recommendations and how important data can be in making accurate decisions.
@@ -23530,6 +23693,10 @@ en:
               name: Post-Unit Survey
             Post-Unit Survey:
               name: Post-Unit Survey
+              description_student: 
+              description_teacher: 
+            CS Discoveries Post-Course Survey:
+              name: CS Discoveries Post-Course Survey
               description_student: 
               description_teacher: 
           lesson_groups:
@@ -23731,12 +23898,12 @@ en:
               description_teacher: ''
             Module 7:
               key: Module 7
-              name: 'Module 7: Tools and structure in Unit 9 - Data'
+              name: 'Module 7: Tools and Structure in Unit 9 - Data'
               description_student: ''
               description_teacher: ''
             Module 8:
               key: Module 8
-              name: 'Module 8: Building community and preparing students for the AP Exam'
+              name: 'Module 8: Building Community and Preparing Students for the AP Exam'
               description_student: ''
               description_teacher: ''
             new lesson:
@@ -24004,10 +24171,11 @@ en:
             lessonGroup-9:
               display_name: Preparing to Teach Unit 1
           name: self-paced-pl-csd5-2021
-          title: 'Module 5: Preparing to Teach CS Discoveries'
+          title: 'Module 5: Preparing to Teach Unit 7'
           description_audience: ''
           description_short: ''
-          description: "This module is designed to help you prepare for teaching specific units within the CS Discoveries course.  Start by selecting the unit you plan to teach first. You can come back to this section of the training throughout the school year as you prepare to teach new units of the course. This content does not need to be completed in order. For guidance on how best to implement CS Discoveries with students, refer to the [CS Discoveries Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview).\n\n**For each unit in CS Discoveries, you will have the opportunity to:**\n* Prepare to teach the first week of unit content \n* Practice key concepts included in the unit \n* Engage with sample student work \n* Explore end of chapter projects \n\n**Suggested Time:** 1 hour per unit \n"
+          description: "This module is designed to help you prepare for teaching specific units within the CS Discoveries course.  Start by selecting the unit you plan to teach first. You can come back to this section of the training throughout the school year as you prepare to teach new units of the course. This content does not need to be completed in order. For guidance on how best to implement CS Discoveries with students, refer to the [CS Discoveries Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview).\n\n**For each unit in CS Discoveries, you will have the opportunity to:**\n* Prepare to teach the first week of unit content \n* Practice key concepts included in the unit \n* Engage with sample student work \n* Explore end of chapter projects \n\n**Suggested Time:** 2 hours\n"
+          student_description: ''
         self-paced-pl-csd6-2021:
           lessons:
             lesson-1:
@@ -24132,13 +24300,18 @@ en:
           description_short: ''
           description: ''
         self-paced-pl-csp1-2021:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Welcome to Code.org
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: self-paced-pl-csp1-2021
-          title: ''
+          title: 'Module 1: Welcome'
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Principles.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          student_description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Principles.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
         self-paced-pl-csp2-2021:
           lessons: {}
           lesson_groups: {}
@@ -24808,7 +24981,8 @@ en:
           title: 2021 CS Principles Deeper Learning Module 4  for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by November 5, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by November 19, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-csp-mod1:
           lessons:
             lesson-1:
@@ -24890,7 +25064,8 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 3 for Workshop 3
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by October 1, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by October 15, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-csd-mod4:
           lessons:
             lesson-1:
@@ -24906,7 +25081,8 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by November 5, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by November 19, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-csp-mod2:
           lessons:
             lesson-1:
@@ -24939,7 +25115,8 @@ en:
           title: 2021 CS Principles Deeper Learning Module 3 for Workshop 3
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by October 1, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by October 18, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-overview:
           lessons: {}
           lesson_groups: {}
@@ -25767,9 +25944,9 @@ en:
               description_teacher: 
             lesson-5:
               key: lesson-5
-              name: Comparing Values to Make Decisions
-              description_student: 'Today is all about using code to make decisions. You compare relationships between values while using conditional statements to help the `Painter` make decisions. '
-              description_teacher: 'Students use relational operators to write and evaluate expressions. Students expand their use of `if` statements to compare values stored in variables and array elements. '
+              name: Unit 4 Pilot Survey
+              description_student: 
+              description_teacher: 
             lesson-6:
               key: lesson-6
               name: Adding Randomness to a Program
@@ -25832,6 +26009,8 @@ en:
               display_name: Show What You Know
             lessonGroup-4:
               display_name: Sandbox
+            lessonGroup-5:
+              display_name: Unit 4 Pilot Survey
           title: Expanding Program Logic
           description: In this unit, students learn how the use of APIs and libraries can expand the functionalities of their programs. Students learn to use relational and logical operators to expand the decisions for conditionals and iteration. Students use casting operators and `Math` class methods as they evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan's Laws and writing truth tables. Students use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
           student_description: In this unit, you learn how the use of APIs and libraries can expand the functionalities of your programs. You learn to use relational and logical operators to expand the decisions for conditionals and iteration. You use casting operators and `Math` class methods as you evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and writing truth tables. You use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
@@ -25842,16 +26021,16 @@ en:
           lessons:
             Creating Tables of Data:
               name: Creating Tables of Data
-              description_student: In the previous lessons, you used one-dimensional (1D) arrays to store values of the same type. Today, you learn how to create and use two-dimensional (2D) arrays, arrays that store arrays of the same type. 2D arrays are useful for storing data represented as a table. In this lesson, you use 2D arrays to store data to represent Project Mercury Pastries Food Truck's business expansion.
-              description_teacher: Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students create 2D arrays to store `int` and `double` elements using the `new` keyword and initializer lists to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.
+              description_student: In the previous lessons, you used one-dimensional (1D) arrays to store values of the same type. Today, you learn how to create and use two-dimensional (2D) arrays. 2D arrays are useful for storing data represented as a table. In this lesson, you use 2D arrays to store data to represent Project Mercury Pastries Food Truck's business expansion.
+              description_teacher: Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students use the `new` keyword and initializer lists to create 2D arrays to store `int` and `double` elements to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.
             Traversing a 2D Array by Rows:
               name: Traversing a 2D Array by Rows
-              description_student: Now that you have seen 2D arrays, you write nested `for` loops to traverse them! You revisit The Theater to develop a new concert to educate The Neighborhood about sustainable transportation. After choosing an initial welcome image for the concert, you write the `getPixels()` method to store pixels from an image into a 2D array to use in upcoming lessons to create image effects.
-              description_teacher: Students use nested `for` loops to traverse 2D arrays in row-major order and apply a standard algorithm they wrote in Unit 3 to evaluate data. Students revisit The Theater to begin development on a new concert to educate The Neighborhood about sustainable transportation. They choose an initial welcome image for the concert and write the `getPixels()` method to store pixels from an image into a 2D array to use in upcoming lessons to create image effects.
+              description_student: Now that you have seen 2D arrays, you use nested loops to traverse them and revisit standard algorithms to evaluate data. You begin development on a new concert to educate The Neighborhood about sustainable transportation. You create a 2D array of images and display them by traversing the array and writing the `getPixels()` method to store pixels from an image into a 2D array.
+              description_teacher: Students use nested loops to traverse 2D arrays in row-major order and revisit standard algorithms to evaluate data. Students begin development on a new concert in The Theater to educate The Neighborhood about sustainable transportation. They create a 2D array of images and display them by traversing the array and writing the `getPixels()` method to store pixels from an image into a 2D array.
             Traversing a 2D Array by Columns:
               name: Traversing a 2D Array by Columns
               description_student: 'Data is organized into rows and columns. In the previous lesson, you traversed a 2D array to access elements and make calculations across a row. Today, you learn how to traverse a 2D array in column-major order. Using this traversal algorithm, you develop image effects that manipulate pixels to mirror an image vertically. '
-              description_teacher: Students use nested `for` loops to traverse a 2D array in column-major order. Students differentiate between column-major and row-major order and explain when they might use one approach over another. Students apply column-major order traversal to calculate the total inventory by dessert for the Project Mercury Pastries Food Truck and further develop the concert in The Theater. Students manipulate pixels in an image using column-major order traversal to vertically mirror the image and implement the effect in the concert.
+              description_teacher: Students use nested loops to traverse a 2D array in column-major order. Students differentiate between column-major and row-major order and explain when they might use one approach over another. Students apply column-major order traversal to calculate the total inventory by dessert for the Project Mercury Pastries Food Truck and develop the concert in The Theater. Students manipulate pixels in an image using column-major order traversal to vertically mirror the image and implement the effect in the concert.
             Using Enhanced for Loops:
               name: Using Enhanced for Loops
               description_student: 'Today, you learn the structure of using enhanced `for` loops to traverse 2D arrays. You identify the similarities and differences between using an enhanced `for` loop with 1D arrays and 2D arrays. You use a nested enhanced `for` loop to write methods to modify the color values of pixels and create effects on the images for the concert. '
@@ -25862,49 +26041,49 @@ en:
               description_teacher: 'Students explore the effect of executing a `return` statement inside a loop compared to executing outside a loop. Students write new standard algorithms to find whether values are evenly divisible by another integer and find the number of elements that meet specific criteria. Students solve problems for the Project Mercury Pastries Food Truck by implementing these algorithms. '
             Applying Standard Algorithms:
               name: Applying Standard Algorithms
-              description_student: The standard algorithms you wrote in Unit 3 also work with 2D arrays and can create visual effects on images. In this lesson, you continue to develop your concert in The Theater by writing a `grayscale()` method. You find the minimum and maximum red, green, or blue color values and use that value to set all other red, green, or blue values. You participate in code reviews to give, receive, and implement feedback on your new methods and progress.
-              description_teacher: Students apply the standard algorithms they wrote in Unit 3 to 2D arrays to create visual effects on images. Students continue developing the concert in The Theater by writing a `grayscale()` method that finds the average of the RGB values of a pixel in an image and sets the pixel to that average value. Students find the minimum and maximum red, green, or blue color values and use the value to set all other red, green, or blue values. Students participate in code reviews to give, receive, and implement feedback on their new methods and progress.
+              description_student: The standard algorithms you wrote for 1D arrays also work with 2D arrays to create image filters and solve problems for the Project Mercury Pastries Food Truck. In this lesson, you use a standard algorithm to create a new image filter to create a grayscale image. You also use a standard algorithm to help the food truck owner maximize their dessert inventory.
+              description_teacher: Students apply the standard algorithms they wrote for 1D arrays to 2D arrays to create image filters and solve problems for the Project Mercury Pastries Food Truck. Students write a `GrayscaleImage` class that creates a grayscale image by finding the average of the RGB values of a `Pixel` in an image and setting the RGB values of the `Pixel` to that average value. Students find the maximum value in a 2D array of dessert quantities to compare to a quantity entered and update the array based on a condition.
             Reversing Elements:
               name: Reversing Elements
-              description_student: 
-              description_teacher: 
+              description_student: You apply standard algorithms to create an image effect in The Theater by writing a `ReversedImage` class that creates a reversed version of an image. You incorporate previous concepts you have learned and functionalities of The Theater to animate your effect and incorporate user interaction.
+              description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `ReversedImage` class that creates a reversed version of an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             Shifting Elements:
               name: Shifting Elements
-              description_student: 
-              description_teacher: 
+              description_student: You apply standard algorithms to create an image effect in The Theater by writing a `ShiftedImage` class that creates a reversed version of an image. You incorporate previous concepts you have learned and functionalities of The Theater to animate your effect and incorporate user interaction.
+              description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `ShiftedImage` class that creates a reversed version of an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             Finding Duplicates:
               name: Finding Duplicates
-              description_student: 
-              description_teacher: 
+              description_student: You previously developed a standard algorithm to find and replace duplicate values in a 1D array. In this lesson, you apply this standard algorithm to find duplicate `Dessert` objects in a 2D array. You refactor the food truck data to create a 2D array of `Dessert` objects to improve the organization of the food truck inventory before writing the `removeDuplicates()` method.
+              description_teacher: Students previously developed a standard algorithm to find and replace duplicate values in a 1D array. In this lesson, students apply this standard algorithm to find duplicate `Dessert` objects in a 2D array. Students refactor the food truck data to create a 2D array of `Dessert` objects to improve the organization of the food truck inventory before writing the `removeDuplicates()` method.
             Searching for Elements:
               name: Searching for Elements
-              description_student: 
-              description_teacher: 
+              description_student: You apply standard algorithms to create an image effect in The Theater by writing a `SepiaImage` class that applies a sepia effect on an image. You incorporate previous concepts you have learned and functionalities of The Theater to animate your effect and incorporate user interaction.
+              description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `SepiaImage` class that applies a sepia effect on an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             A Sustainable Neighborhood Project - Day 1:
               name: A Sustainable Neighborhood Project - Day 1
-              description_student: 
-              description_teacher: 
+              description_student: For this project, you develop a concert in The Theater about your chosen sustainable goal. You begin by choosing a new image filter or effect and writing pseudocode for its algorithm. You then begin the first iteration of your project.
+              description_teacher: For this project, students develop a concert in The Theater about their chosen sustainable goal. Students begin by choosing a new image filter or effect and writing pseudocode for its algorithm. Students then begin the first iteration of their project.
             A Sustainable Neighborhood Project - Day 2:
               name: A Sustainable Neighborhood Project - Day 2
-              description_student: 
-              description_teacher: 
+              description_student: In the previous lesson, you completed the first iteration of your concert. Today, you complete the second iteration of your project and reflect with a group as you prepare for the final development of your Sustainable Neighborhood Concert. You self-assess your work against the project rubric and create a final priority list for your last iteration.
+              description_teacher: In the previous lesson, students completed the first iteration of their concert. Students complete the second iteration of their project and reflect with a group as they prepare for the final development of their Sustainable Neighborhood Concert. Students self-assess their work against the project rubric and create a final priority list for their last iteration.
             A Sustainable Neighborhood Project - Day 3:
               name: A Sustainable Neighborhood Project - Day 3
-              description_student: 
-              description_teacher: 
+              description_student: You complete your last iteration and present your concert to your peers. You finish the project with a final reflection and celebrate your identity as a software engineer.
+              description_teacher: Students complete their last iteration and present their concert to their peers. Students finish the project with a final reflection and celebrate their identity as software engineers.
             FRQ Day:
               name: FRQ Day
-              description_student: 
-              description_teacher: 
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.
             Assessment Day:
               name: Assessment Day
-              description_student: 
-              description_teacher: 
+              description_student: In this unit, you used two-dimensional (2D) arrays to expand storage and organization capabilities in your programs. You identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you previously developed to access and manipulate elements. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students used two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             lesson-1:
               key: lesson-1
-              name: Creating Tables of Data
-              description_student: In the previous lessons, you used one-dimensional (1D) arrays to store values of the same type. Today, you learn how to create and use two-dimensional (2D) arrays, arrays that store arrays of the same type. 2D arrays are useful for storing data represented as a table. In this lesson, you use 2D arrays to store data to represent Project Mercury Pastries Food Truck's business expansion.
-              description_teacher: Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students create 2D arrays to store `int` and `double` elements using the `new` keyword and initializer lists to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.
+              name: Unit 5 Pilot Survey
+              description_student: 
+              description_teacher: 
             lesson-2:
               key: lesson-2
               name: Traversing a 2D Array by Rows
@@ -25975,11 +26154,31 @@ en:
               name: Assessment Day
               description_student: ''
               description_teacher: ''
+            Java Lab:
+              name: Java Lab
+              description_student: 
+              description_teacher: 
+            The Neighborhood:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
+            The Theater:
+              name: The Theater
+              description_student: 
+              description_teacher: 
+            The Playground:
+              name: The Playground
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandbox
+            lessonGroup-5:
+              display_name: Pilot Survey
           title: Giving Objects Organization
           description: In this unit, students use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements.
           student_description: In this unit, you use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. You identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you developed in Unit 3 to access and manipulate elements.
@@ -26137,7 +26336,7 @@ en:
               description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
           lesson_groups: {}
           name: hello-world-food
-          title: Hello World
+          title: 'Hello World: Food'
           description_audience: ''
           description_short: ''
           description: ''
@@ -26224,7 +26423,7 @@ en:
               description_teacher: 
           lesson_groups: {}
           name: hello-world-animals
-          title: Hello World
+          title: 'Hello World: Animals'
           description_audience: ''
           description_short: ''
           description: ''
@@ -26237,7 +26436,7 @@ en:
               description_teacher: 
           lesson_groups: {}
           name: hello-world-emoji
-          title: Hello World
+          title: 'Hello World: Emoji'
           description_audience: ''
           description_short: ''
           description: ''
@@ -26250,7 +26449,7 @@ en:
               description_teacher: 
           lesson_groups: {}
           name: hello-world-retro
-          title: Hello World
+          title: 'Hello World: Retro'
           description_audience: ''
           description_short: ''
           description: ''
@@ -26362,7 +26561,7 @@ en:
             lesson-1:
               name: Our AI Code of Ethics
               description_student: Collaboratively research about AI ethics and create a shareable code of conduct.
-              description_teacher: In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+              description_teacher: This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
           lesson_groups: {}
           name: ai-ethics
           title: Our AI Code of Ethics
@@ -26435,3 +26634,800 @@ en:
           description_short: Take the challenge to create your own sprite effect using Sprite Lab!
           description: ''
           student_description: ''
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgets
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Tools
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Examples
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Demos and Resources
+          name: csa-u8-dev
+          title: CSA Unit 8 Development
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        poem-art:
+          lessons:
+            lesson-1:
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the 5-lesson module called [Coding with Poetry](http://code.org/poetry). By the end of the Coding with Poetry module, students will write their own poems and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s CS Connections curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n"
+          lesson_groups: {}
+          name: poem-art
+          title: Poem Art
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        poetry:
+          lessons:
+            lesson-1:
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n"
+            lesson-2:
+              name: Code Your Own Poem
+              description_student: 'Write your own poem and then animate it using code! '
+              description_teacher: 'In this CS and ELA integrated lesson, students will build on their previous learning about poetry by developing their own short poem. Then, students will work on their computers to animate their poems with code. In lesson 1, students used a poem dropdown menu to choose the poem they wanted to animate. In this lesson, students will use `set title`, `set author`, `add line`, and `animate text` blocks of code to change what text appears in their Playspace. '
+            lesson-3:
+              name: Playing with Words
+              description_student: "Build an interactive app! Use prompts and user input in a creative new way. \n"
+              description_teacher: "In this lesson, students learn how to manipulate specific words in the text in their poems by using open-ended prompts and variables to store the user’s input. First, students explore an app with an open-ended prompt. Then students practice using variables in their code until they are able to combine text and variable blocks to create an interactive app.  \n"
+            lesson-4:
+              name: Build a Poem Generator App
+              description_student: Use prompts and variables to make a Poem Generator App to share with your friends!
+              description_teacher: "In this lesson, students will use their new knowledge about open-ended prompts and variables to modify their poems and create a new poem generator app. Students will discuss how random words change the meaning and mood of their poems. \n"
+            lesson-5:
+              name: Choosing Words Carefully
+              description_student: Make your app even better! Change your poem generator app by adding words you want the user to choose from.
+              description_teacher: 'In this lesson, students create a poem generator app with multiple-choice prompts to guide the user to pick a carefully chosen word. Students will plan which words they will replace in their poems, choose three new multiple-choice words per prompt, and then program their poem generator using new multiple-choice prompts with events.
+
+'
+            lesson-6:
+              name: Poetry Circle
+              description_student: 'Share your new poem apps with your friends! '
+              description_teacher: In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.
+            lesson-7:
+              name: Responding to Words
+              description_student: Make the app respond to what the user chooses in exciting new ways.
+              description_teacher: In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.
+          lesson_groups: {}
+          name: poetry
+          title: Computer Science and Poetry
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Spelling Bee
+              description_student: 'Help the bee spell new words!
+
+'
+              description_teacher: |
+                This lesson builds off prior activities involving spelling and recognizing capital letters. Spelling with the bee helps students in kindergarten and first grade practice following and counting sequences of letters that form words. They use a series of coding commands to move a spelling bee across a grid of letters in order to spell words. Students learn how to use drag-and-drop coding blocks to move their character, and the importance of sequencing commands in the correct order so they can spell a word.
+
+                ####Prerequisite Skills
+                This lesson is not intended to introduce students to the alphabet, sequences of letters to form words, or counting. Students should come into this lesson with prior knowledge and the skills to be able to:
+
+                - recognize uppercase letters of the alphabet.
+                - recognize and count numbers up to 10 using fingers, objects, or manipulatives.
+                - recognize that words are made up of a sequence of letters.
+          lesson_groups: {}
+          name: spelling-bee
+          title: Spelling Bee
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        outbreak-csc:
+          lessons:
+            lesson-1:
+              name: Outbreak Day 1
+            lesson-2:
+              name: Outbreak Day 2
+          lesson_groups: {}
+          name: outbreak-csc
+          title: Outbreak
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: Exploring Box Plots and Histograms
+              description_student: 'Create bar charts and histograms in App Lab''s Data Visualizer.
+
+'
+              description_teacher: |
+                This lesson builds off of the concepts for bar charts and histograms that have already been introduced to students. Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to create two different kinds of charts: a bar chart, and a histogram. This tool is designed to quickly connect students with real-world datasets and make it easy to create visualizations from data without learning how to navigate a more complex tool. They will also have access to several real-world datasets that they can use to create their charts.
+
+
+
+                The lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice creating a bar chart in the Data Visualizer in App Lab. Then they learn how to make histograms for building charts in instances where bar charts may not be useful. Students then have a chance to explore different real-world datasets and see how making charts can help communicate information about a topic they care about.
+
+                ####Prerequisite Skills and Vocabulary
+
+                This lesson is intended to enrich or reinforce existing lessons on bar charts and histograms. It is not meant to introduce new core content to students. Students should come into this lesson with the following prior knowledge and skills:
+
+
+                - Know how to read a bar chart, understanding what the values on the x and y axes represent
+                - Know how to read a histogram, understanding what the range of values represent
+          lesson_groups: {}
+          name: explore-data-1
+          title: Exploring Box Plots and Histograms
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: Counting with Laurel
+              description_student: Help Laurel, the treasure hunter, count and add steps to collect gems!
+              description_teacher: |
+                This lesson builds off prior activities involving counting and representing addition. Counting with Laurel supports students in kindergarten and first grade with practice counting and adding as they use loops to help Laurel, the treasure hunter, collect gems across a maze grid. They use a series of coding commands to guide Laurel across a grid to collect gems, utilizing a “Repeat” block that requires them to count how many steps Laurel should take- then represent that number using the correct numeral within a block of code.
+
+                ####Prerequisite Skills
+                This lesson is not intended to introduce students to numbers, counting, or adding. Students should come into this lesson with some prior knowledge and the skills to be able to:
+
+                - recognize and count numbers up to 10 using images, fingers, or manipulatives.
+                - add objects, images, fingers, or  manipulatives up to a sum of 10.
+          lesson_groups: {}
+          name: counting-csc
+          title: Counting with Laurel
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa5-exemplars:
+          lessons:
+            lesson-1:
+              name: Creating Tables of Data
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Traversing a 2D Array by Rows
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Traversing a 2D Array by Columns
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Using Enhanced for Loops
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Evaluating 2D Arrays
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Applying Standard Algorithms
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Shifting Elements
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Finding Duplicates
+              description_student: 
+              description_teacher: 
+            lesson-9:
+              name: Searching for Elements
+              description_student: 
+              description_teacher: 
+            lesson-10:
+              name: A Sustainable Neighborhood Project - Day 1
+              description_student: 
+              description_teacher: 
+            lesson-11:
+              name: A Sustainable Neighborhood Project - Day 2
+              description_student: 
+              description_teacher: 
+            lesson-12:
+              name: A Sustainable Neighborhood Project - Day 3
+              description_student: 
+              description_teacher: 
+            lesson-13:
+              name: FRQ Day
+              description_student: 
+              description_teacher: 
+            lesson-14:
+              name: Assessment Day
+              description_student: 
+              description_teacher: 
+            lesson-15:
+              name: Reversing Elements
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa5-exemplars
+          title: Unit 5 - Giving Objects Organization [Exemplars]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-examples-21:
+          lessons:
+            lesson-1:
+              name: Unit 1 Projects
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Unit 2 Projects
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Unit 3 Projects
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Unit 4 Projects
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Unit 5 Projects
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Unit 6 Projects
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Unit 7 Projects
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Unit 8 Projects
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csa-examples-21
+          title: CSA Unit Project Examples [2021-2022]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Post-Course Survey
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csd-post-survey-2021
+          title: CS Discoveries Post-Course Survey
+          description_audience: ''
+          description_short: ''
+          description: This unit contains the CS Discoveries Post-Course Survey. This unit can be assigned after students complete their final unit in CS Discoveries.
+          student_description: This unit contains a survey for when your class is finished with the units in CS Discoveries. Your teacher will tell you when it's time to take this survey.
+        csa-pl-test:
+          lessons:
+            lesson-1:
+              name: Module 1 - Getting Started
+          lesson_groups: {}
+          name: csa-pl-test
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-pl-module-1-test:
+          lessons: {}
+          lesson_groups: {}
+          name: csa-pl-module-1-test
+          title: Orientation to Code.org and CSA
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-pl-module-2-test:
+          lessons: {}
+          lesson_groups: {}
+          name: csa-pl-module-2-test
+          title: Navigating Code.org’s tools
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-pl-module-3-test:
+          lessons: {}
+          lesson_groups: {}
+          name: csa-pl-module-3-test
+          title: Support with text-based programming
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa6-pilot-facilitator:
+          lessons:
+            Documenting Program Code:
+              name: Documenting Program Code
+              description_student: The projects you have developed throughout the course have inspired a lot of creativity in the community! A Neighborhood Lit Fest will be held to showcase creative stories, scripts, song lyrics, letters, and poems. The Neighborhood Lit Fest Project is a large project that you work on throughout the unit, and project management strategies help to organize and structure your work. You explore strategies for writing and structuring code so other software engineers can easily understand and use a Java tool to create program documentation.
+              description_teacher: Students are introduced to the Neighborhood Lit Fest Project and evaluate requirements and examples to identify questions and key features. Before beginning work on the project, students expand their understanding of program structure and commenting by identifying best practices and exploring the use of Javadocs to generate program documentation.
+            Exploring Integer and Double Objects:
+              name: Exploring Integer and Double Objects
+              description_student: You construct `Integer` and `Double` objects to represent `int` and `double` primitive values as reference values. Using the methods in the `Integer` and `Double` classes, you return the values these objects store as primitive values. You also explore the minimum and maximum values for integers to avoid overflow errors before planning the tasks you need to complete for your Neighborhood Lit Fest Project.
+              description_teacher: Students construct `Integer` and `Double` objects to represent `int` and `double` primitive values as reference values. Using the methods in the `Integer` and `Double` classes, students return the values these objects store as primitive values. Students also explore the minimum and maximum values for integers to avoid overflow errors before planning the tasks they need to complete for their Neighborhood Lit Fest Project.
+            Using ArrayLists to Store Data:
+              name: Using ArrayLists to Store Data
+              description_student: When working with arrays and lists, we sometimes encounter problems where the number of elements is unknown or the list's size constantly changes. In this lesson, you learn about `ArrayList`s and identify scenarios where this data structure is more suitable.
+              description_teacher: Students create `ArrayList`s to store `int` and `double` values. Students differentiate between `ArrayList` and one-dimensional arrays to determine which data structure is best suited for a scenario. Students add elements to an `ArrayList` and learn how autoboxing converts between primitive values and wrapper classes as they work with the data stored.
+            Working with ArrayList Data:
+              name: Working with ArrayList Data
+              description_student: You use the `ArrayList` methods `get()` and `set()` to retrieve and modify elements and learn about the `String` method `length()` to count the number of characters in a `String` object. You apply the standard algorithms you developed with 1D and 2D arrays to modify elements in an `ArrayList`. You learn how unboxing performs conversions between primitive values and wrapper classes as they work with data stored in an `ArrayList`.
+              description_teacher: 'Students work with the `get()` and `set()` methods to retrieve and modify elements in an `ArrayList` and learn about the `String` method `length()` to return the number of characters in a `String` object. They apply the standard algorithms they developed with 1D and 2D arrays to modify elements in an `ArrayList`. Students learn how unboxing performs conversions between primitive values and wrapper classes as they work with data stored in an `ArrayList`. '
+            Storing Objects in an ArrayList:
+              name: Storing Objects in an ArrayList
+              description_student: So far, you have created `ArrayList`s to store `Integer`s, `Double`s, and `String`s. Like with 1D and 2D arrays, you can also store objects that you create in an `ArrayList`. In this lesson, you create an `ArrayList` of objects to apply the standard algorithms you have used throughout the year to work with the data stored in this list.
+              description_teacher: Students create `ArrayList`s to store objects and learn about generic types in Java. Students apply the algorithms they learned with one-dimensional arrays to `ArrayList`s to find the minimum and maximum values, calculate sums and averages, or find elements that meet specific criteria.
+            Removing Data from an ArrayList:
+              name: Removing Data from an ArrayList
+              description_student: You explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. In the process, you realize when an `ArrayList` is best for a scenario or problem.
+              description_teacher: Students explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. Students then realize when an `ArrayList` is best for a scenario or problem.
+            Using String Methods:
+              name: Using String Methods
+              description_student: You explore the structure of a `String` and recall that `String`s are objects. You use the `indexOf()` and `substring()` methods to search for substrings within a `String` and to create new `String` objects from an existing `String`.
+              description_teacher: Students explore the structure of a `String` and recall that `String`s are objects. Students use the `indexOf()` and `substring()` methods to search for substrings within a `String` and to create new `String` objects from an existing `String`.
+            Comparing Strings:
+              name: Comparing Strings
+              description_student: You explore using `compareTo()` to check if `String`s are in alphabetical order. You then work on your Neighborhood Lit Fest Project, focusing specifically on the tasks you have on your Project Planning Board.
+              description_teacher: Students explore using `compareTo()` to check if `String`s are in alphabetical order. Students then work on their Neighborhood Lit Fest Project, focusing specifically on the tasks they have on their Project Planning Board.
+            Solving Problems with Strings:
+              name: Solving Problems with Strings
+              description_student: 'You combine your knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. You then participate in a peer feedback session and reflect on your progress on your Neighborhood Lit Fest Project. '
+              description_teacher: Students combine their knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. Students then participate in a peer feedback session and reflect on their progress on their Neighborhood Lit Fest Project.
+            Solving Problems with ArrayLists:
+              name: Solving Problems with ArrayLists
+              description_student: You apply standard algorithms you wrote for 1D and 2D arrays to `ArrayList`s. You implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in your Neighborhood Lit Fest Project.
+              description_teacher: Students apply standard algorithms they wrote for 1D and 2D arrays to `ArrayList`s. Students implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in their Neighborhood Lit Fest Project.
+            Neighborhood Lit Fest Project - Day 1:
+              name: Neighborhood Lit Fest Project - Day 1
+              description_student: You continue to develop your Neighborhood Lit Fest Project to create a story, poetry, song, or another form of literature based on analysis of work from your favorite author or artist. You first self-assess your work to evaluate your progress in completing project requirements, then write acceptance criteria for a feature in your project that a peer will test. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project.
+              description_teacher: Students continue to develop their Neighborhood Lit Fest Project to create a story, poetry, song, or another form of literature based on analysis of work from their favorite author or artist. Students first self-assess their work to evaluate their progress in completing project requirements, then write acceptance criteria for a feature in their project that a peer will test. Students use the self-assessment and peer feedback to prioritize their remaining tasks and continue developing their projects.
+            Neighborhood Lit Fest Project - Day 2:
+              name: Neighborhood Lit Fest Project - Day 2
+              description_student: In the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Neighborhood Lit Fest Project.
+              description_teacher: In the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Neighborhood Lit Fest Projects.
+            Neighborhood Lit Fest Project - Day 3:
+              name: Neighborhood Lit Fest Project - Day 3
+              description_student: You make final revisions and updates based on your code reviews and Project Planning Board. You share your Neighborhood Lit Fest Project with your peers. You then celebrate your success and complete a final reflection of the development process.
+              description_teacher: Students make final revisions and updates based on their code reviews and Project Planning Board. Students share their Neighborhood Lit Fest Projects with their peers. Students then celebrate their success and complete a final reflection of the development process.
+            FRQ Day:
+              name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.
+            Assessment Day:
+              name: Assessment Day
+              description_student: In this unit, you used `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explored the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You used methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you wrote program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identified and documented preconditions and postconditions of objects and methods. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students used `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explored the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students used methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students wrote program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identified and documented preconditions and postconditions of objects and methods. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            Java Lab:
+              name: Java Lab
+              description_student: ''
+              description_teacher: ''
+              key: Java Lab
+            The Neighborhood:
+              name: The Neighborhood
+              description_student: ''
+              description_teacher: ''
+              key: The Neighborhood
+            The Theater:
+              name: The Theater
+              description_student: ''
+              description_teacher: ''
+              key: The Theater
+            The Playground:
+              name: The Playground
+              description_student: ''
+              description_teacher: ''
+              key: The Playground
+            lesson-1:
+              key: lesson-1
+              name: Documenting Program Code
+              description_student: The projects you have developed throughout the course have inspired a lot of creativity in the community! A Neighborhood Lit Fest will be held to showcase creative stories, scripts, song lyrics, letters, and poems. The Neighborhood Lit Fest Project is a large project that you work on throughout the unit, and project management strategies help to organize and structure your work. You explore strategies for writing and structuring code so other software engineers can easily understand and use a Java tool to create program documentation.
+              description_teacher: Students are introduced to the Neighborhood Lit Fest Project and evaluate requirements and examples to identify questions and key features. Before beginning work on the project, students expand their understanding of program structure and commenting by identifying best practices and exploring the use of Javadocs to generate program documentation.
+            lesson-2:
+              key: lesson-2
+              name: Exploring Integer and Double Objects
+              description_student: You construct `Integer` and `Double` objects to represent `int` and `double` primitive values as reference values. Using the methods in the `Integer` and `Double` classes, you return the values these objects store as primitive values. You also explore the minimum and maximum values for integers to avoid overflow errors before planning the tasks you need to complete for your Neighborhood Lit Fest Project.
+              description_teacher: Students construct `Integer` and `Double` objects to represent `int` and `double` primitive values as reference values. Using the methods in the `Integer` and `Double` classes, students return the values these objects store as primitive values. Students also explore the minimum and maximum values for integers to avoid overflow errors before planning the tasks they need to complete for their Neighborhood Lit Fest Project.
+            lesson-3:
+              key: lesson-3
+              name: Using ArrayLists to Store Data
+              description_student: When working with arrays and lists, we sometimes encounter problems where the number of elements is unknown or the list's size constantly changes. In this lesson, you learn about `ArrayList`s and identify scenarios where this data structure is more suitable.
+              description_teacher: Students create `ArrayList`s to store `int` and `double` values. Students differentiate between `ArrayList` and one-dimensional arrays to determine which data structure is best suited for a scenario. Students add elements to an `ArrayList` and learn how autoboxing converts between primitive values and wrapper classes as they work with the data stored.
+            lesson-4:
+              key: lesson-4
+              name: Working with ArrayList Data
+              description_student: You use the `ArrayList` methods `get()` and `set()` to retrieve and modify elements and learn about the `String` method `length()` to count the number of characters in a `String` object. You apply the standard algorithms you developed with 1D and 2D arrays to modify elements in an `ArrayList`. You learn how unboxing performs conversions between primitive values and wrapper classes as they work with data stored in an `ArrayList`.
+              description_teacher: 'Students work with the `get()` and `set()` methods to retrieve and modify elements in an `ArrayList` and learn about the `String` method `length()` to return the number of characters in a `String` object. They apply the standard algorithms they developed with 1D and 2D arrays to modify elements in an `ArrayList`. Students learn how unboxing performs conversions between primitive values and wrapper classes as they work with data stored in an `ArrayList`. '
+            lesson-5:
+              key: lesson-5
+              name: Storing Objects in an ArrayList
+              description_student: So far, you have created `ArrayList`s to store `Integer`s, `Double`s, and `String`s. Like with 1D and 2D arrays, you can also store objects that you create in an `ArrayList`. In this lesson, you create an `ArrayList` of objects to apply the standard algorithms you have used throughout the year to work with the data stored in this list.
+              description_teacher: Students create `ArrayList`s to store objects and learn about generic types in Java. Students apply the algorithms they learned with one-dimensional arrays to `ArrayList`s to find the minimum and maximum values, calculate sums and averages, or find elements that meet specific criteria.
+            lesson-6:
+              key: lesson-6
+              name: Removing Data from an ArrayList
+              description_student: You explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. In the process, you realize when an `ArrayList` is best for a scenario or problem.
+              description_teacher: Students explore the functionality of the `remove()` method in the `ArrayList` class and identify potential errors when attempting to remove items while traversing the list. Students then realize when an `ArrayList` is best for a scenario or problem.
+            lesson-7:
+              key: lesson-7
+              name: Using String Methods
+              description_student: You explore the structure of a `String` and recall that `String`s are objects. You use the `indexOf()` and `substring()` methods to search for substrings within a `String` and to create new `String` objects from an existing `String`.
+              description_teacher: Students explore the structure of a `String` and recall that `String`s are objects. Students use the `indexOf()` and `substring()` methods to search for substrings within a `String` and to create new `String` objects from an existing `String`.
+            lesson-8:
+              key: lesson-8
+              name: Comparing Strings
+              description_student: You explore using `compareTo()` to check if `String`s are in alphabetical order. You then work on your Neighborhood Lit Fest Project, focusing specifically on the tasks you have on your Project Planning Board.
+              description_teacher: Students explore using `compareTo()` to check if `String`s are in alphabetical order. Students then work on their Neighborhood Lit Fest Project, focusing specifically on the tasks they have on their Project Planning Board.
+            lesson-9:
+              key: lesson-9
+              name: Solving Problems with Strings
+              description_student: 'You combine your knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. You then participate in a peer feedback session and reflect on your progress on your Neighborhood Lit Fest Project. '
+              description_teacher: Students combine their knowledge of standard algorithms and `String`s to check if a `String` is a palindrome. Students then participate in a peer feedback session and reflect on their progress on their Neighborhood Lit Fest Project.
+            lesson-10:
+              key: lesson-10
+              name: Solving Problems with ArrayLists
+              description_student: You apply standard algorithms you wrote for 1D and 2D arrays to `ArrayList`s. You implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in your Neighborhood Lit Fest Project.
+              description_teacher: Students apply standard algorithms they wrote for 1D and 2D arrays to `ArrayList`s. Students implement a new standard algorithm to get individual digits from an integer before modifying and applying previous algorithms to swap elements, remove duplicates, or find elements meeting specific criteria in their Neighborhood Lit Fest Project.
+            lesson-11:
+              key: lesson-11
+              name: Neighborhood Lit Fest Project - Day 1
+              description_student: You continue to develop your Neighborhood Lit Fest Project to create a story, poetry, song, or another form of literature based on analysis of work from your favorite author or artist. You first self-assess your work to evaluate your progress in completing project requirements, then write acceptance criteria for a feature in your project that a peer will test. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project.
+              description_teacher: Students continue to develop their Neighborhood Lit Fest Project to create a story, poetry, song, or another form of literature based on analysis of work from their favorite author or artist. Students first self-assess their work to evaluate their progress in completing project requirements, then write acceptance criteria for a feature in their project that a peer will test. Students use the self-assessment and peer feedback to prioritize their remaining tasks and continue developing their projects.
+            lesson-12:
+              key: lesson-12
+              name: Neighborhood Lit Fest Project - Day 2
+              description_student: In the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Neighborhood Lit Fest Project.
+              description_teacher: In the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Neighborhood Lit Fest Projects.
+            lesson-13:
+              key: lesson-13
+              name: Neighborhood Lit Fest Project - Day 3
+              description_student: You make final revisions and updates based on your code reviews and Project Planning Board. You share your Neighborhood Lit Fest Project with your peers. You then celebrate your success and complete a final reflection of the development process.
+              description_teacher: Students make final revisions and updates based on their code reviews and Project Planning Board. Students share their Neighborhood Lit Fest Projects with their peers. Students then celebrate their success and complete a final reflection of the development process.
+            lesson-14:
+              key: lesson-14
+              name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.
+            lesson-15:
+              key: lesson-15
+              name: Assessment Day
+              description_student: In this unit, you used `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explored the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You used methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you wrote program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identified and documented preconditions and postconditions of objects and methods. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students used `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explored the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students used methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students wrote program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identified and documented preconditions and postconditions of objects and methods. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Pilot Survey
+            lessonGroup-5:
+              display_name: Sandbox
+          title: Expanding Program Capabilities
+          description: In this unit, students use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. Students explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. Students use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, students write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, students identify and document preconditions and postconditions of objects and methods.
+          student_description: In this unit, you use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identify and document preconditions and postconditions of objects and methods.
+          description_short: ''
+          description_audience: ''
+        ai-ethics-2021:
+          lessons:
+            Our AI Code of Ethics:
+              name: Our AI Code of Ethics
+              description_student: Collaboratively research about AI ethics and create a shareable code of conduct.
+              description_teacher: This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+            lesson-1:
+              key: lesson-1
+              name: Our AI Code of Ethics
+              description_student: Collaboratively research about AI ethics and create a shareable code of conduct.
+              description_teacher: This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+          title: Our AI Code of Ethics
+          description: In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+          student_description: 'Conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of your choice. '
+          description_short: 'In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. '
+          description_audience: grades 6-12
+          lesson_groups: {}
+          name: ai-ethics-2021
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. Students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the multi-lesson module called [Coding with Poetry](http://studio.code.org/s/poetry-2021)."
+            lesson-1:
+              key: lesson-1
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the 5-lesson module called [Coding with Poetry](http://code.org/poetry). By the end of the Coding with Poetry module, students will write their own poems and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s CS Connections curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n"
+          title: Poem Art
+          description: "This lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the multi-lesson module called [Coding with Poetry](studio.code.org/s/poetry-2021). \n\nThe Coding with Poetry is part of Code.org’s [CS Connections](code.org/educate/csc) curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. "
+          student_description: ''
+          description_short: 'This lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the multi-lesson module called Coding with Poetry. '
+          description_audience: ''
+          lesson_groups: {}
+          name: poem-art-2021
+        poetry-2021:
+          lessons:
+            Poem Art:
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson for new coders, students will animate a poem with code to illustrate the mood of a poem. Students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n"
+            Code Your Own Poem:
+              name: Code Your Own Poem
+              description_student: 'Write your own poem and then animate it using code! '
+              description_teacher: 'In this CS and ELA integrated lesson, students will build on their previous learning about poetry by developing their own short poem. Then, students will work on their computers to animate their poems with code. In lesson 1, students used a poem dropdown menu to choose the poem they wanted to animate. In this lesson, students will use `set title`, `set author`, `add line`, and `animate text` blocks of code to change what text appears in their Playspace. '
+            Playing with Words:
+              name: Playing with Words
+              description_student: "Build an interactive app! Use prompts and user input in a creative new way. \n"
+              description_teacher: "In this lesson, students learn how to manipulate specific words in the text in their poems by using open-ended prompts and variables to store the user’s input. First, students explore an app with an open-ended prompt. Then students practice using variables in their code until they are able to combine text and variable blocks to create an interactive app.  \n"
+            Build a Poem Generator:
+              name: Build a Poem Generator App
+              description_student: Use prompts and variables to make a Poem Generator App to share with your friends!
+              description_teacher: "In this lesson, students will use their new knowledge about open-ended prompts and variables to modify their poems and create a new poem generator app. Students will discuss how random words change the meaning and mood of their poems. \n"
+            Choosing Words Carefully:
+              name: Choosing Words Carefully
+              description_student: Make your app even better! Change your poem generator app by adding words you want the user to choose from.
+              description_teacher: 'In this lesson, students create a poem generator app with multiple-choice prompts to guide the user to pick a carefully chosen word. Students will plan which words they will replace in their poems, choose three new multiple-choice words per prompt, and then program their poem generator using new multiple-choice prompts with events.
+
+'
+            Responding to Words:
+              name: Responding to Words
+              description_student: Make the app respond to what the user chooses in exciting new ways.
+              description_teacher: In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.
+            Poetry Circle:
+              name: Poetry Circle
+              description_student: 'Share your new poem apps with your friends! '
+              description_teacher: In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.
+            lesson-1:
+              key: lesson-1
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n"
+            lesson-2:
+              key: lesson-2
+              name: Code Your Own Poem
+              description_student: 'Write your own poem and then animate it using code! '
+              description_teacher: 'In this CS and ELA integrated lesson, students will build on their previous learning about poetry by developing their own short poem. Then, students will work on their computers to animate their poems with code. In lesson 1, students used a poem dropdown menu to choose the poem they wanted to animate. In this lesson, students will use `set title`, `set author`, `add line`, and `animate text` blocks of code to change what text appears in their Playspace. '
+            lesson-3:
+              key: lesson-3
+              name: Playing with Words
+              description_student: "Build an interactive app! Use prompts and user input in a creative new way. \n"
+              description_teacher: "In this lesson, students learn how to manipulate specific words in the text in their poems by using open-ended prompts and variables to store the user’s input. First, students explore an app with an open-ended prompt. Then students practice using variables in their code until they are able to combine text and variable blocks to create an interactive app.  \n"
+            lesson-4:
+              key: lesson-4
+              name: Build a Poem Generator
+              description_student: Use prompts and variables to make a Poem Generator App to share with your friends!
+              description_teacher: "In this lesson, students will use their new knowledge about open-ended prompts and variables to modify their poems and create a new poem generator app. Students will discuss how random words change the meaning and mood of their poems. \n"
+            lesson-5:
+              key: lesson-5
+              name: Choosing Words Carefully
+              description_student: Make your app even better! Change your poem generator app by adding words you want the user to choose from.
+              description_teacher: 'In this lesson, students create a poem generator app with multiple-choice prompts to guide the user to pick a carefully chosen word. Students will plan which words they will replace in their poems, choose three new multiple-choice words per prompt, and then program their poem generator using new multiple-choice prompts with events.
+
+'
+            lesson-7:
+              key: lesson-7
+              name: Responding to Words
+              description_student: Make the app respond to what the user chooses in exciting new ways.
+              description_teacher: In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.
+            lesson-6:
+              key: lesson-6
+              name: Poetry Circle
+              description_student: 'Share your new poem apps with your friends! '
+              description_teacher: In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.
+          title: Computer Science and Poetry
+          description: "This module is designed to ensure students have a shareable app by the end of each lesson, so each lesson is a potential stopping point. If your class finishes the entire 7-part module, students will write their own poems, investigate word choice, learn how to use prompts and variables, learn how to code conditional statements, and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s [CS Connections](code.org/educate/csc) curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n\n**First time teaching with Code.org?** To get started, watch these videos:\n* [Basic Features of Code.org](https://www.youtube.com/watch?v=lYZq1HVTAIY) \n* [Creating a Class Section](https://youtu.be/4Wugxc80fNU)\n* [The Student Experience](https://youtu.be/wzz3jJZoj20)\n* [Progress, Feedack, and Assessment](https://youtu.be/c0pGfCpd6MI)"
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: poetry-2021
+        hello-world-food-2021:
+          lessons:
+            Hello World:
+              name: 'Hello World: Food'
+              description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
+              description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
+            lesson-1:
+              key: lesson-1
+              name: Hello World
+              description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
+              description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
+          title: 'Hello World: Food'
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: hello-world-food-2021
+        hello-world-emoji-2021:
+          lessons:
+            Hello World:
+              name: 'Hello World: Emoji'
+              description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
+              description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
+            lesson-1:
+              key: lesson-1
+              name: Hello World
+              description_student: ''
+              description_teacher: ''
+          title: 'Hello World: Emoji'
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: hello-world-emoji-2021
+        hello-world-animals-2021:
+          lessons:
+            Hello World:
+              name: 'Hello World: Animals'
+              description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
+              description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
+            lesson-1:
+              key: lesson-1
+              name: Hello World
+              description_student: ''
+              description_teacher: ''
+          title: 'Hello World: Animals'
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: hello-world-animals-2021
+        hello-world-retro-2021:
+          lessons:
+            Hello World:
+              name: 'Hello World: Retro'
+              description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
+              description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
+            lesson-1:
+              key: lesson-1
+              name: Hello World
+              description_student: ''
+              description_teacher: ''
+          title: 'Hello World: Retro'
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: hello-world-retro-2021
+        spelling-bee-2021:
+          lessons:
+            Spelling Bee:
+              name: Spelling Bee
+              description_student: 'Help the bee spell new words!
+
+'
+              description_teacher: |
+                This lesson builds off prior activities involving spelling and recognizing capital letters. Spelling with the bee helps students in kindergarten and first grade practice following and counting sequences of letters that form words. They use a series of coding commands to move a spelling bee across a grid of letters in order to spell words. Students learn how to use drag-and-drop coding blocks to move their character, and the importance of sequencing commands in the correct order so they can spell a word.
+
+                ####Prerequisite Skills
+                This lesson is not intended to introduce students to the alphabet, sequences of letters to form words, or counting. Students should come into this lesson with prior knowledge and the skills to be able to:
+
+                - recognize uppercase letters of the alphabet.
+                - recognize and count numbers up to 10 using fingers, objects, or manipulatives.
+                - recognize that words are made up of a sequence of letters.
+            lesson-1:
+              key: lesson-1
+              name: Spelling Bee
+              description_student: 'Help the bee spell new words!
+
+'
+              description_teacher: |
+                This lesson builds off prior activities involving spelling and recognizing capital letters. Spelling with the bee helps students in kindergarten and first grade practice following and counting sequences of letters that form words. They use a series of coding commands to move a spelling bee across a grid of letters in order to spell words. Students learn how to use drag-and-drop coding blocks to move their character, and the importance of sequencing commands in the correct order so they can spell a word.
+
+                ####Prerequisite Skills
+                This lesson is not intended to introduce students to the alphabet, sequences of letters to form words, or counting. Students should come into this lesson with prior knowledge and the skills to be able to:
+
+                - recognize uppercase letters of the alphabet.
+                - recognize and count numbers up to 10 using fingers, objects, or manipulatives.
+                - recognize that words are made up of a sequence of letters.
+          title: Spelling Bee
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: spelling-bee-2021
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Exploring Box Plots and Histograms
+              description_student: 'Create bar charts and histograms in App Lab''s Data Visualizer.
+
+'
+              description_teacher: |
+                This lesson builds off of the concepts for bar charts and histograms that have already been introduced to students. Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to create two different kinds of charts: a bar chart, and a histogram. This tool is designed to quickly connect students with real-world datasets and make it easy to create visualizations from data without learning how to navigate a more complex tool. They will also have access to several real-world datasets that they can use to create their charts.
+
+
+
+                The lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice creating a bar chart in the Data Visualizer in App Lab. Then they learn how to make histograms for building charts in instances where bar charts may not be useful. Students then have a chance to explore different real-world datasets and see how making charts can help communicate information about a topic they care about.
+
+                ####Prerequisite Skills and Vocabulary
+
+                This lesson is intended to enrich or reinforce existing lessons on bar charts and histograms. It is not meant to introduce new core content to students. Students should come into this lesson with the following prior knowledge and skills:
+
+
+                - Know how to read a bar chart, understanding what the values on the x and y axes represent
+                - Know how to read a histogram, understanding what the range of values represent
+            lesson-1:
+              key: lesson-1
+              name: Exploring Box Plots and Histograms
+              description_student: 'Create bar charts and histograms in App Lab''s Data Visualizer.
+
+'
+              description_teacher: |
+                This lesson builds off of the concepts for bar charts and histograms that have already been introduced to students. Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to create two different kinds of charts: a bar chart, and a histogram. This tool is designed to quickly connect students with real-world datasets and make it easy to create visualizations from data without learning how to navigate a more complex tool. They will also have access to several real-world datasets that they can use to create their charts.
+
+
+
+                The lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice creating a bar chart in the Data Visualizer in App Lab. Then they learn how to make histograms for building charts in instances where bar charts may not be useful. Students then have a chance to explore different real-world datasets and see how making charts can help communicate information about a topic they care about.
+
+                ####Prerequisite Skills and Vocabulary
+
+                This lesson is intended to enrich or reinforce existing lessons on bar charts and histograms. It is not meant to introduce new core content to students. Students should come into this lesson with the following prior knowledge and skills:
+
+
+                - Know how to read a bar chart, understanding what the values on the x and y axes represent
+                - Know how to read a histogram, understanding what the range of values represent
+          title: Exploring Box Plots and Histograms
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: explore-data-1-2021
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: Counting with Laurel
+              description_student: Help Laurel, the treasure hunter, count and add steps to collect gems!
+              description_teacher: |
+                This lesson builds off prior activities involving counting and representing addition. Counting with Laurel supports students in kindergarten and first grade with practice counting and adding as they use loops to help Laurel, the treasure hunter, collect gems across a maze grid. They use a series of coding commands to guide Laurel across a grid to collect gems, utilizing a “Repeat” block that requires them to count how many steps Laurel should take- then represent that number using the correct numeral within a block of code.
+
+                ####Prerequisite Skills
+                This lesson is not intended to introduce students to numbers, counting, or adding. Students should come into this lesson with some prior knowledge and the skills to be able to:
+
+                - recognize and count numbers up to 10 using images, fingers, or manipulatives.
+                - add objects, images, fingers, or  manipulatives up to a sum of 10.
+            lesson-1:
+              key: lesson-1
+              name: Counting with Laurel
+              description_student: Help Laurel, the treasure hunter, count and add steps to collect gems!
+              description_teacher: |
+                This lesson builds off prior activities involving counting and representing addition. Counting with Laurel supports students in kindergarten and first grade with practice counting and adding as they use loops to help Laurel, the treasure hunter, collect gems across a maze grid. They use a series of coding commands to guide Laurel across a grid to collect gems, utilizing a “Repeat” block that requires them to count how many steps Laurel should take- then represent that number using the correct numeral within a block of code.
+
+                ####Prerequisite Skills
+                This lesson is not intended to introduce students to numbers, counting, or adding. Students should come into this lesson with some prior knowledge and the skills to be able to:
+
+                - recognize and count numbers up to 10 using images, fingers, or manipulatives.
+                - add objects, images, fingers, or  manipulatives up to a sum of 10.
+          title: Counting with Laurel
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: counting-csc-2021

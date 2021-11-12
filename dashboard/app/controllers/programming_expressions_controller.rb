@@ -1,4 +1,6 @@
 class ProgrammingExpressionsController < ApplicationController
+  load_and_authorize_resource
+
   before_action :require_levelbuilder_mode_or_test_env, except: [:search]
 
   # GET /programming_expressions/search
@@ -23,9 +25,54 @@ class ProgrammingExpressionsController < ApplicationController
     end
     programming_expression = ProgrammingExpression.new(key: params[:key], name: params[:key], programming_environment_id: params[:programming_environment_id])
     if programming_expression.save
-      redirect_to '/home/'
+      redirect_to edit_programming_expression_url(programming_expression)
     else
       render :not_acceptable, json: programming_expression.errors
     end
+  end
+
+  def edit
+    @programming_expression = ProgrammingExpression.find_by_id(params[:id])
+    return render :not_found unless @programming_expression
+    @environment_categories = @programming_expression.programming_environment.categories
+  end
+
+  def update
+    programming_expression = ProgrammingExpression.find_by_id(params[:id])
+    unless programming_expression
+      render :not_found
+      return
+    end
+    programming_expression.assign_attributes(programming_expression_params.except(:parameters))
+    programming_expression.palette_params = programming_expression_params[:parameters]
+    begin
+      programming_expression.save! if programming_expression.changed?
+      render json: programming_expression.summarize_for_edit.to_json
+    rescue ActiveRecord::RecordInvalid => e
+      render(status: :not_acceptable, plain: e.message)
+    end
+  end
+
+  def show
+    @programming_expression = ProgrammingExpression.find(params[:id])
+  end
+
+  private
+
+  def programming_expression_params
+    transformed_params = params.transform_keys(&:underscore)
+    transformed_params = transformed_params.permit(
+      :name,
+      :category,
+      :short_description,
+      :external_documentation,
+      :content,
+      :syntax,
+      :return_value,
+      :tips,
+      parameters: [:name, :type, :required, :description],
+      examples: [:name, :description, :code, :app, :appDisplayType, :appEmbedHeight]
+    )
+    transformed_params
   end
 end

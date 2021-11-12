@@ -30,6 +30,20 @@ export default class SpriteLab extends P5Lab {
     return new CoreLibrary(args.p5);
   }
 
+  async preloadSpriteImages_() {
+    await this.whenAnimationsAreReady();
+    return this.p5Wrapper.preloadSpriteImages(
+      getStore().getState().animationList
+    );
+  }
+
+  preloadLabAssets() {
+    return Promise.all([
+      this.preloadSpriteImages_(),
+      this.p5Wrapper.preloadBackgrounds()
+    ]);
+  }
+
   preview() {
     if (getStore().getState().runState.isRunning) {
       return;
@@ -67,15 +81,17 @@ export default class SpriteLab extends P5Lab {
   onPause(isPaused) {
     const current = new Date().getTime();
     if (isPaused) {
-      this.spritelabLibrary.endPause(current);
+      this.library.endPause(current);
+      Sounds.getSingleton().restartPausedSounds();
     } else {
-      this.spritelabLibrary.startPause(current);
+      this.library.startPause(current);
+      Sounds.getSingleton().pauseSounds();
     }
   }
 
   onPromptAnswer(variableName, value) {
     getStore().dispatch(popPrompt());
-    this.spritelabLibrary.onPromptAnswer(variableName, value);
+    this.library.onPromptAnswer(variableName, value);
   }
 
   setupReduxSubscribers(store) {

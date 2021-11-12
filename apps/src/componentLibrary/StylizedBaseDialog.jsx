@@ -169,7 +169,7 @@ const styles = {
     padding: `${GUTTER / 2}px ${GUTTER - 3}px` // -3 to account for 3px-margin around <Button/>
   },
   buttons: {
-    all: {boxShadow: 'none'},
+    all: {boxShadow: 'none', flexShrink: 0},
     [FooterButtonType.confirm]: {borderColor: color.orange}
   }
 };

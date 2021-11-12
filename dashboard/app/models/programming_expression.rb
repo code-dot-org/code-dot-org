@@ -30,6 +30,13 @@ class ProgrammingExpression < ApplicationRecord
   serialized_attrs %w(
     color
     syntax
+    short_description
+    external_documentation
+    content
+    return_value
+    tips
+    palette_params
+    examples
   )
 
   def key_format
@@ -67,7 +74,8 @@ class ProgrammingExpression < ApplicationRecord
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
         color: expression_config['config']['color'],
-        syntax: expression_config['config']['func'] || expression_config['config']['name']
+        syntax: expression_config['config']['func'] || expression_config['config']['name'],
+        palette_params: expression_config['paletteParams']
       }
     else
       {
@@ -76,7 +84,8 @@ class ProgrammingExpression < ApplicationRecord
         programming_environment_id: programming_environment.id,
         category: expression_config['category'],
         color: ProgrammingExpression.get_category_color(expression_config['category']),
-        syntax: syntax
+        syntax: syntax,
+        palette_params: expression_config['paletteParams']
       }
     end
   end
@@ -86,7 +95,7 @@ class ProgrammingExpression < ApplicationRecord
     if config['syntax']
       syntax = config['syntax']
     elsif config['paletteParams']
-      syntax = config['func'] + "(" + config['paletteParams'].join(', ') + ")"
+      syntax = config['func'] + "(" + config['paletteParams'].map {|p| p['name']} .join(', ') + ")"
     elsif config['block']
       syntax = config['block']
     end
@@ -174,7 +183,46 @@ class ProgrammingExpression < ApplicationRecord
     }
   end
 
+  def summarize_for_edit
+    {
+      id: id,
+      key: key,
+      name: name,
+      category: category,
+      programmingEnvironmentName: programming_environment.name,
+      shortDescription: short_description || '',
+      externalDocumentation: external_documentation || '',
+      content: content || '',
+      syntax: syntax || '',
+      returnValue: return_value || '',
+      tips: tips || '',
+      parameters: palette_params || [],
+      examples: examples || []
+    }
+  end
+
+  def summarize_for_show
+    {
+      name: name,
+      category: category,
+      color: get_color,
+      externalDocumentation: external_documentation,
+      content: content,
+      syntax: syntax,
+      returnValue: return_value,
+      tips: tips
+    }
+  end
+
   def summarize_for_lesson_show
     {name: name, color: color, syntax: syntax, link: documentation_path}
+  end
+
+  def get_color
+    if programming_environment.name == 'spritelab'
+      color
+    else
+      ProgrammingExpression.get_category_color(category)
+    end
   end
 end

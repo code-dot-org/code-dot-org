@@ -1,10 +1,13 @@
 import {commands as locationCommands} from './locationCommands';
+import {commands as behaviorCommands} from './behaviorCommands';
+import * as utils from '@cdo/apps/p5lab/utils';
 
 export const commands = {
   countByAnimation(spriteArg) {
     let sprites = this.getSpriteArray(spriteArg);
     return sprites.length;
   },
+
   destroy(spriteArg) {
     let sprites = this.getSpriteArray(spriteArg);
     sprites.forEach(sprite => {
@@ -65,6 +68,85 @@ export const commands = {
       this.addSprite({
         animation,
         location: locationCommands.randomLocation()
+      });
+    }
+  },
+
+  makeBurst(num, animation, effectName) {
+    const behaviorFuncs = {
+      burst: behaviorCommands.burstFunc,
+      pop: behaviorCommands.popFunc,
+      rain: behaviorCommands.rainFunc,
+      spiral: behaviorCommands.spiralFunc
+    };
+    // Cap created sprites
+    const spriteCountCap = 100;
+    if (num > spriteCountCap) {
+      num = spriteCountCap;
+    }
+    //Makes sure that same-frame multiple spiral effects start at a different angles
+    const spiralRandomizer = utils.randomInt(0, 359);
+    for (let i = 0; i < num; i++) {
+      let spriteOptions = {};
+      switch (effectName) {
+        case 'burst': {
+          spriteOptions = {
+            animation,
+            speed: utils.randomInt(10, 20),
+            scale: 1,
+            direction: utils.randomInt(0, 359),
+            rotation: utils.randomInt(0, 359),
+            delay: utils.randomInt(1, 21),
+            lifetime: 60
+          };
+          break;
+        }
+        case 'pop': {
+          spriteOptions = {
+            animation,
+            speed: utils.randomInt(10, 25),
+            scale: 50,
+            direction: utils.randomInt(225, 315),
+            location: {
+              x: utils.randomInt(0, 400),
+              y: utils.randomInt(450, 500)
+            },
+            lifetime: 60
+          };
+          break;
+        }
+        case 'rain': {
+          spriteOptions = {
+            animation,
+            speed: 0,
+            scale: 50,
+            location: {
+              x: utils.randomInt(0, 400),
+              y: utils.randomInt(-125, -25)
+            },
+            rotation: utils.randomInt(-10, 10),
+            lifetime: 60
+          };
+          break;
+        }
+        case 'spiral': {
+          spriteOptions = {
+            animation,
+            scale: 1,
+            initialAngle:
+              (i * 360) / num - 180 * ((i + 1) % 2) + spiralRandomizer,
+            delay: (i * 30) / num,
+            lifetime: 90
+          };
+          break;
+        }
+        default:
+      }
+      const spriteId = this.addSprite(spriteOptions);
+      const sprite = this.getSpriteArray({id: spriteId})[0];
+      this.addBehavior(sprite, {
+        func: behaviorFuncs[effectName].apply(this),
+        name: effectName
       });
     }
   },

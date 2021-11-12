@@ -5,17 +5,20 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSA",
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
       "is_migrated": true,
       "pilot_experiment": "csa-pilot",
-      "hideable_lessons": true,
-      "weekly_instructional_minutes": 225,
       "show_calendar": true,
-      "include_student_lesson_plans": true
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-04 18:43:21 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2021-11-09 20:50:39 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csa5-pilot"
     }
@@ -42,6 +45,30 @@
       },
       "seeding_key": {
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Pilot Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Sandbox"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-pilot"
       }
     }
@@ -235,6 +262,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "For this project, students develop a concert in The Theater about their chosen sustainable goal. Students begin by choosing a new image filter or effect and writing pseudocode for its algorithm. Students then begin the first iteration of their project.",
+        "preparation": "* Review the project setup, requirements, and rubric\n* Print copies of the A Sustainable Neighborhood Project Planning Guide (one per student)",
+        "student_overview": "For this project, you develop a concert in The Theater about your chosen sustainable goal. You begin by choosing a new image filter or effect and writing pseudocode for its algorithm. You then begin the first iteration of your project."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -250,6 +280,8 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "In the previous lesson, students completed the first iteration of their concert. Students complete the second iteration of their project and reflect with a group as they prepare for the final development of their Sustainable Neighborhood Concert. Students self-assess their work against the project rubric and create a final priority list for their last iteration.",
+        "student_overview": "In the previous lesson, you completed the first iteration of your concert. Today, you complete the second iteration of your project and reflect with a group as you prepare for the final development of your Sustainable Neighborhood Concert. You self-assess your work against the project rubric and create a final priority list for your last iteration."
       },
       "seeding_key": {
         "lesson.key": "lesson-12",
@@ -265,6 +297,9 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
+        "overview": "Students complete their last iteration and present their concert to their peers. Students finish the project with a final reflection and celebrate their identity as software engineers.",
+        "preparation": "* You complete your last iteration and present your concert to your peers. You finish the project with a final reflection and celebrate your identity as a software engineer.",
+        "student_overview": "You complete your last iteration and present your concert to your peers. You finish the project with a final reflection and celebrate your identity as a software engineer."
       },
       "seeding_key": {
         "lesson.key": "lesson-13",
@@ -280,6 +315,9 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "overview": "Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.",
+        "preparation": "* Print copies of the FRQ Writing handout (one per student)\n* Print copies of the FRQ Scoring Guide handout (one per student)",
+        "student_overview": "You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines."
       },
       "seeding_key": {
         "lesson.key": "lesson-14",
@@ -291,14 +329,93 @@
       "key": "lesson-15",
       "name": "Assessment Day",
       "absolute_position": 15,
-      "lockable": false,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
+        "assessment": true,
+        "overview": "In this unit, students used two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions",
+        "student_overview": "In this unit, you used two-dimensional (2D) arrays to expand storage and organization capabilities in your programs. You identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you previously developed to access and manipulate elements. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment."
       },
       "seeding_key": {
         "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "lesson-16",
+      "name": "Unit 5 Pilot Survey",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "Java Lab",
+      "name": "Java Lab",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "The Neighborhood",
+      "name": "The Neighborhood",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "The Theater",
+      "name": "The Theater",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "The Playground",
+      "name": "The Playground",
+      "absolute_position": 20,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Playground",
+        "lesson_group.key": "lessonGroup-4",
         "script.name": "csa5-pilot"
       }
     }
@@ -723,6 +840,258 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa5-pilot"
       }
+    },
+    {
+      "key": "45a294b2-d50c-4483-bf09-a0fdc6f4304e",
+      "position": 1,
+      "properties": {
+        "name": "Project Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "45a294b2-d50c-4483-bf09-a0fdc6f4304e",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "bc87eb4a-07ef-4dd8-bb8b-36919914b47d",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bc87eb4a-07ef-4dd8-bb8b-36919914b47d",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "c92f671c-f244-4701-a919-5942714fbe2f",
+      "position": 3,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c92f671c-f244-4701-a919-5942714fbe2f",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "6bbdef15-8455-42b8-87d7-3307f5fb76a2",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6bbdef15-8455-42b8-87d7-3307f5fb76a2",
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "f1e8a989-82fb-4519-8bd9-555aec0b3b9a",
+      "position": 1,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f1e8a989-82fb-4519-8bd9-555aec0b3b9a",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "c0bf3bab-9862-47c3-bffa-17987cda8b91",
+      "position": 2,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c0bf3bab-9862-47c3-bffa-17987cda8b91",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "41ac9ce1-76c8-4117-ab00-adf807ea560e",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "41ac9ce1-76c8-4117-ab00-adf807ea560e",
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "9ee9af80-bacf-44fc-b4e3-9457ca84fe15",
+      "position": 1,
+      "properties": {
+        "duration": 40,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9ee9af80-bacf-44fc-b4e3-9457ca84fe15",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "081aa90d-1307-467d-8e6c-8a82aca7adb9",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "081aa90d-1307-467d-8e6c-8a82aca7adb9",
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "44fb2cfb-64aa-47c4-8686-82855f930460",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "44fb2cfb-64aa-47c4-8686-82855f930460",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "60d0c994-499d-4d72-b8c5-ce3f02da9120",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "60d0c994-499d-4d72-b8c5-ce3f02da9120",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "727136f2-8170-47e0-ad3a-3950d904a161",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "727136f2-8170-47e0-ad3a-3950d904a161",
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "3fb1334b-81c8-4d3c-b6c8-f196a5f52375",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3fb1334b-81c8-4d3c-b6c8-f196a5f52375",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "e9098ecb-2645-4ada-9af1-b9c2816a8154",
+      "position": 2,
+      "properties": {
+        "name": "Wrap Up (Optional)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e9098ecb-2645-4ada-9af1-b9c2816a8154",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "46fb129a-ffcf-460e-8217-893d212043cc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "46fb129a-ffcf-460e-8217-893d212043cc",
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "326f4bdb-6f0d-43a7-8c78-e45b18a19d4c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "326f4bdb-6f0d-43a7-8c78-e45b18a19d4c",
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "f36741e9-34ee-4186-b377-ea12ad6eac5a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f36741e9-34ee-4186-b377-ea12ad6eac5a",
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "80108590-615a-42e3-970b-92878fe55e37",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "80108590-615a-42e3-970b-92878fe55e37",
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot"
+      }
+    },
+    {
+      "key": "f3599b69-65ab-43be-b765-641e182a0a24",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f3599b69-65ab-43be-b765-641e182a0a24",
+        "lesson.key": "The Playground",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot"
+      }
     }
   ],
   "activity_sections": [
@@ -1039,7 +1408,7 @@
       "key": "dc488e6d-7e47-4ba1-9679-a489c74818e0",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some questions that we could answer by traversing through this data?*\n\n**Discussion Goal:** Students suggest different questions they could answer by traversing the table, such as finding the total inventory for each food truck, the total inventory for a specific dessert, or the average price of a dessert.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1, 2, and 3 in Code Studio to calculate sums and averages for the food truck inventory and prices.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some questions that we could answer by traversing through this data?*\n\n**Discussion Goal:** Students suggest different questions they could answer by traversing the table, such as finding the total inventory for each food truck, the total inventory for a specific dessert, or the average price of a dessert.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1, 2, and 3 in Code Studio to calculate the average price of all desserts available at all food trucks.",
         "progression_name": "Traversing Food Trucks",
         "tips": [
           {
@@ -1120,7 +1489,7 @@
       "key": "cf1ccef2-faec-4e1f-8621-a51a4968a041",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Images and Pixels video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How would we store this pixel in a 2D array called `pixels`?*\n\n**Discussion Goal:** Students recall referring to an element in a 2D array using the row and column indexes. Students identify the relationship between the row index of a 2D array and the y coordinate of the pixel. The column index of a 2D array is associated with the x coordinate.\n\n**Do This:** Click through the animated slide to reveal the solution and identify the relationship between the row and column indexes of a 2D array and the x and y coordinates of the pixel in the image."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How would we store this pixel in a 2D array called `pixels`?*\n\n**Discussion Goal:** Students recall referring to an element in a 2D array using the row and column indexes. Students identify the relationship between the row index of a 2D array and the y coordinate of the pixel. The column index of a 2D array is associated with the x coordinate.\n\n**Do This:** Click through the animated slide to reveal the solution and identify the relationship between the row and column indexes of a 2D array and the x and y coordinates of the pixel in the image."
       },
       "seeding_key": {
         "activity_section.key": "cf1ccef2-faec-4e1f-8621-a51a4968a041",
@@ -1143,7 +1512,7 @@
       "key": "250308a9-9a45-4732-9802-00cc33b53818",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students write the `ImageFilter` class and `getPixels()` method, which accepts an `Image` object and returns a 2D array of `Pixel` objects in row-major order.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio. Students write the `ImageEditor` class and `getPixels()` method, which accepts an `Image` object and returns a 2D array of `Pixel` objects in row-major order.",
         "progression_name": "Getting Pixels from an Image"
       },
       "seeding_key": {
@@ -1316,7 +1685,7 @@
       "key": "d7a842d2-532b-434d-ba99-8cf137dda4f6",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students independently complete the Check for Understanding on Level 1 then move on to complete Level 2 in pairs, where they use column-major order traversal to calculate the sum of each column in the inventory table. Have students continue to complete Level 3, where they update a method that prints prices elements in row-major order to column-major order.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students independently complete the Check for Understanding on Level 1 then move on to complete Level 2 in pairs, where they use column-major order traversal to calculate the sum of each column in the inventory table. Have students continue to complete Level 3, where they write a method that prints `truckPrices` elements in column-major order.",
         "progression_name": "Traversing Desserts"
       },
       "seeding_key": {
@@ -1721,7 +2090,7 @@
       "key": "1fc2cef1-d7b3-4490-b679-136fc6f615b9",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the Return Statement video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Now, what do you think is the purpose of a `return` statement?*\n\n**Discussion Goal:** Students realize that the `return` keyword can halt the execution of a loop to exit the method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the effects of executing a `return` statement inside a loop compared to outside the loop."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Now, what do you think is the purpose of a `return` statement?*\n\n**Discussion Goal:** Students realize that the `return` keyword can halt the execution of a loop to exit the method.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Discuss the effects of executing a `return` statement inside a loop compared to outside the loop."
       },
       "seeding_key": {
         "activity_section.key": "1fc2cef1-d7b3-4490-b679-136fc6f615b9",
@@ -2742,6 +3111,609 @@
         "activity_section.key": "2a8635c7-1e92-40b9-a5e4-68af2cd557b0",
         "lesson_activity.key": "ad06eeae-4af9-4ce1-8a8d-b0a4042317dc"
       }
+    },
+    {
+      "key": "8c7da70e-beb3-4a17-9052-018b216292cf",
+      "position": 1,
+      "properties": {
+        "description": "This unit assessment is a semester capstone assessment that has a five-day, three-day, and one-day version. The five-day modification achieves the targeted learning objects and goals while giving students additional methods to implement and additional time to develop their project. The three-day version offers the same lesson plans, but students will implement one method and call two existing methods. The three-day is the version that is on Code Studio. If there is not enough time for the three-day project, a one-day option is available. In the one-day option, direct students to develop their program on Code Studio in Lesson 13 to submit their project. While the one-day option covers the learning objectives and goals, it shortens planning and reflection time. Consider this tradeoff when deciding which version to use.\n\n**5-Day Version**\n* [**Lesson Plan**](https://docs.google.com/document/d/1pPi-PsDcawjSVOyq1c-xTc1nA9iygHy6FzaXwmNfHoA/edit?usp=sharing)\n* [**Project Planning Guide**](https://docs.google.com/document/d/1dg6PI6YZbSxWyOCenXGtXYBQgoxlehvBVc6piiESg5Q/edit?usp=sharing)\n\n**1-Day Version**\n* [**Lesson Plan**](https://docs.google.com/document/d/1EoFAXcoXPCxS_tMPPPLxBb_G0cRS37Ct8rAb0fe99zQ/edit?usp=sharing)\n* [**Project Planning Guide**](https://docs.google.com/document/d/1Kmy9vtHS0nzmNQ1Ls-ffU5HMsYlMI5yr9JbAY_RuTeY/edit?usp=sharing)\n\nIn the three-day version, the unit assessment project assesses proficiency in the knowledge and skills developed in this unit. Students will have three class periods to plan and create the program. Student participation in planning and feedback activities to improve their programs and solve problems. They will also reinforce software development practices and their self-image as a software engineer. Lessons 11, 12, and 13 collectively include instructions for the three-day project."
+      },
+      "seeding_key": {
+        "activity_section.key": "8c7da70e-beb3-4a17-9052-018b216292cf",
+        "lesson_activity.key": "45a294b2-d50c-4483-bf09-a0fdc6f4304e"
+      }
+    },
+    {
+      "key": "dc4144f2-cf39-4097-ae4d-55e8f77dbf0f",
+      "position": 1,
+      "properties": {
+        "description": "During the last several lessons, you chose a sustainable goal that was important to you and that you want your community to work towards. You identified benefits and impacts on your community and brainstormed how to convey your message.",
+        "name": "Sustainable Goals",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dc4144f2-cf39-4097-ae4d-55e8f77dbf0f",
+        "lesson_activity.key": "bc87eb4a-07ef-4dd8-bb8b-36919914b47d"
+      }
+    },
+    {
+      "key": "11990ac5-06dc-4109-a822-d336fe59f23d",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How will you use The Theater to educate your community about benefits and impacts for your chosen goal?*\n\n**Discussion Goal:** Students identify images, effects, and sounds they plan to use to convey their message about their chosen goal."
+      },
+      "seeding_key": {
+        "activity_section.key": "11990ac5-06dc-4109-a822-d336fe59f23d",
+        "lesson_activity.key": "bc87eb4a-07ef-4dd8-bb8b-36919914b47d"
+      }
+    },
+    {
+      "key": "25e2e67c-38f4-426b-bb65-25d3fd66f51c",
+      "position": 3,
+      "properties": {
+        "description": "Over the next three days, you will design your concert in The Theater. Your goal today is to choose the images, filters, and effects that you want to use. As you work, use your software engineering values of problem-solving, collaboration, creativity, and curiosity to help you complete your project.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "25e2e67c-38f4-426b-bb65-25d3fd66f51c",
+        "lesson_activity.key": "bc87eb4a-07ef-4dd8-bb8b-36919914b47d"
+      }
+    },
+    {
+      "key": "67127532-3e99-4882-8aff-2483a04c3a7e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Sustainable Neighborhood Project Planning Guide to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students read through the Project Description, Program Requirements, and Project Goals on the first page of the project planning guide and review the rubric on the last page.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the goals of the project.",
+        "duration": "5",
+        "name": "Project Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "67127532-3e99-4882-8aff-2483a04c3a7e",
+        "lesson_activity.key": "c92f671c-f244-4701-a919-5942714fbe2f"
+      }
+    },
+    {
+      "key": "2fe53963-e366-498a-b169-e402bfc774eb",
+      "position": 2,
+      "properties": {
+        "description": "Now that you understand the project goals and task, let's start creating your concert. In the previous lesson, you created a storyboard for the scenes of your concert to create an initial plan.\n\nYou will need to select two filters or effects you wrote in previous lessons and create a new one for your concert. There are some ideas for new filters and effects that you can choose from in the project planning guide, or you can create your own.",
+        "duration": "15",
+        "name": "Concert Design",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2fe53963-e366-498a-b169-e402bfc774eb",
+        "lesson_activity.key": "c92f671c-f244-4701-a919-5942714fbe2f"
+      }
+    },
+    {
+      "key": "8831e114-ad02-4664-8e62-5163f880431e",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with a partner to write pseudocode for their chosen image filter or effect on page two of their project planning guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to use their 2D Array Manipulatives from previous lessons to work out the steps of their algorithm.  If students finish early, encourage them to implement their image filter or effect on Level 1 on Code Studio."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8831e114-ad02-4664-8e62-5163f880431e",
+        "lesson_activity.key": "c92f671c-f244-4701-a919-5942714fbe2f"
+      }
+    },
+    {
+      "key": "f9aa1739-5eb4-46de-8d03-2bee753fd5b8",
+      "position": 4,
+      "properties": {
+        "description": "We will use an iterative design process to develop our concerts as we did for the previous unit project. We will spend 15 minutes on our first iteration, 20 minutes on our second iteration, and 20 minutes on our last iteration.\n\nAs you complete your priority list, remember that you must do at least one code review for your image filters and effects and at least one code review for your visual and sound effects. Action items should be small steps to meet the requirements on the first page of your project planning guide. No item should take more than 10 minutes - if you think it will, break it down into smaller parts!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f9aa1739-5eb4-46de-8d03-2bee753fd5b8",
+        "lesson_activity.key": "c92f671c-f244-4701-a919-5942714fbe2f"
+      }
+    },
+    {
+      "key": "f9e9b9d0-897a-4794-82ab-fb9546df9cec",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to create a priority list for their first iteration with reach goals on page four of their project planning guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "f9e9b9d0-897a-4794-82ab-fb9546df9cec",
+        "lesson_activity.key": "c92f671c-f244-4701-a919-5942714fbe2f"
+      }
+    },
+    {
+      "key": "86a7e8f2-ea48-4ba5-85ad-153d1b775970",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 in Code Studio to develop their concert using their first priority list.",
+        "duration": "15",
+        "name": "First Iteration",
+        "progression_name": "A Sustainable Neighborhood Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may move at different speeds when choosing what images to use for the concert. You might want to limit them to only choosing five images to help students move forward."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "86a7e8f2-ea48-4ba5-85ad-153d1b775970",
+        "lesson_activity.key": "c92f671c-f244-4701-a919-5942714fbe2f"
+      }
+    },
+    {
+      "key": "e1204a1b-8f4c-4c10-92fb-b96005c5b7ed",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the Day 1 Reflection on page three of their project planning guide.",
+        "name": "Day 1 Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "e1204a1b-8f4c-4c10-92fb-b96005c5b7ed",
+        "lesson_activity.key": "6bbdef15-8455-42b8-87d7-3307f5fb76a2"
+      }
+    },
+    {
+      "key": "2681a2ea-5a7d-42fe-877f-6da3e4a571d0",
+      "position": 2,
+      "properties": {
+        "description": "**A Sustainable Neighborhood Project Planning Guide:** You can use pages two and three of the project planning guide as a formative assessment for the day.",
+        "name": "Assessment (Optional)"
+      },
+      "seeding_key": {
+        "activity_section.key": "2681a2ea-5a7d-42fe-877f-6da3e4a571d0",
+        "lesson_activity.key": "6bbdef15-8455-42b8-87d7-3307f5fb76a2"
+      }
+    },
+    {
+      "key": "2134f942-3ef1-4418-8e0b-89c458f76524",
+      "position": 1,
+      "properties": {
+        "description": "Yesterday you completed the first iteration of your project. Think about what you have accomplished as you prepare your priority list for your second iteration. You have 20 minutes to create your priority list for your second iteration and work toward these goals, then we will assess our progress. Don't forget that you must do at least one code review for your image filters and effects and at least one code review for your visual and sound effects.",
+        "duration": "20",
+        "name": "Second Iteration",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2134f942-3ef1-4418-8e0b-89c458f76524",
+        "lesson_activity.key": "f1e8a989-82fb-4519-8bd9-555aec0b3b9a"
+      }
+    },
+    {
+      "key": "ab7d6220-bc8a-43a2-aba4-e3772f01cb41",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to create a priority list for their second iteration with reach goals on page five of their project planning guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to develop their concert using their second priority list.",
+        "progression_name": "A Sustainable Neighborhood Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may move at different speeds depending on their priorities. If students finish early, encourage them to complete their reach goals."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ab7d6220-bc8a-43a2-aba4-e3772f01cb41",
+        "lesson_activity.key": "f1e8a989-82fb-4519-8bd9-555aec0b3b9a"
+      }
+    },
+    {
+      "key": "72204f22-e48f-470a-8c1b-3079a6a839c6",
+      "position": 3,
+      "properties": {
+        "description": "At the end of each iteration, developers share their work, stakeholders ask questions, and the group plans the product's next iteration. We will participate in a revised code review to share your work as peer developers and provide feedback as potential members of your community.",
+        "duration": "15",
+        "name": "Code Review",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "72204f22-e48f-470a-8c1b-3079a6a839c6",
+        "lesson_activity.key": "f1e8a989-82fb-4519-8bd9-555aec0b3b9a"
+      }
+    },
+    {
+      "key": "e7b005ab-2489-4036-bf9c-63838c0ca613",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the steps of the reflection and code review and group students for review.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students discuss their progress with their review partner.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to return to their computers to request, receive, and review feedback on their Sustainable Neighborhood Concert Project."
+      },
+      "seeding_key": {
+        "activity_section.key": "e7b005ab-2489-4036-bf9c-63838c0ca613",
+        "lesson_activity.key": "f1e8a989-82fb-4519-8bd9-555aec0b3b9a"
+      }
+    },
+    {
+      "key": "3e168c10-f4f5-4cd6-8625-c40f1a687890",
+      "position": 1,
+      "properties": {
+        "description": "Tomorrow, we will start the day with our final iteration of your project. You should have achieved many of your priorities, but you will have time to revise and update your project at the start of class. Let's take a moment to review the feedback you have received and check your project against the rubric in the project planning guide to prepare our priority lists for our final iterations.",
+        "name": "Revisions, Updates, and Reviews",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3e168c10-f4f5-4cd6-8625-c40f1a687890",
+        "lesson_activity.key": "c0bf3bab-9862-47c3-bffa-17987cda8b91"
+      }
+    },
+    {
+      "key": "360a782c-1dd9-4b02-8b01-39d5e6b2012f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to create a priority list on page six of their project planning guide for their final iteration based on their feedback from the code review and what they would like to achieve next.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students assess their project against the rubric outlined in the project planning guide and add to their priority list for their final iteration on page six.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students finish their prioritized list early, encourage them to start working on their stretch goals."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "360a782c-1dd9-4b02-8b01-39d5e6b2012f",
+        "lesson_activity.key": "c0bf3bab-9862-47c3-bffa-17987cda8b91"
+      }
+    },
+    {
+      "key": "f71a25ec-8f0b-468c-928e-28440841044b",
+      "position": 1,
+      "properties": {
+        "description": "**A Sustainable Neighborhood Project Planning Guide:** You can use pages five and six of the project planning guide as a formative assessment for the day.",
+        "name": "Assessment (Optional)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f71a25ec-8f0b-468c-928e-28440841044b",
+        "lesson_activity.key": "41ac9ce1-76c8-4117-ab00-adf807ea560e"
+      }
+    },
+    {
+      "key": "0ca960f6-7df6-4126-bcce-31f47ac29c6a",
+      "position": 1,
+      "properties": {
+        "description": "We will now begin the last iteration of our projects. Make sure you have met the project's requirements, and if you have time, try to address your reach goals. Remember to commit your code after adding a new feature. Don't forget that you must do at least one code review for your image filters and effects and at least one code review for your visual and sound effects.",
+        "duration": "20",
+        "name": "Third Iteration",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0ca960f6-7df6-4126-bcce-31f47ac29c6a",
+        "lesson_activity.key": "9ee9af80-bacf-44fc-b4e3-9457ca84fe15"
+      }
+    },
+    {
+      "key": "7e69222f-150a-40b2-9f08-908c9abd58aa",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio to finish and submit their projects.",
+        "progression_name": "A Sustainable Neighborhood Project",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may move at different speeds depending on their priorities. If students finish early, encourage them to complete their reach goals."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7e69222f-150a-40b2-9f08-908c9abd58aa",
+        "lesson_activity.key": "9ee9af80-bacf-44fc-b4e3-9457ca84fe15"
+      }
+    },
+    {
+      "key": "991aed8f-08cb-46fa-b89c-904ad05b3914",
+      "position": 3,
+      "properties": {
+        "description": "You did it! Time to showcase your sustainable goal and present your concert to your peers.",
+        "duration": "20",
+        "name": "Peer Presentations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "991aed8f-08cb-46fa-b89c-904ad05b3914",
+        "lesson_activity.key": "9ee9af80-bacf-44fc-b4e3-9457ca84fe15"
+      }
+    },
+    {
+      "key": "69e2d991-7dd1-4b6b-9cf9-3fac321b4071",
+      "position": 4,
+      "properties": {
+        "description": "**Group:** Place students into groups of four to five students.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students take turns demonstrating their program to the others in their group. After each demonstration, students use the interview cards to ask questions and share feedback with presenters.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can choose to showcase students' projects according to your school's regulations, such as:\n* Sharing to your social media accounts using #asustainableneighborhood.\n* Having students use this project for the [**AP with WE Service**](https://apcentral.collegeboard.org/launch-grow-ap-program/collaborations-with-ap/ap-we-service/participate) project.\n* Sharing student projects with your local chamber of commerce.\n* Inviting school stakeholders to watch students' presentations.\n* Recording students' presentations and sharing them at the next PTSA meeting."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "69e2d991-7dd1-4b6b-9cf9-3fac321b4071",
+        "lesson_activity.key": "9ee9af80-bacf-44fc-b4e3-9457ca84fe15"
+      }
+    },
+    {
+      "key": "79672a09-bc04-4091-824d-061179695c26",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete the End of Project Self-Reflection on page seven of the project planning guide.",
+        "name": "Project Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "79672a09-bc04-4091-824d-061179695c26",
+        "lesson_activity.key": "081aa90d-1307-467d-8e6c-8a82aca7adb9"
+      }
+    },
+    {
+      "key": "fa2bb0af-f6c6-4f88-8e7a-f0789be5b405",
+      "position": 2,
+      "properties": {
+        "description": "Congratulations! You have completed your concert for the Sustainable Neighborhood Project, and you should be proud of the work you have done for yourself and your community. This semester, you have used your software engineering values to develop your Java programming skills. \n\nWhen I say, “I am a,” you say, “problem solver.”\n“I am a...”\n\nWhen I say “I am,” you say “creative.”\n“I am...”\n\nWhen I say “I am a,” you say “collaborator.”\n“I am a...”\n\nWhen I say “I am a,” you say “learner.”\n“I am a...”\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> When I say “I am a,” you say “software engineer.”\n“I am a...” \n\nYou are a software engineer, great job!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fa2bb0af-f6c6-4f88-8e7a-f0789be5b405",
+        "lesson_activity.key": "081aa90d-1307-467d-8e6c-8a82aca7adb9"
+      }
+    },
+    {
+      "key": "ab908a54-7260-42bc-a5d6-a9c5e294b507",
+      "position": 3,
+      "properties": {
+        "description": "**A Sustainable Neighborhood Project:** Use the rubric on the last page of the Sustainable Neighborhood Project Planning Guide to assess student projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab908a54-7260-42bc-a5d6-a9c5e294b507",
+        "lesson_activity.key": "081aa90d-1307-467d-8e6c-8a82aca7adb9"
+      }
+    },
+    {
+      "key": "0700deb8-9671-4b3a-be3f-9270f3c58cc0",
+      "position": 1,
+      "properties": {
+        "description": "Today, you will complete your first FRQ independently.\n\nStandardized assessments, like the AP exam you will be taking, can be very stressful. Breathing exercises before and even during an exam are an effective way to help us relax and set aside any distractions or negativity to focus on doing our best work. Everyone is different, though, so some exercises are more effective than others for each person. Let's choose a technique to try!",
+        "name": "Breathing Exercise",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0700deb8-9671-4b3a-be3f-9270f3c58cc0",
+        "lesson_activity.key": "44fb2cfb-64aa-47c4-8686-82855f930460"
+      }
+    },
+    {
+      "key": "876b9ebb-6db3-4d40-a6fb-b629d7ec393e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in one of the breathing exercises."
+      },
+      "seeding_key": {
+        "activity_section.key": "876b9ebb-6db3-4d40-a6fb-b629d7ec393e",
+        "lesson_activity.key": "44fb2cfb-64aa-47c4-8686-82855f930460"
+      }
+    },
+    {
+      "key": "53e44b55-1552-4223-a367-e27b3c4cfd07",
+      "position": 3,
+      "properties": {
+        "description": "Now that we're ready for this FRQ, let's review the strategies we have practiced for approaching these questions.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "53e44b55-1552-4223-a367-e27b3c4cfd07",
+        "lesson_activity.key": "44fb2cfb-64aa-47c4-8686-82855f930460"
+      }
+    },
+    {
+      "key": "7145b088-3bed-4fb6-91fa-4660714bb061",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review the strategies for approaching FRQs."
+      },
+      "seeding_key": {
+        "activity_section.key": "7145b088-3bed-4fb6-91fa-4660714bb061",
+        "lesson_activity.key": "44fb2cfb-64aa-47c4-8686-82855f930460"
+      }
+    },
+    {
+      "key": "e97b5f8e-a5f6-46d2-a11e-bde0792c5e88",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the FRQ Writing handout and Java Quick Reference to each student.",
+        "duration": "25",
+        "name": "Writing",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This is the first time students have used the Java Quick Reference. While students may or may not need it for this FRQ, students should practice using it to become more familiar with this resource before the exam."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e97b5f8e-a5f6-46d2-a11e-bde0792c5e88",
+        "lesson_activity.key": "60d0c994-499d-4d72-b8c5-ce3f02da9120"
+      }
+    },
+    {
+      "key": "0f466043-454e-43d6-a67f-4f539543c0ca",
+      "position": 2,
+      "properties": {
+        "description": "When you take the AP CSA Exam, you will receive a copy of the Java Quick Reference, which lists methods from the Java library that the exam may include. There are likely things on this reference that are unfamiliar to you at the moment, and you may or may not need to reference it as you work on this FRQ. It is helpful to be familiar with this resource for the exam.\n\nYou now have 25 minutes to develop your response to the Free Response Question. Remember to use the strategies we have practiced!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0f466043-454e-43d6-a67f-4f539543c0ca",
+        "lesson_activity.key": "60d0c994-499d-4d72-b8c5-ce3f02da9120"
+      }
+    },
+    {
+      "key": "e1463645-4e3b-45af-9744-c2276ac15f7e",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Free Response Question.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Since this is the first independent Free Response Question, students may need guidance in managing their time. Periodically remind students how much time remains and what part they should work on. Students should spend about 12-13 minutes on each part. For each part, students should spend 2-3 minutes annotating, 5 minutes writing pseudocode, and 5 minutes writing their solution in Java."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e1463645-4e3b-45af-9744-c2276ac15f7e",
+        "lesson_activity.key": "60d0c994-499d-4d72-b8c5-ce3f02da9120"
+      }
+    },
+    {
+      "key": "7dca76f9-667a-4d4e-acaa-138b0ea04cfa",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the FRQ Scoring Guide and Reflection handout to each student.\n\n**Group:** Place students in groups of two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students compare their solutions with their partners and assess their work using the FRQ Scoring Guide.",
+        "duration": "10",
+        "name": "Scoring and Review"
+      },
+      "seeding_key": {
+        "activity_section.key": "7dca76f9-667a-4d4e-acaa-138b0ea04cfa",
+        "lesson_activity.key": "60d0c994-499d-4d72-b8c5-ce3f02da9120"
+      }
+    },
+    {
+      "key": "da41cd6e-cda6-478a-a2e0-47c572d35235",
+      "position": 5,
+      "properties": {
+        "description": "Congratulations on completing another FRQ! As with any problems we solve in Java, there are multiple approaches to solving an FRQ. Let's look at one solution to today's FRQ.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "da41cd6e-cda6-478a-a2e0-47c572d35235",
+        "lesson_activity.key": "60d0c994-499d-4d72-b8c5-ce3f02da9120"
+      }
+    },
+    {
+      "key": "4d3f67d0-34e6-406b-8a53-5fa2e8a3943c",
+      "position": 6,
+      "properties": {
+        "description": "**Do This:** Discuss possible solutions to the FRQ. For each solution, reference each row of the FRQ Scoring Guide and point out how the solution met those requirements.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation for `countBlackPixels()` method (Part (a))\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Implementation for `lightenImage()` method (Part (b))",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "When discussing the solution, remind students of examples and exercises where Unit 5 activities applied the concepts used in the FRQ solution."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4d3f67d0-34e6-406b-8a53-5fa2e8a3943c",
+        "lesson_activity.key": "60d0c994-499d-4d72-b8c5-ce3f02da9120"
+      }
+    },
+    {
+      "key": "e1116bda-f74d-4e50-8c9a-c7cd7a821720",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What were you confident about?*\n* *Are there some things you left out that could have brought up your score?*\n\n**Discussion Goal:** Students identify what they achieved in their FRQ solution and areas of improvement.",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "e1116bda-f74d-4e50-8c9a-c7cd7a821720",
+        "lesson_activity.key": "727136f2-8170-47e0-ad3a-3950d904a161"
+      }
+    },
+    {
+      "key": "4ffe906c-4b83-4850-a928-0421b705ecce",
+      "position": 1,
+      "properties": {
+        "description": "Congratulations, you have made it to the end of Unit 5! You learned a lot about using 2D arrays, pixels, and standard algorithms to create image filters and your concert in The Theater. Today, you will complete an assessment to put your skills to the test.",
+        "name": "Unit 5 Assessment",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4ffe906c-4b83-4850-a928-0421b705ecce",
+        "lesson_activity.key": "3fb1334b-81c8-4d3c-b6c8-f196a5f52375"
+      }
+    },
+    {
+      "key": "3c5e37fe-a8db-417a-bae0-e791b4fdf87f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Administer the Unit 5 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)."
+      },
+      "seeding_key": {
+        "activity_section.key": "3c5e37fe-a8db-417a-bae0-e791b4fdf87f",
+        "lesson_activity.key": "3fb1334b-81c8-4d3c-b6c8-f196a5f52375"
+      }
+    },
+    {
+      "key": "2cad15b1-5767-4012-83c0-0096724598cb",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "name": "Assessment Review",
+        "progression_name": "Unit 5 Assessment",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Discuss any questions that come up and take note of topics where students may need extra review.\n\nAs you review answers with students, consider the following suggested strategies:\n* Students write down solutions to questions in their journals that they answered incorrectly.\n* Identify mostly missed questions and review as a class.\n* Review answers asynchronously and allow students to complete corrections.\n* Place students in pairs to review answers and share areas that need extra review.\n\nIf you do not have time to review answers with students, create a data chart that includes assessment results. For students who did not meet the learning expectations, follow up to ensure they learn from errors made on the assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2cad15b1-5767-4012-83c0-0096724598cb",
+        "lesson_activity.key": "e9098ecb-2645-4ada-9af1-b9c2816a8154"
+      }
+    },
+    {
+      "key": "abd4997f-b545-4a2d-9c86-c740c3214196",
+      "position": 1,
+      "properties": {
+        "progression_name": "Unit 5 Pilot Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "abd4997f-b545-4a2d-9c86-c740c3214196",
+        "lesson_activity.key": "46fb129a-ffcf-460e-8217-893d212043cc"
+      }
+    },
+    {
+      "key": "32fdf9e5-69ce-4c66-b6ef-64b9dd7cc026",
+      "position": 1,
+      "properties": {
+        "progression_name": "Java Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "32fdf9e5-69ce-4c66-b6ef-64b9dd7cc026",
+        "lesson_activity.key": "326f4bdb-6f0d-43a7-8c78-e45b18a19d4c"
+      }
+    },
+    {
+      "key": "359eec69-6e47-4473-bbdb-5d1b15c65e52",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Neighborhood"
+      },
+      "seeding_key": {
+        "activity_section.key": "359eec69-6e47-4473-bbdb-5d1b15c65e52",
+        "lesson_activity.key": "f36741e9-34ee-4186-b377-ea12ad6eac5a"
+      }
+    },
+    {
+      "key": "fda2042d-275e-4ec4-9034-71d4cd3d5adb",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Theater"
+      },
+      "seeding_key": {
+        "activity_section.key": "fda2042d-275e-4ec4-9034-71d4cd3d5adb",
+        "lesson_activity.key": "80108590-615a-42e3-970b-92878fe55e37"
+      }
+    },
+    {
+      "key": "da4d8ebe-6e4e-45f9-985a-6bbc8db29cc7",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Playground"
+      },
+      "seeding_key": {
+        "activity_section.key": "da4d8ebe-6e4e-45f9-985a-6bbc8db29cc7",
+        "lesson_activity.key": "f3599b69-65ab-43be-b765-641e182a0a24"
+      }
     }
   ],
   "script_levels": [
@@ -2751,6 +3723,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L1"
+        ],
         "progression": "Creating 2D Arrays"
       },
       "bonus": false,
@@ -2773,6 +3748,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L2"
+        ],
         "progression": "Creating 2D Arrays"
       },
       "bonus": false,
@@ -2795,6 +3773,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L3"
+        ],
         "progression": "Accessing Rows in 2D Arrays"
       },
       "bonus": false,
@@ -2817,6 +3798,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L4"
+        ],
         "progression": "Accessing Rows in 2D Arrays"
       },
       "bonus": false,
@@ -2839,6 +3823,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L5"
+        ],
         "progression": "Updating Values in 2D Arrays"
       },
       "bonus": false,
@@ -2861,6 +3848,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2883,6 +3873,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L1"
+        ],
         "progression": "Traversing Food Trucks"
       },
       "bonus": false,
@@ -2905,6 +3898,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L2"
+        ],
         "progression": "Traversing Food Trucks"
       },
       "bonus": false,
@@ -2927,6 +3923,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L3"
+        ],
         "progression": "Traversing Food Trucks"
       },
       "bonus": false,
@@ -2949,6 +3948,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L4"
+        ],
         "progression": "Concert Images"
       },
       "bonus": false,
@@ -2971,6 +3973,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L5"
+        ],
         "progression": "Getting Pixels from an Image"
       },
       "bonus": false,
@@ -2993,6 +3998,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3015,6 +4023,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L1"
+        ],
         "progression": "Traversing Desserts"
       },
       "bonus": false,
@@ -3037,6 +4048,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L2"
+        ],
         "progression": "Traversing Desserts"
       },
       "bonus": false,
@@ -3059,6 +4073,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L3"
+        ],
         "progression": "Traversing Desserts"
       },
       "bonus": false,
@@ -3081,6 +4098,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L4"
+        ],
         "progression": "Mirror an Image Vertically"
       },
       "bonus": false,
@@ -3103,6 +4123,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L5"
+        ],
         "progression": "Impacts of Pollution"
       },
       "bonus": false,
@@ -3125,6 +4148,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L6"
+        ],
         "progression": "Impacts of Pollution"
       },
       "bonus": false,
@@ -3147,6 +4173,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L7"
+        ],
         "progression": "Impacts of Pollution"
       },
       "bonus": false,
@@ -3169,6 +4198,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L8"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3191,6 +4223,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L1"
+        ],
         "progression": "Removing Colors from Pixels"
       },
       "bonus": false,
@@ -3213,6 +4248,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L2"
+        ],
         "progression": "Removing Colors from Pixels"
       },
       "bonus": false,
@@ -3235,6 +4273,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L3"
+        ],
         "progression": "Removing Colors from Pixels"
       },
       "bonus": false,
@@ -3257,6 +4298,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L4"
+        ],
         "progression": "Keeping a Color in a Pixel"
       },
       "bonus": false,
@@ -3279,6 +4323,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L5"
+        ],
         "progression": "Keeping a Color in a Pixel"
       },
       "bonus": false,
@@ -3301,6 +4348,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3323,6 +4373,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L1"
+        ],
         "progression": "Returning Inside a Loop"
       },
       "bonus": false,
@@ -3345,6 +4398,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L2"
+        ],
         "progression": "Food Truck Special"
       },
       "bonus": false,
@@ -3367,6 +4423,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L3"
+        ],
         "progression": "Checking for Empty Inventory"
       },
       "bonus": false,
@@ -3389,6 +4448,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L4"
+        ],
         "progression": "Checking for Empty Inventory"
       },
       "bonus": false,
@@ -3411,6 +4473,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L5"
+        ],
         "progression": "Checking Dessert Quantities"
       },
       "bonus": false,
@@ -3433,6 +4498,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3455,6 +4523,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L1"
+        ],
         "progression": "Grayscale Image Filter"
       },
       "bonus": false,
@@ -3477,6 +4548,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L2"
+        ],
         "progression": "Grayscale Image Filter"
       },
       "bonus": false,
@@ -3499,6 +4573,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L3"
+        ],
         "progression": "Grayscale Image Filter"
       },
       "bonus": false,
@@ -3521,6 +4598,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L4"
+        ],
         "progression": "Maximize Dessert Inventory"
       },
       "bonus": false,
@@ -3543,6 +4623,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L5"
+        ],
         "progression": "Maximize Dessert Inventory"
       },
       "bonus": false,
@@ -3565,6 +4648,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L6"
+        ],
         "progression": "Maximize Dessert Inventory"
       },
       "bonus": false,
@@ -3587,6 +4673,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3609,6 +4698,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L1"
+        ],
         "progression": "Reversed Image Effect"
       },
       "bonus": false,
@@ -3631,6 +4723,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L2"
+        ],
         "progression": "Reversed Image Effect"
       },
       "bonus": false,
@@ -3653,6 +4748,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L3"
+        ],
         "progression": "Reversed Image Effect"
       },
       "bonus": false,
@@ -3675,6 +4773,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L4"
+        ],
         "progression": "Animated Image Reversal"
       },
       "bonus": false,
@@ -3697,6 +4798,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L5"
+        ],
         "progression": "Animated Image Reversal"
       },
       "bonus": false,
@@ -3719,6 +4823,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L6"
+        ],
         "progression": "Sustainable Goals Benefits"
       },
       "bonus": false,
@@ -3741,6 +4848,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L7"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3763,6 +4873,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L1"
+        ],
         "progression": "Shifted Image Effect"
       },
       "bonus": false,
@@ -3785,6 +4898,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L2"
+        ],
         "progression": "Shifted Image Effect"
       },
       "bonus": false,
@@ -3807,6 +4923,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L3"
+        ],
         "progression": "Shifted Image Effect"
       },
       "bonus": false,
@@ -3829,6 +4948,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L4"
+        ],
         "progression": "Animated Image Shift"
       },
       "bonus": false,
@@ -3851,6 +4973,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L5"
+        ],
         "progression": "Animated Image Shift"
       },
       "bonus": false,
@@ -3873,6 +4998,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3895,6 +5023,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L1"
+        ],
         "progression": "2D Array of Desserts"
       },
       "bonus": false,
@@ -3917,6 +5048,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L2"
+        ],
         "progression": "2D Array of Desserts"
       },
       "bonus": false,
@@ -3939,6 +5073,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L3"
+        ],
         "progression": "2D Array of Desserts"
       },
       "bonus": false,
@@ -3961,6 +5098,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L4"
+        ],
         "progression": "Combining Duplicate Desserts"
       },
       "bonus": false,
@@ -3983,6 +5123,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L5"
+        ],
         "progression": "Combining Duplicate Desserts"
       },
       "bonus": false,
@@ -4005,6 +5148,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L6"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4027,6 +5173,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L1"
+        ],
         "progression": "Sepia Image Effect"
       },
       "bonus": false,
@@ -4049,6 +5198,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L2"
+        ],
         "progression": "Sepia Image Effect"
       },
       "bonus": false,
@@ -4071,6 +5223,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L3"
+        ],
         "progression": "Sepia Image Effect"
       },
       "bonus": false,
@@ -4093,6 +5248,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L4"
+        ],
         "progression": "Sepia Image Effect"
       },
       "bonus": false,
@@ -4115,6 +5273,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L10-L5"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4129,6 +5290,231 @@
       },
       "level_keys": [
         "CSA U5L10-L5"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U5L11-L1"
+        ],
+        "progression": "A Sustainable Neighborhood Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L11-L1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "86a7e8f2-ea48-4ba5-85ad-153d1b775970"
+      },
+      "level_keys": [
+        "CSA U5L11-L1"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA U5L12-L1"
+        ],
+        "progression": "A Sustainable Neighborhood Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L12-L1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "ab7d6220-bc8a-43a2-aba4-e3772f01cb41"
+      },
+      "level_keys": [
+        "CSA U5L12-L1"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA U5L13-L1"
+        ],
+        "progression": "A Sustainable Neighborhood Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA U5L13-L1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "7e69222f-150a-40b2-9f08-908c9abd58aa"
+      },
+      "level_keys": [
+        "CSA U5L13-L1"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA Unit 5 Pilot Assessment 2021"
+        ],
+        "progression": "Unit 5 Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Unit 5 Pilot Assessment 2021"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "2cad15b1-5767-4012-83c0-0096724598cb"
+      },
+      "level_keys": [
+        "CSA Unit 5 Pilot Assessment 2021"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Pilot Survey Unit 5"
+        ],
+        "progression": "Unit 5 Pilot Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 5"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "abd4997f-b545-4a2d-9c86-c740c3214196"
+      },
+      "level_keys": [
+        "CSA Pilot Survey Unit 5"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
+        "progression": "Java Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "32fdf9e5-69ce-4c66-b6ef-64b9dd7cc026"
+      },
+      "level_keys": [
+        "CSA Java Lab Sandbox"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
+        "progression": "The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "359eec69-6e47-4473-bbdb-5d1b15c65e52"
+      },
+      "level_keys": [
+        "CSA Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Theater Sandbox"
+        ],
+        "progression": "The Theater"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Theater Sandbox"
+        ],
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "fda2042d-275e-4ec4-9034-71d4cd3d5adb"
+      },
+      "level_keys": [
+        "CSA Theater Sandbox"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA Playground Sandbox"
+        ],
+        "progression": "The Playground"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Playground Sandbox"
+        ],
+        "lesson.key": "The Playground",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "da4d8ebe-6e4e-45f9-985a-6bbc8db29cc7"
+      },
+      "level_keys": [
+        "CSA Playground Sandbox"
       ]
     }
   ],
@@ -4888,6 +6274,114 @@
         "script.name": "csa5-pilot",
         "activity_section.key": "2a8635c7-1e92-40b9-a5e4-68af2cd557b0"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5L11-L1",
+        "script_level.level_keys": [
+          "CSA U5L11-L1"
+        ],
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "86a7e8f2-ea48-4ba5-85ad-153d1b775970"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5L12-L1",
+        "script_level.level_keys": [
+          "CSA U5L12-L1"
+        ],
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "ab7d6220-bc8a-43a2-aba4-e3772f01cb41"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA U5L13-L1",
+        "script_level.level_keys": [
+          "CSA U5L13-L1"
+        ],
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "7e69222f-150a-40b2-9f08-908c9abd58aa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Unit 5 Pilot Assessment 2021",
+        "script_level.level_keys": [
+          "CSA Unit 5 Pilot Assessment 2021"
+        ],
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "2cad15b1-5767-4012-83c0-0096724598cb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Pilot Survey Unit 5",
+        "script_level.level_keys": [
+          "CSA Pilot Survey Unit 5"
+        ],
+        "lesson.key": "lesson-16",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "abd4997f-b545-4a2d-9c86-c740c3214196"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Java Lab Sandbox",
+        "script_level.level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "32fdf9e5-69ce-4c66-b6ef-64b9dd7cc026"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "359eec69-6e47-4473-bbdb-5d1b15c65e52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA Theater Sandbox"
+        ],
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "fda2042d-275e-4ec4-9034-71d4cd3d5adb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Playground Sandbox",
+        "script_level.level_keys": [
+          "CSA Playground Sandbox"
+        ],
+        "lesson.key": "The Playground",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa5-pilot",
+        "activity_section.key": "da4d8ebe-6e4e-45f9-985a-6bbc8db29cc7"
+      }
     }
   ],
   "resources": [
@@ -4896,8 +6390,8 @@
       "url": "https://docs.google.com/presentation/d/1-Dlmz1EOpYAt1oNEYa_8TDuwbhfCLzdgVGk3WSOTrdA/edit?usp=sharing",
       "key": "2d_array_manipulatives",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "2d_array_manipulatives"
@@ -4908,11 +6402,23 @@
       "url": "https://docs.google.com/document/d/1sxRE-jeTpq-4XiYg-nK3sxW2jD1NG8Hj8IJQ4BM1SYs/edit?usp=sharing",
       "key": "_key_creating_2d_arrays",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_creating_2d_arrays"
+      }
+    },
+    {
+      "name": "[KEY] FRQ Writing",
+      "url": "https://docs.google.com/document/d/19cABKxpSQ2yQeCaJu_2GbRmZYUd8S7MGthEFRnmlMsU/edit?usp=sharing",
+      "key": "_key_frq_writing_3",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_frq_writing_3"
       }
     },
     {
@@ -4920,8 +6426,8 @@
       "url": "https://docs.google.com/document/d/1Tk3mzui8xzcmDhOgLtR1hlj2IVQiepbzodmC1-7AlGc/edit?usp=sharing",
       "key": "_key_remove_duplicates_in_2d_arrays",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_remove_duplicates_in_2d_arrays"
@@ -4932,8 +6438,8 @@
       "url": "https://docs.google.com/document/d/1Crzwn86VzKoqDgQ2x1JcZy6grGube-RVSgcXXTEIRwQ/edit",
       "key": "_key_reversing_a_2d_array",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_reversing_a_2d_array"
@@ -4944,8 +6450,8 @@
       "url": "https://docs.google.com/document/d/1X0Hjlc-2OfsU7GxQp4t-IZObSM5McJe5dyBHu_OyeMU/edit",
       "key": "_key_shifting_elements_in_a_2d_array",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_shifting_elements_in_a_2d_array"
@@ -4956,8 +6462,8 @@
       "url": "https://docs.google.com/document/d/1JFsWeN6_XwiFwBzP8beH7-yfNfuRsAWM_jxsTUUOHY0/edit?usp=sharing",
       "key": "_key_tracing_2d_array_traversal_algorithms",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_tracing_2d_array_traversal_algorithms"
@@ -4968,8 +6474,8 @@
       "url": "https://docs.google.com/document/d/1pidSrLDJAlW9D72te1PobpipyhN2cT-JbvWY-ocoqhQ/edit?usp=sharing",
       "key": "_key_tracing_enhanced_for_loops",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_tracing_enhanced_for_loops"
@@ -4980,8 +6486,8 @@
       "url": "https://docs.google.com/document/d/1zq2hyaCbrko25wYHLN0miKSGxLzIQsZnObrkGYDJQOo/edit?usp=sharing",
       "key": "_key_u5l10_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l10_extra_practice"
@@ -4992,8 +6498,8 @@
       "url": "https://docs.google.com/document/u/2/d/1wgQT6zb-L72rpzy6PltrVfEDYuMdD90LEdGObjeP9d4/edit",
       "key": "_key_u5l1_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l1_extra_practice"
@@ -5004,8 +6510,8 @@
       "url": "https://docs.google.com/document/d/1kopqWpEEDPyjSdmYufEMD5GqElzyOiUc3uJizhXfTB0/edit",
       "key": "_key_u5l2_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l2_extra_practice"
@@ -5016,8 +6522,8 @@
       "url": "https://docs.google.com/document/d/1mjPTZC6x2rQr2IcCv02qUPstiqk8mGHEwDFrkMb_Flc/edit?usp=sharing",
       "key": "_key_u5l3_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l3_extra_practice"
@@ -5028,8 +6534,8 @@
       "url": "https://docs.google.com/document/d/1O4Z-r8esMpd3vVDCI_D74qq3q2-tAHimwezVRACVfuM/edit?usp=sharing",
       "key": "_key_u5l4_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l4_extra_practice"
@@ -5040,8 +6546,8 @@
       "url": "https://docs.google.com/document/d/1ZsuRoqijYZMhcX2pTkF9KQhEVu9Npf4ura04o7eyq30/edit?usp=sharing",
       "key": "_key_u5l5_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l5_extra_practice"
@@ -5052,8 +6558,8 @@
       "url": "https://docs.google.com/document/d/1zUYa_Jm5or9LSaqaYWFZL5UDLUSisvGunC4sZFDd7wk/edit?usp=sharing",
       "key": "_key_u5l6_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l6_extra_practice"
@@ -5064,8 +6570,8 @@
       "url": "https://docs.google.com/document/d/1WtggFrQ4jir4OQZRRKWlA57SxggCv-upjEouMhEm_rI/edit?usp=sharing",
       "key": "_key_u5l7_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l7_extra_practice"
@@ -5076,8 +6582,8 @@
       "url": "https://docs.google.com/document/d/1wvKojSu3wftMbCl-7PAgxgZjorYPGXwPgCUOISOwnPk/edit?usp=sharing",
       "key": "_key_u5l8_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l8_extra_practice"
@@ -5088,11 +6594,35 @@
       "url": "https://docs.google.com/document/d/1eUZm3EwDi7URA7HAttJREKPYejYWZtp6I1pEmnXf0lY/edit#heading=h.2ugpi8pb9hv1",
       "key": "_key_u5l9_extra_practice",
       "properties": {
-        "type": "Answer Key",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
       },
       "seeding_key": {
         "resource.key": "_key_u5l9_extra_practice"
+      }
+    },
+    {
+      "name": "A Sustainable Neighborhood Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1r-cD8hKUg4G59t5ev8RukVOyRRhfiGMwj1GEuM1nFpM/edit?usp=sharing",
+      "key": "a_sustainable_neighborhood_project_planning_guide",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "a_sustainable_neighborhood_project_planning_guide"
+      }
+    },
+    {
+      "name": "A Sustainable Neighborhood Project Planning Guide",
+      "url": "https://docs.google.com/document/d/17Cj50X0pwXZy_p4fp2XvuX9bO7AQqwTDkzumhTAiT-Y/edit?usp=sharing",
+      "key": "a_sustainable_neighborhood_project_planning_guide_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "a_sustainable_neighborhood_project_planning_guide_1"
       }
     },
     {
@@ -5100,11 +6630,59 @@
       "url": "https://docs.google.com/document/d/1uazR1PUKou39puTk5g_WqsQKjFo2hON8aYd-E5Za_EM/edit?usp=sharing",
       "key": "creating_2d_arrays",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "creating_2d_arrays"
+      }
+    },
+    {
+      "name": "Enhanced for Loops and 2D Arrays",
+      "url": "https://youtu.be/8n9IUauA7k4",
+      "key": "enhanced_for_loops_and_2d_arrays",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "enhanced_for_loops_and_2d_arrays"
+      }
+    },
+    {
+      "name": "FRQ Scoring Guide",
+      "url": "https://docs.google.com/document/d/1r1osgQMGvpnwaR1Vhg2ZcoZ0DDztHgPrqKNIy6eUzgk/edit?usp=sharing",
+      "key": "frq_scoring_guide_3",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "frq_scoring_guide_3"
+      }
+    },
+    {
+      "name": "FRQ Writing",
+      "url": "https://docs.google.com/document/d/198DMgO0IbJVEUs6U59i59pkPsKOzDwQbsOVhG-_mLhc/edit?usp=sharing",
+      "key": "frq_writing_3",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "frq_writing_3"
+      }
+    },
+    {
+      "name": "Java Quick Reference",
+      "url": "https://drive.google.com/file/d/1Z7P-QFWuNUeMIQ60xz-pXrIlSjPAloxX/view?usp=sharing",
+      "key": "java_quick_reference",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "java_quick_reference"
       }
     },
     {
@@ -5112,8 +6690,8 @@
       "url": "https://docs.google.com/document/d/1GA1AtvLfJkY47IFlmDOnjF5Z6uchjNUL5kMe-yQ4DwQ/edit?usp=sharing",
       "key": "remove_duplicates_in_2d_arrays",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "remove_duplicates_in_2d_arrays"
@@ -5124,11 +6702,23 @@
       "url": "https://docs.google.com/document/d/1ZHFXGJckRzQAEp4XIQ27b1WEmJr02UZM5DSLx9tHcQg/edit?ts=60e5ada3#",
       "key": "reversing_a_2d_array",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "reversing_a_2d_array"
+      }
+    },
+    {
+      "name": "Row-Major Traversal",
+      "url": "https://youtu.be/eHJ50ugOLbU",
+      "key": "row-major_traversal",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "row-major_traversal"
       }
     },
     {
@@ -5136,8 +6726,8 @@
       "url": "https://docs.google.com/document/d/1okecHKh_jgKJGvUH2Y1X1nkREw208syphfPuGa2bpg0/edit#",
       "key": "shifting_elements_in_a_2d_array",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "shifting_elements_in_a_2d_array"
@@ -5148,8 +6738,8 @@
       "url": "https://docs.google.com/document/d/1OMbvX-MI2ZiYUuQRgyrSGK7e9SsPay4pXoDGN5bme18/edit?usp=sharing",
       "key": "sustainable_goals_planning_guide",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "sustainable_goals_planning_guide"
@@ -5160,8 +6750,8 @@
       "url": "https://docs.google.com/document/d/13LDyfG6bbaRTSjHE6Xaofs3zONFfn4PEk9psm7ojRdw/edit?usp=sharing",
       "key": "tracing_2d_array_traversal_algorithms",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "tracing_2d_array_traversal_algorithms"
@@ -5172,11 +6762,23 @@
       "url": "https://docs.google.com/document/d/1cs9G8RcRif3Y36UD05RLIVebdg4taRsE2T3xe1PIGsk/edit?usp=sharing",
       "key": "tracing_enhanced_for_loops",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "tracing_enhanced_for_loops"
+      }
+    },
+    {
+      "name": "Two-Dimensional (2D) Arrays",
+      "url": "https://youtu.be/uvyvOALK4Oo",
+      "key": "two-dimensional_2d_arrays",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "two-dimensional_2d_arrays"
       }
     },
     {
@@ -5184,8 +6786,8 @@
       "url": "https://docs.google.com/document/d/1CnW_fsxlZPW8jqdcxCd827lyQPKHLWQxeqRXjedIWdw/edit?usp=sharing",
       "key": "u5l10_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l10_extra_practice"
@@ -5196,8 +6798,8 @@
       "url": "https://docs.google.com/document/d/14ig6hK_ExETmNoC2nJom8cWKkG6zydOKGyOee2rPr6Y/edit?usp=sharing",
       "key": "u5l10_quiz_quiz_trade_cards",
       "properties": {
-        "type": "Handout",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l10_quiz_quiz_trade_cards"
@@ -5208,8 +6810,8 @@
       "url": "https://docs.google.com/document/u/2/d/1I8tnsQSaCx-QA-ow0cIa3Pn13zmLHkhRtCkeDyjdvek/edit",
       "key": "u5l1_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l1_extra_practice"
@@ -5220,8 +6822,8 @@
       "url": "https://docs.google.com/document/d/18H6Cn-IQNZ4LefrqX4Ux308bM4LsfLr1qtobjws6Xus/edit",
       "key": "u5l2_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l2_extra_practice"
@@ -5232,8 +6834,8 @@
       "url": "https://docs.google.com/document/d/1cxQtE-wy_HnWR8y8pN7lzYTGdv7hbLIuM1vjIL26HYY/edit?usp=sharing",
       "key": "u5l3_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l3_extra_practice"
@@ -5244,8 +6846,8 @@
       "url": "https://docs.google.com/document/d/1I2VWTMVr2tpKxcGDkm6UoY_dr8BrVqcO2QBR0SLReEo/edit?usp=sharing",
       "key": "u5l4_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l4_extra_practice"
@@ -5256,8 +6858,8 @@
       "url": "https://docs.google.com/document/d/17o3TFDpoahrdTjJU53i6hqDXaAp1VHBvxPcGadv_3Jo/edit?usp=sharing",
       "key": "u5l5_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l5_extra_practice"
@@ -5268,8 +6870,8 @@
       "url": "https://docs.google.com/document/d/1OPTvdBqG7z1H0-7HEf0tAxbOSyprF9eltondV_aoNKs/edit?usp=sharing",
       "key": "u5l6_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l6_extra_practice"
@@ -5280,8 +6882,8 @@
       "url": "https://docs.google.com/document/d/177T_vTa_SqtFCLSzjBfdTiESCB_xIrucsllo2yOzpYc/edit?usp=sharing",
       "key": "u5l7_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l7_extra_practice"
@@ -5292,8 +6894,8 @@
       "url": "https://docs.google.com/document/d/1RqDy8dg0OArLOm7RKurNQzXap99zzNHtZBszDKDgG1o/edit?usp=sharing",
       "key": "u5l8_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l8_extra_practice"
@@ -5304,8 +6906,8 @@
       "url": "https://docs.google.com/document/d/11T8_6-RrCuR6TxRJGL05oAJtFTL3nz0aUztxZpIp8XU/edit",
       "key": "u5l9_extra_practice",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "u5l9_extra_practice"
@@ -5316,8 +6918,8 @@
       "url": "https://docs.google.com/document/d/1M4OOFDcM8TunCZtnZJmaC12UiKCwnQ_VDDgpZ-vMUzM/edit?usp=sharing",
       "key": "unit_5_guide",
       "properties": {
-        "type": "Resource",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "unit_5_guide"
@@ -5328,8 +6930,8 @@
       "url": "https://docs.google.com/presentation/d/1ysiT5p0BrQe4AzjOtJmpxgp7IW8WgVn_4Q0Ntp0Jdbc/edit?usp=sharing",
       "key": "unit_5_presentation_slides",
       "properties": {
-        "type": "Slides",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "unit_5_presentation_slides"
@@ -5340,8 +6942,8 @@
       "url": "https://docs.google.com/presentation/d/1zgeUlhiDQFnRz1nTjx_Dv_U0xAecmgNcjTp7t39Z-a0/edit?usp=sharing",
       "key": "vocabulary_bingo_cards_1",
       "properties": {
-        "type": "Handout",
-        "audience": "Student"
+        "audience": "Student",
+        "type": "Handout"
       },
       "seeding_key": {
         "resource.key": "vocabulary_bingo_cards_1"
@@ -5352,8 +6954,8 @@
       "url": "https://docs.google.com/document/d/1cAGO-qB1QiekD8clh_SMFepkKVI6tI-Zahrzw-0m7TQ/edit?usp=sharing",
       "key": "vocabulary_bingo_definitions_1",
       "properties": {
-        "type": "Resource",
-        "audience": "Verified Teacher"
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "vocabulary_bingo_definitions_1"
@@ -5388,6 +6990,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "resource.key": "two-dimensional_2d_arrays"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "resource.key": "u5l1_extra_practice"
       }
     },
@@ -5435,8 +7043,104 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "a_sustainable_neighborhood_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "a_sustainable_neighborhood_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "unit_5_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "a_sustainable_neighborhood_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "a_sustainable_neighborhood_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "resource.key": "unit_5_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "a_sustainable_neighborhood_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "a_sustainable_neighborhood_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "resource.key": "unit_5_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "_key_frq_writing_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "frq_scoring_guide_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "frq_writing_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "java_quick_reference"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "resource.key": "unit_5_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "unit_5_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "_key_u5l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "row-major_traversal"
       }
     },
     {
@@ -5491,6 +7195,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "_key_u5l4_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "enhanced_for_loops_and_2d_arrays"
       }
     },
     {
@@ -5700,6 +7410,26 @@
   ],
   "vocabularies": [
     {
+      "key": "column",
+      "word": "Column",
+      "definition": "A vertical (up and down) series of data in a 2D array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "column"
+      }
+    },
+    {
+      "key": "column_major_order",
+      "word": "Column-Major Order",
+      "definition": "Traversing a 2D array by accessing each column from left to right",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "column_major_order"
+      }
+    },
+    {
       "key": "initializer_list",
       "word": "Initializer List",
       "definition": "Creates and initializes the elements in an array to a list of values given inside curly braces ( `{ }` )",
@@ -5707,26 +7437,6 @@
       },
       "seeding_key": {
         "vocabulary.key": "initializer_list"
-      }
-    },
-    {
-      "key": "two_dimensional_d_array",
-      "word": "Two-Dimensional (2D) Array",
-      "definition": "An array of arrays often represented as a table with rows and columns",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "two_dimensional_d_array"
-      }
-    },
-    {
-      "key": "outer_array",
-      "word": "Outer Array",
-      "definition": "The outermost array of a two-dimensional array",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "outer_array"
       }
     },
     {
@@ -5740,23 +7450,13 @@
       }
     },
     {
-      "key": "row",
-      "word": "Row",
-      "definition": "A horizontal (left to right) series of data in a 2D array",
+      "key": "outer_array",
+      "word": "Outer Array",
+      "definition": "The outermost array of a two-dimensional array",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "row"
-      }
-    },
-    {
-      "key": "column",
-      "word": "Column",
-      "definition": "A vertical (up and down) series of data in a 2D array",
-      "properties": {
-      },
-      "seeding_key": {
-        "vocabulary.key": "column"
+        "vocabulary.key": "outer_array"
       }
     },
     {
@@ -5767,6 +7467,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "pixel"
+      }
+    },
+    {
+      "key": "row",
+      "word": "Row",
+      "definition": "A horizontal (left to right) series of data in a 2D array",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "row"
       }
     },
     {
@@ -5790,13 +7500,13 @@
       }
     },
     {
-      "key": "column_major_order",
-      "word": "Column-Major Order",
-      "definition": "Traversing a 2D array by accessing each column from left to right",
+      "key": "two_dimensional_d_array",
+      "word": "Two-Dimensional (2D) Array",
+      "definition": "An array of arrays often represented as a table with rows and columns",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "column_major_order"
+        "vocabulary.key": "two_dimensional_d_array"
       }
     }
   ],
@@ -5804,19 +7514,13 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "vocabulary.key": "column"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "vocabulary.key": "initializer_list"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "vocabulary.key": "two_dimensional_d_array"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "vocabulary.key": "outer_array"
       }
     },
     {
@@ -5828,13 +7532,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "vocabulary.key": "outer_array"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
         "vocabulary.key": "row"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "vocabulary.key": "column"
+        "vocabulary.key": "two_dimensional_d_array"
       }
     },
     {
@@ -5867,33 +7577,23 @@
   ],
   "objectives": [
     {
-      "key": "b0181547-2c7a-44ed-b0e7-a20b34f95878",
+      "key": "0338a959-7a0d-425c-8a7e-d5fe961ba517",
       "properties": {
-        "description": "Declare and initialize a 2D array"
+        "description": "Reflect on the development process"
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "b0181547-2c7a-44ed-b0e7-a20b34f95878"
+        "lesson.key": "lesson-13",
+        "objective.key": "0338a959-7a0d-425c-8a7e-d5fe961ba517"
       }
     },
     {
-      "key": "ba85f416-4529-4853-9019-e7d97ba8a128",
+      "key": "08e9c5b7-0d35-4285-b520-5e5a8600f556",
       "properties": {
-        "description": "Access and modify 2D array elements using row and column indexes"
+        "description": "Use an iterative design approach to identify and meet milestones throughout the project"
       },
       "seeding_key": {
-        "lesson.key": "lesson-1",
-        "objective.key": "ba85f416-4529-4853-9019-e7d97ba8a128"
-      }
-    },
-    {
-      "key": "af9f9f48-9ce0-4e78-bc21-ca2612ecaf05",
-      "properties": {
-        "description": "Use nested loops to traverse a 2D array in row-major order"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "objective.key": "af9f9f48-9ce0-4e78-bc21-ca2612ecaf05"
+        "lesson.key": "lesson-12",
+        "objective.key": "08e9c5b7-0d35-4285-b520-5e5a8600f556"
       }
     },
     {
@@ -5907,93 +7607,13 @@
       }
     },
     {
-      "key": "7fd754a6-478a-4d7f-aec9-e8df59bfaebc",
+      "key": "2aa0be16-4ce5-4b70-854d-81f4ac487b60",
       "properties": {
-        "description": "Traverse a 2D array in column-major order"
+        "description": "Use an iterative design approach to identify and meet milestones throughout the project"
       },
       "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "7fd754a6-478a-4d7f-aec9-e8df59bfaebc"
-      }
-    },
-    {
-      "key": "e4f94a82-c519-4ed9-8e05-60140c4fcc7b",
-      "properties": {
-        "description": "Differentiate between row-major order and column-major order traversal"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-3",
-        "objective.key": "e4f94a82-c519-4ed9-8e05-60140c4fcc7b"
-      }
-    },
-    {
-      "key": "dd5f35ed-a027-415b-b7bb-437e54fdace7",
-      "properties": {
-        "description": "Write nested enhanced `for` loops to traverse 2D arrays"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "objective.key": "dd5f35ed-a027-415b-b7bb-437e54fdace7"
-      }
-    },
-    {
-      "key": "af2ae25f-a086-4fc2-b616-16ebc9238bed",
-      "properties": {
-        "description": "Identify the similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-4",
-        "objective.key": "af2ae25f-a086-4fc2-b616-16ebc9238bed"
-      }
-    },
-    {
-      "key": "55ad8f14-d068-463a-948e-58ada7215879",
-      "properties": {
-        "description": "Explain the effect of executing a `return` statement inside a loop"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "objective.key": "55ad8f14-d068-463a-948e-58ada7215879"
-      }
-    },
-    {
-      "key": "ddad331c-348c-4d14-af15-116a4838226e",
-      "properties": {
-        "description": "Traverse a 2D array to find whether values are evenly divisible by another integer"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "objective.key": "ddad331c-348c-4d14-af15-116a4838226e"
-      }
-    },
-    {
-      "key": "d8b70241-1f7c-4d50-9102-e466c34e769c",
-      "properties": {
-        "description": "Traverse a 2D array to find the number of elements that meet specific criteria"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-5",
-        "objective.key": "d8b70241-1f7c-4d50-9102-e466c34e769c"
-      }
-    },
-    {
-      "key": "dbcd211b-7f1b-4065-8750-b691c4fdff19",
-      "properties": {
-        "description": "Apply standard algorithms to calculate the average RGB color value of each `Pixel` in an `Image`"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "objective.key": "dbcd211b-7f1b-4065-8750-b691c4fdff19"
-      }
-    },
-    {
-      "key": "d03732ae-95d4-44c9-a9a2-acb11ab2845e",
-      "properties": {
-        "description": "Apply standard algorithms to find the maximum dessert quantity for a food truck"
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-6",
-        "objective.key": "d03732ae-95d4-44c9-a9a2-acb11ab2845e"
+        "lesson.key": "lesson-11",
+        "objective.key": "2aa0be16-4ce5-4b70-854d-81f4ac487b60"
       }
     },
     {
@@ -6017,6 +7637,46 @@
       }
     },
     {
+      "key": "47fbecf6-58cb-4409-8f73-a4d4cee6aab9",
+      "properties": {
+        "description": "Identify, modify, and develop an algorithm for array traversal"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "47fbecf6-58cb-4409-8f73-a4d4cee6aab9"
+      }
+    },
+    {
+      "key": "4a4f54c1-b1b6-4da2-a455-af9ea3c164a2",
+      "properties": {
+        "description": "Use an iterative design approach to identify and meet milestones throughout the project"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "4a4f54c1-b1b6-4da2-a455-af9ea3c164a2"
+      }
+    },
+    {
+      "key": "55ad8f14-d068-463a-948e-58ada7215879",
+      "properties": {
+        "description": "Explain the effect of executing a `return` statement inside a loop"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "55ad8f14-d068-463a-948e-58ada7215879"
+      }
+    },
+    {
+      "key": "56ef709d-87ea-4c4a-a34b-ba9623301edb",
+      "properties": {
+        "description": "Implement methods based on a given set of specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "56ef709d-87ea-4c4a-a34b-ba9623301edb"
+      }
+    },
+    {
       "key": "5bf257fd-3d87-4184-be3f-86a587eb914b",
       "properties": {
         "description": "Apply standard algorithms to find and replace duplicate `Dessert` objects in a 2D array"
@@ -6027,6 +7687,86 @@
       }
     },
     {
+      "key": "6f9dacee-60c2-4d7f-8ccc-969fcaae9e72",
+      "properties": {
+        "description": "Identify, modify, and develop an algorithm for array traversal"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "6f9dacee-60c2-4d7f-8ccc-969fcaae9e72"
+      }
+    },
+    {
+      "key": "7fd754a6-478a-4d7f-aec9-e8df59bfaebc",
+      "properties": {
+        "description": "Traverse a 2D array in column-major order"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "7fd754a6-478a-4d7f-aec9-e8df59bfaebc"
+      }
+    },
+    {
+      "key": "8cbc0e63-5f00-4cdc-8225-b1a3c7aa9513",
+      "properties": {
+        "description": "Design a concert in The Theater"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "8cbc0e63-5f00-4cdc-8225-b1a3c7aa9513"
+      }
+    },
+    {
+      "key": "adfcc170-4b30-4b28-b623-c2d911130cb5",
+      "properties": {
+        "description": "Identify, modify, and develop an algorithm for array traversal"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "adfcc170-4b30-4b28-b623-c2d911130cb5"
+      }
+    },
+    {
+      "key": "af2ae25f-a086-4fc2-b616-16ebc9238bed",
+      "properties": {
+        "description": "Identify the similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "af2ae25f-a086-4fc2-b616-16ebc9238bed"
+      }
+    },
+    {
+      "key": "af9f9f48-9ce0-4e78-bc21-ca2612ecaf05",
+      "properties": {
+        "description": "Use nested loops to traverse a 2D array in row-major order"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "af9f9f48-9ce0-4e78-bc21-ca2612ecaf05"
+      }
+    },
+    {
+      "key": "b0181547-2c7a-44ed-b0e7-a20b34f95878",
+      "properties": {
+        "description": "Declare and initialize a 2D array"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "b0181547-2c7a-44ed-b0e7-a20b34f95878"
+      }
+    },
+    {
+      "key": "b25bd80f-6993-47a5-9e36-9d3ed639f5ec",
+      "properties": {
+        "description": "Design a concert in The Theater"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "objective.key": "b25bd80f-6993-47a5-9e36-9d3ed639f5ec"
+      }
+    },
+    {
       "key": "b9e1fdd3-47fc-4bf9-a2a5-2c6823974c13",
       "properties": {
         "description": "Apply standard algorithms to find and modify elements in a 2D array that meet specific conditions"
@@ -6034,6 +7774,106 @@
       "seeding_key": {
         "lesson.key": "lesson-10",
         "objective.key": "b9e1fdd3-47fc-4bf9-a2a5-2c6823974c13"
+      }
+    },
+    {
+      "key": "ba85f416-4529-4853-9019-e7d97ba8a128",
+      "properties": {
+        "description": "Access and modify 2D array elements using row and column indexes"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "ba85f416-4529-4853-9019-e7d97ba8a128"
+      }
+    },
+    {
+      "key": "d03732ae-95d4-44c9-a9a2-acb11ab2845e",
+      "properties": {
+        "description": "Apply standard algorithms to find the maximum dessert quantity for a food truck"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "d03732ae-95d4-44c9-a9a2-acb11ab2845e"
+      }
+    },
+    {
+      "key": "d8b70241-1f7c-4d50-9102-e466c34e769c",
+      "properties": {
+        "description": "Traverse a 2D array to find the number of elements that meet specific criteria"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "d8b70241-1f7c-4d50-9102-e466c34e769c"
+      }
+    },
+    {
+      "key": "dae6aaa5-7c06-47bb-b750-6f6eacb3b08e",
+      "properties": {
+        "description": "Write pseudocode to plan an algorithm"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "dae6aaa5-7c06-47bb-b750-6f6eacb3b08e"
+      }
+    },
+    {
+      "key": "daeb7918-7dd5-44f0-b31b-6df9acce18f9",
+      "properties": {
+        "description": "Design a concert in The Theater"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "objective.key": "daeb7918-7dd5-44f0-b31b-6df9acce18f9"
+      }
+    },
+    {
+      "key": "dbcd211b-7f1b-4065-8750-b691c4fdff19",
+      "properties": {
+        "description": "Apply standard algorithms to calculate the average RGB color value of each `Pixel` in an `Image`"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "dbcd211b-7f1b-4065-8750-b691c4fdff19"
+      }
+    },
+    {
+      "key": "dd5f35ed-a027-415b-b7bb-437e54fdace7",
+      "properties": {
+        "description": "Write nested enhanced `for` loops to traverse 2D arrays"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "dd5f35ed-a027-415b-b7bb-437e54fdace7"
+      }
+    },
+    {
+      "key": "ddad331c-348c-4d14-af15-116a4838226e",
+      "properties": {
+        "description": "Traverse a 2D array to find whether values are evenly divisible by another integer"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "ddad331c-348c-4d14-af15-116a4838226e"
+      }
+    },
+    {
+      "key": "e4f94a82-c519-4ed9-8e05-60140c4fcc7b",
+      "properties": {
+        "description": "Differentiate between row-major order and column-major order traversal"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "e4f94a82-c519-4ed9-8e05-60140c4fcc7b"
+      }
+    },
+    {
+      "key": "f14cb2f2-4ec4-4a76-99d1-d93b84dcf0eb",
+      "properties": {
+        "description": "Translate pseudocode to Java"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "objective.key": "f14cb2f2-4ec4-4a76-99d1-d93b84dcf0eb"
       }
     }
   ],
@@ -6064,6 +7904,13 @@
         "lesson.key": "lesson-1",
         "framework.shortcode": "csa",
         "standard.shortcode": "VAR-2.F.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "CON-2.N.2"
       }
     },
     {
@@ -6153,13 +8000,6 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-9",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-2.N.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-10",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.N.2"
       }

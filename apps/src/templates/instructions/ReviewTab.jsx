@@ -11,6 +11,7 @@ import Comment from './codeReview/Comment';
 import CommentEditor from './codeReview/CommentEditor';
 import CodeReviewDataApi from './codeReview/CodeReviewDataApi';
 import ReviewNavigator from './codeReview/ReviewNavigator';
+import Button from '@cdo/apps/templates/Button';
 
 export const VIEWING_CODE_REVIEW_URL_PARAM = 'viewingCodeReview';
 
@@ -30,6 +31,7 @@ class ReviewTab extends Component {
 
   state = {
     initialLoadCompleted: false,
+    loadingReviewData: true,
     reviewCheckboxEnabled: false,
     isReadyForReview: false,
     reviewableProjectId: '',
@@ -64,12 +66,22 @@ class ReviewTab extends Component {
     `?${VIEWING_CODE_REVIEW_URL_PARAM}=true`;
 
   componentDidMount() {
-    const {channelId, serverLevelId, serverScriptId} = this.props;
+    this.loadReviewData();
+  }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.loadingReviewData && !this.state.loadingReviewData) {
+      this.props.onLoadComplete();
+    }
+  }
+
+  loadReviewData = () => {
+    this.setState({loadingReviewData: true});
+    const {channelId, serverLevelId, serverScriptId} = this.props;
     // If there's no channelId (happens when a teacher is viewing as a student who has not done any work on a level),
     // do not make API calls that require a channelId
     if (!channelId) {
-      this.setState({initialLoadCompleted: true});
+      this.setState({loadingReviewData: false});
       return;
     }
 
@@ -79,14 +91,14 @@ class ReviewTab extends Component {
       serverScriptId
     );
 
-    const initialLoadPromises = [];
+    const loadPromises = [];
 
     const setComments = data => this.setState({comments: data});
-    initialLoadPromises.push(
+    loadPromises.push(
       this.dataApi.getCodeReviewCommentsForProject(setComments)
     );
 
-    initialLoadPromises.push(
+    loadPromises.push(
       this.dataApi
         .getPeerReviewStatus()
         .done(data => {
@@ -106,16 +118,14 @@ class ReviewTab extends Component {
         })
     );
 
-    Promise.all(initialLoadPromises).finally(() => {
-      this.setState({initialLoadCompleted: true});
+    Promise.all(loadPromises).finally(() => {
+      this.setState({loadingReviewData: false});
     });
-  }
+  };
 
-  componentDidUpdate(prevProps, prevState) {
-    if (!prevState.initialLoadCompleted && this.state.initialLoadCompleted) {
-      this.props.onLoadComplete();
-    }
-  }
+  onClickRefresh = () => {
+    this.loadReviewData();
+  };
 
   loadPeers = (onSuccess, onFailure) => {
     this.dataApi
@@ -180,15 +190,16 @@ class ReviewTab extends Component {
     this.dataApi
       .resolveCodeReviewComment(resolvedCommentId, newResolvedStatus)
       .done(() => {
-        const updatedComments = [...comments];
-        const resolvedCommentIndex = comments.findIndex(
+        const toggledCommentIndex = comments.findIndex(
           comment => comment.id === resolvedCommentId
         );
-        updatedComments[resolvedCommentIndex].isResolved = !updatedComments[
-          resolvedCommentIndex
-        ].isResolved;
-
-        this.setState({comments: updatedComments});
+        // Making a deep copy of the comment allows us to update state
+        // explicitly when setState is called. This is used by child elements
+        // such as Comment.
+        const toggledComment = {...comments[toggledCommentIndex]};
+        toggledComment.isResolved = !toggledComment.isResolved;
+        comments[toggledCommentIndex] = toggledComment;
+        this.setState({comments});
       })
       .fail(() => this.flashErrorOnComment(resolvedCommentId));
   };
@@ -343,7 +354,7 @@ class ReviewTab extends Component {
       channelId
     } = this.props;
     const {
-      initialLoadCompleted,
+      loadingReviewData,
       comments,
       forceRecreateEditorKey,
       isReadyForReview,
@@ -362,7 +373,7 @@ class ReviewTab extends Component {
       );
     }
 
-    if (!initialLoadCompleted) {
+    if (loadingReviewData) {
       return (
         <div style={styles.loadingContainer}>
           <Spinner size="large" />
@@ -372,6 +383,16 @@ class ReviewTab extends Component {
 
     return (
       <div style={styles.reviewsContainer}>
+        <div style={styles.refreshButtonContainer}>
+          <Button
+            key="refresh"
+            icon="refresh"
+            text={javalabMsg.refresh()}
+            onClick={this.onClickRefresh}
+            color={Button.ButtonColor.blue}
+            style={styles.refreshButtonStyle}
+          />
+        </div>
         <div style={styles.reviewHeader}>
           {codeReviewEnabled && !viewAsTeacher && (
             <>
@@ -425,7 +446,7 @@ const styles = {
     justifyContent: 'center'
   },
   reviewsContainer: {
-    margin: '25px 5%'
+    margin: '0px 5% 25px 5%'
   },
   reviewCheckboxRow: {
     margin: 0,
@@ -464,5 +485,13 @@ const styles = {
   },
   reviewDisabledText: {
     fontStyle: 'italic'
+  },
+  refreshButtonContainer: {
+    display: 'flex',
+    justifyContent: 'end'
+  },
+  refreshButtonStyle: {
+    margin: '10px 0',
+    fontSize: 13
   }
 };

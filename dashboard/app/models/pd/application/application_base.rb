@@ -37,11 +37,11 @@
 require 'state_abbr'
 
 # Base class for the Pd application forms.
-# Make sure to use a derived class for a specific application type and year.
 # This on its own will fail validation.
 module Pd::Application
   class ApplicationBase < ApplicationRecord
     include ApplicationConstants
+    include Pd::SharedApplicationConstants
     include Pd::Form
     include SerializedProperties
 
@@ -57,7 +57,7 @@ module Pd::Application
     INCOMPLETE = 'Incomplete'.freeze
 
     COMMON_OPTIONS = {
-      title: %w(Mr. Mrs. Ms. Dr.),
+      title: %w(Mr. Mrs. Ms. Mx. Dr.),
 
       state: get_all_states_with_dc.to_h.values,
 

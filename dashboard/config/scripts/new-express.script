@@ -135,77 +135,77 @@ lesson 'Events with Flappy', display_name: 'Events with Flappy', has_lesson_plan
 level 'courseC_video_flappyIntro'
 variants
   level 'flappy_1'
-  level 'courseC_flappy_events1'
+  level 'courseC_flappy_events1', active: false
 endvariants
 variants
   level 'flappy_2'
-  level 'courseC_flappy_events2'
+  level 'courseC_flappy_events2', active: false
 endvariants
 variants
   level 'flappy_3'
-  level 'courseC_flappy_events3'
+  level 'courseC_flappy_events3', active: false
 endvariants
 variants
   level 'flappy_4'
-  level 'courseC_flappy_events4'
+  level 'courseC_flappy_events4', active: false
 endvariants
 variants
   level 'flappy_5'
-  level 'courseC_flappy_events5'
+  level 'courseC_flappy_events5', active: false
 endvariants
 variants
   level 'flappy_6'
-  level 'courseC_flappy_events6'
+  level 'courseC_flappy_events6', active: false
 endvariants
 variants
   level 'flappy_7'
-  level 'courseC_flappy_events7'
+  level 'courseC_flappy_events7', active: false
 endvariants
 variants
   level 'flappy_8'
-  level 'courseC_flappy_events8'
+  level 'courseC_flappy_events8', active: false
 endvariants
 variants
   level 'flappy_9'
-  level 'courseC_flappy_events9'
+  level 'courseC_flappy_events9', active: false
 endvariants
 variants
   level 'flappy_11'
-  level 'courseC_flappy_events10'
+  level 'courseC_flappy_events10', active: false
 endvariants
 
 lesson 'Events in Bounce', display_name: 'Events in Bounce', has_lesson_plan: false
 variants
   level 'bounce_1'
-  level 'courseD_bounce_events1s'
+  level 'courseD_bounce_events1s', active: false
 endvariants
 variants
   level 'bounce_2'
-  level 'courseD_bounce_events2s'
+  level 'courseD_bounce_events2s', active: false
 endvariants
 variants
   level 'bounce_5'
-  level 'courseD_bounce_events5s'
+  level 'courseD_bounce_events5s', active: false
 endvariants
 variants
   level 'bounce_6'
-  level 'courseD_bounce_events6s'
+  level 'courseD_bounce_events6s', active: false
 endvariants
 variants
   level 'bounce_7'
-  level 'courseD_bounce_events7s'
+  level 'courseD_bounce_events7s', active: false
 endvariants
 variants
   level 'bounce_10'
-  level 'courseD_bounce_events10s'
+  level 'courseD_bounce_events10s', active: false
 endvariants
 variants
   level 'bounce_11'
-  level 'courseD_bounce_events11s'
+  level 'courseD_bounce_events11s', active: false
 endvariants
 variants
   level 'bounce_12'
-  level 'courseD_bounce_events12s'
+  level 'courseD_bounce_events12s', active: false
 endvariants
 
 lesson 'Conditionals: Conditionals with Cards', display_name: 'Conditionals: Conditionals with Cards', has_lesson_plan: false, unplugged: true

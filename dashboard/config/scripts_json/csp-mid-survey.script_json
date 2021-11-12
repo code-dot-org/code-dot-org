@@ -5,13 +5,14 @@
     "login_required": true,
     "properties": {
       "has_verified_resources": true,
-      "version_year": "unversioned",
-      "is_course": true
+      "is_course": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csp-mid-survey",
-    "serialized_at": "2021-08-03 22:47:40 UTC",
+    "serialized_at": "2021-10-25 22:53:54 UTC",
     "published_state": "preview",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "csp-mid-survey"
     }

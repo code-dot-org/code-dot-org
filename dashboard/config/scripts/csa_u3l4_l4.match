@@ -1,6 +1,7 @@
 name 'CSA U3L4-L4'
 title 'Check for Understanding'
 description 'Match the term to the correct definition.'
+height 'auto'
 
 question 'infinite loop'
 answer 'a loop that never stops running'

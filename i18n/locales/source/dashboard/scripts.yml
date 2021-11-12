@@ -180,7 +180,7 @@ en:
           lessons:
             Play Lab:
               name: Play Lab
-              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
+              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.
               description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           description_audience: ''
           student_description: Create a story or make a game with Play Lab!
@@ -193,7 +193,7 @@ en:
             Artist:
               name: Artist
               description_student: Create beautiful images by programming the Artist.
-              description_teacher: In this lesson, students will take control of the Artist to complete drawings on the screen. This Artist stage will allow students to create images of increasing complexity using new blocks like `move forward by 100 pixels` and `turn right by 90 degrees`.
+              description_teacher: In this lesson, students will take control of the Artist to complete drawings on the screen. This Artist stage will allow students to create images of increasing complexity using programming blocks like `move forward by 100 pixels` and `turn right by 90 degrees`.
           student_description: Draw cool pictures and designs with the Artist!
         hourofcode:
           title: Classic Maze
@@ -214,7 +214,7 @@ en:
           lesson_groups: {}
           lessons:
             Artist:
-              name: Artist
+              name: Code with Anna and Elsa
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners in the middle grades, ages 10-13, but can be adapted for younger or older learners using the differentiation suggestions provided. Students should have a basic understanding of simple geometry and drawing angles.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners in the middle grades, ages 10-13, but can be adapted for younger or older learners using the differentiation suggestions provided. Students should have a basic understanding of simple geometry and drawing angles.
           student_description: Let's use code to join Anna and Elsa as they explore the magic and beauty of ice. You will create snowflakes and patterns as you ice-skate and make a winter wonderland that you can then share with your friends!
@@ -369,8 +369,8 @@ en:
           lesson_groups: {}
           lessons:
             Infinity:
-              name: Infinity
-              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
+              name: Disney Infinity Play Lab
+              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.
               description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           student_description: Use Play Lab to create a story or game starring Disney Infinity characters.
         algebrademo:
@@ -573,6 +573,8 @@ en:
           lessons:
             Jigsaw:
               name: Jigsaw
+              description_student: Click and drag to finish the puzzles.
+              description_teacher: This lesson will give students an idea of what to expect when they head to the computer lab. It begins with a brief discussion introducing them to computer lab manners, then they will progress into using a computer to complete online puzzles.
           student_description: Try our Jigsaw tutorial.
         step:
           title: Step
@@ -1998,7 +2000,7 @@ en:
           lessons:
             Ice Age Play Lab:
               name: Ice Age Play Lab
-              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
+              description_student: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.
               description_teacher: In this lesson, learners get an introductory experience with computer science and create a game using basic block code.This lesson has been designed for learners in the middle grades, ages 10-16, but can be adapted for younger or older learners using the differentiation suggestions provided.
           student_description: Create a story or make a game with Ice Age Play Lab!
         CSPPD3-Unit3:
@@ -2095,9 +2097,12 @@ en:
           lesson_groups: {}
           lessons:
             Hour of Code 2015:
-              name: Hour of Code 2015
+              name: 'Star Wars: Building a Galaxy With Code (JavaScript)'
               description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. '
-              description_teacher: "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. \r\n\r\n**Option 1: Blocks**\r\n\r\nThe first option uses drag-drop blocks. This version works best for:\r\n\r\n - Students on mobile devices without keyboards\r\n - Younger students (6+ because the tutorial requires reading)\r\n - International students\r\n\r\nWe recommend this for international students because JavaScript syntax is not translated and for the first Hour of Code, the translated blocks provide a better introduction.\r\n\r\n**Option 2: JavaScript**\r\n\r\nThis option teaches the same basic concepts, but because it uses both drag-drop blocks and JavaScript, the students need to be able to type on a keyboard. For older students on computers, learning JavaScript can be fun and provide an additional challenge. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+."
+              description_teacher: |-
+                In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. This version uses both drag-drop blocks and JavaScript. Students need to be able to type on a keyboard. For older students on computers, learning JavaScript can be fun and provide an additional challenge. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+.
+
+                A [Blockly version](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) is also available and recommended for students on mobile devices without keyboards, younger students, and international students.
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         starwarsblocks:
           title: 'Star Wars: Building a Galaxy With Code (Blockly)'
@@ -2107,9 +2112,12 @@ en:
           lesson_groups: {}
           lessons:
             Hour of Code 2015:
-              name: Hour of Code 2015
+              name: 'Star Wars: Building a Galaxy With Code (Blockly)'
               description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. '
-              description_teacher: "In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. \r\n\r\n**Option 1: Blocks**\r\n\r\nThe first option uses drag-drop blocks. This version works best for:\r\n\r\n - Students on mobile devices without keyboards\r\n - Younger students (6+ because the tutorial requires reading)\r\n - International students\r\n\r\nWe recommend this for international students because JavaScript syntax is not translated and for the first Hour of Code, the translated blocks provide a better introduction.\r\n\r\n**Option 2: JavaScript**\r\n\r\nThis option teaches the same basic concepts, but because it uses both drag-drop blocks and JavaScript, the students need to be able to type on a keyboard. For older students on computers, learning JavaScript can be fun and provide an additional challenge. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+."
+              description_teacher: |-
+                In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has two versions. This version uses drag-drop blocks and works best for students on mobile devices without keyboards, younger students, and international students. It is recommended for ages 6+.
+
+                A [JavaScript](s/starwars) version is also available. For older students on computers, learning JavaScript can be fun and provide an additional challenge. Note that JavaScript syntax is not translated and for the first Hour of Code, the translated blocks found here provide a better introduction. This version of the tutorial is also great if you have some students in your class who have already learned some coding. It is recommended for ages 11+.
           student_description: Learn to program droids, and create your own Star Wars game in a galaxy far, far away.
         mc:
           title: Minecraft Hour of Code
@@ -2119,7 +2127,7 @@ en:
           lesson_groups: {}
           lessons:
             Hour of Code 2015:
-              name: Hour of Code 2015
+              name: 'Minecraft: Adventurer'
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
@@ -2132,8 +2140,8 @@ en:
           lessons:
             Oceans:
               name: Oceans
-              description_student: 'Tutorial Summary: First students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.'
-              description_teacher: First, students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
+              description_student: First students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
+              description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. First, students classify objects as either "fish" or "not fish" to attempt to remove trash from the ocean. Then, students will need to expand their training data set to include other sea creatures that belong in the water. In the second part of the activity, students will choose their own labels to apply to images of randomly generated fish. This training data is used for a machine learning model that should then be able to label new images on its own.
           student_description: Learn how AI and machine learning can be used to address world problems.
         CSPPD3-Unit3-pt2:
           title: 'Computer Science Principles: Unit 3 PD Challenges'
@@ -4199,7 +4207,7 @@ en:
           lesson_groups: {}
           lessons:
             Bounce:
-              name: Bounce
+              name: Code Your Own Basketball Game
               description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
               description_teacher: In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
           student_description: Choose your team and make a basketball game
@@ -4485,7 +4493,7 @@ en:
           lesson_groups: {}
           lessons:
             Minecraft Hour of Code Designer:
-              name: Minecraft Hour of Code Designer
+              name: 'Minecraft: Designer'
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Program animals and other Minecraft creatures in your own version of Minecraft.
@@ -4823,7 +4831,7 @@ en:
           lesson_groups: {}
           lessons:
             Sports:
-              name: Sports
+              name: Code Your Own Sports Game
               description_student: Ever wish you could play video games in school? In this lesson, you will get to make your own!
               description_teacher: In this online activity, students will learn what events are, and how computers use them in programs like video games. Students will work through puzzles making the program react to events (like arrow buttons being pressed.) At the end of the puzzle, students will have the opportunity to customize their game with different speeds and sounds.
           student_description: Mix and match across sports
@@ -7181,8 +7189,8 @@ en:
               name: Intro to AppLab - Getting Started
             Intro to App Lab:
               name: Intro to App Lab
-              description_student: 'This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a "Choose Your Own Adventure", "Greeting Card", or "Personality Quiz" app. They can also continue on to build more projects featured on the code.org/applab page. '
-              description_teacher: "This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. \n\n**Age Appropriateness:** The tutorial is designed for students over 13. Because it allows students to upload custom sounds and images, young students should not use this without supervision. To protect students' privacy, if your students are under 13, they will not be able to use this tutorial unless you first set up accounts for them in a section you manage.\n\n"
+              description_student: "At the end of the tutorial, you will be able to extend a project you started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. You can also continue on to build more projects featured on the code.org/applab page. \n\nHave fun completing your Hour of Code with App Lab!"
+              description_teacher: "This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. \n\nHave fun completing your Hour of Code with App Lab!\n\n**Age Appropriateness:** The tutorial is designed for students over 13. Because it allows students to upload custom sounds and images, young students should not use this without supervision. To protect students' privacy, if your students are under 13, they will not be able to use this tutorial unless you first set up accounts for them in a section you manage.\n\n"
             'Lesson 1: App Lab Intro':
               name: 'Lesson 1: App Lab Intro'
           student_description: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
@@ -7873,8 +7881,8 @@ en:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft\: Hero''s Journey Hour of Code'
             Minecraft Hour of Code:
-              name: Minecraft Hour of Code
-              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
+              name: 'Minecraft: Hero''s Journey'
+              description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. '
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.
         applab-intro-staging:
@@ -10919,8 +10927,8 @@ en:
           lesson_groups: {}
           lessons:
             Aquatic:
-              name: Aquatic
-              description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
+              name: 'Minecraft: Voyage Aquatic'
+              description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. '
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson works well for any students old enough to read (ages 6+). Younger learners will probably not finish the tutorial, but will have lots of fun working through the puzzles for an hour. High school students will mostly finish the tutorial and have some time to play on the free play level at the end.
           student_description: Minecraft is back with a brand new activity! Use your creativity and problem solving skills to explore and build underwater worlds with code.
         sconyers:
@@ -11035,7 +11043,7 @@ en:
           lesson_groups: {}
           lessons:
             Dance Party - Go Further:
-              name: Dance Party - Go Further
+              name: Keep on Dancing (2018)
               description_student: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
               description_teacher: In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Go beyond the first hour with extended project ideas.
@@ -15402,7 +15410,7 @@ en:
           lessons:
             Dance Party - Go Further:
               name: Keep on Dancing
-              description_student: 'In this lesson, learners of all ages get an introductory experience with coding and computer science in a safe, supportive environment. '
+              description_student: 'Learners of all ages continue an introductory experience with coding and computer science in a safe, supportive environment. '
               description_teacher: In this lesson, learners of all ages continue their experience with coding and computer science in a safe, supportive environment. This lesson has been designed for learners of all ages but does require reading. This activity requires sound as the tool was built to respond to music.
           student_description: Go beyond the first hour with extended project ideas.
         csp10-pilot:
@@ -19003,6 +19011,10 @@ en:
           lessons:
             Virus Simulation for Code Bytes:
               name: Coding a Simulation
+            Outbreak:
+              name: Coding a Simulation
+              description_student: A virus has come to Monster Town! Learn to create a virus simulator and help the monsters get back to being healthy.
+              description_teacher: 'This lesson combines **skill-building** around events with a **mini-project** where students get to build their own computer simulation in Sprite Lab. Students will study the simulation to understand how quickly a virus can spread and what can be done to slow it down. '
           lesson_groups:
             outbreak:
               display_name: Outbreak Simulation
@@ -20649,8 +20661,8 @@ en:
             Create PT - Make a Plan:
               key: Create PT - Make a Plan
               name: Create PT   Make a Plan
-              description_student: This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT. It contains activities to help students understand the requirements of the task, as well as activities to help them narrow down and brainstorm ideas for their actual project.
-              description_teacher: "This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT. It contains activities to help students understand the requirements of the task, as well as activities to help them narrow down and brainstorm ideas for their actual project.\r\n\r\nThe lesson concludes by providing students with resources to make a plan to complete the task staring in the next lesson."
+              description_student: This lesson uses the Create PT Survival Guide to help narrow down and brainstorm ideas for the actual project.
+              description_teacher: This lesson uses the Create PT Survival Guide to help students narrow down and brainstorm ideas for their actual project. The lesson concludes by providing students with resources to make a plan to complete the task starting in the next lesson.
             Create PT - Complete the Task:
               key: Create PT - Complete the Task
               name: Create PT - Complete the Task (12 hrs)
@@ -20658,8 +20670,8 @@ en:
               description_teacher: "It is finally time for students to take on the Create Performance Task. For a total of 12 class hours, students should work on their projects with only types of teacher support allowed (essentially: Advise on process, don’t influence or evaluate ideas).  Students may also work with a collaborative partner in *in development of their program* - written responses must be done on their own.\r\n\r\nThe lesson includes reminders about how you can interact with students while they are working on their projects, and suggestions about time line. The Create PT requires a minimum of 12 hours of class time.  At the end, students will submit their program code, program video, and written responses through their AP digital portfolio."
             lesson-4:
               name: Create PT Deep Dive
-              description_student: 
-              description_teacher: This lesson will be updated in Fall 2021 to reflect updates to the Create PT.
+              description_student: This lesson uses the Create PT Survival Guide as the backbone for a series of activities to ramp up to doing the actual Create PT.
+              description_teacher: 'This lesson is designed to introduce the nuances of the Create PT, and begin to provide some answers to the questions that will inevitably arise. The Create PT is in many ways straightforward: you complete a self-directed programming project and respond to prompts about your program and process. As you dig into the details of the task, however, you quickly come across some of the nuances of individual components of the task and how they''re scored. '
           lesson_groups: {}
           name: csp8-2021
           student_description: In this unit prepare for, and do the AP Create Performance Task. Each lesson contains links to helpful documents and activities to help you understand the task and develop a plan for completing it.
@@ -20726,7 +20738,7 @@ en:
           student_description: 'In this unit learn how data analysis helps turn raw data into useful information about the world. Learn how to use data visualization to find patterns inside of data sets and learn how this data analysis process is being used in contexts like open data or machine learning to help make decisions or learn more about our world. In the unit project, you''ll analyze a dataset of your choosing and present your findings. '
         csp10-2021:
           title: Cybersecurity and Global Impacts ('21-'22)
-          description: In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
+          description: In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
           description_short: Research and debate current events at the intersection of data, public policy, law, ethics, and societal impact.
           description_audience: ''
           lessons:
@@ -20805,7 +20817,7 @@ en:
               display_name: 'Unit 10: Cybersecurity and Global Impacts'
               description: "### Unit Philosophy and Pedagogy\n\n* **Learning Through Full-class Simulation:** The simulation project that runs through this unit serves several important goals. It helps contextualize what students are learning by moving from abstract ideas of privacy or security to concrete potential innovations. Since the simulation is based on modernizing schools, students can consider the consequences of computing innovations in a familiar setting. By taking on an assigned role and interacting with a group of teammates who have done the same, students must consider a breadth of interests and goals beyond their own when it comes to innovating in schools. \n\n* **Ending the Year as \"Deciders\":** A major theme students engage with throughout this unit is the need to consider both sides of technological innovation. Computing technology has led to both benefits and harms to culture, economy, and society at large. Responding to important questions facing our world requires understanding technology and an ability to identify and interpret the impacts it causes. This unit is not designed to advocate for any particular point of view on the impact of technology. Still, it should empower students to adeptly see and weigh the consequences of the technology around them. While the Create PT may feel like the most significant project of this course, the Explore Curricular requirement and the questions faced in this unit are arguably more crucial. Many of the young people who take CS Principles may pursue studies or careers in which they are \"creators\" with technology, but all of them will need to be thoughtful \"deciders\" in a world profoundly shaped by computing. \n\n\n### Major Assessment and Projects\n\nStudents complete the Future School Convention simulation throughout this unit. Working in teams of roughly five people, students are assigned a role and a set of interests they'll need to investigate. They research real-world innovations that could improve schools and align with the interests of their character. Throughout the unit, they are given opportunities to refine their proposals as a team and debate the benefits and risks of different computing innovations. Eventually, their team submits an overall proposal for the Future School, and all students vote for the team and innovation they believe to be the best. Students will also complete an end-of-unit assessment aligned with the CS Principles framework objectives covered in this unit.\n\n### AP Connections\n\nThis unit and unit project helps build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs please see the \"Standards\" page for this unit.\n\n* IOC-1: While computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences.\n* IOC-2: The use of computing innovations may involve risks to your personal safety and identity.\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage](https://docs.google.com/document/d/1dqYF5u0AULjw049gaCwAP34ZSe0VuEWbAjWoH1-YMW0/edit?usp=sharing).\n\n* 5.1 Beneficial and Harmful Effects\n* 5.6 Safe Computing"
           name: csp10-2021
-          student_description: In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to complete it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
+          student_description: In this unit learn how computing innovations have impacted our world in beneficial and harmful ways. Learn how data can pose a threat to our privacy and security and the ways that encryption and other techniques are used to protect it. Throughout the unit participate in a "school of the future" conference in which you and a team make a proposal for how best to improve school life with computing innovations.
         coursea-2021:
           title: Course A (2021)
           description: 'Course A offers a computer science curriculum for beginning readers, including Kindergarten students. Students will learn to program using commands like loops and events. The lessons featured in this course also teach students to meaningfully collaborate with others, investigate different problem-solving techniques, persist in the face of challenging tasks, and learn about internet safety. '
@@ -20817,7 +20829,7 @@ en:
               name: Safety in My Online Neighborhood
               description_student: Learn how to go places safely online.
               description_teacher: |-
-                [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -20905,7 +20917,7 @@ en:
               name: Digital Trails
               description_student: 'Learn about your digital footprint and how to stay safe when visiting websites. '
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -20999,7 +21011,7 @@ en:
               name: Putting a STOP to Online Meanness
               description_student: In this lesson, you'll learn about meanness and what to do if you encounter it online.
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -21220,7 +21232,7 @@ en:
               name: Password Power-Up
               description_student: In this lesson, you'll learn about how passwords protect your information, and how to make a good password.
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).
 
@@ -21299,7 +21311,7 @@ en:
               name: Private and Personal Information
               description_student: The internet is fun and exciting, but it's important to stay safe too. This lesson teaches you the difference between information that is safe to share and information that is private.
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -21365,7 +21377,7 @@ en:
               name: Be A Super Digital Citizen
               description_student: Learn how you can be an upstander when you see cyberbullying.
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -21537,7 +21549,7 @@ en:
               name: The Power of Words
               description_student: Bullying is never okay. This lesson will teach you about what is and isn't okay to say online.
               description_teacher: |2-
-                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://creativecommons.org/)
+                 [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)
 
                 This lesson was originally created by Common Sense Education. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)
 
@@ -22648,6 +22660,10 @@ en:
               name: The Playground
               description_student: 
               description_teacher: 
+            lesson-20:
+              name: Unit 4 Pilot Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
@@ -22655,6 +22671,8 @@ en:
               display_name: Show What You Know
             lessonGroup-4:
               display_name: Sandbox
+            lessonGroup-5:
+              display_name: Pilot Survey
           name: csa4-pilot
           title: Expanding Program Logic
           description_audience: ''
@@ -22665,16 +22683,16 @@ en:
           lessons:
             lesson-1:
               name: Creating Tables of Data
-              description_student: In the previous lessons, you used one-dimensional (1D) arrays to store values of the same type. Today, you learn how to create and use two-dimensional (2D) arrays, arrays that store arrays of the same type. 2D arrays are useful for storing data represented as a table. In this lesson, you use 2D arrays to store data to represent Project Mercury Pastries Food Truck's business expansion.
-              description_teacher: Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students create 2D arrays to store `int` and `double` elements using the `new` keyword and initializer lists to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.
+              description_student: In the previous lessons, you used one-dimensional (1D) arrays to store values of the same type. Today, you learn how to create and use two-dimensional (2D) arrays. 2D arrays are useful for storing data represented as a table. In this lesson, you use 2D arrays to store data to represent Project Mercury Pastries Food Truck's business expansion.
+              description_teacher: Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students use the `new` keyword and initializer lists to create 2D arrays to store `int` and `double` elements to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.
             lesson-2:
               name: Traversing a 2D Array by Rows
-              description_student: Now that you have seen 2D arrays, you write nested `for` loops to traverse them! You revisit The Theater to develop a new concert to educate The Neighborhood about sustainable transportation. After choosing an initial welcome image for the concert, you write the `getPixels()` method to store pixels from an image into a 2D array to use in upcoming lessons to create image effects.
-              description_teacher: Students use nested `for` loops to traverse 2D arrays in row-major order and apply a standard algorithm they wrote in Unit 3 to evaluate data. Students revisit The Theater to begin development on a new concert to educate The Neighborhood about sustainable transportation. They choose an initial welcome image for the concert and write the `getPixels()` method to store pixels from an image into a 2D array to use in upcoming lessons to create image effects.
+              description_student: Now that you have seen 2D arrays, you use nested loops to traverse them and revisit standard algorithms to evaluate data. You begin development on a new concert to educate The Neighborhood about sustainable transportation. You create a 2D array of images and display them by traversing the array and writing the `getPixels()` method to store pixels from an image into a 2D array.
+              description_teacher: Students use nested loops to traverse 2D arrays in row-major order and revisit standard algorithms to evaluate data. Students begin development on a new concert in The Theater to educate The Neighborhood about sustainable transportation. They create a 2D array of images and display them by traversing the array and writing the `getPixels()` method to store pixels from an image into a 2D array.
             lesson-3:
               name: Traversing a 2D Array by Columns
               description_student: 'Data is organized into rows and columns. In the previous lesson, you traversed a 2D array to access elements and make calculations across a row. Today, you learn how to traverse a 2D array in column-major order. Using this traversal algorithm, you develop image effects that manipulate pixels to mirror an image vertically. '
-              description_teacher: Students use nested `for` loops to traverse a 2D array in column-major order. Students differentiate between column-major and row-major order and explain when they might use one approach over another. Students apply column-major order traversal to calculate the total inventory by dessert for the Project Mercury Pastries Food Truck and further develop the concert in The Theater. Students manipulate pixels in an image using column-major order traversal to vertically mirror the image and implement the effect in the concert.
+              description_teacher: Students use nested loops to traverse a 2D array in column-major order. Students differentiate between column-major and row-major order and explain when they might use one approach over another. Students apply column-major order traversal to calculate the total inventory by dessert for the Project Mercury Pastries Food Truck and develop the concert in The Theater. Students manipulate pixels in an image using column-major order traversal to vertically mirror the image and implement the effect in the concert.
             lesson-4:
               name: Using Enhanced for Loops
               description_student: 'Today, you learn the structure of using enhanced `for` loops to traverse 2D arrays. You identify the similarities and differences between using an enhanced `for` loop with 1D arrays and 2D arrays. You use a nested enhanced `for` loop to write methods to modify the color values of pixels and create effects on the images for the concert. '
@@ -22685,31 +22703,73 @@ en:
               description_teacher: 'Students explore the effect of executing a `return` statement inside a loop compared to executing outside a loop. Students write new standard algorithms to find whether values are evenly divisible by another integer and find the number of elements that meet specific criteria. Students solve problems for the Project Mercury Pastries Food Truck by implementing these algorithms. '
             lesson-6:
               name: Applying Standard Algorithms
-              description_student: The standard algorithms you wrote in Unit 3 also work with 2D arrays and can create visual effects on images. In this lesson, you continue to develop your concert in The Theater by writing a `grayscale()` method. You find the minimum and maximum red, green, or blue color values and use that value to set all other red, green, or blue values. You participate in code reviews to give, receive, and implement feedback on your new methods and progress.
-              description_teacher: Students apply the standard algorithms they wrote in Unit 3 to 2D arrays to create visual effects on images. Students continue developing the concert in The Theater by writing a `grayscale()` method that finds the average of the RGB values of a pixel in an image and sets the pixel to that average value. Students find the minimum and maximum red, green, or blue color values and use the value to set all other red, green, or blue values. Students participate in code reviews to give, receive, and implement feedback on their new methods and progress.
+              description_student: The standard algorithms you wrote for 1D arrays also work with 2D arrays to create image filters and solve problems for the Project Mercury Pastries Food Truck. In this lesson, you use a standard algorithm to create a new image filter to create a grayscale image. You also use a standard algorithm to help the food truck owner maximize their dessert inventory.
+              description_teacher: Students apply the standard algorithms they wrote for 1D arrays to 2D arrays to create image filters and solve problems for the Project Mercury Pastries Food Truck. Students write a `GrayscaleImage` class that creates a grayscale image by finding the average of the RGB values of a `Pixel` in an image and setting the RGB values of the `Pixel` to that average value. Students find the maximum value in a 2D array of dessert quantities to compare to a quantity entered and update the array based on a condition.
             lesson-7:
               name: Reversing Elements
+              description_student: You apply standard algorithms to create an image effect in The Theater by writing a `ReversedImage` class that creates a reversed version of an image. You incorporate previous concepts you have learned and functionalities of The Theater to animate your effect and incorporate user interaction.
+              description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `ReversedImage` class that creates a reversed version of an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             lesson-8:
               name: Shifting Elements
+              description_student: You apply standard algorithms to create an image effect in The Theater by writing a `ShiftedImage` class that creates a reversed version of an image. You incorporate previous concepts you have learned and functionalities of The Theater to animate your effect and incorporate user interaction.
+              description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `ShiftedImage` class that creates a reversed version of an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             lesson-9:
               name: Finding Duplicates
+              description_student: You previously developed a standard algorithm to find and replace duplicate values in a 1D array. In this lesson, you apply this standard algorithm to find duplicate `Dessert` objects in a 2D array. You refactor the food truck data to create a 2D array of `Dessert` objects to improve the organization of the food truck inventory before writing the `removeDuplicates()` method.
+              description_teacher: Students previously developed a standard algorithm to find and replace duplicate values in a 1D array. In this lesson, students apply this standard algorithm to find duplicate `Dessert` objects in a 2D array. Students refactor the food truck data to create a 2D array of `Dessert` objects to improve the organization of the food truck inventory before writing the `removeDuplicates()` method.
             lesson-10:
               name: Searching for Elements
+              description_student: You apply standard algorithms to create an image effect in The Theater by writing a `SepiaImage` class that applies a sepia effect on an image. You incorporate previous concepts you have learned and functionalities of The Theater to animate your effect and incorporate user interaction.
+              description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `SepiaImage` class that applies a sepia effect on an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             lesson-11:
               name: A Sustainable Neighborhood Project - Day 1
+              description_student: For this project, you develop a concert in The Theater about your chosen sustainable goal. You begin by choosing a new image filter or effect and writing pseudocode for its algorithm. You then begin the first iteration of your project.
+              description_teacher: For this project, students develop a concert in The Theater about their chosen sustainable goal. Students begin by choosing a new image filter or effect and writing pseudocode for its algorithm. Students then begin the first iteration of their project.
             lesson-12:
               name: A Sustainable Neighborhood Project - Day 2
+              description_student: In the previous lesson, you completed the first iteration of your concert. Today, you complete the second iteration of your project and reflect with a group as you prepare for the final development of your Sustainable Neighborhood Concert. You self-assess your work against the project rubric and create a final priority list for your last iteration.
+              description_teacher: In the previous lesson, students completed the first iteration of their concert. Students complete the second iteration of their project and reflect with a group as they prepare for the final development of their Sustainable Neighborhood Concert. Students self-assess their work against the project rubric and create a final priority list for their last iteration.
             lesson-13:
               name: A Sustainable Neighborhood Project - Day 3
+              description_student: You complete your last iteration and present your concert to your peers. You finish the project with a final reflection and celebrate your identity as a software engineer.
+              description_teacher: Students complete their last iteration and present their concert to their peers. Students finish the project with a final reflection and celebrate their identity as software engineers.
             lesson-14:
               name: FRQ Day
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.
             lesson-15:
               name: Assessment Day
+              description_student: In this unit, you used two-dimensional (2D) arrays to expand storage and organization capabilities in your programs. You identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you previously developed to access and manipulate elements. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students used two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+            Java Lab:
+              name: Java Lab
+              description_student: 
+              description_teacher: 
+            The Neighborhood:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
+            The Theater:
+              name: The Theater
+              description_student: 
+              description_teacher: 
+            The Playground:
+              name: The Playground
+              description_student: 
+              description_teacher: 
+            lesson-16:
+              name: Unit 5 Pilot Survey
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandbox
+            lessonGroup-5:
+              display_name: Pilot Survey
           name: csa5-pilot
           title: Giving Objects Organization
           description_audience: ''
@@ -23585,7 +23645,7 @@ en:
               description_teacher: ''
             Module 5:
               key: Module 5
-              name: 'Module 5: Unit 7 and understanding functions with parameters and return'
+              name: 'Module 5: Unit 7 and Understanding Functions with Parameters and Return'
               description_student: ''
               description_teacher: ''
             Module 6:
@@ -23868,10 +23928,11 @@ en:
             lessonGroup-9:
               display_name: Preparing to Teach Unit 1
           name: self-paced-pl-csd5-2021
-          title: 'Module 5: Preparing to Teach CS Discoveries'
+          title: 'Module 5: Preparing to Teach Unit7- AI and Machine Learning'
           description_audience: ''
           description_short: ''
           description: "This module is designed to help you prepare for teaching specific units within the CS Discoveries course.  Start by selecting the unit you plan to teach first. You can come back to this section of the training throughout the school year as you prepare to teach new units of the course. This content does not need to be completed in order. For guidance on how best to implement CS Discoveries with students, refer to the [CS Discoveries Implementation Guide][0].\n\n**For each unit in CS Discoveries, you will have the opportunity to:**\n\n-   Prepare to teach the first week of unit content \n-   Practice key concepts included in the unit \n-   Engage with sample student work \n-   Explore end of chapter projects \n\n**Suggested Time:** 1 hour per unit "
+          student_description: ''
         self-paced-pl-csd6-2021:
           lessons:
             lesson-1:
@@ -24669,7 +24730,8 @@ en:
           title: 2021 CS Principles Deeper Learning Module 4  for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "## This module will be fully published by November 5, 2021.  Check back later for your prompts."
+          description: "## This module will be fully published by November 19, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-csp-mod1:
           lessons:
             lesson-1:
@@ -24751,7 +24813,8 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 3 for Workshop 3
           description_audience: ''
           description_short: ''
-          description: "## This module will be fully published by October 1, 2021.  Check back later for your prompts."
+          description: "## This module will be fully published by October 15, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-csd-mod4:
           lessons:
             lesson-1:
@@ -24767,7 +24830,8 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "## This module will be fully published by November 5, 2021.  Check back later for your prompts."
+          description: "## This module will be fully published by November 19, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-csp-mod2:
           lessons:
             lesson-1:
@@ -24800,7 +24864,8 @@ en:
           title: 2021 CS Principles Deeper Learning Module 3 for Workshop 3
           description_audience: ''
           description_short: ''
-          description: "## This module will be fully published by October 1, 2021.  Check back later for your prompts."
+          description: "## This module will be fully published by October 18, 2021.  Check back later for your prompts."
+          student_description: ''
         dlp21-overview:
           lessons: {}
           lesson_groups: {}
@@ -25626,9 +25691,9 @@ en:
               description_teacher: 
             lesson-5:
               key: lesson-5
-              name: Comparing Values to Make Decisions
-              description_student: 'Today is all about using code to make decisions. You compare relationships between values while using conditional statements to help the `Painter` make decisions. '
-              description_teacher: 'Students use relational operators to write and evaluate expressions. Students expand their use of `if` statements to compare values stored in variables and array elements. '
+              name: Unit 4 Pilot Survey
+              description_student: 
+              description_teacher: 
             lesson-6:
               key: lesson-6
               name: Adding Randomness to a Program
@@ -25691,6 +25756,8 @@ en:
               display_name: Show What You Know
             lessonGroup-4:
               display_name: Sandbox
+            lessonGroup-5:
+              display_name: Unit 4 Pilot Survey
           title: Expanding Program Logic
           description: In this unit, students learn how the use of APIs and libraries can expand the functionalities of their programs. Students learn to use relational and logical operators to expand the decisions for conditionals and iteration. Students use casting operators and `Math` class methods as they evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, students develop an understanding of De Morgan's Laws and writing truth tables. Students use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
           student_description: In this unit, you learn how the use of APIs and libraries can expand the functionalities of your programs. You learn to use relational and logical operators to expand the decisions for conditionals and iteration. You use casting operators and `Math` class methods as you evaluate expressions and perform calculations, including implementing random in program decisions and behaviors. While working with compound Boolean expressions and logical operators, you develop an understanding of De Morgan's Laws and writing truth tables. You use these expanded conditions and expressions to evaluate primitive values and object references and make decisions based on the results.
@@ -25701,16 +25768,16 @@ en:
           lessons:
             Creating Tables of Data:
               name: Creating Tables of Data
-              description_student: In the previous lessons, you used one-dimensional (1D) arrays to store values of the same type. Today, you learn how to create and use two-dimensional (2D) arrays, arrays that store arrays of the same type. 2D arrays are useful for storing data represented as a table. In this lesson, you use 2D arrays to store data to represent Project Mercury Pastries Food Truck's business expansion.
-              description_teacher: Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students create 2D arrays to store `int` and `double` elements using the `new` keyword and initializer lists to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.
+              description_student: In the previous lessons, you used one-dimensional (1D) arrays to store values of the same type. Today, you learn how to create and use two-dimensional (2D) arrays. 2D arrays are useful for storing data represented as a table. In this lesson, you use 2D arrays to store data to represent Project Mercury Pastries Food Truck's business expansion.
+              description_teacher: Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students use the `new` keyword and initializer lists to create 2D arrays to store `int` and `double` elements to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.
             Traversing a 2D Array by Rows:
               name: Traversing a 2D Array by Rows
-              description_student: Now that you have seen 2D arrays, you write nested `for` loops to traverse them! You revisit The Theater to develop a new concert to educate The Neighborhood about sustainable transportation. After choosing an initial welcome image for the concert, you write the `getPixels()` method to store pixels from an image into a 2D array to use in upcoming lessons to create image effects.
-              description_teacher: Students use nested `for` loops to traverse 2D arrays in row-major order and apply a standard algorithm they wrote in Unit 3 to evaluate data. Students revisit The Theater to begin development on a new concert to educate The Neighborhood about sustainable transportation. They choose an initial welcome image for the concert and write the `getPixels()` method to store pixels from an image into a 2D array to use in upcoming lessons to create image effects.
+              description_student: Now that you have seen 2D arrays, you use nested loops to traverse them and revisit standard algorithms to evaluate data. You begin development on a new concert to educate The Neighborhood about sustainable transportation. You create a 2D array of images and display them by traversing the array and writing the `getPixels()` method to store pixels from an image into a 2D array.
+              description_teacher: Students use nested loops to traverse 2D arrays in row-major order and revisit standard algorithms to evaluate data. Students begin development on a new concert in The Theater to educate The Neighborhood about sustainable transportation. They create a 2D array of images and display them by traversing the array and writing the `getPixels()` method to store pixels from an image into a 2D array.
             Traversing a 2D Array by Columns:
               name: Traversing a 2D Array by Columns
               description_student: 'Data is organized into rows and columns. In the previous lesson, you traversed a 2D array to access elements and make calculations across a row. Today, you learn how to traverse a 2D array in column-major order. Using this traversal algorithm, you develop image effects that manipulate pixels to mirror an image vertically. '
-              description_teacher: Students use nested `for` loops to traverse a 2D array in column-major order. Students differentiate between column-major and row-major order and explain when they might use one approach over another. Students apply column-major order traversal to calculate the total inventory by dessert for the Project Mercury Pastries Food Truck and further develop the concert in The Theater. Students manipulate pixels in an image using column-major order traversal to vertically mirror the image and implement the effect in the concert.
+              description_teacher: Students use nested loops to traverse a 2D array in column-major order. Students differentiate between column-major and row-major order and explain when they might use one approach over another. Students apply column-major order traversal to calculate the total inventory by dessert for the Project Mercury Pastries Food Truck and develop the concert in The Theater. Students manipulate pixels in an image using column-major order traversal to vertically mirror the image and implement the effect in the concert.
             Using Enhanced for Loops:
               name: Using Enhanced for Loops
               description_student: 'Today, you learn the structure of using enhanced `for` loops to traverse 2D arrays. You identify the similarities and differences between using an enhanced `for` loop with 1D arrays and 2D arrays. You use a nested enhanced `for` loop to write methods to modify the color values of pixels and create effects on the images for the concert. '
@@ -25721,49 +25788,49 @@ en:
               description_teacher: 'Students explore the effect of executing a `return` statement inside a loop compared to executing outside a loop. Students write new standard algorithms to find whether values are evenly divisible by another integer and find the number of elements that meet specific criteria. Students solve problems for the Project Mercury Pastries Food Truck by implementing these algorithms. '
             Applying Standard Algorithms:
               name: Applying Standard Algorithms
-              description_student: The standard algorithms you wrote in Unit 3 also work with 2D arrays and can create visual effects on images. In this lesson, you continue to develop your concert in The Theater by writing a `grayscale()` method. You find the minimum and maximum red, green, or blue color values and use that value to set all other red, green, or blue values. You participate in code reviews to give, receive, and implement feedback on your new methods and progress.
-              description_teacher: Students apply the standard algorithms they wrote in Unit 3 to 2D arrays to create visual effects on images. Students continue developing the concert in The Theater by writing a `grayscale()` method that finds the average of the RGB values of a pixel in an image and sets the pixel to that average value. Students find the minimum and maximum red, green, or blue color values and use the value to set all other red, green, or blue values. Students participate in code reviews to give, receive, and implement feedback on their new methods and progress.
+              description_student: The standard algorithms you wrote for 1D arrays also work with 2D arrays to create image filters and solve problems for the Project Mercury Pastries Food Truck. In this lesson, you use a standard algorithm to create a new image filter to create a grayscale image. You also use a standard algorithm to help the food truck owner maximize their dessert inventory.
+              description_teacher: Students apply the standard algorithms they wrote for 1D arrays to 2D arrays to create image filters and solve problems for the Project Mercury Pastries Food Truck. Students write a `GrayscaleImage` class that creates a grayscale image by finding the average of the RGB values of a `Pixel` in an image and setting the RGB values of the `Pixel` to that average value. Students find the maximum value in a 2D array of dessert quantities to compare to a quantity entered and update the array based on a condition.
             Reversing Elements:
               name: Reversing Elements
-              description_student: 
-              description_teacher: 
+              description_student: You apply standard algorithms to create an image effect in The Theater by writing a `ReversedImage` class that creates a reversed version of an image. You incorporate previous concepts you have learned and functionalities of The Theater to animate your effect and incorporate user interaction.
+              description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `ReversedImage` class that creates a reversed version of an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             Shifting Elements:
               name: Shifting Elements
-              description_student: 
-              description_teacher: 
+              description_student: You apply standard algorithms to create an image effect in The Theater by writing a `ShiftedImage` class that creates a reversed version of an image. You incorporate previous concepts you have learned and functionalities of The Theater to animate your effect and incorporate user interaction.
+              description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `ShiftedImage` class that creates a reversed version of an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             Finding Duplicates:
               name: Finding Duplicates
-              description_student: 
-              description_teacher: 
+              description_student: You previously developed a standard algorithm to find and replace duplicate values in a 1D array. In this lesson, you apply this standard algorithm to find duplicate `Dessert` objects in a 2D array. You refactor the food truck data to create a 2D array of `Dessert` objects to improve the organization of the food truck inventory before writing the `removeDuplicates()` method.
+              description_teacher: Students previously developed a standard algorithm to find and replace duplicate values in a 1D array. In this lesson, students apply this standard algorithm to find duplicate `Dessert` objects in a 2D array. Students refactor the food truck data to create a 2D array of `Dessert` objects to improve the organization of the food truck inventory before writing the `removeDuplicates()` method.
             Searching for Elements:
               name: Searching for Elements
-              description_student: 
-              description_teacher: 
+              description_student: You apply standard algorithms to create an image effect in The Theater by writing a `SepiaImage` class that applies a sepia effect on an image. You incorporate previous concepts you have learned and functionalities of The Theater to animate your effect and incorporate user interaction.
+              description_teacher: Students continue to apply standard algorithms to create image effects in The Theater by writing a `SepiaImage` class that applies a sepia effect on an image. Students incorporate previous concepts and functionalities of The Theater to animate their effect and incorporate user interaction.
             A Sustainable Neighborhood Project - Day 1:
               name: A Sustainable Neighborhood Project - Day 1
-              description_student: 
-              description_teacher: 
+              description_student: For this project, you develop a concert in The Theater about your chosen sustainable goal. You begin by choosing a new image filter or effect and writing pseudocode for its algorithm. You then begin the first iteration of your project.
+              description_teacher: For this project, students develop a concert in The Theater about their chosen sustainable goal. Students begin by choosing a new image filter or effect and writing pseudocode for its algorithm. Students then begin the first iteration of their project.
             A Sustainable Neighborhood Project - Day 2:
               name: A Sustainable Neighborhood Project - Day 2
-              description_student: 
-              description_teacher: 
+              description_student: In the previous lesson, you completed the first iteration of your concert. Today, you complete the second iteration of your project and reflect with a group as you prepare for the final development of your Sustainable Neighborhood Concert. You self-assess your work against the project rubric and create a final priority list for your last iteration.
+              description_teacher: In the previous lesson, students completed the first iteration of their concert. Students complete the second iteration of their project and reflect with a group as they prepare for the final development of their Sustainable Neighborhood Concert. Students self-assess their work against the project rubric and create a final priority list for their last iteration.
             A Sustainable Neighborhood Project - Day 3:
               name: A Sustainable Neighborhood Project - Day 3
-              description_student: 
-              description_teacher: 
+              description_student: You complete your last iteration and present your concert to your peers. You finish the project with a final reflection and celebrate your identity as a software engineer.
+              description_teacher: Students complete their last iteration and present their concert to their peers. Students finish the project with a final reflection and celebrate their identity as software engineers.
             FRQ Day:
               name: FRQ Day
-              description_student: 
-              description_teacher: 
+              description_student: You independently complete an AP-style Free Response Question (FRQ). You review the process for approaching FRQs before planning and writing your response. You then work with a partner to assess your solution using the scoring guidelines.
+              description_teacher: Students independently complete an AP-style Free Response Question (FRQ). Students review the process for approaching FRQs before planning and writing their responses. Students then work with a partner to assess their solution using the scoring guidelines.
             Assessment Day:
               name: Assessment Day
-              description_student: 
-              description_teacher: 
+              description_student: In this unit, you used two-dimensional (2D) arrays to expand storage and organization capabilities in your programs. You identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you previously developed to access and manipulate elements. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
+              description_teacher: In this unit, students used two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identified similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traversed 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.
             lesson-1:
               key: lesson-1
-              name: Creating Tables of Data
-              description_student: In the previous lessons, you used one-dimensional (1D) arrays to store values of the same type. Today, you learn how to create and use two-dimensional (2D) arrays, arrays that store arrays of the same type. 2D arrays are useful for storing data represented as a table. In this lesson, you use 2D arrays to store data to represent Project Mercury Pastries Food Truck's business expansion.
-              description_teacher: Students learn about the structure of two-dimensional (2D) arrays and identify similarities and differences between 1D and 2D arrays. Students create 2D arrays to store `int` and `double` elements using the `new` keyword and initializer lists to represent the Project Mercury Pastries Food Truck's expanded inventory. Students access and modify individual elements by referring to the row and column index values to output and evaluate data stored in the 2D array.
+              name: Unit 5 Pilot Survey
+              description_student: 
+              description_teacher: 
             lesson-2:
               key: lesson-2
               name: Traversing a 2D Array by Rows
@@ -25834,11 +25901,31 @@ en:
               name: Assessment Day
               description_student: ''
               description_teacher: ''
+            Java Lab:
+              name: Java Lab
+              description_student: 
+              description_teacher: 
+            The Neighborhood:
+              name: The Neighborhood
+              description_student: 
+              description_teacher: 
+            The Theater:
+              name: The Theater
+              description_student: 
+              description_teacher: 
+            The Playground:
+              name: The Playground
+              description_student: 
+              description_teacher: 
           lesson_groups:
             lessonGroup-2:
               display_name: Content
             lessonGroup-3:
               display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Sandbox
+            lessonGroup-5:
+              display_name: Pilot Survey
           title: Giving Objects Organization
           description: In this unit, students use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. Students identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. Students traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms they developed in Unit 3 to access and manipulate elements.
           student_description: In this unit, you use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs. You identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing these data structures. You traverse 2D arrays using nested `for` loops and nested enhanced `for` loops in row-major and column-major order to apply the standard algorithms you developed in Unit 3 to access and manipulate elements.
@@ -25992,8 +26079,8 @@ en:
           lessons:
             lesson-1:
               name: Hello World
-              description_student: 
-              description_teacher: 
+              description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
+              description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
           lesson_groups: {}
           name: hello-world-food
           title: Hello World
@@ -26221,7 +26308,7 @@ en:
             lesson-1:
               name: Our AI Code of Ethics
               description_student: Collaboratively research about AI ethics and create a shareable code of conduct.
-              description_teacher: In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+              description_teacher: This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
           lesson_groups: {}
           name: ai-ethics
           title: Our AI Code of Ethics
@@ -26277,6 +26364,256 @@ en:
           lesson_groups: {}
           name: poetry-hoc3
           title: Poetry HoC v3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1:
+              name: Sprite Effect Challenge
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: spritelab-effects-challenge
+          title: Sprite Effect Challenge
+          description_audience: Intermediate/advanced users of Sprite Lab
+          description_short: Take the challenge to create your own sprite effect using Sprite Lab!
+          description: ''
+          student_description: ''
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgets
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Tools
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Examples
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Demos and Resources
+          name: csa-u8-dev
+          title: CSA Unit 8 Development
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        poem-art:
+          lessons:
+            lesson-1:
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the 5-lesson module called [Coding with Poetry](http://code.org/poetry). By the end of the Coding with Poetry module, students will write their own poems and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s CS Connections curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n"
+          lesson_groups: {}
+          name: poem-art
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        poetry:
+          lessons:
+            lesson-1:
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n"
+            lesson-2:
+              name: Code Your Own Poem
+              description_student: 'Write your own poem and then animate it using code! '
+              description_teacher: 'In this CS and ELA integrated lesson, students will build on their previous learning about poetry by developing their own short poem. Then, students will work on their computers to animate their poems with code. In lesson 1, students used a poem dropdown menu to choose the poem they wanted to animate. In this lesson, students will use `set title`, `set author`, `add line`, and `animate text` blocks of code to change what text appears in their Playspace. '
+            lesson-3:
+              name: User Input
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Build a Poem Generator
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Word Choice
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Poetry Circle
+          lesson_groups: {}
+          name: poetry
+          title: Computer Science and Poetry
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Spelling Bee
+              description_student: 'Help the bee spell new words!
+
+'
+              description_teacher: "This lesson builds off prior activities involving spelling and recognizing capital letters. Spelling with the bee helps students in kindergarten and first grade practice following and counting sequences of letters that form words. They use a series of coding commands to move a spelling bee across a grid of letters in order to spell words. Students learn how to use drag-and-drop coding blocks to move their character, and the importance of sequencing commands in the correct order so they can spell a word.\n\n####Prerequisite Skills\nThis lesson is not intended to introduce students to the alphabet, sequences of letters to form words, or counting. Students should come into this lesson with prior knowledge and the skills to be able to:\n\n- recognize uppercase letters of the alphabet.\n- recognize and count numbers up to 10 using fingers, objects, or manipulatives.\n- recognize that words are made up of a sequence of letters.\n"
+          lesson_groups: {}
+          name: spelling-bee
+          title: Spelling Bee
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        outbreak-csc:
+          lessons:
+            lesson-1:
+              name: Outbreak Day 1
+            lesson-2:
+              name: Outbreak Day 2
+          lesson_groups: {}
+          name: outbreak-csc
+          title: Outbreak
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        explore-data-1:
+          lessons:
+            lesson-1:
+              name: Exploring Box Plots and Histograms
+              description_student: 'Create bar charts and histograms in App Lab''s Data Visualizer.
+
+'
+              description_teacher: "This lesson builds off of the concepts for bar charts and histograms that have already been introduced to students. Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to create two different kinds of charts: a bar chart, and a histogram. This tool is designed to quickly connect students with real-world datasets and make it easy to create visualizations from data without learning how to navigate a more complex tool. They will also have access to several real-world datasets that they can use to create their charts.\n\n\n\nThe lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice creating a bar chart in the Data Visualizer in App Lab. Then they learn how to make histograms for building charts in instances where bar charts may not be useful. Students then have a chance to explore different real-world datasets and see how making charts can help communicate information about a topic they care about.\n\n####Prerequisite Skills and Vocabulary\n\nThis lesson is intended to enrich or reinforce existing lessons on bar charts and histograms. It is not meant to introduce new core content to students. Students should come into this lesson with the following prior knowledge and skills:\n\n\n- Know how to read a bar chart, understanding what the values on the x and y axes represent\n- Know how to read a histogram, understanding what the range of values represent\n"
+          lesson_groups: {}
+          name: explore-data-1
+          title: Exploring Box Plots and Histograms
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        counting-csc:
+          lessons:
+            lesson-1:
+              name: Counting with Laurel
+              description_student: Help Laurel, the treasure hunter, count and add steps to collect gems!
+              description_teacher: "This lesson builds off prior activities involving counting and representing addition. Counting with Laurel supports students in kindergarten and first grade with practice counting and adding as they use loops to help Laurel, the treasure hunter, collect gems across a maze grid. They use a series of coding commands to guide Laurel across a grid to collect gems, utilizing a “Repeat” block that requires them to count how many steps Laurel should take- then represent that number using the correct numeral within a block of code.\n\n####Prerequisite Skills\nThis lesson is not intended to introduce students to numbers, counting, or adding. Students should come into this lesson with some prior knowledge and the skills to be able to:\n\n- recognize and count numbers up to 10 using images, fingers, or manipulatives.\n- add objects, images, fingers, or  manipulatives up to a sum of 10.\n"
+          lesson_groups: {}
+          name: counting-csc
+          title: Counting with Laurel
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa5-exemplars:
+          lessons:
+            lesson-1:
+              name: Creating Tables of Data
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Traversing a 2D Array by Rows
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Traversing a 2D Array by Columns
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Using Enhanced for Loops
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Evaluating 2D Arrays
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Applying Standard Algorithms
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Shifting Elements
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Finding Duplicates
+              description_student: 
+              description_teacher: 
+            lesson-9:
+              name: Searching for Elements
+              description_student: 
+              description_teacher: 
+            lesson-10:
+              name: A Sustainable Neighborhood Project - Day 1
+              description_student: 
+              description_teacher: 
+            lesson-11:
+              name: A Sustainable Neighborhood Project - Day 2
+              description_student: 
+              description_teacher: 
+            lesson-12:
+              name: A Sustainable Neighborhood Project - Day 3
+              description_student: 
+              description_teacher: 
+            lesson-13:
+              name: FRQ Day
+              description_student: 
+              description_teacher: 
+            lesson-14:
+              name: Assessment Day
+              description_student: 
+              description_teacher: 
+            lesson-15:
+              name: Reversing Elements
+              description_student: 
+              description_teacher: 
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: csa5-exemplars
+          title: Unit 5 - Giving Objects Organization [Exemplars]
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa-examples-21:
+          lessons:
+            lesson-1:
+              name: Unit 1 Projects
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Unit 2 Projects
+              description_student: 
+              description_teacher: 
+            lesson-3:
+              name: Unit 3 Projects
+              description_student: 
+              description_teacher: 
+            lesson-4:
+              name: Unit 4 Projects
+              description_student: 
+              description_teacher: 
+            lesson-5:
+              name: Unit 5 Projects
+              description_student: 
+              description_teacher: 
+            lesson-6:
+              name: Unit 6 Projects
+              description_student: 
+              description_teacher: 
+            lesson-7:
+              name: Unit 7 Projects
+              description_student: 
+              description_teacher: 
+            lesson-8:
+              name: Unit 8 Projects
+              description_student: 
+              description_teacher: 
+          lesson_groups: {}
+          name: csa-examples-21
+          title: CSA Unit Project Examples [2021-2022]
           description_audience: ''
           description_short: ''
           description: ''

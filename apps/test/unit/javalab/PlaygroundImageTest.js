@@ -26,7 +26,6 @@ describe('PlaygroundImageTest', () => {
     // based on x * 2, we set the right clip path
     expect(imageStyles.width).to.equal(500);
     expect(imageStyles.marginLeft).to.equal(700);
-    expect(imageStyles.clipPath).to.equal('inset(0 400px 0 0)');
   });
 
   it('sets onClick correctly', () => {

@@ -588,7 +588,7 @@
             <value name="BEHAVIOR">
               <block type="gamelab_behavior_get">
                 <mutation/>
-                <title name="VAR">wandering</title>
+                <title name="VAR" id="wandering">wandering</title>
               </block>
             </value>
           </block>

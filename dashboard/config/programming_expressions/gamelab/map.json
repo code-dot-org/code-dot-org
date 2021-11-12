@@ -2,11 +2,21 @@
   "func": "map",
   "category": "Math",
   "paletteParams": [
-    "value",
-    "start1",
-    "stop1",
-    "start2",
-    "stop"
+    {
+      "name": "value"
+    },
+    {
+      "name": "start1"
+    },
+    {
+      "name": "stop1"
+    },
+    {
+      "name": "start2"
+    },
+    {
+      "name": "stop"
+    }
   ],
   "params": [
     "0.9",
