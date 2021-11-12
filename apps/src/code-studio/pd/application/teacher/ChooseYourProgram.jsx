@@ -25,13 +25,13 @@ import {useRegionalPartner} from '../../components/useRegionalPartner';
 const getProgramInfo = program => {
   switch (program) {
     case PROGRAM_CSD:
-      return {name: 'CS Discoveries', shortName: 'csd', minCourseHours: 50};
+      return {name: 'CS Discoveries', shortName: 'CSD', minCourseHours: 50};
     case PROGRAM_CSP:
-      return {name: 'CS Principles', shortName: 'csp', minCourseHours: 100};
+      return {name: 'CS Principles', shortName: 'CSP', minCourseHours: 100};
     case PROGRAM_CSA:
-      return {name: 'CSA', shortName: 'csa', minCourseHours: 140};
+      return {name: 'CSA', shortName: 'CSA', minCourseHours: 140};
     default:
-      return {name: 'CS Program', shortName: 'cs', minCourseHours: 0};
+      return {name: 'CS Program', shortName: null, minCourseHours: 0};
   }
 };
 
@@ -53,9 +53,9 @@ const ChooseYourProgram = props => {
   const [regionalPartner] = useRegionalPartner(data);
 
   const programInfo = getProgramInfo(data.program);
-  const isOffered =
-    regionalPartner?.pl_programs_offered &&
-    regionalPartner.pl_programs_offered[programInfo.shortName];
+  const isOffered = regionalPartner?.pl_programs_offered?.includes(
+    programInfo.shortName
+  );
 
   // This should be kept consistent with the calculation logic in
   // dashboard/app/models/pd/application/teacher_application.rb.
