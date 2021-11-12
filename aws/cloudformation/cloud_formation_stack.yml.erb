@@ -231,12 +231,18 @@ Resources:
           TTL: <%= DNS_TTL %>
           ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
 <%   end -%>
+
 <%   if cdn_enabled -%>
   <%=app%>CDN:
     Type: AWS::CloudFront::Distribution
     Properties:
       DistributionConfig: <%= cloudfront_config(app) %>
 <%   end -%>
+
+<%   if cdn_enabled -%>
+<%=    component 'www_redirect' -%>
+<%  end -%>
+
 <% end -%>
 
 <% if cdn_enabled -%>
@@ -256,10 +262,6 @@ Resources:
           ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
 <%   end -%>
 <% end -%>
-
-<%  if environment == :production -%>
-<%=   component 'www_redirect' -%>
-<%  end -%>
 
 <% if frontends-%>
 <%=  component 'cache'%>
