@@ -26,6 +26,8 @@
             Cookies:
               Forward: none
           ViewerProtocolPolicy: allow-all
+          # Use shared Realtime Log config
+          RealtimeLogConfigArn: !ImportValue AccessLogs-Config
         ViewerCertificate:
           AcmCertificateArn: <%= certificate_arn %>
           SslSupportMethod: sni-only
