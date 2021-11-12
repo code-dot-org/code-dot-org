@@ -20,8 +20,7 @@ class Api::V1::UsersController < Api::V1::JsonApiController
         id: current_user.id,
         username: current_user.username,
         user_type: current_user.user_type,
-        is_signed_in: true,
-        is_verified_teacher: current_user.verified_teacher?
+        is_signed_in: true
       }
     else
       render json: {

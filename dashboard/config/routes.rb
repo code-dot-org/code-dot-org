@@ -583,7 +583,6 @@ Dashboard::Application.routes.draw do
           get :cohort_view
           get :search
           get :fit_cohort
-          get :applications_closed
         end
       end
 
@@ -604,7 +603,7 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
   get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
-  get '/dashboardapi/v1/pd/applications/applications_closed', to: 'api/v1/pd/applications#applications_closed'
+  get '/dashboardapi/v1/pd/application/applications_closed', to: 'pd/professional_learning_landing#applications_closed'
   post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
   post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 
