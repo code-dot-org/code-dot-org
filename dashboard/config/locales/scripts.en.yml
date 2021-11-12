@@ -27311,3 +27311,115 @@ en:
           description_audience: ''
           lesson_groups: {}
           name: hello-world-retro-2021
+        spelling-bee-2021:
+          lessons:
+            Spelling Bee:
+              name: Spelling Bee
+              description_student: 'Help the bee spell new words!
+
+'
+              description_teacher: |
+                This lesson builds off prior activities involving spelling and recognizing capital letters. Spelling with the bee helps students in kindergarten and first grade practice following and counting sequences of letters that form words. They use a series of coding commands to move a spelling bee across a grid of letters in order to spell words. Students learn how to use drag-and-drop coding blocks to move their character, and the importance of sequencing commands in the correct order so they can spell a word.
+
+                ####Prerequisite Skills
+                This lesson is not intended to introduce students to the alphabet, sequences of letters to form words, or counting. Students should come into this lesson with prior knowledge and the skills to be able to:
+
+                - recognize uppercase letters of the alphabet.
+                - recognize and count numbers up to 10 using fingers, objects, or manipulatives.
+                - recognize that words are made up of a sequence of letters.
+            lesson-1:
+              key: lesson-1
+              name: Spelling Bee
+              description_student: 'Help the bee spell new words!
+
+'
+              description_teacher: |
+                This lesson builds off prior activities involving spelling and recognizing capital letters. Spelling with the bee helps students in kindergarten and first grade practice following and counting sequences of letters that form words. They use a series of coding commands to move a spelling bee across a grid of letters in order to spell words. Students learn how to use drag-and-drop coding blocks to move their character, and the importance of sequencing commands in the correct order so they can spell a word.
+
+                ####Prerequisite Skills
+                This lesson is not intended to introduce students to the alphabet, sequences of letters to form words, or counting. Students should come into this lesson with prior knowledge and the skills to be able to:
+
+                - recognize uppercase letters of the alphabet.
+                - recognize and count numbers up to 10 using fingers, objects, or manipulatives.
+                - recognize that words are made up of a sequence of letters.
+          title: Spelling Bee
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Exploring Box Plots and Histograms
+              description_student: 'Create bar charts and histograms in App Lab''s Data Visualizer.
+
+'
+              description_teacher: |
+                This lesson builds off of the concepts for bar charts and histograms that have already been introduced to students. Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to create two different kinds of charts: a bar chart, and a histogram. This tool is designed to quickly connect students with real-world datasets and make it easy to create visualizations from data without learning how to navigate a more complex tool. They will also have access to several real-world datasets that they can use to create their charts.
+
+
+
+                The lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice creating a bar chart in the Data Visualizer in App Lab. Then they learn how to make histograms for building charts in instances where bar charts may not be useful. Students then have a chance to explore different real-world datasets and see how making charts can help communicate information about a topic they care about.
+
+                ####Prerequisite Skills and Vocabulary
+
+                This lesson is intended to enrich or reinforce existing lessons on bar charts and histograms. It is not meant to introduce new core content to students. Students should come into this lesson with the following prior knowledge and skills:
+
+
+                - Know how to read a bar chart, understanding what the values on the x and y axes represent
+                - Know how to read a histogram, understanding what the range of values represent
+            lesson-1:
+              key: lesson-1
+              name: Exploring Box Plots and Histograms
+              description_student: 'Create bar charts and histograms in App Lab''s Data Visualizer.
+
+'
+              description_teacher: |
+                This lesson builds off of the concepts for bar charts and histograms that have already been introduced to students. Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to create two different kinds of charts: a bar chart, and a histogram. This tool is designed to quickly connect students with real-world datasets and make it easy to create visualizations from data without learning how to navigate a more complex tool. They will also have access to several real-world datasets that they can use to create their charts.
+
+
+
+                The lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice creating a bar chart in the Data Visualizer in App Lab. Then they learn how to make histograms for building charts in instances where bar charts may not be useful. Students then have a chance to explore different real-world datasets and see how making charts can help communicate information about a topic they care about.
+
+                ####Prerequisite Skills and Vocabulary
+
+                This lesson is intended to enrich or reinforce existing lessons on bar charts and histograms. It is not meant to introduce new core content to students. Students should come into this lesson with the following prior knowledge and skills:
+
+
+                - Know how to read a bar chart, understanding what the values on the x and y axes represent
+                - Know how to read a histogram, understanding what the range of values represent
+          title: Exploring Box Plots and Histograms
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: Counting with Laurel
+              description_student: Help Laurel, the treasure hunter, count and add steps to collect gems!
+              description_teacher: |
+                This lesson builds off prior activities involving counting and representing addition. Counting with Laurel supports students in kindergarten and first grade with practice counting and adding as they use loops to help Laurel, the treasure hunter, collect gems across a maze grid. They use a series of coding commands to guide Laurel across a grid to collect gems, utilizing a “Repeat” block that requires them to count how many steps Laurel should take- then represent that number using the correct numeral within a block of code.
+
+                ####Prerequisite Skills
+                This lesson is not intended to introduce students to numbers, counting, or adding. Students should come into this lesson with some prior knowledge and the skills to be able to:
+
+                - recognize and count numbers up to 10 using images, fingers, or manipulatives.
+                - add objects, images, fingers, or  manipulatives up to a sum of 10.
+            lesson-1:
+              key: lesson-1
+              name: Counting with Laurel
+              description_student: Help Laurel, the treasure hunter, count and add steps to collect gems!
+              description_teacher: |
+                This lesson builds off prior activities involving counting and representing addition. Counting with Laurel supports students in kindergarten and first grade with practice counting and adding as they use loops to help Laurel, the treasure hunter, collect gems across a maze grid. They use a series of coding commands to guide Laurel across a grid to collect gems, utilizing a “Repeat” block that requires them to count how many steps Laurel should take- then represent that number using the correct numeral within a block of code.
+
+                ####Prerequisite Skills
+                This lesson is not intended to introduce students to numbers, counting, or adding. Students should come into this lesson with some prior knowledge and the skills to be able to:
+
+                - recognize and count numbers up to 10 using images, fingers, or manipulatives.
+                - add objects, images, fingers, or  manipulatives up to a sum of 10.
+          title: Counting with Laurel
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
