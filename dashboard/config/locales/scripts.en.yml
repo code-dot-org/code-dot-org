@@ -24174,7 +24174,7 @@ en:
           title: 'Module 5: Preparing to Teach Unit 7'
           description_audience: ''
           description_short: ''
-          description: "This module is designed to help you prepare for teaching specific units within the CS Discoveries course.  Start by selecting the unit you plan to teach first. You can come back to this section of the training throughout the school year as you prepare to teach new units of the course. This content does not need to be completed in order. For guidance on how best to implement CS Discoveries with students, refer to the [CS Discoveries Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview).\n\n**For each unit in CS Discoveries, you will have the opportunity to:**\n* Prepare to teach the first week of unit content \n* Practice key concepts included in the unit \n* Engage with sample student work \n* Explore end of chapter projects \n\n**Suggested Time:** 1 hour per unit \n"
+          description: "This module is designed to help you prepare for teaching specific units within the CS Discoveries course.  Start by selecting the unit you plan to teach first. You can come back to this section of the training throughout the school year as you prepare to teach new units of the course. This content does not need to be completed in order. For guidance on how best to implement CS Discoveries with students, refer to the [CS Discoveries Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview).\n\n**For each unit in CS Discoveries, you will have the opportunity to:**\n* Prepare to teach the first week of unit content \n* Practice key concepts included in the unit \n* Engage with sample student work \n* Explore end of chapter projects \n\n**Suggested Time:** 2 hours\n"
           student_description: ''
         self-paced-pl-csd6-2021:
           lessons:
@@ -26336,7 +26336,7 @@ en:
               description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
           lesson_groups: {}
           name: hello-world-food
-          title: Hello World
+          title: 'Hello World: Food'
           description_audience: ''
           description_short: ''
           description: ''
@@ -26423,7 +26423,7 @@ en:
               description_teacher: 
           lesson_groups: {}
           name: hello-world-animals
-          title: Hello World
+          title: 'Hello World: Animals'
           description_audience: ''
           description_short: ''
           description: ''
@@ -26436,7 +26436,7 @@ en:
               description_teacher: 
           lesson_groups: {}
           name: hello-world-emoji
-          title: Hello World
+          title: 'Hello World: Emoji'
           description_audience: ''
           description_short: ''
           description: ''
@@ -26449,7 +26449,7 @@ en:
               description_teacher: 
           lesson_groups: {}
           name: hello-world-retro
-          title: Hello World
+          title: 'Hello World: Retro'
           description_audience: ''
           description_short: ''
           description: ''
@@ -27244,7 +27244,7 @@ en:
         hello-world-food-2021:
           lessons:
             Hello World:
-              name: Hello World
+              name: 'Hello World: Food'
               description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
               description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
             lesson-1:
@@ -27252,7 +27252,7 @@ en:
               name: Hello World
               description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
               description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
-          title: Hello World
+          title: 'Hello World: Food'
           description: ''
           student_description: ''
           description_short: ''
@@ -27262,7 +27262,7 @@ en:
         hello-world-emoji-2021:
           lessons:
             Hello World:
-              name: Hello World
+              name: 'Hello World: Emoji'
               description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
               description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
             lesson-1:
@@ -27270,7 +27270,7 @@ en:
               name: Hello World
               description_student: ''
               description_teacher: ''
-          title: Hello World
+          title: 'Hello World: Emoji'
           description: ''
           student_description: ''
           description_short: ''
@@ -27280,7 +27280,7 @@ en:
         hello-world-animals-2021:
           lessons:
             Hello World:
-              name: Hello World
+              name: 'Hello World: Animals'
               description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
               description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
             lesson-1:
@@ -27288,7 +27288,7 @@ en:
               name: Hello World
               description_student: ''
               description_teacher: ''
-          title: Hello World
+          title: 'Hello World: Animals'
           description: ''
           student_description: ''
           description_short: ''
@@ -27298,7 +27298,7 @@ en:
         hello-world-retro-2021:
           lessons:
             Hello World:
-              name: Hello World
+              name: 'Hello World: Retro'
               description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
               description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
             lesson-1:
@@ -27306,7 +27306,7 @@ en:
               name: Hello World
               description_student: ''
               description_teacher: ''
-          title: Hello World
+          title: 'Hello World: Retro'
           description: ''
           student_description: ''
           description_short: ''

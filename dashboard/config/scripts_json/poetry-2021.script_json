@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-12 19:39:24 UTC",
+    "serialized_at": "2021-11-12 20:05:38 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -558,7 +558,7 @@
       "position": 3,
       "properties": {
         "description": "**Level 2:** In this exemplar, students should read the poem on their own first, then press Run. You can ask the student whether the sound and effects the programmer chose matched the mood of the poem. Ask students to elaborate on their answer. ",
-        "progression_name": "Exemple"
+        "progression_name": "Example"
       },
       "seeding_key": {
         "activity_section.key": "b393acce-c8c6-4f70-9a6b-d40a754b3176",
@@ -2059,7 +2059,7 @@
         "level_keys": [
           "poetry_hoc_exemplar1"
         ],
-        "progression": "Exemple"
+        "progression": "Example"
       },
       "bonus": false,
       "seeding_key": {
