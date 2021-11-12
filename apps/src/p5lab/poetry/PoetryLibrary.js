@@ -451,7 +451,10 @@ export default class PoetryLibrary extends CoreLibrary {
   drawFromRenderInfo(renderInfo) {
     this.p5.textFont(renderInfo.font.font);
     renderInfo.lines.forEach(item => {
-      if (item.isPoemBodyLine && this.poemState.text.highlightColor) {
+      if (
+        this.poemState.text.highlightColor &&
+        containsAtLeastOneAlphaNumberic(item.text) // Don't highlight blank lines
+      ) {
         this.drawTextHighlight(item);
       }
       let fillColor = this.getP5Color(renderInfo.font.fill, item.alpha);
