@@ -24171,7 +24171,7 @@ en:
             lessonGroup-9:
               display_name: Preparing to Teach Unit 1
           name: self-paced-pl-csd5-2021
-          title: 'Module 5: Preparing to Teach Unit 7- AI and Machine Learning'
+          title: 'Module 5: Preparing to Teach Unit 7'
           description_audience: ''
           description_short: ''
           description: "This module is designed to help you prepare for teaching specific units within the CS Discoveries course.  Start by selecting the unit you plan to teach first. You can come back to this section of the training throughout the school year as you prepare to teach new units of the course. This content does not need to be completed in order. For guidance on how best to implement CS Discoveries with students, refer to the [CS Discoveries Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview).\n\n**For each unit in CS Discoveries, you will have the opportunity to:**\n* Prepare to teach the first week of unit content \n* Practice key concepts included in the unit \n* Engage with sample student work \n* Explore end of chapter projects \n\n**Suggested Time:** 1 hour per unit \n"
@@ -27146,21 +27146,22 @@ en:
           description_short: 'In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. '
           description_audience: grades 6-12
           lesson_groups: {}
+          name: ai-ethics-2021
         poem-art-2021:
           lessons:
             Poem Art:
               name: Poem Art
               description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
-              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. Students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the 5-lesson module called [Coding with Poetry](http://code.org/poetry). By the end of the Coding with Poetry module, students will write their own poems and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s CS Connections curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n"
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. Students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the multi-lesson module called [Coding with Poetry](http://studio.code.org/s/poetry-2021)."
             lesson-1:
               key: lesson-1
               name: Poem Art
               description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
               description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the 5-lesson module called [Coding with Poetry](http://code.org/poetry). By the end of the Coding with Poetry module, students will write their own poems and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s CS Connections curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n"
           title: Poem Art
-          description: ''
+          description: "This lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the multi-lesson module called [Coding with Poetry](studio.code.org/s/poetry-2021). \n\nThe Coding with Poetry is part of Code.org’s [CS Connections](code.org/educate/csc) curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. "
           student_description: ''
-          description_short: ''
+          description_short: 'This lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the multi-lesson module called Coding with Poetry. '
           description_audience: ''
           lesson_groups: {}
           name: poem-art-2021
@@ -27234,7 +27235,7 @@ en:
               description_student: 'Share your new poem apps with your friends! '
               description_teacher: In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.
           title: Computer Science and Poetry
-          description: ''
+          description: "This module is designed to ensure students have a shareable app by the end of each lesson, so each lesson is a potential stopping point. If your class finishes the entire 7-part module, students will write their own poems, investigate word choice, learn how to use prompts and variables, learn how to code conditional statements, and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s [CS Connections](code.org/educate/csc) curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n\n**First time teaching with Code.org?** To get started, watch these videos:\n* [Basic Features of Code.org](https://www.youtube.com/watch?v=lYZq1HVTAIY) \n* [Creating a Class Section](https://youtu.be/4Wugxc80fNU)\n* [The Student Experience](https://youtu.be/wzz3jJZoj20)\n* [Progress, Feedack, and Assessment](https://youtu.be/c0pGfCpd6MI)"
           student_description: ''
           description_short: ''
           description_audience: ''
@@ -27257,6 +27258,7 @@ en:
           description_short: ''
           description_audience: ''
           lesson_groups: {}
+          name: hello-world-food-2021
         hello-world-emoji-2021:
           lessons:
             Hello World:
@@ -27347,6 +27349,8 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: spelling-bee-2021
         explore-data-1-2021:
           lessons:
             Exploring Box Plots and Histograms:
@@ -27393,6 +27397,8 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: explore-data-1-2021
         counting-csc-2021:
           lessons:
             Counting with Laurel:
@@ -27423,3 +27429,5 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lesson_groups: {}
+          name: counting-csc-2021
