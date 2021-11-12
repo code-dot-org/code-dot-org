@@ -18,7 +18,6 @@ import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 
 const MAX_SEARCH_RESULTS = 40;
-const MAX_HEIGHT = 460;
 
 export default class AnimationPickerBody extends React.Component {
   static propTypes = {
@@ -45,6 +44,7 @@ export default class AnimationPickerBody extends React.Component {
   };
 
   componentDidMount() {
+    this.scrollListContainer = React.createRef();
     this.multiSelectEnabled_ = experiments.isEnabled(experiments.MULTISELECT);
   }
 
@@ -95,8 +95,11 @@ export default class AnimationPickerBody extends React.Component {
     const scrollWindow = event.target;
     const {currentPage, results, pageCount} = this.state;
     const nextPage = currentPage + 1;
+    const scrollContainerHeight =
+      this.scrollListContainer.current?.clientHeight || 0;
     if (
-      scrollWindow.scrollTop + MAX_HEIGHT >= scrollWindow.scrollHeight * 0.9 &&
+      scrollWindow.scrollTop + scrollContainerHeight >=
+        scrollWindow.scrollHeight * 0.9 &&
       (!pageCount || nextPage <= pageCount)
     ) {
       let {results: newResults, pageCount} = this.searchAssetsWrapper(nextPage);
@@ -238,53 +241,56 @@ export default class AnimationPickerBody extends React.Component {
             )}
           </div>
         )}
-        <ScrollableList
-          className="uitest-animation-picker-list"
-          style={{maxHeight: MAX_HEIGHT}}
-          onScroll={this.handleScroll}
-        >
-          {' '}
-          {(searchQuery !== '' || categoryQuery !== '') &&
-            results.length === 0 && (
-              <div style={styles.emptyResults}>
-                {msg.animationPicker_noResultsFound()}
+        <div ref={this.scrollListContainer}>
+          <ScrollableList
+            className="uitest-animation-picker-list"
+            style={{maxHeight: '55vh'}}
+            onScroll={this.handleScroll}
+          >
+            {' '}
+            {(searchQuery !== '' || categoryQuery !== '') &&
+              results.length === 0 && (
+                <div style={styles.emptyResults}>
+                  {msg.animationPicker_noResultsFound()}
+                </div>
+              )}
+            {((searchQuery === '' && categoryQuery === '') ||
+              (results.length === 0 && this.props.canDraw)) && (
+              <div>
+                <AnimationPickerListItem
+                  label={msg.animationPicker_drawYourOwn()}
+                  icon="pencil"
+                  onClick={onDrawYourOwnClick}
+                />
+                {!hideUploadOption && (
+                  <AnimationPickerListItem
+                    label={msg.animationPicker_uploadImage()}
+                    icon="upload"
+                    onClick={onUploadClick}
+                  />
+                )}
               </div>
             )}
-          {((searchQuery === '' && categoryQuery === '') ||
-            (results.length === 0 && this.props.canDraw)) && (
-            <div>
-              <AnimationPickerListItem
-                label={msg.animationPicker_drawYourOwn()}
-                icon="pencil"
-                onClick={onDrawYourOwnClick}
-              />
-              {!hideUploadOption && (
-                <AnimationPickerListItem
-                  label={msg.animationPicker_uploadImage()}
-                  icon="upload"
-                  onClick={onUploadClick}
-                />
+            {searchQuery === '' &&
+              categoryQuery === '' &&
+              this.animationCategoriesRendering()}
+            {(searchQuery !== '' || categoryQuery !== '') &&
+              this.animationItemsRendering(
+                results || [],
+                this.multiSelectEnabled_
               )}
+          </ScrollableList>
+        </div>
+        {this.multiSelectEnabled_ &&
+          (searchQuery !== '' || categoryQuery !== '') && (
+            <div style={styles.footer}>
+              <Button
+                text={msg.done()}
+                onClick={onAnimationSelectionComplete}
+                color={Button.ButtonColor.orange}
+              />
             </div>
           )}
-          {searchQuery === '' &&
-            categoryQuery === '' &&
-            this.animationCategoriesRendering()}
-          {(searchQuery !== '' || categoryQuery !== '') &&
-            this.animationItemsRendering(
-              results || [],
-              this.multiSelectEnabled_
-            )}
-        </ScrollableList>
-        {this.multiSelectEnabled_ && (
-          <div style={styles.footer}>
-            <Button
-              text={msg.done()}
-              onClick={onAnimationSelectionComplete}
-              color={Button.ButtonColor.orange}
-            />
-          </div>
-        )}
       </div>
     );
   }
@@ -323,6 +329,7 @@ const styles = {
   },
   footer: {
     display: 'flex',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
+    marginTop: 5
   }
 };
