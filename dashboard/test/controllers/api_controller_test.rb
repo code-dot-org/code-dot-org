@@ -1508,6 +1508,22 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal 0, response["students"].length
   end
 
+  test "teacher_panel_section returns teacher's section when no section id is passed and teacher has 1 visible section" do
+    teacher = create :teacher
+    sign_in teacher
+    section = create(:section, user: teacher, login_type: 'word')
+    create(:section, user: teacher, login_type: 'word', hidden: true)
+
+    get :teacher_panel_section
+
+    assert_response :success
+    response = JSON.parse(@response.body)
+
+    assert_equal section.id, response["id"]
+    assert_equal teacher.name, response["teacherName"]
+    assert_equal 0, response["students"].length
+  end
+
   test "teacher_panel_section returns no_content when no section_id is passed and teacher has multiple sections" do
     create(:section, user: @teacher, login_type: 'word')
 
