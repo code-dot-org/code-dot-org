@@ -70,6 +70,16 @@ class TeacherDashboardHeader extends React.Component {
       />
     ));
 
+  emergencyModeNotification = ({emergencyMode}) =>
+    emergencyMode && (
+      <Notification
+        type={NotificationType.failure}
+        notice={i18n.emergencyModeProgressBanner()}
+        details={i18n.emergencyModeProgressBannerDetails()}
+        dismissable={false}
+      />
+    );
+
   render() {
     return (
       <div>
@@ -83,6 +93,10 @@ class TeacherDashboardHeader extends React.Component {
           restrictSection={this.props.selectedSection.restrictSection}
           loginType={this.props.selectedSection.loginType}
         />
+        {!this.props.assignmentName.includes('Computer Science Principles') &&
+          !this.props.assignmentName.includes(
+            'Computer Science Discoveries'
+          ) && <this.emergencyModeNotification emergencyMode={true} />}
         <div style={styles.header}>
           <div>
             <h1>{this.props.selectedSection.name}</h1>
