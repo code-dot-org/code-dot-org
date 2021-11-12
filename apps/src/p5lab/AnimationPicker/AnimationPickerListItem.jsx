@@ -111,17 +111,17 @@ class AnimationPickerListItem extends React.Component {
               />
             )}
           </div>
+          {animationProps &&
+            loaded &&
+            (hover || selected) &&
+            multiSelectEnabled && (
+              <i
+                className={multiSelectIconClassName}
+                style={multiSelectIconStyle}
+              />
+            )}
         </button>
         {label && <div style={labelStyle}>{label}</div>}
-        {animationProps &&
-          loaded &&
-          (hover || selected) &&
-          multiSelectEnabled && (
-            <i
-              className={multiSelectIconClassName}
-              style={multiSelectIconStyle}
-            />
-          )}
       </div>
     );
   }
@@ -186,6 +186,7 @@ const styles = {
     position: 'absolute',
     borderStyle: 'solid',
     borderWidth: '2px',
+    fontSize: HOVER_PLUS_SIZE,
     height: HOVER_PLUS_SIZE,
     width: HOVER_PLUS_SIZE,
     borderRadius: 5,

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Draggable} from 'react-beautiful-dnd';
 import color from '@cdo/apps/util/color';
-import {grid} from './StudentGroup';
 
 // A Student is a component that
 // can be dragged between StudentGroups
@@ -24,7 +23,6 @@ export default function Student({followerId, name, index}) {
         <div
           ref={provided.innerRef}
           {...provided.draggableProps}
-          {...provided.dragHandleProps}
           style={getStudentStyle(
             snapshot.isDragging,
             provided.draggableProps.style
@@ -35,7 +33,8 @@ export default function Student({followerId, name, index}) {
               display: 'flex'
             }}
           >
-            {name}
+            <DragHandle {...provided.dragHandleProps} />
+            <div>{name}</div>
           </div>
         </div>
       )}
@@ -49,17 +48,58 @@ Student.propTypes = {
   index: PropTypes.number.isRequired
 };
 
+/**
+ * Custom drag handle icon: six dots in two columns
+ */
+function DragHandle(props) {
+  return (
+    <div {...props} style={handleStyles.container}>
+      <div style={handleStyles.dotColumn}>
+        <span style={handleStyles.dot} />
+        <span style={handleStyles.dot} />
+        <span style={handleStyles.dot} />
+      </div>
+      <div style={handleStyles.dotColumn}>
+        <span style={handleStyles.dot} />
+        <span style={handleStyles.dot} />
+        <span style={handleStyles.dot} />
+      </div>
+    </div>
+  );
+}
+
 const getStudentStyle = (isDragging, draggableStyle) => ({
   userSelect: 'none',
-  padding: grid * 2,
+  padding: '16px 12px',
   color: color.dark_charcoal,
   width: 'auto',
-  height: '20px',
   border: `1px solid ${color.lighter_gray}`,
+  fontSize: 14,
+  lineHeight: '21px',
 
   // change background colour if dragging
-  background: isDragging ? 'navy' : 'white',
+  background: isDragging ? color.background_gray : color.white,
 
   // styles we need to apply on draggables
   ...draggableStyle
 });
+
+const handleStyles = {
+  container: {
+    marginRight: 12,
+    display: 'flex',
+    alignItems: 'center'
+  },
+  dotColumn: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  dot: {
+    width: 3,
+    height: 3,
+    backgroundColor: color.dark_charcoal,
+    borderRadius: '50%',
+    display: 'inline-block',
+    margin: 1.5
+  }
+};

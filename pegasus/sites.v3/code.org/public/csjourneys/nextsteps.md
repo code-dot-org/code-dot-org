@@ -234,10 +234,7 @@ social:
   <img src="/images/csjourneys/footstep.png" style="width: 10%; float: right; margin-top:-50px">
   <h3 style="margin-top:0; color:#00adbc"><strong>Wednesday, November 10th at 11 am EDT / 8 am PDT</strong></h3>
   <p>Students learn about the importance of support networks to their career journey, and about steps to take to start building their own network of intentional connections, including finding a mentor, participating in extracurricular activities, and plugging in with affinity groups and/or professional networks. To view more details, including key topics, student takeaways, and speaker bios, click the Register button below.</p>
-  <a href="https://www.eventbrite.com/e/making-connections-and-building-support-networks-registration-167771632469" target="_blank"><button style="margin-bottom:20px">Register on Eventbrite</button></a>
-  <br>
-<p><i>By clicking above, you will be taken to www.eventbrite.com.</i></p>
-<br>
+  <a href="https://code.zoom.us/rec/play/cIS5zalDnM3RTrvHWYcYIYXCzqr44xdBK5B5WSDysJZKtE61ZFQ1nlGYFD_pWSxy9W7wj_-ugwCDrphN.UeOZUUWcMljYajSC" target="_blank"><button style="margin-bottom:20px">View the recording</button></a>
   <p>Featuring:</p>
   <div class="col-25" style="text-align:center; margin-bottom:10px">
     <img src="/images/csjourneys/kyle-ali.jpg" style="border-radius:50%; width:55%" alt="Kyle Ali">
