@@ -13,7 +13,6 @@ require 'cdo/google/sheet'
 
 EARLIEST_WORKSHOP_START_DATE = Date.new(2022, 5, 1)
 LATEST_WORKSHOP_START_DATE = Date.new(2022, 9, 16)
-EARLIEST_CREATED_AT_DATE = Date.new(2021, 11, 1)
 
 def get_rows
   subjects = [
@@ -29,8 +28,7 @@ def get_rows
   Pd::Workshop.
     where(subject: subjects).
     scheduled_start_on_or_after(EARLIEST_WORKSHOP_START_DATE).
-    scheduled_start_on_or_before(LATEST_WORKSHOP_START_DATE).
-    created_on_or_after(EARLIEST_CREATED_AT_DATE).find_each do |workshop|
+    scheduled_start_on_or_before(LATEST_WORKSHOP_START_DATE).find_each do |workshop|
       workshops << Api::V1::Pd::WorkshopDownloadSerializer.new(workshop).attributes.values
     end
 
