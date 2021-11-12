@@ -5,17 +5,30 @@ import i18n from '@cdo/locale';
 import * as Table from 'reactabular-table';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
+import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 
 const requiredFormatter = required => {
-  return <div>{required && <FontAwesome icon="check" />}</div>;
+  if (required) {
+    return (
+      <div style={styles.requiredCheck}>
+        <FontAwesome icon="check" />
+      </div>
+    );
+  } else {
+    return null;
+  }
 };
 
 const descriptionFormatter = description => {
-  return (
-    <div style={{padding: 10}}>
-      <EnhancedSafeMarkdown markdown={description} />
-    </div>
-  );
+  if (description) {
+    return (
+      <div style={{padding: 10}}>
+        <EnhancedSafeMarkdown markdown={description} />
+      </div>
+    );
+  } else {
+    return null;
+  }
 };
 
 export default function ParametersTable({parameters}) {
@@ -25,8 +38,15 @@ export default function ParametersTable({parameters}) {
       header: {
         label: i18n.name(),
         props: {
-          style: {...styles.headerCell, width: '15%'}
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...styles.headerCell,
+            width: '15%'
+          }
         }
+      },
+      cell: {
+        props: {style: tableLayoutStyles.cell}
       }
     },
     {
@@ -34,8 +54,15 @@ export default function ParametersTable({parameters}) {
       header: {
         label: i18n.type(),
         props: {
-          style: {...styles.headerCell, width: '15%'}
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...styles.headerCell,
+            width: '15%'
+          }
         }
+      },
+      cell: {
+        props: {style: tableLayoutStyles.cell}
       }
     },
     {
@@ -43,11 +70,16 @@ export default function ParametersTable({parameters}) {
       header: {
         label: i18n.requiredQuestion(),
         props: {
-          style: {...styles.headerCell, width: '15%'}
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...styles.headerCell,
+            width: '15%'
+          }
         }
       },
       cell: {
-        formatters: [requiredFormatter]
+        formatters: [requiredFormatter],
+        props: {style: tableLayoutStyles.cell}
       }
     },
     {
@@ -55,30 +87,45 @@ export default function ParametersTable({parameters}) {
       header: {
         label: i18n.description(),
         props: {
-          style: {...styles.headerCell, width: '55%'}
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...styles.headerCell,
+            width: '55%'
+          }
         }
       },
       cell: {
-        formatters: [descriptionFormatter]
+        formatters: [descriptionFormatter],
+        props: {style: tableLayoutStyles.cell}
       }
     }
   ];
 
   return (
-    <Table.Provider className="pure-table pure-table-striped" columns={columns}>
+    <Table.Provider
+      style={{...tableLayoutStyles.table, ...styles.table}}
+      columns={columns}
+    >
       <Table.Header />
 
-      <Table.Body rows={parameters} rowKey="id" />
+      <Table.Body rows={parameters} rowKey="name" />
     </Table.Provider>
   );
 }
 
 ParametersTable.propTypes = {
-  parameters: PropTypes.object
+  parameters: PropTypes.arrayOf(PropTypes.object)
 };
 
 const styles = {
   headerCell: {
-    backgroundColor: color.teal
+    backgroundColor: color.teal,
+    color: color.white
+  },
+  requiredCheck: {
+    textAlign: 'center'
+  },
+  table: {
+    width: '100%'
   }
 };
