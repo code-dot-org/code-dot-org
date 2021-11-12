@@ -575,6 +575,27 @@ class SectionTest < ActiveSupport::TestCase
     refute Section.valid_grade?("56")
   end
 
+  test 'code review disabled for sections with no code review expiration' do
+    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
+    section = create :section
+
+    refute section.code_review_enabled?
+  end
+
+  test 'code review enabled for sections with code review expiration later than current time' do
+    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
+    section = create :section, code_review_expires_at: Time.now.utc + 100.years
+
+    assert section.code_review_enabled?
+  end
+
+  test 'code review disabled for sections with code review expiration before current time' do
+    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
+    section = create :section, code_review_expires_at: Time.now.utc - 1.day
+
+    refute section.code_review_enabled?
+  end
+
   test 'reset_code_review_groups creates new code review groups' do
     code_review_group_section = create(:section, user: @teacher, login_type: 'word')
     # Create 5 students
