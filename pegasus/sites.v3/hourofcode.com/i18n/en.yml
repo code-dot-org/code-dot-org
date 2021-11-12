@@ -148,6 +148,8 @@
   codeorg_homepage_hoc_is_coming: 'The Hour of Code is coming.'
   codeorg_homepage_celebrate_cse: 'Celebrate computer science everywhere!'
   codeorg_homepage_csc: 'Computer science meets language arts, math, and more in CS Connections'
+  codeorg_homepage_csc_long: 'See how computer science meets language arts, math, and more in our curriculum!'
+  codeorg_homepage_csc_title: 'CS Connections'
 
   hoc2018_tutorial_mchoc_description: 'Minecraft is back for the Hour of Code with a brand new activity! Journey through Minecraft with code.'
 
