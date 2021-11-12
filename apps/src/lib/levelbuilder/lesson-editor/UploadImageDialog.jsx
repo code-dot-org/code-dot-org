@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useState} from 'react';
 
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
@@ -7,29 +7,19 @@ import i18n from '@cdo/locale';
 import LessonEditorDialog from './LessonEditorDialog';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
-export default class UploadImageDialog extends React.Component {
-  static propTypes = {
-    isOpen: PropTypes.bool.isRequired,
-    handleClose: PropTypes.func.isRequired,
-    uploadImage: PropTypes.func.isRequired
+export default function UploadImageDialog({isOpen, handleClose, uploadImage}) {
+  const [imgUrl, setImgUrl] = useState(undefined);
+  const [expandable, setExpandable] = useState(false);
+  const [error, setError] = useState(undefined);
+
+  const resetState = () => {
+    setImgUrl(undefined);
+    setExpandable(false);
+    setError(undefined);
   };
 
-  state = {
-    imgUrl: undefined,
-    expandable: false,
-    error: undefined
-  };
-
-  resetState = () => {
-    this.setState({
-      imgUrl: undefined,
-      expandable: false,
-      error: undefined
-    });
-  };
-
-  handleChange = e => {
-    this.resetState();
+  const handleChange = e => {
+    resetState();
 
     // assemble upload data
     const formData = new FormData();
@@ -45,82 +35,83 @@ export default class UploadImageDialog extends React.Component {
       }
     })
       .then(response => response.json())
-      .then(this.handleResult)
-      .catch(this.handleError);
+      .then(handleResult)
+      .catch(handleError);
   };
 
-  handleResult = result => {
+  const handleResult = result => {
     if (result && result.newAssetUrl) {
-      this.setState({imgUrl: result.newAssetUrl});
+      setImgUrl(result.newAssetUrl);
     } else if (result && result.message) {
-      this.handleError(result.message);
+      handleError(result.message);
     } else {
-      this.handleError(result);
+      handleError(result);
     }
   };
 
-  handleError = error => {
-    this.setState({error: error});
+  const handleError = error => {
+    setError(error);
   };
 
-  handleClose = () => {
-    this.resetState();
-    this.props.handleClose();
+  const handleDialogClose = () => {
+    resetState();
+    handleClose();
   };
 
-  handleCloseAndSave = () => {
-    if (this.state.imgUrl) {
-      this.props.uploadImage(this.state.imgUrl, this.state.expandable);
+  const handleCloseAndSave = () => {
+    if (imgUrl) {
+      uploadImage(imgUrl, expandable);
     }
 
-    this.handleClose();
+    handleDialogClose();
   };
 
-  render() {
-    return (
-      <LessonEditorDialog
-        isOpen={this.props.isOpen}
-        handleClose={this.handleClose}
-      >
-        <h2>Upload Image</h2>
+  return (
+    <LessonEditorDialog isOpen={isOpen} handleClose={handleDialogClose}>
+      <h2>Upload Image</h2>
 
-        {this.state.imgUrl && <img src={this.state.imgUrl} />}
-        <input type="file" name="file" onChange={this.handleChange} />
+      {imgUrl && <img src={imgUrl} />}
+      <input type="file" name="file" onChange={handleChange} />
 
-        {this.state.error && (
-          <div className="alert alert-error" role="alert">
-            <span>{this.state.error.toString()}</span>
-          </div>
-        )}
+      {error && (
+        <div className="alert alert-error" role="alert">
+          <span>{error.toString()}</span>
+        </div>
+      )}
 
-        <label style={styles.label}>
-          Expandable
-          <input
-            type="checkbox"
-            checked={this.state.expandable}
-            style={styles.checkbox}
-            onChange={e => this.setState({expandable: e.target.checked})}
-          />
-          <HelpTip>
-            <p>
-              Check if you want the image to be able to be enlarged in a dialog
-              over the page when clicked.
-            </p>
-          </HelpTip>
-        </label>
-
-        <hr />
-
-        <Button
-          text={i18n.closeAndSave()}
-          onClick={this.handleCloseAndSave}
-          color={Button.ButtonColor.orange}
-          className="save-upload-image-button"
+      <label style={styles.label}>
+        Expandable
+        <input
+          type="checkbox"
+          checked={expandable}
+          style={styles.checkbox}
+          onChange={e => setExpandable(e.target.checked)}
         />
-      </LessonEditorDialog>
-    );
-  }
+        <HelpTip>
+          <p>
+            Check if you want the image to be able to be enlarged in a dialog
+            over the page when clicked.
+          </p>
+        </HelpTip>
+      </label>
+
+      <hr />
+
+      <Button
+        text={i18n.closeAndSave()}
+        onClick={handleCloseAndSave}
+        color={Button.ButtonColor.orange}
+        className="save-upload-image-button"
+      />
+    </LessonEditorDialog>
+  );
 }
+
+UploadImageDialog.propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  handleClose: PropTypes.func.isRequired,
+  uploadImage: PropTypes.func.isRequired
+};
 
 const styles = {
   checkbox: {

@@ -39,6 +39,7 @@ import {useRegionalPartner} from '../../components/useRegionalPartner';
 
 const CSD_URL = 'https://code.org/educate/csd';
 const CSP_URL = 'https://code.org/educate/csp';
+const CSA_URL = 'https://code.org/educate/csa';
 const PD_RESOURCES_URL =
   'https://support.code.org/hc/en-us/articles/115003865532';
 const CS_TEACHERS_URL = 'https://code.org/educate/community';
@@ -168,13 +169,13 @@ const AboutYou = props => {
             please visit the{' '}
             <a href={CSD_URL} target="_blank" rel="noopener noreferrer">
               CS Discoveries
-            </a>{' '}
-            and{' '}
+            </a>
+            ,{' '}
             <a href={CSP_URL} target="_blank" rel="noopener noreferrer">
               CS Principles
-            </a>{' '}
-            landing pages. For additional questions regarding the program or
-            application, please{' '}
+            </a>
+            , and <a href={CSA_URL}>CSA</a> landing pages. For additional
+            questions regarding the program or application, please{' '}
             <RegionalPartnerMiniContactPopupLink
               sourcePageId="teacher-application-first-page"
               notes="Please tell me more about the professional learning program for grades 6-12!"
@@ -221,7 +222,7 @@ const AboutYou = props => {
           </p>
           <LabeledInput name="streetAddress" />
           <LabeledInput name="city" />
-          <LabeledInput name="state" />
+          <LabeledSelect name="state" placeholder="Select a state" />
           <LabeledInput name="zipCode" />
 
           <LabeledCheckBoxes name="previousUsedCurriculum" />
