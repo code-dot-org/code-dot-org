@@ -58,9 +58,5 @@ ManageCodeReviewGroups.propTypes = {
 const styles = {
   buttonContainer: {
     marginLeft: 5
-  },
-  footer: {
-    display: 'flex',
-    justifyContent: 'space-between'
   }
 };
