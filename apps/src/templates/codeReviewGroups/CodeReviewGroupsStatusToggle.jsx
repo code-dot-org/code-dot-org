@@ -4,7 +4,9 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import CodeReviewGroupsDataApi from './CodeReviewGroupsDataApi';
 import {setCodeReviewExpiresAt} from '../../redux/sectionDataRedux';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
+import color from '@cdo/apps/util/color';
 
 function CodeReviewGroupsStatusToggle({
   codeReviewExpiresAt,
@@ -12,42 +14,55 @@ function CodeReviewGroupsStatusToggle({
   setCodeReviewExpiration
 }) {
   const [saveError, setSaveError] = useState(false);
+  const [saveInProgress, setSaveInProgress] = useState(false);
   const currentTime = Date.now();
-  const isEnabled = codeReviewExpiresAt
+  const isToggledOn = codeReviewExpiresAt
     ? codeReviewExpiresAt > currentTime
     : false;
   // find days left by dividing milliseconds left by 1000 * 60 * 60 * 24. Round up so we
   // do not show "in 0 days" on the last day.
   const daysLeft =
-    isEnabled &&
+    isToggledOn &&
     Math.ceil((codeReviewExpiresAt - currentTime) / (1000 * 60 * 60 * 24));
   const api = new CodeReviewGroupsDataApi(sectionId);
 
   const toggleEnableCodeReview = () => {
     setSaveError(false);
-    const toggledValue = !isEnabled;
+    setSaveInProgress(true);
+    const toggledValue = !isToggledOn;
     api
       .setCodeReviewEnabled(toggledValue)
       .success(result => {
         const newExpiration = result.expiration;
         setCodeReviewExpiration(newExpiration);
+        setSaveInProgress(false);
       })
       .fail(() => {
         setSaveError(true);
+        setSaveInProgress(false);
       });
   };
 
   return (
     <div>
-      <ToggleSwitch
-        isEnabled={isEnabled}
-        onToggle={toggleEnableCodeReview}
-        label={i18n.enableCodeReview()}
-      />
+      <div style={styles.toggleAndError}>
+        <ToggleSwitch
+          isToggledOn={isToggledOn}
+          onToggle={toggleEnableCodeReview}
+          label={i18n.enableCodeReview()}
+          disabled={saveInProgress}
+        />
+        {saveInProgress && <Spinner style={styles.spinner} size="medium" />}
+        {saveError && (
+          <p style={styles.saveError}>
+            {isToggledOn
+              ? i18n.codeReviewToggleDisableError()
+              : i18n.codeReviewToggleEnableError()}
+          </p>
+        )}
+      </div>
 
-      {saveError && <span>Error saving!</span>}
-
-      {isEnabled && (
+      {isToggledOn && (
         <p style={styles.enabledMessage}>
           {i18n.codeReviewAutoDisableMessage({daysLeft})}
         </p>
@@ -75,6 +90,18 @@ export default connect(
 
 const styles = {
   enabledMessage: {
-    fontStyle: 'italic'
+    fontStyle: 'italic',
+    color: color.dark_charcoal,
+    width: 360
+  },
+  saveError: {
+    color: color.red,
+    margin: 8
+  },
+  toggleAndError: {
+    display: 'flex'
+  },
+  spinner: {
+    marginLeft: 8
   }
 };
