@@ -228,7 +228,7 @@ ar:
             رحلتهما لاستكشاف سحر وجمال الجليد.
           lessons:
             Artist:
-              name: الرسام
+              name: برمج مع آنا و إلسا
           student_description: هيا نستخدم الأوامر البرمجية لنشارك آنا وإلسا رحلتهم
             لاستكشاف سحر وجمال الجليد. سوف تصنع ندفات الثلج والرسومات على الجليد عندما
             تتزلج عليه وأرض الأحلام الخاصة بك التي سوف تتمكن من مشاركتها مع أصدقائك!
@@ -384,7 +384,7 @@ ar:
             ديزني إنفينيتي.
           lessons:
             Infinity:
-              name: ما لانهاية
+              name: مختبر اللعب ديزني إنفينيتي
           student_description: استخدم "مختبر الألعاب" لإنشاء قصة أو لعبة ببطولة شخصيات
             ديزني إنفينيتي.
         algebrademo:
@@ -564,6 +564,11 @@ ar:
           lessons:
             Jigsaw:
               name: بانوراما
+              description_student: انقر واسحب لإنهاء الألغاز.
+              description_teacher: سيقدم هذا الدرس للطلاب فكرة عمّا يمكن توقعه عندما
+                يتوجهون إلى مختبر الكمبيوتر. يبدأ الدرس بمناقشة موجزة لتعريفهم على
+                آداب التعامل داخل مختبر الكمبيوتر، ثم يتقدمون في استخدام الكمبيوتر
+                لإكمال الألغاز عبر الإنترنت.
           student_description: جرّب البرنامج التعليمي للغز تجميع الصورة.
         step:
           title: الخطوة
@@ -1694,7 +1699,7 @@ ar:
             مجرة بعيدة، بعيدة جدا.
           lessons:
             Hour of Code 2015:
-              name: ساعة من البرمجة 2015
+              name: 'حرب النجوم: بناء مجرة باستعمال البرمجة'
           student_description: تعلم برمجة الإنسان الآلي، و اصنع لعبتك حرب النجوم في
             مجرة بعيدة، بعيدة جدا.
         mc:
@@ -3842,7 +3847,6 @@ ar:
           description: اصنع لعبة كرة السلة
           lessons:
             Bounce:
-              name: الارتداد
               description_student: هل تمنيت من قبل أن تلعب ألعاب الفيديو في المدرسة؟
                 في هذا الدرس، ستحصل على أمنيتك!
               description_teacher: في هذا النشاط عبر الإنترنت، سيتعلم الطلاب ماهية
@@ -4774,7 +4778,6 @@ ar:
           description: امزج وطابق عبر الألعاب الرياضية
           lessons:
             Sports:
-              name: الأنشطة الرياضية
               description_student: هل تمنيت من قبل أن تلعب ألعاب الفيديو في المدرسة؟
                 في هذا الدرس، ستحصل على أمنيتك!
               description_teacher: في هذا النشاط عبر الإنترنت، سيتعلم الطلاب ماهية
@@ -8593,7 +8596,7 @@ ar:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'ماين كرافت/: رحلة البطل ساعة من البرمجة'
             Minecraft Hour of Code:
-              name: ساعة من البرمجة مع ماين كرافت
+              name: 'ماين كرافت: رحلة البطل'
           student_description: عاد Minecraft بأنشطة جديدة تمامًا ومخصصة لساعة من البرمجة!
             رحلة عبر Minecraft مع البرمجة.
         applab-intro-staging:
@@ -12357,7 +12360,7 @@ ar:
             وحل المشكلات لاستكشاف العوالم تحت الماء وبنائها باستخدام الأوامر البرمجية.
           lessons:
             Aquatic:
-              name: ماينكرافت
+              name: 'ماينكرافت: الرحلة المائية'
           student_description: عادت لعبة ماينكرافت بنشاط جديد تمامًا! استخدم مهاراتك
             في الإبداع وحل المشكلات لاستكشاف العوالم تحت الماء وبنائها باستخدام الأوامر
             البرمجية.
@@ -22565,6 +22568,8 @@ ar:
           lessons:
             Virus Simulation for Code Bytes:
               name: برمجة محاكاة
+            Outbreak:
+              name: برمجة محاكاة
           lesson_groups:
             outbreak:
               display_name: محاكاة الانتشار
@@ -25591,6 +25596,8 @@ ar:
           lessons:
             lesson-15:
               name: يوم التقييم
+            Java Lab:
+              name: مختبر Java
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
@@ -25949,6 +25956,8 @@ ar:
               name: يوم التقييم
             lesson-15:
               name: يوم التقييم
+            Java Lab:
+              name: مختبر Java
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
@@ -25988,3 +25997,21 @@ ar:
           lessons:
             lesson-1:
               name: حفلة رقص (غير متصل)
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: عناصر واجهة المستخدم
+            lesson-2:
+              name: الأدوات
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: مسابقة التهجئة
+          title: مسابقة التهجئة
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: يوم التقييم
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى

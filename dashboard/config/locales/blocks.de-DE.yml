@@ -1203,6 +1203,17 @@ de:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": Taste
             "'sound://category_collect/clicky_crunch.mp3'": knirschen
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": Blase
+            "'sound://category_animals/bear.mp3'": Bär
+            "'sound://category_animals/cat.mp3'": Katze
+            "'sound://category_animals/cow.mp3'": Kuh
+            "'sound://category_animals/pig.mp3'": Schwein
+            "'sound://category_animals/sheep.mp3'": Schaf
+            "'sound://category_animals/chicken.mp3'": Huhn
+            "'sound://category_animals/elephant.mp3'": Elefant
+            "'sound://category_animals/dolphin.mp3'": Delphin
+            "'sound://category_animals/chick.mp3'": Huhn
+            "'sound://category_animals/dog.mp3'": Hund
             "'sound://category_digital/jump_7.mp3'": springen
       gamelab_pointInDirection:
         text: richte {SPRITE} nach {DIRECTION} aus
@@ -1313,11 +1324,6 @@ de:
           CONDITION:
             '"when"': wenn
             '"while"': solange
-      gamelab_spriteSayChoices:
-        options:
-          SPEECH:
-            '"I am Batman!"': Ich bin Batman!
-            '"I am Catwoman!"': Ich bin Catwoman!
       gamelab_subjectSpritePointer:
         text: "{SPRITE} geklicked"
       gamelab_textVariableJoin:
@@ -1714,12 +1720,34 @@ de:
         text: Monster zufällig anordnen
       Outbreak_stopMoving:
         text: Monster bewegen sich nicht mehr
-      PoemBot_makeNumSprites:
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Eiscreme
+            Stars: Sterne
+            Fireworks: Feuerwerk
+            '"rainbow"': Regenbogen
+            '"hearts"': Herzen
+            '"flowers"': Blumen
+            '"waves"': Wellen
+      Poetry_makeBurst:
+        options:
+          EFFECT:
+            '"burst"': platzen
+            '"rain"': Regen
+      Poetry_makeNewSpriteAnon:
+        text: erstelle neuen {ANIMATION_NAME} Sprite in {LOCATION}
+      Poetry_makeNumSprites:
         text: erzeuge {NUM} neue {ANIMATION_NAME} Sprites
-      PoemBot_playSound:
+      Poetry_playSound:
         text: spieleTon {SOUND}
-      PoemBot_setBackgroundEffect:
-        text: Hintergrundeffekt einstellen {EFFECT} {PALETTE}
+        options:
+          SOUND:
+            Break: Pause
+            Light: Hell
+      Poetry_setBackground:
+        text: setze Hintergrundfarbe {COLOR}
+      Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': Farben
@@ -1727,13 +1755,15 @@ de:
             '"space"': Leerzeichen
             '"stars"': Sterne
             '"ripples"': Welligkeit
+            '"rain"': Regen
+            '"bubbles"': Blasen
+            '"confetti"': Konfetti
+            '"hearts"': Farbenfrohe Herzen
           PALETTE:
-            '"sky"': Himmel
             '"rainbow"': Regenbogen
-      PoemBot_setBackgroundImageAs:
+      Poetry_setBackgroundImageAs:
         text: setze Hintergund auf {IMG}
-      PoemBot_setForegroundEffect:
-        text: Vordergrundeffekt einstellen {EFFECT}
+      Poetry_setForegroundEffect:
         options:
           EFFECT:
             '"rain"': Regen
@@ -1741,7 +1771,7 @@ de:
             '"hearts"': Farbenfrohe Herzen
             '"confetti"': Konfetti
             '"starburst"': Starburst
-      PoemBot_startBehavior:
+      Poetry_startBehavior:
         options:
           BEHAVIOR:
             fluttering: flattern
@@ -1752,7 +1782,7 @@ de:
             spinning_right: nach rechts drehen
             wandering: wandern
             wobbling: wackelnd
-      PoemBot_stopBehavior:
+      Poetry_stopBehavior:
         options:
           BEHAVIOR:
             fluttering: flattern
@@ -1763,8 +1793,22 @@ de:
             spinning_right: nach rechts drehen
             wandering: wandern
             wobbling: wackelnd
-      PoemBot_textVariableJoin:
+      Poetry_textVariableJoin:
         text: "{VAR}{TEXT2}"
+      Poetry_whenLineShows:
+        options:
+          N:
+            '0': "???"
+            '1': '1'
+            '2': '2'
+            '3': '3'
+            '4': '4'
+            '5': '5'
+            '6': '6'
+            '7': '7'
+            '8': '8'
+            '9': '9'
+            '10': '10'
       RyanLab_moveForward:
         text: vorwärts bewegen
       RyanLab_turnLeft:

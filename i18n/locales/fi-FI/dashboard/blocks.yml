@@ -1141,6 +1141,13 @@ fi:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": murskaa
+            "'sound://category_animals/bear.mp3'": karhu
+            "'sound://category_animals/cat.mp3'": kissa
+            "'sound://category_animals/cow.mp3'": lehmä
+            "'sound://category_animals/sheep.mp3'": lammas
+            "'sound://category_animals/chicken.mp3'": kana
+            "'sound://category_animals/dolphin.mp3'": delfiini
+            "'sound://category_animals/dog.mp3'": koira
             "'sound://category_digital/jump_7.mp3'": hyppää
       gamelab_pointInDirection:
         text: suuntaa {SPRITE} {DIRECTION}
@@ -1579,12 +1586,29 @@ fi:
         text: x koordinaatti {SPRITE}
       Mikelab_yLocationOf:
         text: y koordinaatti {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Jäätelö
+            Stars: Äänet
+            Fireworks: Ilotulitus
+            '"rainbow"': Sateenkaari
+            '"hearts"': Sydämet
+            '"flowers"': Kukat
+            '"waves"': Aallot
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': sade
+      Poetry_makeNewSpriteAnon:
+        text: tee uusi {ANIMATION_NAME} sprite sijaintiin {LOCATION}
       Poetry_playSound:
         text: PlaySound {SOUND}
+        options:
+          SOUND:
+            Light: Vaalea
+      Poetry_setBackground:
+        text: aseta taustaväri {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1592,6 +1616,10 @@ fi:
             '"space"': Avaruus
             '"stars"': Äänet
             '"ripples"': Aaltoilu
+            '"rain"': Sade
+            '"bubbles"': Kuplat
+            '"confetti"': Konfetti
+            '"hearts"': Värikkäät sydämet
           PALETTE:
             '"rainbow"': Sateenkaari
       Poetry_setBackgroundImageAs:

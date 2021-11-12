@@ -174,7 +174,7 @@ eu:
           description_short: Erabil dezagun kodea Ana eta Elsarekin bat egin dezagun izotz mundu magiko eta ederra esploratzeko.
           lessons:
             Artist:
-              name: Artista
+              name: Anna eta Elsarekin programatu
           student_description: Erabil dezagun kodea Ana eta Elsa elkar daitezen izotzaren edertasuna eta magia aurkitzen duten bitartean. Elur malutak eta patroiak sortuko dituzu izotz gainean patinatzen duzun bitartean eta modu honetan zure lagunekin partekatu dezakezun neguko paisaia sortuko duzu!
         course4:
           title: 4.  Kurtsoa
@@ -280,7 +280,7 @@ eu:
           description_short: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak edo jokoak sortzeko
           lessons:
             Infinity:
-              name: Infinitu
+              name: Disneyren Infinity Play Lab
           student_description: Erabil ezazu Play Lab Disney Infinity ko pertsonaiekin istorioak edo jokoak sortzeko
         algebrademo:
           lessons:
@@ -641,9 +641,6 @@ eu:
         starwarsblocks:
           description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
           description_short: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
-          lessons:
-            Hour of Code 2015:
-              name: 2015 Code ordua
           student_description: Ikasi droideak programatzen, eta sortu zure Star Wars jokua urrun, urruneko galaxia batetan.
         mc:
           title: Minecraft Kode Ordua
@@ -888,10 +885,6 @@ eu:
           lesson_groups:
             required:
               display_name: Bista orokorra
-        basketball:
-          lessons:
-            Bounce:
-              name: Errebotea
         csd2-2017:
           lessons:
             Lists:
@@ -1282,10 +1275,6 @@ eu:
           lessons:
             Creating Functions:
               name: Funtzioak sortzen
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft Kode Ordua
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -2499,3 +2488,8 @@ eu:
           lessons:
             lesson-1:
               name: Bista orokorra
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Letraz-letra
+          title: Letraz-letra

@@ -29,6 +29,8 @@ ja:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: October 1-31, 2021
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: "  今日から学び、明るい明日を築く。  "
   hoc2020_header_with_line_break_markdown: "  今日から学び、　　　明るい明日を築く。  "
   social_hoc2020_cs_important: 'CS is more important than ever. Let''s build the future
@@ -56,6 +58,7 @@ ja:
   social_hoc2019_coming_dates: もうすぐ2018年12月3～9日がHour of Codeです。コンピューターサイエンスはすべての生徒たちが学ぶべき基礎です。
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
   oceans_landing_title: "  AI for Oceans  "
   oceans_landing_description: "  機械学習とAIの倫理的利用について学びます。  "
   cs_for_good_hashtag: "#CSforGood"
@@ -110,6 +113,12 @@ ja:
   hoc_overview_oceans_tutorial_header: "  AI for Oceans  "
   hoc_overview_oceans_tutorial_desc: "  人工知能（AI）、機械学習、トレーニングデータ、偏見について学びながら、倫理的な問題やAIが世界の問題に対処するためにどのように利用できるかを探ります。
     \ "
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
   ai_video_title_what_is_ai: What is AI?
   ai_video_title_algorithm_bias: Fighting bias in algorithms
   ai_video_title_phone_knows_dog: How does your phone know this is a dog?
@@ -173,6 +182,10 @@ ja:
   codeorg_homepage_hoc2018_video: Watch our video
   hourofcode_homepage_hoc2018_header_line1: 世界中の誰でもHour of Codeのイベントを開催できます。45以上の言語の1時間のチュートリアルが用意されています。経験は必要ありません。
   hourofcode_homepage_hoc2018_header_line2: 4歳から104歳まで。
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
+  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
+    Connections
   hoc2018_tutorial_mchoc_description: コードブロックで、アレックスやスティーブをマインクラフト世界の冒険に連れ出しましょう。
   codeorg_homepage_hoc2019_dance_heading: 新しい <span class="highlight-word"> Dance&nbsp;Party!</span>
     をお試しください
@@ -1347,7 +1360,7 @@ ja:
   tutorial_codespeakhappy_name: Code a Happy Place Meditation App
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
-  tutorial_rpstress_name: Stress ball
+  tutorial_rpstress_name: 'Stress Ball: Code a clickable onscreen stress ball'
   tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
@@ -4812,8 +4825,9 @@ ja:
     program your own fantastic interactive stories, games, and animations. Following
     our creative, fun, activities means that you will develop computational thinking
     as well as coding skills!
-  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
-    can squash!
+  tutorial_rpstress_longdescription: Use Scratch blocks to create and personalise
+    your clickable stress ball with graphic effects, costume animation, and sound
+    effects.
   tutorial_bsdcause_longdescription: 'This course allows students to use code as a
     way to share what is important or interesting to them. They can follow the lesson
     or create unique projects while learning HTML, CSS and JavaScript. They are guided
@@ -5808,8 +5822,7 @@ ja:
   tutorial_codespeakhappy_language: 日本語
   tutorial_grokimage_language: English, English (UK)
   tutorial_icomputelearn_language: 日本語
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rpstress_language: English, English (UK)
   tutorial_bsdcause_language: 日本語
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
@@ -7290,7 +7303,7 @@ ja:
   tutorial_codespeakhappy_string_platforms: Chrome, Firefox
   tutorial_grokimage_string_platforms: モダンブラウザ、 Androidタブレット、iPad
   tutorial_icomputelearn_string_platforms: 最新ブラウザ
-  tutorial_rpstress_string_platforms: Chrome, Firefox
+  tutorial_rpstress_string_platforms: モダンブラウザ、 Androidタブレット、iPad
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: モダンブラウザ、 Androidタブレット、iPad
   tutorial_vidcodeanimojies_string_platforms: モダンブラウザ、 Androidタブレット、iPad

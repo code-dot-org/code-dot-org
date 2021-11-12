@@ -988,6 +988,7 @@ ko:
       email: '이메일'
       email_alternate: '대체 이메일'
       gender: '성 정체성'
+      school: '학교'
       school_name: '학교 이름'
       school_city: '학교 도시'
       school_country: '학교 국가'

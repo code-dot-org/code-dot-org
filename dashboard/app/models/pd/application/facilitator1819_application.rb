@@ -39,6 +39,7 @@ require 'state_abbr'
 module Pd::Application
   class Facilitator1819Application < FacilitatorApplicationBase
     include Pd::Facilitator1819ApplicationConstants
+    include Pd::SharedApplicationConstants
 
     has_one :pd_fit_weekend1819_registration,
       class_name: 'Pd::FitWeekend1819Registration',

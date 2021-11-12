@@ -621,6 +621,7 @@ sl:
   pd:
     form_labels:
       email: 'Elektronska pošta'
+      school: 'Šola'
       school_name: 'Ime šole'
       colombian_chilean_school_name: 'Ime šole'
     form_entries:

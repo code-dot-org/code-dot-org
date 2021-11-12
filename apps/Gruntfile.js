@@ -635,6 +635,10 @@ describe('entry tests', () => {
     'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
     'programming_expressions/new':
       './src/sites/studio/pages/programming_expressions/new.js',
+    'programming_expressions/edit':
+      './src/sites/studio/pages/programming_expressions/edit.js',
+    'programming_expressions/show':
+      './src/sites/studio/pages/programming_expressions/show.js',
     'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
     'scripts/new': './src/sites/studio/pages/scripts/new.js',
     'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
@@ -695,10 +699,6 @@ describe('entry tests', () => {
       './src/sites/code.org/pages/public/learn/local.js',
     'code.org/views/professional_learning_apply_banner':
       './src/sites/code.org/pages/views/professional_learning_apply_banner.js',
-    'code.org/views/at_home_banner':
-      './src/sites/code.org/pages/views/at_home_banner.js',
-    'code.org/views/virtual_hoc_banner':
-      './src/sites/code.org/pages/views/virtual_hoc_banner.js',
 
     'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
     'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',

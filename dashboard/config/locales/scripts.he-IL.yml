@@ -181,7 +181,7 @@ he:
             והיופי של קרח.
           lessons:
             Artist:
-              name: אמן
+              name: תכנתו עם אנה ואלזה
           student_description: תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם
             והיופי שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!
         course4:
@@ -287,7 +287,7 @@ he:
             דמויות האינסוף של דיסני.
           lessons:
             Infinity:
-              name: אינסוף
+              name: מעבדת הצעצועים עם דיסני אינסוף
           student_description: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות
             דמויות האינסוף של דיסני.
         algebrademo:
@@ -653,9 +653,6 @@ he:
             שלכם בגלקסיה רחוקה, רחוקה.
           description_short: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
             הפרטי שלכם בגלקסיה רחוקה, רחוקה.
-          lessons:
-            Hour of Code 2015:
-              name: שעת קוד 2015
           student_description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
             הפרטי שלכם בגלקסיה רחוקה, רחוקה.
         mc:
@@ -947,10 +944,6 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
-        basketball:
-          lessons:
-            Bounce:
-              name: להקפיץ
         csd2-2017:
           lesson_groups:
             csd2_1:
@@ -1632,7 +1625,7 @@ he:
           title: 'מיינקראפט: המסע של הירו'
           lessons:
             Minecraft Hour of Code:
-              name: 'שעת הקוד: גרסת מיינקראפט'
+              name: 'מיינקראפט: המסע של הירו'
         csp-explore-2017:
           lesson_groups:
             cspSurvey:
@@ -2167,6 +2160,9 @@ he:
           title: 'מיינקראפט: מסע ימי'
           description_short: השתמש ביצירתיות ובכישורי פתרון בעיות כדי לגלות ולבנות
             עולמות תת-ימיים עם קוד!
+          lessons:
+            Aquatic:
+              name: 'מיינקראפט: מסע ימי'
         dance--draft:
           lessons:
             Dance Party:
@@ -3416,6 +3412,8 @@ he:
           lessons:
             Virus Simulation for Code Bytes:
               name: קידוד של סימולציה
+            Outbreak:
+              name: קידוד של סימולציה
           lesson_groups:
             outbreak:
               display_name: סימולציית התפרצות
@@ -3908,3 +3906,14 @@ he:
               display_name: שיעורים
             lessonGroup-3:
               display_name: פּרוֹיֶקט
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: ווידג'טים
+            lesson-2:
+              name: כלים
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: תחרות איות
+          title: תחרות איות

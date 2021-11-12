@@ -1,0 +1,100 @@
+{
+  "category": "Poetry - Effects",
+  "config": {
+    "func": "addFrame",
+    "blockText": "set frame to {BRUSH}",
+    "color": [
+      240,
+      0.45,
+      0.65
+    ],
+    "args": [
+      {
+        "name": "BRUSH",
+        "type": "String",
+        "options": [
+          [
+            "Bamboo",
+            "\"placeholder\""
+          ],
+          [
+            "Beaded",
+            "\"placeholder\""
+          ],
+          [
+            "Brick",
+            "\"brick\""
+          ],
+          [
+            "Decorative",
+            "\"placeholder\""
+          ],
+          [
+            "Donuts",
+            "\"placeholder\""
+          ],
+          [
+            "Fire",
+            "\"placeholder\""
+          ],
+          [
+            "Flowers",
+            "\"flowers\""
+          ],
+          [
+            "Gilded",
+            "\"placeholder\""
+          ],
+          [
+            "Hearts",
+            "\"hearts\""
+          ],
+          [
+            "Ice Cream",
+            "\"placeholder\""
+          ],
+          [
+            "Leaves",
+            "\"placeholder\""
+          ],
+          [
+            "Metal Frame",
+            "\"placeholder\""
+          ],
+          [
+            "Paw Prints",
+            "\"pawPrints\""
+          ],
+          [
+            "Rainbow",
+            "\"rainbow\""
+          ],
+          [
+            "Stars",
+            "\"placeholder\""
+          ],
+          [
+            "Swirls",
+            "\"swirls\""
+          ],
+          [
+            "Water",
+            "\"placeholder\""
+          ],
+          [
+            "Waves",
+            "\"waves\""
+          ],
+          [
+            "Wood Frame",
+            "\"placeholder\""
+          ],
+          [
+            "Zig-Zag",
+            "\"zigzag\""
+          ]
+        ]
+      }
+    ]
+  }
+}

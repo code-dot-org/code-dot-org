@@ -2,6 +2,57 @@
   "zh-CN": {
     "data": {
       "objectives": {
+        "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
+          "description": "创建一个程序，利用多步法创建一个图像。"
+        },
+        "aa4e6c97-cd8a-47f8-95c2-2a207dcf6085": {
+          "description": "将复杂的形状分解成简单的组成部分。"
+        },
+        "4fc250ac-a8e1-41f4-bdf5-bd9757702cb3": {
+          "description": "开发响应定时事件的程序"
+        },
+        "efcad81f-908b-4e31-8602-02c5ef16ab26": {
+          "description": "开发响应用户输入的程序"
+        },
+        "a1b8b57a-cbb9-4fad-89fa-3f1eda46248b": {
+          "description": "使用代码创建舞蹈动画"
+        },
+        "93e23857-027c-4711-9033-a41de9430672": {
+          "description": "识别与输入事件相关的操作。"
+        },
+        "8e120010-1817-488a-8ca8-ce5198a0883d": {
+          "description": "使用序列和事件处理程序创建一个互动游戏。"
+        },
+        "67dec84f-bfa5-4756-9dbd-02a20ce3da52": {
+          "description": "与其他学生分享一件有创意的艺术品。"
+        },
+        "901c5c67-68b8-4eef-9d36-2966bbe0ce05": {
+          "description": "识别与输入事件相关的操作。"
+        },
+        "73964b0e-cea1-43cf-a130-410017addf73": {
+          "description": "使用序列和事件处理程序创建一个互动游戏。"
+        },
+        "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
+          "description": "与其他学生分享一件有创意的艺术品。"
+        },
+        "f9486b57-7160-4b3b-b327-b311239d5d26": {
+          "description": "开发响应定时事件的程序"
+        },
+        "251fe027-d9b3-4384-99f6-53505275e4ce": {
+          "description": "开发响应用户输入的程序"
+        },
+        "61a8d066-8bf8-4b0b-88e8-dbf1d453ba1a": {
+          "description": "使用代码创建舞蹈动画"
+        },
+        "dc3abd7d-0bac-48c2-b3ca-980bb53bcc09": {
+          "description": "讨论人工智能在他们生活中的作用。"
+        },
+        "d64de8b1-d394-4e02-a14c-8619ac9ed640": {
+          "description": "训练和测试机器学习模型。"
+        },
+        "d1e18ac0-d448-4585-a4ea-b76bfe7ac07b": {
+          "description": "关于人类偏见如何在机器学习中起重要作用的原因。"
+        },
         "106cae6e-93eb-48ca-b7bf-c8017b52139d": {
           "description": "声明一个变量"
         },

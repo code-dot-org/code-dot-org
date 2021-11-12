@@ -2,6 +2,78 @@
   "uk-UA": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Налагодження"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Налагодження"
+        },
+        "function/hero/unversioned": {
+          "word": "Функція"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Налагодження"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Налагодження"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Налагодження"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Налагодження"
+        },
+        "code/artist/unversioned": {
+          "word": "Код"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Налагодження"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Налагодження"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Налагодження"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Умови"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Цикли"
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Шифрування"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Налагодження"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Налагодження"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Налагодження"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Налагодження"
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Стискання без втрат"
+        },
+        "code/sports/unversioned": {
+          "word": "Код"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Налагодження"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Налагодження"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Налагодження"
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Машинне навчання"
+        },
         "behavior/coursef/2021": {
           "word": "Поведінка"
         },

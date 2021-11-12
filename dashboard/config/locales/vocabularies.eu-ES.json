@@ -2,6 +2,69 @@
   "eu-ES": {
     "data": {
       "vocabularies": {
+        "debugging/minecraft/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/hero/unversioned": {
+          "word": "Arazketa"
+        },
+        "function/hero/unversioned": {
+          "word": "Funtzioa"
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Arazketa"
+        },
+        "code/artist/unversioned": {
+          "word": "Kodea"
+        },
+        "debugging/artist/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Arazketa"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Baldintzak"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Itzuliak"
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/mc/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Arazketa"
+        },
+        "code/sports/unversioned": {
+          "word": "Kodea"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Arazketa"
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Arazketa"
+        },
         "variable/coursef/2021": {
           "word": "Aldagaia"
         },

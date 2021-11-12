@@ -2063,7 +2063,8 @@
           "hello_world_new": "Novo bloco!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Novo bloco!"
+          "hello_world_new": "Novo bloco!",
+          "hello_world_new_block": "Novo bloco!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "Novo bloco!"
@@ -2097,6 +2098,60 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Novo bloco!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Novo bloco!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Novo bloco!",
+          "poetry_foreground": "Novo bloco!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Novo bloco!",
+          "poetry_multiple_sprites": "Novo bloco!",
+          "poetry_new_block": "Novo bloco!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Novo bloco!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Novo bloco!",
+          "poetry_sprite_stops": "Novo bloco!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Novo bloco!",
+          "poetry_remove_sprite": "Novo bloco!"
+        },
+        "courseF_apps_aquarium": {
+          "run_button": "Pressione o botão Run primeiro!",
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "courseF_apps_card": {
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "courseF_apps_chatbot": {
+          "run_button": "Pressione o botão Run primeiro!",
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "courseF_apps_collector": {
+          "run_button": "Pressione o botão Run primeiro!",
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "courseF_apps_madlib": {
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "courseF_apps_pet": {
+          "run_button": "Pressione o botão Run primeiro!",
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "courseF_editable_card": {
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "courseF_editable_chatbot": {
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
+        },
+        "courseF_editable_madlib": {
+          "visualizationResizeBar": "Arraste os 3 pontos para redimensionar a área de jogo."
         }
       }
     }

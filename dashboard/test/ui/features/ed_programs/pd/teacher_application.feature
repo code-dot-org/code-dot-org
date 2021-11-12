@@ -1,5 +1,6 @@
 @dashboard_db_access
 @eyes
+@skip
 
 Feature: Teacher Application
 
@@ -10,21 +11,14 @@ Scenario: Basic teacher application submission
     And I open my eyes to test "Teacher Application"
 
   # Section 1
-  When I wait until element "h3" contains text "Section 1: About You"
+  When I wait until element "h3" contains text "Section 1: About You and Your School"
     And I press the first "input[name='country']" element
     And I press keys "Severus" for element "input#firstName"
     And I press keys "Snape" for element "input#lastName"
     And I press keys "5558675309" for element "input#phone"
     And I press keys "98101" for element "input#zipCode"
     And I press the first "input[name='completingOnBehalfOfSomeoneElse'][value='No']" element
-    Then I see no difference for "Section 1: About You"
-    And I press the first "button#next" element
-
-
-  # Section 2
-  Then I wait until element "h3" contains text "Section 2: Teaching Background"
-  And I wait until element "#school input" is visible
-  And I press keys "nonexistent" for element "#school input"
+    And I press keys "nonexistent" for element "#school input"
 
   # School: select other and enter manual data
   Then I wait until element ".VirtualizedSelectOption:contains('Other school not listed below')" is visible
@@ -44,8 +38,12 @@ Scenario: Basic teacher application submission
   And I press keys "5555882300" for element "input#principalPhoneNumber"
   And I press the first "input[name='currentRole']" element
   And I press the first "input[name='previousYearlongCdoPd']" element
+  And I press keys "Seattle" for element "input#city"
+  And I press keys "Washington" for element "input#state"
+  And I press keys "1501 4th Ave" for element "input#streetAddress"
+  And I press the first "input[name='previousUsedCurriculum']" element
 
-  Then I see no difference for "Section 2: Teaching Background"
+  Then I see no difference for "Section 1: About You and Your School"
   And I press the first "button#next" element
 
 
@@ -71,7 +69,6 @@ Scenario: Basic teacher application submission
   Then I wait until element "input[name='committed']" is visible
   And I press "input[name='committed']:first" using jQuery
   And I click selector "input[name='payFee']" if I see it
-  And I press the first "input[name='interestedInOnlineProgram']" element
   Then I see no difference for "Section 4: Summer Workshop"
   And I press the first "button#next" element
 

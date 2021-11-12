@@ -558,6 +558,11 @@ eu:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": karraska
+            "'sound://category_animals/cat.mp3'": katua
+            "'sound://category_animals/cow.mp3'": behia
+            "'sound://category_animals/sheep.mp3'": ardia
+            "'sound://category_animals/chicken.mp3'": oilaskoa
+            "'sound://category_animals/dog.mp3'": txakurra
             "'sound://category_digital/jump_7.mp3'": salto egin
       gamelab_randColor:
         text: ausazko kolorea
@@ -786,6 +791,10 @@ eu:
         options:
           EFFECT:
             '"rain"': euria
+      Poetry_playSound:
+        options:
+          SOUND:
+            Break: Irten
       RyanLab_moveForward:
         text: mugitu aurrera
       RyanLab_turnLeft:

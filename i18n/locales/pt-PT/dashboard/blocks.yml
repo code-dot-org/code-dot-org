@@ -760,6 +760,16 @@ pt:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": botão
             "'sound://category_collect/clicky_crunch.mp3'": triturar
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bolha
+            "'sound://category_animals/bear.mp3'": urso
+            "'sound://category_animals/cat.mp3'": gato
+            "'sound://category_animals/cow.mp3'": vaca
+            "'sound://category_animals/sheep.mp3'": ovelha
+            "'sound://category_animals/chicken.mp3'": galinha
+            "'sound://category_animals/elephant.mp3'": Elefante
+            "'sound://category_animals/dolphin.mp3'": golfinho
+            "'sound://category_animals/chick.mp3'": pinto
+            "'sound://category_animals/dog.mp3'": cão
             "'sound://category_instrumental/harpe_pluck_1.mp3'": Harpa
             "'sound://category_digital/jump_7.mp3'": saltar
       gamelab_pointInDirection:
@@ -1175,8 +1185,12 @@ pt:
           EFFECT:
             '"burst"': explodido
             '"rain"': chuva
+      Poetry_makeNewSpriteAnon:
+        text: fazer novo {ANIMATION_NAME} sprite at sprite at sprite at spr {LOCATION}
       Poetry_playSound:
         text: PlaySound {SOUND}
+      Poetry_setBackground:
+        text: definir cor de fundo {COLOR}
       Poetry_setBackgroundImageAs:
         text: definir fundo para {IMG}
       Poetry_whenLineShows:

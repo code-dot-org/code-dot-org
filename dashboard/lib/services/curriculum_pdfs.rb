@@ -100,6 +100,7 @@ module Services
 
       return false unless rack_env?(:staging)
       return false unless script_data['properties'].fetch('is_migrated', false)
+      return false if script_data['properties'].fetch('use_legacy_lesson_plans', false)
       return false if DCDO.get('disable_curriculum_pdf_generation', false)
 
       script = Script.find_by(name: script_data['name'])
@@ -117,7 +118,7 @@ module Services
     # in order to generate the overview pdf. When a course is in-development or pilot
     # signed out users can not see the unit overview page
     def self.should_generate_overview_pdf?(unit)
-      !(unit.unit_without_lesson_plans? || [SharedConstants::PUBLISHED_STATE.pilot, SharedConstants::PUBLISHED_STATE.in_development].include?(unit.get_published_state))
+      !(unit.unit_without_lesson_plans? || [SharedCourseConstants::PUBLISHED_STATE.pilot, SharedCourseConstants::PUBLISHED_STATE.in_development].include?(unit.get_published_state))
     end
 
     # Do no generate the resources pdf is there are no lesson plans since

@@ -1154,6 +1154,16 @@ el:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": κουμπί
             "'sound://category_collect/clicky_crunch.mp3'": τρίξιμο
+            "'sound://category_animals/bear.mp3'": Αρκούδα
+            "'sound://category_animals/cat.mp3'": γάτα
+            "'sound://category_animals/cow.mp3'": αγελάδα
+            "'sound://category_animals/pig.mp3'": γουρούνι
+            "'sound://category_animals/sheep.mp3'": πρόβατο
+            "'sound://category_animals/chicken.mp3'": κοτόπουλο
+            "'sound://category_animals/elephant.mp3'": ελέφαντας
+            "'sound://category_animals/dolphin.mp3'": δελφίνι
+            "'sound://category_animals/dog.mp3'": σκύλος
+            "'sound://category_animals/tiger.mp3'": τίγρης
             "'sound://category_digital/jump_7.mp3'": πήδα
       gamelab_pointInDirection:
         text: στρίψε το {SPRITE} {DIRECTION}
@@ -1605,12 +1615,29 @@ el:
         text: x συντεταγμένη του {SPRITE}
       Mikelab_yLocationOf:
         text: y συντεταγμένη του {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Παγωτό
+            Stars: Αστέρια
+            Fireworks: Πυροτεχνήματα
+            '"rainbow"': Ουράνιο τόξο
+            '"hearts"': Καρδιές
+            '"flowers"': Λουλούδια
+            '"waves"': Κύματα
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': βροχή
+      Poetry_makeNewSpriteAnon:
+        text: δημιουργία νέων {ANIMATION_NAME} Σπράιτ σε {LOCATION}
       Poetry_playSound:
         text: παίξεΉχο {SOUND}
+        options:
+          SOUND:
+            Light: Φωτεινό
+      Poetry_setBackground:
+        text: όρισε χρώμα παρασκηνίου σε {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1619,6 +1646,10 @@ el:
             '"space"': Διάστημα
             '"stars"': Αστέρια
             '"ripples"': Πτυχώσεις
+            '"rain"': Βροχή
+            '"bubbles"': Μπουρμπουλήθρες
+            '"confetti"': Κομφετί
+            '"hearts"': Πολύχρωμες καρδιές
           PALETTE:
             '"rainbow"': Ουράνιο τόξο
       Poetry_setBackgroundImageAs:

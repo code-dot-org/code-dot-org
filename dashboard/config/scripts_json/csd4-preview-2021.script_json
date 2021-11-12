@@ -4,13 +4,15 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "hideable_lessons": true,
-      "student_detail_progress_view": true,
       "curriculum_path": "https://curriculum.code.org/csd-preview-21/unit4/{LESSON}",
       "curriculum_umbrella": "CSD",
-      "has_verified_resources": true,
       "has_lesson_plan": true,
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_course": true,
+      "pilot_experiment": "csd-2021-preview",
       "project_sharing": true,
+      "student_detail_progress_view": true,
       "teacher_resources": [
         [
           "lessonPlans",
@@ -29,12 +31,15 @@
           "https://curriculum.code.org/csd-preview-21/unit4/standards/"
         ]
       ],
-      "pilot_experiment": "csd-2021-preview"
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-08-03 22:48:03 UTC",
+    "family_name": "csd4-preview-2021",
+    "serialized_at": "2021-11-10 21:43:32 UTC",
     "published_state": "pilot",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csd4-preview-2021"
     }

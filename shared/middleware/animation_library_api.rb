@@ -52,7 +52,7 @@ class AnimationLibraryApi < Sinatra::Base
       body = request.body
       key = "level_animations/#{animation_name}"
 
-      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body, content_type: request.content_type)
     else
       bad_request
     end
@@ -68,7 +68,7 @@ class AnimationLibraryApi < Sinatra::Base
       body = request.body
       key = "spritelab/#{category}/#{animation_name}"
 
-      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body, content_type: request.content_type)
     else
       bad_request
     end
@@ -130,6 +130,22 @@ class AnimationLibraryApi < Sinatra::Base
   end
 
   #
+  # GET /api/v1/animation-library/level-animations-filenames/
+  #
+  # Retrieve filenames from the level-animations bucket
+  get %r{/api/v1/animation-library/level-animations-filenames} do
+    animations_by_name = []
+    prefix = 'level_animations'
+    bucket = Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET)
+    bucket.objects({prefix: prefix}).each do |object_summary|
+      animation_name = object_summary.key[/level_animations[^.]+/]
+      # Push into animations collection if unique
+      animations_by_name.push(animation_name)
+    end
+    {filenames: animations_by_name}.to_json
+  end
+
+  #
   # POST /api/v1/animation-library/default-spritelab/
   #
   # Update default sprite list in S3
@@ -139,7 +155,7 @@ class AnimationLibraryApi < Sinatra::Base
       body = request.body.string
       key = ANIMATION_DEFAULT_MANIFEST_LEVELBUILDER
 
-      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body, content_type: request.content_type)
     else
       bad_request
     end
@@ -171,7 +187,7 @@ class AnimationLibraryApi < Sinatra::Base
       body = request.body.string
       key = ANIMATION_DEFAULT_MANIFEST_JSON_LEVELBUILDER
 
-      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body)
+      Aws::S3::Bucket.new(ANIMATION_LIBRARY_BUCKET).put_object(key: key, body: body, content_type: request.content_type)
     else
       bad_request
     end

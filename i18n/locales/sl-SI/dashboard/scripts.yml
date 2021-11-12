@@ -158,7 +158,7 @@ sl:
           description_short: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju čarabnosti in lepote ledu.
           lessons:
             Artist:
-              name: Umetnik
+              name: Frozen (Ledeno kraljestvo) z Ano in Elso
           student_description: Uporabimo kodo in se pridružimo Anni in Elsi, pri raziskovanju čarabnosti in lepote ledu.
         course4:
           title: Tečaj 4
@@ -239,10 +239,6 @@ sl:
               name: Velika Igra - Animacija
             'Play Lab: Defining Variables (Big Game)':
               name: Velika Igra - Spremenljivke
-        infinity:
-          lessons:
-            Infinity:
-              name: Neskončnost
         20-hour:
           description: Ta 20-urni tečaj predstavlja bistvo računalništva in konceptov programiranja. Tečaj je namenjen za uporabo v razredih K-8, vendar je zabaven za učenje v vseh starostih.
           description_short: Ta 20-urni tečaj zajema bistvo računalnitšva in programerskih konceptov v tečajih 2-4.
@@ -415,10 +411,6 @@ sl:
             While Loops:
               name: 'Zanka: dokler velja'
         starwars:
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
-        starwarsblocks:
           lessons:
             Hour of Code 2015:
               name: Hour of Code 2015
@@ -609,10 +601,6 @@ sl:
               display_name: Pregled
             content:
               display_name: Vsebina
-        basketball:
-          lessons:
-            Bounce:
-              name: Skokica
         csd2-2017:
           lessons:
             Lists:
@@ -1020,10 +1008,6 @@ sl:
           lessons:
             Creating Functions:
               name: Ustvarjanje funkcij
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft Ura za kodo
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -2295,5 +2279,14 @@ sl:
               display_name: Vsebina
             lesson_group:
               display_name: Vsebina
+            lessonGroup-2:
+              display_name: Vsebina
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Čebelica črkuje besede
+          title: Čebelica črkuje besede
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Vsebina

@@ -661,7 +661,11 @@
         "international_outbreak_freeplay": "Teile eine Nachricht",
         "CourseD_EOC_starwars": "Erschaffe ein Star Wars Spiel",
         "CourseD_EOC_starwars_2021": "Erschaffe ein Star Wars Spiel",
-        "CourseF_outbreak6": "Zufallswahrscheinlichkeit"
+        "CourseF_outbreak6": "Zufallswahrscheinlichkeit",
+        "helloworld_animals_costumes": "Kostüme",
+        "helloworld_emoji_costumes": "Kostüme",
+        "helloworld_food_costumes": "Kostüme",
+        "helloworld_retro_costumes": "Kostüme"
       }
     }
   }

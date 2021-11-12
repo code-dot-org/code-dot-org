@@ -1170,7 +1170,21 @@ ar:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": زر
             "'sound://category_collect/clicky_crunch.mp3'": سحق
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": فقاعة
+            "'sound://category_animals/bear.mp3'": دب
+            "'sound://category_animals/cat.mp3'": قطه
+            "'sound://category_animals/cow.mp3'": بقرة
+            "'sound://category_animals/pig.mp3'": خنزير
+            "'sound://category_animals/sheep.mp3'": خروف
+            "'sound://category_animals/goat.mp3'": ماعز
+            "'sound://category_animals/chicken.mp3'": دجاجة
+            "'sound://category_animals/rooster.mp3'": ديك
+            "'sound://category_animals/elephant.mp3'": فيل
+            "'sound://category_animals/dolphin.mp3'": الدولفين
+            "'sound://category_animals/chick.mp3'": فرخ
+            "'sound://category_animals/dog.mp3'": كلب
             "'sound://category_instrumental/harpe_pluck_1.mp3'": قيثارة
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": تحديد
             "'sound://category_digital/jump_7.mp3'": قفز
       gamelab_pointInDirection:
         text: نقطه {SPRITE} {DIRECTION}
@@ -1630,13 +1644,30 @@ ar:
         text: x إحداثيات {SPRITE}
       Mikelab_yLocationOf:
         text: إحداثيات Y من {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: آيس كريم
+            Stars: نجوم
+            Fireworks: مفرقعات
+            '"rainbow"': ألوان
+            '"hearts"': قلوب
+            '"flowers"': زهور
+            '"waves"': أمواج
       Poetry_makeBurst:
         options:
           EFFECT:
             '"burst"': تدفق
             '"rain"': مطر
+      Poetry_makeNewSpriteAnon:
+        text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
       Poetry_playSound:
         text: بلاي ساوند {SOUND}
+        options:
+          SOUND:
+            Light: ضوء
+      Poetry_setBackground:
+        text: عيّن لون الخلفية {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1645,6 +1676,10 @@ ar:
             '"space"': الفضاء
             '"stars"': نجوم
             '"ripples"': تموجات
+            '"rain"': مطر
+            '"bubbles"': فقاعات
+            '"confetti"': قصاصات من الورق
+            '"hearts"': قلوب ملونة
           PALETTE:
             '"rainbow"': ألوان
       Poetry_setBackgroundImageAs:

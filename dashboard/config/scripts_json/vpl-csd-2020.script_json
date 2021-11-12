@@ -5,6 +5,8 @@
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
+      "is_course": true,
+      "pilot_experiment": "20-21-virtual-AYW-CSD",
       "student_detail_progress_view": true,
       "teacher_resources": [
         [
@@ -24,12 +26,15 @@
           "/link/to/professional/learning"
         ]
       ],
-      "pilot_experiment": "20-21-virtual-AYW-CSD"
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-08-03 22:48:01 UTC",
+    "family_name": "vpl-csd-2020",
+    "serialized_at": "2021-11-10 21:46:25 UTC",
     "published_state": "pilot",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "vpl-csd-2020"
     }

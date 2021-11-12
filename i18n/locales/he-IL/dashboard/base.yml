@@ -882,6 +882,7 @@ he:
       email: 'דואר אלקטרוני'
       email_alternate: 'דוא"ל חלופי'
       gender: 'זהות מגדרית'
+      school: 'בית ספר'
       school_name: 'שם בית הספר'
       school_city: 'יישוב בית הספר'
       school_country: 'ארץ בית הספר'

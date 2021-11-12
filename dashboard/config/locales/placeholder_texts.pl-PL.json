@@ -489,7 +489,11 @@
           "83e4a96aed96436c621b9809e258b309": "ryba",
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "stworzenie",
           "795f3202b17cb6bc3d4b771d8c6c9eaf": "inne",
-          "f655df68ec33643278de7e69794e8d76": "Wirtualne akwarium"
+          "f655df68ec33643278de7e69794e8d76": "Wirtualne akwarium",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Co dodasz?",
+          "0d3e73168beb875063ea0f0302fe32bd": "Która ryba?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Które stworzenie?",
+          "78574118d153534fd0925a2f5ca25e79": "Która rzecz?"
         },
         "courseF_apps_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
@@ -504,17 +508,25 @@
           "ae096fbf24d913754b01a1601672bf62": "też!",
           "6dfcc5e477ebd3e2c893b3fc86b2eb93": "ma lat także!",
           "605f302ebc9f7fbacba60b15f551a633": "Jaki jest Twój ulubiony kolor? ",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:"
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:",
+          "1f258d88a70309efc1435ef5daa277a0": "Dziękuję za dzisiejszą rozmowę!"
         },
         "courseF_apps_collector": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Wygrywasz!",
           "077449fb290b51b9d70c9f2f3d3213bc": " sekund",
-          "490082498449bd20ff0199737dfa4916": "Wybierz typ gry:"
+          "490082498449bd20ff0199737dfa4916": "Wybierz typ gry:",
+          "41f2b2212de0105c2a942ebb4a44e449": "Gra \"Wielki kolekcjoner\"!"
         },
         "courseF_apps_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
           "e522ee28f39133b45497637539ff429b": "Wprowadź liczbę:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier."
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier.",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Zabawy na imprezy",
+          "bf08dd3d1961874f13e77c936aad27e5": "Historia pustej przestrzeni",
+          "514b8d5320196898a9ced3efe0d4c802": "Wpisz przymiotnik:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz przedmiot:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Wpisz część ciała:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "Wyścig na     długości!"
         },
         "courseF_editable_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
@@ -530,12 +542,19 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
           "6dfcc5e477ebd3e2c893b3fc86b2eb93": "ma lat także!",
           "605f302ebc9f7fbacba60b15f551a633": "Jaki jest Twój ulubiony kolor? ",
-          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:"
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Wprowadź swój ulubiony kolor:",
+          "1f258d88a70309efc1435ef5daa277a0": "Dziękuję za dzisiejszą rozmowę!"
         },
         "courseF_editable_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
           "e522ee28f39133b45497637539ff429b": "Wprowadź liczbę:",
-          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier."
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " gier.",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Zabawy na imprezy",
+          "bf08dd3d1961874f13e77c936aad27e5": "Historia pustej przestrzeni",
+          "514b8d5320196898a9ced3efe0d4c802": "Wpisz przymiotnik:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz przedmiot:",
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Wpisz część ciała:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "Wyścig na     długości!"
         },
         "courseF_text_answer": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"

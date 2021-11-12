@@ -1017,6 +1017,7 @@ zh-CN:
       email: 电子邮件
       email_alternate: 备用电子邮件
       gender: 性别
+      school: 学校
       school_name: 学校名称
       school_city: 学校所在城市
       school_country: 学校所在国家

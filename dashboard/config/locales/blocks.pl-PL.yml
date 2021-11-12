@@ -1179,6 +1179,7 @@ pl:
             '"burst"': wybuch
             '"pop"': popularny
             '"rain"': deszcz
+            '"spiral"': spirala
             '"zigzag"': zigzag
       gamelab_makeNewSpriteAnon:
         text: zrobić nowy {ANIMATION_NAME} sprite w {LOCATION}
@@ -1237,11 +1238,24 @@ pl:
             "'sound://category_swish/quick_swing.mp3'": huśtać się
             "'sound://category_nature/summer_night_loop.mp3'": letnia noc
             "'sound://category_background/ocean_waves.mp3'": fale oceanu
+            "'sound://category_nature/south_carolina_beach_ripple.mp3'": fala na plaży
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bąbel
+            "'sound://category_animals/bear.mp3'": niedźwiedź
+            "'sound://category_animals/cat.mp3'": kot
+            "'sound://category_animals/cow.mp3'": krowa
+            "'sound://category_animals/pig.mp3'": świnka
+            "'sound://category_animals/sheep.mp3'": owca
+            "'sound://category_animals/goat.mp3'": koza
+            "'sound://category_animals/chicken.mp3'": kurczak
+            "'sound://category_animals/rooster.mp3'": kogut
+            "'sound://category_animals/elephant.mp3'": słoń
             "'sound://category_animals/dolphin.mp3'": kliknięcia delfina
             "'sound://category_nature/thunderstorm_1.mp3'": burza z piorunami
             "'sound://category_animals/chick.mp3'": ćwierkanie ptaszka
             "'sound://category_animals/dog.mp3'": szczekanie psa
             "'sound://category_animals/tiger.mp3'": ryk tygrysa
+            "'sound://category_collect/trill_stings.mp3'": trill
+            "'sound://category_instrumental/harpe_pluck_1.mp3'": harfa
             "'sound://category_tap/vibrant_positive_tap_1.mp3'": jasny
             "'sound://category_notifications/vibrant_game_tonal_hit_6_correct.mp3'": mistyczny
             "'sound://category_transition/trippy_robotic_transition.mp3'": głos robota
@@ -1311,6 +1325,7 @@ pl:
             '"https://studio.code.org/blockly/media/skins/studio/background_rainbow.png"': tęcza
             '"https://studio.code.org/blockly/media/skins/studio/background_scifi.png"': SF
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': boisko
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etap
             '"https://studio.code.org/blockly/media/skins/studio/background_santa.png"': gwiazdy
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': słońce
@@ -1321,6 +1336,7 @@ pl:
               tenicowy
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': wyspa
               drzew
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': podziemny
             '"https://studio.code.org/blockly/media/skins/studio/background_underwater.png"': podwodny
             '"https://studio.code.org/blockly/media/skins/studio/background_winter.png"': zima
             undefined: żaden
@@ -1384,19 +1400,6 @@ pl:
             '"while"': dopóki
       gamelab_spriteSay:
         text: "{SPRITE} powiedz {SPEECH}"
-      gamelab_spriteSayChoices:
-        text: "{SPRITE} powiedz {SPEECH}"
-        options:
-          SPEECH:
-            '"I am Batman!"': Jestem Batmanem!
-            '"Being kind is never wasted."': Bycie miłym nigdy nie jest stratą.
-            '"When you know better, you do better."': Gdy wiesz lepiej, robisz lepiej.
-            '"You always pass failure on the way to success."': Zawsze mijasz porażkę
-              na drodze do sukcesu.
-            '"Make each day your masterpiece."': Uczyń każdy dzień swoim arcydziełem.
-            '"I am Catwoman!"': Jestem Kobietą Kotem!
-            '"Never quit!"': Nigdy nie rezygnuj!
-            '"Live Fast."': Żyj szybko.
       gamelab_spriteSayTime:
         text: "{SPRITE}mówi{TEXT1}przez{NUM}sekundy"
       gamelab_startAvoiding:
@@ -1745,6 +1748,7 @@ pl:
               parku
             '"https://studio.code.org/api/v1/animation-library/5K0h1rGe5ql4J9TdlqggIzGZYzbD38pF/category_backgrounds/pine_trees.png"': sosny
             '"https://studio.code.org//api/v1/animation-library/WJjQlG1rFhbVmPfcuI_wy6tpwI6mHYnM/category_backgrounds/soccer_field.png"': boisko
+            '"https://studio.code.org/api/v1/animation-library/Thvd6E7yU59nfop.zZKGWKoR8VLZDTq./category_backgrounds/stage.png"': etap
             '"https://studio.code.org/api/v1/animation-library/RblQqWAuW0EkLfYuRVK4LRc0uY_76fvi/category_backgrounds/subway.png"': metro
             '"https://studio.code.org/api/v1/animation-library/ZY0THG5IedwCgmWVIhiPdJH59OORnmgT/category_backgrounds/sun_and_rainbow.png"': słońce
               i tęcza
@@ -1754,6 +1758,7 @@ pl:
               tenicowy
             '"https://studio.code.org/api/v1/animation-library/yatDsUkvGtT_.fSv68qi1d4YJDMHdGnS/category_backgrounds/tree_island.png"': wyspa
               drzew
+            '"https://studio.code.org/api/v1/animation-library/INSgmsgsLuIk1Aqp7g72h9nLFez.NX0p/category_backgrounds/underground.png"': podziemny
       Mikelab_setProp:
         options:
           PROPERTY:
@@ -1864,12 +1869,44 @@ pl:
         text: załóż Miasto Potworów z [COUNT] [0] potworami
       Outbreak_stopMoving:
         text: potwory zatrzymują się
+      Poetry_addFrame:
+        text: dodaj zarys {BRUSH}
+        options:
+          BRUSH:
+            Metal Frame: Metalowa rama
+            Bold: Pogrubiony
+            Shadow Box: Pudełko cienia
+            Gilded: Pozłacany
+            Beaded: Zroszony
+            Beveled: Skośny
+            Wood Frame: Drewniana rama
+            Bamboo: Bambus
+            Decorative: Pismo dekoracyjne
+            Donuts: Pączki
+            Ice Cream: Lody
+            Fire: Ogień
+            Water: Woda
+            Leaves: Liście
+            Stars: Gwiazdy
+            Fireworks: Fajerwerki
+            '"rainbow"': Tęcza
+            '"hearts"': Serca
+            '"flowers"': Kwiaty
+            '"zigzag"': Zig-Zag
+            '"swirls"': Wiry
+            '"pawPrints"': Odciski łap
+            '"waves"': Fale
+            '"brick"': Cegła
       Poetry_addLine:
         text: dodaj linię {LINE}
+      Poetry_addTextHighlight:
+        text: dodaj wyróżnienie tekstu
+      Poetry_animateText:
+        text: animowany tekst
       Poetry_destroy:
         text: usuń {ANIMATION_NAME}
-      Poetry_hidePoem:
-        text: ukryj wiersz
+      Poetry_hideText:
+        text: ukryj tekst
       Poetry_makeBurst:
         text: utwórz {EFFECT} efekt z {NUM} {ANIMATION_NAME} duszkami
         options:
@@ -1878,29 +1915,59 @@ pl:
             '"pop"': popularny
             '"rain"': deszcz
             '"zigzag"': zigzag
+      Poetry_makeNewSpriteAnon:
+        text: zrobić nowy {ANIMATION_NAME} sprite w {LOCATION}
       Poetry_makeNumSprites:
         text: utwórz {NUM} nowymi {ANIMATION_NAME} duszkami
-      Poetry_playSound:
-        text: PlaySound {SOUND}
+      Poetry_playMusic:
+        text: graj muzykę {SOUND}
         options:
           SOUND:
-            '"sound://category_bell/bells_win_low.mp3"': Dzwon
-            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Jasny
+            Calm: spokojny
+            Campfire: Ognisko
+            Drizzle: Mżawka
             '"sound://category_background/fire_burning.mp3"': Kominek
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': Las
             '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': Harfy
+            Haunted: Nawiedzany
+            Hum: Szum
+            Mission: Misja
             '"sound://category_nature/summer_night_loop.mp3"': Noc
             '"sound://category_background/ocean_waves.mp3"': Ocean
             '"sound://category_background/rain_thunderstorm_calm.mp3"': Deszczowy
             '"sound://category_background/rainforest_ambient_sound.mp3"': Deszczowy
               las
+            Riding: Jazda konna
             '"sound://category_background/wavering_wind.mp3"': Senny
-            '"sound://category_background/typewriter.mp3"': Maszyna do pisania
+            Slow: Powoli
             '"sound://category_background/waterfall.mp3"': Wodospad
+      Poetry_playSound:
+        text: PlaySound {SOUND}
+        options:
+          SOUND:
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Jasny
+            Bell: Dzwon
+            Boing: Boing
+            Bubble: Bąbelki
+            Chatter: Gadać
+            Deflate: Siadać
+            Fail: Upadek
+            Flutter: Trzepotanie
+            Jump: Skok
+            Light: Jasne
+            Poof: Puszysty
+            Scan: Skan
+            '"sound://category_background/typewriter.mp3"': Maszyna do pisania
+            Vibrant: Wibrujący
+            Win: Zwycięstwo
+            Whirl: Wir
+            Wind Chimes: Dzwonki wietrzne
       Poetry_randomWord:
         text: losowe słowo
       Poetry_setAuthor:
-        text: ustaw autora wiersza {AUTHOR}
+        text: ustaw autora {AUTHOR}
+      Poetry_setBackground:
+        text: ustaw kolor tła {COLOR}
       Poetry_setBackgroundEffect:
         text: ustaw efekt tła {EFFECT} {PALETTE}
         options:
@@ -1913,8 +1980,14 @@ pl:
             '"fadeColors"': Zanikanie kolorów
             '"blooming"': Rozkwiecony
             '"ripples"': Fale
-            '"clouds"': Chmury
+            '"clouds"': Pochmurno
+            '"rain"': Deszcz
+            '"bubbles"': Bąbelki
+            '"confetti"': Konfetti
+            '"hearts"': Kolorowe Serca
           PALETTE:
+            '"rainbow"': Tęcza
+            '"grayscale"': Czarny i biały
             '"sky"': Niebo
             '"ocean"': Ocean
             '"sunrise"': Wschód słońca
@@ -1923,8 +1996,6 @@ pl:
             '"summer"': Lato
             '"autumn"': Jesień
             '"winter"': Zima
-            '"grayscale"': Czarny i biały
-            '"rainbow"': Tęcza
             '"roses"': Róże
       Poetry_setBackgroundImageAs:
         text: ustaw tło na {IMG}
@@ -1934,16 +2005,15 @@ pl:
           FONT:
             '"Arial"': Arial
             '"Georgia"': Georgia
-            '"Palatino"': Palatino
             '"Times"': Times
             '"Courier"': Courier
             '"Arial Black"': Arial Black
             '"Impact"': Impact
-            '"Tahoma"': Tahoma
-            '"Verdana"': Verdana
+            '"Cursive"': Pochyły
       Poetry_setFontColor:
         text: ustaw kolor czcionki {FILL}
       Poetry_setForegroundEffect:
+        text: wykonaj efekt {EFFECT}
         options:
           EFFECT:
             '"rain"': Deszcz
@@ -1954,25 +2024,12 @@ pl:
             '"starburst"': Rozprysk
             '"glass"': Rozbijające się szkło
             '"twinkling"': Migotliwy
-      Poetry_setPoem:
-        text: ustaw wiersz {POEM}
-        options:
-          POEM:
-            '"---"': "---"
-            '"hafez"': Mój wspaniały obraz
-            '"carroll_1"': Błysk, Błysk, Mała gwiazda
-            '"rumi_1"': Śpiewaj
-            '"field"': Wynken, Blynken, and Nod
-            '"carroll_2"': Krokodyl
-            '"twain"': Ciepłe letnie słońce
-            '"wordsworth"': Wędrowałem samotnie jak chmura
-            '"carroll_3"': Jabberwocky
-            '"rios"': Nie wchodź do biblioteki
-            '"rumi_2"': Ocean
-            '"hughes_1"': Wariacje snów
-            '"hughes"': Harlem
-            '"hopler"': W ogrodzie
-            '"lomeli"': Zwróć
+      Poetry_setPrompt:
+        text: monituj użytkownika {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} o zmienną {VAR}
+      Poetry_setPromptWithChoices:
+        text: monit użytkownika {LEFT_QUOTE}{TEXT}{RIGHT_QUOTE} o zmienną {VAR} z
+          możliwością wyboru {LEFT_QUOTE_A}{A}{RIGHT_QUOTE_A} {LEFT_QUOTE_B}{B}{RIGHT_QUOTE_B}
+          {LEFT_QUOTE_C}{C}{RIGHT_QUOTE_C}
       Poetry_setSize:
         text: ustaw {SPRITE} rozmiar na {VAL}
       Poetry_setTextEffect:
@@ -1986,9 +2043,9 @@ pl:
             '"flyTop"': lecieć z góry
             '"flyBottom"': lecieć z dołu
       Poetry_setTitle:
-        text: ustaw tytuł wiersza {TITLE}
-      Poetry_showPoem:
-        text: pokaż wiersz
+        text: ustaw tytuł {TITLE}
+      Poetry_showText:
+        text: pokaż tekst
       Poetry_startBehavior:
         text: 'duszek {ANIMATION_NAME} rozpoczyna {BEHAVIOR} '
         options:
@@ -1996,6 +2053,10 @@ pl:
             fluttering: trzepotanie
             growing: rośnięcie
             jittering: trzęsienie się
+            moving_north_and_looping: pętla na północ
+            moving_south_and_looping: pętla na południe
+            moving_east_and_looping: pętla na wschód
+            moving_west_and_looping: pętla na zachód
             shrinking: zwężenie
             spinning_left: obracanie się w lewo
             spinning_right: obracanie się w prawo
@@ -2009,6 +2070,10 @@ pl:
             fluttering: trzepotanie
             growing: rośnięcie
             jittering: trzęsienie się
+            moving_north_and_looping: pętla na północ
+            moving_south_and_looping: pętla na południe
+            moving_east_and_looping: pętla na wschód
+            moving_west_and_looping: pętla na zachód
             shrinking: zwężenie
             spinning_left: obracanie się w lewo
             spinning_right: obracanie się w prawo

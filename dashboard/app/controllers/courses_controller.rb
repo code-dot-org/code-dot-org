@@ -87,6 +87,7 @@ class CoursesController < ApplicationController
       has_numbered_units: true
     )
     if unit_group.save
+      unit_group.write_serialization
       redirect_to action: :edit, course_name: unit_group.name
     else
       render 'new', locals: {unit_group: unit_group}
@@ -97,6 +98,7 @@ class CoursesController < ApplicationController
     unit_group = UnitGroup.find_by_name!(params[:course_name])
     unit_group.persist_strings_and_units_changes(params[:scripts], params[:alternate_units], i18n_params)
     unit_group.update(course_params)
+    unit_group.write_serialization
     CourseOffering.add_course_offering(unit_group)
     unit_group.reload
 
@@ -192,9 +194,9 @@ class CoursesController < ApplicationController
   private
 
   def course_params
-    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :announcements).to_h
+    cp = params.permit(:version_year, :family_name, :has_verified_resources, :has_numbered_units, :pilot_experiment, :published_state, :instruction_type, :instructor_audience, :participant_audience, :announcements).to_h
     cp[:announcements] = JSON.parse(cp[:announcements]) if cp[:announcements]
-    cp[:published_state] = SharedConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
+    cp[:published_state] = SharedCourseConstants::PUBLISHED_STATE.in_development unless cp[:published_state]
 
     cp
   end

@@ -217,7 +217,7 @@ ko:
           description_short: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 사용하세요.
           lessons:
             Artist:
-              name: 예술가
+              name: 안나, 엘사와 함께하는 코드
           student_description: 얼음의 마술과 아름다움을 탐구하는 안나, 엘사와 함께 코드를 해보세요. 스케이트를 타는 것
             처럼 쉽게 눈 송이와 패턴을 만들어서 겨울왕국을 꾸밀 수 있게 될 것입니다. 그렇게 만든 것들은 친구들에게 자랑하세요!
         course4:
@@ -369,7 +369,7 @@ ko:
           description_short: Play Lab을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 이야기나 게임을 만들어 보세요.
           lessons:
             Infinity:
-              name: 무한
+              name: 디즈니  무한 반복 Play lab
           student_description: Play Lab을 사용해서 디즈니 인피니티 캐릭터를 주연으로 하는 이야기나 게임을 만들어 보세요.
         algebrademo:
           lessons:
@@ -540,6 +540,9 @@ ko:
           lessons:
             Jigsaw:
               name: 직소퍼즐
+              description_student: 클릭 및 드래그하여 퍼즐을 완성하세요.
+              description_teacher: 이 레슨은 학생들에게 컴퓨터 랩으로 갈 때 무엇을 기대할지에 관한 아이디어를 줄 것입니다.
+                컴퓨터 랩에서의 매너를 소개하는 짧은 토론으로 시작하며, 컴퓨터를 사용해 온라인 퍼즐을 완성하는 활동까지 진행합니다.
           student_description: 그림 맞추기 튜토리얼을 해보세요.
         step:
           title: 단계
@@ -1694,7 +1697,7 @@ ko:
           description_short: 드로이드 프로그램을 배워보고, 자신만의 머나 먼 스타워즈 게임을 만들어보세요.
           lessons:
             Hour of Code 2015:
-              name: Hour of Code 2015
+              name: '스타워즈: 코드로 은하계 건설하기 (블러클리)'
           student_description: 드로이드 프로그램을 배워보고, 자신만의 머나 먼 스타워즈 게임을 만들어보세요.
         mc:
           title: 마인크래프트 Hour of Code
@@ -3633,7 +3636,6 @@ ko:
           description: 팀을 선택하고 농구경기를 하세요
           lessons:
             Bounce:
-              name: 바운스
               description_student: 학교에서 비디오 게임을 맘대로 해봤으면 하고 원해 본 적 있으세요? 이 레슨에서는 직접
                 비디오 게임을 만들거예요.
               description_teacher: 이 온라인 활동에서, 학생들은 이벤트가 무엇이고, 컴퓨터가 그것을 비디오 게임 등과
@@ -4399,7 +4401,6 @@ ko:
           description: 스포츠 혼합 및 매칭
           lessons:
             Sports:
-              name: 스포츠
               description_student: 학교에서 비디오 게임을 맘대로 해봤으면 하고 원해 본 적 있으세요? 이 레슨에서는 직접
                 비디오 게임을 만들거예요.
               description_teacher: 이 온라인 활동에서, 학생들은 이벤트가 무엇이고, 컴퓨터가 그것을 비디오 게임 등과
@@ -7690,7 +7691,7 @@ ko:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: '마인크래프트: 히어로의 여정 아워오브코드'
             Minecraft Hour of Code:
-              name: 마인크래프트 Hour of Code
+              name: '마인크래프트: 히어로의 여정'
           student_description: 마인크래프트가 새로운 활동과 함께 코딩의 시간을 위해 돌아왔습니다! 코딩과 함께 마인크래프트를
             여행하세요.
         applab-intro-staging:
@@ -10796,7 +10797,7 @@ ko:
             속 세계를 코드로 탐험하고 구축하세요.
           lessons:
             Aquatic:
-              name: 아쿠아틱
+              name: '마인크래프트: 보야지 아쿠아틱'
           student_description: 마인크래프트가 완전히 새로운 활동으로 다시 돌아 왔습니다! 창의력과 문제 해결 능력을 사용하여
             코드로 물 속 세계를 코드로 탐험하고 구축하세요.
         sconyers:
@@ -19766,6 +19767,8 @@ ko:
           lessons:
             Virus Simulation for Code Bytes:
               name: 시뮬레이션 코딩
+            Outbreak:
+              name: 시뮬레이션 코딩
           lesson_groups:
             outbreak:
               display_name: 발생 시뮬레이션
@@ -22506,6 +22509,8 @@ ko:
           lessons:
             lesson-15:
               name: 평가일
+            Java Lab:
+              name: Java 연구소
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -22902,6 +22907,8 @@ ko:
               name: 평가일
             lesson-15:
               name: 평가일
+            Java Lab:
+              name: Java 연구소
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
@@ -22935,5 +22942,23 @@ ko:
               display_name: 컨텐츠
             lesson_group:
               display_name: 컨텐츠
+            lessonGroup-2:
+              display_name: 컨텐츠
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: 위젯
+            lesson-2:
+              name: 툴
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: 말하는 꿀벌
+          title: 말하는 꿀벌
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: 평가일
+          lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠

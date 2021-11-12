@@ -234,7 +234,7 @@
         "HOC 2018 Level_2": "Csónakkal sokkal egyszerűbb, mint úszni a nyílt vízen! Menj a móló végére, ahol vízre szállhatsz.",
         "HOC 2018 Level_3": "Ragadd meg az evezőt, és hajózz ki a nyílt vizekre, hogy kifoghasd a **tőkehalat** ![](https://images.code.org/9b636884eefb1efe18f9f844e1e916a9-image-1538698597353.png).",
         "HOC 2018 Level_4": "Hadd egye meg a tőkehalat a **delfin** ![](https://images.code.org/8c240fd4df4da2795ba7ca942b77a057-image-1538947890991.png). Ismétlő blokkal gyorsabban átjutsz az óceánon.",
-        "HOC 2018 Level_5": "Valahol egy **nautiluszhéj** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** !\\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).",
+        "HOC 2018 Level_5": "Valahol egy **nautiluszhéj** ![](https://images.code.org/2eb084fa0c718dee6ca4b6379381f735-image-1538698936660.png) rejtőzik! Kutasd át az elsüllyedt hajót, hogy megleld a **ládát** \\!\\[  (<https://images.code.org/16cdd5779b38909d4bf47b29535c92b0-image-1538698950602.png>).",
         "HOC 2018 Level_6": "Úgy tűnik, irtó hideg van odakint! A víz alatti romokhoz vezető utad során fogj egy **lazacot** ![](https://images.code.org/c66eadf25b3cdfe20bbfdc91e2c28c94-image-1538699000102.png).",
         "HOC 2018 Level_7a": "Megtaláltad a víz alatti romokat. Keress a homokkőben egy **ládát** ![](https://images.code.org/29a5fd76b869d755a60d39fbbb4057eb-image-1538699081910.png), ami **prizmarin** ![](https://images.code.org/5f5ebe5121b8f9787d7dbd38ad0a86cc-image-1538699091018.png) kincset rejt.",
         "HOC 2018 Level_8": "Először jéghegyek, most meg láva? Menj végig ezen a vulkáni szigeten, és keresd meg a **trópusi halat** ![](https://images.code.org/6d3293e7709cb1a43d9f7617fd0cc2b8-image-1538699180397.png) a korallzátonyban.",
@@ -1096,7 +1096,23 @@
         "iceage_sound_and_points_dani": "Itt a kód az előző feladványodból, csak úgy, mint a Nagyit jobbra-balra mozgató kód. \nBe tudod úgy fejezni ezt a programot, hogy a **pontnyerés hang lejátszása** és a **pontszám** is aktiválódnak amikor Sid és Nagyi összeütköznek? \nNyomd meg a \"Futtatás\"-t, hogy játszhass a játékkal.",
         "iceage_throw_hearts": "Sid szeretné a nagymamája, Nagyi tudtára hozni, hogy szereti. \nHasználd az `amikor a 2. szereplő érinti bármely lövedéket` parancsot, hogy Sid (1. szereplő) szivecskékkel dobálja meg Nagyit (2. szereplő). \nÁllítsd Nagyi hangulatát boldogra amikor eltalálják a szivecskék.",
         "iceage_warn_ice_age": "Mindenkinek sietnie kell, mert egy jégvihar közeledik! \nVáltoztasd meg a színhelyet egy jeges háttérre, és állítsd Sid (1. szereplő) sebességét gyorsra.\nNyomd meg a \"Futtatás\"-t, és mozgasd Sidet Diegohoz, hogy figyelmeztesse.",
-        "iceage_warn_ice_age_dani": "Mindenkinek sietnie kell, mert egy jégvihar közeledik! \nVáltoztasd meg a színhelyet egy jeges háttérre, és állítsd Sid (1. szereplő) sebességét gyorsra.\nNyomd meg a \"Futtatás\"-t, és mozgasd Sidet Diegohoz, hogy figyelmeztesse."
+        "iceage_warn_ice_age_dani": "Mindenkinek sietnie kell, mert egy jégvihar közeledik! \nVáltoztasd meg a színhelyet egy jeges háttérre, és állítsd Sid (1. szereplő) sebességét gyorsra.\nNyomd meg a \"Futtatás\"-t, és mozgasd Sidet Diegohoz, hogy figyelmeztesse.",
+        "Overworld Chop Tree": "A fa egy nagyon fontos erőforrás. Nagyon sok dolog készül belőle. Sétálj a fához, és használd a \\`blokk elpusztítása' parancsot, hogy kivágd.",
+        "Overworld Chop Tree_2019": "A fa egy nagyon fontos erőforrás. Nagyon sok dolog készül belőle. Sétálj a fához, és használd a \\`blokk elpusztítása' parancsot, hogy kivágd.",
+        "Overworld Chop Tree_2020": "A fa egy nagyon fontos erőforrás. Nagyon sok dolog készül belőle. Sétálj a fához, és használd a \\`blokk elpusztítása' parancsot, hogy kivágd.",
+        "Overworld Chop Tree_2021": "A fa egy nagyon fontos erőforrás. Nagyon sok dolog készül belőle. Sétálj a fához, és használd a \\`blokk elpusztítása' parancsot, hogy kivágd.",
+        "Overworld House Frame Chosen": "Építsd meg a ház többi részét olyan anyagból, amilyenből csak szeretnéd. Az `ismételd` parancs jól fog jönni.",
+        "Overworld House Frame Chosen_2019": "Építsd meg a ház többi részét olyan anyagból, amilyenből csak szeretnéd. Az `ismételd` parancs jól fog jönni.",
+        "Overworld House Frame Chosen_2020": "Építsd meg a ház többi részét olyan anyagból, amilyenből csak szeretnéd. Az `ismételd` parancs jól fog jönni.",
+        "Overworld House Frame Chosen_2021": "Építsd meg a ház többi részét olyan anyagból, amilyenből csak szeretnéd. Az `ismételd` parancs jól fog jönni.",
+        "Overworld Place Wall": "Minden ház egy fallal kezdődik. Építsd meg a házad első részt úgy, hogy az ismételő ciklusba teszel egy \"elhelyez\" és egy \"előrelépni\" blokkot.",
+        "Overworld Place Wall_2019": "Minden ház egy fallal kezdődik. Építsd meg a házad első részt úgy, hogy az ismételő ciklusba teszel egy \"elhelyez\" és egy \"előrelépni\" blokkot.",
+        "Overworld Place Wall_2020": "Minden ház egy fallal kezdődik. Építsd meg a házad első részt úgy, hogy az ismételő ciklusba teszel egy \"elhelyez\" és egy \"előrelépni\" blokkot.",
+        "Overworld Place Wall_2021": "Minden ház egy fallal kezdődik. Építsd meg a házad első részt úgy, hogy az ismételő ciklusba teszel egy \"elhelyez\" és egy \"előrelépni\" blokkot.",
+        "Overworld Shear Sheep": "Itt a birkanyírás ideje! Használd a `nyírás` parancsot, hogy gyapjút gyűjts a két báránytól.",
+        "Overworld Shear Sheep_2019": "Itt a birkanyírás ideje! Használd a `nyírás` parancsot, hogy gyapjút gyűjts a két báránytól.",
+        "Overworld Shear Sheep_2020": "Itt a birkanyírás ideje! Használd a `nyírás` parancsot, hogy gyapjút gyűjts a két báránytól.",
+        "Overworld Shear Sheep_2021": "Itt a birkanyírás ideje! Használd a `nyírás` parancsot, hogy gyapjút gyűjts a két báránytól."
       }
     }
   }

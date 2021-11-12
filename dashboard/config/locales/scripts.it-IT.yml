@@ -243,7 +243,7 @@ it:
             esplorano la magia e la bellezza del ghiaccio.
           lessons:
             Artist:
-              name: Artista
+              name: Programma con Anna ed Elsa
           student_description: Usa la programmazione per unirti ad Anna ed Elsa mentre
             esplorano la magia e la bellezza del ghiaccio. Farai fiocchi di neve,
             pattinerai sul ghiaccio e realizzerai un meraviglioso paesaggio invernale
@@ -408,7 +408,7 @@ it:
             un gioco con i personaggi di Disney Infinity.
           lessons:
             Infinity:
-              name: Infinito
+              name: Disney Infinity
           student_description: Usa il Laboratorio per creare una storia o inventare
             un gioco con i personaggi di Disney Infinity.
         algebrademo:
@@ -605,6 +605,11 @@ it:
           lessons:
             Jigsaw:
               name: Puzzle
+              description_teacher: Questa lezione darà agli studenti un'idea di cosa
+                aspettarsi quando andranno nel laboratorio di informatica. Si comincia
+                con una breve discussione introduttiva sui comportamenti da tenere
+                in laboratorio, poi gli studenti inizieranno ad utilizzare un computer
+                per completare degli esercizi online.
           student_description: Esercitazione introduttiva per imparare come "trascinare
             e rilasciare" (drag and drop)
         step:
@@ -1540,9 +1545,6 @@ it:
             Stellari, in una galassia lontana lontana...
           description_short: Impara a programmare i droidi e crea la tua versione
             di Guerre Stellari, in una galassia lontana lontana...
-          lessons:
-            Hour of Code 2015:
-              name: L'Ora del Codice 2015
           student_description: Impara a programmare i droidi e crea la tua versione
             di Guerre Stellari, in una galassia lontana lontana...
         mc:
@@ -2360,7 +2362,6 @@ it:
             Scegli la tua squadra e fai una partita di basket
           lessons:
             Bounce:
-              name: Ping-Pong
               description_student: Ti piacerebbe poter giocare con dei videogiochi
                 a scuola? In questa lezione potrai crearne uno tutto tuo!
               description_teacher: In questa attività online, gli studenti impareranno
@@ -2670,7 +2671,6 @@ it:
           description: Combina diversi sport
           lessons:
             Sports:
-              name: Sport
               description_student: Ti piacerebbe poter giocare con dei videogiochi
                 a scuola? In questa lezione potrai crearne uno tutto tuo!
               description_teacher: In questa attività online, gli studenti impareranno
@@ -4516,7 +4516,7 @@ it:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Ora del Codice - Il viaggio dell''eroe'
             Minecraft Hour of Code:
-              name: L'Ora del Codice con Minecraft
+              name: 'Minecraft: Il viaggio dell''eroe'
           student_description: Minecraft è tornato per l'Ora del Codice con una nuovissima
             attività! Viaggia attraverso Minecraft grazie al coding.
         applab-intro-staging:
@@ -6129,6 +6129,9 @@ it:
           description: Anche quest'anno Minecraft propone un'attività nuova di zecca!
             Usa la tua creatività e le competenze di problem solving per esplorare
             e creare mondi sottomarini grazie alla potenza della programmazione.
+          lessons:
+            Aquatic:
+              name: 'Minecraft: Viaggio Acquatico'
           student_description: Anche quest'anno Minecraft propone un'attività nuova
             di zecca! Usa la tua creatività e le competenze di problem solving per
             esplorare e creare mondi sottomarini grazie alla potenza della programmazione.
@@ -9985,6 +9988,8 @@ it:
           lessons:
             Virus Simulation for Code Bytes:
               name: Codifica di una simulazione
+            Outbreak:
+              name: Codifica di una simulazione
           lesson_groups:
             outbreak:
               display_name: Simulazione di epidemia
@@ -10002,6 +10007,8 @@ it:
               name: Introduzione al Laboratorio dei Personaggi
             Virus Simulation for Code Bytes:
               name: Codifica di una simulazione
+            Making Sprites:
+              name: Creazione di personaggi
             Sprites in Action:
               name: Personaggi in azione
             End of Course Project:
@@ -10833,6 +10840,7 @@ it:
                 contatore per creare progetti complessi. Alla fine avranno la possibilità
                 di creare il proprio progetto in un esercizio libero.
             Virtual Pet:
+              key: Animale virtuale
               name: 'Mini progetto: Animaletto Virtuale'
             End of Course Project:
               key: Progetto di fine corso
@@ -10841,6 +10849,8 @@ it:
                 Trova la tua ispirazione, sviluppa un piano e libera la tua creatività!
             lesson-6:
               name: Introduzione al Laboratorio dei Personaggi
+            lesson-7:
+              name: Creazione di personaggi
             lesson-8:
               name: Personaggi in azione
             lesson-5:
@@ -11024,6 +11034,8 @@ it:
                 È ora di iniziare a realizzare il tuo progetto.
             lesson-1:
               name: Ballando col codice
+            lesson-2:
+              name: Creazione di personaggi
             lesson-3:
               name: Personaggi in azione
           lesson_groups:
@@ -11134,6 +11146,8 @@ it:
               name: Codifica di una simulazione
             Course F Introduction:
               name: Introduzione al Laboratorio dei Personaggi
+            Making Sprites:
+              name: Creazione di personaggi
             Sprites in Action:
               name: Personaggi in azione
             introducing-spritelab:
@@ -11466,3 +11480,20 @@ it:
           lessons:
             lesson-1:
               name: Festa di ballo
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Componenti
+            lesson-2:
+              name: Strumenti
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Ape Sapiente
+          title: Ape Sapiente
+        outbreak-csc:
+          title: Epidemia
+        csa5-exemplars:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto

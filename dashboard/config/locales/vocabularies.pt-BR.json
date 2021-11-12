@@ -2,6 +2,273 @@
   "pt-BR": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "event/dance-extras/unversioned": {
+          "word": "Evento",
+          "definition": "Uma ação que faz com que algo aconteça."
+        },
+        "program/dance-extras/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "code/minecraft/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "debugging/minecraft/unversioned": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/minecraft/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "event/minecraft/unversioned": {
+          "word": "Evento",
+          "definition": "Uma ação que faz com que algo aconteça."
+        },
+        "loop/minecraft/unversioned": {
+          "word": "Laço",
+          "definition": "Ação de fazer algo repetidas vezes."
+        },
+        "code/hero/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "debugging/hero/unversioned": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/hero/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "function/hero/unversioned": {
+          "word": "Função",
+          "definition": "Trecho de código que podemos chamar repetidas vezes com facilidade."
+        },
+        "code/flappy/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "debugging/flappy/unversioned": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/flappy/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "code/hourofcode/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "debugging/hourofcode/unversioned": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/hourofcode/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "code/frozen/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "debugging/frozen/unversioned": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/frozen/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "code/iceage/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "debugging/iceage/unversioned": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/iceage/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "code/artist/unversioned": {
+          "word": "Código",
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "debugging/artist/unversioned": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/artist/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "code/gumball/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "debugging/gumball/unversioned": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/gumball/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "event/dance/unversioned": {
+          "word": "Evento",
+          "definition": "Uma ação que faz com que algo aconteça."
+        },
+        "program/dance/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "code/dance/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "code/aquatic/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "debugging/aquatic/unversioned": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/aquatic/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "condition/aquatic/unversioned": {
+          "word": "Condição",
+          "definition": "Algo que um programa verifica para analisar se é verdadeiro antes de permitir uma ação."
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "Condições",
+          "definition": "Instruções que são executadas apenas em determinadas condições."
+        },
+        "loops/aquatic/unversioned": {
+          "word": "laços",
+          "definition": "Ação de fazer algo repetidas vezes."
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "Criptografia"
+        },
+        "code/starwars/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "debugging/starwars/unversioned": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/starwars/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "code/mc/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "debugging/mc/unversioned": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/mc/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "code/playlab/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "debugging/playlab/unversioned": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/playlab/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "code/starwarsblocks/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "debugging/starwarsblocks/unversioned": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/starwarsblocks/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "Compressão sem perdas"
+        },
+        "event/sports/unversioned": {
+          "word": "Evento",
+          "definition": "Uma ação que faz com que algo aconteça."
+        },
+        "code/sports/unversioned": {
+          "word": "Código"
+        },
+        "debugging/sports/unversioned": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/sports/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "code/infinity/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "debugging/infinity/unversioned": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/infinity/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "event/basketball/unversioned": {
+          "word": "Evento",
+          "definition": "Uma ação que faz com que algo aconteça."
+        },
+        "code/basketball/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "debugging/basketball/unversioned": {
+          "word": "Analisando",
+          "definition": "Localizar e corrigir problemas em um algoritmo ou programa."
+        },
+        "program/basketball/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "code/dance-extras-2019/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "Evento",
+          "definition": "Uma ação que faz com que algo aconteça."
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "code/dance-2019/unversioned": {
+          "definition": "(v) escrever código, ou escrever instruções para um computador."
+        },
+        "event/dance-2019/unversioned": {
+          "word": "Evento",
+          "definition": "Uma ação que faz com que algo aconteça."
+        },
+        "program/dance-2019/unversioned": {
+          "word": "Programa",
+          "definition": "Algoritmo que foi codificado em algo que pode ser executado por uma máquina."
+        },
+        "machine_learning/oceans/unversioned": {
+          "word": "Máquina de aprendizado",
+          "definition": "Maneira como os computadores reconhecem padrões e tomam decisões sem que sejam programados de maneira explícita."
+        },
+        "event/outbreak/unversioned": {
+          "word": "Evento",
+          "definition": "Uma ação que faz com que algo aconteça."
+        },
         "sprite/coursef/2021": {
           "word": "Sprite"
         },
@@ -271,7 +538,6 @@
           "definition": "Uma ação que faz com que algo aconteça."
         },
         "code/coursed/2021": {
-          "word": "codificar",
           "definition": "(v) escrever código, ou escrever instruções para um computador."
         },
         "repeat/coursed/2021": {
@@ -327,9 +593,6 @@
         "event/express/2021": {
           "word": "Evento",
           "definition": "Uma ação que faz com que algo aconteça."
-        },
-        "code/express/2021": {
-          "word": "codificar"
         },
         "loop/express/2021": {
           "word": "Laço",

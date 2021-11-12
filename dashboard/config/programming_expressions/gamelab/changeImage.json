@@ -2,7 +2,9 @@
   "func": "changeImage",
   "category": "Sprites",
   "paletteParams": [
-    "label"
+    {
+      "name": "label"
+    }
   ],
   "params": [
     "\"img1\""

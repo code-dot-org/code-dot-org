@@ -29,6 +29,8 @@ ne:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: "२०१७ \n"
   africa_campaign_date_full_year: October 1-31, 2021
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: Learn today, build a brighter tomorrow.
   hoc2020_header_with_line_break_markdown: |-
     Learn today,
@@ -43,11 +45,11 @@ ne:
     all ages.
   social_hoc2020_coming_dates: The Hour of Code is coming December 7-13, 2020. Computer
     science is foundational for every student to learn.
-  hoc2020_ai_subheader: The Hour of Code 2020 is coming!
-  hoc2020_ai_header: Explore Artificial Intelligence
-  hoc2020_ai_description: AI and Machine Learning are impacting our entire world.
-    Join us to explore AI in a new video series, train AI for Oceans in 25+ languages,
-    discuss ethics and AI, and more...
+  hoc2020_ai_subheader: 'Hour of Code २०२० आउदैछ । '
+  hoc2020_ai_header: आर्टिफिसियल इन्टेलिजेन्स अन्वेषण गर्नुहोस्
+  hoc2020_ai_description: AI र मेसिन सिकाईंले हाम्रो सारा संसारलाई असर गरिरहेको छ
+    । नयाँ भिडियो श्रृंखलामा AI पत्ता लगाउन हामी संग जोडिनुहोस्। २५ भन्दा बढी भाषामा
+    महासागरहरुका लागि AI प्रशिक्षण, नैतिकता र AI छलफल र अधिक .......
   hoc2019_header: कम्प्यूटर विज्ञान सिक्नुहोस्। विश्व परिवर्तन गर्नुहोस्।
   hoc2019_header_line1_mobile: कम्प्यूटर विज्ञान सिक्नुहोस्।
   hoc2019_header_line2_mobile: विश्व परिवर्तन गर्नुहोस्।
@@ -62,31 +64,34 @@ ne:
     science is foundational for every student to learn.
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
-  oceans_landing_title: AI for Oceans
-  oceans_landing_description: Learn about machine learning and ethical use of AI.
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
+  oceans_landing_title: महासागरका लागि A.I.
+  oceans_landing_description: "Machine learning र A.I. को नैतिक प्रयोगबारे सिक्नुहोस्
+    । \n"
   cs_for_good_hashtag: "#CSforGood"
-  oceans_landing_specs: Available in 25+ languages | Grades 3+
-  oceans_landing_explanation: Computer science is about so much more than coding!
-    Learn about artificial intelligence (AI), machine learning, training data, and
-    bias, while exploring ethical issues and how AI can be used to address world problems.
-    Enjoy Code.org's first step in a new journey to teach more about AI. When you
-    use the AI for Oceans activity you are training real machine learning models.
-    <a href='#behind-the-scenes'>Learn more</a>.
-  oceans_landing_explanation_markdown: Computer science is about so much more than
-    coding! Learn about artificial intelligence (AI), machine learning, training data,
-    and bias, while exploring ethical issues and how AI can be used to address world
-    problems. Enjoy Code.org's first step in a new journey to teach more about AI.
-    When you use the AI for Oceans activity you are training real machine learning
-    models. [Learn more](#behind-the-scenes).
+  oceans_landing_specs: २५ भन्दा बढी भाषामा उपलब्ध । ग्रेड ३+
+  oceans_landing_explanation: "कम्प्युटर विज्ञान भनेको कोडिङभन्दा पनि धेरै हो!  कृतिम
+    बुद्धि (AI), मेसिनको सिकाई, प्रशिक्षण डेटा र \nपूर्वाग्रहको बारेमा सिक्नुहोस्,
+    जबकि नैतिक मुद्दाहरुको खोज र कसरी AI विश्वसमस्याहरु समाधान गर्न \nप्रयोग गर्न
+    सकिन्छ । AI को बारेमा थप सिकाउन नयाँ यात्रामा Code.org को पहिलो चरणको आनन्द \nलिनुहोस्
+    । महासागरको गतिविधिको लागि AI प्रयोग गर्दा तपाईंले वास्तविक मेसिन सिक्ने मोडेललाई
+    \nप्रशिक्षण दिइसक्नुभएको छ । "
+  oceans_landing_explanation_markdown: "कम्प्युटर विज्ञान भनेको कोडिङभन्दा पनि धेरै
+    हो!  कृतिम बुद्धि (AI), मेसिनको सिकाई, प्रशिक्षण डेटा र \nपूर्वाग्रहको बारेमा
+    सिक्नुहोस्, जबकि नैतिक मुद्दाहरुको खोज र कसरी AI विश्वसमस्याहरु समाधान गर्न \nप्रयोग
+    गर्न सकिन्छ । AI को बारेमा थप सिकाउन नयाँ यात्रामा Code.org को पहिलो चरणको आनन्द
+    \nलिनुहोस् । महासागरको गतिविधिको लागि AI प्रयोग गर्दा तपाईंले वास्तविक मेसिन सिक्ने
+    मोडेललाई \nप्रशिक्षण दिइसक्नुभएको छ । "
   oceans_landing_teacher_resources: शिक्षक संसाधन
-  oceans_landing_teacher_resources_desc: Lesson plans and activities to help you teach
-    AI, machine learning, training data, and bias, while exploring ethical issues.
+  oceans_landing_teacher_resources_desc: "नैतिक विषयहरुको अन्वेषण गर्दै, AI, मेसिन
+    सिकाई, प्रशिक्षण डेटा र पूर्वाग्रह सिकाउन मद्दत गर्न पाठ \nयोजना र गतिविधिहरु
+    ।"
   oceans_landing_resource_button: स्रोतहरू हेर्नुहोस्
   oceans_landing_cs_for_good: " राम्रो को लागी  कम्प्यूटर विज्ञान"
-  oceans_landing_cs_for_good_desc: Resources to help students understand the role
-    computer science could play in creating a more equitable world.
-  oceans_landing_videos: Videos about AI and Machine Learning
-  oceans_behind_the_scenes: 'AI for Oceans: Behind the Scenes'
+  oceans_landing_cs_for_good_desc: "कम्प्युटर विज्ञानले अझ बढी समतामूलक संसार सिर्जना
+    गर्न सक्ने भूमिका बुझ्न विद्यार्थीहरुलाई मद्दत \nगर्ने स्रोतहरु ।"
+  oceans_landing_videos: AI र मेसिन सिकाइ सम्बन्धी भिडियोहरु
+  oceans_behind_the_scenes: 'महासागरका लागि AI: पर्दा पछाडि'
   oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
     href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
     MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
@@ -145,60 +150,66 @@ ne:
     of Code Live episodes.
   hoc_live_join_us: हामीसँग आवद्ध हुनुहोस्
   hoc_live_learn_more: Learn more
-  hoc_overview_oceans_tutorial_header: AI for Oceans
+  hoc_overview_oceans_tutorial_header: महासागरका लागि A.I.
   hoc_overview_oceans_tutorial_desc: Learn about artificial intelligence (AI), machine
     learning, training data, and bias, while exploring ethical issues and how AI can
     be used to address world problems.
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
   ai_video_title_what_is_ai: कृत्रिम बुद्धिमत्ता के हो?
-  ai_video_title_algorithm_bias: Fighting bias in algorithms
-  ai_video_title_phone_knows_dog: How does your phone know this is a dog?
+  ai_video_title_algorithm_bias: 'अल्गोरिदमहरुमा पक्षपात विरुद्ध लड्ने '
+  ai_video_title_phone_knows_dog: यो कुकुर हो भनेर तपाईंको फोनले कसरी थाहा पाउँछ ?
   ai_video_title_what_is_ml: मेशिन लर्निंग भनेको के हो?
   ai_video_title_ml_big_small_prickly: 'मेशिन लर्निंग:  ठूला, साना र घोच्ने  समस्याहरू
     समाधान गर्दै'
   ai_video_title_ethics_of_ai: कृत्रिम बुद्धिमत्ताको नैतिकता
   ai_video_title_ml_human_bias: मेशिन लर्निंग र मानव पूर्वाग्रह
-  ai_video_title_seeing_ai: 'Seeing AI: Making the visual world more accessible'
+  ai_video_title_seeing_ai: AI हेर्नेः दृश्य संसारलाई अझ सुलभ बनाउने
   activity: गतिविधि
   name: नाम
   description: वर्णन
   audience: दर्शक
   ai_resource_header: 'सिकाउनुहोस् र सिक्नुहोस एआईको बारेमा '
-  ai_resource_minecraft: Minecraft AI for Good
-  ai_resource_minecraft_desc: 'Access free resources including a lesson plan, videos,
-    computer science curriculum, and teacher trainings. (Requires Minecraft: Education
-    Edition)'
+  ai_resource_minecraft: राम्रोको लागि Minecraft AI
+  ai_resource_minecraft_desc: 'पाठ योजना, भिडियो, कम्प्युटर विज्ञान पाठ्यक्रम, र शिक्षक
+    प्रशिक्षण सहित निःशुल्क स्रोतहरु पहुँच गर्नुहोस. (Requires Minecraft: Education
+    Edition) '
   ai_resource_ml_for_kids: बच्चाहरूको लागि मेशिन लर्निंग
-  ai_resource_ml_for_kids_desc: Train a machine learning model with text, numbers,
-    or images, and use it to make games in Scratch.
-  ai_resource_ibm_ml_for_kids: 'IBM: Machine Learning for Kids'
-  ai_resouce_ibm_ml_for_kids_desc: Hands-on activities to introduce simple machine
-    learning models to students through games and interactive projects.
-  ai_resource_ecs: 'ECS: Artificial Intelligence (AI)'
-  ai_resource_ecs_desc: A new alternate curriculum unit for the Exploring Computer
-    Science (ECS) curriculum.
+  ai_resource_ml_for_kids_desc: पाठ, संख्या, वा तस्बिरहरुसँग एक मेसिन सिक्ने मोडेल
+    ट्रेन गर्नुहोस, र यसलाई स्क्रेचमा खेल बनाउन प्रयोग गर्नुहोस।
+  ai_resource_ibm_ml_for_kids: 'IBM: केटाकेटीका लागि मेसिन लर्निङ '
+  ai_resouce_ibm_ml_for_kids_desc: 'खेल र अन्तरक्रियात्मक परियोजनाहरु मार्फत् विद्यार्थीहरुलाई
+    सरल मेसिन सिक्ने मोडेल परिचय गर्न सक्रिय गतिविधिहरु । '
+  ai_resource_ecs: 'ECS: कृत्रिम बुद्धि (AI)'
+  ai_resource_ecs_desc: अन्वेषण कम्प्युटर विज्ञान (ECS) पाठ्यक्रमको लागि एउटा नयाँ
+    वैकल्पिक पाठ्यक्रम एकाई ।
   ai_resource_elements_ai: एआई को तत्वहरु
-  ai_resource_elements_ai_desc: A series of free online courses created by Reaktor
-    and the University of Helsinki.
-  ai_resource_cognimates: Cognimates
-  ai_resource_cognimates_desc: An AI education platform for building games, programming
-    robots and training.
-  ai_audience_k12: K-12 (Reading required)
+  ai_resource_elements_ai_desc: "रेक्टोर र हेलसिन्की विश्वविद्यालयद्धारा सिर्जना गरिएको
+    निःशुल्क अनलाइन पाठ्यक्रमहरुको एक \nश्रृङ्खला ।"
+  ai_resource_cognimates: 'कग्निमेट गर्दछ  '
+  ai_resource_cognimates_desc: 'खेल निर्माण, प्रोग्रामिङ रोबोट र प्रशिक्षणको लागि
+    एक AI शिक्षा मञ्च । '
+  ai_audience_k12: K-12 (पढाइ आवश्यक)
   ai_audience_hs: उच्च माध्यमिक विद्यालय
-  ai_activity_header: Activities Powered by AI and ML
+  ai_activity_header: AI र ML द्धारा संचालित क्रियाकलापहरु
   ai_activity_seeing_ai: एआई हेर्दै
-  ai_activity_seeing_ai_desc: A free app that narrates the world around you in a variety
-    of languages.
+  ai_activity_seeing_ai_desc: तपाईंको वरिपरिको संसारलाई विभिन्न भाषामा वर्णन गर्ने
+    निःशुल्क एप
   ai_activity_quick_draw: द्रुत गतिमा चित्र कोर्नुहोस!
-  ai_activity_quick_draw_desc: Can a neural network learn to recognize doodling?
+  ai_activity_quick_draw_desc: के स्नायु सञ्जालले डुडलिङ चिन्न सिक्न सक्छ ?
   ai_activity_teachable: सिकाउन योग्य मेशीन
-  ai_activity_teachable_desc: Train a computer to recognize your own images, sounds,
-    and poses.
+  ai_activity_teachable_desc: 'आफ्नो चित्र, आवाज र मुद्रा चिन्न कम्प्युटरलाई प्रशिक्षण
+    दिनुहोस् '
   ai_activity_experiments: गुगलको साथ एआई परीक्षण
-  ai_activity_experiments_desc: Start exploring machine learning through pictures,
-    drawings, language, music, and more.
-  ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
-  ai_activity_zooniverse_desc: Help protect the endangered Cape Mountain Zebra by
-    identifying the different animals in the images.
+  ai_activity_experiments_desc: 'चित्र, कोराइ, भाषा, संगीत र अरु थुप्रै माध्यमबाट
+    machine learning सुरु गर्नुहोस् '
+  ai_activity_zooniverse: 'जोनिभर्स – स्न्यापसट माउन्टेन जेब्रा  '
+  ai_activity_zooniverse_desc: खतरामा परेका केप माउन्टेन जेब्रालाई चित्रमा भएका विभिन्न
+    जनावरहरुको पहिचान गरेर सुरक्षा गर्न मद्दत गर्नुहोस् ।
   codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
     class="hoc2018-curriculum-link">Code.org courses</a>
   codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
@@ -214,6 +225,10 @@ ne:
   hourofcode_homepage_hoc2018_header_line1: Anyone, anywhere can organize an Hour
     of Code event. One-hour tutorials in over 45 languages. No experience needed.
   hourofcode_homepage_hoc2018_header_line2: उमेर ४  देखि १०4 सम्म।
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
+  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
+    Connections
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
   codeorg_homepage_hoc2019_dance_heading: Try the new <span class="highlight-word">Dance&nbsp;Party!</span>
@@ -1373,7 +1388,7 @@ ne:
   tutorial_cacrazy_name: Code Crazy Creatures
   tutorial_cajump_name: Jumping Jam
   tutorial_carest_name: Robo-restaurant puzzler
-  tutorial_accai_name: Accenture Intelligent Space Exploration
+  tutorial_accai_name: उच्चारण बौद्धिक अन्तरिक्ष अन्वेषण
   tutorial_vceclipse_name: Code the Eclipse
   tutorial_pmzero_name: Pac-Man ZERO
   tutorial_hsela_name: 'Telling stories: ELA + coding'
@@ -1549,7 +1564,7 @@ ne:
   tutorial_codespeakhappy_name: Code a Happy Place Meditation App
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
-  tutorial_rpstress_name: Stress ball
+  tutorial_rpstress_name: 'Stress Ball: Code a clickable onscreen stress ball'
   tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
@@ -2378,8 +2393,8 @@ ne:
     a pet that you can feed and play with.
   tutorial_carest_shortdescription: Use the MicroPython programming language to make
     a pet that you can feed and play with.
-  tutorial_accai_shortdescription: Teach an Artificial Intelligence robot to explore
-    a new planet!
+  tutorial_accai_shortdescription: नयाँ ग्रह पत्ता लगाउन आर्टिफिसियल इन्टेलिजेन्स
+    रोबोटलाई सिकाउनुहोस्
   tutorial_vceclipse_shortdescription: Code a solar eclipse simulation with JavaScript!
   tutorial_pmzero_shortdescription: Create and program a 3D Pac-Man Maze World
   tutorial_hsela_shortdescription: 'Telling stories: ELA + coding'
@@ -4539,12 +4554,11 @@ ne:
   tutorial_carest_longdescription: Join Ross at the Food Avengers restaurant. Use
     your computational thinking skills to help Ross solve problems and serve dinner
     to 8 excited kids.
-  tutorial_accai_longdescription: A robot is sent to an unknown planet to discover
-    if humanity could establish a new settlement. It explores the planet to find shelter
-    and discovers and interacts with the local population. As the player, you will
-    experience various Artificial Intelligence techniques to teach the robot how to
-    recognize animals and plants, understand a new language, dialogue with the inhabitants
-    etc.
+  tutorial_accai_longdescription: "मानवजातिले नयाँ बस्ती स्थापना गर्न सक्छ कि सक्दैन
+    भनेर पत्ता लगाउन एउटा अज्ञात ग्रहमा रोबोट \nपठाइन्छ । यसले यस ग्रहलाई आश्रय खोज्न,
+    पत्ता लगाउन र स्थानीय जनतासँग अन्तरक्रिया गर्न \nखोज्छ । खेलाडी भएकाले रोबोटलाई
+    जनावर र बिरुवा कसरी चिन्ने, नयाँ भाषा बुझ्ने, बासिन्दासँग \nसंवाद आदि सिकाउन विभिन्न
+    आर्टिफिसियल इन्टेलिजेन्स प्रविधिको अनुभव गर्नुहुनेछ ।"
   tutorial_vceclipse_longdescription: 2017 gave us one of the most spectacular natural
     phenomena of our lives, and now we're going to simulate the solar eclipse with
     JavaScript! Looking at the eclipse as a system of moving parts, we can decompose
@@ -5236,8 +5250,9 @@ ne:
     program your own fantastic interactive stories, games, and animations. Following
     our creative, fun, activities means that you will develop computational thinking
     as well as coding skills!
-  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
-    can squash!
+  tutorial_rpstress_longdescription: Use Scratch blocks to create and personalise
+    your clickable stress ball with graphic effects, costume animation, and sound
+    effects.
   tutorial_bsdcause_longdescription: 'This course allows students to use code as a
     way to share what is important or interesting to them. They can follow the lesson
     or create unique projects while learning HTML, CSS and JavaScript. They are guided
@@ -6100,7 +6115,7 @@ ne:
   tutorial_cacrazy_language: English only
   tutorial_cajump_language: English only
   tutorial_carest_language: English only
-  tutorial_accai_language: English, French, Italian, and Dutch
+  tutorial_accai_language: 'अंग्रेजी, फ्रान्सेली, इटालियन र डच '
   tutorial_vceclipse_language: English only
   tutorial_pmzero_language: English only
   tutorial_hsela_language: English only
@@ -6304,8 +6319,7 @@ ne:
   tutorial_codespeakhappy_language: नेपाली
   tutorial_grokimage_language: English, English (UK)
   tutorial_icomputelearn_language: नेपाली
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rpstress_language: English, English (UK)
   tutorial_bsdcause_language: नेपाली
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
@@ -7830,7 +7844,7 @@ ne:
   tutorial_codespeakhappy_string_platforms: Chrome, Firefox
   tutorial_grokimage_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_icomputelearn_string_platforms: All modern browsers
-  tutorial_rpstress_string_platforms: Chrome, Firefox
+  tutorial_rpstress_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_vidcodeanimojies_string_platforms: All modern browsers, Android tablet,
@@ -9468,7 +9482,7 @@ ne:
   tutorial_rpisensehat_name: Sense HAT data logger
   tutorial_mee_name: 'Minecraft Hour of Code: AI for Good'
   tutorial_kuborobo_name: KUBO Robotics Coding Routes
-  tutorial_ai-oceans_name: AI for Oceans
+  tutorial_ai-oceans_name: महासागरका लागि A.I.
   tutorial_scratchimagine_longdescription: Imagine a world where anything is possible,
     then bring it to life with Scratch!
   tutorial_codesterspsa_longdescription: Learn the basics of coding in Python while

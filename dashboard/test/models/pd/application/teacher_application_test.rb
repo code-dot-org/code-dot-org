@@ -3,6 +3,7 @@ require 'test_helper'
 module Pd::Application
   class TeacherApplicationTest < ActiveSupport::TestCase
     include Pd::TeacherApplicationConstants
+    include Pd::Application::ActiveApplicationModels
     include ApplicationConstants
     include RegionalPartnerTeacherconMapping
 
@@ -304,14 +305,14 @@ module Pd::Application
 
     test 'csv_header' do
       csv_header_csd = CSV.parse(TeacherApplication.csv_header('csd'))[0]
-      assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the 2021-2022 school year?"
-      refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the 2021-2022 school year?"
-      assert_equal 93, csv_header_csd.length
+      assert csv_header_csd.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
+      refute csv_header_csd.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
+      assert_equal 96, csv_header_csd.length
 
       csv_header_csp = CSV.parse(TeacherApplication.csv_header('csp'))[0]
-      refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the 2021-2022 school year?"
-      assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the 2021-2022 school year?"
-      assert_equal 95, csv_header_csp.length
+      refute csv_header_csp.include? "To which grades does your school plan to offer CS Discoveries in the #{APPLICATION_CURRENT_YEAR} school year?"
+      assert csv_header_csp.include? "To which grades does your school plan to offer CS Principles in the #{APPLICATION_CURRENT_YEAR} school year?"
+      assert_equal 98, csv_header_csp.length
     end
 
     test 'school cache' do
@@ -479,7 +480,6 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: ['6'],
-        csd_which_units: ['Unit 1: Problem Solving'],
         previous_yearlong_cdo_pd: ['CS Principles'],
         plan_to_teach: options[:plan_to_teach].first,
         replace_existing: options[:replace_existing].second,
@@ -596,7 +596,6 @@ module Pd::Application
       application_hash = build :pd_teacher_application_hash,
         program: Pd::Application::TeacherApplication::PROGRAMS[:csd],
         csd_which_grades: %w(11 12),
-        csd_which_units: ['Unit 1: Problem Solving'],
         previous_yearlong_cdo_pd: ['CS Discoveries'],
         plan_to_teach: options[:plan_to_teach].last,
         replace_existing: options[:replace_existing].first,

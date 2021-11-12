@@ -1178,6 +1178,15 @@ cs:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": křupnutí
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": bublina
+            "'sound://category_animals/bear.mp3'": Medvěd
+            "'sound://category_animals/cat.mp3'": kočka
+            "'sound://category_animals/cow.mp3'": kráva
+            "'sound://category_animals/sheep.mp3'": ovce
+            "'sound://category_animals/chicken.mp3'": slepice
+            "'sound://category_animals/elephant.mp3'": slon
+            "'sound://category_animals/dolphin.mp3'": delfín
+            "'sound://category_animals/dog.mp3'": pes
             "'sound://category_digital/jump_7.mp3'": skoč
       gamelab_pointInDirection:
         text: bod {SPRITE} {DIRECTION}
@@ -1651,14 +1660,31 @@ cs:
         text: nakonfigurujte Město příšer s{COUNT}příšerami
       Outbreak_stopMoving:
         text: příšery se přestávají pohybovat
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Zmrzlina
+            Stars: Hvězdy
+            Fireworks: Ohňostroj
+            '"rainbow"': Duha
+            '"hearts"': Srdce
+            '"flowers"': Květiny
+            '"waves"': Vlny
       Poetry_makeBurst:
         options:
           EFFECT:
             '"rain"': déšť
+      Poetry_makeNewSpriteAnon:
+        text: vytvoř novou postavu {ANIMATION_NAME} na {LOCATION}
       Poetry_makeNumSprites:
         text: vytvoř {NUM} nových {ANIMATION_NAME} postav
       Poetry_playSound:
         text: přehraj zvuk {SOUND}
+        options:
+          SOUND:
+            Light: Světlo
+      Poetry_setBackground:
+        text: nastav barvu pozadí {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1667,6 +1693,10 @@ cs:
             '"space"': Vesmír
             '"stars"': Hvězdy
             '"ripples"': Vlny
+            '"rain"': Déšť
+            '"bubbles"': Bubliny
+            '"confetti"': Konfety
+            '"hearts"': Barevná srdíčka
           PALETTE:
             '"rainbow"': Duha
       Poetry_setBackgroundImageAs:

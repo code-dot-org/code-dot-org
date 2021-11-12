@@ -468,6 +468,29 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Novi blok!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Novi blok!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Novi blok!",
+          "poetry_foreground": "Novi blok!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Novi blok!",
+          "poetry_multiple_sprites": "Novi blok!",
+          "poetry_new_block": "Novi blok!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Novi blok!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Novi blok!",
+          "poetry_sprite_stops": "Novi blok!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Novi blok!",
+          "poetry_remove_sprite": "Novi blok!"
         }
       }
     }

@@ -1633,6 +1633,29 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "قطعة برمجية جديدة!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "قطعة برمجية جديدة!",
+          "poetry_foreground": "قطعة برمجية جديدة!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "قطعة برمجية جديدة!",
+          "poetry_multiple_sprites": "قطعة برمجية جديدة!",
+          "poetry_new_block": "قطعة برمجية جديدة!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "قطعة برمجية جديدة!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "قطعة برمجية جديدة!",
+          "poetry_sprite_stops": "قطعة برمجية جديدة!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "قطعة برمجية جديدة!",
+          "poetry_remove_sprite": "قطعة برمجية جديدة!"
         }
       }
     }

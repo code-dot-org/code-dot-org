@@ -1215,9 +1215,11 @@ ar:
       email: البريد الإلكتروني
       email_alternate: البريد الالكتروني البديل
       gender: الهوية الجنسية
+      school: المدرسة
       school_name: اسم المدرسة
       school_city: مدينة المدرسة
       school_country: بلد المدرسة
+      school_department_region: قسم المدرسة / المنطقة
       colombian_school_city: مدينة المدرسة
       colombian_chilean_school_department: قسم المدرسة / المنطقة
       colombian_school_municipality: بلدية المدرسة

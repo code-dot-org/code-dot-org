@@ -36,7 +36,7 @@ import {
 import googlePlatformApi, {
   loadGooglePlatformApi
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
-import {queryLockStatus, renderTeacherPanel} from './teacherPanelHelpers';
+import {renderTeacherPanel} from './teacherPanelHelpers';
 
 var progress = module.exports;
 
@@ -197,7 +197,10 @@ function getLevelProgress(signedIn, progressData, scriptName) {
     case null:
       // We do not know if user is signed in or not, send a request to the server
       // to find out if the user is signed in and retrieve progress information
-      return $.ajax(`/api/user_progress/${scriptName}`)
+      return $.ajax({
+        url: `/api/user_progress/${scriptName}`,
+        data: {user_id: clientState.queryParams('user_id')}
+      })
         .then(data => {
           if (data.signedIn) {
             return {
@@ -369,17 +372,11 @@ function queryUserProgress(store, scriptData, currentLevelId) {
       (data.isTeacher || data.teacherViewingStudent) &&
       !data.professionalLearningCourse
     ) {
-      const pageType = currentLevelId ? 'level' : 'script_overview';
-      queryLockStatus(store, scriptData.id, pageType);
-      renderTeacherPanel(
-        store,
-        scriptData.id,
-        scriptData.section,
-        scriptData.name,
-        null,
-        pageType,
-        onOverviewPage
-      );
+      const pageType = currentLevelId
+        ? pageTypes.level
+        : pageTypes.scriptOverview;
+
+      renderTeacherPanel(store, scriptData.id, scriptData.name, pageType);
     }
   });
 }

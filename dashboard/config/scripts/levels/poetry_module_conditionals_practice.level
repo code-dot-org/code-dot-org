@@ -1,0 +1,228 @@
+<Poetry>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "skin": "gamelab",
+    "block_pools": [
+      "GamelabJr",
+      "Poetry"
+    ],
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "false",
+    "show_type_hints": true,
+    "use_modal_function_editor": "true",
+    "embed": "false",
+    "callout_json": "[]",
+    "instructions_important": "false",
+    "long_instructions": "*You can use different effects or sprites based on the words the user chooses.*\r\n\r\n* Add an `if` block under one of the events in your code.\r\n* Select a variable that will already have a value, and word that the user might pick.\r\n* Inside the `if` block, add more code that will happen if the right word is selected.\r\n\r\n<xml><block type=\"gamelab_ifVarEquals\">\r\n      <title name=\"NUM\">animal</title>\r\n      <value name=\"VAL\">\r\n        <block type=\"Poetry_stringValue\">\r\n          <title name=\"TEXT\">Octopus</title>\r\n        </block>\r\n      </value>\r\n    </block></xml>",
+    "submittable": "false",
+    "hide_share_and_remix": "true",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "true",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "validation_enabled": "false",
+    "hide_pause_button": "false",
+    "instructions_icon": "octiGeneral",
+    "show_poem_dropdown": "false",
+    "blockly_variables": "word1, word2, word3",
+    "min_workspace_height": "0",
+    "project_template_level_name": "poetry_module_template",
+    "standalone_app_name": "poetry",
+    "preload_asset_list": null,
+    "default_poem": null
+  },
+  "user_id": 13468,
+  "game_id": 69,
+  "created_at": "2021-10-13T14:35:46.000Z",
+  "level_num": "custom",
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2021-10-13T14:35:46.344+00:00\",\"changed\":[\"cloned from \\\"poetry_module_conditionals_freeplay\\\"\"],\"cloned_from\":\"poetry_module_conditionals_freeplay\"},{\"changed_at\":\"2021-10-13 14:44:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"long_instructions\",\"instructions_icon\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-13 14:47:12 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-28 15:43:28 +0000\",\"changed\":[\"name\",\"start_blocks\",\"toolbox_blocks\",\"default_poem\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 16:27:50 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 16:28:47 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 19:36:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"hide_share_and_remix\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-11-05 20:42:10 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16435,\"changed_by_email\":\"katleiah+test@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run">
+  </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="Events">
+          <block type="Poetry_whenLineShows">
+            <title name="N">0</title>
+          </block>
+          <block type="gamelab_whenAllPromptsAnswered"/>
+        </category>
+        <category name="Text">
+          <block type="Poetry_setTitle">
+            <value name="TITLE">
+              <block type="gamelab_textJoin">
+                <title name="TEXT1"/>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_setAuthor">
+            <value name="AUTHOR">
+              <block type="gamelab_textJoin">
+                <title name="TEXT1"/>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_addLine">
+            <value name="LINE">
+              <block type="gamelab_textJoin">
+                <title name="TEXT1"/>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_animateText"/>
+          <block type="gamelab_textJoin">
+            <title name="TEXT1"/>
+          </block>
+        </category>
+        <category name="Variables" custom="VARIABLE">
+          <block type="gamelab_setPrompt">
+            <value name="QUESTION">
+              <block type="text" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </block>
+            </value>
+            <value name="VAR">
+              <block type="variables_get" can_disconnect_from_parent="false">
+                <title name="VAR">???</title>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setPromptWithChoices">
+            <value name="QUESTION">
+              <block type="text" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </block>
+            </value>
+            <value name="VAR">
+              <block type="variables_get" can_disconnect_from_parent="false">
+                <title name="VAR">???</title>
+              </block>
+            </value>
+            <value name="A">
+              <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </block>
+            </value>
+            <value name="B">
+              <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </block>
+            </value>
+            <value name="C">
+              <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <title name="TEXT"/>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_textVariableJoin">
+            <title name="VAR">???</title>
+          </block>
+          <block type="gamelab_ifVarEquals">
+            <title name="NUM">???</title>
+            <value name="VAL">
+              <block type="Poetry_stringValue">
+                <title name="TEXT"/>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Effects">
+          <block type="Poetry_setFont">
+            <title name="FONT">"Courier"</title>
+          </block>
+          <block type="Poetry_setFontColor">
+            <value name="FILL">
+              <block type="colour_picker">
+                <title name="COLOUR">#99ff99</title>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_setTextEffect">
+            <title name="EFFECT">"fade"</title>
+          </block>
+          <block type="Poetry_addTextHighlight">
+            <value name="COLOR">
+              <block type="colour_picker" can_disconnect_from_parent="false">
+                <title name="COLOUR">#99ff99</title>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_playSound">
+            <title name="SOUND">"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"</title>
+          </block>
+          <block type="Poetry_playMusic">
+            <title name="SOUND">"placeholder"</title>
+          </block>
+          <block type="Poetry_setForegroundEffect">
+            <title name="EFFECT">"rain"</title>
+          </block>
+          <block type="Poetry_addFrame">
+            <title name="BRUSH">"rainbow"</title>
+          </block>
+          <block type="Poetry_setBackground">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <title name="COLOUR">#cc0000</title>
+              </block>
+            </value>
+          </block>
+          <block type="Poetry_setBackgroundImageAs">
+            <title name="IMG">"cave"</title>
+          </block>
+          <block type="Poetry_setBackgroundEffect">
+            <title name="EFFECT">"colors"</title>
+            <title name="PALETTE">"grayscale"</title>
+          </block>
+        </category>
+        <category name="Sprites">
+          <block type="Poetry_makeNewSpriteAnon">
+            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="LOCATION">{"x":75,"y":200}</title>
+          </block>
+          <block type="Poetry_setSize">
+            <title name="SPRITE">"bear"</title>
+            <title name="VAL">50</title>
+          </block>
+          <block type="Poetry_startBehavior">
+            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="BEHAVIOR">fluttering</title>
+          </block>
+          <block type="Poetry_stopBehavior">
+            <title name="ANIMATION_NAME">"bear"</title>
+            <title name="BEHAVIOR">fluttering</title>
+          </block>
+          <block type="Poetry_destroy">
+            <title name="ANIMATION_NAME">"bear"</title>
+          </block>
+          <block type="Poetry_makeBurst">
+            <title name="EFFECT">"burst"</title>
+            <title name="NUM">10</title>
+            <title name="ANIMATION_NAME">"bear"</title>
+          </block>
+          <block type="Poetry_makeNumSprites">
+            <title name="NUM">3</title>
+            <title name="ANIMATION_NAME">"bear"</title>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Poetry>

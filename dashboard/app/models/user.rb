@@ -207,6 +207,8 @@ class User < ApplicationRecord
     class_name: 'Pd::Application::ApplicationBase',
     dependent: :destroy
 
+  has_many :pd_attendances, class_name: 'Pd::Attendance', foreign_key: :teacher_id
+
   has_many :sign_ins
   has_many :user_geos, -> {order 'updated_at desc'}
 
@@ -1332,6 +1334,13 @@ class User < ApplicationRecord
 
   alias :verified_teacher? :authorized_teacher?
 
+  def verified_instructor?
+    # You are an verified instructor if you are a universal_instructor, plc_reviewer, facilitator, authorized_teacher, or levelbuiler
+    permission?(UserPermission::UNIVERSAL_INSTRUCTOR) || permission?(UserPermission::PLC_REVIEWER) ||
+      permission?(UserPermission::FACILITATOR) || permission?(UserPermission::AUTHORIZED_TEACHER) ||
+      permission?(UserPermission::LEVELBUILDER)
+  end
+
   def student_of_authorized_teacher?
     teachers.any?(&:authorized_teacher?)
   end
@@ -1682,7 +1691,7 @@ class User < ApplicationRecord
   end
 
   def visible_scripts
-    scripts.map(&:cached).select {|s| [SharedConstants::PUBLISHED_STATE.stable, SharedConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
+    scripts.map(&:cached).select {|s| [SharedCourseConstants::PUBLISHED_STATE.stable, SharedCourseConstants::PUBLISHED_STATE.preview].include?(s.get_published_state)}
   end
 
   # Figures out the unique set of scripts assigned to sections that this user
@@ -2069,6 +2078,12 @@ class User < ApplicationRecord
     TERMS_OF_SERVICE_VERSIONS.last
   end
 
+  # Ideally this would just be called school, but school is already a column
+  # on the user table representing the school name
+  def school_info_school
+    Queries::SchoolInfo.last_complete(self)&.school
+  end
+
   def show_census_teacher_banner?
     # Must have an NCES school to show the banner
     users_school = try(:school_info).try(:school)
@@ -2078,7 +2093,7 @@ class User < ApplicationRecord
   # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
   # Donors are associated with certain schools, captured in DonorSchool and populated from a Pegasus gsheet
   def school_donor_name
-    school_id = Queries::SchoolInfo.last_complete(self)&.school&.id
+    school_id = school_info_school&.id
     donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
 
     donor_name
@@ -2344,7 +2359,51 @@ class User < ApplicationRecord
     save! if persisted?
   end
 
+  # The data returned by this method is set to cookies for the marketing team to
+  # use in Optimizely for segmenting teacher user experience.
+  def marketing_segment_data
+    return unless teacher?
+
+    {
+      locale: read_attribute(:locale),
+      account_age_in_years: account_age_in_years,
+      grades: grades_being_taught.any? ? grades_being_taught.to_json : nil,
+      curriculums: curriculums_being_taught.any? ? curriculums_being_taught.to_json : nil,
+      has_attended_pd: has_attended_pd?,
+      within_us: within_united_states?,
+      school_percent_frl: school_stats&.frl_eligible_total,
+      school_title_i: school_stats&.title_i_status
+    }
+  end
+
+  def self.marketing_segment_data_keys
+    %w(locale account_age_in_years grades curriculums has_attended_pd within_us school_percent_frl school_title_i)
+  end
+
   private
+
+  def account_age_in_years
+    ((Time.now - created_at.to_time) / 1.year).round
+  end
+
+  # Returns a list of all grades that the teacher currently has sections for
+  def grades_being_taught
+    @grades_being_taught ||= sections.map(&:grade).uniq
+  end
+
+  # Returns a list of all curriculums that the teacher currently has sections for
+  # ex: ["csf", "csd"]
+  def curriculums_being_taught
+    @curriculums_being_taught ||= sections.map {|section| section.script&.curriculum_umbrella}.compact.uniq
+  end
+
+  def has_attended_pd?
+    pd_attendances.any?
+  end
+
+  def school_stats
+    @school_stats ||= school_info_school&.most_recent_school_stats
+  end
 
   def hidden_lesson_ids(sections)
     return sections.flat_map(&:section_hidden_lessons).pluck(:stage_id)

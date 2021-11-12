@@ -111,6 +111,35 @@ class LessonTest < ActiveSupport::TestCase
     assert_equal expected_summary_of_levels, lesson.summary_for_lesson_plans[:levels]
   end
 
+  test 'summary of lesson plan with vocab, resources, objectives, programming expressions and standards' do
+    student = create :student
+    teacher = create :teacher
+
+    script = create :script
+    lesson_group = create :lesson_group, script: script
+    lesson = create :lesson, script: script, lesson_group: lesson_group, name: 'My Lesson'
+    lesson.objectives.push(create(:objective))
+    lesson.objectives.push(create(:objective, description: nil))
+    lesson.vocabularies.push(create(:vocabulary))
+    lesson.vocabularies.push(create(:vocabulary))
+    lesson.resources.push(create(:resource))
+    lesson.resources.push(create(:resource))
+    lesson.standards.push(create(:standard))
+    lesson.standards.push(create(:standard))
+    lesson.opportunity_standards.push(create(:standard))
+    lesson.opportunity_standards.push(create(:standard))
+    lesson.programming_expressions.push(create(:programming_expression, syntax: 'xyz'))
+    lesson.programming_expressions.push(create(:programming_expression, syntax: nil))
+
+    # just make sure there are no errors
+    lesson.summarize_for_lesson_edit
+    lesson.summarize_for_lesson_show(student, false)
+    lesson.summarize_for_lesson_show(teacher, false)
+    lesson.summarize_for_rollup(student)
+    lesson.summarize_for_rollup(teacher)
+    lesson.summarize_for_student_lesson_plan
+  end
+
   test "last_progression_script_level" do
     lesson = create :lesson
     create :script_level, lesson: lesson, chapter: 1
@@ -1090,8 +1119,8 @@ class LessonTest < ActiveSupport::TestCase
     test "variants are removed when cloning lesson into another script" do
       lesson_activity = create :lesson_activity, lesson: @original_lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity
-      level1 = create :maze, name: 'level 1', level_num: 'custom'
-      level2 = create :maze, name: 'level 2', level_num: 'custom'
+      level1 = create :maze, name: 'level 1'
+      level2 = create :maze, name: 'level 2'
       sl = create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
         activity_section: activity_section, activity_section_position: 1
       sl.add_variant(level2)
@@ -1105,7 +1134,7 @@ class LessonTest < ActiveSupport::TestCase
     test "levels are cloned when new_level_suffix is passed in" do
       lesson_activity = create :lesson_activity, lesson: @original_lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity, progression_name: 'progression'
-      level1 = create :maze, name: 'level 1', level_num: 'custom'
+      level1 = create :maze, name: 'level 1'
       create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
         activity_section: activity_section, activity_section_position: 1
 

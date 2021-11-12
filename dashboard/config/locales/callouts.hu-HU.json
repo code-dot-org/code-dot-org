@@ -257,13 +257,16 @@
           "craft_callout_preplaced_house": "Ez a kód megkezdi a házad építését. Be tudod fejezni?"
         },
         "Overworld Move to Sheep": {
-          "craft_run_button_callout": "Nyomd meg a „Futtatás” gombot, hogy kipróbáld a programodat"
+          "craft_run_button_callout": "Nyomd meg a „Futtatás” gombot, hogy kipróbáld a programodat",
+          "craft_drag_block_callout": "Fogj meg egy \"előrelépni\" blokkot, és kapcsold a másik blokk alá."
         },
         "Overworld Move to Sheep_2019": {
-          "craft_run_button_callout": "Nyomd meg a „Futtatás” gombot, hogy kipróbáld a programodat"
+          "craft_run_button_callout": "Nyomd meg a „Futtatás” gombot, hogy kipróbáld a programodat",
+          "craft_drag_block_callout": "Fogj meg egy \"előrelépni\" blokkot, és kapcsold a másik blokk alá."
         },
         "Overworld Move to Sheep_2020": {
-          "craft_run_button_callout": "Nyomd meg a „Futtatás” gombot, hogy kipróbáld a programodat"
+          "craft_run_button_callout": "Nyomd meg a „Futtatás” gombot, hogy kipróbáld a programodat",
+          "craft_drag_block_callout": "Fogj meg egy \"előrelépni\" blokkot, és kapcsold a másik blokk alá."
         },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Ismételd a blokkokat úgy, hogy ide helyezed őket"
@@ -829,7 +832,8 @@
           "craft_callout_preplaced_house": "Ez a kód megkezdi a házad építését. Be tudod fejezni?"
         },
         "Overworld Move to Sheep_2021": {
-          "craft_run_button_callout": "Nyomd meg a „Futtatás” gombot, hogy kipróbáld a programodat"
+          "craft_run_button_callout": "Nyomd meg a „Futtatás” gombot, hogy kipróbáld a programodat",
+          "craft_drag_block_callout": "Fogj meg egy \"előrelépni\" blokkot, és kapcsold a másik blokk alá."
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Ismételd a blokkokat úgy, hogy ide helyezed őket"
@@ -979,6 +983,29 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Új blokk!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Új blokk!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Új blokk!",
+          "poetry_foreground": "Új blokk!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Új blokk!",
+          "poetry_multiple_sprites": "Új blokk!",
+          "poetry_new_block": "Új blokk!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Új blokk!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Új blokk!",
+          "poetry_sprite_stops": "Új blokk!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Új blokk!",
+          "poetry_remove_sprite": "Új blokk!"
         }
       }
     }

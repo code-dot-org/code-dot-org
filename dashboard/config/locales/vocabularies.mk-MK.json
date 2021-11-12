@@ -2,6 +2,18 @@
   "mk-MK": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "Функција"
+        },
+        "code/artist/unversioned": {
+          "word": "Код"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "Лупови"
+        },
+        "code/sports/unversioned": {
+          "word": "Код"
+        },
         "variable/coursef/2021": {
           "word": "Променлива"
         },

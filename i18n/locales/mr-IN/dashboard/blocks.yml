@@ -944,6 +944,12 @@ mr:
         text: "{SPRITE}"
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
+      gamelab_playSoundOptions:
+        options:
+          SOUND:
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": बुडबुडा
+            "'sound://category_animals/bear.mp3'": अस्वल
+            "'sound://category_animals/elephant.mp3'": हत्ती
       gamelab_randColor:
         text: कोणताही रंग
       gamelab_randomColor:
@@ -1140,12 +1146,29 @@ mr:
         text: राक्षसांना तुम्हाला हवे त्या ठिकाणी ठेवा
       Outbreak_stopMoving:
         text: राक्षस हालचाल थांबायला सुरुवात करतात
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: आईसक्रीम
+            Stars: तारे
+            Fireworks: फटाके
+            '"rainbow"': इंद्रधनुष्य
+            '"hearts"': ह्रदय
+      Poetry_playSound:
+        options:
+          SOUND:
+            Light: प्रकाश
+      Poetry_setBackground:
+        text: पार्श्वभूमीचा रंग {COLOR} करा
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
             '"colors"': रंग
             '"space"': स्पेस
             '"stars"': तारे
+            '"rain"': पाऊस
+            '"bubbles"': फुगे
+            '"confetti"': कॉन्फेटी
           PALETTE:
             '"rainbow"': इंद्रधनुष्य
       Poetry_setForegroundEffect:

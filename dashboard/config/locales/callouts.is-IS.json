@@ -1784,6 +1784,29 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Nýr kubbur!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Nýr kubbur!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Nýr kubbur!",
+          "poetry_foreground": "Nýr kubbur!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Nýr kubbur!",
+          "poetry_multiple_sprites": "Nýr kubbur!",
+          "poetry_new_block": "Nýr kubbur!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Nýr kubbur!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Nýr kubbur!",
+          "poetry_sprite_stops": "Nýr kubbur!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Nýr kubbur!",
+          "poetry_remove_sprite": "Nýr kubbur!"
         }
       }
     }

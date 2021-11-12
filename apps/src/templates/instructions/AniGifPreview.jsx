@@ -52,13 +52,7 @@ export default connect(
   }),
   dispatch => ({
     showInstructionsDialog() {
-      dispatch(
-        openDialog({
-          autoClose: false,
-          imgOnly: true,
-          hintsOnly: false
-        })
-      );
+      dispatch(openDialog({imgOnly: true}));
     }
   })
 )(ImagePreview);

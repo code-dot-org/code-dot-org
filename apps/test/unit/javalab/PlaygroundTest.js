@@ -1,6 +1,8 @@
 import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
-import Playground from '@cdo/apps/javalab/Playground';
+import Playground, {
+  REENABLE_CLICK_EVENTS_TIMEOUT_MS
+} from '@cdo/apps/javalab/Playground';
 import {
   PlaygroundSignalType,
   WebSocketMessageType
@@ -32,11 +34,13 @@ describe('Playground', () => {
     starterAssetsApi,
     assetsApi,
     playground,
-    setIsProgramRunning;
+    setIsProgramRunning,
+    clock;
 
   beforeEach(() => {
     stubRedux();
     registerReducers({playground: playgroundRedux});
+    clock = sinon.useFakeTimers();
     onOutputMessage = sinon.stub();
     onNewlineMessage = sinon.stub();
     onJavabuilderMessage = sinon.stub();
@@ -83,6 +87,7 @@ describe('Playground', () => {
   afterEach(() => {
     sinon.restore();
     restoreRedux();
+    clock.restore();
   });
 
   it('sets background image when receiving a SET_BACKGROUND_IMAGE message for a starter asset', () => {
@@ -443,6 +448,43 @@ describe('Playground', () => {
     expect(setIsProgramRunning).to.have.been.calledWith(false);
     expect(onOutputMessage).to.have.been.calledOnce;
     expect(onNewlineMessage).to.have.been.calledOnce;
+  });
+
+  it('does not send click event if update is in progress', () => {
+    playground.handleSignal({value: PlaygroundSignalType.RUN});
+
+    const imageId = 'id';
+    playground.handleImageClick(imageId);
+    expect(onJavabuilderMessage).to.have.been.calledOnce;
+
+    onJavabuilderMessage.reset();
+    playground.handleImageClick(imageId);
+    // Should not be called again
+    expect(onJavabuilderMessage).to.have.not.been.called;
+
+    playground.handleSignal({value: PlaygroundSignalType.UPDATE_COMPLETE});
+    playground.handleImageClick(imageId);
+    // Should be able to send message after receiving UPDATE_COMPLETE
+    expect(onJavabuilderMessage).to.have.been.calledOnce;
+  });
+
+  it('re-enables click events after timeout', () => {
+    playground.handleSignal({value: PlaygroundSignalType.RUN});
+
+    const imageId = 'id';
+    playground.handleImageClick(imageId);
+    expect(onJavabuilderMessage).to.have.been.calledOnce;
+
+    onJavabuilderMessage.reset();
+    playground.handleImageClick(imageId);
+    // Should not be called again
+    expect(onJavabuilderMessage).to.have.not.been.called;
+
+    clock.tick(REENABLE_CLICK_EVENTS_TIMEOUT_MS + 1);
+
+    // Should be able to send message after timeout
+    playground.handleImageClick(imageId);
+    expect(onJavabuilderMessage).to.have.been.calledOnce;
   });
 
   function verifyOnFileLoadError(filename) {

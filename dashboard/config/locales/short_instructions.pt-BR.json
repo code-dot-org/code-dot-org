@@ -3658,7 +3658,12 @@
         "ramp_artist_loops8_2021": "Procure por um padrão e deixe esse código menos utilizando laços.",
         "ramp_artist_loops9_2021": "Resolva este enigma desenhando um quadrado.",
         "CourseF_outbreak5": "Mude o número e o tamanho dos espectros de monstros na sua simulação.",
-        "international_outbreak_freeplay": "Compartilhe uma mensagem com a sua simulação."
+        "international_outbreak_freeplay": "Compartilhe uma mensagem com a sua simulação.",
+        "courseF_apps_chatbot": "Este robô vai te fazer perguntas e lembrar o que você digita! Digite as suas respostas e converse com o X-9!",
+        "helloworld_animals_say": "Use o bloco `falar` para me fazer falar o que você quiser!",
+        "helloworld_emoji_say": "Use o bloco `falar` para me fazer falar o que você quiser!",
+        "helloworld_food_say": "Use o bloco `falar` para me fazer falar o que você quiser!",
+        "helloworld_retro_say": "Use o bloco `falar` para me fazer falar o que você quiser!"
       }
     }
   }

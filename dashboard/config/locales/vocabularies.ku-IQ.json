@@ -2,6 +2,21 @@
   "ku-IQ": {
     "data": {
       "vocabularies": {
+        "function/hero/unversioned": {
+          "word": "فرمان"
+        },
+        "code/artist/unversioned": {
+          "word": "کۆد"
+        },
+        "conditionals/aquatic/unversioned": {
+          "word": "مەرجیەکان"
+        },
+        "loops/aquatic/unversioned": {
+          "word": "گرێکان"
+        },
+        "code/sports/unversioned": {
+          "word": "کۆد"
+        },
         "variable/coursef/2021": {
           "word": "گۆڕاو"
         },

@@ -187,7 +187,7 @@ sr:
             Ани и Елзи у истраживању магије и лепоте леда.
           lessons:
             Artist:
-              name: Уметник
+              name: Програмирај са Аном и Елзом
           student_description: Хајде да искористимо програмирање да би се придружили
             Ани и Елзи у истраживању магије и лепоте леда. Креираћете пахуљице и обрасце
             док клижете по леду и направићете зимску чаролију коју можете поделити
@@ -310,7 +310,7 @@ sr:
           description_short: Креирај приче и игре са Дизнијевим ликовима у Играоници.
           lessons:
             Infinity:
-              name: Бесконачно
+              name: Дизнијева Играоница
           student_description: Креирај приче и игре са Дизнијевим ликовима у Играоници.
         algebrademo:
           lessons:
@@ -663,9 +663,6 @@ sr:
             звезда у галаксији далеко, далеко.
           description_short: Научите да програмирате дроиде и креирате сопствену игру
             Ратова звезда у галаксији далеко, далеко.
-          lessons:
-            Hour of Code 2015:
-              name: Час кода 2015
           student_description: Научите да програмирате дроиде и креирате сопствену
             игру Ратова звезда у галаксији далеко, далеко.
         mc:
@@ -910,10 +907,6 @@ sr:
           lesson_groups:
             required:
               display_name: Преглед
-        basketball:
-          lessons:
-            Bounce:
-              name: одбиј се
         csd2-2017:
           lessons:
             Lists:
@@ -1239,10 +1232,6 @@ sr:
               name: 'Algorithms: Tangrams'
             Ice Age Play Lab:
               name: Ледено доба - Играоница
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Мајнкрафт час програмирања
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -2334,3 +2323,8 @@ sr:
           lessons:
             lesson-1:
               name: Преглед
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Пчелица словарица
+          title: Пчелица словарица

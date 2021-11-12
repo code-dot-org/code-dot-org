@@ -129,7 +129,7 @@
                                   <value name="BEHAVIOR">
                                     <block type="gamelab_behavior_get">
                                       <mutation/>
-                                      <title name="VAR">jittering</title>
+                                      <title name="VAR" id="jittering">jittering</title>
                                     </block>
                                   </value>
                                   <next>
@@ -142,7 +142,7 @@
                                       <value name="BEHAVIOR">
                                         <block type="gamelab_behavior_get">
                                           <mutation/>
-                                          <title name="VAR">patrolling</title>
+                                          <title name="VAR" id="patrolling">patrolling</title>
                                         </block>
                                       </value>
                                       <next>
@@ -155,7 +155,7 @@
                                           <value name="BEHAVIOR">
                                             <block type="gamelab_behavior_get">
                                               <mutation/>
-                                              <title name="VAR">wandering</title>
+                                              <title name="VAR" id="wandering">wandering</title>
                                             </block>
                                           </value>
                                         </block>

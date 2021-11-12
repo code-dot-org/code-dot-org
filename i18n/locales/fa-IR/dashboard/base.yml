@@ -643,6 +643,7 @@ fa:
       first_name: 'نام'
       last_name: 'نام خانوادگی'
       email: 'ایمیل'
+      school: 'مدرسه'
       school_name: 'نام مدرسه'
       colombian_chilean_school_name: 'نام مدرسه'
     form_entries:

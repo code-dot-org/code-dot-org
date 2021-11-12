@@ -1139,6 +1139,7 @@ hu:
           EFFECT:
             '"burst"': robbanás
             '"rain"': esős
+            '"spiral"': spirál
       gamelab_makeNewSpriteAnon:
         text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       gamelab_makeNumSprites:
@@ -1186,7 +1187,22 @@ hu:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": gomb
             "'sound://category_collect/clicky_crunch.mp3'": ropogás
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": buborék
+            "'sound://category_animals/bear.mp3'": medve
+            "'sound://category_animals/cat.mp3'": macska
+            "'sound://category_animals/cow.mp3'": tehén
+            "'sound://category_animals/pig.mp3'": malac
+            "'sound://category_animals/sheep.mp3'": juh
+            "'sound://category_animals/goat.mp3'": kecske
+            "'sound://category_animals/chicken.mp3'": csirke
+            "'sound://category_animals/rooster.mp3'": kakas
+            "'sound://category_animals/elephant.mp3'": Elefánt
+            "'sound://category_animals/dolphin.mp3'": delfin
+            "'sound://category_animals/chick.mp3'": csaj
+            "'sound://category_animals/dog.mp3'": kutya
+            "'sound://category_animals/tiger.mp3'": tigris
             "'sound://category_instrumental/harpe_pluck_1.mp3'": hárfa
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": kiválasztás
             "'sound://category_digital/jump_7.mp3'": Ugorj
       gamelab_pointInDirection:
         text: "{SPRITE} fordulj {DIRECTION} felé"
@@ -1674,15 +1690,32 @@ hu:
         text: "{SPRITE} x koordinátája"
       Mikelab_yLocationOf:
         text: "{SPRITE} y koordinátája"
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Fagyi
+            Stars: Csillagok
+            Fireworks: Tűzijáték
+            '"rainbow"': Szivárvány
+            '"hearts"': Szívek
+            '"flowers"': Virágok
+            '"waves"': Hullámok
       Poetry_makeBurst:
         options:
           EFFECT:
             '"burst"': robbanás
             '"rain"': esős
+      Poetry_makeNewSpriteAnon:
+        text: új {ANIMATION_NAME} szereplő {LOCATION} helyen
       Poetry_makeNumSprites:
         text: csinálj {NUM} új {ANIMATION_NAME} szereplőt
       Poetry_playSound:
         text: játszd le a {SOUND} hangot
+        options:
+          SOUND:
+            Light: Világos
+      Poetry_setBackground:
+        text: 'háttérszín beállítása: {COLOR}'
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1691,6 +1724,10 @@ hu:
             '"space"': Világűr
             '"stars"': Csillagok
             '"ripples"': Lüktetés
+            '"rain"': Eső
+            '"bubbles"': Buborékok
+            '"confetti"': Konfetti
+            '"hearts"': Színes szívek
           PALETTE:
             '"rainbow"': Szivárvány
       Poetry_setBackgroundImageAs:

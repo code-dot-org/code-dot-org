@@ -174,7 +174,7 @@ gl:
           description_short: Usa a programación para explorar a maxia e a beleza do xeo con Anna e Elsa.
           lessons:
             Artist:
-              name: Artista
+              name: Programa con Ana e Elsa
           student_description: Imos usar código para unirnos a Ana e Elsa mentres exploran a maxia e a beleza do xeo. Crearás flocos de neve e padróns a medida que patinas sobre xeo e farás unha paisaxe invernal que logo podes compartir cos teus amigos!
         course4:
           title: Curso 4
@@ -282,7 +282,7 @@ gl:
           description_short: Utiliza o laboratorio de xogos para crear unha historia ou xogo protagonizada por personaxes de Disney Infinity.
           lessons:
             Infinity:
-              name: Infinito
+              name: Laboratorio de Xogo Disney Infinity
           student_description: Utiliza o laboratorio de xogos para crear unha historia ou xogo protagonizada por personaxes de Disney Infinity.
         algebrademo:
           lessons:
@@ -619,9 +619,6 @@ gl:
         starwarsblocks:
           description: Aprende a programar androides e crea o teu propio xogo Star Wars nunha galaxia moi, moi afastada.
           description_short: Aprende a programar androides e crea o teu propio xogo Star Wars nunha galaxia moi, moi afastada.
-          lessons:
-            Hour of Code 2015:
-              name: Hora do Co\*digo 2015
           student_description: Aprende a programar androides e crea o teu propio xogo Star Wars nunha galaxia moi, moi afastada.
         mc:
           title: Hora do Código Minecraft
@@ -854,10 +851,6 @@ gl:
           lesson_groups:
             required:
               display_name: Visión xeral
-        basketball:
-          lessons:
-            Bounce:
-              name: Rebote
         csd2-2017:
           lessons:
             Lists:
@@ -1248,10 +1241,6 @@ gl:
           lessons:
             Creating Functions:
               name: Creando funcións
-        hero:
-          lessons:
-            Minecraft Hour of Code:
-              name: Hora do Código Minecraft
         course-e-2018:
           lessons:
             Building a Foundation:
@@ -2427,3 +2416,8 @@ gl:
           lessons:
             lesson-1:
               name: Visión xeral
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Abella que Soletrea
+          title: Abella que Soletrea

@@ -2,8 +2,12 @@
   "func": "digitalWrite",
   "category": "Maker",
   "paletteParams": [
-    "pin",
-    "value"
+    {
+      "name": "pin"
+    },
+    {
+      "name": "value"
+    }
   ],
   "params": [
     "13",

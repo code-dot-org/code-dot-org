@@ -5,7 +5,8 @@ import {
   SoundExceptionType,
   MediaExceptionType,
   TheaterExceptionType,
-  PlaygroundExceptionType
+  PlaygroundExceptionType,
+  EXCEPTION_PREFIX
 } from './constants';
 
 export function handleException(exceptionDetails, callback) {
@@ -109,13 +110,14 @@ export function handleException(exceptionDetails, callback) {
     case PlaygroundExceptionType.PLAYGROUND_NOT_RUNNING:
       error = msg.errorPlaygroundNotRunning();
       break;
-    case PlaygroundExceptionType.INVALID_MESSAGE_PLAYGROUND_ENDED:
-      error = msg.errorPlaygroundMessageAfterEnd();
+    case PlaygroundExceptionType.INVALID_MESSAGE:
+      error = msg.errorPlaygroundInvalidMessage();
       break;
 
     default:
       error = msg.unknownError({type, connectionId});
       break;
   }
+  error = `${EXCEPTION_PREFIX} ${error}`;
   callback(error);
 }

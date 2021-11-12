@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "nasa-myjourney"
+    "/home": "myjourney-lacma"
   },
 
   "banners": {
-    "nasa-myjourney": {
-      "image": "/images/csjourneys/nasa-banner.png",
-      "title": "Building models of the universe with NASA",
-      "body": "Hear from two NASA scientists about their career journeys and how they use data science to build 3D models of the universe. Recommended for grades K-5. Recording will be available the day after the live session.",
+    "myjourney-lacma": {
+      "image": "/images/csjourneys/lacma-dash.png",
+      "title": "My Journey: Art + Tech",
+      "body": "Learn how the program team at LA County Museum of Art makes space for artists to explore the intersections of art and emerging technologies. Recommended for grades K-5. Recording will be available the day after the live session.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://www.eventbrite.com/e/my-journey-building-models-of-the-universe-registration-167178077129",
-      "buttonId": "myjourney-nasa-details"
+      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat9",
+      "buttonId": "myjourney-lacma-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",

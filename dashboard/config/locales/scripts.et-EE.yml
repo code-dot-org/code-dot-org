@@ -205,7 +205,7 @@ et:
             kui nad avastavad jää võlu ja ilu.
           lessons:
             Artist:
-              name: Kunstnik
+              name: Kirjuta koodi Anna ja Elsa'ga
           student_description: Kasutame koodi, et liituda Anna ja Elsa'ga seiklusega
             avastada jää maagilisust ja iludust. Sa moodustad lumehelbeid ja taustasid
             uisutamise ajal ning moodustad talvekuningriigi, mida saad jagada kõigi
@@ -332,7 +332,7 @@ et:
             Disney Infinity tegelased.
           lessons:
             Infinity:
-              name: Lõpmatus
+              name: Disney Infinity Play Lab
           student_description: Kasuta Play Labi, et luua lugu või mäng, kus peaosa
             mängivad Disney Infinity tegelased.
         algebrademo:
@@ -847,9 +847,6 @@ et:
             kauges galaktikas.
           description_short: Õpi programmeerima roboteid ja loo oma Star Wars’i mäng
             kauges, kauges galaktikas.
-          lessons:
-            Hour of Code 2015:
-              name: Kooditund 2015
           student_description: Õpi programmeerima roboteid ja loo oma Star Wars’i
             mäng kauges, kauges galaktikas.
         mc:
@@ -1205,9 +1202,6 @@ et:
           title: Vali meeskond ja tee korvpallimäng
           description_short: Vali meeskond ja tee korvpallimäng
           description: Vali meeskond ja tee korvpallimäng
-          lessons:
-            Bounce:
-              name: Põrkama
           student_description: Vali meeskond ja tee korvpallimäng
         csd2-2017:
           lessons:
@@ -1736,7 +1730,7 @@ et:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft: Kangelase teekond KoodiTund'
             Minecraft Hour of Code:
-              name: Minecrafti KoodiTund
+              name: 'Minecraft: Kangelase teekond'
           student_description: Minecraft on tagasi KoodiTunniks uhiuue tegevusega!
             Teekond läbi Minecrafti koos koodiga.
         csp-explore-2017:
@@ -2157,6 +2151,9 @@ et:
           title: 'Minecraft: Voyage Aquatic'
           description_short: Kasuta loomingulisust ja probleemi lahendamise oskuseid,
             et uurida ja ehitada veealuseid maailmu koodi abil!
+          lessons:
+            Aquatic:
+              name: 'Minecraft: Voyage Aquatic'
         dance--draft:
           lessons:
             Dance Party:
@@ -3491,5 +3488,18 @@ et:
               display_name: Sisu
             lesson_group:
               display_name: Sisu
+            lessonGroup-2:
+              display_name: Sisu
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Vidinad
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Sõnamesilane
+          title: Sõnamesilane
+        csa5-exemplars:
+          lesson_groups:
             lessonGroup-2:
               display_name: Sisu

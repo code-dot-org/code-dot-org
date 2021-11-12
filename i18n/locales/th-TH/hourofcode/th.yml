@@ -30,6 +30,8 @@ th:
   africa_campaign_date_full: October 1-31
   africa_campaign_date_year: '2560'
   africa_campaign_date_full_year: October 1-31, 2021
+  social_hoc2021_cse: 'During the #HourOfCode, we''re celebrating #CSEverywhere. Discover
+    the connections!'
   hoc2020_header: "  เรียนวันนี้ เพื่ออนาคตที่สดใสที่เราสร้างขึ้นเอง  "
   hoc2020_header_with_line_break_markdown: "  เรียนวันนี้ เพื่ออนาคตที่สดใสที่สร้างขึ้นเอง
     \ "
@@ -60,6 +62,7 @@ th:
     9-15 ธันวาคม 2019วิทยาศาสตร์คอมพิวเตอร์เป็นพื้นฐานการเรียนรู้สำหรับนักเรียนทุกคน
   social_hoc2019_dance: Featuring Katy Perry, Shawn Mendes, Panic! At The Disco, Lil
     Nas X, Jonas Brothers, Nicki Minaj, and 34 more!
+  social_hoc_anybody: 'Hour of Code: Anybody can Learn'
   oceans_landing_title: "  AI for Oceans  "
   oceans_landing_description: 'ศึกษารายละเอียดเรื่องการเรียนรู้ของระบบ และการใช้ AI
     อย่างมีศีลธรรม  '
@@ -137,6 +140,12 @@ th:
   hoc_overview_oceans_tutorial_desc: 'เรียนรู้เรื่องปัญญาประดิษฐ์ (AI) รวมถึงการเรียนรู้ของระบบ
     ข้อมูลการฝึกและอคติ ขณะที่ดูเรื่องจริยธรรมและวิธีนำ AI มาใช้เพื่อระบุถึงปัญหาต่างๆ
     บนโลกใบนี้  '
+  hoc_overview_csc_header: Introducing CS Connections
+  hoc_overview_csc_desc: Our newest curriculum highlights the connections between
+    computer science and other subjects like math, language arts, science, and social
+    studies. Through these modules, projects, and lessons, classrooms can explore
+    their usual subjects in exciting new ways!
+  hoc_overview_csc_learn_more: Learn more about CS Connections
   ai_video_title_what_is_ai: AI คืออะไร
   ai_video_title_algorithm_bias: การต่อกรกับอคติในอัลกอริทึม
   ai_video_title_phone_knows_dog: โทรศัพท์ของคุณทราบได้อย่างไรว่านี่คือน้องหมา
@@ -198,6 +207,10 @@ th:
   hourofcode_homepage_hoc2018_header_line1: ไม่ว่าใครก็สามารถจัดกิจกรรมชั่วโมงเขียนโค้ดที่ใดก็ได้
     บทช่วยสอนความยาว 1 ชั่วโมงแปลเป็นภาษาต่าง ๆ มากกว่า 45 ภาษา และไม่จำเป็นต้องมีประสบการณ์มาก่อน
   hourofcode_homepage_hoc2018_header_line2: อายุตั้งแต่ 4 ขวบถึง 104 ปี
+  codeorg_homepage_hoc_is_coming: The Hour of Code is coming.
+  codeorg_homepage_celebrate_cse: Celebrate computer science everywhere!
+  codeorg_homepage_csc: Computer science meets language arts, math, and more in CS
+    Connections
   hoc2018_tutorial_mchoc_description: Minecraft is back for the Hour of Code with
     a brand new activity! Journey through Minecraft with code.
   codeorg_homepage_hoc2019_dance_heading: ลองเกม <span class="highlight-word">Dance&nbsp;Party!</span>
@@ -1480,7 +1493,7 @@ th:
   tutorial_codespeakhappy_name: Code a Happy Place Meditation App
   tutorial_grokimage_name: Image Magic with Python
   tutorial_icomputelearn_name: Learn Coding with iCompute
-  tutorial_rpstress_name: Stress ball
+  tutorial_rpstress_name: 'Stress Ball: Code a clickable onscreen stress ball'
   tutorial_bsdcause_name: Support My Cause
   tutorial_vidcodeanimoji_name: Animoji
   tutorial_vidcodeanimojies_name: Animoji
@@ -5149,8 +5162,9 @@ th:
     program your own fantastic interactive stories, games, and animations. Following
     our creative, fun, activities means that you will develop computational thinking
     as well as coding skills!
-  tutorial_rpstress_longdescription: Use Scratch to create a stress ball that you
-    can squash!
+  tutorial_rpstress_longdescription: Use Scratch blocks to create and personalise
+    your clickable stress ball with graphic effects, costume animation, and sound
+    effects.
   tutorial_bsdcause_longdescription: 'This course allows students to use code as a
     way to share what is important or interesting to them. They can follow the lesson
     or create unique projects while learning HTML, CSS and JavaScript. They are guided
@@ -6215,8 +6229,7 @@ th:
   tutorial_codespeakhappy_language: ภาษาอังกฤษ
   tutorial_grokimage_language: English, English (UK)
   tutorial_icomputelearn_language: ภาษาอังกฤษ
-  tutorial_rpstress_language: Arabic, Dutch, English, English (UK), French, Spanish
-    (Mexico)
+  tutorial_rpstress_language: English, English (UK)
   tutorial_bsdcause_language: ภาษาอังกฤษ
   tutorial_vidcodeanimoji_language: English, Spanish (Spain), Spanish (Mexico)
   tutorial_vidcodeanimojies_language: English, Spanish (Spain), Spanish (Mexico)
@@ -7742,7 +7755,7 @@ th:
   tutorial_codespeakhappy_string_platforms: Chrome, Firefox
   tutorial_grokimage_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_icomputelearn_string_platforms: All modern browsers
-  tutorial_rpstress_string_platforms: Chrome, Firefox
+  tutorial_rpstress_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_bsdcause_string_platforms: Chrome
   tutorial_vidcodeanimoji_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_vidcodeanimojies_string_platforms: All modern browsers, Android tablet,

@@ -202,7 +202,7 @@ da:
             Elsa, når de går på opdagelse i magien og isens skønhed.
           lessons:
             Artist:
-              name: Kunstner
+              name: Kod med Anna og Elsa
           student_description: Lad os bruge kode til at udforske isens magi og skønhed
             sammen med Anna og Elsa. Du kan tegne snefnug og mønstre, mens du skøjter
             og laver et vinterlandskab, som du derefter kan dele med dine venner!
@@ -334,7 +334,7 @@ da:
             med karakterer fra Disneys Infinity
           lessons:
             Infinity:
-              name: Uendelig
+              name: Disney Infinity Play Lab
           student_description: Brug Play Lab til at skabe en historie eller et spil
             med karakterer fra Disneys Infinity
         algebrademo:
@@ -707,9 +707,6 @@ da:
             i en galakse langt, langt herfra.
           description_short: Lær at programmere droider, og lav dit eget Star Wars
             spil i en galakse langt, langt herfra.
-          lessons:
-            Hour of Code 2015:
-              name: Hour of Code 2015
           student_description: Lær at programmere droider, og lav dit eget Star Wars
             spil i en galakse langt, langt herfra.
         mc:
@@ -986,10 +983,6 @@ da:
           lesson_groups:
             required:
               display_name: Oversigt
-        basketball:
-          lessons:
-            Bounce:
-              name: Hoppe
         hoc-encryption:
           lessons:
             Simple Encryption:
@@ -1410,9 +1403,6 @@ da:
         hero:
           description: Minecraft er tilbage med en splinterny aktivitet i En Times
             Kodning! En rejse gennem Minecraft ved hjælp af kode.
-          lessons:
-            Minecraft Hour of Code:
-              name: Minecraft Hour of Code
           student_description: Minecraft er tilbage med en splinterny aktivitet i
             En Times Kodning! En rejse gennem Minecraft ved hjælp af kode.
         course-e-2018:
@@ -1719,7 +1709,7 @@ da:
             En Times Kodning!
           lessons:
             Aquatic:
-              name: Akvatisk
+              name: 'Minecraft: Akvatisk rejse'
         dance--draft:
           lessons:
             Dance Party:
@@ -2479,6 +2469,8 @@ da:
           lessons:
             Virus Simulation for Code Bytes:
               name: Kodning af en simulation
+            Outbreak:
+              name: Kodning af en simulation
           lesson_groups:
             outbreak:
               display_name: Udbrud Simulering
@@ -2777,3 +2769,12 @@ da:
           lessons:
             lesson-3:
               name: Værktøjer
+        csa-u8-dev:
+          lessons:
+            lesson-2:
+              name: Værktøjer
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Stave-bien
+          title: Stave-bien

@@ -2660,10 +2660,24 @@ vi-VN:
           correct: true
           feedback: Chính xác!
         - text: B
+          feedback: Sai rồi. Vòng lặp bên trong vẽ hình ngũ giác và vòng lặp bên ngoài
+            lặp lại vòng lặp đó 4 lần theo hình tròn.
         - text: C
+          feedback: Sai rồi. Vòng lặp bên trong vẽ hình ngũ giác và vòng lặp bên ngoài
+            lặp lại vòng lặp đó 4 lần theo hình tròn.
         - text: Không mục nào ở trên
+          feedback: Sai rồi. Vòng lặp bên trong vẽ hình ngũ giác và vòng lặp bên ngoài
+            lặp lại vòng lặp đó 4 lần theo hình tròn.
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh dưới đây. Chương trình này sẽ vẽ hình gì khi nhấp
+            chuột vào nút “Run” (chạy)?
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
       courseD_multi_bee_conditionals1_predict1_2021:
         answers:
         - text: Dù sao thì chú ong cũng sẽ di chuyển đến chỗ đám mây và thử lấy mật
@@ -2683,9 +2697,9 @@ vi-VN:
             sẽ chỉ thử lấy mật hoa nếu có bông hoa dưới đám mây.
         questions:
         - text: Đám mây đang chắn tầm nhìn. Có thể có một bông hoa dưới đám mây này.
-            Nếu có hoa, chú ong sẽ cần lấy mật hoa một lần. Nếu không có hoa, chú
-            ong không nên làm gì cả. Hãy xem kỹ mã lệnh dưới đây. Bạn nghĩ điều gì
-            sẽ xảy ra sau khi bạn nhấp chuột vào “Run” (chạy)?
+            Nếu có hoa, chú ong cần lấy mật hoa một lần. Nếu không có hoa, chú ong
+            không nên làm gì cả. Hãy xem kỹ mã lệnh dưới đây. Bạn nghĩ điều gì sẽ
+            xảy ra sau khi bạn nhấp chuột vào “Run” (chạy)?
       courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - {}
@@ -2751,13 +2765,26 @@ vi-VN:
             khi bạn nhấp chuột vào nút “Run” (chạy)?
       courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Người thu hoạch sẽ nhặt tất cả các loại nông sản.
+          feedback: Sai rồi. Không có mã lệnh nào để nhặt bí ngô.
+        - text: Người thu hoạch sẽ không nhặt bất kỳ loại nông sản nào trên con đường
+            mà cô ấy đang đi.
+          feedback: Sai rồi. Mã lệnh sẽ yêu cầu người thu hoạch liên tục đi theo hình
+            bậc thang và nhặt toàn bộ ngô hoặc rau diếp khi cô ấy tìm thấy. Cô ấy
+            sẽ không nhặt bí ngô.
+        - text: Người thu hoạch sẽ nhặt tất cả các loại nông sản, ngoại trừ bí ngô.
+          correct: true
           feedback: Chính xác!
         - text: Người thu hoạch sẽ chỉ hái bí.
+          feedback: Sai rồi. Mã lệnh sẽ yêu cầu người thu hoạch liên tục đi theo hình
+            bậc thang và nhặt toàn bộ ngô hoặc rau diếp khi cô ấy tìm thấy. Cô ấy
+            sẽ không nhặt bí ngô.
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh dưới đây. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
+            vào nút “Run” (chạy)?
+        markdown: |
+          Cây trong bài tập này có thể là ngô hoặc rau diếp.
+          <br/>
       courseD_multi_farmer_while10_predict2_2021:
         answers:
         - text: Không có gì. Mã lệnh này sẽ chỉ để lại mặt đất phẳng.
@@ -2792,13 +2819,21 @@ vi-VN:
             vào nút “Run” (chạy)?
       courseD_multi_maze_until10_predict2_2021:
         answers:
-        - correct: true
+        - text: Thây ma sẽ bỏ qua đường đi đúng và cuối cùng sẽ tiến và lùi mãi mãi.
+          correct: true
           feedback: Chính xác!
-        - {}
-        - {}
+        - text: Thây ma sẽ đến được chỗ hoa hướng dương.
+          feedback: Sai rồi. Thây ma sẽ bỏ qua đường đi đúng và cuối cùng sẽ tiến
+            và lùi mãi mãi.
+        - text: Thây ma sẽ xoay phải ở lối đi đầu tiên và đi vòng quanh mãi mãi.
+          feedback: Sai rồi. Thây ma sẽ bỏ qua đường đi đúng và cuối cùng sẽ tiến
+            và lùi mãi mãi.
         - text: Thây ma sẽ bị mắc kẹt ở cuối con đường phía trước.
+          feedback: Trong mã lệnh này, thây ma sẽ bỏ qua đường đi đúng và cuối cùng
+            sẽ tiến và lùi mãi mãi.
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh sau đây. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
+            vào nút “Run” (Chạy)?
       courseD_multi_maze_until2_predict1_2021:
         answers:
         - text: Chú chim sẽ không di chuyển chút nào.
@@ -2819,8 +2854,10 @@ vi-VN:
             vào nút “Run” (chạy)?
       courseE_EOC_2021:
         display_name: Dự án tổng kết khóa học
+        description: Bạn đã đến phần cuối của Khóa học E! Hãy chọn một dự án để tạo.
       courseE_EOC_examples_2021:
         display_name: Dự án tổng kết khóa học
+        description: Bạn đã đến phần cuối của Khóa học E! Hãy chọn một dự án để tạo.
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: Sẽ không có gì xảy ra.
@@ -2836,24 +2873,40 @@ vi-VN:
           feedback: Sai. Người ngoài hành tinh xanh sẽ bắt đầu di chuyển lên và xuống
             trên màn hình.
         questions:
-        - {}
+        - text: Hãy xem kỹ mã lệnh bên dưới. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
+            vào người ngoài hành tinh?
       courseE_multi_farmer_functions11_predict_2021:
         answers:
-        - {}
-        - {}
-        - correct: true
+        - text: Người thu hoạch sẽ hái hai quả bí ngô.
+          feedback: Sai rồi. Người thu hoạch tiến lên cho đến cuối con đường, sau
+            đó xoay ngược lại và lùi đến khi hái được rau diếp.
+        - text: Người thu hoạch sẽ hái toàn bộ bí ngô.
+          feedback: Sai rồi. Người thu hoạch tiến lên cho đến cuối con đường, sau
+            đó xoay ngược lại và lùi đến khi hái được rau diếp.
+        - text: Người thu hoạch sẽ hái rau diếp.
+          correct: true
           feedback: Chính xác!
-        - {}
+        - text: Người thu hoạch sẽ hái ngô.
+          feedback: Sai rồi. Người thu hoạch tiến lên cho đến cuối con đường, sau
+            đó xoay ngược lại và lùi đến khi hái được rau diếp.
         questions:
-        - {}
+        - text: Hãy nhìn vào các hàm được định nghĩa bên dưới. Người thu hoạch sẽ
+            hái những nông sản nào?
       courseE_prediction_artistFunction1_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
+        - text: Không có gì. Hàm không được khai báo trong chương trình.
+          feedback: Sai rồi. Hàm thực ra được khai báo hai lần trong chương trình.
+        - text: Họa sĩ sẽ vẽ một hình vuông duy nhất.
+          feedback: Sai rồi. Hàm thực ra được khai báo hai lần trong chương trình.
+        - text: Họa sĩ sẽ vẽ hai hình vuông chồng lên nhau.
+          feedback: Sai rồi. Chiều dài mỗi cạnh của hình vuông chỉ là 100 điểm ảnh,
+            nhưng họa sĩ đã nhảy 175 điểm ảnh giữa các hàm.
+        - text: Họa sĩ sẽ vẽ hai hình vuông với một khoảng trống nhỏ ở giữa.
+          correct: true
+          feedback: Chính xác! Hàm được khai báo hai lần trong chương trình, kèm theo
+            một bước nhảy ở giữa.
         questions:
-        - {}
+        - text: Bạn nghĩ điều gì sẽ xảy ra khi bạn nhấp Run vào nút “Run” (chạy)?
       courseE_prediction_artistFunction1_dani:
         answers:
         - {}
@@ -2971,19 +3024,19 @@ vi-VN:
             sẽ được hiển thị nếu người dùng nhập “pizza”?
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
-        - text: Họa sĩ sẽ vẽ hình tam giác có cạnh 50 pixel.
+        - text: Họa sĩ sẽ vẽ hình tam giác có cạnh 50 điểm ảnh.
           correct: true
           feedback: Chính xác!
-        - text: Họa sĩ sẽ vẽ đa giác 50 cạnh, mỗi cạnh 3 pixel.
+        - text: Họa sĩ sẽ vẽ đa giác 50 cạnh, mỗi cạnh 3 điểm ảnh.
           feedback: Sai rồi. Biến `length` (chiều dài) cần phải ở trong vòng lặp `repeat`
             (lặp lại) để làm được điều đó.
         - text: Họa sĩ sẽ vẽ ba cạnh mở có các góc xoay 50 độ.
-          feedback: Sai rồi. Biến `length` (chiều dài) cần được dùng trong khối `repeat`
-            (lặp lại) để làm được điều đó.
+          feedback: Sai rồi. Biến `length` (chiều dài) cần được dùng trong khối `turn`
+            (xoay) để làm được điều đó.
         - text: Máy tính sẽ nhắc người dùng nhập số.
           feedback: Biến `length` được đặt giá trị 50 và đang được dùng trong khối
             `move forward by` (tiến lên một khoảng), vì vậy họa sĩ sẽ vẽ hình tam
-            giác có cạnh 50 pixel.
+            giác có cạnh 50 điểm ảnh.
         questions:
         - text: Chúng ta đã đặt biến “length” (chiều dài) thành 50. Điều gì sẽ xảy
             ra khi bạn nhấp chuột vào nút “Run” (Chạy)?
@@ -3009,8 +3062,10 @@ vi-VN:
         questions:
         - text: Hãy đọc mã lệnh dưới đây. Điều gì sẽ xảy ra khi bạn nhấp chuột vào
             nút “Run” (Chạy)?
-        markdown: Đúng rồi! Dùng vòng lặp `for` (với) sẽ khiến bài tập này đơn giản
-          hơn rất nhiều đấy!
+        markdown: |+
+          Đúng rồi! Dùng vòng lặp `for` (với) sẽ khiến bài tập này đơn giản hơn rất nhiều đấy!
+
+
       courseF_sprites_freeplay:
         description: Đến lượt bạn tự sáng tạo bằng ý tưởng của chính mình rồi! Bạn
           sẽ thực hiện loại dự án nào?
@@ -3121,15 +3176,26 @@ vi-VN:
           Nếu bạn không chắc mình đã sẵn sàng để tiếp tục hay chưa, hãy hỏi giáo viên nhé!
       coursee_prediction_artistfunction2_2021:
         answers:
-        - {}
-        - correct: true
+        - text: Họa sĩ sẽ giải quyết các bài tập một cách chính xác.
+          feedback: Sai rồi. Vòng lặp sử dụng “draw polygon” (vẽ đa giác) thay vì
+            “draw line of polygon” (vẽ hàng đa giác).
+        - text: Họa sĩ sẽ vẽ bốn hình vuông theo mẫu cửa sổ.
+          correct: true
           feedback: Chính xác!
-        - {}
-        - {}
+        - text: Họa sĩ sẽ chỉ vẽ một hàng hình vuông.
+          feedback: Sai rồi. Chương trình không khai báo hàm “draw line of polygons”
+            (vẽ hàng đa giác).
+        - text: Họa sĩ sẽ vẽ bốn hình vuông chồng lên nhau.
+          feedback: Sai rồi. Vòng lặp xoay 90 độ giữa các lần khai báo hàm “draw polygon”
+            (vẽ đa giác).
         questions:
-        - {}
+        - text: Điều gì sẽ xảy ra khi bạn nhấp chuột vào nút “Run” (chạy)?
       csf_be_a_super_digital_citizen_2021:
         content1: mô tả ở đây
+        markdown: |-
+          # Siêu công dân số
+
+          ## Làm thế nào để có thể trở thành người bênh vực khi chứng kiến hành vi bắt nạt trên mạng?
       csf_digital_trails_2021:
         markdown: |-
           # Theo dấu chân số
@@ -3163,6 +3229,7 @@ vi-VN:
           ## Làm thế nào để bạn đến những nơi trực tuyến một cách an toàn
       express_EOC_2021:
         display_name: Dự án tổng kết khóa học
+        description: Bạn đã đến phần cuối của Khóa học E! Hãy chọn một dự án để tạo.
       express_EOC_examples_2021:
         description: Bạn sắp bắt đầu dự án cuối cùng của mình. Trước khi bắt đầu,
           hãy dành thời gian xem xét các dự án mẫu.
@@ -3257,3 +3324,28 @@ vi-VN:
           # Lập trình tiếp sức
 
           Hãy chia thành các nhóm và làm việc cùng nhau để viết các chương trình có chức năng vẽ hình.
+      DesigningForAccessibilityMarkdownLevel_2021:
+        markdown: |-
+          # Thiết kế cho trợ năng
+
+          * Trong thế giới khoa học máy tính, **trợ năng** là hoạt động kiến tạo công nghệ dành cho người khuyết tật.
+          * Khuyết tật bao gồm thể chất, thính giác, thị giác và nhiều dạng khuyết tật khác.
+          * Khuyết tật rất đa dạng và tác động đến mọi người theo những cách khác nhau, bao gồm cả cách họ sử dụng công nghệ như **ứng dụng trên điện thoại thông minh**.
+          * Thiết kế các ứng dụng để người khuyết tật có thể truy cập khiến các ứng dụng đó có ích hơn cho cả những người khác!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged_2021:
+        markdown: |
+          # Chia sẻ nội dung số
+
+          Trong bài học này, bạn sẽ xem xét những khó khăn và lợi ích của việc tôn trọng quyền sở hữu và bản quyền, đặc biệt là trong môi trường số.
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |-
+          # Thông tin cá nhân và riêng tư
+
+          ## Thông tin nào về bạn có thể chia sẻ trực tuyến?
+      Songwriting-Unplugged_2021:
+        markdown: |-
+          # Sáng tác nhạc
+
+          Hãy dùng khái niệm điệp khúc trong một bài hát để tìm hiểu về cách xác định và khai báo các hàm.

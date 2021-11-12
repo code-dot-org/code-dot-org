@@ -291,6 +291,13 @@ sq:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": përtyp
+            "'sound://category_animals/cat.mp3'": mace
+            "'sound://category_animals/cow.mp3'": lopë
+            "'sound://category_animals/pig.mp3'": derr
+            "'sound://category_animals/sheep.mp3'": dele
+            "'sound://category_animals/chicken.mp3'": pulë
+            "'sound://category_animals/dolphin.mp3'": delfin
+            "'sound://category_animals/dog.mp3'": qen
             "'sound://category_digital/jump_7.mp3'": hidhu
       gamelab_randColor:
         text: ngjyrë e rastësishme
@@ -454,6 +461,10 @@ sq:
             '"down"': shigjetë drejtuar poshtë
             '"left"': shigjetë drejtuar majtas
             '"right"': shigjetë drejtuar djathtas
+      Poetry_playSound:
+        options:
+          SOUND:
+            Break: Ndërprerje
       Poetry_whenLineShows:
         options:
           'N':

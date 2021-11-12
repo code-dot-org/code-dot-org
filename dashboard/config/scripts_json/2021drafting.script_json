@@ -4,17 +4,22 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_course": true,
       "teacher_resources": [
         [
           "lessonPlans",
           "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"
         ]
-      ]
+      ],
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-09-29 21:23:27 UTC",
+    "family_name": "2021drafting",
+    "serialized_at": "2021-11-10 21:41:56 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "2021drafting"
     }
@@ -1834,6 +1839,30 @@
     },
     {
       "chapter": 64,
+      "position": 13,
+      "activity_section_position": null,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "spritelab_no_sprites"
+        ],
+        "progression": "Blank Costumes Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "spritelab_no_sprites"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      },
+      "level_keys": [
+        "spritelab_no_sprites"
+      ]
+    },
+    {
+      "chapter": 65,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -1857,7 +1886,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 2,
       "activity_section_position": null,
       "assessment": false,
@@ -1881,7 +1910,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 3,
       "activity_section_position": null,
       "assessment": false,
@@ -1905,7 +1934,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 4,
       "activity_section_position": null,
       "assessment": false,
@@ -1929,7 +1958,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 1,
       "activity_section_position": null,
       "assessment": false,
@@ -2641,6 +2670,17 @@
         "level.key": "effect block template",
         "script_level.level_keys": [
           "effect block template"
+        ],
+        "lesson.key": "Sprite Lab",
+        "lesson_group.key": "Toolbox Levels",
+        "script.name": "2021drafting"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "spritelab_no_sprites",
+        "script_level.level_keys": [
+          "spritelab_no_sprites"
         ],
         "lesson.key": "Sprite Lab",
         "lesson_group.key": "Toolbox Levels",
