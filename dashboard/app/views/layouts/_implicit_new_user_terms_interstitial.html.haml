@@ -6,8 +6,6 @@
     %button#close_btn_go_to_account{type: 'button'}
       = t('signup_form.go_to_account')
 
-%script{src: webpack_asset_path('js/layouts/_implicit_new_user_terms_interstitial.js')}
-
 :javascript
   $("#close_btn_go_to_account").click(function () {
     $("#implicit-terms-modal").modal('hide');
