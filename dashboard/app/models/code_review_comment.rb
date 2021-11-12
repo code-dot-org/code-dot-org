@@ -41,6 +41,8 @@ class CodeReviewComment < ApplicationRecord
     return false unless ReviewableProject.project_reviewable?(storage_app_id, project_owner.id, level_id, script_id)
     return false if project_owner.sections_as_student.any? {|s| !s.code_review_enabled?}
     return false if potential_reviewer.sections_as_student.any? {|s| !s.code_review_enabled?}
+
+    return (project_owner.code_review_groups & potential_reviewer.code_review_groups).any? if DCDO.get('code_review_groups_enabled', false)
     return (project_owner.sections_as_student & potential_reviewer.sections_as_student).any?
   end
 
