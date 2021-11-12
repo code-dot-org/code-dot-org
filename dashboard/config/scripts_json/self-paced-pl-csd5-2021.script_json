@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-12 19:59:45 UTC",
+    "serialized_at": "2021-11-12 20:47:55 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -126,7 +126,7 @@
       "key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752",
       "position": 6,
       "properties": {
-        "progression_name": "Explore end of unit projects"
+        "progression_name": "Wrap up"
       },
       "seeding_key": {
         "activity_section.key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752",
@@ -745,10 +745,32 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-ProjectOverview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-ProjectOverview-AIML"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "SP-VPL-21-CSD-mod5-success-Quotes"
         ],
-        "progression": "Explore end of unit projects"
+        "progression": "Wrap up"
       },
       "bonus": false,
       "seeding_key": {
@@ -762,6 +784,50 @@
       },
       "level_keys": [
         "SP-VPL-21-CSD-mod5-success-Quotes"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-MakeAPlan-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-MakeAPlan-AIML"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-WrapUp"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-21-mod5-WrapUp"
       ]
     }
   ],
@@ -1056,9 +1122,45 @@
     },
     {
       "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-ProjectOverview-AIML",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-ProjectOverview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "SP-VPL-21-CSD-mod5-success-Quotes",
         "script_level.level_keys": [
           "SP-VPL-21-CSD-mod5-success-Quotes"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-MakeAPlan-AIML",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-MakeAPlan-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-21-mod5-WrapUp",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-WrapUp"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "lessonGroup-8",
