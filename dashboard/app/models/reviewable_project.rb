@@ -19,6 +19,7 @@ class ReviewableProject < ApplicationRecord
   belongs_to :level
   belongs_to :script
 
+  # Need to update this
   def self.user_can_mark_project_reviewable?(project_owner, user)
     project_owner == user && project_owner.sections_as_student.all?(&:code_review_enabled?)
   end

@@ -39,6 +39,7 @@ class CodeReviewComment < ApplicationRecord
     return true if project_owner.student_of?(potential_reviewer)
     # peers can only review projects where code review has been enabled, which creates a ReviewableProject
     return false unless ReviewableProject.project_reviewable?(storage_app_id, project_owner.id, level_id, script_id)
+    # Need to update this
     return false if project_owner.sections_as_student.any? {|s| !s.code_review_enabled?}
     return false if potential_reviewer.sections_as_student.any? {|s| !s.code_review_enabled?}
 
