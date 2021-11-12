@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "poem-art",
-    "serialized_at": "2021-11-11 19:46:13 UTC",
+    "serialized_at": "2021-11-11 21:45:43 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -178,7 +178,8 @@
       "key": "49994950-2fc5-4779-abd5-2369a402a750",
       "position": 2,
       "properties": {
-        "description": "####Level-by-Level Support\n\n**Level 1:** Encourage students to read through the poem. Then ask students to find a background color or effect that matches the tone of the poem they chose. "
+        "description": "####Level-by-Level Support\n\n**Level 1:** Encourage students to read through the poem. Then ask students to find a background color or effect that matches the tone of the poem they chose. ",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "49994950-2fc5-4779-abd5-2369a402a750",
@@ -189,7 +190,8 @@
       "key": "950807e2-afa0-4c26-9459-4682b3f49602",
       "position": 3,
       "properties": {
-        "description": "**Level 2:** In this exemplar, students should read the poem on their own first, then press Run. You can ask the student whether the sound and effects the programmer chose matched the mood of the poem. Ask students to elaborate on their answer. \n"
+        "description": "**Level 2:** In this exemplar, students should read the poem on their own first, then press Run. You can ask the student whether the sound and effects the programmer chose matched the mood of the poem. Ask students to elaborate on their answer. \n",
+        "progression_name": "Example"
       },
       "seeding_key": {
         "activity_section.key": "950807e2-afa0-4c26-9459-4682b3f49602",
@@ -200,7 +202,8 @@
       "key": "175a6627-901e-40c3-9b54-d156c7da668f",
       "position": 4,
       "properties": {
-        "description": "**Level 3:** This level introduces sound, students can use headphones if they have them. "
+        "description": "**Level 3:** This level introduces sound, students can use headphones if they have them. ",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "175a6627-901e-40c3-9b54-d156c7da668f",
@@ -211,7 +214,8 @@
       "key": "96abf95f-d28e-4fe0-a376-016b5dbd6883",
       "position": 5,
       "properties": {
-        "description": "**Level 4:** Ask students to read the poem and find the line where the poem’s mood shifts or if there is a new image that the poet introduces. Use the event block to add corresponding effects to the identified lines of the poem. "
+        "description": "**Level 4:** Ask students to read the poem and find the line where the poem’s mood shifts or if there is a new image that the poet introduces. Use the event block to add corresponding effects to the identified lines of the poem. ",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "96abf95f-d28e-4fe0-a376-016b5dbd6883",
@@ -222,7 +226,8 @@
       "key": "51fbff8e-3efa-4697-8f66-bc9c3b27e82b",
       "position": 6,
       "properties": {
-        "description": "**Level 5:** In this exemplar, students should read the poem on their own first, then press Run. Ask the student whether the images matched the words of the poem. Ask them to elaborate on their answer. "
+        "description": "**Level 5:** In this exemplar, students should read the poem on their own first, then press Run. Ask the student whether the images matched the words of the poem. Ask them to elaborate on their answer. ",
+        "progression_name": "Example"
       },
       "seeding_key": {
         "activity_section.key": "51fbff8e-3efa-4697-8f66-bc9c3b27e82b",
@@ -233,7 +238,8 @@
       "key": "14006414-2422-4d85-bbed-d7bd50c95996",
       "position": 7,
       "properties": {
-        "description": "**Level 6, 7, 8:** See “Celebrate bugs” under the General Support section. Encourage students to build programs with more than one transition with their event blocks. "
+        "description": "**Level 6, 7, 8:** See “Celebrate bugs” under the General Support section. Encourage students to build programs with more than one transition with their event blocks. ",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "14006414-2422-4d85-bbed-d7bd50c95996",
@@ -244,7 +250,8 @@
       "key": "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6",
       "position": 8,
       "properties": {
-        "description": "**Level 9:** Encourage students to read through all the poems in the dropdown menu to find one they like. Tell students that they can share what they make in this final level with their friends and family. Now is the time to put all the coding and ELA skills together! \n"
+        "description": "**Level 9:** Encourage students to read through all the poems in the dropdown menu to find one they like. Tell students that they can share what they make in this final level with their friends and family. Now is the time to put all the coding and ELA skills together! \n",
+        "progression_name": "Free Play"
       },
       "seeding_key": {
         "activity_section.key": "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6",
@@ -296,7 +303,8 @@
       "properties": {
         "level_keys": [
           "poetry_hoc_backgroundEffects"
-        ]
+        ],
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -318,6 +326,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Example"
       },
       "bonus": false,
       "seeding_key": {
@@ -339,6 +348,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -360,6 +370,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -381,6 +392,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Example"
       },
       "bonus": false,
       "seeding_key": {
@@ -402,6 +414,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -423,6 +436,7 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -444,6 +458,7 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
@@ -465,6 +480,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Free Play"
       },
       "bonus": false,
       "seeding_key": {
