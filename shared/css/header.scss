@@ -22,7 +22,6 @@
 
     .content {
       width: 100%;
-      padding: 0 10px;
       overflow: visible;
       box-sizing: border-box;
     }
@@ -41,13 +40,12 @@
 
     #logo-wrapper {
       display: inline-block;
-      padding: 4px 0 4px 16px;
+      padding: 4px 16px;
       float: left;
 
       #logo {
         width: 42px;
         height: 42px;
-        margin-left: 5px;
       }
 
       #logo-uk {
