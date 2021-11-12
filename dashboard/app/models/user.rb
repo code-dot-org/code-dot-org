@@ -2380,6 +2380,10 @@ class User < ApplicationRecord
     %w(locale account_age_in_years grades curriculums has_attended_pd within_us school_percent_frl school_title_i)
   end
 
+  def code_review_groups
+    followeds.map(&:code_review_group).compact
+  end
+
   private
 
   def account_age_in_years
