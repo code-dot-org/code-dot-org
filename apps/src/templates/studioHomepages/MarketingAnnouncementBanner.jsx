@@ -70,31 +70,15 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
     const bannerKey = getLocalStorageBannerKey();
     trySetLocalStorage(bannerKey, false);
     setDisplayBanner(false);
-    logBannerDismissed();
+    logEvent('close_button_clicked');
   };
 
-  const logBannerDismissed = () => {
+  const logEvent = eventLabel => {
     firehoseClient.putRecord(
       {
         study: 'teacher_signedin_homepage',
         study_group: 'homepage_banner',
-        event: 'close_button_clicked',
-        data_json: JSON.stringify({
-          banner_title: bannerRef.current.querySelector(
-            '#two-column-action-block--sub-heading'
-          ).innerText
-        })
-      },
-      {includeUserId: true}
-    );
-  };
-
-  const logBannerButtonClick = () => {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_signedin_homepage',
-        study_group: 'homepage_banner',
-        event: 'cta_button_clicked',
+        event: eventLabel,
         data_json: JSON.stringify({
           banner_title: bannerRef.current.querySelector(
             '#two-column-action-block--sub-heading'
@@ -117,7 +101,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
       : 'special-announcement-btn-1',
     url: announcement.buttonUrl,
     text: announcement.buttonText,
-    onClick: logBannerButtonClick
+    onClick: () => logEvent('cta_button_clicked')
   };
 
   return (
