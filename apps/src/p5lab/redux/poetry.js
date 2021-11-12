@@ -1,4 +1,14 @@
+import _ from 'lodash';
+
+/**
+ * Action keys
+ */
+
 const SET_POEM = 'poetry/SET_POEM';
+
+/**
+ * Reducer
+ */
 
 export default function poetry(state, action) {
   state = state || {selectedPoem: {key: '', title: '', author: '', lines: []}};
@@ -16,6 +26,10 @@ export default function poetry(state, action) {
       return state;
   }
 }
+
+/**
+ * Action creators
+ */
 
 export function setPoem(poem) {
   return {
