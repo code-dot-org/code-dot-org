@@ -1284,6 +1284,8 @@
   "noLibrariesInClass": "No one in your class has published a library. Try adding one from an ID.",
   "noMenuItemsAvailable": "No menu items available.",
   "nominateATeacher": "Nominate a Teacher",
+  "noSaveWarning": "Progress may not save.",
+  "noSaveWarningDetails": "We are currently experiencing high traffic. During this time, new progress in this course may not be saved.",
   "noStudentsInSection": "There are no other students in this section.",
   "exceededPairProgrammingMax": "You cannot pair with more than 4 people.",
   "noPersonalProjects": "You currently have no projects. Click on one of the buttons above to start a project.",
