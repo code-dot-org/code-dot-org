@@ -6,11 +6,11 @@
         Comment: Redirect www to root domain
         PriceClass: PriceClass_All
         Aliases:
-          - www.code.org
+          - www.<%= CDO.pegasus_hostname %>
         Origins:
           # An origin is required, but will never receive traffic
           - Id: PrimaryOrigin
-            DomainName: code.org
+            DomainName: <%= CDO.pegasus_hostname %>
             CustomOriginConfig:
               OriginProtocolPolicy: match-viewer
         DefaultCacheBehavior:
@@ -27,14 +27,15 @@
               Forward: none
           ViewerProtocolPolicy: allow-all
         ViewerCertificate:
-          AcmCertificateArn: <%= certificate_arn) %>
+          AcmCertificateArn: <%= certificate_arn %>
           SslSupportMethod: sni-only
 
   RedirectCachePolicy:
     Type: AWS::CloudFront::CachePolicy
     Properties:
-      Name: RedirectCachePolicy
-      ParametersInCacheKeyAndForwardedToOrigin: 
+      CachePolicyConfig:
+        Name: RedirectCachePolicy
+        ParametersInCacheKeyAndForwardedToOrigin: 
           CookiesConfig: 
             CookieBehavior: none
           HeadersConfig: 
@@ -61,7 +62,7 @@
             const querystring = request.querystring;
 
             // Start building new url
-            let newUrl = 'https://code.org';
+            let newUrl = 'https://<%= CDO.pegasus_hostname %>';
 
             // Append path
             if (uri) newUrl += uri;
