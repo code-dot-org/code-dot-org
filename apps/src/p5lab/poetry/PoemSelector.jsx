@@ -16,10 +16,18 @@ import {POEMS, PoetryStandaloneApp} from './constants';
 import {getPoem} from './poem';
 import * as utils from '@cdo/apps/utils';
 
+const poemShape = PropTypes.shape({
+  key: PropTypes.string,
+  title: PropTypes.string,
+  author: PropTypes.string,
+  lines: PropTypes.arrayOf(PropTypes.string)
+});
+
 export function PoemEditor(props) {
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
-  const [poem, setPoem] = useState('');
+  const {initialPoem} = props;
+  const [title, setTitle] = useState(initialPoem.title || '');
+  const [author, setAuthor] = useState(initialPoem.author || '');
+  const [poem, setPoem] = useState(initialPoem.lines?.join('\n') || '');
   const [error, setError] = useState(null);
 
   // Reset error if poem state changes.
@@ -126,7 +134,11 @@ export function PoemEditor(props) {
 
 PoemEditor.propTypes = {
   isOpen: PropTypes.bool.isRequired,
-  handleClose: PropTypes.func.isRequired
+  handleClose: PropTypes.func.isRequired,
+  initialPoem: poemShape
+};
+PoemEditor.defaultProps = {
+  initialPoem: {}
 };
 
 function PoemSelector(props) {
@@ -184,9 +196,19 @@ function PoemSelector(props) {
     return options;
   };
 
+  const initialEditorPoem = () => {
+    if (props.selectedPoem?.key === msg.enterMyOwn()) {
+      return props.selectedPoem;
+    }
+  };
+
   return (
     <div id="poemSelector" style={styles.container}>
-      <PoemEditor isOpen={isOpen} handleClose={handleClose} />
+      <PoemEditor
+        isOpen={isOpen}
+        handleClose={handleClose}
+        initialPoem={initialEditorPoem()}
+      />
       <label>
         <b>{msg.selectPoem()}</b>
       </label>
@@ -205,7 +227,7 @@ function PoemSelector(props) {
 
 PoemSelector.propTypes = {
   // from Redux
-  selectedPoem: PropTypes.object.isRequired,
+  selectedPoem: poemShape.isRequired,
   onChangePoem: PropTypes.func.isRequired
 };
 
