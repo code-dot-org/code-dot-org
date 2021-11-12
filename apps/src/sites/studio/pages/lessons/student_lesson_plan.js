@@ -24,6 +24,10 @@ $(document).ready(function() {
 function displayLessonOverview() {
   const lessonData = getScriptData('lesson');
 
+  // NOTE TO SELF: get progress for just the lesson in question here
+  // something like groupedLesson(progressData), then the info we need
+  const progressData = getScriptData('progress');
+
   const store = getStore();
 
   if (lessonData.announcements) {
@@ -43,7 +47,7 @@ function displayLessonOverview() {
 
   ReactDOM.render(
     <Provider store={store}>
-      <StudentLessonOverview lesson={lessonData} />
+      <StudentLessonOverview lesson={lessonData} levels={progressData} />
     </Provider>,
     document.getElementById('show-container')
   );

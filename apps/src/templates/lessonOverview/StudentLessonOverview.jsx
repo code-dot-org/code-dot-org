@@ -4,7 +4,6 @@ import i18n from '@cdo/locale';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import Announcements from '../../code-studio/components/progress/Announcements';
 import {connect} from 'react-redux';
-import {groupedLessons} from '@cdo/apps/code-studio/progressRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
@@ -13,26 +12,26 @@ import styleConstants from '@cdo/apps/styleConstants';
 import color from '@cdo/apps/util/color';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
 import ResourceList from '@cdo/apps/templates/lessonOverview/ResourceList';
-import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
+import ProgressLessonContent from '@cdo/apps/templates/progress/ProgressLessonContent';
 import {studentLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
 import StyledCodeBlock from './StyledCodeBlock';
-import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
+import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
 
 class StudentLessonOverview extends Component {
   static propTypes = {
     lesson: studentLessonShape.isRequired,
+    levels: PropTypes.arrayOf(levelWithProgressType).isRequired,
 
     // from redux
-    groupedLessons: PropTypes.arrayOf(groupedLessonsType).isRequired,
     announcements: PropTypes.arrayOf(announcementShape),
     isSignedIn: PropTypes.bool.isRequired
   };
 
   determineLevelDisplay = () => {
-    return this.props.groupedLessons ? (
-      <SummaryProgressTable groupedLesson={this.props.groupedLessons} />
+    return this.props.levels ? (
+      <ProgressLessonContent levels={this.props.levels} disabled={false} />
     ) : (
       i18n.lessonContainsNoLevels()
     );
@@ -156,6 +155,5 @@ export const UnconnectedStudentLessonOverview = StudentLessonOverview;
 
 export default connect(state => ({
   announcements: state.announcements || [],
-  isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
-  groupedLessons: groupedLessons(state.progress)
+  isSignedIn: state.currentUser.signInState === SignInState.SignedIn
 }))(StudentLessonOverview);
