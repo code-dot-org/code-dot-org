@@ -441,6 +441,7 @@ class Blockly < Level
 
         translated_text = hint['hint_id'].empty? ? nil :
           I18n.t(hint['hint_id'], scope: scope, default: nil, smart: true)
+        translated_text = localized_blockly_xml_embedded_in_text(translated_text)
         original_text = hint['hint_markdown']
 
         if !translated_text.nil? && translated_text != original_text
@@ -459,6 +460,33 @@ class Blockly < Level
         hint
       end
       JSON.generate(hints)
+    end
+  end
+
+  # Translates all the blockly blocks embedded in strings, such as level long_description's and
+  # author_hints
+  # For example:
+  # "This is a <xml><block>block</block></xml>." -> "This is a <xml><block>bloque</block></xml>."
+  def localized_blockly_xml_embedded_in_text(text)
+    # Parse the text so it is broken up into XML::Text and XML::Element nodes
+    translated_text_xml = Nokogiri::XML::DocumentFragment.parse(translated_text)
+    # Select each <xml></xml> because it is embedded blockly we need to translate
+    translated_text_xml.xpath('./xml').each do |inline_blockly|
+      # Translate the blockly XML
+      translated_inline_blockly = localized_function_blocks(inline_blockly.serialize(save_with: XML_OPTIONS))
+      # Swap the untranslated XLM::Element with a translated XML::Element
+      inline_blockly.children = Nokogiri::XML(translated_inline_blockly).child.children
+    end
+    # Iterate through all the XML::Text and XML::Element nodes and combine them back into a single
+    # string.
+    translated_text_xml.children.to_a.reduce('') do |result, node|
+      if node.is_a? Nokogiri::XML::Element
+        # For XML -> String, we want to make sure there are no indentation or newlines.
+        result + node.serialize(save_with: XML_OPTIONS | Nokogiri::XML::Node::SaveOptions::NO_EMPTY_TAGS)
+      else
+        # Just an XML::Text node, so to_s will return the text in the node.
+        result + node.to_s
+      end
     end
   end
 
