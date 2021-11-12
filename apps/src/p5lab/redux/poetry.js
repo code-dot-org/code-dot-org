@@ -37,3 +37,14 @@ export function setPoem(poem) {
     ...poem
   };
 }
+
+/**
+ * Helpers
+ */
+
+export function hasSelectedPoemChanged(prevState = {}, currentState = {}) {
+  return !_.isEqual(
+    prevState.poetry?.selectedPoem,
+    currentState.poetry?.selectedPoem
+  );
+}

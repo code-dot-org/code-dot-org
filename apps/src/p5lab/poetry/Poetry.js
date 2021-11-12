@@ -1,7 +1,7 @@
 import msg from '@cdo/poetry/locale';
 import {getStore} from '@cdo/apps/redux';
 import trackEvent from '@cdo/apps/util/trackEvent';
-import {setPoem} from '../redux/poetry';
+import {setPoem, hasSelectedPoemChanged} from '../redux/poetry';
 import {P5LabType} from '../constants';
 import SpriteLab from '../spritelab/SpriteLab';
 import PoetryLibrary from './PoetryLibrary';
@@ -116,10 +116,7 @@ export default class Poetry extends SpriteLab {
       const lastState = state;
       state = store.getState();
 
-      if (
-        lastState.poetry &&
-        lastState.poetry.selectedPoem.title !== state.poetry.selectedPoem.title
-      ) {
+      if (hasSelectedPoemChanged(lastState, state)) {
         this.reset();
       }
     });
