@@ -4,6 +4,7 @@ import i18n from '@cdo/locale';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import Announcements from '../../code-studio/components/progress/Announcements';
 import {connect} from 'react-redux';
+import {groupedLessons} from '@cdo/apps/code-studio/progressRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
@@ -17,22 +18,21 @@ import {studentLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanS
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
 import StyledCodeBlock from './StyledCodeBlock';
+import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
 
 class StudentLessonOverview extends Component {
   static propTypes = {
     lesson: studentLessonShape.isRequired,
 
     // from redux
+    groupedLessons: PropTypes.arrayOf(groupedLessonsType).isRequired,
     announcements: PropTypes.arrayOf(announcementShape),
     isSignedIn: PropTypes.bool.isRequired
   };
 
   determineLevelDisplay = () => {
-    const lesson = this.props.lesson;
-    const levels = lesson.levels;
-    const groupedLesson = {lesson, levels};
-    return levels ? (
-      <SummaryProgressTable groupedLesson={groupedLesson} />
+    return this.props.groupedLessons ? (
+      <SummaryProgressTable groupedLesson={this.props.groupedLessons} />
     ) : (
       i18n.lessonContainsNoLevels()
     );
@@ -156,5 +156,6 @@ export const UnconnectedStudentLessonOverview = StudentLessonOverview;
 
 export default connect(state => ({
   announcements: state.announcements || [],
-  isSignedIn: state.currentUser.signInState === SignInState.SignedIn
+  isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
+  groupedLessons: groupedLessons(state.progress)
 }))(StudentLessonOverview);
