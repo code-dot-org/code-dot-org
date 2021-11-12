@@ -26,7 +26,12 @@ function AddLevelDialogTop(props) {
 
   useEffect(() => {
     handleSearch();
-  }, [currentPage]);
+  }, []);
+
+  const setCurrentPageAndSearch = value => {
+    setCurrentPage(value);
+    handleSearch();
+  };
 
   const handleSearch = () => {
     let queryParams = {page: currentPage};
@@ -90,7 +95,7 @@ function AddLevelDialogTop(props) {
                 levelType={levelType}
               />
               <AddLevelTable
-                setCurrentPage={value => setCurrentPage(value)}
+                setCurrentPage={setCurrentPageAndSearch}
                 currentPage={currentPage}
                 addLevel={props.addLevel}
                 levels={levels}
