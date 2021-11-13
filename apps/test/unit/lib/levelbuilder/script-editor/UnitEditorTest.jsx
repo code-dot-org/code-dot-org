@@ -197,6 +197,21 @@ describe('UnitEditor', () => {
             .props().useMigratedResources
         ).to.be.true;
       });
+
+      it('uses old resource editor for migrated units when legacy teacher resources are present', () => {
+        const wrapper = createWrapper({
+          isMigrated: true,
+          initialTeacherResources: [
+            {type: ResourceType.curriculum, link: '/foo'}
+          ]
+        });
+        expect(
+          wrapper
+            .find('ResourcesEditor')
+            .first()
+            .props().useMigratedResources
+        ).to.be.false;
+      });
     });
 
     it('has correct markdown for preview of unit description', () => {

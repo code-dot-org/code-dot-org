@@ -2,11 +2,21 @@
 title: CS Connections
 theme: responsive
 set_dir: true
+social:
+  "og:title": "CS Connections"
+  "twitter:title": "CS Connections"
+  "og:description": "Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies."
+  "twitter:description": "Cross-curricular learning makes the connections between computer science and other subjects like math, language arts, science, and social studies."
+  "og:image": "https://code.org/images/social-media/csc-og-image-1200x630.png"
+  "og:image:width": 1200
+  "og:image:height": 630
+  "twitter:card": "summary_large_image"
+  "twitter:image:src": "https://code.org/images/social-media/csc-og-image-1200x630.png"
 ---
 
 # Computer Science Connections
 
-Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways! <em>(Teachers: See the CS Connections curriculum guide <a href="https://docs.google.com/document/d/1O3g2QoMn41gDoUXmKhrXCkU_djJhGs_T_9XZpgiS4T8/edit#">here</a>.)</em>
+Our newest curriculum makes the connections between learning computer science and other subjects like math, language arts, science, and social studies. Through CS Connections, K-12 classrooms explore their usual subjects in exciting new ways! 
 
 ## Try out CS Connections with these activities for Hour of Code
 {{ tutorial_promo2, heading: "", background_image: "/images/fit-1940/csc/landing/tutorial_promo2_csc_background.jpg", text_color: "black", box_background_color: "rgb(226, 241, 243)", left_heading: "Mood study", left_description: "Express yourself! Use code to create animated poems.", left_specs: "", left_button_url: "https://studio.code.org/s/poem-art-2021/reset", left_button_text: "Start", right_heading: "Hello World", right_description: "Choose from four fun themes to code interactive characters in a world you create.", right_specs: "", right_button_url: "/helloworld", right_button_text: "Start"}}
