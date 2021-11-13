@@ -2,6 +2,16 @@
 title: Hello World
 theme: responsive
 set_dir: true
+social:
+  "og:title": "Hello World!"
+  "twitter:title": "Hello World!"
+  "og:description": "Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity!"
+  "twitter:description": "Choose from fun themes to code interactive characters in a world you create in this Hour of Code activity"
+  "og:image": "https://code.org/images/social-media/helloworld-og-image-1200x630.png"
+  "og:image:width": 1200
+  "og:image:height": 630
+  "twitter:card": "summary_large_image"
+  "twitter:image:src": "https://code.org/images/social-media/helloworld-og-image-1200x630.png"
 ---
 
 # Hello World!
