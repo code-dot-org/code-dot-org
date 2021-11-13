@@ -30,6 +30,12 @@ export default class Poetry extends SpriteLab {
     return P5LabType.POETRY;
   }
 
+  // We do want levels that show the finish dialog using
+  // this.studioApp_.displayFeedback to show the save & publish buttons.
+  saveToProjectGallery() {
+    return true;
+  }
+
   createLibrary(args) {
     if (!args.p5) {
       console.warn('cannot create poetry library without p5 instance');
