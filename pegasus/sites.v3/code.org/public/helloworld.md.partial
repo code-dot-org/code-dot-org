@@ -30,12 +30,8 @@ In Computer Science 101, the first program many students create is a simple one 
 
 ## Featured Student Creations
 
-{{ featured_project, title: "Coin color", author: "M", age: "13+", image: "images/csc/helloworld/creation0.png", url: "/about" }}
-{{ featured_project, title: "Real world simulation", author: "D", age: "8+", image: "images/csc/helloworld/creation0.png", url: "/" }}
-{{ featured_project, title: "ROBOT", author: "B", age: "18+", image: "images/csc/helloworld/creation0.png", url: "/" }}
-{{ featured_project, title: "EVADE", author: "W", age: "13+", image: "images/csc/helloworld/creation0.png", url: "/" }}
-{{ featured_project, title: "Protect the castle", author: "S", age: "8+", image: "images/csc/helloworld/creation0.png", url: "/" }}
-{{ featured_project, title: "Remix: my project", author: "K", age: "8+", image: "images/csc/helloworld/creation0.png", url: "/" }}
-{{ featured_project, title: "ping pong", author: "V", age: "18+", image: "images/csc/helloworld/creation0.png", url: "/" }}
-{{ featured_project, title: "First agme", author: "C", age: "13+", image: "images/csc/helloworld/creation0.png", url: "/" }}
+{{ featured_project, title: "Happy Food", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood.gif", url: "https://levelbuilder-studio.code.org/projects/spritelab/JGilI1P_SVkBh-bGeX8x3g" }}
+{{ featured_project, title: "Emoji", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", url: "https://levelbuilder-studio.code.org/projects/spritelab/3ww5iaTqdlICy1WhYegh0g" }}
+{{ featured_project, title: "Animals", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", url: "https://levelbuilder-studio.code.org/projects/spritelab/XbjWItDf7086CSSpMbs7UA" }}
+{{ featured_project, title: "Retro", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", url: "https://levelbuilder-studio.code.org/projects/spritelab/nVIDpbpWKnc952zm2GiTtg" }}
 {{ clearfix }}
