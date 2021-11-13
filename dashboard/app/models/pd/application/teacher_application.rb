@@ -753,6 +753,7 @@ module Pd::Application
         [:committed, TEXT_FIELDS[:no_explain], :committed_other],
         [:plan_to_teach, TEXT_FIELDS[:dont_know_if_i_will_teach_explain]],
         [:replace_existing, TEXT_FIELDS[:i_dont_know_explain]],
+        [:replace_which_course, TEXT_FIELDS[:other_please_explain]],
         [:able_to_attend_multiple, TEXT_FIELDS[:not_sure_explain], :able_to_attend_multiple_not_sure_explain],
         [:able_to_attend_multiple, TEXT_FIELDS[:unable_to_attend], :able_to_attend_multiple_unable_to_attend],
         [:how_heard, TEXT_FIELDS[:other_with_text]]
@@ -876,7 +877,9 @@ module Pd::Application
           principal: [
             :share_ap_scores,
             :replace_which_course_csp,
-            :csp_implementation
+            :replace_which_course_csa,
+            :csp_implementation,
+            :csa_implementation
           ]
         }
       elsif course == 'csp'
@@ -890,7 +893,9 @@ module Pd::Application
           ],
           principal: [
             :replace_which_course_csd,
-            :csd_implementation
+            :replace_which_course_csa,
+            :csd_implementation,
+            :csa_implementation
           ]
         }
       elsif course == 'csa'
@@ -1174,7 +1179,7 @@ module Pd::Application
       principal_response = principal_approval.sanitize_form_data_hash
 
       response = principal_response.values_at(:replace_course, :replace_course_other).compact.join(": ")
-      replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd).compact.join(', ')
+      replaced_courses = principal_response.values_at(:replace_which_course_csp, :replace_which_course_csd, :replace_which_course_csa).compact.join(', ')
       # Sub out :: for : because "I don't know:" has a colon on the end
       replace_course_string = "#{response}#{replaced_courses.present? ? ': ' + replaced_courses : ''}".gsub('::', ':')
 

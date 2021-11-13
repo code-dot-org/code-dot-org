@@ -480,6 +480,14 @@ class ScriptLevel < ApplicationRecord
         url: edit_level_path(id: level.id)
       }
     end
+
+    # For now, the lesson edit page does not allow modification of level
+    # variants. However, the variants are needed because the update API
+    # requires that variants be specified in order for existing variants to be
+    # preserved, even if they are not being modified. Therefore, send the raw
+    # original value of this field, rather than recomputing it each time.
+    summary[:variants] = variants
+
     summary
   end
 

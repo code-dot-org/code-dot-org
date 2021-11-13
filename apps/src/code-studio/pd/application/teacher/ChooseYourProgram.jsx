@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {FormGroup, Row, Col} from 'react-bootstrap';
-import color from '@cdo/apps/util/color';
 import {
   PageLabels,
   SectionHeaders,
@@ -34,6 +33,18 @@ const getProgramInfo = program => {
     default:
       return {name: 'CS Program', shortName: 'cs', minCourseHours: 0};
   }
+};
+
+const CourseHoursLabeledNumberInput = props => {
+  return (
+    <LabeledNumberInput
+      style={styles.numberInput}
+      labelWidth={{md: 8}}
+      controlWidth={{md: 4}}
+      inlineControl={true}
+      {...props}
+    />
+  );
 };
 
 const ChooseYourProgram = props => {
@@ -108,22 +119,26 @@ const ChooseYourProgram = props => {
 
           {data.program === PROGRAM_CSA && (
             <>
-              <LabeledRadioButtons name="csaAlreadyKnow" required={false} />
+              <LabeledRadioButtons name="csaAlreadyKnow" />
               {data.csaAlreadyKnow === 'No' && (
-                <p style={{color: 'red'}}>
+                <p style={styles.error}>
                   We don’t recommend this program for teachers completely new to
-                  CS. Consider starting with CS Principles Professional Learning
-                  or plan for additional onboarding in preparation for this
-                  program.
+                  CS. If possible, consider teaching CS Principles in the
+                  upcoming school year and applying for our CS Principles
+                  Professional Learning program. If this is not possible, plan
+                  to spend at least 40 hours learning foundational CS concepts
+                  prior to attending our professional learning for CSA.
                 </p>
               )}
-              <LabeledRadioButtons name="csaPhoneScreen" required={false} />
+              <LabeledRadioButtons name="csaPhoneScreen" />
               {data.csaPhoneScreen === 'No' && (
-                <p style={{color: 'red'}}>
+                <p style={styles.error}>
                   We recommend deepening your content knowledge prior to
                   starting this program. This can be accomplished by completing
-                  some additional onboarding that will be shared with you once
-                  accepted to the program.
+                  some additional onboarding prior to attending the CSA
+                  Professional Learning program. Your regional partner will
+                  share this with you after you have been accepted into the
+                  program.
                 </p>
               )}
               <LabeledCheckBoxes name="csaWhichGrades" />
@@ -139,40 +154,26 @@ const ChooseYourProgram = props => {
           <p>
             Please provide information about your course implementation plans.
           </p>
-          <LabeledNumberInput
+          <CourseHoursLabeledNumberInput
             name="csHowManyMinutes"
-            style={{
-              width: '100px'
-            }}
             label={PageLabels.chooseYourProgram.csHowManyMinutes.replace(
               '{{CS program}}',
               programInfo.name
             )}
-            labelWidth={{md: 8}}
-            controlWidth={{md: 4}}
-            inlineControl={true}
           />
-          <LabeledNumberInput
+          <CourseHoursLabeledNumberInput
             name="csHowManyDaysPerWeek"
-            style={{
-              width: '100px'
-            }}
             label={PageLabels.chooseYourProgram.csHowManyDaysPerWeek.replace(
               '{{CS program}}',
               programInfo.name
             )}
-            labelWidth={{md: 8}}
-            controlWidth={{md: 4}}
-            inlineControl={true}
           />
-          <LabeledNumberInput
+          <CourseHoursLabeledNumberInput
             name="csHowManyWeeksPerYear"
-            style={{
-              width: '100px'
-            }}
-            labelWidth={{md: 8}}
-            controlWidth={{md: 4}}
-            inlineControl={true}
+            label={PageLabels.chooseYourProgram.csHowManyWeeksPerYear.replace(
+              '{{CS program}}',
+              programInfo.name
+            )}
           />
           {courseHours && (
             <div style={{marginBottom: 30}}>
@@ -189,7 +190,7 @@ const ChooseYourProgram = props => {
             </div>
           )}
           {belowMinCourseHours && (
-            <p style={{color: 'red'}}>
+            <p style={styles.error}>
               Note: {minCourseHours} or more hours of instruction per{' '}
               {programInfo.name} section are strongly recommended. We suggest
               checking with your school administration to see if additional time
@@ -226,7 +227,7 @@ const ChooseYourProgram = props => {
                 programInfo.name
               )}
               textFieldMap={{
-                [TextFields.iDontKnowExplain]: 'other'
+                [TextFields.otherPleaseExplain]: 'other'
               }}
             />
           )}
@@ -250,7 +251,12 @@ ChooseYourProgram.associatedFields = [
 const uniqueRequiredFields = {
   [PROGRAM_CSD]: ['csdWhichGrades'],
   [PROGRAM_CSP]: ['cspWhichGrades', 'cspHowOffer'],
-  [PROGRAM_CSA]: ['csaWhichGrades', 'csaHowOffer']
+  [PROGRAM_CSA]: [
+    'csaWhichGrades',
+    'csaHowOffer',
+    'csaAlreadyKnow',
+    'csaPhoneScreen'
+  ]
 };
 
 ChooseYourProgram.getDynamicallyRequiredFields = data => {
@@ -280,12 +286,6 @@ ChooseYourProgram.processPageData = data => {
       });
     });
   }
-  // the following are unique to csa but not required
-  if (data.program && data.program !== PROGRAM_CSA) {
-    changes.csaAlreadyKnow = undefined;
-    changes.csaPhoneScreen = undefined;
-  }
-
   if (data.replaceExisting !== 'Yes') {
     changes.replaceWhichCourse = undefined;
   }
@@ -324,7 +324,10 @@ ChooseYourProgram.getErrorMessages = data => {
 
 const styles = {
   error: {
-    color: color.red
+    color: 'rgb(204, 0, 0)'
+  },
+  numberInput: {
+    width: 100
   }
 };
 

@@ -147,7 +147,7 @@ style_min: false
     - tutorial[:name]                                 = hoc_s(prefix + "name")
     - tutorial[:shortdescription]                     = hoc_s(prefix + "shortdescription")
     - tutorial[:longdescription]                      = hoc_s(prefix + "longdescription")
-    - tutorial[:language]                             = hoc_s(prefix + "language")
+    - tutorial[:language]                             = hoc_language(tutorial[:languages_supported])
     - tutorial[:string_detail_grades]                 = hoc_s(prefix + "string_detail_grades")
     - tutorial[:string_platforms]                     = hoc_s(prefix + "string_platforms")
     - tutorial[:string_detail_platforms]              = hoc_s(prefix + "string_detail_platforms")

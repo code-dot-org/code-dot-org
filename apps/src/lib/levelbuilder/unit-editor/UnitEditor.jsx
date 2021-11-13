@@ -373,6 +373,8 @@ class UnitEditor extends React.Component {
     const textAreaRows = this.state.lessonLevelData
       ? this.state.lessonLevelData.split('\n').length + 5
       : 10;
+    const useMigratedTeacherResources =
+      this.props.isMigrated && !this.state.teacherResources?.length;
     return (
       <div>
         <label>
@@ -916,7 +918,7 @@ class UnitEditor extends React.Component {
                 updateResources={teacherResources =>
                   this.setState({teacherResources})
                 }
-                useMigratedResources={this.props.isMigrated}
+                useMigratedResources={useMigratedTeacherResources}
                 courseVersionId={this.props.initialCourseVersionId}
                 migratedResources={this.props.migratedTeacherResources}
                 getRollupsUrl={`/s/${this.props.name}/get_rollup_resources`}

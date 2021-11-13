@@ -15,13 +15,16 @@ import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teach
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {hasLockableLessons} from '@cdo/apps/code-studio/progressRedux';
+import {
+  hasLockableLessons,
+  queryUserProgress
+} from '@cdo/apps/code-studio/progressRedux';
+import {reload} from '@cdo/apps/utils';
+import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {studentShape, levelWithProgress} from './types';
 
 class TeacherPanel extends React.Component {
   static propTypes = {
-    onSelectUser: PropTypes.func,
-    getSelectedUserId: PropTypes.func,
     unitName: PropTypes.string,
     pageType: PropTypes.oneOf([
       pageTypes.level,
@@ -43,7 +46,8 @@ class TeacherPanel extends React.Component {
     levelsWithProgress: PropTypes.arrayOf(levelWithProgress),
     loadLevelsWithProgress: PropTypes.func.isRequired,
     teacherId: PropTypes.number,
-    exampleSolutions: PropTypes.array
+    exampleSolutions: PropTypes.array,
+    selectUser: PropTypes.func.isRequired
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -73,7 +77,13 @@ class TeacherPanel extends React.Component {
 
   onSelectUser = (id, selectType) => {
     this.logToFirehose('select_student', {select_type: selectType});
-    this.props.onSelectUser(id);
+    const isAsync = this.props.pageType === pageTypes.scriptOverview;
+    this.props.selectUser(id, isAsync);
+  };
+
+  getSelectedUserId = () => {
+    const userIdStr = queryParams('user_id');
+    return userIdStr ? parseInt(userIdStr, 10) : null;
   };
 
   render() {
@@ -87,13 +97,12 @@ class TeacherPanel extends React.Component {
       students,
       unitName,
       levelsWithProgress,
-      getSelectedUserId,
       pageType,
       teacherId,
       exampleSolutions
     } = this.props;
 
-    const selectedUserId = getSelectedUserId();
+    const selectedUserId = this.getSelectedUserId();
 
     const sectionId = selectedSection && selectedSection.id;
 
@@ -287,6 +296,10 @@ export default connect(
     };
   },
   dispatch => ({
-    loadLevelsWithProgress: () => dispatch(loadLevelsWithProgress())
+    loadLevelsWithProgress: () => dispatch(loadLevelsWithProgress()),
+    selectUser: (userId, isAsync = false) => {
+      updateQueryParam('user_id', userId);
+      isAsync ? dispatch(queryUserProgress(userId)) : reload();
+    }
   })
 )(TeacherPanel);
