@@ -116,7 +116,7 @@ export default class Poetry extends SpriteLab {
       const lastState = state;
       state = store.getState();
 
-      if (hasSelectedPoemChanged(lastState, state)) {
+      if (lastState.poetry && hasSelectedPoemChanged(lastState, state)) {
         this.reset();
       }
     });
