@@ -59,5 +59,6 @@ export const FEATURED_PROJECT_TYPE_MAP = {
   artist_k1: i18n.projectTypeK1(),
   playlab_k1: i18n.projectTypeK1(),
   dance: i18n.projectTypeDance(),
+  poetry: i18n.projectTypePoetry(),
   spritelab: i18n.projectTypeSpriteLab()
 };
