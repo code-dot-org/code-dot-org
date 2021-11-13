@@ -9,10 +9,7 @@ import {Provider} from 'react-redux';
 import ReactDOM from 'react-dom';
 import TeacherContentToggle from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import {getHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {
-  renderTeacherPanel,
-  queryLockStatus
-} from '@cdo/apps/code-studio/teacherPanelHelpers';
+import {renderTeacherPanel} from '@cdo/apps/code-studio/teacherPanelHelpers';
 import {setVerified} from '@cdo/apps/code-studio/verifiedTeacherRedux';
 
 $(document).ready(initPage);
@@ -24,11 +21,7 @@ function initPage() {
   const store = getStore();
 
   initViewAs(store);
-  queryLockStatus(
-    store,
-    teacherPanelData.script_id,
-    teacherPanelData.page_type
-  );
+
   store.dispatch(getHiddenLessons(teacherPanelData.script_name, false));
   if (teacherPanelData.is_verified_teacher) {
     store.dispatch(setVerified());
@@ -40,7 +33,6 @@ function initPage() {
   renderTeacherPanel(
     store,
     teacherPanelData.script_id,
-    teacherPanelData.section,
     teacherPanelData.script_name,
     teacherPanelData.page_type
   );

@@ -101,9 +101,7 @@ module Pd::Application
         committed_to_master_schedule: [
           "Yes, I plan to include this course in the #{year} master schedule",
           "Yes, I plan to include this course in the #{year} master schedule, but not taught by this teacher",
-          "I hope to include this course in the #{year} master schedule",
           "No, I do not plan to include this course in the #{year} master schedule but hope to the following year (#{next_year(year)})",
-          "I don’t know if I will be able to include this course in the #{year} master schedule",
           TEXT_FIELDS[:other_with_text]
         ],
         replace_course: [
@@ -150,12 +148,29 @@ module Pd::Application
           'We’ve created our own course',
           TEXT_FIELDS[:other_please_explain]
         ],
+        replace_which_course_csa: [
+          'CodeHS',
+          'Codesters',
+          'Computer Applications (ex: using Microsoft programs)',
+          'CS Fundamentals',
+          'CS in Algebra',
+          'CS in Science',
+          'Exploring Computer Science',
+          'Globaloria',
+          'ICT',
+          'My CS',
+          'Project Lead the Way - Computer Science',
+          'Robotics',
+          'ScratchEd',
+          'Typing',
+          'Technology Foundations',
+          'We’ve created our own course',
+          TEXT_FIELDS[:other_please_explain]
+        ],
         committed_to_diversity: [YES, NO, TEXT_FIELDS[:other_please_explain]],
         pay_fee: [
-          'Yes, my school will be able to pay the full program fee.',
-          'No, my school will not be able to pay the program fee. We would like to be considered for a scholarship.',
-          'Not applicable: there is no fee for the program for teachers in my region.',
-          'Not applicable: there is no Regional Partner in my region.'
+          'Yes, my school would be able to pay the full program fee.',
+          'No, my school would not be able to pay the program fee. We would like to be considered for a scholarship.'
         ]
       }
     end
@@ -193,6 +208,8 @@ module Pd::Application
                 required << :replace_which_course_csd
               elsif teacher_application&.course == 'csp'
                 required << :replace_which_course_csp
+              elsif teacher_application&.course == 'csa'
+                required << :replace_which_course_csa
               end
             end
           end
@@ -211,6 +228,7 @@ module Pd::Application
         [:committed_to_diversity, TEXT_FIELDS[:other_please_explain], :committed_to_diversity_other],
         [:replace_which_course_csd, TEXT_FIELDS[:other_please_explain], :replace_which_course_csd_other],
         [:replace_which_course_csp, TEXT_FIELDS[:other_please_explain], :replace_which_course_csp_other],
+        [:replace_which_course_csa, TEXT_FIELDS[:other_please_explain], :replace_which_course_csa_other],
         [:do_you_approve],
         [:contact_invoicing],
         [:contact_invoicing_detail]
