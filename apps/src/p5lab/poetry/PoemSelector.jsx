@@ -182,8 +182,6 @@ function PoemSelector(props) {
     }
   };
 
-  const getDropdownValue = () => props.selectedPoem.key;
-
   const getPoemOptions = () => {
     const options = Object.keys(POEMS)
       .map(poemKey => getPoem(poemKey))
@@ -214,7 +212,7 @@ function PoemSelector(props) {
       </label>
       <div style={styles.selector}>
         <Select
-          value={getDropdownValue()}
+          value={props.selectedPoem.key}
           clearable={false}
           searchable={false}
           onChange={onChange}
