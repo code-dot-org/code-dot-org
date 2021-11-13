@@ -91,6 +91,7 @@ Dashboard::Application.routes.draw do
         get 'student_script_ids'
         get 'code_review_groups'
         post 'code_review_groups', to: 'sections#set_code_review_groups'
+        post 'code_review_enabled', to: 'sections#set_code_review_enabled'
       end
       collection do
         get 'membership'
@@ -582,7 +583,6 @@ Dashboard::Application.routes.draw do
           get :cohort_view
           get :search
           get :fit_cohort
-          get :applications_closed
         end
       end
 
@@ -603,7 +603,7 @@ Dashboard::Application.routes.draw do
 
   get '/dashboardapi/v1/regional_partners/find', to: 'api/v1/regional_partners#find'
   get '/dashboardapi/v1/regional_partners/show/:partner_id', to: 'api/v1/regional_partners#show'
-  get '/dashboardapi/v1/pd/applications/applications_closed', to: 'api/v1/pd/applications#applications_closed'
+  get '/dashboardapi/v1/pd/application/applications_closed', to: 'pd/professional_learning_landing#applications_closed'
   post '/dashboardapi/v1/pd/regional_partner_mini_contacts', to: 'api/v1/pd/regional_partner_mini_contacts#create'
   post '/dashboardapi/v1/amazon_future_engineer_submit', to: 'api/v1/amazon_future_engineer#submit'
 
@@ -722,6 +722,7 @@ Dashboard::Application.routes.draw do
   get '/dashboardapi/script_standards/:script', to: 'api#script_standards'
   get '/api/section_progress/:section_id', to: 'api#section_progress', as: 'section_progress'
   get '/api/teacher_panel_progress/:section_id', to: 'api#teacher_panel_progress'
+  get '/api/teacher_panel_section', to: 'api#teacher_panel_section'
   get '/dashboardapi/section_level_progress/:section_id', to: 'api#section_level_progress', as: 'section_level_progress'
   get '/api/user_progress/:script', to: 'api#user_progress', as: 'user_progress'
   get '/api/user_app_options/:script/:lesson_position/:level_position/:level', to: 'api#user_app_options', as: 'user_app_options'

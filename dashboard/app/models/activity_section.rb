@@ -85,9 +85,9 @@ class ActivitySection < ApplicationRecord
         bonus: sl_data['bonus'],
         challenge: !!sl_data['challenge'],
         instructor_in_training: !!sl_data['instructor_in_training'],
+        variants: sl_data['variants'],
         progression: progression_name.present? && progression_name
       )
-      # TODO(dave): check and update script level variants
       sl.update_levels(sl_data['levels'] || [])
       sl
     end

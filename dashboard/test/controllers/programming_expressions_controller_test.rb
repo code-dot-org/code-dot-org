@@ -35,19 +35,24 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
       key: programming_expression.key,
       name: 'new name',
       category: 'world',
+      videoKey: 'video-key',
+      imageUrl: 'image.code.org/foo',
       shortDescription: 'short description of code',
       externalDocumentation: 'google.com',
       content: 'a longer description of the code',
       syntax: 'block()',
       returnValue: 'none',
       tips: 'some tips on how to use this block',
-      parameters: [{name: "id", type: "string", required: true, description: "description"}, {name: "text"}]
+      parameters: [{name: "id", type: "string", required: true, description: "description"}, {name: "text"}],
+      examples: [{name: 'example 1', appEmbedHeight: '300px'}]
     }
     assert_response :ok
     programming_expression.reload
 
     assert_equal 'new name', programming_expression.name
     assert_equal 'world', programming_expression.category
+    assert_equal 'video-key', programming_expression.video_key
+    assert_equal 'image.code.org/foo', programming_expression.image_url
     assert_equal 'short description of code', programming_expression.short_description
     assert_equal 'google.com', programming_expression.external_documentation
     assert_equal 'a longer description of the code', programming_expression.content
@@ -55,6 +60,7 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
     assert_equal 'none', programming_expression.return_value
     assert_equal 'some tips on how to use this block', programming_expression.tips
     assert_equal [{name: 'id', type: 'string', required: 'true', description: 'description'}, {name: 'text'}].to_json, programming_expression.palette_params.to_json
+    assert_equal [{name: 'example 1', appEmbedHeight: '300px'}].to_json, programming_expression.examples.to_json
   end
 
   test 'data is passed down to edit page' do

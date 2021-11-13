@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import color from '@cdo/apps/util/color';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 
-export default function ParameterEditor({item: parameter, update}) {
+export default function ParameterEditor({parameter, update}) {
   return (
     <div>
       <label>
@@ -16,6 +17,7 @@ export default function ParameterEditor({item: parameter, update}) {
       </label>
       <label>
         Type
+        <HelpTip>Data type, capitalized</HelpTip>
         <input
           value={parameter.type || ''}
           onChange={e => update('type', e.target.value)}
@@ -42,7 +44,7 @@ export default function ParameterEditor({item: parameter, update}) {
 }
 
 ParameterEditor.propTypes = {
-  item: PropTypes.object,
+  parameter: PropTypes.object,
   update: PropTypes.func
 };
 

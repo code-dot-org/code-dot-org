@@ -3,10 +3,21 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 6: Introduction to AI Lab Cont.
+# Lesson 6: Introduction to AI Lab 
 
-Emphasize the importance of utilizing the lesson plan and class discussion - the curriculum is designed to be facilitated by a teacher, it is not designed a self-paced course for students to progress through independently
-Include a snippet from the lesson plan 
+#### After students train their machine learning model to predict shapes based on features, they will move on to training machine learning models to make food recommendations for customers at various restaurants. As they did in the first model, they will be selecting features (food options) to predict a label (like or dislike). 
 
-![](https://images.code.org/a36157d103f66a23e053b95852981fda-image-1636146793315.13.00 PM.png)
+## Role of the teacher 
+
+##### As with all lessons in CS Discoveries, the teacher plays an active role in facilitating learning for students. Lesson 6 introduces key concepts and skills that will be used throughout the remainder of the unit and in the end of chapter projects. Below is an excerpt from the lesson plan for Lesson 6. As you read the lesson plan excerpt consider the following:
+
+### **As students are working in AI Lab, how might I informally assess student understanding?** 
+
+![](https://images.code.org/1aaad24523f2e6d5ed06d6ac5ed6ee25-image-1636562845638.42.42 AM.png)
+
+##### <a href="https://studio.code.org/s/csd7-2021/lessons/6" target="blank" rel="noopener noreferrer">Click here</a> if you would like to view the full lesson plan and resources for Lesson 6. 
+
+## Let's continue practicing! 
+
+
 MARKDOWN

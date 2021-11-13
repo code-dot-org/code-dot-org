@@ -25,6 +25,7 @@ en:
         cspexams_category_name: CS Principles Practice Test
         csp17_category_name: CS Principles ('17-'18)
         aiml_2021_category_name: AI / ML
+        csc_2021_category_name: CS Connnections ('21-'22)
         full_course_category_name: Full Courses
         hoc_category_name: Hour of Code
         math_category_name: Math
@@ -24171,10 +24172,10 @@ en:
             lessonGroup-9:
               display_name: Preparing to Teach Unit 1
           name: self-paced-pl-csd5-2021
-          title: 'Module 5: Preparing to Teach Unit 7- AI and Machine Learning'
+          title: 'Module 5: Preparing to Teach Unit 7'
           description_audience: ''
           description_short: ''
-          description: "This module is designed to help you prepare for teaching specific units within the CS Discoveries course.  Start by selecting the unit you plan to teach first. You can come back to this section of the training throughout the school year as you prepare to teach new units of the course. This content does not need to be completed in order. For guidance on how best to implement CS Discoveries with students, refer to the [CS Discoveries Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview).\n\n**For each unit in CS Discoveries, you will have the opportunity to:**\n* Prepare to teach the first week of unit content \n* Practice key concepts included in the unit \n* Engage with sample student work \n* Explore end of chapter projects \n\n**Suggested Time:** 1 hour per unit \n"
+          description: "This module is designed to help you prepare for teaching specific units within the CS Discoveries course.  Start by selecting the unit you plan to teach first. You can come back to this section of the training throughout the school year as you prepare to teach new units of the course. This content does not need to be completed in order. For guidance on how best to implement CS Discoveries with students, refer to the [CS Discoveries Implementation Guide](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview).\n\n**For each unit in CS Discoveries, you will have the opportunity to:**\n* Prepare to teach the first week of unit content \n* Practice key concepts included in the unit \n* Engage with sample student work \n* Explore end of chapter projects \n\n**Suggested Time:** 2 hours\n"
           student_description: ''
         self-paced-pl-csd6-2021:
           lessons:
@@ -24300,13 +24301,18 @@ en:
           description_short: ''
           description: ''
         self-paced-pl-csp1-2021:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Welcome to Code.org
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
           name: self-paced-pl-csp1-2021
-          title: ''
+          title: 'Module 1: Welcome'
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Principles.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
+          student_description: "This module is a short introduction to both Code.org and this professional learning course. \n\n**You will:**\n* Get an introduction to Code.org and CS Principles.\n* Learn how to engage in this professional learning course.\n\n**Suggested Time:** 10 minutes"
         self-paced-pl-csp2-2021:
           lessons: {}
           lesson_groups: {}
@@ -26331,7 +26337,7 @@ en:
               description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
           lesson_groups: {}
           name: hello-world-food
-          title: Hello World
+          title: 'Hello World: Food'
           description_audience: ''
           description_short: ''
           description: ''
@@ -26418,7 +26424,7 @@ en:
               description_teacher: 
           lesson_groups: {}
           name: hello-world-animals
-          title: Hello World
+          title: 'Hello World: Animals'
           description_audience: ''
           description_short: ''
           description: ''
@@ -26431,7 +26437,7 @@ en:
               description_teacher: 
           lesson_groups: {}
           name: hello-world-emoji
-          title: Hello World
+          title: 'Hello World: Emoji'
           description_audience: ''
           description_short: ''
           description: ''
@@ -26444,7 +26450,7 @@ en:
               description_teacher: 
           lesson_groups: {}
           name: hello-world-retro
-          title: Hello World
+          title: 'Hello World: Retro'
           description_audience: ''
           description_short: ''
           description: ''
@@ -26660,7 +26666,7 @@ en:
               description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the 5-lesson module called [Coding with Poetry](http://code.org/poetry). By the end of the Coding with Poetry module, students will write their own poems and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s CS Connections curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n"
           lesson_groups: {}
           name: poem-art
-          title: ''
+          title: Poem Art
           description_audience: ''
           description_short: ''
           description: ''
@@ -26670,7 +26676,7 @@ en:
             lesson-1:
               name: Poem Art
               description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
-              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n"
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n"
             lesson-2:
               name: Code Your Own Poem
               description_student: 'Write your own poem and then animate it using code! '
@@ -26680,9 +26686,9 @@ en:
               description_student: "Build an interactive app! Use prompts and user input in a creative new way. \n"
               description_teacher: "In this lesson, students learn how to manipulate specific words in the text in their poems by using open-ended prompts and variables to store the user’s input. First, students explore an app with an open-ended prompt. Then students practice using variables in their code until they are able to combine text and variable blocks to create an interactive app.  \n"
             lesson-4:
-              name: Build a Poem Generator
-              description_student: 
-              description_teacher: 
+              name: Build a Poem Generator App
+              description_student: Use prompts and variables to make a Poem Generator App to share with your friends!
+              description_teacher: "In this lesson, students will use their new knowledge about open-ended prompts and variables to modify their poems and create a new poem generator app. Students will discuss how random words change the meaning and mood of their poems. \n"
             lesson-5:
               name: Choosing Words Carefully
               description_student: Make your app even better! Change your poem generator app by adding words you want the user to choose from.
@@ -26691,12 +26697,12 @@ en:
 '
             lesson-6:
               name: Poetry Circle
-              description_student: 
-              description_teacher: 
+              description_student: 'Share your new poem apps with your friends! '
+              description_teacher: In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.
             lesson-7:
-              name: Conditionals
-              description_student: 
-              description_teacher: 
+              name: Responding to Words
+              description_student: Make the app respond to what the user chooses in exciting new ways.
+              description_teacher: In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.
           lesson_groups: {}
           name: poetry
           title: Computer Science and Poetry
@@ -27124,3 +27130,305 @@ en:
           student_description: In this unit, you use `ArrayList`s to store program data and differentiate between when to use 1D and 2D arrays and `ArrayList`s. You explore the benefits and functionality of an `ArrayList`, using these to solve problems involving numerical and object data. You use methods in the `String` class to analyze and process text obtained from user and file input. Throughout the unit, you write program documentation using single-line comments, multi-line comments, and Javadoc comments to create API documentation. In the process, you identify and document preconditions and postconditions of objects and methods.
           description_short: ''
           description_audience: ''
+        ai-ethics-2021:
+          lessons:
+            Our AI Code of Ethics:
+              name: Our AI Code of Ethics
+              description_student: Collaboratively research about AI ethics and create a shareable code of conduct.
+              description_teacher: This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+            lesson-1:
+              key: lesson-1
+              name: Our AI Code of Ethics
+              description_student: Collaboratively research about AI ethics and create a shareable code of conduct.
+              description_teacher: This lesson builds off prior activities involving research and finding sources to justify an argument. In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+          title: Our AI Code of Ethics
+          description: In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.
+          student_description: 'Conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of your choice. '
+          description_short: 'In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. '
+          description_audience: grades 6-12
+          lesson_groups: {}
+          name: ai-ethics-2021
+        poem-art-2021:
+          lessons:
+            Poem Art:
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. Students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the multi-lesson module called [Coding with Poetry](http://studio.code.org/s/poetry-2021)."
+            lesson-1:
+              key: lesson-1
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the 5-lesson module called [Coding with Poetry](http://code.org/poetry). By the end of the Coding with Poetry module, students will write their own poems and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s CS Connections curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n"
+          title: Poem Art
+          description: "This lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the multi-lesson module called [Coding with Poetry](studio.code.org/s/poetry-2021). \n\nThe Coding with Poetry is part of Code.org’s [CS Connections](code.org/educate/csc) curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. "
+          student_description: ''
+          description_short: 'This lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the multi-lesson module called Coding with Poetry. '
+          description_audience: ''
+          lesson_groups: {}
+          name: poem-art-2021
+        poetry-2021:
+          lessons:
+            Poem Art:
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson for new coders, students will animate a poem with code to illustrate the mood of a poem. Students will read and detect the mood of a poem. They will then find corresponding effects and images to help illustrate the poem's mood. Finally, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n"
+            Code Your Own Poem:
+              name: Code Your Own Poem
+              description_student: 'Write your own poem and then animate it using code! '
+              description_teacher: 'In this CS and ELA integrated lesson, students will build on their previous learning about poetry by developing their own short poem. Then, students will work on their computers to animate their poems with code. In lesson 1, students used a poem dropdown menu to choose the poem they wanted to animate. In this lesson, students will use `set title`, `set author`, `add line`, and `animate text` blocks of code to change what text appears in their Playspace. '
+            Playing with Words:
+              name: Playing with Words
+              description_student: "Build an interactive app! Use prompts and user input in a creative new way. \n"
+              description_teacher: "In this lesson, students learn how to manipulate specific words in the text in their poems by using open-ended prompts and variables to store the user’s input. First, students explore an app with an open-ended prompt. Then students practice using variables in their code until they are able to combine text and variable blocks to create an interactive app.  \n"
+            Build a Poem Generator:
+              name: Build a Poem Generator App
+              description_student: Use prompts and variables to make a Poem Generator App to share with your friends!
+              description_teacher: "In this lesson, students will use their new knowledge about open-ended prompts and variables to modify their poems and create a new poem generator app. Students will discuss how random words change the meaning and mood of their poems. \n"
+            Choosing Words Carefully:
+              name: Choosing Words Carefully
+              description_student: Make your app even better! Change your poem generator app by adding words you want the user to choose from.
+              description_teacher: 'In this lesson, students create a poem generator app with multiple-choice prompts to guide the user to pick a carefully chosen word. Students will plan which words they will replace in their poems, choose three new multiple-choice words per prompt, and then program their poem generator using new multiple-choice prompts with events.
+
+'
+            Responding to Words:
+              name: Responding to Words
+              description_student: Make the app respond to what the user chooses in exciting new ways.
+              description_teacher: In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.
+            Poetry Circle:
+              name: Poetry Circle
+              description_student: 'Share your new poem apps with your friends! '
+              description_teacher: In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.
+            lesson-1:
+              key: lesson-1
+              name: Poem Art
+              description_student: 'Poetry is making art with words. Add visual effects and images to your own animated poem. '
+              description_teacher: "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n"
+            lesson-2:
+              key: lesson-2
+              name: Code Your Own Poem
+              description_student: 'Write your own poem and then animate it using code! '
+              description_teacher: 'In this CS and ELA integrated lesson, students will build on their previous learning about poetry by developing their own short poem. Then, students will work on their computers to animate their poems with code. In lesson 1, students used a poem dropdown menu to choose the poem they wanted to animate. In this lesson, students will use `set title`, `set author`, `add line`, and `animate text` blocks of code to change what text appears in their Playspace. '
+            lesson-3:
+              key: lesson-3
+              name: Playing with Words
+              description_student: "Build an interactive app! Use prompts and user input in a creative new way. \n"
+              description_teacher: "In this lesson, students learn how to manipulate specific words in the text in their poems by using open-ended prompts and variables to store the user’s input. First, students explore an app with an open-ended prompt. Then students practice using variables in their code until they are able to combine text and variable blocks to create an interactive app.  \n"
+            lesson-4:
+              key: lesson-4
+              name: Build a Poem Generator
+              description_student: Use prompts and variables to make a Poem Generator App to share with your friends!
+              description_teacher: "In this lesson, students will use their new knowledge about open-ended prompts and variables to modify their poems and create a new poem generator app. Students will discuss how random words change the meaning and mood of their poems. \n"
+            lesson-5:
+              key: lesson-5
+              name: Choosing Words Carefully
+              description_student: Make your app even better! Change your poem generator app by adding words you want the user to choose from.
+              description_teacher: 'In this lesson, students create a poem generator app with multiple-choice prompts to guide the user to pick a carefully chosen word. Students will plan which words they will replace in their poems, choose three new multiple-choice words per prompt, and then program their poem generator using new multiple-choice prompts with events.
+
+'
+            lesson-7:
+              key: lesson-7
+              name: Responding to Words
+              description_student: Make the app respond to what the user chooses in exciting new ways.
+              description_teacher: In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.
+            lesson-6:
+              key: lesson-6
+              name: Poetry Circle
+              description_student: 'Share your new poem apps with your friends! '
+              description_teacher: In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.
+          title: Computer Science and Poetry
+          description: "This module is designed to ensure students have a shareable app by the end of each lesson, so each lesson is a potential stopping point. If your class finishes the entire 7-part module, students will write their own poems, investigate word choice, learn how to use prompts and variables, learn how to code conditional statements, and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s [CS Connections](code.org/educate/csc) curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n\n**First time teaching with Code.org?** To get started, watch these videos:\n* [Basic Features of Code.org](https://www.youtube.com/watch?v=lYZq1HVTAIY) \n* [Creating a Class Section](https://youtu.be/4Wugxc80fNU)\n* [The Student Experience](https://youtu.be/wzz3jJZoj20)\n* [Progress, Feedack, and Assessment](https://youtu.be/c0pGfCpd6MI)"
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: poetry-2021
+        hello-world-food-2021:
+          lessons:
+            Hello World:
+              name: 'Hello World: Food'
+              description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
+              description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
+            lesson-1:
+              key: lesson-1
+              name: Hello World
+              description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
+              description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
+          title: 'Hello World: Food'
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: hello-world-food-2021
+        hello-world-emoji-2021:
+          lessons:
+            Hello World:
+              name: 'Hello World: Emoji'
+              description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
+              description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
+            lesson-1:
+              key: lesson-1
+              name: Hello World
+              description_student: ''
+              description_teacher: ''
+          title: 'Hello World: Emoji'
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: hello-world-emoji-2021
+        hello-world-animals-2021:
+          lessons:
+            Hello World:
+              name: 'Hello World: Animals'
+              description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
+              description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
+            lesson-1:
+              key: lesson-1
+              name: Hello World
+              description_student: ''
+              description_teacher: ''
+          title: 'Hello World: Animals'
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: hello-world-animals-2021
+        hello-world-retro-2021:
+          lessons:
+            Hello World:
+              name: 'Hello World: Retro'
+              description_student: In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events.
+              description_teacher: "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)"
+            lesson-1:
+              key: lesson-1
+              name: Hello World
+              description_student: ''
+              description_teacher: ''
+          title: 'Hello World: Retro'
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: hello-world-retro-2021
+        spelling-bee-2021:
+          lessons:
+            Spelling Bee:
+              name: Spelling Bee
+              description_student: 'Help the bee spell new words!
+
+'
+              description_teacher: |
+                This lesson builds off prior activities involving spelling and recognizing capital letters. Spelling with the bee helps students in kindergarten and first grade practice following and counting sequences of letters that form words. They use a series of coding commands to move a spelling bee across a grid of letters in order to spell words. Students learn how to use drag-and-drop coding blocks to move their character, and the importance of sequencing commands in the correct order so they can spell a word.
+
+                ####Prerequisite Skills
+                This lesson is not intended to introduce students to the alphabet, sequences of letters to form words, or counting. Students should come into this lesson with prior knowledge and the skills to be able to:
+
+                - recognize uppercase letters of the alphabet.
+                - recognize and count numbers up to 10 using fingers, objects, or manipulatives.
+                - recognize that words are made up of a sequence of letters.
+            lesson-1:
+              key: lesson-1
+              name: Spelling Bee
+              description_student: 'Help the bee spell new words!
+
+'
+              description_teacher: |
+                This lesson builds off prior activities involving spelling and recognizing capital letters. Spelling with the bee helps students in kindergarten and first grade practice following and counting sequences of letters that form words. They use a series of coding commands to move a spelling bee across a grid of letters in order to spell words. Students learn how to use drag-and-drop coding blocks to move their character, and the importance of sequencing commands in the correct order so they can spell a word.
+
+                ####Prerequisite Skills
+                This lesson is not intended to introduce students to the alphabet, sequences of letters to form words, or counting. Students should come into this lesson with prior knowledge and the skills to be able to:
+
+                - recognize uppercase letters of the alphabet.
+                - recognize and count numbers up to 10 using fingers, objects, or manipulatives.
+                - recognize that words are made up of a sequence of letters.
+          title: Spelling Bee
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: spelling-bee-2021
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Exploring Box Plots and Histograms
+              description_student: 'Create bar charts and histograms in App Lab''s Data Visualizer.
+
+'
+              description_teacher: |
+                This lesson builds off of the concepts for bar charts and histograms that have already been introduced to students. Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to create two different kinds of charts: a bar chart, and a histogram. This tool is designed to quickly connect students with real-world datasets and make it easy to create visualizations from data without learning how to navigate a more complex tool. They will also have access to several real-world datasets that they can use to create their charts.
+
+
+
+                The lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice creating a bar chart in the Data Visualizer in App Lab. Then they learn how to make histograms for building charts in instances where bar charts may not be useful. Students then have a chance to explore different real-world datasets and see how making charts can help communicate information about a topic they care about.
+
+                ####Prerequisite Skills and Vocabulary
+
+                This lesson is intended to enrich or reinforce existing lessons on bar charts and histograms. It is not meant to introduce new core content to students. Students should come into this lesson with the following prior knowledge and skills:
+
+
+                - Know how to read a bar chart, understanding what the values on the x and y axes represent
+                - Know how to read a histogram, understanding what the range of values represent
+            lesson-1:
+              key: lesson-1
+              name: Exploring Box Plots and Histograms
+              description_student: 'Create bar charts and histograms in App Lab''s Data Visualizer.
+
+'
+              description_teacher: |
+                This lesson builds off of the concepts for bar charts and histograms that have already been introduced to students. Students will practice making conclusions from charts and learn to use the Data Visualizer in App Lab to create two different kinds of charts: a bar chart, and a histogram. This tool is designed to quickly connect students with real-world datasets and make it easy to create visualizations from data without learning how to navigate a more complex tool. They will also have access to several real-world datasets that they can use to create their charts.
+
+
+
+                The lesson begins with a quick prompt to review the reasons charts are useful for looking at data. Students then practice creating a bar chart in the Data Visualizer in App Lab. Then they learn how to make histograms for building charts in instances where bar charts may not be useful. Students then have a chance to explore different real-world datasets and see how making charts can help communicate information about a topic they care about.
+
+                ####Prerequisite Skills and Vocabulary
+
+                This lesson is intended to enrich or reinforce existing lessons on bar charts and histograms. It is not meant to introduce new core content to students. Students should come into this lesson with the following prior knowledge and skills:
+
+
+                - Know how to read a bar chart, understanding what the values on the x and y axes represent
+                - Know how to read a histogram, understanding what the range of values represent
+          title: Exploring Box Plots and Histograms
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: explore-data-1-2021
+        counting-csc-2021:
+          lessons:
+            Counting with Laurel:
+              name: Counting with Laurel
+              description_student: Help Laurel, the treasure hunter, count and add steps to collect gems!
+              description_teacher: |
+                This lesson builds off prior activities involving counting and representing addition. Counting with Laurel supports students in kindergarten and first grade with practice counting and adding as they use loops to help Laurel, the treasure hunter, collect gems across a maze grid. They use a series of coding commands to guide Laurel across a grid to collect gems, utilizing a “Repeat” block that requires them to count how many steps Laurel should take- then represent that number using the correct numeral within a block of code.
+
+                ####Prerequisite Skills
+                This lesson is not intended to introduce students to numbers, counting, or adding. Students should come into this lesson with some prior knowledge and the skills to be able to:
+
+                - recognize and count numbers up to 10 using images, fingers, or manipulatives.
+                - add objects, images, fingers, or  manipulatives up to a sum of 10.
+            lesson-1:
+              key: lesson-1
+              name: Counting with Laurel
+              description_student: Help Laurel, the treasure hunter, count and add steps to collect gems!
+              description_teacher: |
+                This lesson builds off prior activities involving counting and representing addition. Counting with Laurel supports students in kindergarten and first grade with practice counting and adding as they use loops to help Laurel, the treasure hunter, collect gems across a maze grid. They use a series of coding commands to guide Laurel across a grid to collect gems, utilizing a “Repeat” block that requires them to count how many steps Laurel should take- then represent that number using the correct numeral within a block of code.
+
+                ####Prerequisite Skills
+                This lesson is not intended to introduce students to numbers, counting, or adding. Students should come into this lesson with some prior knowledge and the skills to be able to:
+
+                - recognize and count numbers up to 10 using images, fingers, or manipulatives.
+                - add objects, images, fingers, or  manipulatives up to a sum of 10.
+          title: Counting with Laurel
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lesson_groups: {}
+          name: counting-csc-2021

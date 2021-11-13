@@ -57,6 +57,9 @@ export default class PoetryLibrary extends CoreLibrary {
 
       // Override the draw loop
       executeDrawLoopAndCallbacks() {
+        // Make sure we start each frame with a clean slate.
+        this.p5.background('white');
+
         this.backgroundEffect();
         this.runBehaviors();
         this.runEvents();
@@ -283,14 +286,18 @@ export default class PoetryLibrary extends CoreLibrary {
     this.p5.push();
     this.p5.textFont(font);
     this.p5.textSize(desiredSize);
-    const fullWidth = this.p5.textWidth(text);
+    // Some authors require copyright info that is also included in the author field.
+    const lines = text.split('\n');
+    const longestLine = lines.reduce((a, b) => (a.length > b.length ? a : b));
+    const fullWidth = this.p5.textWidth(longestLine);
     const scaledSize = Math.min(
       desiredSize,
       (desiredSize * (PLAYSPACE_SIZE - OUTER_MARGIN)) / fullWidth
     );
+    const maxLineHeight = 30 / lines.length;
 
     this.p5.pop();
-    return scaledSize;
+    return Math.min(scaledSize, maxLineHeight);
   }
 
   applyTextEffect(renderInfo, effect, frameCount) {

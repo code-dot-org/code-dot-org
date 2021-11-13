@@ -381,6 +381,31 @@ class ApiController < ApplicationController
     render json: student_progress.unshift(teacher_progress)
   end
 
+  # Get /api/teacher_panel_section
+  def teacher_panel_section
+    teacher_sections = current_user&.sections
+
+    if teacher_sections.blank?
+      head :no_content
+      return
+    end
+
+    section_id = params[:section_id].present? ? params[:section_id].to_i : nil
+
+    if section_id
+      section = teacher_sections.find_by(id: section_id)
+      if section.present?
+        render json: section.summarize if section.present?
+        return
+      end
+    elsif teacher_sections.length == 1
+      render json: teacher_sections[0].summarize
+      return
+    end
+
+    head :no_content
+  end
+
   def script_structure
     script = Script.get_from_cache(params[:script])
     overview_path = CDO.studio_url(script_path(script))
@@ -400,8 +425,14 @@ class ApiController < ApplicationController
   # Return a JSON summary of the user's progress for params[:script].
   def user_progress
     if current_user
+      if params[:user_id].present?
+        user = User.find(params[:user_id])
+        return head :forbidden unless user.student_of?(current_user)
+      else
+        user = current_user
+      end
+
       script = Script.get_from_cache(params[:script])
-      user = params[:user_id].present? ? User.find(params[:user_id]) : current_user
       teacher_viewing_student = !current_user.student? && current_user.students.include?(user)
       render json: summarize_user_progress(script, user).merge(
         {
@@ -419,8 +450,7 @@ class ApiController < ApplicationController
   # Returns app_options values that are user-specific. This is used on cached
   # levels.
   def user_app_options
-    response = user_summary(current_user)
-    response[:signedIn] = !current_user.nil?
+    response = {}
 
     script = Script.get_from_cache(params[:script])
     lesson = script.lessons[params[:lesson_position].to_i - 1]
@@ -428,55 +458,85 @@ class ApiController < ApplicationController
     level = params[:level] ? Script.cache_find_level(params[:level].to_i) : script_level.oldest_active_level
 
     if current_user
-      user_level = current_user.last_attempt(level, script)
-      level_source = user_level.try(:level_source).try(:data)
+      response[:signedIn] = true
 
-      # Temporarily return the full set of progress so we can overwrite what the sessionStorage changed
-      response[:progress] = summarize_user_progress(script, current_user)[:progress]
-      response[:isHoc] = script.hoc?
-
-      if user_level
-        response[:lastAttempt] = {
-          timestamp: user_level.updated_at.to_datetime.to_milliseconds,
-          source: level_source
-        }
-
-        # Pairing info
-        is_navigator = user_level.navigator?
-        if is_navigator
-          driver = user_level.driver
-          driver_level_source_id = user_level.driver_level_source_id
-        end
-
-        response[:isNavigator] = is_navigator
-        if driver
-          response[:pairingDriver] = driver.name
-          if driver_level_source_id
-            response[:pairingAttempt] = edit_level_source_path(driver_level_source_id)
-          elsif level.channel_backed?
-            response[:pairingChannelId] = get_channel_for(level, script.id, driver)
-          end
-        end
+      # Set `user` to the user that we should use to calculate the app_options
+      # and note if the signed-in user is viewing another user (e.g. a teacher
+      # viewing a student's work).
+      if params[:user_id].present?
+        user = User.find(params[:user_id])
+        return head :forbidden unless can?(:view_as_user, script_level, user)
+        viewing_other_user = true
+      else
+        user = current_user
+        viewing_other_user = false
       end
-    end
 
-    if level.finishable?
-      slog(
-        tag: 'activity_start',
-        script_level_id: script_level.try(:id),
-        level_id: level.contained_levels.empty? ? level.id : level.contained_levels.first.id,
-        user_agent: request.user_agent&.valid_encoding? ? request.user_agent : 'invalid_encoding',
-        locale: locale
-      )
+      if viewing_other_user
+        response[:isStarted] = level_started?(level, script, user)
+
+        # This is analogous to readonly_view_options
+        response[:skipInstructionsPopup] = true
+        response[:readonlyWorkspace] = true
+        response[:callouts] = []
+      end
+
+      # TODO: There are many other user-specific values in app_options that may
+      # need to be sent down.  See LP-2086 for a list of potential values.
+
+      response[:disableSocialShare] = !!user.under_13?
+      response.merge!(progress_app_options(script, level, user))
+    else
+      response[:signedIn] = false
+      viewing_other_user = false
     end
 
     if params[:get_channel_id] == "true"
-      response[:channel] = get_channel_for(level, script.id, current_user)
+      response[:channel] = viewing_other_user ?
+        get_channel_for(level, script.id, user) :
+        get_channel_for(level, script.id)
       response[:reduceChannelUpdates] =
         !Gatekeeper.allows("updateChannelOnSave", where: {script_name: script.name}, default: true)
     end
 
     render json: response
+  end
+
+  # Gets progress-related app_options for the given script and level for the
+  # given user. This code is analogous to parts of LevelsHelper#app_options.
+  # TODO: Eliminate this logic from LevelsHelper#app_options or refactor methods
+  # to share code.
+  def progress_app_options(script, level, user)
+    response = {}
+
+    user_level = user.last_attempt(level, script)
+    level_source = user_level.try(:level_source).try(:data)
+
+    if user_level
+      response[:lastAttempt] = {
+        timestamp: user_level.updated_at.to_datetime.to_milliseconds,
+        source: level_source
+      }
+
+      # Pairing info
+      is_navigator = user_level.navigator?
+      if is_navigator
+        driver = user_level.driver
+        driver_level_source_id = user_level.driver_level_source_id
+      end
+
+      response[:isNavigator] = is_navigator
+      if driver
+        response[:pairingDriver] = driver.name
+        if driver_level_source_id
+          response[:pairingAttempt] = edit_level_source_path(driver_level_source_id)
+        elsif level.channel_backed?
+          response[:pairingChannelId] = get_channel_for(level, script.id, driver)
+        end
+      end
+    end
+
+    response
   end
 
   # GET /api/example_solutions/:script_level_id/:level_id

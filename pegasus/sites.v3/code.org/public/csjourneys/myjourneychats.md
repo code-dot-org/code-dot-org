@@ -206,12 +206,7 @@ As Director of Software Engineering at <a href="https://www.irobot.com/" target=
 As the senior instruction designer for <a href="https://www.roblox.com/" target="_blank">Roblox</a>, <strong>Genevieve Johnson</strong> oversees the creation of educational content and empowers students to pursue careers as entrepreneurs, engineers, and designers. She has been an author on two books, <i>Roblox Game Development in 24 Hours: The Official Roblox Guide</i>, and <i>Coding with Roblox Lua in 24 Hours: The Official Roblox Guide</i>.
 </p>
 
-<a href="https://www.eventbrite.com/e/my-journey-using-roblox-to-empower-students-registration-167177770211" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
-
+<a href="https://code.zoom.us/rec/play/G3oUkKUOrnj_EeM1QfWyOOiwJbqQ-xh2-GLDV0Nq_7_wsO8m9hLBrvAZNPZ0DHuw-3kGN0ubhRS6sUTm.DdfzTgxyJMJa-4Qo" target="_blank"><button>Watch the chat</button></a>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
