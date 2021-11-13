@@ -90,7 +90,14 @@ export const StatusMessageType = {
 
 export const InputMessageType = {
   SYSTEM_IN: 'SYSTEM_IN',
-  PLAYGROUND: 'PLAYGROUND'
+  PLAYGROUND: 'PLAYGROUND',
+  THEATER: 'THEATER'
+};
+
+export const InputMessage = {
+  // Theater-specific messages
+  UPLOAD_SUCCESS: 'UPLOAD_SUCCESS',
+  UPLOAD_ERROR: 'UPLOAD_ERROR'
 };
 
 export const SoundExceptionType = makeEnum(

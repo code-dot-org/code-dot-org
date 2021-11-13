@@ -7,7 +7,12 @@ import i18n from '@cdo/locale';
 import LessonEditorDialog from './LessonEditorDialog';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
-export default function UploadImageDialog({isOpen, handleClose, uploadImage}) {
+export default function UploadImageDialog({
+  isOpen,
+  handleClose,
+  uploadImage,
+  allowExpandable = true
+}) {
   const [imgUrl, setImgUrl] = useState(undefined);
   const [expandable, setExpandable] = useState(false);
   const [error, setError] = useState(undefined);
@@ -79,22 +84,23 @@ export default function UploadImageDialog({isOpen, handleClose, uploadImage}) {
         </div>
       )}
 
-      <label style={styles.label}>
-        Expandable
-        <input
-          type="checkbox"
-          checked={expandable}
-          style={styles.checkbox}
-          onChange={e => setExpandable(e.target.checked)}
-        />
-        <HelpTip>
-          <p>
-            Check if you want the image to be able to be enlarged in a dialog
-            over the page when clicked.
-          </p>
-        </HelpTip>
-      </label>
-
+      {allowExpandable && (
+        <label style={styles.label}>
+          Expandable
+          <input
+            type="checkbox"
+            checked={expandable}
+            style={styles.checkbox}
+            onChange={e => setExpandable(e.target.checked)}
+          />
+          <HelpTip>
+            <p>
+              Check if you want the image to be able to be enlarged in a dialog
+              over the page when clicked.
+            </p>
+          </HelpTip>
+        </label>
+      )}
       <hr />
 
       <Button
@@ -108,6 +114,7 @@ export default function UploadImageDialog({isOpen, handleClose, uploadImage}) {
 }
 
 UploadImageDialog.propTypes = {
+  allowExpandable: PropTypes.bool,
   isOpen: PropTypes.bool.isRequired,
   handleClose: PropTypes.func.isRequired,
   uploadImage: PropTypes.func.isRequired
