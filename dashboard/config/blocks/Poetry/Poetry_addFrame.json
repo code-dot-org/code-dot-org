@@ -15,11 +15,11 @@
         "options": [
           [
             "Bamboo",
-            "\"placeholder\""
+            "\"bamboo\""
           ],
           [
             "Beaded",
-            "\"placeholder\""
+            "\"beaded\""
           ],
           [
             "Brick",
@@ -27,15 +27,15 @@
           ],
           [
             "Decorative",
-            "\"placeholder\""
+            "\"decorative\""
           ],
           [
             "Donuts",
-            "\"placeholder\""
+            "\"donuts\""
           ],
           [
             "Fire",
-            "\"placeholder\""
+            "\"fire\""
           ],
           [
             "Flowers",
@@ -43,7 +43,7 @@
           ],
           [
             "Gilded",
-            "\"placeholder\""
+            "\"gilded\""
           ],
           [
             "Hearts",
@@ -51,15 +51,15 @@
           ],
           [
             "Ice Cream",
-            "\"placeholder\""
+            "\"iceCream\""
           ],
           [
             "Leaves",
-            "\"placeholder\""
+            "\"leaves\""
           ],
           [
             "Metal Frame",
-            "\"placeholder\""
+            "\"metal\""
           ],
           [
             "Paw Prints",
@@ -71,15 +71,11 @@
           ],
           [
             "Stars",
-            "\"placeholder\""
+            "\"stars\""
           ],
           [
             "Swirls",
             "\"swirls\""
-          ],
-          [
-            "Water",
-            "\"placeholder\""
           ],
           [
             "Waves",
@@ -87,7 +83,7 @@
           ],
           [
             "Wood Frame",
-            "\"placeholder\""
+            "\"wood\""
           ],
           [
             "Zig-Zag",
