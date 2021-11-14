@@ -71,11 +71,6 @@ def main(options)
       next
     end
 
-    # TODO(dave): remove this check once teacher_resources are handled safely
-    if script.teacher_resources.present?
-      raise "unsafe to migrate script #{script.name.dump} containing teacher resources"
-    end
-
     next if options.dry_run
 
     models = ['Lesson', 'Activity']
