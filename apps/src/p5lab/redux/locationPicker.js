@@ -16,7 +16,8 @@ export default function locationPicker(state, action) {
       return {
         ...state,
         mode: LocationPickerMode.SELECTING,
-        lastSelection: undefined
+        lastSelection: undefined,
+        requestTime: Date.now()
       };
     case CANCEL_LOCATION_SELECTION:
       return {
