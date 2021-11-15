@@ -18,9 +18,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:30 UTC",
+    "serialized_at": "2021-11-12 22:33:41 UTC",
     "published_state": null,
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp6-2021"
     }
@@ -2338,6 +2340,12 @@
     {
       "seeding_key": {
         "lesson.key": "Lesson 6: Assessment Day",
+        "resource.key": "csp_unit_6_-_algorithms"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Parallel and Distributed Algorithms",
         "resource.key": "csp_unit_6_-_algorithms"
       }
     },
