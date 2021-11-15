@@ -185,7 +185,11 @@ As Director of Software Engineering at <a href="https://www.irobot.com/" target=
 <br>
 <br>
 <strong>Ini Oladosu</strong> joined <a href="https://www.ilm.com/" target="_blank">Industrial Light & Magic</a> in 2020 as a Production Assistant. He was born in Port Harcourt, Nigeria before immigrating to Calgary, Canada with his family in 2000. Between 2019 and 2021, Ini co-wrote and co-produced his debut short film, <i>Framed</i>. The film has been selected into various film festivals and most recently won the award for Best Edit at the 2021 London International Monthly Film Festival.</p>
-<i>Recording not currently available.</i>
+
+<a href="https://code.zoom.us/rec/play/kIvRYVMSbjTlS0R135aJipNeBxbg6Vv1taAVDeVb3IVoBXwRMZuQjhuRFa-VNSg5Wy8UVJF4fcZ15BFV.p4zxH_sHQW5GLwBU" target="_blank"><button>Watch the chat</button></a>
+<br>
+<br>
+<i>Due to legal constraints, we are only able to offer this recording on demand. You will need to register using your name and email address to access.</i>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
