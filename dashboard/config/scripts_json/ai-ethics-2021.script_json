@@ -11,8 +11,8 @@
     },
     "new_name": null,
     "family_name": "ai-ethics",
-    "serialized_at": "2021-11-12 17:35:16 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-11-15 17:08:59 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -202,7 +202,7 @@
       "key": "fd4b350c-f002-4b2d-a51a-3c56bfdecb04",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r ethics_ai_equal_access_and_algorithmic_bias/ai-ethics/unversioned] video to setup the activity they will complete today.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the \n[r ethics_ai_equal_access_and_algorithmic_bias/ai-ethics/2021] video to setup the activity they will complete today.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "fd4b350c-f002-4b2d-a51a-3c56bfdecb04",
@@ -237,7 +237,7 @@
       "key": "6bd7055f-82ec-4dcd-8002-7f800bd6190e",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Digitally share the [r ai-ethics-research-areas/ai-ethics/unversioned] document with each group. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the [r ai-ethics-research-reflection/ai-ethics/unversioned] handout. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students research their area with  fellow group members, answering questions on the handout along the way. Students can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\n\n#### AI Ethics Research Reflection\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout.\n\n\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute**: Digitally share the [r ai_ethics_research_areas/ai-ethics/2021] document with each group. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that this document lists research areas in AI ethics, along with sample articles and videos students may read and watch. Have groups choose an area of specialization. Encourage students to pick different topics if possible.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Provide each group with one copy of the [r ai_ethics_research_reflection/ai-ethics/2021] handout. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students research their area with  fellow group members, answering questions on the handout along the way. Students can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits.\n\n#### AI Ethics Research Reflection\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share**: Ask groups to share what they learned, along with a few answers to the questions on the handout.\n\n\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "6bd7055f-82ec-4dcd-8002-7f800bd6190e",
@@ -278,7 +278,7 @@
       "key": "47abb655-2c82-4c68-9600-308702f15689",
       "position": 1,
       "properties": {
-        "description": "If you or your students would like to learn more about AI, check out our [r how-ai-works-video-series/ai-ethics/unversioned] video series.\n",
+        "description": "If you or your students would like to learn more about AI, check out our [r how_ai_works/ai-ethics/2021] video series.\n\n\n\n\n\n",
         "name": "Learn more about AI\r"
       },
       "seeding_key": {
