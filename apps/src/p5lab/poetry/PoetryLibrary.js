@@ -104,6 +104,10 @@ export default class PoetryLibrary extends CoreLibrary {
         spritelabCommands.destroy.call(this, {costume});
       },
 
+      glideTo(costume, location) {
+        spritelabCommands.glideTo.call(this, {costume}, location);
+      },
+
       playMusic(url) {
         if (this.poemState.backgroundMusic) {
           audioCommands.stopSound({url: this.poemState.backgroundMusic});
