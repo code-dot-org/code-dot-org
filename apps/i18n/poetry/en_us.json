@@ -8,6 +8,7 @@
   "carroll2Title": "Crocodile",
   "carroll3Lines": "'Twas brillig, and the slithy toves\nDid gyre and gimble in the wabe;\nAll mimsy were the borogoves,\nAnd the mome raths outgrabe.\n\n“Beware the Jabberwock, my son!\nThe jaws that bite, the claws that catch!\nBeware the Jubjub bird, and shun\nThe frumious Bandersnatch!”",
   "carroll3Title": "Jabberwocky",
+  "chooseAPoem": "Choose a Poem",
   "chooseSound": "This poem doesn't have any sound yet. Choose a music or sound block to add to your code. \n<xml><block type=\"Poetry_playSound\"><title name=\"SOUND\">\"sound://category_background/typewriter.mp3\"</title></block></xml>  \n<xml><block type=\"Poetry_playMusic\"><title name=\"SOUND\">\"sound://category_background/fire_burning.mp3\"</title></block></xml>",
   "editCustomPoem": "Edit Custom Poem",
   "effectWithEvent": "Try using a new foreground or background effect under your `when line shows` event block.",
