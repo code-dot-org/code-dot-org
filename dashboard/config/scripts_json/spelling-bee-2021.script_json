@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "spelling-bee",
-    "serialized_at": "2021-11-13 05:01:04 UTC",
+    "serialized_at": "2021-11-15 16:32:17 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -37,7 +37,7 @@
   "lessons": [
     {
       "key": "Spelling Bee",
-      "name": "Spelling Bee",
+      "name": "Spelling With Bee",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -613,7 +613,7 @@
   ],
   "resources": [
     {
-      "name": "Spelling with the bee",
+      "name": "Spelling with Bee",
       "url": "https://docs.google.com/presentation/d/1WFZy1MO89Tx6gk1_K6NV4YrMNMKHEy5rbW9bKqw_Bs4/edit?usp=sharing",
       "key": "spelling_with_the_bee",
       "properties": {
@@ -625,7 +625,7 @@
       }
     },
     {
-      "name": "Warm Up:  Spelling with the bee - Worksheet",
+      "name": "Warm Up: Spelling with Bee - Worksheet",
       "url": "https://docs.google.com/document/d/18AsuOZcLliSa3wF9xS1glgirm6EQ2WgLWgGry2QKGQo/edit",
       "key": "warm_up_spelling_with_the_bee_-_worksheet",
       "properties": {
@@ -637,7 +637,7 @@
       }
     },
     {
-      "name": "Wrap Up:  Spelling with the bee - Worksheet",
+      "name": "Wrap Up:  Spelling with Bee - Worksheet",
       "url": "https://docs.google.com/document/d/1rkI8TRw-8xN7K-8EiVfBgm_a9evB_vaKh6fZyu38j0k/edit",
       "key": "wrap_up_spelling_with_the_bee_-_worksheet",
       "properties": {
