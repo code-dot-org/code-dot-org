@@ -90,7 +90,7 @@ const ProfessionalLearningProgramRequirements = props => {
     } else {
       return (
         <label>
-          Once you are matched with a partner, they may have scholarships
+          When you are matched with a partner, they may have scholarships
           available to cover the cost of the program. Let us know if your school
           or district would be able to pay the fee or if you need to be
           considered for a scholarship.
