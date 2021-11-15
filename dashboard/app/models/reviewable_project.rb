@@ -19,9 +19,14 @@ class ReviewableProject < ApplicationRecord
   belongs_to :level
   belongs_to :script
 
-  # Need to update this
   def self.user_can_mark_project_reviewable?(project_owner, user)
-    project_owner == user && project_owner.sections_as_student.all?(&:code_review_enabled?)
+    if DCDO.get('code_review_groups_enabled', false)
+      return project_owner == user &&
+        project_owner.sections_as_student.any?(&:code_review_enabled?) &&
+        !project_owner.code_review_groups.empty?
+    else
+      return project_owner == user && project_owner.sections_as_student.all?(&:code_review_enabled?)
+    end
   end
 
   def self.project_reviewable?(storage_app_id, user_id, level_id, script_id)
