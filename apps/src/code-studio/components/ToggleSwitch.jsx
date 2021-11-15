@@ -21,7 +21,6 @@ class ToggleSwitch extends React.Component {
     const iconStyle = {...styles.icon, ...dynamicStyle};
     return (
       <button
-        ref={ref => (this.buttonDiv = ref)}
         type="button"
         onClick={onToggle}
         aria-pressed={isToggledOn}
@@ -29,7 +28,7 @@ class ToggleSwitch extends React.Component {
         className="button-active-no-border toggle-input"
       >
         <div style={styles.label}>{label}</div>
-        <div ref={ref => (this.toggleIconDiv = ref)} className="toggle-display">
+        <div className="toggle-display">
           <i className={'fa fa-toggle-on'} style={iconStyle} />
         </div>
       </button>
