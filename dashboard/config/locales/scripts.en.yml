@@ -27193,11 +27193,17 @@ en:
             Responding to Words:
               name: Responding to Words
               description_student: Make the app respond to what the user chooses in exciting new ways.
-              description_teacher: In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.
+              description_teacher: |-
+                **Note:** This is an **optional** lesson in the module
+
+                In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.
             Poetry Circle:
               name: Poetry Circle
               description_student: 'Share your new poem apps with your friends! '
-              description_teacher: In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.
+              description_teacher: |-
+                **Note:** This is an **optional** lesson in the module.
+
+                In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.
             lesson-1:
               key: lesson-1
               name: Poem Art
@@ -27235,8 +27241,8 @@ en:
               name: Poetry Circle
               description_student: 'Share your new poem apps with your friends! '
               description_teacher: In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.
-          title: Computer Science and Poetry
-          description: "This module is designed to ensure students have a shareable app by the end of each lesson, so each lesson is a potential stopping point. If your class finishes the entire 7-part module, students will write their own poems, investigate word choice, learn how to use prompts and variables, learn how to code conditional statements, and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s [CS Connections](code.org/educate/csc) curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n\n**First time teaching with Code.org?** To get started, watch these videos:\n* [Basic Features of Code.org](https://www.youtube.com/watch?v=lYZq1HVTAIY) \n* [Creating a Class Section](https://youtu.be/4Wugxc80fNU)\n* [The Student Experience](https://youtu.be/wzz3jJZoj20)\n* [Progress, Feedack, and Assessment](https://youtu.be/c0pGfCpd6MI)"
+          title: Coding with Poetry
+          description: "This module is designed to ensure students have a shareable app by the end of each lesson, so each lesson is a potential stopping point. If your class finishes the entire 7-part module, students will write their own poems, investigate word choice, learn how to use prompts and variables, learn how to code conditional statements, and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s [CS Connections](https://www.code.org/educate/csc) curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n\n**First time teaching with Code.org?** To get started, watch these videos:\n* [Basic Features of Code.org](https://www.youtube.com/watch?v=lYZq1HVTAIY) \n* [Creating a Class Section](https://youtu.be/4Wugxc80fNU)\n* [The Student Experience](https://youtu.be/wzz3jJZoj20)\n* [Progress, Feedack, and Assessment](https://youtu.be/c0pGfCpd6MI)"
           student_description: ''
           description_short: ''
           description_audience: ''
