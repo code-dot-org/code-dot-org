@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "myjourney-ilm"
+    "/home": "myjourney-lacma"
   },
 
   "banners": {
-    "myjourney-ilm": {
-      "image": "/images/csjourneys/myjourney-ilm.png",
-      "title": "My Journey: Making Star Wars",
-      "body": "Hear how two computer science graduates use technology to help make movies and TV shows, including the many worlds of Star Wars. Recommended for grades K-5. Recording will be available the day after the live session.",
+    "myjourney-lacma": {
+      "image": "/images/csjourneys/lacma-dash.png",
+      "title": "My Journey: Art + Tech",
+      "body": "Learn how the program team at LA County Museum of Art makes space for artists to explore the intersections of art and emerging technologies. Recommended for grades K-5. Recording will be available the day after the live session.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat7",
-      "buttonId": "myjourney-ilm-details"
+      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat9",
+      "buttonId": "myjourney-lacma-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",

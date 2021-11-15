@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ParameterEditor from './ParameterEditor';
 import Button from '@cdo/apps/templates/Button';
 import {createUuid} from '@cdo/apps/utils';
 
-export default function OrderableList({list, setList, addButtonText}) {
+export default function OrderableList({
+  list,
+  setList,
+  addButtonText,
+  renderItem
+}) {
   const addItem = () => {
     const newParams = [...list, {key: createUuid()}];
     setList(newParams);
@@ -30,7 +34,7 @@ export default function OrderableList({list, setList, addButtonText}) {
   return (
     <div>
       {list.map((item, idx) => (
-        <div key={item.key}>
+        <div key={item.key} style={styles.item}>
           {' '}
           <div style={styles.controls}>
             {idx !== 0 && (
@@ -53,13 +57,15 @@ export default function OrderableList({list, setList, addButtonText}) {
               className="fa fa-trash"
             />
           </div>
-          <ParameterEditor
-            item={item}
-            update={(key, value) => updateItem(idx, key, value)}
-          />
+          {renderItem(item, (key, value) => updateItem(idx, key, value))}
         </div>
       ))}
-      <Button onClick={addItem} text={addButtonText} color="gray" />
+      <Button
+        onClick={addItem}
+        text={addButtonText}
+        color="gray"
+        style={styles.button}
+      />
     </div>
   );
 }
@@ -67,15 +73,22 @@ export default function OrderableList({list, setList, addButtonText}) {
 OrderableList.propTypes = {
   list: PropTypes.arrayOf(PropTypes.object).isRequired,
   setList: PropTypes.func.isRequired,
-  addButtonText: PropTypes.string.isRequired
+  addButtonText: PropTypes.string.isRequired,
+  renderItem: PropTypes.func.isRequired
 };
 
 const styles = {
-  controls: {
-    display: 'flex'
+  button: {
+    marginLeft: 0
   },
   controlButton: {
     margin: '0px 5px',
     cursor: 'pointer'
+  },
+  controls: {
+    display: 'flex'
+  },
+  item: {
+    paddingBottom: 15
   }
 };

@@ -46,9 +46,6 @@ StudentGroup.propTypes = {
 };
 
 const getListStyle = isDraggingOver => ({
-  background: isDraggingOver ? 'lightblue' : 'white',
-  margin: grid,
-  border: `1px solid ${color.lightest_gray}`
+  background: isDraggingOver ? color.lightest_gray : color.white,
+  border: `1px solid ${color.lighter_gray}`
 });
-
-export const grid = 8;

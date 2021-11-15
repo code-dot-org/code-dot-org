@@ -6,7 +6,8 @@ import UnassignedStudentsPanel from './UnassignedStudentsPanel';
 import AssignedStudentsPanel from './AssignedStudentsPanel';
 
 const DROPPABLE_ID_PREFIX = 'groupId';
-const DROPPABLE_ID_UNASSIGNED = 'unassigned';
+// Exported for a test
+export const DROPPABLE_ID_UNASSIGNED = 'unassigned';
 
 // Provides "drag and drop context" that allows us to drag
 // code review group members between groups as teachers arrange their students into code review groups.
@@ -15,7 +16,7 @@ const DROPPABLE_ID_UNASSIGNED = 'unassigned';
 // https://github.com/atlassian/react-beautiful-dnd
 export default function CodeReviewGroupsManager({initialGroups}) {
   const [groups, setGroups] = useState(
-    initialGroups.map(group => addDroppableIdToGroup(group))
+    _.cloneDeep(initialGroups).map(group => addDroppableIdToGroup(group))
   );
 
   const getGroup = droppableId =>
@@ -23,6 +24,49 @@ export default function CodeReviewGroupsManager({initialGroups}) {
   const getUnassignedGroup = () => getGroup(DROPPABLE_ID_UNASSIGNED);
   const getAssignedGroups = () =>
     groups.filter(group => group.droppableId !== DROPPABLE_ID_UNASSIGNED);
+
+  const onGroupNameUpdate = (droppableId, newName) => {
+    const updatedGroup = {...getGroup(droppableId), name: newName};
+    const updatedGroups = updateGroups(groups, [updatedGroup]);
+    setGroups(updatedGroups);
+  };
+
+  const onGroupDelete = droppableId => {
+    // First, take all group members from deleted group and put them in unassigned group
+    const updatedUnassignedGroup = copyMembersIntoUnassigned(
+      getUnassignedGroup(),
+      getGroup(droppableId)
+    );
+    const updatedGroups = updateGroups(groups, [updatedUnassignedGroup]);
+
+    setGroups(updatedGroups.filter(group => group.droppableId !== droppableId));
+  };
+
+  const unassignAll = () => {
+    let updatedUnassignedGroup = _.cloneDeep(getUnassignedGroup());
+    getAssignedGroups().forEach(group => {
+      updatedUnassignedGroup = copyMembersIntoUnassigned(
+        updatedUnassignedGroup,
+        group
+      );
+    });
+
+    const updatedAssignedGroups = getAssignedGroups().map(group => ({
+      ...group,
+      members: []
+    }));
+    setGroups([...updatedAssignedGroups, updatedUnassignedGroup]);
+  };
+
+  const copyMembersIntoUnassigned = (
+    existingUnassignedGroup,
+    groupBeingUnassigned
+  ) => {
+    const updatedUnassignedGroup = _.cloneDeep(existingUnassignedGroup);
+    updatedUnassignedGroup.members.push(...groupBeingUnassigned.members);
+
+    return updatedUnassignedGroup;
+  };
 
   function onDragEnd(result) {
     const {source, destination} = result;
@@ -66,12 +110,17 @@ export default function CodeReviewGroupsManager({initialGroups}) {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div style={styles.dragAndDropContainer}>
-        <UnassignedStudentsPanel unassignedGroup={getUnassignedGroup()} />
+        <UnassignedStudentsPanel
+          unassignedGroup={getUnassignedGroup()}
+          onUnassignAllClick={unassignAll}
+        />
         <AssignedStudentsPanel
           groups={getAssignedGroups()}
           onCreateGroupClick={() => {
             setGroups([generateNewGroup(), ...groups]);
           }}
+          onGroupNameUpdate={onGroupNameUpdate}
+          onGroupDelete={onGroupDelete}
         />
       </div>
     </DragDropContext>
@@ -85,7 +134,7 @@ CodeReviewGroupsManager.propTypes = {
 // Reorders members in a group if member dragged elsewhere in the same group.
 // Returns a copied, updated group.
 const reorder = (group, startIndex, endIndex) => {
-  const result = {...group};
+  const result = _.cloneDeep(group);
   const [removed] = result.members.splice(startIndex, 1);
   result.members.splice(endIndex, 0, removed);
 
@@ -100,8 +149,8 @@ const move = (
   droppableSourceIndex,
   droppableDestinationIndex
 ) => {
-  const updatedSource = {...source};
-  const updatedDest = {...destination};
+  const updatedSource = _.cloneDeep(source);
+  const updatedDest = _.cloneDeep(destination);
   const [removed] = updatedSource.members.splice(droppableSourceIndex, 1);
 
   updatedDest.members.splice(droppableDestinationIndex, 0, removed);
@@ -112,7 +161,7 @@ const move = (
 // Returns a copied list of groups
 // with updated versions of the provided changedGroups (ie, with more, less, or reordered members).
 const updateGroups = (groups, changedGroups) => {
-  const updatedGroups = [...groups];
+  const updatedGroups = _.cloneDeep(groups);
 
   changedGroups.forEach(changedGroup => {
     const updatedGroupIndex = updatedGroups.findIndex(
@@ -128,17 +177,20 @@ const addDroppableIdToGroup = group => {
   if (group.unassigned) {
     group.droppableId = DROPPABLE_ID_UNASSIGNED;
   } else {
-    group.droppableId = `${DROPPABLE_ID_PREFIX}${group.id}`;
+    group.droppableId = getAssignedGroupDroppableId(group.id);
   }
   return group;
 };
 
-// TO DO: present a modal that allows a user to select a group name before creating it.
+// Exported for a test
+export const getAssignedGroupDroppableId = id => DROPPABLE_ID_PREFIX + id;
+
 // We need to generate a unique identifier for each group that is generated on the client
 // before we save it -- use a timestamp for this unique identifier.
 const generateNewGroup = () => {
   return {
     droppableId: `${DROPPABLE_ID_PREFIX}${new Date().getTime()}`,
+    name: '',
     members: []
   };
 };

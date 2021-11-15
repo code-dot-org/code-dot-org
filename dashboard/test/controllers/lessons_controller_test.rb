@@ -1041,7 +1041,7 @@ class LessonsControllerTest < ActionController::TestCase
     assert_equal ['level-to-add'], script_level.levels.map(&:name)
   end
 
-  test 'cannot add duplicate level via lesson update' do
+  test 'cannot add new duplicate level to unit via lesson update' do
     sign_in @levelbuilder
     activity = create :lesson_activity, lesson: @lesson
     create :activity_section, lesson_activity: activity
@@ -1056,7 +1056,6 @@ class LessonsControllerTest < ActionController::TestCase
     activities_data.first[:activitySections].first[:scriptLevels].push(
       activitySectionPosition: 1,
       activeId: existing_level.id,
-      assessment: true,
       levels: [{id: existing_level.id, name: existing_level.name}]
     )
 
@@ -1066,6 +1065,32 @@ class LessonsControllerTest < ActionController::TestCase
       put :update, params: @update_params
     end
     assert_includes error.message, 'duplicate levels detected'
+  end
+
+  test 'can update lesson when duplicate levels already exist in unit' do
+    sign_in @levelbuilder
+    activity = create :lesson_activity, lesson: @lesson
+    section = create :activity_section, lesson_activity: activity
+    existing_level = create :maze, name: 'existing-level'
+    create :script_level, activity_section: section, activity_section_position: 1, lesson: @lesson, script: @script, levels: [existing_level]
+
+    activity2 = create :lesson_activity, lesson: @lesson2
+    section2 = create :activity_section, lesson_activity: activity2
+    create :script_level, activity_section: section2, activity_section_position: 2, lesson: @lesson2, script: @script, levels: [existing_level]
+
+    @lesson.reload
+    new_level = create :level
+    activities_data = @lesson.summarize_for_lesson_edit[:activities]
+    activities_data.first[:activitySections].first[:scriptLevels].push(
+      activitySectionPosition: 2,
+      activeId: new_level.id,
+      levels: [{id: new_level.id, name: new_level.name}]
+    )
+
+    @update_params['activities'] = activities_data.to_json
+
+    put :update, params: @update_params
+    assert_response :success
   end
 
   test 'add anonymous survey level via lesson update' do
@@ -1324,6 +1349,28 @@ class LessonsControllerTest < ActionController::TestCase
     # sanity check that chapter and position values have been updated
     assert_equal [1, 2], section.script_levels.map(&:chapter)
     assert_equal [1, 2], section.script_levels.map(&:position)
+  end
+
+  test 'lesson update preserves level variants' do
+    sign_in @levelbuilder
+    activity = create :lesson_activity, lesson: @lesson
+    section = create :activity_section, lesson_activity: activity
+    inactive_level = create :level, name: 'inactive-level'
+    active_level = create :level, name: 'active-level'
+    script_level = create :script_level, activity_section: section, activity_section_position: 1, lesson: @lesson, script: @script, levels: [inactive_level]
+    script_level.add_variant(active_level)
+    assert_equal active_level, script_level.oldest_active_level
+    assert_equal [inactive_level, active_level], script_level.levels
+
+    @lesson.reload
+    activities_data = @lesson.summarize_for_lesson_edit[:activities]
+    @update_params['activities'] = activities_data.to_json
+    put :update, params: @update_params
+    assert_response :success
+
+    script_level.reload
+    assert_equal active_level, script_level.oldest_active_level
+    assert_equal [inactive_level, active_level], script_level.levels
   end
 
   test 'legacy lesson clone fails if destination course does not use code studio lessons' do

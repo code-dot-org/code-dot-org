@@ -304,7 +304,7 @@ module Services
       script = create_script_tree
       # give the new level a level key that will appear after the existing
       # level keys in the sort order.
-      new_level = create :level, name: 'xyz', level_num: 'custom'
+      new_level = create :level, name: 'xyz'
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         updated_script_level = script.script_levels.first
@@ -325,7 +325,7 @@ module Services
       script = create_script_tree
       # give the new level a level key that will appear before the existing
       # level keys in the sort order.
-      new_level = create :level, name: 'abc', level_num: 'custom'
+      new_level = create :level, name: 'abc'
 
       script_with_changes, json = get_script_and_json_with_change_and_rollback(script) do
         updated_script_level = script.script_levels.first
@@ -829,7 +829,7 @@ module Services
     test 'seed deletes levels_script_levels' do
       script = create_script_tree
       old_level = script.script_levels.first.levels.first
-      new_level = create :level, level_num: 'custom'
+      new_level = create :level
       script.script_levels.first.add_variant(new_level)
       original_counts = get_counts
 
@@ -1115,6 +1115,27 @@ module Services
       # minitest is a bit weird about Time equality, so normalize both values
       # to integers for easy comparison
       assert_equal serialized['serialized_at'].to_i, Time.parse(script.seeded_from).to_i
+    end
+
+    test 'seed rejects bad plc module name' do
+      unit = create :script
+      lesson_group = create :lesson_group, script: unit, key: 'bad_module_type', display_name: "Bad Module Type"
+      lesson = create :lesson, lesson_group: lesson_group, script: unit
+      activity = create :lesson_activity, lesson: lesson
+      section = create :activity_section, lesson_activity: activity
+      level = create :level
+      create :script_level, script: unit, lesson: lesson, activity_section: section, activity_section_position: 1, levels: [level]
+
+      # must skip callbacks, or generate_plc_objects will fail.
+      unit.update_columns(properties: unit.properties.merge(professional_learning_course: true))
+
+      unit.reload
+      json = ScriptSeed.serialize_seeding_json(unit)
+
+      e = assert_raises ActiveRecord::RecordInvalid do
+        ScriptSeed.seed_from_json(json)
+      end
+      assert_equal 'Validation failed: Module type is not included in the list', e.message
     end
 
     def get_script_and_json_with_change_and_rollback(script, &db_write_block)

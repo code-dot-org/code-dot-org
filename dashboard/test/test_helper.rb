@@ -668,20 +668,6 @@ def storage_id_for_user_id(user_id)
   Random.new(user_id.to_i).rand(1_000_000)
 end
 
-# A fake slogger implementation that captures the records written to it.
-class FakeSlogger
-  attr_reader :records
-
-  def initialize
-    @records = []
-  end
-
-  def write(json)
-    # Force application: :dashboard to ensure we don't incorrectly use the :pegasus version:
-    @records << json.merge({application: :dashboard})
-  end
-end
-
 def json_response
   JSON.parse @response.body
 end
