@@ -584,7 +584,7 @@ class SectionTest < ActiveSupport::TestCase
 
   test 'code review enabled for sections with code review expiration later than current time' do
     DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
-    section = create :section, code_review_expires_at: Time.now.utc + 100.years
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day
 
     assert section.code_review_enabled?
   end
