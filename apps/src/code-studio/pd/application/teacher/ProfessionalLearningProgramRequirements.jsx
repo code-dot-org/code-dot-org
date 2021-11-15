@@ -63,8 +63,96 @@ const ProfessionalLearningProgramRequirements = props => {
     }
   };
 
+  const renderCostNote = hasRegionalPartner => {
+    if (hasRegionalPartner) {
+      return (
+        <label>
+          {regionalPartner.name} may have scholarships available to cover the
+          cost of the program.{' '}
+          <a
+            href={
+              pegasus('/educate/professional-learning/program-information') +
+              (!!data.schoolZipCode ? '?zip=' + data.schoolZipCode : '')
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Click here to check the fees and discounts for your program
+          </a>
+          . Let us know if your school or district would be able to pay the fee
+          or if you need to be considered for a scholarship.
+        </label>
+      );
+    } else {
+      return (
+        <label>
+          Once you are matched with a partner, they may have scholarships
+          available to cover the cost of the program. Let us know if your school
+          or district would be able to pay the fee or if you need to be
+          considered for a scholarship.
+        </label>
+      );
+    }
+  };
+
+  const renderProgramRequirements = hasRegionalPartner => {
+    return (
+      <div>
+        <p>
+          Code.org’s Professional Learning Program is a yearlong program
+          starting in the summer and concluding in the spring. Workshops can be
+          held in-person, virtually, or as a combination of both throughout the
+          year.
+          {hasRegionalPartner && (
+            <span>
+              {' '}
+              Refer to {`${regionalPartner.name}'s `}
+              <a
+                href={
+                  pegasus(
+                    '/educate/professional-learning/program-information'
+                  ) + (!!data.schoolZipCode ? '?zip=' + data.schoolZipCode : '')
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                landing page
+              </a>{' '}
+              for more information about the schedule and delivery model.
+            </span>
+          )}
+        </p>
+        <LabeledRadioButtonsWithAdditionalTextFields
+          name="committed"
+          textFieldMap={{
+            [TextFields.noExplain]: 'other'
+          }}
+        />
+        {hasRegionalPartner ? (
+          renderAssignedWorkshopList()
+        ) : (
+          <p style={styles.marginBottom}>
+            <strong>
+              Once you have been matched with a partner, they will be in touch
+              regarding Summer Workshop dates.
+            </strong>
+          </p>
+        )}
+        <div>
+          {renderCostNote(hasRegionalPartner)}
+          <LabeledSingleCheckbox name="understandFee" />
+          <LabeledRadioButtons name="payFee" />
+          {data.payFee === TextFields.noPayFee && (
+            <LabeledLargeInput name="scholarshipReasons" />
+          )}
+        </div>
+      </div>
+    );
+  };
+
   const renderContents = () => {
     if (data.program === undefined) {
+      // teacher hasn't chosen their program
       return (
         <div style={styles.error}>
           <p>
@@ -74,6 +162,7 @@ const ProfessionalLearningProgramRequirements = props => {
         </div>
       );
     } else if (!data.school) {
+      // teacher hasn't entered information about their school
       return (
         <div style={styles.error}>
           <p>
@@ -83,6 +172,7 @@ const ProfessionalLearningProgramRequirements = props => {
         </div>
       );
     } else if (regionalPartner === undefined) {
+      // regional partner information is loading
       return <Spinner />;
     } else if (regionalPartnerError) {
       return (
@@ -100,77 +190,11 @@ const ProfessionalLearningProgramRequirements = props => {
         </div>
       );
     } else if (regionalPartner === null) {
-      return (
-        <>
-          <p>
-            <strong>
-              There is no Regional Partner in your region at this time
-            </strong>
-          </p>
-          <p>
-            Code.org will review your application and contact you with options
-            for joining the program hosted by a Regional Partner from a
-            different region. Please note that we are not able to guarantee a
-            space for you with another Regional Partner, and you will be
-            responsible for the costs associated with traveling to that location
-            if a virtual option is not available.
-          </p>
-        </>
-      );
+      // no regional partner and is not errored
+      return renderProgramRequirements(false);
     } else {
       // regional partner exists and is not errored
-      return (
-        <div>
-          <p>
-            Code.org’s Professional Learning Program is a yearlong program
-            starting in the summer and concluding in the spring. Workshops can
-            be held in-person, virtually, or as a combination of both throughout
-            the year. Refer to {`${regionalPartner.name}'s `}
-            <a
-              href={
-                pegasus('/educate/professional-learning/program-information') +
-                (!!data.schoolZipCode ? '?zip=' + data.schoolZipCode : '')
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              landing page
-            </a>{' '}
-            for more information about the schedule and delivery model.
-          </p>
-          <LabeledRadioButtonsWithAdditionalTextFields
-            name="committed"
-            textFieldMap={{
-              [TextFields.noExplain]: 'other'
-            }}
-          />
-          {renderAssignedWorkshopList()}
-          <div>
-            <label>
-              {regionalPartner.name} may have scholarships available to cover
-              the cost of the program.{' '}
-              <a
-                href={
-                  pegasus(
-                    '/educate/professional-learning/program-information'
-                  ) + (!!data.schoolZipCode ? '?zip=' + data.schoolZipCode : '')
-                }
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Click here to check the fees and discounts for your program
-              </a>
-              . Let us know if your school or district would be able to pay the
-              fee or if you need to be considered for a scholarship.
-            </label>
-            <LabeledSingleCheckbox name="understandFee" />
-            <LabeledRadioButtons name="payFee" />
-            {data.payFee === TextFields.noPayFee && (
-              <LabeledLargeInput name="scholarshipReasons" />
-            )}
-          </div>
-        </div>
-      );
+      return renderProgramRequirements(true);
     }
   };
 
