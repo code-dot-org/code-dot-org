@@ -665,7 +665,7 @@ class Blockly < Level
       placeholders[title.content] = localized_text if localized_text
     end
 
-    # Replace each string here
+    # Replace each string
     placeholders.keys.each do |original_str|
       markdown = markdown.gsub(original_str, placeholders[original_str])
     end
