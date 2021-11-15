@@ -24,6 +24,10 @@ import {FormContext} from '../../form_components_func/FormComponent';
 const ProfessionalLearningProgramRequirements = props => {
   const {data} = props;
   const [regionalPartner, regionalPartnerError] = useRegionalPartner(data);
+  const hasNoProgramSelected = () => data.program === undefined;
+  const hasNoSchoolInformation = () => !data.school;
+  const hasNotLoadedRegionalPartner = () => regionalPartner === undefined;
+  const hasNoRegionalPartner = () => regionalPartner === null;
 
   const renderAssignedWorkshopList = () => {
     if (regionalPartner.workshops?.length === 0) {
@@ -151,8 +155,7 @@ const ProfessionalLearningProgramRequirements = props => {
   };
 
   const renderContents = () => {
-    if (data.program === undefined) {
-      // teacher hasn't chosen their program
+    if (hasNoProgramSelected()) {
       return (
         <div style={styles.error}>
           <p>
@@ -161,8 +164,7 @@ const ProfessionalLearningProgramRequirements = props => {
           </p>
         </div>
       );
-    } else if (!data.school) {
-      // teacher hasn't entered information about their school
+    } else if (hasNoSchoolInformation()) {
       return (
         <div style={styles.error}>
           <p>
@@ -171,8 +173,7 @@ const ProfessionalLearningProgramRequirements = props => {
           </p>
         </div>
       );
-    } else if (regionalPartner === undefined) {
-      // regional partner information is loading
+    } else if (hasNotLoadedRegionalPartner()) {
       return <Spinner />;
     } else if (regionalPartnerError) {
       return (
@@ -189,11 +190,9 @@ const ProfessionalLearningProgramRequirements = props => {
           </p>
         </div>
       );
-    } else if (regionalPartner === null) {
-      // no regional partner and is not errored
+    } else if (hasNoRegionalPartner()) {
       return renderProgramRequirements(false);
     } else {
-      // regional partner exists and is not errored
       return renderProgramRequirements(true);
     }
   };
