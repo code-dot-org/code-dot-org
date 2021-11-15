@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "explore-data-1",
-    "serialized_at": "2021-11-13 05:00:53 UTC",
+    "serialized_at": "2021-11-15 17:03:02 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -36,7 +36,7 @@
   "lessons": [
     {
       "key": "Exploring Box Plots and Histograms",
-      "name": "Exploring Box Plots and Histograms",
+      "name": "Data Visualization",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -141,7 +141,7 @@
       "key": "d691bd3d-9a9b-40a7-b7c6-f3b87744365f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the \n[r data_visualizer_in_app_lab_part_1/explore-data-1/unversioned]",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the \n[r data_visualizer_in_app_lab_part_1/explore-data-1/2021]",
         "name": "Making Bar Charts and Histograms",
         "progression_name": "Video: Data Visualizer in App Lab Part 1"
       },
@@ -154,7 +154,7 @@
       "key": "1ded8c46-8629-44a5-942f-897144a152c8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give students access to [r exploring_bar_charts_and_histograms_2/explore-data-1/unversioned] - ideally in digital form.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into their Code.org accounts to access the second level of this lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give students access to [r exploring_bar_charts_and_histograms_2/explore-data-1/2021] - ideally in digital form.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into their Code.org accounts to access the second level of this lesson.",
         "progression_name": "Data Visualizer",
         "tips": [
           {
@@ -333,7 +333,7 @@
       }
     },
     {
-      "name": "Exploring Bar Charts and Histograms",
+      "name": "Data Visualization",
       "url": "https://docs.google.com/presentation/d/1vHtip4atGgbT6xRiR12FtKcVLs26wgDGLJxmnuTeRnI/edit",
       "key": "exploring_bar_charts_and_histograms",
       "properties": {
@@ -345,7 +345,7 @@
       }
     },
     {
-      "name": "Exploring Bar Charts and Histograms",
+      "name": "Data Visualization",
       "url": "https://docs.google.com/document/d/15oXKCaqWYPaiBZGW-xW-HFsnwbFsMMdbVwQmxD9K3UY/edit",
       "key": "exploring_bar_charts_and_histograms_1",
       "properties": {
