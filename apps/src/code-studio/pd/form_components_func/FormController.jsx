@@ -67,6 +67,7 @@ const FormController = props => {
     onInitialize = () => {},
     onSetPage = () => {},
     onSuccessfulSubmit = () => {},
+    serializeAdditionalData = () => ({}),
     sessionStorageKey = null,
     submitButtonText = defaultSubmitButtonText,
     getPageProps: getAdditionalPageProps = () => ({}),
@@ -282,7 +283,8 @@ const FormController = props => {
    */
   const serializeFormData = () => {
     return {
-      form_data: data
+      form_data: data,
+      ...serializeAdditionalData()
     };
   };
 
@@ -348,8 +350,6 @@ const FormController = props => {
         }
         setSubmitting(false);
       });
-
-    event.preventDefault();
   };
 
   /**
@@ -544,6 +544,7 @@ FormController.propTypes = {
   onInitialize: PropTypes.func,
   onSetPage: PropTypes.func,
   onSuccessfulSubmit: PropTypes.func,
+  serializeAdditionalData: PropTypes.func,
   sessionStorageKey: PropTypes.string,
   submitButtonText: PropTypes.string,
   validateOnSubmitOnly: PropTypes.bool,

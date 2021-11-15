@@ -185,15 +185,10 @@ As Director of Software Engineering at <a href="https://www.irobot.com/" target=
 <br>
 <br>
 <strong>Ini Oladosu</strong> joined <a href="https://www.ilm.com/" target="_blank">Industrial Light & Magic</a> in 2020 as a Production Assistant. He was born in Port Harcourt, Nigeria before immigrating to Calgary, Canada with his family in 2000. Between 2019 and 2021, Ini co-wrote and co-produced his debut short film, <i>Framed</i>. The film has been selected into various film festivals and most recently won the award for Best Edit at the 2021 London International Monthly Film Festival.</p>
-
-<a href="https://www.eventbrite.com/e/my-journey-making-star-wars-registration-166863869325" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
-
+<i>Recording not currently available.</i>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
+
 
 <a id="chat8"></a>
 <h3 style="background:#e7e8ea;color:#5b6770; padding:8px;">Using Roblox to empower students</h3>
@@ -211,12 +206,7 @@ taken to www.eventbrite.com.</i></p>
 As the senior instruction designer for <a href="https://www.roblox.com/" target="_blank">Roblox</a>, <strong>Genevieve Johnson</strong> oversees the creation of educational content and empowers students to pursue careers as entrepreneurs, engineers, and designers. She has been an author on two books, <i>Roblox Game Development in 24 Hours: The Official Roblox Guide</i>, and <i>Coding with Roblox Lua in 24 Hours: The Official Roblox Guide</i>.
 </p>
 
-<a href="https://www.eventbrite.com/e/my-journey-using-roblox-to-empower-students-registration-167177770211" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
-
+<a href="https://code.zoom.us/rec/play/G3oUkKUOrnj_EeM1QfWyOOiwJbqQ-xh2-GLDV0Nq_7_wsO8m9hLBrvAZNPZ0DHuw-3kGN0ubhRS6sUTm.DdfzTgxyJMJa-4Qo" target="_blank"><button>Watch the chat</button></a>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 

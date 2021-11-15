@@ -74,8 +74,8 @@ module Pd
         csp_how_offer: 'How will you offer CS Principles?',
         csa_already_know: 'Have you previously taught CS or have you learned CS yourself?',
         csa_phone_screen: clean_multiline(
-          'Are you able to independently write a function (or procedure) with one or more
-          parameters and that uses conditional logic, loops, and an array (or list)?'
+          'Are you able to independently write and debug an error-free function (or procedure) with
+          one or more parameters and that uses conditional logic, loops, and an array (or list)?'
         ),
         csa_which_grades: clean_multiline(
           "To which grades does your school plan to offer CSA in the #{YEAR} school year?
@@ -203,8 +203,10 @@ module Pd
         replace_course: "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
         replace_which_course_csp: "Which existing course or curriculum will CS Principles replace?",
         replace_which_course_csd: "Which existing course or curriculum will CS Discoveries replace?",
+        replace_which_course_csa: "Which existing course or curriculum will CSA replace?",
         csp_implementation: "How will you implement CS Principles at your school?",
         csd_implementation: "How will you implement CS Discoveries at your school?",
+        csa_implementation: "How will you implement CSA at your school?",
         committed_to_diversity: "Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?",
         pay_fee: "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
         share_ap_scores: "Principal authorizes college board to send AP Scores",
@@ -262,6 +264,7 @@ module Pd
       # Minimum requirements
       csd_which_grades: YES_NO,
       csp_which_grades: YES_NO,
+      csa_which_grades: YES_NO,
       committed: YES_NO,
       plan_to_teach: YES_NO,
       previous_yearlong_cdo_pd: YES_NO,
@@ -290,6 +293,15 @@ module Pd
       ],
       criteria_score_questions_csp: [
         :csp_which_grades,
+        :committed,
+        :plan_to_teach,
+        :previous_yearlong_cdo_pd,
+        :replace_existing,
+        :principal_approval,
+        :principal_schedule_confirmed,
+      ],
+      criteria_score_questions_csa: [
+        :csa_which_grades,
         :committed,
         :plan_to_teach,
         :previous_yearlong_cdo_pd,
@@ -389,8 +401,10 @@ module Pd
         :replace_course,
         :replace_which_course_csp,
         :replace_which_course_csd,
+        :replace_which_course_csa,
         :csp_implementation,
         :csd_implementation,
+        :csa_implementation,
         :committed_to_diversity,
         :pay_fee,
         :share_ap_scores,

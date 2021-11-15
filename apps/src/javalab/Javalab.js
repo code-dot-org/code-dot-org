@@ -136,7 +136,8 @@ Javalab.prototype.init = function(config) {
         this.onOutputMessage,
         this.onNewlineMessage,
         this.openPhotoPrompter,
-        this.closePhotoPrompter
+        this.closePhotoPrompter,
+        onJavabuilderMessage
       );
       this.visualization = <TheaterVisualizationColumn />;
       break;

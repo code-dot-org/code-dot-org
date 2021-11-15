@@ -30,6 +30,12 @@ export default class Poetry extends SpriteLab {
     return P5LabType.POETRY;
   }
 
+  // We do want levels that show the finish dialog using
+  // this.studioApp_.displayFeedback to show the save & publish buttons.
+  saveToProjectGallery() {
+    return true;
+  }
+
   createLibrary(args) {
     if (!args.p5) {
       console.warn('cannot create poetry library without p5 instance');
@@ -66,14 +72,25 @@ export default class Poetry extends SpriteLab {
 
   preloadFrames() {
     const frames = {
-      rainbow: 'rainbow',
-      hearts: 'heart-pink',
+      bamboo: 'bamboo',
+      beaded: 'beaded',
+      brick: 'brick',
+      decorative: 'decorative',
+      donuts: 'donuts',
+      fire: 'fire',
       flowers: 'flower-purple',
-      zigzag: 'lightning',
-      swirls: 'swirlyline',
+      gilded: 'gilded',
+      hearts: 'heart-pink',
+      iceCream: 'ice-cream',
+      leaves: 'leaves',
+      metal: 'metal',
       pawPrints: 'pawprint',
+      rainbow: 'rainbow',
+      stars: 'stars',
+      swirls: 'swirlyline',
       waves: 'water',
-      brick: 'brick'
+      wood: 'wood',
+      zigzag: 'lightning'
     };
     if (!this.preloadFrames_) {
       this.preloadFrames_ = Promise.all(

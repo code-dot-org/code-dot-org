@@ -38,7 +38,8 @@ class AnimationListItem extends React.Component {
     children: PropTypes.node,
     style: PropTypes.object,
     allAnimationsSingleFrame: PropTypes.bool.isRequired,
-    spriteLab: PropTypes.bool.isRequired
+    spriteLab: PropTypes.bool.isRequired,
+    labType: PropTypes.string.isRequired
   };
 
   getAnimationProps(props) {
@@ -218,6 +219,7 @@ class AnimationListItem extends React.Component {
               this.state.frameDelay
             )}
             singleFrameAnimation={this.props.allAnimationsSingleFrame}
+            labType={this.props.labType}
           />
         )}
       </button>
