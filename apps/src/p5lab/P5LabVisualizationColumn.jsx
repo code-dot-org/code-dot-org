@@ -32,7 +32,7 @@ import {calculateOffsetCoordinates} from '@cdo/apps/utils';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 
 const MODAL_Z_INDEX = 1050;
-const LOCATION_PICKER_CANCEL_THRESHOLD = 250;
+const LOCATION_PICKER_CANCEL_THRESHOLD_MS = 250;
 
 class P5LabVisualizationColumn extends React.Component {
   static propTypes = {
@@ -227,7 +227,7 @@ class P5LabVisualizationColumn extends React.Component {
               // with a time threshold to avoid this issue.
               if (
                 Date.now() - this.props.requestTime <
-                LOCATION_PICKER_CANCEL_THRESHOLD
+                LOCATION_PICKER_CANCEL_THRESHOLD_MS
               ) {
                 return;
               }
