@@ -364,7 +364,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
     const postMilestoneDisabled = store.getState().progress
       .postMilestoneDisabled;
-    if (data.signedIn && postMilestoneDisabled && !scriptData.isHocScript) {
+    if (data.signedIn && postMilestoneDisabled) {
       showDisabledBubblesModal();
     }
 
