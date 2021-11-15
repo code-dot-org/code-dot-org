@@ -37,7 +37,7 @@ export default class DisabledBubblesAlert extends React.Component {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href="https://support.code.org/hc/en-us/articles/115002660852"
+            href="https://support.code.org/hc/en-us/articles/360020520891"
           >
             {i18n.learnMore()}
           </a>
