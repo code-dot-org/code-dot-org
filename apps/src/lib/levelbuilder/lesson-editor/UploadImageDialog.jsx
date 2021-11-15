@@ -26,6 +26,10 @@ export default function UploadImageDialog({
   };
 
   const handleChange = e => {
+    if (!e.target.files[0]) {
+      setError(undefined);
+      return;
+    }
     resetState();
     setIsUploading(true);
 
