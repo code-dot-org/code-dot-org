@@ -20,7 +20,6 @@ const defaultProps = {
       name: 'Last progression'
     }
   ],
-  showTeacherInfo: false,
   viewAs: ViewType.Teacher,
   lessonIsVisible: () => true,
   lessonIsLockedForUser: () => false,
