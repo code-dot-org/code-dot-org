@@ -24,10 +24,11 @@ import {FormContext} from '../../form_components_func/FormComponent';
 const ProfessionalLearningProgramRequirements = props => {
   const {data} = props;
   const [regionalPartner, regionalPartnerError] = useRegionalPartner(data);
-  const hasNoProgramSelected = () => data.program === undefined;
-  const hasNoSchoolInformation = () => !data.school;
-  const hasNotLoadedRegionalPartner = () => regionalPartner === undefined;
-  const hasNoRegionalPartner = () => regionalPartner === null;
+  const hasNoProgramSelected = data.program === undefined;
+  const hasNoSchoolInformation = !data.school;
+  const hasNotLoadedRegionalPartner = regionalPartner === undefined;
+  const hasRegionalPartner =
+    !hasNotLoadedRegionalPartner && regionalPartner !== null;
 
   const renderAssignedWorkshopList = () => {
     if (regionalPartner.workshops?.length === 0) {
@@ -67,7 +68,7 @@ const ProfessionalLearningProgramRequirements = props => {
     }
   };
 
-  const renderCostNote = hasRegionalPartner => {
+  const renderCostNote = () => {
     if (hasRegionalPartner) {
       return (
         <label>
@@ -99,7 +100,7 @@ const ProfessionalLearningProgramRequirements = props => {
     }
   };
 
-  const renderProgramRequirements = hasRegionalPartner => {
+  const renderProgramRequirements = () => {
     return (
       <div>
         <p>
@@ -155,7 +156,7 @@ const ProfessionalLearningProgramRequirements = props => {
   };
 
   const renderContents = () => {
-    if (hasNoProgramSelected()) {
+    if (hasNoProgramSelected) {
       return (
         <div style={styles.error}>
           <p>
@@ -164,7 +165,7 @@ const ProfessionalLearningProgramRequirements = props => {
           </p>
         </div>
       );
-    } else if (hasNoSchoolInformation()) {
+    } else if (hasNoSchoolInformation) {
       return (
         <div style={styles.error}>
           <p>
@@ -173,7 +174,7 @@ const ProfessionalLearningProgramRequirements = props => {
           </p>
         </div>
       );
-    } else if (hasNotLoadedRegionalPartner()) {
+    } else if (hasNotLoadedRegionalPartner) {
       return <Spinner />;
     } else if (regionalPartnerError) {
       return (
@@ -183,17 +184,14 @@ const ProfessionalLearningProgramRequirements = props => {
             workshop information.
           </p>
           <p>
-            Refresh the page to try again. If this persists, please
-            contact&nbsp;
+            Refresh the page to try again. If this persists, please contact{' '}
             <a href="https://support.code.org/hc/en-us/requests/new">support</a>
             .
           </p>
         </div>
       );
-    } else if (hasNoRegionalPartner()) {
-      return renderProgramRequirements(false);
     } else {
-      return renderProgramRequirements(true);
+      return renderProgramRequirements();
     }
   };
 
