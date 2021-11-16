@@ -5,15 +5,27 @@ import OrderableList from '@cdo/apps/lib/levelbuilder/code-docs-editor/Orderable
 import sinon from 'sinon';
 
 describe('OrderableList', () => {
-  let defaultProps, setListSpy;
+  let defaultProps, setListSpy, renderItemSpy;
 
   beforeEach(() => {
     setListSpy = sinon.spy();
+    renderItemSpy = sinon.spy();
     defaultProps = {
       list: [{key: 1}, {key: 2}, {key: 3}],
       setList: setListSpy,
-      addButtonText: 'Add New'
+      addButtonText: 'Add New',
+      renderItem: renderItemSpy
     };
+  });
+
+  it('calls renderItem for each item in the list', () => {
+    shallow(<OrderableList {...defaultProps} />);
+    expect(renderItemSpy.callCount).to.equal(3);
+    expect(renderItemSpy.getCalls().map(c => c.args[0])).to.eql([
+      {key: 1},
+      {key: 2},
+      {key: 3}
+    ]);
   });
 
   it('can add new item to list', () => {

@@ -22,7 +22,7 @@ Consider the following code segment:
 int[] ar = {8,9,10,11};
 if(ar.length > 3)
 {
-  System.out.println(ary[2]);
+  System.out.println(ar[2]);
 }
 
 ```

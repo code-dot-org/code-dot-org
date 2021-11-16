@@ -9,6 +9,7 @@
       "has_lesson_plan": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
+      "is_course": true,
       "pilot_experiment": "csd-2021-preview",
       "project_sharing": true,
       "student_detail_progress_view": true,
@@ -29,13 +30,16 @@
           "standardMappings",
           "https://curriculum.code.org/csd-preview-21/unit4/standards/"
         ]
-      ]
+      ],
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-10-25 22:54:41 UTC",
+    "family_name": "csd4-preview-2021",
+    "serialized_at": "2021-11-10 21:43:32 UTC",
     "published_state": "pilot",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csd4-preview-2021"
     }
