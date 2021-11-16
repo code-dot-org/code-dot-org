@@ -80,7 +80,6 @@ describe('viewAs redux', () => {
     after(() => {
       appsUtils.reload.restore();
       codeStudioUtils.queryParams.restore();
-      codeStudioUtils.updateQueryParam.restore();
     });
 
     it('changes the window location when changing to Student with user_id', () => {

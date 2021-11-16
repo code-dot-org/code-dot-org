@@ -24,7 +24,7 @@ export default function reducer(state = ViewType.Student, action) {
       throw new Error('unknown ViewType: ' + viewType);
     }
 
-    return action.viewType;
+    return viewType;
   }
 
   return state;
