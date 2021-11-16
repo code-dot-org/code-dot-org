@@ -118,7 +118,7 @@ GRAPH
     postfix (>= 0.0.0)
   cdo-redis (0.1.3)
     redisio (>= 0.0.0)
-  cdo-repository (0.2.20)
+  cdo-repository (0.2.21)
     cdo-github-access (>= 0.0.0)
   cdo-ruby (0.2.16)
     apt (>= 0.0.0)
