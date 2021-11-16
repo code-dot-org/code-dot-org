@@ -19,7 +19,7 @@ class TeacherFeedbackRubric extends Component {
     performance: PropTypes.string,
     isEditable: PropTypes.bool,
     onRubricChange: PropTypes.func.isRequired,
-    viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired
   };
 
   render() {
