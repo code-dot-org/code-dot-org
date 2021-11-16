@@ -63,12 +63,14 @@ hi:
   previous_page: पिछला पृष्ठ
   next_page: अगले पृष्ठ
   next_resource: अगले संसाधन
+  done_with_module: इस लर्निंग मॉड्यूल के साथ हो गया
   cancel: "रद्द करें"
   okay: "ठीक है"
   or: "अथवा "
   heading_x_of_y: "%{heading}(पेज %{x} के लिए %{y})"
   join_section:
     code:
+      title: 'Code.org पर एक अनुभाग में शामिल हों'
       placeholder: "अनुभाग कोड (ABCDEF)"
       instructions: "कृपया 6 अक्षरों का कोड दर्ज करें जिसे आपके शिक्षक ने आपके साथ साझा किया था (उदाहरण: \"ABCDEF\") उनके अनुभाग में शामिल होने के लिए।"
       instructions_short: "अपने 6 पत्र अनुभाग कोड दर्ज करें"
@@ -101,6 +103,8 @@ hi:
     continue_with: '%{provider} के साथ साइन इन करें'
     sign_in_with: '%{provider} के साथ साइन इन करें'
     signed_in: 'साइंगड इन!'
+    signed_out_markdown: '### आपने [Code.org](%{url}) से साइन आउट कर लिया है।'
+    sign_out_of_markdown: '#### आपने साइन इन करने के लिए %{provider} का उपयोग किया। [यहां क्लिक करें](%{url}) %{provider} से साइन आउट करने के लिए।'
     already_signedup: 'पहले से पंजीकृत?'
     notyet_signedup: "अभी तक शामिल नहीं हुए?"
     google_oauth2: 'गूगल खाता'
@@ -301,6 +305,7 @@ hi:
       sections: "अनुभाग"
       help_support: "सहायता और समर्थन"
       report_bug: "समस्या की रिपोर्ट करें"
+      report_abuse: "दुरुपयोग की रिपोर्ट करें"
       teacher_community: "अध्यापक समुदाय"
       professional_learning: "पेशेवर प्रशिक्षण"
       documentation: "दस्तावेजीकरण"
@@ -309,6 +314,8 @@ hi:
       app_lab_tutorials: "ऐप लैब ट्यूटोरियल्स"
       game_lab_documentation: "गेम लैब दस्तावेज"
       game_lab_tutorials: "गेम लैब ट्यूटोरियल्स"
+      sprite_lab_documentation: "स्प्राइट लैब दस्तावेज़ीकरण"
+      sprite_lab_tutorials: "स्प्राइट लैब ट्यूटोरियल"
       educate_overview: "शिक्षक रूपरेखा"
       educate_elementary: "प्राथमिक स्कूल"
       educate_middle: "मिडल स्कूल"
@@ -334,6 +341,7 @@ hi:
       help_us: "हमारी मदद करें"
       teach: "पढ़ाएं"
       about: "के बारे में"
+      legal: "निजता और कानूनी"
       legal_privacy: "गोपनीयता नीति"
       legal_tos: "सेवा की शर्तें"
     user:
@@ -376,6 +384,7 @@ hi:
       minecraft_hero: 'Minecraft हीरो'
       playlab: 'प्ले लैब'
       playlab_k1: 'प्ले लैब (आरंभिक-पाठक)'
+      poetry: 'काव्य'
       scratch: 'Scratch'
       sports: 'खेल'
       spritelab: 'स्प्राइट लैब'
@@ -500,6 +509,7 @@ hi:
     no_primary_course: "कोड स्टूडियो पाठ्यक्रम आजमाएं"
     choose_next_course: "नीचे दिए गए कोड स्टूडियो पाठ्यक्रम में से एक चुनकर आजमाएं"
     print_certificate: "प्रमाण-पत्र प्रिंट करें"
+  certificate_sponsor_message: "%{sponsor_name} ने आपके सीखने को प्रायोजित करने के लिए उदार उपहार दिया।"
   move_students:
     new_section_dne: "हमें खेद है कि अनुभाग %{new_section_code} मौजूद नहीं है। कृपया अलग अनुभाग कोड दर्ज करें।"
     section_code_cant_be_current_section: "मौजूदा अनुभाग, नए अनुभाग के समान नहीं हो सकता।"
@@ -530,6 +540,7 @@ hi:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. सभी अधिकार सुरक्षित हैं। Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. सभी अधिकार सुरक्षित हैं। Frozen&#8482; &copy; %{current_year} Disney. सभी अधिकार सुरक्षित हैं। Ice Age&#8482; &copy; %{current_year} 20th Century Fox. सभी अधिकार सुरक्षित हैं। Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. सभी अधिकार सुरक्षित हैं। Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. सभी अधिकार सुरक्षित हैं। The Amazing World of Gumball ट्रेडमार्क है और &copy; %{current_year} Cartoon Network.'
     code_from_html: 'Code.org, p5.play का उपयोग करती है, जिसका <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU LGPL 2.1</a> के अंतर्गत लाइसेंस है।'
     powered_by_aws: 'अमेज़ॅन वेब सर्विसेज द्वारा संचालित'
+    built_on_github: 'माइक्रोसॉफ्ट से गिटहब पर बनाया गया'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, CODE लोगो और आवर ऑफ़ कोड&reg; Code.org के ट्रेडमार्क हैं।'
     copyright: 'कॉपीराइट'
     more: 'अधिक'
@@ -539,12 +550,14 @@ hi:
     tos_short: 'शर्तें'
     tos: 'सेवा की शर्तें'
     privacy: 'गोपनीयता नीति'
+    privacy_updated: 'गोपनीयता नीति (अपडेट किया गया)'
     secure: 'सुरक्षित संस्करण'
     report_abuse: 'दुर्व्यवहार रिपोर्ट करें'
     built_on_code_studio: 'कोड स्टूडियो पर आधारित'
     make_my_own_app: 'मेरा खुद का ऐप बनाएं'
     how_it_works: 'यह कैसे काम करता है (कोड देखें)'
     try_hour_of_code: 'आवर ऑफ़ कोड आजमाएं!'
+    store: 'स्टोर'
   reference_area:
     title: 'मदद चाहिए?'
     subtitle: 'देखें ये वीडियो और संकेत'
