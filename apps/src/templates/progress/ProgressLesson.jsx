@@ -98,10 +98,7 @@ class ProgressLesson extends React.Component {
     }
 
     // Is this a hidden lesson that we still render because we're a instructor
-    const hiddenForParticipants = !lessonIsVisible(
-      lesson,
-      ViewType.Participant
-    );
+    const hiddenForStudents = !lessonIsVisible(lesson, ViewType.Participant);
     const isLockedForUser = lessonIsLockedForUser(lesson, levels, viewAs);
     const isLockedForSection = lessonIsLockedForAllStudents(lesson.id);
     const showAsLocked = isLockedForUser || isLockedForSection;
@@ -144,13 +141,13 @@ class ProgressLesson extends React.Component {
         className="uitest-progress-lesson"
         style={{
           ...styles.outer,
-          ...((hiddenForParticipants || showAsLocked) && styles.hiddenOrLocked)
+          ...((hiddenForStudents || showAsLocked) && styles.hiddenOrLocked)
         }}
       >
         <div
           style={{
             ...styles.main,
-            ...(((hiddenForParticipants && viewAs === ViewType.Participant) ||
+            ...(((hiddenForStudents && viewAs === ViewType.Participant) ||
               isLockedForUser) &&
               styles.translucent)
           }}
@@ -158,7 +155,7 @@ class ProgressLesson extends React.Component {
           <div style={styles.heading}>
             <div style={styles.headingText} onClick={this.toggleCollapsed}>
               <FontAwesome icon={caret} style={caretStyle} />
-              {hiddenForParticipants && (
+              {hiddenForStudents && (
                 <FontAwesome icon="eye-slash" style={styles.icon} />
               )}
               {lesson.lockable && (

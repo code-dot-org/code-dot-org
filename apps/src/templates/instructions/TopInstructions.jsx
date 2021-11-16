@@ -125,11 +125,11 @@ class TopInstructions extends Component {
     //Pull the student id from the url
     const studentId = queryString.parse(window.location.search).user_id;
 
-    this.isViewingAsParticipant = this.props.viewAs === ViewType.Participant;
-    this.isViewingAsInstructor = this.props.viewAs === ViewType.Instructor;
+    this.isViewingAsStudent = this.props.viewAs === ViewType.Participant;
+    this.isViewingAsTeacher = this.props.viewAs === ViewType.Instructor;
 
     const teacherViewingStudentWork =
-      this.isViewingAsInstructor &&
+      this.isViewingAsTeacher &&
       this.props.readOnlyWorkspace &&
       window.location.search.includes('user_id');
 
@@ -184,12 +184,7 @@ class TopInstructions extends Component {
 
     const promises = [];
 
-    if (
-      this.isViewingAsParticipant &&
-      user &&
-      serverLevelId &&
-      serverScriptId
-    ) {
+    if (this.isViewingAsStudent && user && serverLevelId && serverScriptId) {
       promises.push(
         topInstructionsDataApi
           .getTeacherFeedbackForStudent(user, serverLevelId, serverScriptId)
@@ -632,7 +627,7 @@ class TopInstructions extends Component {
       (levelVideos && levelVideos.length > 0) || levelResourcesAvailable;
 
     const participantHasFeedback =
-      this.isViewingAsParticipant && feedbacks.length > 0;
+      this.isViewingAsStudent && feedbacks.length > 0;
 
     // If we're displaying the review tab (for CSA peer review) the teacher can leave feedback in that tab,
     // in that case we hide the feedback tab (unless there's a rubric) to avoid confusion about
@@ -686,7 +681,7 @@ class TopInstructions extends Component {
           levelHasRubric={!!rubric}
           displayDocumentationTab={displayDocumentationTab}
           displayReviewTab={displayReviewTab}
-          isViewingAsTeacher={this.isViewingAsInstructor}
+          isViewingAsTeacher={this.isViewingAsTeacher}
           fetchingData={fetchingData}
           handleDocumentationClick={this.handleDocumentationClick}
           handleInstructionTabClick={() =>
@@ -760,7 +755,7 @@ class TopInstructions extends Component {
                   ))}
                 </div>
               )}
-            {this.isViewingAsInstructor &&
+            {this.isViewingAsTeacher &&
               (hasContainedLevels || teacherMarkdown) && (
                 <div>
                   {hasContainedLevels && (

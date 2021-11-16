@@ -9,7 +9,7 @@ import {
 } from '../sectionProgressConstants';
 import ProgressTableStudentName from './ProgressTableStudentName';
 import progressTableStyles from './progressTableStyles.scss';
-import {scriptUrlForParticipant} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
 export default class ProgressTableStudentList extends React.Component {
@@ -52,7 +52,7 @@ export default class ProgressTableStudentList extends React.Component {
 
   studentNameFormatter(rowData) {
     const {sectionId, scriptData, studentTimestamps} = this.props;
-    const studentUrl = scriptUrlForParticipant(
+    const studentUrl = scriptUrlForStudent(
       sectionId,
       scriptData.name,
       rowData.student.id
