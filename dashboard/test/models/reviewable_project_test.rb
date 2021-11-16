@@ -27,7 +27,7 @@ class ReviewableProjectTest < ActiveSupport::TestCase
     refute ReviewableProject.user_can_mark_project_reviewable?(project_owner, project_owner)
   end
 
-  test 'project owner can mark project reviewable if in code review group and section with code review enabled' do
+  test 'project owner cannot mark project reviewable if not in code review group' do
     DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
 
     project_owner = create :student
@@ -37,7 +37,7 @@ class ReviewableProjectTest < ActiveSupport::TestCase
     refute ReviewableProject.user_can_mark_project_reviewable?(project_owner, project_owner)
   end
 
-  test 'project owner cannot mark project reviewable if not in code review group' do
+  test 'project owner can mark project reviewable if in code review group and section with code review enabled' do
     DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
 
     project_owner = create :student
