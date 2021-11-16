@@ -27,7 +27,7 @@ describe('DisabledBubblesAlert', () => {
             <span>{i18n.disabledButtonsWarning() + ' '}</span>
             <span>{i18n.disabledButtonsInfo() + ' '}</span>
             <a
-              href="https://support.code.org/hc/en-us/articles/115002660852"
+              href="https://support.code.org/hc/en-us/articles/360020520891"
               target="_blank"
               rel="noopener noreferrer"
             >
