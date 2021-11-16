@@ -12,8 +12,8 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-12 20:05:38 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-11-15 15:40:23 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -3362,7 +3362,7 @@
     },
     {
       "name": "Coding with Poetry Modules",
-      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_259",
+      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gfaf59442b2_0_129",
       "key": "coding_with_poetry_modules",
       "properties": {
         "audience": "Teacher",

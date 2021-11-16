@@ -7,6 +7,8 @@ import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWith
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import Button from '@cdo/apps/templates/Button';
+import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 import {createUuid, navigateToHref} from '@cdo/apps/utils';
 import $ from 'jquery';
 import color from '@cdo/apps/util/color';
@@ -43,7 +45,8 @@ function renderExampleEditor(example, updateFunc) {
 
 export default function ProgrammingExpressionEditor({
   initialProgrammingExpression,
-  environmentCategories
+  environmentCategories,
+  videoOptions
 }) {
   // We don't want to update id or key
   const {
@@ -62,6 +65,7 @@ export default function ProgrammingExpressionEditor({
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
+  const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
 
   const save = () => {
     if (isSaving) {
@@ -112,6 +116,35 @@ export default function ProgrammingExpressionEditor({
       <label>
         Key (Used in URLs)
         <input value={key} readOnly style={styles.textInput} />
+      </label>
+      <label>
+        Video
+        <select
+          value={programmingExpression.videoKey || ''}
+          onChange={e =>
+            updateProgrammingExpression('videoKey', e.target.value)
+          }
+          style={styles.selectInput}
+        >
+          <option value={''}>---</option>
+          {videoOptions.map(video => (
+            <option key={video.key} value={video.key}>
+              {video.name}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label>
+        Image
+        <Button
+          onClick={() => setUploadImageDialogOpen(true)}
+          text="Choose Image"
+          color="gray"
+          icon="plus-circle"
+        />
+        {programmingExpression.imageUrl && (
+          <span>{programmingExpression.imageUrl}</span>
+        )}
       </label>
       <label>
         Short Description
@@ -226,6 +259,12 @@ export default function ProgrammingExpressionEditor({
         error={error}
         handleView={() => navigateToHref('/')}
       />
+      <UploadImageDialog
+        isOpen={uploadImageDialogOpen}
+        handleClose={() => setUploadImageDialogOpen(false)}
+        uploadImage={imgUrl => updateProgrammingExpression('imageUrl', imgUrl)}
+        allowExpandable={false}
+      />
     </div>
   );
 }
@@ -247,7 +286,8 @@ const programmingExpressionShape = PropTypes.shape({
 
 ProgrammingExpressionEditor.propTypes = {
   initialProgrammingExpression: programmingExpressionShape.isRequired,
-  environmentCategories: PropTypes.arrayOf(PropTypes.string).isRequired
+  environmentCategories: PropTypes.arrayOf(PropTypes.string).isRequired,
+  videoOptions: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 const styles = {
@@ -266,6 +306,7 @@ const styles = {
     color: '#555',
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
+    marginBottom: 0,
     marginLeft: 5
   }
 };
