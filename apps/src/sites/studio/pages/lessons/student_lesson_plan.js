@@ -10,6 +10,8 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {registerReducers} from '@cdo/apps/redux';
+import {retrieveProgress} from '@cdo/apps/code-studio/progress';
+import {groupedLessons} from '@cdo/apps/code-studio/progressRedux';
 import StudentLessonOverview from '@cdo/apps/templates/lessonOverview/StudentLessonOverview';
 
 $(document).ready(function() {
@@ -21,14 +23,26 @@ $(document).ready(function() {
  * Collect and preprocess all data students should see for the lesson, and
  * render the React component which displays them.
  */
-function displayLessonOverview() {
+async function displayLessonOverview() {
   const lessonData = getScriptData('lesson');
-
-  // NOTE TO SELF: get progress for just the lesson in question here
-  // something like groupedLesson(progressData), then the info we need
-  const progressData = getScriptData('progress');
+  await retrieveProgress('csd1-2021', null, null);
+  //const progressData = getScriptData('progress');
 
   const store = getStore();
+
+  const groupedLessonsResults = groupedLessons(store.getState().progress);
+  let lessonIndex;
+  const groupedLesson = groupedLessonsResults.find(groupedLesson =>
+    groupedLesson.lessons.find((lesson, index) => {
+      const isCurrentLesson = lesson.lessonNumber === lessonData.position;
+      if (isCurrentLesson) {
+        lessonIndex = index;
+        return true;
+      }
+    })
+  );
+  const {lessons, levelsByLesson} = groupedLesson;
+  console.log(lessons);
 
   if (lessonData.announcements) {
     registerReducers({announcements: announcementsReducer});
@@ -47,7 +61,10 @@ function displayLessonOverview() {
 
   ReactDOM.render(
     <Provider store={store}>
-      <StudentLessonOverview lesson={lessonData} levels={progressData} />
+      <StudentLessonOverview
+        lesson={lessonData}
+        levels={levelsByLesson[lessonIndex]}
+      />
     </Provider>,
     document.getElementById('show-container')
   );
