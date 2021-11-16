@@ -120,9 +120,10 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
       storage_app_id: @project_storage_app_id,
       level_id: @project_level_id,
       script_id: @project_script_id
-    code_review_group = CodeReviewGroup.create!(name: 'test', section: section)
-    CodeReviewGroupMember.create!(follower: project_owner_follower, code_review_group: code_review_group)
-    CodeReviewGroupMember.create!(follower: reviewer_follower, code_review_group: code_review_group)
+
+    code_review_group = create :code_review_group, section: section
+    create :code_review_group_member, follower: project_owner_follower, code_review_group: code_review_group
+    create :code_review_group_member, follower: reviewer_follower, code_review_group: code_review_group
 
     assert CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_storage_app_id, @project_level_id, @project_script_id)
   end
@@ -168,9 +169,9 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
       storage_app_id: @project_storage_app_id,
       level_id: @project_level_id,
       script_id: @project_script_id
-    code_review_group = CodeReviewGroup.create!(name: 'test', section: section)
-    CodeReviewGroupMember.create!(follower: project_owner_follower, code_review_group: code_review_group)
-    CodeReviewGroupMember.create!(follower: reviewer_follower, code_review_group: code_review_group)
+    code_review_group = create :code_review_group, section: section
+    create :code_review_group_member, follower: project_owner_follower, code_review_group: code_review_group
+    create :code_review_group_member, follower: reviewer_follower, code_review_group: code_review_group
 
     refute CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_storage_app_id, @project_level_id, @project_script_id)
   end
@@ -209,10 +210,11 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
       storage_app_id: @project_storage_app_id,
       level_id: @project_level_id,
       script_id: @project_script_id
-    reviewer_code_review_group = CodeReviewGroup.create!(name: 'reviewer group', section: reviewer_section)
-    project_owner_code_review_group = CodeReviewGroup.create!(name: 'project owner group', section: section)
-    CodeReviewGroupMember.create!(follower: project_owner_follower, code_review_group: project_owner_code_review_group)
-    CodeReviewGroupMember.create!(follower: reviewer_follower, code_review_group: reviewer_code_review_group)
+
+    reviewer_code_review_group = create :code_review_group, section: reviewer_section
+    project_owner_code_review_group = create :code_review_group, section: section
+    create :code_review_group_member, follower: project_owner_follower, code_review_group: project_owner_code_review_group
+    create :code_review_group_member, follower: reviewer_follower, code_review_group: reviewer_code_review_group
 
     refute CodeReviewComment.user_can_review_project?(project_owner, reviewer, @project_storage_app_id, @project_level_id, @project_script_id)
   end

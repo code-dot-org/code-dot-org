@@ -664,8 +664,8 @@ class SectionTest < ActiveSupport::TestCase
     end
 
     # Create 2 code review groups
-    @group1 = CodeReviewGroup.create(section_id: @code_review_group_section.id, name: "group1")
-    @group2 = CodeReviewGroup.create(section_id: @code_review_group_section.id, name: "group2")
+    @group1 = create :code_review_group, section: @code_review_group_section
+    @group2 = create :code_review_group, section: @code_review_group_section
     # put student 0 and 1 in group 1, and student 2 in group 2
     CodeReviewGroupMember.create(follower_id: @followers[0].id, code_review_group_id: @group1.id)
     CodeReviewGroupMember.create(follower_id: @followers[1].id, code_review_group_id: @group1.id)
