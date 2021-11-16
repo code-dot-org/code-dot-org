@@ -38,7 +38,7 @@ describe('TeacherContentToggle', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
-        viewAs="Teacher"
+        viewAs={ViewType.Teacher}
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenLesson={false}
@@ -78,7 +78,7 @@ describe('TeacherContentToggle', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
-        viewAs="Teacher"
+        viewAs={ViewType.Teacher}
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenLesson={false}
@@ -104,7 +104,7 @@ describe('TeacherContentToggle', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={false}
-        viewAs="Teacher"
+        viewAs={ViewType.Teacher}
         hiddenLessonsInitialized={true}
         sectionsAreLoaded={true}
         isHiddenLesson={false}
@@ -130,7 +130,7 @@ describe('TeacherContentToggle', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={false}
-        viewAs="Teacher"
+        viewAs={ViewType.Teacher}
         hiddenLessonsInitialized={true}
         sectionsAreLoaded={true}
         isHiddenLesson={false}
@@ -156,7 +156,7 @@ describe('TeacherContentToggle', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
-        viewAs="Student"
+        viewAs={ViewType.Student}
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenLesson={false}
@@ -183,7 +183,7 @@ describe('TeacherContentToggle', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
-        viewAs="Student"
+        viewAs={ViewType.Student}
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenLesson={false}
@@ -230,7 +230,7 @@ describe('TeacherContentToggle', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
-        viewAs="Student"
+        viewAs={ViewType.Student}
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenLesson={false}
@@ -277,7 +277,7 @@ describe('TeacherContentToggle', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
-        viewAs="Student"
+        viewAs={ViewType.Student}
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenLesson={false}
@@ -315,7 +315,7 @@ describe('TeacherContentToggle', () => {
     const component = mount(
       <TeacherContentToggle
         isBlocklyOrDroplet={true}
-        viewAs="Student"
+        viewAs={ViewType.Student}
         hiddenLessonsInitialized={false}
         sectionsAreLoaded={false}
         isHiddenLesson={false}
