@@ -13,7 +13,7 @@ const DEFAULT_PROPS = {
   onResolveStateToggle: () => {},
   onDelete: () => {},
   viewAsCodeReviewer: false,
-  viewAsInstructor: false
+  viewAsTeacher: false
 };
 
 describe('Code Review Comment', () => {
@@ -96,7 +96,7 @@ describe('Code Review Comment', () => {
   });
 
   it('displays delete option for instructor', () => {
-    const wrapper = renderWrapper({}, {viewAsInstructor: true});
+    const wrapper = renderWrapper({}, {viewAsTeacher: true});
     expect(wrapper.find('.fa-trash')).to.have.lengthOf(1);
   });
 
