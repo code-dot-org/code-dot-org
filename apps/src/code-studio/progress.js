@@ -312,7 +312,7 @@ progress.renderCourseProgress = function(scriptData) {
 
 progress.retrieveProgress = function(scriptName, scriptData, currentLevelId) {
   const store = getStore();
-  $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
+  return $.getJSON(`/api/script_structure/${scriptName}`, scriptData => {
     initializeStoreWithProgress(store, scriptData, currentLevelId, true);
     queryUserProgress(store, scriptData, currentLevelId);
   });
