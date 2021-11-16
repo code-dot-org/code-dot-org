@@ -9,7 +9,7 @@ title: Paano-gawin na gabay para sa mga boluntaryo ng Hour of Code
 
 ***
 
-## Bakit nag-boluntaryo?
+## Bakit magboluntaryo?
 Tignan ang ilang testimonya mula sa mga nakaraang boluntaryo:
 
 - “The best part of my experience was that the entire class were women and people of color. It bodes well for the future of our industry to have a chance to reach and excite these kids.”
@@ -40,7 +40,7 @@ Do you believe that learning computer science can open doors of opportunity for 
 ## Mag-recruit ang iyong mga katrabaho upang magboluntaryo
 Sabihin sa iyong mga kaibigan at mga katrabaho ang tungkol sa Hour of Code. Libo-libong mga guro ang naghahanap para sa mga boluntaryo, kaya hilingin sa kanila na [mag-sign up bilang isang boluntaryo](https://code.org/volunteer). Tanungin ang iyong employer na makisali. [Send this email]({{ promote/sample_emails }}) to your manager or the CEO to get everyone on board.
 
-## Paano maghanda
+## Paano maghahanda
 - [Pick out a video]({{ promote/videos }}) to show to help focus the class and get them excited to do an Hour of Code.
 - Tignan ang [Hour of Code Volunteer Toolkit](/files/hoc-volunteer-toolkit.pdf) na kinabibilangan ng isang buod, timeline, mga materyal sa paghahanda, at marketing na materyal. Lahat ng kailangan mo upang maging handa para sa iyong mga karanasan sa pag boluntaryo!
 - If you're going to be doing a tutorial during your session, spend 30 minutes trying at least one [Hour of Code tutorial]({{ urls/learn }}).
@@ -55,13 +55,13 @@ Kapag ikaw ay nagho-host ng isang kaganapan sa Hour of Code, sundin ang halimbaw
 
 ### Halimbawang agenda:
 
-| Oras         | Aytem ng agenda                                                                                                                                                                                                                                                                                                                                                                                        |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 1-5 minuto   | [Show an inspirational video]({{ promote/videos }}).                                                                                                                                                                                                                                                                                                                                                   |
-| 5-10 minuto  | Introduce yourself and learn more about the students: </ul><li>Ano ang iyong trabaho, ano ang iyong ginagawa, at ano ang pinakagusto mong trabaho?</li><li>Ano o sino ang nagpupukaw sa iyo?</li><li>Paano ka naging interesado sa computer science?</li><li>Meron ka bang tagapagturo?</li><li>Magbahagi ng isang kwento tungkol sa kung paano naaapektuhan ng tech ang lahat.</li><br>Tanungin ang mga estudyante ng mga katanungan at bigyan ng oras para sa Q&A.</br> <li> Anong mga trabaho ang interesado sila, ano ang kanilang paboritong tech na gadgets o apps, at kung paano sa palagay nila ito ay nabuo? </li><li> Mayroon bang mga katanungan ang mga estudyante para sa iyo?</ul> |
-| 30-60 minuto | **Code!** Walk around, answer questions, and guide them through tough puzzles. Subukang huwag munang ibigay ang solusyon sa mga estudyante, sa halip, subukang tanungin sila upang sila mismo ang makasagot kung ano ang mali, at hikayatin ang mga estudyante na magtanong sila sa isa't isa kung may mga katanungan. Ang pagkatuto mula sa isa't isa ay isang mahusay na pagkakataon para matuto.    |
-| 1-3 minuto   | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                                                                                                                        |
-| Pagkatapos   | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! Pumunta sa [code.org/yourschool](https://code.org/yourschool) kasama ang iyong guro para mapunan ang kung ano mang tinuturo ng paaralan ngayon at hikayatin sila na mangakong dadalhin nila ang computer science sa kanilang silid-aralan.                                          |
+| Oras         | Aytem ng agenda                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1-5 minuto   | [Show an inspirational video]({{ promote/videos }}).                                                                                                                                                                                                                                                                                                                                                |
+| 5-10 minuto  | Introduce yourself and learn more about the students: </ul><li>Ano ang iyong trabaho, ano ang iyong ginagawa, at ano ang pinakagusto mong trabaho?</li><li>Ano o sino ang naging inspirasyon mo?</li><li>Paano ka naging interesado sa computer science?</li><li>Meron ka bang mentor?</li><li>Magbahagi ng isang kwento tungkol sa kung paano naaapektuhan ng tech ang lahat.</li><br>Tanungin ang mga estudyante ng mga katanungan at bigyan ng oras sa Q&A.</br> <li> Anong mga trabaho ang interesado sila, ano ang kanilang paboritong tech na gadgets o apps, at kung paano sa palagay nila ito ay nabuo? </li><li> Mayroon bang mga katanungan ang mga estudyante para sa iyo?</ul>   |
+| 30-60 minuto | **Code!** Walk around, answer questions, and guide them through tough puzzles. Subukang huwag munang ibigay ang solusyon sa mga estudyante, sa halip, subukang tanungin sila upang sila mismo ang makasagot kung ano ang mali, at hikayatin ang mga estudyante na magtanong sila sa isa't isa kung may mga katanungan. Ang pagkatuto mula sa isa't isa ay isang mahusay na pagkakataon para matuto. |
+| 1-3 minuto   | Thank everyone and share inspirational parting words. Hand out any of your company swag (stickers are awesome)!                                                                                                                                                                                                                                                                                     |
+| Pagkatapos   | **Make a lasting change:** Talk to the teacher about turning the Hour of Code into a full computer science course! Pumunta sa [code.org/yourschool](https://code.org/yourschool) kasama ang iyong guro para mapunan ang kung ano mang tinuturo ng paaralan ngayon at hikayatin sila na mangakong dadalhin nila ang computer science sa kanilang silid-aralan.                                       |
 
 ### Pagkatapos ng kaganapan:
 - Ibahagi ang iyong mga larawan at mga kwento sa Code.org sa giving@code.org.
@@ -71,19 +71,19 @@ Kapag ikaw ay nagho-host ng isang kaganapan sa Hour of Code, sundin ang halimbaw
 - At, tignan pagkalipas ng isang buwan: Ang guro ba ay interesado sa pag aalok ng kursong computer science? Ibahagi[ang mga pinagkunan at propesyonal na oportunidad ng pag aaral upang makatulong sa kanilang gawin ito](https://code.org/yourschool).
 
 ## Paano ka napili bilang isang teknikal na boluntaryo ng panauhing tagapagsalita
-- Ang mga guro ay maghahanap ng mga boluntaryo sa aming [mapa ng boluntaryo](https://code.org/volunteer/local).
-- Subukang gawing ang iyong profile na kumpleto hangga't maaari upang madagdagan ang pagkakataon na mapili ka ng guro.
+- Maghahanap ng mga volunteer ang mga guro sa aming [mapa ng volunteer](https://code.org/volunteer/local).
+- Subukang kumpletohin ang profile mo hangga't maaari upang madagdagan ang pagkakataon na mapili ka ng guro.
 - Kokontakin ka ng isang guro sa pamamagitan nitong form (ang iyong email adress ay ibabahagi sa guro). *If you are receiving too many requests from teachers, you can always update your preferences by clicking the link to edit your information or unsubscribe, provided at the bottom of any email from a teacher.*
 
 ## Pagbo-bulontaryo sa panahon ng Hour of Code FAQ
 
 ### I haven't been contacted by a teacher yet. How can I still volunteer?
-Subukang humanap ng lokal na paaralan at tawagan ang punong-guro/guro/opisina at tanungin kung paano ka makakatulong.
+Subukang humanap ng mga lokal na paaralan at tawagan ang punong-guro/guro/opisina at tanungin kung paano ka makakatulong.
 
-### Gaano tumatagal ang pagbisita sa silid-aralan?
+### Gaano katagal ang mga pagbisita sa silid-aralan?
 Ang personal na pagbisita sa silid-aralan ay karaniwang nagtatagal ng 60-90 minuto habang ang pagbisita sa virtual na silid-aralan ay karaniwang tumatagal ng 20-30 minuto.
 
-### What age group is the Hour of Code activity appropriate for?
+### Sa anong pangkat ng edad naaangkop ang aktibidad ng Hour of Code?
 Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12), boys and girls, from all backgrounds. Everyone, even adults can have fun playing!
 
 
