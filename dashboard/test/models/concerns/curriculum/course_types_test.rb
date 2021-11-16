@@ -59,27 +59,6 @@ class CourseTypesTests < ActiveSupport::TestCase
     assert_equal "Validation failed: Participant audience must be facilitator, teacher, or student", e.message
   end
 
-  test 'create unit_group with nil participant audience raises error' do
-    e = assert_raises do
-      create(:unit_group, name: 'no-participant-audience', participant_audience: nil)
-    end
-    assert_equal e.message, "Validation failed: Participant audience is required"
-  end
-
-  test 'create unit_group with nil instructor audience raises error' do
-    e = assert_raises do
-      create(:unit_group, name: 'no-instructor-audience', instructor_audience: nil)
-    end
-    assert_equal e.message, "Validation failed: Instructor audience is required"
-  end
-
-  test 'create unit_group with nil instruction type raises error' do
-    e = assert_raises do
-      create(:unit_group,  name: 'no-instruction-type', instruction_type: nil)
-    end
-    assert_equal e.message, "Validation failed: Instruction type is required"
-  end
-
   test 'create script with invalid instruction type raises error' do
     e = assert_raises do
       create(:script,  name: 'fake-instruction-type', instruction_type: "NOT REAL")
@@ -101,6 +80,27 @@ class CourseTypesTests < ActiveSupport::TestCase
     assert_equal "Validation failed: Participant audience must be facilitator, teacher, or student", e.message
   end
 
+  test 'create unit_group with nil participant audience raises error' do
+    e = assert_raises do
+      create(:unit_group, name: 'no-participant-audience', participant_audience: nil)
+    end
+    assert_equal e.message, "Validation failed: Participant audience is required"
+  end
+
+  test 'create unit_group with nil instructor audience raises error' do
+    e = assert_raises do
+      create(:unit_group, name: 'no-instructor-audience', instructor_audience: nil)
+    end
+    assert_equal e.message, "Validation failed: Instructor audience is required"
+  end
+
+  test 'create unit_group with nil instruction type raises error' do
+    e = assert_raises do
+      create(:unit_group,  name: 'no-instruction-type', instruction_type: nil)
+    end
+    assert_equal e.message, "Validation failed: Instruction type is required"
+  end
+
   test 'create script with nil participant audience raises error' do
     e = assert_raises do
       create(:script, name: 'no-participant-audience', participant_audience: nil)
@@ -120,6 +120,27 @@ class CourseTypesTests < ActiveSupport::TestCase
       create(:script,  name: 'no-instruction-type', instruction_type: nil)
     end
     assert_equal e.message, "Validation failed: Instruction type is required"
+  end
+
+  test 'set script in course to nil participant audience does not raise error' do
+    assert_nothing_raised do
+      @unit_in_course.participant_audience = nil
+      @unit_in_course.save!
+    end
+  end
+
+  test 'set script in course to nil instructor audience does not raise error' do
+    assert_nothing_raised do
+      @unit_in_course.instructor_audience = nil
+      @unit_in_course.save!
+    end
+  end
+
+  test 'set script in course to nil instruction type does not raise error' do
+    assert_nothing_raised do
+      @unit_in_course.instruction_type = nil
+      @unit_in_course.save!
+    end
   end
 
   test 'unit in course should check course for if it is a pl course' do
