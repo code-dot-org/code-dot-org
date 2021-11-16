@@ -205,7 +205,6 @@ Resources:
 <%=   component 'scaling_schedule' -%>
 <%  end -%>
 <% end -%>
-
 # Route53 (DNS) and CloudFront (CDN) resources:
 # TODO hourofcode.com and csedweek.org DNS/CDN resources should be added to this template.
 <%
@@ -231,20 +230,13 @@ Resources:
           TTL: <%= DNS_TTL %>
           ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
 <%   end -%>
-
 <%   if cdn_enabled -%>
   <%=app%>CDN:
     Type: AWS::CloudFront::Distribution
     Properties:
       DistributionConfig: <%= cloudfront_config(app) %>
 <%   end -%>
-
-<%   if cdn_enabled -%>
-<%=    component 'www_redirect' -%>
-<%  end -%>
-
 <% end -%>
-
 <% if cdn_enabled -%>
   OriginDNS:
     Type: AWS::Route53::RecordSetGroup
@@ -262,11 +254,9 @@ Resources:
           ResourceRecords: [!GetAtt <%=daemon%>.PublicIp]
 <%   end -%>
 <% end -%>
-
 <% if frontends-%>
 <%=  component 'cache'%>
 <% end -%>
-
   DaemonRole:
     Type: AWS::IAM::Role
     Properties:
@@ -425,7 +415,6 @@ Resources:
   DaemonInstanceProfile:
     Type: AWS::IAM::InstanceProfile
     Properties: {Roles: [!Ref DaemonRole]}
-
 <% if daemon -%>
   <%=daemon%>:
     Type: AWS::EC2::Instance
@@ -481,7 +470,6 @@ Resources:
     DependsOn: Aurora1
 <% end -%>
 <%end-%>
-
 <% if options.console -%>
   Console:
     Type: AWS::EC2::Instance
@@ -523,15 +511,12 @@ Resources:
     DependsOn: Aurora1
 <%   end -%>
 <% end-%>
-
 <% if alarms-%>
 <%=  component 'alarms'%>
 <% end -%>
-
 <% if database-%>
 <%=  component 'database'%>
 <% end -%>
-
   ChefConfig:
     Type: AWS::SecretsManager::Secret
     Properties:
@@ -540,7 +525,6 @@ Resources:
       # Update this secret manually after the stack is created to customize Chef configuration.
       # The value should never be changed in the stack itself, since it would clobber all other changes.
       SecretString: '{}'
-
 Outputs:
   DashboardURL:
     Value: "https://<%=studio_subdomain%>"
