@@ -480,7 +480,7 @@ Resources:
 <%  unless load_balancer -%>
           - !ImportValue VPC-ELBSecurityGroup # Accept HTTP traffic on daemon
 <%  end -%>
-    DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
+      DisableApiTermination: <%= rack_env?(:adhoc) ? false : true %>
 <% if database %>
     DependsOn: Aurora1
 <% end -%>
