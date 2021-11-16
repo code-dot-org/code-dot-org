@@ -1,5 +1,5 @@
 var PLAYSPACE_SIZE = 400;	//replace var with const in GitHub
-var EARLY_FAIL_TIME = 10;
+var EARLY_FAIL_TIME = 60;
 var WAIT_TIME = 150;
 var FAIL_COLOR = rgb(118,102,160);
 var PASS_COLOR = rgb(0,173,188);

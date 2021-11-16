@@ -79,6 +79,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -1539,12 +1540,29 @@ export default class P5Lab {
   }
 
   /**
+   * Override to change whether the current app wants to show the
+   * save & publish buttons in the "finish" feedback dialog, shown
+   * by calling this.studioApp_.displayFeedback() in
+   * displayFeedback_(), below.
+   */
+  saveToProjectGallery() {
+    return false;
+  }
+
+  /**
    * App specific displayFeedback function that calls into
    * this.studioApp_.displayFeedback when appropriate
    */
   displayFeedback_() {
     var level = this.level;
     let msg = this.getMsg();
+
+    const isSignedIn =
+      getStore().getState().currentUser.signInState === SignInState.SignedIn;
+
+    // Find out whether the current app (e.g. SpriteLab, GameLab, or Poetry) wants
+    // to show the save & publish buttons in this dialog.
+    const saveToProjectGallery = this.saveToProjectGallery();
 
     this.studioApp_.displayFeedback({
       feedbackType: this.testResults,
@@ -1557,7 +1575,9 @@ export default class P5Lab {
         reinfFeedbackMsg: msg.reinfFeedbackMsg(),
         sharingText: msg.shareGame()
       },
-      hideXButton: true
+      hideXButton: true,
+      saveToProjectGallery: saveToProjectGallery,
+      disableSaveToGallery: !isSignedIn
     });
   }
 
