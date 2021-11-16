@@ -2,6 +2,10 @@
   "vi-VN": {
     "data": {
       "vocabularies": {
+        "code/dance-extras/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "event/dance-extras/unversioned": {
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
@@ -9,6 +13,10 @@
         "program/dance-extras/unversioned": {
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "code/minecraft/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/minecraft/unversioned": {
           "word": "Sửa lỗi",
@@ -26,6 +34,10 @@
           "word": "Vòng lặp",
           "definition": "Hành động lặp đi lặp lại một việc."
         },
+        "code/hero/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/hero/unversioned": {
           "word": "Sửa lỗi",
           "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
@@ -38,6 +50,30 @@
           "word": "Hàm",
           "definition": "Một đoạn mã lệnh mà bạn có thể dễ dàng khai báo nhiều lần."
         },
+        "code/poem-art/2021": {
+          "word": "Mã",
+          "definition": ""
+        },
+        "event/poem-art/2021": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "line/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/2021": {
+          "word": "Chương trình",
+          "definition": ""
+        },
+        "code/flappy/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/flappy/unversioned": {
           "word": "Sửa lỗi",
           "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
@@ -45,6 +81,10 @@
         "program/flappy/unversioned": {
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "code/hourofcode/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/hourofcode/unversioned": {
           "word": "Sửa lỗi",
@@ -54,6 +94,10 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
+        "code/frozen/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/frozen/unversioned": {
           "word": "Sửa lỗi",
           "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
@@ -61,6 +105,10 @@
         "program/frozen/unversioned": {
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "code/iceage/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/iceage/unversioned": {
           "word": "Sửa lỗi",
@@ -71,7 +119,8 @@
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
         "code/artist/unversioned": {
-          "word": "Mã"
+          "word": "Mã",
+          "definition": ""
         },
         "debugging/artist/unversioned": {
           "word": "Sửa lỗi",
@@ -80,6 +129,10 @@
         "program/artist/unversioned": {
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "code/gumball/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/gumball/unversioned": {
           "word": "Sửa lỗi",
@@ -97,6 +150,14 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
+        "code/dance/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/aquatic/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/aquatic/unversioned": {
           "word": "Sửa lỗi",
           "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
@@ -105,12 +166,45 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
+        "condition/aquatic/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "conditionals/aquatic/unversioned": {
-          "word": "Điều kiện"
+          "word": "Điều kiện",
+          "definition": ""
         },
         "loops/aquatic/unversioned": {
           "word": "Vòng lặp",
           "definition": "Hành động lặp đi lặp lại một việc."
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/starwars/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/starwars/unversioned": {
           "word": "Sửa lỗi",
@@ -120,6 +214,10 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
+        "code/mc/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/mc/unversioned": {
           "word": "Sửa lỗi",
           "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
@@ -127,6 +225,10 @@
         "program/mc/unversioned": {
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "code/playlab/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/playlab/unversioned": {
           "word": "Sửa lỗi",
@@ -136,6 +238,10 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
+        "code/starwarsblocks/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/starwarsblocks/unversioned": {
           "word": "Sửa lỗi",
           "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
@@ -144,12 +250,17 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "event/sports/unversioned": {
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
         "code/sports/unversioned": {
-          "word": "Mã"
+          "word": "Mã",
+          "definition": ""
         },
         "debugging/sports/unversioned": {
           "word": "Sửa lỗi",
@@ -158,6 +269,10 @@
         "program/sports/unversioned": {
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "code/infinity/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/infinity/unversioned": {
           "word": "Sửa lỗi",
@@ -171,6 +286,10 @@
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
+        "code/basketball/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/basketball/unversioned": {
           "word": "Sửa lỗi",
           "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
@@ -179,6 +298,10 @@
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
+        "code/dance-extras-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "event/dance-extras-2019/unversioned": {
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
@@ -186,6 +309,10 @@
         "program/dance-extras-2019/unversioned": {
           "word": "Chương trình",
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
+        },
+        "code/dance-2019/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "event/dance-2019/unversioned": {
           "word": "Sự kiện",
@@ -198,6 +325,26 @@
         "machine_learning/oceans/unversioned": {
           "word": "Học máy",
           "definition": "Cách máy tính nhận ra mẫu và đưa ra quyết định mà không cần được lập trình cụ thể"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Mã",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "Sự kiện",
+          "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "program/poem-art/unversioned": {
+          "word": "Chương trình",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "event/outbreak/unversioned": {
           "word": "Sự kiện",
@@ -240,6 +387,7 @@
           "definition": "Thông báo trên màn hình máy tính chờ người dùng nhập dữ liệu đầu vào."
         },
         "input/coursef/2021": {
+          "word": "",
           "definition": "Thông tin máy tính nhận được từ người dùng."
         },
         "loop/coursef/2021": {
@@ -263,6 +411,7 @@
           "definition": "Cách máy tính nhận ra mẫu và đưa ra quyết định mà không cần được lập trình cụ thể"
         },
         "dns/coursef/2021": {
+          "word": "",
           "definition": "viết tắt của Domain Name System – Hệ thống tên miền. Hệ thống này dịch tên miền (Ví dụ: example.com) sang địa chỉ IP (Ví dụ: 93.184.216.34)"
         },
         "internet/coursef/2021": {
@@ -294,6 +443,7 @@
           "definition": "Con số được gán cho bất kỳ mục nào kết nối với Internet."
         },
         "wi_fi/coursef/2021": {
+          "word": "",
           "definition": "Phương pháp gửi thông tin không dây bằng sóng vô tuyến."
         },
         "define/coursef/2021": {
@@ -347,6 +497,10 @@
         "programming/courseb/2021": {
           "word": "Lập trình",
           "definition": "Đó là nghệ thuật sáng tạo chương trình."
+        },
+        "persistence/courseb/2021": {
+          "word": "Sự kiên trì",
+          "definition": "Cố gắng hết lần này đến lần khác, ngay cả khi tình huống vô cùng khó khăn."
         },
         "loop/courseb/2021": {
           "word": "Vòng lặp",
@@ -425,7 +579,8 @@
           "definition": "Thuật toán đã được mã hóa thành thông tin mà máy tính có thể chạy"
         },
         "sequencing/coursec/2021": {
-          "word": "Chuỗi tuần tự"
+          "word": "Chuỗi tuần tự",
+          "definition": "Đặt các lệnh theo đúng thứ tự để máy tính có thể đọc các lệnh."
         },
         "programming/coursec/2021": {
           "word": "Lập trình",
@@ -444,7 +599,8 @@
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
         "binary/coursec/2021": {
-          "word": "Nhị phân"
+          "word": "Nhị phân",
+          "definition": "Một cách biểu diễn thông tin chỉ sử dụng hai tùy chọn."
         },
         "algorithm/coursed/2021": {
           "word": "Thuật toán",
@@ -470,16 +626,49 @@
           "word": "Lập trình",
           "definition": "Đó là nghệ thuật sáng tạo chương trình."
         },
+        "frustrated/coursed/2021": {
+          "word": "Bực bội",
+          "definition": ""
+        },
+        "persistence/coursed/2021": {
+          "word": "Sự kiên trì",
+          "definition": "Cố gắng hết lần này đến lần khác, ngay cả khi tình huống vô cùng khó khăn."
+        },
         "event/coursed/2021": {
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
+        },
+        "code/coursed/2021": {
+          "word": "",
+          "definition": ""
         },
         "repeat/coursed/2021": {
           "word": "Lặp lại",
           "definition": "Làm lại một việc."
         },
+        "command/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
         "conditionals/coursed/2021": {
-          "word": "Điều kiện"
+          "word": "Điều kiện",
+          "definition": ""
+        },
+        "pseudocode/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "while_loop/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "until/coursed/2021": {
+          "word": "",
+          "definition": ""
         },
         "algorithm/express/2021": {
           "word": "Thuật toán",
@@ -494,7 +683,8 @@
           "definition": "Tìm và sửa các vấn đề trong một thuật toán hoặc chương trình."
         },
         "sequencing/express/2021": {
-          "word": "Chuỗi tuần tự"
+          "word": "Chuỗi tuần tự",
+          "definition": "Đặt các lệnh theo đúng thứ tự để máy tính có thể đọc các lệnh."
         },
         "program/express/2021": {
           "word": "Chương trình",
@@ -516,6 +706,10 @@
           "word": "Sự kiện",
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
+        "code/express/2021": {
+          "word": "",
+          "definition": ""
+        },
         "loop/express/2021": {
           "word": "Vòng lặp",
           "definition": "Hành động lặp đi lặp lại một việc."
@@ -524,8 +718,25 @@
           "word": "Lặp lại",
           "definition": "Làm lại một việc."
         },
+        "command/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/express/2021": {
+          "word": "",
+          "definition": ""
+        },
         "conditionals/express/2021": {
-          "word": "Điều kiện"
+          "word": "Điều kiện",
+          "definition": ""
+        },
+        "while_loop/express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "until/express/2021": {
+          "word": "",
+          "definition": ""
         },
         "function/express/2021": {
           "word": "Hàm",
@@ -536,6 +747,7 @@
           "definition": "Nhãn cho một phần thông tin dùng trong chương trình."
         },
         "prompt/express/2021": {
+          "word": "lời nhắc",
           "definition": "Thông báo trên màn hình máy tính chờ người dùng nhập dữ liệu đầu vào."
         },
         "for_loop/express/2021": {
@@ -594,6 +806,10 @@
           "word": "Lập trình",
           "definition": "Đó là nghệ thuật sáng tạo chương trình."
         },
+        "persistence/pre-express/2021": {
+          "word": "Sự kiên trì",
+          "definition": "Cố gắng hết lần này đến lần khác, ngay cả khi tình huống vô cùng khó khăn."
+        },
         "loop/pre-express/2021": {
           "word": "Vòng lặp",
           "definition": "Hành động lặp đi lặp lại một việc."
@@ -610,6 +826,10 @@
           "word": "Hành vi",
           "definition": "Hành động mà nhân vật thực hiện liên tục cho đến khi được yêu cầu dừng lại."
         },
+        "algorithm/coursee/2021": {
+          "word": "thuật toán",
+          "definition": "Danh sách các bước để hoàn thành nhiệm vụ."
+        },
         "sprite/coursee/2021": {
           "word": "Nhân vật",
           "definition": "Yếu tố đồ họa trên màn hình có vị trí, kích thước và ngoại hình."
@@ -619,7 +839,8 @@
           "definition": "Hành động khiến hiện tượng nào đó xảy ra"
         },
         "copyright/coursee/2021": {
-          "word": "Bản quyền"
+          "word": "Bản quyền",
+          "definition": ""
         },
         "loop/coursee/2021": {
           "word": "Vòng lặp",
@@ -633,8 +854,17 @@
           "word": "Hàm",
           "definition": "Một đoạn mã lệnh mà bạn có thể dễ dàng khai báo nhiều lần."
         },
+        "condition/coursee/2021": {
+          "word": "",
+          "definition": ""
+        },
         "conditionals/coursee/2021": {
-          "word": "Điều kiện"
+          "word": "Điều kiện",
+          "definition": ""
+        },
+        "while_loop/coursee/2021": {
+          "word": "",
+          "definition": ""
         },
         "define/coursee/2021": {
           "word": "Định nghĩa",
