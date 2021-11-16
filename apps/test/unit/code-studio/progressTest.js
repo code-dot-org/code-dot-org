@@ -58,32 +58,32 @@ describe('initViewAs', function() {
 
   it('defaults to Student', function() {
     initViewAs(mockStore, {});
-    assert(mockSetViewType.calledWith('Student'));
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Student));
   });
 
   it('defaults to Teacher iff current user is a teacher', function() {
     initViewAs(mockStore, {user_type: 'teacher'});
-    assert(mockSetViewType.calledWith('Teacher'));
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Teacher));
   });
 
   it('prevents overriding default if current user is a student', function() {
-    mockQueryStringParse.returns({viewAs: 'Teacher'});
+    mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Teacher});
     initViewAs(mockStore, {user_type: 'student'});
-    assert(mockSetViewType.calledWith('Student'));
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Student));
   });
 
   it('allows overriding default if current user is not a student', function() {
-    mockQueryStringParse.returns({viewAs: 'Teacher'});
+    mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Teacher});
 
     initViewAs(mockStore, {});
-    assert(mockSetViewType.calledWith('Teacher'));
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Teacher));
 
     initViewAs(mockStore, {user_type: 'teacher'});
-    assert(mockSetViewType.calledWith('Teacher'));
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Teacher));
 
-    mockQueryStringParse.returns({viewAs: 'Student'});
+    mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Student});
 
     initViewAs(mockStore, {user_type: 'teacher'});
-    assert(mockSetViewType.calledWith('Student'));
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Student));
   });
 });
