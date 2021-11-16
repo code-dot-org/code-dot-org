@@ -1253,18 +1253,17 @@ ku:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: دۆندرمە
-            Stars: ئەستێرە
-            Fireworks: یاری ئاگرین
-            '"rainbow"': پەلكەزێرینە
             '"hearts"': دڵ
+            '"iceCream"': دۆندرمە
+            '"rainbow"': پەلكەزێرینە
+            '"stars"': ئەستێرە
       Poetry_makeNewSpriteAnon:
         text: سپرایتێکی {ANIMATION_NAME} نوێ دروست بکە لە {LOCATION}
       Poetry_playSound:
         text: دەنگ هەڵکەر {SOUND}
         options:
           SOUND:
-            Light: ڕووناکی
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ڕووناکی
       Poetry_setBackground:
         text: ڕەنگی پاشبنەما دیاریبکە {COLOR}
       Poetry_setBackgroundEffect:
