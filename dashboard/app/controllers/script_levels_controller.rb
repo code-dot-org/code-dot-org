@@ -515,7 +515,7 @@ class ScriptLevelsController < ApplicationController
     end
 
     # To do: rename this variable, as it gets passed into redux as sectionData.section.codeReviewEnabled,
-    # which is confusing there is a section-level method (used below, code_review_enabled?)
+    # which is confusing as there is a section-level method (used below, code_review_enabled?)
     # that is different from what is returned here.
     @code_review_enabled = if DCDO.get('code_review_groups_enabled', false)
                              @level.is_a?(Javalab) &&
