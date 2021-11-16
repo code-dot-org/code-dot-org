@@ -121,7 +121,21 @@ class Homepage
     end
 
     hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
-    if hoc_mode == "actual-hoc"
+
+    if show_single_hero(request) == "csc"
+      [
+        {
+          text: "homepage_banner_text_link",
+          type: "cta_button_solid_yellow",
+          url: "/educate/csc",
+        },
+        {
+          text: "homepage_action_text_try_it",
+          type: "cta_button_solid_grey",
+          url: "/hourofcode/overview"
+        }
+      ]
+    elsif hoc_mode == "actual-hoc"
       [
         {
           text: "get_started",
@@ -353,7 +367,7 @@ class Homepage
   def self.show_single_hero(request)
     hoc_mode = DCDO.get('hoc_mode', CDO.default_hoc_mode)
     if ["soon-hoc", "actual-hoc"].include? hoc_mode
-      "cse"
+      "csc"
     else
       "changeworld"
     end
@@ -364,12 +378,16 @@ class Homepage
     hero_cse = [
       {centering: "50% 50%", type: "stat", textposition: "bottom", image: "/images/homepage/codebytes2020_background.jpg"}
     ]
+    hero_csc = [{centering: "50% 50%", type: "stat", textposition: "bottom", image: ""}]
+
     # Generate a random set of hero images alternating between non-celeb and celeb.
     heroes = get_heroes
     hero_display_time = 13 * 1000
 
     if show_single_hero(request) == "changeworld"
       heroes_arranged = hero_changeworld
+    elsif show_single_hero(request) == "csc"
+      heroes_arranged = hero_csc
     elsif show_single_hero(request) == "cse"
       heroes_arranged = hero_cse
     else
