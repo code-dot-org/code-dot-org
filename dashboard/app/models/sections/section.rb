@@ -303,7 +303,9 @@ class Section < ApplicationRecord
       students: include_students ? unique_students.map(&:summarize) : nil,
       restrict_section: restrict_section,
       code_review_enabled: code_review_enabled?,
-      is_assigned_csa: assigned_csa?
+      is_assigned_csa: assigned_csa?,
+      # this will be true when we are in emergency mode and this section has any script assigned other than CSP or CSD
+      not_saving_progress: script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true)
     }
   end
 
