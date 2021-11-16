@@ -1377,7 +1377,6 @@ describe('progressReduxTest', () => {
         'progress/CLEAR_RESULTS',
         'verifiedTeacher/SET_VERIFIED',
         'progress/SET_IS_SUMMARY_VIEW',
-        'progress/SHOW_TEACHER_INFO',
         'progress/UPDATE_FOCUS_AREAS',
         'lessonLock/AUTHORIZE_LOCKABLE',
         'progress/SET_UNIT_COMPLETED',

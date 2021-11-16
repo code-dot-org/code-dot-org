@@ -23,7 +23,6 @@ const CLEAR_RESULTS = 'progress/CLEAR_RESULTS';
 const MERGE_RESULTS = 'progress/MERGE_RESULTS';
 const MERGE_PEER_REVIEW_PROGRESS = 'progress/MERGE_PEER_REVIEW_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
-const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
 const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
 const SET_IS_HOC_UNIT = 'progress/SET_IS_HOC_UNIT';
 const SET_IS_AGE_13_REQUIRED = 'progress/SET_IS_AGE_13_REQUIRED';
@@ -64,7 +63,6 @@ const initialState = {
   focusAreaLessonIds: [],
   peerReviewLessonInfo: null,
   peerReviewsPerformed: [],
-  showTeacherInfo: false,
   postMilestoneDisabled: false,
   isHocScript: null,
   isAge13Required: false,
@@ -180,13 +178,6 @@ export default function reducer(state = initialState, action) {
       ...state,
       changeFocusAreaPath: action.changeFocusAreaPath,
       focusAreaLessonIds: action.focusAreaLessonIds
-    };
-  }
-
-  if (action.type === SHOW_TEACHER_INFO) {
-    return {
-      ...state,
-      showTeacherInfo: true
     };
   }
 
@@ -358,7 +349,6 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
     ) {
       // Default to summary view if teacher is viewing their student, otherwise default to detail view.
       dispatch(setIsSummaryView(data.teacherViewingStudent));
-      dispatch(showTeacherInfo());
     }
 
     if (data.focusAreaLessonIds) {
@@ -474,8 +464,6 @@ export const updateFocusArea = (changeFocusAreaPath, focusAreaLessonIds) => ({
   changeFocusAreaPath,
   focusAreaLessonIds
 });
-
-export const showTeacherInfo = () => ({type: SHOW_TEACHER_INFO});
 
 export const disablePostMilestone = () => ({type: DISABLE_POST_MILESTONE});
 export const setIsHocScript = isHocScript => ({

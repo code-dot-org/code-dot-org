@@ -96,9 +96,7 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
         '11': {[lessonId]: true}
       }
     }),
-    progress: {
-      showTeacherInfo: false
-    },
+    progress: {},
     currentUser: {
       userId: 1
     }
@@ -131,9 +129,7 @@ export const createStoreWithLockedLesson = (
         '11': {[lessonId]: true}
       }
     }),
-    progress: {
-      showTeacherInfo: false
-    },
+    progress: {},
     currentUser: {
       userId: 1
     }
