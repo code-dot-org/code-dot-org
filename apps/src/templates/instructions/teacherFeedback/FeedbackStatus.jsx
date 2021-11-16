@@ -8,7 +8,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 class FeedbackStatus extends Component {
   static propTypes = {
-    viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     latestFeedback: PropTypes.object.isRequired
   };
 

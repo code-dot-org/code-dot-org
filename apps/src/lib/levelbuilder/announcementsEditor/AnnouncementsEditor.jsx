@@ -8,6 +8,7 @@ import Announcements from '@cdo/apps/code-studio/components/progress/Announcemen
 import {NotificationType} from '@cdo/apps/templates/Notification';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import Announcement from '@cdo/apps/lib/levelbuilder/announcementsEditor/Announcement';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 export default class AnnouncementsEditor extends Component {
   static propTypes = {
@@ -77,11 +78,17 @@ export default class AnnouncementsEditor extends Component {
           <div>
             <div style={styles.preview}>
               <div>Teacher Preview:</div>
-              <Announcements announcements={announcements} viewAs={'Teacher'} />
+              <Announcements
+                announcements={announcements}
+                viewAs={ViewType.Teacher}
+              />
             </div>
             <div style={styles.preview}>
               <div>Student Preview:</div>
-              <Announcements announcements={announcements} viewAs={'Student'} />
+              <Announcements
+                announcements={announcements}
+                viewAs={ViewType.Student}
+              />
             </div>
           </div>
         )}

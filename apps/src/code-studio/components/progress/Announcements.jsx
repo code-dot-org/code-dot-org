@@ -31,10 +31,10 @@ export default class Announcements extends Component {
 
   isVisible = (currentView, element) =>
     element.visibility === VisibilityType.teacherAndStudent ||
-    (currentView === 'Teacher' &&
+    (currentView === ViewType.Teacher &&
       (element.visibility === VisibilityType.teacher ||
         element.visibility === undefined)) ||
-    (currentView === 'Student' &&
+    (currentView === ViewType.Student &&
       element.visibility === VisibilityType.student);
 
   render() {
