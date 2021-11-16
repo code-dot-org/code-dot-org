@@ -27317,7 +27317,7 @@ en:
         spelling-bee-2021:
           lessons:
             Spelling Bee:
-              name: Spelling Bee
+              name: Spelling With Bee
               description_student: 'Help the bee spell new words!
 
 '
@@ -27345,7 +27345,7 @@ en:
                 - recognize uppercase letters of the alphabet.
                 - recognize and count numbers up to 10 using fingers, objects, or manipulatives.
                 - recognize that words are made up of a sequence of letters.
-          title: Spelling Bee
+          title: Spelling With Bee
           description: ''
           student_description: ''
           description_short: ''
@@ -27355,7 +27355,7 @@ en:
         explore-data-1-2021:
           lessons:
             Exploring Box Plots and Histograms:
-              name: Exploring Box Plots and Histograms
+              name: Data Visualization
               description_student: 'Create bar charts and histograms in App Lab''s Data Visualizer.
 
 '
@@ -27393,7 +27393,7 @@ en:
 
                 - Know how to read a bar chart, understanding what the values on the x and y axes represent
                 - Know how to read a histogram, understanding what the range of values represent
-          title: Exploring Box Plots and Histograms
+          title: Data Visualization
           description: ''
           student_description: ''
           description_short: ''

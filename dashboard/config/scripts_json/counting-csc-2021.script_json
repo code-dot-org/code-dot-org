@@ -13,8 +13,8 @@
     },
     "new_name": null,
     "family_name": "counting-csc",
-    "serialized_at": "2021-11-12 17:44:38 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-11-13 05:00:37 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -290,6 +290,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-1"
+        ],
         "progression": "Video: Introduction to Maze Puzzles"
       },
       "bonus": false,
@@ -312,6 +315,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-2"
+        ],
         "progression": "Maze Practice"
       },
       "bonus": false,
@@ -334,6 +340,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-3"
+        ],
         "progression": "Maze Practice"
       },
       "bonus": false,
@@ -356,6 +365,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-4"
+        ],
         "progression": "Video: The Collector"
       },
       "bonus": false,
@@ -378,6 +390,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-5"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -400,6 +415,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-6"
+        ],
         "progression": "Video: The Repeat Block"
       },
       "bonus": false,
@@ -422,6 +440,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-7"
+        ],
         "progression": "Model Level"
       },
       "bonus": false,
@@ -444,6 +465,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-8"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -466,6 +490,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-9"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -488,6 +515,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-10"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -510,6 +540,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-11"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -532,6 +565,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc-laurel-12"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -554,6 +590,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csc - stop math talk"
+        ],
         "progression": "Math Talk"
       },
       "bonus": false,
