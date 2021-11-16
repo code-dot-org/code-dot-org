@@ -222,9 +222,9 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   test 'student in code review group with project available for review gets list of peers' do
     DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
 
-    code_review_group = CodeReviewGroup.create!(name: 'test', section: @section)
-    CodeReviewGroupMember.create!(follower: @another_student_follower, code_review_group: code_review_group)
-    CodeReviewGroupMember.create!(follower: @project_owner_follower, code_review_group: code_review_group)
+    code_review_group = create :code_review_group, section: @section
+    create :code_review_group_member, follower: @another_student_follower, code_review_group: code_review_group
+    create :code_review_group_member, follower:  @project_owner_follower, code_review_group: code_review_group
 
     create :reviewable_project,
       user_id: @project_owner.id,
@@ -240,8 +240,8 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
   test 'student in code review group with only own project available for review gets empty list of peers' do
     DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
 
-    code_review_group = CodeReviewGroup.create!(name: 'test', section: @section)
-    CodeReviewGroupMember.create!(follower: @project_owner_follower, code_review_group: code_review_group)
+    code_review_group = create :code_review_group, section: @section
+    create :code_review_group_member, follower: @project_owner_follower, code_review_group: code_review_group
 
     create :reviewable_project,
       user_id: @project_owner.id,
@@ -256,9 +256,6 @@ class ReviewableProjectsControllerTest < ActionController::TestCase
 
   test 'student not in code review group gets empty list of peers' do
     DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
-
-    code_review_group = CodeReviewGroup.create!(name: 'test', section: @section)
-    CodeReviewGroupMember.create!(follower: @project_owner_follower, code_review_group: code_review_group)
 
     create :reviewable_project,
       user_id: @project_owner.id,
