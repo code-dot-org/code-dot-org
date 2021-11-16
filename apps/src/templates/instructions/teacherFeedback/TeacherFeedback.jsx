@@ -38,7 +38,7 @@ export class TeacherFeedback extends Component {
     latestFeedback: teacherFeedbackShape,
     token: PropTypes.string,
     //Provided by Redux
-    viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
+    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     verifiedTeacher: PropTypes.bool,
     selectedSectionId: PropTypes.string,
     updateUserProgress: PropTypes.func.isRequired,
