@@ -13,12 +13,24 @@ export const SET_VIEW_TYPE = 'viewAs/SET_VIEW_TYPE';
 
 export default function reducer(state = ViewType.Student, action) {
   if (action.type === SET_VIEW_TYPE) {
-    const viewType = action.viewType;
-    if (!ViewType[viewType]) {
+    let viewType = action.viewType;
+    /* These redirects are temporary. They will allow us to move over to
+     * Participant and Instructor as the main ViewTypes without a risk
+     * of breaking something for users if we have to revert. We should have
+     * moved over to Instructor and Participant as the main ViewTypes by
+     * Jan 2022
+     */
+    if (viewType === 'Instructor') {
+      viewType = 'Teacher';
+      updateQueryParam('viewAs', 'Teacher');
+    } else if (viewType === 'Participant') {
+      viewType = 'Student';
+      updateQueryParam('viewAs', 'Student');
+    } else if (!ViewType[viewType]) {
       throw new Error('unknown ViewType: ' + viewType);
     }
 
-    return action.viewType;
+    return viewType;
   }
 
   return state;

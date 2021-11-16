@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import ParametersTable from './ParametersTable';
 import i18n from '@cdo/locale';
 
 export default function ProgrammingExpressionOverview({programmingExpression}) {
@@ -34,6 +35,12 @@ export default function ProgrammingExpressionOverview({programmingExpression}) {
             markdown={`\`${programmingExpression.syntax}\``}
             expandableImages
           />
+        </div>
+      )}
+      {programmingExpression.parameters?.length > 0 && (
+        <div>
+          <h2>{i18n.parametersHeader()}</h2>
+          <ParametersTable parameters={programmingExpression.parameters} />
         </div>
       )}
       {!!programmingExpression.returnValue && (

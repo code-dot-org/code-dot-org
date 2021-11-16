@@ -15,7 +15,16 @@ describe('ProgrammingExpressionOverview', () => {
       syntax: 'block()',
       returnValue: 'no return value',
       tips: 'some tips on how to use this block',
-      externalDocumentation: 'example.example'
+      externalDocumentation: 'example.example',
+      parameters: [
+        {
+          name: 'param1',
+          type: 'string',
+          required: true,
+          description: 'description'
+        },
+        {name: 'param2'}
+      ]
     };
   });
 
@@ -31,6 +40,7 @@ describe('ProgrammingExpressionOverview', () => {
     );
     expect(wrapper.find('h2').map(h => h.text())).to.eql([
       'Syntax',
+      'Parameters',
       'Returns',
       'Tips',
       'Additional Information'
@@ -74,6 +84,17 @@ describe('ProgrammingExpressionOverview', () => {
     );
     expect(wrapper.find('h2').length).to.be.greaterThan(0);
     expect(wrapper.find('h2').map(h => h.text())).to.not.include('Syntax');
+  });
+
+  it('hides the parameters headers if no parameters are provided', () => {
+    defaultProgrammingExpression.parameters = [];
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={defaultProgrammingExpression}
+      />
+    );
+    expect(wrapper.find('h2').length).to.be.greaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).to.not.include('Parameters');
   });
 
   it('hides the returns header if no returns is provided', () => {

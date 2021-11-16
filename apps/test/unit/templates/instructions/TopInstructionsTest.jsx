@@ -6,6 +6,7 @@ import {
   TabType
 } from '@cdo/apps/templates/instructions/TopInstructions';
 import TopInstructionsHeader from '@cdo/apps/templates/instructions/TopInstructionsHeader';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 const DEFAULT_PROPS = {
   isEmbedView: false,
@@ -20,7 +21,7 @@ const DEFAULT_PROPS = {
   setInstructionsHeight: () => {},
   setInstructionsRenderedHeight: () => {},
   setInstructionsMaxHeightNeeded: () => {},
-  viewAs: 'Teacher',
+  viewAs: ViewType.Teacher,
   readOnlyWorkspace: false,
   serverLevelId: 123,
   user: 5,
@@ -177,7 +178,7 @@ describe('TopInstructions', () => {
     describe('as a student', () => {
       it('passes displayFeedback = true to TopInstructionsHeader on a level where the teacher has given feedback', () => {
         const wrapper = shallow(
-          <TopInstructions {...DEFAULT_PROPS} viewAs={'Student'} />
+          <TopInstructions {...DEFAULT_PROPS} viewAs={ViewType.Student} />
         );
 
         wrapper.setState({
@@ -211,7 +212,7 @@ describe('TopInstructions', () => {
 
       it('passes displayFeedback = false to TopInstructionsHeader on a level where the teacher has not given feedback and there is no rubric', () => {
         const wrapper = shallow(
-          <TopInstructions {...DEFAULT_PROPS} viewAs={'Student'} />
+          <TopInstructions {...DEFAULT_PROPS} viewAs={ViewType.Student} />
         );
 
         wrapper.setState({

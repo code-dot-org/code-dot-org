@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 
 import LessonEditorDialog from './LessonEditorDialog';
@@ -16,6 +17,7 @@ export default function UploadImageDialog({
   const [imgUrl, setImgUrl] = useState(undefined);
   const [expandable, setExpandable] = useState(false);
   const [error, setError] = useState(undefined);
+  const [isUploading, setIsUploading] = useState(false);
 
   const resetState = () => {
     setImgUrl(undefined);
@@ -24,7 +26,12 @@ export default function UploadImageDialog({
   };
 
   const handleChange = e => {
+    if (!e.target.files[0]) {
+      resetState();
+      return;
+    }
     resetState();
+    setIsUploading(true);
 
     // assemble upload data
     const formData = new FormData();
@@ -41,21 +48,21 @@ export default function UploadImageDialog({
     })
       .then(response => response.json())
       .then(handleResult)
-      .catch(handleError);
+      .catch(err => {
+        setError(err);
+        setIsUploading(false);
+      });
   };
 
   const handleResult = result => {
     if (result && result.newAssetUrl) {
       setImgUrl(result.newAssetUrl);
     } else if (result && result.message) {
-      handleError(result.message);
+      setError(result.message);
     } else {
-      handleError(result);
+      setError(result);
     }
-  };
-
-  const handleError = error => {
-    setError(error);
+    setIsUploading(false);
   };
 
   const handleDialogClose = () => {
@@ -76,7 +83,12 @@ export default function UploadImageDialog({
       <h2>Upload Image</h2>
 
       {imgUrl && <img src={imgUrl} />}
-      <input type="file" name="file" onChange={handleChange} />
+      <input
+        type="file"
+        name="file"
+        onChange={handleChange}
+        disabled={isUploading}
+      />
 
       {error && (
         <div className="alert alert-error" role="alert">
@@ -102,13 +114,20 @@ export default function UploadImageDialog({
         </label>
       )}
       <hr />
-
-      <Button
-        text={i18n.closeAndSave()}
-        onClick={handleCloseAndSave}
-        color={Button.ButtonColor.orange}
-        className="save-upload-image-button"
-      />
+      <div style={{display: 'flex'}}>
+        <Button
+          text={i18n.closeAndSave()}
+          onClick={handleCloseAndSave}
+          color={Button.ButtonColor.orange}
+          className="save-upload-image-button"
+          disabled={isUploading}
+        />{' '}
+        {isUploading && (
+          <div style={styles.spinner}>
+            <FontAwesome icon="spinner" className="fa-spin" />
+          </div>
+        )}
+      </div>
     </LessonEditorDialog>
   );
 }
@@ -126,5 +145,9 @@ const styles = {
   },
   label: {
     margin: '10px 0'
+  },
+  spinner: {
+    fontSize: 25,
+    padding: 10
   }
 };
