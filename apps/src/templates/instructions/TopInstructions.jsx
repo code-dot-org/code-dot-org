@@ -626,8 +626,7 @@ class TopInstructions extends Component {
     const displayHelpTab =
       (levelVideos && levelVideos.length > 0) || levelResourcesAvailable;
 
-    const participantHasFeedback =
-      this.isViewingAsStudent && feedbacks.length > 0;
+    const studentHasFeedback = this.isViewingAsStudent && feedbacks.length > 0;
 
     // If we're displaying the review tab (for CSA peer review) the teacher can leave feedback in that tab,
     // in that case we hide the feedback tab (unless there's a rubric) to avoid confusion about
@@ -635,7 +634,7 @@ class TopInstructions extends Component {
     const displayFeedback =
       !!rubric ||
       (!displayReviewTab && teacherViewingStudentWork) ||
-      participantHasFeedback;
+      studentHasFeedback;
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
