@@ -14,6 +14,9 @@ export const SET_VIEW_TYPE = 'viewAs/SET_VIEW_TYPE';
 export default function reducer(state = ViewType.Participant, action) {
   if (action.type === SET_VIEW_TYPE) {
     let viewType = action.viewType;
+    /* The ViewTypes used to be Teacher and Student. We redirect them to the new
+     * ViewTypes here in order to make sure be continue to support old links.
+     */
     if (viewType === 'Teacher') {
       viewType = 'Instructor';
       updateQueryParam('viewAs', 'Instructor');
