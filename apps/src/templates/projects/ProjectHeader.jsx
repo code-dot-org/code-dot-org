@@ -5,6 +5,7 @@ import i18n from '@cdo/locale';
 import StartNewProject from '@cdo/apps/templates/projects/StartNewProject';
 import HeaderBanner from '@cdo/apps/templates/HeaderBanner';
 import {SpecialAnnouncementActionBlock} from '../studioHomepages/TwoColumnActionBlock';
+import ProjectsPromo from './ProjectsPromo';
 
 export default class ProjectHeader extends React.Component {
   static propTypes = {
@@ -29,6 +30,7 @@ export default class ProjectHeader extends React.Component {
           backgroundUrl={backgroundUrl}
         />
         <div className={'container main'}>
+          {!this.props.specialAnnouncement && <ProjectsPromo />}
           {this.props.specialAnnouncement && (
             <SpecialAnnouncementActionBlock
               announcement={this.props.specialAnnouncement}
