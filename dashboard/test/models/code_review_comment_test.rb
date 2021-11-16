@@ -58,7 +58,7 @@ class CodeReviewCommentTest < ActiveSupport::TestCase
 
     project_owner = create :student
     teacher = create :teacher
-    section = create :section, code_review_expires_at: Time.now.utc + 1.day, teacher: teacher
+    section = create :section, code_review_expires_at: Time.now.utc - 1.day, teacher: teacher
     create :follower, section: section, student_user: project_owner
     assert CodeReviewComment.user_can_review_project?(project_owner, teacher, nil)
   end
