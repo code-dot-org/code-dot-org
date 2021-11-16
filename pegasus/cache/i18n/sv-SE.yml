@@ -952,6 +952,12 @@ sv-SE:
   coursed-2020_gradelevel: Åldrarna 7-11
   coursee-2020_gradelevel: Åldrarna 8-12
   coursef-2020_gradelevel: Åldrarna 9-13
+  coursea-2021_gradelevel: Åldrarna 4-7
+  courseb-2021_gradelevel: Åldrarna 5-8
+  coursec-2021_gradelevel: Åldrarna 6-10
+  coursed-2021_gradelevel: Åldrarna 7-11
+  coursee-2021_gradelevel: Åldrarna 8-12
+  coursef-2021_gradelevel: Åldrarna 9-13
   accelerated_gradelevel: Åldrar 10 + (efter kurs 3)
   codeorg_platformtext: Moderna webbläsare, smartphones, surfplattor
   codeintl_platformtext: Moderna webbläsare, smartphones, surfplattor
@@ -1676,3 +1682,4 @@ sv-SE:
     de färdigheter som behövs för att lyckas på 2000-talet.  "
   ai_activity: Aktivitet
   ai_description: Beskrivning
+  outbreak_tile_title: Utbrott
