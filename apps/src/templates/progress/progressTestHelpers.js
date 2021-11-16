@@ -89,7 +89,8 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
     },
     viewAs: viewAs,
     teacherSections: {
-      selectedSectionId: '11',
+      sectionIds: ['11'],
+      sectionsAreLoaded: true,
       sections: {
         '11': {
           id: 11,
@@ -104,9 +105,11 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
           lessonExtras: false,
           pairingAllowed: true
         }
-      }
+      },
+      selectedSectionId: '11'
     },
     hiddenLesson: Immutable.fromJS({
+      hideableLessonsAllowed: true,
       lessonsBySection: {
         '11': {[lessonId]: true}
       }
