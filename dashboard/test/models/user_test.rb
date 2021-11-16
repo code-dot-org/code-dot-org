@@ -4636,13 +4636,18 @@ class UserTest < ActiveSupport::TestCase
     assert teacher.marketing_segment_data[:within_us]
   end
 
-  test 'marketing_segment_data returns expected value for school_percent_frl' do
-    frl_eligible_total = 35
+  test 'marketing_segment_data returns expected value for school_percent_frl_40_plus' do
+    frl_eligible_total = 45
     school = create :school
-    create :school_stats_by_year, school: school, frl_eligible_total: frl_eligible_total
+    create :school_stats_by_year, school: school, frl_eligible_total: frl_eligible_total, students_total: 100
     school_info = create :school_info, school: school
     teacher = create :teacher, school_info: school_info
-    assert_equal frl_eligible_total, teacher.marketing_segment_data[:school_percent_frl]
+    assert teacher.marketing_segment_data[:school_percent_frl_40_plus]
+  end
+
+  test 'marketing_segment_data returns expected value for school_percent_frl_40_plus when no school stats' do
+    teacher = create :teacher
+    assert_nil teacher.marketing_segment_data[:school_percent_frl_40_plus]
   end
 
   test 'marketing_segment_data returns expected value for school_title_i' do
