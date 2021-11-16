@@ -20,56 +20,62 @@ let poolField, nameField, helperEditor, configEditor, validationDiv;
 
 $(document).ready(() => {
   registerReducers({animationList: animationList});
-  getDefaultListMetadata().then(defaultSprites => {
-    getStore().dispatch(setInitialAnimationList(defaultSprites));
+  getDefaultListMetadata()
+    .then(defaultSprites => {
+      getStore().dispatch(setInitialAnimationList(defaultSprites));
 
-    poolField = document.getElementById('block_pool');
-    nameField = document.getElementById('block_name');
-    Blockly.inject(document.getElementById('blockly-container'), {
-      assetUrl,
-      valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
-      typeHints: true
-    });
+      poolField = document.getElementById('block_pool');
+      nameField = document.getElementById('block_name');
+      Blockly.inject(document.getElementById('blockly-container'), {
+        assetUrl,
+        valueTypeTabShapeMap: valueTypeTabShapeMap(Blockly),
+        typeHints: true
+      });
 
-    const blockConfigElement = document.getElementById('block_config');
+      const blockConfigElement = document.getElementById('block_config');
 
-    // Pretty print the config
-    let blocks = blockConfigElement.value;
-    if (blocks) {
-      blockConfigElement.value = JSON.stringify(JSON.parse(blocks), null, 2);
-    }
-
-    validationDiv = $(
-      blockConfigElement.parentNode.insertBefore(
-        document.createElement('div'),
-        blockConfigElement.nextSibling
-      )
-    );
-
-    const helperCodeElement = document.getElementById('block_helper_code');
-    configEditor = initializeCodeMirror(
-      blockConfigElement,
-      'application/json',
-      {
-        callback: validateBlockConfig,
-        onUpdateLinting: onUpdateLinting
+      // Pretty print the config
+      let blocks = blockConfigElement.value;
+      if (blocks) {
+        blockConfigElement.value = JSON.stringify(JSON.parse(blocks), null, 2);
       }
-    );
 
-    helperEditor = initializeCodeMirror(helperCodeElement, 'javascript', {
-      callback: _ => validateBlockConfig(),
-      onUpdateLinting: onUpdateLinting
+      validationDiv = $(
+        blockConfigElement.parentNode.insertBefore(
+          document.createElement('div'),
+          blockConfigElement.nextSibling
+        )
+      );
+
+      const helperCodeElement = document.getElementById('block_helper_code');
+      configEditor = initializeCodeMirror(
+        blockConfigElement,
+        'application/json',
+        {
+          callback: validateBlockConfig,
+          onUpdateLinting: onUpdateLinting
+        }
+      );
+
+      helperEditor = initializeCodeMirror(helperCodeElement, 'javascript', {
+        callback: _ => validateBlockConfig(),
+        onUpdateLinting: onUpdateLinting
+      });
+      poolField.addEventListener('change', updateBlockPreview);
+
+      if (blocks) {
+        updateBlockPreview();
+      }
+
+      $('.alert.alert-success')
+        .delay(5000)
+        .fadeOut(1000);
+    })
+    .catch(() => {
+      console.error(
+        'Unable to render sprite costumes in block preview. Please refresh the page.'
+      );
     });
-    poolField.addEventListener('change', updateBlockPreview);
-
-    if (blocks) {
-      updateBlockPreview();
-    }
-
-    $('.alert.alert-success')
-      .delay(5000)
-      .fadeOut(1000);
-  });
 });
 
 function onUpdateLinting(_, errors) {
