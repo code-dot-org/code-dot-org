@@ -185,7 +185,11 @@ As Director of Software Engineering at <a href="https://www.irobot.com/" target=
 <br>
 <br>
 <strong>Ini Oladosu</strong> joined <a href="https://www.ilm.com/" target="_blank">Industrial Light & Magic</a> in 2020 as a Production Assistant. He was born in Port Harcourt, Nigeria before immigrating to Calgary, Canada with his family in 2000. Between 2019 and 2021, Ini co-wrote and co-produced his debut short film, <i>Framed</i>. The film has been selected into various film festivals and most recently won the award for Best Edit at the 2021 London International Monthly Film Festival.</p>
-<i>Recording not currently available.</i>
+
+<a href="https://code.zoom.us/rec/play/kIvRYVMSbjTlS0R135aJipNeBxbg6Vv1taAVDeVb3IVoBXwRMZuQjhuRFa-VNSg5Wy8UVJF4fcZ15BFV.p4zxH_sHQW5GLwBU" target="_blank"><button>Watch the chat</button></a>
+<br>
+<br>
+<i>Due to legal constraints, we are only able to offer this recording on demand. You will need to register using your name and email address to access.</i>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
@@ -206,12 +210,7 @@ As Director of Software Engineering at <a href="https://www.irobot.com/" target=
 As the senior instruction designer for <a href="https://www.roblox.com/" target="_blank">Roblox</a>, <strong>Genevieve Johnson</strong> oversees the creation of educational content and empowers students to pursue careers as entrepreneurs, engineers, and designers. She has been an author on two books, <i>Roblox Game Development in 24 Hours: The Official Roblox Guide</i>, and <i>Coding with Roblox Lua in 24 Hours: The Official Roblox Guide</i>.
 </p>
 
-<a href="https://www.eventbrite.com/e/my-journey-using-roblox-to-empower-students-registration-167177770211" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
-
+<a href="https://code.zoom.us/rec/play/G3oUkKUOrnj_EeM1QfWyOOiwJbqQ-xh2-GLDV0Nq_7_wsO8m9hLBrvAZNPZ0DHuw-3kGN0ubhRS6sUTm.DdfzTgxyJMJa-4Qo" target="_blank"><button>Watch the chat</button></a>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 

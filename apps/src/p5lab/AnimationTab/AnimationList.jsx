@@ -19,7 +19,8 @@ class AnimationList extends React.Component {
     selectedAnimation: shapes.AnimationKey,
     onNewItemClick: PropTypes.func.isRequired,
     spriteLab: PropTypes.bool.isRequired,
-    hideBackgrounds: PropTypes.bool.isRequired
+    hideBackgrounds: PropTypes.bool.isRequired,
+    labType: PropTypes.string.isRequired
   };
 
   render() {
@@ -48,6 +49,7 @@ class AnimationList extends React.Component {
             animationProps={this.props.animationList.propsByKey[key]}
             isSelected={key === this.props.selectedAnimation}
             animationList={this.props.animationList}
+            labType={this.props.labType}
           />
         ))}
         {!this.props.spriteLab && addAnimation}
