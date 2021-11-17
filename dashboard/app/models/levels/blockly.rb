@@ -481,7 +481,7 @@ class Blockly < Level
     # TODO: add `localized_variable_blocks_xml(text_xml_doc)`
 
     # Use to_html because the XML we want to generate will be used in web browsers.
-    text_xml.to_html
+    text_xml.to_html(encoding: 'UTF-8')
   end
 
   def localized_short_instructions
