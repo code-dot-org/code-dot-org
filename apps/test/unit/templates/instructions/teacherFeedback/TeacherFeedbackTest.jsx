@@ -19,7 +19,7 @@ const DEFAULT_PROPS = {
   serverLevelId: 123,
   teacher: 5,
   latestFeedback: null,
-  viewAs: 'Teacher',
+  viewAs: ViewType.Teacher,
   verifiedTeacher: true,
   selectedSectionId: '789',
   canHaveFeedbackReviewState: true,
@@ -106,7 +106,7 @@ describe('TeacherFeedback', () => {
         const wrapper = setUp({latestFeedback});
         const statusComponent = wrapper.find(FeedbackStatus);
         expect(statusComponent).to.have.length(1);
-        expect(statusComponent.props().viewAs).to.equal('Teacher');
+        expect(statusComponent.props().viewAs).to.equal(ViewType.Teacher);
         expect(statusComponent.props().latestFeedback).to.equal(latestFeedback);
       });
 
@@ -201,7 +201,7 @@ describe('TeacherFeedback', () => {
 
   describe('viewed as a Student', () => {
     const STUDENT_PROPS = {
-      viewAs: 'Student',
+      viewAs: ViewType.Student,
       isEditable: false
     };
     describe('without previous feedback given', () => {
@@ -264,7 +264,7 @@ describe('TeacherFeedback', () => {
 
         const statusComponent = wrapper.find(FeedbackStatus);
         expect(statusComponent).to.have.length(1);
-        expect(statusComponent.props().viewAs).to.equal('Student');
+        expect(statusComponent.props().viewAs).to.equal(ViewType.Student);
         expect(statusComponent.props().latestFeedback).to.equal(latestFeedback);
       });
 

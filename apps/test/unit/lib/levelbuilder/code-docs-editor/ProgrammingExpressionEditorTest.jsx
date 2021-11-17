@@ -24,7 +24,17 @@ describe('ProgrammingExpressionEditor', () => {
         parameters: [{name: 'id', type: 'string'}],
         examples: [{name: 'example 1'}]
       },
-      environmentCategories: ['Circuit', 'Variables', 'Canvas']
+      environmentCategories: ['Circuit', 'Variables', 'Canvas'],
+      videoOptions: [
+        {
+          key: 'video1',
+          name: 'Video 1'
+        },
+        {
+          key: 'video2',
+          name: 'Video 2'
+        }
+      ]
     };
     fetchSpy = sinon.stub(window, 'fetch');
   });
@@ -58,6 +68,21 @@ describe('ProgrammingExpressionEditor', () => {
         .at(1)
         .props().readOnly
     ).to.be.true;
+
+    // Video select
+    const videoSelect = wrapper.find('select').at(0);
+    expect(videoSelect.find('option').length).to.equal(3);
+    expect(
+      videoSelect.find('option').map(option => option.props().value)
+    ).to.eql(['', 'video1', 'video2']);
+
+    // Image upload
+    expect(
+      wrapper
+        .find('Button')
+        .at(0)
+        .props().text
+    ).to.equal('Choose Image');
 
     // short description
     expect(
@@ -126,6 +151,14 @@ describe('ProgrammingExpressionEditor', () => {
       'Add Another Example'
     );
     expect(orderableExampleList.props().list.length).to.equal(1);
+  });
+
+  it('shows upload image dialog when choose image button is pressed', () => {
+    const wrapper = shallow(<ProgrammingExpressionEditor {...defaultProps} />);
+    const uploadButton = wrapper.find('Button').first();
+    expect(uploadButton).to.not.be.null;
+    uploadButton.simulate('click');
+    expect(wrapper.find('UploadImageDialog').length).to.equal(1);
   });
 
   it('attempts to save when save is pressed', () => {

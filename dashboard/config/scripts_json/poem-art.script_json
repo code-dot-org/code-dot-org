@@ -7,11 +7,12 @@
       "curriculum_umbrella": "CSC",
       "is_course": true,
       "is_migrated": true,
+      "redirect_to": "poem-art-2021",
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "poem-art",
-    "serialized_at": "2021-11-09 19:46:43 UTC",
+    "serialized_at": "2021-11-10 21:07:34 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

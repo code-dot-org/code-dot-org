@@ -19,8 +19,7 @@ class AnimationPickerListItem extends React.Component {
     onClick: PropTypes.func,
     playAnimations: PropTypes.bool,
     category: PropTypes.string,
-    selected: PropTypes.bool,
-    multiSelectEnabled: PropTypes.bool
+    selected: PropTypes.bool
   };
 
   state = {
@@ -36,8 +35,7 @@ class AnimationPickerListItem extends React.Component {
       onClick,
       playAnimations,
       label,
-      selected,
-      multiSelectEnabled
+      selected
     } = this.props;
     const {loaded, hover} = this.state;
     const rootStyle = [styles.root, !label && styles.noLabel];
@@ -111,15 +109,12 @@ class AnimationPickerListItem extends React.Component {
               />
             )}
           </div>
-          {animationProps &&
-            loaded &&
-            (hover || selected) &&
-            multiSelectEnabled && (
-              <i
-                className={multiSelectIconClassName}
-                style={multiSelectIconStyle}
-              />
-            )}
+          {animationProps && loaded && (hover || selected) && (
+            <i
+              className={multiSelectIconClassName}
+              style={multiSelectIconStyle}
+            />
+          )}
         </button>
         {label && <div style={labelStyle}>{label}</div>}
       </div>

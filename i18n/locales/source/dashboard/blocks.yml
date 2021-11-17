@@ -1187,7 +1187,6 @@ en:
             '"pop"': pop
             '"rain"': rain
             '"spiral"': spiral
-            '"zigzag"': zig-zag
       gamelab_makeNewSpriteAnon:
         text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
       gamelab_makeNumSprites:
@@ -1910,41 +1909,38 @@ en:
       Outbreak_stopMoving:
         text: monsters stop moving
       Poetry_addFrame:
-        text: add [BRUSH][0] outline
+        text: set frame to [BRUSH][0]
         options:
           BRUSH:
-            Metal Frame: Metal Frame
-            Bold: Bold
-            Shadow Box: Shadow Box
-            Gilded: Gilded
-            Beaded: Beaded
-            Beveled: Beveled
-            Wood Frame: Wood Frame
-            Bamboo: Bamboo
-            Decorative: Decorative
-            Donuts: Donuts
-            Ice Cream: Ice Cream
-            Fire: Fire
-            Water: Water
-            Leaves: Leaves
-            Stars: Stars
-            Fireworks: Fireworks
-            '"rainbow"': Rainbow
-            '"hearts"': Hearts
-            '"flowers"': Flowers
-            '"zigzag"': Zig-Zag
-            '"swirls"': Swirls
-            '"pawPrints"': Paw Prints
-            '"waves"': Waves
+            '"bamboo"': Bamboo
+            '"beaded"': Beaded
             '"brick"': Brick
+            '"decorative"': Decorative
+            '"donuts"': Donuts
+            '"fire"': Fire
+            '"flowers"': Flowers
+            '"gilded"': Gilded
+            '"hearts"': Hearts
+            '"iceCream"': Ice Cream
+            '"leaves"': Leaves
+            '"metal"': Metal Frame
+            '"pawPrints"': Paw Prints
+            '"rainbow"': Rainbow
+            '"stars"': Stars
+            '"swirls"': Swirls
+            '"waves"': Waves
+            '"wood"': Wood Frame
+            '"zigzag"': Zig-Zag
       Poetry_addLine:
         text: add line [LINE][0]
       Poetry_addTextHighlight:
-        text: add text highlight
+        text: add text highlight [COLOR][0]
       Poetry_animateText:
         text: animate text
       Poetry_destroy:
         text: remove [ANIMATION_NAME][0]
+      Poetry_glideTo:
+        text: "[SPRITE][0] glide to [LOCATION][1]"
       Poetry_hideText:
         text: hide text
       Poetry_makeBurst:
@@ -1954,7 +1950,7 @@ en:
             '"burst"': burst
             '"pop"': pop
             '"rain"': rain
-            '"zigzag"': zig-zag
+            '"spiral"': spiral
       Poetry_makeNewSpriteAnon:
         text: make new [ANIMATION_NAME][0] sprite at [LOCATION][1]
       Poetry_makeNumSprites:
@@ -1963,47 +1959,45 @@ en:
         text: play music [SOUND][0]
         options:
           SOUND:
-            Calm: Calm
-            Campfire: Campfire
-            Drizzle: Drizzle
+            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Bright
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Calm
+            '"sound://category_nature/steady_campfire_loop.mp3"': Campfire
+            '"sound://category_nature/rain_loop.mp3"': Drizzle
             '"sound://category_background/fire_burning.mp3"': Fireside
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': Forest
             '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': Harps
-            Haunted: Haunted
-            Hum: Hum
-            Mission: Mission
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Haunted
+            '"sound://category_background/inside_plane.mp3"': Hum
+            '"sound://category_loops/red_flag_loop1.mp3"': Mission
             '"sound://category_nature/summer_night_loop.mp3"': Night
             '"sound://category_background/ocean_waves.mp3"': Ocean
             '"sound://category_background/rain_thunderstorm_calm.mp3"': Rainy
             '"sound://category_background/rainforest_ambient_sound.mp3"': Rainforest
-            Riding: Riding
+            '"sound://category_background/repitition.mp3"': Riding
             '"sound://category_background/wavering_wind.mp3"': Sleepy
-            Slow: Slow
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Slow
             '"sound://category_background/waterfall.mp3"': Waterfall
       Poetry_playSound:
         text: play sound [SOUND][0]
         options:
           SOUND:
-            '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Bright
-            Bell: Bell
-            Break: Break
-            Boing: Boing
-            Bubble: Bubble
-            Chatter: Chatter
-            Deflate: Deflate
-            Fail: Fail
-            Flutter: Flutter
-            Jump: Jump
-            Light: Light
-            Poof: Poof
-            Scan: Scan
+            '"sound://category_bell/long_bell_notification.mp3"': Bell
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Break
+            '"sound://category_digital/boing_2.mp3"': Boing
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bubble
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Chatter
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Deflate
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Fail
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Flutter
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Jump
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Light
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Poof
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Scan
             '"sound://category_background/typewriter.mp3"': Typewriter
-            Vibrant: Vibrant
-            Win: Win
-            Whirl: Whirl
-            Wind Chimes: Wind Chimes
-      Poetry_randomWord:
-        text: random word
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Vibrant
+            '"sound://category_achievements/peaceful_win_1.mp3"': Win
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Whirl
+            '"sound://category_achievements/peaceful_win_6.mp3"': Wind Chimes
       Poetry_setAuthor:
         text: set author [AUTHOR][0]
       Poetry_setBackground:
@@ -2049,7 +2043,7 @@ en:
             '"Courier"': Courier
             '"Arial Black"': Arial Black
             '"Impact"': Impact
-            '"Cursive"': Cursive
+            '"Cursive"': Handwriting
       Poetry_setFontColor:
         text: set text color [FILL][0]
       Poetry_setForegroundEffect:
