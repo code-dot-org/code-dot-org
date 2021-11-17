@@ -649,7 +649,8 @@ XML
     # Expected result is markdown in which the original string
     # has been replaced by a localized string. Newlines should be
     # maintained outside of any XML.
-    expected_localized_markdown = markdown.gsub(original_str, localized_str)
+    cleaned_markdown = markdown.strip.gsub(/\s*\n\s*/, '').gsub(original_str, localized_str)
+    expected_localized_markdown = cleaned_markdown.gsub("Test [link](https://code.org)", "Test [link](https://code.org)\n")
 
     assert_equal expected_localized_markdown, localized_markdown
   end
