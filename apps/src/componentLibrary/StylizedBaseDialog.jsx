@@ -84,6 +84,7 @@ export default function StylizedBaseDialog(props) {
       type={FooterButtonType.confirm}
       text={props.confirmationButtonText}
       onClick={props.handleConfirmation || props.handleClose}
+      disabled={props.disableConfirmationButton}
     />
   ];
 
@@ -133,6 +134,7 @@ StylizedBaseDialog.propTypes = {
   hideFooter: PropTypes.bool,
   confirmationButtonText: PropTypes.string.isRequired,
   cancellationButtonText: PropTypes.string.isRequired,
+  disableConfirmationButton: PropTypes.bool,
   handleConfirmation: PropTypes.func,
   handleClose: PropTypes.func.isRequired,
   handleCancellation: PropTypes.func,
