@@ -4,14 +4,6 @@ import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 export default class SaveBar extends Component {
-  static propTypes = {
-    lastSaved: PropTypes.number,
-    error: PropTypes.string,
-    handleSave: PropTypes.func.isRequired,
-    handleView: PropTypes.func.isRequired,
-    isSaving: PropTypes.bool
-  };
-
   render() {
     return (
       <div style={styles.saveButtonBackground} className="saveBar">
@@ -65,6 +57,14 @@ export default class SaveBar extends Component {
     );
   }
 }
+
+SaveBar.propTypes = {
+  error: PropTypes.string,
+  handleSave: PropTypes.func.isRequired,
+  handleView: PropTypes.func.isRequired,
+  isSaving: PropTypes.bool,
+  lastSaved: PropTypes.number
+};
 
 const styles = {
   saveButtonBackground: {
