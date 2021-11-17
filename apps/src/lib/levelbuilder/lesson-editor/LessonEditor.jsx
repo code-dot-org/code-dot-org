@@ -74,9 +74,10 @@ class LessonEditor extends Component {
   }
 
   handleView = () => {
-    navigateToHref(
-      linkWithQueryParams(this.state.originalLessonData.lessonPath)
-    );
+    this.state.hasLessonPlan &&
+      navigateToHref(
+        linkWithQueryParams(this.state.originalLessonData.lessonPath)
+      );
   };
 
   handleSave = (event, shouldCloseAfterSave) => {
