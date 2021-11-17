@@ -7,8 +7,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:16 UTC",
+    "serialized_at": "2021-11-07 00:04:59 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "new-d"
     }
@@ -804,7 +807,12 @@
         "level_keys": [
           "bounce_1",
           "courseD_bounce_events1s"
-        ]
+        ],
+        "variants": {
+          "courseD_bounce_events1s": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -830,7 +838,12 @@
         "level_keys": [
           "bounce_2",
           "courseD_bounce_events2s"
-        ]
+        ],
+        "variants": {
+          "courseD_bounce_events2s": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -856,7 +869,12 @@
         "level_keys": [
           "bounce_5",
           "courseD_bounce_events5s"
-        ]
+        ],
+        "variants": {
+          "courseD_bounce_events5s": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -882,7 +900,12 @@
         "level_keys": [
           "bounce_6",
           "courseD_bounce_events6s"
-        ]
+        ],
+        "variants": {
+          "courseD_bounce_events6s": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -908,7 +931,12 @@
         "level_keys": [
           "bounce_7",
           "courseD_bounce_events7s"
-        ]
+        ],
+        "variants": {
+          "courseD_bounce_events7s": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -934,7 +962,12 @@
         "level_keys": [
           "bounce_10",
           "courseD_bounce_events10s"
-        ]
+        ],
+        "variants": {
+          "courseD_bounce_events10s": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -960,7 +993,12 @@
         "level_keys": [
           "bounce_11",
           "courseD_bounce_events11s"
-        ]
+        ],
+        "variants": {
+          "courseD_bounce_events11s": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {
@@ -986,7 +1024,12 @@
         "level_keys": [
           "bounce_12",
           "courseD_bounce_events12s"
-        ]
+        ],
+        "variants": {
+          "courseD_bounce_events12s": {
+            "active": false
+          }
+        }
       },
       "bonus": false,
       "seeding_key": {

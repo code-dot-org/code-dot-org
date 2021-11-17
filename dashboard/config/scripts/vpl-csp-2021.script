@@ -1,9 +1,11 @@
 hideable_lessons true
 student_detail_progress_view true
 teacher_resources [["curriculum", "https://studio.code.org/courses/csp-2021"], ["teacherForum", "https://forum.code.org/"], ["curriculumGuide", "https://docs.google.com/document/d/1k0wytFCORchnEg4G214yVFMZXJcUa2PoKaw-TrxtLjI/edit?usp=sharing"]]
-version_year '2021'
+family_name 'vpl-csp-2021'
+version_year 'unversioned'
 published_state 'pilot'
 pilot_experiment '20-21-virtual-AYW-CSP'
+is_course true
 
 lesson 'Module 1', display_name: 'Module 1', has_lesson_plan: false
 level 'CSP-PL AYWS1 Workshop Overview', progression: 'Module 1 Overview (~5 minutes)'
@@ -13,7 +15,7 @@ level 'CSP-PL - U4 L12 Practice PT 1', progression: 'Unit 4 Overview (~30 minute
 level 'CSP-PL U4 L12 Practice PT 2', progression: 'Unit 4 Overview (~30 minutes)'
 level 'CSP Module 1 Unit 4 Reflection', progression: 'Unit 4 Overview (~30 minutes)'
 level 'CSP Module 1 EIPM Reflection', progression: 'Introducing EIPM (~25 minutes)'
-level 'CSP - Module 1 Wrap Up', progression: 'Module 1 Asynchronous wrap-up (~10 minutes)'
+level 'CSP - Module 1 Wrap Up', progression: 'Module 1 Asynchronous Wrap Up (~10 minutes)'
 
 lesson 'Module 2', display_name: 'Module 2', has_lesson_plan: false
 level 'CSP-PL AYWS2 Workshop Overview', progression: 'Module 2 Overview (~5 minutes)'
@@ -33,7 +35,7 @@ level 'CSP - PL - U4 L04 Variables Make Project Submit_2020', progression: 'Vari
 level 'CSP - PL - Make Reflection', progression: 'Variables Make (~30 minutes)'
 level 'CSP-PL - Unit 4 Wrap-up', progression: 'Collaborative and Independent Work (~10 minutes)'
 level 'CSP - PL - Collaboration Reflection', progression: 'Collaborative and Independent Work (~10 minutes)'
-level 'CSP - Module 2 Wrap Up', progression: 'Module 2 Asynchronous wrap-up (~10 minutes)'
+level 'CSP - Module 2 Wrap Up', progression: 'Module 2 Asynchronous Wrap Up (~10 minutes)'
 
 lesson 'Module 3', display_name: 'Module 3', has_lesson_plan: false
 level 'CSP-PL AYWS3 Workshop Overview', progression: 'Module 3 Overview (~5 minutes)'
@@ -56,7 +58,7 @@ level 'CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify', progress
 level 'CSP - Asynch4 - U5L10 Traversals Investigate', progression: 'Traversals and datasets (~15 minutes)'
 level 'CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify', progression: 'Traversals and datasets (~15 minutes)'
 level 'CSP AYW4 - Reflection on datasets', progression: 'Traversals and datasets (~15 minutes)'
-level 'CSP - Module 4 Wrap Up', progression: 'Module 4 Asynchronous Wrap-Up (~10 minutes)'
+level 'CSP - Module 4 Wrap Up', progression: 'Module 4 Asynchronous Wrap Up (~10 minutes)'
 
 lesson 'Module 5', display_name: 'Module 5: Unit 7 and Understanding Functions with Parameters and Return', has_lesson_plan: false
 level 'CSP-PL Module 5 - Workshop Overview', progression: 'Module 5 Overview (~5 minutes)'
@@ -72,12 +74,31 @@ level 'PL U7 Param Investigate Calculator App', progression: 'Digging into the "
 level 'PL U7 Param Practice App 2', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
 level 'CSP-PL M5 - Param Prac 10', progression: 'Digging into the "Parameters and Return Practice" lesson (~30 minutes)'
 level 'CSP-PL M5 - Inclusive Classrooms', progression: 'Creating inclusive classrooms (~15 minutes)'
-level 'CSP - Module 5 Wrap Up', progression: 'Module 5 Asynchronous wrap-up (~10 minutes)'
+level 'CSP - Module 5 Wrap Up', progression: 'Module 5 Asynchronous Wrap Up (~10 minutes)'
 
 lesson 'Module 6', display_name: 'Module 6: Introduction to the Create Performance Task', has_lesson_plan: false
 level 'CSP-PL Module 6 - Workshop Overview', progression: 'Module 6 overview (~5 minutes)'
 level 'CSP-PL M6 - Create PT Reqs', progression: 'Requirements of the Create Performance Task (~20 minutes)'
 level 'CSP-PL M6 - Survival Guide', progression: 'Digging into the Create Performance Task Survival Guide (~40 minutes)'
 level 'CSP-PL M6 - Role of teacher', progression: 'Role of the teacher during the Create Performance Task (~15 minutes)'
-level 'CSP - Module 6 Wrap Up', progression: 'Module 6 Asynchronous Wrap-Up (~10 minutes)'
+level 'CSP - Module 6 Wrap Up', progression: 'Module 6 Asynchronous Wrap Up (~10 minutes)'
+
+lesson 'Module 7', display_name: 'Module 7: Tools and Structure in Unit 9 - Data', has_lesson_plan: false
+level 'CSP-PL Module 7 - Workshop Overview', progression: 'Module 7 Overview (~5 minutes)'
+level 'CSP-PL M7 - Unit 9 Overview', progression: 'Overview of Unit 9 - Data (~10 minutes)'
+level 'CSP-PL M7 - Google Trends', progression: 'Using the Google Trends Tool (~20 minutes)'
+level 'CSP-PL M7 - Data Viz 1', progression: 'Using the Data Visualizer Tool (~45 minutes)'
+level 'CSP-PL M7 - Data Viz 2', progression: 'Using the Data Visualizer Tool (~45 minutes)'
+level 'CSP-PL M7 - Data Viz 3', progression: 'Using the Data Visualizer Tool (~45 minutes)'
+level 'CSP-PL M7 - Data Viz 4', progression: 'Using the Data Visualizer Tool (~45 minutes)'
+level 'CSP - Module 7 Wrap Up', progression: 'Module 7 Asynchronous Wrap Up (~10 minutes)'
+
+lesson 'Module 8', display_name: 'Module 8: Building Community and Preparing Students for the AP Exam', has_lesson_plan: false
+level 'CSP-PL Module 8 - Workshop Overview', progression: 'Module 8 Overview (~5 minutes)'
+level 'CSP-PL M8 - Community 1', progression: 'Connecting to the CS Community (~15 minutes)'
+level 'CSP-PL M8 - Community 2', progression: 'Connecting to the CS Community (~15 minutes)'
+level 'CSP-PL M8 - MC Exam 1', progression: 'Preparing students for the AP Multiple Choice Exam (~60 minutes)'
+level 'CSP-PL M8 - Exam 2', progression: 'Preparing students for the AP Multiple Choice Exam (~60 minutes)'
+level 'CSP-PL M8 - Exam 3', progression: 'Preparing students for the AP Multiple Choice Exam (~60 minutes)'
+level 'CSP - Module 8 Wrap Up', progression: 'Module 8 Asynchronous Wrap Up (~10 minutes)'
 

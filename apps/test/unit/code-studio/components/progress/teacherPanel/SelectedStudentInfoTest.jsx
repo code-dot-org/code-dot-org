@@ -3,29 +3,33 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../../../util/reconfiguredChai';
 import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import i18n from '@cdo/locale';
 
 const LEVEL_WITH_PROGRESS = {
   id: '123',
   assessment: null,
   contained: false,
-  driver: null,
+  paired: false,
+  partnerNames: null,
+  partnerCount: null,
   isConceptLevel: false,
   levelNumber: 4,
-  navigators: null,
-  paired: null,
-  isDriver: null,
-  isNavigator: null,
   passed: false,
-  status: LevelStatus.not_tried,
-  userId: 1
+  status: LevelStatus.not_tried
 };
+
+const DEFAULT_SELECTED_USER = 1;
 
 const DEFAULT_PROPS = {
   students: [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}],
-  selectedStudent: {id: 1, name: 'Student 1'},
-  levelWithProgress: LEVEL_WITH_PROGRESS,
+  levelsWithProgress: [
+    {...LEVEL_WITH_PROGRESS, userId: 1},
+    {...LEVEL_WITH_PROGRESS, userId: 2},
+    {...LEVEL_WITH_PROGRESS, userId: 5}
+  ],
   onSelectUser: () => {},
-  getSelectedUserId: () => {}
+  selectedUserId: DEFAULT_SELECTED_USER,
+  teacherId: 5
 };
 
 const setUp = overrideProps => {
@@ -42,9 +46,30 @@ describe('SelectedStudentInfo', () => {
 
   // levelWithProgress data is loaded async, this test ensures the component handles missing data
   it('displays student name, gracefully handles missing userLevel', () => {
-    const wrapper = setUp({levelWithProgress: null});
+    const wrapper = setUp({levelsWithProgress: null});
     expect(wrapper.contains('Student 1')).to.equal(true);
     expect(wrapper.find('ProgressBubble')).to.have.length(0);
+  });
+
+  it('displays teacher if selectedUserId is null, gracefully handles missing userLevel', () => {
+    const wrapper = setUp({levelsWithProgress: null, selectedUserId: null});
+    expect(wrapper.contains(i18n.studentTableTeacherDemo())).to.equal(true);
+    expect(wrapper.find('ProgressBubble')).to.have.length(0);
+  });
+
+  it('passes expected levelWithProgress to ProgressBubble for selected user', () => {
+    const teacherLevelWithProgress = {
+      ...LEVEL_WITH_PROGRESS,
+      userId: 5,
+      id: 'test'
+    };
+    const wrapper = setUp({
+      levelsWithProgress: [teacherLevelWithProgress],
+      selectedUserId: null
+    });
+    const progressBubble = wrapper.find('ProgressBubble');
+    expect(progressBubble).to.have.length(1);
+    expect(progressBubble.props().level.id).to.equal('test');
   });
 
   it('displays time and unsubmit button if submitted level', () => {
@@ -52,9 +77,10 @@ describe('SelectedStudentInfo', () => {
       ...LEVEL_WITH_PROGRESS,
       submitLevel: true,
       submitted: true,
-      status: LevelStatus.submitted
+      status: LevelStatus.submitted,
+      userId: DEFAULT_SELECTED_USER
     };
-    const wrapper = setUp({levelWithProgress});
+    const wrapper = setUp({levelsWithProgress: [levelWithProgress]});
     expect(wrapper.contains('Submitted On:')).to.equal(true);
     expect(wrapper.find('Button')).to.have.length(1);
   });
@@ -63,74 +89,42 @@ describe('SelectedStudentInfo', () => {
     const levelWithProgress = {
       ...LEVEL_WITH_PROGRESS,
       contained: true,
-      status: LevelStatus.perfect
+      status: LevelStatus.perfect,
+      userId: DEFAULT_SELECTED_USER
     };
-    const wrapper = setUp({levelWithProgress});
+    const wrapper = setUp({levelsWithProgress: [levelWithProgress]});
 
     expect(wrapper.contains('Last Updated:')).to.equal(true);
   });
 
-  it('displays time and who they worked with as navigator if paired as driver on level', () => {
+  it('displays time if paired', () => {
     const levelWithProgress = {
       ...LEVEL_WITH_PROGRESS,
-      paired: true,
-      isDriver: true,
       status: LevelStatus.perfect,
-      navigators: ['Student 2', 'Student 3']
+      paired: true,
+      userId: DEFAULT_SELECTED_USER
     };
-    const wrapper = setUp({levelWithProgress});
 
-    expect(wrapper.contains('Worked With:')).to.equal(true);
-    expect(wrapper.contains('Partner: Student 2')).to.equal(true);
-    expect(wrapper.contains('Logged in:')).to.equal(false);
+    const wrapper = setUp({
+      levelsWithProgress: [levelWithProgress]
+    });
+
     expect(wrapper.contains('Last Updated:')).to.equal(true);
   });
 
-  it('displays time and unknown navigator if paired as driver on level', () => {
-    const levelWithProgress = {
-      ...LEVEL_WITH_PROGRESS,
-      paired: true,
-      isDriver: true,
-      status: LevelStatus.perfect,
-      navigators: []
-    };
-    const wrapper = setUp({levelWithProgress});
-
-    expect(wrapper.contains('Worked With:')).to.equal(true);
-    expect(wrapper.contains('Partner: n/a')).to.equal(true);
-    expect(wrapper.contains('Logged in:')).to.equal(false);
-    expect(wrapper.contains('Last Updated:')).to.equal(true);
+  it('does not display SelectedStudentPairing if not paired', () => {
+    const wrapper = setUp();
+    expect(wrapper.find('SelectedStudentPairing')).to.have.length(0);
   });
 
-  it('displays time and who they worked with as driver if paired as navigator on level', () => {
+  it('displays SelectedStudentPairing if paired', () => {
     const levelWithProgress = {
       ...LEVEL_WITH_PROGRESS,
-      paired: true,
-      isNavigator: true,
       status: LevelStatus.perfect,
-      driver: 'Student 2'
-    };
-    const wrapper = setUp({levelWithProgress});
-
-    expect(wrapper.contains('Worked With:')).to.equal(true);
-    expect(wrapper.contains('Logged in: Student 2')).to.equal(true);
-    expect(wrapper.contains('Partner:')).to.equal(false);
-    expect(wrapper.contains('Last Updated:')).to.equal(true);
-  });
-
-  it('displays time and unknown driver if paired as navigator on level', () => {
-    const levelWithProgress = {
-      ...LEVEL_WITH_PROGRESS,
       paired: true,
-      isNavigator: true,
-      status: LevelStatus.perfect,
-      driver: null
+      userId: DEFAULT_SELECTED_USER
     };
-    const wrapper = setUp({levelWithProgress});
-
-    expect(wrapper.contains('Worked With:')).to.equal(true);
-    expect(wrapper.contains('Logged in: n/a')).to.equal(true);
-    expect(wrapper.contains('Partner:')).to.equal(false);
-    expect(wrapper.contains('Last Updated:')).to.equal(true);
+    const wrapper = setUp({levelsWithProgress: [levelWithProgress]});
+    expect(wrapper.find('SelectedStudentPairing')).to.have.length(1);
   });
 });

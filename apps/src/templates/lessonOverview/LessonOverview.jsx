@@ -24,7 +24,7 @@ import Announcements from '../../code-studio/components/progress/Announcements';
 import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
-import {PublishedState} from '@cdo/apps/util/sharedConstants';
+import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 
 class LessonOverview extends Component {
   static propTypes = {
@@ -98,7 +98,9 @@ class LessonOverview extends Component {
     } = this.props;
 
     const displayVerifiedResourcesNotification =
-      viewAs === ViewType.Teacher && !isVerifiedTeacher && hasVerifiedResources;
+      viewAs === ViewType.Instructor &&
+      !isVerifiedTeacher &&
+      hasVerifiedResources;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
 

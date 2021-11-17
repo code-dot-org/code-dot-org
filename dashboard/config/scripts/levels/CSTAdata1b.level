@@ -248,7 +248,7 @@
                                               <mutation>
                                                 <arg name="speed" type="Number"/>
                                               </mutation>
-                                              <title name="VAR">wandering</title>
+                                              <title name="VAR" id="wandering">wandering</title>
                                               <value name="ARG0">
                                                 <block type="math_number">
                                                   <title name="NUM">1</title>
@@ -268,7 +268,7 @@
                                                   <mutation>
                                                     <arg name="speed" type="Number"/>
                                                   </mutation>
-                                                  <title name="VAR">wandering</title>
+                                                  <title name="VAR" id="wandering">wandering</title>
                                                   <value name="ARG0">
                                                     <block type="math_number">
                                                       <title name="NUM">3</title>
@@ -288,7 +288,7 @@
                                                       <mutation>
                                                         <arg name="speed" type="Number"/>
                                                       </mutation>
-                                                      <title name="VAR">wandering</title>
+                                                      <title name="VAR" id="wandering">wandering</title>
                                                       <value name="ARG0">
                                                         <block type="math_number">
                                                           <title name="NUM">2</title>

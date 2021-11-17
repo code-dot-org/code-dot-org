@@ -70,8 +70,12 @@ export const NeighborhoodExceptionType = makeEnum(
 );
 
 export const TheaterSignalType = {
+  // This message contains the url to an audio element
   AUDIO_URL: 'AUDIO_URL',
-  VISUAL_URL: 'VISUAL_URL'
+  // This message contains the url to a visual element
+  VISUAL_URL: 'VISUAL_URL',
+  // Get an image from the user via Prompter
+  GET_IMAGE: 'GET_IMAGE'
 };
 
 export const StatusMessageType = {
@@ -79,12 +83,21 @@ export const StatusMessageType = {
   COMPILATION_SUCCESSFUL: 'COMPILATION_SUCCESSFUL',
   RUNNING: 'RUNNING',
   GENERATING_RESULTS: 'GENERATING_RESULTS',
+  TIMEOUT_WARNING: 'TIMEOUT_WARNING',
+  TIMEOUT: 'TIMEOUT',
   EXITED: 'EXITED'
 };
 
 export const InputMessageType = {
   SYSTEM_IN: 'SYSTEM_IN',
-  PLAYGROUND: 'PLAYGROUND'
+  PLAYGROUND: 'PLAYGROUND',
+  THEATER: 'THEATER'
+};
+
+export const InputMessage = {
+  // Theater-specific messages
+  UPLOAD_SUCCESS: 'UPLOAD_SUCCESS',
+  UPLOAD_ERROR: 'UPLOAD_ERROR'
 };
 
 export const SoundExceptionType = makeEnum(
@@ -102,12 +115,13 @@ export const TheaterExceptionType = makeEnum(
 export const PlaygroundExceptionType = {
   PLAYGROUND_RUNNING: 'PLAYGROUND_RUNNING',
   PLAYGROUND_NOT_RUNNING: 'PLAYGROUND_NOT_RUNNING',
-  INVALID_MESSAGE_PLAYGROUND_ENDED: 'INVALID_MESSAGE_PLAYGROUND_ENDED'
+  INVALID_MESSAGE: 'INVALID_MESSAGE'
 };
 
 export const CompileStatus = makeEnum('NONE', 'LOADING', 'SUCCESS', 'ERROR');
 
 export const STATUS_MESSAGE_PREFIX = '[JAVALAB]';
+export const EXCEPTION_PREFIX = '[EXCEPTION]';
 
 export const PlaygroundSignalType = {
   // Indicate that the Playground game has started
@@ -127,7 +141,11 @@ export const PlaygroundSignalType = {
   // Play a sound
   PLAY_SOUND: 'PLAY_SOUND',
   // Set the background image of the Playground
-  SET_BACKGROUND_IMAGE: 'SET_BACKGROUND_IMAGE'
+  SET_BACKGROUND_IMAGE: 'SET_BACKGROUND_IMAGE',
+  // Set of updates to the playground
+  UPDATE: 'UPDATE',
+  // Indicate that the current update cycle has completed
+  UPDATE_COMPLETE: 'UPDATE_COMPLETE'
 };
 
 export const PlaygroundFontTypeFontFamilies = {
@@ -146,4 +164,11 @@ export const PlaygroundFontStyleType = makeEnum(
 export const PlaygroundItemType = {
   IMAGE: 'image',
   TEXT: 'text'
+};
+
+export const ExecutionType = {
+  // Compile and run the main method
+  RUN: 'RUN',
+  // Compile and run tests
+  TEST: 'TEST'
 };

@@ -8,7 +8,7 @@ const defaultProps = {
   handleClose: () => {
     console.log('closed');
   },
-  viewAs: ViewType.Teacher,
+  viewAs: ViewType.Instructor,
   isRtl: false
 };
 
@@ -89,6 +89,7 @@ const bubbleChoiceScriptLevel = {
 
 const levelWithInstructions = {
   url: '/s/csd6-2020/lessons/16/levels/9/page/1',
+  exampleSolutions: ['solution/1/link'],
   level: {
     type: 'Weblab',
     longInstructions:
@@ -113,6 +114,7 @@ const levelWithInstructions = {
 
 const levelWithContainedLevel = {
   url: '/s/coursef-2021/lessons/2/levels/2',
+  exampleSolutions: ['solution/1/link'],
   level: {
     type: 'GamelabJr',
     containedLevels: [

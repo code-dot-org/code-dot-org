@@ -142,7 +142,13 @@ class ProjectsController < ApplicationController
     },
     javalab: {
       name: 'New Java Lab Project',
-      levelbuilder_required: true
+      login_required: true
+    },
+    poetry: {
+      name: 'New Poetry Project'
+    },
+    poetry_hoc: {
+      name: 'New Poetry HOC Project'
     }
   }.with_indifferent_access.freeze
 
@@ -178,7 +184,7 @@ class ProjectsController < ApplicationController
     storage_apps = "#{CDO.pegasus_db_name}__storage_apps".to_sym
     project_featured_project_combo_data = DASHBOARD_DB[:featured_projects].
       select(*project_and_featured_project_fields).
-      join(storage_apps, id: :storage_app_id).all
+      join(storage_apps, id: :storage_app_id, state: 'active').all
     extract_data_for_tables(project_featured_project_combo_data)
   end
 
@@ -261,7 +267,7 @@ class ProjectsController < ApplicationController
   private def initial_data
     data = {
       name: 'Untitled Project',
-      level: polymorphic_url([params[:key], 'project_projects'])
+      level: polymorphic_url([params[:key].to_sym, :project_projects])
     }
     default_image_url = STANDALONE_PROJECTS[params[:key]][:default_image_url]
     data[:thumbnailUrl] = default_image_url if default_image_url
@@ -318,7 +324,7 @@ class ProjectsController < ApplicationController
       disallowed_html_tags: disallowed_html_tags
     )
 
-    if params[:key] == 'artist'
+    if ['artist', 'spritelab'].include? params[:key]
       @project_image = CDO.studio_url "/v3/files/#{@view_options['channel']}/.metadata/thumbnail.png", 'https:'
     end
 

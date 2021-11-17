@@ -2,9 +2,15 @@
   "func": "constrain",
   "category": "Math",
   "paletteParams": [
-    "num",
-    "low",
-    "high"
+    {
+      "name": "num"
+    },
+    {
+      "name": "low"
+    },
+    {
+      "name": "high"
+    }
   ],
   "params": [
     "1.1",

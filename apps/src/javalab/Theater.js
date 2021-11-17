@@ -1,13 +1,28 @@
-import {TheaterSignalType, STATUS_MESSAGE_PREFIX} from './constants';
+import {
+  TheaterSignalType,
+  STATUS_MESSAGE_PREFIX,
+  InputMessageType,
+  InputMessage
+} from './constants';
 import javalabMsg from '@cdo/javalab/locale';
 
 export default class Theater {
-  constructor(onOutputMessage, onNewlineMessage) {
+  constructor(
+    onOutputMessage,
+    onNewlineMessage,
+    openPhotoPrompter,
+    closePhotoPrompter,
+    onJavabuilderMessage
+  ) {
     this.canvas = null;
     this.context = null;
     this.onOutputMessage = onOutputMessage;
     this.onNewlineMessage = onNewlineMessage;
+    this.openPhotoPrompter = openPhotoPrompter;
+    this.closePhotoPrompter = closePhotoPrompter;
+    this.onJavabuilderMessage = onJavabuilderMessage;
     this.loadEventsFinished = 0;
+    this.prompterUploadUrl = null;
   }
 
   handleSignal(data) {
@@ -23,6 +38,12 @@ export default class Theater {
         // Preload the image. Once it's ready, start the playback
         this.getImgElement().src = data.detail.url + this.getCacheBustSuffix();
         this.getImgElement().onload = () => this.startPlayback();
+        break;
+      }
+      case TheaterSignalType.GET_IMAGE: {
+        // Open the photo prompter
+        this.prompterUploadUrl = data.detail.uploadUrl;
+        this.openPhotoPrompter(data.detail.prompt);
         break;
       }
       default:
@@ -43,7 +64,20 @@ export default class Theater {
   reset() {
     this.loadEventsFinished = 0;
     this.getImgElement().style.visibility = 'hidden';
-    this.getAudioElement().src = '';
+    this.resetAudioAndVideo();
+  }
+
+  onStop() {
+    this.resetAudioAndVideo();
+    // Close the photo prompter if it is still open
+    this.closePhotoPrompter();
+  }
+
+  resetAudioAndVideo() {
+    const audioElement = this.getAudioElement();
+    audioElement.pause();
+    audioElement.src = '';
+    this.getImgElement().src = '';
   }
 
   getImgElement() {
@@ -60,9 +94,50 @@ export default class Theater {
       `${STATUS_MESSAGE_PREFIX} ${javalabMsg.programCompleted()}`
     );
     this.onNewlineMessage();
+    // Close the photo prompter if it is still open
+    this.closePhotoPrompter();
   }
 
   getCacheBustSuffix() {
     return '?=' + new Date().getTime();
   }
+
+  onPhotoPrompterFileSelected(photo) {
+    if (!this.prompterUploadUrl) {
+      // The upload URL should be provided when opening the prompter, so if
+      // it is somehow not set, we are in an invalid scenario.
+      this.onJavabuilderMessage(
+        InputMessageType.THEATER,
+        InputMessage.UPLOAD_ERROR
+      );
+      return;
+    }
+
+    this.uploadFile(
+      this.prompterUploadUrl,
+      photo,
+      xhr => {
+        this.onJavabuilderMessage(
+          InputMessageType.THEATER,
+          InputMessage.UPLOAD_SUCCESS
+        );
+      },
+      xhr => {
+        this.onJavabuilderMessage(
+          InputMessageType.THEATER,
+          InputMessage.UPLOAD_ERROR
+        );
+      }
+    );
+  }
+
+  uploadFile = (uploadUrl, fileData, onSuccess, onError) => {
+    // Use XHR directly (rather than ajax) so we can upload binary file data directly
+    const xhr = new XMLHttpRequest();
+    xhr.open('PUT', uploadUrl, true);
+    xhr.onload = onSuccess;
+    xhr.onerror = onError;
+
+    xhr.send(fileData);
+  };
 }

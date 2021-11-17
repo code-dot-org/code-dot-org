@@ -79,6 +79,7 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {setExportGeneratedProperties} from '@cdo/apps/code-studio/components/exportDialogRedux';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -1229,15 +1230,9 @@ export default class P5Lab {
    *         loading the game.
    */
   onP5Preload() {
-    Promise.all([
-      this.isBlockly
-        ? this.preloadSpriteImages_()
-        : this.preloadAnimations_(this.level.pauseAnimationsByDefault),
-      this.maybePreloadBackgrounds_(),
-      this.runPreloadEventHandler_()
-    ]).then(() => {
-      this.p5Wrapper.notifyPreloadPhaseComplete();
-    });
+    this.preloadLabAssets()
+      .then(this.runPreloadEventHandler_())
+      .then(() => this.p5Wrapper.notifyPreloadPhaseComplete());
     return false;
   }
 
@@ -1250,39 +1245,6 @@ export default class P5Lab {
     }
   }
 
-  // Preloads background images if this is Sprite Lab
-  maybePreloadBackgrounds_() {
-    if (!this.isBlockly) {
-      return Promise.resolve();
-    }
-    return this.p5Wrapper.preloadBackgrounds();
-  }
-
-  /**
-   * Wait for animations to be loaded into memory and ready to use, then pass
-   * those animations to P5 to be loaded into the engine as animations.
-   * @param {Boolean} pauseAnimationsByDefault whether animations should be paused
-   * @returns {Promise} which resolves once animations are in memory in the redux
-   *          store and we've started loading them into P5.
-   *          Loading to P5 is also an async process but it has its own internal
-   *          effect on the P5 preloadCount, so we don't need to track it here.
-   * @private
-   */
-  async preloadAnimations_(pauseAnimationsByDefault) {
-    await this.whenAnimationsAreReady();
-    // Animations are ready - send them to p5 to be loaded into the engine.
-    return this.p5Wrapper.preloadAnimations(
-      getStore().getState().animationList,
-      pauseAnimationsByDefault
-    );
-  }
-
-  async preloadSpriteImages_() {
-    await this.whenAnimationsAreReady();
-    return this.p5Wrapper.preloadSpriteImages(
-      getStore().getState().animationList
-    );
-  }
   /**
    * Check whether all animations in the project animation list have been loaded
    * into memory and are ready to use.
@@ -1578,12 +1540,29 @@ export default class P5Lab {
   }
 
   /**
+   * Override to change whether the current app wants to show the
+   * save & publish buttons in the "finish" feedback dialog, shown
+   * by calling this.studioApp_.displayFeedback() in
+   * displayFeedback_(), below.
+   */
+  saveToProjectGallery() {
+    return false;
+  }
+
+  /**
    * App specific displayFeedback function that calls into
    * this.studioApp_.displayFeedback when appropriate
    */
   displayFeedback_() {
     var level = this.level;
     let msg = this.getMsg();
+
+    const isSignedIn =
+      getStore().getState().currentUser.signInState === SignInState.SignedIn;
+
+    // Find out whether the current app (e.g. SpriteLab, GameLab, or Poetry) wants
+    // to show the save & publish buttons in this dialog.
+    const saveToProjectGallery = this.saveToProjectGallery();
 
     this.studioApp_.displayFeedback({
       feedbackType: this.testResults,
@@ -1596,7 +1575,9 @@ export default class P5Lab {
         reinfFeedbackMsg: msg.reinfFeedbackMsg(),
         sharingText: msg.shareGame()
       },
-      hideXButton: true
+      hideXButton: true,
+      saveToProjectGallery: saveToProjectGallery,
+      disableSaveToGallery: !isSignedIn
     });
   }
 

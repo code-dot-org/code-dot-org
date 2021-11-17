@@ -11,7 +11,7 @@ class LevelsHelperTest < ActionView::TestCase
   end
 
   setup do
-    @level = create(:maze, level_num: 'custom')
+    @level = create(:maze)
 
     def request
       OpenStruct.new(
@@ -149,7 +149,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "should select only callouts for current script level" do
     script = create(:script)
-    @level = create(:level, :blockly, user_id: nil)
+    @level = create(:deprecated_blockly_level)
     lesson = create(:lesson, script: script)
     @script_level = create(:script_level, script: script, levels: [@level], lesson: lesson)
 
@@ -166,7 +166,7 @@ class LevelsHelperTest < ActionView::TestCase
 
   test "should localize callouts" do
     script = create(:script)
-    @level = create(:level, :blockly, user_id: nil)
+    @level = create(:deprecated_blockly_level)
     lesson = create(:lesson, script: script)
     @script_level = create(:script_level, script: script, levels: [@level], lesson: lesson)
 
@@ -202,7 +202,35 @@ class LevelsHelperTest < ActionView::TestCase
     assert_equal blockly_level_options, level.blockly_level_options
   end
 
-  test 'app_options sets a channel' do
+  test 'app_options sets a channel if the level is not cached for a channel-backed level' do
+    user = create :user
+    sign_in user
+
+    ScriptConfig.stubs(:allows_public_caching_for_script).returns(false)
+
+    @script = create(:script)
+    @level = create :applab
+    create(:script_level, script: @script, levels: [@level])
+
+    assert_not_nil app_options['channel']
+  end
+
+  test 'app_options does not set a channel if the level is cached' do
+    ScriptConfig.stubs(:allows_public_caching_for_script).returns(true)
+
+    @script = create(:script)
+    @level = create :applab
+    create(:script_level, script: @script, levels: [@level])
+
+    assert_nil app_options['channel']
+  end
+
+  test "app_options sets level_requires_channel to true if level is channel backed" do
+    @level = create :applab
+    assert_equal true, app_options['levelRequiresChannel']
+  end
+
+  test 'get_channel_for sets a channel' do
     user = create :user
     sign_in user
 
@@ -219,12 +247,40 @@ class LevelsHelperTest < ActionView::TestCase
     assert_not_equal channel, get_channel_for(level, script.id)
   end
 
-  test 'applab levels should have channels' do
-    user = create :user
-    sign_in user
+  test 'uses_google_blockly is false if not set' do
+    @level = build :level
+    refute use_google_blockly
+  end
 
-    @level = create :applab
-    assert_not_nil app_options['channel']
+  test 'use_google_blockly is true if useGoogleBlockly is set in view_options' do
+    view_options(useGoogleBlockly: true)
+    @level = build :level
+    assert use_google_blockly
+
+    reset_view_options
+  end
+
+  test 'use_google_blockly is true if level.uses_google_blockly?' do
+    Level.any_instance.stubs(:uses_google_blockly?).returns(true)
+    @level = build :level
+    assert use_google_blockly
+
+    Level.unstub(:uses_google_blockly?)
+  end
+
+  test 'use_google_blockly is false if level.uses_google_blockly? but disable_google_blockly is set' do
+    GamelabJr.any_instance.stubs(:uses_google_blockly?).returns(true)
+    @level = build :spritelab
+    assert use_google_blockly
+
+    DCDO.stubs(:get).with('disable_google_blockly', []).returns(['GamelabJr'])
+    refute use_google_blockly
+
+    # Should be case insensitive
+    DCDO.stubs(:get).with('disable_google_blockly', []).returns(['gamelabjr'])
+    refute use_google_blockly
+
+    DCDO.unstub(:get)
   end
 
   test 'applab levels should not load channel when viewing student solution of a student without a channel' do

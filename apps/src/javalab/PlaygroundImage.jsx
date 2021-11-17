@@ -32,20 +32,7 @@ export default class PlaygroundImage extends React.Component {
     dynamicStyles.height = heightAdjusted;
     dynamicStyles.marginTop = yAdjusted;
     dynamicStyles.marginLeft = xAdjusted;
-    dynamicStyles.clipPath = `inset(0 ${this.getClipPath(
-      widthAdjusted,
-      xAdjusted
-    )} ${this.getClipPath(heightAdjusted, yAdjusted)} 0)`;
     return dynamicStyles;
-  }
-
-  // If the image would go outside of the 800x800 box we put playground
-  // into, cut it off at the appropriate dimension. This will crop any images
-  // that go outside of the box, which is our expected behavior.
-  getClipPath(dimension, coordinate) {
-    return dimension + coordinate > 800
-      ? `${dimension + coordinate - 800}px`
-      : 0;
   }
 
   render() {

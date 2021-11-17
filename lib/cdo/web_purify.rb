@@ -16,6 +16,7 @@ module WebPurify
   # @return [Array<String>, nil] The profanities (if any) or nil (if none).
   def self.find_potential_profanities(text, language_codes = ['en'])
     return nil unless CDO.webpurify_key && Gatekeeper.allows('webpurify', default: true)
+    return nil if text.nil?
     # Convert language codes to a list of two character codes, comma separated.
     language_codes = language_codes.
       map {|language_code| language_code[0..1]}.

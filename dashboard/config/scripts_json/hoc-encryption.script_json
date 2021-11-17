@@ -4,15 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "version_year": "unversioned",
       "is_course": true,
       "is_migrated": true,
-      "use_legacy_lesson_plans": true
+      "use_legacy_lesson_plans": true,
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "hoc-encryption",
-    "serialized_at": "2021-09-30 23:28:15 UTC",
+    "serialized_at": "2021-10-25 22:53:20 UTC",
     "published_state": "preview",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "hoc-encryption"
     }
@@ -681,9 +682,9 @@
       "url": "https://youtu.be/ZghMPWGXexs",
       "key": "encryption-and-public-keys-optional-1",
       "properties": {
-        "type": "Video",
         "audience": "Student",
-        "download_url": "http://videos.code.org/2015/csp/concept_encryption.mp4"
+        "download_url": "http://videos.code.org/2015/csp/concept_encryption.mp4",
+        "type": "Video"
       },
       "seeding_key": {
         "resource.key": "encryption-and-public-keys-optional-1"
@@ -826,16 +827,6 @@
   ],
   "objectives": [
     {
-      "key": "5d9905b6-0dbe-4624-9184-8fa076dad2bb",
-      "properties": {
-        "description": "Explain why encryption is an important need for everyday life on the Internet."
-      },
-      "seeding_key": {
-        "lesson.key": "Simple Encryption",
-        "objective.key": "5d9905b6-0dbe-4624-9184-8fa076dad2bb"
-      }
-    },
-    {
       "key": "0bd7545d-60d4-4515-8d4e-6c66531e1f7d",
       "properties": {
         "description": "Crack a message encrypted with a Caesar cipher using a Caesar Cipher Widget"
@@ -853,6 +844,16 @@
       "seeding_key": {
         "lesson.key": "Simple Encryption",
         "objective.key": "3e2039fe-71cf-4966-8421-fbb9a2a9f075"
+      }
+    },
+    {
+      "key": "5d9905b6-0dbe-4624-9184-8fa076dad2bb",
+      "properties": {
+        "description": "Explain why encryption is an important need for everyday life on the Internet."
+      },
+      "seeding_key": {
+        "lesson.key": "Simple Encryption",
+        "objective.key": "5d9905b6-0dbe-4624-9184-8fa076dad2bb"
       }
     },
     {

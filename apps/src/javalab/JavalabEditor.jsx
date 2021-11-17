@@ -161,7 +161,7 @@ class JavalabEditor extends React.Component {
   }
 
   createEditor(key, doc) {
-    const {isDarkMode} = this.props;
+    const {isDarkMode, isReadOnlyWorkspace} = this.props;
     const extensions = [...editorSetup];
 
     if (isDarkMode) {
@@ -172,8 +172,11 @@ class JavalabEditor extends React.Component {
       extensions.push(lightModeExtension);
     }
 
-    if (this.props.isReadOnlyWorkspace) {
-      extensions.push(EditorView.editable.of(false));
+    if (isReadOnlyWorkspace) {
+      extensions.push(
+        EditorView.editable.of(false),
+        EditorState.readOnly.of(true)
+      );
     }
 
     this.editors[key] = new EditorView({
