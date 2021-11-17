@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-03 17:13:59 UTC",
+    "serialized_at": "2021-11-16 20:32:44 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7795,7 +7795,7 @@
     {
       "key": "sentinel_value",
       "word": "Sentinel Value",
-      "definition": "Determines when to end a loop",
+      "definition": "An illegal value that causes an algorithm to stop",
       "properties": {
       },
       "seeding_key": {
