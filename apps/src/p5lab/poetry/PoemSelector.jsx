@@ -16,10 +16,18 @@ import {POEMS, PoetryStandaloneApp} from './constants';
 import {getPoem} from './poem';
 import * as utils from '@cdo/apps/utils';
 
+const poemShape = PropTypes.shape({
+  key: PropTypes.string,
+  title: PropTypes.string,
+  author: PropTypes.string,
+  lines: PropTypes.arrayOf(PropTypes.string)
+});
+
 export function PoemEditor(props) {
-  const [title, setTitle] = useState('');
-  const [author, setAuthor] = useState('');
-  const [poem, setPoem] = useState('');
+  const {initialPoem} = props;
+  const [title, setTitle] = useState(initialPoem.title || '');
+  const [author, setAuthor] = useState(initialPoem.author || '');
+  const [poem, setPoem] = useState(initialPoem.lines?.join('\n') || '');
   const [error, setError] = useState(null);
 
   // Reset error if poem state changes.
@@ -75,7 +83,12 @@ export function PoemEditor(props) {
 
   const onSave = () => {
     const closeAndSave = () =>
-      props.handleClose({title, author, lines: poem.split('\n')});
+      props.handleClose({
+        key: msg.enterMyOwn(),
+        title,
+        author,
+        lines: poem.split('\n')
+      });
 
     utils
       .findProfanity(
@@ -121,7 +134,11 @@ export function PoemEditor(props) {
 
 PoemEditor.propTypes = {
   isOpen: PropTypes.bool.isRequired,
-  handleClose: PropTypes.func.isRequired
+  handleClose: PropTypes.func.isRequired,
+  initialPoem: poemShape
+};
+PoemEditor.defaultProps = {
+  initialPoem: {}
 };
 
 function PoemSelector(props) {
@@ -142,22 +159,26 @@ function PoemSelector(props) {
 
   const onChange = e => {
     const poemKey = e.value;
-    const poem = getPoem(poemKey);
-
     if (poemKey === msg.enterMyOwn()) {
       setIsOpen(true);
-    } else if (poem) {
+      return;
+    }
+
+    let poem;
+    if (poemKey === msg.chooseAPoem()) {
+      poem = {
+        key: msg.chooseAPoem(),
+        author: '',
+        title: '',
+        lines: []
+      };
+    } else {
+      poem = getPoem(poemKey);
+    }
+
+    if (poem) {
       props.onChangePoem(poem);
       project.saveSelectedPoem(poem);
-    }
-  };
-
-  const getDropdownValue = () => {
-    const poem = getPoem(props.selectedPoem.key);
-    if (poem) {
-      return poem.key;
-    } else {
-      return msg.enterMyOwn();
     }
   };
 
@@ -168,18 +189,30 @@ function PoemSelector(props) {
       .map(poem => ({value: poem.key, label: poem.title}));
     // Add option to create your own poem to the top of the dropdown.
     options.unshift({value: msg.enterMyOwn(), label: msg.enterMyOwn()});
+    // Add blank option that just says "Choose a Poem" to the top of the dropdown.
+    options.unshift({value: msg.chooseAPoem(), label: msg.chooseAPoem()});
     return options;
+  };
+
+  const initialEditorPoem = () => {
+    if (props.selectedPoem?.key === msg.enterMyOwn()) {
+      return props.selectedPoem;
+    }
   };
 
   return (
     <div id="poemSelector" style={styles.container}>
-      <PoemEditor isOpen={isOpen} handleClose={handleClose} />
+      <PoemEditor
+        isOpen={isOpen}
+        handleClose={handleClose}
+        initialPoem={initialEditorPoem()}
+      />
       <label>
         <b>{msg.selectPoem()}</b>
       </label>
       <div style={styles.selector}>
         <Select
-          value={getDropdownValue()}
+          value={props.selectedPoem.key}
           clearable={false}
           searchable={false}
           onChange={onChange}
@@ -192,7 +225,7 @@ function PoemSelector(props) {
 
 PoemSelector.propTypes = {
   // from Redux
-  selectedPoem: PropTypes.object.isRequired,
+  selectedPoem: poemShape.isRequired,
   onChangePoem: PropTypes.func.isRequired
 };
 

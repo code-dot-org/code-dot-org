@@ -299,15 +299,6 @@ async function loadAppAsync(appOptions) {
     appOptions.disableSocialShare = true;
   }
 
-  const userAppOptionsRequest = $.ajax(
-    `/api/user_app_options` +
-      `/${appOptions.scriptName}` +
-      `/${appOptions.lessonPosition}` +
-      `/${appOptions.levelPosition}` +
-      `/${appOptions.serverLevelId}` +
-      `?get_channel_id=${shouldGetChannelId}`
-  );
-
   const sectionId = clientState.queryParams('section_id') || '';
   const exampleSolutionsRequest = $.ajax(
     `/api/example_solutions/${appOptions.serverScriptLevelId}/${
@@ -315,18 +306,48 @@ async function loadAppAsync(appOptions) {
     }?section_id=${sectionId}`
   );
 
-  try {
-    const [data, exampleSolutions] = await Promise.all([
-      userAppOptionsRequest,
-      exampleSolutionsRequest
-    ]);
+  // Kick off userAppOptionsRequest before awaiting exampleSolutionsRequest to ensure requests
+  // are made in parallel
+  const userAppOptionsRequest = $.ajax({
+    url:
+      `/api/user_app_options` +
+      `/${appOptions.scriptName}` +
+      `/${appOptions.lessonPosition}` +
+      `/${appOptions.levelPosition}` +
+      `/${appOptions.serverLevelId}`,
+    data: {
+      user_id: clientState.queryParams('user_id'),
+      get_channel_id: shouldGetChannelId
+    }
+  });
 
-    appOptions.exampleSolutions = exampleSolutions;
+  try {
+    const exampleSolutions = await exampleSolutionsRequest;
+
+    if (exampleSolutions) {
+      appOptions.exampleSolutions = exampleSolutions;
+    }
+  } catch (err) {
+    console.error('Could not load example solutions');
+  }
+
+  try {
+    const data = await userAppOptionsRequest;
+
     appOptions.disableSocialShare = data.disableSocialShare;
 
-    // We do not need to process data.progress here because labs do not use
-    // the level progress data directly. (The progress bubbles in the header
-    // of the level pages are rendered by header.build in header.js.)
+    if (data.isStarted) {
+      appOptions.level.isStarted = data.isStarted;
+    }
+    if (data.skipInstructionsPopup) {
+      appOptions.level.skipInstructionsPopup = data.skipInstructionsPopup;
+    }
+    if (data.readonlyWorkspace) {
+      appOptions.readonlyWorkspace = data.readonlyWorkspace;
+    }
+    if (data.callouts) {
+      appOptions.callouts = data.callouts;
+    }
 
     if (data.lastAttempt) {
       appOptions.level.lastAttempt = data.lastAttempt.source;
@@ -354,7 +375,7 @@ async function loadAppAsync(appOptions) {
     }
   } catch (err) {
     // TODO: Show an error to the user here? (LP-1815)
-    console.error('Could not load user progress.');
+    console.error('Could not load app options');
     return appOptions;
   }
 }

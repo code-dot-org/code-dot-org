@@ -12,7 +12,9 @@ class ApiControllerTest < ActionController::TestCase
 
     @section = create(:section, user: @teacher, login_type: 'word')
 
-    @script = create(:script)
+    @script = create(:script, :with_levels, levels_count: 1)
+    @script_level = @script.script_levels[0]
+    @level = @script_level.level
 
     # some of our tests depend on sorting of students by name, thus we name them ourselves
     @students = []
@@ -79,7 +81,7 @@ class ApiControllerTest < ActionController::TestCase
     # UserLevel.create!(level_id: level.id, user_id: student.id, script_id: script.id, level_source: level_source)
   end
 
-  test "example_solutions should call ScriptLevel get_example_solution" do
+  test "example_solutions should return expected example solutions" do
     STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
     CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
 
@@ -94,6 +96,39 @@ class ApiControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal '["https://studio.code.org/projects/dance/example-1/view","https://studio.code.org/projects/dance/example-2/view"]', @response.body
+  end
+
+  test "example_solutions should return expected example solutions when section id is empty" do
+    STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    teacher = create :authorized_teacher
+    sign_in teacher
+
+    level = create(:level, :blockly, :with_ideal_level_source)
+    script_level = create :script_level, levels: [level]
+
+    get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: ""}
+
+    assert_response :success
+    assert_equal "[\"http://test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?solution=true\"]", @response.body
+  end
+
+  test "example_solutions should return expected example solutions when section id is present" do
+    STUB_ENCRYPTION_KEY = SecureRandom.base64(Encryption::KEY_LENGTH / 8)
+    CDO.stubs(:properties_encryption_key).returns(STUB_ENCRYPTION_KEY)
+
+    teacher = create :authorized_teacher
+    sign_in teacher
+
+    section = create :section
+    level = create(:level, :blockly, :with_ideal_level_source)
+    script_level = create :script_level, levels: [level]
+
+    get :example_solutions, params: {script_level_id: script_level.id, level_id: level.id, section_id: section.id}
+
+    assert_response :success
+    assert_equal "[\"http://test-studio.code.org/s/#{script_level.script.name}/lessons/1/levels/1?section_id=#{section.id}\\u0026solution=true\"]", @response.body
   end
 
   test "should get text_responses for section with default script" do
@@ -782,83 +817,188 @@ class ApiControllerTest < ActionController::TestCase
     assert_response 403
   end
 
-  test "should get user progress" do
-    script = create(:script, :with_levels, levels_count: 2)
-
+  test "should get signed-in user's user progress" do
     user = create :user, total_lines: 2
-    create :user_level, user: user, best_result: 100, script: script, level: script.script_levels[1].level
     sign_in user
 
-    # Test user progress.
-    get :user_progress, params: {script: script.name}
+    create :user_level, user: user, best_result: 100, script: @script, level: @level
+
+    get :user_progress, params: {script: @script.name}
     assert_response :success
 
     body = JSON.parse(response.body)
+    assert_equal true, body['signedIn']
     assert_equal 2, body['linesOfCode']
-    script_level = script.script_levels[1]
-    level_id = script_level.level.id.to_s
-    assert_equal 'perfect', body['progress'][level_id]['status']
-    assert_equal 100, body['progress'][level_id]['result']
+    level_progress = body['progress'][@level.id.to_s]
+    refute_nil level_progress
+    assert_equal 'perfect', level_progress['status']
+    assert_equal 100, level_progress['result']
   end
 
-  test "should get user progress for lesson" do
-    slogger = FakeSlogger.new
-    CDO.set_slogger_for_test(slogger)
-    script = create(:script, :with_levels, levels_count: 1)
+  test "should get student's user progress if teacher of student" do
+    sign_in @teacher
 
+    create :user_level, user: @student_1, best_result: 100, script: @script, level: @level
+
+    get :user_progress, params: {script: @script.name, user_id: @student_1.id}
+    assert_response :success
+
+    body = JSON.parse(response.body)
+    level_progress = body['progress'][@level.id.to_s]
+    refute_nil level_progress
+    assert_equal 100, level_progress['result']
+  end
+
+  test "should not return student's user progress if not signed in" do
+    sign_out @teacher
+
+    create :user_level, user: @student_1, best_result: 100, script: @script, level: @level
+
+    get :user_progress, params: {script: @script.name, user_id: @student_1.id}
+    assert_response :success
+
+    body = JSON.parse(response.body)
+    assert_equal false, body['signedIn']
+    assert_nil body['progress']
+  end
+
+  test "should fail to get student's user progress if not teacher of student" do
+    user = create :user
+    sign_in user
+
+    create :user_level, user: @student_1, best_result: 100, script: @script, level: @level
+
+    get :user_progress, params: {script: @script.name, user_id: @student_1.id}
+    assert_response :forbidden
+  end
+
+  test "should get signed-in user's user app_options" do
     user = create :user, total_lines: 2
     sign_in user
 
-    script_level = script.script_levels.first
-    level = script_level.level
-    level_source = create :level_source, level: level, data: 'level source'
-
-    create :user_level, user: user, best_result: 100, script: script,
-      level: level, level_source: level_source
-    create :activity, user: user, level: level, level_source: level_source
+    level_source = create :level_source, level: @level, data: 'level source'
+    create :user_level, user: user, best_result: 100, script: @script,
+      level: @level, level_source: level_source
 
     get :user_app_options, params: {
-      script: script.name,
+      script: @script.name,
       lesson_position: 1,
-      level_position: 1
+      level_position: 1,
+      level: @level.id
     }
-    result = {"status" => "perfect", "result" => 100}
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal true, body['signedIn']
-    assert_nil body['disableSocialShare']
-    assert_equal result, body['progress'][level.id.to_s]
+    assert_equal false, body['disableSocialShare']
     assert_equal 'level source', body['lastAttempt']['source']
-
-    assert_equal(
-      [
-        {
-          application: :dashboard,
-          tag: 'activity_start',
-          script_level_id: script_level.id,
-          level_id: level.id,
-          user_agent: 'Rails Testing',
-          locale: :'en-US'
-        }
-      ],
-      slogger.records
-    )
   end
 
-  test "user_app_options should return channel when param get_channel_id is true" do
-    script = create(:script, :with_levels, levels_count: 1)
-    level = script.script_levels.first.level
+  test "should get student's user app_options if teacher of student" do
+    sign_in @teacher
 
-    user = create :user, total_lines: 2
+    level_source = create :level_source, level: @level, data: 'level source'
+    create :user_level, user: @student_1, best_result: 100, script: @script,
+      level: @level, level_source: level_source
+
+    get :user_app_options, params: {
+      script: @script.name,
+      lesson_position: 1,
+      level_position: 1,
+      level: @level.id,
+      user_id: @student_1.id
+    }
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal true, body['signedIn']
+    assert_equal false, body['disableSocialShare']
+    assert_equal 'level source', body['lastAttempt']['source']
+    assert_equal true, body['isStarted']
+  end
+
+  test "should not return student's user app_options if not signed in" do
+    sign_out @teacher
+
+    level_source = create :level_source, level: @level, data: 'level source'
+    create :user_level, user: @student_1, best_result: 100, script: @script,
+      level: @level, level_source: level_source
+
+    get :user_app_options, params: {
+      script: @script.name,
+      lesson_position: 1,
+      level_position: 1,
+      level: @level.id,
+      user_id: @student_1.id
+    }
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal false, body['signedIn']
+    assert_nil body['lastAttempt']
+  end
+
+  test "should fail to get student's user app_options if not teacher of student" do
+    user = create :user
     sign_in user
 
-    channel_token = create :channel_token, level: level, script_id: script.id, storage_id: storage_id_for_user_id(user.id)
+    level_source = create :level_source, level: @level, data: 'level source'
+    create :user_level, user: @student_1, best_result: 100, script: @script,
+      level: @level, level_source: level_source
+
+    get :user_app_options, params: {
+      script: @script.name,
+      lesson_position: 1,
+      level_position: 1,
+      level: @level.id,
+      user_id: @student_1.id
+    }
+    assert_response :forbidden
+  end
+
+  test "user_app_options should not return readonly options when viewing self" do
+    sign_in @student_1
+
+    get :user_app_options, params: {
+      script: @script.name,
+      lesson_position: 1,
+      level_position: 1,
+      level: @level.id,
+    }
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_nil body['skipInstructionsPopup']
+    assert_nil body['readonlyWorkspace']
+    assert_nil body['callouts']
+  end
+
+  test "user_app_options should return readonly options when viewing student" do
+    sign_in @teacher
+
+    get :user_app_options, params: {
+      script: @script.name,
+      lesson_position: 1,
+      level_position: 1,
+      level: @level.id,
+      user_id: @student_1.id
+    }
+
+    assert_response :success
+    body = JSON.parse(response.body)
+    assert_equal true, body['skipInstructionsPopup']
+    assert_equal true, body['readonlyWorkspace']
+    assert_equal [], body['callouts']
+  end
+
+  test "user_app_options should return existing channel if one exists" do
+    sign_in @student_1
+
+    channel_token = create :channel_token, level: @level, script_id: @script.id, storage_id: storage_id_for_user_id(@student_1.id)
     expected_channel = channel_token.channel
 
     get :user_app_options, params: {
-      script: script.name,
+      script: @script.name,
       lesson_position: 1,
       level_position: 1,
+      level: @level.id,
       get_channel_id: true
     }
 
@@ -866,19 +1006,63 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal expected_channel, body['channel']
   end
 
-  test "user_app_options should not return channel when param get_channel_id is false" do
-    script = create(:script, :with_levels, levels_count: 1)
-    level = script.script_levels.first.level
-
-    user = create :user, total_lines: 2
-    sign_in user
-
-    create :channel_token, level: level, script_id: script.id, storage_id: storage_id_for_user_id(user.id)
+  test "user_app_options should create new channel if one doesn't exist" do
+    sign_in @student_1
 
     get :user_app_options, params: {
-      script: script.name,
+      script: @script.name,
       lesson_position: 1,
       level_position: 1,
+      level: @level.id,
+      get_channel_id: true
+    }
+
+    body = JSON.parse(response.body)
+    refute_nil body['channel']
+  end
+
+  test "user_app_options should not create channel when viewing student" do
+    sign_in @teacher
+
+    get :user_app_options, params: {
+      script: @script.name,
+      lesson_position: 1,
+      level_position: 1,
+      level: @level.id,
+      get_channel_id: true,
+      user_id: @student_1.id
+    }
+
+    body = JSON.parse(response.body)
+    assert_nil body['channel']
+  end
+
+  test "user_app_options should create new channel if one doesn't exist when signed out" do
+    sign_out @teacher
+
+    get :user_app_options, params: {
+      script: @script.name,
+      lesson_position: 1,
+      level_position: 1,
+      level: @level.id,
+      get_channel_id: true
+    }
+
+    body = JSON.parse(response.body)
+    refute_nil body['channel']
+  end
+
+  test "user_app_options should not return channel when param get_channel_id is false" do
+    user = @student_1
+    sign_in user
+
+    create :channel_token, level: @level, script_id: @script.id, storage_id: storage_id_for_user_id(user.id)
+
+    get :user_app_options, params: {
+      script: @script.name,
+      lesson_position: 1,
+      level_position: 1,
+      level: @level.id,
       get_channel_id: false
     }
 
@@ -888,13 +1072,10 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "user_app_options should normally return reduceChannelUpdates false" do
-    script = create(:script, :with_levels, levels_count: 1)
-
-    user = create :user
-    sign_in user
+    sign_in @student_1
 
     get :user_app_options, params: {
-      script: script.name,
+      script: @script.name,
       lesson_position: 1,
       level_position: 1,
       get_channel_id: true
@@ -905,18 +1086,16 @@ class ApiControllerTest < ActionController::TestCase
   end
 
   test "user_app_options should return reduceChannelUpdates true in emergency mode" do
-    script = create(:script, :with_levels, levels_count: 1)
-
-    user = create :user
-    sign_in user
+    sign_in @student_1
 
     # Mimic Gatekeeper setting that's set in emergency mode
-    Gatekeeper.set('updateChannelOnSave', where: {script_name: script.name}, value: false)
+    Gatekeeper.set('updateChannelOnSave', where: {script_name: @script.name}, value: false)
 
     get :user_app_options, params: {
-      script: script.name,
+      script: @script.name,
       lesson_position: 1,
       level_position: 1,
+      level: @level.id,
       get_channel_id: true
     }
 
@@ -924,92 +1103,22 @@ class ApiControllerTest < ActionController::TestCase
     assert_equal true, body['reduceChannelUpdates']
   end
 
-  test "should slog the contained level id when present" do
-    slogger = FakeSlogger.new
-    CDO.set_slogger_for_test(slogger)
-    script = create :script
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, script: script, lesson_group: lesson_group
-    contained_level = create :multi, name: 'multi level'
-    level = create :maze, name: 'maze level', contained_level_names: ['multi level']
-    create :script_level, script: script, lesson: lesson, levels: [level]
-
-    user = create :user
-    sign_in user
-
-    get :user_app_options, params: {
-      script: script.name,
-      lesson_position: 1,
-      level_position: 1
-    }
-
-    assert_equal(contained_level.id, slogger.records.first[:level_id])
-  end
-
-  test "should get user progress for lesson for signed-out user" do
-    slogger = FakeSlogger.new
-    CDO.set_slogger_for_test(slogger)
-    script = create(:script, :with_levels, levels_count: 1)
-    script_level = script.script_levels[0]
-    level = script_level.level
-
-    user = create :user
-    sign_out user
-
-    get :user_app_options, params: {
-      script: script.name,
-      lesson_position: 1,
-      level_position: 1
-    }
-    assert_response :success
-    body = JSON.parse(response.body)
-    assert_equal false, body['signedIn']
-    assert_equal(
-      [
-        {
-          application: :dashboard,
-          tag: 'activity_start',
-          script_level_id: script_level.id,
-          level_id: level.id,
-          user_agent: 'Rails Testing',
-          locale: :'en-US'
-        }
-      ],
-      slogger.records
-    )
-  end
-
-  test "should get user progress for lesson with young student" do
-    script = create(:script, :with_levels, levels_count: 1)
+  test "user_app_options should return disableSocialShare true for young student" do
     young_student = create :young_student
     sign_in young_student
 
     get :user_app_options, params: {
-      script: script.name,
+      script: @script.name,
       lesson_position: 1,
-      level_position: 1
+      level_position: 1,
+      level: @level.id
     }
     assert_response :success
     body = JSON.parse(response.body)
     assert_equal true, body['disableSocialShare']
-    assert_equal({}, body['progress'])
   end
 
-  test "should get user progress for disabled milestone posts" do
-    Gatekeeper.set('postMilestone', value: false)
-    script = create(:script, :with_levels, levels_count: 1)
-    user = create :user, total_lines: 2
-    sign_in user
-
-    get :user_app_options, params: {
-      script: script.name,
-      lesson_position: 1,
-      level_position: 1
-    }
-    assert_response :success
-  end
-
-  test "should get user progress for lesson with swapped level" do
+  test "user_app_options should return previous attempt with swapped level" do
     sign_in @student_1
     script = create :script
     lesson_group = create :lesson_group, script: script
@@ -1019,7 +1128,6 @@ class ApiControllerTest < ActionController::TestCase
     level_source = create :level_source, level: level1a, data: 'level source'
     create :script_level, script: script, lesson: lesson, levels: [level1a, level1b], properties: {'maze 1': {'active': false}}
     create :user_level, user: @student_1, script: script, level: level1a, level_source: level_source
-    create :activity, user: @student_1, level: level1a, level_source: level_source
 
     get :user_app_options, params: {
       script: script.name,
