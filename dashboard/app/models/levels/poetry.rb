@@ -32,8 +32,13 @@ class Poetry < GamelabJr
     standalone_app_name
   )
 
+  STANDALONE_APP_NAMES = {
+    poetry: 'poetry',
+    poetry_hoc: 'poetry_hoc'
+  }.with_indifferent_access.freeze
+
   def check_default_poem
-    self.default_poem = nil unless standalone_app_name == 'poetry_hoc'
+    self.default_poem = nil unless standalone_app_name == STANDALONE_APP_NAMES[:poetry_hoc]
   end
 
   # Poetry levels use the same shared_functions as GamelabJr
@@ -42,7 +47,7 @@ class Poetry < GamelabJr
   end
 
   def self.standalone_app_names
-    [['Poetry', 'poetry'], ['Poetry HOC', 'poetry_hoc']]
+    [['Poetry', STANDALONE_APP_NAMES[:poetry]], ['Poetry HOC', STANDALONE_APP_NAMES[:poetry_hoc]]]
   end
 
   def self.skins
@@ -67,7 +72,7 @@ class Poetry < GamelabJr
           hide_animation_mode: true,
           show_type_hints: true,
           use_modal_function_editor: true,
-          standalone_app_name: 'poetry'
+          standalone_app_name: STANDALONE_APP_NAMES[:poetry]
         }
       )
     )
