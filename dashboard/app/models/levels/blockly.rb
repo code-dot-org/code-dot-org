@@ -426,8 +426,6 @@ class Blockly < Level
   end
 
   def localized_long_instructions
-    # Order is important here. Placeholder text has no unique identifier
-    # so all matching strings are replaced during that step.
     localized_long_instructions = get_localized_property("long_instructions")
     localized_markdown_with_placeholder_texts(localized_long_instructions)
   end
