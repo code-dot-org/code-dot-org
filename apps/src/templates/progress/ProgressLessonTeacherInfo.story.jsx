@@ -76,7 +76,7 @@ const createStore = ({
     store.dispatch(authorizeLockable());
   }
   store.dispatch(showTeacherInfo());
-  store.dispatch(setViewType(ViewType.Teacher));
+  store.dispatch(setViewType(ViewType.Instructor));
   store.dispatch(
     setHiddenLessons(
       {
