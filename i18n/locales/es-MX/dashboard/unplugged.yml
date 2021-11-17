@@ -174,6 +174,7 @@ es-MX:
         title: Actividad sin conexión
         desc: Hoy aprenderás qué significa que alguien esté en linea.
       deeper learning description:
+        title: 'CHUỖI NGUỒN'
         desc: 'traducción pendiente: en-US.data.unplugged.desc'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmos de la vida real: plantar una semilla'
@@ -244,6 +245,42 @@ es-MX:
       courseB_unplugged_MRF_2018:
         title: 'falta de traducción: en-US.data.unplugged.courseB_unplugged_MRF_2018.title'
         desc: '¡Aprende a programar y escribir código con tus amigos!'
+      BuildingAFoundation_2018:
+        title: CHUỖI NGUỒN
+        desc: CHUỖI NGUỒN
+      courseB_unplugged_loopyMRF_2018:
+        title: CHUỖI NGUỒN
+        desc: CHUỖI NGUỒN
+      DiceRace_2018:
+        title: CHUỖI NGUỒN
+        desc: CHUỖI NGUỒN
+      courseE_unplugged_privateInformation_2018:
+        title: CHUỖI NGUỒN
+        desc: CHUỖI NGUỒN
+      SongwritingParameters_2018:
+        title: CHUỖI NGUỒN
+        desc: CHUỖI NGUỒN
+      Internet_2018:
+        title: CHUỖI NGUỒN
+        desc: CHUỖI NGUỒN
+      Crowdsourcing_2018:
+        title: CHUỖI NGUỒN
+        desc: CHUỖI NGUỒN
+      TangramAlgorithms_2018:
+        title: CHUỖI NGUỒN
+        desc: CHUỖI NGUỒN
+      courseF_unplugged_powerOfWords_2018:
+        title: CHUỖI NGUỒN
+        desc: CHUỖI NGUỒN
+      EnvelopeVariables_2018:
+        title: CHUỖI NGUỒN
+        desc: CHUỖI NGUỒN
+      ForLoopFun_2018:
+        title: CHUỖI NGUỒN
+        desc: CHUỖI NGUỒN
+      SongwritingWithParameters_2018:
+        title: CHUỖI NGUỒN
+        desc: CHUỖI NGUỒN
       PlantASeed_2018:
         title: 'Algoritmos de la vida real: plantar una semilla'
         desc: Esta lección resalta formas en las que usamos algoritmos en nuestra vida cotidiana, usando de ejemplo plantar una semilla. También se centra en el panorama general de la informática y cómo los algoritmos juegan un papel esencial.
@@ -288,6 +325,7 @@ es-MX:
         desc: Los estudiantes crean pulseras como representaciones binarias de la primera letra de su nombre. Aprenden que los datos se pueden representar y guardar de más de una forma.
       MoveItMoveIt_2018:
         title: Muévelo, muévelo
+        desc: 'CHUỖI NGUỒN'
       courseB_unplugged_CnC_2018:
         title: Crear y jugar limpio es lo mejor
         desc: Esta lección, cedida al curso de Fundamentos de Ciencias de la Computación por parte del equipo de Derechos de Autor y Creatividad, tiene como objetivo ayudar a los alumnos a entender cómo funciona el intercambio y la inspiración en el proceso creativo. Esto conlleva la promoción de la expresión creativa y la necesidad de ser justos con el trabajo creativo.
@@ -374,6 +412,7 @@ es-MX:
         desc: '¡En esta lección aprenderás sobre bucles!'
       MoveItMoveIt_2019:
         title: Muévelo, muévelo
+        desc: 'CHUỖI NGUỒN'
       DigitalFootprint_2019:
         title: Tu huella dactilar
         desc: Los profesores le presentan a los alumnos la idea de que poner información sobre ellos en línea crea una huella dactilar o un "rastro" que tiene consecuencias.
@@ -398,3 +437,6 @@ es-MX:
       timeforcs_demo_conditionals:
         title: Condicionales
         desc: Para aprender acerca de las instrucciones condicionales, los estudiantes juegan con cartas y crean reglas como "si tomo una tarjeta roja, obtengo un punto" y "si tomo una carta negra, tú obtienes un punto."
+      SP-VPL-CSD-21-CourseNavigation:
+        title: CHUỖI NGUỒN
+        desc: CHUỖI NGUỒN

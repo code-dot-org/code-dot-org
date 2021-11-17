@@ -470,6 +470,12 @@
   coursed-2020_gradelevel: عمر 7-11
   coursee-2020_gradelevel: "Ages 8-12\n"
   coursef-2020_gradelevel: "Ages 9-13\n"
+  coursea-2021_gradelevel: عمر 4-7
+  courseb-2021_gradelevel: "Ages 5-8\n"
+  coursec-2021_gradelevel: "Ages 6-10\n"
+  coursed-2021_gradelevel: عمر 7-11
+  coursee-2021_gradelevel: "Ages 8-12\n"
+  coursef-2021_gradelevel: "Ages 9-13\n"
   accelerated_gradelevel: "Ages 10-18\n"
   thinkersmithspanish_platformtext: "پلگ نکالا ہوا"
   thinkersmith_platformtext: "پلگ نکالا ہوا"
@@ -581,3 +587,4 @@
   ai_microsoft_thanks: "ہم Microsoft کا شکریہ ادا کرتے ہیں کہ انہوں نے ہماری بصیرت اور مشن کہ ہر بچے کو کمپیوٹر سائنس اور 21ویں صدی میں کامیابی کی مہارتیں سیکھنے کا موقع فراہم ہو کی حمایت کی."
   ai_activity: "سرگرمی"
   ai_description: "تفصیل"
+  outbreak_tile_title: "وباء کا پھیلنا"

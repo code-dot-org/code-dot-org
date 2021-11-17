@@ -6,13 +6,13 @@ title: Hour of Code How-to Guide for After-school
 
 # Zo kunt u een 'Hour of 'Code' onderwijzen op de na-schoolse opvang of in een club
 
-### Join the movement and introduce your students to computer science with these steps.
+### Wordt lid van de beweging en laat uw studenten met deze stappen kennis maken met informatica.
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+Rekenkundig denken draagt bij aan vaardigheden voor het oplossen van problemen, logica, en creativiteit. En technologie verandert elke industrie op de planeet. Vandaag de dag dienen studenten te leren hoe ze technologie moeten creëren, niet alleen gebruiken. Door vroeg te beginnen leggen ze de basis voor succes in elk carrièrepad in de 21ste eeuw.
 
 Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
 
-### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
+### Een 'Hour of Code' kan ook op afstand worden gehost. Bekijk om te beginnen onze [tips voor het hosten van een virtuele 'Hour of Code'](https://hourofcode.com/us/how-to/virtual).
 
 * * *
 

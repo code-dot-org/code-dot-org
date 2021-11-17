@@ -2,6 +2,37 @@
   "hu-HU": {
     "data": {
       "resources": {
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "sprite_lab_documentation/coursef/2021": {
+          "name": "Sprite Lab dokumentációja"
+        },
         "unplugged-video-for-loop-fun/coursef/2021": {
           "name": "Szórakozás a For ciklussal"
         },
@@ -34,6 +65,9 @@
         },
         "teacher_forum_1/coursef/2021": {
           "name": "Tanári fórum"
+        },
+        "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Sprite Lab dokumentációja"
         },
         "mimi-activity/courseb/2021": {
           "name": "Gyerünk, gyerünk!"
@@ -221,6 +255,12 @@
         "pair_programming/express/2021": {
           "name": "Páros programozás"
         },
+        "sprite_lab_documentation/express/2021": {
+          "name": "Sprite Lab dokumentációja"
+        },
+        "sprite_lab_documentation_1/express/2021": {
+          "name": "Sprite Lab dokumentációja"
+        },
         "variables_video/express/2021": {
           "name": "változók"
         },
@@ -233,6 +273,9 @@
         "teacher_forum_1/pre-express/2021": {
           "name": "Tanári fórum"
         },
+        "sprite_lab_documentation/coursee/2021": {
+          "name": "Sprite Lab dokumentációja"
+        },
         "implementation_guide/coursee/2021": {
           "name": "Bevezetési Útmutató"
         },
@@ -241,6 +284,9 @@
         },
         "teacher_forum_1/coursee/2021": {
           "name": "Tanári fórum"
+        },
+        "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Sprite Lab dokumentációja"
         }
       }
     }

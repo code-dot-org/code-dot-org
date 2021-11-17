@@ -534,11 +534,11 @@
         "courseC_artist_prog_challenge2a_2021": "Strada",
         "courseF_apps_aquarium": "Aquario virtuale",
         "courseF_apps_card": "Biglietto di Auguri",
-        "courseF_apps_madlib": "Cronologia delle caselle vuote",
+        "courseF_apps_madlib": "Storia delle Caselle vuote",
         "courseF_apps_pet": "Animale virtuale",
         "courseF_editable_card": "Biglietto di Auguri",
         "courseF_editable_chatbot": "Chatbot",
-        "courseF_editable_madlib": "Cronologia delle caselle vuote",
+        "courseF_editable_madlib": "Storia delle Caselle vuote",
         "courseF_events_freeplay_air": "In volo",
         "courseF_events_freeplay_animals": "Cuccioli simpatici",
         "courseF_events_freeplay_aquatic": "Acquatico",
@@ -621,11 +621,19 @@
         "courseF_variables_card_finish": "Biglietti di Auguri, Parte 2",
         "courseF_variables_chatbot": "Chatbot, Parte 1",
         "courseF_variables_chatbot_finish": "Chatbot, Parte 2",
-        "courseF_variables_madlib": "Cronologia delle caselle vuote, Parte 1",
-        "courseF_variables_madlib_finish": "Cronologia delle caselle vuote, Parte 2",
-        "helloworld_emoji_location": "Eventi del tempo",
-        "helloworld_retro_location": "Eventi del tempo",
-        "ramp_artist_loops6v1_2021": "Scalinata"
+        "courseF_variables_madlib": "Storia delle Caselle vuote, Parte 1",
+        "courseF_variables_madlib_finish": "Storia delle Caselle vuote, Parte 2",
+        "helloworld_emoji_location": "Eventi temporali",
+        "helloworld_retro_location": "Eventi temporali",
+        "ramp_artist_loops6v1_2021": "Scalinata",
+        "helloworld_animals_sizes": "Dimensione",
+        "helloworld_animals_sounds": "Suoni",
+        "helloworld_emoji_sizes": "Dimensione",
+        "helloworld_emoji_sounds": "Suoni",
+        "helloworld_food_sizes": "Dimensione",
+        "helloworld_food_sounds": "Suoni",
+        "helloworld_retro_sizes": "Dimensione",
+        "helloworld_retro_sounds": "Suoni"
       }
     }
   }

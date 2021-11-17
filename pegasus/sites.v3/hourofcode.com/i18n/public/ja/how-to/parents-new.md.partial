@@ -75,12 +75,12 @@ Hour of Codeをパソコン、タブレット、スマートフォンで、も�
 コンピュータサイエンスは、私たちが思っていたようにはならなかった状況を「デバッグ」する方法を学ぶことがすべてです。     お子さんと一緒に、問題を解決するための創造的な方法を考えてみましょう!
 
 
-## 4) お祝いを忘れずに！
+## 4) 認定をする！
 
 Hour of Codeは世界的なイベントです。     Hour of Codeを特別なものにする方法をいくつかご紹介します。
 
 - <a href="https://staging.code.org/certificates">子供がアクティビティを完了したときに授与するコードの時間証明書</a>を印刷します。
-- <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Print stickers</a> at home or <a href="https://store.code.org/">purchase them online</a>, as an added surprise.
+- サプライズとして自宅で<a href="https://staging.hourofcode.com/us/promote/resources#stickers">ステッカーをプリントアウトするか</a> <a href="https://store.code.org/">オンラインで購入しましょう。</a>
 - 自宅のHour　of　Codeの写真とビデオをソーシャルメディアで共有しましょう。   Use #HourOfCode and @codeorg so we can highlight your success, too!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})

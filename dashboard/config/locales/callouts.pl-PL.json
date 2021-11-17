@@ -1718,7 +1718,7 @@
           "courseF_bee_for9_1": "Znajdziesz tutaj blok \"matematyka\"."
         },
         "courseF_bee_variables_1a_2021": {
-          "courseF_bee_functions_1_2018_1": "Tutaj można znaleźć swoje zmienne!"
+          "courseF_bee_functions_1_2018_1": "Tutaj możesz znaleźć swoje zmienne!"
         },
         "courseF_events_predict": {
           "behaviors_edit": "Kliknij tutaj, aby zobaczyć, na czym polega to zachowanie."
@@ -1984,7 +1984,7 @@
           "behaviors_category": "Kliknij tutaj, aby otworzyć kategorię \"Zachowania\"."
         },
         "courseF_sprites_make": {
-          "sprites_category": "Kliknij tutaj, aby otworzyć kategorię \"Duszki\"."
+          "sprites_category": "Kliknij tutaj, aby otworzyć kategorię Duszki."
         },
         "courseF_sprites_positioning": {
           "locations_category": "Kliknij tutaj, aby otworzyć kategorię \"Lokalizacje\"."
@@ -1994,6 +1994,41 @@
         },
         "courseF_text_events": {
           "events_category": "Kliknij tutaj, aby otworzyć kategorię \"Zdarzenia\"."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Tutaj możesz spowolnić program."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Spróbuj przejść przez swój kod po jednym bloku po kolei."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "W tym momencie przyjrzyj się bliżej poniższemu kodowi."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Poszukaj tutaj nowych bloków!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "Czy zmienił się kolor tła po udzieleniu odpowiedzi na pytanie? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Skończyłeś? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Poszukaj tutaj dwóch nowych bloków!",
+          "text_answer_finish": "Czy ekran tytułowy pojawił się na 3 sekundy? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Poszukaj tutaj nowego bloku!"
+        },
+        "courseF_text_print": {
+          "print_block": "Znajdź blok `drukuj` tutaj!",
+          "text_print_finish": "Czy twoja wiadomość wydrukowała się powyżej? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Znajdź blok `podpowiedź` tutaj!"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "W tym momencie przyjrzyj się bliżej poniższemu kodowi."
         }
       }
     }

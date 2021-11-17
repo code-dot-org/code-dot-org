@@ -6,12 +6,33 @@
           "name": "Lista de Reproducción en Spotify (todas las edades)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
+        "list_of_poems/poem-art/2021": {
+          "name": "",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
+        },
+        "poem_art_celebration/poem-art/2021": {
+          "name": "",
+          "url": ""
+        },
+        "poem_art_events/poem-art/2021": {
+          "name": "",
+          "url": ""
+        },
+        "poem_art_imagery/poem-art/2021": {
+          "name": "",
+          "url": ""
+        },
+        "poem_art_introduction/poem-art/2021": {
+          "name": "",
+          "url": ""
+        },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Introducción a Artista",
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
         },
         "csf-turns-angles-doc/artist/unversioned": {
-          "name": "Giros & Ángulos"
+          "name": "Giros & Ángulos",
+          "url": ""
         },
         "csf-turns-angles-video/artist/unversioned": {
           "name": "Giros & Ángulos",
@@ -20,6 +41,42 @@
         "dance-party-playlist/dance/unversioned": {
           "name": "Lista de Reproducción en Spotify (todas las edades)",
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
+        },
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "events-in-bounce-how-do-they-happen/sports/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "events-in-bounce-how-do-they-happen/basketball/unversioned": {
+          "name": "",
+          "url": ""
         },
         "dance-party-playlist/dance-extras-2019/unversioned": {
           "name": "Lista de Reproducción en Spotify (todas las edades)",
@@ -30,13 +87,20 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "ai-ml/oceans/unversioned": {
-          "name": "AI: aprendizaje automático"
+          "name": "AI: aprendizaje automático",
+          "url": ""
         },
         "ai-societal/oceans/unversioned": {
-          "name": "AI: implicaciones para la sociedad"
+          "name": "AI: implicaciones para la sociedad",
+          "url": ""
         },
         "ai-training/oceans/unversioned": {
-          "name": "AI: datos de entrenamiento"
+          "name": "AI: datos de entrenamiento",
+          "url": ""
+        },
+        "list_of_poems_1/poem-art/unversioned": {
+          "name": "Lista de Poemas",
+          "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing"
         },
         "introducing_sprite_lab/coursef/2021": {
           "name": "Presentamos el Laboratorio de sprites",
@@ -66,6 +130,30 @@
           "name": "Sprites en acción",
           "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
         },
+        "the_power_of_words_lesson_slides/coursef/2021": {
+          "name": "El poder de las palabras: Diapositivas de lecciones",
+          "url": "https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2021": {
+          "name": "El poder de las palabras: el poder de las palabras\t",
+          "url": "https://www.commonsense.org/education/videos/the-power-of-words"
+        },
+        "the_power_of_words_words_can_hurt/coursef/2021": {
+          "name": "El poder de las palabras: las palabras pueden hacer daño",
+          "url": "https://docs.google.com/document/d/1gJcgF03GdltY81jfccsl-tOpgwxMfHI5S1KvzhEhyIw/edit"
+        },
+        "the_power_of_words_lesson_quiz/coursef/2021": {
+          "name": "El poder de las palabras: Cuestionario de lección",
+          "url": "https://docs.google.com/forms/d/1OKy2U3F37NSgCBUez9XMi0UJtlHKPXIe_rxy0l_KEOg/copy"
+        },
+        "the_power_of_words_lesson_quiz_answer_key/coursef/2021": {
+          "name": "El poder de las palabras: Cuestionario de lección",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/the-power-of-words-lesson-quiz"
+        },
+        "variables_blank_space_stories/coursef/2021": {
+          "name": "Variables: historias de espacios en blanco",
+          "url": "https://docs.google.com/presentation/d/1x7kbu1-DNs0lAkb6WMVzjye3NrMjA0jAEiwj6o2_B1g/template/preview"
+        },
         "blank_space_stories_-_worksheet/coursef/2021": {
           "name": "Historias del espacio en blanco",
           "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
@@ -75,64 +163,104 @@
           "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
         },
         "text_and_prompts/coursef/2021": {
-          "name": "Texto y Comentarios"
+          "name": "Texto y Comentarios",
+          "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
+        },
+        "user_input_programs/coursef/2021": {
+          "name": "Programas de entrada de usuario",
+          "url": "https://docs.google.com/document/d/1FZAVAVabeADxUlDZACeZojuPK1gBN7g0_UfYfvxzah4/template/preview"
+        },
+        "mini_project_user_input_programs/coursef/2021": {
+          "name": "Mini proyecto: programas de entrada de usuario",
+          "url": "https://docs.google.com/presentation/d/1AGDl6WPPsPId6J3GXjySlvFJMaLDnt0P9Tu6ujjZeG0/edit#slide=id.gc6acec9c41_0_68"
+        },
+        "teacher_sandbox_level/coursef/2021": {
+          "name": "Nivel Sandbox del profesor",
+          "url": "https://studio.code.org/levels/27300"
+        },
+        "mini_project_user_input_programs_1/coursef/2021": {
+          "name": "Mini proyecto: programas de entrada de usuario",
+          "url": "https://docs.google.com/document/d/1nDzSayssOEjdUhPgyhPtCOLrfMYIgLAmWeQTLYnBReM/template/preview"
         },
         "pause_and_think_online/coursef/2021": {
-          "name": "Detente y Piensa Online"
+          "name": "Detente y Piensa Online",
+          "url": "https://www.youtube.com/watch?v=X_duZ-1LApg&t=0s"
         },
         "unplugged-video-for-loop-fun/coursef/2021": {
-          "name": "Diversión con bucles Para"
+          "name": "Diversión con bucles Para",
+          "url": "https://youtu.be/mX857v5B4gE"
         },
         "flf-assessment-teacher-key/coursef/2021": {
-          "name": "Diversión con Loop Para - Clave de Evaluación"
+          "name": "Diversión con Loop Para - Clave de Evaluación",
+          "url": "https://docs.google.com/document/d/11nIyoZ8jLVO-US-b0P8B-kisfFGdTwY6xjKhbTi-gGI/edit"
         },
         "lesson-in-action-for-loop-fun/coursef/2021": {
-          "name": "Diversión con bucles Para"
+          "name": "Diversión con bucles Para",
+          "url": "https://www.youtube.com/watch?v=HO4uhoahtjM"
         },
         "csf-for-loop-fun-worksheet/coursef/2021": {
-          "name": "Diversión con bucles Para"
+          "name": "Diversión con bucles Para",
+          "url": "https://docs.google.com/document/d/15Sn7JZ-Twp3SUK6ObDClqwueAoA_0Wn0MGlIdxSQGHM/edit"
         },
         "activity-answer-for-loop-fun/coursef/2021": {
-          "name": "Diversión con bucles Para"
+          "name": "Diversión con bucles Para",
+          "url": "https://docs.google.com/document/d/1DPEOgWHVAAfnLXhuBWDw51nnGy1qSV9QPj9L2rUrvv8/edit"
         },
         "csf-for-loop-fun-assessment/coursef/2021": {
-          "name": "Diversión con bucles Para"
+          "name": "Diversión con bucles Para",
+          "url": "https://docs.google.com/document/d/1iyfroULEOlaLH52MY9PUwUHPk9R6jAMn0rbjlwNtCWs/edit"
         },
         "course-cf-blockly-blocks/coursef/2021": {
-          "name": "Bloques Blockly Sin Conexión (Cursos 2-5)"
+          "name": "Bloques Blockly Sin Conexión (Cursos 2-5)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "running-simulations/coursef/2021": {
-          "name": "Ejecutar simulaciones"
+          "name": "Ejecutar simulaciones",
+          "url": "https://docs.google.com/document/d/1sgUd9UcthM3M-A1EKX1m3AwsgLrivx0jF0i-e_79kk8/edit"
         },
         "ai-ml/coursef/2021": {
-          "name": "AI: aprendizaje automático"
+          "name": "AI: aprendizaje automático",
+          "url": ""
         },
         "ai-training/coursef/2021": {
-          "name": "AI: datos de entrenamiento"
+          "name": "AI: datos de entrenamiento",
+          "url": ""
         },
         "ai-societal/coursef/2021": {
-          "name": "AI: implicaciones para la sociedad"
+          "name": "AI: implicaciones para la sociedad",
+          "url": ""
         },
         "unplugged-video-internet/coursef/2021": {
-          "name": "Internet"
+          "name": "Internet",
+          "url": "https://youtu.be/mFOUbqYv1Sc"
         },
         "csf-ip-address-cards-and-delivery-type-cards/coursef/2021": {
-          "name": "Tarjetas de dirección IP y tarjetas de tipo entrega"
+          "name": "Tarjetas de dirección IP y tarjetas de tipo entrega",
+          "url": "https://docs.google.com/document/d/1wnDD_Jm7JOApWQ5aPOcZVag4_h7lhBpl-QbCFIZAz6o/edit"
         },
         "csf-internet-assessment/coursef/2021": {
-          "name": "Internet"
+          "name": "Internet",
+          "url": "https://docs.google.com/document/d/1xqKUsyGloccd5_qulTARCzw5zLpEF3jSFrvDfLYrqAs/edit"
         },
         "assessment-answer-internet/coursef/2021": {
-          "name": "Internet"
+          "name": "Internet",
+          "url": "https://docs.google.com/document/d/1uUY1zm6d7LZySpXzW9CFZaI8tcY4fzw_-w3Z2WbKVwI/edit"
+        },
+        "get-site-ip-com/coursef/2021": {
+          "name": "get-site-ip-com",
+          "url": "http://get-site-ip.com/"
         },
         "design-process/coursef/2021": {
-          "name": "Proceso de Diseño"
+          "name": "Proceso de Diseño",
+          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
         },
         "final-project-design-worksheet/coursef/2021": {
-          "name": "Diseño del Proyecto Final"
+          "name": "Diseño del Proyecto Final",
+          "url": "https://docs.google.com/document/d/1sVrwglrvfm-cq9dzbvB9Cn2iuztrs3_VdWjluYPNaDE/"
         },
         "rubric-csf-final-projects/coursef/2021": {
-          "name": "Proyecto Final de Fundamentos de Ciencias de la Computación"
+          "name": "Proyecto Final de Fundamentos de Ciencias de la Computación",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
         },
         "csta_standards_mapping/coursef/2021": {
           "name": "Normas de la CSTA",
@@ -179,6 +307,7 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursef/2021": {
+          "name": "Modificaciones de lecciones virtuales",
           "url": "https://docs.google.com/document/d/14BNL2IO5Dayx5BWeT9wh_w2VXfea_TvB_pCRpuojuho/edit"
         },
         "digital-trails-lesson-slides/courseb/2021": {
@@ -290,7 +419,8 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "the-right-app-scenarios/courseb/2021": {
-          "name": "La Aplicación Correcta - Escenarios"
+          "name": "La Aplicación Correcta - Escenarios",
+          "url": "https://docs.google.com/presentation/d/1WzO71WwSTbn2XhkWjG3tvD7vnQbsCSb58rhSBpurQjw/edit#slide=id.g45fb8e6318_0_0"
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "El Gran Evento",
@@ -309,10 +439,12 @@
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit"
         },
         "play_lab_project_planning_guide/courseb/2021": {
-          "name": "Proyecto de Laboratorio de Juegos - Guía de Planificación"
+          "name": "Proyecto de Laboratorio de Juegos - Guía de Planificación",
+          "url": "https://docs.google.com/document/d/1XiBMkmdQtaCYcaQsGnoY32tGimfiGgBEwenuAadEqT8/template/preview"
         },
         "play_lab_project_planning_guide_1/courseb/2021": {
-          "name": "Proyecto de Laboratorio de Juegos - Guía de Planificación"
+          "name": "Proyecto de Laboratorio de Juegos - Guía de Planificación",
+          "url": "https://docs.google.com/document/d/1CK-fZ7le7tv6mIR9hZ8MHmaSSkI2uFfyH3W_DFfew2c/template/preview"
         },
         "csta_standards_mapping/courseb/2021": {
           "name": "Normas de la CSTA",
@@ -355,6 +487,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/courseb/2021": {
+          "name": "Modificaciones de lecciones virtuales",
           "url": "https://docs.google.com/document/d/1uR3JBx-UWSomzLMGgH8xPbeU720RsUECNufH7VObUgk/edit"
         },
         "safety-in-my-online-neighborhood-lesson-slides/coursea/2021": {
@@ -386,6 +519,7 @@
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
+          "name": "Primeros pasos: creación de una sección de clase",
           "url": "https://www.youtube.com/watch?v=4Wugxc80fNU"
         },
         "unplugged-video-happy-maps/coursea/2021": {
@@ -553,6 +687,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursea/2021": {
+          "name": "Modificaciones de lecciones virtuales",
           "url": "https://docs.google.com/document/d/1jap518hJg74YGea9zTrW4qE_Qa53IbJ3SHKrPB_Hars/edit"
         },
         "putting-a-stop-to-online-meanness-lesson-slides/coursec/2021": {
@@ -604,7 +739,8 @@
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA"
         },
         "course-cf-blockly-blocks/coursec/2021": {
-          "name": "Bloques Blockly Sin Conexión (Cursos 2-5)"
+          "name": "Bloques Blockly Sin Conexión (Cursos 2-5)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "csf-artist-intro-video/coursec/2021": {
           "name": "Introducción a Artista",
@@ -727,6 +863,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursec/2021": {
+          "name": "Modificaciones de lecciones virtuales",
           "url": "https://docs.google.com/document/d/1OYQtcOdhJDcgSMaF_02zCFhWqJjAqbOtLpBCwfmP1dY/edit"
         },
         "password_power-up_lesson_slides/coursed/2021": {
@@ -786,37 +923,51 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "relay-programming-assessment-answer-key/coursed/2021": {
-          "name": "Programación de Relevos"
+          "name": "Programación de Relevos",
+          "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit"
         },
         "relay-assessment/coursed/2021": {
-          "name": "Programación de Relevos"
+          "name": "Programación de Relevos",
+          "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit"
         },
         "relay-programming-teacher-debugging/coursed/2021": {
-          "name": "Programación de Relevos"
+          "name": "Programación de Relevos",
+          "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit"
         },
         "unplugged-video-relay-programming/coursed/2021": {
-          "name": "Programación de Relevos"
+          "name": "Programación de Relevos",
+          "url": "https://youtu.be/l5MKkXbzOsk"
         },
         "teacher-video-relay-programming-2/coursed/2021": {
-          "name": "Programación de Relevos"
+          "name": "Programación de Relevos",
+          "url": "https://youtu.be/ZULpfAVJOBo"
         },
         "csf-relay-programming-activity-packet/coursed/2021": {
-          "name": "Programación de Relevos"
+          "name": "Programación de Relevos",
+          "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit"
         },
         "course-cf-blockly-blocks/coursed/2021": {
-          "name": "Bloques Blockly Sin Conexión (Cursos 2-5)"
+          "name": "Bloques Blockly Sin Conexión (Cursos 2-5)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "events-in-bounce-how-do-they-happen/coursed/2021": {
+          "name": "",
+          "url": "https://docs.google.com/presentation/d/1dumoPi0CxOOAUejCCqfuby5oBgX3c34CYX4WrHR-t9Q/template/preview"
         },
         "pause_and_think_online/coursed/2021": {
           "name": "Detente y Piensa Online",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "open-ended_programming_levels/coursed/2021": {
-          "name": "Niveles de Programación Abiertos"
+          "name": "Niveles de Programación Abiertos",
+          "url": "https://docs.google.com/document/d/1Pr3XEM5J4oogmwFCGyvolp5XQzVaUFkGCkSMs9d55dQ/view"
         },
         "open-ended_programming_levels_1/coursed/2021": {
-          "name": "Niveles de Programación Abiertos"
+          "name": "Niveles de Programación Abiertos",
+          "url": "https://docs.google.com/document/d/14qVMrzEOkq7m0gRjtYI8Erb1nGbx_XCz4TSm_d_xCls/view"
         },
         "dance-party-project-guide/coursed/2021": {
+          "name": "Guía de proyectos de fiesta de baile",
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/coursed/2021": {
@@ -824,7 +975,8 @@
           "url": "https://open.spotify.com/playlist/2MiLztu5QGQERdEsZed81b?si=6cF0s1ETQf2vN_ea8B4fIw"
         },
         "dance_party_unplugged/coursed/2021": {
-          "name": "Fiesta de baile: sin conexión"
+          "name": "Fiesta de baile: sin conexión",
+          "url": "https://curriculum.code.org/hoc/unplugged/4/"
         },
         "open-ended_programming_levels_2/coursed/2021": {
           "name": "Niveles de Programación Abiertos",
@@ -839,22 +991,32 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "unplugged-video-conditionals-cards/coursed/2021": {
-          "name": "Condicionales con tarjetas"
+          "name": "Condicionales con tarjetas",
+          "url": "https://youtu.be/UymN4lTL50s"
         },
         "lesson-in-action-conditional-cards/coursed/2021": {
-          "name": "Condicionales con tarjetas"
+          "name": "Condicionales con tarjetas",
+          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
         },
         "csf-conditionals-with-cards-sample-program/coursed/2021": {
-          "name": "Programa Condicionales con Cartas de Muestra"
+          "name": "Programa Condicionales con Cartas de Muestra",
+          "url": "https://docs.google.com/document/d/151s4_0NuDhuzprjPGlDubPZodeJQCEJElsvdkSSqzPM/edit"
         },
         "csf-conditionals-with-cards-assessment/coursed/2021": {
-          "name": "Condicionales con tarjetas"
+          "name": "Condicionales con tarjetas",
+          "url": "https://docs.google.com/document/d/1LAJIGKZkVE8Hx68qJZxOUyQ0iw1jhgIWSMGh_fv5zN0/edit"
         },
         "conditionals-with-cards-assessment-video/coursed/2021": {
-          "name": "Condicionales con tarjetas"
+          "name": "Condicionales con tarjetas",
+          "url": "https://youtu.be/TbUaEnAYPjI"
         },
         "assessment-answer-conditionals-cards/coursed/2021": {
-          "name": "Condicionales con tarjetas"
+          "name": "Condicionales con tarjetas",
+          "url": "https://docs.google.com/document/d/1SsfkUoEg316vjBSxrRNLN4q4V2-yYW8HAK4m9snLtac/edit"
+        },
+        "course-d-project-planning-guide-1/coursed/2021": {
+          "name": "Curso D de CSF Guía de planificación de proyectos de fin de curso",
+          "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing"
         },
         "csta_standards_mapping/coursed/2021": {
           "name": "Normas de la CSTA",
@@ -897,14 +1059,20 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "virtual_lesson_modifications/coursed/2021": {
+          "name": "Modificaciones de lecciones virtuales",
           "url": "https://docs.google.com/document/d/1OqoBWgwGvPILgjeDExHaVcT5cLJ_FoMD2T1sKS3bJc8/edit"
         },
         "unplugged_maze_blocks/express/2021": {
-          "name": "Bloques Sin conexión para Laberinto/Granjera/Abeja - Cursos 2-5"
+          "name": "Bloques Sin conexión para Laberinto/Granjera/Abeja - Cursos 2-5",
+          "url": "https://docs.google.com/presentation/d/1k_7SSLsm-E4aisa9-LmbsCVzH6J-8yGD9T2LwPb2v48/edit"
         },
         "pair_programming/express/2021": {
           "name": "Programación de pares",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "unplugged_blocks_courses_c-f_/express/2021": {
+          "name": "Bloques desenchufados (cursos C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "artist_introduction/express/2021": {
           "name": "Introducción a Artista",
@@ -918,25 +1086,32 @@
           "name": "Giros & Ángulos",
           "url": "https://docs.google.com/document/d/1JDeb07W7myaLu7Wjd-fPM8whSaO8aw37m9SJ_7B4Su4/edit"
         },
+        "swimming_fish_teacher_sandbox/express/2021": {
+          "name": "Sandbox para profesor de peces de natación",
+          "url": "https://studio.code.org/levels/18623"
+        },
         "sprite_lab_documentation/express/2021": {
           "name": "Documentación del Laboratorio de sprites",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "making_sprites/express/2021": {
-          "name": "Creación de Sprites"
+          "name": "Creación de Sprites",
+          "url": "https://docs.google.com/presentation/d/1u8gueXrKIKoYNgTxbr3bIvmbVlCsJcVT7qcDeqsOh1U/template/preview"
         },
         "sprite_lab_documentation_1/express/2021": {
           "name": "Documentación del Laboratorio de sprites",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/express/2021": {
-          "name": "Sprites en acción"
+          "name": "Sprites en acción",
+          "url": "https://docs.google.com/presentation/d/1JdBmPn9XHWiXhGALqwxoR1g6R5TwFaQhVRmq22XLdYY/template/preview"
         },
         "pause_and_think_online/express/2021": {
           "name": "Detente y Piensa Online",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo"
         },
         "dance-party-project-guide/express/2021": {
+          "name": "Guía de proyectos de fiesta de baile",
           "url": "https://docs.google.com/document/d/1F9dc129iWUWHmkU7fL23PQqxEK-wYstblbs-XitZ9FM/edit"
         },
         "dance-party-playlist/express/2021": {
@@ -948,22 +1123,44 @@
           "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
         },
         "pair_programming_video/express/2021": {
+          "name": "Video de programación por pares",
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
+        "unplugged_blocks_courses_c-f__1/express/2021": {
+          "name": "Bloques desenchufados (cursos C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "unplugged_blocks_courses_c-f__2/express/2021": {
+          "name": "Bloques desenchufados (cursos C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
+        "unplugged_blocks_courses_c-f__3/express/2021": {
+          "name": "Bloques desenchufados (cursos C-F)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
+        },
         "unplugged_blocks_courses_c-f__4/express/2021": {
-          "name": "Bloques Blockly Sin Conexión (Cursos 2-5)"
+          "name": "Bloques Blockly Sin Conexión (Cursos 2-5)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "unplugged_blocks_courses_c-f__5/express/2021": {
-          "name": "Bloques Blockly Sin Conexión (Cursos 2-5)"
+          "name": "Bloques Blockly Sin Conexión (Cursos 2-5)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "text_and_prompts/express/2021": {
-          "name": "Texto y Comentarios"
+          "name": "Texto y Comentarios",
+          "url": "https://docs.google.com/presentation/d/1ImZg6MHmaj5ouvrYdgsungbeLXRDAu106-NXOroJg14/template/preview"
         },
         "variables_video/express/2021": {
-          "name": "Variables"
+          "name": "Variables",
+          "url": "https://youtu.be/DI7DprN4FtE"
+        },
+        "csf-express-end-of-course-project-planning-guide/express/2021": {
+          "name": "Guía de planificación de proyectos de fin de curso de CSF Express",
+          "url": "https://docs.google.com/document/d/1k_TQ5juruh79PiqGE4t1j9X3siaBRNFaKxODsytTj64/edit?usp=sharing"
         },
         "rubric-csf-final-projects/express/2021": {
-          "name": "Proyecto Final de Fundamentos de Ciencias de la Computación"
+          "name": "Proyecto Final de Fundamentos de Ciencias de la Computación",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
         },
         "csta_standards_mapping/express/2021": {
           "name": "Normas de la CSTA",
@@ -1022,20 +1219,60 @@
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "follow_the_algorithm/coursee/2021": {
-          "name": "Sigue el algoritmo"
+          "name": "Sigue el algoritmo",
+          "url": "https://docs.google.com/presentation/d/16r9HpwQodVnmSfRlfJmOfZajqE66YlZz0aG60CFsVMk/template/preview"
+        },
+        "swimming-fish-teacher-sandbox/coursee/2021": {
+          "name": "Sandbox para profesor de peces de natación",
+          "url": "https://studio.code.org/levels/18623"
         },
         "sprite_lab_documentation/coursee/2021": {
           "name": "Documentación del Laboratorio de sprites",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
+          "name": "Ser un Super Ciudadano Digital: Diapositivas de la lección",
           "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
         },
         "be_a_super_digital_citizen_super_digital_citizen/coursee/2021": {
+          "name": "Ser un Super Ciudadano Digital: Super Ciudadano Digital",
           "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
         },
+        "private-and-personal-information-lesson-slides/coursee/2021": {
+          "name": "Información Privada y Personal: Diapositivas de la lección",
+          "url": "https://docs.google.com/presentation/d/1g7JUvuosvwU2f5qixuTJg5sjZ0TAW2iN3oapWlSNqhM/edit"
+        },
+        "private-and-personal-information-private-and-personal-information/coursee/2021": {
+          "name": "Información Privada y Personal: Información Privada y Personal",
+          "url": "https://www.commonsense.org/education/videos/private-and-personal-information"
+        },
+        "private-and-personal-information-exit-ticket/coursee/2021": {
+          "name": "Información Privada y Personal: Ticket de Salida",
+          "url": "https://docs.google.com/document/d/1xK_CFNeB3lQ_kJIQAl3Y0sowSyqMy8ac5P3MhCjfkgA/edit"
+        },
+        "private-and-personal-information-lesson-quiz/coursee/2021": {
+          "name": "Información Privada y Personal: Prueba de la Lección",
+          "url": "https://docs.google.com/forms/d/1iXNQu1c_I19GGasTbz95xGmIBLz3YokGSErREzTukpQ/copy"
+        },
+        "private-and-personal-information-lesson-quiz-answer-key/coursee/2021": {
+          "name": "Información Privada y Personal: Prueba de la Lección",
+          "url": "https://www.commonsense.org/education/digital-citizenship/quiz/private-and-personal-information-lesson-quiz"
+        },
         "common-sense-media-pause-think/coursee/2021": {
-          "name": "Detente y Piensa Online"
+          "name": "Detente y Piensa Online",
+          "url": "https://youtu.be/X_duZ-1LApg"
+        },
+        "about_me_planning_guide/coursee/2021": {
+          "name": "Sobre Mí  Guía de Planificación",
+          "url": "https://docs.google.com/document/d/1EQvXTvg4ujk4Xkn2noldwgzUXbR7M3dsAOkJyo4KO3o/template/preview"
+        },
+        "digital-sharing-lesson/coursee/2021": {
+          "name": "",
+          "url": ""
+        },
+        "digital-sharing-video/coursee/2021": {
+          "name": "",
+          "url": ""
         },
         "csf-turns-angles-doc/coursee/2021": {
           "name": "Giros & Ángulos",
@@ -1046,34 +1283,52 @@
           "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
         },
         "unplugged-video-songwriting-functions/coursee/2021": {
-          "name": "Componer Canciones con Funciones"
+          "name": "Componer Canciones con Funciones",
+          "url": ""
         },
         "lesson-in-action-songwriting/coursee/2021": {
-          "name": "Funciones Sin Conexión: Componer Canciones"
+          "name": "Funciones Sin Conexión: Componer Canciones",
+          "url": ""
         },
         "csf-songwriting-worksheets/coursee/2021": {
-          "name": "Funciones Sin Conexión: Componer Canciones"
+          "name": "Funciones Sin Conexión: Componer Canciones",
+          "url": ""
         },
         "csf-songwriting-assessment/coursee/2021": {
-          "name": "Funciones Sin Conexión: Componer Canciones"
+          "name": "Funciones Sin Conexión: Componer Canciones",
+          "url": ""
         },
         "assessment-answer-songwriting/coursee/2021": {
-          "name": "Funciones Sin Conexión: Componer Canciones"
+          "name": "Funciones Sin Conexión: Componer Canciones",
+          "url": ""
         },
         "course-cf-blockly-blocks/coursee/2021": {
-          "name": "Bloques Blockly Sin Conexión (Cursos 2-5)"
+          "name": "Bloques Blockly Sin Conexión (Cursos 2-5)",
+          "url": "https://docs.google.com/document/d/1cRPELQ28TZMJhc68-eYP1D26Uqzcyfx4RDYuThZJGLo/edit"
         },
         "designing_for_accessibility_1/coursee/2021": {
-          "name": "Diseñar con la accesibilidad en mente"
+          "name": "Diseñar con la accesibilidad en mente",
+          "url": ""
+        },
+        "types_of_disabilities/coursee/2021": {
+          "name": "",
+          "url": ""
+        },
+        "end-of-course-project-guide/coursee/2021": {
+          "name": "",
+          "url": ""
         },
         "rubric-csf-final-projects/coursee/2021": {
-          "name": "Proyecto Final de Fundamentos de Ciencias de la Computación"
+          "name": "Proyecto Final de Fundamentos de Ciencias de la Computación",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/"
         },
         "design-process/coursee/2021": {
-          "name": "Proceso de Diseño"
+          "name": "Proceso de Diseño",
+          "url": "https://docs.google.com/document/d/18hBG-cWRYOkpNXFelRFUVgRrMd4XQsvZziH-mtNKbec/"
         },
         "72_creative_ways_for_your_students_to_show_what_they_know/coursee/2021": {
-          "name": "72 formas creativas de que tus estudiantes muestren lo que saben"
+          "name": "72 formas creativas de que tus estudiantes muestren lo que saben",
+          "url": ""
         },
         "csta_standards_mapping/coursee/2021": {
           "name": "Normas de la CSTA",
@@ -1120,6 +1375,7 @@
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursee/2021": {
+          "name": "Modificaciones de lecciones virtuales",
           "url": "https://docs.google.com/document/d/1vQPpivN-p1sQfT5TuiiEXU2Ppy9e6vikeIwfStWF_Vw/edit"
         }
       }
