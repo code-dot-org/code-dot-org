@@ -26,6 +26,18 @@ export default function ManageCodeReviewGroups({
     );
   };
 
+  // [x] change button text on confirm/cancel
+  // [x] add ability to disable confirmation button
+  // disable buttons until changes made
+  // -- store initial state to disable again if no diffs?
+  // -- some other disabling that should happen related to enable code review status?
+  // check if group names are unique
+  // -- add backend uniqueness check as well?
+  // call data API on "Confirm Changes"
+  // show some loading state while confirming changes
+  // on success, show changes have been saved message. disable buttons until more change madde. remove after some time?
+  // on fail, show error has occurred message. remove after some time?
+
   return (
     <div style={{...styles.buttonContainer, ...buttonContainerStyle}}>
       {/* use div instead of button HTML element via __useDeprecatedTag
@@ -45,6 +57,8 @@ export default function ManageCodeReviewGroups({
         fixedWidth={DIALOG_WIDTH}
         renderFooter={renderFooter}
         footerJustification="space-between"
+        confirmationButtonText={i18n.confirmChanges()}
+        disableConfirmationButton={true}
       />
     </div>
   );
