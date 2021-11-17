@@ -1,4 +1,23 @@
 hi:
   data:
     shared_functions:
-      moving with arrow keys: एरो कीज के साथ मूव करना।
+      driving with arrow keys: तीर वाली कुंजियों के साथ ड्राइव करना
+      fluttering: फड़फड़ाना
+      growing: बढ़ना
+      jittering: कलमलाना
+      moving east: पूर्व की ओर मूव करना
+      moving east and looping: पूर्व की ओर मूव और लूप करना
+      moving north: उत्तर की ओर मूव करना
+      moving north and looping: उत्तर की ओर मूव और लूप करना
+      moving south: दक्षिण की ओर मूव करना
+      moving south and looping: दक्षिण की ओर मूव और लूप करना
+      moving west: पश्चिम की ओर मूव करना
+      moving west and looping: पश्चिम की ओर मूव और लूप करना
+      moving with arrow keys: तीर वाली कुंजियों के साथ मूव करना
+      patrolling: गश्त लगाना
+      shrinking: सिकुड़ना
+      spinning left: बाएं घुमाना
+      spinning right: दाएं घुमाना
+      swimming left and right: बाएं और दाएं तैराकी करना
+      wandering: घूमना
+      wobbling: लड़खड़ाना

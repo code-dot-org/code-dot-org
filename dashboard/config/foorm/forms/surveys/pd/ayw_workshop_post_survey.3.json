@@ -5,6 +5,11 @@
       "name": "front_page",
       "elements": [
         {
+          "type": "html",
+          "name": "comment",
+          "Natalia_comment": "******NOTE: This is RED's current version - Oct 14, maintain it equal to Version 0 to ensure the link picks up the latest version******"
+        },
+        {
           "type": "library_item",
           "library_name": "surveys/pd/workshop_elements",
           "library_version": 0,

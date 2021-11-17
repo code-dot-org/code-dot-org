@@ -9,7 +9,7 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
@@ -62,7 +62,7 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
@@ -121,7 +121,7 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
@@ -144,7 +144,7 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
@@ -300,7 +300,7 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
@@ -327,7 +327,7 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
@@ -429,7 +429,7 @@ ru:
           COSTUME:
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
@@ -546,7 +546,7 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
@@ -610,7 +610,7 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
@@ -645,7 +645,7 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
@@ -671,7 +671,7 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
@@ -687,7 +687,7 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
@@ -711,7 +711,7 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
@@ -745,7 +745,7 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
@@ -789,7 +789,7 @@ ru:
             sprites: все
             '"ALIEN"': все инопланетяне
             '"BEAR"': медведи
-            '"CAT"': все кошки
+            '"CAT"': кошки
             '"DOG"': все собаки
             '"DUCK"': утки
             '"FROG"': лягушки
@@ -1054,6 +1054,17 @@ ru:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": кнопка
             "'sound://category_collect/clicky_crunch.mp3'": хруст
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": пузырик
+            "'sound://category_animals/bear.mp3'": Медведь
+            "'sound://category_animals/cat.mp3'": кот
+            "'sound://category_animals/cow.mp3'": корова
+            "'sound://category_animals/pig.mp3'": свинка
+            "'sound://category_animals/sheep.mp3'": овца
+            "'sound://category_animals/chicken.mp3'": курица
+            "'sound://category_animals/elephant.mp3'": слон
+            "'sound://category_animals/dolphin.mp3'": дельфин
+            "'sound://category_animals/chick.mp3'": цыпленок
+            "'sound://category_animals/dog.mp3'": собака
             "'sound://category_digital/jump_7.mp3'": прыгнуть
       gamelab_pointInDirection:
         text: точка {SPRITE} {DIRECTION}
@@ -1491,15 +1502,30 @@ ru:
         text: x координата {SPRITE}
       Mikelab_yLocationOf:
         text: y координата {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Stars: Звезды
+            Fireworks: Фейерверк
+            '"rainbow"': Радуга
+            '"hearts"': Сердечки
+            '"flowers"': Цветы
       Poetry_makeBurst:
         options:
           EFFECT:
             '"burst"': взрыв
             '"rain"': дождь
+      Poetry_makeNewSpriteAnon:
+        text: сделать новые {ANIMATION_NAME} спрайт на {LOCATION}
       Poetry_makeNumSprites:
         text: создать {NUM} новый {ANIMATION_NAME} слайдов
       Poetry_playSound:
         text: playSound {SOUND}
+        options:
+          SOUND:
+            Light: Свет
+      Poetry_setBackground:
+        text: задать цвет фона {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1507,6 +1533,10 @@ ru:
             '"space"': Космос
             '"stars"': Звезды
             '"ripples"': Круги на воде
+            '"rain"': Дождь
+            '"bubbles"': Пузыри
+            '"confetti"': Конфетти
+            '"hearts"': Цветные сердечки
           PALETTE:
             '"rainbow"': Радуга
       Poetry_setBackgroundImageAs:
@@ -1521,21 +1551,25 @@ ru:
       Poetry_startBehavior:
         options:
           BEHAVIOR:
+            fluttering: дрожание
             growing: увеличение
             jittering: дрожание
             shrinking: уменьшение
             spinning_left: левостороннее вращение
             spinning_right: правостороннее вращение
             wandering: блуждание
+            wobbling: колебание
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
+            fluttering: дрожание
             growing: увеличение
             jittering: дрожание
             shrinking: уменьшение
             spinning_left: левостороннее вращение
             spinning_right: правостороннее вращение
             wandering: блуждание
+            wobbling: колебание
       Poetry_whenLineShows:
         options:
           N:

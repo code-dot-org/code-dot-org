@@ -461,6 +461,29 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "บล็อกใหม่!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "บล็อกใหม่!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "บล็อกใหม่!",
+          "poetry_foreground": "บล็อกใหม่!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "บล็อกใหม่!",
+          "poetry_multiple_sprites": "บล็อกใหม่!",
+          "poetry_new_block": "บล็อกใหม่!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "บล็อกใหม่!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "บล็อกใหม่!",
+          "poetry_sprite_stops": "บล็อกใหม่!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "บล็อกใหม่!",
+          "poetry_remove_sprite": "บล็อกใหม่!"
         }
       }
     }

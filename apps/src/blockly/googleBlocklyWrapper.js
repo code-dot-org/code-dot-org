@@ -1,22 +1,29 @@
+import {ScrollOptions} from '@blockly/plugin-scroll-options';
 import {BlocklyVersion} from '@cdo/apps/constants';
 import styleConstants from '@cdo/apps/styleConstants';
+import * as utils from '@cdo/apps/utils';
 import CdoBlockDragger from './addons/cdoBlockDragger';
 import CdoBlockSvg from './addons/cdoBlockSvg';
 import initializeCdoConstants from './addons/cdoConstants';
+import CdoFieldButton from './addons/cdoFieldButton';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
+import CdoFieldLabel from './addons/cdoFieldLabel';
 import FunctionEditor from './addons/functionEditor';
 import initializeGenerator from './addons/cdoGenerator';
 import CdoInput from './addons/cdoInput';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoPathObject from './addons/cdoPathObject';
 import CdoTheme from './addons/cdoTheme';
+import CdoToolbox from './addons/cdoToolbox';
 import initializeTouch from './addons/cdoTouch';
 import CdoTrashcan from './addons/cdoTrashcan';
 import initializeVariables from './addons/cdoVariables';
 import CdoVariableMap from './addons/cdoVariableMap';
+import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
 import CdoWorkspaceSvg from './addons/cdoWorkspaceSvg';
 import initializeBlocklyXml from './addons/cdoXml';
+import initializeCss from './addons/cdoCss';
 
 /**
  * Wrapper class for https://github.com/google/blockly
@@ -84,6 +91,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('contractEditor');
   blocklyWrapper.wrapReadOnlyProperty('createSvgElement');
   blocklyWrapper.wrapReadOnlyProperty('Css');
+  blocklyWrapper.wrapReadOnlyProperty('DropDownDiv');
   blocklyWrapper.wrapReadOnlyProperty('disableVariableEditing');
   blocklyWrapper.wrapReadOnlyProperty('Events');
   blocklyWrapper.wrapReadOnlyProperty('FieldAngleDropdown');
@@ -97,6 +105,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('FieldImage');
   blocklyWrapper.wrapReadOnlyProperty('FieldImageDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldLabel');
+  blocklyWrapper.wrapReadOnlyProperty('FieldNumber');
   blocklyWrapper.wrapReadOnlyProperty('FieldParameter');
   blocklyWrapper.wrapReadOnlyProperty('FieldRectangularDropdown');
   blocklyWrapper.wrapReadOnlyProperty('FieldTextInput');
@@ -118,6 +127,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Input');
   blocklyWrapper.wrapReadOnlyProperty('INPUT_VALUE');
   blocklyWrapper.wrapReadOnlyProperty('js');
+  blocklyWrapper.wrapReadOnlyProperty('MenuItem');
   blocklyWrapper.wrapReadOnlyProperty('MetricsManager');
   blocklyWrapper.wrapReadOnlyProperty('modalBlockSpace');
   blocklyWrapper.wrapReadOnlyProperty('Msg');
@@ -134,8 +144,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
   blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('utils');
+  blocklyWrapper.wrapReadOnlyProperty('Toolbox');
   blocklyWrapper.wrapReadOnlyProperty('Touch');
   blocklyWrapper.wrapReadOnlyProperty('Trashcan');
+  blocklyWrapper.wrapReadOnlyProperty('VARIABLE_CATEGORY_NAME');
   blocklyWrapper.wrapReadOnlyProperty('Variables');
   blocklyWrapper.wrapReadOnlyProperty('VariableMap');
   blocklyWrapper.wrapReadOnlyProperty('weblab_locale');
@@ -144,29 +156,30 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('WorkspaceSvg');
   blocklyWrapper.wrapReadOnlyProperty('Xml');
 
-  blocklyWrapper.blockly_.BlockDragger = CdoBlockDragger;
   blocklyWrapper.blockly_.BlockSvg = CdoBlockSvg;
+  blocklyWrapper.blockly_.FieldButton = CdoFieldButton;
   blocklyWrapper.blockly_.FieldDropdown = CdoFieldDropdown;
   blocklyWrapper.blockly_.FieldImageDropdown = CdoFieldImageDropdown;
+  blocklyWrapper.blockly_.FieldLabel = CdoFieldLabel;
   blocklyWrapper.blockly_.FunctionEditor = FunctionEditor;
   blocklyWrapper.blockly_.Input = CdoInput;
-  blocklyWrapper.blockly_.MetricsManager = CdoMetricsManager;
   blocklyWrapper.geras.PathObject = CdoPathObject;
+  blocklyWrapper.blockly_.Toolbox = CdoToolbox;
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan;
   blocklyWrapper.blockly_.VariableMap = CdoVariableMap;
   blocklyWrapper.blockly_.WorkspaceSvg = CdoWorkspaceSvg;
 
   blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.METRICS_MANAGER,
+    blocklyWrapper.blockly_.registry.Type.TOOLBOX,
     blocklyWrapper.blockly_.registry.DEFAULT,
-    CdoMetricsManager,
+    CdoToolbox,
     true /* opt_allowOverrides */
   );
 
   blocklyWrapper.blockly_.registry.register(
-    blocklyWrapper.blockly_.registry.Type.BLOCK_DRAGGER,
+    blocklyWrapper.blockly_.registry.Type.FLYOUTS_VERTICAL_TOOLBOX,
     blocklyWrapper.blockly_.registry.DEFAULT,
-    CdoBlockDragger,
+    CdoVerticalFlyout,
     true /* opt_allowOverrides */
   );
 
@@ -219,6 +232,13 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return Blockly.JavaScript.workspaceToCode(Blockly.mainBlockSpace);
   };
 
+  blocklyWrapper.getFieldForInputType = function(type) {
+    if (type === 'Number') {
+      return blocklyWrapper.FieldNumber;
+    }
+    return blocklyWrapper.FieldTextInput;
+  };
+
   // TODO - used for spritelab behavior blocks
   blocklyWrapper.Block.createProcedureDefinitionBlock = function(config) {};
 
@@ -239,7 +259,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
       BLOCK_SPACE_SCROLLED: 'blockSpaceScrolled',
       RUN_BUTTON_CLICKED: 'runButtonClicked'
     },
-    onMainBlockSpaceCreated: () => {}, // TODO
+    onMainBlockSpaceCreated: callback => {
+      if (Blockly.mainBlockSpace) {
+        callback();
+      } else {
+        document.addEventListener(
+          Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED,
+          callback
+        );
+      }
+    },
+
     createReadOnlyBlockSpace: (container, xml, options) => {
       const workspace = new Blockly.WorkspaceSvg({
         readOnly: true,
@@ -280,6 +310,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
           vertical: true,
           horizontal: false
         }
+      },
+      plugins: {
+        blockDragger: CdoBlockDragger,
+        metricsManager: CdoMetricsManager
       }
     };
 
@@ -292,7 +326,14 @@ function initializeBlocklyWrapper(blocklyInstance) {
       styleConstants['workspace-headers-height']
     }px)`;
     blocklyWrapper.editBlocks = opt_options.editBlocks;
-    return blocklyWrapper.blockly_.inject(container, options);
+    const workspace = blocklyWrapper.blockly_.inject(container, options);
+
+    document.dispatchEvent(
+      utils.createEvent(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED)
+    );
+
+    const scrollOptionsPlugin = new ScrollOptions(workspace);
+    scrollOptionsPlugin.init();
   };
 
   // Used by StudioApp to tell Blockly to resize for Mobile Safari.
@@ -307,6 +348,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   initializeTouch(blocklyWrapper);
   initializeVariables(blocklyWrapper);
   initializeCdoConstants(blocklyWrapper);
+  initializeCss(blocklyWrapper);
 
   return blocklyWrapper;
 }

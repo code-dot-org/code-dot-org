@@ -3028,3 +3028,64 @@ uk-UA:
         - {}
         questions:
         - {}
+      CSD U2 Expression Exemplars:
+        markdown: |
+          # Зразки особистого веб-сайту
+
+          Натисніть на веб-сайти нижче, щоб перевірити особисті веб-сайти інших студентів.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
+      CSD U2 Expression Exemplars_2018:
+        markdown: |
+          # Зразки особистого веб-сайту
+
+          Натисніть на веб-сайти нижче, щоб перевірити особисті веб-сайти інших студентів.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
+      CSD U2 Expression Exemplars_2018_2019:
+        markdown: |
+          # Зразки особистого веб-сайту
+
+          Натисніть на веб-сайти нижче, щоб перевірити особисті веб-сайти інших студентів.
+
+          <a href="https://codeprojects.org/SYRw7CQJzSmAErCEF-mMXQ" target="_blank"><img src="https://images.code.org/25b7284a4cd3d26f9b989a5c3bba6485-image-1493760609250.29.54 PM.png" style="width:200px;float:left"></a>
+
+          <a href="https://codeprojects.org/y6u1W372PZh2MfzxwHQBKA" target="_blank"><img src="https://images.code.org/5929f61d14370a72e2e3b77c1948d5ed-image-1493943243592.13.32 PM.png" style="width:200px;float:left"></a>
+      CSD U2 Top Websites_2018:
+        markdown: |
+          # Найпопулярніші веб-сайти США
+
+          Нижче наведені деякі з найбільш відвідуваних веб-сайтів у США. Кожен з них містить короткий опис основної функції веб-сайту.
+
+
+          * Google.com - Пошукова система веб-сайтів, зображень, відео та інших засобів масової інформації
+          * Youtube.com - Відправлений користувачем відеосайт з оцінками та коментарями
+          * Facebook.com - Спільнота соціальних медіа, що дозволяє користувачам ділитися інформацією з друзями
+          * Amazon.com - Сайти інтернет-магазинів для покупки всіх видів товарів
+          * Yahoo.com - Пошукова система, постачальник електронної пошти і джерело новин
+          * Wikipedia.org - Безкоштовна енциклопедія із вмістом, створеним користувачами
+      CSD U2 Top Websites_2018_2019:
+        markdown: |
+          # Найпопулярніші веб-сайти США
+
+          Нижче наведені деякі з найбільш відвідуваних веб-сайтів у США. Кожен з них містить короткий опис основної функції веб-сайту.
+
+
+          * Google.com - Пошукова система веб-сайтів, зображень, відео та інших засобів масової інформації
+          * Youtube.com - Відправлений користувачем відеосайт з оцінками та коментарями
+          * Facebook.com - Спільнота соціальних медіа, що дозволяє користувачам ділитися інформацією з друзями
+          * Amazon.com - Сайти інтернет-магазинів для покупки всіх видів товарів
+          * Yahoo.com - Пошукова система, постачальник електронної пошти і джерело новин
+          * Wikipedia.org - Безкоштовна енциклопедія із вмістом, створеним користувачами
+      csd-pre-survey-2017-levelgroup:
+        title: Опитування студентів перед курсом CS Discoveries
+      csd-pre-survey-2017-levelgroup_2018:
+        title: Опитування студентів перед курсом CS Discoveries
+      csd-pre-survey-levelgroup_2019:
+        title: Опитування студентів перед курсом CS Discoveries
+      CSD U1 Test:
+        title: 'Післяпроектне тестування: Комп''ютери та вирішення проблем '

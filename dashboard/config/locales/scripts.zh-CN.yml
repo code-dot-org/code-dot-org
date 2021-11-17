@@ -201,7 +201,7 @@ zh-CN:
           description_short: 让我们用代码同安娜和爱莎一起去探寻冰雪的魔力与美丽。
           lessons:
             Artist:
-              name: 小艺术家
+              name: 和安娜、爱莎一起编程
           student_description: 让我们用代码与安娜和艾莎一起探索神奇而又美丽的冰雪世界。你将能创造雪花，溜冰，以及冬季仙境，你还可与朋友分享它们！
         course4:
           title: 课程 4
@@ -343,7 +343,7 @@ zh-CN:
           description_short: 通过游戏实验室用迪斯尼无限的角色创建故事或游戏。
           lessons:
             Infinity:
-              name: 无限
+              name: 迪斯尼无限游戏实验室
           student_description: 通过游戏实验室用迪斯尼无限的角色创建故事或游戏。
         algebrademo:
           lessons:
@@ -512,6 +512,8 @@ zh-CN:
           lessons:
             Jigsaw:
               name: 拼图
+              description_student: 点击并拖拽来完成难题。
+              description_teacher: 这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。
           student_description: 试试拼图教程
         step:
           title: 步进
@@ -1679,9 +1681,6 @@ zh-CN:
         starwarsblocks:
           description: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
           description_short: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
-          lessons:
-            Hour of Code 2015:
-              name: "《编程一小时 2015》"
           student_description: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
         mc:
           title: 我的世界 编程一小时
@@ -3492,7 +3491,6 @@ zh-CN:
           description: 进行一场篮球赛
           lessons:
             Bounce:
-              name: 跳
               description_student: 你想过能在学校里玩电脑游戏吗？这堂课里，你能自己做一个！
               description_teacher: 在这个在线活动中，学生们会学习什么是事件，在像游戏一样的程序中计算机如何使用它们。学生们会编程使用交互事件（比如按下方向键）来通过这一关。在这一关结束时，学生们可以通过不同的速度和声音来自定义他们的游戏。
           student_description: 进行一场篮球赛
@@ -4143,7 +4141,6 @@ zh-CN:
           description: 为你自己的运动编写代码
           lessons:
             Sports:
-              name: 运动
               description_student: 你想过能在学校里玩电脑游戏吗？这堂课里，你能自己做一个！
               description_teacher: 在这个在线活动中，学生们会学习什么是事件，在像游戏一样的程序中计算机如何使用它们。学生们会编程使用交互事件（比如按下方向键）来通过这一关。在这一关结束时，学生们可以通过不同的速度和声音来自定义他们的游戏。
           student_description: 为你自己的运动编写代码
@@ -6970,7 +6967,7 @@ zh-CN:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: "《我的世界》: 编程一小时英雄之旅"
             Minecraft Hour of Code:
-              name: 我的世界 编程一小时
+              name: "《我的世界》: 英雄之旅"
           student_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
         applab-intro-staging:
           title: 应用实验室阶段简介
@@ -9521,7 +9518,7 @@ zh-CN:
           description: "《我的世界》带来了一个全新的活动！用你的创造力和解决问题的技能用代码来探索并建造一个水下世界。"
           lessons:
             Aquatic:
-              name: 水上
+              name: "《我的世界》：水上航行"
           student_description: "《我的世界》带来了一个全新的活动！用你的创造力和解决问题的技能用代码来探索并建造一个水下世界。"
         sconyers:
           title: 特蕾西的游乐场
@@ -16038,6 +16035,8 @@ zh-CN:
           lessons:
             Virus Simulation for Code Bytes:
               name: 编码一个模拟
+            Outbreak:
+              name: 编码一个模拟
           lesson_groups:
             outbreak:
               display_name: 疫情爆发模拟
@@ -18013,6 +18012,8 @@ zh-CN:
           lessons:
             lesson-15:
               name: 评估日
+            Java Lab:
+              name: Java实验室
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -18388,6 +18389,8 @@ zh-CN:
               name: 评估日
             lesson-15:
               name: 评估日
+            Java Lab:
+              name: Java实验室
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -18427,3 +18430,23 @@ zh-CN:
           lessons:
             lesson-1:
               name: 舞会：离线
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: 小部件
+            lesson-2:
+              name: 工具
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: 拼字比赛
+          title: 拼字比赛
+        outbreak-csc:
+          title: 疫情爆发
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: 评估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容

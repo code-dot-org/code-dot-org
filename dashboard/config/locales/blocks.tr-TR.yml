@@ -1062,6 +1062,7 @@ tr:
           EFFECT:
             '"burst"': patlama
             '"rain"': yağmur
+            '"spiral"': sarmal
       gamelab_makeNewSpriteAnon:
         text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNumSprites:
@@ -1109,7 +1110,22 @@ tr:
           SOUND:
             "'sound://category_app/app_button_1.mp3'": Tuş
             "'sound://category_collect/clicky_crunch.mp3'": çatlak
+            "'sound://category_pop/bubble_pop_cluster_1.mp3'": baloncuk
+            "'sound://category_animals/bear.mp3'": Ayı
+            "'sound://category_animals/cat.mp3'": kedi
+            "'sound://category_animals/cow.mp3'": inek
+            "'sound://category_animals/pig.mp3'": domuz
+            "'sound://category_animals/sheep.mp3'": kuzu
+            "'sound://category_animals/goat.mp3'": keçi
+            "'sound://category_animals/chicken.mp3'": tavuk
+            "'sound://category_animals/rooster.mp3'": horoz
+            "'sound://category_animals/elephant.mp3'": fil
+            "'sound://category_animals/dolphin.mp3'": yunus
+            "'sound://category_animals/chick.mp3'": tavuk
+            "'sound://category_animals/dog.mp3'": köpek
+            "'sound://category_animals/tiger.mp3'": Kaplan
             "'sound://category_instrumental/harpe_pluck_1.mp3'": arp
+            "'sound://category_retro/retro_game_ui_select_6.mp3'": seç
             "'sound://category_digital/jump_7.mp3'": zıpla
       gamelab_pointInDirection:
         text: point {SPRITE} {DIRECTION}
@@ -1607,15 +1623,32 @@ tr:
         text: canavarları rastgele yerleştir
       Outbreak_stopMoving:
         text: canavarlar hareket etmeyi bırakıyor
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: Dondurma
+            Stars: Yıldızlar
+            Fireworks: Havai fişek
+            '"rainbow"': Gökkuşağı
+            '"hearts"': Kalpler
+            '"flowers"': Çiçekler
+            '"waves"': Dalgalar
       Poetry_makeBurst:
         options:
           EFFECT:
             '"burst"': patlama
             '"rain"': yağmur
+      Poetry_makeNewSpriteAnon:
+        text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
       Poetry_makeNumSprites:
         text: "{NUM} yeni {ANIMATION_NAME} hareketli nesneleri oluştur."
       Poetry_playSound:
         text: playSound {SOUND}
+        options:
+          SOUND:
+            Light: Aydınlık
+      Poetry_setBackground:
+        text: arka plan rengini {COLOR} olarak ayarla
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1624,6 +1657,10 @@ tr:
             '"space"': Uzay
             '"stars"': Yıldızlar
             '"ripples"': Dalgaları
+            '"rain"': Yağmur
+            '"bubbles"': Baloncuklar
+            '"confetti"': Konfeti
+            '"hearts"': Renkli Kalpler
           PALETTE:
             '"rainbow"': Gökkuşağı
       Poetry_setBackgroundImageAs:

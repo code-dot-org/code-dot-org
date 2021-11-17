@@ -4,7 +4,7 @@ he:
     script:
       category:
         csf_category_name: יסודות מדעי המחשב
-        hoc_category_name: שעה של קוד
+        hoc_category_name: שעת הקוד
         math_category_name: מתמטיקה
         other_category_name: אחר
       name:
@@ -157,12 +157,12 @@ he:
           student_description: נסו את יסודות מדעי המחשב עם דמויות מאנגרי בירדס, צמחים נגד זומבים וסקראט מעידן הקרח!
         frozen:
           title: תכנתו עם אנה ואלזה
-          description: תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!
+          description: השתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי שבקרח. אנו עומדים ליצור פתיתי שלג וצורות בקרח ואז תוכלו לשתף את זה עם חבריכם!
           description_short: בוא נשתמש בקוד כדי להצטרף לאנה ואלזה כשהן חוקרות את הקסם והיופי של קרח.
           lessons:
             Artist:
-              name: אמן
-          student_description: תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!
+              name: תכנתו עם אנה ואלזה
+          student_description: השתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי שבקרח. אנו עומדים ליצור פתיתי שלג וצורות בקרח ואז תוכלו לשתף את זה עם חבריכם!
         course4:
           title: מסלול 4
           description: קורס 4 מיועד עבור תלמידים אשר למדו את קורס 2 ו-3. תלמידים ילמדו לפתור חידות עם מורכבות מוגברת כאשר ילמדו איך לשלב מספר עקרונות כשפותרים כל אתגר. כאשר הקורס יסתיים, התלמידים יצרו תוכניות אשר יאפשרו להם לתרגל מספר מיומנויות הכוללים בין היתר לולאות ופונקציות עם פרמטרים. מומלץ לכיתות ד-ו.
@@ -255,7 +255,7 @@ he:
           description_short: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות דמויות האינסוף של דיסני.
           lessons:
             Infinity:
-              name: אינסוף
+              name: מעבדת הצעצועים עם דיסני אינסוף
           student_description: השתמש במעבדת הצעצועים כדי ליצור סיפור או משחק בו מככבות דמויות האינסוף של דיסני.
         algebrademo:
           lessons:
@@ -637,9 +637,6 @@ he:
         starwarsblocks:
           description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה.
           description_short: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה.
-          lessons:
-            Hour of Code 2015:
-              name: שעת קוד 2015
           student_description: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים" הפרטי שלכם בגלקסיה רחוקה, רחוקה.
         mc:
           title: 'שעת הקוד: גרסת מיינקראפט'
@@ -953,10 +950,7 @@ he:
           lesson_groups:
             required:
               display_name: סקירה
-        basketball:
-          lessons:
-            Bounce:
-              name: להקפיץ
+        basketball: {}
         hoc-encryption: {}
         csd2-2017:
           lesson_groups:
@@ -991,12 +985,12 @@ he:
               display_name: סקר שלאחר הקורס
         minecraft:
           title: מעצבי מיינקראפט
-          description_short: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט משלך.
-          description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט משלך.
+          description_short: תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך.
+          description: תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך.
           lessons:
             Minecraft Hour of Code Designer:
               name: מעצבי מיינקראפט
-          student_description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט משלך.
+          student_description: תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט משלך.
         flappy-impact-study:
           lessons:
             Flappy Code:
@@ -1044,6 +1038,7 @@ he:
             extra_course_content:
               display_name: תוכן נוסף של הקורס
           lessons:
+            Functions in Farmer: {}
             Build a Play Lab Game:
               name: צור משחק במעבדת הצעצועים
             Internet:
@@ -1618,7 +1613,7 @@ he:
           title: 'מיינקראפט: המסע של הירו'
           lessons:
             Minecraft Hour of Code:
-              name: 'שעת הקוד: גרסת מיינקראפט'
+              name: 'מיינקראפט: המסע של הירו'
         applab-intro-staging: {}
         csp-explore-2017:
           lesson_groups:
@@ -1653,6 +1648,7 @@ he:
               name: רצף במבוך
             Debugging with Scrat:
               name: ניפוי שגיאות עם סקראט
+            Loops in Artist: {}
             Introduction:
               name: מבוא
             Conditionals:
@@ -2343,6 +2339,9 @@ he:
         aquatic:
           title: 'מיינקראפט: מסע ימי'
           description_short: השתמש ביצירתיות ובכישורי פתרון בעיות כדי לגלות ולבנות עולמות תת-ימיים עם קוד!
+          lessons:
+            Aquatic:
+              name: 'מיינקראפט: מסע ימי'
         sconyers: {}
         dance--draft:
           lessons:
@@ -3122,7 +3121,9 @@ he:
             CS Discoveries Post Course survey: {}
             Sprite Properties:
               name: מאפייני ספרייט
-        csd-bugs: {}
+        csd-bugs:
+          lessons:
+            Game Lab Bugs: {}
         maddie-test:
           lessons:
             stage 1:
@@ -3875,6 +3876,8 @@ he:
           lessons:
             Virus Simulation for Code Bytes:
               name: קידוד של סימולציה
+            Outbreak:
+              name: קידוד של סימולציה
           lesson_groups:
             outbreak:
               display_name: סימולציית התפרצות
@@ -3912,6 +3915,7 @@ he:
           lessons:
             Post-Project Test: {}
             CS Discoveries Post Course survey: {}
+            lesson-1: {}
           lesson_groups:
             cspSurvey:
               display_name: סקר
@@ -3937,6 +3941,7 @@ he:
               name: פונקציות
             Post-Project Test: {}
             CS Discoveries Post Course survey: {}
+            lesson-1: {}
           lesson_groups:
             csd3_1:
               display_name: 'פרק 1: תמונות ואנימציות'
@@ -3948,6 +3953,7 @@ he:
           lessons:
             Post-Project Test: {}
             CS Discoveries Post Course survey: {}
+            CS Discoveries Post-Course Survey: {}
           lesson_groups:
             csd4_1:
               display_name: 'פרק 1: עיצוב מכוון משתמש'
@@ -3964,6 +3970,7 @@ he:
               name: ייצוג ASCII וייצוג בינארי
             Post-Project Test: {}
             CS Discoveries Post Course survey: {}
+            CS Discoveries Post-Course Survey: {}
           lesson_groups:
             csd5_1:
               display_name: 'פרק 1: ייצוג מידע'
@@ -3981,6 +3988,7 @@ he:
               name: פונקציות ופרמטרים
             Post-Project Test: {}
             CS Discoveries Post Course survey: {}
+            CS Discoveries Post-Course Survey: {}
           lesson_groups:
             csd6_1:
               display_name: 'פרק 1: תכנות עם חומרה'
@@ -4023,9 +4031,7 @@ he:
               display_name: פּרוֹיֶקט
         csp6-2021: {}
         csp7-2021: {}
-        csp8-2021:
-          lessons:
-            lesson-4: {}
+        csp8-2021: {}
         csp9-2021: {}
         csp10-2021: {}
         coursea-2021:
@@ -4294,8 +4300,20 @@ he:
             lesson-17: {}
             lesson-18: {}
             lesson-19: {}
-        csa5-pilot: {}
-        csa6-pilot: {}
+            lesson-20: {}
+        csa5-pilot:
+          lessons:
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+            lesson-16: {}
+        csa6-pilot:
+          lessons:
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
         csa7-pilot: {}
         csa8-pilot: {}
         csa9-pilot: {}
@@ -4355,6 +4373,7 @@ he:
         csd7-2021:
           lessons:
             Post-Unit Survey: {}
+            CS Discoveries Post-Course Survey: {}
           lesson_groups:
             lessonGroup-4:
               display_name: סקר
@@ -4424,7 +4443,9 @@ he:
             lesson-6: {}
         self-paced-pl-csd7-2021: {}
         self-paced-pl-csd8-2021: {}
-        self-paced-pl-csp1-2021: {}
+        self-paced-pl-csp1-2021:
+          lessons:
+            lesson-1: {}
         self-paced-pl-csp2-2021: {}
         self-paced-pl-csp3-2021: {}
         self-paced-pl-csp4-2021: {}
@@ -4645,6 +4666,7 @@ he:
             lesson-1: {}
             lesson-3: {}
             lesson-4: {}
+            lesson-5: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -4652,15 +4674,7 @@ he:
             lesson-2: {}
         csa5-pilot-facilitator:
           lessons:
-            Reversing Elements: {}
-            Shifting Elements: {}
-            Finding Duplicates: {}
-            Searching for Elements: {}
-            A Sustainable Neighborhood Project - Day 1: {}
-            A Sustainable Neighborhood Project - Day 2: {}
-            A Sustainable Neighborhood Project - Day 3: {}
-            FRQ Day: {}
-            Assessment Day: {}
+            lesson-1: {}
             lesson-7: {}
             lesson-8: {}
             lesson-9: {}
@@ -4670,6 +4684,10 @@ he:
             lesson-13: {}
             lesson-14: {}
             lesson-15: {}
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
         poetry-hoc:
           lessons:
             lesson-1: {}
@@ -4696,9 +4714,7 @@ he:
             lesson-19:
               name: פּרוֹיֶקט
             lesson-20: {}
-        hello-world-food:
-          lessons:
-            lesson-1: {}
+        hello-world-food: {}
         csa-u7-dev:
           lessons:
             lesson-1: {}
@@ -4762,3 +4778,82 @@ he:
         poetry-hoc3:
           lessons:
             lesson-1: {}
+        spritelab-effects-challenge:
+          lessons:
+            lesson-1: {}
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: ווידג'טים
+            lesson-2:
+              name: כלים
+            lesson-3: {}
+        poem-art: {}
+        poetry: {}
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: תחרות איות
+          title: תחרות איות
+        outbreak-csc: {}
+        explore-data-1: {}
+        counting-csc: {}
+        csa5-exemplars:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+            lesson-9: {}
+            lesson-10: {}
+            lesson-11: {}
+            lesson-12: {}
+            lesson-13: {}
+            lesson-14: {}
+            lesson-15: {}
+        csa-examples-21:
+          lessons:
+            lesson-1: {}
+            lesson-2: {}
+            lesson-3: {}
+            lesson-4: {}
+            lesson-5: {}
+            lesson-6: {}
+            lesson-7: {}
+            lesson-8: {}
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: סקר שלאחר הקורס
+        csa-pl-test: {}
+        csa-pl-module-1-test: {}
+        csa-pl-module-2-test: {}
+        csa-pl-module-3-test: {}
+        csa6-pilot-facilitator:
+          lessons:
+            Java Lab: {}
+            The Neighborhood: {}
+            The Theater: {}
+            The Playground: {}
+        poem-art-2021: {}
+        poetry-2021: {}
+        hello-world-food-2021: {}
+        hello-world-emoji-2021:
+          lessons:
+            lesson-1: {}
+        hello-world-animals-2021:
+          lessons:
+            lesson-1: {}
+        hello-world-retro-2021:
+          lessons:
+            lesson-1: {}
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: תחרות איות
+        explore-data-1-2021: {}
+        counting-csc-2021: {}

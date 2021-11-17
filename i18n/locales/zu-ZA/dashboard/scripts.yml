@@ -1,14 +1,9 @@
----
 zu:
   data:
     script:
       category:
         math_category_name: Izibalo
       name:
-        infinity:
-          lessons:
-            Infinity:
-              name: Akugcini noma utalagu
         csd2-2017:
           lessons:
             Lists:

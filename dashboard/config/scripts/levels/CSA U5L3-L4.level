@@ -2,21 +2,28 @@
   <config><![CDATA[{
   "properties": {
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "project_template_level_name": "CSA U5 Sustainable Concert Template",
-    "long_instructions": "mirrorVertical()",
+    "long_instructions": "Import `ImageEditor.java` from your **Backpack**.\r\n\r\nWrite the `MirroredImage` class which extends `Image`. A `MirroredImage` has a 2D `Pixel` array called `imagePixels`, which is initialized in the constructor using `ImageEditor.getPixels()`. Use the `this` keyword as the argument to `getPixels()` to pass the current object.\r\n\r\nIn `MirroredImage.java`, write the `verticalMirror()` method by:\r\n\r\n1. Declare `Pixel` variables `leftPixel` and `rightPixel` and initialize both to `null`.\r\n\r\n2. Declare and initialize an `int` variable called `width` to the number of columns in `imagePixels`.\r\n\r\n3. Traverse half of the width of the `imagePixels` array in column-major order.\r\n\r\n   * Set `leftPixel` to the current `Pixel`.\r\n   \r\n   * Set `rightPixel` to the `Pixel` on the opposite side using `width - 1 - col` for the column.\r\n   \r\n   * Use `setColor()` and `getColor()` to set the color of the `rightPixel` to the color of the `leftPixel`.\r\n\r\n4. Test your `MirroredImage` in `MyConcert.java`.",
     "mini_rubric": "false",
     "hide_share_and_remix": "false",
     "submittable": "false",
-    "csa_view_mode": "theater"
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "MyClass.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\npublic class MyConcert {\n  public static void main(String[] args) throws FileNotFoundException {\n\n    Stage myStage = Theater.stage;\n\n    myStage.drawImage(\"city_block.jpeg\", 0, 0, myStage.getWidth(), myStage.getHeight(), 0);\n    myStage.pause(1);\n    \n    // TO DO: Create a MirroredImage object.\n\t\t\n\n    // TO DO: Use the vertical mirror effect.\n    \n\n    // TO DO: Draw the MirroredImage on the stage.\n    \n\n    myStage.play();\n  }\n}",
+        "isVisible": true
+      },
+      "MirroredImage.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.io.FileNotFoundException;\n\n// TO DO: Make MirroredImage a subclass of Image.\npublic class MirroredImage {\n\n  // TO DO: Declare a 2D Pixel array called imagePixels.\n  private Pixel[][] imagePixels;\n\n  // TO DO: Complete the constructor by calling super() and initializing\n  // imagePixels to the 2D Pixel array returned from ImageEditor.getPixels().\n  public MirroredImage(String filename) throws FileNotFoundException {\n    super(filename);\n    imagePixels = ImageEditor.getPixels(this);\n  }\n\n  // TO DO: Write your code to vertically mirror the image.\n  public void verticalMirror() {\n    Pixel leftPixel = null;\n    Pixel rightPixel = null;\n    int width = imagePixels[0].length;\n\n    for (int col = 0; col < width / 2; col++) {\n      for (int row = 0; row < imagePixels.length; row++) {\n        leftPixel = imagePixels[row][col];\n        rightPixel = imagePixels[row][width - 1 - col];\n        rightPixel.setColor(leftPixel.getColor());\n      }\n    }\n  }\n}",
+        "isVisible": true
+      }
+    },
+    "encrypted_examples": "f0IsrdHx9oayOAswvXWYgoG/TL5XtGZ+9azHHlFb/tNbdileYNenivhpx3ry\nrDQTE+jpwSie/919Zy8GDHErOMlG8+M5DhvDXmSQyc9iVLM=\n"
   },
   "game_id": 68,
   "published": true,
   "created_at": "2021-09-21T17:20:52.000Z",
   "level_num": "custom",
   "user_id": 9271,
-  "audit_log": "[{\"changed_at\":\"2021-09-21 17:20:54 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-09-21 17:20:54 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-14 14:30:53 +0000\",\"changed\":[\"long_instructions\",\"contained_level_names\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-14 16:03:49 +0000\",\"changed\":[\"project_template_level_name\",\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-14 17:12:10 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-14 17:18:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"},{\"changed_at\":\"2021-10-14 17:21:15 +0000\",\"changed\":[\"encrypted_examples\"],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]"
 }]]></config>
 </Javalab>

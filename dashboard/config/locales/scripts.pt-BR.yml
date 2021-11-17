@@ -239,7 +239,7 @@ pt:
             gelo com Anna e Elsa.
           lessons:
             Artist:
-              name: Artista
+              name: Programação com Anna e Elsa
           student_description: Vamos usar programação para explorar a magia e a beleza
             do gelo junto com Anna e Elsa. Você vai criar flocos de neve e padrões
             enquanto patina no gelo e cria um país das maravilhas congelante que pode
@@ -403,7 +403,7 @@ pt:
             usando personagens da Disney Infinity.
           lessons:
             Infinity:
-              name: Infinito
+              name: Laboratório Infinito Disney
           student_description: Use o Laboratório para criar uma história ou um jogo
             usando personagens da Disney Infinity.
         algebrademo:
@@ -596,6 +596,12 @@ pt:
           lessons:
             Jigsaw:
               name: Quebra-cabeça
+              description_student: Clique e arraste para finalizar os quebra-cabeças.
+              description_teacher: Esta lição dará aos alunos uma ideia sobre o que
+                esperar quando eles vão para o laboratório de informática. A lição
+                começa com uma breve discussão introduzindo à eles as condutas do
+                laboratório de informática, então eles irão progredir usando um computador
+                para completar quebra-cabeças online.
           student_description: Experimente nosso tutorial sobre quebra-cabeça
         step:
           title: Passo
@@ -1908,9 +1914,6 @@ pt:
             Wars em uma galáxia muito, muito distante.
           description_short: Aprenda a programar droids, e crie seu próprio jogo do
             Star Wars em uma galáxia muito, muito distante.
-          lessons:
-            Hour of Code 2015:
-              name: Hora do Código 2015
           student_description: Aprenda a programar droids, e crie seu próprio jogo
             do Star Wars em uma galáxia muito, muito distante.
         mc:
@@ -4127,7 +4130,6 @@ pt:
           description: Escolha seu time e faça um jogo de basquete
           lessons:
             Bounce:
-              name: Pingue-pongue
               description_student: Você já desejou poder jogar videogame na escola?
                 Nesta lição, você poderá fazer o seu próprio!
               description_teacher: Nesta atividade online, os alunos aprenderão o
@@ -5145,7 +5147,6 @@ pt:
           description: Esportes
           lessons:
             Sports:
-              name: Esportes
               description_student: Você já desejou poder jogar videogame na escola?
                 Nesta lição, você poderá fazer o seu próprio!
               description_teacher: Nesta atividade online, os alunos aprenderão o
@@ -9232,7 +9233,7 @@ pt:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: 'Minecraft : Hora do Código da Jornada do Herói'
             Minecraft Hour of Code:
-              name: Hora do Código Minecraft
+              name: 'Minecraft: Jornada do Herói'
           student_description: O Minecraft está de volta para a Hora do Código com
             uma nova atividade! Viaje através de Minecraft com código.
         applab-intro-staging:
@@ -13289,7 +13290,7 @@ pt:
             usando código.
           lessons:
             Aquatic:
-              name: Aquático
+              name: 'Minecraft: Viagem Aquática'
           student_description: Minecraft está de volta com uma nova atividade! Use
             sua criatividade e habilidade de resolver problemas para explorar e construir
             mundos submarinos usando código.
@@ -20940,6 +20941,8 @@ pt:
                 todas as habilidades de programação que eles aprenderam para criar
                 um jogo animado. É hora de ser criativo e criar uma história no Laboratório
                 de Jogos!
+            Safety in My Online Neighborhood:
+              description_student: Saiba como ter segurança ao visitar lugares online.
           student_description: Aprenda o básixo de Ciências da Computação e segurança
             na internet. No final deste curso, você irá irá seu próprio jogo ou história,
             que poderá ser compartilhada.
@@ -22616,6 +22619,8 @@ pt:
             csd3_2:
               display_name: 'Capítulo 2: Construindo Jogos'
           lessons:
+            Example Projects:
+              name: Projetos de exemplo
             Velocity:
               name: Velocidade
             Collision Detection:
@@ -22881,6 +22886,8 @@ pt:
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
+              name: Codificação da simulação
+            Outbreak:
               name: Codificação da simulação
           lesson_groups:
             outbreak:
@@ -23757,6 +23764,8 @@ pt:
           description_short: Uma introdução à ciência da computação para pré-leitores.
           description_audience: 'Idade: de 4 a 7 anos'
           lessons:
+            Safety in My Online Neighborhood:
+              description_student: Saiba como ter segurança ao visitar lugares online.
             Learn to Drag and Drop:
               key: Aprenda a arrastar e soltar
               name: Aprenda a arrastar e soltar
@@ -24711,6 +24720,7 @@ pt:
               description_teacher: Aqui, os alunos usarão o Sprite Lab para criar
                 seus próprios comportamentos personalizados.
             Virtual Pet:
+              key: Animal de Estimação Virtual
               name: 'Mini-Projeto: Pet Virtual'
               description_student: Nesta lição, os alunos criarão um animal de estimação
                 virtual interativo que se parece e se comporta como deseja. Os alunos
@@ -26231,3 +26241,23 @@ pt:
           lessons:
             lesson-1:
               name: 'Festa: Desconectada'
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: Widgets
+            lesson-2:
+              name: Ferramentas
+            lesson-3:
+              name: Exemplos
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: Soletrando
+          title: Soletrando
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: Dia de Avaliação
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conteúdo

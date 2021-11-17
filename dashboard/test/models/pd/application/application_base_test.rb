@@ -4,6 +4,7 @@ module Pd::Application
   class ApplicationBaseTest < ActiveSupport::TestCase
     include ApplicationConstants
     include Pd::Application::ActiveApplicationModels
+    include Pd::SharedApplicationConstants
 
     freeze_time
 
@@ -25,7 +26,7 @@ module Pd::Application
     test 'derived classes override type and year' do
       application = TEACHER_APPLICATION_CLASS.new
       assert_equal TEACHER_APPLICATION, application.application_type
-      assert_equal TEACHER_APPLICATION_CLASS.year, application.application_year
+      assert_equal APPLICATION_CURRENT_YEAR, application.application_year
     end
 
     test 'default status is unreviewed' do

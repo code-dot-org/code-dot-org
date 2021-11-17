@@ -958,6 +958,29 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Nieuw blok!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Nieuw blok!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Nieuw blok!",
+          "poetry_foreground": "Nieuw blok!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Nieuw blok!",
+          "poetry_multiple_sprites": "Nieuw blok!",
+          "poetry_new_block": "Nieuw blok!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Nieuw blok!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Nieuw blok!",
+          "poetry_sprite_stops": "Nieuw blok!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Nieuw blok!",
+          "poetry_remove_sprite": "Nieuw blok!"
         }
       }
     }

@@ -681,6 +681,7 @@ bs:
   pd:
     form_labels:
       email: Email
+      school: Škola
     form_entries:
       gender:
         male: Muško

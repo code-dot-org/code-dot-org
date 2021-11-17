@@ -15,7 +15,12 @@ import ResourceType from '@cdo/apps/templates/courseOverview/resourceType';
 import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
-import {PublishedState} from '@cdo/apps/util/sharedConstants';
+import {
+  PublishedState,
+  InstructionType,
+  InstructorAudience,
+  ParticipantAudience
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 const defaultProps = {
@@ -38,7 +43,10 @@ const defaultProps = {
   versionYearOptions: ['2017', '2018', '2019'],
   initialAnnouncements: [],
   useMigratedResources: false,
-  coursePath: '/courses/test-course'
+  coursePath: '/courses/test-course',
+  initialInstructionType: InstructionType.teacher_led,
+  initialInstructorAudience: InstructorAudience.teacher,
+  initialParticipantAudience: ParticipantAudience.student
 };
 
 describe('CourseEditor', () => {
@@ -135,9 +143,10 @@ describe('CourseEditor', () => {
     assert.equal(wrapper.find('CourseUnitsEditor').length, 1);
     assert.equal(wrapper.find('ResourcesEditor').length, 1);
     assert.equal(wrapper.find('ResourcesDropdown').length, 1);
-    assert.equal(wrapper.find('CollapsibleEditorSection').length, 4);
+    assert.equal(wrapper.find('CollapsibleEditorSection').length, 5);
     assert.equal(wrapper.find('AnnouncementsEditor').length, 1);
     assert.equal(wrapper.find('CourseVersionPublishingEditor').length, 1);
+    assert.equal(wrapper.find('CourseTypeEditor').length, 1);
   });
 
   it('has correct markdown for preview of course teacher and student description', () => {

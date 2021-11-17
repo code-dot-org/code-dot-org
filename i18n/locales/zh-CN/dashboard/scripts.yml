@@ -198,7 +198,7 @@ zh-CN:
           description_short: 让我们用代码同安娜和爱莎一起去探寻冰雪的魔力与美丽。
           lessons:
             Artist:
-              name: 小艺术家
+              name: 和安娜、爱莎一起编程
           student_description: 让我们用代码与安娜和艾莎一起探索神奇而又美丽的冰雪世界。你将能创造雪花，溜冰，以及冬季仙境，你还可与朋友分享它们！
         course4:
           title: 课程 4
@@ -340,7 +340,7 @@ zh-CN:
           description_short: 通过游戏实验室用迪斯尼无限的角色创建故事或游戏。
           lessons:
             Infinity:
-              name: 无限
+              name: 迪斯尼无限游戏实验室
           student_description: 通过游戏实验室用迪斯尼无限的角色创建故事或游戏。
         algebrademo:
           lessons:
@@ -509,6 +509,8 @@ zh-CN:
           lessons:
             Jigsaw:
               name: 拼图
+              description_student: 点击并拖拽来完成难题。
+              description_teacher: 这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。
           student_description: 试试拼图教程
         step:
           title: 步进
@@ -1676,9 +1678,6 @@ zh-CN:
         starwarsblocks:
           description: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
           description_short: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
-          lessons:
-            Hour of Code 2015:
-              name: "《编程一小时 2015》"
           student_description: 学习如何对机器人编程，然后在遥远的银河系中创造你的星球大战游戏。
         mc:
           title: 我的世界 编程一小时
@@ -3418,7 +3417,6 @@ zh-CN:
           description: 进行一场篮球赛
           lessons:
             Bounce:
-              name: 跳
               description_student: 你想过能在学校里玩电脑游戏吗？这堂课里，你能自己做一个！
               description_teacher: 在这个在线活动中，学生们会学习什么是事件，在像游戏一样的程序中计算机如何使用它们。学生们会编程使用交互事件（比如按下方向键）来通过这一关。在这一关结束时，学生们可以通过不同的速度和声音来自定义他们的游戏。
           student_description: 进行一场篮球赛
@@ -3697,6 +3695,7 @@ zh-CN:
               name: 我的世界 编码时间设计师
           student_description: 在你自建的《我的世界》中对各种动物和其他生物进行编程。
         flappy-impact-study:
+          title: 带调查的 Flappy Code
           lessons:
             Pre Hour of Code Survey:
               name: 编程一小时预调查
@@ -3973,6 +3972,7 @@ zh-CN:
             Post Hour of Code Survey:
               name: 编程一小时事后调查
         hoc-impact-study:
+          title: 带调查的经典迷宫
           description_short: 与许多有趣的人物一起尝试计算机科学的基础知识！
           lessons:
             Pre Hour of Code Survey:
@@ -3987,7 +3987,6 @@ zh-CN:
           description: 为你自己的运动编写代码
           lessons:
             Sports:
-              name: 运动
               description_student: 你想过能在学校里玩电脑游戏吗？这堂课里，你能自己做一个！
               description_teacher: 在这个在线活动中，学生们会学习什么是事件，在像游戏一样的程序中计算机如何使用它们。学生们会编程使用交互事件（比如按下方向键）来通过这一关。在这一关结束时，学生们可以通过不同的速度和声音来自定义他们的游戏。
           student_description: 为你自己的运动编写代码
@@ -6733,7 +6732,7 @@ zh-CN:
             'Minecraft\: Hero''s Journey Hour of Code':
               name: "《我的世界》: 编程一小时英雄之旅"
             Minecraft Hour of Code:
-              name: 我的世界 编程一小时
+              name: "《我的世界》: 英雄之旅"
           student_description: "《我的世界》编程一小时的全新的活动回来了！与《我的世界》和代码一起旅行吧。"
         applab-intro-staging:
           title: 应用实验室阶段简介
@@ -9098,7 +9097,7 @@ zh-CN:
           description: "《我的世界》带来了一个全新的活动！用你的创造力和解决问题的技能用代码来探索并建造一个水下世界。"
           lessons:
             Aquatic:
-              name: 水上
+              name: "《我的世界》：水上航行"
           student_description: "《我的世界》带来了一个全新的活动！用你的创造力和解决问题的技能用代码来探索并建造一个水下世界。"
         sconyers:
           title: 特蕾西的游乐场
@@ -15268,6 +15267,8 @@ zh-CN:
           lessons:
             Virus Simulation for Code Bytes:
               name: 编码一个模拟
+            Outbreak:
+              name: 编码一个模拟
           lesson_groups:
             outbreak:
               display_name: 疫情爆发模拟
@@ -15413,6 +15414,8 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            lesson-1:
+              name: 计算机科学发现课后调查
           lesson_groups:
             csd2_1v2:
               display_name: 第一单元：创造网页
@@ -15498,6 +15501,8 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            lesson-1:
+              name: 计算机科学发现课后调查
           lesson_groups:
             csd3_1:
               display_name: 第 1 章︰图像和动画
@@ -15559,6 +15564,8 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            CS Discoveries Post-Course Survey:
+              name: 计算机科学发现课后调查
           lesson_groups:
             csd4_1:
               display_name: 第 1 章︰ 用户为中心的设计
@@ -15619,6 +15626,8 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            CS Discoveries Post-Course Survey:
+              name: 计算机科学发现课后调查
           lesson_groups:
             csd5_1:
               display_name: 第 1 章︰ 表达信息
@@ -15693,6 +15702,8 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            CS Discoveries Post-Course Survey:
+              name: 计算机科学发现课后调查
           lesson_groups:
             csd6_1:
               display_name: 第 1 章︰ 用硬件编程
@@ -17159,6 +17170,17 @@ zh-CN:
           lessons:
             lesson-15:
               name: 评估日
+            Java Lab:
+              name: Java实验室
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java实验室
+            lesson-15:
+              name: 评估日
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17265,6 +17287,8 @@ zh-CN:
                 **今日问题。**计算机如何学习用数字数据进行预测？
             Survey Planning:
               name: 设计数据收集
+            CS Discoveries Post-Course Survey:
+              name: 计算机科学发现课后调查
           lesson_groups:
             lessonGroup-4:
               display_name: 调查
@@ -17475,6 +17499,8 @@ zh-CN:
           lessons:
             lesson-12:
               name: 工具
+            lesson-17:
+              name: 控制台
             lesson-18:
               name: 小部件
           lesson_groups:
@@ -17482,6 +17508,11 @@ zh-CN:
               display_name: 课程
             lessonGroup-3:
               display_name: 项目
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: 你好，世界！
+          title: '"世界你好!"'
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
@@ -17534,6 +17565,8 @@ zh-CN:
               name: 评估日
             lesson-15:
               name: 评估日
+            Java Lab:
+              name: Java实验室
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
@@ -17573,3 +17606,49 @@ zh-CN:
           lessons:
             lesson-1:
               name: 舞会：离线
+        csa-u8-dev:
+          lessons:
+            lesson-1:
+              name: 小部件
+            lesson-2:
+              name: 工具
+        spelling-bee:
+          lessons:
+            lesson-1:
+              name: 拼字比赛
+          title: 拼字比赛
+        outbreak-csc:
+          title: 疫情爆发
+        csa5-exemplars:
+          lessons:
+            lesson-14:
+              name: 评估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: 课后问卷
+          title: 计算机科学发现课后调查
+        csa6-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: 评估日
+            Java Lab:
+              name: Java实验室
+              key: Java实验室
+            lesson-15:
+              name: 评估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: 拼字比赛
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: 数据可视化
+          title: 数据可视化

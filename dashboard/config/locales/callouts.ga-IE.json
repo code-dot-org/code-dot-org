@@ -1749,6 +1749,29 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Bloc nua!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Bloc nua!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Bloc nua!",
+          "poetry_foreground": "Bloc nua!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Bloc nua!",
+          "poetry_multiple_sprites": "Bloc nua!",
+          "poetry_new_block": "Bloc nua!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Bloc nua!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Bloc nua!",
+          "poetry_sprite_stops": "Bloc nua!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Bloc nua!",
+          "poetry_remove_sprite": "Bloc nua!"
         }
       }
     }

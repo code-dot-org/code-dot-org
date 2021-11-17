@@ -20,11 +20,11 @@ describe('SummaryProgressRow', () => {
     lockableAuthorized: false
   };
 
-  it('renders with dashed border and not faded when teacher viewing hidden lesson', () => {
+  it('renders with dashed border and not faded when instructor viewing hidden lesson', () => {
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
-        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
+        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Participant}
       />
     );
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
@@ -44,12 +44,12 @@ describe('SummaryProgressRow', () => {
     );
   });
 
-  it('renders with dashed border and faded when locked for student', () => {
+  it('renders with dashed border and faded when locked for participant', () => {
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
         lesson={fakeLesson('Maze', 1, true)}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
         lessonIsLockedForUser={() => true}
       />
     );
@@ -70,12 +70,12 @@ describe('SummaryProgressRow', () => {
     );
   });
 
-  it('renders with dashed border when lockable lesson and teacher is not verified', () => {
+  it('renders with dashed border when lockable lesson and instructor is not verified', () => {
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
         lesson={fakeLesson('Maze', 1, true)}
-        viewAs={ViewType.Teacher}
+        viewAs={ViewType.Instructor}
         lockableAuthorized={false}
         lessonIsLockedForUser={() => true}
       />
@@ -83,12 +83,12 @@ describe('SummaryProgressRow', () => {
     assert.equal(wrapper.props().style.borderStyle, 'dashed');
   });
 
-  it('renders with dashed border and not faded when lockable lesson and lesson locked for students in teachers section', () => {
+  it('renders with dashed border and not faded when lockable lesson and lesson locked for participants in instructors section', () => {
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
         lesson={fakeLesson('Maze', 1, true)}
-        viewAs={ViewType.Teacher}
+        viewAs={ViewType.Instructor}
         lockableAuthorized={true}
         lessonIsLockedForAllStudents={() => true}
       />
@@ -110,11 +110,11 @@ describe('SummaryProgressRow', () => {
     );
   });
 
-  it('disables bubbles when locked for student', () => {
+  it('disables bubbles when locked for participant', () => {
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
-        viewAs={ViewType.Student}
+        viewAs={ViewType.Participant}
         lessonIsLockedForUser={() => true}
       />
     );
@@ -124,12 +124,12 @@ describe('SummaryProgressRow', () => {
     );
   });
 
-  it('disables bubbles when lockable lesson and teacher not verified', () => {
+  it('disables bubbles when lockable lesson and instructor not verified', () => {
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
         lesson={fakeLesson('Maze', 1, true)}
-        viewAs={ViewType.Teacher}
+        viewAs={ViewType.Instructor}
         lockableAuthorized={false}
         lessonIsLockedForUser={() => true}
       />
@@ -140,12 +140,12 @@ describe('SummaryProgressRow', () => {
     );
   });
 
-  it('does not disable bubbles when lockable lesson and teacher verified', () => {
+  it('does not disable bubbles when lockable lesson and instructor verified', () => {
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
         lesson={fakeLesson('Maze', 1, true)}
-        viewAs={ViewType.Teacher}
+        viewAs={ViewType.Instructor}
         lockableAuthorized={true}
         lessonIsLockedForUser={() => false}
         lessonIsLockedForAllStudents={() => true}
@@ -157,11 +157,11 @@ describe('SummaryProgressRow', () => {
     );
   });
 
-  it('has an eye slash icon when hidden for students', () => {
+  it('has an eye slash icon when hidden for participants', () => {
     const wrapper = shallow(
       <SummaryProgressRow
         {...baseProps}
-        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
+        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Participant}
       />
     );
     assert.equal(
@@ -226,7 +226,7 @@ describe('SummaryProgressRow', () => {
       <SummaryProgressRow
         {...baseProps}
         lesson={fakeLesson('Maze', 1, true)}
-        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Student}
+        lessonIsVisible={(lesson, viewAs) => viewAs !== ViewType.Participant}
         lessonIsLockedForUser={() => true}
       />
     );

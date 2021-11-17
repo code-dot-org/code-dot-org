@@ -1718,7 +1718,7 @@
           "courseF_bee_for9_1": "Znajdziesz tutaj blok \"matematyka\"."
         },
         "courseF_bee_variables_1a_2021": {
-          "courseF_bee_functions_1_2018_1": "Tutaj można znaleźć swoje zmienne!"
+          "courseF_bee_functions_1_2018_1": "Tutaj możesz znaleźć swoje zmienne!"
         },
         "courseF_events_predict": {
           "behaviors_edit": "Kliknij tutaj, aby zobaczyć, na czym polega to zachowanie."
@@ -1907,6 +1907,128 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Nowy blok!"
+        },
+        "helloworld_animals_location": {
+          "pin": "przypnij"
+        },
+        "helloworld_animals_multi": {
+          "pin": "przypnij"
+        },
+        "helloworld_emoji_location": {
+          "pin": "przypnij"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "przypnij"
+        },
+        "helloworld_food_location": {
+          "pin": "przypnij"
+        },
+        "helloworld_food_multi": {
+          "pin": "przypnij"
+        },
+        "helloworld_retro_location": {
+          "pin": "przypnij"
+        },
+        "helloworld_retro_multi": {
+          "pin": "przypnij"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Nowy blok!"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "Znajdź tutaj bloki kodu.",
+          "pause_button": "Przetestuj swoją animację za pomocą tego przycisku."
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Nowy blok!",
+          "poetry_foreground": "Nowy blok!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Nowy blok!",
+          "poetry_multiple_sprites": "Nowy blok!",
+          "poetry_new_block": "Nowy blok!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Nowy blok!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Nowy blok!",
+          "poetry_sprite_stops": "Nowy blok!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Nowy blok!",
+          "poetry_remove_sprite": "Nowy blok!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Kliknij tutaj, aby dodać nowe kostiumy do swojego projektu!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Kliknij tutaj, aby dodać nowe kostiumy do swojego projektu!"
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Spróbuj zmienić \"gdy\" na \"podczas gdy\"."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Tutaj są nowe bloki!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Użyj bloku nowego zdarzenia znaleziony tutaj."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Kolejność w tym bloku jest niepoprawna."
+        },
+        "courseF_events_time": {
+          "events_category": "Kliknij tutaj, aby otworzyć kategorię \"Zdarzenia\"."
+        },
+        "courseF_sprites_behaviors": {
+          "behaviors_category": "Kliknij tutaj, aby otworzyć kategorię \"Zachowania\"."
+        },
+        "courseF_sprites_make": {
+          "sprites_category": "Kliknij tutaj, aby otworzyć kategorię Duszki."
+        },
+        "courseF_sprites_positioning": {
+          "locations_category": "Kliknij tutaj, aby otworzyć kategorię \"Lokalizacje\"."
+        },
+        "courseF_sprites_properties": {
+          "sprites_category2": "Poszukaj tutaj nowego bloku."
+        },
+        "courseF_text_events": {
+          "events_category": "Kliknij tutaj, aby otworzyć kategorię \"Zdarzenia\"."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Tutaj możesz spowolnić program."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Spróbuj przejść przez swój kod po jednym bloku po kolei."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "W tym momencie przyjrzyj się bliżej poniższemu kodowi."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Poszukaj tutaj nowych bloków!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "Czy zmienił się kolor tła po udzieleniu odpowiedzi na pytanie? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "Skończyłeś? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
+        },
+        "courseF_text_choice_title": {
+          "title_block": "Poszukaj tutaj dwóch nowych bloków!",
+          "text_answer_finish": "Czy ekran tytułowy pojawił się na 3 sekundy? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Poszukaj tutaj nowego bloku!"
+        },
+        "courseF_text_print": {
+          "print_block": "Znajdź blok `drukuj` tutaj!",
+          "text_print_finish": "Czy twoja wiadomość wydrukowała się powyżej? Jeśli tak, kliknij \"Zakończ\". Jeśli nie, kliknij \"Reset\", zmień kod i kliknij \"Uruchom\" ponownie."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Znajdź blok `podpowiedź` tutaj!"
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "W tym momencie przyjrzyj się bliżej poniższemu kodowi."
         }
       }
     }

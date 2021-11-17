@@ -12,13 +12,12 @@ import {
   searchAssets,
   filterOutBackgrounds
 } from '@cdo/apps/code-studio/assets/searchAssets';
-import experiments from '@cdo/apps/util/experiments';
 import Button from '@cdo/apps/templates/Button';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
+import {PICKER_TYPE} from './AnimationPicker.jsx';
 
 const MAX_SEARCH_RESULTS = 40;
-const MAX_HEIGHT = 460;
 
 export default class AnimationPickerBody extends React.Component {
   static propTypes = {
@@ -35,7 +34,8 @@ export default class AnimationPickerBody extends React.Component {
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
     canDraw: PropTypes.bool.isRequired,
-    selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired
+    selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
+    pickerType: PropTypes.string.isRequired
   };
 
   state = {
@@ -45,7 +45,7 @@ export default class AnimationPickerBody extends React.Component {
   };
 
   componentDidMount() {
-    this.multiSelectEnabled_ = experiments.isEnabled(experiments.MULTISELECT);
+    this.scrollListContainer = React.createRef();
   }
 
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -95,8 +95,11 @@ export default class AnimationPickerBody extends React.Component {
     const scrollWindow = event.target;
     const {currentPage, results, pageCount} = this.state;
     const nextPage = currentPage + 1;
+    const scrollContainerHeight =
+      this.scrollListContainer.current?.clientHeight || 0;
     if (
-      scrollWindow.scrollTop + MAX_HEIGHT >= scrollWindow.scrollHeight * 0.9 &&
+      scrollWindow.scrollTop + scrollContainerHeight >=
+        scrollWindow.scrollHeight * 0.9 &&
       (!pageCount || nextPage <= pageCount)
     ) {
       let {results: newResults, pageCount} = this.searchAssetsWrapper(nextPage);
@@ -165,28 +168,34 @@ export default class AnimationPickerBody extends React.Component {
     ));
   }
 
-  animationItemsRendering(animations, isMultiSelectEnabled) {
+  animationItemsRendering(animations) {
     return animations.map(animationProps => (
       <AnimationPickerListItem
         key={animationProps.sourceUrl}
         label={this.props.hideAnimationNames ? undefined : animationProps.name}
         animationProps={animationProps}
-        onClick={() =>
-          this.props.onPickLibraryAnimation(
-            animationProps,
-            isMultiSelectEnabled
-          )
-        }
+        onClick={() => this.props.onPickLibraryAnimation(animationProps)}
         playAnimations={this.props.playAnimations}
         selected={this.props.selectedAnimations.some(
           e => e.sourceUrl === animationProps.sourceUrl
         )}
-        multiSelectEnabled={this.multiSelectEnabled_}
       />
     ));
   }
 
   render() {
+    let assetType;
+    switch (this.props.pickerType) {
+      case PICKER_TYPE.spritelab:
+        assetType = msg.costumeMode();
+        break;
+      case PICKER_TYPE.gamelab:
+        assetType = msg.animationMode();
+        break;
+      case PICKER_TYPE.backgrounds:
+        assetType = msg.backgroundMode();
+        break;
+    }
     if (!this.props.libraryManifest) {
       return <div>{msg.loading()}</div>;
     }
@@ -201,8 +210,8 @@ export default class AnimationPickerBody extends React.Component {
 
     // Display second "Done" button. Useful for mobile, where the original "done" button might not be on screen when
     // animation picker is loaded. 600 pixels is minimum height of the animation picker.
-    const shouldDisplaySecondDoneButton =
-      this.multiSelectEnabled_ && isMobileDevice();
+    const shouldDisplaySecondDoneButton = isMobileDevice();
+
     return (
       <div style={{marginBottom: 10}}>
         {shouldDisplaySecondDoneButton && (
@@ -212,7 +221,9 @@ export default class AnimationPickerBody extends React.Component {
             color={Button.ButtonColor.orange}
           />
         )}
-        <h1 style={dialogStyles.title}>{msg.animationPicker_title()}</h1>
+        <h1 style={dialogStyles.title}>
+          {msg.animationPicker_title({assetType})}
+        </h1>
         {!is13Plus && !hideUploadOption && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
@@ -237,46 +248,47 @@ export default class AnimationPickerBody extends React.Component {
             )}
           </div>
         )}
-        <ScrollableList
-          style={{maxHeight: MAX_HEIGHT}}
-          onScroll={this.handleScroll}
-        >
-          {' '}
-          {(searchQuery !== '' || categoryQuery !== '') &&
-            results.length === 0 && (
-              <div style={styles.emptyResults}>
-                {msg.animationPicker_noResultsFound()}
+        <div ref={this.scrollListContainer}>
+          <ScrollableList
+            className="uitest-animation-picker-list"
+            style={{maxHeight: '55vh'}}
+            onScroll={this.handleScroll}
+          >
+            {' '}
+            {(searchQuery !== '' || categoryQuery !== '') &&
+              results.length === 0 && (
+                <div style={styles.emptyResults}>
+                  {msg.animationPicker_noResultsFound()}
+                </div>
+              )}
+            {((searchQuery === '' && categoryQuery === '') ||
+              (results.length === 0 && this.props.canDraw)) && (
+              <div>
+                <AnimationPickerListItem
+                  label={msg.animationPicker_drawYourOwn()}
+                  icon="pencil"
+                  onClick={onDrawYourOwnClick}
+                />
+                {!hideUploadOption && (
+                  <AnimationPickerListItem
+                    label={msg.animationPicker_uploadImage()}
+                    icon="upload"
+                    onClick={onUploadClick}
+                  />
+                )}
               </div>
             )}
-          {((searchQuery === '' && categoryQuery === '') ||
-            (results.length === 0 && this.props.canDraw)) && (
-            <div>
-              <AnimationPickerListItem
-                label={msg.animationPicker_drawYourOwn()}
-                icon="pencil"
-                onClick={onDrawYourOwnClick}
-              />
-              {!hideUploadOption && (
-                <AnimationPickerListItem
-                  label={msg.animationPicker_uploadImage()}
-                  icon="upload"
-                  onClick={onUploadClick}
-                />
-              )}
-            </div>
-          )}
-          {searchQuery === '' &&
-            categoryQuery === '' &&
-            this.animationCategoriesRendering()}
-          {(searchQuery !== '' || categoryQuery !== '') &&
-            this.animationItemsRendering(
-              results || [],
-              this.multiSelectEnabled_
-            )}
-        </ScrollableList>
-        {this.multiSelectEnabled_ && (
+            {searchQuery === '' &&
+              categoryQuery === '' &&
+              this.animationCategoriesRendering()}
+            {(searchQuery !== '' || categoryQuery !== '') &&
+              this.animationItemsRendering(results || [])}
+          </ScrollableList>
+        </div>
+        {(searchQuery !== '' || categoryQuery !== '') && (
           <div style={styles.footer}>
             <Button
+              className="ui-test-selector-done-button"
               text={msg.done()}
               onClick={onAnimationSelectionComplete}
               color={Button.ButtonColor.orange}
@@ -321,6 +333,7 @@ const styles = {
   },
   footer: {
     display: 'flex',
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
+    marginTop: 5
   }
 };

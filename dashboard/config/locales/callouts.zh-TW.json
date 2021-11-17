@@ -1570,8 +1570,8 @@
           "costumes_callout": "點擊以製作新服裝"
         },
         "CourseF_outbreak2": {
-          "minitoolbox": "點擊這裡擴展塊。",
-          "pointerlocation": "在這裡拖動一個主題塊。"
+          "minitoolbox": "點擊這裡擴展積木。",
+          "pointerlocation": "在這裡拖曳一個主題積木。"
         },
         "CourseF_outbreak7": {
           "costumes_callout": "點擊以製作新服裝"
@@ -1980,6 +1980,29 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "新的程式積木！"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "新的程式積木！"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "新的程式積木！",
+          "poetry_foreground": "新的程式積木！"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "新的程式積木！",
+          "poetry_multiple_sprites": "新的程式積木！",
+          "poetry_new_block": "新的程式積木！"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "新的程式積木！"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "新的程式積木！",
+          "poetry_sprite_stops": "新的程式積木！"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "新的程式積木！",
+          "poetry_remove_sprite": "新的程式積木！"
         }
       }
     }

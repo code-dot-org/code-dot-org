@@ -448,6 +448,29 @@
         },
         "helloworld_retro_sounds": {
           "hello_world_new": "Uusi blokki!"
+        },
+        "poetry_hoc_addSprites": {
+          "poetry_sprite": "Uusi blokki!"
+        },
+        "poetry_hoc_events1": {
+          "poetry_event": "Uusi blokki!",
+          "poetry_foreground": "Uusi blokki!"
+        },
+        "poetry_hoc_freeplay": {
+          "poetry_burst": "Uusi blokki!",
+          "poetry_multiple_sprites": "Uusi blokki!",
+          "poetry_new_block": "Uusi blokki!"
+        },
+        "poetry_hoc_sounds": {
+          "poetry_sound": "Uusi blokki!"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "poetry_sprite_begins": "Uusi blokki!",
+          "poetry_sprite_stops": "Uusi blokki!"
+        },
+        "poetry_hoc_spriteSizes": {
+          "poetry_set_sprite": "Uusi blokki!",
+          "poetry_remove_sprite": "Uusi blokki!"
         }
       }
     }

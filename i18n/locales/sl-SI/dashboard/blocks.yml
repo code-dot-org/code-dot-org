@@ -1,4 +1,3 @@
----
 sl:
   data:
     blocks:
@@ -423,6 +422,11 @@ sl:
         options:
           SOUND:
             "'sound://category_collect/clicky_crunch.mp3'": hrustati
+            "'sound://category_animals/cat.mp3'": muca
+            "'sound://category_animals/cow.mp3'": krava
+            "'sound://category_animals/sheep.mp3'": ovca
+            "'sound://category_animals/chicken.mp3'": piščanec
+            "'sound://category_animals/dog.mp3'": kuža
             "'sound://category_digital/jump_7.mp3'": skoči
       gamelab_randColor:
         text: naključna barva
@@ -610,8 +614,8 @@ sl:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': da
-            '"no"': ne
+            '"yes"': 'da'
+            '"no"': 'ne'
       Mikelab_whileKeyPressed:
         options:
           KEY:
@@ -672,8 +676,8 @@ sl:
             "'ahead'": spredaj
       craft_ifStandingOn:
         text: |-
-          če stojiš na {TYPE}
-          {STATEMENT}
+          če stojiš na [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'blueCoralBlock'": moder koral
@@ -684,8 +688,8 @@ sl:
             "'seaLantern'": morska svetilka
       craft_ifStandingOnLimit:
         text: |-
-          če stojiš na {TYPE}
-          {STATEMENT}
+          če stojiš na [TYPE][0]
+          [STATEMENT][1]
         options:
           TYPE:
             "'sand'": pesek

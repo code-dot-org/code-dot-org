@@ -4,7 +4,7 @@ import React from 'react';
 import Radium from 'radium';
 import {connect} from 'react-redux';
 import color from '@cdo/apps/util/color';
-import AnimationPicker from '../AnimationPicker/AnimationPicker';
+import AnimationPicker, {PICKER_TYPE} from '../AnimationPicker/AnimationPicker';
 import P5LabVisualizationHeader from '../P5LabVisualizationHeader';
 import {setColumnSizes} from '../redux/animationTab';
 import AnimationList from './AnimationList';
@@ -25,6 +25,7 @@ class AnimationTab extends React.Component {
     hideAnimationNames: PropTypes.bool.isRequired,
     hideBackgrounds: PropTypes.bool.isRequired,
     labType: PropTypes.oneOf(Object.keys(P5LabType)).isRequired,
+    pickerType: PropTypes.oneOf(Object.values(PICKER_TYPE)).isRequired,
 
     // Provided by Redux
     columnSizes: PropTypes.arrayOf(PropTypes.number).isRequired,
@@ -45,7 +46,10 @@ class AnimationTab extends React.Component {
         >
           <div style={styles.animationsColumn}>
             <P5LabVisualizationHeader labType={this.props.labType} />
-            <AnimationList hideBackgrounds={this.props.hideBackgrounds} />
+            <AnimationList
+              hideBackgrounds={this.props.hideBackgrounds}
+              labType={this.props.labType}
+            />
           </div>
           <div style={styles.editorColumn}>
             <PiskelEditor style={styles.piskelEl} />
@@ -59,13 +63,13 @@ class AnimationTab extends React.Component {
         {this.props.channelId && (
           <AnimationPicker
             channelId={this.props.channelId}
-            allowedExtensions=".png,.jpg,.jpeg"
             libraryManifest={this.props.libraryManifest}
             hideUploadOption={this.props.hideUploadOption}
             hideAnimationNames={this.props.hideAnimationNames}
             navigable={true}
             canDraw={true}
             hideBackgrounds={this.props.hideBackgrounds}
+            pickerType={this.props.pickerType}
           />
         )}
       </div>

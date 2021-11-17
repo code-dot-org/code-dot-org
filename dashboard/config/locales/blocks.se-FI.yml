@@ -1035,6 +1035,10 @@ se:
         text: čuojatJiena {SOUND}
       gamelab_playSoundOptions:
         text: čuojatJiena {SOUND}
+        options:
+          SOUND:
+            "'sound://category_animals/bear.mp3'": guovža
+            "'sound://category_animals/dolphin.mp3'": delfiidna
       gamelab_pointInDirection:
         text: čujut {SPRITE} {DIRECTION}
         options:
@@ -1360,10 +1364,27 @@ se:
         text: x koordináhta {SPRITE}
       Mikelab_yLocationOf:
         text: y koordináhta {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            Ice Cream: LákcaJiekŋa
+            Stars: Násttit
+            Fireworks: Dollarusonat
+            '"rainbow"': Arvedávgi
+            '"hearts"': Váimmut
+            '"flowers"': Lieđit
+            '"waves"': Bárut
+      Poetry_makeNewSpriteAnon:
+        text: ráhkat ođđa {ANIMATION_NAME} sprite dán {LOCATION}
       Poetry_makeNumSprites:
         text: ráhkat{NUM} ođđa {ANIMATION_NAME} sprite:id
       Poetry_playSound:
         text: čuojatJiena {SOUND}
+        options:
+          SOUND:
+            Light: Čuovga
+      Poetry_setBackground:
+        text: bija duogábeal-ivnni {COLOR}
       Poetry_setBackgroundEffect:
         options:
           EFFECT:
@@ -1372,6 +1393,10 @@ se:
             '"space"': Gomuvuohta
             '"stars"': Násttit
             '"ripples"': Bárožat
+            '"rain"': Arvi
+            '"bubbles"': Bulljarasat
+            '"confetti"': Konfetti
+            '"hearts"': Ivdnás Váimmut
           PALETTE:
             '"rainbow"': Arvedávgi
       Poetry_setBackgroundImageAs:

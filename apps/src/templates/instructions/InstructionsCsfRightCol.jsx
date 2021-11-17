@@ -46,8 +46,11 @@ class InstructionsCsfRightCol extends React.Component {
     this.updateDimensions();
   }
 
-  componentDidUpdate() {
-    this.updateDimensions();
+  componentDidUpdate(prevProps) {
+    const {height, collapsed} = this.props;
+    if (prevProps.height !== height || prevProps.collapsed !== collapsed) {
+      this.updateDimensions();
+    }
   }
 
   updateDimensions() {

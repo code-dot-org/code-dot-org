@@ -2610,7 +2610,9 @@
           "moving north": "bergerak ke utara",
           "moving south": "bergerak ke selatan",
           "moving west": "bergerak ke barat",
-          "spinning right": "berputar ke kanan"
+          "spinning right": "berputar ke kanan",
+          "spinning left": "berputar ke kiri",
+          "moving with arrow keys": "bergerak dengan tanda panah"
         },
         "helloworld_emoji_backgrounds": {
           "swimming left and right": "berenang ke kiri dan kanan",
@@ -2675,7 +2677,9 @@
           "moving north": "bergerak ke utara",
           "moving south": "bergerak ke selatan",
           "moving west": "bergerak ke barat",
-          "spinning right": "berputar ke kanan"
+          "spinning right": "berputar ke kanan",
+          "spinning left": "berputar ke kiri",
+          "moving with arrow keys": "bergerak dengan tanda panah"
         },
         "helloworld_food_backgrounds": {
           "swimming left and right": "berenang ke kiri dan kanan",
@@ -2725,7 +2729,9 @@
           "moving north": "bergerak ke utara",
           "moving south": "bergerak ke selatan",
           "moving west": "bergerak ke barat",
-          "spinning right": "berputar ke kanan"
+          "spinning right": "berputar ke kanan",
+          "spinning left": "berputar ke kiri",
+          "moving with arrow keys": "bergerak dengan tanda panah"
         },
         "helloworld_retro_backgrounds": {
           "swimming left and right": "berenang ke kiri dan kanan",
@@ -2790,7 +2796,114 @@
           "moving north": "bergerak ke utara",
           "moving south": "bergerak ke selatan",
           "moving west": "bergerak ke barat",
-          "spinning right": "berputar ke kanan"
+          "spinning right": "berputar ke kanan",
+          "spinning left": "berputar ke kiri",
+          "moving with arrow keys": "bergerak dengan tanda panah"
+        },
+        "helloworld_food_behaviors": {
+          "wandering": "pengembaraan",
+          "moving east": "bergerak ke timur",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "shrinking": "penyusutan",
+          "growing": "pertumbuhan",
+          "moving south": "bergerak ke selatan",
+          "swimming left and right": "berenang ke kiri dan kanan",
+          "moving north": "bergerak ke utara",
+          "jittering": "gugup",
+          "moving west": "bergerak ke barat",
+          "patrolling": "perondaan",
+          "moving with arrow keys": "bergerak dengan tanda panah"
+        },
+        "poetry_hoc_spriteSizes": {
+          "wandering": "pengembaraan",
+          "moving east": "bergerak ke timur",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "shrinking": "penyusutan",
+          "growing": "pertumbuhan",
+          "moving south": "bergerak ke selatan",
+          "swimming left and right": "berenang ke kiri dan kanan",
+          "moving north": "bergerak ke utara",
+          "jittering": "gugup",
+          "moving west": "bergerak ke barat",
+          "patrolling": "perondaan",
+          "moving with arrow keys": "bergerak dengan tanda panah"
+        },
+        "poetry_hoc_addSprites": {
+          "wandering": "pengembaraan",
+          "moving east": "bergerak ke timur",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "shrinking": "penyusutan",
+          "growing": "pertumbuhan",
+          "moving south": "bergerak ke selatan",
+          "swimming left and right": "berenang ke kiri dan kanan",
+          "moving north": "bergerak ke utara",
+          "jittering": "gugup",
+          "moving west": "bergerak ke barat",
+          "patrolling": "perondaan",
+          "moving with arrow keys": "bergerak dengan tanda panah"
+        },
+        "poetry_hoc_exemplar1": {
+          "wandering": "pengembaraan",
+          "moving east": "bergerak ke timur",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "shrinking": "penyusutan",
+          "growing": "pertumbuhan",
+          "moving south": "bergerak ke selatan",
+          "swimming left and right": "berenang ke kiri dan kanan",
+          "moving north": "bergerak ke utara",
+          "jittering": "gugup",
+          "moving west": "bergerak ke barat",
+          "patrolling": "perondaan",
+          "moving with arrow keys": "bergerak dengan tanda panah"
+        },
+        "poetry_hoc_exemplar2": {
+          "wandering": "pengembaraan",
+          "moving east": "bergerak ke timur",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "shrinking": "penyusutan",
+          "growing": "pertumbuhan",
+          "moving south": "bergerak ke selatan",
+          "swimming left and right": "berenang ke kiri dan kanan",
+          "moving north": "bergerak ke utara",
+          "jittering": "gugup",
+          "moving west": "bergerak ke barat",
+          "patrolling": "perondaan",
+          "moving with arrow keys": "bergerak dengan tanda panah"
+        },
+        "poetry_hoc_freeplay": {
+          "wandering": "pengembaraan",
+          "moving east": "bergerak ke timur",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "shrinking": "penyusutan",
+          "growing": "pertumbuhan",
+          "moving south": "bergerak ke selatan",
+          "swimming left and right": "berenang ke kiri dan kanan",
+          "moving north": "bergerak ke utara",
+          "jittering": "gugup",
+          "moving west": "bergerak ke barat",
+          "patrolling": "perondaan",
+          "moving with arrow keys": "bergerak dengan tanda panah"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "wandering": "pengembaraan",
+          "moving east": "bergerak ke timur",
+          "spinning left": "berputar ke kiri",
+          "spinning right": "berputar ke kanan",
+          "shrinking": "penyusutan",
+          "growing": "pertumbuhan",
+          "moving south": "bergerak ke selatan",
+          "swimming left and right": "berenang ke kiri dan kanan",
+          "moving north": "bergerak ke utara",
+          "jittering": "gugup",
+          "moving west": "bergerak ke barat",
+          "patrolling": "perondaan",
+          "moving with arrow keys": "bergerak dengan tanda panah"
         }
       }
     }

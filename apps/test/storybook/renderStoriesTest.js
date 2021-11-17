@@ -12,7 +12,9 @@ enzyme.configure({adapter: new Adapter()});
 
 // Add story files here to exclude them from the storybook render tests.
 const DENYLIST = [
-  // 'templates/progress/ProgressLessonTeacherInfo.story.jsx',
+  // Skip because of issues rendering with Enzyme,
+  // works without issue when rendering Storybook entries in browser.
+  'templates/codeReviewGroups/CodeReviewGroupsManager.story.jsx'
 ];
 
 describe('react-storybook stories render without errors or warnings', function() {

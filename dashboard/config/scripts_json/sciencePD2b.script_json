@@ -4,13 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS in Science Legacy"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:51 UTC",
+    "serialized_at": "2021-11-02 14:30:07 UTC",
     "published_state": "beta",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "sciencePD2b"
     }
@@ -136,21 +139,177 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "ea61b61c-2866-467c-9b8c-ac3222da1eab",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ea61b61c-2866-467c-9b8c-ac3222da1eab",
+        "lesson.key": "Welcome!",
+        "lesson_group.key": "",
+        "script.name": "sciencePD2b"
+      }
+    },
+    {
+      "key": "7d54a530-5aac-420e-a201-9f5a36381692",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7d54a530-5aac-420e-a201-9f5a36381692",
+        "lesson.key": "Review StarLogo Nova",
+        "lesson_group.key": "",
+        "script.name": "sciencePD2b"
+      }
+    },
+    {
+      "key": "fa822155-faca-4046-8154-ca82ae365b92",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fa822155-faca-4046-8154-ca82ae365b92",
+        "lesson.key": "Reviewing the Modules",
+        "lesson_group.key": "",
+        "script.name": "sciencePD2b"
+      }
+    },
+    {
+      "key": "da3e51ff-7a28-42bf-97ef-42139e6843a8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "da3e51ff-7a28-42bf-97ef-42139e6843a8",
+        "lesson.key": "Advanced StarLogo Nova",
+        "lesson_group.key": "",
+        "script.name": "sciencePD2b"
+      }
+    },
+    {
+      "key": "1c9af8e2-8301-4f29-b22a-84e6fdc0a07d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1c9af8e2-8301-4f29-b22a-84e6fdc0a07d",
+        "lesson.key": "Remixing Phases 1 and 2",
+        "lesson_group.key": "",
+        "script.name": "sciencePD2b"
+      }
+    },
+    {
+      "key": "25c32aca-43ab-4563-bc3e-1b8b44011f02",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "25c32aca-43ab-4563-bc3e-1b8b44011f02",
+        "lesson.key": "Thinking Ahead to Implementation",
+        "lesson_group.key": "",
+        "script.name": "sciencePD2b"
+      }
+    },
+    {
+      "key": "78d0c5b7-8448-4056-a67f-35d0d66ef190",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "78d0c5b7-8448-4056-a67f-35d0d66ef190",
+        "lesson.key": "Wrap-Up",
+        "lesson_group.key": "",
+        "script.name": "sciencePD2b"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "3c6edc01-95b7-46d5-9537-0a049d7aea29",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3c6edc01-95b7-46d5-9537-0a049d7aea29",
+        "lesson_activity.key": "ea61b61c-2866-467c-9b8c-ac3222da1eab"
+      }
+    },
+    {
+      "key": "adacede5-9135-4aee-8ca1-216ac55194c7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "adacede5-9135-4aee-8ca1-216ac55194c7",
+        "lesson_activity.key": "7d54a530-5aac-420e-a201-9f5a36381692"
+      }
+    },
+    {
+      "key": "40372c3f-3daf-4c3a-b767-61fc42e14389",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "40372c3f-3daf-4c3a-b767-61fc42e14389",
+        "lesson_activity.key": "fa822155-faca-4046-8154-ca82ae365b92"
+      }
+    },
+    {
+      "key": "834275ac-33ba-4cde-a74d-4713f78c18d2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2",
+        "lesson_activity.key": "da3e51ff-7a28-42bf-97ef-42139e6843a8"
+      }
+    },
+    {
+      "key": "c4450f23-4175-4310-aa56-6bd3113e10da",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c4450f23-4175-4310-aa56-6bd3113e10da",
+        "lesson_activity.key": "1c9af8e2-8301-4f29-b22a-84e6fdc0a07d"
+      }
+    },
+    {
+      "key": "685f1a5e-70a0-4baa-b70b-367e622ccadc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "685f1a5e-70a0-4baa-b70b-367e622ccadc",
+        "lesson_activity.key": "25c32aca-43ab-4563-bc3e-1b8b44011f02"
+      }
+    },
+    {
+      "key": "de5921da-e3b2-4495-ad76-c687cfe6bce1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "de5921da-e3b2-4495-ad76-c687cfe6bce1",
+        "lesson_activity.key": "78d0c5b7-8448-4056-a67f-35d0d66ef190"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2b intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -159,7 +318,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "3c6edc01-95b7-46d5-9537-0a049d7aea29"
       },
       "level_keys": [
         "sciPD2b intro"
@@ -168,12 +328,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS tour"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -182,7 +339,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "3c6edc01-95b7-46d5-9537-0a049d7aea29"
       },
       "level_keys": [
         "PDECS tour"
@@ -191,12 +349,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PD check your progress"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -205,7 +360,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "3c6edc01-95b7-46d5-9537-0a049d7aea29"
       },
       "level_keys": [
         "PD check your progress"
@@ -214,12 +370,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 timeline"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -228,7 +381,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "3c6edc01-95b7-46d5-9537-0a049d7aea29"
       },
       "level_keys": [
         "sciPD2 timeline"
@@ -237,12 +391,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD PD details"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -251,7 +402,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "3c6edc01-95b7-46d5-9537-0a049d7aea29"
       },
       "level_keys": [
         "ECSPD PD details"
@@ -260,12 +412,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 StarLogoNova"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -274,7 +423,8 @@
         ],
         "lesson.key": "Review StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "adacede5-9135-4aee-8ca1-216ac55194c7"
       },
       "level_keys": [
         "sciPD2 StarLogoNova"
@@ -283,12 +433,9 @@
     {
       "chapter": 7,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo intro 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -297,7 +444,8 @@
         ],
         "lesson.key": "Review StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "adacede5-9135-4aee-8ca1-216ac55194c7"
       },
       "level_keys": [
         "sciPD StarLogo intro 1"
@@ -306,12 +454,9 @@
     {
       "chapter": 8,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo intro 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -320,7 +465,8 @@
         ],
         "lesson.key": "Review StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "adacede5-9135-4aee-8ca1-216ac55194c7"
       },
       "level_keys": [
         "sciPD StarLogo intro 2"
@@ -329,12 +475,9 @@
     {
       "chapter": 9,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo intro 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -343,7 +486,8 @@
         ],
         "lesson.key": "Review StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "adacede5-9135-4aee-8ca1-216ac55194c7"
       },
       "level_keys": [
         "sciPD StarLogo intro 3"
@@ -352,12 +496,9 @@
     {
       "chapter": 10,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD StarLogo intro 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -366,7 +507,8 @@
         ],
         "lesson.key": "Review StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "adacede5-9135-4aee-8ca1-216ac55194c7"
       },
       "level_keys": [
         "sciPD StarLogo intro 4"
@@ -375,12 +517,9 @@
     {
       "chapter": 11,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciencePD2b remixing"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -389,7 +528,8 @@
         ],
         "lesson.key": "Review StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "adacede5-9135-4aee-8ca1-216ac55194c7"
       },
       "level_keys": [
         "sciencePD2b remixing"
@@ -398,12 +538,9 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 mods"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -412,7 +549,8 @@
         ],
         "lesson.key": "Reviewing the Modules",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "40372c3f-3daf-4c3a-b767-61fc42e14389"
       },
       "level_keys": [
         "sciPD2 mods"
@@ -421,12 +559,9 @@
     {
       "chapter": 13,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 remember"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -435,7 +570,8 @@
         ],
         "lesson.key": "Reviewing the Modules",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "40372c3f-3daf-4c3a-b767-61fc42e14389"
       },
       "level_keys": [
         "sciPD2 remember"
@@ -444,12 +580,9 @@
     {
       "chapter": 14,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 challenge"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -458,7 +591,8 @@
         ],
         "lesson.key": "Reviewing the Modules",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "40372c3f-3daf-4c3a-b767-61fc42e14389"
       },
       "level_keys": [
         "sciPD2 challenge"
@@ -467,12 +601,9 @@
     {
       "chapter": 15,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 SLN explore"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -481,7 +612,8 @@
         ],
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2"
       },
       "level_keys": [
         "sciPD2 SLN explore"
@@ -490,12 +622,9 @@
     {
       "chapter": 16,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 sliders"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -504,7 +633,8 @@
         ],
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2"
       },
       "level_keys": [
         "sciPD2 sliders"
@@ -513,12 +643,9 @@
     {
       "chapter": 17,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD breeds"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -527,7 +654,8 @@
         ],
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2"
       },
       "level_keys": [
         "sciPD breeds"
@@ -536,12 +664,9 @@
     {
       "chapter": 18,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 camera"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -550,7 +675,8 @@
         ],
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2"
       },
       "level_keys": [
         "sciPD2 camera"
@@ -559,12 +685,9 @@
     {
       "chapter": 19,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 wiggle"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -573,7 +696,8 @@
         ],
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2"
       },
       "level_keys": [
         "sciPD2 wiggle"
@@ -582,12 +706,9 @@
     {
       "chapter": 20,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 color"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -596,7 +717,8 @@
         ],
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2"
       },
       "level_keys": [
         "sciPD2 color"
@@ -605,12 +727,9 @@
     {
       "chapter": 21,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 procedures"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -619,7 +738,8 @@
         ],
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2"
       },
       "level_keys": [
         "sciPD2 procedures"
@@ -628,12 +748,9 @@
     {
       "chapter": 22,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 conditionals"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -642,7 +759,8 @@
         ],
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2"
       },
       "level_keys": [
         "sciPD2 conditionals"
@@ -651,12 +769,9 @@
     {
       "chapter": 23,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 remix1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -665,7 +780,8 @@
         ],
         "lesson.key": "Remixing Phases 1 and 2",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "c4450f23-4175-4310-aa56-6bd3113e10da"
       },
       "level_keys": [
         "sciPD2 remix1"
@@ -674,12 +790,9 @@
     {
       "chapter": 24,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 implement1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -688,7 +801,8 @@
         ],
         "lesson.key": "Thinking Ahead to Implementation",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "685f1a5e-70a0-4baa-b70b-367e622ccadc"
       },
       "level_keys": [
         "sciPD2 implement1"
@@ -697,12 +811,9 @@
     {
       "chapter": 25,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 implement2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -711,7 +822,8 @@
         ],
         "lesson.key": "Thinking Ahead to Implementation",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "685f1a5e-70a0-4baa-b70b-367e622ccadc"
       },
       "level_keys": [
         "sciPD2 implement2"
@@ -720,12 +832,9 @@
     {
       "chapter": 26,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 thanks"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -734,7 +843,8 @@
         ],
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "de5921da-e3b2-4495-ad76-c687cfe6bce1"
       },
       "level_keys": [
         "sciPD2 thanks"
@@ -743,12 +853,9 @@
     {
       "chapter": 27,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2b reflection"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -757,7 +864,8 @@
         ],
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "de5921da-e3b2-4495-ad76-c687cfe6bce1"
       },
       "level_keys": [
         "sciPD2b reflection"
@@ -766,12 +874,9 @@
     {
       "chapter": 28,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2b end"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -780,7 +885,8 @@
         ],
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "de5921da-e3b2-4495-ad76-c687cfe6bce1"
       },
       "level_keys": [
         "sciPD2b end"
@@ -796,7 +902,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "3c6edc01-95b7-46d5-9537-0a049d7aea29"
       }
     },
     {
@@ -807,7 +914,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "3c6edc01-95b7-46d5-9537-0a049d7aea29"
       }
     },
     {
@@ -818,7 +926,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "3c6edc01-95b7-46d5-9537-0a049d7aea29"
       }
     },
     {
@@ -829,7 +938,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "3c6edc01-95b7-46d5-9537-0a049d7aea29"
       }
     },
     {
@@ -840,7 +950,8 @@
         ],
         "lesson.key": "Welcome!",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "3c6edc01-95b7-46d5-9537-0a049d7aea29"
       }
     },
     {
@@ -851,7 +962,8 @@
         ],
         "lesson.key": "Review StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "adacede5-9135-4aee-8ca1-216ac55194c7"
       }
     },
     {
@@ -862,7 +974,8 @@
         ],
         "lesson.key": "Review StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "adacede5-9135-4aee-8ca1-216ac55194c7"
       }
     },
     {
@@ -873,7 +986,8 @@
         ],
         "lesson.key": "Review StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "adacede5-9135-4aee-8ca1-216ac55194c7"
       }
     },
     {
@@ -884,7 +998,8 @@
         ],
         "lesson.key": "Review StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "adacede5-9135-4aee-8ca1-216ac55194c7"
       }
     },
     {
@@ -895,7 +1010,8 @@
         ],
         "lesson.key": "Review StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "adacede5-9135-4aee-8ca1-216ac55194c7"
       }
     },
     {
@@ -906,7 +1022,8 @@
         ],
         "lesson.key": "Review StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "adacede5-9135-4aee-8ca1-216ac55194c7"
       }
     },
     {
@@ -917,7 +1034,8 @@
         ],
         "lesson.key": "Reviewing the Modules",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "40372c3f-3daf-4c3a-b767-61fc42e14389"
       }
     },
     {
@@ -928,7 +1046,8 @@
         ],
         "lesson.key": "Reviewing the Modules",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "40372c3f-3daf-4c3a-b767-61fc42e14389"
       }
     },
     {
@@ -939,7 +1058,8 @@
         ],
         "lesson.key": "Reviewing the Modules",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "40372c3f-3daf-4c3a-b767-61fc42e14389"
       }
     },
     {
@@ -950,7 +1070,8 @@
         ],
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2"
       }
     },
     {
@@ -961,7 +1082,8 @@
         ],
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2"
       }
     },
     {
@@ -972,7 +1094,8 @@
         ],
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2"
       }
     },
     {
@@ -983,7 +1106,8 @@
         ],
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2"
       }
     },
     {
@@ -994,7 +1118,8 @@
         ],
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2"
       }
     },
     {
@@ -1005,7 +1130,8 @@
         ],
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2"
       }
     },
     {
@@ -1016,7 +1142,8 @@
         ],
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2"
       }
     },
     {
@@ -1027,7 +1154,8 @@
         ],
         "lesson.key": "Advanced StarLogo Nova",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "834275ac-33ba-4cde-a74d-4713f78c18d2"
       }
     },
     {
@@ -1038,7 +1166,8 @@
         ],
         "lesson.key": "Remixing Phases 1 and 2",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "c4450f23-4175-4310-aa56-6bd3113e10da"
       }
     },
     {
@@ -1049,7 +1178,8 @@
         ],
         "lesson.key": "Thinking Ahead to Implementation",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "685f1a5e-70a0-4baa-b70b-367e622ccadc"
       }
     },
     {
@@ -1060,7 +1190,8 @@
         ],
         "lesson.key": "Thinking Ahead to Implementation",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "685f1a5e-70a0-4baa-b70b-367e622ccadc"
       }
     },
     {
@@ -1071,7 +1202,8 @@
         ],
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "de5921da-e3b2-4495-ad76-c687cfe6bce1"
       }
     },
     {
@@ -1082,7 +1214,8 @@
         ],
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "de5921da-e3b2-4495-ad76-c687cfe6bce1"
       }
     },
     {
@@ -1093,7 +1226,8 @@
         ],
         "lesson.key": "Wrap-Up",
         "lesson_group.key": "",
-        "script.name": "sciencePD2b"
+        "script.name": "sciencePD2b",
+        "activity_section.key": "de5921da-e3b2-4495-ad76-c687cfe6bce1"
       }
     }
   ],

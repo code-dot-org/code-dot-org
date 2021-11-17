@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "nextsteps-showcase"
+    "/home": "myjourney-lacma"
   },
 
   "banners": {
-    "nextsteps-showcase": {
-      "image": "/images/csjourneys/showcase-banner.png",
-      "title": "Learn how computer science is used in college",
-      "body": "Give high school students the opportunity to learn how CS is used at the college level to help with research and projects in different fields of study they may want to pursue. Recording will be available the day after the live session.",
+    "myjourney-lacma": {
+      "image": "/images/csjourneys/lacma-dash.png",
+      "title": "My Journey: Art + Tech",
+      "body": "Learn how the program team at LA County Museum of Art makes space for artists to explore the intersections of art and emerging technologies. Recommended for grades K-5. Recording will be available the day after the live session.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/nextsteps#event-2",
-      "buttonId": "nextsteps-showcase-details"
+      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat9",
+      "buttonId": "myjourney-lacma-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",

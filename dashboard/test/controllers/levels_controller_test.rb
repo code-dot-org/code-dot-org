@@ -78,9 +78,17 @@ class LevelsControllerTest < ActionController::TestCase
     assert_equal 22, JSON.parse(@response.body)['numPages']
   end
 
+  test "should get filtered levels with name matching level key for blockly levels" do
+    game = Game.find_by_name("CustomMaze")
+    create(:level, name: 'blockly', level_num: 'special_blockly_level', game_id: game.id, type: "Maze")
+
+    get :get_filtered_levels, params: {name: 'blockly:CustomMaze:special_blockly_level'}
+    assert_equal 'blockly:CustomMaze:special_blockly_level', JSON.parse(@response.body)['levels'][0]["name"]
+  end
+
   test "should get filtered levels with level_type" do
     existing_levels_count = Odometer.all.count
-    level = create(:level, type: 'Odometer')
+    level = create(:odometer)
     get :get_filtered_levels, params: {page: 1, level_type: 'Odometer'}
     assert_equal existing_levels_count + 1, JSON.parse(@response.body)['levels'].length
     assert_equal level.name, JSON.parse(@response.body)['levels'][0]["name"]
@@ -96,9 +104,9 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should get filtered levels with owner_id" do
     Level.where(user_id: @levelbuilder.id).destroy_all
-    level = create :level, user: @levelbuilder
+    level = create :applab, user: @levelbuilder
     get :get_filtered_levels, params: {page: 1, owner_id: @levelbuilder.id}
-    assert_equal level[:name], JSON.parse(@response.body)['levels'][0]["name"]
+    assert_equal level.name, JSON.parse(@response.body)['levels'][0]["name"]
     assert_equal 1, JSON.parse(@response.body)['numPages']
   end
 
@@ -564,7 +572,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "should not edit level if not custom level" do
-    level = create(:level, user_id: nil)
+    level = create(:deprecated_blockly_level, user_id: nil)
     refute Ability.new(@levelbuilder).can? :edit, level
 
     post :update_blocks, params: @default_update_blocks_params.merge(
@@ -811,9 +819,9 @@ class LevelsControllerTest < ActionController::TestCase
     assert_select "#level_skin option[value='pvz'][selected='selected']"
   end
 
-  test 'should render level num in title' do
+  test 'should render level name in title' do
     get :show, params: {id: @level, game_id: @level.game}
-    assert_match /#{Regexp.quote(@level.level_num)}/, Nokogiri::HTML(@response.body).css('title').text.strip
+    assert_match /#{Regexp.quote(@level.name)}/, Nokogiri::HTML(@response.body).css('title').text.strip
   end
 
   test "should update maze data properly" do
@@ -936,7 +944,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should clone" do
     game = Game.find_by_name("Custom")
-    old = create(:level, game_id: game.id, name: "Fun Level", level_num: 'custom')
+    old = create(:level, game_id: game.id, name: "Fun Level")
     assert_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
     end
@@ -949,7 +957,7 @@ class LevelsControllerTest < ActionController::TestCase
 
   test "should clone without redirect" do
     game = Game.find_by_name("Custom")
-    old = create(:level, game_id: game.id, name: "Fun Level", level_num: 'custom')
+    old = create(:level, game_id: game.id, name: "Fun Level")
     assert_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)", do_not_redirect: true}
     end
@@ -961,7 +969,7 @@ class LevelsControllerTest < ActionController::TestCase
   end
 
   test "cannot clone hard-coded levels" do
-    old = create(:level, game_id: Game.first.id, name: "Fun Level", user_id: nil)
+    old = create(:deprecated_blockly_level, game_id: Game.first.id, name: "Fun Level", user_id: nil)
     refute old.custom?
     refute_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
@@ -981,7 +989,7 @@ class LevelsControllerTest < ActionController::TestCase
     sign_in @platformization_partner
 
     game = Game.find_by_name("Custom")
-    old = create(:level, game_id: game.id, name: "Fun Level", level_num: 'custom')
+    old = create(:level, game_id: game.id, name: "Fun Level")
     assert_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
     end
@@ -997,7 +1005,7 @@ class LevelsControllerTest < ActionController::TestCase
     sign_out @levelbuilder
     sign_in @platformization_partner
 
-    old = create(:level, game_id: Game.first.id, name: "Fun Level", user_id: nil)
+    old = create(:deprecated_blockly_level, game_id: Game.first.id, name: "Fun Level", user_id: nil)
     refute old.custom?
     refute_creates(Level) do
       post :clone, params: {id: old.id, name: "Fun Level (copy 1)"}
