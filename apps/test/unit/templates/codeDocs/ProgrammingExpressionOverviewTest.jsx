@@ -24,6 +24,12 @@ describe('ProgrammingExpressionOverview', () => {
           description: 'description'
         },
         {name: 'param2'}
+      ],
+      examples: [
+        {
+          name: 'Example 1',
+          description: 'the first example'
+        }
       ]
     };
   });
@@ -39,6 +45,7 @@ describe('ProgrammingExpressionOverview', () => {
       defaultProgrammingExpression.name
     );
     expect(wrapper.find('h2').map(h => h.text())).to.eql([
+      'Examples',
       'Syntax',
       'Parameters',
       'Returns',
@@ -73,6 +80,17 @@ describe('ProgrammingExpressionOverview', () => {
 
     expect(wrapper.text()).to.contain(defaultProgrammingExpression.category);
     expect(wrapper.text()).to.contain(defaultProgrammingExpression.returnValue);
+  });
+
+  it('hides the examples header if no syntax is provided', () => {
+    delete defaultProgrammingExpression.examples;
+    const wrapper = shallow(
+      <ProgrammingExpressionOverview
+        programmingExpression={defaultProgrammingExpression}
+      />
+    );
+    expect(wrapper.find('h2').length).to.be.greaterThan(0);
+    expect(wrapper.find('h2').map(h => h.text())).to.not.include('Examples');
   });
 
   it('hides the syntax header if no syntax is provided', () => {
