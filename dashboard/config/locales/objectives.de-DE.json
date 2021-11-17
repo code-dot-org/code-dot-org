@@ -2,6 +2,54 @@
   "de-DE": {
     "data": {
       "objectives": {
+        "53df251f-a20a-47a9-ae13-ede6e36df59d": {
+          "description": "Erstelle mit Sprites und Ereignissen interaktive Animationen."
+        },
+        "c62b54f4-a05a-481a-a61a-1c55a4e9ff01": {
+          "description": "Erstelle neue Sprites und gib ihnen Kostüme und Positionen"
+        },
+        "1ae10556-de6c-4a50-87bb-e4e184dfa54a": {
+          "description": "Erstelle neue Sprites und gib ihnen Kostüme und Positionen"
+        },
+        "255c15f5-cba0-41e4-979b-8bcf7f7548fa": {
+          "description": "Erstelle mit Sprites und Ereignissen interaktive Animationen."
+        },
+        "5d9905b6-0dbe-4624-9184-8fa076dad2bb": {
+          "description": ""
+        },
+        "0bd7545d-60d4-4515-8d4e-6c66531e1f7d": {
+          "description": ""
+        },
+        "3e2039fe-71cf-4966-8421-fbb9a2a9f075": {
+          "description": ""
+        },
+        "f6a523a0-0d22-47e5-97b9-6c325a5cecb6": {
+          "description": ""
+        },
+        "cde35a90-2d01-4014-9c06-fdfc221bca4a": {
+          "description": "Erstelle mit Sprites und Ereignissen interaktive Animationen."
+        },
+        "d3e36bfc-e0ed-4628-bfee-43dedca8d721": {
+          "description": "Erstelle neue Sprites und gib ihnen Kostüme und Positionen"
+        },
+        "94fe131e-bef8-4cd2-86c2-4c346d0515aa": {
+          "description": "Erstelle mit Sprites und Ereignissen interaktive Animationen."
+        },
+        "e89656fb-d896-4db9-8f42-d9ace70d64a0": {
+          "description": "Erstelle neue Sprites und gib ihnen Kostüme und Positionen"
+        },
+        "d2d65101-b356-4092-8f88-59b387334dd9": {
+          "description": ""
+        },
+        "1b251101-e3a2-406d-8f53-1b15c3c80a3f": {
+          "description": ""
+        },
+        "6c6d8105-605e-4539-acd7-48e2d7cbf906": {
+          "description": ""
+        },
+        "0f92f0fe-a51c-411b-b1f2-bdc1bd60e02c": {
+          "description": ""
+        },
         "93e23857-027c-4711-9033-a41de9430672": {
           "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
         },
@@ -13,6 +61,12 @@
         },
         "a17f5dea-9dfa-4d0a-ae15-23bc79ac012f": {
           "description": "Teile ein kreatives Artefakt mit anderen Schülern."
+        },
+        "a42fea5f-a36c-4c10-8c6a-025ce196bab8": {
+          "description": "Erstelle neue Sprites und gib ihnen Kostüme und Positionen"
+        },
+        "e0fb758b-907c-45e4-8f27-b18701ed39c5": {
+          "description": "Erstelle mit Sprites und Ereignissen interaktive Animationen."
         },
         "cdbe73f5-f16f-475f-b896-e9acdb885a23": {
           "description": "Erkenne, was erwartet wird, wenn SchülerInnen den Computerraum betreten."
@@ -144,13 +198,13 @@
           "description": "Überwinde Hindernisse wie Zeitbeschränkungen oder Bugs."
         },
         "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
-          "description": "Entdecke, dass das Internet genutzt werden kann, um ferne Orte zu besuchen und neue Dinge zu lernen."
+          "description": "Entdecken, dass das Internet genutzt werden kann, um ferne Orte zu besuchen und neue Dinge zu lernen."
         },
         "16b11f19-6072-4fa4-ac74-d6074dd844c4": {
-          "description": "Vergleiche, wie sicher du online bist und wie sicher du in der realen Welt bist."
+          "description": "Vergleichen, wie die Sicherheit im Internet der Sicherheit in der realen Welt ähnelt."
         },
         "ba49206c-c099-4994-be57-1f8744273eaf": {
-          "description": "Erkläre Regeln für sicheres Reisen im Internet."
+          "description": "Die Regeln für sicheres Navigieren im Internet erklären."
         },
         "9727a876-04d5-4ae0-a904-13cd594e2fac": {
           "description": "Erkenne, was erwartet wird, wenn SchülerInnen den Computerraum betreten."
@@ -159,13 +213,13 @@
           "description": "Verwende eine angemessene Terminologie, wenn du dich auf eine Computermaus, ein Trackpad oder einen Touchscreen beziehst."
         },
         "fa05721c-e159-4343-aa2d-679c0a4a7ca4": {
-          "description": "Übersetze einen Algorithmus in ein Programm"
+          "description": "Einen Algorithmus in ein Programm übersetzen"
         },
         "95ef707d-603d-4106-955e-3138f0f16a5d": {
-          "description": "Dekodiere und führe ein von jemand anderem erstelltes Programm aus"
+          "description": "Ein von jemand anderem erstelltes Programm dekodieren und ausführen "
         },
         "a78b8215-4f53-4cf7-a1fc-f2c5507b6dd8": {
-          "description": "Identifiziere und behebe Bugs oder Fehler in sequenzierten Anweisungen"
+          "description": "Fehler in sequenzierten Anweisungen erkennen und lösen"
         },
         "9cf70e8b-6934-4329-88cc-9b936c7042e3": {
           "description": "Vorbildliches Verhalten im Computerraum"
@@ -174,31 +228,31 @@
           "description": "Experimentiere mit standardmäßigen blockbasierten Programmieraktionen wie: Klicken, Drag and Drop, etc."
         },
         "768eac27-12a4-4a5f-96d6-80bcf4fc8947": {
-          "description": "Konstruiere ein Programm, indem du sequenzielle Bewegungen reorganisierst"
+          "description": "Ein Programm durch Umorganisieren sequenzieller Bewegungen entwerfen."
         },
         "3f280431-7bc1-4f1a-aad6-708c97a92a48": {
-          "description": "Ein Computerprogramm aus einer Reihe von schriftlichen Anweisungen erstellen"
+          "description": "Ein Computerprogramm aus einer Reihe schriftlicher Anweisungen erstellen"
         },
         "ad752d9a-9437-4b0b-9ffd-e01b34f8cdb5": {
-          "description": "Geeignete Debugging-Praktiken beim Lösen von Problemen wählen"
+          "description": "Geeignete Praktiken zur Fehlersuche beim Lösen von Problemen auswählen"
         },
         "199aed02-347c-4892-9e98-d7571ae64c9d": {
-          "description": "Ordne die Befehle in einer logischen Reihenfolge an."
+          "description": "Befehle in einer logischen Reihenfolge anordnen."
         },
         "f0335d03-c7b3-4dee-9d9c-e1cd00919261": {
-          "description": "Erkenne Probleme oder \"Bugs\" in einem Programm und entwickle einen Plan, um die Probleme zu beheben."
+          "description": "Probleme oder \"Fehler\" in einem Programm entdecken und einen Plan entwickeln, um die Probleme zu beheben."
         },
         "407c5a4d-9337-4218-92d5-018597e41e19": {
-          "description": "Identifiziere sich wiederholenden Code und verkürze mehrere Aktionen zu einer einzigen Schleife."
+          "description": "Identifiziere Code, der sich wiederholt, und verkürze mehrere Aktionen zu einer einzigen Schleife."
         },
         "4c30941d-1b93-4dd9-a4f2-bbf9c9ff297f": {
           "description": "Interpretiere ein Programm mit Schleifen als eine Serie von mehreren Aktionen."
         },
         "cb7cab91-20ca-495a-a429-621631cb0507": {
-          "description": "Konstruiere ein Programm mit Strukturen, die Bereiche des Codes wiederholen"
+          "description": "Ein Programm mit Strukturen entwickeln, die Teile des Codes wiederholen"
         },
         "381b89ab-336f-41cd-b755-78142a1f1f90": {
-          "description": "Verbessere bestehenden Code, indem du Bereiche mit Wiederholungen findest und sie in Schleifenstrukturen verschiebst"
+          "description": "Bestehenden Code durch Identifizieren von Bereiche mit Wiederholungen und Verschieben in Schleifenstrukturen verbessern "
         },
         "632bd918-c124-4f4c-892e-980cdc07b3bf": {
           "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
@@ -243,7 +297,7 @@
           "description": "Passe auf die Genauigkeit auf, während der Erstellung von Anweisungen."
         },
         "26392005-5f64-4707-b38b-847d1f009a29": {
-          "description": "Identifiziere und behebe Bugs oder Fehler in sequenzierten Anweisungen"
+          "description": "Fehler in sequenzierten Anweisungen erkennen und lösen"
         },
         "560e14ee-7390-4244-aee5-a0c2737112e5": {
           "description": "Übersetzte Bewegungen in eine Reihe von Befehlen."
@@ -378,10 +432,10 @@
           "description": "Identifiziere Aktionen, die mit Eingangsereignissen korrelieren."
         },
         "9ff9fb2c-7d0a-4449-85bf-fa6d3fe84744": {
-          "description": "Konstruiere ein Programm mit Strukturen, die Bereiche des Codes wiederholen"
+          "description": "Ein Programm mit Strukturen entwickeln, die Teile des Codes wiederholen"
         },
         "982d25cd-d5ff-491b-8505-be2606ba0a5e": {
-          "description": "Verbessere bestehenden Code, indem du Bereiche mit Wiederholungen findest und sie in Schleifenstrukturen verschiebst"
+          "description": "Bestehenden Code durch Identifizieren von Bereiche mit Wiederholungen und Verschieben in Schleifenstrukturen verbessern "
         },
         "d0dae7ad-246b-4f90-8800-8cc9f1de25aa": {
           "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."
@@ -573,16 +627,16 @@
           "description": "Übersetzte Bewegungen in eine Reihe von Befehlen."
         },
         "7ef6d077-67aa-4a8b-b27b-ab3697654abc": {
-          "description": "Konstruiere ein Programm, indem du sequenzielle Bewegungen reorganisierst"
+          "description": "Ein Programm durch Umorganisieren sequenzieller Bewegungen entwerfen."
         },
         "3ad309d1-5c29-4a7d-923c-9c60e6ef21b0": {
-          "description": "Ein Computerprogramm aus einer Reihe von schriftlichen Anweisungen erstellen"
+          "description": "Ein Computerprogramm aus einer Reihe schriftlicher Anweisungen erstellen"
         },
         "f4ccea6b-5333-454a-8b7a-e9d680967cef": {
-          "description": "Ordne die Befehle in einer logischen Reihenfolge an."
+          "description": "Befehle in einer logischen Reihenfolge anordnen."
         },
         "b881f284-2988-49e1-aaf2-f8baf12e5bb5": {
-          "description": "Erkenne Probleme oder \"Bugs\" in einem Programm und entwickle einen Plan, um die Probleme zu beheben."
+          "description": "Probleme oder \"Fehler\" in einem Programm entdecken und einen Plan entwickeln, um die Probleme zu beheben."
         },
         "620da514-ad6e-4049-a9d3-d189a79af01e": {
           "description": "Übersetzte Bewegungen in eine Reihe von Befehlen."
@@ -591,10 +645,10 @@
           "description": "Identifiziere und lokalisiere Bugs in einem Programm."
         },
         "38f34964-ca2d-4d03-ab82-e937fc487d2a": {
-          "description": "Konstruiere ein Programm mit Strukturen, die Bereiche des Codes wiederholen"
+          "description": "Ein Programm mit Strukturen entwickeln, die Teile des Codes wiederholen"
         },
         "b6f41a7c-0967-4986-b7b6-910819b28396": {
-          "description": "Verbessere bestehenden Code, indem du Bereiche mit Wiederholungen findest und sie in Schleifenstrukturen verschiebst"
+          "description": "Bestehenden Code durch Identifizieren von Bereiche mit Wiederholungen und Verschieben in Schleifenstrukturen verbessern "
         },
         "442a1fcc-3ffc-4e3a-9c55-9cfd94d281e1": {
           "description": "Identifiziere die Vorteile der Verwendung einer Schleifenstruktur anstelle von manuellen Wiederholungen."

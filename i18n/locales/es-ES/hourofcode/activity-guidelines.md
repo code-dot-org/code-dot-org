@@ -105,7 +105,7 @@ Qué necesitas:
 * Nombre de la actividad (no puede incluir "Hora del Código" en el nombre)
 * URL para la actividad
 * Descripciones de la actividad 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Además, algunas escuelas están interesadas en conocer si las actividades de la Hora del Código abordan los estándares comunes o avanzados de la ciencia. Si la actividad aborda estándares específicos, considera incluir esta información.
 * Niveles de grado recomendados para los usuarios previstos. Puedes consultar \[los estándares K-12 de la Computer Science Teachers’ Association\] (https://k12cs.org/framework-statements-by-grade-band/) para ver los conceptos de las ciencias de la computación adecuados para cada grado. Algunos ejemplos de niveles de grado: 
     * Jardín de infantes - Grado 1 (4 a 6 años)
     * Grados 2-5 (7 a 10 años)

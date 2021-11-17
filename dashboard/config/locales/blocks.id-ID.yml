@@ -1153,6 +1153,7 @@ id:
             "'sound://category_animals/cat.mp3'": kucing
             "'sound://category_animals/cow.mp3'": sapi
             "'sound://category_animals/sheep.mp3'": domba
+            "'sound://category_animals/goat.mp3'": kambing
             "'sound://category_animals/chicken.mp3'": ayam
             "'sound://category_animals/elephant.mp3'": Gajah
             "'sound://category_animals/dolphin.mp3'": lumba-lumba
@@ -1608,12 +1609,11 @@ id:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Es Krim
-            Stars: Bintang
-            Fireworks: Kembang Api
-            '"rainbow"': Pelangi
-            '"hearts"': Hati
             '"flowers"': Bunga
+            '"hearts"': Hati
+            '"iceCream"': Es Krim
+            '"rainbow"': Pelangi
+            '"stars"': Bintang
             '"waves"': Gelombang
       Poetry_makeBurst:
         options:
@@ -1625,7 +1625,7 @@ id:
         text: Playsound {SOUND}
         options:
           SOUND:
-            Light: Lampu
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Lampu
       Poetry_setBackground:
         text: tetapkan warna latar belakang {COLOR}
       Poetry_setBackgroundEffect:

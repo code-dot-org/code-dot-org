@@ -487,7 +487,8 @@
           "draw a pinwheel": {
             "parameters": {
               "repeat": "पुन्हा करा",
-              "sides": "बाजू"
+              "sides": "बाजू",
+              "length": "लांबी"
             },
             "name": "एक भिरभिरे काढा"
           },
@@ -516,6 +517,32 @@
             "description": "दिलेल्या त्रिज्येचे एक वर्तुळ काढा",
             "parameters": {
               "radius": "त्रिज्या"
+            }
+          },
+          "draw a triangle": {
+            "name": "एक त्रिकोण काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a shape": {
+            "name": "एक आकार काढा",
+            "parameters": {
+              "sides": "बाजू",
+              "length": "लांबी"
+            }
+          },
+          "draw a house": {
+            "name": "एक घर काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
+          },
+          "draw a square": {
+            "name": "एक चौरस काढा",
+            "parameters": {
+              "length": "लांबी",
+              "sides": "बाजू"
             }
           }
         },
@@ -661,6 +688,12 @@
             "parameters": {
               "length": "लांबी"
             }
+          },
+          "draw a square": {
+            "name": "एक चौरस काढा",
+            "parameters": {
+              "length": "लांबी"
+            }
           }
         },
         "courseC_data wizard_2021": {
@@ -674,16 +707,31 @@
           },
           "draw hexagon": {
             "name": "षटकोन काढा"
+          },
+          "draw line of hexagons": {
+            "name": "षटकोनांची एक ओळ काढा"
           }
         },
         "courseE_artist_functions8_2021": {
           "do something": {
             "name": "काहीतरी करा"
+          },
+          "staggered squares": {
+            "name": "एक आड एक चौरस"
+          },
+          "draw a line of squares": {
+            "name": "चौरसांची एक ओळ काढा"
+          },
+          "draw square": {
+            "name": "एक चौरस काढा"
           }
         },
         "courseE_artist_functions8a_2021": {
           "do something": {
             "name": "काहीतरी करा"
+          },
+          "draw a square": {
+            "name": "एक चौरस काढा"
           }
         },
         "courseE_artist_functions8b_2021": {
@@ -692,6 +740,9 @@
           },
           "draw square": {
             "name": "एक चौरस काढा"
+          },
+          "draw a line of squares": {
+            "name": "चौरसांची एक ओळ काढा"
           }
         },
         "courseE_artist_functions8c_2021": {
@@ -700,6 +751,12 @@
           },
           "draw square": {
             "name": "एक चौरस काढा"
+          },
+          "draw a line of squares": {
+            "name": "चौरसांची एक ओळ काढा"
+          },
+          "staggered squares": {
+            "name": "एक आड एक चौरस"
           }
         },
         "courseE_artist_functions9_2021": {
@@ -708,11 +765,17 @@
           },
           "draw triangle": {
             "name": "एक त्रिकोण काढा"
+          },
+          "draw line of triangles": {
+            "name": "त्रिकोणांची एक ओळ काढा "
           }
         },
         "courseE_artist_functions_challenge1_2021": {
           "do something": {
             "name": "काहीतरी करा"
+          },
+          "my design": {
+            "name": "माझे डिझाईन"
           }
         },
         "courseE_artist_functions_challenge2_2021": {
@@ -726,6 +789,12 @@
         "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "काहीतरी करा"
+          },
+          "draw line of polygons": {
+            "name": "बहुभुजाकृतींची एक ओळ काढा"
+          },
+          "draw polygon": {
+            "name": "बहुभुजाकृती काढा"
           }
         },
         "Function intro Ryan": {
@@ -860,6 +929,9 @@
         "courseE_artist_functions2_2021": {
           "draw a square": {
             "name": "एक चौरस काढा"
+          },
+          "draw ear stems": {
+            "name": "कानाच्या पाळ्या काढा"
           }
         },
         "courseE_artist_functions3_2021": {
@@ -878,16 +950,149 @@
           },
           "draw square": {
             "name": "एक चौरस काढा"
+          },
+          "draw line of hexagons": {
+            "name": "षटकोनांची एक ओळ काढा"
+          },
+          "staggered squares": {
+            "name": "एक आड एक चौरस"
+          },
+          "draw a line of squares": {
+            "name": "चौरसांची एक ओळ काढा"
           }
         },
         "courseE_farmer_functions10a1_2021": {
           "get all pumpkins": {
             "name": "सगळे भोपळे मिळवा"
+          },
+          "pick along path": {
+            "name": "जाता जाता तोडा"
+          },
+          "check square for corn": {
+            "name": "चौरसात कणीस आहे का तपासा"
+          },
+          "pumpkin square": {
+            "name": "भोपळ्याचा चौरस"
           }
         },
         "courseE_farmer_functions11_predict_2021": {
           "get all pumpkins": {
             "name": "सगळे भोपळे मिळवा"
+          },
+          "pick along path": {
+            "name": "जाता जाता तोडा"
+          },
+          "pumpkin square": {
+            "name": "भोपळ्याचा चौरस"
+          },
+          "check square for corn": {
+            "name": "चौरसात कणीस आहे का तपासा"
+          },
+          "get produce": {
+            "name": "उत्पादन मिळवा"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "फंक्शन 1"
+          },
+          "function 2": {
+            "name": "फंक्शन 2"
+          }
+        },
+        "courseC_artist_prog3_2021": {
+          "draw flame": {
+            "name": "ज्योतीचे चित्र काढा",
+            "parameters": {
+              "x": "x"
+            }
+          },
+          "draw fire": {
+            "name": "आगीचे चित्र काढा"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "एक खिडकी काढा"
+          }
+        },
+        "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "एक चौरस काढा"
+          },
+          "draw ear stems": {
+            "name": "कानाच्या पाळ्या काढा"
+          }
+        },
+        "courseE_farmer_functions13_2021": {
+          "pick along path": {
+            "name": "जाता जाता तोडा"
+          },
+          "check for corn": {
+            "name": "कणीस आहे का तपासा"
+          },
+          "corn rectangle": {
+            "name": "कणीसाचा आयत"
+          },
+          "lettuce stairs": {
+            "name": "लेट्युसचा जिना"
+          }
+        },
+        "courseE_farmer_functions1a_2021": {
+          "check square for corn": {
+            "name": "चौरसात कणीस आहे का तपासा"
+          }
+        },
+        "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "चौरसात कणीस आहे का तपासा"
+          }
+        },
+        "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "चौरसात कणीस आहे का तपासा"
+          },
+          "get all pumpkins": {
+            "name": "सगळे भोपळे मिळवा"
+          }
+        },
+        "courseE_farmer_functions3c1_2021": {
+          "pick along path": {
+            "name": "जाता जाता तोडा"
+          },
+          "check square for corn": {
+            "name": "चौरसात कणीस आहे का तपासा"
+          },
+          "get all pumpkins": {
+            "name": "सगळे भोपळे मिळवा"
+          }
+        },
+        "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "चौरसात कणीस आहे का तपासा"
+          },
+          "get all pumpkins": {
+            "name": "सगळे भोपळे मिळवा"
+          }
+        },
+        "courseE_farmer_functions7a1_2021": {
+          "garden square": {
+            "name": "बागेचा चौरस"
+          }
+        },
+        "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "बागेचा चौरस"
+          }
+        },
+        "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "बागेचा चौरस"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "हालचाल करा आणि काऊंटर वापरून परागकण गोळा करा."
           }
         }
       }

@@ -91,6 +91,32 @@
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Setelah Satu Jam Kode"
         },
+        "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
+          "tips": [
+            null
+          ]
+        },
+        "49994950-2fc5-4779-abd5-2369a402a750": {
+          "progression_name": "Pembangunan Keterampilan"
+        },
+        "950807e2-afa0-4c26-9459-4682b3f49602": {
+          "progression_name": "Contoh"
+        },
+        "175a6627-901e-40c3-9b54-d156c7da668f": {
+          "progression_name": "Pembangunan Keterampilan"
+        },
+        "96abf95f-d28e-4fe0-a376-016b5dbd6883": {
+          "progression_name": "Pembangunan Keterampilan"
+        },
+        "51fbff8e-3efa-4697-8f66-bc9c3b27e82b": {
+          "progression_name": "Contoh"
+        },
+        "14006414-2422-4d85-bbed-d7bd50c95996": {
+          "progression_name": "Pembangunan Keterampilan"
+        },
+        "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6": {
+          "progression_name": "Permainan Gratis"
+        },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
             null
@@ -177,6 +203,14 @@
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Setelah Satu Jam Kode"
         },
+        "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
+          "tips": [
+            null
+          ]
+        },
+        "f95b4eed-639e-483e-bef7-ead9abf4808e": {
+          "name": "Bayangan"
+        },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "tips": [
             null
@@ -193,24 +227,49 @@
         "75db60fb-671b-4740-80ae-0b13f4c09897": {
           "name": "Artis"
         },
+        "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
+          "name": "",
+          "description": ""
+        },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
-            null
+            ""
           ]
         },
+        "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
+          "description": ""
+        },
         "0e395269-9740-4229-a7ac-b18b9f4eced9": {
-          "name": "Laboratorium Bermain Gumball"
+          "name": "Laboratorium Bermain Gumball",
+          "description": ""
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
-            null
+            ""
           ]
         },
+        "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
+          "description": ""
+        },
+        "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
+          "name": "",
+          "description": ""
+        },
+        "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
+          "name": "",
+          "description": ""
+        },
         "59cd05df-cb4d-4280-8700-840826c01845": {
-          "name": "Langkah berikutnya"
+          "name": "Langkah berikutnya",
+          "description": ""
+        },
+        "94661bb9-f6c1-40ac-ba26-15a09e2eece7": {
+          "name": "",
+          "description": ""
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
-          "name": "Setelah Satu Jam Kode"
+          "name": "Setelah Satu Jam Kode",
+          "description": ""
         },
         "0335c0d1-6eb5-4671-a1e2-1e3f559b3103": {
           "name": "Pendahuluan"
@@ -232,6 +291,14 @@
         },
         "456b1d51-129d-43ff-aab9-727995464e36": {
           "name": "Langkah berikutnya"
+        },
+        "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
+          "tips": [
+            null
+          ]
+        },
+        "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
+          "name": "Bayangan"
         },
         "5396c200-526e-4dd4-86dc-eefe7b52ec03": {
           "name": "Pendahuluan"
@@ -262,57 +329,146 @@
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "75673a5f-7781-4876-8d91-9157f53161c2": {
+          "description": ""
+        },
+        "281279d4-2b9b-48f4-b0fa-cb7017a86c91": {
+          "name": "",
+          "description": ""
         },
         "b4a270c7-538c-4278-a88e-d074a04fafb4": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "9c5bb1fb-a5dc-4857-89fe-b24f3d0ab8bb": {
+          "description": ""
         },
         "be8fc72a-c35b-403e-9063-5cb6af4c5b28": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "529245c0-b1fc-416b-aee4-77f322d85c58": {
+          "description": ""
+        },
+        "3e14940a-f236-48f0-bb1b-17cfad462b20": {
+          "name": "",
+          "description": ""
         },
         "4e04bf40-bae8-413b-a7f9-e62dc83d808e": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "19da6882-e123-46c0-a3e6-d51cdfbfb524": {
+          "description": ""
+        },
+        "41c7a442-e5f1-4440-ad9a-d892d852fa3f": {
+          "name": "",
+          "description": ""
         },
         "7219d891-31ac-454e-8060-eb84a3a0d1df": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "66d1a328-68c1-4006-b013-4d42e91c7360": {
+          "description": ""
+        },
+        "87dc9b80-1d14-4b71-b281-d2c67bba67a4": {
+          "progression_name": ""
+        },
+        "eaccf571-0358-4756-b0c7-2349901065d4": {
+          "progression_name": ""
+        },
+        "1c8bec9c-af39-4dce-826c-a2ead77100c5": {
+          "progression_name": ""
+        },
+        "9ad445d9-3385-460d-97f8-396f069b456d": {
+          "progression_name": ""
+        },
+        "761cdcc6-546c-4a87-8f96-8555cdf01e99": {
+          "progression_name": ""
+        },
+        "38ff7ecd-0a0f-4332-802c-cfa62c64beb5": {
+          "name": "",
+          "progression_name": ""
         },
         "c6e4a8c3-e36b-4a1f-9620-d892af9535f3": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "a09a8861-0c7d-433f-9fd6-d10220a44624": {
+          "name": "",
+          "description": ""
+        },
+        "fc172d97-57ec-446d-bd3b-fd4f79aad8bf": {
+          "name": "",
+          "description": ""
         },
         "c694a6e6-b265-4802-bfca-bbc9180c8407": {
           "tips": [
+            ""
+          ]
+        },
+        "cec5b790-610d-4bb9-8868-a71c39f63329": {
+          "description": ""
+        },
+        "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
+          "tips": [
             null
           ]
+        },
+        "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
+          "name": "Bayangan"
+        },
+        "ede504c6-d7ea-444a-a17d-cb87ed4a461e": {
+          "name": "",
+          "description": ""
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            null
+            ""
           ]
         },
+        "7f1244d9-811b-410c-96b2-9f7086959c6b": {
+          "description": ""
+        },
         "a69a3310-4b81-4e04-8313-51044489351a": {
-          "name": "Star Wars: Dirikan sebuah galaksi dengan Code"
+          "name": "Star Wars: Dirikan sebuah galaksi dengan Code",
+          "description": ""
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
           "tips": [
-            null
+            ""
           ]
         },
+        "eb72d828-788d-4090-9e4f-71423c081948": {
+          "description": ""
+        },
+        "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
+          "name": "",
+          "description": ""
+        },
+        "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
+          "name": "",
+          "description": ""
+        },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
-          "name": "Langkah berikutnya"
+          "name": "Langkah berikutnya",
+          "description": ""
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
-          "name": "Setelah Satu Jam Kode"
+          "name": "Setelah Satu Jam Kode",
+          "description": ""
+        },
+        "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
+          "description": ""
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "Pendahuluan"
@@ -372,6 +528,30 @@
         "b1a83781-66bd-4da3-b4c0-ae80c5e99a8b": {
           "progression_name": "Mode desain"
         },
+        "9d3ef78a-4043-489e-898b-f407c914f698": {
+          "name": "",
+          "description": ""
+        },
+        "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
+          "name": "",
+          "description": ""
+        },
+        "70daba44-c26e-4286-95ae-50cbd8724b2d": {
+          "name": ""
+        },
+        "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
+          "description": ""
+        },
+        "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
+          "name": "Bayangan",
+          "description": ""
+        },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
             null
@@ -388,18 +568,52 @@
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Setelah Satu Jam Kode"
         },
+        "2596c914-8e1c-4c92-b66c-9062e2a778c2": {
+          "name": "",
+          "description": ""
+        },
+        "e7bb5d35-bec3-45f9-9022-f718aedb634c": {
+          "description": ""
+        },
+        "8464f3ff-176d-4c69-bd66-1089fef7d689": {
+          "description": ""
+        },
+        "9157e4da-0260-4b90-a36a-7b6b36f25666": {
+          "description": ""
+        },
+        "78658467-dd3d-480e-9d99-1a7a190ff6ba": {
+          "description": ""
+        },
+        "ad131c3e-2bb5-477f-a628-291c5ccc0410": {
+          "description": ""
+        },
         "f5f6ef34-367d-424d-af63-a8a04c146c34": {
           "tips": [
-            null
+            ""
           ]
         },
         "540e3c12-987d-44de-8efc-5e6e12fed295": {
           "tips": [
-            null
+            ""
           ]
+        },
+        "b784f10e-0727-464d-856e-33c76e2e0077": {
+          "description": ""
+        },
+        "b6de46c4-4cbc-4214-9cf2-e0851583fe92": {
+          "description": ""
         },
         "9e4304e5-944c-4b21-88eb-708558b2b82f": {
           "progression_name": "kompresi Teks"
+        },
+        "789f83b4-45b7-4145-9d8c-e2a2429efec2": {
+          "progression_name": ""
+        },
+        "4bfe229f-419d-409f-9ecc-ca2a03311d80": {
+          "description": ""
+        },
+        "17878891-5c24-412b-b385-35b54fdaeb11": {
+          "description": ""
         },
         "21f43e64-dea3-4abc-8284-e055480370ce": {
           "name": "Pendahuluan",
@@ -515,20 +729,75 @@
           "name": "Langkah berikutnya"
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
+          "name": "",
+          "description": "",
           "tips": [
-            null
-          ]
+            ""
+          ],
+          "progression_name": ""
+        },
+        "a000c7ca-046c-47c5-b2c9-5a3043c747d9": {
+          "description": ""
         },
         "fd806d81-ec5e-4b00-a4d5-2a588e64160b": {
           "name": "AI for Oceans",
           "tips": [
-            null
+            ""
           ]
         },
+        "5d09fa3e-63ce-4142-ac59-d893889ce78d": {
+          "description": ""
+        },
+        "917bb837-8f93-4a92-86dc-ed60980f680b": {
+          "description": "",
+          "progression_name": ""
+        },
+        "2dd01487-fb16-4666-bd3c-56ae2ce5a364": {
+          "description": ""
+        },
+        "5ccd5b0c-d53b-4931-9405-218822bb91c6": {
+          "description": ""
+        },
+        "6403e073-cdd0-46e8-9e02-f336a51baf91": {
+          "description": ""
+        },
         "7b664ff9-4e73-4d47-b54e-f2963900fa2a": {
+          "description": "",
           "tips": [
-            null
-          ]
+            ""
+          ],
+          "progression_name": ""
+        },
+        "0e3fc271-27d1-4e73-9981-3e36c95c583f": {
+          "description": "",
+          "progression_name": ""
+        },
+        "10c97a69-e8a4-4eb0-8a7d-86e143c3c4ac": {
+          "description": ""
+        },
+        "fa3c9144-cc51-42f5-8069-6f50da5b465d": {
+          "description": ""
+        },
+        "a47af864-6d0d-441c-98ea-6e50d036c415": {
+          "description": "",
+          "progression_name": ""
+        },
+        "0cc68ced-0af8-4fbf-a8df-4df044149a60": {
+          "description": ""
+        },
+        "be0db11e-cb8e-4658-844c-73a9faafa36d": {
+          "description": ""
+        },
+        "bb046ecc-a5f6-4ac9-a43c-a071589e04c9": {
+          "description": ""
+        },
+        "be0995b2-b12f-45ee-9047-8261719fcd56": {
+          "name": "",
+          "description": ""
+        },
+        "2a0e6d6d-f8b2-4f88-86e2-1b4c8c2ee300": {
+          "name": "",
+          "description": ""
         },
         "e9aff97e-cad0-44f6-a38c-acea877cab0f": {
           "name": "Pemanasan"
@@ -543,6 +812,93 @@
         },
         "b68a11cc-930a-4803-beca-1d4f49ede378": {
           "name": "Bayangan"
+        },
+        "d6c0f379-8c4b-44a4-a027-b1b0d67a9605": {
+          "progression_name": ""
+        },
+        "5baa2f9a-16b7-412f-b3cb-4fb126c06add": {
+          "progression_name": ""
+        },
+        "7197ddf8-89bf-4b3a-86d9-1f424a1d1b0a": {
+          "progression_name": ""
+        },
+        "a81e104f-4588-40de-bce6-a309993c9bd4": {
+          "progression_name": "Aplikasi Multilayar"
+        },
+        "43a2cde3-0ad9-4dc0-87df-db17a8f9e789": {
+          "progression_name": "Penghasil dan Pengatur"
+        },
+        "330f29ec-379e-4f4e-ae58-4163b1afca6c": {
+          "progression_name": ""
+        },
+        "4e481fb1-126e-41df-bd8b-7358c3bf23fc": {
+          "progression_name": ""
+        },
+        "432cf1e5-be20-4ba1-a6b5-617481522694": {
+          "progression_name": ""
+        },
+        "04db6cce-94f1-43ba-ad97-05a8fcd32541": {
+          "progression_name": ""
+        },
+        "f090c505-7c09-4e19-bcf4-b219f24eae45": {
+          "name": "",
+          "progression_name": ""
+        },
+        "0bb9cc9e-e99a-4f86-af29-44e022052307": {
+          "progression_name": ""
+        },
+        "04b9d0f5-a42b-4700-ba6d-cf352558897a": {
+          "progression_name": ""
+        },
+        "25be4c6b-89f1-467b-b126-100d0ea60e4d": {
+          "progression_name": ""
+        },
+        "041660a1-c3ea-4701-ade4-b4e7d30f0f49": {
+          "progression_name": ""
+        },
+        "20ad1c05-99cf-4117-8963-86d325b6f48d": {
+          "progression_name": ""
+        },
+        "fca2ad77-7fc0-4d43-9b2c-8ebe8ced8f31": {
+          "progression_name": ""
+        },
+        "dfb84fa6-32ca-4ab5-9810-e28e155bf132": {
+          "name": "",
+          "progression_name": ""
+        },
+        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
+          "description": "",
+          "tips": [
+            ""
+          ]
+        },
+        "d99fc09e-a586-41df-84b2-e552cc4735e3": {
+          "description": ""
+        },
+        "b6c8c6a3-fe85-4d42-999e-a2ba13f6739a": {
+          "description": ""
+        },
+        "6fba9dd0-6069-402c-a641-53899ae667e2": {
+          "description": ""
+        },
+        "21c585fc-7b80-4ab9-ba4c-8f4caa8ec102": {
+          "description": ""
+        },
+        "a49bc6c2-1b76-476d-98cd-7f040e8853a7": {
+          "name": "",
+          "description": ""
+        },
+        "065eda67-268c-4f91-9caf-efb2c34493fe": {
+          "description": ""
+        },
+        "51a89a3e-a8c7-41d6-bbbf-2ce16fc7e033": {
+          "description": ""
+        },
+        "8630a813-1b6c-49c5-a58b-d2dc5dcccd0a": {
+          "description": ""
+        },
+        "901dbdcd-5c65-4f3d-8cb2-9c9e36a48c2f": {
+          "description": ""
         },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Pendahuluan"
@@ -665,7 +1021,7 @@
           "name": "Bayangan"
         },
         "d9d67048-27b2-49cf-9f30-26daf2aa25d1": {
-          "description": "**Tanyakan**: _Siapa yang pernah mendengar pepatah \"Tongkat dan batu bisa mematahkan tulang, tetapi kata-kata takkan bisa melukai saya\"?_\n\nUndang murid untuk menanggapi. Jawaban akan bervariasi. Tindak lanjuti dengan bertanya kepada murid apakah pepatah tersebut benar di mata mereka.\n\n**Proyeksikan** [Slide 7](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_117) dan ucapkan: _Kita sekarang akan menonton video berjudul \"Kekuatan Kata-Kata.\" Sewaktu kita menonton, lanjutkan berpikir apakah pernyataan tersebut benar atau tidak._\n\nPerlihatkan video [Kekuatan Kata-Kata](https://www.commonsense.org/education/videos/the-power-of-words) lalu panggil murid untuk membagikan pesan yang disampaikannya terkait apakah pernyataan di atas benar atau tidak. Tekankan bahwa kadang-kadang perkataan seseorang itu sulit sekali diabaikan jika berupa nama kasar. Nama BISA membuat Anda merasa sedih atau terluka.\n\n**Tanyakan**: _Menurut Anda mengapa pemain lain tersebut mengucapkan hal-hal tersebut kepada Guts?_ ([Slide 8](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3e3f96c340_0_0))\n\nUndang murid untuk menanggapi. Jawaban akan bervariasi, tetapi kemungkinan alasannya meliput _mereka mencoba mengajak guyon_ atau _mereka merasa kesal hati sendiri dan ingin curhat kepada seseorang_.\n\n**Tanyakan**: _Apakah yang dilakukan Guts untuk menanggapi kata-kata kasar?_\n\nUndang murid untuk menanggapi dan jelaskan bahwa Guts berbicara dengan seseorang yang dipercayainya, yang dapat merasakan empati padanya dan memberikan nasihat yang baik. Definisikan empati sebagai _membayangkan perasaan yang sedang dirasakan oleh orang lain_. ([Slide 9](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_109))\n\n**Proyeksikan** [Slide 10](https://docs.google.com/presentation/d/1LC3dpRP6mXBZkB8oe3hGMWkJUhunO9e5gU6g8WlUQsk/edit#slide=id.g3d844aea9e_1_157) dan tinjau kembali akronim S-T-O-P untuk menanggapi kata-kata kasar di dunia online."
+          "description": "**Tanyakan**: _Siapa yang pernah mendengar pepatah \"Tongkat dan batu bisa mematahkan tulang, tetapi kata-kata takkan bisa melukai saya\"?_\n\nUndang murid untuk menanggapi. Jawaban akan bervariasi. Tindak lanjuti dengan bertanya kepada murid apakah pepatah tersebut benar di mata mereka.\n\n**Proyeksikan** [Slide 7](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_117) dan ucapkan: _Kita sekarang akan menonton video berjudul \"Kekuatan Kata-Kata.\" Sewaktu kita menonton, lanjutkan berpikir apakah pernyataan tersebut benar atau tidak._\n\nPerlihatkan video [Kekuatan Kata-Kata](https://www.commonsense.org/education/videos/the-power-of-words) lalu panggil murid untuk membagikan pesan yang disampaikannya terkait apakah pernyataan di atas benar atau tidak. Tekankan bahwa kadang-kadang perkataan seseorang itu sulit sekali diabaikan jika berupa nama kasar. Nama BISA membuat Anda merasa sedih atau terluka.\n\n**Tanyakan**: _Menurut Anda mengapa pemain lain tersebut mengucapkan hal-hal tersebut kepada Guts?_ ([Slide 8](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3e3f96c340_0_0))\n\nUndang murid untuk menanggapi. Jawaban akan bervariasi, tetapi kemungkinan alasannya meliput _mereka mencoba mengajak guyon_ atau _mereka merasa kesal hati sendiri dan ingin curhat kepada seseorang_.\n\n**Tanyakan**: _Apakah yang dilakukan Guts untuk menanggapi kata-kata kasar?_\n\nUndang murid untuk menanggapi dan jelaskan bahwa Guts berbicara dengan seseorang yang dipercayainya, yang dapat merasakan empati padanya dan memberikan nasihat yang baik. Definisikan empati sebagai _membayangkan perasaan yang sedang dirasakan oleh orang lain_. ([Slide 9](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_109))\n\n**Proyeksikan** [Slide 10](https://docs.google.com/presentation/d/1kUVxRuQ_CUDpeSm3Sqg4yyueITjc3qQMUpSTi0WP4so/edit#slide=id.g3d844aea9e_1_157) dan tinjau kembali akronim S-T-O-P untuk menanggapi kata-kata kasar di dunia online."
         },
         "1a870f4c-fdc7-4802-bcf8-44342bb8f7d6": {
           "tips": [
@@ -1184,10 +1540,10 @@
           "progression_name": "Tetangga Online Saya"
         },
         "66dc5fd4-eacf-41f8-9d21-196b81d35d7a": {
-          "description": "### Kosakata Kunci\n\n-   **online**: menggunakan komputer, ponsel, atau tablet untuk mengunjungi situs web atau aplikasi\n-   **situs web atau aplikasi**: tempat yang bisa Anda kunjungi di internet\n\n**Tanyakan**: _Apa yang perlu Anda lakukan agar tetap aman ketika mengunjungi tempat-tempat baru?_ ([Slide 3](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_54))\n\nUndang murid untuk menanggapi. Jawaban akan bervariasi, tetapi tekankan aturan keselamatan berikut:\n\n-   Selalu kunjungi tempat bersama orang dewasa.\n-   Jangan keluyuran sendiri.\n-   Hanya bicara dengan orang yang Anda kenal.\n\n**Ucapkan**: _Hari ini kita akan berbicara tentang kemiripan berkunjung ke tempat-tempat di internet dengan mengunjungi tempat-tempat di dunia nyata. Seperti halnya ada aturan agar tetap aman ketika mengunjungi tempat baru di dunia, juga ada cara untuk menjaga keselamatan diri Anda ketika online._\n\n**Proyeksikan** [Slide 4](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g5c15fa078c_0_0) di papan dan definisikan **online** sebagai _menggunakan komputer, ponsel, atau tablet untuk mengunjungi situs web atau aplikasi_.\n\n**Pertontonkan** video [Lingkungan Sekitar Online Saya](https://www.commonsense.org/education/videos/my-online-neighborhood) di [Slide 5](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_93) lalu tanyakan: _Apakah yang disukai oleh Arms tentang internet? Hal-hal apa saja yang bisa dilakukannya di internet?_\n\nUndang murid untuk menanggapi. Contoh tanggapan:\n\n-   Dia senang mengunjungi tempat yang keren.\n-   Dia bisa berbicara dengan keluarga dan teman. \n-   Dia bisa mempelajari banyak hal baru.\n-   Dia bisa membuat hal-hal di internet.\n\n**Tanyakan**: _Apa tiga aturan yang diikuti oleh Ams  ketika dia mengunjungi tempat-tempat online?_\n\nUndang murid untuk menanggapi. Proyeksikan [Slide 6](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g56efa39244_0_141) dan tekankan tiga aturan utama:\n\n1.  Selalu tanyakan ke orang tua Anda (atau orang dewasa yang Anda percayai) lebih dulu. \n2.  Hanya bicara dengan orang yang Anda kenal.\n3.  Tetap di tempat yang tepat untuk Anda.\n\nJelaskan bahwa tetap berada di tempat yang \"tepat\" berarti memastikan situs atau aplikasinya cocok untuk anak-anak, dan Anda memiliki izin untuk mengunjunginya."
+          "description": "### Kosakata Kunci\n\n-   **online**: menggunakan komputer, ponsel, atau tablet untuk mengunjungi situs web atau aplikasi\n-   **situs web atau aplikasi**: tempat yang bisa Anda kunjungi di internet\n\n**Tanyakan**: _Apa yang perlu Anda lakukan agar tetap aman ketika mengunjungi tempat-tempat baru?_ ([Slide 3](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_54))\n\nUndang murid untuk menanggapi. Jawaban akan bervariasi, tetapi tekankan aturan keselamatan berikut:\n\n-   Selalu kunjungi tempat bersama orang dewasa.\n-   Jangan keluyuran sendiri.\n-   Hanya bicara dengan orang yang Anda kenal.\n\n**Ucapkan**: _Hari ini kita akan berbicara tentang kemiripan berkunjung ke tempat-tempat di internet dengan mengunjungi tempat-tempat di dunia nyata. Seperti halnya ada aturan agar tetap aman ketika mengunjungi tempat baru di dunia, juga ada cara untuk menjaga keselamatan diri Anda ketika online._\n\n**Proyeksikan** [Slide 4](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5c15fa078c_0_0) di papan dan definisikan **online** sebagai _menggunakan komputer, ponsel, atau tablet untuk mengunjungi situs web atau aplikasi_.\n\n**Pertontonkan** video [Lingkungan Sekitar Online Saya](https://www.commonsense.org/education/videos/my-online-neighborhood) di [Slide 5](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_93) lalu tanyakan: _Apakah yang disukai oleh Arms tentang internet? Hal-hal apa saja yang bisa dilakukannya di internet?_\n\nUndang murid untuk menanggapi. Contoh tanggapan:\n\n-   Dia senang mengunjungi tempat yang keren.\n-   Dia bisa berbicara dengan keluarga dan teman. \n-   Dia bisa mempelajari banyak hal baru.\n-   Dia bisa membuat hal-hal di internet.\n\n**Tanyakan**: _Apa tiga aturan yang diikuti oleh Ams  ketika dia mengunjungi tempat-tempat online?_\n\nUndang murid untuk menanggapi. Proyeksikan [Slide 6](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g56efa39244_0_141) dan tekankan tiga aturan utama:\n\n1.  Selalu tanyakan ke orang tua Anda (atau orang dewasa yang Anda percayai) lebih dulu. \n2.  Hanya bicara dengan orang yang Anda kenal.\n3.  Tetap di tempat yang tepat untuk Anda.\n\nJelaskan bahwa tetap berada di tempat yang \"tepat\" berarti memastikan situs atau aplikasinya cocok untuk anak-anak, dan Anda memiliki izin untuk mengunjunginya."
         },
         "f06d2db8-bdc8-44ce-9d41-73fe53003e35": {
-          "description": "**Ucapkan**: _Hari ini kita berbicara tentang cara internet memungkinkan kita mengunjungi tempat-tempat yang jauh terpencil. Kita tahu bahwa bepergian ke tempat baru di internet sangat mirip dengan pergi ke tempat di dunia nyata. Kita juga memahami tiga aturan keselamatan penting ketika mengunjungi situs web atau aplikasi._\n\n**Distribusikan**  [Momen Diam Sebentar & Berpikir](https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/edit) ke masing-masing murid. Baca arahan keras-keras dan persilakan murid menyelesaikan edaran secara mandiri. ([Slide 9](https://docs.google.com/presentation/d/1n5Mn1QxL5AKyNFOqFUv3hKAQELYL0_m06E_zqBHHm_s/edit#slide=id.g5b457108e7_0_0))\n\n**Undang** murid untuk membagikan renungan mereka ke depan kelas. Kumpulkan edaran untuk menilai hasil belajar murid."
+          "description": "**Ucapkan**: _Hari ini kita berbicara tentang cara internet memungkinkan kita mengunjungi tempat-tempat yang jauh terpencil. Kita tahu bahwa bepergian ke tempat baru di internet sangat mirip dengan pergi ke tempat di dunia nyata. Kita juga memahami tiga aturan keselamatan penting ketika mengunjungi situs web atau aplikasi._\n\n**Distribusikan**  [Momen Diam Sebentar & Berpikir](https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/edit) ke masing-masing murid. Baca arahan keras-keras dan persilakan murid menyelesaikan edaran secara mandiri. ([Slide 9](https://docs.google.com/presentation/d/1VFaxU6S0hsDgyCtaPhVFf9xpign__BXdvT0ypQq1gBs/edit#slide=id.g5b457108e7_0_0))\n\n**Undang** murid untuk membagikan renungan mereka ke depan kelas. Kumpulkan edaran untuk menilai hasil belajar murid."
         },
         "e89c6579-86c7-4478-8ddf-e941751a06c5": {
           "description": "Berikut adalah materi pembelajaran tambahan yang bisa Anda berikan kepada murid untuk meningkatkan pembelajaran mereka:\n\n-   [Aktivitas Keluarga](https://drive.google.com/open?id=17Tq9wgw2F9sMkE2Z2a2zkriLK0zp1qDsSkv5YTB7Ldg) \n-   [Kiat Keluarga](https://www.commonsense.org/education/family-tips/k-5-privacy-and-security)"
@@ -1237,6 +1593,9 @@
           "tips": [
             null
           ]
+        },
+        "d3d96ea6-986d-49e8-b48a-521536592847": {
+          "description": "Proyeksikan salah satu peta dari kegiatan \"Peta Bahagia\" dan tampilkan untuk dilihat siswa. Di proyektor atau di depan kelas, letakkan beberapa blok arah dari _\\\\_Manipulatif\\*\\* secara acak dan berlatih \"menyeret dan menjatuhkan\" dengan menekan jari Anda pada salah satu potongan kertas dan memindahkannya melintasi layar. Jelaskan bahwa Anda dapat \"mengklik\" untuk memilih blok ini dengan mengetuk jari Anda di atasnya, atau Anda dapat \"menyeret\" blok dengan menekan jari Anda di atasnya dan memindahkannya. Untuk \"menjatuhkan\" balok, lepaskan jari Anda.\n\nSetelah menunjukkan ini di depan kelas, mintalah sukarelawan untuk membuat algoritme untuk Peta Bahagia dengan \"menyeret dan melepaskan\" balok-balok yang diperlukan.\n\n#### -atau-"
         },
         "382f7ddc-c4e7-4674-80b2-e8b7dac7dcf6": {
           "name": "Mempratinjau Puzzle Online Bersama Murid di Kelas"
@@ -1454,13 +1813,13 @@
           ]
         },
         "b05af723-adce-4036-a645-7b9519b86a1c": {
-          "description": "**Tanyakan**: _Mengapa Anda menganggap seseorang bisa berperilaku kasar kepada orang lain secara online?_ ([Slide 5](https://docs.google.com/presentation/d/1bLzHBP-_S6ogzyh602rOlGemBAm3LnxE3SL3WQ4RqbA/edit#slide=id.g5bfb202a4d_0_4))\n\nJawaban akan bervariasi, tetapi kemungkinan alasannya meliputi: mereka mencoba mengajak guyon, atau mereka merasa kesal hati dan mengutarakannya kepada orang lain. Murid juga bisa mencatat bahwa orang bisa mengatakan hal-hal yang tidak akan dikatakannya jika bertatap muka.\n\n**Ucapkan**: _Kadang-kadang orang lebih mudah berperilaku kasar secara online versus jika bertemu muka, karena mereka tidak harus melihat orang secara tatap muka dan melihat emosi lawan bicaranya._\n\n**Jelaskan** kepada murid bahwa mereka akan berpura-pura bahwa boneka mainan adalah seseorang yang sudah dikenal. Pada saat menatap boneka mainan, ucapkan (dengan nada kasar): _Saya tidak percaya Anda seperti para jagoan itu. Kalau itu sih pasti akan ditonton adik saya!_  \n\nLalu, tampilkan [Slide 6](https://docs.google.com/presentation/d/1bLzHBP-_S6ogzyh602rOlGemBAm3LnxE3SL3WQ4RqbA/edit#slide=id.g5c0ff197bf_0_0) di layar dan suruh murid membaca batin obrolan tersebut.\n\n**Tanyakan**: _Apa perbedaan antara menulis kata-kata kasar versus mengucapkannya kepada orang?_ \nTampilkan [Slide 7](https://docs.google.com/presentation/d/1bLzHBP-_S6ogzyh602rOlGemBAm3LnxE3SL3WQ4RqbA/edit#slide=id.g5c0ff197bf_0_67) di layar dan kumpulkan respons murid dalam tabel skala prioritas (table-t). \n\nTekankan bahwa dua-duanya kasar (mengucapkannya tatap muka dan online), tetapi kemungkinan lebih mudah mengetikkannya daripada mengucapkannya langsung kepada orang karena Anda tidak harus melihat reaksi orang tersebut dan mereka tidak bisa mendengar nada suara Anda.\n\n**Ucapkan**: _Ingat, jika Anda tidak akan mengucapkan sesuatu di hadapan wajah seseorang, jelas hal itu tidak BAIK diucapkan secara online._"
+          "description": "**Tanyakan**: _Mengapa Anda menganggap seseorang bisa berperilaku kasar kepada orang lain secara online?_ ([Slide 5](https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit#slide=id.g5bfb202a4d_0_4))\n\nJawaban akan bervariasi, tetapi kemungkinan alasannya meliputi: mereka mencoba mengajak guyon, atau mereka merasa kesal hati dan mengutarakannya kepada orang lain. Murid juga bisa mencatat bahwa orang bisa mengatakan hal-hal yang tidak akan dikatakannya jika bertatap muka.\n\n**Ucapkan**: _Kadang-kadang orang lebih mudah berperilaku kasar secara online versus jika bertemu muka, karena mereka tidak harus melihat orang secara tatap muka dan melihat emosi lawan bicaranya._\n\n**Jelaskan** kepada murid bahwa mereka akan berpura-pura bahwa boneka mainan adalah seseorang yang sudah dikenal. Pada saat menatap boneka mainan, ucapkan (dengan nada kasar): _Saya tidak percaya Anda seperti para jagoan itu. Kalau itu sih pasti akan ditonton adik saya!_  \n\nLalu, tampilkan [Slide 6](https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit#slide=id.g5c0ff197bf_0_0) di layar dan suruh murid membaca batin obrolan tersebut.\n\n**Tanyakan**: _Apa perbedaan antara menulis kata-kata kasar versus mengucapkannya kepada orang?_ \nTampilkan [Slide 7](https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit#slide=id.g5c0ff197bf_0_67) di layar dan kumpulkan respons murid dalam tabel skala prioritas (table-t). \n\nTekankan bahwa dua-duanya kasar (mengucapkannya tatap muka dan online), tetapi kemungkinan lebih mudah mengetikkannya daripada mengucapkannya langsung kepada orang karena Anda tidak harus melihat reaksi orang tersebut dan mereka tidak bisa mendengar nada suara Anda.\n\n**Ucapkan**: _Ingat, jika Anda tidak akan mengucapkan sesuatu di hadapan wajah seseorang, jelas hal itu tidak BAIK diucapkan secara online._"
         },
         "e9890d5b-6eb0-4a1c-b0b2-dc9924e7f7a0": {
-          "description": "**Distribusikan** [Edaran Murid STOP Kekasaran Online](https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit). Suruh murid membaca skenario di [Slide 8](https://docs.google.com/presentation/d/1bLzHBP-_S6ogzyh602rOlGemBAm3LnxE3SL3WQ4RqbA/edit#slide=id.g5bfb202a4d_0_27) keras-keras. Persilakan pasangan murid menyelesaikan dua pertanyaan pertama selama lima menit.\n\n**Undang** murid untuk membagikan tanggapan mereka kepada seluruh murid di kelas.\n\n**Ucapkan**: _Jika Anda pernah mengalami kekasaran online, ingat untuk STOP!_ \n\n**Proyeksikan** [Slide 9](https://docs.google.com/presentation/d/1bLzHBP-_S6ogzyh602rOlGemBAm3LnxE3SL3WQ4RqbA/edit#slide=id.g5bfb202a4d_0_12) dan tinjau kembali empat aturan dalam menghadapi kekasaran online. Sewaktu Anda meninjau kembali setiap aturan, ajukan pertanyaan tindak lanjut berikut untuk memandu diskusi.\n\n**S**: Jauhi\n\n-   _Menurut Anda mengapa Anda harus berhenti menggunakan perangkat dan segera menjauh?_\n\n**T**: Beri tahu orang dewasa yang tepercaya\n\n-   _Jika ada orang yang membuat Anda marah, sedih, atau ketakutan secara online, siapa saja orang dewasa yang bisa Anda beri tahu dan mintai bantuan?_\n\n**O**: Situs-situs yang BAIK saja\n\n-   _Mengapa masuk ke dunia online bersama orang dewasa itu penting, atau ketika orang dewasa mengatakan BOLEH?_\n\nTekankan bahwa beberapa situs tidak dibuat untuk anak-anak, izinkan anak-anak berbicara dengan orang lain. Cara ini membuka peluang terjadinya kekasaran online.\n\n**P**: Diam sebentar dan berpikir\n\n-   _Apakah akan bermanfaat jika berbicara dengan orang yang bersikap kasar?_\n\n**Tanyakan**: _Apa nasihat yang akan Anda berikan kepada Jada untuk menanggapi situasi ini? Ingat S-T-O-P!_\n\nBersama teman sebangku, suruh murid menyelesaikan pertanyaan 3 dari [Edaran Murid STOP Kekasaran Online](https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit) lalu undang murid untuk membagikan tanggapan mereka ke seluruh murid di kelas. \n\n-   **S**: Jada harus menjauh dari komputer.\n-   **T**: Jada harus memberi tahu orang dewasa yang dipercayainya tentang apa yang terjadi. \n-   **O**: Jada tidak boleh kembali online atau balik ke situs web yang mencurigakan sampai orang dewasa mengatakan BOLEH.\n-   **P**: Jada harus diam sebentar dan berpikir tentang situasi tersebut. Jika Jada dan Michael adalah sahabat karib, Jada boleh memberi tahu Michael perihal dampak tindakan Michael terhadap perasaan Jada, setelah Jada menerima nasihat dari orang dewasa. Jika Michael tetap kasar kepadanya, Jada bisa langsung memberi tahu orang dewasa.\n\n**Tanyakan**: _Manakah dari 4 aturan S-T-O-P yang Anda anggap paling penting? Mengapa?_\n\nBeri murid waktu untuk berpikir dan kemudian lakukan poling di kelas secara informal. Tekankan lagi bahwa memberi tahu orang dewasa (T) merupakan tindakan terpenting yang harus mereka lakukan jika mengalami kekasaran online."
+          "description": "**Distribusikan** [Edaran Murid STOP Kekasaran Online](https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit). Suruh murid membaca skenario di [Slide 8](https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit#slide=id.g5bfb202a4d_0_27) keras-keras. Persilakan pasangan murid menyelesaikan dua pertanyaan pertama selama lima menit.\n\n**Undang** murid untuk membagikan tanggapan mereka kepada seluruh murid di kelas.\n\n**Ucapkan**: _Jika Anda pernah mengalami kekasaran online, ingat untuk STOP!_ \n\n**Proyeksikan** [Slide 9](https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit#slide=id.g5bfb202a4d_0_12) dan tinjau kembali empat aturan dalam menghadapi kekasaran online. Sewaktu Anda meninjau kembali setiap aturan, ajukan pertanyaan tindak lanjut berikut untuk memandu diskusi.\n\n**S**: Jauhi\n\n-   _Menurut Anda mengapa Anda harus berhenti menggunakan perangkat dan segera menjauh?_\n\n**T**: Beri tahu orang dewasa yang tepercaya\n\n-   _Jika ada orang yang membuat Anda marah, sedih, atau ketakutan secara online, siapa saja orang dewasa yang bisa Anda beri tahu dan mintai bantuan?_\n\n**O**: Situs-situs yang BAIK saja\n\n-   _Mengapa masuk ke dunia online bersama orang dewasa itu penting, atau ketika orang dewasa mengatakan BOLEH?_\n\nTekankan bahwa beberapa situs tidak dibuat untuk anak-anak, izinkan anak-anak berbicara dengan orang lain. Cara ini membuka peluang terjadinya kekasaran online.\n\n**P**: Diam sebentar dan berpikir\n\n-   _Apakah akan bermanfaat jika berbicara dengan orang yang bersikap kasar?_\n\n**Tanyakan**: _Apa nasihat yang akan Anda berikan kepada Jada untuk menanggapi situasi ini? Ingat S-T-O-P!_\n\nBersama teman sebangku, suruh murid menyelesaikan pertanyaan 3 dari [Edaran Murid STOP Kekasaran Online](https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit) lalu undang murid untuk membagikan tanggapan mereka ke seluruh murid di kelas. \n\n-   **S**: Jada harus menjauh dari komputer.\n-   **T**: Jada harus memberi tahu orang dewasa yang dipercayainya tentang apa yang terjadi. \n-   **O**: Jada tidak boleh kembali online atau balik ke situs web yang mencurigakan sampai orang dewasa mengatakan BOLEH.\n-   **P**: Jada harus diam sebentar dan berpikir tentang situasi tersebut. Jika Jada dan Michael adalah sahabat karib, Jada boleh memberi tahu Michael perihal dampak tindakan Michael terhadap perasaan Jada, setelah Jada menerima nasihat dari orang dewasa. Jika Michael tetap kasar kepadanya, Jada bisa langsung memberi tahu orang dewasa.\n\n**Tanyakan**: _Manakah dari 4 aturan S-T-O-P yang Anda anggap paling penting? Mengapa?_\n\nBeri murid waktu untuk berpikir dan kemudian lakukan poling di kelas secara informal. Tekankan lagi bahwa memberi tahu orang dewasa (T) merupakan tindakan terpenting yang harus mereka lakukan jika mengalami kekasaran online."
         },
         "822262f9-4afc-493a-a3d7-0c4d40334547": {
-          "description": "**Ucapkan**: _Kami online untuk menonton video, mengirim pesan kepada orang yang kita kenal, bermain permainan, dan mengerjakan PR. Kadang-kadang orang mengucapkan kata-kata kasar atau menakutkan. Jika Anda pernah mengalami perilaku kasar dari seseorang yang online, ingat untuk S-T-O-P!_\n\n**Arahkan** murid ke Momen Diam Sejenak & Berpikir di halaman 2 dari [Edaran Murid STOP Kekasaran Online](https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit). Baca arahan tersebut keras-keras dan persilakan murid untuk menyelesaikan renungan secara mandiri. ([Slide 10](https://docs.google.com/presentation/d/1bLzHBP-_S6ogzyh602rOlGemBAm3LnxE3SL3WQ4RqbA/edit#slide=id.g590d551e23_0_356))\n\n**Undang** murid untuk membagikan renungan mereka kepada murid di kelas. Kumpulkan edaran untuk menilai hasil belajar murid."
+          "description": "**Ucapkan**: _Kami online untuk menonton video, mengirim pesan kepada orang yang kita kenal, bermain permainan, dan mengerjakan PR. Kadang-kadang orang mengucapkan kata-kata kasar atau menakutkan. Jika Anda pernah mengalami perilaku kasar dari seseorang yang online, ingat untuk S-T-O-P!_\n\n**Arahkan** murid ke Momen Diam Sejenak & Berpikir di halaman 2 dari [Edaran Murid STOP Kekasaran Online](https://docs.google.com/document/d/1gXXWbEocNfvw4fWdo7nQJ0r2FjoNeyElr8IcANUqLlo/edit). Baca arahan tersebut keras-keras dan persilakan murid untuk menyelesaikan renungan secara mandiri. ([Slide 10](https://docs.google.com/presentation/d/1IXZ_WSxUuenF42ZzWk5pXTD8-Yy8P4nV2ihHd5-FotY/edit#slide=id.g590d551e23_0_356))\n\n**Undang** murid untuk membagikan renungan mereka kepada murid di kelas. Kumpulkan edaran untuk menilai hasil belajar murid."
         },
         "69edb680-3657-4056-82ba-59c74c6a0e96": {
           "description": "Berikut adalah materi pembelajaran tambahan yang bisa Anda berikan kepada murid untuk meningkatkan pembelajaran mereka:\n\n-   [Aktivitas Keluarga](https://drive.google.com/open?id=1tsYWY76Y9BJpl_mHcxb0-BiLIHL2PrGBt3GqeeBNAD8) \n-   [Kiat Keluarga](https://www.commonsense.org/education/family-tips/k-12-cyberbullying-digital-drama-and-hate-speech)"
@@ -1762,7 +2121,7 @@
           "progression_name": "Proyek"
         },
         "8d87fed2-e793-40e8-899f-18e8ff3313c4": {
-          "description": "**Proyeksikan** **Kiat Kata Sandi** di papan dan baca setiap kata sandi keras-keras. Pandu murid untuk mengisi ruang kosong di buku catatan mereka sewaktu Anda membacanya. Sebagai kiat terakhir, jelaskan kembali bahwa **simbol** merupakan _karakter selain angka atau huruf, seperti #, !, or @._  ([Slide 8](https://docs.google.com/presentation/d/1PfPx-zBdutEnOKd0e1lJJEaL2eDSVbFBmncvr_DOkuM/edit#slide=id.g3d416ba77f_0_21))\n\n**Ucapkan**: _Ketika Anda bertambah usia, memiliki kata sandi yang bagus akan menjadi lebih penting lagi. Kata sandi akan membantu Anda melindungi profil jaringan sosial ketika Anda sudah SMA, menjaga privasi nilai transkrip Anda ketika sudah kuliah, dan melindungi rekening bank dan akun toko online ketika Anda sudah dewasa._\n\n**Suruh** murid menyelesaikan [Kuis Pelajaran](https://docs.google.com/forms/u/2/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy)."
+          "description": "**Proyeksikan** **Kiat Kata Sandi** di papan dan baca setiap kata sandi keras-keras. Pandu murid untuk mengisi ruang kosong di buku catatan mereka sewaktu Anda membacanya. Sebagai kiat terakhir, jelaskan kembali bahwa **simbol** merupakan _karakter selain angka atau huruf, seperti #, !, or @._  ([Slide 8](https://docs.google.com/presentation/d/1Pspz89jagbsbDvxndX0ULUKA9PikWMR3zpTSn8Cdjec/edit#slide=id.g3d416ba77f_0_21))\n\n**Ucapkan**: _Ketika Anda bertambah usia, memiliki kata sandi yang bagus akan menjadi lebih penting lagi. Kata sandi akan membantu Anda melindungi profil jaringan sosial ketika Anda sudah SMA, menjaga privasi nilai transkrip Anda ketika sudah kuliah, dan melindungi rekening bank dan akun toko online ketika Anda sudah dewasa._\n\n**Suruh** murid menyelesaikan [Kuis Pelajaran](https://docs.google.com/forms/u/2/d/1OBS37DZUmIxM4ZciCD6qWFMam3_u8djgZNJd9IOK6Zs/copy)."
         },
         "2a466981-732c-4b6b-82da-7a5552e04294": {
           "name": "Pendahuluan"

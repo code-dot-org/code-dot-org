@@ -5217,7 +5217,7 @@ pl-PL:
 
           <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
 
-          Pewnego dnia jeden z potworów poczuł się chory. Potwór złapał **wirusa**! Wirus to malutki zarazek, który może wywołać chorobę. Inne potwory nie były zbyt zmartwione. Ciągle odwiedzali swoich przyjaciół.
+          Pewnego dnia jeden z potworów poczuł się chory. Potwór złapał **wirusa**! Wirus to malutki zarazek, który może wywołać chorobę. Inne potwory nie były zbyt zmartwione. Ciągle odwiedzały swoich przyjaciół.
 
           <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
 
@@ -5244,7 +5244,7 @@ pl-PL:
 
           ## Co się później stanie?
 
-          Dzisiaj masz zamiar napisać kod, aby utworzyć i uruchomić własną **symulację** epidemii wirusa w Miaście potworów. Symulacja to komputerowy model procesu lub systemu. Naucz się kodować i przewidywać, co stanie się z sąsiadami Miasta potworów.
+          Dzisiaj masz zamiar napisać kod, aby utworzyć i uruchomić własną **symulację** epidemii wirusa w Mieście potworów. Symulacja to komputerowy model procesu lub systemu. Naucz się kodować i przewidywać, co stanie się z sąsiadami Miasta potworów.
 
           <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
 
@@ -5707,11 +5707,11 @@ pl-PL:
       courseF_events_predict_multi:
         answers:
         - text: 'Duszek będzie się właśnie obracać w prawo. '
-          feedback: Błąd. Duszek będzie się również przemieszczać na wschód.
-        - text: Duszek będzie się właśnie przemieszczać na wschód.
-          feedback: Błąd. Duszek nie przestał obracać się wokół własnej osi, zatem
-            zrobi obie rzeczy jednocześnie.
-        - text: Duszek będzie się jednocześnie obracać wokół własnej osi i przemieszczać.
+          feedback: Niepoprawnie. Duszek będzie się również przemieszczać na wschód.
+        - text: Duszek będzie się właśnie przemieszczał na wschód.
+          feedback: Niepoprawnie. Duszek nie przestał obracać się wokół własnej osi,
+            zatem zrobi obie rzeczy jednocześnie.
+        - text: Duszek będzie się jednocześnie obracał wokół własnej osi i przemieszczał.
           correct: true
           feedback: Poprawnie! Oba zachowania będą zachodzić jednocześnie.
         - text: Duszek najpierw będzie się obracać wokół własnej osi, a potem będzie
@@ -5733,13 +5733,20 @@ pl-PL:
           Dokonując wyboru uczniowie przechodzą do przykładowych aplikacji, które mogą zgłębiać. To ćwiczenie służy do koordynacji  kraty pracy "Zgłębiania aplikacji", którą można znaleźć w [plan lekcji](.././).
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - correct: true
-        - {}
+        - text: '"Już idzie jedna pizza!"'
+          feedback: Niepoprawnie. Etykiety zmiennych nie pasują.
+        - text: '"Już idzie jeden posiłek!"'
+          feedback: Niepoprawnie. Etykieta zmiennej nie jest wydrukowana.
+        - text: '"Już idzie jedno jedzenie!"'
+          feedback: Niepoprawnie. Etykieta zmiennej nie jest wydrukowana.
+        - text: '"Już idzie jedna porcja!"'
+          correct: true
+          feedback: Poprawnie. Etykiety zmiennych nie pasują.
+        - text: Nic się nie wydrukuje.
+          feedback: Niepoprawnie. Zdarzenie i blok drukowania będą nadal działać.
         questions:
-        - {}
+        - text: Kod może wyglądać znajomo, ale należy uważnie go przeczytać. Co się
+            wydrukuje, jeśli użytkownik wpisze "pizza"?
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - text: Artysta narysuje trójkąt o bokach 50 pikseli.
@@ -5751,7 +5758,8 @@ pl-PL:
         - text: Artysta narysuje trzy otwarte boki ze skrętami 50 stopni.
           feedback: 'Niepoprawnie. Zmienna "długość" będzie musiała być użyta w bloku
             "skręć", aby to się wydarzyło. '
-        - feedback: Zmienna "długość" jest ustawiona na 50 i wykorzystywana w bloku
+        - text: Komputer podpowie użytkownikowi liczbę.
+          feedback: Zmienna "długość" jest ustawiona na 50 i wykorzystywana w bloku
             "idź do przodu o" tak, że artysta narysuje trójkąt o bokach 50 pikseli.
         questions:
         - text: Ustawiliśmy zmienną "długość" na 50. Co się stanie, gdy klikniesz
@@ -5768,7 +5776,9 @@ pl-PL:
         - text: 'Pszczółka poleci do przodu i zbierze jeden nektar z każdego kwiatka. '
           feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
             ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
-        - feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
+        - text: Pszczółka poleci do przodu i zbierze jeden nektar z kwiatków numer
+            1 i 4.
+          feedback: Niepoprawnie. Pętla "dla" pozwoli pszczółce zebrać odpowiednią
             ilość nektaru, ale jest to tak ustawione, aby dotrzeć do 4 kwiatków.
         markdown: Ach! Użycie pętli "dla" czyni łamigłówkę czymś dużo prostszym.
         questions:
@@ -5793,14 +5803,34 @@ pl-PL:
         - text: Przeczytaj kod, a potem zgadnij.
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - correct: true
-        - {}
-        - {}
+        - text: Program wydrukuje "Cześć imię!"
+          feedback: Niepoprawnie. Blok imienia zastąpi to, co wpiszesz.
+        - text: Program przywita się z tobą imieniem, które wpiszesz.
+          correct: true
+          feedback: Poprawnie! To, co wpisujesz, stosuje się w miejscu bloku imieniu.
+        - text: 'Duszek będzie zmieniać rozmiary.
+
+'
+          feedback: Niepoprawnie. Tekst jest wydrukowany na ekranie.
+        - text: Komputer zada inne pytanie.
+          feedback: Niepoprawnie. Zadawane jest tylko jedno pytanie, wtedy, gdy program
+            rozpoczyna działanie.
         questions:
-        - {}
+        - text: 'Ten program pozwala ci odpowiedzieć na pytanie poprzez wpisanie przy
+            pomocy swojej klawiatury. Blok ''drukuj'' pokazuje tekst na ekranie. Dokonaj
+            prognozy: Co się stanie po udzieleniu odpowiedzi na pytanie?'
       courseF_variables_stop:
         content1: opis tutaj
+        markdown: "# Stop!\n\n## Czy jesteś pewien, że jesteś gotowy na dalsze działania?
+          \n\n\nNa kolejnym poziomie rozpoczniesz pisanie kodu na potrzeby swojego
+          projektu. To sprawdza się najlepiej, gdy masz już plan.\n\nTwój gotowy plan
+          powinien obejmować:\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* Rodzaj projektu,
+          który budujesz. N przykład kartę z życzeniami, chatbota lub historię pustej
+          przestrzeni.\n* Wykaz pytań, które zadasz użytkownikowi.\n* Inny tekst,
+          który wyświetlisz na ekranie.\n* Opis lub rysunek duszków, które będą ci
+          potrzebne (i ich zachowania).\n\nIf you are not sure if you are ready to
+          move on, check with your teacher!\n"
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: Artysta rozwiąże tę łamigłówkę poprawnie.
@@ -5978,3 +6008,63 @@ pl-PL:
           | ***Koncepcja***|*duszki, lokalizacje*|*duszki, właściwości*|*duszki, lokalizacje, zachowania*|*zachowania*|
 
 
+      EnvelopeVariables-Unplugged_2021_2:
+        markdown: |
+          # Historie pustej przestrzeni
+
+          Na tej lekcji nauczysz się korzystać z historii pustej przestrzeni i pisać je. Obejrzyj ten film wideo i dowiedz się, jak łączy się to z informatyką.
+      courseF_artist_practice:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z pętlami i artystą!
+        display_name: " Ćwiczenie artysty"
+      courseF_beeFor_practice:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z pętlami "for"
+          i pszczółką!
+        display_name: Ćwiczenie pszczółki
+      courseF_beeVar_practice:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia ze zmiennymi
+          i pszczółką!
+        display_name: Ćwiczenie pszczółki
+      courseF_bee_practice:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z pętlami i pszczółką!
+        display_name: Ćwiczenie pszczółki
+      courseF_text_practice:
+        description: Jak dotychczas świetnie ci idzie! Wybierz swoją kolejną aktywność.
+          Wykonaj tyle, ile jesteś w stanie. Nie przerywaj ćwiczenia z tekstem i podpowiedziami!
+        display_name: Ćwiczenia w zakresie tekstu i podpowiedzi
+        teacher_markdown: |+
+          # Omówienie poziomu wyboru
+          W ramach poziomów wyboru oferuje się menu dodatkowych poziomów do realizacji dla uczniów. Uczniowie muszą wykonać przynajmniej jeden z tutejszych podpoziomów, ale można przerobić tyle, ile się chce.
+
+          Można skorzystać z poniższych opisów, aby pomóc uczniom w dokonywaniu własnych wyborów lub aby ustanowić oczekiwania dotyczące tego, ile podpoziomów powinni przejść.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Korzystanie z mowy na potrzebę tekstu|Tekst z podpowiedzi|Nazwij robota!|Etykiety zmiennych|Ważny tekst|Podpowiedzi w zakresie kolorów|Zaczynanie od początku|
+          |-|-|-|-|-|-|-|-|
+          | ***Wpisz*** |**Powtórz**|**Debuguj**|**Debuguj**|**Debuguj**|**Treść faktultatywna**|**Treść faktultatywna**|**Czas na zabawę**
+          | ***Koncepcja***|*blok drukowania, zdarzenia*|*podpowiedzi, zdarzenia*|*dodawanie obszarów*|*dopasowywanie etykiet zmiennych*|*bloki ekraników*|*przechowywanie kolorów*|*brak nowych treści*
+
+      courseF_variables_projects:
+        description: Będziesz tworzyć albo kartkę z życzeniami, chatbota lub historię
+          pustej przestrzeni. Jeśli już skończyłeś \"Część 1\" swój projekt, przejdź
+          do \"Części 2\".
+        display_name: Wybierz projekt
+        teacher_markdown: |2-
+           # Omówienie poziomu wyboru
+          W ramach poziomów wyboru oferuje się menu dodatkowych poziomów do realizacji dla uczniów. Uczniowie muszą tutaj przejść przynajmniej jeden z podpoziomów, ale należy ich zachęcać, aby przeszli **dwa** poziomy dla tego samego projektu.
+
+          Studenci mogą potrzebować naprawdę czytelnych instrukcji, aby zrozumieć jak poruszać się pośród możliwości wyboru. Dla każdego z wyborów w ramach projektu występują tutaj dwa podpoziomy. Na początek uczniowie powinni wybrać jeden z poziomów oznaczonych jako "Część 1". Po ukończeniu poziomu powinni oni powrócić tutaj i wybrać "Część 2" tego *samego* projektu. W ramach pierwszego poziomu uczniom zostaną zapewnione informacje zwrotne w trakcie łączenia ze sobą podstawowych elementów składowych projektu. Drugi poziom to "czas na zabawę", który jest przeznaczony do tego, by umożliwić uczniom dokonywanie wszelkich zmian w swoim kodzie, jaki chcą.
+      courseF_variables_samples:
+        description: Będziesz tworzyć albo kartkę z życzeniami, chatbota lub historie
+          pustej przestrzeni. Zanim zaczniesz, zbadaj poniższe przykładowe projekty,
+          aby przekonać się czego tworzeniem się interesujesz. Wciśnij \"Koniec"\,
+          gdy będziesz gotowy do rozpoczęcia planowania swojego własnego programu.
+        display_name: Eksploracja - przykładowe programy
+        teacher_markdown: "Omówienie poziomu wyboru # W ramach poziomów wyboru oferuje
+          się menu dodatkowych poziomów do realizacji dla uczniów. Uczniowie muszą
+          wykonać przynajmniej jeden z tutejszych podpoziomów, ale można przerobić
+          tyle, ile się chce. \n\nUczniowie powinni uważnie zapoznać się z tymi projektami
+          przed podjęciem decyzji, co chcą tworzyć. Można zapoznać się z nimi wspólnie,
+          jako klasa lub kazać uczniom zgłębiać je na własną rękę.\n"

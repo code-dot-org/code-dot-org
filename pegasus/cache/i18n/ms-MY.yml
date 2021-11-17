@@ -348,6 +348,7 @@ ms-MY:
   dashboard_sections_table_course: Kursus
   dashboard_sections_name: Nama seksyen
   dashboard_sections_switch_section: 'Tukar seksyen:'
+  dashboard_sections_close: Tutup
   dashboard_students_add_multiple: 'Taip atau salin nama pelajar anda, satu nama setiap
     baris:'
   dashboard_students_name: Nama
@@ -561,6 +562,12 @@ ms-MY:
   coursed-2020_gradelevel: Peringkat umur 7-11 tahun
   coursee-2020_gradelevel: Umur 8-12 tahun
   coursef-2020_gradelevel: Umur 9-13 tahun
+  coursea-2021_gradelevel: Peringkat umur 4-7 tahun
+  courseb-2021_gradelevel: Umur 5-8 tahun
+  coursec-2021_gradelevel: Umur 6-10 tahun
+  coursed-2021_gradelevel: Peringkat umur 7-11 tahun
+  coursee-2021_gradelevel: Umur 8-12 tahun
+  coursef-2021_gradelevel: Umur 9-13 tahun
   accelerated_gradelevel: Umur 10-18 tahun
   thinkersmithspanish_platformtext: Nirplag
   thinkersmith_platformtext: Nirplag
@@ -947,3 +954,4 @@ ms-MY:
   ai_cognimates_description: Platform pendidikan AI untuk membina permainan, mengatur
     cara robot dan latihan.
   ai_try_activity: Cuba lakukan aktiviti
+  outbreak_tile_title: Wabak
