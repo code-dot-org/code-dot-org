@@ -916,6 +916,7 @@ class ScriptTest < ActiveSupport::TestCase
     lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
     create(:script_level, script: unit, lesson: lesson)
     unit.teacher_resources = [['curriculum', '/link/to/curriculum']]
+    create :resource, lessons: [lesson], include_in_pdf: true
     Services::CurriculumPdfs.stubs(:get_script_overview_url).returns('/overview-pdf-url')
     Services::CurriculumPdfs.stubs(:get_unit_resources_url).returns('/resources-pdf-url')
     summary = unit.summarize
