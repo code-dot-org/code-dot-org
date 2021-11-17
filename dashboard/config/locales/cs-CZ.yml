@@ -387,10 +387,17 @@ cs:
       sections: Sekce
       help_support: Pomoc a podpora
       report_bug: Nahlásit chybu
+      report_abuse: Nahlásit zneužití
       teacher_community: Komunita učitelů
       professional_learning: Odborné vzdělání
       documentation: Dokumentace
       tutorials: Návody
+      app_lab_documentation: Dokumentace v aplikačním
+      app_lab_tutorials: Výukové programy aplikace Lab
+      game_lab_documentation: Dokumentace herní laboratoře
+      game_lab_tutorials: Výukové programy pro herní laboratoř
+      sprite_lab_documentation: Dokumentace laboratoře Sprite
+      sprite_lab_tutorials: Výukové programy Sprite Lab
       web_lab_documentation: Dokumentace k Web Lab
       educate_overview: Pedagogův přehled
       educate_elementary: Základní škola
@@ -417,6 +424,7 @@ cs:
       help_us: Pomozte nám
       teach: Učit
       about: O nás
+      legal: Ochrana osobních údajů a právní
       legal_privacy: Zásady ochrany osobních údajů
       legal_tos: Podmínky
     user:
@@ -459,6 +467,7 @@ cs:
       playlab_k1: Play Lab (předškolák)
       scratch: Scratch
       sports: Sporty
+      spritelab: Laboratoř Sprite
       starwars: Hvězdné války
       starwarsblocks: Hvězdné války (kostky)
       starwarsblocks_hour: Hvězdné války (kostky)
@@ -624,6 +633,8 @@ cs:
     no_primary_course: Zkuste Code Studio kurz
     choose_next_course: Zkuste kurz Code Studio výběrem níže
     print_certificate: Vytisknout certifikát
+  certificate_sponsor_message: "%{sponsor_name} udělal štědrý dar sponzorovat vaše
+    učení."
   move_students:
     new_section_dne: Je nám líto, ale sekce %{new_section_code} neexistuje. Zadej
       jiný kód sekce.
@@ -681,6 +692,7 @@ cs:
     code_from_html: Code.org používá p5.play, který je licencován pod <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
     powered_by_aws: Poháněn Amazon Web Services
+    built_on_github: Postavený na GitHubu od Microsoftu
     google_copyright: "&copy; Google Inc. používáno se svolením. Třída Google (Google
       Classroom) je obchodní známka společnosti Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, CODE logo a Hour
@@ -694,12 +706,14 @@ cs:
     tos_short: Podmínky
     tos: Podmínky
     privacy: Zásady ochrany osobních údajů
+    privacy_updated: Zásady ochrany osobních údajů (aktualizovány)
     secure: Zabezpečená verze
     report_abuse: Ohlásit urážlivý příspěvek
     built_on_code_studio: Postavenn na Code Studio
     make_my_own_app: Vytvořit svou vlastní app
     how_it_works: Jak to funguje
     try_hour_of_code: Vyzkoušejte Hodinu kódu!
+    store: Obchod
   reference_area:
     title: Potřebuješ pomoc?
     subtitle: Podívej se na tato videa a tipy
@@ -1321,6 +1335,9 @@ cs:
     accept: Souhlasím
   page_not_found_title: Stránka nebyla nalezena
   page_not_found_header: 404 - Stránka nebyla nalezena
+  page_not_found_description: Stránka, kterou hledáte, na této adrese neexistuje.
+    Zkontrolujte webovou adresu a znovu odešlete. Nebo se vraťte na naši domovskou
+    stránku.
   page_not_found_button: Zpět domů
   copy: Kopírovat
   confirm: Potvrdit

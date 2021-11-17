@@ -359,6 +359,7 @@
   "goToCodeStudio": "Siirry Code Studio:on",
   "goToUnit": "Siirry yksikköön",
   "grade": "Taso",
+  "groups": "Ryhmät",
   "hashError": "Valitan, '%1' ei vastaa mitään tallennettua ohjelmaa.",
   "help": "Ohje",
   "helpTips": "Neuvoja",

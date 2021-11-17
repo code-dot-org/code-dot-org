@@ -2,7 +2,16 @@
   "da-DK": {
     "data": {
       "lesson_activities": {
+        "35dfee9b-2785-47f9-93fd-9b3177d68ba6": {
+          "name": "Opvarmning"
+        },
+        "b90a8b9e-d5d5-4cf5-899c-f0155b34afca": {
+          "name": "Opvarmning"
+        },
         "c53a1348-2816-4c38-9417-92561d0bca19": {
+          "name": "Opvarmning"
+        },
+        "a653c76e-8536-4e82-adad-98306fc15f07": {
           "name": "Opvarmning"
         },
         "9b93e20e-e9d8-4407-a1a4-83844434c1e0": {
@@ -11,11 +20,17 @@
         "62ac573d-84f8-4b2b-ae06-910ffdd9a6cf": {
           "name": "Afslutning"
         },
+        "a026407c-221b-4f0a-a88d-ec29365ee5fe": {
+          "name": "Opvarmning"
+        },
         "f4670c8c-98ec-47d0-b458-02a96f130b76": {
           "name": "Opvarmning"
         },
         "5ff12dbb-3603-4bc6-9a8a-3fa7dc917685": {
           "name": "Aktivitet"
+        },
+        "ad24912f-a30c-4821-83a5-77e20997a044": {
+          "name": "Opvarmning"
         },
         "8b8d6959-c861-4474-950b-b097aaa9fae3": {
           "name": "Aktivitet"
@@ -36,6 +51,9 @@
           "name": "Aktivitet"
         },
         "f0e43cbc-520d-42b7-8de2-0572d569695e": {
+          "name": "Opvarmning"
+        },
+        "901e8625-9092-42fc-9fcc-9c665720b1f4": {
           "name": "Opvarmning"
         },
         "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {

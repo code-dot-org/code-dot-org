@@ -464,7 +464,7 @@ sq:
       Poetry_playSound:
         options:
           SOUND:
-            Break: Ndërprerje
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Ndërprerje
       Poetry_whenLineShows:
         options:
           'N':

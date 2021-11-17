@@ -11,6 +11,9 @@
         "function/hero/unversioned": {
           "word": "함수"
         },
+        "code/poem-art/2021": {
+          "word": "코드"
+        },
         "debugging/flappy/unversioned": {
           "word": "디버깅"
         },
@@ -29,8 +32,17 @@
         "debugging/artist/unversioned": {
           "word": "디버깅"
         },
+        "code/gumball/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/gumball/unversioned": {
-          "word": "디버깅"
+          "word": "디버깅",
+          "definition": ""
+        },
+        "program/gumball/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/aquatic/unversioned": {
           "word": "디버깅"
@@ -41,11 +53,41 @@
         "loops/aquatic/unversioned": {
           "word": "반복"
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "암호화"
+          "word": "암호화",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/starwars/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/starwars/unversioned": {
-          "word": "디버깅"
+          "word": "디버깅",
+          "definition": ""
+        },
+        "program/starwars/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/mc/unversioned": {
           "word": "디버깅"
@@ -57,7 +99,8 @@
           "word": "디버깅"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "무손실 압축"
+          "word": "무손실 압축",
+          "definition": ""
         },
         "code/sports/unversioned": {
           "word": "코드"
@@ -71,8 +114,41 @@
         "debugging/basketball/unversioned": {
           "word": "디버깅"
         },
+        "code/dance-extras-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/dance-extras-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/dance-extras-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "machine_learning/oceans/unversioned": {
-          "word": "머신 러닝"
+          "word": "머신 러닝",
+          "definition": ""
+        },
+        "code/poem-art/unversioned": {
+          "word": "코드",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "program/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "sprite/coursef/2021": {
           "word": "스프라이트",
@@ -257,12 +333,21 @@
           "word": "알고리즘",
           "definition": "과제를 끝내기 위한 단계 목록. "
         },
+        "program/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
         "bug/coursed/2021": {
           "word": "버그",
           "definition": "정상 작동하지 않는 프로그램 부분."
         },
         "debugging/coursed/2021": {
-          "word": "디버깅"
+          "word": "디버깅",
+          "definition": ""
+        },
+        "loop/coursed/2021": {
+          "word": "",
+          "definition": ""
         },
         "programming/coursed/2021": {
           "word": "프로그래밍",
@@ -276,6 +361,14 @@
           "word": "끈기",
           "definition": "매우 어렵더라도 계속 다시 시도."
         },
+        "event/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "code/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
         "repeat/coursed/2021": {
           "word": "반복",
           "definition": "뭔가를 다시 하기 위해."
@@ -285,7 +378,16 @@
           "definition": "컴퓨터에게 내릴 지시사항. 많은 명령어가 조합되어 알고리즘과 컴퓨터 프로그램을 이룹니다."
         },
         "conditionals/coursed/2021": {
-          "word": "조건"
+          "word": "조건",
+          "definition": ""
+        },
+        "pseudocode/coursed/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "condition/coursed/2021": {
+          "word": "",
+          "definition": ""
         },
         "while_loop/coursed/2021": {
           "word": "While 루프",

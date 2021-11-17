@@ -3695,6 +3695,7 @@ zh-CN:
               name: 我的世界 编码时间设计师
           student_description: 在你自建的《我的世界》中对各种动物和其他生物进行编程。
         flappy-impact-study:
+          title: 带调查的 Flappy Code
           lessons:
             Pre Hour of Code Survey:
               name: 编程一小时预调查
@@ -3971,6 +3972,7 @@ zh-CN:
             Post Hour of Code Survey:
               name: 编程一小时事后调查
         hoc-impact-study:
+          title: 带调查的经典迷宫
           description_short: 与许多有趣的人物一起尝试计算机科学的基础知识！
           lessons:
             Pre Hour of Code Survey:
@@ -15412,6 +15414,8 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            lesson-1:
+              name: 计算机科学发现课后调查
           lesson_groups:
             csd2_1v2:
               display_name: 第一单元：创造网页
@@ -15497,6 +15501,8 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            lesson-1:
+              name: 计算机科学发现课后调查
           lesson_groups:
             csd3_1:
               display_name: 第 1 章︰图像和动画
@@ -15558,6 +15564,8 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            CS Discoveries Post-Course Survey:
+              name: 计算机科学发现课后调查
           lesson_groups:
             csd4_1:
               display_name: 第 1 章︰ 用户为中心的设计
@@ -15618,6 +15626,8 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            CS Discoveries Post-Course Survey:
+              name: 计算机科学发现课后调查
           lesson_groups:
             csd5_1:
               display_name: 第 1 章︰ 表达信息
@@ -15692,6 +15702,8 @@ zh-CN:
             CS Discoveries Post Course survey:
               key: 计算机科学发现课后问卷
               name: 计算机科学发现课后问卷
+            CS Discoveries Post-Course Survey:
+              name: 计算机科学发现课后调查
           lesson_groups:
             csd6_1:
               display_name: 第 1 章︰ 用硬件编程
@@ -17163,6 +17175,15 @@ zh-CN:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java实验室
+            lesson-15:
+              name: 评估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -17266,6 +17287,8 @@ zh-CN:
                 **今日问题。**计算机如何学习用数字数据进行预测？
             Survey Planning:
               name: 设计数据收集
+            CS Discoveries Post-Course Survey:
+              name: 计算机科学发现课后调查
           lesson_groups:
             lessonGroup-4:
               display_name: 调查
@@ -17476,6 +17499,8 @@ zh-CN:
           lessons:
             lesson-12:
               name: 工具
+            lesson-17:
+              name: 控制台
             lesson-18:
               name: 小部件
           lesson_groups:
@@ -17483,6 +17508,11 @@ zh-CN:
               display_name: 课程
             lessonGroup-3:
               display_name: 项目
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: 你好，世界！
+          title: '"世界你好!"'
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
@@ -17596,3 +17626,29 @@ zh-CN:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: 课后问卷
+          title: 计算机科学发现课后调查
+        csa6-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: 评估日
+            Java Lab:
+              name: Java实验室
+              key: Java实验室
+            lesson-15:
+              name: 评估日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: 拼字比赛
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: 数据可视化
+          title: 数据可视化

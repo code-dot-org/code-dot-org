@@ -931,17 +931,16 @@ dv:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: އައިސްކްރީމް
-            Stars: ސްޓަރ - ތަރި
-            Fireworks: ފަޔަރވޯކް (ހަވާ)
-            '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
-            '"hearts"': ހާރޓްސް
             '"flowers"': ފްލާވަރ - މައު
+            '"hearts"': ހާރޓްސް
+            '"iceCream"': އައިސްކްރީމް
+            '"rainbow"': ރެއިންބޯ (ވިއްސާރަދުނި)
+            '"stars"': ސްޓަރ - ތަރި
             '"waves"': ވޭވްސް
       Poetry_playSound:
         options:
           SOUND:
-            Light: ލައިޓް - އަލި
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ލައިޓް - އަލި
       Poetry_setBackground:
         text: "{COLOR} އަށް ބެކްގްރައުންޑް ކުލަ ސެޓް ކުރަން"
       Poetry_setBackgroundEffect:
