@@ -5755,7 +5755,7 @@ var styles = {
 
 var BackButton = function BackButton(props) {
   return _react["default"].createElement("a", {
-    href: "/learn"
+    href: "./index.html"
   }, _react["default"].createElement("button", {
     type: "button",
     style: styles.backButton
