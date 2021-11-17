@@ -444,7 +444,7 @@ class Blockly < Level
 
         translated_text = hint['hint_id'].empty? ? nil :
           I18n.t(hint['hint_id'], scope: scope, default: nil, smart: true)
-        translated_text = localized_blockly_xml_embedded_in_text(translated_text)
+        translated_text = localized_blockly_in_text(translated_text)
         original_text = hint['hint_markdown']
 
         if !translated_text.nil? && translated_text != original_text
@@ -466,31 +466,25 @@ class Blockly < Level
     end
   end
 
-  # Translates all the blockly blocks embedded in strings, such as level long_description's and
-  # author_hints
+  # Can apply translations to blockly block XML which is embedded in rich text such as Markdown
+  # strings.
   # For example:
-  # "This is a <xml><block>block</block></xml>." -> "This is a <xml><block>bloque</block></xml>."
-  def localized_blockly_xml_embedded_in_text(text)
-    # Parse the text so it is broken up into XML::Text and XML::Element nodes
-    translated_text_xml = Nokogiri::XML::DocumentFragment.parse(translated_text)
-    # Select each <xml></xml> because it is embedded blockly we need to translate
-    translated_text_xml.xpath('./xml').each do |inline_blockly|
-      # Translate the blockly XML
-      translated_inline_blockly = localized_function_blocks(inline_blockly.serialize(save_with: XML_OPTIONS))
-      # Swap the untranslated XLM::Element with a translated XML::Element
-      inline_blockly.children = Nokogiri::XML(translated_inline_blockly).child.children
-    end
-    # Iterate through all the XML::Text and XML::Element nodes and combine them back into a single
-    # string.
-    translated_text_xml.children.to_a.reduce('') do |result, node|
-      if node.is_a? Nokogiri::XML::Element
-        # For XML -> String, we want to make sure there are no indentation or newlines.
-        result + node.serialize(save_with: XML_OPTIONS | Nokogiri::XML::Node::SaveOptions::NO_EMPTY_TAGS)
-      else
-        # Just an XML::Text node, so to_s will return the text in the node.
-        result + node.to_s
-      end
-    end
+  # "Esto es un <xml><block>block</block></xml>." -> "Esto es un <xml><block>bloque</block></xml>."
+  # @param text [String] Text which might have blockly XML embedded in it and needs localization.
+  # @return [String] Text with localized blockly blocks.
+  def localized_blockly_in_text(text)
+    return unless text
+    # Surround the text in a <root /> node so we can parse it as an XML document.
+    text_xml_doc = Nokogiri::XML("<root>#{text}</root>")
+    # Selects the `text` XML elements which will be inside the <xml><root>{text}</root></xml>
+    text_xml = text_xml_doc.child.children
+    # Translate all the function blockly blocks in the text.
+    localized_function_blocks_xml(text_xml_doc)
+    # TODO: add `localized_blocks_with_placeholder_texts_xml(text_xml_doc)`
+    # TODO: add `localized_variable_blocks_xml(text_xml_doc)`
+
+    # Use to_html because the XML we want to generate will be used in web browsers.
+    text_xml.to_html
   end
 
   def localized_short_instructions
@@ -521,10 +515,11 @@ class Blockly < Level
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
-  def localized_function_blocks(blocks)
-    return nil if blocks.nil?
-
-    block_xml = Nokogiri::XML(blocks, &:noblanks)
+  # Localizes the given function blockly blocks in the given XML document. Localization will be
+  # applied directly to the given document.
+  # @param block_xml [Nokogiri::XML::Document] an XML doc to be localized and modified.
+  # @return [Nokogiri::XML::Document] the given XML doc localized.
+  def localized_function_blocks_xml(block_xml)
     block_xml.xpath("//block[@type=\"procedures_defnoreturn\"]").each do |function|
       function_name = function.at_xpath('./title[@name="NAME"]')
       next unless function_name
@@ -618,7 +613,17 @@ class Blockly < Level
     end
 
     localize_behaviors(block_xml)
-    return block_xml.serialize(save_with: XML_OPTIONS).strip
+    block_xml
+  end
+
+  # Localizes the given function blockly blocks in the given XML document string.
+  # @param blocks [String] an XML doc to be localized.
+  # @return [String] the given XML doc localized.
+  def localized_function_blocks(blocks)
+    return nil if blocks.nil?
+
+    block_xml = localized_function_blocks_xml(Nokogiri::XML(blocks, &:noblanks))
+    block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
   # Localizing variable names in "variables_get" and "parameters_get" block types

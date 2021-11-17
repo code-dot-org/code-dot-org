@@ -510,6 +510,50 @@ XML
     assert_equal localized_hints[1]["tts_url"], "https://tts.code.org/rosa22k/180/100/62885e459602efbd236f324c4796acc9/test_localize_authored_hints.mp3"
   end
 
+  test 'localizes authored hints with embedded behavior block' do
+    test_locale = :"es-MX"
+    level_name = 'test_localize_authored_hints_with_embedded_behavior_block'
+    hint = <<~HINT
+      Some text at the beginning: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.
+
+      This block is found in the **Behaviors** category of the toolbox.
+    HINT
+
+    I18n.locale = test_locale
+    custom_i18n = {
+      'data' => {
+        'authored_hints' => {
+          level_name => {
+            "first": hint,
+          }
+        },
+        behavior_names: {
+          level_name => {
+            "wandering": "deambulando",
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = Level.create(
+      name: level_name,
+      level_num: 'custom',
+      type: 'Maze',
+      authored_hints: JSON.generate(
+        [
+          {"hint_markdown": hint, "hint_id": "first"},
+        ]
+      )
+    )
+
+    localized_hints = JSON.parse(level.localized_authored_hints)
+
+    expected_translated_hint = hint.gsub("wandering", "deambulando")
+    assert_equal expected_translated_hint, localized_hints[0]["hint_markdown"]
+  end
+
   test 'localized_blocks_with_placeholder_texts' do
     test_locale = 'vi-VN'
     original_str = 'Hello'
