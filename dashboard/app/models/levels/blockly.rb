@@ -426,7 +426,10 @@ class Blockly < Level
   end
 
   def localized_long_instructions
-    get_localized_property("long_instructions")
+    # Order is important here. Placeholder text has no unique identifier
+    # so all matching strings are replaced during that step.
+    localized_long_instructions = get_localized_property("long_instructions")
+    localized_markdown_with_placeholder_texts(localized_long_instructions)
   end
 
   def localized_authored_hints
@@ -492,7 +495,8 @@ class Blockly < Level
 
   def localized_short_instructions
     if custom?
-      loc_val = get_localized_property("short_instructions")
+      loc_instructions = get_localized_property("short_instructions")
+      loc_val = localized_markdown_with_placeholder_texts(loc_instructions)
       unless I18n.en? || loc_val.nil?
         return loc_val
       end
@@ -652,7 +656,7 @@ class Blockly < Level
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
-  # Localizing placeholder texts in all possible block types.
+  # Localizing placeholder texts in all possible block types within xml.
   # @param blocks [String]
   # @return [String]
   # @see unit test for an example of blocks that contain placeholder texts.
@@ -665,6 +669,38 @@ class Blockly < Level
     localize_placeholder_texts(block_xml, 'studio_showTitleScreen', %w(TEXT TITLE))
 
     block_xml.serialize(save_with: XML_OPTIONS).strip
+  end
+
+  # Localizing placeholder texts in all possible block types within markdown.
+  # @param markdown [String]
+  # @return [String]
+  # @see unit test for an example of blocks that contain placeholder texts.
+  def localized_markdown_with_placeholder_texts(markdown)
+    return if markdown.nil?
+
+    placeholders = Hash.new
+    processed_markdown = Nokogiri::HTML(markdown, &:noblanks)
+
+    processed_markdown.xpath("//block[@type=\"text\"]").each do |block|
+      title = block.at_xpath("./title[@name=\"TEXT\"]")
+      next unless title&.content&.present?
+
+      text_key = Digest::MD5.hexdigest title.content
+      localized_text = I18n.t(
+        text_key,
+        scope: [:data, :placeholder_texts, name],
+        default: nil,
+        smart: true
+      )
+      placeholders[title.content] = localized_text if localized_text
+    end
+
+    # Replace each string
+    placeholders.keys.each do |original_str|
+      markdown = markdown.gsub(original_str, placeholders[original_str])
+    end
+
+    markdown
   end
 
   # Localizing placeholder texts in one block type.
