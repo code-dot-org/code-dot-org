@@ -4489,6 +4489,7 @@ ar:
           student_description: برمج الحيوانات وغيرها من مخلوقات ماينكرافت في إصدارك
             الخاص من ماينكرافت.
         flappy-impact-study:
+          title: رمز Flappy مع المسح
           lessons:
             Pre Hour of Code Survey:
               name: استطلاع رأي مسبق عن دورة ساعة من البرمجة
@@ -4763,6 +4764,7 @@ ar:
             Post Hour of Code Survey:
               name: استطلاع رأي بعد انتهاء دورة ساعة من البرمجة
         hoc-impact-study:
+          title: متاهة كلاسيكية مع مسح
           description_short: جرب تعلم مبادئ الحاسب الآلي من خلال الغديد من الشخصيات
             الممتعة!
           lessons:
@@ -22755,6 +22757,8 @@ ar:
             CS Discoveries Post Course survey:
               key: استطلاع رأي بعد انتهاء دورة استكشافات علم الحاسوب
               name: استطلاع رأي بعد انتهاء دورة استكشافات علم الحاسوب
+            lesson-1:
+              name: استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب
           lesson_groups:
             cspSurvey:
               display_name: استبيان
@@ -22873,6 +22877,8 @@ ar:
             CS Discoveries Post Course survey:
               key: استطلاع رأي بعد انتهاء دورة استكشافات علم الحاسوب
               name: استطلاع رأي بعد انتهاء دورة استكشافات علم الحاسوب
+            lesson-1:
+              name: استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب
           lesson_groups:
             csd3_1:
               display_name: 'الفصل 1: الصور والمتحركات'
@@ -22952,6 +22958,8 @@ ar:
               name: استطلاع رأي بعد انتهاء دورة استكشافات علم الحاسوب
             Build a Paper Prototype:
               name: النماذج الورقية الأولية
+            CS Discoveries Post-Course Survey:
+              name: استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب
           lesson_groups:
             csd4_1:
               display_name: 'الفصل 1: التصميم المحوري للمستخدم'
@@ -23035,6 +23043,8 @@ ar:
             CS Discoveries Post Course survey:
               key: استطلاع رأي بعد انتهاء دورة استكشافات علم الحاسوب
               name: استطلاع رأي بعد انتهاء دورة استكشافات علم الحاسوب
+            CS Discoveries Post-Course Survey:
+              name: استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب
           lesson_groups:
             csd5_1:
               display_name: 'الفصل 1: تمثيل المعلومات'
@@ -23178,6 +23188,8 @@ ar:
             CS Discoveries Post Course survey:
               key: استطلاع رأي بعد انتهاء دورة استكشافات علم الحاسوب
               name: استطلاع رأي بعد انتهاء دورة استكشافات علم الحاسوب
+            CS Discoveries Post-Course Survey:
+              name: استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب
           lesson_groups:
             csd6_1:
               display_name: 'الفصل 1: البرمجة باستخدام الأجهزة'
@@ -25601,6 +25613,15 @@ ar:
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: مختبر Java
+            lesson-15:
+              name: يوم التقييم
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
         k5-onlinepd-2021:
           student_description: تعرف على كيفية تدريس علم الحاسوب باستخدام أساسيات علم
             الحاسوب في Code.org من خلال هذه الدورة التدريبية المجانية عبر الإنترنت!
@@ -25699,6 +25720,8 @@ ar:
           lessons:
             Survey Planning:
               name: تصميم أداة لجمع البيانات
+            CS Discoveries Post-Course Survey:
+              name: استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب
           lesson_groups:
             lessonGroup-4:
               display_name: استبيان
@@ -25837,6 +25860,10 @@ ar:
               name: 'الوحدة 2: تطوير الويب'
             lesson-6:
               name: البيانات والمجتمع
+        self-paced-pl-csp1-2021:
+          lessons:
+            lesson-1:
+              name: مرحبا بكم في Code.org
         csa1-exemplars:
           lessons:
             lesson-20:
@@ -25906,6 +25933,11 @@ ar:
               display_name: الدروس
             lessonGroup-3:
               display_name: مشروع
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: مرحبا بالعالم!
+          title: '"مرحبا بالعالم!"'
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
@@ -26015,3 +26047,24 @@ ar:
           lesson_groups:
             lessonGroup-2:
               display_name: محتوى
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: استبيان ما بعد الدورة التدريبية
+          title: استطلاع رأي بعد انتهاء دورة مقدمات علوم الحاسوب
+        csa6-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: يوم التقييم
+            Java Lab:
+              name: مختبر Java
+              key: مختبر Java
+            lesson-15:
+              name: يوم التقييم
+          lesson_groups:
+            lessonGroup-2:
+              display_name: محتوى
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: مسابقة التهجئة

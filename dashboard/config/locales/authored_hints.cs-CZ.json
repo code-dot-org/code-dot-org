@@ -4567,6 +4567,47 @@
         "courseB_maze_seq_challenge2_2021": {
           "courseB_maze_seq_challenge2_a": "Chcete-li vyřešit tento hlavolam, nemusíte přidávat ani odstraňovat bloky.",
           "courseB_maze_seq_challenge2_b": "Přeskupte bloky a vezměte cestu tvaru schodiště."
+        },
+        "courseC_harvester_loops_challenge1a_2021": {
+          "courseC_harvester_loops_challenge1_a": "Toto je bez cyklů příliš obtížné!",
+          "courseC_harvester_loops_challenge1_b": "Sekvenci `posuv vpřed` a `sebrat kukuřici` můžete opakovat, kolikrát bude potřeba, a na každém rohu můžete zahnout pomocí `zahnout doprava`."
+        },
+        "helloworld_animals_behaviors": {
+          "storyboard_behavior_example": "_Poznámka:_ Abyste dali sprajtu chování, musíte použít blok `sprajt začíná` spolu s jedním ze zelených bloků chování, jako například `otáčení doprava`.\n\n[blockly block][0]"
+        },
+        "helloworld_animals_multi": {
+          "cat_xml": "Zajistěte, aby si kostýmy v jednotlivých blocích odpovídaly.\n\n[blockly block][0]"
+        },
+        "helloworld_animals_say": {
+          "hello-world-first-solution-bear": "Aby medvěd něco řekl, propojte bloky kódu takto:\n\n[blockly block][0]"
+        },
+        "helloworld_emoji_behaviors": {
+          "storyboard_behavior_example": "_Poznámka:_ Abyste dali sprajtu chování, musíte použít blok `sprajt začíná` spolu s jedním ze zelených bloků chování, jako například `otáčení doprava`.\n\n[blockly block][0]"
+        },
+        "helloworld_emoji_say": {
+          "hello-world-first-solution-emoji": "Aby emoji něco řeklo, propojte bloky kódu takto:\n\n[blockly block][0]"
+        },
+        "helloworld_food_behaviors": {
+          "storyboard_behavior_example": "_Poznámka:_ Abyste dali sprajtu chování, musíte použít blok `sprajt začíná` spolu s jedním ze zelených bloků chování, jako například `otáčení doprava`.\n\n[blockly block][0]"
+        },
+        "helloworld_food_say": {
+          "hello-world-first-solution-pizza": "Aby pizza něco řekla, propojte bloky kódu takto:\n\n[blockly block][0]"
+        },
+        "helloworld_retro_behaviors": {
+          "storyboard_behavior_example": "_Poznámka:_ Abyste dali sprajtu chování, musíte použít blok `sprajt začíná` spolu s jedním ze zelených bloků chování, jako například `otáčení doprava`.\n\n[blockly block][0]"
+        },
+        "helloworld_retro_say": {
+          "hello-world-first-solution-retrocreature": "Abyste tvora přiměli něco říci, propojte bloky kódu takto:\n\n[blockly block][0]"
+        },
+        "poetry_hoc_backgroundEffects": {
+          "add_background_effect": "Najděte takový blok pozadí, jako tento:\n[blockly block][0]\n\na najděte blok textového efektu jako je tento: \n\n[blockly block][1]\n\nPropojte tyto bloky ve svém pracovním prostoru pod `když bude spuštěno`.",
+          "add_more_effects": "Přidejte více barev nebo efektů za účelem vytvoření nálady této básně.\n\n[blockly block][0]"
+        },
+        "poetry_hoc_sounds": {
+          "more_code": "Přidejte další efekty a barvy odpovídající vybranému zvuku.\n[blockly block][0]"
+        },
+        "poetry_hoc_spriteBehaviors": {
+          "add_behavior": "Přidejte ke svému kódu blok `sprajt začíná`. Zajistěte, abyste sprajt, kterému budete dávat chování, měli už vyroben.\n\n[blockly block][0]"
         }
       }
     }

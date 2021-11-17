@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "aiml",
-    "serialized_at": "2021-11-05 18:27:19 UTC",
+    "serialized_at": "2021-11-11 04:31:21 UTC",
     "published_state": "stable",
     "instruction_type": null,
     "instructor_audience": null,
@@ -3751,7 +3751,7 @@
       "key": "e9b87449-8870-4236-aaf5-3e4c843915d6",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is one example from today of how human's can influence the machine learning process?_",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is one example from today of how humans can influence the machine learning process?_",
         "name": "Journal"
       },
       "seeding_key": {

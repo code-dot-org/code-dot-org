@@ -1,71 +1,71 @@
 ---
-title: Hour of Code How-To Guide for Virtual Events
+title: Hour of Code Vägledning för virtuella händelser
 ---
 
 {{ signup_button }}
 
-# Tips for a virtual Hour of Code event
+# Tips för en virtuell Hour of Coce evenemang
 
-### You don't have to be in-person to run a successful Hour of Code!
+### Du behöver inte vara personlig för att köra en framgångsrik Hour of Code!
 
 ***
 
-While the Hour of Code is traditionally held in classrooms throughout the globe, you don’t need to be in-person to enjoy the fun! You can still host an interactive and inspirational Hour of Code for students remotely using some of these recommendations.  Take a look at our [guide for virtual events]({{ localized_files/participation_guide_virtual }}) if you still have questions.
+Även om Hour of Code traditionellt hålls i klassrum över hela världen, behöver du inte vara personlig för att njuta av det roliga! Du kan fortfarande vara värd för en interaktiv och inspirerande Hour of Code för studenter på distans med hjälp av några av dessa rekommendationer.  Ta en titt på vår [guide för virtuella evenemang]({{ localized_files/participation_guide_virtual }}) om du fortfarande har frågor.
 
 <br><br>
 
 [<img src="/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg" />]({{ urls/learn }})
 
-## You may be apart, but you can still start together
-Even if you plan for students to complete their activities independently, we recommend starting your event with a virtual kick-off online to get participants excited. There are several interesting ways you can start your event: 
+## Ni kanske är isär, men ni kan fortfarande börja tillsammans
+Även om du planerar att studenter ska slutföra sina aktiviteter på egen hand, rekommenderar vi att du startar ditt evenemang med en virtuell kick-off online för att få deltagarna entusiastiska. Det finns flera intressanta sätt som du kan starta ditt evenemang på: 
 
 <ul>
-<li><b>Invite a guest speaker</b>: Thousands of volunteers from all backgrounds are waiting to hear from you! Simply use our <a href="https://code.org/volunteer/local">volunteer map</a> to search for them. With a virtual Hour of Code, you’re not limited by distance so if needed, consider searching outside of your zip code for volunteers that are offering to help remotely. Once you’ve connected with a volunteer, you can reference the <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code Volunteer How-To</a> as a guide for determining potential topics, discussion questions, and more.</li> 
-<li><b>Show an inspirational video</b>: Another reliable option to start your event, is showing participants one of our many <a href="http://hourofcode.com/us/promote/resources#videos">inspirational videos</a>. Many videos are less than 5 minutes long and feature inspiration and encouragement from celebrities your students will recognize.</li> 
-<li><b>Discuss computer science for good</b>: Turn your Hour of Code event into a deeper understanding of computer science by considering the impact of technology on our everyday lives. Ask students guiding questions and turn the beginning of your event into an interactive discussion. For ideas on how to get the conversation started, check out these <a href="https://code.org/csforgood#prompts">discussion questions</a>.</li>
+<li><b>Bjud in en gästföreläsare</b>: Tusentals frivilliga från alla bakgrunder väntar på att höra från dig! Använd helt enkelt vår <a href="https://code.org/volunteer/local">volontärkarta</a> för att söka efter dem. Med en virtuell Hour of Code är du inte begränsad av avstånd så om det behövs, överväg att söka utanför ditt postnummer efter volontärer som erbjuder att hjälpa till på distans. När du har fått kontakt med en volontär kan du referera till <a href="http://hourofcode.com/us/how-to/volunteers">Hour of Code Voluntär vägledning</a> som en guide för att fastställa potentiella ämnen, diskussionsfrågor och mer.</li> 
+<li><b>Visa en inspirerande video</b>: Ett annat tillförlitligt alternativ för att starta ditt evenemang är att visa deltagarna en av våra många <a href="http://hourofcode.com/us/promote/resources#videos">inspirerande videor</a>. Många videor är mindre än 5 minuter långa och innehåller inspiration och uppmuntran från kändisar som dina elever känner igen.</li> 
+<li><b>Diskutera datavetenskap för gott</b>: Förvandla ditt Hour of Code-evenemang till en djupare förståelse av datavetenskap genom att överväga teknikens inverkan på våra vardagliga liv. Ställ vägledande frågor till eleverna och förvandla början av ditt evenemang till en interaktiv diskussion. För idéer om hur du får igång konversationen, kolla in dessa <a href="https://code.org/csforgood#prompts">diskussionsfrågor</a>.</li>
 </ul>
 
 ---
 
-## What to prepare ahead of time
+## Vad ska man förbereda i förväg
 
-### 1. Determine your video conferencing platform
-Chances are you’re probably familiar with platforms like Cisco Webex, Google Meet, Microsoft Teams, Skype, or Zoom by now. Whichever tool you prefer, we just encourage you to familiarize yourself, test out it’s capabilities, and run through your Hour of Code agenda prior to your event date.
+### 1. Bestäm din videokonferensplattform
+Chansen är stor att du förmodligen är bekant med plattformar som Cisco Webex, Google Meet, Microsoft Teams, Skype eller Zoom vid det här laget. Vilket verktyg du än föredrar, uppmuntrar vi dig bara att bekanta dig, testa dess kapacitet och gå igenom din Hour of Code-agenda innan ditt evenemangsdatum.
 
 [<img src="/images/fit-600/Marketing/photo-of-boy-video-calling-with-a-woman-4145197.jpg" />]({{ urls/learn }})
 
-### 2. Plan how students will participate
-**Self-led Hour of Code activity**<br> We recommend that after your kickoff, you allow students to leave the video conference to work through their <a href="https://hourofcode.com/us/learn">Hour of Code activities</a> on their own rather than live together. This will allow students to immerse themselves in their own projects and gain a stronger understanding of the CS concepts. It will also minimize the distraction and obstacle of having to have a video conference window open.
+### 2. Planera hur eleverna ska delta
+**Självledd Hour of Code-aktivitet**<br> Vi rekommenderar att du efter din kickoff låter eleverna lämna videokonferensen för att arbeta igenom sina <a href="https://hourofcode.com/us/learn">Hour of Code-aktiviteter</a> på egen hand istället för live tillsammans. Detta kommer att tillåta eleverna att fördjupa sig i sina egna projekt och få en starkare förståelse för Datavetenskaps-koncepten. Det kommer också att minimera distraktionen och hindret för att behöva ha ett videokonferensfönster öppet.
 
-It may be helpful for you to determine 1-3 tutorial options for them to choose from ahead of time. This allows you to choose activities that are best suited for their grade level. Plus, if students have questions that require your assistance you’ll be better prepared to help if you’re already familiar with the tutorials they’re working on.
+Det kan vara bra för dig att bestämma 1-3 självstudiealternativ för dem att välja mellan i förväg. Detta gör att du kan välja aktiviteter som är bäst lämpade för deras årskurs. Dessutom, om elever har frågor som kräver din hjälp kommer du att vara bättre beredd att hjälpa till om du redan är bekant med handledningarna de arbetar med.
 
-If your class is expected to do their activity immediately after kickoff, you might consider keeping a virtual conference room, chat platform, or other means of communication open so they can reconnect with you with questions as needed.
+Om din klass förväntas göra sin aktivitet omedelbart efter kickoff, kan du överväga att hålla ett virtuellt konferensrum, chattplattform eller andra kommunikationsmedel öppet så att de kan återkoppla med dig med frågor efter behov.
 
-**Hour of Code activity together online**<br> If you prefer to keep your participants on the same video call for the duration of your event, please note that they’ll need to have two windows open at all times - one for the video conferencing platform, and the other for students to work on their activity.
+**Hour of Code-aktivitet tillsammans online**<br> Om du föredrar att hålla dina deltagare i samma videosamtal under hela ditt evenemang, vänligen observera att de måste ha två fönster öppna hela tiden - ett för videokonferensplattformen och det andra för studenter att arbeta på deras verksamhet. •
 
-**With parents**<br> For students that are Grade 4 and below, consider encouraging their parents to host an Hour of Code at home. You can support them with some recommended tutorials as well as this helpful <a href="https://hourofcode.com/us/how-to/parents">How-To for Parents</a>.
+**Med föräldrar**<br> För elever som är årskurs 4 och lägre, överväg att uppmuntra deras föräldrar att vara värd för en Hour of Code hemma. Du kan stödja dem med några rekommenderade handledningar samt den här användbara <a href="https://hourofcode.com/us/how-to/parents">Vägledning för föräldrar</a>.
 
 [<img src="/images/fit-600/Marketing//happy-father-and-child-browsing-laptop-in-bedroom-4545778.jpg" />](https://hourofcode.com/us/how-to/parents)
 
-### 3. Enlist a volunteer
-You can find a volunteer suited to your needs by visiting our <a href="https://code.org/volunteer/local">volunteer map</a>. Many are available for remote participation and are more than willing to speak about their experience in computer science, how technology impacts their roles, or simply to help you with troubleshooting student questions. Once you find a volunteer, make sure you set up a meeting with them ahead of time to discuss their role for the event, work out technical requirements, and establish the logistics of participating online.
+### 3. Anlita en volontär
+Du kan hitta en volontär som passar dina behov genom att besöka vår <a href="https://code.org/volunteer/local">volontärkarta</a>. Många är tillgängliga för deltagande på distans och är mer än villiga att berätta om sin erfarenhet inom datavetenskap, hur tekniken påverkar deras roller, eller helt enkelt för att hjälpa dig med att felsöka elevers frågor. När du har hittat en volontär, se till att du ställer upp ett möte med dem i förväg för att diskutera deras roll för evenemanget, utarbeta tekniska krav och fastställa logistiken för att delta online.
 
-### 4. Celebration supplies
-Take a look below for ideas on celebrating your virtual Hour of Code. Some may require you to prepare ahead of time such as creating completion <a href="https://code.org/certificates">certificates</a> for all of your participants.
+### 4. Firande leveranser
+Ta en titt nedan för idéer om hur du firar din virtuella Hour of Code. Vissa kan kräva att du förbereder dig i förväg, som att skapa <a href="https://code.org/certificates">intyg</a> för alla dina deltagare.
 
 ---
 
-## Celebrate together
+## Fira tillsammans
 
-Similar to how you started the event, come together afterwards to celebrate! Here are some ideas for making your virtual celebration interactive and special:
+På samma sätt som du startade evenemanget, kom tillsammans efteråt för att fira! Här är några idéer för att göra ditt virtuella firande interaktivt och speciellt:
 
-- Allow students to share their completed projects with the rest of the class. If your conferencing platform allows, you can even encourage students to take a screenshot of their projects and set it as their virtual background!
-- Discuss learnings: What have they learned about computer science or technology? What did they do when they ran into a problem, how did they solve it?
-- <a href="https://code.org/certificates">Create and share certificates</a> for your participants
-- Share photos and videos of your virtual Hour of Code on social media. Använd "HourOfCode och @codeorg så kan vi också lyfta upp dina framgångar!
+- Låt eleverna dela sina avslutade projekt med resten av klassen. Om din konferensplattform tillåter kan du till och med uppmuntra eleverna att ta en skärmdump av sina projekt och ställa in den som deras virtuella bakgrund!
+- Diskutera lärdomar: Vad har de lärt sig om datavetenskap eller teknologi? Vad gjorde de när de stötte på ett problem, hur löste de det?
+- <a href="https://code.org/certificates">Skapa och dela certifikat</a> för dina deltagare
+- Dela foton och videor av din virtuella Hour of Code på sociala medier. Använd "HourOfCode och @codeorg så kan vi också lyfta upp dina framgångar!
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
-Lastly, if you didn’t start the event with a <a href="https://code.org/volunteer/local">guest speaker</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirational video</a>, or <a href="https://code.org/csforgood#prompts">discussion questions</a>, this would be another great opportunity to incorporate one of those experiences as well.
+Slutligen, om du inte startade evenemanget med en <a href="https://code.org/volunteer/local">gästföreläsare</a>, <a href="https://hourofcode.com/us/promote/resources#">inspirerande video</a> eller <a href="https://code.org/csforgood#prompts">diskussionsfrågor</a>, skulle detta vara ytterligare ett tillfälle att införliva en av dessa upplevelser också.
 
 {{ signup_button }}

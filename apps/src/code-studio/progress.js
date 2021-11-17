@@ -321,18 +321,20 @@ progress.retrieveProgress = function(scriptName, scriptData, currentLevelId) {
   });
 };
 
-/* Set our initial view type (Student or Teacher) from current user's user_type
+/* Set our initial view type (Participant or Instructor) from current user's user_type
  * or our query string. */
 progress.initViewAs = function(store, scriptData) {
-  // Default to Student, unless current user is a teacher
-  let initialViewAs = ViewType.Student;
+  // Default to Participant, unless current user is a teacher
+  let initialViewAs = ViewType.Participant;
   if (scriptData.user_type === 'teacher') {
-    initialViewAs = ViewType.Teacher;
+    //TODO(dmcavoy): Update to check instructor
+    initialViewAs = ViewType.Instructor;
   }
 
   // If current user is not a student (ie, a teacher or signed out), allow the
   // 'viewAs' query parameter to override;
   if (scriptData.user_type !== 'student') {
+    //TODO(dmcavoy): Update to check participant
     const query = queryString.parse(location.search);
     initialViewAs = query.viewAs || initialViewAs;
   }
@@ -364,7 +366,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
     const postMilestoneDisabled = store.getState().progress
       .postMilestoneDisabled;
-    if (data.signedIn && postMilestoneDisabled && !scriptData.isHocScript) {
+    if (data.signedIn && postMilestoneDisabled) {
       showDisabledBubblesModal();
     }
 
