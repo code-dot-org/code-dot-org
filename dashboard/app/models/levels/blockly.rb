@@ -680,17 +680,12 @@ class Blockly < Level
   # @see unit test for an example of blocks that contain placeholder texts.
   def localized_markdown_with_placeholder_texts(markdown)
     return if markdown.nil?
+    markdown_xml = Nokogiri::HTML(markdown, &:noblanks)
 
-    # Not using Nokogiri::HTML.fragment because of existing bug,
-    # and need select all descendant capability.
-    # https://github.com/sparklemotion/nokogiri/issues/572
-    processed_markdown = Nokogiri::HTML(markdown, &:noblanks)
-    localize_placeholder_texts(processed_markdown, 'text', ['TEXT'])
+    localize_placeholder_texts(markdown_xml, 'text', ['TEXT'])
 
-    # Removing wrapping elements placed by Nokogiri::HTML processing
-    processed_markdown = processed_markdown.root.xpath("/html/body").first.inner_html
-    # Text gets wrapped with p tags and breaks markdown syntax
-    processed_markdown.gsub!('<p>', '').gsub!('</p>', '')
+    ## make sure below returns correct format
+    markdown_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
   # Localizing placeholder texts in one block type.
