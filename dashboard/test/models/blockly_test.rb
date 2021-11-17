@@ -611,50 +611,6 @@ XML
     assert_equal expected_localized_block_xml, localized_block_xml
   end
 
-  test 'localized_markdown_with_placeholder_texts' do
-    test_locale = 'vi-VN'
-    original_str = 'Hello'
-    localized_str = 'Xin Chao'
-    level = create :level, :blockly
-
-    # Add translation mapping to the I18n backend
-    custom_i18n = {
-      'data' => {
-        'placeholder_texts' => {
-          level.name => {
-            # Must generate the string key in the same way it is created in
-            # the get_i18n_strings function in sync-in.rb script.
-            Digest::MD5.hexdigest(original_str) => localized_str
-          }
-        }
-      }
-    }
-    I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n
-
-    # Create a simple blockly level markdown property containing the
-    # original string, then localize the markdown property.
-    markdown = <<~HTML
-      Test [link](https://code.org)
-      <block type="gamelab_printText">
-        <value name="TEXT">
-          <block type="text">
-            <title name="TEXT">#{original_str}</title>
-          </block>
-        </value>
-      </block>
-    HTML
-    localized_markdown = level.localized_markdown_with_placeholder_texts(markdown)
-
-    # Expected result is markdown in which the original string
-    # has been replaced by a localized string. Newlines should be
-    # maintained outside of any XML.
-    cleaned_markdown = markdown.strip.gsub(/\s*\n\s*/, '').gsub(original_str, localized_str)
-    expected_localized_markdown = cleaned_markdown.gsub("Test [link](https://code.org)", "Test [link](https://code.org)\n")
-
-    assert_equal expected_localized_markdown, localized_markdown
-  end
-
   test 'handles bad authored hint localization data' do
     test_locale = :"te-ST"
     level_name = 'test_localize_authored_hints'
