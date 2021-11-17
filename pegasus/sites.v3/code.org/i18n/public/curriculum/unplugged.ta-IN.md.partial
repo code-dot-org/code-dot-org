@@ -1,28 +1,28 @@
 ---
-title: CS Fundamentals Unplugged
+title: கணினி இல்லாமல் கணினி அறிவியல் அடிப்படைகள்
 video_player: true
 theme: responsive
 ---
 
-# CS Fundamentals Unplugged
+# கணினி இல்லாமல் கணினி அறிவியல் அடிப்படைகள்
 
-We've compiled a list of all of our unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not!
+உங்கள் வகுப்பறையில் நீங்கள் பயன்படுத்துவதற்காக எங்களின் கணினி இல்லாத பாடங்களின் பட்டியலை நாங்கள் தொகுத்துள்ளோம். உங்கள் வகுப்பறையில் கணினிகள் இருந்தாலும் இல்லாவிட்டாலும் கணினி அறிவியலின் அடிப்படைகளை இப்போது நீங்கள் கற்பிக்கலாம்!
 <br>
 <div class="col-50">
-We refer to lessons in which students are not working on a computer as “unplugged.” Students will often work with pencil and paper or physical manipulatives.  These are intentionally placed kinesthetic opportunities that help students digest complicated concepts in ways that relate to their own lives. <br><br>
-Unplugged lessons are particularly useful for building and maintaining a collaborative classroom environment, and they are useful touchstone experiences you can refer to when introducing more abstract concepts. Each of these activities can either be used alone or with other computer science lessons on related concepts.
+மாணவர்கள் கணினியில் வேலை செய்யாத பாடங்களை “அன்பிளக்டு” என்று குறிப்பிடுகிறோம் மாணவர்கள் பெரும்பாலும் பென்சில் மற்றும் காகிதம் அல்லது கைமுறை செயல்பாடுகளோடு வேலை செய்வார்கள்.  இவை வேண்டுமென்றே கொடுக்கப்படும் இயக்கவியல் வாய்ப்புகளாகும், இது மாணவர்கள் தங்கள் சொந்த வாழ்க்கையுடன் தொடர்புடைய வழிகளில் சிக்கலான கருத்துக்களை ஜீரணிக்க உதவுகிறது. <br><br>
+அன்பிளக்டு பாடங்கள், கூட்டு வகுப்பறைச் சூழலை உருவாக்குவதற்கும் பராமரிப்பதற்கும் மிகவும் பயனுள்ளதாக இருக்கும், மேலும் சுருக்கமான கருத்துகளை அறிமுகப்படுத்தும்போது அவை குறிப்பிடத்தக்க பயனுள்ள உரைகல் (டச்ஸ்டோன்) அனுபவங்களாகும். இந்தச் செயல்பாடுகள் ஒவ்வொன்றும் தனியாகவோ அல்லது பிற கணினி அறிவியல் பாடங்களுடன் தொடர்புடைய கருத்துக்களுடனோ பயன்படுத்தப்படலாம்.
 </div>
 
 <div class="col-50" style="text-align:center">
 <img src="/images/new-main.jpg" width="90%">
-<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Ages 4+, English only
+<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;வயது 4+, ஆங்கிலம் மட்டும்
 </div>
 
 <div style="clear: both;"></div>
 
 ***
-## Unplugged lessons in CS Fundamentals 2021-22
-The following lessons can be found in <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank">CS Fundamentals 2021-22</a>. <br><br>
+## கணினி அறிவியல் அடிப்படைகளில் கணினி அற்ற பாடங்கள் 2021-22
+கீழ்க்கண்ட பாடங்களை இங்கு காணலாம் <a href="https://docs.google.com/document/d/19BIaGVliOZCciSDmuezFFUhhCjhrB2oXpVLn0cJAibc/preview" target="_blank"> கணினி அறிவியல் அடிப்படைகள் 2021-22</a>. <br><br>
 
 <style>
 table, th, td {
@@ -60,87 +60,84 @@ th, td {
 </style>
 <table style="width:100%">
   <tr>
-    <th><center><big>Course</th>
-    <th><center><big>Lesson Plan</th> 
-    <th width=10%><center><big>Concept</th>
-    <th width=20%><center><big>Video</th>
-     <tr>
-    <th rowspan="3" id="t01">Course A</th>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/3">A.3 - Happy Maps</a><br><small>This unplugged lesson brings together teams with a simple task: get the "flurb" to the fruit. Students will practice writing precise instructions as they work to translate instructions into the symbols provided. If problems arise in the code, students should also work together to recognize bugs and build solutions.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
-  </tr>
-  <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/7">A.7 - Happy Loops</a><br><small>This activity revisits Happy Maps. This time, student will be solving bigger, longer puzzles with their code, leading them to see utility in structures that let them write longer code in an easier way.</td><td>Loops</td> <td><img src="/images/a7.png" width="90%"></td>
-  <tr>
-    <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/11">A.11 - The Big Event Jr.</a><br><small>Events are a great way to add variety to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. That is what events are for.</td><td>Events</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
-  </tr>
-       <tr>
-    <th rowspan="3" id="t02">Course B</th>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/2">B.2 - Move It, Move It</a><br><small>This lesson will work to prepare students mentally for the coding exercises that they will encounter over the length of this course. In small teams, students will use physical activity to program their classmates to step carefully from place to place until a goal is achieved.</td><td>Sequencing</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
-  </tr>
-  <tr>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/6">B.6 - Getting Loopy</a><br><small>As we start to write longer and more interesting programs, our code often contains a lot of repetition. In this lesson, students will learn about how loops can be used to more easily communicate instructions that have a lot of repetition by looking at the repeated patterns of movement in a dance.</td><td>Loops</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
-  <tr>
-    <td><a href="https://studio.code.org/s/courseb-2021/lessons/10">B.10 - The Right App</a><br><small>This lesson has students recognize that computer science can help people in real life. First, students empathize with several fictional smartphone users in order to help them find the “right app” that addresses their needs. Then, students exercise empathy and creativity to sketch their own smartphone app that addresses the needs of one additional user.</td><td>Impacts of Computing</td> <td><img src="/images/b10.png" width="90%"></td>
-  </tr>
-       <tr>
-    <th rowspan="4" id="t03">Course C</th>
-    <td><a href="https://studio.code.org/s/coursec-2021/lessons/2">C.2 - My Robotic Friends Jr.</a><br><i>*Supplies: Plastic cups (10/group of 2-3)</i><br><small>Using a set of symbols in place of code, students will design algorithms to instruct a "robot" to stack cups in different patterns. Students will take turns participating as the robot, responding only to the algorithm defined by their peers. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
-  </tr> 
-  <tr>
-   <td><a href="https://studio.code.org/s/coursec-2021/lessons/7">C.7 - My Loopy Robotic Friend Jr</a><br><i>*Supplies: Paper cups (20/group of 4)</i><br><small>Overview
-Building on the initial "My Robotic Friends" activity, students tackle larger and more complicated designs. In order to program their "robots" to complete these bigger designs, students will need to identify repeated patterns in their instructions that could be replaced with a loop.</td><td>Loops</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>
-  </tr> 
+    <th><center><big>பாடம்</th>
+     <th><center><big>பாடத்திட்டம்</th>
+      <th width=10%><center><big>கருத்து</th>
+     <th width=20%><center><big>வீடியோ</th>
       <tr>
-   <td><a href="https://studio.code.org/s/coursec-2021/lessons/11">C.11 - The Big Event</a><br><small>Students will soon learn that events are a great way to add flexibility to a pre-written algorithm. Sometimes you want your program to be able to respond to the user exactly when the user wants it to. Events can make your program more interesting and interactive.</td><td>Events</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
-   </tr> 
-       </tr> 
-     <td><a href="https://studio.code.org/s/coursec-2021/lessons/15">C.15 - Binary Bracelets</a><br><i>*Supplies: Markers. Optional – 18 black/18 white beads, 1 pipe cleaner per student</i><br><small>Binary is extremely important in the world of computers. The majority of computers today store all sorts of information in binary form. This lesson helps demonstrate how it is possible to take something from real life and translate it into a series of ons and offs.</td><td>Binary</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
+     <th rowspan="3" id="t01"> பாடத்தொகுதி A</th>
+     <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/3">A.3 – ஹேப்பி மேப்ஸ்</a><br><small>இந்த கணினி அற்ற பாடம் ஒரு எளிய பணியுடன் குழுக்களை ஒன்றிணைக்கிறது: பழத்திற்கு "ஃப்ளர்ப்" ஐ கொண்டு வாருங்கள். வழங்கப்பட்ட குறியீடுகளில் வழிமுறைகளை மொழிபெயர்க்கும் பணியின்போது மாணவர்கள் துல்லியமான வழிமுறைகளை எழுதுவதைப் பயிற்சி செய்வார்கள். குறியீட்டில் சிக்கல்கள் ஏற்பட்டால், பிழைகளைக் கண்டறிந்து உருவாக்க மாணவர்களும் இணைந்து தீர்வுகளை கட்டமைக்கச் செயல்பட வேண்டும். </td><td>வரிசைப்படுத்துதல்</td> <td>{{ curriculum/unplugged/coursea_one_video_thumbnail }}</td>
   </tr>
-         <tr>
-    <th rowspan="3" id="t04">Course D</th>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/2">D.2 - Graph Paper Programming<br></a><small>By "programming" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. The class will start by having students use symbols to instruct each other to color squares on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
-  </tr>
+   <tr>
+     <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/7">A.7 – ஹேப்பி லூப்ஸ்</a><br><small>இந்த செயல்பாடு ஹேப்பி மேப்ஸ் க்கு மறுபடியும் வரவைக்கும். இந்த நேரத்தில், மாணவர்கள் தங்கள் குறியீட்டைக் கொண்டு பெரிய, நீளமான புதிர்களைத் தீர்ப்பார்கள், இது நீண்ட குறியீட்டை எளிதாக எழுத அனுமதிக்கும் கட்டமைப்புகளில் பயன்பாட்டைக் காண அவர்களை வழிநடத்துகிறது.</td><td>லூப்கள்</td> <td><img src="/images/a7.png" width="90%"></td>
+   <tr>
+     <td width=40%><a href="https://studio.code.org/s/coursea-2021/lessons/11">A.11 – தி பிக் ஈவண்ட் ஜூனியர்</a><br><small> முன்பே எழுதப்பட்ட அல்காரிதத்தில் பல்வேறு வகைகளைச் சேர்க்க நிகழ்வுகள் சிறந்த வழியாகும். சில நேரங்களில் உங்கள் புரொகிராம் பயனர் விரும்பும் போது சரியாகப் பயனருக்கு பதிலளிக்க முடியும் என்று நீங்கள் விரும்பலாம். அதற்காகத்தான் இந்த நிகழ்வுகள் உள்ளன.</td><td>நிகழ்வுகள்</td> <td>{{ curriculum/unplugged/coursea_three_video_thumbnail }}</td>
+   </tr>
+        <tr>
+     <th rowspan="3" id="t02"> பாடத்தொகுதி B</th>
+     <td><a href="https://studio.code.org/s/courseb-2021/lessons/2">B.2 மூவ் இட், மூவ் இட்</a><br><small> இந்தப் பாடத்திட்டம் முழுவதற்கும் மாணவர்கள் சந்திக்கும் குறியீட்டு பயிற்சிகளுக்கு அவர்களை மனரீதியாகத் தயார்படுத்த இந்தப் பாடம் வேலை செய்யும். சிறிய அணிகளில், மாணவர்கள் தங்கள் வகுப்புத் தோழர்களை ஒரு இலக்கை அடையும் வரை ஒரு இடத்திலிருந்து மற்றொரு இடத்திற்கு கவனமாக அடியெடுத்து வைக்க உடல் செயல்பாடுகளைப் பயன்படுத்துவார்கள்.</td><td>வரிசைப்படுத்துதல்</td> <td>{{ curriculum/unplugged/courseb_one_video_thumbnail }}</td>
+   </tr>
+   <tr>
+     <td><a href="https://studio.code.org/s/courseb-2021/lessons/6">B.6 – கெட்டிங் லூப்பி</a><br><small> நாம் நீண்ட மற்றும் சுவாரஸ்யமான புரொகிராம்களை எழுதத் தொடங்கும்போது, நம்முடையை குறியீடுகள் மீண்டும் மீண்டும் வரும் சொற்கள் பலவற்றைக் கொண்டுள்ளது. இந்தப் பாடத்தில், ஒரு நடனத்தில் திரும்பத் திரும்ப வரும் இயக்க முறைகளைப் பார்த்து, திரும்பத் திரும்பச் சொல்லும் வழிமுறைகளை எளிதாக எடுத்துச் சொல்ல, லூப்களை எவ்வாறு பயன்படுத்தலாம் என்பதைப் பற்றி மாணவர்கள் அறிந்து கொள்வார்கள்.</td><td>லூப்ஸ்</td> <td>{{ curriculum/unplugged/courseb_two_video_thumbnail }}</td>
+   <tr>
+     <td><a href="https://studio.code.org/s/courseb-2021/lessons/10"> B.10 - The Right செயலி<   </a><br><small> கணினி அறிவியல் நிஜ வாழ்க்கையில் மக்களுக்கு உதவ முடியும் என்பதை இந்த பாடம் மூலம் மாணவர்கள் அறிய முடியும். முதலாவதாக, மாணவர்கள் தங்கள் தேவைகளை நிவர்த்தி செய்யும் "சரியான பயன்பாட்டை" கண்டறிய உதவுவதற்காக பல கற்பனையான ஸ்மார்ட்ஃபோன் பயனர்கள் மூலம் புரிந்து கொள்கிறார்கள். பின்னர், ஒரு கூடுதல் பயனரின் தேவைகளை நிவர்த்தி செய்யும் தங்கள் சொந்த ஸ்மார்ட்ஃபோன் பயன்பாட்டை உருவாக்குவதற்கு மாணவர்கள் அறிவையும் படைப்பாற்றலையும் பயன்படுத்துகிறார்கள்.</td><td> கணினியியலின் தாக்கங்கள் </td> <td><img src="/images/b10.png" width="90%"></td>
+   </tr>
+        <tr>
+     <th rowspan="4" id="t03">பாடத்தொகுதி C</th>
+     <td><a href="https://studio.code.org/s/coursec-2021/lessons/2">C.2 – என் ரோபோட்டிக் நண்பர்கள் Jr.</a><br><i>*வழங்குபொருட்கள்: பிளாஸ்டிக் கோப்பைகள் (10/ 2-3 உள்ள குழு)</i><br><small> குறியீட்டிற்குப் பதிலாக ஒரு குறியீடுகளின் தொகுப்பைப் பயன்படுத்தி, வெவ்வேறு வடிவங்களில் கோப்பைகளை அடுக்கி வைக்க "ரோபோட்"க்கு அறிவுறுத்தும் வகையில் மாணவர்கள் அல்காரிதம்களை வடிவமைப்பார்கள். மாணவர்கள் தங்கள் சகாக்களால் வரையறுக்கப்பட்ட அல்காரிதத்திற்கு மட்டுமே பதிலளிப்பதன் மூலம் ரோபோவாக மாறி மாறி பங்கேற்பார்கள். இந்த பிரிவு மாணவர்களுக்கு குறியீடுகள் மற்றும் செயல்களுக்கு இடையேயான தொடர்பை, அல்காரிதம் மற்றும் புரோகிராம் இடையே உள்ள வேறுபாடு மற்றும் பிழைத்திருத்தத்தின் மதிப்புமிக்க திறன் ஆகியவற்றைக் கற்பிக்கிறது.</td><td>வரிசைப்படுத்துதல்</td><td>{{ curriculum/unplugged/coursec_one_video_thumbnail }}</td>
+  </tr>  
   <tr>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/4">D.4 - Relay Programming<br></a><small>This activity will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.</td><td>Sequencing</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
-      </tr>
-  <tr>
-    <td><a href="https://studio.code.org/s/coursed-2021/lessons/12">D.12 - Conditionals with Cards</a><br><small>This lesson demonstrates how conditionals can be used to tailor a program to specific information. We don’t always have all of the information we need when writing a program. Sometimes you will want to do something different in one situation than in another, even if you don't know what situation will be true when your code runs. That is where conditionals come in. Conditionals allow a computer to make a decision, based on the information that is true any time your code is run.+</td><td>Conditionals</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>
+    <td><a href="https://studio.code.org/s/coursec-2021/lessons/7">C.7 – என் லூப்பி ரோபோட்டிக் நண்பன் Jr</a><br><i>* வழங்குபொருட்கள்: பிளாஸ்டிக் கப்கள் (20/ 4 உள்ள குழு)</i><br><small>கண்ணோட்டம் "எனது ரோபோடிக் நண்பர்கள்" என்ற ஆரம்ப செயல்பாட்டின் அடிப்படையில், மாணவர்கள் பெரிய மற்றும் சிக்கலான வடிவமைப்புகளைச் சமாளிக்கின்றனர். இந்த பெரிய வடிவமைப்புகளை முடிக்க அவர்களின் "ரோபோக்களை" புரொகிராம் செய்ய, மாணவர்கள் தங்கள் வழிமுறைகளில் திரும்பத் திரும்ப வரும் வடிவங்களை அடையாளம் காண வேண்டும், அவை ஒரு லூப்பால் மாற்றியமைக்கப்படலாம்.</td><td>லூப்ஸ்</td><td>{{ curriculum/unplugged/coursec_three_video_thumbnail }}</td>   
+</tr> 
+       <tr>
+   <td><a href="https://studio.code.org/s/coursec-2021/lessons/11">C.11 – தி பிக் ஈவண்ட்</a><br><small> முன்பே எழுதப்பட்ட அல்காரிதத்திற்கு நெகிழ்வுத்தன்மையை சேர்க்க நிகழ்வுகள் சிறந்த வழி என்பதை மாணவர்கள் விரைவில் அறிந்து கொள்வார்கள். சில நேரங்களில் உங்கள் புரொகிராம் பயனர் விரும்பும் போது சரியாகப் பயனருக்கு பதிலளிக்க முடியும் என்று நீங்கள் விரும்பலாம். நிகழ்வுகள் உங்கள் புரொகிராமை மிகவும் சுவாரஸ்யமாகவும் ஊடாடக்கூடியதாகவும் மாற்றும்.</td><td>நிகழ்வுகள்</td><td>{{ curriculum/unplugged/coursec_four_video_thumbnail }}</td>
+    </tr> 
+        </tr>
+       <td><a href="https://studio.code.org/s/coursec-2021/lessons/15">C.15 – பைனரி பிரேஸ்லெட்ஸ்</a><br><i>*வழங்குபொருட்கள்: மார்க்கர்கள். விருப்பத்தேர்வு – ஒரு மாணவருக்கு 18 கறுப்பு/18 வெள்ளை மணிகள், 1 பைப் கிளீனர்</i><br><small>கணினி உலகில் பைனரி என்பது மிக முக்கியமான ஒன்றாகும். இன்று பெரும்பாலான கணினிகள் அனைத்து வகையான தகவல்களையும் பைனரி வடிவத்தில் சேமிக்கின்றன. நிஜ வாழ்க்கையிலிருந்து எதையாவது எடுத்து, அதைத் தொடர்ந்த ஆன்கள் மற்றும் ஆஃப்களாக மொழிபெயர்ப்பது எப்படி என்பதை நிரூபிக்க இந்தப் பாடம் உதவுகிறது.</td><td>பைனரி</td><td>{{ curriculum/unplugged/coursec_two_video_thumbnail }}</td>
+   </tr>
+ <tr>
+     <th rowspan="3" id="t04">பாடத்தொகுதி D</th>
+     <td><a href="https://studio.code.org/s/coursed-2021/lessons/2">D.2 - கிராப் பேப்பர் புரொகிராமிங்<br></a><small> படங்களை வரைவதற்கு ஒருவரையொருவர் "புரொகிராமிங்" செய்வதன் மூலம், மாணவர்கள் ஒரு வேடிக்கையான மற்றும் அணுகக்கூடிய வழியில் புரொகிராமிங்கின் சில முக்கிய கருத்துக்களை அனுபவிக்கும் வாய்ப்பைப் பெறுகிறார்கள். ஏற்கனவே உள்ள படத்தை மீண்டும் உருவாக்கும் முயற்சியில், வரைபடத் தாளில் உள்ள சதுரங்களை வண்ணம் தீட்டுவதற்கு அடையாளங்களைப் பயன்படுத்த மாணவர்கள் ஒருவரையொருவர் அறிவுறுத்துவதன் மூலம் வகுப்பு தொடங்கும். நேரம் இருந்தால், மாணவர்கள் தாங்களாகவே உருவாக்கும் படங்களுடன் பாடத்தை முடிக்கலாம்.</td><td>வரிசைப்படுத்துதல்</td><td>{{ curriculum/unplugged/coursed_one_video_thumbnail }}</td>
+   </tr>
+   <tr>
+     <td><a href="https://studio.code.org/s/coursed-2021/lessons/4">D.4 – ரிலே புரொகிராமிங்<br></a><small>இந்தச் செயல்பாடு பிழைத்திருத்தம் மற்றும் விடாமுயற்சி பற்றிய ஒரு சிறிய பாடத்துடன் தொடங்கும், பின்னர் மாணவர்கள் அணிகளாகப் பிரிந்து, ஒரு நேரத்தில் ஒரு புரொகிராமுக்கான வழிமுறையை எழுதுவதற்கு ஒன்றாக வேலை செய்யும் போது நேரத்திற்கு எதிரான பந்தயத்திற்கு விரைவாக நகரும்.</td><td>வரிசைப்படுத்துதல்</td><td>{{ curriculum/unplugged/coursed_two_video_thumbnail }}</td>
+       </tr>
+   <tr>
+     <td><a href="https://studio.code.org/s/coursed-2021/lessons/12">D.12 – கார்டுகளுடன் நிபந்தனைகள்</a><br><small> இந்த பாடம் குறிப்பிட்ட தகவலுக்கு ஒரு புரொகிராமை மாற்றியமைக்க நிபந்தனைகள் எவ்வாறு பயன்படுத்தப்படலாம் என்பதை விளக்குகிறது. ஒரு புரொகிராமை எழுதும்போது நமக்குத் தேவையான அனைத்து தகவல்களும் எப்போதும் நம்மிடம் இருக்காது. உங்கள் குறியீடு இயங்கும் போது எந்த சூழ்நிலை சரியாக இருக்கும் என்று உங்களுக்குத் தெரியாவிட்டாலும், சில நேரங்களில் நீங்கள் ஒரு சூழ்நிலையில் இருந்து மற்றொரு சூழ்நிலைக்கு வித்தியாசமாக ஏதாவது செய்ய விரும்புவீர்கள். இங்குதான் நிபந்தனைகள் வருகின்றன. உங்கள் குறியீடு இயக்கப்படும் எந்த நேரத்திலும் உண்மையாக இருக்கும் தகவலின் அடிப்படையில், ஒரு கணினி ஒரு முடிவை எடுக்க நிபந்தனைகள் அனுமதிக்கின்றன.+</td><td>நிபந்தனைகள்</td><td>{{ curriculum/unplugged/coursed_three_video_thumbnail }}</td>      
 
     </tr>
+          <tr>
+    <th rowspan="3" id="t05">course E</th>
+     <td><a href="https://studio.code.org/s/coursee-2021/lessons/7">E.7 - டிஜிட்டல் குடியுரிமை </a><br><i>*வழங்குபொருட்கள்: ஸ்மார்ட்ஃபோன் அல்லது டேப்லட்</i><br><small> பதிப்புரிமை மற்றும் படைப்பாற்றல் குழுவால் கணினி அறிவியல் அதன் அடிப்படைகளுக்கு கடமைப்பட்டுள்ளது, இந்த பாடம் மாணவர்களுக்கு உரிமை மற்றும் பதிப்புரிமையை மதிக்கும் சவால்கள் மற்றும் நன்மைகளை, குறிப்பாக டிஜிட்டல் சூழல்களில் புரிந்துகொள்ள உதவுகிறது. நெறிமுறையான டிஜிட்டல் குடிமகனாக இருப்பதன் முக்கிய அங்கமாக கலைஞர்களின் உரிமைகளை மதிக்க மாணவர்கள் ஊக்குவிக்கப்பட வேண்டும்.</td><td>டிஜிட்டல் சிட்டிசன்ஷிப்</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
+   </tr>
+   <tr>
+     <td><a href="https://studio.code.org/s/coursee-2021/lessons/11">E.11 – பாடல் எழுதுதல்</a><br><small> கணினி அறிவியல் உலகில் மிக அற்புதமான கட்டமைப்புகளில் ஒன்று ஃபன்க்‌ஷன் ஆகும். ஃபன்க்‌ஷன்கள் (சில நேரங்களில் நடைமுறைகள் என்று அழைக்கப்படுகின்றன) உங்கள் பெரிய புரொகிராமின் உள்ளே நீங்கள் மீண்டும் மீண்டும் பயன்படுத்தக்கூடிய சிறிய புரொகிராம்களாகும். குறியீட்டின் சிறு துகள்களை ஃபன்க்‌ஷன்களாக இணைப்பது ஏன் மிகவும் பயனுள்ள நடைமுறையாக இருக்கும் என்பதை மாணவர்களுக்கு உள்ளுணர்வுடன் புரிந்துகொள்ள இந்தப் பாடம் உதவும்.</td><td>ஃபன்க்‌ஷன்கள்</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
+   <tr>
+     <td><a href="https://studio.code.org/s/coursee-2021/lessons/17">E.17 – அணுகலுக்கான வடிவமைப்பு</a><br><small> இந்தப் பாடத்தில், கற்பனையான பயன்பாடுகளுக்கான அணுகக்கூடிய தீர்வுகளை மூளையைக் கசக்கி வடிவமைப்பதன் மூலம் மாணவர்கள் அணுகல்தன்மை மற்றும் அறிவுத்திறனின் மதிப்பைப் பற்றி அறிந்து கொள்வார்கள்.</td><td>கம்ப்யூட்டிங்கின் தாக்கம்</td><td><img src="/images/e18.png" width="90%"></td>   </tr>
+     </tr>
+          <tr>
+     <th rowspan="3" id="t06">course F</th>
+            <td><a href= "https://studio.code.org/s/coursef-2021/lessons/6">F.6 –வெற்றிடக் கதைகள்</a><br><i>* வழங்குபொருட்கள்: 6 கடிதவுறை (மேலும் பொருத்தமானது: காகிதம் அல்லது குறியீட்டு அட்டைகள், பாதியாக மடிக்கப்பட்டது)</i><br><small> கணினிகள் ஒரு பயனரிடமிருந்து உள்ளீட்டை எவ்வாறு எடுத்துச் சேமித்து வைக்கின்றன பின்னர் நிரல் இயங்கும்போது அதை எப்படி பயன்படுத்துகின்றன என்பதைப் புரிந்துகொள்வதற்கான சூழலாக மாணவர்கள் கோடிட்ட இடத்தை நிரப்பு கதைகளைப் (Mad Libs ® போன்றது) பயன்படுத்துவார்கள், பின்னர் அதை ஒரு நிரல் ஓட்டங்களாகப் பயன்படுத்துவார்கள்.
+   </td><td>மாறிகள்</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
+     </tr>
          <tr>
-    <th rowspan="3" id="t05">Course E</th>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/7">E.7 - Digital Sharing</a><br><i>*Supplies: Smartphone or tablet</i><br><small>Loaned to Computer Science Fundamentals by the team over at Copyright and Creativity, this lesson exists to help students understand the challenges and beneﬁts of respecting ownership and copyright, particularly in digital environments. Students should be encouraged to respect artists’ rights as an important part of being an ethical digital citizen.</td><td>Digital Citizenship</td><td>{{ curriculum/unplugged/coursee_one_video_thumbnail }}</td>
-  </tr>
-  <tr>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/11">E.11 - Songwriting</a><br><small>One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions can be such a helpful practice.</td><td>Functions</td><td>{{ curriculum/unplugged/coursee_two_video_thumbnail }}</td>
-  <tr>
-    <td><a href="https://studio.code.org/s/coursee-2021/lessons/17">E.17 - Designing for Accessibility</a><br><small>In this lesson, students will learn about accessibility and the value of empathy through brainstorming and designing accessible solutions for hypothetical apps.</td><td>Impacts of Computing</td><td><img src="/images/e18.png" width="90%"></td>
-  </tr>
-    </tr>
-         <tr>
-    <th rowspan="3" id="t06">Course F</th>
-           <td><a href= "https://studio.code.org/s/coursef-2021/lessons/6">F.6 -Blank Space Stories</a><br><i>*Supplies: 6 envelopes(also suitable:paper or index cards,folded in half)</i><br><small>Students will use fill-in-the-blank stories (similar to Mad Libs®) as a context for understanding how computers take and store input from a user, then use it later as a program runs.
-   </td><td>Variables</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>  
-  </tr>
-        <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 - For Loop Fun</a><br><i>*Supplies: Dice (3 dice/group of 2-4)</i><br><small>We know that loops allow us to do things over and over again, but now we’re going to learn how to use loops that have extra structures built right in. These new structures will allow students to create code that is more powerful and dynamic.</td><td>For Loops</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
-  </tr>
-  <tr>
-    <td><a href="https://studio.code.org/s/coursef-2021/lessons/19">F.19 - The Internet</a><br><small>Even though many people use the internet daily, not very many know how it works. In this lesson, students will pretend to flow through the internet, all the while learning about connections, URLs, IP Addresses, and the DNS.</td><td>Data</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>
-  </tr>
+     <td><a href="https://studio.code.org/s/coursef-2021/lessons/13">F.13 – லூப் வேடிக்கைக்காக</a><br><i>* வழங்குபொருட்கள்: பகடை (3 பகடை/2-4 கொண்ட தொகுதி)</i><br><small> லூப்கள் மீண்டும் மீண்டும் விஷயங்களைச் செய்ய அனுமதிக்கின்றன என்பதை நாம் அறிவோம், ஆனால் இப்போது கூடுதல் கட்டமைப்புகளைக் கொண்ட லூப்களை எவ்வாறு பயன்படுத்துவது என்பதைக் கற்றுக்கொள்வோம். இந்த புதிய கட்டமைப்புகள் மாணவர்கள் மிகவும் சக்திவாய்ந்த மற்றும் ஆற்றல்மிக்க குறியீட்டை உருவாக்க அனுமதிக்கும்.</td><td> லூப்ஸுக்காக</td><td>{{ curriculum/unplugged/coursef_three_video_thumbnail }}</td>
+   </tr>
+   <tr>
+     <td><a href="https://studio.code.org/s/coursef-2021/lessons/19">F.19 - இணையம்</a><br><small> பலர் தினமும் இணையத்தைப் பயன்படுத்தினாலும், அது எவ்வாறு செயல்படுகிறது என்பது பலருக்குத் தெரியாது. இந்த பாடத்தில், மாணவர்கள் இணையம் வழியாக வேலை செய்வதாக பாசாங்கு செய்வார்கள், அந்த எல்லா நேரங்களிலும் இணைப்புகள், URLகள், IP முகவரிகள் மற்றும் DNS போன்றவற்றை அறிந்து கொள்வார்கள்.</td><td>தரவு</td><td>{{ curriculum/unplugged/coursef_two_video_thumbnail }}</td>   </tr>
 </table>
 
 <p style="clear:both"></p>
 
 ***
-## Additional Unplugged lessons
+## கூடுதல் அன்பிளக்டு பாடங்கள்
 
-The following lessons are organized by concept and can be found in earlier versions of our CS Fundamentals courses. Additional resources you may want to consult as you plan to use these lessons include:
-* [2019 Course A-F Curriculum Guide](https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview) | [2019 Course A-F Supply List](https://docs.google.com/document/d/e/2PACX-1vRLQiHVgq1oIXytilpBZDoeEn2_JcIN__r600AbUKTSGkQDaydXAGKpmUu1J7mTVBEkh9ZOnGcBDQQt/pub) | [2019 Course Amazon Lists](https://www.amazon.com/ideas/amzn1.account.AFRP6N2PQKQ73HHEN6SJNS5ONHEA)
-* [2018 Course A-F Curriculum Guide](https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf)
-* [2017 Course A-F Curriculum Guide (v2)](https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf)
-* [Course 1-4 Curriculum Guide](http://code.org/curriculum/docs/k-5/complete_compressed.pdf)
-* [CSF Flashcards](https://code.org/curriculum/docs/k-5/flashCards.pdf) <br><br>
+பின்வரும் பாடங்கள் கருத்துப்படி ஒழுங்கமைக்கப்பட்டுள்ளன, மேலும் இதை எங்கள் கணினி அறிவியல் அடிப்படை பாடத் தொகுதிகளின் முந்தைய பதிப்புகளில் காணலாம். இந்தப் பாடங்களைப் பயன்படுத்த நீங்கள் திட்டமிடும் போது, நீங்கள் கலந்தாலோசிக்க வேண்டிய கூடுதல் ஆதாரங்கள்:
+* [2019 பாடத் தொகுதி A-F பாடத்திட்ட வழிகாட்டி](https://docs.google.com/document/d/1UqCgO06NzB1L6y83fnwnUcYdKr3MooJAaUZajj48DnI/preview) | [2019 பாடத்தொகுதி A-F வழங்குபொருட்களின் பட்டியல்](https://docs.google.com/document/d/e/2PACX-1vRLQiHVgq1oIXytilpBZDoeEn2_JcIN__r600AbUKTSGkQDaydXAGKpmUu1J7mTVBEkh9ZOnGcBDQQt/pub) | [2019 பாடத் தொகுதி Amazon பட்டியல்](https://www.amazon.com/ideas/amzn1.account.AFRP6N2PQKQ73HHEN6SJNS5ONHEA)
+* [2018 படிப்பின் A-F பாடத்திட்ட வழிகாட்டி](https://code.org/curriculum/docs/csf/CSF_Curriculum_Guide_2018_smaller.pdf)
+* [2017 படிப்பின் A-F பாடத்திட்ட வழிகாட்டி (v2)](https://code.org/curriculum/docs/csf/CSF_TeacherGuide_CoursesA-F_v2a_small.pdf)
+* [பாடத் தொகுதி 1-4 பாடத்திட்ட வழிகாட்டி](http://code.org/curriculum/docs/k-5/complete_compressed.pdf)
+* [CSF ஃப்ளாஷ்கார்டுகள்](https://code.org/curriculum/docs/k-5/flashCards.pdf) <br><br>
 
 <style>
 table, th, td {
@@ -159,74 +156,74 @@ th, td {
 </style>
 <table style="width:100%">
   <tr>
-    <th><center><big>Concept</th>
-    <th width=65%><center><big>Lesson Plan <br>
-<small> Lesson Plan includes additional resources (slides, videos, answer keys, etc).
+    <th><center><big>கோட்பாடு </th>
+     <th width=65%><center><big>பாடத்திட்டம் <br>
+<small> பாடத் திட்டத்தில் கூடுதல் ஆதாரங்கள் (ஸ்லைடுகள், வீடியோக்கள், பதில் குறிகாட்டிகள் போன்றவை) அடங்கும்.
 </th> 
-    <th><center><big>Resources</th>
+     <th><center><big>வளங்கள்</th>
+      <tr>
+     <th rowspan="2" id=t07 width=5%>டிஜிட்டல் சிட்டிசன்ஷிப்</th>
+     <td><a href="https://curriculum.code.org/csf-19/coursef/18">கிரவுட் சோர்சிங்</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>
+   </tr>
+   <tr>
+       <td colspan="2">*பொது அறிவுக் கல்வி ஒரு <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">முழு டிஜிட்டல் சிட்டிசன்ஷிப் பாடத்திட்டம்</a> அன்பிளக்டு செயல்பாடுகள் உட்பட</td>
      <tr>
-    <th rowspan="2" id=t07 width=5%>Digital Citizenship</th>
-    <td><a href="https://curriculum.code.org/csf-19/coursef/18">Crowdsourcing</a></td> <td>{{ curriculum/unplugged/archive_one_video_thumbnail }}</td>
+     <th id=t07>பைனரி</th>
+         <td><a href="https://curriculum.code.org/csf-20/coursed/16/">பைனரி படங்கள் </a><br><small>* வழங்குபொருட்கள்:விருப்பத்தேர்வானது - மாணவர்களுக்குக் காட்டுவதற்கு எதிரெதிர் உருப்படிகளின் குழுக்கள். பலர் பைனரியை கண்டிப்பாக பூஜ்ஜியங்கள் மற்றும் ஒன்றுகள் என்று நினைத்தாலும், பல வகையான பைனரி விருப்பங்களிலும் தகவல்களைப் பிரதிநிதித்துவப்படுத்தலாம் என்ற எண்ணத்தை மாணவர்களுக்கு அறிமுகம் செய்யப்படும். இந்த பாடம் அந்த கருத்தை ஒரு படி மேலே கொண்டு செல்கிறது, ஏனெனில் ஒரு கணினி எப்படி இன்னும் சிக்கலான தகவல்களை (படங்கள் மற்றும் வண்ணங்கள் போன்றவை) பைனரியில் சேமிக்க முடியும் என்பதை விளக்குகிறது.</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
   </tr>
-  <tr>
-      <td colspan="2">*Common Sense Education has a <a href="https://www.commonsense.org/education/digital-citizenship/curriculum">full Digital Citizenship Curriculum</a> that includes many unplugged activities.</td>
-    <tr>
-    <th id=t07>Binary</th>
-        <td><a href="https://curriculum.code.org/csf-20/coursed/16/">Binary Images </a><br><small>*Supplies:Optional - Groupings of opposite items to display to students. Though many people think of binary as strictly zeros and ones, students will be introduced to the idea that information can be represented in a variety of binary options. This lesson takes that concept one step further as it illustrates how a computer can store even more complex information (such as images and colors) in binary, as well.</td><td>{{ curriculum/unplugged/coursed_four_video_thumbnail }}</td>
- </tr>
-    <tr>
-    <th id=t07>Loops</th>
-        <td><a href="https://curriculum.code.org/csf-18/coursee/6/">My Loopy Robotic Friends</a><br><small>Here, students learn the simplicity and utility of loops by “programming” their friends using the language from "My Robotic Friends." Once loops are introduced, students will find that they can build bigger structures faster.
+     <tr>
+     <th id=t07>லூப்ஸ்</th>
+         <td><a href="https://curriculum.code.org/csf-18/coursee/6/">மை லூப்பி ரோபோட்டிக் ஃப்ரெண்ட்ஸ்</a><br><small> இங்கே, மாணவர்கள் "My Robotic Friends" என்பதில் உள்ள மொழியைப் பயன்படுத்தி தங்கள் நண்பர்களை "புரொகிராமிங்" செய்வதன் மூலம் லூப்களின் எளிமை மற்றும் பயன்பாட்டைக் கற்றுக்கொள்கிறார்கள் லூப்கள் அறிமுகப்படுத்தப்பட்டவுடன், மாணவர்கள் பெரிய கட்டமைப்புகளை விரைவாக உருவாக்க முடியும் என்பதை அறிவார்கள்.
 </td> <td>{{ curriculum/unplugged/archive_two_video_thumbnail }}</td>
-  </tr>
-     <th rowspan="2" id=t07>Functions</th>
-    <td><a href="https://code.org/curriculum/course3/4/Teacher">Functional Suncatchers</a><br><small>In this lesson, students will make a suncatcher out of string, beads, and a special charm. The students will follow a series of repetitive steps, then be asked to identify certain sets of “skills” that are duplicated several times. Once those skills are defined, they will be called from a main program and the whole beautiful process of creation will be recorded on a single sheet of paper. The final program will be geared toward the entire class, whatever their type of string, beads, and charms. To effectively allow for this, students will need to “abstract out” the details of their specific materials and create vague terms for an individual’s supplies. This use of generic placeholders is a wonderful introduction to variables.</td> <td><a href="https://youtu.be/d1MdyeXy0v0">Lesson Video</a><br><a href="https://www.youtube.com/watch?v=Rb5DNYhLb7I">See Lesson in Action</a><br><a href="https://www.code.org/curriculum/course3/4/Key-Activity4-FunctionalSuncatchers.pdf">Activity Answer Key <a href="https://www.code.org/curriculum/course3/4/Key-Assessment4-FunctionalSkills.pdf">Assessment Answer Key</a></td>
-  </tr>
-  <tr>
-    <td><a href="https://curriculum.code.org/csf-1718/coursef/21/">Songwriting with Parameters</a><br><small>One of the most magnificent structures in the computer science world is the function. Functions (sometimes called procedures) are mini programs that you can use over and over inside of your bigger program. This lesson will help students intuitively understand why combining chunks of code into functions is such a helpful practice, and how they can use those structures even when chunks of code are slightly different.
+   </tr>
+      <th rowspan="2" id=t07>ஃபங்க்‌ஷன்கள்</th>
+     <td><a href="https://code.org/curriculum/course3/4/Teacher">ஃபங்க்‌ஷனல் சன்கேச்சர்ஸ்</a><br><small> இந்த பாடத்தில், மாணவர்கள் சரம், மணிகள் மற்றும் ஒரு சிறப்பு அலங்காரப்பொருள் கொண்டு ஒரு சன்காச்சரை உருவாக்குவார்கள். மாணவர்கள் தொடர்ச்சியான தொடர் படிநிலைகளைப் பின்பற்றுவார்கள், பின்னர் பல முறை நகலெடுக்கப்பட்ட சில "திறன்களை" அடையாளம் காணும்படி கேட்கப்படுவார்கள். அந்த திறன்கள் வரையறுக்கப்பட்டவுடன், அவை ஒரு முக்கிய புரொகிராமிலிருந்து எடுக்கப்பட்டு, அந்த உருவாக்கத்தின் முழு அழகான செயல்முறையும் ஒரு தாளில் பதிவு செய்யப்படும். இறுதி புரொகிராம் முழு வகுப்பிற்கும், அவர்களின் சரம், மணிகள் மற்றும் அலங்காரப்பொருள் எதுவாக இருந்தாலும் சரி அவர்களுக்கு அனுப்பப்படும். இதை திறம்பட அனுமதிக்க, மாணவர்கள் தங்கள் குறிப்பிட்ட பொருட்களின் விவரங்களை "சுருக்கம்" செய்ய வேண்டும் மற்றும் ஒரு தனிநபரின் விநியோகங்களுக்கு தெளிவற்ற விதிமுறைகளை உருவாக்க வேண்டும். இந்த பொதுவான பிளேஸ்ஹோல்டர்களின் பயன்பாடு வேரியபிள்களுக்கு ஒரு அற்புதமான அறிமுகமாகும்.</td> <td><a href="https://youtu.be/d1MdyeXy0v0">பாட வீடியோ</a><br><a href="https://www.youtube.com/watch?v=Rb5DNYhLb7I">பாடத்தை செயல்பாட்டில் பார்க்கவும்</a><br><a href="https://www.code.org/curriculum/course3/4/Key-Activity4-FunctionalSuncatchers.pdf">நடவடிக்கைக்கான பதில் விசை <a href="https://www.code.org/curriculum/course3/4/Key-Assessment4-FunctionalSkills.pdf">மதிப்பீட்டிற்கான பதில் விசை</a></td>
+   </tr>
+   <tr>
+     <td><a href="https://curriculum.code.org/csf-1718/coursef/21/">அளவுருக்களுடன் பாடல் எழுதுவது</a><br><small> கணினி அறிவியல் உலகில் மிக அற்புதமான கட்டமைப்புகளில் ஒன்று ஃபன்க்‌ஷன் ஆகும். ஃபன்க்‌ஷன்கள் (சில நேரங்களில் நடைமுறைகள் என்று அழைக்கப்படுகின்றன) உங்கள் பெரிய புரொகிராமின் உள்ளே நீங்கள் மீண்டும் மீண்டும் பயன்படுத்தக்கூடிய சிறிய புரொகிராம்களாகும். குறியீட்டின் சிறு துகள்களை ஃபன்க்‌ஷன்களாக இணைப்பது ஏன் மிகவும் பயனுள்ள நடைமுறை என்பதையும், குறியீட்டின் சிறு துகள்கள் சற்று வித்தியாசமாக இருந்தாலும் அந்த கட்டமைப்புகளை எவ்வாறு பயன்படுத்தலாம் என்பதையும் மாணவர்களுக்கு உள்ளுணர்வுடன் புரிந்துகொள்ள இந்தப் பாடம் உதவும்.
 </td> <td>{{ curriculum/unplugged/archive_three_video_thumbnail }}</td>
-  </tr>
-     <th rowspan="6" id=t07>Algorithms</th>
-    <td><a href="https://curriculum.code.org/csf-1718/coursee/10/">Dice Race</a><br><small>In this lesson, students will relate the concept of algorithms back to real-life activities by playing the Dice Race game. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.
+   </tr>
+      <th rowspan="6" id=t07>அல்காரிதம்கள்</th>
+     <td><a href="https://curriculum.code.org/csf-1718/coursee/10/">டைஸ் ரேஸ்</a><br><small> இந்த பாடத்தில், மாணவர்கள் டைஸ் ரேஸ் விளையாட்டை விளையாடுவதன் மூலம் அல்காரிதம்களின் கருத்தை நிஜ வாழ்க்கை நடவடிக்கைகளுடன் தொடர்புபடுத்துவார்கள். நிஜ உலக சூழ்நிலைகளை ஆன்லைன் காட்சிகளாக மொழிபெயர்ப்பதற்கான திறன்களை உருவாக்கத் தொடங்குவதும் அதன் எதிர் செயலுமே இங்குள்ள இலக்காகும்.
 </td> <td>{{ curriculum/unplugged/archive_four_video_thumbnail }}</td>
-  </tr>
-  <tr>
-    <td><a href="https://curriculum.code.org/csf-18/coursee/1">My Robotic Friends</a><br><small>Using a predefined symbol key, your students will figure out how to guide one another to accomplish specific tasks without using any verbal commands. This segment teaches students the connection between symbols and actions, the difference between an algorithm and a program, and the valuable skill of debugging.</td> <td>{{ curriculum/unplugged/archive_five_video_thumbnail }}</td>
-  </tr>
-    <tr>
-    <td><a href="https://curriculum.code.org/csf-18/coursec/4/">Real-Life Algorithms: Paper Planes</a><br><small>In this lesson, students will relate the concept of algorithms back to everyday activities. After discussing algorithms, students will make paper airplanes using an algorithm. The goal here is to start building the skills to translate real world situations to online scenarios and vice versa.</td> <td>{{ curriculum/unplugged/archive_six_video_thumbnail }}</td>
-  </tr>
-    <tr>
-    <td><a href="https://curriculum.code.org/csf-18/coursea/3/">Real Life Algorithms: Plant a Seed</a><br><small>In this lesson, students will relate the concept of algorithms back to everyday, real-life activities by planting an actual seed. The goal here is to start building the skills to translate real-world situations to online scenarios and vice versa.</td> <td>{{ curriculum/unplugged/archive_seven_video_thumbnail }}</td>
-  </tr>
-    <tr>
-    <td><a href="https://curriculum.code.org/csf-1718/coursef/10/">Tangrams</a><br><small>This lesson shows us something important about algorithms. As long as you keep an algorithm simple, there are lots of ways to use it. However, if you want to make sure everyone produces the same outcome, then your algorithm needs more detail. Students will learn the difference between a detailed and general algorithm while playing with tangrams.</td> <td>{{ curriculum/unplugged/archive_eight_video_thumbnail }}</td>
-  </tr>
-  </tr>
-    <tr>
-  </tr>
-    </tr>
-     <th id=t07 rowspan="4">Computational Thinking</th>
-        <tr>
-        <td><a href="https://code.org/curriculum/course3/1/Teacher">Computational Thinking</a><br><small>For this activity, no instructions are provided. Instead, students will use examples of what imaginary players have done to figure out how to play the game. This lesson gives students the opportunity to practice the four arts of computational thinking (decomposition, pattern matching, abstraction, and algorithms) in one cohesive activity.</td> <td><a href="https://youtu.be/TlAaklrolA0">Lesson Video</a><br><a href="https://www.youtube.com/watch?v=b4a7Ty1TpKU">See Lesson in Action</a><br><a href="https://www.code.org/curriculum/course3/1/Key-Activity1-ComputationalThinking.pdf">Activity Answer Key </a></td>
-        </tr>
-        <td><a href="https://studio.code.org/unplugged/unplug2.pdf">Computational Thinking with Monsters</a><br><small>With nothing but paper and markers, students will learn the four steps of computational thinking. After a brief introduction, students should be split into groups where they will have to create directions for other students to draw a specific monster (from a catalog of pre-selected monsters). The entire task must be decomposed, then teams will analyze all monsters in the catalog for patterns, abstract similar details from the monsters, then use that information to create an algorithm (directions) for another team to draw a certain monster. Teams will then switch algorithms with another group and draw the monster based on what that algorithm indicates. Is the drawing what the original team intended?</td> <td>{{ curriculum/unplugged/archive_nine_video_thumbnail }}</td>
-  <tr>
-    <td><a href="https://curriculum.code.org/csf-18/coursea/1/">Unspotted Bugs</a><br><small>This lesson will guide students through the steps of debugging. Students will learn the mantra: "What happened? What was supposed to happen? What does that tell you?" </td> <td>{{ curriculum/unplugged/archive_ten_video_thumbnail }}</td>
-  </tr>
-    </tr>
-     <th rowspan="2" id=t07>Persistence</th>
-  <td><a href="https://curriculum.code.org/csf-18/coursec/1/">Building a Foundation</a><br><small>New and unsolved problems are often pretty hard. If we want to have any chance of making something creative, useful, and clever, then we need to be willing to attack hard problems even if it means failing a few times before we succeed. In this lesson, students will be building a structure with common materials. The structure will be tested on its ability to hold a textbook for more than ten seconds. Most students will not get this right the first time, but it's important they push through and keep trying.</td> <td>{{ curriculum/unplugged/archive_eleven_video_thumbnail }}</td>
-  </tr>
-  <tr>
- <td><a href="https://curriculum.code.org/csf-18/coursea/2/">Stevie and the Big Project</a><br><small>When students run into a barrier while answering a question or working on a project, it’s so easy for them to get frustrated and give up. This lesson will introduce students to the idea that frustration can be an important part of learning. Here, frustration is presented as a step in the creative process, rather than a sign of failure. This lesson can be done over one or two class sessions. If you have more time, feel free to draw out the building and revising phase of the Marble Run activity.</td> <td>{{ curriculum/unplugged/archive_twelve_video_thumbnail }}</td>
-  </tr>
-     <th id=t07>Abstraction</th>
-    <td><a href="https://code.org/curriculum/course4/5/Teacher">Mad Glibs</a><br><small>Abstraction is one of the most important skills for a computer scientist to understand. It simplifies problems and prevents unnecessary repetition. A good coder uses abstraction just about every time she creates a program. This activity will have your students analyze stories for differences so that they can abstract them away. Those abstracted stories become templates for fun and crazy new ones.</td> <td><a href="https://youtu.be/TctGRrUdkcc">Lesson Video</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Activity5-MadGlibs.pdf">Activity Answer Key</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Assessment5-MadGlibs.pdf">Assessment Answer Key </a></td>
-  </tr>
+   </tr>
+   <tr>
+     <td><a href="https://curriculum.code.org/csf-18/coursee/1">என் ரோபோட்டிக் ஃப்ரெண்ட்ஸ்</a><br><small> முன் வரையறுக்கப்பட்ட குறியீட்டு விசையைப் பயன்படுத்தி, எந்தவொரு வாய்மொழி கட்டளைகளையும் பயன்படுத்தாமல் குறிப்பிட்ட பணிகளைச் செய்ய ஒருவருக்கொருவர் எவ்வாறு வழிகாட்டுவது என்பதை உங்கள் மாணவர்கள் கண்டுபிடிப்பார்கள். இந்த பிரிவு மாணவர்களுக்கு குறியீடுகள் மற்றும் செயல்களுக்கு இடையேயான தொடர்பை, அல்காரிதம் மற்றும் புரோகிராமுக்கு இடையே உள்ள வேறுபாடு மற்றும் பிழைத்திருத்தத்தின் மதிப்புமிக்க திறன் ஆகியவற்றைக் கற்பிக்கிறது.</td> <td>{{ curriculum/unplugged/archive_five_video_thumbnail }}</td>
+   </tr>
+     <tr>
+     <td><a href="https://curriculum.code.org/csf-18/coursec/4/">நிஜவாழ்வு அல்காரிதம்கள்: காகித விமானங்கள்</a><br><small> இந்த பாடத்தில், மாணவர்கள் அல்காரிதம்களின் கருத்தை அன்றாட நடவடிக்கைகளுடன் தொடர்புபடுத்துவார்கள். அல்காரிதம்களைப் பற்றி விவாதித்த பிறகு, மாணவர்கள் அல்காரிதத்தைப் பயன்படுத்தி காகித விமானங்களை உருவாக்குவார்கள். நிஜ உலக சூழ்நிலைகளை ஆன்லைன் காட்சிகளாக மொழிபெயர்ப்பதற்கான திறன்களை உருவாக்கத் தொடங்குவதும் அதற்கு நேர் எதிரான செயல்பாடுமே இங்குள்ள இலக்காகும்.</td> <td>{{ curriculum/unplugged/archive_six_video_thumbnail }}</td>
+   </tr>
+     <tr>
+     <td><a href="https://curriculum.code.org/csf-18/coursea/3/">நிஜ வாழ்வு அல்காரிதம்கள்: ஒரு விதையை நடுதல்</a><br><small> இந்தப் பாடத்தில், மாணவர்கள் ஒரு உண்மையான விதையை விதைப்பதன் மூலம் அல்காரிதம்களின் கருத்தை அன்றாட, நிஜ வாழ்க்கை நடவடிக்கைகளுடன் தொடர்புபடுத்துவார்கள். நிஜ உலக சூழ்நிலைகளை ஆன்லைன் காட்சிகளாக மொழிபெயர்ப்பதற்கான திறன்களை உருவாக்கத் தொடங்குவதும் அதற்கு நேர் எதிரான செயல்பாடுமே இங்குள்ள இலக்காகும்.</td> <td>{{ curriculum/unplugged/archive_seven_video_thumbnail }}</td>
+   </tr>
+     <tr>
+     <td><a href="https://curriculum.code.org/csf-1718/coursef/10/">டேன்கிராம்ஸ்</a><br><small> இந்த பாடம் அல்காரிதம் பற்றிய முக்கியமான ஒன்றை நமக்குக் காட்டுகிறது. நீங்கள் ஒரு அல்காரிதத்தை எளிமையாக வைத்திருக்கும் வரை, அதைப் பயன்படுத்த பல வழிகள் உள்ளன. இருப்பினும், அனைவரும் ஒரே விளைவை உருவாக்குவதை உறுதிசெய்ய விரும்பினால், உங்கள் அல்காரிதத்திற்கு கூடுதல் விவரங்கள் தேவை. டேன்கிராம்களுடன் விளையாடும் போது மாணவர்கள் ஒரு விரிவான மற்றும் ஒரு பொதுவான அல்காரிதத்திற்கு இடையே உள்ள வித்தியாசத்தை அறிந்து கொள்வார்கள்.</td> <td>{{ curriculum/unplugged/archive_eight_video_thumbnail }}</td>
+   </tr>
+   </tr>
+     <tr>
+   </tr>
+     </tr>
+      <th id=t07 rowspan="4">கம்ப்யூடேஷனல் சிந்தனை</th>
+         <tr>
+         <td><a href="https://code.org/curriculum/course3/1/Teacher"> கம்ப்யூடேஷனல் சிந்தனை</a><br><small> இந்த நடவடிக்கைக்கு, எந்த வழிமுறைகளும் வழங்கப்படவில்லை. மாறாக, விளையாட்டை எப்படி விளையாடுவது என்பதைக் கண்டுபிடிக்க கற்பனை வீரர்கள் என்ன செய்தார்கள் என்பதற்கான எடுத்துக்காட்டுகளை மாணவர்கள் பயன்படுத்துவார்கள். இந்த பாடம் மாணவர்களுக்கு ஒரு ஒருங்கிணைந்த செயல்பாட்டில் கணக்கீட்டு சிந்தனையின் நான்கு கலைகளை (சிதைவு, வடிவப் பொருத்தம், சுருக்கம் மற்றும் அல்காரிதம்கள்) பயிற்சி செய்வதற்கான வாய்ப்பை வழங்குகிறது.</td> <td><a href="https://youtu.be/TlAaklrolA0">பாட வீடியோ</a><br><a href="https://www.youtube.com/watch?v=b4a7Ty1TpKU">பாடத்தை செயல்பாட்டில் காணுங்கள்</a><br><a href="https://www.code.org/curriculum/course3/1/Key-Activity1-ComputationalThinking.pdf">நடவடிக்கைக்கான பதில் விசை </a></td>
+         </tr>
+         <td><a href="https://studio.code.org/unplugged/unplug2.pdf">மான்ஸ்ட்டர்களுடன் கம்ப்யூடேஷனல் சிந்தனை</a><br><small> காகிதம் மற்றும் மார்க்கர்களை மட்டும் கொண்டு, மாணவர்கள் கணக்கீட்டு சிந்தனையின் நான்கு படிநிலைகளைக் கற்றுக்கொள்வார்கள். ஒரு சிறிய அறிமுகத்திற்குப் பிறகு, மாணவர்கள் குழுக்களாகப் பிரிக்கப்பட வேண்டும், அங்கு அவர்கள் மற்ற மாணவர்களுக்கு ஒரு குறிப்பிட்ட மான்ஸ்ட்டரை (முன் தேர்ந்தெடுக்கப்பட்ட மான்ஸ்ட்டர்களின் பட்டியலிலிருந்து) வரைவதற்கான முறைகளை உருவாக்க வேண்டும். முழுப் பணியும் கலைக்கப்பட வேண்டும், பின்னர் குழுக்கள் அட்டவணையில் உள்ள அனைத்து மான்ஸ்ட்டர்களையும் அதன் வடிவங்களுக்காக பகுப்பாய்வு செய்யும், மான்ஸ்ட்டர்களிடமிருந்து ஒத்த விவரங்களை சுருக்கவும், பின்னர் அந்த தகவலைப் பயன்படுத்தி மற்றொரு குழு ஒரு குறிப்பிட்ட மான்ஸ்ட்டரை வரைய ஒரு அல்காரிதத்தை (வழிமுறைகளை) உருவாக்க வேண்டும். அணிகள் மற்றொரு குழுவுடன் அல்காரிதம்களை மாற்றிக்கொண்டு, அந்த அல்காரிதம் எதைக் குறிப்பிடுகிறதோ அதன் அடிப்படையில் மான்ஸ்ட்டரை வரைவார்கள். அந்த ஓவியம் அசல் குழு நினைத்ததைப் போல் உள்ளதா? </td> <td>{{ curriculum/unplugged/archive_nine_video_thumbnail }}</td>
+   <tr>
+     <td><a href="https://curriculum.code.org/csf-18/coursea/1/">அன்ஸ்பாட்டட் பக்ஸ்</a><br><small> இந்த பாடம் மாணவர்களுக்கு பிழைத்திருத்தத்தின் படிநிலைகளுக்கு வழிகாட்டும். மாணவர்கள் இந்த மந்திரத்தைக் கற்றுக்கொள்வார்கள்: “என்ன நடந்தது? என்ன நடந்திருக்க வேண்டும்? அது உங்களுக்கு என்ன சொல்கிறது </td> <td>{{ curriculum/unplugged/archive_ten_video_thumbnail }}</td>
+   </tr>
+     </tr>
+      <th rowspan="2" id=t07>பெர்சிஸ்டன்ஸ்</th>
+   <td><a href="https://curriculum.code.org/csf-18/coursec/1/">ஒரு அடிப்படையைக் கட்டமைத்தல்</a><br><small> புதிய மற்றும் தீர்க்கப்படாத சிக்கல்கள் பெரும்பாலும் கடினமானவை. ஆக்கப்பூர்வமான, பயனுள்ள மற்றும் புத்திசாலித்தனமான ஒன்றைச் செய்வதற்கு ஒரு வாய்ப்பைப் பெற விரும்பினால், நாம் வெற்றிபெறுவதற்கு முன்பு, சில முறை தோல்வியுற்றாலும், கடினமான பிரச்சனைகளை எதிர்கொள்ள நாம் தயாராக இருக்க வேண்டும். இந்த பாடத்தில், மாணவர்கள் சாதாரண பொருட்களைக் கொண்டு ஒரு கட்டமைப்பை உருவாக்குவார்கள். ஒரு பாடப்புத்தகத்தை பத்து வினாடிகளுக்கு மேல் பிடித்துக்கொண்டிருக்கும் திறனுக்காக இந்த அமைப்பு சோதிக்கப்படும். பெரும்பாலான மாணவர்கள் முதல் முறையிலேயே இதைச் சரியாகப் பெற மாட்டார்கள், ஆனால் அவர்கள் முழு மூச்சுடன் தொடர்ந்து முயற்சி செய்வது முக்கியம்.</td> <td>{{ curriculum/unplugged/archive_eleven_video_thumbnail }}</td>
+   </tr>
+   <tr>
+  <td><a href="https://curriculum.code.org/csf-18/coursea/2/">ஸ்டீவ் மற்றும் பிக் புராஜக்ட்</a><br><small> ஒரு கேள்விக்கு பதிலளிக்கும் போது அல்லது ஒரு திட்டத்தில் பணிபுரியும் போது மாணவர்கள் ஏதாவதொரு தடங்கலில் சிக்கினால், அவர்கள் விரக்தியடைந்து அதை விட்டுவிடுவது எளிதான காரியம். விரக்தி என்பது கற்றலின் ஒரு முக்கிய அங்கமாக இருக்கும் என்ற எண்ணத்தை இந்தப் பாடம் மாணவர்களுக்கு அறிமுகப்படுத்தும். இங்கே, விரக்தி தோல்வியின் அறிகுறியாக இல்லாமல், படைப்புச் செயல்பாட்டில் ஒரு படிநிலையாக முன் வைக்கப்படுகிறது. இந்த பாடத்தை ஒன்று அல்லது இரண்டு வகுப்பு அமர்வுகளில் செய்யலாம். உங்களுக்கு அதிக நேரம் இருந்தால், மார்பிள் ரன் செயல்பாட்டின் கட்டிடம் மற்றும் திருத்தியமைகும் நிலையை வரையலாம்.</td> <td>{{ curriculum/unplugged/archive_twelve_video_thumbnail }}</td>
+   </tr>
+      <th id=t07>சுருக்கம்</th>
+     <td><a href="https://code.org/curriculum/course4/5/Teacher"> மாட் –கிளிப்ஸ்</a><br><small> ஒரு கணினி விஞ்ஞானி புரிந்து கொள்ள வேண்டிய மிக முக்கியமான திறன்களில் ஒன்று சுருங்கச் சொல்வதாகும். இது சிக்கல்களை எளிதாக்கி தேவையற்ற மறு செயல்முறைகளை தடுக்கிறது. ஒரு நல்ல குறியீட்டாளர் ஒவ்வொரு முறையும் ஒரு புரொகிராமை உருவாக்கும் போது சுருங்கச் சொல்வதை பயன்படுத்துகிறார். இந்தச் செயல்பாடு உங்கள் மாணவர்களை கதைகளில் உள்ள வேறுபாடுகளைப் பகுப்பாய்வு செய்யும், இதனால் அவர்கள் அவற்றை சுருக்கிக் கொள்ளலாம். அந்த சுருக்கமான கதைகள் வேடிக்கையான புதிய கதைகளுக்கான டெம்ப்ளேட்களாக மாறும்.</td> <td><a href="https://youtu.be/TctGRrUdkcc">பாட வீடியோ</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Activity5-MadGlibs.pdf">நடவடிக்கைக்கான பதில் விசை</a><br><a href="https://www.code.org/curriculum/course4/5/Key-Assessment5-MadGlibs.pdf">மதிப்பீட்டிற்கான பதில் விசை </a></td>
+   </tr>
 <tr>
-   <th id=t07>Variables</th>
-​     <td><a href="https://curriculum.code.org/csf-20/coursef/7/">Envelope Variables</a><br><i>*Supplies: Envelopes (1-4/group of 2-4)</i><br><small>Variables are used as placeholders for values such as numbers or words. Variables allow for a lot of freedom in programming. Instead of having to type out a phrase many times or remember an obscure number, computer scientists can use variables to reference them. This lesson helps to explain what variables are and how we can use them in many different ways. The idea of variables isn't an easy concept to grasp, so we recommend allowing plenty of time for discussion at the end of the lesson.</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td>
+    <th id=t07>மாறிகள்</th>
+      <td><a href="https://curriculum.code.org/csf-20/coursef/7/">கடித உறை மாறிகள்</a><br><i>*வழங்குபொருட்கள்: கடித உறைகள் (1-4/ 2-4 உள்ள குழு)</i><br><small> எண்கள் அல்லது சொற்கள் போன்ற மதிப்புகளுக்கு மாறிகள் பிளேஸ் ஹோல்டர்களாகப் பயன்படுத்தப்படுகின்றன. மாறிகள் புரொகிராமிங்கில் அதிக சுதந்திரத்தை அனுமதிக்கின்றன. ஒரு சொற்றொடரை பல முறை தட்டச்சு செய்வதற்கு அல்லது தெளிவற்ற எண்ணை நினைவில் வைத்திருப்பதற்குப் பதிலாக, கணினி விஞ்ஞானிகள் அவற்றைக் குறிப்பிட மாறிகளைப் பயன்படுத்தலாம். இந்த பாடம் மாறிகள் என்றால் என்ன, அவற்றை எவ்வாறு பல வழிகளில் பயன்படுத்தலாம் என்பதை விளக்க உதவுகிறது. மாறிகள் பற்றிய கருத்து புரிந்துகொள்வதற்கு எளிதான ஒன்று அல்ல, எனவே பாடத்தின் முடிவில் விவாதத்திற்கு நிறைய நேரத்தை அனுமதிக்க பரிந்துரைக்கிறோம்.</td><td>{{ curriculum/unplugged/coursef_one_video_thumbnail }}</td> 
 </tr>
 </table>
 

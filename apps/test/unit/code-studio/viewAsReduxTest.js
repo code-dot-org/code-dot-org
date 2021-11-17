@@ -30,38 +30,38 @@ describe('viewAs redux', () => {
     restoreRedux();
   });
 
-  it('can set as teacher', () => {
-    const action = changeViewType(ViewType.Teacher);
+  it('can set as instructor', () => {
+    const action = changeViewType(ViewType.Instructor);
     store.dispatch(action);
     const nextState = store.getState();
-    assert.equal(nextState.viewAs, ViewType.Teacher);
+    assert.equal(nextState.viewAs, ViewType.Instructor);
   });
 
-  it('setting instructor redirects to teacher', () => {
-    const action = changeViewType('Instructor');
+  it('setting teacher redirects to instructor', () => {
+    const action = changeViewType('Teacher');
     store.dispatch(action);
     const nextState = store.getState();
-    assert.equal(nextState.viewAs, ViewType.Teacher);
+    assert.equal(nextState.viewAs, ViewType.Instructor);
     expect(
       codeStudioUtils.updateQueryParam
-    ).to.have.been.calledOnce.and.calledWith('viewAs', 'Teacher');
+    ).to.have.been.calledOnce.and.calledWith('viewAs', 'Instructor');
   });
 
-  it('can set as student', () => {
-    const action = changeViewType(ViewType.Student);
+  it('can set as participant', () => {
+    const action = changeViewType(ViewType.Participant);
     store.dispatch(action);
     const nextState = store.getState();
-    assert.equal(nextState.viewAs, ViewType.Student);
+    assert.equal(nextState.viewAs, ViewType.Participant);
   });
 
-  it('setting participant redirects to student', () => {
-    const action = changeViewType('Participant');
+  it('setting student redirects to participant', () => {
+    const action = changeViewType('Student');
     store.dispatch(action);
     const nextState = store.getState();
-    assert.equal(nextState.viewAs, ViewType.Student);
+    assert.equal(nextState.viewAs, ViewType.Participant);
     expect(
       codeStudioUtils.updateQueryParam
-    ).to.have.been.calledOnce.and.calledWith('viewAs', 'Student');
+    ).to.have.been.calledOnce.and.calledWith('viewAs', 'Participant');
   });
 
   it('does not allow for invalid view types', () => {
@@ -82,8 +82,8 @@ describe('viewAs redux', () => {
       codeStudioUtils.queryParams.restore();
     });
 
-    it('changes the window location when changing to Student with user_id', () => {
-      const action = changeViewType(ViewType.Student);
+    it('changes the window location when changing to particpant with user_id', () => {
+      const action = changeViewType(ViewType.Participant);
       store.dispatch(action);
       assert(codeStudioUtils.queryParams.calledWith('user_id'));
       assert(codeStudioUtils.updateQueryParam.calledWith('user_id', undefined));

@@ -40,7 +40,7 @@ function initPage() {
 
 function initViewAs(store) {
   const query = queryString.parse(location.search);
-  const initialViewAs = query.viewAs || ViewType.Teacher;
+  const initialViewAs = query.viewAs || ViewType.Instructor;
   store.dispatch(setViewType(initialViewAs));
 }
 
