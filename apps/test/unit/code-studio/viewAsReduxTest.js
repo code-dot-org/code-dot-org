@@ -1,5 +1,5 @@
 import {assert} from 'chai';
-import {stub} from 'sinon';
+import sinon, {stub} from 'sinon';
 import reducer, {
   ViewType,
   changeViewType
@@ -12,6 +12,7 @@ import {
 } from '@cdo/apps/redux';
 import * as appsUtils from '@cdo/apps/utils';
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
+import {expect} from '../../util/reconfiguredChai';
 
 describe('viewAs redux', () => {
   // Create a store so that we get the benefits of our thunk middleware
@@ -20,9 +21,12 @@ describe('viewAs redux', () => {
     stubRedux();
     registerReducers({viewAs: reducer});
     store = getStore();
+
+    sinon.stub(codeStudioUtils, 'updateQueryParam');
   });
 
   afterEach(() => {
+    codeStudioUtils.updateQueryParam.restore();
     restoreRedux();
   });
 
@@ -33,11 +37,31 @@ describe('viewAs redux', () => {
     assert.equal(nextState.viewAs, ViewType.Teacher);
   });
 
+  it('setting instructor redirects to teacher', () => {
+    const action = changeViewType('Instructor');
+    store.dispatch(action);
+    const nextState = store.getState();
+    assert.equal(nextState.viewAs, ViewType.Teacher);
+    expect(
+      codeStudioUtils.updateQueryParam
+    ).to.have.been.calledOnce.and.calledWith('viewAs', 'Teacher');
+  });
+
   it('can set as student', () => {
     const action = changeViewType(ViewType.Student);
     store.dispatch(action);
     const nextState = store.getState();
     assert.equal(nextState.viewAs, ViewType.Student);
+  });
+
+  it('setting participant redirects to student', () => {
+    const action = changeViewType('Participant');
+    store.dispatch(action);
+    const nextState = store.getState();
+    assert.equal(nextState.viewAs, ViewType.Student);
+    expect(
+      codeStudioUtils.updateQueryParam
+    ).to.have.been.calledOnce.and.calledWith('viewAs', 'Student');
   });
 
   it('does not allow for invalid view types', () => {
@@ -51,13 +75,11 @@ describe('viewAs redux', () => {
     before(() => {
       stub(appsUtils, 'reload');
       stub(codeStudioUtils, 'queryParams').callsFake(() => 'fake_user_id');
-      stub(codeStudioUtils, 'updateQueryParam');
     });
 
     after(() => {
       appsUtils.reload.restore();
       codeStudioUtils.queryParams.restore();
-      codeStudioUtils.updateQueryParam.restore();
     });
 
     it('changes the window location when changing to Student with user_id', () => {

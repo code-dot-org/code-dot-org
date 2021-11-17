@@ -1492,13 +1492,6 @@ class ScriptTest < ActiveSupport::TestCase
     assert_equal Plc::LearningModule::CONTENT_MODULE, lm.module_type
   end
 
-  test 'expect error on bad module types' do
-    unit_file = File.join(self.class.fixture_path, 'test-bad-plc-module.script')
-    assert_raises ActiveRecord::RecordInvalid do
-      Script.setup([unit_file])
-    end
-  end
-
   test 'unit name format validation' do
     assert_raises ActiveRecord::RecordInvalid do
       create :script, name: 'abc 123'

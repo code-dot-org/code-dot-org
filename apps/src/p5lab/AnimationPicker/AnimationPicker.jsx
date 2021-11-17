@@ -127,6 +127,12 @@ class AnimationPicker extends React.Component {
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}
           isOpen={this.state.exitingDialog}
+          backdropStyle={{
+            top: -15,
+            right: -15,
+            bottom: -15,
+            left: -15
+          }}
           hideCloseButton={true}
           handleClose={() => {
             this.setState({exitingDialog: false});
@@ -200,8 +206,8 @@ export default connect(
     onPickNewAnimation() {
       dispatch(pickNewAnimation());
     },
-    onPickLibraryAnimation(animation, isMultiSelectEnabled) {
-      dispatch(pickLibraryAnimation(animation, isMultiSelectEnabled));
+    onPickLibraryAnimation(animation) {
+      dispatch(pickLibraryAnimation(animation));
     },
     onUploadStart(data) {
       if (data.files[0].size >= MAX_UPLOAD_SIZE) {

@@ -23,13 +23,13 @@ class HttpCache
   UNCACHED_UNIT_LEVEL_PATHS = [
     '/s/dance/lessons/1/levels/13',
     '/s/dance-2019/lessons/1/levels/10',
-    '/s/poem-art/lessons/1/levels/9',
-    '/s/poem-art/lessons/1/levels/2', # prediction levels are not cacheable
-    '/s/poem-art/lessons/1/levels/5', # prediction levels are not cacheable
-    '/s/hello-world-food/lessons/1/levels/11',
-    '/s/hello-world-animals/lessons/1/levels/11',
-    '/s/hello-world-retro/lessons/1/levels/11',
-    '/s/hello-world-emoji/lessons/1/levels/11',
+    '/s/poem-art-2021/lessons/1/levels/9',
+    '/s/poem-art-2021/lessons/1/levels/2', # prediction levels are not cacheable
+    '/s/poem-art-2021/lessons/1/levels/5', # prediction levels are not cacheable
+    '/s/hello-world-food-2021/lessons/1/levels/11',
+    '/s/hello-world-animals-2021/lessons/1/levels/11',
+    '/s/hello-world-retro-2021/lessons/1/levels/11',
+    '/s/hello-world-emoji-2021/lessons/1/levels/11',
     '/s/outbreak/lessons/1/levels/10'
   ]
 
@@ -48,11 +48,11 @@ class HttpCache
     dance
     dance-2019
     oceans
-    poem-art
-    hello-world-food
-    hello-world-animals
-    hello-world-retro
-    hello-world-emoji
+    poem-art-2021
+    hello-world-food-2021
+    hello-world-animals-2021
+    hello-world-retro-2021
+    hello-world-emoji-2021
     outbreak
   ).map do |script_name|
     # Most scripts use the default route pattern.

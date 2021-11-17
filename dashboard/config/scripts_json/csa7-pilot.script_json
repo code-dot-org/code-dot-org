@@ -5,41 +5,2086 @@
     "login_required": false,
     "properties": {
       "curriculum_umbrella": "CSA",
+      "hideable_lessons": true,
+      "include_student_lesson_plans": true,
       "is_migrated": true,
-      "pilot_experiment": "csa-pilot"
+      "pilot_experiment": "csa-pilot",
+      "show_calendar": true,
+      "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:46 UTC",
+    "serialized_at": "2021-11-16 19:33:33 UTC",
     "published_state": "in_development",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csa7-pilot"
     }
   },
   "lesson_groups": [
-
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Content"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-3",
+      "user_facing": true,
+      "position": 2,
+      "properties": {
+        "display_name": "Show What You Know"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-4",
+      "user_facing": true,
+      "position": 3,
+      "properties": {
+        "display_name": "Pilot Survey"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lessonGroup-5",
+      "user_facing": true,
+      "position": 4,
+      "properties": {
+        "display_name": "Sandbox"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot"
+      }
+    }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-10",
+      "name": "Accessing Object Behavior",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "Students review writing methods to satisfy conditions and learn about procedural abstraction and method decomposition. Students are then introduced to the Title Sequence Project and evaluate requirements and examples to identify questions and key features.",
+        "preparation": "* Print copies of the Title Sequence Project Planning Guide (one per student)\n* Print copies of the Unit 7 Guide (one per student)",
+        "student_overview": "Your favorite content creator has recruited you to create a title sequence to use on all of their content! The Title Sequence Project is a large project that you work on throughout the unit, and project management strategies help organize and structure your work."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Writing Methods to Satisfy Conditions",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "overview": "Students revisit the components of a method signature and review the relationship between actual and formal parameters. Students differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. Students then plan the tasks they need to complete for their Title Sequence Project.",
+        "preparation": "* Gather students' Project Backlog folders from the previous unit and small stack of sticky notes (10-12) for each student",
+        "student_overview": "You revisit the components of a method signature and review the relationship between actual and formal parameters. You differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. You then plan the tasks you need to complete for your Title Sequence Project."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Exploring Method Components and Functionality",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Using Object References as Parameters",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Overloading Methods",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lesson-11",
+      "name": "Overriding Methods",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lesson-12",
+      "name": "Exploring Recursive Methods",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-12",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lesson-13",
+      "name": "Comparing Recursive and Iterative Solutions",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-13",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lesson-14",
+      "name": "Writing Recursive Methods",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lesson-15",
+      "name": "Maximizing System Reliability",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Title Sequence Project - Day 1",
+      "absolute_position": 11,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 11,
+      "properties": {
+        "overview": "Students continue to develop their Title Sequence Project to create a title sequence for a show to promote their favorite content creator using images and drawings to create animations and effects. Students first self-assess their work to evaluate their progress in completing project requirements, then conduct acceptance testing to determine which of their user stories are complete. Students use the self-assessment and peer feedback to prioritize their remaining tasks and continue developing their projects.",
+        "student_overview": "You continue to develop your Title Sequence Project to create a title sequence for a show to promote your favorite content creator using images and drawings to create animations and effects. You first self-assess your work to evaluate your progress in completing project requirements, then conduct acceptance testing to determine which of your user stories are complete. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Title Sequence Project - Day 2",
+      "absolute_position": 12,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 12,
+      "properties": {
+        "overview": "In the previous lesson, students conducted self-assessments and wrote acceptance criteria for their projects. Students obtain peer feedback in this lesson to identify remaining tasks to complete and continue developing their Title Sequence Projects.",
+        "preparation": "* Print copies of the Project Development Feedback handout (one per student)",
+        "student_overview": "In the previous lesson, you conducted a self-assessment and wrote acceptance criteria for your project. In this lesson, you obtain peer feedback to identify remaining tasks to complete and continue developing your Title Sequence Project."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Title Sequence Project - Day 3",
+      "absolute_position": 13,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 13,
+      "properties": {
+        "overview": "Students make final revisions and updates based on their code reviews and Project Planning Board. Students share their Title Sequence Projects with their peers. Students then celebrate their success and complete a final reflection of the development process.",
+        "student_overview": "You make final revisions and updates based on your code reviews and Project Planning Board. You share your Title Sequence Project with your peers. You then celebrate your success and complete a final reflection of the development process."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "FRQ Day",
+      "absolute_position": 14,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 14,
+      "properties": {
+        "overview": "Students independently complete an AP-style Free Response Question (FRQ). Students then complete a post-FRQ survey to debrief on their testing experience and identify any gaps in their knowledge.",
+        "preparation": "* Print copies of the FRQ Writing handout (one per student)\n* Print copies of the Java Quick Reference (one per student)\n* Gather several sharpened pencils and scratch paper",
+        "student_overview": "You independently complete an AP-style Free Response Question (FRQ). You are responsible for pacing yourself and applying the three-step process of annotating the question, writing pseudocode, then writing your Java code. You then complete a post-FRQ to identify any areas where you could use more practice."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Assessment Day",
+      "absolute_position": 15,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 15,
+      "properties": {
+        "assessment": true,
+        "overview": "In this unit, students practiced software design and development using the skills and programming constructs they have learned throughout the course to develop a title sequence for their favorite content creator. Students used decomposition strategies and object-oriented programming principles to plan and implement their ideas while ensuring their projects met specific requirements. Students explored recursive methods and compared recursive and iterative solutions for efficiency. At the end of the unit, students considered the need for maximizing system reliability as they analyzed open-source code. Now, students evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment.",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions",
+        "student_overview": "In this unit, you practiced software design and development using the skills and programming constructs you have learned throughout the course to develop a title sequence for your favorite content creator. You used decomposition strategies and object-oriented programming principles to plan and implement your ideas while ensuring your project met specific requirements. You explored recursive methods and compared recursive and iterative solutions for efficiency. At the end of the unit, you considered the need for maximizing system reliability as you analyzed open-source code. Now, you evaluate achievement of the unit learning objectives and skills on a multiple-choice assessment."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "Java Lab",
+      "name": "Java Lab",
+      "absolute_position": 16,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 16,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "The Neighborhood",
+      "name": "The Neighborhood",
+      "absolute_position": 17,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "The Theater",
+      "name": "The Theater",
+      "absolute_position": 18,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 18,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "The Playground",
+      "name": "The Playground",
+      "absolute_position": 19,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 19,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "The Playground",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot"
+      }
+    }
   ],
   "lesson_activities": [
-
+    {
+      "key": "34bee67c-449b-46bd-bf8d-88ce9cabaeb8",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "34bee67c-449b-46bd-bf8d-88ce9cabaeb8",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "5854e670-dc68-4939-b268-c2d1950004cf",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5854e670-dc68-4939-b268-c2d1950004cf",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "0e86a7ae-6f97-4119-ad91-0da2e5fdb576",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0e86a7ae-6f97-4119-ad91-0da2e5fdb576",
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "09eabed0-c3a6-488d-9513-a449d9c9d464",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "09eabed0-c3a6-488d-9513-a449d9c9d464",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "6b9d1549-7ea6-4033-82af-25ba35fc25f6",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6b9d1549-7ea6-4033-82af-25ba35fc25f6",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "5ee19e57-ad64-4b4a-a4c2-154c768ae2c9",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5ee19e57-ad64-4b4a-a4c2-154c768ae2c9",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "086c165c-cc69-4d30-9947-db25425be286",
+      "position": 1,
+      "properties": {
+        "name": "Project Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "086c165c-cc69-4d30-9947-db25425be286",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "caebd6e8-4734-49c8-bea9-22e6e50f9733",
+      "position": 2,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "caebd6e8-4734-49c8-bea9-22e6e50f9733",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "dd8c3c79-c1b5-4af4-b187-d4154da8bb9b",
+      "position": 3,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "dd8c3c79-c1b5-4af4-b187-d4154da8bb9b",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "ff6ed216-0594-48ac-8e75-20248d06752d",
+      "position": 4,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ff6ed216-0594-48ac-8e75-20248d06752d",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "53ff72fc-f871-4caf-b6f2-02b44df59c4e",
+      "position": 1,
+      "properties": {
+        "duration": 40,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "53ff72fc-f871-4caf-b6f2-02b44df59c4e",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "e5e2a910-368a-4098-a68a-ba99724a64ba",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e5e2a910-368a-4098-a68a-ba99724a64ba",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "18486d89-5223-4e52-9d62-bb71cb8f0c01",
+      "position": 1,
+      "properties": {
+        "duration": 40,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "18486d89-5223-4e52-9d62-bb71cb8f0c01",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "bd793adc-db50-4151-8633-da1a3be9e568",
+      "position": 2,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bd793adc-db50-4151-8633-da1a3be9e568",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "3e4950d4-bb44-4ebe-bbe8-d42835a50716",
+      "position": 1,
+      "properties": {
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3e4950d4-bb44-4ebe-bbe8-d42835a50716",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "3446ec73-121d-4be0-bd79-550867a31f36",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3446ec73-121d-4be0-bd79-550867a31f36",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "3af7f41f-bb9b-4a20-adfe-3a8110901e2f",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3af7f41f-bb9b-4a20-adfe-3a8110901e2f",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "6492437a-0349-451b-a054-993924e6317a",
+      "position": 1,
+      "properties": {
+        "duration": 45,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6492437a-0349-451b-a054-993924e6317a",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "8f7608de-0831-4ccc-83aa-4e8a3106ce3d",
+      "position": 2,
+      "properties": {
+        "name": "Wrap Up (Optional)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8f7608de-0831-4ccc-83aa-4e8a3106ce3d",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "3e05bb70-03e7-41e0-aa55-a3bb05e8786a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3e05bb70-03e7-41e0-aa55-a3bb05e8786a",
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "1ba18e7b-4cfb-4828-ba30-9c44fc2dd248",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1ba18e7b-4cfb-4828-ba30-9c44fc2dd248",
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "ed623426-08d4-4978-acc3-6d184912ca1a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ed623426-08d4-4978-acc3-6d184912ca1a",
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "30633a9e-e72e-4b86-96e3-4efce5fa8ef1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "30633a9e-e72e-4b86-96e3-4efce5fa8ef1",
+        "lesson.key": "The Playground",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "56cde150-c5f7-4301-90b1-42e67174a034",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineering: Computer-Generated Graphics (CGI) video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you notice? What do you wonder?*\n\n**Discussion Goal:** Students notice that TV shows and movies often use CGI to create scenes and effects more easily or more dramatically than what is possible in real-life. Students may wonder how programming influences or contributes to CGI and computer science career possibilities in the entertainment industry.",
+        "name": "Computer-Generated Graphics"
+      },
+      "seeding_key": {
+        "activity_section.key": "56cde150-c5f7-4301-90b1-42e67174a034",
+        "lesson_activity.key": "34bee67c-449b-46bd-bf8d-88ce9cabaeb8"
+      }
+    },
+    {
+      "key": "fa42c929-d19b-4b72-8dff-3555c0448de1",
+      "position": 2,
+      "properties": {
+        "description": "Imagine that your favorite content creator is getting their own TV show or movie, and they have asked you to create a title sequence for it. Or maybe they want a title sequence for their vlog. Or maybe it's YOU getting your own TV show or for your own vlog!\n\nThroughout the year, you have used The Theater to create concerts consisting of drawings, animations, and effects. We can use The Theater and our Java knowledge and skills to create a title sequence for our favorite content creators or ourselves.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fa42c929-d19b-4b72-8dff-3555c0448de1",
+        "lesson_activity.key": "34bee67c-449b-46bd-bf8d-88ce9cabaeb8"
+      }
+    },
+    {
+      "key": "7d4f2136-6d15-4c1f-a4f1-4bd424b97d89",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What do you know about Java that would help you develop a program that creates a simple version of a title sequence like this?*\n* *What do you think you still need to know?*\n\n**Discussion Goal:** Students suggest various constructs and algorithms for writing a program that creates a title sequence. Students realize that they know how to write code to achieve most of the required elements of a title sequence but might need to know how to create a program more efficiently.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Creating CGI is beyond the capabilities of The Theater and the scope of this course. Encourage students to focus on creating simple animations and effects in The Theater based on its capabilities and what they know how to do in Java."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7d4f2136-6d15-4c1f-a4f1-4bd424b97d89",
+        "lesson_activity.key": "34bee67c-449b-46bd-bf8d-88ce9cabaeb8"
+      }
+    },
+    {
+      "key": "7e3a9f9f-e3cd-4326-b1bf-20165e733220",
+      "position": 1,
+      "properties": {
+        "description": "Throughout the year, we have used strategies to plan our programs and algorithms and identify the classes and behaviors we need to implement. The Title Sequence Project is a large project that will require you to identify which methods you need to implement and their algorithms.",
+        "duration": "15",
+        "name": "Procedural Abstraction and Decomposition",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7e3a9f9f-e3cd-4326-b1bf-20165e733220",
+        "lesson_activity.key": "5854e670-dc68-4939-b268-c2d1950004cf"
+      }
+    },
+    {
+      "key": "ede37644-0a2a-439d-98d6-5336dc55f89e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Unit 7 Guide to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do we write methods?*\n\n**Discussion Goal:** Students share different reasons, such as not having to repeat code, readability and maintainability, and methods with parameters that make the code more flexible for different inputs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define procedural abstraction.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students learn about procedural abstraction in Computer Science Principles. You may choose to prompt students to recall the functionality and purpose of procedural abstraction and examples."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ede37644-0a2a-439d-98d6-5336dc55f89e",
+        "lesson_activity.key": "5854e670-dc68-4939-b268-c2d1950004cf"
+      }
+    },
+    {
+      "key": "5229d119-01b0-4aae-8f5a-a12658b3d07a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How do we decide what methods to write?*\n\n**Discussion Goal:** Students share different reasons, such as identifying the need to reuse the same code multiple times.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define method decomposition."
+      },
+      "seeding_key": {
+        "activity_section.key": "5229d119-01b0-4aae-8f5a-a12658b3d07a",
+        "lesson_activity.key": "5854e670-dc68-4939-b268-c2d1950004cf"
+      }
+    },
+    {
+      "key": "37e60525-a7df-4b30-94d0-a87b16aa05ad",
+      "position": 4,
+      "properties": {
+        "description": "Let's take a look at a short scene that was made in The Theater. We can apply method decomposition to identify the subproblems that we need to implement as methods.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "37e60525-a7df-4b30-94d0-a87b16aa05ad",
+        "lesson_activity.key": "5854e670-dc68-4939-b268-c2d1950004cf"
+      }
+    },
+    {
+      "key": "59796975-2dbe-4aba-93d1-38fa48968457",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students work with a partner to apply method decomposition to the scenario. Have pairs share their approaches with another pair, then have groups share as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to discuss the example solution.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why might we apply method decomposition to a problem first before writing code?*\n\n**Discussion Goal:** Students realize that applying method decomposition makes it easier to identify which methods they need to write before writing code."
+      },
+      "seeding_key": {
+        "activity_section.key": "59796975-2dbe-4aba-93d1-38fa48968457",
+        "lesson_activity.key": "5854e670-dc68-4939-b268-c2d1950004cf"
+      }
+    },
+    {
+      "key": "0fcd342c-9b9c-43ba-bdec-855a2f6b0bdd",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define title sequence.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Title Sequence Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the project and have students read the project description and rubric.",
+        "duration": "15",
+        "name": "Project Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "0fcd342c-9b9c-43ba-bdec-855a2f6b0bdd",
+        "lesson_activity.key": "5854e670-dc68-4939-b268-c2d1950004cf"
+      }
+    },
+    {
+      "key": "a67c7883-f63e-4f76-aaeb-8e031733e217",
+      "position": 7,
+      "properties": {
+        "description": "We need to understand what we already know and what we need to know to complete a project like this. Let's start by reviewing the project requirements to identify what we know and what we need to know, then we will look at some examples to identify specific characteristics and features that we need to develop.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a67c7883-f63e-4f76-aaeb-8e031733e217",
+        "lesson_activity.key": "5854e670-dc68-4939-b268-c2d1950004cf"
+      }
+    },
+    {
+      "key": "1ab4aa2e-7c68-43b7-b932-e5685a1b5bd1",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Know\" column of the chart on page two of the Project Planning Guide. Have students think and discuss in pairs before having students share as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the \"Need to Know\" column of the chart. Have students think and discuss in pairs before having students share as a class.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students might have questions that may not be relevant to the project. Encourage students that figuring out what they need to know is part of the inquiry process."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1ab4aa2e-7c68-43b7-b932-e5685a1b5bd1",
+        "lesson_activity.key": "5854e670-dc68-4939-b268-c2d1950004cf"
+      }
+    },
+    {
+      "key": "8b91fa67-d661-4bd7-a92c-563b77031f9d",
+      "position": 9,
+      "properties": {
+        "description": "Now that we have an idea of what we know and what we need to know, let's look at some examples of this project to understand the type of work you will need to complete.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8b91fa67-d661-4bd7-a92c-563b77031f9d",
+        "lesson_activity.key": "5854e670-dc68-4939-b268-c2d1950004cf"
+      }
+    },
+    {
+      "key": "e6b76293-cb08-4377-af2e-6eb42478fee3",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Have students work with a partner to analyze the exemplars to generate a list of common characteristics and key features on page three of the Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Emphasize to students that while these are examples of work, they are not representative of the only ways students can approach or develop the project.\n\nIt may be helpful to model the process for students first, then facilitate a discussion about the key features of the exemplars they reviewed."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e6b76293-cb08-4377-af2e-6eb42478fee3",
+        "lesson_activity.key": "5854e670-dc68-4939-b268-c2d1950004cf"
+      }
+    },
+    {
+      "key": "22ef421e-a66e-45a1-803f-76cdb87c8f83",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What words and phrases are in the rubric that aligns with your list of criteria?*\n\n**Discussion Goal:** Students make connections between the features of the exemplars that they noticed and the project's requirements. Students also notice that there are multiple ways to achieve each requirement."
+      },
+      "seeding_key": {
+        "activity_section.key": "22ef421e-a66e-45a1-803f-76cdb87c8f83",
+        "lesson_activity.key": "5854e670-dc68-4939-b268-c2d1950004cf"
+      }
+    },
+    {
+      "key": "d37d7b89-d72d-4dd8-a9d6-8b8fc66f28fc",
+      "position": 12,
+      "properties": {
+        "description": "Now that we have a solid understanding of the requirements of this project, we can start working through the things we identified as \"Need to Knows.\" We will be learning a lot throughout this unit that will be useful for completing this project. First, let's learn about documenting our code.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d37d7b89-d72d-4dd8-a9d6-8b8fc66f28fc",
+        "lesson_activity.key": "5854e670-dc68-4939-b268-c2d1950004cf"
+      }
+    },
+    {
+      "key": "aef7510b-9312-4dc7-a673-f232ec2f01de",
+      "position": 1,
+      "properties": {
+        "description": "**Distribute:** Give each student two sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write one thing they feel confident about and one thing they are still unsure about with the project or documenting program code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Gots and Needs"
+      },
+      "seeding_key": {
+        "activity_section.key": "aef7510b-9312-4dc7-a673-f232ec2f01de",
+        "lesson_activity.key": "0e86a7ae-6f97-4119-ad91-0da2e5fdb576"
+      }
+    },
+    {
+      "key": "cdd76d98-c26d-40fe-a4c3-bc62a1bbd66b",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "cdd76d98-c26d-40fe-a4c3-bc62a1bbd66b",
+        "lesson_activity.key": "0e86a7ae-6f97-4119-ad91-0da2e5fdb576"
+      }
+    },
+    {
+      "key": "3e88f69f-f5f5-4da9-817e-894b02b2f718",
+      "position": 1,
+      "properties": {
+        "description": "Look at the following code segments and tell me what is missing. You are looking at the syntax, not the functionality.",
+        "name": "What's Missing?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3e88f69f-f5f5-4da9-817e-894b02b2f718",
+        "lesson_activity.key": "09eabed0-c3a6-488d-9513-a449d9c9d464"
+      }
+    },
+    {
+      "key": "89161d2e-cb93-4de8-ba45-21e6476cd05d",
+      "position": 2,
+      "properties": {
+        "description": "**Do This:** Have students identify the missing component before clicking through the animation to reveal the answer.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> This method is missing the parameter list. Even if the method does not need any parameters, it must include empty parentheses. Students share this is a `void` and mutator method.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> This method is missing the method name. Without the method name, there is no way to call it. Students share this as an accessor method.\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> This method is missing the actual parameters. The actual parameters `item` and `size` must be passed in arguments when calling the method `order()`."
+      },
+      "seeding_key": {
+        "activity_section.key": "89161d2e-cb93-4de8-ba45-21e6476cd05d",
+        "lesson_activity.key": "09eabed0-c3a6-488d-9513-a449d9c9d464"
+      }
+    },
+    {
+      "key": "86521e2b-f7aa-4233-b645-b1c3c172855e",
+      "position": 1,
+      "properties": {
+        "description": "Today we are going to revisit actual and formal parameters as well as `void` and non-`void` methods.",
+        "duration": "10",
+        "name": "Actual and Formal Parameters",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "86521e2b-f7aa-4233-b645-b1c3c172855e",
+        "lesson_activity.key": "6b9d1549-7ea6-4033-82af-25ba35fc25f6"
+      }
+    },
+    {
+      "key": "69899ade-af6a-43b5-83c5-b13f50ade012",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slides to review actual and formal parameters:\n* *What is the structure of the signature and call of this constructor?*\n* *How do the signature and the call to the constructor function?*\n\n**Discussion Goal:** Students identify the actual and formal parameters. Students share the signature and the call to the constructor function by defining the values to pass to the constructor to create the object. The values passed to the formal parameters can then be assigned to the instance variables to set the object's initial state and have access to the values outside of the constructor.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the actual and formal parameters."
+      },
+      "seeding_key": {
+        "activity_section.key": "69899ade-af6a-43b5-83c5-b13f50ade012",
+        "lesson_activity.key": "6b9d1549-7ea6-4033-82af-25ba35fc25f6"
+      }
+    },
+    {
+      "key": "80dc3550-d5a0-4007-b62f-346c8c9a3aac",
+      "position": 3,
+      "properties": {
+        "description": "We are now going to look at a code segment with actual and formal parameters. Trace the code to predict the output and answer the questions about the relationship between the parameters. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "80dc3550-d5a0-4007-b62f-346c8c9a3aac",
+        "lesson_activity.key": "6b9d1549-7ea6-4033-82af-25ba35fc25f6"
+      }
+    },
+    {
+      "key": "692064cc-d20e-4b8d-b3bb-ef20ffd7e9c2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students answer the questions and predict the output for actual and formal parameters."
+      },
+      "seeding_key": {
+        "activity_section.key": "692064cc-d20e-4b8d-b3bb-ef20ffd7e9c2",
+        "lesson_activity.key": "6b9d1549-7ea6-4033-82af-25ba35fc25f6"
+      }
+    },
+    {
+      "key": "a9070374-a1c2-416d-bd23-fdc4c96dd374",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slides to display the prompts.\n* *What is the relationship between the actual and formal parameters?*\n* *What was the output of the method call `myShow.display(2,7)`?*\n\n**Discussion Goal:** Students share the actual parameters are the values passed when invoking the method. The formal parameters are the variables defined by the method that receives values when calling the method. The output of the method call is `2 people purchased 7 tickets for the show`."
+      },
+      "seeding_key": {
+        "activity_section.key": "a9070374-a1c2-416d-bd23-fdc4c96dd374",
+        "lesson_activity.key": "6b9d1549-7ea6-4033-82af-25ba35fc25f6"
+      }
+    },
+    {
+      "key": "a4854b4e-6d80-4740-873c-d45cc4683ef8",
+      "position": 6,
+      "properties": {
+        "description": "Now let’s revisit some additional types of methods that you have written in the past.",
+        "duration": "10",
+        "name": "Void and Non-Void Methods",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a4854b4e-6d80-4740-873c-d45cc4683ef8",
+        "lesson_activity.key": "6b9d1549-7ea6-4033-82af-25ba35fc25f6"
+      }
+    },
+    {
+      "key": "48115fc3-d32b-475f-a87b-fa22aab5c6fb",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review accessor methods and define non-void methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to review mutator methods and define void methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio. Students debug code that has incorrect method headers and return statements or types."
+      },
+      "seeding_key": {
+        "activity_section.key": "48115fc3-d32b-475f-a87b-fa22aab5c6fb",
+        "lesson_activity.key": "6b9d1549-7ea6-4033-82af-25ba35fc25f6"
+      }
+    },
+    {
+      "key": "405ffa1c-b466-4a09-96ef-26b7d96d8a4e",
+      "position": 8,
+      "properties": {
+        "description": "We reviewed the project's requirements in the previous lesson and looked at examples to identify the key features we needed to develop. Using the list of common characteristics and key features you created and the project requirements, let's identify and plan the tasks we need to complete.",
+        "duration": "10",
+        "name": "Project Planning",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "405ffa1c-b466-4a09-96ef-26b7d96d8a4e",
+        "lesson_activity.key": "6b9d1549-7ea6-4033-82af-25ba35fc25f6"
+      }
+    },
+    {
+      "key": "500d2eff-1750-4602-af47-2441ff2fcf59",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student their Project Backlog folder and a small stack of sticky notes (10-12).\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Identify the key benchmarks and deadlines for the project.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students write the tasks they need to complete for each benchmark on individual sticky notes. Have students post these sticky notes on the other side of their manilla folder.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students might be unsure what tasks they need to complete for this project. Refer students to their \"Need to Knows\" and the common characteristics and features they identified in the previous lesson on pages two and three of their Title Sequence Project Planning Guide. Students should use these to determine tasks associated with each \"Need to Know\" and characteristic they identified."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "500d2eff-1750-4602-af47-2441ff2fcf59",
+        "lesson_activity.key": "6b9d1549-7ea6-4033-82af-25ba35fc25f6"
+      }
+    },
+    {
+      "key": "b794119f-b5b6-4e7e-b037-c1a349f473e6",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post the tasks for the first benchmark in the \"To Do\" column of their Project Planning Board."
+      },
+      "seeding_key": {
+        "activity_section.key": "b794119f-b5b6-4e7e-b037-c1a349f473e6",
+        "lesson_activity.key": "6b9d1549-7ea6-4033-82af-25ba35fc25f6"
+      }
+    },
+    {
+      "key": "930f67c9-2a13-436f-b19e-cf427b3e0d6e",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students respond to the prompts on page four of their Title Sequence Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Project Brainstorming"
+      },
+      "seeding_key": {
+        "activity_section.key": "930f67c9-2a13-436f-b19e-cf427b3e0d6e",
+        "lesson_activity.key": "5ee19e57-ad64-4b4a-a4c2-154c768ae2c9"
+      }
+    },
+    {
+      "key": "91673dc4-cb84-4fab-9dc4-777c831b9da0",
+      "position": 2,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "91673dc4-cb84-4fab-9dc4-777c831b9da0",
+        "lesson_activity.key": "5ee19e57-ad64-4b4a-a4c2-154c768ae2c9"
+      }
+    },
+    {
+      "key": "53c9a0ce-cad8-45c3-bd95-b714a401e142",
+      "position": 1,
+      "properties": {
+        "description": "The unit assessment project assesses proficiency in the knowledge and skills developed in this unit. Students will have three class periods to develop and refine their program. Lessons 11, 12, and 13 collectively include instructions for managing each day of the three-day project work time.\n\nIf there is not enough time for the three-day project work time, a one-day option achieves the targeted learning objectives and goals. If using this option, refer to the [**Title Sequence Project 1 Day Lesson Plan**](https://docs.google.com/document/d/16Cgn1mYTCJEvwBDncZm1DfV5y_Zq2TZo-eL1HBz4-x4/edit?usp=sharing). Direct students to develop their program on Code Studio in Lesson 13 so they can submit their project. While the one-day option covers the learning objectives and goals, it shortens development time. Consider this tradeoff when deciding which version to use."
+      },
+      "seeding_key": {
+        "activity_section.key": "53c9a0ce-cad8-45c3-bd95-b714a401e142",
+        "lesson_activity.key": "086c165c-cc69-4d30-9947-db25425be286"
+      }
+    },
+    {
+      "key": "38887d94-3717-44a4-b650-f744cdf289f3",
+      "position": 1,
+      "properties": {
+        "description": "Before working towards your final benchmark, review the project requirements and rubric and evaluate your progress. Self-assessing your progress will help you identify which tasks to focus on during your project workdays.",
+        "name": "Project Self-Assessment",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "38887d94-3717-44a4-b650-f744cdf289f3",
+        "lesson_activity.key": "caebd6e8-4734-49c8-bea9-22e6e50f9733"
+      }
+    },
+    {
+      "key": "14b4b470-ddac-495d-9b90-535885c68c2f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually self-assess their project using the rubric on the last page of the Title Sequence Project Planning Guide and review any remaining questions in the \"Need to Know\" column on page two.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What questions do you still have that need answering for this project?*\n\n**Discussion Goal:** Students share any questions they still have in their \"Need to Know\" column.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students may have questions that are unrelated or beyond the scope of the project. Encourage students to research these questions as extension activities. Focus this discussion on answering questions specific to the content covered in this unit and for the project."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "14b4b470-ddac-495d-9b90-535885c68c2f",
+        "lesson_activity.key": "caebd6e8-4734-49c8-bea9-22e6e50f9733"
+      }
+    },
+    {
+      "key": "00728580-744a-4539-8bb0-c1b48dbde140",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students post tasks they want to complete for the third benchmark in the \"To Do\" column of their Project Planning Board."
+      },
+      "seeding_key": {
+        "activity_section.key": "00728580-744a-4539-8bb0-c1b48dbde140",
+        "lesson_activity.key": "caebd6e8-4734-49c8-bea9-22e6e50f9733"
+      }
+    },
+    {
+      "key": "3c8273f9-9345-4b4e-8eb2-611d9c1d661c",
+      "position": 1,
+      "properties": {
+        "description": "You wrote acceptance criteria for your Title Sequence Project's user stories to define when each user story can be considered complete. With these, you can conduct acceptance testing to determine which of your user stories are complete and which ones still need work.",
+        "duration": "15",
+        "name": "Acceptance Testing",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3c8273f9-9345-4b4e-8eb2-611d9c1d661c",
+        "lesson_activity.key": "dd8c3c79-c1b5-4af4-b187-d4154da8bb9b"
+      }
+    },
+    {
+      "key": "f0071ebf-eabe-4bbb-ab7f-1a76ba9c03ef",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Software Engineering: Acceptance Testing video.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define acceptance testing, alpha testing, and beta testing."
+      },
+      "seeding_key": {
+        "activity_section.key": "f0071ebf-eabe-4bbb-ab7f-1a76ba9c03ef",
+        "lesson_activity.key": "dd8c3c79-c1b5-4af4-b187-d4154da8bb9b"
+      }
+    },
+    {
+      "key": "e465bd67-3961-4141-9175-f97765f40fd7",
+      "position": 3,
+      "properties": {
+        "description": "Now it’s your turn to test the acceptance criteria for your user stories. Your reviewer will test your program and determine which of your user stories are complete and which ones still need work.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e465bd67-3961-4141-9175-f97765f40fd7",
+        "lesson_activity.key": "dd8c3c79-c1b5-4af4-b187-d4154da8bb9b"
+      }
+    },
+    {
+      "key": "8ed753d1-9227-4c51-be68-7d404b0eae16",
+      "position": 4,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to conduct acceptance testing on each other's projects. Students note the results of their testing on page xx of their Title Sequence Project Planning Guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "8ed753d1-9227-4c51-be68-7d404b0eae16",
+        "lesson_activity.key": "dd8c3c79-c1b5-4af4-b187-d4154da8bb9b"
+      }
+    },
+    {
+      "key": "88468c2a-639d-4c54-b079-0771753b1771",
+      "position": 5,
+      "properties": {
+        "description": "Using the remaining items on your Project Planning Board, Project Backlog, and the feedback from your peers, continue to develop your Title Sequence Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "duration": "15",
+        "name": "Project Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "88468c2a-639d-4c54-b079-0771753b1771",
+        "lesson_activity.key": "dd8c3c79-c1b5-4af4-b187-d4154da8bb9b"
+      }
+    },
+    {
+      "key": "26e8abff-86be-457c-b5ad-5dbeee17682e",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Backlog and Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Return students to Level 1 on Code Studio to work on the Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work as they complete tasks on their Project Planning Board."
+      },
+      "seeding_key": {
+        "activity_section.key": "26e8abff-86be-457c-b5ad-5dbeee17682e",
+        "lesson_activity.key": "dd8c3c79-c1b5-4af4-b187-d4154da8bb9b"
+      }
+    },
+    {
+      "key": "e3d6c766-69f2-4eab-9011-fde69f6312bc",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added.",
+        "name": "Project Planning Board"
+      },
+      "seeding_key": {
+        "activity_section.key": "e3d6c766-69f2-4eab-9011-fde69f6312bc",
+        "lesson_activity.key": "ff6ed216-0594-48ac-8e75-20248d06752d"
+      }
+    },
+    {
+      "key": "7cafb8e1-5a8c-465c-b95f-81274e6f3497",
+      "position": 2,
+      "properties": {
+        "description": "**Title Sequence Project:** You can review the Project Planning Board as an optional completion assessment.",
+        "name": "Assessment (Optional)"
+      },
+      "seeding_key": {
+        "activity_section.key": "7cafb8e1-5a8c-465c-b95f-81274e6f3497",
+        "lesson_activity.key": "ff6ed216-0594-48ac-8e75-20248d06752d"
+      }
+    },
+    {
+      "key": "52f3473a-248a-4b3b-84e8-d95273f0d610",
+      "position": 1,
+      "properties": {
+        "description": "You have made a lot of progress in your development work on your project. As we near the end of our project work, let's assess our progress on our last benchmark and get feedback on the work you have done.",
+        "duration": "20",
+        "name": "Peer Review and Feedback",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "52f3473a-248a-4b3b-84e8-d95273f0d610",
+        "lesson_activity.key": "53ff72fc-f871-4caf-b6f2-02b44df59c4e"
+      }
+    },
+    {
+      "key": "3a419e6e-980a-476a-bf17-14f91ce7aafe",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Development Feedback handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify a question to frame the feedback session.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and framing questions and sharing feedback. Students should take notes on their Project Development Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Development Feedback handout."
+      },
+      "seeding_key": {
+        "activity_section.key": "3a419e6e-980a-476a-bf17-14f91ce7aafe",
+        "lesson_activity.key": "53ff72fc-f871-4caf-b6f2-02b44df59c4e"
+      }
+    },
+    {
+      "key": "f62a1842-6e5c-4fb0-8acd-45b99f0b6a51",
+      "position": 3,
+      "properties": {
+        "description": "Using the remaining items on your Project Planning Board, Project Backlog, and the feedback from your peers, continue to develop your Title Sequence Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "duration": "20",
+        "name": "Project Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f62a1842-6e5c-4fb0-8acd-45b99f0b6a51",
+        "lesson_activity.key": "53ff72fc-f871-4caf-b6f2-02b44df59c4e"
+      }
+    },
+    {
+      "key": "1c4590a9-d358-427d-b330-f7f21d3e928a",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students prioritize the remaining tasks on their Project Backlog and Project Planning Board based on feedback and self-assessment.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work as they complete tasks on their Project Planning Board."
+      },
+      "seeding_key": {
+        "activity_section.key": "1c4590a9-d358-427d-b330-f7f21d3e928a",
+        "lesson_activity.key": "53ff72fc-f871-4caf-b6f2-02b44df59c4e"
+      }
+    },
+    {
+      "key": "4e087266-1473-4bdc-be86-d93c064aa62a",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
+      },
+      "seeding_key": {
+        "activity_section.key": "4e087266-1473-4bdc-be86-d93c064aa62a",
+        "lesson_activity.key": "53ff72fc-f871-4caf-b6f2-02b44df59c4e"
+      }
+    },
+    {
+      "key": "e6b90603-94e2-4da5-8ed7-cd330000f87a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added.",
+        "name": "Project Planning Board"
+      },
+      "seeding_key": {
+        "activity_section.key": "e6b90603-94e2-4da5-8ed7-cd330000f87a",
+        "lesson_activity.key": "e5e2a910-368a-4098-a68a-ba99724a64ba"
+      }
+    },
+    {
+      "key": "9d992f9d-097f-441c-9338-7736e5df9ff2",
+      "position": 2,
+      "properties": {
+        "description": "**Title Sequence Project:** You can collect the Project Development Feedback or review the Project Planning Board as optional completion assessments.",
+        "name": "Assessment (Optional)"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d992f9d-097f-441c-9338-7736e5df9ff2",
+        "lesson_activity.key": "e5e2a910-368a-4098-a68a-ba99724a64ba"
+      }
+    },
+    {
+      "key": "56afc17f-3274-4dce-b769-6b5320d812a8",
+      "position": 1,
+      "properties": {
+        "description": "It's time to put the finishing touches on our projects!\n\nUsing the remaining items on your Project Planning Board, Project Backlog, and the feedback from your peers, continue to develop your Title Sequence Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "duration": "20",
+        "name": "Project Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "56afc17f-3274-4dce-b769-6b5320d812a8",
+        "lesson_activity.key": "18486d89-5223-4e52-9d62-bb71cb8f0c01"
+      }
+    },
+    {
+      "key": "280a9ec8-fcfe-4c44-b4b0-42e1a0d77217",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio to finish and submit their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work as they complete tasks on their Project Planning Board.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students that they may not complete every item on their Project Planning Board or Project Backlog, and that is okay! Software engineers have to make decisions all the time about which features are most important. The purpose of creating Project Planning Boards and Project Backlogs is to focus on completing the most important items first."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "280a9ec8-fcfe-4c44-b4b0-42e1a0d77217",
+        "lesson_activity.key": "18486d89-5223-4e52-9d62-bb71cb8f0c01"
+      }
+    },
+    {
+      "key": "a484d5fc-f064-413a-9ff3-00c89b068e9b",
+      "position": 3,
+      "properties": {
+        "description": "You did it! Time to showcase your Title Sequence Project to your peers.",
+        "duration": "20",
+        "name": "Title Sequence Presentations",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a484d5fc-f064-413a-9ff3-00c89b068e9b",
+        "lesson_activity.key": "18486d89-5223-4e52-9d62-bb71cb8f0c01"
+      }
+    },
+    {
+      "key": "0c3797d9-eac0-4b71-a1c6-5cf54d486462",
+      "position": 4,
+      "properties": {
+        "description": "**Group:** Place students in small groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns demonstrating their program to their group."
+      },
+      "seeding_key": {
+        "activity_section.key": "0c3797d9-eac0-4b71-a1c6-5cf54d486462",
+        "lesson_activity.key": "18486d89-5223-4e52-9d62-bb71cb8f0c01"
+      }
+    },
+    {
+      "key": "2841d0e8-4236-4b5f-b75e-ee67258d42ae",
+      "position": 1,
+      "properties": {
+        "description": "Congratulations! You have completed your Title Sequence Project, and you should be proud of the work you have done. It was a large project, but you used your software engineering skills to plan, manage, and develop your work throughout the unit.",
+        "name": "Project Reflection",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2841d0e8-4236-4b5f-b75e-ee67258d42ae",
+        "lesson_activity.key": "bd793adc-db50-4151-8633-da1a3be9e568"
+      }
+    },
+    {
+      "key": "888b536c-f0d4-44bc-a4cb-3c8524919842",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the End of Project Self-Reflection on page xx of the Title Sequence Project Planning Guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Collect the Project Backlog folders from students. These will be reused in the next unit."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "888b536c-f0d4-44bc-a4cb-3c8524919842",
+        "lesson_activity.key": "bd793adc-db50-4151-8633-da1a3be9e568"
+      }
+    },
+    {
+      "key": "5a1f2e88-06c5-47cd-a8d7-2e2c28af4093",
+      "position": 3,
+      "properties": {
+        "description": "**Title Sequence Project:** Use the rubric on the last page of the Title Sequence Project Planning Guide to assess student projects.",
+        "name": "Assessment: Grading the Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "5a1f2e88-06c5-47cd-a8d7-2e2c28af4093",
+        "lesson_activity.key": "bd793adc-db50-4151-8633-da1a3be9e568"
+      }
+    },
+    {
+      "key": "431c4dc2-8ca2-462a-8dce-8bc0e295c088",
+      "position": 1,
+      "properties": {
+        "description": "Today, you will independently complete an FRQ called `MusicQueue`.\n\nToday's FRQ will be conducted similarly to the AP Exam to prepare you for exam day. The strategies we have been using are the same, but the classroom setup will be more formal.",
+        "duration": "5",
+        "name": "Exam Structure",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "431c4dc2-8ca2-462a-8dce-8bc0e295c088",
+        "lesson_activity.key": "3e4950d4-bb44-4ebe-bbe8-d42835a50716"
+      }
+    },
+    {
+      "key": "a8f0e78b-f2d4-4749-9139-0f46d6c3dcef",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through an animated slide to explain the exam structure. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students participate in one of the breathing exercises."
+      },
+      "seeding_key": {
+        "activity_section.key": "a8f0e78b-f2d4-4749-9139-0f46d6c3dcef",
+        "lesson_activity.key": "3e4950d4-bb44-4ebe-bbe8-d42835a50716"
+      }
+    },
+    {
+      "key": "5d5aeae4-e704-4720-80a0-261bdd13bbcb",
+      "position": 1,
+      "properties": {
+        "description": "For this section of the exam, you will use a No. 2 pencil to write your responses. Please raise your hand if you need a No. 2 pencil.",
+        "duration": "5",
+        "name": "Exam Setup",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "5d5aeae4-e704-4720-80a0-261bdd13bbcb",
+        "lesson_activity.key": "3446ec73-121d-4be0-bd79-550867a31f36"
+      }
+    },
+    {
+      "key": "1895a7e9-e8f7-42a4-a924-6a3a81b2f3d5",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a sharpened No. 2 pencil to students who raised their hands."
+      },
+      "seeding_key": {
+        "activity_section.key": "1895a7e9-e8f7-42a4-a924-6a3a81b2f3d5",
+        "lesson_activity.key": "3446ec73-121d-4be0-bd79-550867a31f36"
+      }
+    },
+    {
+      "key": "cb87e531-c94c-4ab6-8f3c-505e0dcccc49",
+      "position": 3,
+      "properties": {
+        "description": "I will now distribute the exam materials. Please do not turn over any materials until you are told to do so.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cb87e531-c94c-4ab6-8f3c-505e0dcccc49",
+        "lesson_activity.key": "3446ec73-121d-4be0-bd79-550867a31f36"
+      }
+    },
+    {
+      "key": "e2aa0a1d-c2af-430c-aaea-c405bc49a841",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Place a copy of the FRQ Writing handout, Java Quick Reference, and a sheet of scratch paper faced down on each student’s desk. "
+      },
+      "seeding_key": {
+        "activity_section.key": "e2aa0a1d-c2af-430c-aaea-c405bc49a841",
+        "lesson_activity.key": "3446ec73-121d-4be0-bd79-550867a31f36"
+      }
+    },
+    {
+      "key": "9a68f8d1-220a-4055-b15c-9ee6fc269051",
+      "position": 5,
+      "properties": {
+        "description": "In front of you, you should have a copy of the FRQ Writing handout, Java Quick Reference handout, and a sheet of scratch paper. Please raise your hand if you are missing any exam materials.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9a68f8d1-220a-4055-b15c-9ee6fc269051",
+        "lesson_activity.key": "3446ec73-121d-4be0-bd79-550867a31f36"
+      }
+    },
+    {
+      "key": "3bbb33cb-aa7b-4d12-acd9-7224239260a7",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give any missing exam materials to students who raised their hands."
+      },
+      "seeding_key": {
+        "activity_section.key": "3bbb33cb-aa7b-4d12-acd9-7224239260a7",
+        "lesson_activity.key": "3446ec73-121d-4be0-bd79-550867a31f36"
+      }
+    },
+    {
+      "key": "52714aa8-8491-4958-8a90-06246ef013f6",
+      "position": 7,
+      "properties": {
+        "description": "On the cover of the FRQ Writing handout, print your name and today’s date where indicated.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "52714aa8-8491-4958-8a90-06246ef013f6",
+        "lesson_activity.key": "3446ec73-121d-4be0-bd79-550867a31f36"
+      }
+    },
+    {
+      "key": "8ff3d93c-2913-4793-971d-626de2c6e490",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to fill in their names and the current date on the cover of the FRQ Writing handout."
+      },
+      "seeding_key": {
+        "activity_section.key": "8ff3d93c-2913-4793-971d-626de2c6e490",
+        "lesson_activity.key": "3446ec73-121d-4be0-bd79-550867a31f36"
+      }
+    },
+    {
+      "key": "9ab5946e-27d8-4e22-8d56-9143f56b12a6",
+      "position": 9,
+      "properties": {
+        "description": "You now have 25 minutes to complete the free response question. You are responsible for pacing yourself and may proceed freely from part a to part b. Show all necessary work and final solutions on the FRQ Writing handout. Solutions written on scratch paper will not be considered. \n\nGood luck! You may now begin the exam.",
+        "duration": "25",
+        "name": "Free Response Question",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9ab5946e-27d8-4e22-8d56-9143f56b12a6",
+        "lesson_activity.key": "3446ec73-121d-4be0-bd79-550867a31f36"
+      }
+    },
+    {
+      "key": "f1521392-a83f-43d2-a7dc-80d03ac6fbeb",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students complete the free-response question on the FRQ Writing activity guide. On the board, write the start and end times.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If there is not a visible clock in the room, consider displaying a 30-minute timer.\n\nDuring the AP Exam, students must sit quietly until the allotted testing time has elapsed. If you decide to adhere to this rule closely, encourage students that finish early to:\n* Continue to work on their FRQ\n* Trace their code to ensure it is correct.\n* Check their solution to ensure it aligns with their pseudocode solution."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f1521392-a83f-43d2-a7dc-80d03ac6fbeb",
+        "lesson_activity.key": "3446ec73-121d-4be0-bd79-550867a31f36"
+      }
+    },
+    {
+      "key": "c9f4867a-e9e5-4775-93e3-ed26af6d59b0",
+      "position": 1,
+      "properties": {
+        "description": "Great work! Time is up. Please stop working and close your exam. Remain in your seat, without talking, while the exam materials are collected.",
+        "name": "Post-FRQ Debrief",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c9f4867a-e9e5-4775-93e3-ed26af6d59b0",
+        "lesson_activity.key": "3af7f41f-bb9b-4a20-adfe-3a8110901e2f"
+      }
+    },
+    {
+      "key": "22970077-1195-422f-80c8-98d5405a1b50",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Collect the FRQ Writing handout, Java Quick Reference, and scrap paper from each student."
+      },
+      "seeding_key": {
+        "activity_section.key": "22970077-1195-422f-80c8-98d5405a1b50",
+        "lesson_activity.key": "3af7f41f-bb9b-4a20-adfe-3a8110901e2f"
+      }
+    },
+    {
+      "key": "7fb4728c-63ea-4cba-8e8f-5c380a6044e3",
+      "position": 3,
+      "properties": {
+        "description": "To wrap up, you will now complete a post-FRQ survey. This survey is not a part of the AP Exam but rather an opportunity to analyze your testing experience and identify the next steps in your study plan.  \n\nIf you feel like you missed a portion of the FRQ, analyzing can help you recognize strategies and topics that need more practice to have greater success with future testing situations. \n\nIf you feel like you were able to complete all parts of the FRQ, analyzing can help you understand how you prepared and approached the test.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "7fb4728c-63ea-4cba-8e8f-5c380a6044e3",
+        "lesson_activity.key": "3af7f41f-bb9b-4a20-adfe-3a8110901e2f"
+      }
+    },
+    {
+      "key": "d31e4fda-5785-4037-b812-ad245b777b65",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the FRQ Scoring Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete Levels 1 through Level 7 on Code Studio to complete the post-FRQ survey."
+      },
+      "seeding_key": {
+        "activity_section.key": "d31e4fda-5785-4037-b812-ad245b777b65",
+        "lesson_activity.key": "3af7f41f-bb9b-4a20-adfe-3a8110901e2f"
+      }
+    },
+    {
+      "key": "a84850d9-6965-482a-ba1c-6b456e0e759c",
+      "position": 1,
+      "properties": {
+        "description": "Congratulations, you have made it to the end of Unit 7! You learned a lot about software design and recursion and used these concepts to develop a title sequence for your favorite content creator. Today, you will complete an assessment to put your skills to the test.",
+        "name": "Unit 7 Assessment",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a84850d9-6965-482a-ba1c-6b456e0e759c",
+        "lesson_activity.key": "6492437a-0349-451b-a054-993924e6317a"
+      }
+    },
+    {
+      "key": "93c8734b-e6b9-4d5d-b704-0d8358da03df",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Administer the Unit 7 Assessment on Code Studio. Make sure to unlock the assessment following instructions [**here**](https://support.code.org/hc/en-us/articles/115001331951-Using-lock-settings-for-assessments-and-surveys)."
+      },
+      "seeding_key": {
+        "activity_section.key": "93c8734b-e6b9-4d5d-b704-0d8358da03df",
+        "lesson_activity.key": "6492437a-0349-451b-a054-993924e6317a"
+      }
+    },
+    {
+      "key": "c87654cf-b985-483e-8a87-82b632937d80",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the answers to the assessment with the class.",
+        "name": "Assessment Review",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Discuss any questions that come up and take note of topics where students may need extra review.\n\nAs you review answers with students, consider the following suggested strategies:\n* Students write down solutions to questions in their journals that they answered incorrectly.\n* Identify mostly missed questions and review as a class.\n* Review answers asynchronously and allow students to complete corrections.\n* Place students in pairs to review answers and share areas that need extra review.\n\nIf you do not have time to review answers with students, create a data chart that includes assessment results. For students who did not meet the learning expectations, follow up to ensure they learn from errors made on the assessment."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c87654cf-b985-483e-8a87-82b632937d80",
+        "lesson_activity.key": "8f7608de-0831-4ccc-83aa-4e8a3106ce3d"
+      }
+    },
+    {
+      "key": "437c97fa-551a-4fcc-82d5-09403747f858",
+      "position": 1,
+      "properties": {
+        "progression_name": "Java Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "437c97fa-551a-4fcc-82d5-09403747f858",
+        "lesson_activity.key": "3e05bb70-03e7-41e0-aa55-a3bb05e8786a"
+      }
+    },
+    {
+      "key": "9f03f134-e79c-49d2-82cf-894a1d890fa3",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Neighborhood"
+      },
+      "seeding_key": {
+        "activity_section.key": "9f03f134-e79c-49d2-82cf-894a1d890fa3",
+        "lesson_activity.key": "1ba18e7b-4cfb-4828-ba30-9c44fc2dd248"
+      }
+    },
+    {
+      "key": "f7ba5e07-c741-4ad4-b228-d089bc699a8b",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Theater"
+      },
+      "seeding_key": {
+        "activity_section.key": "f7ba5e07-c741-4ad4-b228-d089bc699a8b",
+        "lesson_activity.key": "ed623426-08d4-4978-acc3-6d184912ca1a"
+      }
+    },
+    {
+      "key": "05fd0b81-cbee-487b-81bd-91d6874cdce4",
+      "position": 1,
+      "properties": {
+        "progression_name": "The Playground"
+      },
+      "seeding_key": {
+        "activity_section.key": "05fd0b81-cbee-487b-81bd-91d6874cdce4",
+        "lesson_activity.key": "30633a9e-e72e-4b86-96e3-4efce5fa8ef1"
+      }
+    }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Java Lab"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "437c97fa-551a-4fcc-82d5-09403747f858"
+      },
+      "level_keys": [
+        "CSA Java Lab Sandbox"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Neighborhood"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "9f03f134-e79c-49d2-82cf-894a1d890fa3"
+      },
+      "level_keys": [
+        "CSA Neighborhood Sandbox"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Theater"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Theater Sandbox"
+        ],
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "f7ba5e07-c741-4ad4-b228-d089bc699a8b"
+      },
+      "level_keys": [
+        "CSA Theater Sandbox"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "The Playground"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA Playground Sandbox"
+        ],
+        "lesson.key": "The Playground",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "05fd0b81-cbee-487b-81bd-91d6874cdce4"
+      },
+      "level_keys": [
+        "CSA Playground Sandbox"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "CSA Java Lab Sandbox",
+        "script_level.level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
+        "lesson.key": "Java Lab",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "437c97fa-551a-4fcc-82d5-09403747f858"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Neighborhood Sandbox",
+        "script_level.level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
+        "lesson.key": "The Neighborhood",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "9f03f134-e79c-49d2-82cf-894a1d890fa3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Theater Sandbox",
+        "script_level.level_keys": [
+          "CSA Theater Sandbox"
+        ],
+        "lesson.key": "The Theater",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "f7ba5e07-c741-4ad4-b228-d089bc699a8b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA Playground Sandbox",
+        "script_level.level_keys": [
+          "CSA Playground Sandbox"
+        ],
+        "lesson.key": "The Playground",
+        "lesson_group.key": "lessonGroup-5",
+        "script.name": "csa7-pilot",
+        "activity_section.key": "05fd0b81-cbee-487b-81bd-91d6874cdce4"
+      }
+    }
   ],
   "resources": [
-
+    {
+      "name": "[KEY] FRQ Writing",
+      "url": "https://docs.google.com/document/d/18Tu1zffWKsC7IXd3geEff8y2iMFWouray2PIeK0Kal4/edit?usp=sharing",
+      "key": "_key_frq_writing_5",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_frq_writing_5"
+      }
+    },
+    {
+      "name": "[KEY] U7L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1cFgtSo77SErDlOguc5mhXnS98MPJH408zHYRWgVIqG8/edit?usp=sharing",
+      "key": "_key_u7l1_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u7l1_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] U7L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1RaQ5gNzpaKjEI8yp0krQETu5VGHpwVnA0BUFUuKa5wQ/edit?usp=sharing",
+      "key": "_key_u7l2_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u7l2_extra_practice"
+      }
+    },
+    {
+      "name": "FRQ Scoring Guide",
+      "url": "https://docs.google.com/document/d/1cp_m-sAddWHbObPhH6J9jvxe0BaQbFLs6FpaZhoXTUY/edit?usp=sharing",
+      "key": "frq_scoring_guide_5",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "frq_scoring_guide_5"
+      }
+    },
+    {
+      "name": "FRQ Writing",
+      "url": "https://docs.google.com/document/d/1hSg2jMGenKeyCDqNjzgLi3MgWgDJz7-BNO5l9TFMzT4/edit?usp=sharing",
+      "key": "frq_writing_5",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "frq_writing_5"
+      }
+    },
+    {
+      "name": "Java Quick Reference",
+      "url": "https://drive.google.com/file/d/1Z7P-QFWuNUeMIQ60xz-pXrIlSjPAloxX/view?usp=sharing",
+      "key": "java_quick_reference",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "java_quick_reference"
+      }
+    },
+    {
+      "name": "Title Sequence Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1ENWJmqeLA_7j1S8oQufipp2pV0Hr8OdWG5QmGLRIS9U/edit",
+      "key": "title_sequence_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "title_sequence_project_planning_guide"
+      }
+    },
+    {
+      "name": "U7L1 Extra Practice",
+      "url": "https://docs.google.com/document/d/1gXzcyJjcCUVQE7_dqyw8W0A3K3SnezMDH9eN0CT2k3U/edit?usp=sharing",
+      "key": "u7l1_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u7l1_extra_practice"
+      }
+    },
+    {
+      "name": "U7L2 Extra Practice",
+      "url": "https://docs.google.com/document/d/1hXZtQJX7vYFmY2g6Tyg0SRQgdssAR7QBONoc0I-WbYc/edit?usp=sharing",
+      "key": "u7l2_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u7l2_extra_practice"
+      }
+    },
+    {
+      "name": "Unit 7 Guide",
+      "url": "https://docs.google.com/document/d/15mCtXw9iGno9nHbY9QI6vC32TReg1dkKvbMS2mQhpyw/edit?usp=sharing",
+      "key": "unit_7_guide",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "unit_7_guide"
+      }
+    },
+    {
+      "name": "Unit 7 Presentation Slides",
+      "url": "https://docs.google.com/presentation/d/1STrrtZkjvZsovIPQnbizYym_V58ciDLvGZ8T-y59lKc/edit?usp=sharing",
+      "key": "unit_7_presentation_slides",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "unit_7_presentation_slides"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "unit_7_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "_key_u7l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "title_sequence_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "u7l1_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "unit_7_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "unit_7_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "unit_7_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "unit_7_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "_key_frq_writing_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "frq_scoring_guide_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "frq_writing_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "java_quick_reference"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "unit_7_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unit_7_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_u7l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "u7l2_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "unit_7_presentation_slides"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -48,19 +2093,319 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "acceptance_testing",
+      "word": "Acceptance Testing",
+      "definition": "A test conducted to determine if requirements are met",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "acceptance_testing"
+      }
+    },
+    {
+      "key": "alpha_testing",
+      "word": "Alpha Testing",
+      "definition": "A type of acceptance testing done by software engineers to identify issues and bugs",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "alpha_testing"
+      }
+    },
+    {
+      "key": "beta_testing",
+      "word": "Beta Testing",
+      "definition": "A type of acceptance testing done by actual users to identify issues and bugs",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "beta_testing"
+      }
+    },
+    {
+      "key": "method_decomposition",
+      "word": "Method Decomposition",
+      "definition": "The process of breaking down a larger problem into smaller subproblems, which are then written as methods",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "method_decomposition"
+      }
+    },
+    {
+      "key": "non_void_method",
+      "word": "Non-Void Method",
+      "definition": "A method that returns a single value",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "non_void_method"
+      }
+    },
+    {
+      "key": "procedural_abstraction",
+      "word": "Procedural Abstraction",
+      "definition": "Writing methods to represent a specific task or behavior",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "procedural_abstraction"
+      }
+    },
+    {
+      "key": "title_sequence",
+      "word": "Title Sequence",
+      "definition": "A scene or sequence of scenes shown at the beginning of a movie or TV show that includes the title and opening credits",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "title_sequence"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "acceptance_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "alpha_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "beta_testing"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "method_decomposition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "procedural_abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "vocabulary.key": "title_sequence"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "vocabulary.key": "non_void_method"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "151df16c-6496-4be3-8d25-45987d676449",
+      "properties": {
+        "description": "Prioritize project tasks based on peer feedback"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "151df16c-6496-4be3-8d25-45987d676449"
+      }
+    },
+    {
+      "key": "23b13309-f757-4d6b-8dba-d83d2d0e738f",
+      "properties": {
+        "description": "Give and receive peer feedback on project progress and quality"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "23b13309-f757-4d6b-8dba-d83d2d0e738f"
+      }
+    },
+    {
+      "key": "29426403-5a7c-4710-848e-94cf04163bf4",
+      "properties": {
+        "description": "Write scenario-based acceptance criteria for a program feature"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "29426403-5a7c-4710-848e-94cf04163bf4"
+      }
+    },
+    {
+      "key": "417e536f-b213-4323-99ee-cc552411623a",
+      "properties": {
+        "description": "Differentiate between void methods and non-void methods"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "417e536f-b213-4323-99ee-cc552411623a"
+      }
+    },
+    {
+      "key": "4c4b7e1c-65ce-4706-98db-56d3a199c186",
+      "properties": {
+        "description": "Implement methods based on a given set of specifications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "4c4b7e1c-65ce-4706-98db-56d3a199c186"
+      }
+    },
+    {
+      "key": "5016095e-6185-4c8b-ae86-53dee7cc27ac",
+      "properties": {
+        "description": "Reflect on the development process"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "5016095e-6185-4c8b-ae86-53dee7cc27ac"
+      }
+    },
+    {
+      "key": "519f66f7-18ef-469b-b9e7-3cd0714441f1",
+      "properties": {
+        "description": "Translate pseudocode into Java"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "519f66f7-18ef-469b-b9e7-3cd0714441f1"
+      }
+    },
+    {
+      "key": "5f8fcb17-0b13-408b-aab3-35e2159363d3",
+      "properties": {
+        "description": "Prioritize project tasks based on self-assessment and peer feedback"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "5f8fcb17-0b13-408b-aab3-35e2159363d3"
+      }
+    },
+    {
+      "key": "6bd79279-c90b-479e-b121-02d5c3aa19f1",
+      "properties": {
+        "description": "Identify the components of a method and its signature"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "6bd79279-c90b-479e-b121-02d5c3aa19f1"
+      }
+    },
+    {
+      "key": "7013a323-46bf-4ca3-9fc0-31e07b3ddcfb",
+      "properties": {
+        "description": "Identify the purpose and benefits of procedural abstraction"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "7013a323-46bf-4ca3-9fc0-31e07b3ddcfb"
+      }
+    },
+    {
+      "key": "73b524f2-35a3-4798-992e-fcf26662b3ae",
+      "properties": {
+        "description": "Apply method decomposition to a problem"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "73b524f2-35a3-4798-992e-fcf26662b3ae"
+      }
+    },
+    {
+      "key": "cabfd901-3224-472b-a166-742c8c901761",
+      "properties": {
+        "description": "Develop a program that creates a title sequence for a show to promote a content creator"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "objective.key": "cabfd901-3224-472b-a166-742c8c901761"
+      }
+    },
+    {
+      "key": "eece8158-f94d-4a23-b564-4919e5b62dd6",
+      "properties": {
+        "description": "Write pseudocode to plan an algorithm"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "eece8158-f94d-4a23-b564-4919e5b62dd6"
+      }
+    },
+    {
+      "key": "f6a665ec-8c8a-43c3-a545-8f28fdf7da64",
+      "properties": {
+        "description": "Self-assess progress in completing project requirements"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "f6a665ec-8c8a-43c3-a545-8f28fdf7da64"
+      }
+    },
+    {
+      "key": "fd9a4ebb-d4d7-46c4-9760-dcbc04440f60",
+      "properties": {
+        "description": "Develop a program that creates a title sequence for a show to promote a content creator"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "fd9a4ebb-d4d7-46c4-9760-dcbc04440f60"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-1.E.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.C.5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "VAR-1.G.4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.F.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "MOD-2.F.4"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 
