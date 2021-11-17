@@ -2,27 +2,27 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+import {navigateToHref} from '@cdo/apps/utils';
 
 export default class SaveBar extends Component {
   handleView = () =>
-    this.props.handleView ||
-    navigateToHref(linkWithQueryParams(this.props.pathForShowButton));
+    this.props.handleView || navigateToHref(this.props.pathForShowButton);
+
+  isShowButtonRendered =
+    this.props.handleView || this.props.pathForShowButton !== '/';
 
   render() {
     return (
       <div style={styles.saveButtonBackground} className="saveBar">
-        {this.props.pathForShowButton !== '/' && (
-          <button
-            className="btn"
-            type="button"
-            style={styles.saveButton}
-            onClick={this.handleView}
-            disabled={this.props.isSaving}
-          >
-            Show
-          </button>
-        )}
+        <button
+          className="btn"
+          type="button"
+          style={this.isShowButtonRendered ? styles.saveButton : styles.hide}
+          onClick={this.handleView}
+          disabled={this.props.isSaving}
+        >
+          Show
+        </button>
         <div style={styles.saveButtonArea}>
           {this.props.lastSaved && !this.props.error && (
             <div style={styles.lastSaved} className="lastSavedMessage">
@@ -99,6 +99,9 @@ const styles = {
   },
   saveButton: {
     margin: '10px 50px 10px 20px'
+  },
+  hide: {
+    visibility: 'hidden'
   },
   spinner: {
     fontSize: 25,
