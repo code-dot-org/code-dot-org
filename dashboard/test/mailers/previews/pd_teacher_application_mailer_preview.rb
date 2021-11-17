@@ -18,9 +18,6 @@ class Pd::TeacherApplicationMailerPreview < ActionMailer::Preview
     define_method "#{mail_type}__with_partner".to_sym do
       Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: true)
     end
-    define_method "#{mail_type}__with_partner_no_contact".to_sym do
-      Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: true, partner_contact_info: false)
-    end
     define_method "#{mail_type}__without_partner".to_sym do
       Pd::Application::TeacherApplicationMailer.send mail_type, build_application(matched: false)
     end

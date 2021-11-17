@@ -4,18 +4,22 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "is_course": true,
       "teacher_resources": [
         [
           "lessonPlans",
           "https://docs.google.com/document/d/1wBceXwfyyJKqjKmSQaT_DlyLXlLG3qd3Qm_yL0mNgi8/edit?usp=sharing"
         ]
-      ]
+      ],
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-10-25 22:54:41 UTC",
+    "family_name": "contagion-guided-practice",
+    "serialized_at": "2021-11-10 21:42:40 UTC",
     "published_state": "beta",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "contagion-guided-practice"
     }

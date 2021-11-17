@@ -66,6 +66,10 @@ Then /^I select the bear animal head animation from the animal category$/ do
   @browser.execute_script("$(\"img[src*='/category_animals/animalhead_bear.png']\")[0].click();")
 end
 
+Then /^I select the animation picker 'done' button$/ do
+  steps 'Then I click selector ".ui-test-selector-done-button" once I see it'
+end
+
 Then /^I add a new, blank animation$/ do
   steps <<-STEPS
     And I open the animation picker
@@ -78,6 +82,7 @@ Then /^I add the bear animal head animation from the library$/ do
     And I open the animation picker
     And I select the animal category of the animation library
     And I select the bear animal head animation from the animal category
+    And I select the animation picker 'done' button
   STEPS
 end
 
