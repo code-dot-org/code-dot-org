@@ -937,6 +937,12 @@ fi-FI:
   coursed-2020_gradelevel: Kahdeksasluokkalaisista alkaen
   coursee-2020_gradelevel: 8-12-vuotiaille
   coursef-2020_gradelevel: 9-13-vuotiaille
+  coursea-2021_gradelevel: 4-7-vuotiaille
+  courseb-2021_gradelevel: 5-8-vuotiaille
+  coursec-2021_gradelevel: 6-10-vuotiaille
+  coursed-2021_gradelevel: Kahdeksasluokkalaisista alkaen
+  coursee-2021_gradelevel: 8-12-vuotiaille
+  coursef-2021_gradelevel: 9-13-vuotiaille
   accelerated_gradelevel: 10+ -vuotiaille (kurssin 3 jälkeen)
   codeorg_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit
   codeintl_platformtext: Nykyaikaiset selaimet, älypuhelimet, tabletit

@@ -1647,12 +1647,11 @@ ar:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: آيس كريم
-            Stars: نجوم
-            Fireworks: مفرقعات
-            '"rainbow"': ألوان
-            '"hearts"': قلوب
             '"flowers"': زهور
+            '"hearts"': قلوب
+            '"iceCream"': آيس كريم
+            '"rainbow"': ألوان
+            '"stars"': نجوم
             '"waves"': أمواج
       Poetry_makeBurst:
         options:
@@ -1665,7 +1664,7 @@ ar:
         text: بلاي ساوند {SOUND}
         options:
           SOUND:
-            Light: ضوء
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ضوء
       Poetry_setBackground:
         text: عيّن لون الخلفية {COLOR}
       Poetry_setBackgroundEffect:

@@ -160,8 +160,8 @@
         "CourseF_outbreak2": "वायरस सिम्युलेशन",
         "CourseF_outbreak3": "वायरस सिम्युलेशन",
         "CourseF_outbreak4": "अपने सिम्युलेशन को मॉडिफाई करें",
-        "CourseF_outbreak7": "इम्युनिटी और वैक्सीन्स",
-        "CourseF_outbreak8": "एक संदेश साझा करें",
+        "CourseF_outbreak7": "इम्युनिटी और वैक्सीन्स (टीका)",
+        "CourseF_outbreak8": "एक मैसेज शेयर करें",
         "CourseF_video_introSpriteLab_2021": "यह स्प्राइट लैब है",
         "OPD-K5 WhatIsCS_dani": "कंप्यूटर साइंस क्या है?",
         "courseF_artist_for1_2021": "फॉर लूप्स फ्रीप्ले (शुरुआत)",
@@ -307,7 +307,15 @@
         "CSD U6 circuit button map_2019": "बटन सर्किट",
         "MC_HOC_2017_FP20x20": "फ्रीप्ले",
         "MC_HOC_2017_FP20x20_2019": "फ्रीप्ले",
-        "MC_HOC_2017_FP20x20_2020": "फ्रीप्ले"
+        "MC_HOC_2017_FP20x20_2020": "फ्रीप्ले",
+        "helloworld_animals_sizes": "साइज़",
+        "helloworld_animals_sounds": "आवाज़",
+        "helloworld_emoji_sizes": "साइज़",
+        "helloworld_emoji_sounds": "आवाज़",
+        "helloworld_food_sizes": "साइज़",
+        "helloworld_food_sounds": "आवाज़",
+        "helloworld_retro_sizes": "साइज़",
+        "helloworld_retro_sounds": "आवाज़"
       }
     }
   }

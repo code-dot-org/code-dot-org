@@ -16110,6 +16110,8 @@ ko:
             CS Discoveries Post Course survey:
               key: CS 발견 과정 후 설문 조사
               name: CS 발견 과정 후 설문 조사
+            lesson-1:
+              name: CS 발견 과정 후 설문 조사
           lesson_groups:
             csd2_1v2:
               display_name: '챕터 1: 웹페이지 만들기'
@@ -16219,6 +16221,8 @@ ko:
             CS Discoveries Post Course survey:
               key: CS 발견 과정 후 설문 조사
               name: CS 발견 과정 후 설문 조사
+            lesson-1:
+              name: CS 발견 과정 후 설문 조사
           lesson_groups:
             csd3_1:
               display_name: '챕터 1: 이미지와 애니메이션'
@@ -16312,6 +16316,8 @@ ko:
               name: 프로토타입 업데이트
             Build a Paper Prototype:
               name: 종이 프로토타입 만들기
+            CS Discoveries Post-Course Survey:
+              name: CS 발견 과정 후 설문 조사
           lesson_groups:
             csd4_1:
               display_name: '챕터 1: 사용자 중심 설계'
@@ -16389,6 +16395,8 @@ ko:
               name: CS 발견 과정 후 설문 조사
             Data and Machine Learning:
               name: 데이터 및 머신러닝
+            CS Discoveries Post-Course Survey:
+              name: CS 발견 과정 후 설문 조사
           lesson_groups:
             csd5_1:
               display_name: '챕터1: 정보 표현하기'
@@ -16466,6 +16474,8 @@ ko:
               name: 프로젝트 후 테스트
             CS Discoveries Post Course survey:
               key: CS 발견 과정 후 설문 조사
+              name: CS 발견 과정 후 설문 조사
+            CS Discoveries Post-Course Survey:
               name: CS 발견 과정 후 설문 조사
           lesson_groups:
             csd6_1:
@@ -18088,6 +18098,15 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Java 연구소
+            lesson-15:
+              name: 평가일
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -18194,6 +18213,8 @@ ko:
               description_teacher: 학생들은 소그룹 안에서 그들이 선택한 인공지능 (AI) 영역에서 윤리적 위험을 노출한 기사와 동영상을 사용하여 조사를 실시합니다. 그후, 각 그룹은 그들이 선택한 영역을 다루는 최소 한 가지의 솔루션 중심 원칙을 발전시킵니다. 그러한 원칙은 그 다음 AI 창작자와 입법가를 위해 학급 차원의 “우리의  AI 윤리강령” 리소스 (예. 슬라이드 프레젠테이션, 문서, 웹페이지)에 합쳐집니다.
             Survey Planning:
               name: 데이터 수집 설계
+            CS Discoveries Post-Course Survey:
+              name: CS 발견 과정 후 설문 조사
           lesson_groups:
             lessonGroup-4:
               display_name: 설문조사
@@ -18403,6 +18424,8 @@ ko:
           lessons:
             lesson-12:
               name: 툴
+            lesson-17:
+              name: 콘솔
             lesson-18:
               name: 위젯
           lesson_groups:
@@ -18410,6 +18433,11 @@ ko:
               display_name: 레슨
             lessonGroup-3:
               display_name: 프로젝트
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: 헬로우, 월드
+          title: '"안녕하세요. 여러분!"'
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
@@ -18517,3 +18545,29 @@ ko:
           lesson_groups:
             lessonGroup-2:
               display_name: 컨텐츠
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: 과정 후 설문조사
+          title: CS 발견 과정 후 설문 조사
+        csa6-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: 평가일
+            Java Lab:
+              name: Java 연구소
+              key: Java 연구소
+            lesson-15:
+              name: 평가일
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 컨텐츠
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: 말하는 꿀벌
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: 데이터 시각화
+          title: 데이터 시각화
