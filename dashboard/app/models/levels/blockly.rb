@@ -681,38 +681,25 @@ class Blockly < Level
   def localized_markdown_with_placeholder_texts(markdown)
     return if markdown.nil?
 
-    placeholders = Hash.new
+    # Not using Nokogiri::HTML.fragment because of existing bug,
+    # and need select all descendant capability.
+    # https://github.com/sparklemotion/nokogiri/issues/572
     processed_markdown = Nokogiri::HTML(markdown, &:noblanks)
+    localize_placeholder_texts(processed_markdown, 'text', ['TEXT'])
 
-    processed_markdown.xpath("//block[@type=\"text\"]").each do |block|
-      title = block.at_xpath("./title[@name=\"TEXT\"]")
-      next unless title&.content&.present?
-
-      text_key = Digest::MD5.hexdigest title.content
-      localized_text = I18n.t(
-        text_key,
-        scope: [:data, :placeholder_texts, name],
-        default: nil,
-        smart: true
-      )
-      placeholders[title.content] = localized_text if localized_text
-    end
-
-    # Replace each string here
-    placeholders.keys.each do |original_str|
-      markdown = markdown.gsub(original_str, placeholders[original_str])
-    end
-
-    markdown
+    # Removing wrapping elements placed by Nokogiri::HTML processing
+    processed_markdown = processed_markdown.root.xpath("/html/body").first.inner_html
+    # Text gets wrapped with p tags and breaks markdown syntax
+    processed_markdown.gsub!('<p>', '').gsub!('</p>', '')
   end
 
   # Localizing placeholder texts in one block type.
-  # @param block_xml [Nokogiri::XML::Document]
+  # @param document [Nokogiri::XML::Document, Nokogiri::HTML::Document]
   # @param block_type [String]
   # @param title_names [Array<String>]
   # @return [Nokogiri::XML::Document]
-  def localize_placeholder_texts(block_xml, block_type, title_names)
-    block_xml.xpath("//block[@type=\"#{block_type}\"]").each do |block|
+  def localize_placeholder_texts(document, block_type, title_names)
+    document.xpath("//block[@type=\"#{block_type}\"]").each do |block|
       title_names.each do |title_name|
         title = block.at_xpath("./title[@name=\"#{title_name}\"]")
         next unless title&.content&.present?
@@ -729,7 +716,7 @@ class Blockly < Level
         title.content = localized_text if localized_text
       end
     end
-    block_xml
+    document
   end
 
   def self.base_url
