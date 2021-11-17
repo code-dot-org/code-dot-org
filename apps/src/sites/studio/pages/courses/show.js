@@ -52,7 +52,7 @@ function showCourseOverview() {
   store.dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
 
   if (isTeacher) {
-    store.dispatch(setViewType(ViewType.Teacher));
+    store.dispatch(setViewType(ViewType.Instructor));
     store.dispatch(setSections(scriptData.sections));
 
     if (scriptData.is_verified_teacher) {

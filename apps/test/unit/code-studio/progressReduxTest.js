@@ -391,12 +391,12 @@ describe('progressReduxTest', () => {
     // stuff like updating query param. We just want to test the core action
     // it ultimately dispatches.
     describe('setViewType', () => {
-      it('toggles to detail view when setting viewAs to Teacher', () => {
+      it('toggles to detail view when setting viewAs to instructor', () => {
         const state = {
           ...initialState,
           isSummaryView: true
         };
-        const nextState = reducer(state, setViewType(ViewType.Teacher));
+        const nextState = reducer(state, setViewType(ViewType.Instructor));
         assert.strictEqual(nextState.isSummaryView, false);
       });
 
@@ -406,7 +406,7 @@ describe('progressReduxTest', () => {
           studentDefaultsSummaryView: true,
           isSummaryView: false
         };
-        const nextState = reducer(state, setViewType(ViewType.Teacher));
+        const nextState = reducer(state, setViewType(ViewType.Instructor));
         assert.strictEqual(nextState.isSummaryView, false);
       });
 
@@ -416,7 +416,7 @@ describe('progressReduxTest', () => {
           studentDefaultsSummaryView: false,
           isSummaryView: true
         };
-        const nextState = reducer(state, setViewType(ViewType.Teacher));
+        const nextState = reducer(state, setViewType(ViewType.Instructor));
         assert.strictEqual(nextState.isSummaryView, false);
       });
     });
