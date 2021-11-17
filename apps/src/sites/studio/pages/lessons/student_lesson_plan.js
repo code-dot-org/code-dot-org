@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-
 import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 import announcementsReducer, {
   addAnnouncement
@@ -25,9 +24,8 @@ $(document).ready(function() {
  */
 async function displayLessonOverview() {
   const lessonData = getScriptData('lesson');
-  await retrieveProgress('csd1-2021', null, null);
-  //const progressData = getScriptData('progress');
-
+  const scriptName = getScriptData('scriptName');
+  await retrieveProgress(scriptName, null, null);
   const store = getStore();
 
   const groupedLessonsResults = groupedLessons(store.getState().progress);
@@ -41,8 +39,8 @@ async function displayLessonOverview() {
       }
     })
   );
-  const {lessons, levelsByLesson} = groupedLesson;
-  console.log(lessons);
+  const levelsByLesson = groupedLesson.levelsByLesson;
+  const targetLessonLevels = levelsByLesson[lessonIndex];
 
   if (lessonData.announcements) {
     registerReducers({announcements: announcementsReducer});
@@ -59,12 +57,12 @@ async function displayLessonOverview() {
     );
   }
 
+  // !!store.progress.unitCompleted <- wait until this is true to call StudentLessonOverview
+  // ... similar to rendering logic in UnitOverview
+  //const unitProgressLoaded = store.getState().progress.unitCompleted;
   ReactDOM.render(
     <Provider store={store}>
-      <StudentLessonOverview
-        lesson={lessonData}
-        levels={levelsByLesson[lessonIndex]}
-      />
+      <StudentLessonOverview lesson={lessonData} levels={targetLessonLevels} />
     </Provider>,
     document.getElementById('show-container')
   );
