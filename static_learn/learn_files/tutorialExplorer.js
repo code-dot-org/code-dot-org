@@ -7061,7 +7061,7 @@ function (_React$Component) {
     }, _react["default"].createElement("div", {
       style: styles.container
     }, _react["default"].createElement("img", {
-      src: "/images/learn/robotics-link.png",
+      src: "learn_files/robotics-link.png",
       style: styles.roboticsButtonImage,
       alt: ""
     }), _react["default"].createElement("div", {
