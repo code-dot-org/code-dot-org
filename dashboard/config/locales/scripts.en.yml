@@ -23044,22 +23044,36 @@ en:
               description_teacher: Students revisit the components of a method signature and review the relationship between actual and formal parameters. Students differentiate between `void` and non-`void` methods and debug code with incorrect method headers and return statements. Students then plan the tasks they need to complete for their Title Sequence Project.
             lesson-7:
               name: Exploring Method Components and Functionality
+              description_student: You revisit passing primitives and object references as parameters to identify similarities and differences between each. You determine the output of code segments and the impact on objects from using object references as parameters. You then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
+              description_teacher: Students revisit passing primitives and object references as parameters to identify similarities and differences between each. Students determine the output of code segments and the impact on objects from using object references as parameters. Students then learn the importance of best practices for using object references as parameters to make sure that objects are only modified when required.
             lesson-8:
               name: Using Object References as Parameters
+              description_student: You revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. You then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning your initial plans for your Title Sequence Project.
+              description_teacher: Students revisit the purpose of overloading and examine overloaded methods to determine their impacts on the functionality of a program. Students then write overloaded methods to solve problems in the console, The Neighborhood, or The Theater before beginning their initial plans for their Title Sequence Project.
             lesson-9:
               name: Overloading Methods
+              description_student: You revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. You explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
+              description_teacher: Students revisit the `public` and `private` keywords to determine the external accessibility of attributes and behaviors of an object. Students explore the impacts of setting methods to `private` on the functionality of a program and identify the benefits of using `private` methods.
             lesson-10:
               name: Accessing Object Behavior
               description_student: Your favorite content creator has recruited you to create a title sequence to use on all of their content! The Title Sequence Project is a large project that you work on throughout the unit, and project management strategies help organize and structure your work.
               description_teacher: Students review writing methods to satisfy conditions and learn about procedural abstraction and method decomposition. Students are then introduced to the Title Sequence Project and evaluate requirements and examples to identify questions and key features.
             lesson-11:
               name: Overriding Methods
+              description_student: You have overridden methods in the `Object` class in previous lessons and worked with class hierarchies that implemented overridden methods. You explore writing and calling overridden methods in custom classes, then learn to use sentinel values to improve your ability to work with user input in your programs.
+              description_teacher: Students have overridden methods in the `Object` class in previous lessons and worked with class hierarchies that implemented overridden methods. Students explore writing and calling overridden methods in custom classes, then learn to use sentinel values to improve their ability to work with user input in their programs.
             lesson-12:
               name: Exploring Recursive Methods
+              description_student: You explore recursive methods through an unplugged activity of your choosing and practice tracing code with recursive methods. You then work through the tasks on your Project Planning Board to continue development on your Title Sequence Project.
+              description_teacher: Students explore recursive methods through an unplugged activity of their choosing and practice tracing code with recursive methods. Students then work through the tasks on their Project Planning Board to continue development on their Title Sequence Project.
             lesson-13:
               name: Comparing Recursive and Iterative Solutions
+              description_student: Sometimes it's easier to write a method iteratively, and other times a recursive method is best! You examine problems and algorithms to identify their base cases and recursive cases. You differentiate between recursive and iterative solutions and practice converting iterative solutions to recursive methods.
+              description_teacher: Students examine problems and algorithms to identify their base cases and recursive cases. Students differentiate between recursive and iterative solutions and practice converting iterative solutions to recursive methods.
             lesson-14:
               name: Writing Recursive Methods
+              description_student: You compare iterative and recursive solutions for working with `String`s and practice tracing recursive solutions with `String`s, arrays, and `ArrayList`s. You then participate in a peer review to give and receive feedback on your Title Sequence Project progress.
+              description_teacher: Students compare iterative and recursive solutions for working with `String`s and practice tracing recursive solutions with `String`s, arrays, and `ArrayList`s. Students then participate in a peer review to give and receive feedback on their Title Sequence Project progress.
             lesson-15:
               name: Maximizing System Reliability
             lesson-1:
