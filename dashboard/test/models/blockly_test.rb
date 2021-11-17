@@ -510,7 +510,51 @@ XML
     assert_equal localized_hints[1]["tts_url"], "https://tts.code.org/rosa22k/180/100/62885e459602efbd236f324c4796acc9/test_localize_authored_hints.mp3"
   end
 
-  test 'localized_blocks_with_placeholder_texts' do
+  test 'localizes authored hints with embedded behavior block' do
+    test_locale = :"es-MX"
+    level_name = 'test_localize_authored_hints_with_embedded_behavior_block'
+    hint = <<~HINT
+      Some text at the beginning: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.
+
+      This block is found in the **Behaviors** category of the toolbox.
+    HINT
+
+    I18n.locale = test_locale
+    custom_i18n = {
+      'data' => {
+        'authored_hints' => {
+          level_name => {
+            "first": hint,
+          }
+        },
+        behavior_names: {
+          level_name => {
+            "wandering": "deambulando",
+          }
+        }
+      }
+    }
+
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = Level.create(
+      name: level_name,
+      level_num: 'custom',
+      type: 'Maze',
+      authored_hints: JSON.generate(
+        [
+          {"hint_markdown": hint, "hint_id": "first"},
+        ]
+      )
+    )
+
+    localized_hints = JSON.parse(level.localized_authored_hints)
+
+    expected_translated_hint = hint.gsub("wandering", "deambulando")
+    assert_equal expected_translated_hint, localized_hints[0]["hint_markdown"]
+  end
+
+  test 'localized_placeholder_text_blocks' do
     test_locale = 'vi-VN'
     original_str = 'Hello'
     localized_str = 'Xin Chao'
@@ -557,7 +601,7 @@ XML
         </blocks>
       </GamelabJr>
     XML
-    localized_block_xml = level.localized_blocks_with_placeholder_texts(block_xml)
+    localized_block_xml = level.localized_placeholder_text_blocks(block_xml)
 
     # Expected result is an one-line XML, in which the original string
     # has been replaced by a localized string.
@@ -567,29 +611,14 @@ XML
     assert_equal expected_localized_block_xml, localized_block_xml
   end
 
-  test 'localized_markdown_with_placeholder_texts' do
+  test 'placeholder text is localized within markdown' do
+    level_name = 'test_localize_markdown_placeholder_text'
     test_locale = 'vi-VN'
     original_str = 'Hello'
     localized_str = 'Xin Chao'
-    level = create :level, :blockly
 
-    # Add translation mapping to the I18n backend
-    custom_i18n = {
-      'data' => {
-        'placeholder_texts' => {
-          level.name => {
-            # Must generate the string key in the same way it is created in
-            # the get_i18n_strings function in sync-in.rb script.
-            Digest::MD5.hexdigest(original_str) => localized_str
-          }
-        }
-      }
-    }
-    I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n
-
-    # Create a simple blockly level markdown property containing the
-    # original string, then localize the markdown property.
+    # Create a simple blockly level markdown string containing the
+    # original string.
     markdown = <<~HTML
       Test [link](https://code.org)
       <block type="gamelab_printText">
@@ -600,13 +629,46 @@ XML
         </value>
       </block>
     HTML
-    localized_markdown = level.localized_markdown_with_placeholder_texts(markdown)
+
+    # Add translation mapping to the I18n backend
+    custom_i18n = {
+      'data' => {
+        'placeholder_texts' => {
+          level_name => {
+            # Must generate the string key in the same way it is created in
+            # the get_i18n_strings function in sync-in.rb script.
+            Digest::MD5.hexdigest(original_str) => localized_str
+          }
+        },
+        "short_instructions" => {
+          level_name => markdown
+        },
+        "long_instructions" => {
+          level_name => markdown
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    level = create(
+      :level,
+      :blockly,
+      name: level_name,
+      level_num: 'custom',
+      short_instructions: markdown,
+      long_instructions: markdown
+    )
+
+    localized_markdown = level.localized_blockly_in_text(markdown)
 
     # Expected result is markdown in which the original string
     # has been replaced by a localized string. Newlines should be
     # maintained.
     expected_localized_markdown = markdown.gsub(original_str, localized_str)
 
+    assert_equal expected_localized_markdown, level.localized_blockly_level_options({})['shortInstructions']
+    assert_equal expected_localized_markdown, level.localized_blockly_level_options({})['longInstructions']
     assert_equal expected_localized_markdown, localized_markdown
   end
 
