@@ -215,7 +215,8 @@ class ProgrammingExpression < ApplicationRecord
       syntax: syntax,
       returnValue: return_value,
       tips: tips,
-      parameters: palette_params
+      parameters: palette_params,
+      examples: examples
     }
   end
 
