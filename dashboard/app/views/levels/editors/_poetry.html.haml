@@ -10,7 +10,7 @@
 = render partial: 'levels/editors/fields/debugger', locals: {f: f}
 = render partial: 'levels/editors/fields/control_buttons', locals: {f: f}
 = render partial: 'levels/editors/fields/animation', locals: {f: f}
-= render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: @level.standalone_app_name}
+= render partial: 'levels/editors/fields/encrypted_examples', locals: {f: f, level_type: @level.standalone_app_name, warning: "For Poetry levels, the project URL for example solutions depends on the level type. Any existing example solutions will break if you change the level type without updating the channel tokens here."}
 
 = render partial: 'levels/editors/fields/preload_assets', locals: {f: f}
 = render partial: 'levels/editors/fields/sharing', locals: {f: f}
