@@ -197,7 +197,10 @@ function getLevelProgress(signedIn, progressData, scriptName) {
     case null:
       // We do not know if user is signed in or not, send a request to the server
       // to find out if the user is signed in and retrieve progress information
-      return $.ajax(`/api/user_progress/${scriptName}`)
+      return $.ajax({
+        url: `/api/user_progress/${scriptName}`,
+        data: {user_id: clientState.queryParams('user_id')}
+      })
         .then(data => {
           if (data.signedIn) {
             return {
@@ -361,7 +364,7 @@ function queryUserProgress(store, scriptData, currentLevelId) {
 
     const postMilestoneDisabled = store.getState().progress
       .postMilestoneDisabled;
-    if (data.signedIn && postMilestoneDisabled && !scriptData.isHocScript) {
+    if (data.signedIn && postMilestoneDisabled) {
       showDisabledBubblesModal();
     }
 

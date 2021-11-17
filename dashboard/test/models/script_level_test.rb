@@ -117,6 +117,14 @@ class ScriptLevelTest < ActiveSupport::TestCase
       assert_equal sl.get_example_solutions(level, @authorized_teacher), ["http://test-studio.code.org/s/test-script/lessons/1/levels/1?solution=true"]
     end
 
+    test 'get_example_solutions for level with ideal level source and section_id' do
+      script = create(:csp_script, name: 'test-script')
+      level = create(:level, :blockly, :with_ideal_level_source)
+      sl = create(:script_level, levels: [level], script: script)
+
+      assert_equal sl.get_example_solutions(level, @authorized_teacher, 5), ["http://test-studio.code.org/s/test-script/lessons/1/levels/1?section_id=5&solution=true"]
+    end
+
     test 'get_example_solutions returns empty array if no examples' do
       level = create(:level)
       sl = create(:script_level, levels: [level])
