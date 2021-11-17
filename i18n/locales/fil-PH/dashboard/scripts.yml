@@ -11697,6 +11697,8 @@ fil:
               name: Mga Loops sa Artist
               description_student: Maghanda na sa iyong susunod na obra maestra. Dito ay gagamit ka ng mga `for` loop para makagawa ng iilang kamangha-manghang mga larawan.
               description_teacher: Sa araling ito, ang mga estudyante ay patuloy na magsasanay sa mga for loop, sa pagkakataong ito gamit ang Artist. Ang mga estudyante ay magkukumpleto ng mga palaisipan sa pamamagitan ng pagsama-sama sa mga ideya ng mga variable, mga loop, at mga for loop para makalikha ng mga komplikadong mga disenyo. Sa bandang huli, sila ay magkakaroon ng pagkakataon na maglikha ng kanilang sariling sining sa libreng laro na antas.
+            lesson-5:
+              name: Pagsiklab
             lesson-2:
               name: Ang Kapangyarihan ng mga Salita
               description_student: Ang pang-aapi ay hindi talaga mabuti. Ang araling ito ay magtuturo sa iyong tungkol sa kung ano pwede at hindi pwedeng sabihin online.
@@ -12119,6 +12121,8 @@ fil:
           lessons:
             lesson-4:
               name: Ang Proseso ng Pag-Disenyo
+        outbreak-module:
+          title: Pagsiklab
         csa-videos:
           lesson_groups:
             lessonGroup-3:
@@ -12143,6 +12147,8 @@ fil:
               name: Buod
         csa-u6-dev:
           lessons:
+            lesson-17:
+              name: Console
             lesson-18:
               name: Mga Widget
         csdu6-playground:
@@ -12164,3 +12170,9 @@ fil:
             lesson-1:
               name: Spelling Bee
           title: Spelling Bee
+        outbreak-csc:
+          title: Pagsiklab
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Spelling Bee

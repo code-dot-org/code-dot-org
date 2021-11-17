@@ -1106,7 +1106,8 @@
           "hello_world_new": "Bagong block!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "Bagong block!"
+          "hello_world_new": "Bagong block!",
+          "hello_world_new_block": "Bagong block!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "Bagong block!"
@@ -1151,7 +1152,8 @@
         "poetry_hoc_freeplay": {
           "poetry_burst": "Bagong block!",
           "poetry_multiple_sprites": "Bagong block!",
-          "poetry_new_block": "Bagong block!"
+          "poetry_new_block": "Bagong block!",
+          "poetry_selector": "Pumili ng anumang tula, o ilagay ang sa iyo!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "Bagong block!"
@@ -1163,6 +1165,110 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "Bagong block!",
           "poetry_remove_sprite": "Bagong block!"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "Gamitin ang block na ito upang magtakda ng bagong background."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "Gamitin ang block na ito kasama ang isa sa mga pag-uugali sa ibaba."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "Mag-click dito para paganahin ang code."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "Idagdag ang block ng event na ito sa workspace mo."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "I-click dito upang magdagdag ng mga kasuotan sa proyekto mo."
+        },
+        "helloworld_animals_location": {
+          "pin": "pin"
+        },
+        "helloworld_animals_multi": {
+          "pin": "pin"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "Gamitin ang block na ito upang makapagsalita ang mga tiyanak.",
+          "hello_world_make_sprite": "Gamitin ang block na ito upang gumawa ng tiyanak."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "Gamitin ang block na ito upang magtakda ng bagong background."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "Gamitin ang block na ito kasama ang isa sa mga pag-uugali sa ibaba."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "Mag-click dito para paganahin ang code."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "Idagdag ang block ng event na ito sa workspace mo."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "I-click dito upang magdagdag ng mga kasuotan sa proyekto mo."
+        },
+        "helloworld_emoji_location": {
+          "pin": "pin"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "pin"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "Gamitin ang block na ito upang makapagsalita ang mga tiyanak.",
+          "hello_world_make_sprite": "Gamitin ang block na ito upang gumawa ng tiyanak."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "Gamitin ang block na ito upang magtakda ng bagong background."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Gamitin ang block na ito kasama ang isa sa mga pag-uugali sa ibaba."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "Mag-click dito para paganahin ang code."
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "Idagdag ang block ng event na ito sa workspace mo."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "I-click dito upang magdagdag ng mga kasuotan sa proyekto mo."
+        },
+        "helloworld_food_location": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi": {
+          "pin": "pin"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "Gamitin ang block na ito upang makapagsalita ang mga tiyanak.",
+          "hello_world_make_sprite": "Gamitin ang block na ito upang gumawa ng tiyanak."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "Gamitin ang block na ito upang magtakda ng bagong background."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "Gamitin ang block na ito kasama ang isa sa mga pag-uugali sa ibaba."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "Mag-click dito para paganahin ang code."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "Idagdag ang block ng event na ito sa workspace mo."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "I-click dito upang magdagdag ng mga kasuotan sa proyekto mo."
+        },
+        "helloworld_retro_location": {
+          "pin": "pin"
+        },
+        "helloworld_retro_multi": {
+          "pin": "pin"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "Gamitin ang block na ito upang makapagsalita ang mga tiyanak.",
+          "hello_world_make_sprite": "Gamitin ang block na ito upang gumawa ng tiyanak."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "Maghanap ng mga block ng code dito.",
+          "pause_button": "Subukan ang animation mo gamit ang button na ito."
         }
       }
     }

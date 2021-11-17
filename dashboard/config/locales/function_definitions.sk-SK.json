@@ -4412,6 +4412,11 @@
           "move and get nectar with counter": {
             "name": "posuň sa a získaj nektár s počítadlom"
           }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "začať od začiatku"
+          }
         }
       }
     }
