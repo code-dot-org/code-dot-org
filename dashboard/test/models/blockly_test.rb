@@ -648,7 +648,7 @@ XML
 
     # Expected result is markdown in which the original string
     # has been replaced by a localized string. Newlines should be
-    # maintained.
+    # maintained outside of any XML.
     expected_localized_markdown = markdown.gsub(original_str, localized_str)
 
     assert_equal expected_localized_markdown, localized_markdown
