@@ -474,7 +474,7 @@ class Blockly < Level
     # Surround the text in a <root /> node so we can parse it as an XML document.
     text_xml_doc = Nokogiri::XML("<root>#{text}</root>")
     # Selects the `text` XML elements which will be inside the <xml><root>{text}</root></xml>
-    text_xml = text_xml_doc.child.children
+    text_xml = text_xml_doc.root.children
     # Translate all the function blockly blocks in the text.
     localized_function_blocks_xml(text_xml_doc)
     # TODO: add `localized_blocks_with_placeholder_texts_xml(text_xml_doc)`
