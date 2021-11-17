@@ -7,7 +7,6 @@ import progress from '@cdo/apps/code-studio/progressRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
 import lessonLock from '@cdo/apps/code-studio/lessonLockRedux';
-import Immutable from 'immutable';
 
 const defaultProps = {
   lesson: fakeLesson('Maze', 1),
@@ -51,9 +50,7 @@ const initialState = {
     sections: {},
     sectionIds: []
   },
-  hiddenLesson: Immutable.fromJS({
-    hideableLessonsAllowed: true
-  }),
+  hiddenLesson: {},
   lessonLock: {}
 };
 
