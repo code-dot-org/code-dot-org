@@ -323,6 +323,7 @@ Dashboard::Application.routes.draw do
       get :search
     end
   end
+  get 'programming_expressions/:environment/:expression', to: 'programming_expressions#show'
 
   resources :standards, only: [] do
     collection do

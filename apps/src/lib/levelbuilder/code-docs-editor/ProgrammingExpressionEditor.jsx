@@ -257,7 +257,7 @@ export default function ProgrammingExpressionEditor({
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
-        handleView={() => navigateToHref('/')}
+        handleView={() => navigateToHref(`/programming_expresions/${id}`)}
       />
       <UploadImageDialog
         isOpen={uploadImageDialogOpen}
