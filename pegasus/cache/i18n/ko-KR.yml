@@ -954,7 +954,6 @@ ko-KR:
   dashboard_submission_timestamp: 제출 시간 표시
   stats_hoc_2013_heading: '지난 Hour of Code 이후의 폭발적 통계수치. 지난 1주일:'
   stats_hoc_2013_image_alt: 203 Hour of Code 이후 통계수치
-  dashboard_teacher: 선생님
   dashboard_student: 학생
   dashboard_sections_email_question: 모든 학생들이 올바른 이메일 주소를 가지고 있나요?
   dashboard_sections_account_creation_question: 학생들의 계정은 누가 만들었나요?
@@ -1244,6 +1243,12 @@ ko-KR:
   coursed-2020_gradelevel: 8 학년 이상
   coursee-2020_gradelevel: 나이 8세-12세
   coursef-2020_gradelevel: 9-13 세
+  coursea-2021_gradelevel: 4-7 세
+  courseb-2021_gradelevel: 5-8 세
+  coursec-2021_gradelevel: 6-10 세
+  coursed-2021_gradelevel: 8 학년 이상
+  coursee-2021_gradelevel: 나이 8세-12세
+  coursef-2021_gradelevel: 9-13 세
   accelerated_gradelevel: 나이 10세-13세
   codeorg_platformtext: 최신 웹브라우저, 스마트폰, 태블릿
   codeintl_platformtext: 최신 웹브라우저, 스마트폰, 태블릿

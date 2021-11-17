@@ -125,8 +125,8 @@ class TopInstructions extends Component {
     //Pull the student id from the url
     const studentId = queryString.parse(window.location.search).user_id;
 
-    this.isViewingAsStudent = this.props.viewAs === ViewType.Student;
-    this.isViewingAsTeacher = this.props.viewAs === ViewType.Teacher;
+    this.isViewingAsStudent = this.props.viewAs === ViewType.Participant;
+    this.isViewingAsTeacher = this.props.viewAs === ViewType.Instructor;
 
     const teacherViewingStudentWork =
       this.isViewingAsTeacher &&
