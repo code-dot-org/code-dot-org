@@ -164,13 +164,13 @@ describe('TeacherPanel', () => {
 
     it('calls selectUser when user is clicked with isAsync true when on overview page', () => {
       const store = createStore(combineReducers({viewAs}), {
-        viewAs: ViewType.Teacher
+        viewAs: ViewType.Instructor
       });
 
       const selectUserStub = sinon.stub();
       const overrideProps = {
         selectUser: selectUserStub,
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         students: students,
         pageType: pageTypes.scriptOverview
       };
@@ -190,13 +190,13 @@ describe('TeacherPanel', () => {
 
     it('calls selectUser when user is clicked with isAsync false when on level page', () => {
       const store = createStore(combineReducers({viewAs}), {
-        viewAs: ViewType.Teacher
+        viewAs: ViewType.Instructor
       });
 
       const selectUserStub = sinon.stub();
       const overrideProps = {
         selectUser: selectUserStub,
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         students: students,
         pageType: pageTypes.level
       };

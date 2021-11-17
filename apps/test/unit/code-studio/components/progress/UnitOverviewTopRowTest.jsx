@@ -224,7 +224,7 @@ describe('UnitOverviewTopRow', () => {
       const wrapper = shallow(
         <UnitOverviewTopRow
           {...defaultProps}
-          viewAs={ViewType.Teacher}
+          viewAs={ViewType.Instructor}
           isMigrated={true}
           teacherResources={[
             {
