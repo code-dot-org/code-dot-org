@@ -8,7 +8,9 @@ es-MX:
       moving east: moverse al este
       moving east and looping: moverse hacia el este y hacer un bucle
       moving north: moviéndose al norte
+      moving north and looping: moviéndose hacia el norte y haciendo un bucle
       moving south: moviéndose al sur
+      moving south and looping: moviéndose hacia el sur y haciendo un bucle
       moving west: moviéndose al oeste
       moving west and looping: moverse hacia el oeste y hacer un bucle
       moving with arrow keys: moverse con las teclas de flecha

@@ -303,7 +303,8 @@ class Section < ApplicationRecord
       students: include_students ? unique_students.map(&:summarize) : nil,
       restrict_section: restrict_section,
       code_review_enabled: code_review_enabled?,
-      is_assigned_csa: assigned_csa?
+      is_assigned_csa: assigned_csa?,
+      code_review_expires_at: code_review_expires_at
     }
   end
 

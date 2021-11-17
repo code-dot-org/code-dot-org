@@ -39,6 +39,7 @@ nl:
         Custom: Kunstenaar
         CustomStudio: Speel Lab
         Gamelab: Game Lab
+        Spritelab: Sprite Lab
     trophy:
       name:
         Bronze: Brons
@@ -454,6 +455,8 @@ nl:
         CSF_if_allskins: Het if-blok
         CSF_loops_AB: Lussen
         hoc_dance_warmup: Dance Party - Opwarmen
+        hoc_dance_events: Dance Party - Evenementen
+        hoc_dance_properties: Dansfeest - Eigenschappen
         hoc_dance_congrats: Dance Party - Party On!
         writing_first_program: Schrijf je eerste computerprogramma!
         csd_pair_programming: Programmeren in Tweetallen

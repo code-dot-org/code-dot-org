@@ -2,5 +2,6 @@
 en-GB:
   data:
     progressions:
+      Example: Example
       Lists: Lists
       Variables: Variables
