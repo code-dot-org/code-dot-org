@@ -609,6 +609,19 @@ pl:
         hello_world_events: Witaj świecie - Programowanie ze zdarzeniami
         hello_world_congrats: Witaj świecie - Rób, co chcesz
         csp_global_vs_local: Debugowanie zmiennych globalnych versus lokalnych
+        rough_poemart_intro: v1 Sztuka poezji Wprowadzenie
+        rough_poemart_events: v1 Sztuka poezji Zdarzenia
+        rough_poemart_imagery: v1 Sztuka poezji Obrazy
+        rough_poemart_congrats: ' v1 Sztuka poezji Gratulacje'
+        poetry_module_variables: Zmienne - Kodowanie z Poezją
+        poetry_module_textandvariables: Tekst i Zmienne - Kodowanie z Poezją
+        poetry_module_planningapp: Planowanie aplikacji do generowania wierszy — Kodowanie z poezją
+        poetry_module_multichoiceprompts: Monity wielokrotnego wyboru — kodowanie z poezją
+        poetry_module_conditionals: Warunki - Kodowanie z Poezją
+        poemart_intro: Wprowadzenie do sztuki poezji
+        poemart_events: Zdarzenia związane z poematami
+        poemart_imagery: Obrazy związane z poematami
+        poemart_celebration: Święto związane z poematami
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

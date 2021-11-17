@@ -313,8 +313,8 @@
         "CourseF_outbreak2": "Simulasi Virus",
         "CourseF_outbreak3": "Simulasi Virus",
         "CourseF_outbreak4": "Modifikasi Simulasi Anda",
-        "CourseF_outbreak7": "Peluang Acak",
-        "CourseF_outbreak8": "Kekebalan dan Vaksin",
+        "CourseF_outbreak7": "Kekebalan dan Vaksin",
+        "CourseF_outbreak8": "Bagikan Pesan",
         "CourseF_video_introSpriteLab_2021": "Ini adalah Sprite Lab",
         "MC_HOC_2017_01_RETRY_2021": "Rumah dan pekarangannya",
         "MC_HOC_2017_02_Cole_2021": "Ladang",
@@ -346,7 +346,19 @@
         "helloworld_food_costumes": "Kostum",
         "helloworld_retro_costumes": "Kostum",
         "courseF_apps_card": "Kartu Ucapan",
-        "courseF_editable_card": "Kartu Ucapan"
+        "courseF_editable_card": "Kartu Ucapan",
+        "courseF_apps_aquarium": "Akuarium Virtual",
+        "courseF_apps_chatbot": "X-9 Chat Bot",
+        "courseF_events_freeplay_animals": "Hewan Lucu",
+        "courseF_sprites_freeplay_animals": "Hewan Lucu",
+        "helloworld_animals_sizes": "Ukuran",
+        "helloworld_animals_sounds": "Suara",
+        "helloworld_emoji_sizes": "Ukuran",
+        "helloworld_emoji_sounds": "Suara",
+        "helloworld_food_sizes": "Ukuran",
+        "helloworld_food_sounds": "Suara",
+        "helloworld_retro_sizes": "Ukuran",
+        "helloworld_retro_sounds": "Suara"
       }
     }
   }

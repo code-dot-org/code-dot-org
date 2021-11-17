@@ -210,15 +210,15 @@ ar:
     user_type_button: تحديث نوع الحساب
     user_type_label: نوع الحساب
     user_type_student: طالب
-    user_type_student_desc: 'اكتشف جميع دوراتنا وأنشطتنا ، بالإضافة إلى:'
+    user_type_student_desc: 'اكتشف جميع دوراتنا وأنشطتنا، بالإضافة إلى:'
     user_type_student_ability_1: احفظ تقدمك ومشاريعك
     user_type_student_ability_2: انضم إلى الفصل الخاص لمعلمك
     user_type_teacher: المدرس
-    user_type_teacher_desc: 'كل ما يمكن للطلاب الوصول إليه ، بالإضافة إلى:'
+    user_type_teacher_desc: 'كل ما يمكن للطلاب الوصول إليه، بالإضافة إلى:'
     user_type_teacher_ability_1: إنشاء أقسام جديده للفصل الدراسي
     user_type_teacher_ability_2: تعيين وتتبع عمل الطلاب
     user_type_teacher_ability_3: التسجيل في التعلم المهني
-    user_type_teacher_ability_4: تفاعل في منتدى المعلم
+    user_type_teacher_ability_4: التفاعل في منتدى المعلم
     field_is_required: مطلوب
     accept_terms: يجب عليك الموافقة على إنشاء حساب
     error: حدث خطأ.
@@ -679,6 +679,7 @@ ar:
     code_from_html: Code.org يستخدم p5.play المُرخَّص بموجب <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">
       رخصة جنو العمومية الصغرى 2.1</a>.
     powered_by_aws: تعمل على خدمات أمازون للويب
+    built_on_github: بنيت على GitHub من مايكروسوفت
     google_copyright: "&copy; Google Inc .و تم استخدامها بعد الحصول على الإذن من Google
       Classroom وهي علامة تجارية لـ Google Inc."
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;، إن شعار CODE و Hour
@@ -692,12 +693,14 @@ ar:
     tos_short: الشروط
     tos: شروط الخدمة
     privacy: سياسة الخصوصية
+    privacy_updated: سياسة الخصوصية (محدثة)
     secure: نسخة آمنة
     report_abuse: الابلاغ عن سوء استخدام
     built_on_code_studio: بني في "Code Studio"
     make_my_own_app: بناء التطبيق الخاص بي
     how_it_works: كيف تعمل (اعرِض الكود)
     try_hour_of_code: جرب ساعة من البرمجة!
+    store: متجر
   reference_area:
     title: بحاجة إلى مساعدة؟
     subtitle: مشاهدة اشرطة الفيديو والتلميحات

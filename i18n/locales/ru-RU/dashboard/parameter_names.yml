@@ -1,6 +1,7 @@
 ru:
   data:
     parameter_names:
+      "???": "???\n"
       actor: персонаж
       color: цвет
       counter: счетчик
