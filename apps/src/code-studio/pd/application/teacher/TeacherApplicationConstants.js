@@ -16,7 +16,7 @@ const styles = {
   },
   questionText: {
     fontSize: 14,
-    lineHeight: '20px',
+    lineHeight: 1.5,
     fontWeight: 'bold'
   },
   checkBoxAfterButtonList: {
