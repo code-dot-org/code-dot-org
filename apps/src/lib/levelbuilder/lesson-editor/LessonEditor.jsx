@@ -62,8 +62,8 @@ class LessonEditor extends Component {
       unplugged: this.props.initialLessonData.unplugged,
       lockable: this.props.initialLessonData.lockable,
       hasLessonPlan: this.props.initialLessonData.hasLessonPlan,
-      creativeCommonsLicense: this.props.initialLessonData
-        .creativeCommonsLicense,
+      creativeCommonsLicense:
+        this.props.initialLessonData.creativeCommonsLicense || '',
       assessment: this.props.initialLessonData.assessment,
       purpose: this.props.initialLessonData.purpose || '',
       preparation: this.props.initialLessonData.preparation || '',
