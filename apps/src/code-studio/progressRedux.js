@@ -230,7 +230,7 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isSummaryView:
-        viewType === ViewType.Student && state.studentDefaultsSummaryView
+        viewType === ViewType.Participant && state.studentDefaultsSummaryView
     };
   }
 
