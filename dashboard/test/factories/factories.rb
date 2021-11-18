@@ -32,9 +32,6 @@ FactoryGirl.define do
   factory :unit_group do
     sequence(:name) {|n| "bogus-course-#{n}"}
     published_state "beta"
-    instruction_type "teacher_led"
-    instructor_audience "teacher"
-    participant_audience "student"
   end
 
   factory :experiment do
@@ -757,9 +754,6 @@ FactoryGirl.define do
     sequence(:name) {|n| "bogus-script-#{n}"}
     published_state "beta"
     is_migrated true
-    instruction_type "teacher_led"
-    instructor_audience "teacher"
-    participant_audience "student"
 
     trait :with_levels do
       transient do
