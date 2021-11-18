@@ -18,28 +18,19 @@ import {linkWithQueryParams} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
 import StyledCodeBlock from './StyledCodeBlock';
 import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
-import {retrieveProgress} from '@cdo/apps/code-studio/progress';
 import {groupedLessons} from '@cdo/apps/code-studio/progressRedux';
 
 class StudentLessonOverview extends Component {
   static propTypes = {
     lesson: studentLessonShape.isRequired,
-    scriptName: PropTypes.string.isRequired,
 
     // from redux
     groupedLessons: PropTypes.arrayOf(groupedLessonsType).isRequired,
     announcements: PropTypes.arrayOf(announcementShape),
-    isSignedIn: PropTypes.bool.isRequired,
-    unitCompleted: PropTypes.bool.isRequired
+    isSignedIn: PropTypes.bool.isRequired
   };
 
-  state = {
-    levels: []
-  };
-
-  UNSAFE_componentWillMount = () => {
-    retrieveProgress(this.props.scriptName, null, null);
-    console.log('retrieving progress');
+  determineLevelDisplay = () => {
     let lessonIndex;
     const groupedLesson = this.props.groupedLessons.find(groupedLesson =>
       groupedLesson.lessons.find((thisLesson, index) => {
@@ -52,21 +43,16 @@ class StudentLessonOverview extends Component {
       })
     );
     const levelsByLesson = groupedLesson.levelsByLesson;
-    this.setState({
-      levels: levelsByLesson[lessonIndex]
-    });
-  };
-
-  determineLevelDisplay = () => {
-    return this.state.levels ? (
-      <ProgressLessonContent levels={this.state.levels} disabled={false} />
+    const levels = levelsByLesson[lessonIndex];
+    return levels ? (
+      <ProgressLessonContent levels={levels} disabled={false} />
     ) : (
       i18n.lessonContainsNoLevels()
     );
   };
 
   render() {
-    const {lesson, announcements, isSignedIn, unitCompleted} = this.props;
+    const {lesson, announcements, isSignedIn} = this.props;
     return (
       <div>
         <div className="lesson-overview-header">
@@ -153,12 +139,10 @@ class StudentLessonOverview extends Component {
             />
           </div>
         )}
-        {!!unitCompleted && (
-          <div id="level-section">
-            <h2>{i18n.levels()}</h2>
-            {this.determineLevelDisplay()}
-          </div>
-        )}
+        <div id="level-section">
+          <h2>{i18n.levels()}</h2>
+          {this.determineLevelDisplay()}
+        </div>
       </div>
     );
   }
@@ -186,6 +170,5 @@ export const UnconnectedStudentLessonOverview = StudentLessonOverview;
 export default connect(state => ({
   announcements: state.announcements || [],
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
-  groupedLessons: groupedLessons(state.progress),
-  unitCompleted: !!state.progress.unitCompleted
+  groupedLessons: groupedLessons(state.progress)
 }))(StudentLessonOverview);
