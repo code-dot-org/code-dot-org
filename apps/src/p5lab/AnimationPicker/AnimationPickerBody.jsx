@@ -15,6 +15,7 @@ import {
 import Button from '@cdo/apps/templates/Button';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
+import {PICKER_TYPE} from './AnimationPicker.jsx';
 
 const MAX_SEARCH_RESULTS = 40;
 
@@ -33,7 +34,8 @@ export default class AnimationPickerBody extends React.Component {
     defaultQuery: PropTypes.object,
     hideBackgrounds: PropTypes.bool.isRequired,
     canDraw: PropTypes.bool.isRequired,
-    selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired
+    selectedAnimations: PropTypes.arrayOf(AnimationProps).isRequired,
+    pickerType: PropTypes.string.isRequired
   };
 
   state = {
@@ -182,6 +184,18 @@ export default class AnimationPickerBody extends React.Component {
   }
 
   render() {
+    let assetType;
+    switch (this.props.pickerType) {
+      case PICKER_TYPE.spritelab:
+        assetType = msg.costumeMode();
+        break;
+      case PICKER_TYPE.gamelab:
+        assetType = msg.animationMode();
+        break;
+      case PICKER_TYPE.backgrounds:
+        assetType = msg.backgroundMode();
+        break;
+    }
     if (!this.props.libraryManifest) {
       return <div>{msg.loading()}</div>;
     }
@@ -207,7 +221,9 @@ export default class AnimationPickerBody extends React.Component {
             color={Button.ButtonColor.orange}
           />
         )}
-        <h1 style={dialogStyles.title}>{msg.animationPicker_title()}</h1>
+        <h1 style={dialogStyles.title}>
+          {msg.animationPicker_title({assetType})}
+        </h1>
         {!is13Plus && !hideUploadOption && (
           <WarningLabel>{msg.animationPicker_warning()}</WarningLabel>
         )}
