@@ -496,6 +496,13 @@ $(document).ready(function() {
   drawImage($(panelIds[1])[0], "art", paintingX + 3, paintingY);
   drawImage($(panelIds[1])[0], "biology", plantX + 3, plantY);
 
+  // Adjust the SVGs to have the correct size now, and make
+  // sure to do it again if the window is resized.
+  handleResize();
+  $(window).resize(function() {
+    handleResize();
+  });
+
   // Hide the regular images and show the SVGs.
   $(leftBarImgId).animate({ opacity: 0 }, 1000);
   $(rightBarImgId).animate({ opacity: 0 }, 1000);
@@ -512,6 +519,32 @@ $(document).ready(function() {
     step += 0.02;
   }, 1000 / 60);
 });
+
+function handleResize() {
+  handleResizePanel("#left-svg-bars", "#left-bars-svg");
+  handleResizePanel("#right-svg-bars", "#right-bars-svg");
+}
+
+function handleResizePanel(parentId, panelIdSvg) {
+  // We want the SVG to match the parent in height, though the SVG can be wider.
+  var targetHeight = $(parentId).outerHeight();
+
+  // This is the width/height of our SVGs.
+  var aspectRatio = 640 / 332;
+
+  // Match the parent's height.
+  var height = targetHeight;
+
+  // Set the appropriate width for the full SVG.
+  var width = targetHeight * aspectRatio;
+
+  $(panelIdSvg)
+    .css({
+      width: width,
+      height: height
+    })
+    .show();
+}
 
 function drawImage(panelRef, iconName, x, y) {
   var obj = document.createElementNS("http://www.w3.org/2000/svg", "image");
@@ -531,7 +564,7 @@ function drawImage(panelRef, iconName, x, y) {
 function updateBar(barDefinition, bar, barIndex, step) {
   for (var segment = 0; segment < barDefinition.length; segment++) {
     var offset;
-    var phase = 8 - ((step + barIndex + 0.1 * segment) % 8);
+    var phase = (step + barIndex + 0.1 * segment) % 8;
     if (phase > 0 && phase <= 1) {
       offset = 1 + phase;
     } else if (phase >= 7 && phase <= 8) {
