@@ -496,6 +496,10 @@ $(document).ready(function() {
   drawImage($(panelIds[1])[0], "art", paintingX + 3, paintingY);
   drawImage($(panelIds[1])[0], "biology", plantX + 3, plantY);
 
+  // Show the outer containers for the SVGs and the fades.
+  $("#svgbars").css("display", "flex");
+  $("#csc-fades").css("display", "flex");
+
   // Adjust the SVGs to have the correct size now, and make
   // sure to do it again if the window is resized.
   handleResize();
