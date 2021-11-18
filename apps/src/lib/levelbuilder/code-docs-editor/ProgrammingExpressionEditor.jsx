@@ -9,7 +9,7 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import Button from '@cdo/apps/templates/Button';
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
-import {createUuid, linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+import {createUuid, navigateToHref} from '@cdo/apps/utils';
 import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 
@@ -257,9 +257,7 @@ export default function ProgrammingExpressionEditor({
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
-        handleView={() =>
-          navigateToHref(linkWithQueryParams(`/programming_expressions/${id}`))
-        }
+        handleView={() => navigateToHref(`/programming_expressions/${id}`)}
       />
       <UploadImageDialog
         isOpen={uploadImageDialogOpen}
