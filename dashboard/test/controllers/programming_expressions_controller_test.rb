@@ -93,7 +93,10 @@ class ProgrammingExpressionsControllerTest < ActionController::TestCase
 
     programming_expression = create :programming_expression, programming_environment: @programming_environment
 
-    get :show, params: {environment: @programming_environment.name, expression: programming_expression.key}
+    get :show_by_keys, params: {
+      programming_environment_name: @programming_environment.name,
+      programming_expression_key: programming_expression.key
+    }
     assert_response :ok
 
     show_data = css_select('script[data-programmingexpression]').first.attribute('data-programmingexpression').to_s
