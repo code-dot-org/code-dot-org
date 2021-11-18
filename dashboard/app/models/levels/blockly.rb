@@ -479,7 +479,6 @@ class Blockly < Level
     # Translate all the function and placeholder text blockly blocks in the text.
     localized_function_blocks_xml(text_xml_doc)
     localize_all_placeholder_text_block_types(text_xml_doc)
-    localized_variable_blocks_explicitly(text_xml_doc)
     # TODO: add `localized_variable_blocks_xml(text_xml_doc)`
 
     # Use to_html because the XML we want to generate will be used in web browsers.
@@ -660,19 +659,6 @@ class Blockly < Level
     return block_xml.serialize(save_with: XML_OPTIONS).strip
   end
 
-  # Localizes any existing variable blockly blocks in the given XML document string.
-  # Note this could break block's function references and at the moment seems only
-  # to be used on rich text such as Markdown.
-  # @param block_xml [String] an XML doc to be localized.
-  # @return [String] the given XML doc localized.
-  def localized_variable_blocks_explicitly(block_xml)
-    # TODO: This has potential to house other types of blocks and be more generalized
-    block_xml.xpath(".//title[@name=\"VAR\"]").each do |parameter|
-      next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
-      parameter.content = I18n.t('behaviors.this_sprite')
-    end
-  end
-
   # Localizes all supported types of the given placeholder text blockly
   # blocks in the given XML document string.
   # @param blocks [String] an XML doc to be localized.
@@ -780,11 +766,9 @@ class Blockly < Level
   end
 
   def localize_behaviors(block_xml)
-    block_xml.xpath("//block[@type=\"gamelab_behavior_get\"]").each do |behavior|
-      behavior.xpath(".//title[@name=\"VAR\"]").each do |parameter|
-        next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
-        parameter.content = I18n.t('behaviors.this_sprite')
-      end
+    block_xml.xpath(".//title[@name=\"VAR\"]").each do |parameter|
+      next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
+      parameter.content = I18n.t('behaviors.this_sprite')
     end
     block_xml.xpath("//block[@type=\"behavior_definition\"]").each do |behavior|
       mutation = behavior.at_xpath('./mutation')
@@ -796,11 +780,6 @@ class Blockly < Level
       behavior.xpath(".//title[@name=\"NAME\"]").each do |name|
         localized_name = I18n.t(name.content, scope: [:data, :shared_functions], default: nil, smart: true)
         name.content = localized_name if localized_name
-      end
-
-      behavior.xpath(".//title[@name=\"VAR\"]").each do |parameter|
-        next unless parameter.content == I18n.t('behaviors.this_sprite', locale: :en)
-        parameter.content = I18n.t('behaviors.this_sprite')
       end
     end
   end
