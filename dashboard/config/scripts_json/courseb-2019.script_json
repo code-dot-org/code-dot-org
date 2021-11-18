@@ -47,7 +47,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-11-15 20:54:50 UTC",
+    "serialized_at": "2021-11-18 00:27:06 UTC",
     "published_state": "stable",
     "instruction_type": null,
     "instructor_audience": null,
@@ -4081,7 +4081,244 @@
 
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events: The Big Event",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops: Getting Loopy",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Move It, Move It",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Move It, Move It",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Move It, Move It",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-01"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Right App",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Your Digital Footprint",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Your Digital Footprint",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Your Digital Footprint",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-NI-04"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Your Digital Footprint",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-18"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

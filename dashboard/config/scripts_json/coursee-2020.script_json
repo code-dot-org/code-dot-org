@@ -43,7 +43,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-11-15 20:57:01 UTC",
+    "serialized_at": "2021-11-18 00:27:12 UTC",
     "published_state": "stable",
     "instruction_type": null,
     "instructor_audience": null,
@@ -7058,7 +7058,265 @@
 
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "About Me",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "About Me",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing for Accessibility",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing for Accessibility",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing for Accessibility",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-03"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing for Accessibility",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing for Accessibility",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Designing for Accessibility",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Digital Sharing",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "End of Course Project",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions in Minecraft",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions: Songwriting",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Functions: Songwriting",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Frozen",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Nested Loops in Frozen",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Private and Personal Information",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming and Loops with the Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in the Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-08"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing in the Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Simon Says",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 
