@@ -85,7 +85,7 @@ LoadableComponent.propTypes = {
   /** Optional. Additional styles to apply to the loading spinner. */
   spinnerStyle: PropTypes.object,
   /** Optional. Size of the loading spinner. Defaults to `medium` */
-  spinnerSize: PropTypes.oneOf('small', 'medium', 'large'),
+  spinnerSize: PropTypes.oneOf(['small', 'medium', 'large']),
   /** Optional. Additional styles to apply to the error message. */
   errorMessageStyle: PropTypes.object,
   /** Optional. Custom error message text. Defaults to a standard load error message. */
