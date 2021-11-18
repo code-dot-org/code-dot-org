@@ -136,6 +136,12 @@ export default class CoreLibrary {
   }
 
   addSpeechBubble(sprite, text, seconds = null) {
+    // Sprites can only have one speech bubble at a time so first filter out
+    // any existing speech bubbles for this sprite
+    this.speechBubbles = this.speechBubbles.filter(
+      bubble => bubble.sprite !== sprite
+    );
+
     const id = createUuid();
     const removeAt = seconds ? this.getAdjustedWorldTime() + seconds : null;
     // Note: renderFrame is used by validation code.
