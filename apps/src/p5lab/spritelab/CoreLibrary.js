@@ -120,16 +120,17 @@ export default class CoreLibrary {
     // For the calculations below, keep in mind that x and y are located at the horizontal center and the top of the sprite, respectively.
     // In other words, x and y indicate the default position of the bubble's triangular tip.
     y = Math.min(y, APP_HEIGHT);
+    let originalX = x;
     if (y - height - triangleSize < 1) {
       triangleSize = Math.max(1, y - height);
       y = height + triangleSize;
     }
-    if (x - width / 2 < 1) {
-      triangleTipX = Math.max(x, rectangleCornerRadius + triangleSize);
+    if (originalX - width / 2 < 1) {
+      triangleTipX = Math.max(originalX, rectangleCornerRadius + triangleSize);
       x = width / 2;
     }
-    if (x + width / 2 > APP_WIDTH) {
-      triangleTipX = Math.min(x, APP_WIDTH - rectangleCornerRadius);
+    if (originalX + width / 2 > APP_WIDTH) {
+      triangleTipX = Math.min(originalX, APP_WIDTH - rectangleCornerRadius);
       x = APP_WIDTH - width / 2;
     }
 
