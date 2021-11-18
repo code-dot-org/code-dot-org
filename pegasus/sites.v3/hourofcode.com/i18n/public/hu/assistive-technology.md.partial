@@ -8,14 +8,16 @@ Bárki kipróbálhatja a Kódolás óráját a számítástechnikai oktatási h�
 
 ## Képernyőolvasók használata
 
-Ha képernyőolvasót használsz, a [Quorum gyakorlat kezdőknek](https://quorumlanguage.com/hourofcode/astro1.html) vagy a [Quorum gyakorlat haladóknak](https://quorumlanguage.com/hourofcode/part1.html) remek lehetőség arra, hogy nekivágj a Kódolás órájának. Ugyanis a Quorum nyelv kifejezetten képernyőolvasót használó emberek számára lett kifejlesztve. Mára általános programnyelvvé vált, így nemcsak a vakok és gyengénlátók számára lehet opció. Amennyiben mélyebben is szeretnél a Kódolás órájának ezzel a fajájával foglalkozni, a Quorum-csapat további eszközöket és tantervet tud ajánlani.
+The Hour of Code activities page now includes a [filter for activities compatible with screen readers](https://hourofcode.com/us/learn?platform=screenreader).
 
-[![Gyakorlatok kezdőknek](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Gyakorlatok haladóknak](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
+If you use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. Amennyiben mélyebben is szeretnél a Kódolás órájának ezzel a fajájával foglalkozni, a Quorum-csapat további eszközöket és tantervet tud ajánlani. If you use a screen reader and are interested in robotics, try the [Dash Joins a Dance Circle activity](https://milnel2.github.io/blocks4alliOS/danceCircle1.html) from Lauren Milne.
+
+[![Tutorial for beginners](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Tutorial for comfortable students](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
 
 ## Code.org gyakorlatok hang nélkül
 
-A [Code.org gyakorlatok](https://studio.code.org/courses) kivétel nélkül úgy lettek tervezve, hogy hanggal és hang nélkül is használhatók.
+The [Code.org tutorials](https://studio.code.org/courses) can all be used with or without sound. All the videos have captions.
 
 ## Páros programozás
 
-A páros programozás egy olyan módszer, amelyet a tudósok jelenleg is használnak a problémák közös, csoportos megoldására. Nézz szembe te is a Kódolás órája kihívásaival egy barátoddal vagy oszálytársaddal közösen. Ne felejtsd el megnézni az alábbi [videót](https://www.youtube.com/watch?v=vgkahOzFH2Q), hogy további technikákat tanulj a páros programozásról.
+Pair programming is a tool computer scientists use to solve problems as a pair or team. Try working on Hour of Code challenges with a friend or classmate. Don’t forget to [check out this video](https://www.youtube.com/watch?v=vgkahOzFH2Q) to learn the best techniques for pair programming.

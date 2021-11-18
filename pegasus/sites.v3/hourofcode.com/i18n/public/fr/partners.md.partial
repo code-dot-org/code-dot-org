@@ -2,39 +2,39 @@
 title: Partenaires
 ---
 
-L'Heure du Code est rendu possible grâce à la Commission Consultative et aux Comités d'Examen de l'Heure du Code et de l'Informatique.
+Hour of Code est piloté par les comités consultatifs et de révision de Hour of Code et de Computer Science Education Week.
 
-The [Advisory Committee]({{ urls/advisory_committee }}) is composed of representatives from K-12, academia, nonprofits, for-profits, and international organizations. Cette commission guide la stratégie de la campagne Heure du Code.
+Le [comité consultatif]({{ urls/advisory_committee }}) est composé de représentants des écoles de la maternelle à la terminale, du monde universitaire, d'organisations à but non lucratif, d'organisations à but lucratif et d'organisations internationales. Cette commission oriente la stratégie de la campagne de Hour of Code .
 
-The [Review Committee]({{ urls/review_committee }}) is composed of 15 educators across K-12 grade bands that assess and recommend activities using the Advisory Committee's rubric. Ces éducateurs examinent des activités pour les élèves et des plans de cours pour les professeurs soumis par des centaines de partenaires éducatifs. Ils évaluent la valeur éducatives des activités, l'engagement des élèves et le potentiel pour attirer différentes catégories d'élèves.
+Le [comité de révision]({{ urls/review_committee }}) est composé de 15 éducateurs de la maternelle à la terminale qui évaluent et recommandent des activités sur la base des critères du comité consultatif. Ces éducateurs examinent les activités dirigées par les élèves et les programmes de cours dirigés par les enseignants, proposés par des centaines de partenaires d'activités. Ils évaluent la valeur éducative des activités, leur capacité à susciter l'engagement des apprenants et leur capacité à intéresser divers groupes d'élèves.
 
-Le travail de ces deux commissions et leur implication ont contribué au succès de l'Heure de Code et à sa vision de permettre à chaque élève une découverte de l'informatique.
+Le travail et le dévouement des deux comités ont contribué au succès de Hour of Code et à sa vision d'offrir à chaque élève une initiation à l'informatique.
 
-# Major Partners and Corporate Supporters
+# Principaux partenaires et soutiens
 
 {{ partners/major_partners_corporate_supporters }}
 
 * * *
 
-# International Partners
+# Partenaires internationaux
 
 {{ partners/international_partners }}
 
 * * *
 
-# Curriculum and Tutorial Partners
+# Partenaires du programme d'études et tutorats
 
 {{ partners/curriculum_tutorial_partners }}
 
 * * *
 
-# Infrastructure Partners and Tools
+# Partenaires et outils d'infrastructure
 
 {{ partners/infrastructure_partners_tools }}
 
 * * *
 
-# Additional Partners
+# Autres partenaires
 
 {{ partners/additional_partners }}
 

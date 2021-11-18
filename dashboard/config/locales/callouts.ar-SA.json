@@ -1599,7 +1599,8 @@
           "hello_world_new": "قطعة برمجية جديدة!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "قطعة برمجية جديدة!"
+          "hello_world_new": "قطعة برمجية جديدة!",
+          "hello_world_new_block": "كتلة جديدة!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "قطعة برمجية جديدة!"
@@ -1644,7 +1645,8 @@
         "poetry_hoc_freeplay": {
           "poetry_burst": "قطعة برمجية جديدة!",
           "poetry_multiple_sprites": "قطعة برمجية جديدة!",
-          "poetry_new_block": "قطعة برمجية جديدة!"
+          "poetry_new_block": "قطعة برمجية جديدة!",
+          "poetry_selector": "اختر أي قصيدة، أو أدخل قصيدتك الخاصة!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "قطعة برمجية جديدة!"
@@ -1656,6 +1658,110 @@
         "poetry_hoc_spriteSizes": {
           "poetry_set_sprite": "قطعة برمجية جديدة!",
           "poetry_remove_sprite": "قطعة برمجية جديدة!"
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "استخدم هذه الكتلة لضبط خلفية جديدة."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "استخدم هذه الكتلة مع أحد السلوكيات التالية."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "انقر هنا لتشغيل الكود."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "أضف هذا الحدث إلى مساحة العمل الخاصة بك."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "انقر هنا لإضافة أزياء لمشروعك."
+        },
+        "helloworld_animals_location": {
+          "pin": "تثبيت"
+        },
+        "helloworld_animals_multi": {
+          "pin": "تثبيت"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "استخدم هذه الكتلة لجعل الكائنات تتحدث.",
+          "hello_world_make_sprite": "استخدم هذه الكتلة لإنشاء كائن."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "استخدم هذه الكتلة لضبط خلفية جديدة."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "استخدم هذه الكتلة مع أحد السلوكيات التالية."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "انقر هنا لتشغيل الكود."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "أضف هذا الحدث إلى مساحة العمل الخاصة بك."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "انقر هنا لإضافة أزياء لمشروعك."
+        },
+        "helloworld_emoji_location": {
+          "pin": "تثبيت"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "تثبيت"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "استخدم هذه الكتلة لجعل الكائنات تتحدث.",
+          "hello_world_make_sprite": "استخدم هذه الكتلة لإنشاء كائن."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "استخدم هذه الكتلة لضبط خلفية جديدة."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "استخدم هذه الكتلة مع أحد السلوكيات التالية."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "انقر هنا لتشغيل الكود."
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "أضف هذا الحدث إلى مساحة العمل الخاصة بك."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "انقر هنا لإضافة أزياء لمشروعك."
+        },
+        "helloworld_food_location": {
+          "pin": "تثبيت"
+        },
+        "helloworld_food_multi": {
+          "pin": "تثبيت"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "استخدم هذه الكتلة لجعل الكائنات تتحدث.",
+          "hello_world_make_sprite": "استخدم هذه الكتلة لإنشاء كائن."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "استخدم هذه الكتلة لضبط خلفية جديدة."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "استخدم هذه الكتلة مع أحد السلوكيات التالية."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "انقر هنا لتشغيل الكود."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "أضف هذا الحدث إلى مساحة العمل الخاصة بك."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "انقر هنا لإضافة أزياء لمشروعك."
+        },
+        "helloworld_retro_location": {
+          "pin": "تثبيت"
+        },
+        "helloworld_retro_multi": {
+          "pin": "تثبيت"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "استخدم هذه الكتلة لجعل الكائنات تتحدث.",
+          "hello_world_make_sprite": "استخدم هذه الكتلة لإنشاء كائن."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "ابحث عن كتل للكود هنا.",
+          "pause_button": "اختبر الرسوم المتحركة الخاصة بك مع هذا الزر."
         }
       }
     }

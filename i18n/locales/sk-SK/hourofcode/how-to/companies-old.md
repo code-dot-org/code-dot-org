@@ -5,7 +5,7 @@ title: Ako zogranizovať Hodinu kódu - Spoločnosti
 {{ signup_button }}
 
 # Ako priniesť Hodinu Kódu do Vašej spoločnosti
-### Find out how you and your employees can inspire students to try computer science!
+### Zistite, ako môžete vy a vaši zamestnanci inšpirovať študentov, aby vyskúšali informatiku!
 
 ***
 
