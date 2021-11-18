@@ -21,9 +21,7 @@ let poolField, nameField, helperEditor, configEditor, validationDiv;
 $(document).ready(() => {
   registerReducers({animationList: animationList});
   getDefaultListMetadata()
-    .then(defaultSprites => {
-      initializeEditPage(defaultSprites);
-    })
+    .then(initializeEditPage)
     .catch(() => {
       console.error(
         'Unable to render sprite costumes in block preview. Please refresh the page.'
