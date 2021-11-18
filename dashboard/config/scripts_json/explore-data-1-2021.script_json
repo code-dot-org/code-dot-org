@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "explore-data-1",
-    "serialized_at": "2021-11-15 17:03:02 UTC",
+    "serialized_at": "2021-11-17 02:05:26 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -154,7 +154,7 @@
       "key": "1ded8c46-8629-44a5-942f-897144a152c8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give students access to [r exploring_bar_charts_and_histograms_2/explore-data-1/2021] - ideally in digital form.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into their Code.org accounts to access the second level of this lesson.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give students access to [r exploring_bar_charts_and_histograms_1/explore-data-1/2021] - ideally in digital form.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into their Code.org accounts to access the second level of this lesson.\n\n\n",
         "progression_name": "Data Visualizer",
         "tips": [
           {
