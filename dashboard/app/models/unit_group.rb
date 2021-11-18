@@ -75,6 +75,7 @@ class UnitGroup < ApplicationRecord
     version_year
     pilot_experiment
     announcements
+    is_deeper_learning_course
   )
 
   def to_param
@@ -376,6 +377,7 @@ class UnitGroup < ApplicationRecord
       is_migrated: has_migrated_unit?,
       has_verified_resources: has_verified_resources?,
       has_numbered_units: has_numbered_units?,
+      is_deeper_learning_course: is_deeper_learning_course?,
       versions: summarize_versions(user),
       show_assign_button: assignable_for_user?(user),
       announcements: announcements,

@@ -268,7 +268,6 @@ class ScriptsController < ApplicationController
       :login_required,
       :hideable_lessons,
       :curriculum_path,
-      :professional_learning_course,
       :only_instructor_review_required,
       :peer_reviews_to_complete,
       :wrapup_video,

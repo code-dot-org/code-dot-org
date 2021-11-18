@@ -78,6 +78,7 @@ function showCourseEditor() {
         initialHasNumberedUnits={
           courseEditorData.course_summary.has_numbered_units
         }
+        initialDeeperLearning={courseEditorData.course_summary.deeper_learning}
         courseFamilies={courseEditorData.course_families}
         versionYearOptions={courseEditorData.version_year_options}
         initialAnnouncements={announcements}

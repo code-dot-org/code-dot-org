@@ -12,7 +12,6 @@ class ScriptDslTest < ActiveSupport::TestCase
     id: nil,
     wrapup_video: nil,
     login_required: false,
-    professional_learning_course: nil,
     only_instructor_review_required: nil,
     peer_reviews_to_complete: nil,
     hideable_lessons: false,

@@ -980,7 +980,7 @@ class ScriptsControllerTest < ActionController::TestCase
     stub_file_writes(unit.name)
 
     # Set most of the properties.
-    # omitted: professional_learning_course, announcements because
+    # omitted: announcements because
     # using fake values doesn't seem to work for them.
     general_params = {
       hideable_lessons: 'on',

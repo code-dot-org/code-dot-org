@@ -62,9 +62,7 @@ export default function initPage(unitEditorData) {
         initialStudentDetailProgressView={
           scriptData.student_detail_progress_view
         }
-        initialProfessionalLearningCourse={
-          scriptData.professionalLearningCourse || ''
-        }
+        inProfessionalLearningCourse={scriptData.inProfessionalLearningCourse}
         initialOnlyInstructorReviewRequired={
           scriptData.only_instructor_review_required
         }

@@ -197,17 +197,11 @@ class Script < ApplicationRecord
   #
   # This returns true if a course uses the PLC course models.
   def old_professional_learning_course?
-    !professional_learning_course.nil?
+    unit_group&.is_deeper_learning_course?
   end
 
   def generate_plc_objects
     if old_professional_learning_course?
-      unit_group = UnitGroup.find_by_name(professional_learning_course)
-      unless unit_group
-        unit_group = UnitGroup.new(name: professional_learning_course)
-        unit_group.plc_course = Plc::Course.create!(unit_group: unit_group)
-        unit_group.save!
-      end
       unit = Plc::CourseUnit.find_or_initialize_by(script_id: id)
       unit.update!(
         plc_course_id: unit_group.plc_course.id,
@@ -238,7 +232,6 @@ class Script < ApplicationRecord
   #   unit is being updated, so we can regenerate PDFs.
   serialized_attrs %w(
     hideable_lessons
-    professional_learning_course
     only_instructor_review_required
     peer_reviews_to_complete
     redirect_to
@@ -1643,7 +1636,7 @@ class Script < ApplicationRecord
     # Filter out lessons that have a visible_after date in the future
     filtered_lessons = lessons.select {|lesson| lesson.published?(user)}
     summary[:lessons] = filtered_lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
-    summary[:professionalLearningCourse] = professional_learning_course if old_professional_learning_course?
+    summary[:inProfessionalLearningCourse] = old_professional_learning_course?
     summary[:wrapupVideo] = wrapup_video.key if wrapup_video
     summary[:calendarLessons] = filtered_lessons.map(&:summarize_for_calendar)
 
@@ -1852,7 +1845,6 @@ class Script < ApplicationRecord
     # try to put it in the appropriate place.
     nonboolean_keys = [
       :hideable_lessons,
-      :professional_learning_course,
       :only_instructor_review_required,
       :peer_reviews_to_complete,
       :student_detail_progress_view,

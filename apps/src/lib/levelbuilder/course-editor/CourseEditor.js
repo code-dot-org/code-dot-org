@@ -58,6 +58,7 @@ class CourseEditor extends Component {
     courseVersionId: PropTypes.number,
     preventCourseVersionChange: PropTypes.bool,
     coursePath: PropTypes.string.isRequired,
+    initialDeeperLearning: PropTypes.bool,
 
     // Provided by redux
     migratedTeacherResources: PropTypes.arrayOf(migratedResourceShape),
@@ -96,7 +97,8 @@ class CourseEditor extends Component {
       publishedState: this.props.initialPublishedState,
       instructionType: this.props.initialInstructionType,
       instructorAudience: this.props.initialInstructorAudience,
-      participantAudience: this.props.initialParticipantAudience
+      participantAudience: this.props.initialParticipantAudience,
+      isDeeperLearning: this.props.initialDeeperLearning
     };
   }
 
@@ -128,7 +130,8 @@ class CourseEditor extends Component {
       participant_audience: this.state.participantAudience,
       instructor_audience: this.state.instructorAudience,
       pilot_experiment: this.state.pilotExperiment,
-      scripts: this.state.unitsInCourse
+      scripts: this.state.unitsInCourse,
+      is_deeper_learning_course: this.state.isDeeperLearning
     };
 
     if (this.props.migratedTeacherResources) {
@@ -300,6 +303,24 @@ class CourseEditor extends Component {
               style={styles.checkbox}
               onChange={() =>
                 this.setState({hasNumberedUnits: !hasNumberedUnits})
+              }
+            />
+          </label>
+          <label>
+            Deeper Learning Course
+            <HelpTip>
+              <p>
+                Only check this if this box if this course is a deeper learning
+                course and is going to use the peer review system which is part
+                of the old PLC courses model.
+              </p>
+            </HelpTip>
+            <input
+              type="checkbox"
+              defaultChecked={this.state.isDeeperLearning}
+              style={styles.checkbox}
+              onChange={() =>
+                this.setState({isDeeperLearning: !this.state.isDeeperLearning})
               }
             />
           </label>

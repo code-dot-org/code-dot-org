@@ -60,7 +60,7 @@ class UnitEditor extends React.Component {
     initialLoginRequired: PropTypes.bool,
     initialHideableLessons: PropTypes.bool,
     initialStudentDetailProgressView: PropTypes.bool,
-    initialProfessionalLearningCourse: PropTypes.string,
+    inProfessionalLearningCourse: PropTypes.bool,
     initialPeerReviewsRequired: PropTypes.number,
     initialOnlyInstructorReviewRequired: PropTypes.bool,
     initialWrapupVideo: PropTypes.string,
@@ -134,7 +134,6 @@ class UnitEditor extends React.Component {
       loginRequired: this.props.initialLoginRequired,
       hideableLessons: this.props.initialHideableLessons,
       studentDetailProgressView: this.props.initialStudentDetailProgressView,
-      professionalLearningCourse: this.props.initialProfessionalLearningCourse,
       onlyInstructorReviewRequired: this.props
         .initialOnlyInstructorReviewRequired,
       peerReviewsRequired: this.props.initialPeerReviewsRequired,
@@ -291,7 +290,6 @@ class UnitEditor extends React.Component {
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
       student_detail_progress_view: this.state.studentDetailProgressView,
-      professional_learning_course: this.state.professionalLearningCourse,
       only_instructor_review_required: this.state.onlyInstructorReviewRequired,
       peer_reviews_to_complete: this.state.peerReviewsRequired,
       wrapup_video: this.state.wrapupVideo,
@@ -984,19 +982,11 @@ class UnitEditor extends React.Component {
           </CollapsibleEditorSection>
         )}
 
-        {this.props.isLevelbuilder && (
+        {this.props.isLevelbuilder && this.props.inProfessionalLearningCourse && (
           <CollapsibleEditorSection
             title="Deeper Learning Settings"
             collapsed={true}
           >
-            <b>
-              <i>
-                These settings are only used for deeper learning courses which
-                use the peer review system which is not part of the normal
-                course model. All other courses should be built in the normal
-                course model.
-              </i>
-            </b>
             <label>
               Deprecated
               <input
@@ -1014,24 +1004,6 @@ class UnitEditor extends React.Component {
                   being displayed in the admin-only Peer Review Dashboard.
                 </p>
               </HelpTip>
-            </label>
-            <label>
-              Professional Learning Course
-              <HelpTip>
-                <p>
-                  When filled out, the course unit associated with this unit
-                  will be associated with the course named in this box. If the
-                  course unit does not exist, and if the course does not exist
-                  it will be created.
-                </p>
-              </HelpTip>
-              <input
-                value={this.state.professionalLearningCourse}
-                style={styles.input}
-                onChange={e =>
-                  this.setState({professionalLearningCourse: e.target.value})
-                }
-              />
             </label>
             <h4>Peer Reviews</h4>
             <label>
