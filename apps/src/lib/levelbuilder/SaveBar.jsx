@@ -70,7 +70,7 @@ SaveBar.propTypes = {
 };
 
 SaveBar.defaultProps = {
-  error: false,
+  error: undefined,
   handleView: undefined,
   isSaving: false,
   lastSaved: 0,
