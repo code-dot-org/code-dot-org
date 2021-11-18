@@ -1,8 +1,8 @@
 import sinon from 'sinon';
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import Playground, {
   REENABLE_CLICK_EVENTS_TIMEOUT_MS
-} from '@cdo/apps/javalab/Playground';
+} from '@cdo/apps/javalab/playground/Playground';
 import {
   PlaygroundSignalType,
   WebSocketMessageType
@@ -14,7 +14,7 @@ import {
   stubRedux,
   restoreRedux
 } from '@cdo/apps/redux';
-import playgroundRedux from '@cdo/apps/javalab/playgroundRedux';
+import playgroundRedux from '@cdo/apps/javalab/playground/playgroundRedux';
 import color from '@cdo/apps/util/color';
 
 describe('Playground', () => {

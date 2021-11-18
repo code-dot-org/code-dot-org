@@ -1,7 +1,7 @@
 import React from 'react';
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai';
 import {shallow} from 'enzyme';
-import PlaygroundText from '@cdo/apps/javalab/PlaygroundText';
+import PlaygroundText from '@cdo/apps/javalab/playground/PlaygroundText';
 import {PlaygroundFontTypeFontFamilies} from '@cdo/apps/javalab/constants';
 
 describe('PlaygroundImageTest', () => {
