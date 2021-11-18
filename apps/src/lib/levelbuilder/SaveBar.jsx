@@ -1,68 +1,63 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
+import React from 'react';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {navigateToHref} from '@cdo/apps/utils';
 
-export default class SaveBar extends Component {
-  handleView = () =>
-    this.props.handleView || navigateToHref(this.props.pathForShowButton);
+export default function SaveBar({
+  error,
+  handleSave,
+  handleView,
+  isSaving,
+  lastSaved,
+  pathForShowButton
+}) {
+  const isShowButtonRendered = handleView || pathForShowButton !== '/';
 
-  isShowButtonRendered =
-    this.props.handleView || this.props.pathForShowButton !== '/';
-
-  render() {
-    return (
-      <div style={styles.saveButtonBackground} className="saveBar">
+  return (
+    <div style={styles.saveButtonBackground} className="saveBar">
+      <button
+        className="btn"
+        type="button"
+        style={isShowButtonRendered ? styles.saveButton : styles.hide}
+        onClick={handleView || (() => navigateToHref(pathForShowButton))}
+        disabled={isSaving}
+      >
+        Show
+      </button>
+      <div style={styles.saveButtonArea}>
+        {lastSaved && !error && (
+          <div style={styles.lastSaved} className="lastSavedMessage">
+            {`Last saved at: ${new Date(lastSaved).toLocaleString()}`}
+          </div>
+        )}
+        {error && <div style={styles.error}>{`Error Saving: ${error}`}</div>}
+        {isSaving && (
+          <div style={styles.spinner}>
+            <FontAwesome icon="spinner" className="fa-spin" />
+          </div>
+        )}
         <button
           className="btn"
           type="button"
-          style={this.isShowButtonRendered ? styles.saveButton : styles.hide}
-          onClick={this.handleView}
-          disabled={this.props.isSaving}
+          style={styles.saveButton}
+          onClick={e => handleSave(e, false)}
+          disabled={isSaving}
         >
-          Show
+          Save and Keep Editing
         </button>
-        <div style={styles.saveButtonArea}>
-          {this.props.lastSaved && !this.props.error && (
-            <div style={styles.lastSaved} className="lastSavedMessage">
-              {`Last saved at: ${new Date(
-                this.props.lastSaved
-              ).toLocaleString()}`}
-            </div>
-          )}
-          {this.props.error && (
-            <div style={styles.error}>{`Error Saving: ${
-              this.props.error
-            }`}</div>
-          )}
-          {this.props.isSaving && (
-            <div style={styles.spinner}>
-              <FontAwesome icon="spinner" className="fa-spin" />
-            </div>
-          )}
-          <button
-            className="btn"
-            type="button"
-            style={styles.saveButton}
-            onClick={e => this.props.handleSave(e, false)}
-            disabled={this.props.isSaving}
-          >
-            Save and Keep Editing
-          </button>
-          <button
-            className="btn btn-primary"
-            type="submit"
-            style={styles.saveButton}
-            onClick={e => this.props.handleSave(e, true)}
-            disabled={this.props.isSaving}
-          >
-            Save and Close
-          </button>
-        </div>
+        <button
+          className="btn btn-primary"
+          type="submit"
+          style={styles.saveButton}
+          onClick={e => handleSave(e, true)}
+          disabled={isSaving}
+        >
+          Save and Close
+        </button>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 SaveBar.propTypes = {
