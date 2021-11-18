@@ -91,6 +91,20 @@ export default class ResourcesEditor extends Component {
       );
     }
 
+    // In order to migrate teacher resources for translated units, we must have
+    // both migrated and unmigrated teacher resources so that we can serve the
+    // unmigrated resources while we translate the migrated ones. During this
+    // time, there's no practical way to allow editing, so instead just disable
+    // editing of teacher resources during this time.
+    if (this.props.resources?.length && this.props.migratedResources?.length) {
+      return (
+        <strong>
+          Cannot edit resources because they are being translated. If you need
+          to make an urgent edit, please ask an engineer.
+        </strong>
+      );
+    }
+
     // Resources contains maxResources entries. For the empty entries, we want to
     // show just one, so we slice to the lastNonEmpty +1 to get an empty entry
     // and +1 more because slice is exclusive.
