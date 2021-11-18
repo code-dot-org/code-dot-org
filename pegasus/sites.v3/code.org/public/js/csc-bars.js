@@ -1,5 +1,5 @@
 /* Curious about this temporary code?  There's more detail at
- * https://github.com/code-dot-org/code-dot-org/pull/43037 */
+ * https://github.com/code-dot-org/code-dot-org/pull/43679 */
 
 var gridSize = 16;
 var strokeWidth = 11;
