@@ -20,15 +20,15 @@ import javalab, {
   openPhotoPrompter,
   closePhotoPrompter
 } from './javalabRedux';
-import playground from './playgroundRedux';
+import playground from './playground/playgroundRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './JavabuilderConnection';
 import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
-import Neighborhood from './Neighborhood';
-import NeighborhoodVisualizationColumn from './NeighborhoodVisualizationColumn';
-import TheaterVisualizationColumn from './TheaterVisualizationColumn';
-import Theater from './Theater';
+import Neighborhood from './neighborhood/Neighborhood';
+import NeighborhoodVisualizationColumn from './neighborhood/NeighborhoodVisualizationColumn';
+import TheaterVisualizationColumn from './theater/TheaterVisualizationColumn';
+import Theater from './theater/Theater';
 import {CsaViewMode, ExecutionType, InputMessageType} from './constants';
 import {DisplayTheme, getDisplayThemeFromString} from './DisplayTheme';
 import BackpackClientApi from '../code-studio/components/backpack/BackpackClientApi';
@@ -39,8 +39,8 @@ import {
 } from '../containedLevels';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
-import Playground from './Playground';
-import PlaygroundVisualizationColumn from './PlaygroundVisualizationColumn';
+import Playground from './playground/Playground';
+import PlaygroundVisualizationColumn from './playground/PlaygroundVisualizationColumn';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
