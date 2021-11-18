@@ -3,7 +3,7 @@ import {
   STATUS_MESSAGE_PREFIX,
   InputMessageType,
   InputMessage
-} from './constants';
+} from '../constants';
 import javalabMsg from '@cdo/javalab/locale';
 
 export default class Theater {
