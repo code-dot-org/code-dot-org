@@ -3,10 +3,10 @@ import {
   PlaygroundItemType,
   WebSocketMessageType,
   STATUS_MESSAGE_PREFIX
-} from './constants';
+} from '../constants';
 import {assets, starterAssets} from '@cdo/apps/clientApi';
 import javalabMsg from '@cdo/javalab/locale';
-import {getStore} from '../redux';
+import {getStore} from '../../redux';
 import {
   addItemData,
   removeItemData,

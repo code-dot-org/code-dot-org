@@ -1,17 +1,17 @@
 {
   "pages": {
     "/projects": "home-learning-2020",
-    "/home": "myjourney-lacma"
+    "/home": "myjourney-sasha"
   },
 
   "banners": {
-    "myjourney-lacma": {
-      "image": "/images/csjourneys/lacma-dash.png",
-      "title": "My Journey: Art + Tech",
-      "body": "Learn how the program team at LA County Museum of Art makes space for artists to explore the intersections of art and emerging technologies. Recommended for grades K-5. Recording will be available the day after the live session.",
+    "myjourney-sasha": {
+      "image": "/images/csjourneys/sasha-dash.png",
+      "title": "My Journey: Visual storytelling with data",
+      "body": "Learn how a creative technologist uses art, music, data, and technology to create experiential software that both helps scientists and inspires people of all ages. Recommended for grades 6-12.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat9",
-      "buttonId": "myjourney-lacma-details"
+      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat10",
+      "buttonId": "myjourney-sasha-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",
