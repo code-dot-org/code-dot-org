@@ -13,28 +13,6 @@
   },
   "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/2": {
     "short_instructions": "Did the sounds and images match the mood of the poem? ",
-    "behavior_names": {
-      "wandering": "wandering",
-      "moving east": "moving east",
-      "spinning left": "spinning left",
-      "spinning right": "spinning right",
-      "shrinking": "shrinking",
-      "growing": "growing",
-      "moving south": "moving south",
-      "swimming left and right": "swimming left and right",
-      "moving north": "moving north",
-      "jittering": "jittering",
-      "moving west": "moving west",
-      "patrolling": "patrolling",
-      "moving with arrow keys": "moving with arrow keys",
-      "driving with arrow keys": "driving with arrow keys",
-      "fluttering": "fluttering",
-      "wobbling": "wobbling",
-      "moving west and looping": "moving west and looping",
-      "moving east and looping": "moving east and looping",
-      "moving north and looping": "moving north and looping",
-      "moving south and looping": "moving south and looping"
-    },
     "contained levels": [
       {
         "long_instructions": "<img src=\"https://images.code.org/752a37250030ee9b5acaea2143dca2fa-image-1634928264031.png\" style=\"max-width: 75px; float:left; padding-left:10px; padding-right:10px; padding-top:10px\">\n\n## Predict\n\nRead the poem. What sounds and images come to mind? \n\nAfter you type your answer, press \"Run\" to watch and listen to the poem animation. "
@@ -67,28 +45,6 @@
   },
   "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/5": {
     "short_instructions": "What images come to mind?",
-    "behavior_names": {
-      "wandering": "wandering",
-      "moving east": "moving east",
-      "spinning left": "spinning left",
-      "spinning right": "spinning right",
-      "shrinking": "shrinking",
-      "growing": "growing",
-      "moving south": "moving south",
-      "swimming left and right": "swimming left and right",
-      "moving north": "moving north",
-      "jittering": "jittering",
-      "moving west": "moving west",
-      "patrolling": "patrolling",
-      "moving with arrow keys": "moving with arrow keys",
-      "driving with arrow keys": "driving with arrow keys",
-      "fluttering": "fluttering",
-      "wobbling": "wobbling",
-      "moving west and looping": "moving west and looping",
-      "moving east and looping": "moving east and looping",
-      "moving north and looping": "moving north and looping",
-      "moving south and looping": "moving south and looping"
-    },
     "contained levels": [
       {
         "long_instructions": "<img src=\"https://images.code.org/752a37250030ee9b5acaea2143dca2fa-image-1634928264031.png\" style=\"max-width: 75px; float:left; padding-left:10px; padding-right:10px; padding-top:10px\">\n\n## Predict\n\nRead the poem. What images come to mind?\n\nAfter you type your answer, press \"Run\" to watch the poem animation. "
@@ -104,28 +60,6 @@
     },
     "callouts": {
       "poetry_sprite": "New block!"
-    },
-    "behavior_names": {
-      "wandering": "wandering",
-      "moving east": "moving east",
-      "spinning left": "spinning left",
-      "spinning right": "spinning right",
-      "shrinking": "shrinking",
-      "growing": "growing",
-      "moving south": "moving south",
-      "swimming left and right": "swimming left and right",
-      "moving north": "moving north",
-      "jittering": "jittering",
-      "moving west": "moving west",
-      "patrolling": "patrolling",
-      "moving with arrow keys": "moving with arrow keys",
-      "driving with arrow keys": "driving with arrow keys",
-      "fluttering": "fluttering",
-      "wobbling": "wobbling",
-      "moving west and looping": "moving west and looping",
-      "moving east and looping": "moving east and looping",
-      "moving north and looping": "moving north and looping",
-      "moving south and looping": "moving south and looping"
     }
   },
   "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/7": {
@@ -137,28 +71,6 @@
     "callouts": {
       "poetry_sprite_begins": "New block!",
       "poetry_sprite_stops": "New block!"
-    },
-    "behavior_names": {
-      "wandering": "wandering",
-      "moving east": "moving east",
-      "spinning left": "spinning left",
-      "spinning right": "spinning right",
-      "shrinking": "shrinking",
-      "growing": "growing",
-      "moving south": "moving south",
-      "swimming left and right": "swimming left and right",
-      "moving north": "moving north",
-      "jittering": "jittering",
-      "moving west": "moving west",
-      "patrolling": "patrolling",
-      "moving with arrow keys": "moving with arrow keys",
-      "driving with arrow keys": "driving with arrow keys",
-      "fluttering": "fluttering",
-      "wobbling": "wobbling",
-      "moving west and looping": "moving west and looping",
-      "moving east and looping": "moving east and looping",
-      "moving north and looping": "moving north and looping",
-      "moving south and looping": "moving south and looping"
     }
   },
   "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/8": {
@@ -170,28 +82,6 @@
     "callouts": {
       "poetry_set_sprite": "New block!",
       "poetry_remove_sprite": "New block!"
-    },
-    "behavior_names": {
-      "wandering": "wandering",
-      "moving east": "moving east",
-      "spinning left": "spinning left",
-      "spinning right": "spinning right",
-      "shrinking": "shrinking",
-      "growing": "growing",
-      "moving south": "moving south",
-      "swimming left and right": "swimming left and right",
-      "moving north": "moving north",
-      "jittering": "jittering",
-      "moving west": "moving west",
-      "patrolling": "patrolling",
-      "moving with arrow keys": "moving with arrow keys",
-      "driving with arrow keys": "driving with arrow keys",
-      "fluttering": "fluttering",
-      "wobbling": "wobbling",
-      "moving west and looping": "moving west and looping",
-      "moving east and looping": "moving east and looping",
-      "moving north and looping": "moving north and looping",
-      "moving south and looping": "moving south and looping"
     }
   },
   "https://studio.code.org/s/poetry-hoc3/lessons/1/levels/9": {
@@ -199,28 +89,6 @@
     "callouts": {
       "poetry_new_block": "New block!",
       "poetry_selector": "Select any poem, or enter your own!"
-    },
-    "behavior_names": {
-      "wandering": "wandering",
-      "moving east": "moving east",
-      "spinning left": "spinning left",
-      "spinning right": "spinning right",
-      "shrinking": "shrinking",
-      "growing": "growing",
-      "moving south": "moving south",
-      "swimming left and right": "swimming left and right",
-      "moving north": "moving north",
-      "jittering": "jittering",
-      "moving west": "moving west",
-      "patrolling": "patrolling",
-      "moving with arrow keys": "moving with arrow keys",
-      "driving with arrow keys": "driving with arrow keys",
-      "fluttering": "fluttering",
-      "wobbling": "wobbling",
-      "moving west and looping": "moving west and looping",
-      "moving east and looping": "moving east and looping",
-      "moving north and looping": "moving north and looping",
-      "moving south and looping": "moving south and looping"
     }
   }
 }

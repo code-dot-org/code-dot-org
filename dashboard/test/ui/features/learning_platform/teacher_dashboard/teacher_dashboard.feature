@@ -15,7 +15,7 @@ Feature: Using the teacher dashboard
     When I click selector "a:contains(Sally)" to load a new page
     And I wait until element "#teacher-panel-container" is visible
     And check that the URL contains "/s/allthethings"
-    And check that the URL contains "viewAs=Teacher"
+    And check that the URL contains "viewAs=Instructor"
 
   Scenario: Viewing a student
     Given I create an authorized teacher-associated student named "Sally"

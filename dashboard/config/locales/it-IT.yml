@@ -228,7 +228,15 @@ it:
     user_type_button: Aggiorna Tipologia di Account
     user_type_label: Tipo di account
     user_type_student: Studente
+    user_type_student_desc: 'Esplora tutti i tuoi corsi e attività, più:'
+    user_type_student_ability_1: Salva i tuoi progressi e progetti
+    user_type_student_ability_2: Partecipa alla sezione della classe del tuo insegnante
     user_type_teacher: Insegnante
+    user_type_teacher_desc: 'Tutto ciò a cui hanno accesso gli studenti, più:'
+    user_type_teacher_ability_1: Crea le sezioni della classe
+    user_type_teacher_ability_2: Assegna e tieni traccia del lavoro degli studenti
+    user_type_teacher_ability_3: Iscriviti all'apprendimento professionale
+    user_type_teacher_ability_4: Interagisci sul nostro forum per insegnanti
     field_is_required: è un dato obbligatorio
     accept_terms: Devi accettare le condizioni per creare un account
     error: Si è verificato un errore.
@@ -707,6 +715,7 @@ it:
     code_from_html: Code.org usa p5.play, il quale è sotto licenza <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">GNU
       LGPL 2.1</a>.
     powered_by_aws: Eseguito su Amazon Web Services
+    built_on_github: Costruito su GitHub di Microsoft
     trademark: "&copy; Code.org, %{current_year}. Code.org&reg;, il logo CODE e Hour
       of Code&reg; sono marchi registrati di Code.org."
     copyright: Copyright
@@ -718,12 +727,14 @@ it:
     tos_short: Condizioni
     tos: Termini di servizio
     privacy: Informativa sulla privacy
+    privacy_updated: Informativa sulla privacy (aggiornata)
     secure: Versione sicura
     report_abuse: Segnala un abuso
     built_on_code_studio: Costruito con Code Studio
     make_my_own_app: Creo la mia App
     how_it_works: Come funziona
     try_hour_of_code: Prova l'Ora del Codice!
+    store: Negozio
   reference_area:
     title: Hai bisogno di aiuto?
     subtitle: Guarda questi video e suggerimenti
