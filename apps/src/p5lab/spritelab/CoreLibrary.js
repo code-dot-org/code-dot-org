@@ -85,14 +85,20 @@ export default class CoreLibrary {
   drawSpeechBubble(text, x, y) {
     const padding = 8;
     text = ellipsify(text, 150 /* maxLength */);
-    let textSize = 10;
+    let textSize;
+    let maxLength;
     if (text.length < 50) {
       textSize = 20;
+      maxLength = 16;
     } else if (text.length < 75) {
       textSize = 15;
+      maxLength = 20;
+    } else {
+      textSize = 10;
+      maxLength = 28;
     }
 
-    const lines = stringToChunks(text, 16 /* maxLength */);
+    const lines = stringToChunks(text, maxLength);
     const longestLine = [...lines].sort((a, b) =>
       a.length < b.length ? 1 : -1
     )[0];
