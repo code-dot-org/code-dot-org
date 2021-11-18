@@ -75,6 +75,10 @@ SaveBar.propTypes = {
 };
 
 SaveBar.defaultProps = {
+  error: false,
+  handleView: undefined,
+  isSaving: false,
+  lastSaved: 0,
   pathForShowButton: '/'
 };
 
