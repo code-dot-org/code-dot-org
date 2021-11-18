@@ -2,7 +2,7 @@ import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {shallow} from 'enzyme';
-import PlaygroundImage from '@cdo/apps/javalab/PlaygroundImage';
+import PlaygroundImage from '@cdo/apps/javalab/playground/PlaygroundImage';
 
 describe('PlaygroundImageTest', () => {
   it('sets styles correctly', () => {

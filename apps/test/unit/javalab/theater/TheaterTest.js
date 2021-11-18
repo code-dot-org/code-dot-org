@@ -5,7 +5,7 @@ import {
   InputMessageType,
   InputMessage
 } from '@cdo/apps/javalab/constants';
-import Theater from '@cdo/apps/javalab/Theater';
+import Theater from '@cdo/apps/javalab/theater/Theater';
 
 describe('Theater', () => {
   let theater,
