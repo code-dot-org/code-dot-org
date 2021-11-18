@@ -14,7 +14,7 @@ describe('LevelDetailsDialogTest', () => {
     handleCloseSpy = sinon.spy();
     defaultProps = {
       handleClose: handleCloseSpy,
-      viewAs: ViewType.Teacher,
+      viewAs: ViewType.Instructor,
       isRtl: false
     };
     loadVideoSpy = sinon.stub(LevelDetailsDialog.prototype, 'loadVideo');

@@ -1,5 +1,5 @@
 ---
-title: Teacher Resources - MINECRAFT
+title: Materi Pembelajaran Guru - MINECRAFT
 nav: hoc_teacher_resources_nav
 video_player: true
 theme: responsive
@@ -12,27 +12,27 @@ style_min: true
 
 [col-50]
 
-## Teacher Resources
+## Materi Pembelajaran Guru
 
-### Lesson Plans:
+### Paket Pelajaran:
 
-- [MINECRAFT Lesson Plan](/files/minecraft-lp.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Voyage Aquatic](/files/minecraft-aquatic-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Adventurer](/files/minecraft-adventurer-answer-sheet.pdf)
-- [Answer Sheet and Teacher Tips for Minecraft Hour of Code Designer](/files/minecraft-designer-answer-sheet.pdf)
-- [Extra Challenges](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
+- [Paket Pelajaran MINECRAFT](/files/minecraft-lp.pdf)
+- [Lembar Jawaban dan Tips Guru untuk Minecraft Hour of Code Voyage Aquatic](/files/minecraft-aquatic-answer-sheet.pdf)
+- [Lembar Jawaban dan Tips Guru untuk Petualang Minecraft Hour of Code](/files/minecraft-adventurer-answer-sheet.pdf)
+- [Lembar Jawaban dan Tips Guru untuk Desainer Minecraft Hour of Code](/files/minecraft-designer-answer-sheet.pdf)
+- [Tantangan Ekstra](https://education.minecraft.net/wp-content/uploads/Hour-of-Code-Daily-Puzzles.pdf)
 
-### Extension Activities:
+### Aktivitas Ekstensi:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
-- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
+- [Melampaui Hour of Code](http://code.org/learn/beyond)
+- [Dasar-Dasar Ilmu Komputer: Kursus 2](https://studio.code.org/s/course2)
 
-### Other Teacher Resources:
+### Materi Pembelajaran Guru Lainnya:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
-- [Resources to help you plan and lead an event](https://docs.com/hourofcode2016)
+- [Hour of Code: Cara Memandu bagi Pendidik](https://hourofcode.com/how-to)
+- [Praktik Terbaik dari Para Pendidik Sukses](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Event Siaran Langsung: [Panduan Pendidik tentang Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Materi pembelajaran untuk membantu Anda menyusun rencana dan memandu event](https://docs.com/hourofcode2016)
 
 [/col-50]
 
@@ -40,12 +40,12 @@ style_min: true
 
 ## Gambaran
 
-Use blocks of code to take Steve or Alex on an adventure through this Minecraft world.
+Gunakan blok code untuk menggerakkan Steve atau Alex dalam petualangan menjelajahi dunia Minecraft ini.
 
-**Recommended Age Range:** 6+
+**Rentang Usia yang Dianjurkan:** 6+
 
-**Technology Requirements:** Modern browsers + tablets
+**Persyaratan Teknologi:** Browser modem + tablet
 
-<a href="/mc"><button>Try the tutorial</button></a>
+<a href="/mc"><button>Coba tutorial</button></a>
 
 [/col-50]
