@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import PreviewPaneHeader from './PreviewPaneHeader';
+import PreviewPaneHeader from '../PreviewPaneHeader';
 import ProtectedVisualizationDiv from '@cdo/apps/templates/ProtectedVisualizationDiv';
-import {toggleVisualizationCollapsed} from './javalabRedux';
+import {toggleVisualizationCollapsed} from '../javalabRedux';
 
 class TheaterVisualizationColumn extends React.Component {
   static propTypes = {

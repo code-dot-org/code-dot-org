@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import PreviewPaneHeader from './PreviewPaneHeader';
+import PreviewPaneHeader from '../PreviewPaneHeader';
 import classNames from 'classnames';
-import {toggleVisualizationCollapsed} from './javalabRedux';
+import {toggleVisualizationCollapsed} from '../javalabRedux';
 import PlaygroundImage from './PlaygroundImage';
 import PlaygroundText from './PlaygroundText';
-import {PlaygroundItemType} from './constants';
+import {PlaygroundItemType} from '../constants';
 
 class PlaygroundVisualizationColumn extends React.Component {
   static propTypes = {
