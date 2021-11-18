@@ -50,7 +50,7 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-11-15 21:08:23 UTC",
+    "serialized_at": "2021-11-18 00:27:17 UTC",
     "published_state": "stable",
     "instruction_type": null,
     "instructor_audience": null,
@@ -5347,7 +5347,223 @@
 
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Learn to Drag and Drop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-02"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Artist",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Collector",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Loops in Ice Age",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make a Game in Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make a Game in Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Ocean Scene with Loops",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Harvester",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming in Maze",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming with Rey and BB-8",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sequencing with Scrat",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Spelling Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Spelling Bee",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Tell a Story in Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Tell a Story in Play Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 
