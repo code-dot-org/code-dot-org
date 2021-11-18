@@ -10,15 +10,12 @@ const buttonStyle = {
   marginBottom: 20
 };
 
-const STANDALONE_OPTIONS = ['Multiple Units', 'Single Unit'];
-const YES_NO_OPTIONS = ['Yes', 'No'];
-
 export default function NewUnitForm(props) {
-  const [standalone, setStandalone] = useState(null);
+  const [standalone, setStandalone] = useState('');
   const [selectedFamilyName, setSelectedFamilyName] = useState(null);
   const [newFamilyName, setNewFamilyName] = useState(null);
   const [versionedCourse, setVersionedCourse] = useState(null);
-  const [versionYear, setVersionYear] = useState(null);
+  const [versionYear, setVersionYear] = useState('');
 
   const getScriptName = () => {
     const familyName = selectedFamilyName ? selectedFamilyName : newFamilyName;
@@ -35,12 +32,18 @@ export default function NewUnitForm(props) {
         <select
           style={styles.dropdown}
           value={standalone}
+          name="is_course"
           onChange={e => setStandalone(e.target.value)}
         >
-          {STANDALONE_OPTIONS.map(option => (
-            <option key={option} value={option}>
-              {option}
-            </option>
+          <option key={'empty'} value={''}>
+            {''}
+          </option>
+          <option key={'multi-unit'} value={false}>
+            {'Multiple Units'}
+          </option>
+          <option key={'single-unit'} value={true}>
+            {'Single Unit'}
+          </option>
           ))}
         </select>
         <HelpTip>
@@ -50,22 +53,13 @@ export default function NewUnitForm(props) {
           </p>
         </HelpTip>
       </label>
-      {standalone === 'Multiple Units' && (
-        <label>
-          Unit Slug
-          <HelpTip>
-            <p>
-              The unit slug is used to create the link to the unit. It is in the
-              format of studio.code.org/s/unit-slug-here. A unit slug can only
-              contain lowercase letters, numbers and dashes. Once you set the
-              slug it can not be updated.
-            </p>
-          </HelpTip>
-          <input name="script[name]" />
-        </label>
-      )}
-      {standalone === 'Single Unit' && (
+      {standalone && (
         <div>
+          <input
+            name="family_name"
+            value={selectedFamilyName || newFamilyName}
+            type="hidden"
+          />
           <label>
             What family is this course a part of?
             <select
@@ -108,13 +102,22 @@ export default function NewUnitForm(props) {
                 <select
                   style={styles.dropdown}
                   value={versionedCourse}
-                  onChange={e => setVersionedCourse(e.target.value)}
+                  onChange={e => {
+                    setVersionedCourse(e.target.value);
+                    if (!versionedCourse) {
+                      setVersionYear('unversioned');
+                    }
+                  }}
                 >
-                  {YES_NO_OPTIONS.map(option => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
-                  ))}
+                  <option key={'empty'} value={null}>
+                    {''}
+                  </option>
+                  <option key={'yes'} value={true}>
+                    {'Yes'}
+                  </option>
+                  <option key={'no'} value={false}>
+                    {'No'}
+                  </option>
                 </select>
                 <HelpTip>
                   <p>
@@ -124,13 +127,15 @@ export default function NewUnitForm(props) {
                   </p>
                 </HelpTip>
               </label>
-              {versionedCourse === 'Yes' && (
+              {(versionedCourse || versionYear) && (
                 <label>
                   What year is this course for?
                   <select
                     value={versionYear}
+                    name="version_year"
                     style={styles.dropdown}
                     className="versionYearSelector"
+                    disabled={!versionedCourse}
                     onChange={event => setVersionYear(event.target.value)}
                   >
                     <option value="">(None)</option>
@@ -142,7 +147,7 @@ export default function NewUnitForm(props) {
                   </select>
                 </label>
               )}
-              {(versionedCourse === 'No' || versionYear) && (
+              {versionYear && (
                 <label>
                   The Unit Slug for this course will be:
                   <HelpTip>
@@ -155,7 +160,7 @@ export default function NewUnitForm(props) {
                   </HelpTip>
                   <input
                     name="script[name]"
-                    value={getScriptName}
+                    value={getScriptName()}
                     disabled={true}
                   />
                 </label>
@@ -164,14 +169,19 @@ export default function NewUnitForm(props) {
           )}
         </div>
       )}
-      {standalone === 'Single Unit' && (
-        <div>
-          <input name="is_course" value={true} type="hidden" />
-          <input name="family_name" value={selectedFamilyName} type="hidden" />
-        </div>
-      )}
-      {versionedCourse === 'No' && (
-        <input name="version_year" value={'unversioned'} type="hidden" />
+      {(!standalone || versionYear) && (
+        <label>
+          Unit Slug
+          <HelpTip>
+            <p>
+              The unit slug is used to create the link to the unit. It is in the
+              format of studio.code.org/s/unit-slug-here. A unit slug can only
+              contain lowercase letters, numbers and dashes. Once you set the
+              slug it can not be updated.
+            </p>
+          </HelpTip>
+          <input name="script[name]" />
+        </label>
       )}
       <input name="is_migrated" value={true} type="hidden" />
       <input name="lesson_groups" value={'[]'} type="hidden" />
