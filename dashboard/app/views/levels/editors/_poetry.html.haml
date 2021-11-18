@@ -1,7 +1,7 @@
 :ruby
   warnings = {
-    level_type: "Example solutions are dependent on the level type field for generating solution URLs. If you change the level type, any existing example solution URLs will break.",
-    encrypted_examples: "For Poetry levels, the project URL for example solutions depends on the level type. Any existing example solutions will break if you change the level type without updating the channel tokens here."
+    level_type: "Example solutions are dependent on this field for generating solution URLs. If you change the level subtype, any existing example solution URLs will break.",
+    encrypted_examples: "For Poetry levels, the project URL for example solutions depends on the level subtype (Poetry or Poetry HOC). Any existing example solutions will break if you change the level subtype without updating the channel tokens here."
   }
 
 = render partial: 'levels/editors/fields/instructions_area', locals: {f: f}
