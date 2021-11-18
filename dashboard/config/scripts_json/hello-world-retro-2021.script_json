@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "hello-world-retro",
-    "serialized_at": "2021-11-13 05:01:22 UTC",
+    "serialized_at": "2021-11-17 19:08:44 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -143,7 +143,8 @@
       "key": "70daba44-c26e-4286-95ae-50cbd8724b2d",
       "position": 2,
       "properties": {
-        "name": "Hello World"
+        "name": "Hello World",
+        "progression_name": "Hello World"
       },
       "seeding_key": {
         "activity_section.key": "70daba44-c26e-4286-95ae-50cbd8724b2d",
@@ -183,7 +184,8 @@
       "properties": {
         "level_keys": [
           "helloworld_retro_say"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -207,7 +209,8 @@
       "properties": {
         "level_keys": [
           "helloworld_retro_location"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -231,7 +234,8 @@
       "properties": {
         "level_keys": [
           "helloworld_retro_multi"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -255,7 +259,8 @@
       "properties": {
         "level_keys": [
           "helloworld_retro_click"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -279,7 +284,8 @@
       "properties": {
         "level_keys": [
           "helloworld_retro_events"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -303,7 +309,8 @@
       "properties": {
         "level_keys": [
           "helloworld_retro_backgrounds"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -327,7 +334,8 @@
       "properties": {
         "level_keys": [
           "helloworld_retro_costumes"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -351,7 +359,8 @@
       "properties": {
         "level_keys": [
           "helloworld_retro_sizes"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -375,7 +384,8 @@
       "properties": {
         "level_keys": [
           "helloworld_retro_behaviors"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -399,7 +409,8 @@
       "properties": {
         "level_keys": [
           "helloworld_retro_sounds"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -423,7 +434,8 @@
       "properties": {
         "level_keys": [
           "helloworld_retro_freeplay"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
