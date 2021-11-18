@@ -3,7 +3,7 @@ import _ from 'lodash';
 import {getStore} from '@cdo/apps/redux';
 import CoreLibrary from '../spritelab/CoreLibrary';
 import {POEMS} from './constants';
-import {containsAtLeastOneAlphaNumberic} from '../../utils';
+import {containsAtLeastOneAlphaNumeric} from '../../utils';
 import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as backgroundEffects} from './commands/backgroundEffects';
 import {commands as foregroundEffects} from './commands/foregroundEffects';
@@ -102,6 +102,10 @@ export default class PoetryLibrary extends CoreLibrary {
 
       destroy(costume) {
         spritelabCommands.destroy.call(this, {costume});
+      },
+
+      glideTo(costume, location) {
+        spritelabCommands.glideTo.call(this, {costume}, location);
       },
 
       playMusic(url) {
@@ -431,7 +435,7 @@ export default class PoetryLibrary extends CoreLibrary {
         x: PLAYSPACE_SIZE / 2,
         y: yCursor,
         size: lineSize,
-        isPoemBodyLine: containsAtLeastOneAlphaNumberic(line) // Used to skip blank lines in animations
+        isPoemBodyLine: containsAtLeastOneAlphaNumeric(line) // Used to skip blank lines in animations
       });
       yCursor += lineHeight;
     });
@@ -451,7 +455,10 @@ export default class PoetryLibrary extends CoreLibrary {
   drawFromRenderInfo(renderInfo) {
     this.p5.textFont(renderInfo.font.font);
     renderInfo.lines.forEach(item => {
-      if (item.isPoemBodyLine && this.poemState.text.highlightColor) {
+      if (
+        this.poemState.text.highlightColor &&
+        containsAtLeastOneAlphaNumeric(item.text) // Don't highlight blank lines
+      ) {
         this.drawTextHighlight(item);
       }
       let fillColor = this.getP5Color(renderInfo.font.fill, item.alpha);

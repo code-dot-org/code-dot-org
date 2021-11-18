@@ -2,15 +2,22 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import Button from '@cdo/apps/templates/Button';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 
 import LessonEditorDialog from './LessonEditorDialog';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
-export default function UploadImageDialog({isOpen, handleClose, uploadImage}) {
+export default function UploadImageDialog({
+  isOpen,
+  handleClose,
+  uploadImage,
+  allowExpandable = true
+}) {
   const [imgUrl, setImgUrl] = useState(undefined);
   const [expandable, setExpandable] = useState(false);
   const [error, setError] = useState(undefined);
+  const [isUploading, setIsUploading] = useState(false);
 
   const resetState = () => {
     setImgUrl(undefined);
@@ -19,7 +26,12 @@ export default function UploadImageDialog({isOpen, handleClose, uploadImage}) {
   };
 
   const handleChange = e => {
+    if (!e.target.files[0]) {
+      resetState();
+      return;
+    }
     resetState();
+    setIsUploading(true);
 
     // assemble upload data
     const formData = new FormData();
@@ -36,21 +48,21 @@ export default function UploadImageDialog({isOpen, handleClose, uploadImage}) {
     })
       .then(response => response.json())
       .then(handleResult)
-      .catch(handleError);
+      .catch(err => {
+        setError(err);
+        setIsUploading(false);
+      });
   };
 
   const handleResult = result => {
     if (result && result.newAssetUrl) {
       setImgUrl(result.newAssetUrl);
     } else if (result && result.message) {
-      handleError(result.message);
+      setError(result.message);
     } else {
-      handleError(result);
+      setError(result);
     }
-  };
-
-  const handleError = error => {
-    setError(error);
+    setIsUploading(false);
   };
 
   const handleDialogClose = () => {
@@ -71,7 +83,12 @@ export default function UploadImageDialog({isOpen, handleClose, uploadImage}) {
       <h2>Upload Image</h2>
 
       {imgUrl && <img src={imgUrl} />}
-      <input type="file" name="file" onChange={handleChange} />
+      <input
+        type="file"
+        name="file"
+        onChange={handleChange}
+        disabled={isUploading}
+      />
 
       {error && (
         <div className="alert alert-error" role="alert">
@@ -79,35 +96,44 @@ export default function UploadImageDialog({isOpen, handleClose, uploadImage}) {
         </div>
       )}
 
-      <label style={styles.label}>
-        Expandable
-        <input
-          type="checkbox"
-          checked={expandable}
-          style={styles.checkbox}
-          onChange={e => setExpandable(e.target.checked)}
-        />
-        <HelpTip>
-          <p>
-            Check if you want the image to be able to be enlarged in a dialog
-            over the page when clicked.
-          </p>
-        </HelpTip>
-      </label>
-
+      {allowExpandable && (
+        <label style={styles.label}>
+          Expandable
+          <input
+            type="checkbox"
+            checked={expandable}
+            style={styles.checkbox}
+            onChange={e => setExpandable(e.target.checked)}
+          />
+          <HelpTip>
+            <p>
+              Check if you want the image to be able to be enlarged in a dialog
+              over the page when clicked.
+            </p>
+          </HelpTip>
+        </label>
+      )}
       <hr />
-
-      <Button
-        text={i18n.closeAndSave()}
-        onClick={handleCloseAndSave}
-        color={Button.ButtonColor.orange}
-        className="save-upload-image-button"
-      />
+      <div style={{display: 'flex'}}>
+        <Button
+          text={i18n.closeAndSave()}
+          onClick={handleCloseAndSave}
+          color={Button.ButtonColor.orange}
+          className="save-upload-image-button"
+          disabled={isUploading}
+        />{' '}
+        {isUploading && (
+          <div style={styles.spinner}>
+            <FontAwesome icon="spinner" className="fa-spin" />
+          </div>
+        )}
+      </div>
     </LessonEditorDialog>
   );
 }
 
 UploadImageDialog.propTypes = {
+  allowExpandable: PropTypes.bool,
   isOpen: PropTypes.bool.isRequired,
   handleClose: PropTypes.func.isRequired,
   uploadImage: PropTypes.func.isRequired
@@ -119,5 +145,9 @@ const styles = {
   },
   label: {
     margin: '10px 0'
+  },
+  spinner: {
+    fontSize: 25,
+    padding: 10
   }
 };

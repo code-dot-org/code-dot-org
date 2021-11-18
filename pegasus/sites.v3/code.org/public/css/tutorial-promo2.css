@@ -2,6 +2,7 @@
   width: 100%;
   padding-left: 5px;
   position: relative;
+  margin: 20px 0px;
 }
 
 .background-img {
@@ -41,8 +42,8 @@ html[dir= 'rtl']  .left-tutorial{
   right: auto;
 }
 .tutorial-promo-container .tutorial-box {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
+  background-color: rgb(226, 241, 243);
+  color: black;
   padding: 20px;
   border-radius: 5px;
 }
@@ -51,7 +52,7 @@ html[dir= 'rtl']  .left-tutorial{
   margin-top: 0px;
   margin-bottom: 10px;
   margin-right: 20px;
-  color: white;
+  color: black;
 }
 
 @media screen and (min-width: 970px) {
@@ -95,6 +96,11 @@ html[dir= 'rtl']  .left-tutorial{
 
   .img-container {
     padding: 0px 5px;
+  }
+
+  .tutorial-promo-container h1 {
+    margin-left: 25px;
+    margin-right: 25px;
   }
 }
 

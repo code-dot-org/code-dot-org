@@ -18,9 +18,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:33 UTC",
+    "serialized_at": "2021-11-12 23:46:25 UTC",
     "published_state": null,
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp10-2021"
     }
@@ -1000,7 +1002,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Small Classes:** If you have less than ten students, you can leave out the *PARENT* role and divide into groups of 4-5.\r\n\r\n**Large Classes:** More than one student can have the same character assignmnet, as long as they are not in the same group. You may also opt to use the blank badges and nameplates to create your own characters. Consider the school counselor or the bus driver. \r\n\r\n"
+            "markdown": "**Small Classes:** If you have less than ten students, you can leave out the *PARENT* role and divide into groups of 4-5.\n\n**Large Classes:** More than one student can have the same character assignment, as long as they are not in the same group. You may also opt to use the blank badges and nameplates to create your own characters. Consider the school counselor or the bus driver. \n\n"
           }
         ]
       },
