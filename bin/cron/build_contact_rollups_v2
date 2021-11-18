@@ -22,7 +22,7 @@ ensure
 end
 
 def main
-  return false unless DCDO.get('contact_rollups_active', true)
+  return unless DCDO.get('contact_rollups_active', true)
   run_contact_rollups
 end
 
