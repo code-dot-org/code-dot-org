@@ -3608,6 +3608,7 @@ ja:
               name: Minecraft Hour of Code デザイナー
           student_description: ニワトリ、羊、クリーパー、ゾンビをプログラムして、自分だけのオリジナルなMinecraftを作ろう。
         flappy-impact-study:
+          title: ゆるいコードとアンケート
           lessons:
             Pre Hour of Code Survey:
               name: Hour of Code事前アンケート
@@ -3881,6 +3882,7 @@ ja:
             Post Hour of Code Survey:
               name: Hour of Code事後アンケート
         hoc-impact-study:
+          title: 調査付きのクラシック迷路
           description_short: いろいろなキャラクターでコンピューター サイエンスの基礎を試してみよう！
           lessons:
             Pre Hour of Code Survey:
@@ -15531,6 +15533,8 @@ ja:
             CS Discoveries Post Course survey:
               key: CS発見 コース後アンケート
               name: CS発見 コース後アンケート
+            lesson-1:
+              name: CS発見 コース後アンケート
           lesson_groups:
             csd2_1v2:
               display_name: '第1章: ウェブページの作成'
@@ -15618,6 +15622,8 @@ ja:
             CS Discoveries Post Course survey:
               key: CS発見 コース後アンケート
               name: CS発見 コース後アンケート
+            lesson-1:
+              name: CS発見 コース後アンケート
           lesson_groups:
             csd3_1:
               display_name: '第 1 章: 画像とアニメーション'
@@ -15678,6 +15684,8 @@ ja:
               name: プロジェクト後のテスト
             CS Discoveries Post Course survey:
               key: CS発見 コース後アンケート
+              name: CS発見 コース後アンケート
+            CS Discoveries Post-Course Survey:
               name: CS発見 コース後アンケート
           lesson_groups:
             csd4_1:
@@ -15741,6 +15749,8 @@ ja:
               name: プロジェクト後のテスト
             CS Discoveries Post Course survey:
               key: CS発見 コース後アンケート
+              name: CS発見 コース後アンケート
+            CS Discoveries Post-Course Survey:
               name: CS発見 コース後アンケート
           lesson_groups:
             csd5_1:
@@ -15809,6 +15819,8 @@ ja:
               name: プロジェクト後のテスト
             CS Discoveries Post Course survey:
               key: CS発見 コース後アンケート
+              name: CS発見 コース後アンケート
+            CS Discoveries Post-Course Survey:
               name: CS発見 コース後アンケート
           lesson_groups:
             csd6_1:
@@ -17361,6 +17373,15 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        csa6-pilot:
+          lessons:
+            Java Lab:
+              name: Javaラボ
+            lesson-15:
+              name: 評価日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
         k5-onlinepd-2021:
           lessons:
             Welcome to "Teaching Computer Science Fundamentals":
@@ -17439,6 +17460,8 @@ ja:
           lessons:
             Survey Planning:
               name: データ収集の設計
+            CS Discoveries Post-Course Survey:
+              name: CS発見 コース後アンケート
           lesson_groups:
             lessonGroup-4:
               display_name: アンケート
@@ -17650,6 +17673,11 @@ ja:
               display_name: レッスン
             lessonGroup-3:
               display_name: プロジェクト
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: ハローワールド！
+          title: '"ハローワールド！"'
         csa1-pilot-facilitator:
           lessons:
             Assessment Day:
@@ -17763,3 +17791,29 @@ ja:
           lesson_groups:
             lessonGroup-2:
               display_name: 内容
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: コース終了後アンケート
+          title: CS発見 コース後アンケート
+        csa6-pilot-facilitator:
+          lessons:
+            Assessment Day:
+              name: 評価日
+            Java Lab:
+              name: Javaラボ
+              key: Javaラボ
+            lesson-15:
+              name: 評価日
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 内容
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: つづりみつばち
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: データの視覚化
+          title: データの視覚化

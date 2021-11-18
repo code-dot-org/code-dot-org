@@ -126,12 +126,21 @@
         "CourseF_outbreak2": "Simulasyon ng Virus",
         "CourseF_outbreak3": "Simulasyon ng Virus",
         "CourseF_outbreak4": "Baguhin ang Iyong Simulasyon",
-        "CourseF_outbreak7": "Nagkataon lamang",
-        "CourseF_outbreak8": "Imyunisasyon at Mga Bakuna",
+        "CourseF_outbreak7": "Imyunisasyon at Mga Bakuna",
+        "CourseF_outbreak8": "Magbahagi ng Mensahe",
         "courseF_bee_for5_2021": "Mga variable",
         "ramp_artist_loops4_2021": "Bituin",
         "CourseF_outbreak5": "Baguhin ang Iyong Simulasyon",
-        "international_outbreak_freeplay": "Magbahagi ng isang Mensahe"
+        "international_outbreak_freeplay": "Karaniwang Toolbox",
+        "CourseF_outbreak6": "Nagkataon Lamang",
+        "helloworld_animals_sizes": "Laki",
+        "helloworld_animals_sounds": "Mga Tunog",
+        "helloworld_emoji_sizes": "Laki",
+        "helloworld_emoji_sounds": "Mga Tunog",
+        "helloworld_food_sizes": "Laki",
+        "helloworld_food_sounds": "Mga Tunog",
+        "helloworld_retro_sizes": "Laki",
+        "helloworld_retro_sounds": "Mga Tunog"
       }
     }
   }

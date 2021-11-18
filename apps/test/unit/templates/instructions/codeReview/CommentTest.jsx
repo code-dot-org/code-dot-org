@@ -95,7 +95,7 @@ describe('Code Review Comment', () => {
     expect(wrapper.find('.fa-circle-o')).to.have.lengthOf(1);
   });
 
-  it('displays delete option for teacher', () => {
+  it('displays delete option for instructor', () => {
     const wrapper = renderWrapper({}, {viewAsTeacher: true});
     expect(wrapper.find('.fa-trash')).to.have.lengthOf(1);
   });
