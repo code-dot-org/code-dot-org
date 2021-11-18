@@ -86,21 +86,26 @@ export default class CoreLibrary {
     const padding = 8;
     text = ellipsify(text, 150 /* maxLength */);
     let textSize;
-    let maxLength;
+    let charsPerLine;
     if (text.length < 50) {
       textSize = 20;
-      maxLength = 16;
+      charsPerLine = 16;
     } else if (text.length < 75) {
       textSize = 15;
-      maxLength = 20;
+      charsPerLine = 20;
     } else {
       textSize = 10;
-      maxLength = 28;
+      charsPerLine = 28;
     }
 
-    const lines = stringToChunks(text, maxLength);
+    const lines = stringToChunks(text, charsPerLine);
+    // Since it's not a fixed-width font, we can't just use line length to
+    // determine the longest line, we have to actually calculate each width.
     const longestLine = [...lines].sort((a, b) =>
-      a.length < b.length ? 1 : -1
+      drawUtils.getTextWidth(this.p5, a, textSize) <
+      drawUtils.getTextWidth(this.p5, b, textSize)
+        ? 1
+        : -1
     )[0];
     let width =
       drawUtils.getTextWidth(this.p5, longestLine, textSize) + padding * 2;
