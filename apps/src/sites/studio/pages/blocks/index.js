@@ -51,6 +51,7 @@ $(document).ready(() => {
   Blockly.valueTypeTabShapeMap = valueTypeTabShapeMap(Blockly);
   Blockly.typeHints = true;
   Blockly.Css.inject(document);
+
   const divs = document.getElementsByClassName('blockly-container');
   for (let i = 0; i < divs.length; i++) {
     renderBlock(divs[i]);
