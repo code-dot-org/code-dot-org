@@ -8305,7 +8305,7 @@
           "courseC_artist_prog7_a": "Každý z uhlov je buď 45 alebo 90 stupňov.",
           "courseC_artist_prog7_b": "Funguje všetko po prvom kroku?\nStále všetko funguje aj po druhom kroku?\nV ktorom kroku sa stala chyba?",
           "courseC_artist_prog7_c": "Môžeš použiť šípku nadol s rozbaľovacou ponukou na blokoch \"otoč sa o\" aby si zistil aký uhol potrebuješ!",
-          "courseC_artist_prog7_d": "Potrebuješ bloky:\n\n-   posuň sa dopredu\n-   otoč sa vpravo o 45 stupňov\n-   posuň sa dopredu\n-   otoč sa vpravo o 90 stupňov\n-   posuň sa dopredu\n-   otoč sa vpravo o 45 stupňov\n\nZopakuj tento cyklus 2 krát!",
+          "courseC_artist_prog7_d": "Potrebuješ bloky:\n- posuň sa dopredu\n- otoč sa vpravo o 45 stupňov\n- posuň sa dopredu\n- otoč sa vpravo o 90 stupňov\n- posuň sa dopredu\n- otoč sa vpravo o 45 stupňov\n\nZopakuj tento cyklus 2 krát!",
           "courseC_artist_prog7_e": "Neboj sa urobiť chybu! Pridaj bloky,  spusti kód a sleduj, čo sa stane, aj keď úlohu ešte nemáš úplne vyriešenú. "
         },
         "courseC_artist_prog_challenge1_2021": {
@@ -8748,7 +8748,7 @@
         "courseD_bee_nestedLoops7_2021": {
           "courseD_bee_nestedLoops7_a": "Musíš opakovať blok `získaj nektár` vnútri ďašieho bloku `opakuj`, ktorý bude ešte v sebe obsahovať aj blok `posuň sa dopredu`.",
           "courseD_bee_nestedLoops7_b": "Musíš použiť všetky tri dostupné bloky `opakuj` na vyriešenie tejto úlohy.",
-          "courseD_bee_nestedLoops7_c": "Vnor do seba 3 cykly takto:\n\n-   opakuj 4 krát\n    -   opakuj 3 krát\n        -   opakuj 12 krát\n            -   získaj nektár\n        -   posuň sa dopredu\n    -   otoč sa vpravo"
+          "courseD_bee_nestedLoops7_c": "Vnor do seba 3 cykly takto:\n\n- opakuj 4 krát\n    - opakuj 3 krát\n        - opakuj 12 krát\n            - získaj nektár\n        - posuň sa dopredu\n    - otoč sa vpravo"
         },
         "courseD_bounce_events10s_2021": {
           "courseD_bounce_events10s_a": "Vo svojom kóde musíš mať tieto dve udalosti:\n\n<xml><block type=\"bounce_whenBallInGoal\" deletable=\"false\"><next><block type=\"bounce_playSound\">svišťanie<title name=\"SOUND\"></title><next><block type=\"bounce_incrementPlayerScore\"></block></next></block></next></block><block type=\"bounce_whenBallMissesPaddle\" deletable=\"false\"><next><block type=\"bounce_playSound\"><title name=\"SOUND\">píšťalka</title><next><block type=\"bounce_incrementOpponentScore\"></block></next></block></next>\\</block</xml>"
@@ -9169,16 +9169,16 @@
         },
         "courseF_artist_variables9_2021": {
           "courseF_artist_variables9_a": "Všetko, čo musíš spraviť v tejto úlohe, je zmeniť, koľkokrát sa cyklus opakuje.",
-          "courseF_artist_variables9_b": "Uisti sa, že bloky, ktoré menia premennú `dĺžka`, sú vnútri v cykle, aby sa čiary postupne predlžovali."
+          "courseF_artist_variables9_b": "Uisti sa, že bloky, ktoré menia premennú „dĺžka“, sú vo vnútri cyklu, aby sa čiary postupne predlžovali."
         },
         "courseF_bee_for10_2021": {
           "courseF_bee_for10_a": "Dokážeš nájsť vzťah medzi počtom krokov, ktoré potrebuješ prejsť, a počtom nektárov, ktoré musíš pozbierať?",
           "courseF_bee_for10_b": "Prvá skupina kvetov má dokopy **14 kvetov**. Aby sa včela dostala k tejto prvej skupine, tak musí preletieť nadol **7 políčok** (alebo 14 delené 2). Koľko kvetov je v ďalších skupinách a koľko políčok musí včela prejsť, aby sa k nim dostala?",
           "courseF_bee_for10_d": "Potrebuješ použiť 2 opakovania, jedno použije matematický blok.",
-          "courseF_bee_for10_c": "V úlohe má prvá skupina kvetov **14** kvetov, druhá skupina má **10** kvetov, tretia skupina má **6** kvetov a štvrtá skupina má **2** kvety.\n\nVšimni si, že na tomto obrázku je **7** červených štvorcov, **5** oranžových štvorcov, **3** zelené štvorce a **1** modrý štvorec. \n\n![](<https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png>)\n\nAko súvisia tieto čísla?"
+          "courseF_bee_for10_c": "V úlohe má prvá skupina kvetov **14** kvetov, druhá skupina má **10** kvetov, tretia skupina má **6** kvetov a štvrtá skupina má **2** kvety.\n\nVšimni si, že na tomto obrázku je **7** červených štvorcov, **5** oranžových štvorcov, **3** zelené štvorce a **1** modrý štvorec. \n\n![](https://images.code.org/602ce14659299af6a59a79ebd0bdb9d4-image-1493221855089.6.11 Hint Drawing.png)\n\nAko spolu súvisia čísla?"
         },
         "courseF_bee_for1_2021": {
-          "courseF_bee_for1_b": "Na pozbieranie všetkého nektáru potrebuješ dva bloky v tvojom cykle ’opakuj’."
+          "courseF_bee_for1_b": "Na pozbieranie všetkého nektáru potrebuješ dva bloky v tvojom cykle „opakuj“."
         },
         "courseF_bee_for2_2021": {
           "courseF_bee_for2_a": "Ak nevieš, čo máš robiť, tak pracuj vždy len na jednom kvete a často testuj.",
@@ -9187,7 +9187,7 @@
         "courseF_bee_for4_2021": {
           "courseF_bee_for4_a": "Na vyriešenie tejto úlohy použi cyklus `for`, ktorý ide od 1 do 7 so zvyšovaním o 1.",
           "courseF_bee_for4_b": "Vo svojom cykle `for` budeš mať príkaz `posuň sa dopredu` a cyklus na pozbieranie nektáru.",
-          "courseF_bee_for4_c": "Uisti sa, že používaš premennú `počítadlo` vo svojom vnorenom cykle `opakuj` a pozbieraj tak nektár!"
+          "courseF_bee_for4_c": "Uisti sa, že používaš premennú „počítadlo“ vo svojom vnorenom cykle „opakuj“ a pozbieraj tak nektár!"
         },
         "courseF_bee_for5_2021": {
           "courseF_bee_for5_a": "Tentokrát tvoj blok `posuň sa dopredu` a tvoj blok `získaj nektár` potrebujú byť v samostatných cykloch `opakuj` a obidva v rovnakom cykle `for`.",
@@ -9207,7 +9207,7 @@
         "courseF_bee_for8_2021": {
           "courseF_bee_for8_a": "Pri každom prechode tvojho cyklu sa prírastok pridáva k tvojej premennej počítadlo.\n\nKoľko potrebuješ zakaždým pridať, keď sa chceš dostať k ďalšiemu množstvu nektárov?",
           "courseF_bee_for8_b": "V tejto úlohe sa potrebuješ pohybovať schodiskovým vzorom a potom sa dostaneš ku kvetom.",
-          "courseF_bee_for8_c": "Tvoj cyklus bude počítať _od 3 do 15_ s nejakým prírastkom. Aký to bude?"
+          "courseF_bee_for8_c": "Tvoj cyklus bude počítať *od 3 do 15* s nejakým prírastkom. Aký to bude?"
         },
         "courseF_bee_for9_2021": {
           "courseF_bee_for9_a": "Skús spraviť nejaké výpočty s premennou počítadlo.\n\nČo musíš spraviť s počítadlom na každom kvete, aby sa to rovnalo množstvu nektáru, ktoré potrebuješ pozbierať?",
@@ -9295,7 +9295,7 @@
           "courseA_playlab_events_challenge2_c": "Nahnevanú príšeru môžeš naprogramovať tak, aby vrčala.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">5</title>\n    <next>\n      <block type=\"studio_setSpriteEmotion\">\n        <title name=\"SPRITE\">5</title>\n        <title name=\"VALUE\">2</title>\n        <next>\n          <block type=\"studio_saySprite\">\n            <title name=\"SPRITE\">5</title>\n            <title name=\"TEXT\">Roar!</title>\n            <next>\n              <block type=\"studio_setSpriteEmotion\">\n                <title name=\"SPRITE\">5</title>\n                <title name=\"VALUE\">0</title>\n              </block>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block></xml>"
         },
         "courseF_bee_for11_2021": {
-          "courseF_bee_for11_a": "O koľko menej je 12 ako 15?\\\nO koľko menej je 9 ako 12?\n\nVidíš nejaký vzor?"
+          "courseF_bee_for11_a": "O koľko menej je 12 ako 15? \nO koľko menej je 9 ako 12?\n\nVidíš nejaký vzor?"
         },
         "course1_playlab_events_challenge1": {
           "courseA_playlab_events_challenge1_a": "Naprogramuj, aby po kliknutí na vtáčika Robina zobrazil tučniak Waddles.\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>",
@@ -9408,10 +9408,10 @@
           "courseA_maze_seq9_c": "Na vyriešenie tejto úlohy budeš musieť ísť 3 rôznymi smermi."
         },
         "courseF_events_choice_pufferfish": {
-          "changeProp": "Budeš musieť použiť aj tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+          "changeProp": "Budeš potrebovať tento blok:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_text_choice_multiprompt": {
-          "when_answered_var": "Skús zmeniť názov premennej v bloku `keď zodpovedaná`. Keďže sa v programe nachádza viacero výziev, použi názov premennej z _poslednej_ výzvy, na ktorú bude používateľ odpovedať.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+          "when_answered_var": "Skús zmeniť názov premennej v bloku „keď zodpovedaná“. Keďže sa v programe nachádza viacero výziev, použi názov premennej z *poslednej* výzvy, na ktorú bude používateľ odpovedať.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         }
       }
     }

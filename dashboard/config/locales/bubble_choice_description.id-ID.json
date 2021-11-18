@@ -8,10 +8,18 @@
         "courseF_bee_variables_7a_2021": "Puzzle ini sedikit berbeda. Apa yang perlu Anda lakukan untuk memecahkannya?",
         "ramp_artist_loops8_2021": "Carilah sebuah pola dan buatlah kode ini lebih pendek menggunakan loops.",
         "CourseF_outbreak5": "Bantu bidadarimu menjadi lebih baik secara otomatis seiring waktu!",
-        "CourseF_outbreak6": "Virus tidak selalu menular, dan masker juga tidak menghentikan penularan dengan sempurna. Tingkatkan simulasi dengan membuat infeksi terjadi secara acak.",
-        "CourseF_outbreak7": "Cegah bidadarimu agar tidak sakit dengan memberi mereka kekebalan.",
+        "CourseF_outbreak6": "Virus tidak selalu menular, dan masker juga tidak menghentikan penularan dengan sempurna. Tingkatkan simulasimu dengan membuat infeksi terjadi secara acak.",
+        "CourseF_outbreak7": "Lindungi sprite kamu dari penyakit dengan memberi mereka kekebalan.",
         "CourseF_outbreak8": "Gunakan proyekmu untuk membagikan pesan. Apa yang kamu inginkan agar orang lain pelajari dari ini?",
-        "international_outbreak_freeplay": "Lanjutkan dengan blok yang sama yang telah kamu lihat!"
+        "international_outbreak_freeplay": "Lanjutkan dengan blok yang sama yang telah kamu lihat!",
+        "helloworld_animals_costumes": "Pelajari cara mengubah tampilan sprite.",
+        "helloworld_animals_sounds": "Pelajari cara memainkan suara.",
+        "helloworld_emoji_costumes": "Pelajari cara mengubah tampilan sprite.",
+        "helloworld_emoji_sounds": "Pelajari cara memainkan suara.",
+        "helloworld_food_costumes": "Pelajari cara mengubah tampilan sprite.",
+        "helloworld_food_sounds": "Pelajari cara memainkan suara.",
+        "helloworld_retro_costumes": "Pelajari cara mengubah tampilan sprite.",
+        "helloworld_retro_sounds": "Pelajari cara memainkan suara."
       }
     }
   }

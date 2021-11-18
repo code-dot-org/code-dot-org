@@ -12,8 +12,8 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-12 20:05:38 UTC",
-    "published_state": "beta",
+    "serialized_at": "2021-11-15 23:10:57 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -133,7 +133,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "In this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.",
+        "overview": "**Note:** This is an **optional** lesson in the module\n\nIn this lesson, students add conditionals to their projects, which will make their apps more responsive. Conditionals allow students to incorporate if-then logic to their code, which leads to more personalization in their app. Students can create programs that make new effects or sprites based on which word the user chooses.",
         "preparation": " - Make sure students have their handouts from previous lessons for reference. \n- Play through the levels ahead of time to prepare for the prediction and discussion sections.\n- To keep track of student progress, assign the lesson to your class sections.. Many levels in this module are linked to each other, so student code will carry on between lessons on certain levels. Logging in will ensure their work is saved. \n- Prepare one computer per student.\n",
         "purpose": "This is an optional lesson that extends student understanding of programming concepts in this module. Forty-five minutes is the suggested timeframe, but this lesson is intentionally open-ended so students can go at their own pace. Students spend the majority of the class in free play levels, tinkering with their code; the lesson can be shortened or extended as needed.  \n\nAnother use for this lesson might be to allow extra time for students who want to continue building their app from any previous lesson. Conditionals could be an extension activity for early finishers. \n",
         "student_overview": "Make the app respond to what the user chooses in exciting new ways."
@@ -152,7 +152,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "overview": "In this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.",
+        "overview": "**Note:** This is an **optional** lesson in the module.\n\nIn this lesson, students will take turns sharing their poem app with their peers. Students start by discussing the importance of giving and getting feedback. Then, students conduct a poetry pair-share by sharing their poem apps with a partner and giving and getting feedback. Finally, the whole class will have a Poetry Circle followed by a discussion on the mood and tone, as well as visual effects, of a student volunteer’s poem.",
         "preparation": "- Prepare one computer per student.\n- Prepare one copy of the “Share Your App” handout per student.\n- Make sure students have a copy of their original poem handy for this lesson.  \n- Divide the class into pairs for the Poetry Pair-Share activity.\n- [Optional, especially for remote teaching] Determine whether you need to set up a digital document or shared online space to post each student’s app URL (see teacher template in “Links”). \n",
         "student_overview": "Share your new poem apps with your friends! "
       },
@@ -3362,7 +3362,7 @@
     },
     {
       "name": "Coding with Poetry Modules",
-      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_259",
+      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gfaf59442b2_0_129",
       "key": "coding_with_poetry_modules",
       "properties": {
         "audience": "Teacher",

@@ -1083,6 +1083,12 @@
   coursed-2020_gradelevel: 8+ sınıfları
   coursee-2020_gradelevel: 9. ve üzeri Sınıflar
   coursef-2020_gradelevel: 10 ve üzeri Sınıflar
+  coursea-2021_gradelevel: 5. ve üzeri Sınıflar
+  courseb-2021_gradelevel: 6. ve üzeri Sınıflar
+  coursec-2021_gradelevel: 7. ve üzeri Sınıflar
+  coursed-2021_gradelevel: 8+ sınıfları
+  coursee-2021_gradelevel: 9. ve üzeri Sınıflar
+  coursef-2021_gradelevel: 10 ve üzeri Sınıflar
   accelerated_gradelevel: "10 Yaş ve Üstü (Ders 3 sonrası)"
   codeorg_platformtext: "Modern tarayıcılar, akıllı telefonlar, tabletler"
   codeintl_platformtext: "Modern tarayıcılar, akıllı telefonlar, tabletler"
@@ -1706,3 +1712,4 @@
   ai_microsoft_thanks: "21. yüzyılda başarıyı yakalamak için her çocuğun bilgisayar bilimini ve becerileri öğrenme olanağına sahip olmasını sağlamaya yönelik vizyonumuzu ve misyonumuzu desteklediği için Microsoft'a teşekkür ederiz."
   ai_activity: "Etkinlik"
   ai_description: "Tanım"
+  outbreak_tile_title: "Salgın"

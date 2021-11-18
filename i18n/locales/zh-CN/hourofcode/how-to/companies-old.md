@@ -5,7 +5,7 @@ title: 如何主办编程一小时 —— 公司
 {{ signup_button }}
 
 # 如何将编程一小时带到您的公司
-### Find out how you and your employees can inspire students to try computer science!
+### 思考你和你的员工如何激励学生尝试计算机科学！
 
 ***
 

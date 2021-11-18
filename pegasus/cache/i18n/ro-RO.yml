@@ -1383,6 +1383,12 @@ ro-RO:
   coursed-2020_gradelevel: Gradele 8+
   coursee-2020_gradelevel: Vârste 8-12 ani
   coursef-2020_gradelevel: Clasele 10+
+  coursea-2021_gradelevel: Clasele 5+
+  courseb-2021_gradelevel: Clasele 6+
+  coursec-2021_gradelevel: Clasele 7+
+  coursed-2021_gradelevel: Gradele 8+
+  coursee-2021_gradelevel: Vârste 8-12 ani
+  coursef-2021_gradelevel: Clasele 10+
   accelerated_gradelevel: Vârste 10 - 18 ani
   codeorg_platformtext: Browsere web moderne, smartphone-uri, tablete
   codeintl_platformtext: Browsere web moderne, smartphone-uri, tablete
@@ -2403,3 +2409,4 @@ ro-RO:
     să reușească în secolul 21.
   ai_activity: Activitate
   ai_description: Descriere
+  outbreak_tile_title: Epidemie
