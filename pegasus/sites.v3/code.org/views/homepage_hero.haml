@@ -99,18 +99,19 @@
         #csc-main-actions.col-33{style: "z-index: 1; background-color: white; padding-top: 40px"}
           = main_actions
         #right-bars-img.col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-csc-right-fade-wider.png); background-position: 0% 50%; background-size: cover; background-repeat: no-repeat"}
-      #svgbars{style: "display: flex; max-width: 1920px; margin: 0 auto; position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%"}
-        #left-svg-bars.col-33.tablet-feature{style: "overflow: hidden"}
-          %svg#left-bars-svg.tablet-feature{viewBox: "0 0 640 332", style: "opacity: 0; height: 100%; float: right"}
-        #central-empty.col-33
-          &nbsp;
-        #right-svg-bars.col-33.tablet-feature{style: "overflow: hidden"}
-          %svg#right-bars-svg.tablet-feature{viewBox: "0 0 640 332", style: "opacity: 0; height: 100%; float: left"}
-      #csc-fades{style: "display: flex; max-width: 1920px; margin: 0 auto; position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%"}
-        #left-fades.col-33.tablet-feature
-        #central-empty.col-33
-          &nbsp;
-        #right-fades.col-33.tablet-feature
+      - if hoc_csc_enable_svg
+        #svgbars{style: "display: none; max-width: 1920px; margin: 0 auto; position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%"}
+          #left-svg-bars.col-33.tablet-feature{style: "overflow: hidden"}
+            %svg#left-bars-svg.tablet-feature{viewBox: "0 0 640 332", style: "opacity: 0; height: 100%; float: right"}
+          #central-empty.col-33
+            &nbsp;
+          #right-svg-bars.col-33.tablet-feature{style: "overflow: hidden"}
+            %svg#right-bars-svg.tablet-feature{viewBox: "0 0 640 332", style: "opacity: 0; height: 100%; float: left"}
+        #csc-fades{style: "display: none; max-width: 1920px; margin: 0 auto; position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%"}
+          #left-fades.col-33.tablet-feature
+          #central-empty.col-33
+            &nbsp;
+          #right-fades.col-33.tablet-feature
 
   - else
     - if show_single_hero
