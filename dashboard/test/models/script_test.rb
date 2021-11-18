@@ -934,10 +934,10 @@ class ScriptTest < ActiveSupport::TestCase
 
   test 'get_unit_resources_pdf_url returns nil if no resources in script or lessons' do
     Services::CurriculumPdfs.stubs(:get_unit_resources_url).returns('/resources-pdf-url')
-    unit = create(:script, name: 'single-lesson-script', instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student)
-    lesson_group = create(:lesson_group, key: 'key1', script: unit)
-    lesson = create(:lesson, script: unit, name: 'lesson 1', lesson_group: lesson_group)
-    create(:script_level, script: unit, lesson: lesson)
+    unit = create :script
+    lesson_group = create :lesson_group, script: unit
+    lesson = create :lesson, script: unit, lesson_group: lesson_group
+    create :script_level, script: unit, lesson: lesson
 
     assert_nil unit.get_unit_resources_pdf_url
   end
