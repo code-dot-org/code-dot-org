@@ -11,11 +11,9 @@
     },
     "new_name": null,
     "family_name": "aquatic",
-    "serialized_at": "2021-11-19 20:00:13 UTC",
+    "serialized_at": "2021-10-25 22:53:51 UTC",
     "published_state": "preview",
     "instruction_type": null,
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
     "seeding_key": {
       "script.name": "aquatic"
     }

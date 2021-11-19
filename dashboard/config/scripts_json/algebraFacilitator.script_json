@@ -9,11 +9,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:00:08 UTC",
+    "serialized_at": "2021-11-02 14:28:55 UTC",
     "published_state": "beta",
     "instruction_type": null,
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "algebraFacilitator"
     }
@@ -196,9 +196,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -220,9 +217,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS tour"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -244,9 +238,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg functions"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -268,9 +259,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg hard video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -292,9 +280,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg functional"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -316,9 +301,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Blocks Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -340,9 +322,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -364,9 +343,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -388,9 +364,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -412,9 +385,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -436,9 +406,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -460,9 +427,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -484,9 +448,6 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -508,9 +469,6 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 9"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -532,9 +490,6 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -556,9 +511,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDK5 Teacher Dashboard 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -580,9 +532,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDK5 Teacher Dashboard 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -604,9 +553,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Teacher Dashboard"
-        ]
       },
       "bonus": false,
       "seeding_key": {

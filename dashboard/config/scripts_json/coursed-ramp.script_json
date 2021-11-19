@@ -9,11 +9,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:00:31 UTC",
+    "serialized_at": "2021-10-26 22:12:32 UTC",
     "published_state": "beta",
     "instruction_type": null,
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "coursed-ramp"
     }
@@ -82,9 +82,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_video_ramp1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -106,9 +103,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_maze_ramp1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -130,9 +124,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_maze_ramp2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -154,9 +145,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_maze_ramp3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -178,9 +166,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_maze_ramp4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -202,9 +187,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_maze_ramp5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -226,9 +208,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_maze_video_Loops"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -250,9 +229,6 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_maze_ramp6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -274,9 +250,6 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_maze_ramp7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -298,9 +271,6 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_collector_ramp8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -322,9 +292,6 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_collector_ramp9"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -346,9 +313,6 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_collector_ramp10"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -370,9 +334,6 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_artist_ramp11"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -394,9 +355,6 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_artist_ramp12"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -418,9 +376,6 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseD_farmer_ramp13"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -442,9 +397,6 @@
       "activity_section_position": 16,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "courseD_farmer_ramp14"
-        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -10,11 +10,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:01:02 UTC",
+    "serialized_at": "2021-11-02 14:29:40 UTC",
     "published_state": "beta",
     "instruction_type": null,
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "cspnovice"
     }
@@ -324,9 +324,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "welcome-csp-novice"
-        ],
         "progression": "Welcome CS Principles Novices!"
       },
       "bonus": false,
@@ -349,9 +346,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-tuesday-unit"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -374,9 +368,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-tuesday-unit2"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -399,9 +390,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-tuesday-pedagogy"
-        ],
         "progression": "Pedagogy Reflection"
       },
       "bonus": false,
@@ -424,9 +412,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-tuesday-facilitation"
-        ],
         "progression": "Facilitation Reflection"
       },
       "bonus": false,
@@ -449,9 +434,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-wednesday-unit"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -474,9 +456,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-wednesday-unit2"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -499,9 +478,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-wednesday-pedagogy"
-        ],
         "progression": "Pedagogy Reflection"
       },
       "bonus": false,
@@ -524,9 +500,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-wednesday-facilitation"
-        ],
         "progression": "Facilitation Reflection"
       },
       "bonus": false,
@@ -549,9 +522,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-thursday-unit"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -574,9 +544,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-thursday-unit2"
-        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -599,9 +566,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-thursday-pedagogy"
-        ],
         "progression": "Pedagogy Reflection"
       },
       "bonus": false,
@@ -624,9 +588,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-thursday-pedagogy2"
-        ],
         "progression": "Pedagogy Reflection"
       },
       "bonus": false,
@@ -649,9 +610,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-thursday-facilitation"
-        ],
         "progression": "Facilitation Reflection"
       },
       "bonus": false,
@@ -674,9 +632,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csp-novice-congrats"
-        ],
         "progression": "Congrats on completing the novice program!"
       },
       "bonus": false,

@@ -5,18 +5,19 @@
     "login_required": true,
     "properties": {
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/algebra/courseB/{LESSON}",
-      "has_lesson_plan": true,
       "hideable_lessons": true,
       "is_course": true,
+      "is_migrated": true,
+      "use_legacy_lesson_plans": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "algebrab",
-    "serialized_at": "2021-11-19 19:59:59 UTC",
+    "serialized_at": "2021-11-15 20:52:53 UTC",
     "published_state": "preview",
     "instruction_type": null,
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "AlgebraB"
     }
@@ -206,21 +207,269 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "3ecbeabe-5805-4166-a814-ca9a999bf9df",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3ecbeabe-5805-4166-a814-ca9a999bf9df",
+        "lesson.key": "Unplugged: Video Games and Coordinate Planes",
+        "lesson_group.key": "",
+        "script.name": "AlgebraB"
+      }
+    },
+    {
+      "key": "6710e3be-5708-4537-bbb2-73325c6d7d4d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6710e3be-5708-4537-bbb2-73325c6d7d4d",
+        "lesson.key": "Play Lab: Defining Variables (Big Game)",
+        "lesson_group.key": "",
+        "script.name": "AlgebraB"
+      }
+    },
+    {
+      "key": "b7ccc0b1-3e2f-4e22-9b8e-0a245dc9f0f6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b7ccc0b1-3e2f-4e22-9b8e-0a245dc9f0f6",
+        "lesson.key": "Play Lab: Animation (Big Game)",
+        "lesson_group.key": "",
+        "script.name": "AlgebraB"
+      }
+    },
+    {
+      "key": "1c90cf53-e7d4-40bc-bc0a-99efb6c243cc",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1c90cf53-e7d4-40bc-bc0a-99efb6c243cc",
+        "lesson.key": "Unplugged: Booleans",
+        "lesson_group.key": "",
+        "script.name": "AlgebraB"
+      }
+    },
+    {
+      "key": "5ffe276a-7c6c-4a77-bfb0-277ba5743fcb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5ffe276a-7c6c-4a77-bfb0-277ba5743fcb",
+        "lesson.key": "Eval: Boolean Operators",
+        "lesson_group.key": "",
+        "script.name": "AlgebraB"
+      }
+    },
+    {
+      "key": "af67d461-9784-4385-857c-888f5bd9ef77",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "af67d461-9784-4385-857c-888f5bd9ef77",
+        "lesson.key": "Play Lab: Booleans",
+        "lesson_group.key": "",
+        "script.name": "AlgebraB"
+      }
+    },
+    {
+      "key": "4e87a3d4-974e-484f-b58e-323ef249387d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4e87a3d4-974e-484f-b58e-323ef249387d",
+        "lesson.key": "Play Lab: Boolean (Big Game)",
+        "lesson_group.key": "",
+        "script.name": "AlgebraB"
+      }
+    },
+    {
+      "key": "a92eb8fa-787b-4c7e-aea8-6f16faac0928",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a92eb8fa-787b-4c7e-aea8-6f16faac0928",
+        "lesson.key": "Unplugged: Conditionals and Piecewise Functions",
+        "lesson_group.key": "",
+        "script.name": "AlgebraB"
+      }
+    },
+    {
+      "key": "c5e932be-34a3-4b14-b017-e70e4d14a722",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c5e932be-34a3-4b14-b017-e70e4d14a722",
+        "lesson.key": "Eval: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "AlgebraB"
+      }
+    },
+    {
+      "key": "e7ab42bd-9759-4490-9f97-65c015e82b51",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e7ab42bd-9759-4490-9f97-65c015e82b51",
+        "lesson.key": "Unplugged: Collision Detection and the Distance Formula",
+        "lesson_group.key": "",
+        "script.name": "AlgebraB"
+      }
+    },
+    {
+      "key": "ad9cea63-7e70-4ff9-a30b-ccde5b9e2a7c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ad9cea63-7e70-4ff9-a30b-ccde5b9e2a7c",
+        "lesson.key": "Play Lab: Collision Detection (Big Game)",
+        "lesson_group.key": "",
+        "script.name": "AlgebraB"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "e436dcda-7ce0-46d7-a88c-7f4ea56e7ab3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e436dcda-7ce0-46d7-a88c-7f4ea56e7ab3",
+        "lesson_activity.key": "3ecbeabe-5805-4166-a814-ca9a999bf9df"
+      }
+    },
+    {
+      "key": "01f130dd-3675-4d8e-b2c8-aad6384359a7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "01f130dd-3675-4d8e-b2c8-aad6384359a7",
+        "lesson_activity.key": "6710e3be-5708-4537-bbb2-73325c6d7d4d"
+      }
+    },
+    {
+      "key": "647d9829-0b0e-434b-93b2-c3a0c65d55ff",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "647d9829-0b0e-434b-93b2-c3a0c65d55ff",
+        "lesson_activity.key": "b7ccc0b1-3e2f-4e22-9b8e-0a245dc9f0f6"
+      }
+    },
+    {
+      "key": "b600009f-448f-46f2-8361-b81a0f256789",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b600009f-448f-46f2-8361-b81a0f256789",
+        "lesson_activity.key": "1c90cf53-e7d4-40bc-bc0a-99efb6c243cc"
+      }
+    },
+    {
+      "key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761",
+        "lesson_activity.key": "5ffe276a-7c6c-4a77-bfb0-277ba5743fcb"
+      }
+    },
+    {
+      "key": "a458a733-c6a2-45e6-9ae2-54fa4ae6ab26",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a458a733-c6a2-45e6-9ae2-54fa4ae6ab26",
+        "lesson_activity.key": "af67d461-9784-4385-857c-888f5bd9ef77"
+      }
+    },
+    {
+      "key": "2322ecf4-d89e-4de6-8ebe-bc2c29fb931c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2322ecf4-d89e-4de6-8ebe-bc2c29fb931c",
+        "lesson_activity.key": "4e87a3d4-974e-484f-b58e-323ef249387d"
+      }
+    },
+    {
+      "key": "9fae5b6f-52f1-4cae-8df9-6ddb2f89b40b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9fae5b6f-52f1-4cae-8df9-6ddb2f89b40b",
+        "lesson_activity.key": "a92eb8fa-787b-4c7e-aea8-6f16faac0928"
+      }
+    },
+    {
+      "key": "0882200e-9cff-444e-93ae-52f26522cfa5",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5",
+        "lesson_activity.key": "c5e932be-34a3-4b14-b017-e70e4d14a722"
+      }
+    },
+    {
+      "key": "5d1920a3-6bac-4cac-af05-2c8aead7bed6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5d1920a3-6bac-4cac-af05-2c8aead7bed6",
+        "lesson_activity.key": "e7ab42bd-9759-4490-9f97-65c015e82b51"
+      }
+    },
+    {
+      "key": "451aa528-ad12-4a3b-9bbb-b1f9cd048d7b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "451aa528-ad12-4a3b-9bbb-b1f9cd048d7b",
+        "lesson_activity.key": "ad9cea63-7e70-4ff9-a30b-ccde5b9e2a7c"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "VideoGamesCoordinatePlanes"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -229,7 +478,8 @@
         ],
         "lesson.key": "Unplugged: Video Games and Coordinate Planes",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "e436dcda-7ce0-46d7-a88c-7f4ea56e7ab3"
       },
       "level_keys": [
         "VideoGamesCoordinatePlanes"
@@ -238,12 +488,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Ninjacat Demo B"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -252,7 +499,8 @@
         ],
         "lesson.key": "Unplugged: Video Games and Coordinate Planes",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "e436dcda-7ce0-46d7-a88c-7f4ea56e7ab3"
       },
       "level_keys": [
         "Ninjacat Demo B"
@@ -261,12 +509,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Coordinates Multi 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -275,7 +520,8 @@
         ],
         "lesson.key": "Unplugged: Video Games and Coordinate Planes",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "e436dcda-7ce0-46d7-a88c-7f4ea56e7ab3"
       },
       "level_keys": [
         "Coordinates Multi 1"
@@ -284,12 +530,9 @@
     {
       "chapter": 4,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Vars 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -298,7 +541,8 @@
         ],
         "lesson.key": "Play Lab: Defining Variables (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "01f130dd-3675-4d8e-b2c8-aad6384359a7"
       },
       "level_keys": [
         "Big Game Vars 1"
@@ -307,12 +551,9 @@
     {
       "chapter": 5,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Vars 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -321,7 +562,8 @@
         ],
         "lesson.key": "Play Lab: Defining Variables (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "01f130dd-3675-4d8e-b2c8-aad6384359a7"
       },
       "level_keys": [
         "Big Game Vars 2"
@@ -330,12 +572,9 @@
     {
       "chapter": 6,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Vars 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -344,7 +583,8 @@
         ],
         "lesson.key": "Play Lab: Defining Variables (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "01f130dd-3675-4d8e-b2c8-aad6384359a7"
       },
       "level_keys": [
         "Big Game Vars 3"
@@ -353,12 +593,9 @@
     {
       "chapter": 7,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Vars 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -367,7 +604,8 @@
         ],
         "lesson.key": "Play Lab: Defining Variables (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "01f130dd-3675-4d8e-b2c8-aad6384359a7"
       },
       "level_keys": [
         "Big Game Vars 4"
@@ -376,12 +614,9 @@
     {
       "chapter": 8,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Animation 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -390,7 +625,8 @@
         ],
         "lesson.key": "Play Lab: Animation (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "647d9829-0b0e-434b-93b2-c3a0c65d55ff"
       },
       "level_keys": [
         "Big Game Animation 1"
@@ -399,12 +635,9 @@
     {
       "chapter": 9,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Animation 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -413,7 +646,8 @@
         ],
         "lesson.key": "Play Lab: Animation (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "647d9829-0b0e-434b-93b2-c3a0c65d55ff"
       },
       "level_keys": [
         "Big Game Animation 2"
@@ -422,12 +656,9 @@
     {
       "chapter": 10,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Animation 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -436,7 +667,8 @@
         ],
         "lesson.key": "Play Lab: Animation (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "647d9829-0b0e-434b-93b2-c3a0c65d55ff"
       },
       "level_keys": [
         "Big Game Animation 3"
@@ -445,12 +677,9 @@
     {
       "chapter": 11,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Animation 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -459,7 +688,8 @@
         ],
         "lesson.key": "Play Lab: Animation (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "647d9829-0b0e-434b-93b2-c3a0c65d55ff"
       },
       "level_keys": [
         "Big Game Animation 4"
@@ -468,12 +698,9 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Booleans"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -482,7 +709,8 @@
         ],
         "lesson.key": "Unplugged: Booleans",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "b600009f-448f-46f2-8361-b81a0f256789"
       },
       "level_keys": [
         "Booleans"
@@ -491,12 +719,9 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -505,7 +730,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       },
       "level_keys": [
         "Eval Booleans 1"
@@ -514,12 +740,9 @@
     {
       "chapter": 14,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -528,7 +751,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       },
       "level_keys": [
         "Eval Booleans 2"
@@ -537,12 +761,9 @@
     {
       "chapter": 15,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -551,7 +772,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       },
       "level_keys": [
         "Eval Booleans 3"
@@ -560,12 +782,9 @@
     {
       "chapter": 16,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -574,7 +793,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       },
       "level_keys": [
         "Eval Booleans 4"
@@ -583,12 +803,9 @@
     {
       "chapter": 17,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -597,7 +814,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       },
       "level_keys": [
         "Eval Booleans 5"
@@ -606,12 +824,9 @@
     {
       "chapter": 18,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -620,7 +835,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       },
       "level_keys": [
         "Eval Booleans 6"
@@ -629,12 +845,9 @@
     {
       "chapter": 19,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Bools 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -643,7 +856,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       },
       "level_keys": [
         "Blocks to Bools 1"
@@ -652,12 +866,9 @@
     {
       "chapter": 20,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Bools 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -666,7 +877,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       },
       "level_keys": [
         "Blocks to Bools 3"
@@ -675,12 +887,9 @@
     {
       "chapter": 21,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Bools 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -689,7 +898,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       },
       "level_keys": [
         "Blocks to Bools 4"
@@ -698,12 +908,9 @@
     {
       "chapter": 22,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -712,7 +919,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       },
       "level_keys": [
         "Eval Booleans Free Play"
@@ -721,12 +929,9 @@
     {
       "chapter": 23,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sam the Butterfly 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -735,7 +940,8 @@
         ],
         "lesson.key": "Play Lab: Booleans",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "a458a733-c6a2-45e6-9ae2-54fa4ae6ab26"
       },
       "level_keys": [
         "Sam the Butterfly 1"
@@ -744,12 +950,9 @@
     {
       "chapter": 24,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sam the Butterfly 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -758,7 +961,8 @@
         ],
         "lesson.key": "Play Lab: Booleans",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "a458a733-c6a2-45e6-9ae2-54fa4ae6ab26"
       },
       "level_keys": [
         "Sam the Butterfly 2"
@@ -767,12 +971,9 @@
     {
       "chapter": 25,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sam the Butterfly 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -781,7 +982,8 @@
         ],
         "lesson.key": "Play Lab: Booleans",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "a458a733-c6a2-45e6-9ae2-54fa4ae6ab26"
       },
       "level_keys": [
         "Sam the Butterfly 3"
@@ -790,12 +992,9 @@
     {
       "chapter": 26,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sam the Butterfly 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -804,7 +1003,8 @@
         ],
         "lesson.key": "Play Lab: Booleans",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "a458a733-c6a2-45e6-9ae2-54fa4ae6ab26"
       },
       "level_keys": [
         "Sam the Butterfly 4"
@@ -813,12 +1013,9 @@
     {
       "chapter": 27,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sam the Butterfly 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -827,7 +1024,8 @@
         ],
         "lesson.key": "Play Lab: Booleans",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "a458a733-c6a2-45e6-9ae2-54fa4ae6ab26"
       },
       "level_keys": [
         "Sam the Butterfly 5"
@@ -836,12 +1034,9 @@
     {
       "chapter": 28,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Booleans 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -850,7 +1045,8 @@
         ],
         "lesson.key": "Play Lab: Boolean (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "2322ecf4-d89e-4de6-8ebe-bc2c29fb931c"
       },
       "level_keys": [
         "Big Game Booleans 1"
@@ -859,12 +1055,9 @@
     {
       "chapter": 29,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Booleans 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -873,7 +1066,8 @@
         ],
         "lesson.key": "Play Lab: Boolean (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "2322ecf4-d89e-4de6-8ebe-bc2c29fb931c"
       },
       "level_keys": [
         "Big Game Booleans 4"
@@ -882,12 +1076,9 @@
     {
       "chapter": 30,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Booleans 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -896,7 +1087,8 @@
         ],
         "lesson.key": "Play Lab: Boolean (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "2322ecf4-d89e-4de6-8ebe-bc2c29fb931c"
       },
       "level_keys": [
         "Big Game Booleans 2"
@@ -905,12 +1097,9 @@
     {
       "chapter": 31,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Booleans 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -919,7 +1108,8 @@
         ],
         "lesson.key": "Play Lab: Boolean (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "2322ecf4-d89e-4de6-8ebe-bc2c29fb931c"
       },
       "level_keys": [
         "Big Game Booleans 3"
@@ -928,12 +1118,9 @@
     {
       "chapter": 32,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Booleans 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -942,7 +1129,8 @@
         ],
         "lesson.key": "Play Lab: Boolean (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "2322ecf4-d89e-4de6-8ebe-bc2c29fb931c"
       },
       "level_keys": [
         "Big Game Booleans 5"
@@ -951,12 +1139,9 @@
     {
       "chapter": 33,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ConditionalsPiecewiseFunctions"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -965,7 +1150,8 @@
         ],
         "lesson.key": "Unplugged: Conditionals and Piecewise Functions",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9fae5b6f-52f1-4cae-8df9-6ddb2f89b40b"
       },
       "level_keys": [
         "ConditionalsPiecewiseFunctions"
@@ -974,12 +1160,9 @@
     {
       "chapter": 34,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Luigi's Pizza 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -988,7 +1171,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5"
       },
       "level_keys": [
         "Luigi's Pizza 1"
@@ -997,12 +1181,9 @@
     {
       "chapter": 35,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Luigi's Pizza 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1011,7 +1192,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5"
       },
       "level_keys": [
         "Luigi's Pizza 2"
@@ -1020,12 +1202,9 @@
     {
       "chapter": 36,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Luigi's Pizza 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1034,7 +1213,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5"
       },
       "level_keys": [
         "Luigi's Pizza 3"
@@ -1043,12 +1223,9 @@
     {
       "chapter": 37,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Luigi's Pizza 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1057,7 +1234,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5"
       },
       "level_keys": [
         "Luigi's Pizza 4"
@@ -1066,12 +1244,9 @@
     {
       "chapter": 38,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Cond 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1080,7 +1255,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5"
       },
       "level_keys": [
         "Eval Cond 4"
@@ -1089,12 +1265,9 @@
     {
       "chapter": 39,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Cond 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1103,7 +1276,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5"
       },
       "level_keys": [
         "Eval Cond 5"
@@ -1112,12 +1286,9 @@
     {
       "chapter": 40,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Player 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1126,7 +1297,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5"
       },
       "level_keys": [
         "Big Game Player 1"
@@ -1135,12 +1307,9 @@
     {
       "chapter": 41,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Player 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1149,7 +1318,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5"
       },
       "level_keys": [
         "Big Game Player 2"
@@ -1158,12 +1328,9 @@
     {
       "chapter": 42,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CollisionDetection"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1172,7 +1339,8 @@
         ],
         "lesson.key": "Unplugged: Collision Detection and the Distance Formula",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "5d1920a3-6bac-4cac-af05-2c8aead7bed6"
       },
       "level_keys": [
         "CollisionDetection"
@@ -1181,12 +1349,9 @@
     {
       "chapter": 43,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Collision 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1195,7 +1360,8 @@
         ],
         "lesson.key": "Play Lab: Collision Detection (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "451aa528-ad12-4a3b-9bbb-b1f9cd048d7b"
       },
       "level_keys": [
         "Big Game Collision 1"
@@ -1204,12 +1370,9 @@
     {
       "chapter": 44,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Collision 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1218,7 +1381,8 @@
         ],
         "lesson.key": "Play Lab: Collision Detection (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "451aa528-ad12-4a3b-9bbb-b1f9cd048d7b"
       },
       "level_keys": [
         "Big Game Collision 3"
@@ -1227,12 +1391,9 @@
     {
       "chapter": 45,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Collision 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1241,7 +1402,8 @@
         ],
         "lesson.key": "Play Lab: Collision Detection (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "451aa528-ad12-4a3b-9bbb-b1f9cd048d7b"
       },
       "level_keys": [
         "Big Game Collision 4"
@@ -1250,12 +1412,9 @@
     {
       "chapter": 46,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Final"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1264,7 +1423,8 @@
         ],
         "lesson.key": "Play Lab: Collision Detection (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "451aa528-ad12-4a3b-9bbb-b1f9cd048d7b"
       },
       "level_keys": [
         "Big Game Final"
@@ -1280,7 +1440,8 @@
         ],
         "lesson.key": "Unplugged: Video Games and Coordinate Planes",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "e436dcda-7ce0-46d7-a88c-7f4ea56e7ab3"
       }
     },
     {
@@ -1291,7 +1452,8 @@
         ],
         "lesson.key": "Unplugged: Video Games and Coordinate Planes",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "e436dcda-7ce0-46d7-a88c-7f4ea56e7ab3"
       }
     },
     {
@@ -1302,7 +1464,8 @@
         ],
         "lesson.key": "Unplugged: Video Games and Coordinate Planes",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "e436dcda-7ce0-46d7-a88c-7f4ea56e7ab3"
       }
     },
     {
@@ -1313,7 +1476,8 @@
         ],
         "lesson.key": "Play Lab: Defining Variables (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "01f130dd-3675-4d8e-b2c8-aad6384359a7"
       }
     },
     {
@@ -1324,7 +1488,8 @@
         ],
         "lesson.key": "Play Lab: Defining Variables (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "01f130dd-3675-4d8e-b2c8-aad6384359a7"
       }
     },
     {
@@ -1335,7 +1500,8 @@
         ],
         "lesson.key": "Play Lab: Defining Variables (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "01f130dd-3675-4d8e-b2c8-aad6384359a7"
       }
     },
     {
@@ -1346,7 +1512,8 @@
         ],
         "lesson.key": "Play Lab: Defining Variables (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "01f130dd-3675-4d8e-b2c8-aad6384359a7"
       }
     },
     {
@@ -1357,7 +1524,8 @@
         ],
         "lesson.key": "Play Lab: Animation (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "647d9829-0b0e-434b-93b2-c3a0c65d55ff"
       }
     },
     {
@@ -1368,7 +1536,8 @@
         ],
         "lesson.key": "Play Lab: Animation (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "647d9829-0b0e-434b-93b2-c3a0c65d55ff"
       }
     },
     {
@@ -1379,7 +1548,8 @@
         ],
         "lesson.key": "Play Lab: Animation (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "647d9829-0b0e-434b-93b2-c3a0c65d55ff"
       }
     },
     {
@@ -1390,7 +1560,8 @@
         ],
         "lesson.key": "Play Lab: Animation (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "647d9829-0b0e-434b-93b2-c3a0c65d55ff"
       }
     },
     {
@@ -1401,7 +1572,8 @@
         ],
         "lesson.key": "Unplugged: Booleans",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "b600009f-448f-46f2-8361-b81a0f256789"
       }
     },
     {
@@ -1412,7 +1584,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       }
     },
     {
@@ -1423,7 +1596,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       }
     },
     {
@@ -1434,7 +1608,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       }
     },
     {
@@ -1445,7 +1620,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       }
     },
     {
@@ -1456,7 +1632,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       }
     },
     {
@@ -1467,7 +1644,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       }
     },
     {
@@ -1478,7 +1656,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       }
     },
     {
@@ -1489,7 +1668,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       }
     },
     {
@@ -1500,7 +1680,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       }
     },
     {
@@ -1511,7 +1692,8 @@
         ],
         "lesson.key": "Eval: Boolean Operators",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9d51d0ce-baa3-4aea-b3a2-ed9a078f3761"
       }
     },
     {
@@ -1522,7 +1704,8 @@
         ],
         "lesson.key": "Play Lab: Booleans",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "a458a733-c6a2-45e6-9ae2-54fa4ae6ab26"
       }
     },
     {
@@ -1533,7 +1716,8 @@
         ],
         "lesson.key": "Play Lab: Booleans",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "a458a733-c6a2-45e6-9ae2-54fa4ae6ab26"
       }
     },
     {
@@ -1544,7 +1728,8 @@
         ],
         "lesson.key": "Play Lab: Booleans",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "a458a733-c6a2-45e6-9ae2-54fa4ae6ab26"
       }
     },
     {
@@ -1555,7 +1740,8 @@
         ],
         "lesson.key": "Play Lab: Booleans",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "a458a733-c6a2-45e6-9ae2-54fa4ae6ab26"
       }
     },
     {
@@ -1566,7 +1752,8 @@
         ],
         "lesson.key": "Play Lab: Booleans",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "a458a733-c6a2-45e6-9ae2-54fa4ae6ab26"
       }
     },
     {
@@ -1577,7 +1764,8 @@
         ],
         "lesson.key": "Play Lab: Boolean (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "2322ecf4-d89e-4de6-8ebe-bc2c29fb931c"
       }
     },
     {
@@ -1588,7 +1776,8 @@
         ],
         "lesson.key": "Play Lab: Boolean (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "2322ecf4-d89e-4de6-8ebe-bc2c29fb931c"
       }
     },
     {
@@ -1599,7 +1788,8 @@
         ],
         "lesson.key": "Play Lab: Boolean (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "2322ecf4-d89e-4de6-8ebe-bc2c29fb931c"
       }
     },
     {
@@ -1610,7 +1800,8 @@
         ],
         "lesson.key": "Play Lab: Boolean (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "2322ecf4-d89e-4de6-8ebe-bc2c29fb931c"
       }
     },
     {
@@ -1621,7 +1812,8 @@
         ],
         "lesson.key": "Play Lab: Boolean (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "2322ecf4-d89e-4de6-8ebe-bc2c29fb931c"
       }
     },
     {
@@ -1632,7 +1824,8 @@
         ],
         "lesson.key": "Unplugged: Conditionals and Piecewise Functions",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "9fae5b6f-52f1-4cae-8df9-6ddb2f89b40b"
       }
     },
     {
@@ -1643,7 +1836,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5"
       }
     },
     {
@@ -1654,7 +1848,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5"
       }
     },
     {
@@ -1665,7 +1860,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5"
       }
     },
     {
@@ -1676,7 +1872,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5"
       }
     },
     {
@@ -1687,7 +1884,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5"
       }
     },
     {
@@ -1698,7 +1896,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5"
       }
     },
     {
@@ -1709,7 +1908,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5"
       }
     },
     {
@@ -1720,7 +1920,8 @@
         ],
         "lesson.key": "Eval: Conditionals",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "0882200e-9cff-444e-93ae-52f26522cfa5"
       }
     },
     {
@@ -1731,7 +1932,8 @@
         ],
         "lesson.key": "Unplugged: Collision Detection and the Distance Formula",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "5d1920a3-6bac-4cac-af05-2c8aead7bed6"
       }
     },
     {
@@ -1742,7 +1944,8 @@
         ],
         "lesson.key": "Play Lab: Collision Detection (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "451aa528-ad12-4a3b-9bbb-b1f9cd048d7b"
       }
     },
     {
@@ -1753,7 +1956,8 @@
         ],
         "lesson.key": "Play Lab: Collision Detection (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "451aa528-ad12-4a3b-9bbb-b1f9cd048d7b"
       }
     },
     {
@@ -1764,7 +1968,8 @@
         ],
         "lesson.key": "Play Lab: Collision Detection (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "451aa528-ad12-4a3b-9bbb-b1f9cd048d7b"
       }
     },
     {
@@ -1775,7 +1980,8 @@
         ],
         "lesson.key": "Play Lab: Collision Detection (Big Game)",
         "lesson_group.key": "",
-        "script.name": "AlgebraB"
+        "script.name": "AlgebraB",
+        "activity_section.key": "451aa528-ad12-4a3b-9bbb-b1f9cd048d7b"
       }
     }
   ],

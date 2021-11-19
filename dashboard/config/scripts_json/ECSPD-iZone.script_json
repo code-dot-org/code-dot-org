@@ -10,11 +10,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:00:02 UTC",
+    "serialized_at": "2021-11-02 14:28:36 UTC",
     "published_state": "beta",
     "instruction_type": null,
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "ECSPD-iZone"
     }
@@ -273,9 +273,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD presurvey"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -297,9 +294,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS Welcome Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -321,9 +315,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS tour"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -345,9 +336,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS commitment"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -369,9 +357,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS commitment match"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -393,9 +378,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS attendance commitment"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -417,9 +399,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD pause"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -441,9 +420,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD program overview"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -465,9 +441,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD curriculum overview"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -489,9 +462,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD unit matching"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -513,9 +483,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD course goals"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -537,9 +504,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD PD overview"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -561,9 +525,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD PD Phases"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -585,9 +546,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD phase matching"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -609,9 +567,6 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD PD goals"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -633,9 +588,6 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD program overlap"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -657,9 +609,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD impact of CS"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -681,9 +630,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD impact vid1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -705,9 +651,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD impact vid2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -729,9 +672,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD impact vid2 question"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -753,9 +693,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD impact in program"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -777,9 +714,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD what is growth mindset"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -801,9 +735,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD growth mindset in the classroom"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -825,9 +756,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD growth mindset question"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -849,9 +777,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD growth mindset strategies"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -873,9 +798,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD strategies"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -897,9 +819,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD teaching strategies video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -921,9 +840,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD strategies"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -945,9 +861,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "facilitator test"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -969,9 +882,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD forum introduction"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -993,9 +903,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD PD details"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1017,9 +924,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD postsurvey"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1041,9 +945,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD end of p1"
-        ]
       },
       "bonus": false,
       "seeding_key": {

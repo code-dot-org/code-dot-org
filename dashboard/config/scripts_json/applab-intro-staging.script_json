@@ -9,11 +9,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:00:12 UTC",
+    "serialized_at": "2021-10-26 22:11:30 UTC",
     "published_state": "beta",
     "instruction_type": null,
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "applab-intro-staging"
     }
@@ -738,9 +738,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 1 - Welcome"
-        ],
         "progression": "Welcome to App Lab!"
       },
       "bonus": false,
@@ -763,9 +760,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 1 - Try App"
-        ],
         "progression": "Skill Building - Screens and Buttons"
       },
       "bonus": false,
@@ -788,9 +782,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 1 - Add Screen"
-        ],
         "progression": "Skill Building - Screens and Buttons"
       },
       "bonus": false,
@@ -813,9 +804,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 1 - Add Button"
-        ],
         "progression": "Skill Building - Screens and Buttons"
       },
       "bonus": false,
@@ -838,9 +826,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 1 - Add Event"
-        ],
         "progression": "Skill Building - Screens and Buttons"
       },
       "bonus": false,
@@ -863,9 +848,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 1 - Add Sound"
-        ],
         "progression": "Skill Building - Screens and Buttons"
       },
       "bonus": false,
@@ -888,9 +870,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 1 - Building a Choose Your Own Adventure"
-        ],
         "progression": "Build Your Adventure!"
       },
       "bonus": false,
@@ -913,9 +892,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 1 - Build Your Adventure"
-        ],
         "progression": "Build Your Adventure!"
       },
       "bonus": false,
@@ -938,9 +914,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 1 - Go Further"
-        ],
         "progression": "Go Further!"
       },
       "bonus": false,
@@ -963,9 +936,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 2 - Try App"
-        ],
         "progression": "Skill Building - Screens and Buttons"
       },
       "bonus": false,
@@ -988,9 +958,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "HOC Intro to App Lab Example"
-        ],
         "progression": "Welcome to App Lab!"
       },
       "bonus": false,
@@ -1013,9 +980,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "HOC Intro to App Lab Brainstorm"
-        ],
         "progression": "Welcome to App Lab!"
       },
       "bonus": false,
@@ -1038,9 +1002,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 2 - Try Cat Commander"
-        ],
         "progression": "Welcome to App Lab!"
       },
       "bonus": false,
@@ -1063,9 +1024,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 2 - Edit startScreen"
-        ],
         "progression": "Design your Start Screen"
       },
       "bonus": false,
@@ -1088,9 +1046,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 2 - Edit startScreen2"
-        ],
         "progression": "Design your Start Screen"
       },
       "bonus": false,
@@ -1113,9 +1068,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 2 - Learn App Lab Video"
-        ],
         "progression": "Screens and Buttons"
       },
       "bonus": false,
@@ -1138,9 +1090,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 2 - Edit place1"
-        ],
         "progression": "Screens and Buttons"
       },
       "bonus": false,
@@ -1163,9 +1112,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 2 - Edit place1 2"
-        ],
         "progression": "Screens and Buttons"
       },
       "bonus": false,
@@ -1188,9 +1134,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 2 - add Button"
-        ],
         "progression": "Screens and Buttons"
       },
       "bonus": false,
@@ -1213,9 +1156,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 2 - add onEvent"
-        ],
         "progression": "Screens and Buttons"
       },
       "bonus": false,
@@ -1238,9 +1178,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 2 - add more buttons"
-        ],
         "progression": "Screens and Buttons"
       },
       "bonus": false,
@@ -1263,9 +1200,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 2 - add more buttons 2"
-        ],
         "progression": "Screens and Buttons"
       },
       "bonus": false,
@@ -1288,9 +1222,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 2 - add images"
-        ],
         "progression": "Go Further - Images and Sound"
       },
       "bonus": false,
@@ -1313,9 +1244,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 2 - add sound"
-        ],
         "progression": "Go Further - Images and Sound"
       },
       "bonus": false,
@@ -1338,9 +1266,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 2 - finish and share"
-        ],
         "progression": "Finish and Share"
       },
       "bonus": false,
@@ -1363,9 +1288,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 3 - onEvent mouseOut"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -1388,9 +1310,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 3 - Change Screen Color"
-        ],
         "progression": "Colors and Size"
       },
       "bonus": false,
@@ -1413,9 +1332,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 3 - Change Text"
-        ],
         "progression": "Colors and Size"
       },
       "bonus": false,
@@ -1438,9 +1354,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 3 - Change Text 2"
-        ],
         "progression": "Colors and Size"
       },
       "bonus": false,
@@ -1463,9 +1376,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 3 - Full Text"
-        ],
         "progression": "Colors and Size"
       },
       "bonus": false,
@@ -1488,9 +1398,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 3 - Change Two Buttons"
-        ],
         "progression": "Colors and Size"
       },
       "bonus": false,
@@ -1513,9 +1420,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 3 - onEvent intro"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -1538,9 +1442,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 3 - onEvent before"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -1563,9 +1464,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 3 - onEvent twoButtons"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -1588,9 +1486,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 3 - onEvent mouseOver"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -1613,9 +1508,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 3 - playSound"
-        ],
         "progression": "Sounds"
       },
       "bonus": false,
@@ -1638,9 +1530,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 3 - stopSound"
-        ],
         "progression": "Sounds"
       },
       "bonus": false,
@@ -1663,9 +1552,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 3 - thisOrThat"
-        ],
         "progression": "Create and Share Your App"
       },
       "bonus": false,
@@ -1688,9 +1574,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - Video Welcome"
-        ],
         "progression": "Welcome"
       },
       "bonus": false,
@@ -1713,9 +1596,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - Video setProperty"
-        ],
         "progression": "Colors and Size"
       },
       "bonus": false,
@@ -1738,9 +1618,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - Change Screen Color"
-        ],
         "progression": "Colors and Size"
       },
       "bonus": false,
@@ -1763,9 +1640,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - Change Text"
-        ],
         "progression": "Colors and Size"
       },
       "bonus": false,
@@ -1788,9 +1662,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - Full Text"
-        ],
         "progression": "Colors and Size"
       },
       "bonus": false,
@@ -1813,9 +1684,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - Change Text 2"
-        ],
         "progression": "Colors and Size"
       },
       "bonus": false,
@@ -1838,9 +1706,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - Change Two Buttons"
-        ],
         "progression": "Colors and Size"
       },
       "bonus": false,
@@ -1863,9 +1728,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - Video using onEvent"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -1888,9 +1750,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - onEvent intro"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -1913,9 +1772,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - onEvent before"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -1938,9 +1794,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - onEvent twoButtons"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -1963,9 +1816,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - playSound"
-        ],
         "progression": "Sounds"
       },
       "bonus": false,
@@ -1988,9 +1838,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - stopSound"
-        ],
         "progression": "Sounds"
       },
       "bonus": false,
@@ -2013,9 +1860,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - Video share thisThat"
-        ],
         "progression": "Create and Share Your App"
       },
       "bonus": false,
@@ -2038,9 +1882,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - thisOrThat"
-        ],
         "progression": "Create and Share Your App"
       },
       "bonus": false,
@@ -2063,9 +1904,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - Video sneak designMode"
-        ],
         "progression": "Sneak Peak of What Comes Next"
       },
       "bonus": false,
@@ -2088,9 +1926,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - thisOrThat design"
-        ],
         "progression": "Sneak Peak of What Comes Next"
       },
       "bonus": false,
@@ -2113,9 +1948,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 5 - Video Welcome to App Lab"
-        ],
         "progression": "Welcome"
       },
       "bonus": false,
@@ -2138,9 +1970,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - Video setProperty"
-        ],
         "progression": "Colors and Size"
       },
       "bonus": false,
@@ -2163,9 +1992,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 5 - Change Screen Color"
-        ],
         "progression": "Colors and Size"
       },
       "bonus": false,
@@ -2188,9 +2014,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 5 - Change Text 2"
-        ],
         "progression": "Colors and Size"
       },
       "bonus": false,
@@ -2213,9 +2036,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 5 - Full Text"
-        ],
         "progression": "Colors and Size"
       },
       "bonus": false,
@@ -2238,9 +2058,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - Video using onEvent"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -2263,9 +2080,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 5 - onEvent intro"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -2288,9 +2102,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 5 - onEvent twoButtons"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -2313,9 +2124,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 5 - Video Videos Sound"
-        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -2338,9 +2146,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 5 - playSound"
-        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -2363,9 +2168,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 5 - rate it app"
-        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -2388,9 +2190,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 5 - Video Intro Design Mode"
-        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -2413,9 +2212,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 5 - addButton"
-        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -2438,9 +2234,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 5 - setScreen"
-        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -2463,9 +2256,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 5 - Video Share Keep Going"
-        ],
         "progression": "Share and Keep Going"
       },
       "bonus": false,
@@ -2488,9 +2278,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 5 - share keep going"
-        ],
         "progression": "Share and Keep Going"
       },
       "bonus": false,
@@ -2513,9 +2300,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 5 - go further"
-        ],
         "progression": "Share and Keep Going"
       },
       "bonus": false,
@@ -2538,9 +2322,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - Video Welcome SetProperty"
-        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -2563,9 +2344,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - Change Screen Color"
-        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -2588,9 +2366,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - Change Text 2"
-        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -2613,9 +2388,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - Full Text"
-        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -2638,9 +2410,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - Video using onEvent"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -2663,9 +2432,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - onEvent intro"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -2688,9 +2454,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - onEvent twoButtons"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -2713,9 +2476,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - Video Images and Sounds"
-        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -2738,9 +2498,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - playSound"
-        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -2763,9 +2520,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - Video Design Mode and Screens"
-        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -2788,9 +2542,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - thisOrThatAddButton"
-        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -2813,9 +2564,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - thisOrThatAddScreen"
-        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -2838,9 +2586,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - thisOrThatSetScreen"
-        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -2863,9 +2608,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - Video Keep Going"
-        ],
         "progression": "Create Your App"
       },
       "bonus": false,
@@ -2888,9 +2630,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - thisOrThatPersonalize"
-        ],
         "progression": "Create Your App"
       },
       "bonus": false,
@@ -2913,9 +2652,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - animalSoundBoard"
-        ],
         "progression": "Create Your App"
       },
       "bonus": false,
@@ -2938,9 +2674,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - quizApp"
-        ],
         "progression": "Create Your App"
       },
       "bonus": false,
@@ -2963,9 +2696,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - blankApp"
-        ],
         "progression": "Create Your App"
       },
       "bonus": false,
@@ -2988,9 +2718,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - Video Welcome SetProperty"
-        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -3013,9 +2740,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - Change Screen Color"
-        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -3038,9 +2762,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - Change Text 2"
-        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -3063,9 +2784,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - Full Text"
-        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -3088,9 +2806,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 4 - Video using onEvent"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -3113,9 +2828,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - onEvent intro"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -3138,9 +2850,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - onEvent twoButtons"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -3163,9 +2872,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - Video Images and Sounds"
-        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -3188,9 +2894,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - playSound"
-        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -3213,9 +2916,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - Video Design Mode and Screens"
-        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -3238,9 +2938,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - thisOrThatAddButton"
-        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -3263,9 +2960,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - thisOrThatAddScreen"
-        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -3288,9 +2982,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - thisOrThatSetScreen"
-        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -3313,9 +3004,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 6 - Video Keep Going"
-        ],
         "progression": "Create Your App"
       },
       "bonus": false,
@@ -3338,9 +3026,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - thisOrThatPersonalize"
-        ],
         "progression": "Create Your App"
       },
       "bonus": false,
@@ -3363,9 +3048,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "App Lab Intro 8 - Video Getting Started"
-        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -3388,9 +3070,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - Change Screen Color"
-        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -3413,9 +3092,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - Change Text 2"
-        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -3438,9 +3114,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - Full Text"
-        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -3463,9 +3136,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "App Lab Intro 8 - Video Make It Interactive"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -3488,9 +3158,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - onEvent intro"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -3513,9 +3180,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - onEvent twoButtons"
-        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -3538,9 +3202,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "App Lab Intro 8 - Video Images and Sounds"
-        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -3563,9 +3224,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - playSound"
-        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -3588,9 +3246,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "App Lab Intro 8 - Video Design Mode"
-        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -3613,9 +3268,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - thisOrThatAddButton"
-        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -3638,9 +3290,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - thisOrThatAddScreen"
-        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -3663,9 +3312,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - thisOrThatSetScreen"
-        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -3688,9 +3334,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "App Lab Intro 8 - Video Share Your App"
-        ],
         "progression": "Share Your App"
       },
       "bonus": false,
@@ -3713,9 +3356,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "AppLab Intro 7 - thisOrThatPersonalize"
-        ],
         "progression": "Share Your App"
       },
       "bonus": false,

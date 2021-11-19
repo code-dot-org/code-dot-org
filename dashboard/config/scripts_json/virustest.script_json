@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:01:40 UTC",
+    "serialized_at": "2021-10-26 22:17:49 UTC",
     "published_state": "beta",
     "instruction_type": null,
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "virustest"
     }
@@ -106,9 +106,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virus_1_codebytes"
-        ],
         "progression": "Create your sprites"
       },
       "bonus": false,
@@ -131,9 +128,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virus_2_codebytes"
-        ],
         "progression": "Simulating an outbreak"
       },
       "bonus": false,
@@ -156,9 +150,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "virus_3_codebytes"
-        ],
         "progression": "Simulating masks"
       },
       "bonus": false,

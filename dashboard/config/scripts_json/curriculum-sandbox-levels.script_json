@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:02:08 UTC",
+    "serialized_at": "2021-10-26 22:15:51 UTC",
     "published_state": "beta",
     "instruction_type": null,
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "curriculum-sandbox-levels"
     }
@@ -508,9 +508,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_maze_seq10_predict1_2018"
-        ],
         "progression": "Course A"
       },
       "bonus": false,
@@ -533,9 +530,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_maze_seq1_predict1_2018"
-        ],
         "progression": "Course A"
       },
       "bonus": false,
@@ -558,9 +552,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_loops3_predict1"
-        ],
         "progression": "Course A"
       },
       "bonus": false,
@@ -583,9 +574,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_collector_loops11_predict2"
-        ],
         "progression": "Course A"
       },
       "bonus": false,
@@ -608,9 +596,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_artist_loops11_predict2"
-        ],
         "progression": "Course A"
       },
       "bonus": false,
@@ -633,9 +618,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_maze_seq2_predict1"
-        ],
         "progression": "Course B"
       },
       "bonus": false,
@@ -658,9 +640,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_maze_seq12_predict2"
-        ],
         "progression": "Course B"
       },
       "bonus": false,
@@ -683,9 +662,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_collector_loops3_predict1"
-        ],
         "progression": "Course B"
       },
       "bonus": false,
@@ -708,9 +684,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_artist_loops8_predict1"
-        ],
         "progression": "Course B"
       },
       "bonus": false,
@@ -733,9 +706,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "teacherSandboxFish"
-        ],
         "progression": "Course E"
       },
       "bonus": false,
@@ -758,9 +728,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Swimming Fish Teacher Sandbox"
-        ],
         "progression": "Course E"
       },
       "bonus": false,
@@ -783,9 +750,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_label_predict_sandbox2"
-        ],
         "progression": "Course F"
       },
       "bonus": false,
@@ -808,9 +772,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd digital unplugged PSP word search big"
-        ],
         "progression": "Problem Solving Widgets"
       },
       "bonus": false,
@@ -833,9 +794,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "csd digital unplugged PSP seating big"
-        ],
         "progression": "Problem Solving Widgets"
       },
       "bonus": false,
@@ -858,9 +816,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "contagion_teachers"
-        ],
         "progression": "Contagion - Guided Practice"
       },
       "bonus": false,
@@ -883,9 +838,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "6sidedDie"
-        ],
         "progression": "Contagion - Guided Practice"
       },
       "bonus": false,
@@ -908,9 +860,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "contagion_teachers2"
-        ],
         "progression": "Contagion - Guided Practice"
       },
       "bonus": false,
@@ -933,9 +882,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_text_events_loom"
-        ],
         "progression": "Events/Insects"
       },
       "bonus": false,
@@ -958,9 +904,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_events_loom_sandbox"
-        ],
         "progression": "Events/Creatures"
       },
       "bonus": false,
@@ -983,9 +926,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sprites in Action Video Projects"
-        ],
         "progression": " Project Links"
       },
       "bonus": false,
@@ -1008,9 +948,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_text_concat_loom"
-        ],
         "progression": "Prompts/Concatenation"
       },
       "bonus": false,
@@ -1033,9 +970,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Text and Prompts Video Projects"
-        ],
         "progression": "Project Links"
       },
       "bonus": false,
@@ -1058,9 +992,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseF_apps_card"
-        ],
         "progression": "Birthday card"
       },
       "bonus": false,
@@ -1083,9 +1014,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lots of Sprites Video Projects"
-        ],
         "progression": "Project Links"
       },
       "bonus": false,
@@ -1108,9 +1036,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PlayLab Video Projects"
-        ],
         "progression": "Project Links"
       },
       "bonus": false,
@@ -1133,9 +1058,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CS Principles: Functions"
-        ],
         "progression": "CS Principles: Functions"
       },
       "bonus": false,
@@ -1158,9 +1080,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "translation_prompt_name"
-        ],
         "progression": "Course F: Text and Prompts"
       },
       "bonus": false,
@@ -1183,9 +1102,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "translation_prompt_username"
-        ],
         "progression": "Course F: Text and Prompts"
       },
       "bonus": false,

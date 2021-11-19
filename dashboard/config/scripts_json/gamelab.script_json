@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:01:17 UTC",
+    "serialized_at": "2021-10-26 22:16:08 UTC",
     "published_state": "beta",
     "instruction_type": null,
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "gamelab"
     }
@@ -119,9 +119,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Gamelab StartScreen Intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -143,9 +140,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Gamelab StartScreen base code"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -167,9 +161,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Gamelab StartScreen State"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -191,9 +182,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Gamelab StartScreen Check State"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -215,9 +203,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Gamelab StartScreen Check States"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -239,9 +224,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Gamelab StartScreen Change State"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -263,9 +245,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Gamelab StartScreen End Game"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -287,9 +266,6 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Gamelab StartScreen Restart Game"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -311,9 +287,6 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Gamelab StartScreen Hide Sprites"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -335,9 +308,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Gamelab StartScreen Intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {

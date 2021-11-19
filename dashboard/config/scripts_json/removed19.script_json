@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:01:31 UTC",
+    "serialized_at": "2021-10-26 22:17:13 UTC",
     "published_state": "beta",
     "instruction_type": null,
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "removed19"
     }
@@ -158,9 +158,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseB_video_Unspotted_2019"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -182,9 +179,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "courseA_video_Stevie_2019"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -206,9 +200,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PlantASeed_2019"
-        ]
       },
       "bonus": false,
       "seeding_key": {

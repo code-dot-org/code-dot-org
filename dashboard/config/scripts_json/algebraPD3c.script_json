@@ -9,11 +9,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:00:11 UTC",
+    "serialized_at": "2021-11-02 14:29:11 UTC",
     "published_state": "beta",
     "instruction_type": null,
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "algebraPD3c"
     }
@@ -158,9 +158,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CWelcome"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -182,9 +179,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CAbout"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -206,9 +200,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "OPD-K5 CS Tips"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -230,9 +221,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CPlanning"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -254,9 +242,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CGo"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -278,9 +263,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CGathering"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -302,9 +284,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CSharing"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -326,9 +305,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CShare Forum"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -350,9 +326,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CFuture"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -374,9 +347,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CCourseAB"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -398,9 +368,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CBootstrap"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -422,9 +389,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CElective"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -446,9 +410,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CSharePlan"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -470,9 +431,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg 3CCongrats"
-        ]
       },
       "bonus": false,
       "seeding_key": {

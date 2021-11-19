@@ -9,11 +9,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:01:32 UTC",
+    "serialized_at": "2021-11-02 14:30:07 UTC",
     "published_state": "beta",
     "instruction_type": null,
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "sciencePD3_pre1"
     }
@@ -158,9 +158,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD3pre1 intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -182,9 +179,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 timeline"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -206,9 +200,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD PD details"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -230,9 +221,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "TLO intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -254,9 +242,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "TLO practical"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -278,9 +263,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD3pre1 prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -302,9 +284,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD3pre1 remember"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -326,9 +305,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD3pre1 thanks"
-        ]
       },
       "bonus": false,
       "seeding_key": {

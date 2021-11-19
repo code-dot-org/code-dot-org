@@ -8,8 +8,6 @@
   ],
   "published_state": "beta",
   "instruction_type": "teacher_led",
-  "participant_audience": "teacher",
-  "instructor_audience": "universal_instructor",
   "properties": {
     "has_verified_resources": true,
     "version_year": "2021"

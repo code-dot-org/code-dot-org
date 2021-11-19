@@ -9,11 +9,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:00:03 UTC",
+    "serialized_at": "2021-11-02 14:28:37 UTC",
     "published_state": "beta",
     "instruction_type": null,
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "ECSPD1"
     }
@@ -234,9 +234,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS Welcome Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -258,9 +255,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS tour"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -282,9 +276,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 professional learning program phases"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -306,9 +297,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECS Matching Program Commitment"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -330,9 +318,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 cs is about"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -354,9 +339,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 dikjstra"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -378,9 +360,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 equity in cs education"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -402,9 +381,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 background reflection"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -426,9 +402,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 curriculum design"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -450,9 +423,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 unit overviews"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -474,9 +444,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 Matching Unit Descriptions and Numbers"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -498,9 +465,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 unit 1 overview"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -522,9 +486,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 unit 2 overview"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -546,9 +507,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 curriculum connections"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -570,9 +528,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 computational thinker"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -594,9 +549,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 unifying themes"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -618,9 +570,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECS PD1 classroom culture"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -642,9 +591,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 your role"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -666,9 +612,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 student centered learning"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -690,9 +633,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 Forum"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -714,9 +654,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 post survey"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -738,9 +675,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD1 congratulations end"
-        ]
       },
       "bonus": false,
       "seeding_key": {

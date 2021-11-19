@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:00:12 UTC",
+    "serialized_at": "2021-10-26 22:11:24 UTC",
     "published_state": "beta",
     "instruction_type": null,
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "applab-1hour"
     }
@@ -149,9 +149,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Escape Room Example"
-        ],
         "progression": "Escape Room Example"
       },
       "bonus": false,
@@ -174,9 +171,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: Design Mode"
-        ],
         "progression": "Overview: Design Mode"
       },
       "bonus": false,
@@ -199,9 +193,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: Images"
-        ],
         "progression": "Overview: Images"
       },
       "bonus": false,
@@ -224,9 +215,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 1"
-        ],
         "progression": "Overview: onEvent"
       },
       "bonus": false,
@@ -249,9 +237,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 3"
-        ],
         "progression": "Overview: onEvent"
       },
       "bonus": false,
@@ -274,9 +259,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: onEvent"
-        ],
         "progression": "Overview: onEvent"
       },
       "bonus": false,
@@ -299,9 +281,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: setPosition"
-        ],
         "progression": "Overview: setPosition"
       },
       "bonus": false,
@@ -324,9 +303,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 3-2"
-        ],
         "progression": "Overview: If Statements"
       },
       "bonus": false,
@@ -349,9 +325,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 4"
-        ],
         "progression": "Overview: If Statements"
       },
       "bonus": false,
@@ -374,9 +347,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: If Statements"
-        ],
         "progression": "Overview: If Statements"
       },
       "bonus": false,
@@ -399,9 +369,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 5"
-        ],
         "progression": "Final Room Escape App"
       },
       "bonus": false,
@@ -424,9 +391,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 7"
-        ],
         "progression": "Final Room Escape App"
       },
       "bonus": false,
@@ -449,9 +413,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 8"
-        ],
         "progression": "Final Room Escape App"
       },
       "bonus": false,
@@ -474,9 +435,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 9-2"
-        ],
         "progression": "Final Room Escape App"
       },
       "bonus": false,
@@ -499,9 +457,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 10"
-        ],
         "progression": "Final Room Escape App"
       },
       "bonus": false,
@@ -524,9 +479,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Room Escape Workshop - 10 - 2"
-        ],
         "progression": "Final Room Escape App"
       },
       "bonus": false,
@@ -549,9 +501,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Final Room Escape App"
-        ],
         "progression": "Final Room Escape App"
       },
       "bonus": false,

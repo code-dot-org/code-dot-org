@@ -9,11 +9,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:00:05 UTC",
+    "serialized_at": "2021-11-02 14:28:47 UTC",
     "published_state": "beta",
     "instruction_type": null,
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "ECSPD3-Unit6"
     }
@@ -272,9 +272,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECS Phase 3 Welcome"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -296,9 +293,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 about"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -320,9 +314,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PD check your progress"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -344,9 +335,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 plan"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -368,9 +356,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD course goals"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -392,9 +377,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 overview"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -416,9 +398,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 intro to u6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -440,9 +419,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 connections"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -464,9 +440,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 why study robotics"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -488,9 +461,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 lesson overview"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -512,9 +482,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 day 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -536,9 +503,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 day 2-3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -560,9 +524,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 day 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -584,9 +545,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 day 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -608,9 +566,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 day 6-7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -632,9 +587,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 day 8-9"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -656,9 +608,6 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 day 10-13"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -680,9 +629,6 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 day 14"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -704,9 +650,6 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 day 15"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -728,9 +671,6 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 day 16-18"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -752,9 +692,6 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 day 19-23"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -776,9 +713,6 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 day 24-33"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -800,9 +734,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 alt lesson overview"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -824,9 +755,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 lesson ideas"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -848,9 +776,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 links to online simulations"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -872,9 +797,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 ideas for culminating projects"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -896,9 +818,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 challenge inside"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -920,9 +839,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 challenge details"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -944,9 +860,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 list of challenges"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -968,9 +881,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 pick a challenge"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -992,9 +902,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 do the challenge"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1016,9 +923,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 share out overview"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1040,9 +944,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 post to forum"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1064,9 +965,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 submit forum link"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1088,9 +986,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD3-u6 post survey"
-        ]
       },
       "bonus": false,
       "seeding_key": {
