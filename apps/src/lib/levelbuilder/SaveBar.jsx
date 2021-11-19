@@ -74,11 +74,8 @@ SaveBar.propTypes = {
 };
 
 SaveBar.defaultProps = {
-  error: undefined,
-  handleView: undefined,
   isSaving: false,
-  lastSaved: 0,
-  pathForShowButton: undefined
+  lastSaved: 0
 };
 
 const styles = {
