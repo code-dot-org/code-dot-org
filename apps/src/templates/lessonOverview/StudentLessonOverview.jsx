@@ -17,35 +17,26 @@ import {studentLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanS
 import {linkWithQueryParams} from '@cdo/apps/utils';
 import Button from '@cdo/apps/templates/Button';
 import StyledCodeBlock from './StyledCodeBlock';
-import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
-import {groupedLessons} from '@cdo/apps/code-studio/progressRedux';
+import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
+import {levelsForLessonId} from '@cdo/apps/code-studio/progressRedux';
 
 class StudentLessonOverview extends Component {
   static propTypes = {
     lesson: studentLessonShape.isRequired,
 
     // from redux
-    groupedLessons: PropTypes.arrayOf(groupedLessonsType).isRequired,
+    lessonLevels: PropTypes.arrayOf(levelWithProgressType),
     announcements: PropTypes.arrayOf(announcementShape),
     isSignedIn: PropTypes.bool.isRequired
   };
 
   determineLevelDisplay = () => {
-    let lessonIndex;
-    const groupedLesson = this.props.groupedLessons.find(groupedLesson =>
-      groupedLesson.lessons.find((thisLesson, index) => {
-        const isCurrentLesson =
-          thisLesson.lessonNumber === this.props.lesson.position;
-        if (isCurrentLesson) {
-          lessonIndex = index;
-          return true;
-        }
-      })
-    );
-    const levelsByLesson = groupedLesson.levelsByLesson;
-    const levels = levelsByLesson[lessonIndex];
-    return levels ? (
-      <ProgressLessonContent levels={levels} disabled={false} />
+    console.log(this.props.lessonLevels);
+    return this.props.lessonLevels ? (
+      <ProgressLessonContent
+        levels={this.props.lessonLevels}
+        disabled={false}
+      />
     ) : (
       i18n.lessonContainsNoLevels()
     );
@@ -167,8 +158,8 @@ const styles = {
 
 export const UnconnectedStudentLessonOverview = StudentLessonOverview;
 
-export default connect(state => ({
+export default connect((state, ownProps) => ({
   announcements: state.announcements || [],
   isSignedIn: state.currentUser.signInState === SignInState.SignedIn,
-  groupedLessons: groupedLessons(state.progress)
+  lessonLevels: levelsForLessonId(state.progress, ownProps.lesson.id)
 }))(StudentLessonOverview);
