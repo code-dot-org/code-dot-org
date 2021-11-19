@@ -13,12 +13,7 @@ describe('SaveBar', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<SaveBar handleSave={handleSave} />);
-    expect(wrapper.find('button').length).to.equal(3);
-
-    // show button is hidden by default
-    const showButton = wrapper.find('button').at(0);
-    expect(showButton.props().style).to.have.property('visibility', 'hidden');
-
+    expect(wrapper.find('button').length).to.equal(2); // show button not rendered
     expect(wrapper.find('FontAwesome').length).to.equal(0); //spinner isn't showing
   });
 
@@ -26,7 +21,7 @@ describe('SaveBar', () => {
     const handleSave = sinon.spy();
     const wrapper = shallow(<SaveBar handleSave={handleSave} />);
 
-    const saveAndKeepEditingButton = wrapper.find('button').at(1);
+    const saveAndKeepEditingButton = wrapper.find('button').at(0);
     expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
       .true;
     saveAndKeepEditingButton.simulate('click');
@@ -67,7 +62,7 @@ describe('SaveBar', () => {
     const handleSave = sinon.spy();
     const wrapper = shallow(<SaveBar handleSave={handleSave} />);
 
-    const saveAndCloseButton = wrapper.find('button').at(2);
+    const saveAndCloseButton = wrapper.find('button').at(1);
     expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
     saveAndCloseButton.simulate('click');
 
@@ -86,7 +81,6 @@ describe('SaveBar', () => {
     );
 
     const showButton = wrapper.find('button').at(0);
-    expect(showButton.props().style).not.to.have.property('visibility');
     expect(showButton.contains('Show')).to.be.true;
     showButton.simulate('click');
 
@@ -104,7 +98,6 @@ describe('SaveBar', () => {
     );
 
     const showButton = wrapper.find('button').at(0);
-    expect(showButton.props().style).not.to.have.property('visibility');
     expect(showButton.contains('Show')).to.be.true;
     showButton.simulate('click');
 
