@@ -12,15 +12,19 @@ export default function SaveBar({
   lastSaved,
   pathForShowButton
 }) {
-  const isShowButtonRendered = handleView || pathForShowButton !== '/';
+  const isShowButtonVisible = handleView || pathForShowButton;
 
   return (
     <div style={styles.saveButtonBackground} className="saveBar">
       <button
         className="btn"
         type="button"
-        style={isShowButtonRendered ? styles.saveButton : styles.hide}
-        onClick={handleView || (() => navigateToHref(pathForShowButton))}
+        style={isShowButtonVisible ? styles.saveButton : styles.hide}
+        onClick={
+          handleView ||
+          (pathForShowButton && (() => navigateToHref(pathForShowButton))) ||
+          (() => {})
+        }
         disabled={isSaving}
       >
         Show
@@ -74,7 +78,7 @@ SaveBar.defaultProps = {
   handleView: undefined,
   isSaving: false,
   lastSaved: 0,
-  pathForShowButton: '/'
+  pathForShowButton: undefined
 };
 
 const styles = {
