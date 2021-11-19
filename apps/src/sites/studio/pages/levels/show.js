@@ -24,7 +24,8 @@ function initPage() {
   const codeReviewEnabled = config.code_review_enabled;
   getStore().dispatch(setCodeReviewEnabled(codeReviewEnabled));
 
-  // We are viewing the unit overview components in the miniview
+  // If viewing the unit overview components on the level page it is in
+  // the mini view
   getStore().dispatch(setIsMiniView(true));
 
   const redirectDialogMountPoint = document.getElementById('redirect-dialog');
