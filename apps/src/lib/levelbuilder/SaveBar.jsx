@@ -18,11 +18,7 @@ export default function SaveBar({
       className="btn"
       type="button"
       style={styles.saveButton}
-      onClick={
-        handleView ||
-        (pathForShowButton && (() => navigateToHref(pathForShowButton))) ||
-        (() => {})
-      }
+      onClick={handleView || (() => navigateToHref(pathForShowButton))}
       disabled={isSaving}
     >
       Show
