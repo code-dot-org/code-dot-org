@@ -19,13 +19,13 @@ describe('ProgressLesson', () => {
     },
     levels: fakeLevels(3),
     lessonNumber: 3,
-    showTeacherInfo: false,
     viewAs: ViewType.Instructor,
     lessonIsVisible: () => true,
     lessonIsLockedForUser: () => false,
     lessonIsLockedForAllStudents: () => false,
     lockableAuthorizedLoaded: true,
-    lockableAuthorized: true
+    lockableAuthorized: true,
+    isMiniView: false
   };
 
   it('renders with gray background when not hidden', () => {
@@ -390,5 +390,29 @@ describe('ProgressLesson', () => {
     // If locked, it would have a dashed border
     assert.equal(wrapper.props().style.borderStyle, 'solid');
     assert.equal(wrapper.find('ProgressLessonContent').props().disabled, false);
+  });
+
+  it('if ProgressLesson displayed in the MiniView it does not show the ProgressLessonTeacherInfo for teacher', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        viewAs={ViewType.Instructor}
+        isMiniView={true}
+      />
+    );
+
+    assert.equal(wrapper.find('Connect(ProgressLessonTeacherInfo)').length, 0);
+  });
+
+  it('if ProgressLesson displayed on UnitOverview page it shows the ProgressLessonTeacherInfo for teacher', () => {
+    const wrapper = shallow(
+      <ProgressLesson
+        {...defaultProps}
+        viewAs={ViewType.Instructor}
+        isMiniView={false}
+      />
+    );
+
+    assert.equal(wrapper.find('Connect(ProgressLessonTeacherInfo)').length, 1);
   });
 });
