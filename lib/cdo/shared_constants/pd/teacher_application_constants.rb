@@ -79,8 +79,9 @@ module Pd
         ),
         csa_which_grades: clean_multiline(
           "To which grades does your school plan to offer CSA in the #{YEAR} school year?
-          Please note that the CSA Professional Learning Program is not available for grades
-          K-8 nor recommended for grade 9. (select all that apply)"
+          The Code.org CSA curriculum is recommended for those who have successfully completed
+          a first-year high school algebra course AND an introductory programming course.
+          (select all that apply)"
         ),
         csa_how_offer: 'How will you offer CSA?',
         cs_how_many_minutes: clean_multiline(
