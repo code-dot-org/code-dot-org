@@ -12,9 +12,9 @@
     },
     "new_name": null,
     "family_name": "explore-data-1",
-    "serialized_at": "2021-11-19 20:28:04 UTC",
+    "serialized_at": "2021-11-19 20:02:06 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
+    "instruction_type": null,
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {

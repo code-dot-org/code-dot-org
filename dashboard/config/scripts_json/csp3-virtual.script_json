@@ -13,9 +13,9 @@
     },
     "new_name": null,
     "family_name": "csp3-virtual",
-    "serialized_at": "2021-11-19 20:27:02 UTC",
+    "serialized_at": "2021-11-19 20:00:55 UTC",
     "published_state": "preview",
-    "instruction_type": "teacher_led",
+    "instruction_type": null,
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {
