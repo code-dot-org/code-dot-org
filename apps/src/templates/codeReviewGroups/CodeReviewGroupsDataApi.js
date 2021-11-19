@@ -1,4 +1,8 @@
 import $ from 'jquery';
+import {
+  DROPPABLE_ID_UNASSIGNED,
+  getAssignedGroupDroppableId
+} from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 
 export default class CodeReviewGroupsDataApi {
   constructor(sectionId) {
@@ -8,7 +12,10 @@ export default class CodeReviewGroupsDataApi {
   getCodeReviewGroups() {
     return $.getJSON(
       `/api/v1/sections/${this.sectionId}/code_review_groups`
-    ).then(response => this.convertGroupsToCamelCase(response.groups));
+    ).then(response => {
+      this.convertGroupsToCamelCase(response.groups);
+      return this.addDroppableIdToGroups(response.groups);
+    });
   }
 
   setCodeReviewGroups(groups) {
@@ -48,6 +55,17 @@ export default class CodeReviewGroupsDataApi {
         delete converted.follower_id;
         return converted;
       });
+    }
+    return groups;
+  };
+
+  addDroppableIdToGroups = groups => {
+    for (let group of groups) {
+      if (group.unassigned) {
+        group.droppableId = DROPPABLE_ID_UNASSIGNED;
+      } else {
+        group.droppableId = getAssignedGroupDroppableId(group.id);
+      }
     }
     return groups;
   };

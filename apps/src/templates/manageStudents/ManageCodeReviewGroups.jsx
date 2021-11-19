@@ -12,6 +12,7 @@ export default function ManageCodeReviewGroups({
   buttonContainerStyle,
   sectionId
 }) {
+  const [groups, setGroups] = useState([]);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const openDialog = () => setIsDialogOpen(true);
@@ -24,6 +25,10 @@ export default function ManageCodeReviewGroups({
         <div>{buttons}</div>
       </>
     );
+  };
+
+  const submitNewGroups = groups => {
+    console.log('submitted');
   };
 
   // [x] change button text on confirm/cancel
@@ -51,14 +56,21 @@ export default function ManageCodeReviewGroups({
       />
       <StylizedBaseDialog
         title={i18n.codeReviewGroups()}
-        body={<CodeReviewGroupsLoader sectionId={sectionId} />}
+        body={
+          <CodeReviewGroupsLoader
+            sectionId={sectionId}
+            groups={groups}
+            setGroups={setGroups}
+          />
+        }
         isOpen={isDialogOpen}
         handleClose={onDialogClose}
+        handleConfirmation={submitNewGroups}
         fixedWidth={DIALOG_WIDTH}
         renderFooter={renderFooter}
         footerJustification="space-between"
         confirmationButtonText={i18n.confirmChanges()}
-        disableConfirmationButton={true}
+        disableConfirmationButton={false}
       />
     </div>
   );
