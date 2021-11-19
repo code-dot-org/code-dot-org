@@ -5466,6 +5466,11 @@ csv-parse@^1.1.7:
   version "1.1.7"
   resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-1.1.7.tgz#6e4678f7967013ac823929a4303a3ce177115abc"
 
+csv-parse@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/csv-parse/-/csv-parse-5.0.2.tgz#15186c5eb85c7d45eb6567f22d1397deb962a20d"
+  integrity sha512-nn7kY+si9BefTuunYrRg4QX5qU/LBqzGFBkgeAb7GDU/Yyo4P/JzpAg0/CkvW/8/Gg0WNlQ9WenH4n86keZCig==
+
 currently-unhandled@^0.4.1:
   version "0.4.1"
   resolved "https://registry.yarnpkg.com/currently-unhandled/-/currently-unhandled-0.4.1.tgz#988df33feab191ef799a61369dd76c17adf957ea"
