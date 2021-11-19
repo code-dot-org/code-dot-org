@@ -8,6 +8,7 @@ export default function CodeReviewGroupsLoader({sectionId, groups, setGroups}) {
   return (
     <LoadableComponent
       loadFunction={(sectionId, onLoadSuccess, onLoadError) => {
+        console.log('in load function');
         const api = new CodeReviewGroupsDataApi(sectionId);
         api
           .getCodeReviewGroups()
@@ -19,7 +20,7 @@ export default function CodeReviewGroupsLoader({sectionId, groups, setGroups}) {
           .fail(error => onLoadError());
       }}
       loadArgs={[sectionId]}
-      renderFunction={g => {
+      renderFunction={_ => {
         return (
           <CodeReviewGroupsManager groups={groups} setGroups={setGroups} />
         );
