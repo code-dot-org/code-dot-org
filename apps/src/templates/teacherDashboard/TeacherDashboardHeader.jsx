@@ -108,7 +108,7 @@ class TeacherDashboardHeader extends React.Component {
           restrictSection={this.props.selectedSection.restrictSection}
           loginType={this.props.selectedSection.loginType}
         />
-        {this.props.selectedSection.notSavingProgress && (
+        {this.props.selectedSection.postMilestoneDisabled && (
           <this.progressNotSavingNotification />
         )}
         <div style={styles.header}>
