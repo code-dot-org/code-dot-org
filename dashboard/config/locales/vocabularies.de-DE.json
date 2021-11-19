@@ -37,6 +37,16 @@
         "function/hero/unversioned": {
           "word": "Funktion"
         },
+        "code/poem-art/2021": {
+          "word": "Code"
+        },
+        "event/poem-art/2021": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "program/poem-art/2021": {
+          "word": "Programm"
+        },
         "debugging/flappy/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
           "definition": "Das Suchen und Beheben von Problemen in einem Algorithmus oder Programm."
@@ -114,8 +124,29 @@
           "word": "Schleifen",
           "definition": "Der Vorgang, wo etwas immer und immer wieder getan wird\""
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Verschlüsselung"
+          "word": "Verschlüsselung",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/starwars/unversioned": {
           "word": "Debugging/Fehlerbeseitigung",
@@ -150,7 +181,8 @@
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "Verlustlose Kompression"
+          "word": "Verlustlose Kompression",
+          "definition": ""
         },
         "event/sports/unversioned": {
           "word": "Ereignis",
@@ -206,12 +238,25 @@
         "machine_learning/oceans/unversioned": {
           "word": "Maschinelles Lernen"
         },
+        "code/poem-art/unversioned": {
+          "word": "Code"
+        },
+        "event/poem-art/unversioned": {
+          "word": "Ereignis",
+          "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
+        },
+        "program/poem-art/unversioned": {
+          "word": "Programm"
+        },
         "event/outbreak/unversioned": {
           "word": "Ereignis",
           "definition": "Eine Aktion, die bewirkt, dass etwas passiert."
         },
         "sprite/coursef/2021": {
           "word": "Sprite"
+        },
+        "user/coursef/2021": {
+          "word": "Benutzer"
         },
         "behavior/coursef/2021": {
           "word": "Verhalten"
@@ -221,7 +266,8 @@
           "definition": "Ein Algorithmus, der so kodiert wurde, das er von einer Maschine ausgeführt werden kann."
         },
         "algorithm/coursef/2021": {
-          "word": "Algorithmus"
+          "word": "Algorithmus",
+          "definition": "Liste von Schritten zur Erledigung der Aufgabe."
         },
         "event/coursef/2021": {
           "word": "Ereignis",

@@ -32,6 +32,15 @@
         "ce329650-3549-4f96-8da9-8bc77c162411": {
           "name": "Rozšířená výuka"
         },
+        "35dfee9b-2785-47f9-93fd-9b3177d68ba6": {
+          "name": "Zahřátí"
+        },
+        "4928afb1-7ade-483d-aeda-aad8e9f2b761": {
+          "name": "Hlavní aktivita"
+        },
+        "16f892de-712b-4c95-b063-a6e969bd0aa1": {
+          "name": "Rekapitulace"
+        },
         "34b3133e-064b-4e77-a42f-51fcb7209d2b": {
           "name": "Začínáme"
         },
@@ -86,6 +95,15 @@
         "d091559f-3ec9-46c5-9e79-a245aadfb146": {
           "name": "Rozšířená výuka"
         },
+        "b90a8b9e-d5d5-4cf5-899c-f0155b34afca": {
+          "name": "Zahřátí"
+        },
+        "88111b93-3762-4109-9f31-2a08ca80ddb5": {
+          "name": "Hlavní aktivita"
+        },
+        "6a36e450-dd26-4e9f-b236-a9c77b5041a1": {
+          "name": "Rekapitulace"
+        },
         "c53a1348-2816-4c38-9417-92561d0bca19": {
           "name": "Zahřátí"
         },
@@ -125,6 +143,15 @@
         "4d9f4220-ead7-435d-adeb-bd7968b543aa": {
           "name": "Rekapitulace"
         },
+        "a653c76e-8536-4e82-adad-98306fc15f07": {
+          "name": "Zahřátí"
+        },
+        "48bd058b-2012-4d4a-9fba-52d20d8a922f": {
+          "name": "Hlavní aktivita"
+        },
+        "ae872c5e-1b66-4026-b2d7-e26574ff8b57": {
+          "name": "Rekapitulace"
+        },
         "13ff3f08-ce46-4c2a-b555-b3e477aa2fae": {
           "name": "Začínáme"
         },
@@ -145,6 +172,15 @@
         },
         "10b66543-86a4-459e-bc67-a31d688547ce": {
           "name": "Rozšířená výuka"
+        },
+        "a026407c-221b-4f0a-a88d-ec29365ee5fe": {
+          "name": "Zahřátí"
+        },
+        "32a95e21-140b-4b72-bd7a-b000ff574b18": {
+          "name": "Hlavní aktivita"
+        },
+        "e170217a-dcf7-4f4e-9285-cc5f6bdb37a3": {
+          "name": "Rekapitulace"
         },
         "156ffaf5-a045-4956-9c89-15fcc64fa3af": {
           "name": "Aktivita (30–45 minut)"
@@ -186,6 +222,15 @@
           "name": "Aktivita"
         },
         "8e673a7c-56ec-49ed-b7ca-36799cb40b2f": {
+          "name": "Rekapitulace"
+        },
+        "ad24912f-a30c-4821-83a5-77e20997a044": {
+          "name": "Zahřátí"
+        },
+        "5c3a2275-a7f9-4e50-a0b4-8f198452a102": {
+          "name": "Hlavní aktivita"
+        },
+        "20701fc4-d308-49af-8988-34896fd12713": {
           "name": "Rekapitulace"
         },
         "d1fb8b1b-235a-41a7-bfb9-8c916983bb68": {
@@ -245,6 +290,9 @@
         "42552407-b313-4fc4-9163-e6a8e4a6029d": {
           "name": "Rozšířená výuka"
         },
+        "ee8cbd12-265d-4681-b6c9-05a0a062916d": {
+          "name": "Úrovně"
+        },
         "82dec89b-f375-4238-a251-ffae17c2dfd1": {
           "name": "Aktivita (30–45 minut)"
         },
@@ -263,6 +311,48 @@
         "04400eef-5989-4325-a801-ab4ad451f130": {
           "name": "Rozšířená výuka"
         },
+        "899fd6a9-1214-43ec-a159-77c421de2c8a": {
+          "name": "Úrovně"
+        },
+        "59cec226-923d-4712-8e8f-799b398e4365": {
+          "name": "Úrovně"
+        },
+        "9af106d8-4c2a-4a7f-9443-efb869f46042": {
+          "name": "Úrovně"
+        },
+        "c1487633-6ce6-4812-9d07-beed7f582215": {
+          "name": "Úrovně"
+        },
+        "5aa154dd-1f39-4e03-b144-df04b4703180": {
+          "name": "Úrovně"
+        },
+        "22d59daf-926a-4ff1-87d9-d3dfec2f1ef4": {
+          "name": "Úrovně"
+        },
+        "c5959823-4993-4b52-a1eb-4810fbb8dab2": {
+          "name": "Úrovně"
+        },
+        "baa0c795-4461-4af2-8397-9833219bae88": {
+          "name": "Úrovně"
+        },
+        "2c1ce9f4-d65a-4020-b7ed-e4da0dc49e7b": {
+          "name": "Úrovně"
+        },
+        "61dcaa29-1d32-48a9-87b3-4873c4eeec80": {
+          "name": "Úrovně"
+        },
+        "252f7911-9519-495d-af6d-71a1dd1155df": {
+          "name": "Úrovně"
+        },
+        "bd5f5260-8e13-4655-9302-a7405ceebc84": {
+          "name": "Úrovně"
+        },
+        "9b28f9fb-485d-471f-ab65-c845d26516b1": {
+          "name": "Úrovně"
+        },
+        "c728edf8-b7ed-465b-99f4-78f27e751d2b": {
+          "name": "Úrovně"
+        },
         "f0e43cbc-520d-42b7-8de2-0572d569695e": {
           "name": "Zahřátí"
         },
@@ -270,6 +360,141 @@
           "name": "Hlavní aktivita"
         },
         "26cbfc03-2134-4097-b9c9-a2b7d4227d8f": {
+          "name": "Rekapitulace"
+        },
+        "c2cd2e0e-1e75-44ea-9e26-74c4e81117ce": {
+          "name": "Úrovně"
+        },
+        "b482746d-0030-459f-8657-a2775cf1f2a3": {
+          "name": "Úrovně"
+        },
+        "0f2c3670-022b-44ce-b519-13cb72ccd0fd": {
+          "name": "Úrovně"
+        },
+        "acd32520-21e7-4c29-8e51-5e9caf6a378d": {
+          "name": "Úrovně"
+        },
+        "2ca3abdd-710e-49b4-9393-9c11a00308a3": {
+          "name": "Úrovně"
+        },
+        "1fe068b8-1da2-4611-b839-90992a1a77a7": {
+          "name": "Úrovně"
+        },
+        "fb145498-9073-4bd2-a031-7808b50a3efa": {
+          "name": "Úrovně"
+        },
+        "618d99a5-1be4-469b-8e5b-196023cca77e": {
+          "name": "Úrovně"
+        },
+        "592e1014-6ce0-4f0e-9904-6e8610c536fb": {
+          "name": "Úrovně"
+        },
+        "601367d1-a711-45ca-8129-5e0b39472088": {
+          "name": "Úrovně"
+        },
+        "2079060a-d680-4da6-8bc5-c21c71c455de": {
+          "name": "Úrovně"
+        },
+        "320cb4e7-1eb9-4510-bf0c-96498c7d9b59": {
+          "name": "Úrovně"
+        },
+        "2f22bd22-5f78-444f-a3a5-7890b0d0a247": {
+          "name": "Úrovně"
+        },
+        "7f5019c8-e89b-45d8-9048-2180d5e9a24f": {
+          "name": "Úrovně"
+        },
+        "60b5a902-ec2e-4d3d-8172-c6e6c439bc2c": {
+          "name": "Úrovně"
+        },
+        "41518965-e0d9-4c64-acaa-75abff9eeb52": {
+          "name": "Úrovně"
+        },
+        "f6fdf744-0a0e-4efb-b70e-a4a6f272487d": {
+          "name": "Úrovně"
+        },
+        "f488bd5e-8717-4f17-89de-67eed7656f10": {
+          "name": "Úrovně"
+        },
+        "469ead3b-ff2b-47a4-a58b-bb268370fae4": {
+          "name": "Úrovně"
+        },
+        "b4e1628d-775d-442e-9363-1e4d5d05a9f3": {
+          "name": "Úrovně"
+        },
+        "5c6427ce-49af-4fef-857c-44a01f1583bf": {
+          "name": "Úrovně"
+        },
+        "fb448d2f-35c0-4c79-bf75-b8eb5ee11017": {
+          "name": "Úrovně"
+        },
+        "f64730d7-ba60-489d-a6b5-e33c8768879b": {
+          "name": "Úrovně"
+        },
+        "1e703264-9e5f-4ddb-bfe5-8cbefbb646e4": {
+          "name": "Úrovně"
+        },
+        "1910c7c0-fe86-4867-accd-c9b9c78853b1": {
+          "name": "Úrovně"
+        },
+        "72871561-f49b-4ae5-a5c5-ec0dbfd6f14f": {
+          "name": "Úrovně"
+        },
+        "289bbaea-ab5e-48a1-80c3-8299af5a0965": {
+          "name": "Úrovně"
+        },
+        "0deb9da8-356e-4547-951f-445a58491a24": {
+          "name": "Úrovně"
+        },
+        "941b1202-9ae6-4fbf-b806-c3e4ae8293cc": {
+          "name": "Úrovně"
+        },
+        "b47403db-764c-41c2-9c65-eea089621c6f": {
+          "name": "Úrovně"
+        },
+        "6f2dd9af-fb21-4368-a9ce-738833702651": {
+          "name": "Úrovně"
+        },
+        "de875c8f-2433-4a61-bd42-a2412a3fe033": {
+          "name": "Úrovně"
+        },
+        "a8c929bc-ca75-40ae-8dfa-eec74ee6a958": {
+          "name": "Úrovně"
+        },
+        "289f45ab-557e-43dc-99f9-f86ba374fd67": {
+          "name": "Úrovně"
+        },
+        "433390db-3967-466a-b58a-db833369579d": {
+          "name": "Úrovně"
+        },
+        "b8d08a94-3e62-472f-8364-e61cb8bf5ca7": {
+          "name": "Úrovně"
+        },
+        "b3174c95-1b68-429d-8d32-804d57101288": {
+          "name": "Úrovně"
+        },
+        "6e806048-9339-4a04-bf04-0e32ee0567f2": {
+          "name": "Úrovně"
+        },
+        "9708eb16-ce00-4d84-9534-8a145228ea21": {
+          "name": "Úrovně"
+        },
+        "8324d97f-4ce6-4304-8cec-9d75a4f1ca80": {
+          "name": "Úrovně"
+        },
+        "bad195ab-b5b0-41e3-9c40-610a35ff0e4f": {
+          "name": "Úrovně"
+        },
+        "a83c07a8-61ea-4017-b41d-725d1bd7b425": {
+          "name": "Úrovně"
+        },
+        "901e8625-9092-42fc-9fcc-9c665720b1f4": {
+          "name": "Zahřátí"
+        },
+        "b20b4bbb-2eb1-4c77-b938-e60cd435ce93": {
+          "name": "Hlavní aktivita"
+        },
+        "18913d21-3c6f-4dd8-864e-09b70f80e640": {
           "name": "Rekapitulace"
         },
         "2f9ea489-720e-4dab-ae4b-4036a6385f4d": {
@@ -332,8 +557,17 @@
         "3eaf76e0-6c2e-4565-acd8-cef7f0cb5121": {
           "name": "Rekapitulace"
         },
+        "4cd953ae-9546-4cdf-b6ea-860212b4875f": {
+          "name": "Příležitost napříč předměty"
+        },
+        "424b80fc-8e8d-4dbd-bed3-4890da24b145": {
+          "name": "Zahřátí: Stejné slovo. Jiný význam."
+        },
         "fdbc31b6-5f12-49c6-be6a-3183aec2bfa6": {
           "name": "Podívejte se: Moc slov"
+        },
+        "fbda7646-9395-471f-8749-694fd9cd30da": {
+          "name": "Prozkoumejte: V čem je problém?"
         },
         "f747c55f-efbf-41df-809a-2f2620917e1f": {
           "name": "Shrnutí: Překročení hranice"
@@ -349,6 +583,9 @@
         },
         "c6c49adb-f68f-411c-a9ec-bd89e0134bbd": {
           "name": "Rekapitulace"
+        },
+        "385b01c4-de16-401f-bc49-71e637e93ccc": {
+          "name": "Příležitost napříč předměty"
         },
         "5750d053-1daa-409c-9b83-bc4306ba4aef": {
           "name": "Zahřátí"
@@ -419,8 +656,14 @@
         "f6c99d2f-9ec7-4706-8a77-71513d31db13": {
           "name": "Rozšířená výuka"
         },
+        "22f02104-4519-48dd-aa08-c532f9e080c9": {
+          "name": "Příležitost napříč předměty"
+        },
         "8362c620-cea5-4a56-b0b4-74a606bf62da": {
           "name": "Zahřátí"
+        },
+        "5b774bd6-b243-4d1d-9145-20747f320129": {
+          "name": "Přemosťovací aktivita – vyberte si jednu"
         },
         "17982c9a-0fc7-457e-95a7-e0852d5f861e": {
           "name": "Hlavní aktivita"
@@ -482,11 +725,20 @@
         "19c350ea-4420-4a94-a91e-f7d798799cc4": {
           "name": "Hodnocení"
         },
+        "80cbea1a-7c3f-4121-bab6-abd831772020": {
+          "name": "Day 1 – Zkoumání projektových nápadů"
+        },
         "d3e8770f-3f2d-450a-b605-bd792b3ed687": {
-          "name": "2.  den – Proces návrhu"
+          "name": "2. den – Proces návrhu"
         },
         "12f4ca9e-9b05-4a99-a6f4-6133b8c0e407": {
-          "name": "3.  den – Vytvoření projektu"
+          "name": "3. den – Vytvoření projektu"
+        },
+        "459d00f2-e296-4205-bca6-eab8d4599354": {
+          "name": "4. den – Revize projektu"
+        },
+        "25d5e16a-9db1-441d-a4c4-916612df574b": {
+          "name": "Den 5 a 6 – Prezentace projektu"
         },
         "d9a085a2-e557-4826-952e-fdc5836fe8a2": {
           "name": "Rozšířená výuka"
@@ -499,6 +751,9 @@
         },
         "de382430-d529-490d-b4fd-a7f020c4802b": {
           "name": "Recenze: Lze sdílet?"
+        },
+        "f2a9c944-6d4b-4b02-aaef-23952d86702f": {
+          "name": "Shrnutí: Chvíle zastavení a zamyšlení"
         },
         "add79bbe-c639-4e83-9191-993c430f08e9": {
           "name": "Rozšířená výuka"
@@ -518,6 +773,9 @@
         "0912bd0e-91c8-4f72-88ee-70d5ccd443f3": {
           "name": "Zahřátí"
         },
+        "5fbaf40a-2106-4bfd-937a-3f4594b26b81": {
+          "name": "Přemosťovací aktivita – vyberte si jednu"
+        },
         "248075ed-be23-4145-bbe5-f629eb3df448": {
           "name": "Hlavní aktivita"
         },
@@ -527,8 +785,17 @@
         "4f870e69-6c13-4513-a1d9-e6b1b8e22053": {
           "name": "Rozšířená výuka"
         },
+        "e030be21-480d-40a2-8f97-574492b54aa2": {
+          "name": "Příležitost napříč předměty"
+        },
         "e3fccb19-cd4f-4f90-a75c-a995b9150d32": {
           "name": "Zahřátí"
+        },
+        "bc23554e-190c-44f9-84b1-03b21dd7ef17": {
+          "name": "Přemosťovací aktivita – vyberte si jednu"
+        },
+        "0e24dd16-0f94-45cb-85a3-ed4852df7abd": {
+          "name": "Náhled online hádanek jako třída"
         },
         "394eeb9e-8c66-4a17-bfb8-294a6f91b6d6": {
           "name": "Hlavní aktivita"
@@ -566,6 +833,9 @@
         "10140329-cade-4307-8132-d9ac56d8182c": {
           "name": "Zahřátí"
         },
+        "06b2458e-a834-46c5-842e-385c1fc97bc8": {
+          "name": "Přemosťovací aktivita – vyberte si jednu"
+        },
         "287b6295-2274-4349-a7c3-fab998a09e1c": {
           "name": "Hlavní aktivita"
         },
@@ -574,6 +844,9 @@
         },
         "c0501fbb-bb65-4144-bc1c-56ea50bc7485": {
           "name": "Rozšířená výuka"
+        },
+        "3ffb2700-4b4c-4deb-a009-856be4b850da": {
+          "name": "Příležitost napříč předměty"
         },
         "58912602-06a0-492d-b07d-ab9a63d4a7e0": {
           "name": "Zahřátí"
@@ -584,6 +857,9 @@
         "98b7bd27-d78e-4e62-9b4f-56940dc6bdd9": {
           "name": " Rekapitulace"
         },
+        "352bcbca-fe70-41d4-8d38-7cfed390e991": {
+          "name": "Příležitost napříč předměty"
+        },
         "369c31b8-5f8b-44dc-a978-c5c56f794b7b": {
           "name": "Zahřátí"
         },
@@ -592,6 +868,9 @@
         },
         "ad9b2654-4506-4741-9f53-5699cb20615d": {
           "name": "Rekapitulace"
+        },
+        "3ed032b9-b27d-4c86-8aff-1e60ba90a038": {
+          "name": "Příležitost napříč předměty"
         },
         "ec70fc95-cedd-46df-9f23-30e8b75faabf": {
           "name": "Zahřátí"
@@ -617,8 +896,14 @@
         "5c5d3429-dd07-4fae-8525-0d80d2a4381f": {
           "name": "Rozšířená výuka"
         },
+        "e524c263-6ebc-47c9-9d43-3b738a99574b": {
+          "name": "Příležitost napříč předměty"
+        },
         "ad4e833a-3b1a-4da1-b894-887cf32573cb": {
           "name": "Zahřátí"
+        },
+        "8e77b151-07f6-4404-98ec-473f310fc8b1": {
+          "name": "Přemosťovací aktivita – vyberte si jednu"
         },
         "b170b2ef-82f1-4067-aadc-add8074acb80": {
           "name": "Hlavní aktivita"
@@ -638,8 +923,14 @@
         "4e1c7bf7-dd7f-40be-9bd7-4ffae08950a8": {
           "name": "Rekapitulace"
         },
+        "09eb0525-dfae-44f2-831f-5c1f2ffee133": {
+          "name": "Sledování: Bezpečnost v mém online sousedství"
+        },
         "8dff0d8d-c0a6-4200-8b1e-4a8b3673a8fb": {
           "name": "Čtěte: bezpečnost vládne!"
+        },
+        "a4fc0e6a-0e98-43b6-9453-3fb5569ce8e9": {
+          "name": "Prozkoumejte: Internetový výlet"
         },
         "df8b3513-c2f8-4db5-bb6b-93e60a3826d7": {
           "name": "Chvíle zastavení a zamyšlení"
@@ -659,6 +950,9 @@
         "9ef71984-8749-46e9-ada3-889815c8f1b9": {
           "name": "Rozšířená výuka"
         },
+        "620c06c7-711d-459f-9f67-af3d142eb29c": {
+          "name": "Příležitost napříč předměty"
+        },
         "f03fc05c-d123-4c38-bde0-0bbbaf397b94": {
           "name": "Zahřátí"
         },
@@ -673,6 +967,9 @@
         },
         "3c9570d2-fe30-4242-a735-9a2a4ee66bf0": {
           "name": "Zahřátí"
+        },
+        "9bcd264d-fc8b-42f8-a7d5-47be1a4ff975": {
+          "name": "Přemosťovací aktivita – vyberte si jednu"
         },
         "2a7f3c27-943a-415a-bdb1-1fbef4249074": {
           "name": "Hlavní aktivita"
@@ -694,6 +991,9 @@
         },
         "13ec08fa-c803-4a93-82b0-0a18629d2e54": {
           "name": "Rozšířená výuka"
+        },
+        "891cbd33-69a5-4cfc-bec4-fc995706c95a": {
+          "name": "Příležitost napříč předměty"
         },
         "7ca483b4-722a-4ed3-aa26-501375f59ab8": {
           "name": "Zahřátí"
@@ -719,6 +1019,9 @@
         "e0f98e02-d388-4fa9-8f14-0774fe44df3b": {
           "name": "Zahřátí"
         },
+        "6008d4fa-44e5-48b8-9a9e-a07541b36f3a": {
+          "name": " Přemosťovací aktivita – vyberte si jednu"
+        },
         "0e7d82d5-a2e6-450f-b8e8-c170e97cfe0b": {
           "name": "Hlavní aktivita"
         },
@@ -727,6 +1030,9 @@
         },
         "1fb8c04e-dd05-47b7-9767-28b8ecfa71ea": {
           "name": "Rozšířená výuka"
+        },
+        "92c5197c-d135-4891-9504-ba1393dd8ca6": {
+          "name": "Příležitost napříč předměty"
         },
         "6aab5f16-5596-4536-b404-f46152246d24": {
           "name": "Zahřátí"
@@ -746,6 +1052,9 @@
         "450f879a-a14d-4d47-93fd-2916bbf46caa": {
           "name": "Rekapitulace"
         },
+        "d532c41b-fba1-4122-8928-17ec3ef36315": {
+          "name": "Příležitost napříč předměty"
+        },
         "e1843002-564c-4803-9eaa-44f48a8e4159": {
           "name": "Zahřátí"
         },
@@ -760,6 +1069,9 @@
         },
         "2b650fd5-765d-4989-8e47-e21de2cdd0d5": {
           "name": "Zahřátí"
+        },
+        "ad51b08a-b3bd-4dcb-bb1a-2340c563ac85": {
+          "name": "Přemosťovací aktivity – Události – Vyberte si jednu"
         },
         "c92853be-b1ed-4b05-afe9-79928330a3a3": {
           "name": "Hlavní aktivita"
@@ -782,8 +1094,14 @@
         "5feda2e8-7d86-483b-9e66-959252a75a9a": {
           "name": "Výuka: Co je to podlost?"
         },
+        "78358409-25ec-4e4f-92d7-b69ff300191a": {
+          "name": "Provedení: online vs. osobně"
+        },
         "6a765562-dff5-4ac9-9353-52dc1a3b0655": {
           "name": "Prozkoumat: ZASTAVIT lakotu"
+        },
+        "c797667a-0cd2-4bb2-8908-274c50bcf7b1": {
+          "name": "Shrnutí: Chvíle zastavení a zamyšlení"
         },
         "65d9fc89-0138-4c31-8501-74bdfbfd4c13": {
           "name": "Rozšířená výuka"
@@ -803,6 +1121,12 @@
         "260a48d0-8cd7-4f15-b303-32e5c685a349": {
           "name": "Zahřátí"
         },
+        "d3ccea72-fdca-4a45-a194-3ed4cbcffc38": {
+          "name": "Přemosťovací aktivita – programování"
+        },
+        "28178b0d-4526-4c90-ba4b-a2cab6f12461": {
+          "name": "Náhled online hádanek jako třída"
+        },
         "679fd0a3-4fa5-445a-a58d-2789ae6af602": {
           "name": "Hlavní aktivita"
         },
@@ -811,6 +1135,9 @@
         },
         "6e3e3ddd-0ac5-4d74-aeb0-bc6d4355aa20": {
           "name": "Rozšířená výuka"
+        },
+        "fbd5cbd1-8b1f-41f6-bba3-2df600903adc": {
+          "name": "Příležitost napříč předměty"
         },
         "d0107cb9-45b4-4d0b-871c-26c1f94cd85b": {
           "name": "Zahřátí"
@@ -848,6 +1175,9 @@
         "27034f13-f0bf-41c0-a198-385c740be6ab": {
           "name": "Rozšířená výuka"
         },
+        "c6ddc263-f624-4d04-a67d-87cf4a90a03e": {
+          "name": "Příležitost napříč předměty"
+        },
         "1c265744-1a1f-44f4-8380-7328759249ea": {
           "name": "Zahřátí"
         },
@@ -862,6 +1192,9 @@
         },
         "8bdab5a2-cc72-4591-9cea-63350d38c61e": {
           "name": "Zahřátí"
+        },
+        "8df58520-6127-4563-b145-8d7d81635bde": {
+          "name": "Přemosťovací aktivita – vyberte si jednu"
         },
         "e36b6776-3c22-498e-94ef-44fae2c28065": {
           "name": "Hlavní aktivita"
@@ -884,6 +1217,9 @@
         "00bc0557-ae64-4fe1-a1d1-09b4bb890c42": {
           "name": "Rozšířená výuka"
         },
+        "c1cb23a9-85d1-4f19-ae36-9388baa9566c": {
+          "name": "Příležitost napříč předměty"
+        },
         "63075b82-d582-409b-afd8-a8967040c94c": {
           "name": "Zahřátí"
         },
@@ -892,6 +1228,9 @@
         },
         "533abcef-ea93-4b33-902c-7b70e22ffe31": {
           "name": "Rekapitulace"
+        },
+        "d96c9108-8707-4345-9f1a-5e69928ca31f": {
+          "name": "Příležitost napříč předměty"
         },
         "8d10f0a0-909f-482c-a17f-3477280c7375": {
           "name": "Zahřátí"
@@ -908,6 +1247,9 @@
         "38b78816-4a04-4c9b-b112-3704e9511c42": {
           "name": "Zahřátí"
         },
+        "bddb3c72-46b5-4cdf-897d-3cf4ffbbcdb9": {
+          "name": "Přemosťovací aktivita – vyberte si jednu"
+        },
         "7ec11452-1367-44ef-afe4-c8cf354bb183": {
           "name": "Hlavní aktivita"
         },
@@ -916,6 +1258,9 @@
         },
         "7c0129f4-ba20-475d-b304-a85ddd87507e": {
           "name": "Rozšířená výuka"
+        },
+        "d7041d0f-5170-4379-9d84-a93a44dbb51e": {
+          "name": "Příležitost napříč předměty"
         },
         "63f9b85e-0c2c-4304-97fe-2ff3e63f8d4c": {
           "name": "Zahřátí"
@@ -962,6 +1307,18 @@
         "90d3854b-a2c4-44ec-924a-f66d2087098c": {
           "name": "Rekapitulace"
         },
+        "aebca980-e26c-4993-b001-dc20e492f04e": {
+          "name": "Zahřátí: Pssst... Co je to heslo?"
+        },
+        "139034de-1cee-48f9-abd8-40e8c15cd439": {
+          "name": "Vyhodnoťte: Pokud ... Pak ..."
+        },
+        "a992b967-f8d7-474c-a1ad-81b9b7872fbd": {
+          "name": "Vytvořit: Posilte své heslo"
+        },
+        "735c6b82-9219-4ef5-9313-d386dc1c52b9": {
+          "name": "Shrnutí: Poznámky k tipům na hesla"
+        },
         "e735098e-abab-465e-949c-a7e92e771b84": {
           "name": "Rozšířená výuka"
         },
@@ -986,6 +1343,9 @@
         "56feea4b-799f-4d15-a71b-8b6a09d23faf": {
           "name": "Zahřátí"
         },
+        "6b7f225b-884f-47b3-8390-7226087e8fd1": {
+          "name": "Přemosťovací aktivita – programování"
+        },
         "e514547a-7e9e-43e5-991d-3e3daab0ef20": {
           "name": "Hlavní aktivita"
         },
@@ -1007,6 +1367,9 @@
         "380a0a21-1ede-432e-bd0a-433c37514bba": {
           "name": "Zahřátí"
         },
+        "4c685b1b-abfc-410a-ad22-e4f99f0e1a7e": {
+          "name": "Přemosťovací aktivity – vyberte si jednu"
+        },
         "d05decb3-7f64-4886-8da0-088e7d73216d": {
           "name": "Hlavní aktivita"
         },
@@ -1025,6 +1388,9 @@
         "142b93b0-99db-4bb4-9add-9b6a8cd102b3": {
           "name": "Rozšířená výuka"
         },
+        "9b7bc38a-d4af-47c0-8c3c-b824d0a8cd5c": {
+          "name": "Příležitost napříč předměty"
+        },
         "86fab19b-5ba7-490a-b1e6-75fb3527a9ac": {
           "name": "Zahřátí"
         },
@@ -1033,6 +1399,9 @@
         },
         "0ba4a78d-b13f-442c-90f2-58125ef3ff64": {
           "name": "Rekapitulace"
+        },
+        "235b3b14-975a-43b6-93bc-d386b857fd6b": {
+          "name": ""
         },
         "fd06b4db-e3d4-491b-9372-af9a05dc2bb7": {
           "name": "Aktivita (30–45 minut)"
@@ -1084,6 +1453,9 @@
         },
         "22ad368d-3a00-4720-a21a-72985c642b8d": {
           "name": "Rozšířená výuka"
+        },
+        "e0a55231-1434-43ad-8e85-579b44ebc1ef": {
+          "name": "Příležitost napříč předměty"
         },
         "5665d6c0-e9df-4c72-995a-2b43e543f96d": {
           "name": "Zahřátí"
@@ -1148,6 +1520,9 @@
         "fdc83a09-7d91-45c6-a7a7-ec0cce218f97": {
           "name": "Rozšířená výuka"
         },
+        "6b5b713d-b79d-4ac5-8041-f3d5bd2bf883": {
+          "name": "Příležitost napříč předměty"
+        },
         "5244a0ac-aa62-4a48-8a3a-4f641ade1ada": {
           "name": "Zahřátí"
         },
@@ -1183,6 +1558,9 @@
         },
         "1d75c580-140f-4796-9e75-5863162c676b": {
           "name": "Rozšířená výuka"
+        },
+        "4366b898-b885-48ea-90a8-0316aa3c153f": {
+          "name": "Příležitost napříč předměty"
         },
         "5f4d9aaa-d92d-45ad-858d-8b161ed4483a": {
           "name": "Zahřátí"
@@ -1220,6 +1598,9 @@
         "a3122d16-5927-4ac5-98a5-c86494ad85fc": {
           "name": "Rekapitulace"
         },
+        "a75ec06d-15b5-41d1-895c-3b1c3c52276d": {
+          "name": "Příležitost napříč předměty"
+        },
         "4e59783c-7761-4afe-9775-d8c51ca075d0": {
           "name": "Zahřátí"
         },
@@ -1249,6 +1630,9 @@
         },
         "6e4e84d7-d20f-49ca-9be1-b73be610fc02": {
           "name": "Rekapitulace"
+        },
+        "74cd46ac-1c89-437d-a630-a19c43b6ff41": {
+          "name": "Příležitost napříč předměty"
         },
         "9c75f37e-a774-4e3e-9415-a820b02d8ce6": {
           "name": "Zahřátí"
@@ -1430,6 +1814,9 @@
         "dde11556-b732-467c-a7bf-70b47c9cc8ad": {
           "name": "Zahřátí"
         },
+        "472354f3-e631-40c3-8001-dc5d7f1206db": {
+          "name": "Náhled online hádanek jako třída"
+        },
         "0dbd5d7d-e9b0-4c0c-be01-009191570dc5": {
           "name": "Hlavní aktivita"
         },
@@ -1438,6 +1825,9 @@
         },
         "80d38f1c-ff9b-4393-9266-9d4fbee74acc": {
           "name": "Rozšířená výuka"
+        },
+        "a5713eec-33e7-45ba-acc9-fba5383c6355": {
+          "name": "Zahřátí: Náhled programování v bludišti"
         },
         "e0aa5bd3-368a-43c0-b435-29b01a86a6d4": {
           "name": "Hlavní aktivita"
@@ -1480,6 +1870,9 @@
         },
         "59675efe-890a-48b9-bd56-947f991df50b": {
           "name": "Zahřátí"
+        },
+        "9299b9d4-262a-452e-93f2-b04f9c64c34e": {
+          "name": "Online nadace: Cykly náhledu v kolektoru"
         },
         "879a5770-47f6-4f01-bc0f-14726d6ae8b4": {
           "name": "Hlavní aktivita"
@@ -1565,8 +1958,23 @@
         "f642093a-def9-467e-a8cc-8950b21d62c8": {
           "name": "Výuka: Naučte se nedat se"
         },
+        "80d3bd1c-5d30-4abd-85d9-38e445a6068b": {
+          "name": "Vytvořit: Váš digitální občanský superhrdina"
+        },
+        "7d491d29-d496-450c-aece-a776f7fbd3d3": {
+          "name": "Shrnutí: Zachraňte den! Komiksový strip"
+        },
         "8335f8cb-a189-4f98-bb1c-817ac9264bd5": {
           "name": "Rozšířená výuka"
+        },
+        "14b61eaf-26c8-46d2-8538-06fe223a04c0": {
+          "name": "Rozcvička: Vstaňte, sedněte si"
+        },
+        "3d33781b-194e-4311-b493-e6cd3bf140ac": {
+          "name": "Analýza: Proč lidé sdílejí?"
+        },
+        "202398a5-6b48-4360-9ed8-10db2039b064": {
+          "name": "Analýza: Soukromé nebo osobní?"
         },
         "d7df338d-c42c-4fce-aa60-ec516fd2d48d": {
           "name": "Shrnutí: Výstupní lístek"
@@ -1585,6 +1993,9 @@
         },
         "911c75e0-ddd2-4431-8bc6-c1ea19c4e104": {
           "name": "Rekapitulace"
+        },
+        "54992eb5-cb3f-40b5-9f19-07eeda83e000": {
+          "name": "Příležitost napříč předměty"
         },
         "077242ad-8c8a-4b24-a139-a5e198abd405": {
           "name": "Zahřátí (volitelné)"
@@ -1607,6 +2018,9 @@
         "875f6137-2035-4bb3-aec9-0c2f30fcbb1d": {
           "name": "Rekapitulace"
         },
+        "dbad5d87-5c18-4c2a-a15a-6567124b4864": {
+          "name": "Příležitost napříč předměty"
+        },
         "d2e747dc-0bde-4836-8d4c-c69868ad9b11": {
           "name": "Zahřátí"
         },
@@ -1628,6 +2042,9 @@
         "3c16545b-4916-4493-b8ad-6e73aa6ac515": {
           "name": "Rekapitulace"
         },
+        "388b4557-7534-453f-a760-847055923bc0": {
+          "name": "Příležitost napříč předměty"
+        },
         "dd01dd63-cce2-4280-836a-eb80e859c3a4": {
           "name": "Zahřátí"
         },
@@ -1643,8 +2060,14 @@
         "a3701255-a00e-431c-a6bc-ee1f6d192ebf": {
           "name": "Rozšířená výuka"
         },
+        "6c35971f-0c71-44c4-b6d7-9380216625a5": {
+          "name": "Příležitost napříč předměty"
+        },
         "b713c6b6-7ef2-44e1-aa4b-4fb81a5e4a2b": {
           "name": "Zahřátí"
+        },
+        "a80b5d47-5fb8-4557-9fb2-233074caad47": {
+          "name": "Přemosťovací aktivita – vyberte si jednu"
         },
         "0da29d00-d95a-4538-ac89-116513fba104": {
           "name": "Hlavní aktivita"
@@ -1710,10 +2133,13 @@
           "name": "Projekt na zakončení kurzu"
         },
         "430c7fd8-dd67-4fff-924a-e6080df26e8a": {
-          "name": "2.  den – Proces návrhu"
+          "name": "2. den – Proces návrhu"
         },
         "0cf95f16-6aaa-4ea6-b62b-043b7c299f90": {
-          "name": "3.  den – Vytvoření projektu"
+          "name": "3. den – Vytvoření projektu"
+        },
+        "e8be4727-c687-43bb-a1be-e1b3da780020": {
+          "name": "Den 4 a 5 – Prezentace projektu"
         },
         "070a6c7f-86b0-4bd2-b220-99469d1f1169": {
           "name": "Rozšířená výuka"

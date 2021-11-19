@@ -1161,18 +1161,6 @@
         "courseF_bee_for9_2020": {
           "courseF_bee_for9_1": "여기서 `수학` 블록을 찾게 될 거예요."
         },
-        "courseF_artist_for1": {
-          "courseF_artist_for1_1": "툴박스는 \"카테고리\" 모드에 있어 코드를 위한 더 많은 여지를 만듭니다. 여기에 `for` 루프가 있습니다."
-        },
-        "courseF_artist_for1_2018": {
-          "courseF_artist_for1_1": "툴박스는 \"카테고리\" 모드에 있어 코드를 위한 더 많은 여지를 만듭니다. 여기에 `for` 루프가 있습니다."
-        },
-        "courseF_artist_for1_2019": {
-          "courseF_artist_for1_1": "툴박스는 \"카테고리\" 모드에 있어 코드를 위한 더 많은 여지를 만듭니다. 여기에 `for` 루프가 있습니다."
-        },
-        "courseF_artist_for1_2020": {
-          "courseF_artist_for1_1": "툴박스는 \"카테고리\" 모드에 있어 코드를 위한 더 많은 여지를 만듭니다. 여기에 `for` 루프가 있습니다."
-        },
         "courseF_bee_conditionals2": {
           "courseF_bee_conditionals2_2": "이제 툴박스는 카테고리 모드입니다. 필요한 모든 블록은 라벨 아래에 있습니다!"
         },
@@ -1618,7 +1606,7 @@
           "courseE_farmer_functions1a_1": "이 야채는 모르는 야채입니다. 프로그램을 실행할 때 마다 바뀝니다. "
         },
         "courseF_artist_for1_2021": {
-          "courseF_artist_for1_1": "툴박스는 \"카테고리\" 모드에 있어 코드를 위한 더 많은 여지를 만듭니다. 여기에 `for` 루프가 있습니다."
+          "courseF_artist_for1_1": "툴박스는 \"범주\" 모드에 있어 코드를 위한 더 많은 여지를 만듭니다. 여기에 `for` 루프가 있습니다."
         },
         "courseF_bee_for4_2021": {
           "courseF_bee_for4_1": "여기서 `for` 루프를 찾게 될 거예요!"
@@ -1646,7 +1634,8 @@
           "hello_world_new": "새 블록!"
         },
         "helloworld_animals_sizes": {
-          "hello_world_new": "새 블록!"
+          "hello_world_new": "새 블록!",
+          "hello_world_new_block": "새 블록!!!!"
         },
         "helloworld_animals_sounds": {
           "hello_world_new": "새 블록!"
@@ -1691,7 +1680,8 @@
         "poetry_hoc_freeplay": {
           "poetry_burst": "새 블록!",
           "poetry_multiple_sprites": "새 블록!",
-          "poetry_new_block": "새 블록!"
+          "poetry_new_block": "새 블록!",
+          "poetry_selector": "시를 선택하거나 또는 자신의 시를 입력하세요!"
         },
         "poetry_hoc_sounds": {
           "poetry_sound": "새 블록!"
@@ -1736,13 +1726,13 @@
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
         "courseF_sprites_behaviors": {
-          "behaviors_category": "여기를 클릭하여 행동 카테고리를 여세요."
+          "behaviors_category": "여기를 클릭하여 행동 범주를 여세요."
         },
         "courseF_sprites_make": {
-          "sprites_category": "여기를 클릭하여 스프라이트 카테고리를 여세요."
+          "sprites_category": "여기를 클릭하여 스프라이트 범주를 여세요."
         },
         "courseF_sprites_positioning": {
-          "locations_category": "여기를 클릭하여 위치 카테고리를 여세요."
+          "locations_category": "여기를 클릭하여 위치 범주를 여세요."
         },
         "courseF_sprites_properties": {
           "sprites_category2": "여기서 새 블록을 찾으세요."
@@ -1784,7 +1774,7 @@
           "stopAllBug": "이 블록은 잘못된 순서로 되어 있습니다."
         },
         "courseF_events_time": {
-          "events_category": "여기를 클릭하여 이벤트 카테고리를 여세요."
+          "events_category": "여기를 클릭하여 이벤트 범주를 여세요."
         },
         "courseF_label_predict": {
           "variablesPredict": "이 지점 아래 코드를 자세히 보세요."
@@ -1806,7 +1796,7 @@
           "join_blocks": "여기서 새 블록을 찾으세요!"
         },
         "courseF_text_events": {
-          "events_category": "여기를 클릭하여 이벤트 카테고리를 여세요."
+          "events_category": "여기를 클릭하여 이벤트 범주를 여세요."
         },
         "courseF_text_print": {
           "print_block": "여기서 인쇄 블록을 찾으세요!",
@@ -1817,6 +1807,110 @@
         },
         "courseF_variables_predict": {
           "variablesPredict": "이 지점 아래 코드를 자세히 보세요."
+        },
+        "helloworld_animals_backgrounds": {
+          "hw_background_location": "이 블록을 사용하여 새 배경을 설정하세요."
+        },
+        "helloworld_animals_behaviors": {
+          "hello_world_behavior_blocks": "이 블록을 아래 행동 중 하나와 함께 사용하세요."
+        },
+        "helloworld_animals_click": {
+          "hw_Run": "코드를 실행하려면 여기를 클릭하세요."
+        },
+        "helloworld_animals_events": {
+          "hello_world_click_hint": "이 이벤트 블록을 작업공간에 추가합니다."
+        },
+        "helloworld_animals_freeplay": {
+          "costumes_tab": "여기를 클릭하여 의상을 프로젝트에 추가하세요."
+        },
+        "helloworld_animals_location": {
+          "pin": "핀"
+        },
+        "helloworld_animals_multi": {
+          "pin": "핀"
+        },
+        "helloworld_animals_say": {
+          "hello_world_say": "이 블록을 사용하여 스프라이트가 말하게 만드세요.",
+          "hello_world_make_sprite": "이 블록을 사용하여 스프라이트를 만드세요."
+        },
+        "helloworld_emoji_backgrounds": {
+          "hw_background_location": "이 블록을 사용하여 새 배경을 설정하세요."
+        },
+        "helloworld_emoji_behaviors": {
+          "hello_world_behavior_blocks": "이 블록을 아래 행동 중 하나와 함께 사용하세요."
+        },
+        "helloworld_emoji_click": {
+          "hw_Run": "코드를 실행하려면 여기를 클릭하세요."
+        },
+        "helloworld_emoji_events": {
+          "hello_world_click_hint": "이 이벤트 블록을 작업공간에 추가합니다."
+        },
+        "helloworld_emoji_freeplay": {
+          "costumes_tab": "여기를 클릭하여 의상을 프로젝트에 추가하세요."
+        },
+        "helloworld_emoji_location": {
+          "pin": "핀"
+        },
+        "helloworld_emoji_multi": {
+          "pin": "핀"
+        },
+        "helloworld_emoji_say": {
+          "hello_world_say": "이 블록을 사용하여 스프라이트가 말하게 만드세요.",
+          "hello_world_make_sprite": "이 블록을 사용하여 스프라이트를 만드세요."
+        },
+        "helloworld_food_backgrounds": {
+          "hw_background_location": "이 블록을 사용하여 새 배경을 설정하세요."
+        },
+        "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "이 블록을 아래 행동 중 하나와 함께 사용하세요."
+        },
+        "helloworld_food_click": {
+          "hw_Run": "코드를 실행하려면 여기를 클릭하세요."
+        },
+        "helloworld_food_events": {
+          "hello_world_click_hint": "이 이벤트 블록을 작업공간에 추가합니다."
+        },
+        "helloworld_food_freeplay": {
+          "costumes_tab": "여기를 클릭하여 의상을 프로젝트에 추가하세요."
+        },
+        "helloworld_food_location": {
+          "pin": "핀"
+        },
+        "helloworld_food_multi": {
+          "pin": "핀"
+        },
+        "helloworld_food_say": {
+          "hello_world_say": "이 블록을 사용하여 스프라이트가 말하게 만드세요.",
+          "hello_world_make_sprite": "이 블록을 사용하여 스프라이트를 만드세요."
+        },
+        "helloworld_retro_backgrounds": {
+          "hw_background_location": "이 블록을 사용하여 새 배경을 설정하세요."
+        },
+        "helloworld_retro_behaviors": {
+          "hello_world_behavior_blocks": "이 블록을 아래 행동 중 하나와 함께 사용하세요."
+        },
+        "helloworld_retro_click": {
+          "hw_Run": "코드를 실행하려면 여기를 클릭하세요."
+        },
+        "helloworld_retro_events": {
+          "hello_world_click_hint": "이 이벤트 블록을 작업공간에 추가합니다."
+        },
+        "helloworld_retro_freeplay": {
+          "costumes_tab": "여기를 클릭하여 의상을 프로젝트에 추가하세요."
+        },
+        "helloworld_retro_location": {
+          "pin": "핀"
+        },
+        "helloworld_retro_multi": {
+          "pin": "핀"
+        },
+        "helloworld_retro_say": {
+          "hello_world_say": "이 블록을 사용하여 스프라이트가 말하게 만드세요.",
+          "hello_world_make_sprite": "이 블록을 사용하여 스프라이트를 만드세요."
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "여기에서 코드 블럭을 찾으세요. ",
+          "pause_button": "이 버튼으로 애니메이션을 테스트하세요."
         }
       }
     }

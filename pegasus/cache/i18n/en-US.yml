@@ -1831,3 +1831,4 @@
   ai_try_activity: "Try activity"
   outbreak_tile_title: "Outbreak"
   outbreak_tile_subtitle: "A virus has infected Monster Town! Code an outbreak simulator and make predictions about what will happen to the neighbors of Monster Town."
+  outbreak_tile_alt: "A simulation of how a virus spreads through a group of purple monsters."

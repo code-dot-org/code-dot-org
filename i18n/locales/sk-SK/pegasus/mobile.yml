@@ -491,7 +491,7 @@
   video_title_obama: "Prezident Obama na informatike"
   video_title_hoc_is_here: "Hodina Kódu je tu - učiť sa môže každý"
   video_title_anybody_can_learn: "Ktokoľvek sa môže učiť"
-  video_title_steph_curry: "Hodina Kódu so Steph Curry"
+  video_title_steph_curry: "Hodina Kódu so Stephom Currym"
   video_title_draymond_green: "Hodine Kódu s Draymond Green"
   video_title_russell_okung: "Hodina Kódu s Russell Okung"
   video_title_real_madrid: "Hodinu Kódu s Real Madrid"
@@ -1062,6 +1062,12 @@
   coursed-2020_gradelevel: Vek 7-11
   coursee-2020_gradelevel: Vek 8-12
   coursef-2020_gradelevel: Vek 9-13
+  coursea-2021_gradelevel: Vek 4-7
+  courseb-2021_gradelevel: Vek 5-8
+  coursec-2021_gradelevel: Vek 6-10
+  coursed-2021_gradelevel: Vek 7-11
+  coursee-2021_gradelevel: Vek 8-12
+  coursef-2021_gradelevel: Vek 9-13
   accelerated_gradelevel: "Vek 10-18"
   codeorg_platformtext: "Moderné prehliadače, smartfóny, tablety"
   codeintl_platformtext: "Moderné prehliadače, smartfóny, tablety"
@@ -1532,7 +1538,7 @@
   hoc2018_mc_video_2min: "2 min"
   hoc2018_mc_video_3min: "3 minúty"
   hoc2018_mc_video_5min: "5 min"
-  hoc2018_mc_video_title_steph_curry: "Hodina Kódu so Steph Curry"
+  hoc2018_mc_video_title_steph_curry: "Hodina Kódu so Stephom Currym"
   hoc2018_mc_video_title_sports: "Premôž sa. Každý sa dokáže naučiť."
   hoc2018_mc_video_title_cs_is_everything: "Informatika mení svet okolo nás"
   hoc2018_mc_video_title_inspire_girl: "Inšpiruj dievča"
@@ -1614,3 +1620,4 @@
   ai_in_partnership_with: "V spolupráci s"
   ai_activity: "Aktivita"
   ai_description: "Popis"
+  outbreak_tile_title: "Nákaza"

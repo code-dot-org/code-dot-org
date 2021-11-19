@@ -4,62 +4,63 @@ title: Paano-gawin ang kaganapan ng Hour of Code
 
 {{ signup_button }}
 
-# How to organize an Hour of Code assembly or event
+# Paano mag organize ng isang assembly o event ng Hour of Code
 
-### Get your entire school or community involved in an Hour of Code!
+### Isama ang buong paaralan o komunidad mo sa isang Hour of Code!
 
 * * *
 
-## 1. Maghanda para sa iyong kaganapan
+## 1. Maghanda para sa event mo
 
 - Tukuyin ang lugar, petsa, at oras.
-- Send [a letter](https://hourofcode.com/promote/resources#sample-emails) to your local mayor, member of Congress, governor, or influential business person and invite them to speak. Check out our [how-to toolkit]({{ localized_files/elected_official }}) when hosting an elected official during an Hour of Code for more info.
-- Invite media/press. i.e. local news station, newspaper, education/tech bloggers. See our [press kit]({{ promote/press_kit_url }}) for help.
-
-## 2. Sa panahon ng iyong kaganapan
-
-- Kick off your event with one of our [inspirational videos]({{ promote/videos }}).
-- Give an intro overviewing the importance of computer science, using these [stats and infographics]({{ promote/stats_url }}).   
-      
+- Magpadala[ng sulat](https://hourofcode.com/promote/resources#sample-emails) sa iyong lokal na alkalde, miyembro ng Kongreso, gobernador, o maimpluwensyang negosyante at anyayahan silang magsalita. Tingnan ang aming [gabay sa paggamit na toolkit]({{ localized_files/elected_official }}) kapag nagho-host ng isang halal na opisyal sa isang Hour of Code para sa higit pang impormasyon.</li> 
     
-- ** Iba pang mga ideya ng event **: 
-    - Mag imbita ng isang lokal na leader ng indutriya pa ipaliwanag ang kanyang gawa na sangkot ang computer science.
-    - Mag imbita ng isang lokal na pulitiko at hayaang turuan sya ng mga estudyante kung paano mag-code.
-    - Magkaroong ng grupo ng mga estudyante na nagpapakita ng isang unplugged na aktibidad.
-    - Magkaroon ng grupo ng mga estudyante na magtuturo sa prinsipal o sa grupo ng mga guro kung paano mag code.
-    - Kung ang iyong paaralan ay nagtuturo na ng computer science, magkaroon ang mga estudyante ng demo na proyekto.
-
-## 3. Ibahagi ang pangyayari
-
-Share pictures of your event on Facebook and Twitter and use the hashtag **#HourOfCode**.
-
-* * *
-
-## Mag host ng isang gabing Family Code na may kasamang Hour of Code at imbitahin ang mga magulang na lumahok
-
-Consider hosting a K-5 evening event and invite parents to join their students for an hour of computer science. Ito ay isang mahusay na paraan upang makisali sa mas malaking komunidad at hikayatin ang suporta ng magulang para sa computer science sa iyong paaralan. Our partners at Family Code Night have created an all-in-one event kit with planning checklist, presenter’s script, invitation emails, posters, powerpoints, and more to run your own event. [I-click dito para ma-download ang Kit ng kaganapan](http://www.familycodenight.org/DownloadCodeDotOrg.html).
-
-* * *
-
-## Example plan for a school assembly or event
-
-**Kaganapan:** Ang School-wide Computer Science Education Week kick-off assembly
-
-**Date:** {{ campaign_date/start_short }} (start of Computer Science Education Week)
-
-**Oras:** Sa araw ng pag-aaral. Ginusto ang kalagitnaan ng umagang kaganapan. Humigit-kumulang na 1 oras.
-
-**Lokasyon:** School assembly hall (hal. theater, gym, cafeteria)
-
-## Takbo ng palabas
-
-| Oras                   | Aksyon                                                                                                                                                                                                    |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 10:00 - 10:05 ng umaga | Open with one of our [inspirational videos]({{ promote/videos }}).                                                                                                                                        |
-| 10:05 - 10:15 ng umaga | Principal gives an intro overviewing the importance of computer science. Use these [stats and infographics]({{ promote/stats_url }}).                                                                     |
-| 10:15 - 10:30 ng umaga | Ang mga espesyal na panauhin at magsasalita tungkol sa kanilang background at kung paano ang teknolohiya at computer science ay gumaganap ng importanteng katungkulan sa kanilang araw araw na pamumuhay. |
-| 10:30 - 10:40 ng umaga | Ang mga estudyante ay gumawa ng demo ng Hour of Code para sa paaralan. Masyang twist: hayaan silang turuan ang punong guro, pulitiko, o ibang estudyante!                                                 |
-| 10:40 - 11:00 ng umaga | Ang mga estudyante ay nag demo ng isang unplugged na aktibidad at kung paano ituturo ang computer science ng hindi gumagamit ng mga computer.                                                             |
-| 11:00 - 11:05 ng umaga | Ang mga gurong tumulong para magdala nag kaganapang school-wide ay magbibigay na pagtatapos na salita.                                                                                                    |
-
-{{ signup_button }}
+    - Mag-imbita ng media/press. hal. lokal na istasyon ng balita, pahayagan, edukasyon/tech na blogger. Tingnan ang aming [press kit]({{ promote/press_kit_url }}) para sa tulong.</ul> 
+    
+    ## 2. Sa panahon ng event mo
+    
+    - Simulan ang event mo sa isa sa aming [mga inspirational na video]({{ promote/videos }}).
+    - Magbigay ng intro na pangkalahatang-ideya sa kahalagahan ng computer science, gamit ang mga ito [mga stat at infographic]({{ promote/stats_url }}).   
+          
+        
+    - ** Iba pang mga ideya sa event**: 
+        - Mag-imbita ng isang lider ng lokal na industriya upang talakayin ang kanyang trabaho na may kinalaman sa computer science.
+        - Mag imbita ng lokal na pulitiko at hayaang turuan sya ng mga estudyante kung paano mag-code.
+        - Magkaroon ng grupo ng mga estudyante na nagpapakita ng isang unplugged na aktibidad.
+        - Magkaroon ng grupo ng mga estudyante na magtuturo sa prinsipal o sa grupo ng mga guro kung paano mag-code.
+        - Kung nagtuturo na ng computer science ang paaralan mo, magkaroon ng mga demo na proyekto ang mga estudyante.
+    
+    ## 3. Ibahagi ang nangyari
+    
+    Ibahagi ang mga larawan ng event mo sa Facebook at Twitter at gamitin ang hashtag **#HourOfCode**.
+    
+    * * *
+    
+    ## Mag-host ng Family Code Night kasama ang Hour of Code at anyayahan ang mga magulang na lumahok
+    
+    Pag-isipan ang pagho-host ng isang kaganapan sa gabi ng K-5 at anyayahan ang mga magulang na sumali sa kanilang mga mag-aaral sa isang oras ng computer science. Isa itong mahusay na paraan upang isali ang mas malaking komunidad at hikayatin ang suporta ng magulang sa computer science sa paaralan mo. Gumawa ng all-in-one na event kit ang aming mga partner sa Family Code Night na may checklist sa pagpaplano, script ng presenter, mga email ng imbitasyon, mga poster, powerpoint, at higit pa upang patakbuhin ang sarili mong event. [I-click dito para ma-download ang Kit ng Event](http://www.familycodenight.org/DownloadCodeDotOrg.html).
+    
+    * * *
+    
+    ## Halimbawang plano sa isang pagtitipon o event sa paaralan
+    
+    **Event:** Ang kick-off na pagtitipon sa Linggo ng Edukasyon sa Computer Science sa buong paaralan
+    
+    **Petsa:**{{ campaign_date/start_short }} (simula ng Linggo ng Edukasyon ng Computer Science)
+    
+    **Oras:** Sa araw ng klase. Mas mabuti sa kalagitnaan ng umaga. Humigit-kumulang na 1 oras.
+    
+    **Lokasyon:** sa School assembly hall (hal. theater, gym, cafeteria)
+    
+    ## Takbo ng Palabas
+    
+    | Oras                   | Aksyon                                                                                                                                                                                              |
+    | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | 10:00 - 10:05 ng umaga | Buksan gamit ang isa sa aming [mga inspirational na video]({{ promote/videos }}).                                                                                                                   |
+    | 10:05 - 10:15 ng umaga | Magbibigay ang principal ng pangkalahatang-ideyang panimula sa kahalagahan ng computer science. Gamitin itong [mga stat at infographic]({{ promote/stats_url }}).                                   |
+    | 10:15 - 10:30 ng umaga | Magsasalita ang mga espesyal na panauhin tungkol sa kanilang background at kung paano gumaganap ang teknolohiya at computer science ng importanteng katungkulan sa kanilang araw-araw na pamumuhay. |
+    | 10:30 - 10:40 ng umaga | Gumawa ng demo ang mga estudyante ng Hour of Code para sa paaralan. Masayang twist: hayaan silang turuan ang punong guro, pulitiko, o ibang mga estudyante!                                         |
+    | 10:40 - 11:00 ng umaga | Nag-demo ang mga estudyante ng isang unplugged na aktibidad at kung paano ituturo ang computer science ng hindi gumagamit ng mga computer.                                                          |
+    | 11:00 - 11:05 ng umaga | Magbibigay ng pagtatapos na salita ang mga gurong tumulong para magdala nag school-wide na event .                                                                                                  |
+    
+    {{ signup_button }}

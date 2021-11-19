@@ -185,7 +185,11 @@ As Director of Software Engineering at <a href="https://www.irobot.com/" target=
 <br>
 <br>
 <strong>Ini Oladosu</strong> joined <a href="https://www.ilm.com/" target="_blank">Industrial Light & Magic</a> in 2020 as a Production Assistant. He was born in Port Harcourt, Nigeria before immigrating to Calgary, Canada with his family in 2000. Between 2019 and 2021, Ini co-wrote and co-produced his debut short film, <i>Framed</i>. The film has been selected into various film festivals and most recently won the award for Best Edit at the 2021 London International Monthly Film Festival.</p>
-<i>Recording not currently available.</i>
+
+<a href="https://code.zoom.us/rec/play/kIvRYVMSbjTlS0R135aJipNeBxbg6Vv1taAVDeVb3IVoBXwRMZuQjhuRFa-VNSg5Wy8UVJF4fcZ15BFV.p4zxH_sHQW5GLwBU" target="_blank"><button>Watch the chat</button></a>
+<br>
+<br>
+<i>Due to legal constraints, we are only able to offer this recording on demand. You will need to register using your name and email address to access.</i>
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
 
@@ -229,11 +233,7 @@ Since <strong>Joel Ferree</strong> became program director of <a href="https://w
 <strong>Tomas Garcia</strong> is <a href="https://www.lacma.org/" target="_blank">LACMA</a>’s Assistant Vice President of Technology and Digital Media, guiding the digital vision of one of the nation’s pioneering arts institutions. In this capacity he leads the digital operations of a diverse, multi-generational workforce while materializing the groundwork for the future of technology in museums. Tomas is responsible for the design and management of digital touchpoints all across the institution.
 </p>
 
-<a href="https://www.eventbrite.com/e/my-journey-art-tech-registration-167881553245" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
+<a href="https://code.zoom.us/rec/play/8MWpAvbUnRgFRbICEk_6DTR1hg7t6jwZIxBiU47LL6q7RyzQRPdIkxpgFm51UtDykbHrsffWMgOtz8hr.jBnfUHkL405fU4s0" target="_blank"><button>Watch the chat</button></a>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>

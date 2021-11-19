@@ -9,12 +9,17 @@
         "program/dance-extras/unversioned": {
           "word": "प्रोग्रॅम"
         },
+        "code/minecraft/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/minecraft/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/minecraft/unversioned": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
         },
         "event/minecraft/unversioned": {
           "word": "इव्हेंट",
@@ -24,15 +29,28 @@
           "word": "लूप ",
           "definition": "पुन्हा पुन्हा काहीतरी करण्याची क्रिया"
         },
+        "code/hero/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/hero/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/hero/unversioned": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
         },
         "function/hero/unversioned": {
+          "word": "",
           "definition": "कोडचा एक भाग ज्याला आपण परत परत सहजपणे कॉल करू शकता"
+        },
+        "event/poem-art/2021": {
+          "word": "इव्हेंट",
+          "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
+        },
+        "program/poem-art/2021": {
+          "word": "प्रोग्रॅम"
         },
         "debugging/flappy/unversioned": {
           "word": "डीबगिंग",
@@ -48,12 +66,17 @@
         "program/hourofcode/unversioned": {
           "word": "प्रोग्रॅम"
         },
+        "code/frozen/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/frozen/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/frozen/unversioned": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
         },
         "debugging/iceage/unversioned": {
           "word": "डीबगिंग",
@@ -62,19 +85,29 @@
         "program/iceage/unversioned": {
           "word": "प्रोग्रॅम"
         },
+        "code/artist/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/artist/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/artist/unversioned": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
+        },
+        "code/gumball/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/gumball/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/gumball/unversioned": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
         },
         "event/dance/unversioned": {
           "word": "इव्हेंट",
@@ -83,68 +116,133 @@
         "program/dance/unversioned": {
           "word": "प्रोग्रॅम"
         },
+        "code/aquatic/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "debugging/aquatic/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/aquatic/unversioned": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
         },
         "condition/aquatic/unversioned": {
-          "word": "अट"
+          "word": "अट",
+          "definition": ""
         },
         "conditionals/aquatic/unversioned": {
           "word": "कंडीशनल्स ",
           "definition": "स्टेटमेंट जे फक्त काही विशिष्ट अटींनुसार चालतात."
         },
         "loops/aquatic/unversioned": {
+          "word": "",
           "definition": "पुन्हा पुन्हा काहीतरी करण्याची क्रिया"
+        },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "code/starwars/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/starwars/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/starwars/unversioned": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
+        },
+        "code/mc/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/mc/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/mc/unversioned": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
+        },
+        "code/playlab/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/playlab/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/playlab/unversioned": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
+        },
+        "code/starwarsblocks/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/starwarsblocks/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/starwarsblocks/unversioned": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
+        },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "event/sports/unversioned": {
           "word": "इव्हेंट",
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
+        },
+        "code/sports/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/sports/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/sports/unversioned": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
+        },
+        "code/infinity/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/infinity/unversioned": {
           "word": "डीबगिंग",
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/infinity/unversioned": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
         },
         "event/basketball/unversioned": {
           "word": "इव्हेंट",
@@ -157,12 +255,17 @@
         "program/basketball/unversioned": {
           "word": "प्रोग्रॅम"
         },
+        "code/dance-extras-2019/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "event/dance-extras-2019/unversioned": {
           "word": "इव्हेंट",
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
         },
         "program/dance-extras-2019/unversioned": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
         },
         "event/dance-2019/unversioned": {
           "word": "इव्हेंट",
@@ -172,14 +275,36 @@
           "word": "प्रोग्रॅम"
         },
         "machine_learning/oceans/unversioned": {
-          "word": "मशीन लर्निंग"
+          "word": "मशीन लर्निंग",
+          "definition": ""
+        },
+        "code/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "event/poem-art/unversioned": {
+          "word": "इव्हेंट",
+          "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
+        },
+        "program/poem-art/unversioned": {
+          "word": "प्रोग्रॅम",
+          "definition": ""
+        },
+        "mood/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "line/poem-art/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "event/outbreak/unversioned": {
           "word": "इव्हेंट",
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
         },
         "models_and_simulations/outbreak/unversioned": {
-          "word": "मॉडेल आणि सिम्युलेशन"
+          "word": "मॉडेल आणि सिम्युलेशन",
+          "definition": ""
         },
         "sprite/coursef/2021": {
           "word": "स्प्राईट",
@@ -188,6 +313,9 @@
         "user/coursef/2021": {
           "word": "वापरकर्ता",
           "definition": "सॉफ्टवेअर आणि हार्डवेअरसह एखादी वस्तू वापरणारी एखादी व्यक्ती."
+        },
+        "behavior/coursef/2021": {
+          "definition": "एखादी क्रिया जी स्प्राइटला थांबवायला सांगितली जात नाही तोपर्यंत ती सतत करत असते."
         },
         "program/coursef/2021": {
           "word": "प्रोग्रॅम"
@@ -219,7 +347,8 @@
           "definition": "परत काहीतरी करा"
         },
         "for_loop/coursef/2021": {
-          "word": "लूप साठी"
+          "word": "लूप साठी",
+          "definition": "लूप ज्यांची पूर्वनिर्धारित सुरुवात, शेवट आणि वाढ (स्टेप इंटरव्हल) असते."
         },
         "models_and_simulations/coursef/2021": {
           "word": "मॉडेल आणि सिम्युलेशन"
@@ -228,23 +357,27 @@
           "word": "मशीन लर्निंग"
         },
         "dns/coursef/2021": {
-          "word": "DNS"
+          "word": "DNS",
+          "definition": "डोमेन नेम सिस्टमसाठी संक्षिप्त, ही प्रणाली डोमेन नावांचे भाषांतर करते (उदाहरणार्थ.com) IP पत्त्यांवर (जसे की 93.184.216.34)"
         },
         "internet/coursef/2021": {
           "definition": "कम्प्युटर आणि  सर्व्हरचा एक गट जो एकमेकांशी जोडलेला आहे."
         },
         "packets/coursef/2021": {
-          "word": "पॅकेट्स"
+          "word": "पॅकेट्स",
+          "definition": "माहितीचे लहान भाग जे माहितीच्या मोठ्या भागांमधून काळजीपूर्वक तयार केले गेले आहेत."
         },
         "servers/coursef/2021": {
           "word": "सर्व्हर",
           "definition": "संगणक जे फक्त इतरांना गोष्टी पुरवण्यासाठी अस्तित्वात आहेत."
         },
         "url/coursef/2021": {
-          "word": "यूआरएल"
+          "word": "यूआरएल",
+          "definition": "वेब पेजवर कॉल करण्यासाठी लक्षात ठेवण्यास सोपा पत्ता (जसे की www.code.org)."
         },
         "dsl_cable/coursef/2021": {
-          "word": "डीएसएल/केबल"
+          "word": "डीएसएल/केबल",
+          "definition": "टेलिफोन किंवा टेलिव्हिजन केबल्स वापरून माहिती पाठवण्याची पद्धत."
         },
         "fiber_optic_cable/coursef/2021": {
           "word": "फायबर ऑप्टिक केबल",
@@ -263,10 +396,12 @@
           "definition": "आपण ज्या समस्यांचे निराकरण करण्याचा प्रयत्न करीत आहात त्याचे तपशील काढा"
         },
         "prepare/coursef/2021": {
-          "word": " तयारी "
+          "word": " तयारी ",
+          "definition": "तुम्ही करत असलेल्या उपक्रमा साठी संशोधन करा, योजना करा आणि साहित्य मिळवा"
         },
         "reflect/coursef/2021": {
-          "word": "प्रतिबिंबित करा"
+          "word": "प्रतिबिंबित करा",
+          "definition": "भविष्यात परिणाम सुधारण्याच्या हेतूने एखाद्या गोष्टीवर काळजीपूर्वक विचार करा"
         },
         "try/coursef/2021": {
           "word": "प्रयत्न ",
@@ -289,17 +424,20 @@
           "definition": "माउस चे बटण दाबा"
         },
         "drag/courseb/2021": {
-          "word": "ड्रॅग करा"
+          "word": "ड्रॅग करा",
+          "definition": "तुमच्या माऊस बटणावर क्लिक करा आणि तुम्ही माउस पॉइंटरला नवीन स्थानावर हलवताना धरून ठेवा"
         },
         "drop/courseb/2021": {
-          "word": "ड्रॉप"
+          "word": "ड्रॉप",
+          "definition": "तुम्ही ड्रॅग करत असलेल्या आयटमला \"लेट गो\" साठी तुमचे माउस बटण  रिलिझ करा"
         },
         "double_click/courseb/2021": {
           "word": "डबल क्लिक ",
           "definition": "माऊस बटण खूप पटकन दाबा"
         },
         "program/courseb/2021": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
         },
         "programming/courseb/2021": {
           "word": "प्रोग्रामिंग",
@@ -337,10 +475,12 @@
           "definition": "माउस चे बटण दाबा"
         },
         "drag/coursea/2021": {
-          "word": "ड्रॅग करा"
+          "word": "ड्रॅग करा",
+          "definition": "तुमच्या माऊस बटणावर क्लिक करा आणि तुम्ही माउस पॉइंटरला नवीन स्थानावर हलवताना धरून ठेवा"
         },
         "drop/coursea/2021": {
-          "word": "ड्रॉप"
+          "word": "ड्रॉप",
+          "definition": "तुम्ही ड्रॅग करत असलेल्या आयटमला \"लेट गो\" साठी तुमचे माउस बटण  रिलिझ करा"
         },
         "double_click/coursea/2021": {
           "word": "डबल क्लिक ",
@@ -379,10 +519,12 @@
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/coursec/2021": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
         },
         "sequencing/coursec/2021": {
-          "word": "सिक्वेन्सिंग"
+          "word": "सिक्वेन्सिंग",
+          "definition": "कमांड योग्य क्रमाने टाकणे जेणेकरुन संगणक कमांड वाचू शकतील."
         },
         "programming/coursec/2021": {
           "word": "प्रोग्रामिंग",
@@ -401,6 +543,7 @@
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
         },
         "binary/coursec/2021": {
+          "word": "",
           "definition": "फक्त दोन पर्यायांचा वापर करून माहितीचे प्रतिनिधित्व करण्याचा  मार्ग."
         },
         "algorithm/coursed/2021": {
@@ -427,7 +570,8 @@
           "definition": "प्रोग्राम तयार करण्याची कला"
         },
         "frustrated/coursed/2021": {
-          "word": "निराश"
+          "word": "निराश",
+          "definition": "एखादी गोष्ट तुम्हाला हवी तशी नसल्यामुळे चीड येणे किंवा रागावणे."
         },
         "persistence/coursed/2021": {
           "word": "चिकाटी",
@@ -442,7 +586,8 @@
           "definition": "परत काहीतरी करा"
         },
         "command/coursed/2021": {
-          "word": "कमांड"
+          "word": "कमांड",
+          "definition": "संगणकासाठी एक सूचना. अनेक कमांड्स एकत्रितपणे अल्गोरिदम आणि कॉम्प्युटर प्रोग्राम बनवतात."
         },
         "conditionals/coursed/2021": {
           "word": "कंडीशनल्स ",
@@ -460,7 +605,8 @@
           "definition": "कंडीशन सत्य असताना पुनरावृत्ती होत राहणारी लूप."
         },
         "until/coursed/2021": {
-          "word": "पर्यंत"
+          "word": "पर्यंत",
+          "definition": "एक कमांड जो आपणास काहीतरी करायला सांगतो  जे काहीतरी पुढे जाऊन  सत्यात उतरते."
         },
         "algorithm/express/2021": {
           "word": "अल्गोरिदम",
@@ -475,7 +621,8 @@
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "sequencing/express/2021": {
-          "word": "सिक्वेन्सिंग"
+          "word": "सिक्वेन्सिंग",
+          "definition": "कमांड योग्य क्रमाने टाकणे जेणेकरुन संगणक कमांड वाचू शकतील."
         },
         "program/express/2021": {
           "word": "प्रोग्रॅम"
@@ -483,6 +630,9 @@
         "programming/express/2021": {
           "word": "प्रोग्रामिंग",
           "definition": "प्रोग्राम तयार करण्याची कला"
+        },
+        "behavior/express/2021": {
+          "definition": "एखादी क्रिया जी स्प्राइटला थांबवायला सांगितली जात नाही तोपर्यंत ती सतत करत असते."
         },
         "sprite/express/2021": {
           "word": "स्प्राईट",
@@ -504,7 +654,8 @@
           "definition": "परत काहीतरी करा"
         },
         "command/express/2021": {
-          "word": "कमांड"
+          "word": "कमांड",
+          "definition": "संगणकासाठी एक सूचना. अनेक कमांड्स एकत्रितपणे अल्गोरिदम आणि कॉम्प्युटर प्रोग्राम बनवतात."
         },
         "condition/express/2021": {
           "word": "अट"
@@ -518,7 +669,8 @@
           "definition": "कंडीशन सत्य असताना पुनरावृत्ती होत राहणारी लूप."
         },
         "until/express/2021": {
-          "word": "पर्यंत"
+          "word": "पर्यंत",
+          "definition": "एक कमांड जो आपणास काहीतरी करायला सांगतो  जे काहीतरी पुढे जाऊन  सत्यात उतरते."
         },
         "function/express/2021": {
           "definition": "कोडचा एक भाग ज्याला आपण परत परत सहजपणे कॉल करू शकता"
@@ -531,17 +683,20 @@
           "definition": "कम्प्युटरच्या स्क्रीनवर एक मेसेज जो वापरकर्त्याच्या इनपुटची वाट पाहतो."
         },
         "for_loop/express/2021": {
-          "word": "लूप साठी"
+          "word": "लूप साठी",
+          "definition": "लूप ज्यांची पूर्वनिर्धारित सुरुवात, शेवट आणि वाढ (स्टेप इंटरव्हल) असते."
         },
         "define/express/2021": {
           "word": "नेमुन द्या",
           "definition": "आपण ज्या समस्यांचे निराकरण करण्याचा प्रयत्न करीत आहात त्याचे तपशील काढा"
         },
         "prepare/express/2021": {
-          "word": " तयारी "
+          "word": " तयारी ",
+          "definition": "तुम्ही करत असलेल्या उपक्रमा साठी संशोधन करा, योजना करा आणि साहित्य मिळवा"
         },
         "reflect/express/2021": {
-          "word": "प्रतिबिंबित करा"
+          "word": "प्रतिबिंबित करा",
+          "definition": "भविष्यात परिणाम सुधारण्याच्या हेतूने एखाद्या गोष्टीवर काळजीपूर्वक विचार करा"
         },
         "try/express/2021": {
           "word": "प्रयत्न ",
@@ -552,10 +707,12 @@
           "definition": "माउस चे बटण दाबा"
         },
         "drag/pre-express/2021": {
-          "word": "ड्रॅग करा"
+          "word": "ड्रॅग करा",
+          "definition": "तुमच्या माऊस बटणावर क्लिक करा आणि तुम्ही माउस पॉइंटरला नवीन स्थानावर हलवताना धरून ठेवा"
         },
         "drop/pre-express/2021": {
-          "word": "ड्रॉप"
+          "word": "ड्रॉप",
+          "definition": "तुम्ही ड्रॅग करत असलेल्या आयटमला \"लेट गो\" साठी तुमचे माउस बटण  रिलिझ करा"
         },
         "double_click/pre-express/2021": {
           "word": "डबल क्लिक ",
@@ -574,7 +731,8 @@
           "definition": "अल्गोरिदम किंवा प्रोग्राममध्ये समस्या शोधणे आणि त्याचे निराकरण करणे."
         },
         "program/pre-express/2021": {
-          "word": "प्रोग्रॅम"
+          "word": "प्रोग्रॅम",
+          "definition": ""
         },
         "programming/pre-express/2021": {
           "word": "प्रोग्रामिंग",
@@ -596,6 +754,9 @@
           "word": "इव्हेंट",
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
         },
+        "behavior/coursee/2021": {
+          "definition": "एखादी क्रिया जी स्प्राइटला थांबवायला सांगितली जात नाही तोपर्यंत ती सतत करत असते."
+        },
         "algorithm/coursee/2021": {
           "word": "अल्गोरिदम",
           "definition": "एखादे काम पूर्ण करण्यासाठी चरणांची यादी"
@@ -609,7 +770,8 @@
           "definition": "एखादी कृती ज्यामुळे काहीतरी घडते."
         },
         "copyright/coursee/2021": {
-          "word": "कॉपीराइट"
+          "word": "कॉपीराइट",
+          "definition": "साहित्यिक, कलात्मक किंवा संगीत साहित्य प्रिंट करण्याचा, प्रकाशित करण्याचा, सादर करण्याचा, चित्रपट करण्याचा किंवा रेकॉर्ड करण्याचा आणि इतरांना तसे करण्यास अधिकृत करण्याचा अनन्य कायदेशीर अधिकार"
         },
         "loop/coursee/2021": {
           "word": "लूप ",
@@ -638,10 +800,12 @@
           "definition": "आपण ज्या समस्यांचे निराकरण करण्याचा प्रयत्न करीत आहात त्याचे तपशील काढा"
         },
         "prepare/coursee/2021": {
-          "word": " तयारी "
+          "word": " तयारी ",
+          "definition": "तुम्ही करत असलेल्या उपक्रमा साठी संशोधन करा, योजना करा आणि साहित्य मिळवा"
         },
         "reflect/coursee/2021": {
-          "word": "प्रतिबिंबित करा"
+          "word": "प्रतिबिंबित करा",
+          "definition": "भविष्यात परिणाम सुधारण्याच्या हेतूने एखाद्या गोष्टीवर काळजीपूर्वक विचार करा"
         },
         "try/coursee/2021": {
           "word": "प्रयत्न ",

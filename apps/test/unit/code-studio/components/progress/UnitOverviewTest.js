@@ -20,7 +20,7 @@ const defaultProps = {
   scriptName: 'csp1',
   unitTitle: 'CSP 1',
   professionalLearningCourse: false,
-  viewAs: ViewType.Teacher,
+  viewAs: ViewType.Instructor,
   isRtl: false,
   sectionsForDropdown: [],
   unitHasLockableLessons: false,

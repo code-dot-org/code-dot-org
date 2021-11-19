@@ -81,7 +81,7 @@ Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage o
 - Ознакомьтесь[ с лучшими методиками](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) от организаторов прошлого Часа Программирования.
 - Посмотрите запись нашего[ вебинара - учебного пособия для преподавателей Часа Программирования](https://youtu.be/EJeMeSW2-Mw).
 - Посетите [форум Часа кода](http://forum.code.org/c/plc/hour-of-code), чтобы получить совет, идею и помощь от других организаторов.
-- Просмотрите [Часто задаваемые вопросы по Часу Программирования](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
+- Просмотрите [Часто задаваемые вопросы по Часу кода](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## Час Кода: а что дальше?
 

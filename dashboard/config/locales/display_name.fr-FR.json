@@ -744,8 +744,8 @@
         "CourseF_outbreak2": "Simulation de virus",
         "CourseF_outbreak3": "Simulation de virus",
         "CourseF_outbreak4": "Modifiez votre simulation",
-        "CourseF_outbreak6": "Récupération",
-        "CourseF_outbreak7": "Probabilité aléatoire",
+        "CourseF_outbreak6": "Probabilité aléatoire",
+        "CourseF_outbreak7": "Immunité et vaccins",
         "CourseF_outbreak8": "Immunité et vaccins",
         "CourseF_video_introSpriteLab_2021": "Voici le Labo du Lutin",
         "MC_HOC_2017_01_RETRY_2021": "Maison",
@@ -883,7 +883,15 @@
         "helloworld_food_costumes": "Costumes",
         "helloworld_food_location": "Événements temporels ",
         "helloworld_retro_costumes": "Costumes",
-        "helloworld_retro_location": "Événements temporels "
+        "helloworld_retro_location": "Événements temporels ",
+        "helloworld_animals_sizes": "Taille",
+        "helloworld_animals_sounds": "Sons",
+        "helloworld_emoji_sizes": "Taille",
+        "helloworld_emoji_sounds": "Sons",
+        "helloworld_food_sizes": "Taille",
+        "helloworld_food_sounds": "Sons",
+        "helloworld_retro_sizes": "Taille",
+        "helloworld_retro_sounds": "Sons"
       }
     }
   }
