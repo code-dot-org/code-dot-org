@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {DragDropContext} from 'react-beautiful-dnd';
 import _ from 'lodash';
@@ -14,11 +14,8 @@ export const DROPPABLE_ID_UNASSIGNED = 'unassigned';
 // More information on the package we're using here (React Beautiful DnD)
 // can be found here:
 // https://github.com/atlassian/react-beautiful-dnd
-export default function CodeReviewGroupsManager({initialGroups}) {
-  const [groups, setGroups] = useState(
-    _.cloneDeep(initialGroups).map(group => addDroppableIdToGroup(group))
-  );
-
+export default function CodeReviewGroupsManager({groups, setGroups}) {
+  console.log(groups);
   const getGroup = droppableId =>
     _.find(groups, group => group.droppableId === droppableId);
   const getUnassignedGroup = () => getGroup(DROPPABLE_ID_UNASSIGNED);
@@ -128,7 +125,8 @@ export default function CodeReviewGroupsManager({initialGroups}) {
 }
 
 CodeReviewGroupsManager.propTypes = {
-  initialGroups: PropTypes.array.isRequired
+  groups: PropTypes.array.isRequired,
+  setGroups: PropTypes.func.isRequired
 };
 
 // Reorders members in a group if member dragged elsewhere in the same group.
@@ -173,7 +171,7 @@ const updateGroups = (groups, changedGroups) => {
   return updatedGroups;
 };
 
-const addDroppableIdToGroup = group => {
+export const addDroppableIdToGroup = group => {
   if (group.unassigned) {
     group.droppableId = DROPPABLE_ID_UNASSIGNED;
   } else {
