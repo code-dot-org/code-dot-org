@@ -23,6 +23,7 @@ import Led from './Led';
 import PlaygroundButton from './Button';
 import {detectBoardTypeFromPort, BOARD_TYPE} from '../../util/boardUtils';
 import {isChromeOS, serialPortType} from '../../util/browserChecks';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
 process.hrtime = require('browser-process-hrtime');
@@ -48,6 +49,14 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
     /** @private {SerialPort} serial port controller */
     this.serialPort_ = null;
+    firehoseClient.putRecord(
+      {
+        study: 'maker-serial-port',
+        study_group: 'serial-port-lifecycle',
+        event: 'serial-port-constructor-set-to-null'
+      },
+      {includeUserId: true}
+    );
 
     /** @private {five.Board} A johnny-five board controller */
     this.fiveBoard_ = null;
@@ -89,6 +98,16 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       const board = new five.Board({io: playground, repl: false, debug: false});
       board.once('ready', () => {
         this.serialPort_ = serialPort;
+        firehoseClient.putRecord(
+          {
+            study: 'maker-serial-port',
+            study_group: 'serial-port-lifecycle',
+            event: 'serial-port-set',
+            data_json: JSON.stringify({serialPort, name})
+          },
+          {includeUserId: true}
+        );
+
         this.fiveBoard_ = board;
         this.fiveBoard_.samplingInterval(100);
         this.boardType_ = detectBoardTypeFromPort(this.port_);
@@ -217,8 +236,24 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         // node serialport in the Code.org Maker App.
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
           this.serialPort_.close();
+          firehoseClient.putRecord(
+            {
+              study: 'maker-serial-port',
+              study_group: 'serial-port-lifecycle',
+              event: 'serial-port-closed'
+            },
+            {includeUserId: true}
+          );
         }
         this.serialPort_ = null;
+        firehoseClient.putRecord(
+          {
+            study: 'maker-serial-port',
+            study_group: 'serial-port-lifecycle',
+            event: 'serial-port-cleared'
+          },
+          {includeUserId: true}
+        );
         resolve();
       }, 50);
     });
@@ -250,7 +285,26 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
      * So if we clear the queue after we call cleanupCircuitPlaygroundComponents, but before
      * all of the writes complete, the board will be left in a partially-reset state.
      */
-    this.serialPort_.queue = [];
+    if (this.serialPort_) {
+      this.serialPort_.queue = [];
+      firehoseClient.putRecord(
+        {
+          study: 'maker-serial-port',
+          study_group: 'serial-port-lifecycle',
+          event: 'serial-port-queue-cleared'
+        },
+        {includeUserId: true}
+      );
+    } else {
+      firehoseClient.putRecord(
+        {
+          study: 'maker-serial-port',
+          study_group: 'serial-port-lifecycle',
+          event: 'serial-port-undefined'
+        },
+        {includeUserId: true}
+      );
+    }
 
     cleanupCircuitPlaygroundComponents(
       this.prewiredComponents_,
