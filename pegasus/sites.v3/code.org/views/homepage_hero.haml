@@ -3,6 +3,7 @@
   show_single_hero = Homepage.show_single_hero(request)
   heroes_arranged, hero_display_time = Homepage.get_heroes_arranged(request)
   actions = Homepage.get_actions(request)
+  hoc_csc_enable_svg = DCDO.get("hoc_csc_enable_svg", false)
 
 :css
   .csc-hero-message-line2 {
@@ -17,6 +18,14 @@
 
   #pageheader-wrapper #pageheader {
     margin: 0 !important;
+  }
+
+  #left-fades {
+    box-shadow: inset -15px -15px 15px 0px rgb(255 255 255), inset -15px -15px 15px 0px rgb(255 255 255);
+  }
+
+  #right-fades {
+    box-shadow: inset 15px -15px 15px 0px rgb(255 255 255), inset 15px -15px 15px 0px rgb(255 255 255);
   }
 
 - main_actions = capture_haml do
@@ -84,14 +93,25 @@
         = view :mobile_header_responsive
 
   - if ["soon-hoc", "actual-hoc"].include?(hoc_mode)
-    #actions{style: "padding-top: 0px; padding-left: 0px; padding-right: 0px"}
+    #actions{style: "padding-top: 0px; padding-left: 0px; padding-right: 0px;"}
       #bars{style: "display: flex; max-width: 1920px; margin: 0 auto;"}
         #left-bars-img.col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-csc-left-fade-wider.png); background-position: 100% 50%; background-size: cover; background-repeat: no-repeat"}
         #csc-main-actions.col-33{style: "z-index: 1; background-color: white; padding-top: 40px"}
           = main_actions
         #right-bars-img.col-33.tablet-feature{style: "align-items: stretch; background-image: url(/shared/images/fit-1200/hoc-csc-right-fade-wider.png); background-position: 0% 50%; background-size: cover; background-repeat: no-repeat"}
-      %svg#left-bars-svg.tablet-feature{viewBox: "0 0 235 250", style: "opacity: 0; position: absolute; width: 0; height: 0"}
-      %svg#right-bars-svg.tablet-feature{viewBox: "0 0 235 250", style: "opacity: 0; position: absolute; width: 0; height: 0"}
+      - if hoc_csc_enable_svg
+        #svgbars{style: "display: none; max-width: 1920px; margin: 0 auto; position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%"}
+          #left-svg-bars.col-33.tablet-feature{style: "overflow: hidden"}
+            %svg#left-bars-svg.tablet-feature{viewBox: "0 0 640 332", style: "opacity: 0; height: 100%; float: right"}
+          #central-empty.col-33
+            &nbsp;
+          #right-svg-bars.col-33.tablet-feature{style: "overflow: hidden"}
+            %svg#right-bars-svg.tablet-feature{viewBox: "0 0 640 332", style: "opacity: 0; height: 100%; float: left"}
+        #csc-fades{style: "display: none; max-width: 1920px; margin: 0 auto; position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%"}
+          #left-fades.col-33.tablet-feature
+          #central-empty.col-33
+            &nbsp;
+          #right-fades.col-33.tablet-feature
 
   - else
     - if show_single_hero
@@ -212,3 +232,6 @@
 
     showQuote(lastImage, currentImage);
   }
+
+- if ["soon-hoc", "actual-hoc"].include?(hoc_mode) && hoc_csc_enable_svg
+  %script{src: "/js/csc-bars.js"}
