@@ -11,9 +11,9 @@
     },
     "new_name": null,
     "family_name": "playlab",
-    "serialized_at": "2021-11-19 20:01:28 UTC",
+    "serialized_at": "2021-11-19 20:27:32 UTC",
     "published_state": "preview",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {

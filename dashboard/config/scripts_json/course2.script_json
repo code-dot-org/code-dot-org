@@ -20,9 +20,9 @@
     },
     "new_name": null,
     "family_name": "course2",
-    "serialized_at": "2021-11-19 20:00:19 UTC",
+    "serialized_at": "2021-11-19 20:26:31 UTC",
     "published_state": "preview",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {

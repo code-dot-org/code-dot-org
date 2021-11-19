@@ -35,9 +35,9 @@
     },
     "new_name": null,
     "family_name": "csd5-preview-2021",
-    "serialized_at": "2021-11-19 20:01:53 UTC",
+    "serialized_at": "2021-11-19 20:27:52 UTC",
     "published_state": "pilot",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {
