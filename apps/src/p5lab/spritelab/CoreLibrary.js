@@ -85,16 +85,27 @@ export default class CoreLibrary {
   drawSpeechBubble(text, x, y) {
     const padding = 8;
     text = ellipsify(text, 150 /* maxLength */);
-    let textSize = 10;
+    let textSize;
+    let charsPerLine;
     if (text.length < 50) {
       textSize = 20;
+      charsPerLine = 16;
     } else if (text.length < 75) {
       textSize = 15;
+      charsPerLine = 20;
+    } else {
+      textSize = 10;
+      charsPerLine = 28;
     }
 
-    const lines = stringToChunks(text, 16 /* maxLength */);
+    const lines = stringToChunks(text, charsPerLine);
+    // Since it's not a fixed-width font, we can't just use line length to
+    // determine the longest line, we have to actually calculate each width.
     const longestLine = [...lines].sort((a, b) =>
-      a.length < b.length ? 1 : -1
+      drawUtils.getTextWidth(this.p5, a, textSize) <
+      drawUtils.getTextWidth(this.p5, b, textSize)
+        ? 1
+        : -1
     )[0];
     let width =
       drawUtils.getTextWidth(this.p5, longestLine, textSize) + padding * 2;
@@ -109,16 +120,17 @@ export default class CoreLibrary {
     // For the calculations below, keep in mind that x and y are located at the horizontal center and the top of the sprite, respectively.
     // In other words, x and y indicate the default position of the bubble's triangular tip.
     y = Math.min(y, APP_HEIGHT);
+    const spriteX = x;
     if (y - height - triangleSize < 1) {
       triangleSize = Math.max(1, y - height);
       y = height + triangleSize;
     }
-    if (x - width / 2 < 1) {
-      triangleTipX = Math.max(x, rectangleCornerRadius + triangleSize);
+    if (spriteX - width / 2 < 1) {
+      triangleTipX = Math.max(spriteX, rectangleCornerRadius + triangleSize);
       x = width / 2;
     }
-    if (x + width / 2 > APP_WIDTH) {
-      triangleTipX = Math.min(x, APP_WIDTH - rectangleCornerRadius);
+    if (spriteX + width / 2 > APP_WIDTH) {
+      triangleTipX = Math.min(spriteX, APP_WIDTH - rectangleCornerRadius);
       x = APP_WIDTH - width / 2;
     }
 
@@ -136,6 +148,10 @@ export default class CoreLibrary {
   }
 
   addSpeechBubble(sprite, text, seconds = null) {
+    // Sprites can only have one speech bubble at a time so first filter out
+    // any existing speech bubbles for this sprite
+    this.removeSpeechBubblesForSprite(sprite);
+
     const id = createUuid();
     const removeAt = seconds ? this.getAdjustedWorldTime() + seconds : null;
     // Note: renderFrame is used by validation code.
@@ -147,6 +163,12 @@ export default class CoreLibrary {
       renderFrame: this.currentFrame()
     });
     return id;
+  }
+
+  removeSpeechBubblesForSprite(sprite) {
+    this.speechBubbles = this.speechBubbles.filter(
+      bubble => bubble.sprite !== sprite
+    );
   }
 
   removeExpiredSpeechBubbles() {

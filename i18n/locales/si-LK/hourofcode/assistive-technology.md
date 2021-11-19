@@ -8,14 +8,16 @@ title: උපකාරක තාක්‍ෂණය සමඟ පැයක කේ
 
 ## තිර කියවනයන් භාවිතා කිරීම
 
-ඔබ තිර කියවනය භාවිතා කරන්නේ නම්, ආරම්භකයින් සඳහා කෝරම් නිබන්ධනය හෝ සුවපහසු සිසුන් සඳහා වූ ගණපූරණ නිබන්ධනය පැය කේතයක් ආරම්භ කිරීමට හොඳ ස්ථාන වේ. ගණපූරණය ආරම්භ වූයේ පරිවර්තන භාෂාවක් ලෙස වන අතර එය මුලින් නිර්මාණය කර ඇත්තේ තිර පාඨකයන්ට ප්‍රවේශ විය හැකි ආකාරයට ය. එය ඕනෑම පරිශීලකයෙකු සඳහා නිර්මාණය කර ඇති පොදු අරමුණු ක්‍රමලේඛන භාෂාවක් බවට පත්ව ඇත. තවද, ඔබට පැයක කේතයකින් ඔබ්බට යාමට අවශ්‍ය නම්, ගණපූරණයෙහි කණ්ඩායමට අමතර මෙවලම් සහ විෂයමාලා ඇත.
+The Hour of Code activities page now includes a [filter for activities compatible with screen readers](https://hourofcode.com/us/learn?platform=screenreader).
 
-[![ආරම්භකයින් සඳහා නිබන්ධනය](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![සුවපහසු සිසුන් සඳහා නිබන්ධනය](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
+If you use a screen reader, the [Quorum tutorial for beginners](https://quorumlanguage.com/hourofcode/astro1.html) or the [Quorum tutorial for comfortable students](https://quorumlanguage.com/hourofcode/part1.html) are great places to start an Hour of Code. Quorum started as an interpreted language originally designed to be accessible through screen readers. It has become a general purpose programming language designed for any user. තවද, ඔබට පැයක කේතයකින් ඔබ්බට යාමට අවශ්‍ය නම්, ගණපූරණයෙහි කණ්ඩායමට අමතර මෙවලම් සහ විෂයමාලා ඇත. If you use a screen reader and are interested in robotics, try the [Dash Joins a Dance Circle activity](https://milnel2.github.io/blocks4alliOS/danceCircle1.html) from Lauren Milne.
+
+[![Tutorial for beginners](https://code.org/images/fill-480x360/tutorials/hoc2017/quorum_astronomy.jpg)](https://quorumlanguage.com/hourofcode/astro1.html) [![Tutorial for comfortable students](https://code.org/images/fill-480x360/quorum.jpg)](https://quorumlanguage.com/hourofcode/part1.html)
 
 ## Code.org ශ්‍රව්ය උපකරණ නොමැතිව නිබන්ධන 
 
-Code.org නිබන්ධන සියල්ලම ශබ්දය සමඟ හෝ නැතිව භාවිතා කළ හැකිය. සියලුම වීඩියෝ වල ශීර්ෂ පාඨ ඇත.
+The [Code.org tutorials](https://studio.code.org/courses) can all be used with or without sound. All the videos have captions.
 
 ## යුගල වැඩසටහන්කරණය
 
-යුගල ක්‍රමලේඛනය යනු පරිගණක විද්‍යඥයින් යුගලයක් හෝ කණ්ඩායමක් ලෙස ගැටලු විසඳීමට භාවිතා කරන මෙවලමකි. මිතුරෙකු හෝ පංතියේ මිතුරෙකු සමඟ පැය කේත අභියෝග සඳහා වැඩ කිරීමට උත්සාහ කරන්න. යුගල වැඩසටහන්කරණය සඳහා හොඳම ක්‍රම ඉගෙන ගැනීමට මෙම වීඩියෝව බැලීමට අමතක නොකරන්න.
+Pair programming is a tool computer scientists use to solve problems as a pair or team. Try working on Hour of Code challenges with a friend or classmate. Don’t forget to [check out this video](https://www.youtube.com/watch?v=vgkahOzFH2Q) to learn the best techniques for pair programming.

@@ -1018,7 +1018,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "يتحرك يسار و يمين"
         },
         "Dance Party 3_2019": {
           "spinning left": "الدوران ناحية اليسار",
@@ -1057,7 +1058,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "يتحرك يسارا و يمين"
         },
         "Dance Party 4_2019": {
           "spinning left": "الدوران ناحية اليسار",
@@ -1096,7 +1098,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "يتحرك يسار و يمين"
         },
         "Dance Party 5_2019": {
           "spinning left": "الدوران ناحية اليسار",
@@ -1267,7 +1270,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "يسبح يسار و يمين "
         },
         "Fish Tank 3-validated_2019": {
           "shrinking": "الانقباض",
@@ -1303,7 +1307,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "يسبح يسار و يمين "
         },
         "Fish Tank 4-validated_2019": {
           "shrinking": "الانقباض",
@@ -1339,7 +1344,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "يسبح يسار و يمين"
         },
         "Fish Tank 5-validated_2019": {
           "shrinking": "الانقباض",
@@ -1375,7 +1381,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "يسبح يسار و يمين"
         },
         "Fish Tank 6-validated_2019": {
           "shrinking": "الانقباض",
@@ -1411,7 +1418,8 @@
           "moving north": "التحرك ناحية الشمال",
           "moving south": "التحرك ناحية الجنوب",
           "moving west": "التحرك ناحية الغرب",
-          "spinning right": "الدوران ناحية اليمين"
+          "spinning right": "الدوران ناحية اليمين",
+          "swimming left and right": "يسبح يسار و يمين"
         },
         "OPD-K5-spritelab-2": {
           "shrinking": "الانقباض",

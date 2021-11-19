@@ -279,7 +279,7 @@ he-IL:
   studiobar_flappy_body: צור ושתף את משחק הפלאפי בירד שלך
   studiobar_teacher_title: נוצר עבור מורים
   studiobar_teacher_body: הצג את קוד הסטודיו בכיתתך
-  studiobar_frozen_title: שעה של קוד
+  studiobar_frozen_title: שעת הקוד
   studiobar_frozen_body: צור עולם פלאים חורפי עם אלסה ואנה
   studiobar_donate_title: תרום
   studiobar_donate_body: ילד אחד ילמד עבור כל דולר תרומה
@@ -352,7 +352,7 @@ he-IL:
   homepage_banner_20k_teachers_link: למד עוד
   homepage_banner_emailprivacy_link: קראו עוד
   homepage_banner_40k_teachers_link: למד עוד
-  homepage_slot_text_title_hoc: שעה של קוד
+  homepage_slot_text_title_hoc: שעת הקוד
   homepage_slot_text_blurb_hoc: כל אחד יכול ללמוד. התחל היום
   homepage_slot_text_link_hoc: נסה את "שעת הקוד" (Hour of Code)
   homepage_slot_text_link_about_hoc: אודות שעה של קוד
@@ -463,7 +463,7 @@ he-IL:
   minecraft_specs: שפות רבות | טאבלטים ודפדפנים מודרניים | כיתות ב+
   minecraft_start_tutorial: התחלת מדריך
   minecraft_agent_button: התחל
-  minecraft_designer_description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט
+  minecraft_designer_description: תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט
     משלך.
   minecraft_designer_button: התחל
   minecraft_adventurer_description: השתמש בקוד כדי לצאת עם אלכס או סטיב להרפתקה.
@@ -938,6 +938,12 @@ he-IL:
   coursed-2020_gradelevel: כיתות ח' ומעלה
   coursee-2020_gradelevel: גילאי 8-12
   coursef-2020_gradelevel: גילאי 9-13
+  coursea-2021_gradelevel: גילאי 4-7
+  courseb-2021_gradelevel: גילאי 5-8
+  coursec-2021_gradelevel: גילאי 6-10
+  coursed-2021_gradelevel: כיתות ח' ומעלה
+  coursee-2021_gradelevel: גילאי 8-12
+  coursef-2021_gradelevel: גילאי 9-13
   accelerated_gradelevel: גילאי 10-18
   codeorg_platformtext: דפדפנים מודרנים, סמארטפונים, טאבלטים
   codeintl_platformtext: דפדפנים מודרנים, סמארטפונים, טאבלטים
@@ -1139,8 +1145,8 @@ he-IL:
     איך מידול וסימולציה עובדים על ידי כך שקבוצת תלמידים תשחק בגרסאות שונות של המשחק
     "אבן נייר ומספריים" , ותראה את התוצאות כניסוים שונים במידול.
   hourofcode_longdescription: מחזיק מקום עבור code.org/hoc חדש
-  frozen_longdescription: תשתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי
-    שבקרח. ניצור פתיתי שלג וצורות בקרח ואתם יכולים לשתף את זה עם חבריכם!
+  frozen_longdescription: השתמשו בקוד כדי להצטרף לאנה ואלזה כשהן מגלות את הקסם והיופי
+    שבקרח. אנו עומדים ליצור פתיתי שלג וצורות בקרח ואז תוכלו לשתף את זה עם חבריכם!
   starwars_longdescription: למדו כיצד לתכנת דרואידים, וליצור את משחק "מלחמת הכוכבים"
     הפרטי שלכם בגלקסיה רחוקה, רחוקה...
   playlab_longdescription: צור סיפור או משחק בעזרת מעבדת הצעצועים! גרום לחיות, פיראטים,
@@ -1338,7 +1344,7 @@ he-IL:
   header_educate_elementary: בית ספר יסודי
   header_educate_middle: חטיבת ביניים
   header_educate_high: תיכון
-  header_educate_hoc: שעה של קוד
+  header_educate_hoc: שעת הקוד
   header_educate_partner: שותף יחד איתנו
   header_educate_beyond: מעבר ל-Code.org
   header_educate_inspire: הנחל השראה לתלמיד
@@ -1429,7 +1435,7 @@ he-IL:
   hoc2018_mc_aquatic_title: 'מיינקראפט: מסע ימי'
   hoc2018_mc_hero_title: המסע של הגיבור במיינקראפט
   hoc2018_mc_designer_title: מעצב מיינקראפט
-  hoc2018_mc_designer_description: תכנת חיות ויצורי מיינקרפט נוספים בגרסת מיינקראפט
+  hoc2018_mc_designer_description: תכנת חיות ויצורי מיינקראפט נוספים בגרסת מיינקראפט
     משלך.
   hoc2018_mc_adventurer_title: הרפתקן מיינקראפט
   hoc2018_mc_adventurer_description: השתמש בקוד כדי לצאת עם אלכס או סטיב להרפתקה.
@@ -1450,9 +1456,9 @@ he-IL:
   hoc2018_mc_homepage_what_create: מה אתם תיצרו?
   hoc2018_mc_homepage_join_us: הצטרף אלינו
   hoc2018_mc_homepage_try_it: נסו זאת
-  hoc2018_mc_minecraft_education: לימוד בעזרת מיינקרפט
-  hoc2018_mc_continue_learning: המשך ללמוד עם מיינקרפט.
-  hoc2018_mc_go_to_mc_education: עבור ללימוד בעזרת מיינקרפט
+  hoc2018_mc_minecraft_education: לימוד בעזרת מיינקראפט
+  hoc2018_mc_continue_learning: המשך ללמוד עם מיינקראפט.
+  hoc2018_mc_go_to_mc_education: עבור ללימוד בעזרת מיינקראפט
   hoc2018_mc_short_description_shorter: השתמש ביצירתיות ובכישורי פתרון בעיות כדי לגלות
     ולבנות עולמות תת-ימיים עם קוד.
   hoc2018_mc_journey: מסע במיינקראפט עם קוד.

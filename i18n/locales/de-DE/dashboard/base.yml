@@ -174,6 +174,7 @@ de:
     user_type_teacher: "Lehrer"
     user_type_teacher_desc: "Alles, worauf die Studierenden Zugriff haben, plus:"
     user_type_teacher_ability_1: "Erstelle ein Klassenzimmer"
+    user_type_teacher_ability_2: "Gib den Schülern Aufgaben, die du nachverfolgen kannst"
     user_type_teacher_ability_3: "Schreibe dich ein zum professionellen Lernen"
     user_type_teacher_ability_4: "Interagiere in unserem Lehrerforum"
     field_is_required: "ist erforderlich"
@@ -409,6 +410,7 @@ de:
       minecraft_hero: 'Minecraft Hero'
       playlab: 'Spielelabor'
       playlab_k1: 'Spielelabor (Leseanfänger)'
+      poetry: 'Poesie'
       scratch: 'Scratch'
       sports: 'Sport'
       spritelab: 'Sprite Lab'
@@ -569,6 +571,7 @@ de:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Alle Rechte vorbehalten. Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. Alle Rechte vorbehalten. Frozen&#8482; &copy; %{current_year} Disney. Alle Rechte vorbehalten. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Alle Rechte vorbehalten. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Alle Rechte vorbehalten. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Alle Rechte vorbehalten. The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org nutzt p5.play, das unter <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html">der GNU LGPL 2.1</a> lizensiert ist.'
     powered_by_aws: 'Betrieben von Amazon Web Services'
+    built_on_github: 'Gebaut auf GitHub von Microsoft'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, das CODE-Logo sowie Hour of Code&reg; sind Marken von Code.org.'
     copyright: 'Copyright'
     more: 'Mehr'
@@ -579,12 +582,14 @@ de:
     tos_short: 'Bedingungen'
     tos: 'AGBs'
     privacy: 'Datenschutzerklärung'
+    privacy_updated: 'Datenschutzrichtlinie (aktualisiert)'
     secure: 'Sichere Version'
     report_abuse: 'Missbrauch melden'
     built_on_code_studio: 'Erstellt auf Code Studio'
     make_my_own_app: 'Meine eigene App entwickeln'
     how_it_works: 'So funktioniert es (Code ansehen)'
     try_hour_of_code: 'Probiere die "Hour of Code" aus!'
+    store: 'Geschäft'
   reference_area:
     title: 'Brauchst du Hilfe?'
     subtitle: 'Schau dir diese Videos und Hinweise an'

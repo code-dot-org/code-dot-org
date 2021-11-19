@@ -2371,13 +2371,17 @@ class User < ApplicationRecord
       curriculums: curriculums_being_taught.any? ? curriculums_being_taught.to_json : nil,
       has_attended_pd: has_attended_pd?,
       within_us: within_united_states?,
-      school_percent_frl: school_stats&.frl_eligible_total,
+      school_percent_frl_40_plus: school_stats&.frl_eligible_percent.present? ? school_stats.frl_eligible_percent >= 40 : nil,
       school_title_i: school_stats&.title_i_status
     }
   end
 
   def self.marketing_segment_data_keys
-    %w(locale account_age_in_years grades curriculums has_attended_pd within_us school_percent_frl school_title_i)
+    %w(locale account_age_in_years grades curriculums has_attended_pd within_us school_percent_frl_40_plus school_title_i)
+  end
+
+  def code_review_groups
+    followeds.map(&:code_review_group).compact
   end
 
   private
