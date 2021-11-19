@@ -713,11 +713,12 @@ class Lesson < ApplicationRecord
     return unless objectives
 
     self.objectives = objectives.map do |objective|
+      next nil unless objective['description'].present?
       persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
-    end
+    end.compact
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to
