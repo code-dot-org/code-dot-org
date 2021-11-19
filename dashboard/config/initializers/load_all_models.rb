@@ -221,5 +221,13 @@ if Dashboard::Application.config.eager_load
     Weblab,
     Widget,
     WordSection
-  ].each(&:new)
+  ].each do |klass|
+    klass.new
+  rescue NotImplementedError, ArgumentError, ActiveModel::MissingAttributeError, ActiveRecord::StatementInvalid, NoMethodError
+    # we don't actually care whether or not we're able to successfully
+    # initialize a model (many of our model classes are abstract and cannot be
+    # initialized, or have validation requirements that prevent them from being
+    # initialized as "empty"); all we care about here is that we *try* to
+    # initialize a model, so we can guarantee that model class has been loaded
+  end
 end
