@@ -10,8 +10,8 @@ import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
 import animationList, {
   setInitialAnimationList
 } from '@cdo/apps/p5lab/redux/animationList';
-import {getStore, registerReducers} from '@cdo/apps/redux';
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
+import {getStore, registerReducers} from '@cdo/apps/redux';
 
 const VALID_COLOR = 'black';
 const INVALID_COLOR = '#d00';
@@ -65,7 +65,6 @@ function initializeEditPage(defaultSprites) {
     callback: _ => validateBlockConfig(),
     onUpdateLinting: onUpdateLinting
   });
-
   poolField.addEventListener('change', updateBlockPreview);
 
   if (blocks) {
