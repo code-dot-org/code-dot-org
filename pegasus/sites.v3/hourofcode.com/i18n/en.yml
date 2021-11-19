@@ -549,8 +549,8 @@
   hoc_faq_certificates_a: "Go to our <a href='%{codeorg_url}/certificates'>certificates page</a> where you can print certificates for your entire class ahead of time. You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special certificates</a> for students doing the Minecraft tutorial."
   hoc_faq_certificates_a_markdown: "Go to our [certificates page](%{codeorg_url}/certificates) where you can print certificates for your entire class ahead of time. You can also print out [special certificates](%{codeorg_url}/certificates?course=mc) for students doing the Minecraft tutorial."
   hoc_faq_logo_q: "Are there limitations to how I can use the Hour of Code logo or name?"
-  hoc_faq_logo_a: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see <a href='%{logo_url}'>these guidelines for usage</a>."
-  hoc_faq_logo_a_markdown: "Hour of Code is trademarked. We don't want to prevent its usage, but we want to make sure its usage fits within a few limits. Please see [these guidelines for usage](%{logo_url})."
+  hoc_faq_logo_a: "The following are trademarks of Code.org: (1) Hour of Code; (2) Hora del Código; (3) Hora do Código; and (4) Heure de Code. We don't want to prevent their usage, but we do want to make sure usage fits within a few guidelines. Please see <a href='%{logo_url}'>these guidelines for usage</a>."
+  hoc_faq_logo_a_markdown: "The following are trademarks of Code.org: (1) Hour of Code; (2) Hora del Código; (3) Hora do Código; and (4) Heure de Code. We don't want to prevent their usage, but we do want to make sure usage fits within a few guidelines. Please see [these guidelines for usage](%{logo_url})."
 
   stats_hoc_2013_image_alt: 'Stats from 2013 Hour of Code'
   stats_growth: "It was the fastest to reach 15 million users."
@@ -672,7 +672,7 @@
   highlights_constant_athletes_short_heading: Push yourself
 
   footer_copyright_message: 'Copyright %{current_year} Code.org. All rights reserved.'
-  footer_trademark_message: 'Hour of Code™ and Hora del Código® are trademarks of Code.org.'
+  footer_trademark_message: 'Hour of Code®, Hora del Código®, Heure de Code™, and Hora do Código® are trademarks of Code.org.'
   footer_built_on_github: 'Built on GitHub from Microsoft'
 
   footer_menu_partners: 'Partners and Advisors'
