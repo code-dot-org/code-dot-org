@@ -11,8 +11,21 @@ import RetryProjectSaveDialog from './RetryProjectSaveDialog';
 class ProjectUpdatedAt extends React.Component {
   static propTypes = {
     status: PropTypes.oneOf(Object.values(statuses)),
-    updatedAt: PropTypes.string
+    updatedAt: PropTypes.string,
+    onContentUpdated: PropTypes.func
   };
+
+  componentDidMount() {
+    if (this.props.onContentUpdated) {
+      this.props.onContentUpdated();
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.props.onContentUpdated) {
+      this.props.onContentUpdated();
+    }
+  }
 
   renderText() {
     if (this.props.status === statuses.error) {
@@ -35,7 +48,7 @@ class ProjectUpdatedAt extends React.Component {
       return (
         <div>
           {msg.savedToGallery()}{' '}
-          {this.props.updatedAt && (
+          {false && this.props.updatedAt && (
             <TimeAgo dateString={this.props.updatedAt} />
           )}
         </div>
