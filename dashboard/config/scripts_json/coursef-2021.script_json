@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-11-18 19:55:48 UTC",
+    "serialized_at": "2021-11-19 17:39:10 UTC",
     "published_state": "stable",
     "instruction_type": null,
     "instructor_audience": null,
@@ -3360,8 +3360,8 @@
       "key": "76fe757f-0aa5-4dc0-9864-861f6023828e",
       "position": 5,
       "properties": {
-        "description": "**Do This:** Show the “Lots of Sprites” video and discuss how the special blocks inside the event blocks work.",
-        "progression_name": "Video: Lots of Sprites",
+        "description": "**Do This:** Show the “Outbreak Simulator: Introduction” video.",
+        "progression_name": "Video: Outbreak Simulator: Introduction",
         "tips": [
           {
             "type": "teachingTip",
@@ -3390,7 +3390,7 @@
       "key": "6a891356-b6da-4faa-bb30-f79f23f2bbcb",
       "position": 7,
       "properties": {
-        "description": "**Do This:** Bring the class back together to read *Outbreak: Thinking Like a Scientist.*",
+        "description": "**Do This:** Bring the class back together to read *Outbreak: Thinking Like a Scientist.* You can also show the next video in Level 8.",
         "progression_name": "Learning from Simulations"
       },
       "seeding_key": {
@@ -6398,7 +6398,7 @@
         "level_keys": [
           "courseF_lotsofsprites_video"
         ],
-        "progression": "Video: Lots of Sprites"
+        "progression": "Video: Outbreak Simulator: Introduction"
       },
       "bonus": false,
       "seeding_key": {
@@ -10029,15 +10029,6 @@
       "seeding_key": {
         "lesson.key": "For Loops in Artist",
         "objective.key": "68c038c1-990a-4009-ad61-619ba6ea71af"
-      }
-    },
-    {
-      "key": "7a69d6de-1a75-41da-a511-9cb735e02a5c",
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "objective.key": "7a69d6de-1a75-41da-a511-9cb735e02a5c"
       }
     },
     {
