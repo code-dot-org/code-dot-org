@@ -12,7 +12,7 @@
 #  index_pd_application_tags_on_name  (name) UNIQUE
 #
 
-# useless comment
+# useless comment 2
 module Pd::Application
   class Tag < ApplicationRecord
     self.table_name = 'pd_application_tags'
