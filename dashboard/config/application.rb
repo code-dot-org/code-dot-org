@@ -137,6 +137,11 @@ module Dashboard
     # well as some subdirectories of the models dir that we use for organization.
 
     config.autoload_paths << Rails.root.join('lib')
+    config.autoload_paths << Rails.root.join('lib', 'api')
+    config.autoload_paths << Rails.root.join('lib', 'pd')
+    config.autoload_paths << Rails.root.join('lib', 'policies')
+    config.autoload_paths << Rails.root.join('lib', 'queries')
+    config.autoload_paths << Rails.root.join('lib', 'services')
     config.autoload_paths << Rails.root.join('app', 'models', 'experiments')
     config.autoload_paths << Rails.root.join('app', 'models', 'levels')
     config.autoload_paths << Rails.root.join('app', 'models', 'sections')
