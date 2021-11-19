@@ -75,7 +75,8 @@ const sections = [
     studentCount: 10,
     hidden: false,
     restrict_section: false,
-    code_review_enabled: true
+    code_review_enabled: true,
+    post_milestone_disabled: false
   },
   {
     id: 12,
@@ -97,7 +98,8 @@ const sections = [
     studentCount: 1,
     hidden: false,
     restrict_section: false,
-    code_review_enabled: true
+    code_review_enabled: true,
+    post_milestone_disabled: false
   },
   {
     id: 307,
@@ -119,7 +121,8 @@ const sections = [
     studentCount: 0,
     hidden: false,
     restrict_section: false,
-    code_review_enabled: true
+    code_review_enabled: true,
+    post_milestone_disabled: false
   }
 ];
 
@@ -787,7 +790,8 @@ describe('teacherSectionsRedux', () => {
       createdAt: createdAt,
       hidden: false,
       restrict_section: false,
-      code_review_enabled: true
+      code_review_enabled: true,
+      post_milestone_disabled: false
     };
 
     function successResponse(customProps = {}) {
@@ -995,7 +999,8 @@ describe('teacherSectionsRedux', () => {
       script_id: null,
       hidden: false,
       restrict_section: false,
-      code_review_enabled: true
+      code_review_enabled: true,
+      post_milestone_disabled: false
     };
 
     function successResponse(sectionId, customProps = {}) {
@@ -1228,7 +1233,8 @@ describe('teacherSectionsRedux', () => {
       studentCount: 10,
       hidden: false,
       restrict_section: false,
-      code_review_enabled: true
+      code_review_enabled: true,
+      post_milestone_disabled: false
     };
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {
