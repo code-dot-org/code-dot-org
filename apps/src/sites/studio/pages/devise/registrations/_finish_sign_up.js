@@ -50,7 +50,7 @@ $(document).ready(() => {
   const schoolInfoMountPoint = document.getElementById('school-info-inputs');
 
   const inClearerUserTypeOptExp =
-    localStorage.getItem('inClearerUserTypeOptExpLS') === 'true';
+    sessionStorage.getItem('inClearerUserTypeOptExpLS') === 'true';
 
   let userType = $('#user_user_type')[0].value;
   init();
