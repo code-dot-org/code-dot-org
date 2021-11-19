@@ -316,6 +316,28 @@ describe('LessonOverview', () => {
     ]);
   });
 
+  it('renders dropdown button with lessonPlanPdf if no scriptResourcesPdfUrl provided and not pilot or in development', () => {
+    const lesson = {
+      ...defaultProps.lesson,
+      lessonPlanPdfUrl: '/link/to/lesson_plan.pdf',
+      scriptResourcesPdfUrl: null
+    };
+    const wrapper = shallow(
+      <LessonOverview {...defaultProps} lesson={lesson} />
+    );
+    expect(wrapper.find(DropdownButton).length).to.equal(1);
+    const dropdownLinks = wrapper
+      .find(DropdownButton)
+      .first()
+      .props().children;
+    expect(dropdownLinks.map(link => link.props.href)).to.eql([
+      '/link/to/lesson_plan.pdf'
+    ]);
+    expect(dropdownLinks.map(link => link.props.children)).to.eql([
+      'Print Lesson Plan'
+    ]);
+  });
+
   it('does not render overview printing option in dropdown for pilot course', () => {
     const unit = {
       ...defaultProps.lesson.unit,

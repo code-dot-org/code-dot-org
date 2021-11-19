@@ -19,7 +19,6 @@ describe('ProgressLesson', () => {
     },
     levels: fakeLevels(3),
     lessonNumber: 3,
-    showTeacherInfo: false,
     viewAs: ViewType.Instructor,
     lessonIsVisible: () => true,
     lessonIsLockedForUser: () => false,

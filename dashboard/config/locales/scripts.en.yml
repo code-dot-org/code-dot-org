@@ -23076,6 +23076,8 @@ en:
               description_teacher: Students compare iterative and recursive solutions for working with `String`s and practice tracing recursive solutions with `String`s, arrays, and `ArrayList`s. Students then participate in a peer review to give and receive feedback on their Title Sequence Project progress.
             lesson-15:
               name: Maximizing System Reliability
+              description_student: You explore system reliability by considering the end users of programs and conducting tests to check that programs meet their needs and expectations. You identify strategies to test system reliability and recognize your role as a software engineer in developing and maintaining functioning software.
+              description_teacher: Students explore system reliability by considering the end users of programs and conducting tests to check that programs meet their needs and expectations. Students identify strategies to test system reliability and recognize their role as software engineers in developing and maintaining functioning software.
             lesson-1:
               name: Title Sequence Project - Day 1
               description_student: You continue to develop your Title Sequence Project to create a title sequence for a show to promote your favorite content creator using images and drawings to create animations and effects. You first self-assess your work to evaluate your progress in completing project requirements, then conduct acceptance testing to determine which of your user stories are complete. You use the self-assessment and peer feedback to prioritize your remaining tasks and continue developing your project.
@@ -24266,22 +24268,19 @@ en:
               description_student: 
               description_teacher: 
             lesson-2:
-              name: 'Preparing to Teach Unit 1: Problem Solving and Computing'
+              name: 'Introduction to AI and machine learning '
               description_student: 
               description_teacher: 
             lesson-3:
-              name: 'Unit 2: Web Development'
+              name: 'Train a machine learning model '
               description_student: 
               description_teacher: 
             lesson-4:
-              name: Preparing to Teach Unit 3
+              name: Consider real world implications
               description_student: 
-              description_teacher: |-
-                ##Ineractive Animations and Games
-
-                In Unit 3, students build on their coding experience as they program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, students develop a personalized, interactive program.
+              description_teacher: 
             lesson-5:
-              name: 'Preparing to Teach The Design Process '
+              name: 'Unit wrap up '
               description_student: 
               description_teacher: 
             lesson-6:
@@ -24348,7 +24347,7 @@ en:
               name: Unit 1 Projects
           lesson_groups:
             lessonGroup-2:
-              display_name: Preparing to Teach CS Discoveries
+              display_name: Preparing to Teach Artificial Intelligence and Machine Learning
             lessonGroup-3:
               display_name: 'Preparing to Teach Unit 2: Web Development'
             lessonGroup-4:
@@ -24362,10 +24361,11 @@ en:
             lessonGroup-8:
               display_name: 'Preparing to Teach Unit 7: AI and Machine Learning'
           name: self-paced-pl-csd6-2021
-          title: 'Module 6: Next Steps'
+          title: 'Module 6: Preparing to teach AI and machine learning '
           description_audience: ''
           description_short: ''
           description: "Short module description \n\n**You will:**\n* Objective 1\n* Objective 2\n\n**Suggested Time:** 10 minutes"
+          student_description: ''
         self-paced-pl-csd7-2021:
           lessons: {}
           lesson_groups: {}
@@ -24386,6 +24386,10 @@ en:
           lessons:
             lesson-1:
               name: Welcome to Code.org
+              description_student: 
+              description_teacher: 
+            lesson-2:
+              name: Welcome to “Teaching CS Principles”
               description_student: 
               description_teacher: 
           lesson_groups: {}
@@ -26324,7 +26328,7 @@ en:
                 - use variables to check value of variable
                   - for example: play buzzer after a certain number of clicks
             lesson-8:
-              name: 'Mini-Proj: Emoji Race'
+              name: 'Mini-Project: On The Go Apps'
               description_student: 
               description_teacher: 
             lesson-9:

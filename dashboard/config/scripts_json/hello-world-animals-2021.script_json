@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "hello-world-animals",
-    "serialized_at": "2021-11-13 05:01:12 UTC",
+    "serialized_at": "2021-11-17 19:08:39 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -143,7 +143,8 @@
       "key": "893dba56-7c8e-4897-949b-de514de76011",
       "position": 2,
       "properties": {
-        "name": "Hello World"
+        "name": "Hello World",
+        "progression_name": "Hello World"
       },
       "seeding_key": {
         "activity_section.key": "893dba56-7c8e-4897-949b-de514de76011",
@@ -183,7 +184,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_say"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -207,7 +209,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_location"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -231,7 +234,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_multi"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -255,7 +259,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_click"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -279,7 +284,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_events"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -303,7 +309,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_backgrounds"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -327,7 +334,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_costumes"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -351,7 +359,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_sizes"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -375,7 +384,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_behaviors"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -399,7 +409,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_sounds"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
@@ -423,7 +434,8 @@
       "properties": {
         "level_keys": [
           "helloworld_animals_freeplay"
-        ]
+        ],
+        "progression": "Hello World"
       },
       "bonus": false,
       "seeding_key": {
