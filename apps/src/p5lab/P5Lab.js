@@ -276,7 +276,7 @@ export default class P5Lab {
       getStore().dispatch(
         setInitialAnimationList(
           this.startAnimations,
-          false /* shouldRunV3Migration */,
+          null /* shouldRunV3Migration */,
           this.isBlockly
         )
       );
@@ -486,7 +486,7 @@ export default class P5Lab {
     getStore().dispatch(
       setInitialAnimationList(
         initialAnimationList,
-        this.isBlockly /* shouldRunV3Migration */,
+        defaultSprites /* shouldRunV3Migration */,
         this.isBlockly
       )
     );
