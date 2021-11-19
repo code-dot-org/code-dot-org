@@ -472,17 +472,22 @@ class Blockly < Level
   # @return [String] Text with localized blockly blocks.
   def localized_blockly_in_text(text)
     return unless text
-    # Surround the text in a <root /> node so we can parse it as an XML document.
-    text_xml_doc = Nokogiri::XML("<root>#{text}</root>")
-    # Selects the `text` XML elements which will be inside the <xml><root>{text}</root></xml>
-    text_xml = text_xml_doc.root.children
-    # Translate all the function and placeholder text blockly blocks in the text.
-    localized_function_blocks_xml(text_xml_doc)
-    localize_all_placeholder_text_block_types(text_xml_doc)
-    # TODO: add `localized_variable_blocks_xml(text_xml_doc)`
-
-    # Use to_html because the XML we want to generate will be used in web browsers.
-    text_xml.to_html(encoding: 'UTF-8')
+    # Tracks the original xml and maps it to the translated xml.
+    translated_xml_texts = {}
+    # Selects each <xml></xml> because these might be blockly blocks which need translation.
+    text.scan(/<xml>[\s\S]*?<\/xml>/).each do |xml_text|
+      text_xml_doc = Nokogiri::XML(xml_text)
+      localized_function_blocks_xml(text_xml_doc)
+      localize_all_placeholder_text_block_types(text_xml_doc)
+      translated_xml_text = text_xml_doc.to_html(encoding: 'UTF-8').strip
+      translated_xml_texts[xml_text] = translated_xml_text
+      # TODO: add `localized_variable_blocks_xml(text_xml_doc)`
+    end
+    # Replace the untranslated <xml></xml> with the translated <xml></xml>.
+    translated_xml_texts.each do |orig_xml, translated_xml|
+      text = text.gsub!(orig_xml, translated_xml)
+    end
+    text
   end
 
   def localized_short_instructions
