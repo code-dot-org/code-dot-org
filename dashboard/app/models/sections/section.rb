@@ -305,7 +305,7 @@ class Section < ApplicationRecord
       code_review_enabled: code_review_enabled?,
       is_assigned_csa: assigned_csa?,
       # this will be true when we are in emergency mode and this section has any script assigned other than CSP or CSD
-      post_milestone_disabled: script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
+      post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
       code_review_expires_at: code_review_expires_at
     }
   end
