@@ -649,7 +649,8 @@ describe('teacherSectionsRedux', () => {
         hidden: false,
         isAssigned: undefined,
         restrictSection: false,
-        codeReviewEnabled: true
+        codeReviewEnabled: true,
+        postMilestoneDisabled: false
       });
     });
   });
@@ -943,7 +944,8 @@ describe('teacherSectionsRedux', () => {
           hidden: false,
           isAssigned: undefined,
           restrictSection: false,
-          codeReviewEnabled: true
+          codeReviewEnabled: true,
+          postMilestoneDisabled: false
         }
       });
     });
@@ -1263,6 +1265,10 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(
         section.code_review_enabled,
         serverSection.codeReviewEnabled
+      );
+      assert.strictEqual(
+        section.post_milestone_disabled,
+        serverSection.postMilestoneDisabled
       );
     });
 
