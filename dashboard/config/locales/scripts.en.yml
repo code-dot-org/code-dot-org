@@ -24400,13 +24400,58 @@ en:
           description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n* Get an introduction to Code.org and CS Principles.\n* Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
           student_description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n* Get an introduction to Code.org and CS Principles.\n* Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
         self-paced-pl-csp2-2021:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Navigating the Code.org learning platform
+              description_student: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Navigate the Code.org website and teacher tools.
+                * Set up a classroom section.
+
+                **Suggested time:** 30 minutes
+            lesson-2:
+              name: Navigating lesson plans and resources
+              description_student: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Locate and use course lesson plans and teacher resources.
+
+                **Suggested time:** 25 minutes
+            lesson-3:
+              name: Navigating support
+              description_student: |-
+                **You will:**
+
+                * Access support while teaching CS Principles.
+
+                **Suggested time:** 15 minutes
+              description_teacher: |-
+                **You will:**
+
+                * Access support while teaching CS Principles.
+
+                **Suggested time:** 15 minutes
           lesson_groups: {}
           name: self-paced-pl-csp2-2021
-          title: ''
+          title: 'Module 2: Navigating Code.org'
           description_audience: ''
           description_short: ''
-          description: ''
+          description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
+          student_description: "This module is designed to orient you to the tools you will use to support student learning while teaching CS Principles. \n\n**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section\n* Locate and use course lesson plans and teacher resources. \n* Learn how to access support while teaching the course.\n\n**Suggested time:** 60 minutes"
         self-paced-pl-csp3-2021:
           lessons: {}
           lesson_groups: {}
@@ -25068,7 +25113,7 @@ en:
           title: 2021 CS Principles Deeper Learning Module 4  for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by November 19, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by December 17, 2021.  Check back later for your prompts."
           student_description: ''
         dlp21-csp-mod1:
           lessons:
@@ -25151,7 +25196,7 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 3 for Workshop 3
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by October 15, 2021.  Check back later for your prompts."
+          description: ''
           student_description: ''
         dlp21-csd-mod4:
           lessons:
@@ -25168,7 +25213,7 @@ en:
           title: 2021 CS Discoveries Deeper Learning Module 4 for Workshop 4
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by November 19, 2021.  Check back later for your prompts."
+          description: "##This module will be fully published by December 17, 2021.  Check back later for your prompts."
           student_description: ''
         dlp21-csp-mod2:
           lessons:
@@ -25202,7 +25247,7 @@ en:
           title: 2021 CS Principles Deeper Learning Module 3 for Workshop 3
           description_audience: ''
           description_short: ''
-          description: "##This module will be fully published by October 18, 2021.  Check back later for your prompts."
+          description: ''
           student_description: ''
         dlp21-overview:
           lessons: {}
