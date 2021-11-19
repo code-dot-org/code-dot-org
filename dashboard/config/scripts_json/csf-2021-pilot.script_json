@@ -14,22 +14,23 @@
         }
       ],
       "hideable_lessons": true,
-      "is_migrated": true,
+      "is_course": true,
       "pilot_experiment": "csf-2021-pilot",
       "teacher_resources": [
         [
           "lessonPlans",
           "https://docs.google.com/document/d/1EO_WpYYvkl1mvaOxSI0E1UuWiSBiz3thpHRoSuz8QuE/edit?usp=sharing"
         ]
-      ]
+      ],
+      "version_year": "unversioned"
     },
     "new_name": null,
-    "family_name": null,
-    "serialized_at": "2021-11-15 21:01:42 UTC",
+    "family_name": "csf-2021-pilot",
+    "serialized_at": "2021-11-19 20:01:47 UTC",
     "published_state": "pilot",
     "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csf-2021-pilot"
     }
@@ -156,331 +157,21 @@
     }
   ],
   "lesson_activities": [
-    {
-      "key": "49209193-9da5-4af5-864c-a71601ebd8c2",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "49209193-9da5-4af5-864c-a71601ebd8c2",
-        "lesson.key": "introducing-spritelab",
-        "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot"
-      }
-    },
-    {
-      "key": "5888907b-9bd7-4d94-bd0a-103bd6ee72b2",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5888907b-9bd7-4d94-bd0a-103bd6ee72b2",
-        "lesson.key": "Making Sprites",
-        "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot"
-      }
-    },
-    {
-      "key": "f4f84fde-9806-4300-88a9-5fb9879e0949",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f4f84fde-9806-4300-88a9-5fb9879e0949",
-        "lesson.key": "Sprites in Action",
-        "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot"
-      }
-    },
-    {
-      "key": "cb54af83-a28f-4c0f-8ad5-c5ff1d2d606e",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "cb54af83-a28f-4c0f-8ad5-c5ff1d2d606e",
-        "lesson.key": "blank-space-stories",
-        "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot"
-      }
-    },
-    {
-      "key": "c4763f4d-24f3-4da3-b419-53b08c07ed40",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c4763f4d-24f3-4da3-b419-53b08c07ed40",
-        "lesson.key": "texts-and-prompts",
-        "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot"
-      }
-    },
-    {
-      "key": "b7425324-0cf6-4d7e-a981-97546da03f6d",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b7425324-0cf6-4d7e-a981-97546da03f6d",
-        "lesson.key": "user-input-programs",
-        "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot"
-      }
-    }
+
   ],
   "activity_sections": [
-    {
-      "key": "6cebb6b0-13b8-455a-bb8a-6245ea041cc3",
-      "position": 1,
-      "properties": {
-        "progression_name": "Video: Introducing Sprite Lab"
-      },
-      "seeding_key": {
-        "activity_section.key": "6cebb6b0-13b8-455a-bb8a-6245ea041cc3",
-        "lesson_activity.key": "49209193-9da5-4af5-864c-a71601ebd8c2"
-      }
-    },
-    {
-      "key": "273f445d-b424-4d70-b689-42e5eac33e81",
-      "position": 2,
-      "properties": {
-        "name": "Exploration: Sample Apps",
-        "progression_name": "Exploration: Sample Apps"
-      },
-      "seeding_key": {
-        "activity_section.key": "273f445d-b424-4d70-b689-42e5eac33e81",
-        "lesson_activity.key": "49209193-9da5-4af5-864c-a71601ebd8c2"
-      }
-    },
-    {
-      "key": "252596a6-ce3c-42c4-b250-01882228bea0",
-      "position": 1,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "252596a6-ce3c-42c4-b250-01882228bea0",
-        "lesson_activity.key": "5888907b-9bd7-4d94-bd0a-103bd6ee72b2"
-      }
-    },
-    {
-      "key": "c391e21d-2733-4a61-9507-b5eaae8e644f",
-      "position": 2,
-      "properties": {
-        "progression_name": "Video: How to Make a Sprite"
-      },
-      "seeding_key": {
-        "activity_section.key": "c391e21d-2733-4a61-9507-b5eaae8e644f",
-        "lesson_activity.key": "5888907b-9bd7-4d94-bd0a-103bd6ee72b2"
-      }
-    },
-    {
-      "key": "9bb89bdc-4a36-44fd-abf2-973f4c6ae45b",
-      "position": 3,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "9bb89bdc-4a36-44fd-abf2-973f4c6ae45b",
-        "lesson_activity.key": "5888907b-9bd7-4d94-bd0a-103bd6ee72b2"
-      }
-    },
-    {
-      "key": "086df5e7-736c-42d5-9753-339121e00855",
-      "position": 4,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "086df5e7-736c-42d5-9753-339121e00855",
-        "lesson_activity.key": "5888907b-9bd7-4d94-bd0a-103bd6ee72b2"
-      }
-    },
-    {
-      "key": "9d597192-0c38-4db4-88f5-d9610430e193",
-      "position": 5,
-      "properties": {
-        "name": "Free Play: Make a Scene",
-        "progression_name": "Free Play: Make a Scene"
-      },
-      "seeding_key": {
-        "activity_section.key": "9d597192-0c38-4db4-88f5-d9610430e193",
-        "lesson_activity.key": "5888907b-9bd7-4d94-bd0a-103bd6ee72b2"
-      }
-    },
-    {
-      "key": "2dfa6d6e-204e-4bf8-a9c9-078cb6233ab0",
-      "position": 1,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "2dfa6d6e-204e-4bf8-a9c9-078cb6233ab0",
-        "lesson_activity.key": "f4f84fde-9806-4300-88a9-5fb9879e0949"
-      }
-    },
-    {
-      "key": "9582751b-2c46-496f-b5cb-923f863a5452",
-      "position": 2,
-      "properties": {
-        "progression_name": "Video: Sprites in Action"
-      },
-      "seeding_key": {
-        "activity_section.key": "9582751b-2c46-496f-b5cb-923f863a5452",
-        "lesson_activity.key": "f4f84fde-9806-4300-88a9-5fb9879e0949"
-      }
-    },
-    {
-      "key": "570d9067-4fb1-4539-9904-6b0e3fa39b69",
-      "position": 3,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "570d9067-4fb1-4539-9904-6b0e3fa39b69",
-        "lesson_activity.key": "f4f84fde-9806-4300-88a9-5fb9879e0949"
-      }
-    },
-    {
-      "key": "ba44cb53-a2ab-4584-b878-361ad7009431",
-      "position": 4,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "ba44cb53-a2ab-4584-b878-361ad7009431",
-        "lesson_activity.key": "f4f84fde-9806-4300-88a9-5fb9879e0949"
-      }
-    },
-    {
-      "key": "84f563e5-1b20-44f3-b256-fd8303b4a81a",
-      "position": 5,
-      "properties": {
-        "name": "Free Play: Make an Interactive Scene",
-        "progression_name": "Free Play: Make an Interactive Scene"
-      },
-      "seeding_key": {
-        "activity_section.key": "84f563e5-1b20-44f3-b256-fd8303b4a81a",
-        "lesson_activity.key": "f4f84fde-9806-4300-88a9-5fb9879e0949"
-      }
-    },
-    {
-      "key": "9da52a2b-0c5e-4361-8fd7-d1f923c15ac9",
-      "position": 1,
-      "properties": {
-        "name": "Video: Variables in Envelopes",
-        "progression_name": "Video: Variables in Envelopes"
-      },
-      "seeding_key": {
-        "activity_section.key": "9da52a2b-0c5e-4361-8fd7-d1f923c15ac9",
-        "lesson_activity.key": "cb54af83-a28f-4c0f-8ad5-c5ff1d2d606e"
-      }
-    },
-    {
-      "key": "3d2bf73a-3e35-42a4-b725-437a001fc39f",
-      "position": 1,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "3d2bf73a-3e35-42a4-b725-437a001fc39f",
-        "lesson_activity.key": "c4763f4d-24f3-4da3-b419-53b08c07ed40"
-      }
-    },
-    {
-      "key": "965bb9f6-63ce-4c16-b7de-b4533acd324b",
-      "position": 2,
-      "properties": {
-        "progression_name": "Video: Text and Prompts"
-      },
-      "seeding_key": {
-        "activity_section.key": "965bb9f6-63ce-4c16-b7de-b4533acd324b",
-        "lesson_activity.key": "c4763f4d-24f3-4da3-b419-53b08c07ed40"
-      }
-    },
-    {
-      "key": "5f8171aa-ee79-46eb-b1b6-272a519fcdaf",
-      "position": 3,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "5f8171aa-ee79-46eb-b1b6-272a519fcdaf",
-        "lesson_activity.key": "c4763f4d-24f3-4da3-b419-53b08c07ed40"
-      }
-    },
-    {
-      "key": "26ccef6d-ebf6-412a-8924-f1627d38c089",
-      "position": 4,
-      "properties": {
-        "name": "Practice",
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "26ccef6d-ebf6-412a-8924-f1627d38c089",
-        "lesson_activity.key": "c4763f4d-24f3-4da3-b419-53b08c07ed40"
-      }
-    },
-    {
-      "key": "804259e2-e366-442b-a823-e7b9845be2ad",
-      "position": 1,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "804259e2-e366-442b-a823-e7b9845be2ad",
-        "lesson_activity.key": "b7425324-0cf6-4d7e-a981-97546da03f6d"
-      }
-    },
-    {
-      "key": "89d3f284-a8f0-4c58-93b0-a22812c8cb76",
-      "position": 2,
-      "properties": {
-        "progression_name": "Exploration: Sample Programs"
-      },
-      "seeding_key": {
-        "activity_section.key": "89d3f284-a8f0-4c58-93b0-a22812c8cb76",
-        "lesson_activity.key": "b7425324-0cf6-4d7e-a981-97546da03f6d"
-      }
-    },
-    {
-      "key": "31f9c1a8-37b9-4c46-8693-1a93774abfbd",
-      "position": 3,
-      "properties": {
-        "progression_name": "Planning"
-      },
-      "seeding_key": {
-        "activity_section.key": "31f9c1a8-37b9-4c46-8693-1a93774abfbd",
-        "lesson_activity.key": "b7425324-0cf6-4d7e-a981-97546da03f6d"
-      }
-    },
-    {
-      "key": "39c9e33b-8fe0-4fcb-8286-a892848867d4",
-      "position": 4,
-      "properties": {
-        "name": "Mini-Project: User Input Programs",
-        "progression_name": "Mini-Project: User Input Programs"
-      },
-      "seeding_key": {
-        "activity_section.key": "39c9e33b-8fe0-4fcb-8286-a892848867d4",
-        "lesson_activity.key": "b7425324-0cf6-4d7e-a981-97546da03f6d"
-      }
-    }
+
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseEF_video_IntroSpriteLab_2020"
+        ],
         "progression": "Video: Introducing Sprite Lab"
       },
       "bonus": false,
@@ -490,8 +181,7 @@
         ],
         "lesson.key": "introducing-spritelab",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "6cebb6b0-13b8-455a-bb8a-6245ea041cc3"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "CourseEF_video_IntroSpriteLab_2020"
@@ -500,9 +190,12 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_intro_apps"
+        ],
         "progression": "Exploration: Sample Apps"
       },
       "bonus": false,
@@ -512,8 +205,7 @@
         ],
         "lesson.key": "introducing-spritelab",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "273f445d-b424-4d70-b689-42e5eac33e81"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_intro_apps"
@@ -522,9 +214,12 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_predict"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -534,8 +229,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "252596a6-ce3c-42c4-b250-01882228bea0"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_sprites_predict"
@@ -544,9 +238,12 @@
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseEF_video_MakeSprite_2020"
+        ],
         "progression": "Video: How to Make a Sprite"
       },
       "bonus": false,
@@ -556,8 +253,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "c391e21d-2733-4a61-9507-b5eaae8e644f"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "CourseEF_video_MakeSprite_2020"
@@ -566,9 +262,12 @@
     {
       "chapter": 5,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_make"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -578,8 +277,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "9bb89bdc-4a36-44fd-abf2-973f4c6ae45b"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_sprites_make"
@@ -588,9 +286,12 @@
     {
       "chapter": 6,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_positioning"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -600,8 +301,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "9bb89bdc-4a36-44fd-abf2-973f4c6ae45b"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_sprites_positioning"
@@ -610,9 +310,12 @@
     {
       "chapter": 7,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_moreSprites"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -622,8 +325,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "9bb89bdc-4a36-44fd-abf2-973f4c6ae45b"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_sprites_moreSprites"
@@ -632,9 +334,12 @@
     {
       "chapter": 8,
       "position": 6,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_properties"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -644,8 +349,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "9bb89bdc-4a36-44fd-abf2-973f4c6ae45b"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_sprites_properties"
@@ -654,9 +358,12 @@
     {
       "chapter": 9,
       "position": 7,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_behaviors"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -666,8 +373,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "9bb89bdc-4a36-44fd-abf2-973f4c6ae45b"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_sprites_behaviors"
@@ -676,9 +382,12 @@
     {
       "chapter": 10,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_practice"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -688,8 +397,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "086df5e7-736c-42d5-9753-339121e00855"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_sprites_practice"
@@ -698,9 +406,12 @@
     {
       "chapter": 11,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_sprites_freeplay"
+        ],
         "progression": "Free Play: Make a Scene"
       },
       "bonus": false,
@@ -710,8 +421,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "9d597192-0c38-4db4-88f5-d9610430e193"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_sprites_freeplay"
@@ -720,9 +430,12 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_predict"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -732,8 +445,7 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "2dfa6d6e-204e-4bf8-a9c9-078cb6233ab0"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_events_predict"
@@ -742,9 +454,12 @@
     {
       "chapter": 13,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_events"
+        ],
         "progression": "Video: Sprites in Action"
       },
       "bonus": false,
@@ -754,8 +469,7 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "9582751b-2c46-496f-b5cb-923f863a5452"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_pilotVideo_events"
@@ -764,9 +478,12 @@
     {
       "chapter": 14,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_review"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -776,8 +493,7 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "570d9067-4fb1-4539-9904-6b0e3fa39b69"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_events_review"
@@ -786,9 +502,12 @@
     {
       "chapter": 15,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_time"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -798,8 +517,7 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "570d9067-4fb1-4539-9904-6b0e3fa39b69"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_events_time"
@@ -808,9 +526,12 @@
     {
       "chapter": 16,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_key"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -820,8 +541,7 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "570d9067-4fb1-4539-9904-6b0e3fa39b69"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_events_key"
@@ -830,9 +550,12 @@
     {
       "chapter": 17,
       "position": 6,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_conflict"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -842,8 +565,7 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "570d9067-4fb1-4539-9904-6b0e3fa39b69"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_events_conflict"
@@ -852,9 +574,12 @@
     {
       "chapter": 18,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_practice"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -864,8 +589,7 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "ba44cb53-a2ab-4584-b878-361ad7009431"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_events_practice"
@@ -874,9 +598,12 @@
     {
       "chapter": 19,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_events_freeplay"
+        ],
         "progression": "Free Play: Make an Interactive Scene"
       },
       "bonus": false,
@@ -886,8 +613,7 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "84f563e5-1b20-44f3-b256-fd8303b4a81a"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_events_freeplay"
@@ -896,9 +622,12 @@
     {
       "chapter": 20,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "EnvelopeVariables-Unplugged_2021"
+        ],
         "progression": "Video: Variables in Envelopes"
       },
       "bonus": false,
@@ -908,8 +637,7 @@
         ],
         "lesson.key": "blank-space-stories",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "9da52a2b-0c5e-4361-8fd7-d1f923c15ac9"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "EnvelopeVariables-Unplugged_2021"
@@ -918,9 +646,12 @@
     {
       "chapter": 21,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_predict"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -930,8 +661,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "3d2bf73a-3e35-42a4-b725-437a001fc39f"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_variables_predict"
@@ -940,9 +670,12 @@
     {
       "chapter": 22,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_pilotVideo_prompts"
+        ],
         "progression": "Video: Text and Prompts"
       },
       "bonus": false,
@@ -952,8 +685,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "965bb9f6-63ce-4c16-b7de-b4533acd324b"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_pilotVideo_prompts"
@@ -962,9 +694,12 @@
     {
       "chapter": 23,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_review"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -974,8 +709,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "5f8171aa-ee79-46eb-b1b6-272a519fcdaf"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_text_review"
@@ -984,9 +718,12 @@
     {
       "chapter": 24,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_print"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -996,8 +733,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "5f8171aa-ee79-46eb-b1b6-272a519fcdaf"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_text_print"
@@ -1006,9 +742,12 @@
     {
       "chapter": 25,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_events"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1018,8 +757,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "5f8171aa-ee79-46eb-b1b6-272a519fcdaf"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_text_events"
@@ -1028,9 +766,12 @@
     {
       "chapter": 26,
       "position": 6,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_prompts"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1040,8 +781,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "5f8171aa-ee79-46eb-b1b6-272a519fcdaf"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_text_prompts"
@@ -1050,9 +790,12 @@
     {
       "chapter": 27,
       "position": 7,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_answer"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1062,8 +805,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "5f8171aa-ee79-46eb-b1b6-272a519fcdaf"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_text_answer"
@@ -1072,9 +814,12 @@
     {
       "chapter": 28,
       "position": 8,
-      "activity_section_position": 6,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_concat"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1084,8 +829,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "5f8171aa-ee79-46eb-b1b6-272a519fcdaf"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_text_concat"
@@ -1094,9 +838,12 @@
     {
       "chapter": 29,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_text_practice"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1106,8 +853,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "26ccef6d-ebf6-412a-8924-f1627d38c089"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_text_practice"
@@ -1116,9 +862,12 @@
     {
       "chapter": 30,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_label_predict"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1128,8 +877,7 @@
         ],
         "lesson.key": "user-input-programs",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "804259e2-e366-442b-a823-e7b9845be2ad"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_label_predict"
@@ -1138,9 +886,12 @@
     {
       "chapter": 31,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_samples"
+        ],
         "progression": "Exploration: Sample Programs"
       },
       "bonus": false,
@@ -1150,8 +901,7 @@
         ],
         "lesson.key": "user-input-programs",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "89d3f284-a8f0-4c58-93b0-a22812c8cb76"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_variables_samples"
@@ -1160,9 +910,12 @@
     {
       "chapter": 32,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_stop"
+        ],
         "progression": "Planning"
       },
       "bonus": false,
@@ -1172,8 +925,7 @@
         ],
         "lesson.key": "user-input-programs",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "31f9c1a8-37b9-4c46-8693-1a93774abfbd"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_variables_stop"
@@ -1182,9 +934,12 @@
     {
       "chapter": 33,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_variables_projects"
+        ],
         "progression": "Mini-Project: User Input Programs"
       },
       "bonus": false,
@@ -1194,8 +949,7 @@
         ],
         "lesson.key": "user-input-programs",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "39c9e33b-8fe0-4fcb-8286-a892848867d4"
+        "script.name": "csf-2021-pilot"
       },
       "level_keys": [
         "courseF_variables_projects"
@@ -1211,8 +965,7 @@
         ],
         "lesson.key": "introducing-spritelab",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "6cebb6b0-13b8-455a-bb8a-6245ea041cc3"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1223,8 +976,7 @@
         ],
         "lesson.key": "introducing-spritelab",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "273f445d-b424-4d70-b689-42e5eac33e81"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1235,8 +987,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "252596a6-ce3c-42c4-b250-01882228bea0"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1247,8 +998,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "c391e21d-2733-4a61-9507-b5eaae8e644f"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1259,8 +1009,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "9bb89bdc-4a36-44fd-abf2-973f4c6ae45b"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1271,8 +1020,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "9bb89bdc-4a36-44fd-abf2-973f4c6ae45b"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1283,8 +1031,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "9bb89bdc-4a36-44fd-abf2-973f4c6ae45b"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1295,8 +1042,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "9bb89bdc-4a36-44fd-abf2-973f4c6ae45b"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1307,8 +1053,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "9bb89bdc-4a36-44fd-abf2-973f4c6ae45b"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1319,8 +1064,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "086df5e7-736c-42d5-9753-339121e00855"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1331,8 +1075,7 @@
         ],
         "lesson.key": "Making Sprites",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "9d597192-0c38-4db4-88f5-d9610430e193"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1343,8 +1086,7 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "2dfa6d6e-204e-4bf8-a9c9-078cb6233ab0"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1355,8 +1097,7 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "9582751b-2c46-496f-b5cb-923f863a5452"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1367,8 +1108,7 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "570d9067-4fb1-4539-9904-6b0e3fa39b69"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1379,8 +1119,7 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "570d9067-4fb1-4539-9904-6b0e3fa39b69"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1391,8 +1130,7 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "570d9067-4fb1-4539-9904-6b0e3fa39b69"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1403,8 +1141,7 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "570d9067-4fb1-4539-9904-6b0e3fa39b69"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1415,8 +1152,7 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "ba44cb53-a2ab-4584-b878-361ad7009431"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1427,8 +1163,7 @@
         ],
         "lesson.key": "Sprites in Action",
         "lesson_group.key": "Sprites",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "84f563e5-1b20-44f3-b256-fd8303b4a81a"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1439,8 +1174,7 @@
         ],
         "lesson.key": "blank-space-stories",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "9da52a2b-0c5e-4361-8fd7-d1f923c15ac9"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1451,8 +1185,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "3d2bf73a-3e35-42a4-b725-437a001fc39f"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1463,8 +1196,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "965bb9f6-63ce-4c16-b7de-b4533acd324b"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1475,8 +1207,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "5f8171aa-ee79-46eb-b1b6-272a519fcdaf"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1487,8 +1218,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "5f8171aa-ee79-46eb-b1b6-272a519fcdaf"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1499,8 +1229,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "5f8171aa-ee79-46eb-b1b6-272a519fcdaf"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1511,8 +1240,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "5f8171aa-ee79-46eb-b1b6-272a519fcdaf"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1523,8 +1251,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "5f8171aa-ee79-46eb-b1b6-272a519fcdaf"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1535,8 +1262,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "5f8171aa-ee79-46eb-b1b6-272a519fcdaf"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1547,8 +1273,7 @@
         ],
         "lesson.key": "texts-and-prompts",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "26ccef6d-ebf6-412a-8924-f1627d38c089"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1559,8 +1284,7 @@
         ],
         "lesson.key": "user-input-programs",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "804259e2-e366-442b-a823-e7b9845be2ad"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1571,8 +1295,7 @@
         ],
         "lesson.key": "user-input-programs",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "89d3f284-a8f0-4c58-93b0-a22812c8cb76"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1583,8 +1306,7 @@
         ],
         "lesson.key": "user-input-programs",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "31f9c1a8-37b9-4c46-8693-1a93774abfbd"
+        "script.name": "csf-2021-pilot"
       }
     },
     {
@@ -1595,8 +1317,7 @@
         ],
         "lesson.key": "user-input-programs",
         "lesson_group.key": "variables",
-        "script.name": "csf-2021-pilot",
-        "activity_section.key": "39c9e33b-8fe0-4fcb-8286-a892848867d4"
+        "script.name": "csf-2021-pilot"
       }
     }
   ],

@@ -8,7 +8,6 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_course": true,
-      "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
       "teacher_resources": [
@@ -21,11 +20,11 @@
     },
     "new_name": null,
     "family_name": "csd3-virtual",
-    "serialized_at": "2021-11-15 20:59:56 UTC",
+    "serialized_at": "2021-11-19 20:00:44 UTC",
     "published_state": "preview",
     "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csd3-virtual"
     }
@@ -316,1434 +315,21 @@
     }
   ],
   "lesson_activities": [
-    {
-      "key": "92a5d3ce-808a-475c-980f-1a7c774e129d",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "92a5d3ce-808a-475c-980f-1a7c774e129d",
-        "lesson.key": "Drawing in Game Lab",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "e4eb6c92-3bd6-4f00-a9e7-ff2a109dbc74",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e4eb6c92-3bd6-4f00-a9e7-ff2a109dbc74",
-        "lesson.key": "Shapes and Parameters",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "d72a18f5-aa07-4399-b5b5-313ca52dfa33",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d72a18f5-aa07-4399-b5b5-313ca52dfa33",
-        "lesson.key": "Variables",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "d210d6dd-e0d3-4faa-82e5-b3cbad99d15f",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d210d6dd-e0d3-4faa-82e5-b3cbad99d15f",
-        "lesson.key": "Random Numbers",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "c0f79946-c481-401f-a9cf-d312ef20a8ef",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c0f79946-c481-401f-a9cf-d312ef20a8ef",
-        "lesson.key": "Sprites",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "1791b04f-0ca1-4d93-ae33-49251503cfaf",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1791b04f-0ca1-4d93-ae33-49251503cfaf",
-        "lesson.key": "Sprite Properties",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "bd64f6f7-a87b-4d3e-9c43-737b0f8b35ab",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bd64f6f7-a87b-4d3e-9c43-737b0f8b35ab",
-        "lesson.key": "Text",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "36a7f91a-0d9f-4e4d-b345-265f7f6e38c4",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "36a7f91a-0d9f-4e4d-b345-265f7f6e38c4",
-        "lesson.key": "The Draw Loop",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "f8f3cc34-6dd7-4360-9300-3d7f725b7973",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f8f3cc34-6dd7-4360-9300-3d7f725b7973",
-        "lesson.key": "Sprite Movement",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "fccd3606-cef1-4235-b763-d03d26e140da",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "fccd3606-cef1-4235-b763-d03d26e140da",
-        "lesson.key": "Conditionals",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "595b2433-c022-4e33-8dda-ece5ccbdc3eb",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "595b2433-c022-4e33-8dda-ece5ccbdc3eb",
-        "lesson.key": "Keyboard Input",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "8c44d29c-1769-4276-9c20-3c87e2fc2780",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8c44d29c-1769-4276-9c20-3c87e2fc2780",
-        "lesson.key": "Mouse Input",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "840ed446-f2d3-4b4d-b522-da7f988f1107",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "840ed446-f2d3-4b4d-b522-da7f988f1107",
-        "lesson.key": "Velocity",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "1e582c88-4e19-4cd3-a515-381b4524ce06",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1e582c88-4e19-4cd3-a515-381b4524ce06",
-        "lesson.key": "Collision Detection",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "cd7a6759-087f-4fee-b431-251f47fd3e14",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "cd7a6759-087f-4fee-b431-251f47fd3e14",
-        "lesson.key": "Complex Sprite Movement",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "c5b7bf67-2a5c-485f-9818-ff58f2893958",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c5b7bf67-2a5c-485f-9818-ff58f2893958",
-        "lesson.key": "Collisions",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "42a0defb-f82c-4bbf-bc25-6a34cc75528e",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "42a0defb-f82c-4bbf-bc25-6a34cc75528e",
-        "lesson.key": "Functions",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    },
-    {
-      "key": "10dd992c-3a7e-4569-bfce-5c23d4eec8a7",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "10dd992c-3a7e-4569-bfce-5c23d4eec8a7",
-        "lesson.key": "Project - Design a Game",
-        "lesson_group.key": "",
-        "script.name": "csd3-virtual"
-      }
-    }
+
   ],
   "activity_sections": [
-    {
-      "key": "35213e78-7fd3-4dcd-b4d2-410219b6d9b6",
-      "position": 1,
-      "properties": {
-        "progression_name": "Sample Programs"
-      },
-      "seeding_key": {
-        "activity_section.key": "35213e78-7fd3-4dcd-b4d2-410219b6d9b6",
-        "lesson_activity.key": "92a5d3ce-808a-475c-980f-1a7c774e129d"
-      }
-    },
-    {
-      "key": "a98dfb06-455f-4063-978b-034f0915afcb",
-      "position": 2,
-      "properties": {
-        "progression_name": "Introduction to Game Lab"
-      },
-      "seeding_key": {
-        "activity_section.key": "a98dfb06-455f-4063-978b-034f0915afcb",
-        "lesson_activity.key": "92a5d3ce-808a-475c-980f-1a7c774e129d"
-      }
-    },
-    {
-      "key": "8a578027-f578-4255-85ea-d686619e32f2",
-      "position": 3,
-      "properties": {
-        "progression_name": "Video: Drawing in Game Lab - Part 1"
-      },
-      "seeding_key": {
-        "activity_section.key": "8a578027-f578-4255-85ea-d686619e32f2",
-        "lesson_activity.key": "92a5d3ce-808a-475c-980f-1a7c774e129d"
-      }
-    },
-    {
-      "key": "84b7e9a4-5eee-4006-ad25-92db3ce66233",
-      "position": 4,
-      "properties": {
-        "progression_name": "Using the Grid"
-      },
-      "seeding_key": {
-        "activity_section.key": "84b7e9a4-5eee-4006-ad25-92db3ce66233",
-        "lesson_activity.key": "92a5d3ce-808a-475c-980f-1a7c774e129d"
-      }
-    },
-    {
-      "key": "a9364ea5-2c76-425b-85b2-6b76bc471a96",
-      "position": 5,
-      "properties": {
-        "progression_name": "Video: Drawing in Game Lab - Part 2"
-      },
-      "seeding_key": {
-        "activity_section.key": "a9364ea5-2c76-425b-85b2-6b76bc471a96",
-        "lesson_activity.key": "92a5d3ce-808a-475c-980f-1a7c774e129d"
-      }
-    },
-    {
-      "key": "4e105436-e985-4225-8809-61717764e17c",
-      "position": 6,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "4e105436-e985-4225-8809-61717764e17c",
-        "lesson_activity.key": "92a5d3ce-808a-475c-980f-1a7c774e129d"
-      }
-    },
-    {
-      "key": "9494926d-7162-4af4-b466-52c23a1518fa",
-      "position": 7,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "9494926d-7162-4af4-b466-52c23a1518fa",
-        "lesson_activity.key": "92a5d3ce-808a-475c-980f-1a7c774e129d"
-      }
-    },
-    {
-      "key": "b7ca59da-1614-45d2-b29f-17400a545adf",
-      "position": 8,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "b7ca59da-1614-45d2-b29f-17400a545adf",
-        "lesson_activity.key": "92a5d3ce-808a-475c-980f-1a7c774e129d"
-      }
-    },
-    {
-      "key": "d4703ef2-a877-4667-8d1b-3cb59f67d2f7",
-      "position": 9,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "d4703ef2-a877-4667-8d1b-3cb59f67d2f7",
-        "lesson_activity.key": "92a5d3ce-808a-475c-980f-1a7c774e129d"
-      }
-    },
-    {
-      "key": "22e1bca9-1e74-465a-b4c1-ded88ec5de8e",
-      "position": 1,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "22e1bca9-1e74-465a-b4c1-ded88ec5de8e",
-        "lesson_activity.key": "e4eb6c92-3bd6-4f00-a9e7-ff2a109dbc74"
-      }
-    },
-    {
-      "key": "a2c382e1-6d84-452f-a03f-ec009a2e3d35",
-      "position": 2,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "a2c382e1-6d84-452f-a03f-ec009a2e3d35",
-        "lesson_activity.key": "e4eb6c92-3bd6-4f00-a9e7-ff2a109dbc74"
-      }
-    },
-    {
-      "key": "f97c240a-d1cf-4ee7-8dcd-56b2eb523120",
-      "position": 3,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "f97c240a-d1cf-4ee7-8dcd-56b2eb523120",
-        "lesson_activity.key": "e4eb6c92-3bd6-4f00-a9e7-ff2a109dbc74"
-      }
-    },
-    {
-      "key": "53a5850c-c39c-4785-8af6-fab639556f89",
-      "position": 4,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "53a5850c-c39c-4785-8af6-fab639556f89",
-        "lesson_activity.key": "e4eb6c92-3bd6-4f00-a9e7-ff2a109dbc74"
-      }
-    },
-    {
-      "key": "6f9ce57a-5d6b-45c7-9a58-d92f3ae3bc9c",
-      "position": 1,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "6f9ce57a-5d6b-45c7-9a58-d92f3ae3bc9c",
-        "lesson_activity.key": "d72a18f5-aa07-4399-b5b5-313ca52dfa33"
-      }
-    },
-    {
-      "key": "6729599a-337c-46ab-8d5e-5c57515c8d67",
-      "position": 2,
-      "properties": {
-        "progression_name": "Video: Introduction to Variables"
-      },
-      "seeding_key": {
-        "activity_section.key": "6729599a-337c-46ab-8d5e-5c57515c8d67",
-        "lesson_activity.key": "d72a18f5-aa07-4399-b5b5-313ca52dfa33"
-      }
-    },
-    {
-      "key": "8d2fdbab-ab56-4bc9-a25f-644c81ec6780",
-      "position": 3,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "8d2fdbab-ab56-4bc9-a25f-644c81ec6780",
-        "lesson_activity.key": "d72a18f5-aa07-4399-b5b5-313ca52dfa33"
-      }
-    },
-    {
-      "key": "62208bff-b1ac-4346-94a3-0bcb904f496e",
-      "position": 4,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "62208bff-b1ac-4346-94a3-0bcb904f496e",
-        "lesson_activity.key": "d72a18f5-aa07-4399-b5b5-313ca52dfa33"
-      }
-    },
-    {
-      "key": "6cc885f4-667f-40b9-b268-2f301365676c",
-      "position": 5,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "6cc885f4-667f-40b9-b268-2f301365676c",
-        "lesson_activity.key": "d72a18f5-aa07-4399-b5b5-313ca52dfa33"
-      }
-    },
-    {
-      "key": "351bbb90-bd86-4dff-aec1-dcbdc8ab4750",
-      "position": 6,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "351bbb90-bd86-4dff-aec1-dcbdc8ab4750",
-        "lesson_activity.key": "d72a18f5-aa07-4399-b5b5-313ca52dfa33"
-      }
-    },
-    {
-      "key": "7993c1bd-33d5-4b4d-bbe8-f2185e49d5da",
-      "position": 1,
-      "properties": {
-        "progression_name": "Exploration"
-      },
-      "seeding_key": {
-        "activity_section.key": "7993c1bd-33d5-4b4d-bbe8-f2185e49d5da",
-        "lesson_activity.key": "d210d6dd-e0d3-4faa-82e5-b3cbad99d15f"
-      }
-    },
-    {
-      "key": "0215a0d4-8f0d-466b-b645-93c160d00788",
-      "position": 2,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "0215a0d4-8f0d-466b-b645-93c160d00788",
-        "lesson_activity.key": "d210d6dd-e0d3-4faa-82e5-b3cbad99d15f"
-      }
-    },
-    {
-      "key": "506e0d91-ba02-4e0a-8967-4f106a558f2a",
-      "position": 3,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "506e0d91-ba02-4e0a-8967-4f106a558f2a",
-        "lesson_activity.key": "d210d6dd-e0d3-4faa-82e5-b3cbad99d15f"
-      }
-    },
-    {
-      "key": "c47ed57e-2fa6-41ac-9024-61757fad7f03",
-      "position": 4,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "c47ed57e-2fa6-41ac-9024-61757fad7f03",
-        "lesson_activity.key": "d210d6dd-e0d3-4faa-82e5-b3cbad99d15f"
-      }
-    },
-    {
-      "key": "85cc0878-0461-4476-b481-c8e3ac9d4f9f",
-      "position": 5,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "85cc0878-0461-4476-b481-c8e3ac9d4f9f",
-        "lesson_activity.key": "d210d6dd-e0d3-4faa-82e5-b3cbad99d15f"
-      }
-    },
-    {
-      "key": "5b3813d5-0da9-4ef8-aae1-acc387785d92",
-      "position": 1,
-      "properties": {
-        "progression_name": "Exploration"
-      },
-      "seeding_key": {
-        "activity_section.key": "5b3813d5-0da9-4ef8-aae1-acc387785d92",
-        "lesson_activity.key": "c0f79946-c481-401f-a9cf-d312ef20a8ef"
-      }
-    },
-    {
-      "key": "66c7814f-63ec-451e-895c-07df55f12fad",
-      "position": 2,
-      "properties": {
-        "progression_name": "Video: Introduction to Sprites"
-      },
-      "seeding_key": {
-        "activity_section.key": "66c7814f-63ec-451e-895c-07df55f12fad",
-        "lesson_activity.key": "c0f79946-c481-401f-a9cf-d312ef20a8ef"
-      }
-    },
-    {
-      "key": "674f0d67-1968-4aff-92a0-29f7fea6a4f5",
-      "position": 3,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "674f0d67-1968-4aff-92a0-29f7fea6a4f5",
-        "lesson_activity.key": "c0f79946-c481-401f-a9cf-d312ef20a8ef"
-      }
-    },
-    {
-      "key": "59eb1901-0610-4009-8658-e641d910384f",
-      "position": 4,
-      "properties": {
-        "progression_name": "Video: The Animation Tab"
-      },
-      "seeding_key": {
-        "activity_section.key": "59eb1901-0610-4009-8658-e641d910384f",
-        "lesson_activity.key": "c0f79946-c481-401f-a9cf-d312ef20a8ef"
-      }
-    },
-    {
-      "key": "5f64ecee-93e4-4525-a19c-f5851f22893f",
-      "position": 5,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "5f64ecee-93e4-4525-a19c-f5851f22893f",
-        "lesson_activity.key": "c0f79946-c481-401f-a9cf-d312ef20a8ef"
-      }
-    },
-    {
-      "key": "2d4ce688-b79e-4fbd-8011-cd0d3e74aa76",
-      "position": 6,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "2d4ce688-b79e-4fbd-8011-cd0d3e74aa76",
-        "lesson_activity.key": "c0f79946-c481-401f-a9cf-d312ef20a8ef"
-      }
-    },
-    {
-      "key": "29fe0833-327e-47d4-bc45-24ea6be2b45b",
-      "position": 7,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "29fe0833-327e-47d4-bc45-24ea6be2b45b",
-        "lesson_activity.key": "c0f79946-c481-401f-a9cf-d312ef20a8ef"
-      }
-    },
-    {
-      "key": "fc7cd7b8-f9c2-47d7-a3e5-785812e20877",
-      "position": 8,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "fc7cd7b8-f9c2-47d7-a3e5-785812e20877",
-        "lesson_activity.key": "c0f79946-c481-401f-a9cf-d312ef20a8ef"
-      }
-    },
-    {
-      "key": "6e35b463-538d-4537-8cfd-e307b265fae8",
-      "position": 1,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "6e35b463-538d-4537-8cfd-e307b265fae8",
-        "lesson_activity.key": "1791b04f-0ca1-4d93-ae33-49251503cfaf"
-      }
-    },
-    {
-      "key": "1241cf6d-24a2-49c2-a87f-05d48c351436",
-      "position": 2,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "1241cf6d-24a2-49c2-a87f-05d48c351436",
-        "lesson_activity.key": "1791b04f-0ca1-4d93-ae33-49251503cfaf"
-      }
-    },
-    {
-      "key": "4be81ace-c78e-4514-8798-3c5d4c75da82",
-      "position": 3,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "4be81ace-c78e-4514-8798-3c5d4c75da82",
-        "lesson_activity.key": "1791b04f-0ca1-4d93-ae33-49251503cfaf"
-      }
-    },
-    {
-      "key": "96ab38df-7aef-416f-9c05-4eda4fef7974",
-      "position": 4,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "96ab38df-7aef-416f-9c05-4eda4fef7974",
-        "lesson_activity.key": "1791b04f-0ca1-4d93-ae33-49251503cfaf"
-      }
-    },
-    {
-      "key": "a826c930-b933-4125-9030-b5893b4c0993",
-      "position": 5,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "a826c930-b933-4125-9030-b5893b4c0993",
-        "lesson_activity.key": "1791b04f-0ca1-4d93-ae33-49251503cfaf"
-      }
-    },
-    {
-      "key": "8c0b36ee-355c-4097-a5ac-56482c98c8a0",
-      "position": 1,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "8c0b36ee-355c-4097-a5ac-56482c98c8a0",
-        "lesson_activity.key": "bd64f6f7-a87b-4d3e-9c43-737b0f8b35ab"
-      }
-    },
-    {
-      "key": "5b302f80-a58c-467a-aed4-5bb0f503f744",
-      "position": 2,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "5b302f80-a58c-467a-aed4-5bb0f503f744",
-        "lesson_activity.key": "bd64f6f7-a87b-4d3e-9c43-737b0f8b35ab"
-      }
-    },
-    {
-      "key": "d6a848e2-3b7b-49ef-a2d5-d56bf0674dda",
-      "position": 3,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "d6a848e2-3b7b-49ef-a2d5-d56bf0674dda",
-        "lesson_activity.key": "bd64f6f7-a87b-4d3e-9c43-737b0f8b35ab"
-      }
-    },
-    {
-      "key": "db1adef4-694e-4479-89a1-ade27bab349a",
-      "position": 4,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "db1adef4-694e-4479-89a1-ade27bab349a",
-        "lesson_activity.key": "bd64f6f7-a87b-4d3e-9c43-737b0f8b35ab"
-      }
-    },
-    {
-      "key": "10788f00-a9de-4c66-be0a-44d2bba8efd4",
-      "position": 5,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "10788f00-a9de-4c66-be0a-44d2bba8efd4",
-        "lesson_activity.key": "bd64f6f7-a87b-4d3e-9c43-737b0f8b35ab"
-      }
-    },
-    {
-      "key": "4186ba96-a835-4afe-bae6-862bd3d1ca4f",
-      "position": 1,
-      "properties": {
-        "progression_name": "Video: Introduction to the Draw Loop"
-      },
-      "seeding_key": {
-        "activity_section.key": "4186ba96-a835-4afe-bae6-862bd3d1ca4f",
-        "lesson_activity.key": "36a7f91a-0d9f-4e4d-b345-265f7f6e38c4"
-      }
-    },
-    {
-      "key": "87614ac0-f914-46f3-8ca4-c1c322863a30",
-      "position": 2,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "87614ac0-f914-46f3-8ca4-c1c322863a30",
-        "lesson_activity.key": "36a7f91a-0d9f-4e4d-b345-265f7f6e38c4"
-      }
-    },
-    {
-      "key": "ff5e76e3-de74-48bd-9ede-792de7545e3f",
-      "position": 3,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "ff5e76e3-de74-48bd-9ede-792de7545e3f",
-        "lesson_activity.key": "36a7f91a-0d9f-4e4d-b345-265f7f6e38c4"
-      }
-    },
-    {
-      "key": "748b681a-182d-466e-ac08-611fad39bafb",
-      "position": 4,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "748b681a-182d-466e-ac08-611fad39bafb",
-        "lesson_activity.key": "36a7f91a-0d9f-4e4d-b345-265f7f6e38c4"
-      }
-    },
-    {
-      "key": "45325bf9-77b7-415c-8ef5-113937251cae",
-      "position": 5,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "45325bf9-77b7-415c-8ef5-113937251cae",
-        "lesson_activity.key": "36a7f91a-0d9f-4e4d-b345-265f7f6e38c4"
-      }
-    },
-    {
-      "key": "bb033c32-ed52-4e40-9a51-a7e7011dd38b",
-      "position": 6,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "bb033c32-ed52-4e40-9a51-a7e7011dd38b",
-        "lesson_activity.key": "36a7f91a-0d9f-4e4d-b345-265f7f6e38c4"
-      }
-    },
-    {
-      "key": "2adfa7a8-a3b0-4467-bb79-8b20b5ffa2c0",
-      "position": 7,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "2adfa7a8-a3b0-4467-bb79-8b20b5ffa2c0",
-        "lesson_activity.key": "36a7f91a-0d9f-4e4d-b345-265f7f6e38c4"
-      }
-    },
-    {
-      "key": "b87d3d86-5239-44b2-8f36-08aa0ad6e0aa",
-      "position": 1,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "b87d3d86-5239-44b2-8f36-08aa0ad6e0aa",
-        "lesson_activity.key": "f8f3cc34-6dd7-4360-9300-3d7f725b7973"
-      }
-    },
-    {
-      "key": "fb34aced-3555-4a32-b612-51a0f84e1d94",
-      "position": 2,
-      "properties": {
-        "progression_name": "Video: Sprite Movement"
-      },
-      "seeding_key": {
-        "activity_section.key": "fb34aced-3555-4a32-b612-51a0f84e1d94",
-        "lesson_activity.key": "f8f3cc34-6dd7-4360-9300-3d7f725b7973"
-      }
-    },
-    {
-      "key": "50085cef-357e-4257-9ca3-a0852c6b5b43",
-      "position": 3,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "50085cef-357e-4257-9ca3-a0852c6b5b43",
-        "lesson_activity.key": "f8f3cc34-6dd7-4360-9300-3d7f725b7973"
-      }
-    },
-    {
-      "key": "44507b57-039c-40b1-afd3-065e04d519b0",
-      "position": 4,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "44507b57-039c-40b1-afd3-065e04d519b0",
-        "lesson_activity.key": "f8f3cc34-6dd7-4360-9300-3d7f725b7973"
-      }
-    },
-    {
-      "key": "68abe5c1-3403-4d0d-bb29-e02212902ad8",
-      "position": 5,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "68abe5c1-3403-4d0d-bb29-e02212902ad8",
-        "lesson_activity.key": "f8f3cc34-6dd7-4360-9300-3d7f725b7973"
-      }
-    },
-    {
-      "key": "fa31114a-9916-4709-a268-c604e5200450",
-      "position": 6,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "fa31114a-9916-4709-a268-c604e5200450",
-        "lesson_activity.key": "f8f3cc34-6dd7-4360-9300-3d7f725b7973"
-      }
-    },
-    {
-      "key": "c8bb6ef6-5258-4860-9f3f-8469da3358d3",
-      "position": 1,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "c8bb6ef6-5258-4860-9f3f-8469da3358d3",
-        "lesson_activity.key": "fccd3606-cef1-4235-b763-d03d26e140da"
-      }
-    },
-    {
-      "key": "a1b020cd-6a83-4393-a675-27ac017247f3",
-      "position": 2,
-      "properties": {
-        "progression_name": "Video: Booleans"
-      },
-      "seeding_key": {
-        "activity_section.key": "a1b020cd-6a83-4393-a675-27ac017247f3",
-        "lesson_activity.key": "fccd3606-cef1-4235-b763-d03d26e140da"
-      }
-    },
-    {
-      "key": "06626026-ee30-4756-af49-4f2159cd176d",
-      "position": 3,
-      "properties": {
-        "progression_name": "Quick Check"
-      },
-      "seeding_key": {
-        "activity_section.key": "06626026-ee30-4756-af49-4f2159cd176d",
-        "lesson_activity.key": "fccd3606-cef1-4235-b763-d03d26e140da"
-      }
-    },
-    {
-      "key": "28ed5851-b004-4888-8da9-595dc811c0ca",
-      "position": 4,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "28ed5851-b004-4888-8da9-595dc811c0ca",
-        "lesson_activity.key": "fccd3606-cef1-4235-b763-d03d26e140da"
-      }
-    },
-    {
-      "key": "e1e44f42-7fa4-43f7-8db0-ac960503f36e",
-      "position": 5,
-      "properties": {
-        "progression_name": "Video: Conditional Statements"
-      },
-      "seeding_key": {
-        "activity_section.key": "e1e44f42-7fa4-43f7-8db0-ac960503f36e",
-        "lesson_activity.key": "fccd3606-cef1-4235-b763-d03d26e140da"
-      }
-    },
-    {
-      "key": "749a4069-41b6-411d-abd3-3e2afd5e43b0",
-      "position": 6,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "749a4069-41b6-411d-abd3-3e2afd5e43b0",
-        "lesson_activity.key": "fccd3606-cef1-4235-b763-d03d26e140da"
-      }
-    },
-    {
-      "key": "ca311e91-8347-481a-ab27-6b9c6572a16d",
-      "position": 7,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "ca311e91-8347-481a-ab27-6b9c6572a16d",
-        "lesson_activity.key": "fccd3606-cef1-4235-b763-d03d26e140da"
-      }
-    },
-    {
-      "key": "4bca9ec2-a8b7-412b-803d-d101bd856faa",
-      "position": 8,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "4bca9ec2-a8b7-412b-803d-d101bd856faa",
-        "lesson_activity.key": "fccd3606-cef1-4235-b763-d03d26e140da"
-      }
-    },
-    {
-      "key": "1830f060-8e84-4f1a-8380-cc74080621dc",
-      "position": 9,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "1830f060-8e84-4f1a-8380-cc74080621dc",
-        "lesson_activity.key": "fccd3606-cef1-4235-b763-d03d26e140da"
-      }
-    },
-    {
-      "key": "fb3aeafc-f12f-4ce3-acab-368e4bd7cbae",
-      "position": 1,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "fb3aeafc-f12f-4ce3-acab-368e4bd7cbae",
-        "lesson_activity.key": "595b2433-c022-4e33-8dda-ece5ccbdc3eb"
-      }
-    },
-    {
-      "key": "affef772-f801-4968-9fe4-331347be70fd",
-      "position": 2,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "affef772-f801-4968-9fe4-331347be70fd",
-        "lesson_activity.key": "595b2433-c022-4e33-8dda-ece5ccbdc3eb"
-      }
-    },
-    {
-      "key": "86c260b2-a95f-4e66-becf-0eccb3b8c2c2",
-      "position": 3,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "86c260b2-a95f-4e66-becf-0eccb3b8c2c2",
-        "lesson_activity.key": "595b2433-c022-4e33-8dda-ece5ccbdc3eb"
-      }
-    },
-    {
-      "key": "fdb46bf3-6a6f-41c5-a001-bffa9ac05c1c",
-      "position": 4,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "fdb46bf3-6a6f-41c5-a001-bffa9ac05c1c",
-        "lesson_activity.key": "595b2433-c022-4e33-8dda-ece5ccbdc3eb"
-      }
-    },
-    {
-      "key": "68a7acae-32e3-48fb-ad82-4b3bb878e965",
-      "position": 5,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "68a7acae-32e3-48fb-ad82-4b3bb878e965",
-        "lesson_activity.key": "595b2433-c022-4e33-8dda-ece5ccbdc3eb"
-      }
-    },
-    {
-      "key": "40f3eb00-0162-44ba-a3da-8a9f708e2ea4",
-      "position": 1,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "40f3eb00-0162-44ba-a3da-8a9f708e2ea4",
-        "lesson_activity.key": "8c44d29c-1769-4276-9c20-3c87e2fc2780"
-      }
-    },
-    {
-      "key": "326580d0-9df8-43e2-a19c-10196f359756",
-      "position": 2,
-      "properties": {
-        "progression_name": "Video: If/Else Statements"
-      },
-      "seeding_key": {
-        "activity_section.key": "326580d0-9df8-43e2-a19c-10196f359756",
-        "lesson_activity.key": "8c44d29c-1769-4276-9c20-3c87e2fc2780"
-      }
-    },
-    {
-      "key": "3d88f8b7-aca6-4d55-80d6-4428b006628f",
-      "position": 3,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "3d88f8b7-aca6-4d55-80d6-4428b006628f",
-        "lesson_activity.key": "8c44d29c-1769-4276-9c20-3c87e2fc2780"
-      }
-    },
-    {
-      "key": "4c3baa4f-1407-42b4-96c4-efd0258172e9",
-      "position": 4,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "4c3baa4f-1407-42b4-96c4-efd0258172e9",
-        "lesson_activity.key": "8c44d29c-1769-4276-9c20-3c87e2fc2780"
-      }
-    },
-    {
-      "key": "d13dfa6d-fa92-45ac-a494-96717d6a8701",
-      "position": 5,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "d13dfa6d-fa92-45ac-a494-96717d6a8701",
-        "lesson_activity.key": "8c44d29c-1769-4276-9c20-3c87e2fc2780"
-      }
-    },
-    {
-      "key": "ac2139d1-00f0-4a7b-aafe-13d95c2b3df2",
-      "position": 6,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "ac2139d1-00f0-4a7b-aafe-13d95c2b3df2",
-        "lesson_activity.key": "8c44d29c-1769-4276-9c20-3c87e2fc2780"
-      }
-    },
-    {
-      "key": "97dc0c22-0aba-4b4c-99b7-ed599c8272c1",
-      "position": 1,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "97dc0c22-0aba-4b4c-99b7-ed599c8272c1",
-        "lesson_activity.key": "840ed446-f2d3-4b4d-b522-da7f988f1107"
-      }
-    },
-    {
-      "key": "2c36bc56-2220-4fe7-a0be-38a239943aa9",
-      "position": 2,
-      "properties": {
-        "progression_name": "Video: Velocity"
-      },
-      "seeding_key": {
-        "activity_section.key": "2c36bc56-2220-4fe7-a0be-38a239943aa9",
-        "lesson_activity.key": "840ed446-f2d3-4b4d-b522-da7f988f1107"
-      }
-    },
-    {
-      "key": "b6778150-83f6-4d5c-8c0c-9ca0a25742bc",
-      "position": 3,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "b6778150-83f6-4d5c-8c0c-9ca0a25742bc",
-        "lesson_activity.key": "840ed446-f2d3-4b4d-b522-da7f988f1107"
-      }
-    },
-    {
-      "key": "0a7b11b2-ce9e-4c91-8250-7655f0bbb46e",
-      "position": 4,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "0a7b11b2-ce9e-4c91-8250-7655f0bbb46e",
-        "lesson_activity.key": "840ed446-f2d3-4b4d-b522-da7f988f1107"
-      }
-    },
-    {
-      "key": "cd2cc9bd-0043-493e-b0b5-e57d4cee5aa2",
-      "position": 5,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "cd2cc9bd-0043-493e-b0b5-e57d4cee5aa2",
-        "lesson_activity.key": "840ed446-f2d3-4b4d-b522-da7f988f1107"
-      }
-    },
-    {
-      "key": "8bb9dff9-6b73-4dbd-bd6e-62f155db6ed8",
-      "position": 6,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "8bb9dff9-6b73-4dbd-bd6e-62f155db6ed8",
-        "lesson_activity.key": "840ed446-f2d3-4b4d-b522-da7f988f1107"
-      }
-    },
-    {
-      "key": "26f227be-7c40-436e-a081-841e5c1d811a",
-      "position": 1,
-      "properties": {
-        "progression_name": "Sample Game"
-      },
-      "seeding_key": {
-        "activity_section.key": "26f227be-7c40-436e-a081-841e5c1d811a",
-        "lesson_activity.key": "1e582c88-4e19-4cd3-a515-381b4524ce06"
-      }
-    },
-    {
-      "key": "b3432e22-9fb7-42c8-b1ee-53b28b603492",
-      "position": 2,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "b3432e22-9fb7-42c8-b1ee-53b28b603492",
-        "lesson_activity.key": "1e582c88-4e19-4cd3-a515-381b4524ce06"
-      }
-    },
-    {
-      "key": "b468989a-ae47-4ca1-afbc-e99c4509d83a",
-      "position": 3,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "b468989a-ae47-4ca1-afbc-e99c4509d83a",
-        "lesson_activity.key": "1e582c88-4e19-4cd3-a515-381b4524ce06"
-      }
-    },
-    {
-      "key": "1ba4850a-162f-4b10-802c-028c7c6e483a",
-      "position": 4,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "1ba4850a-162f-4b10-802c-028c7c6e483a",
-        "lesson_activity.key": "1e582c88-4e19-4cd3-a515-381b4524ce06"
-      }
-    },
-    {
-      "key": "892fce5b-5ee9-4027-84f6-41bffa422955",
-      "position": 5,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "892fce5b-5ee9-4027-84f6-41bffa422955",
-        "lesson_activity.key": "1e582c88-4e19-4cd3-a515-381b4524ce06"
-      }
-    },
-    {
-      "key": "88cc357c-3c62-430c-a655-0c44d5e60918",
-      "position": 1,
-      "properties": {
-        "progression_name": "Prediction"
-      },
-      "seeding_key": {
-        "activity_section.key": "88cc357c-3c62-430c-a655-0c44d5e60918",
-        "lesson_activity.key": "cd7a6759-087f-4fee-b431-251f47fd3e14"
-      }
-    },
-    {
-      "key": "cf4aaff6-d3a5-48ed-87ff-4cc731ee39c4",
-      "position": 2,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "cf4aaff6-d3a5-48ed-87ff-4cc731ee39c4",
-        "lesson_activity.key": "cd7a6759-087f-4fee-b431-251f47fd3e14"
-      }
-    },
-    {
-      "key": "08c81100-00e9-4417-bd6b-91d1144010c9",
-      "position": 3,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "08c81100-00e9-4417-bd6b-91d1144010c9",
-        "lesson_activity.key": "cd7a6759-087f-4fee-b431-251f47fd3e14"
-      }
-    },
-    {
-      "key": "ea5cc218-5af8-4b1e-bb25-acaad3844200",
-      "position": 4,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "ea5cc218-5af8-4b1e-bb25-acaad3844200",
-        "lesson_activity.key": "cd7a6759-087f-4fee-b431-251f47fd3e14"
-      }
-    },
-    {
-      "key": "da6fb4b2-fd06-446d-bb66-78994562d33b",
-      "position": 5,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "da6fb4b2-fd06-446d-bb66-78994562d33b",
-        "lesson_activity.key": "cd7a6759-087f-4fee-b431-251f47fd3e14"
-      }
-    },
-    {
-      "key": "dbadc3d9-cff4-4c68-9972-6b7020695dad",
-      "position": 1,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "dbadc3d9-cff4-4c68-9972-6b7020695dad",
-        "lesson_activity.key": "c5b7bf67-2a5c-485f-9818-ff58f2893958"
-      }
-    },
-    {
-      "key": "ed4b20ac-6e6f-4277-b2e0-0979ca706e83",
-      "position": 2,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "ed4b20ac-6e6f-4277-b2e0-0979ca706e83",
-        "lesson_activity.key": "c5b7bf67-2a5c-485f-9818-ff58f2893958"
-      }
-    },
-    {
-      "key": "f0eb699d-6389-4c32-bc0d-579bf5cd40b7",
-      "position": 3,
-      "properties": {
-        "progression_name": "Assessment"
-      },
-      "seeding_key": {
-        "activity_section.key": "f0eb699d-6389-4c32-bc0d-579bf5cd40b7",
-        "lesson_activity.key": "c5b7bf67-2a5c-485f-9818-ff58f2893958"
-      }
-    },
-    {
-      "key": "6daa57b5-679d-4f0b-bfa2-a98a0b26f2c4",
-      "position": 4,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "6daa57b5-679d-4f0b-bfa2-a98a0b26f2c4",
-        "lesson_activity.key": "c5b7bf67-2a5c-485f-9818-ff58f2893958"
-      }
-    },
-    {
-      "key": "018cf972-1166-4a2c-8c90-30f6d13be4d2",
-      "position": 1,
-      "properties": {
-        "progression_name": "Video: Functions"
-      },
-      "seeding_key": {
-        "activity_section.key": "018cf972-1166-4a2c-8c90-30f6d13be4d2",
-        "lesson_activity.key": "42a0defb-f82c-4bbf-bc25-6a34cc75528e"
-      }
-    },
-    {
-      "key": "58da7eae-3be7-4632-bc56-c4ec223b9767",
-      "position": 2,
-      "properties": {
-        "progression_name": "Skill Building"
-      },
-      "seeding_key": {
-        "activity_section.key": "58da7eae-3be7-4632-bc56-c4ec223b9767",
-        "lesson_activity.key": "42a0defb-f82c-4bbf-bc25-6a34cc75528e"
-      }
-    },
-    {
-      "key": "96e38939-3534-432e-a2bf-430873c5d238",
-      "position": 3,
-      "properties": {
-        "progression_name": "Predict"
-      },
-      "seeding_key": {
-        "activity_section.key": "96e38939-3534-432e-a2bf-430873c5d238",
-        "lesson_activity.key": "42a0defb-f82c-4bbf-bc25-6a34cc75528e"
-      }
-    },
-    {
-      "key": "710af326-227c-4709-b1b8-3a239d5f3b1b",
-      "position": 4,
-      "properties": {
-        "progression_name": "Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "710af326-227c-4709-b1b8-3a239d5f3b1b",
-        "lesson_activity.key": "42a0defb-f82c-4bbf-bc25-6a34cc75528e"
-      }
-    },
-    {
-      "key": "db44ab83-f087-43fa-be81-f5b089d83a9f",
-      "position": 5,
-      "properties": {
-        "progression_name": "Collector Game"
-      },
-      "seeding_key": {
-        "activity_section.key": "db44ab83-f087-43fa-be81-f5b089d83a9f",
-        "lesson_activity.key": "42a0defb-f82c-4bbf-bc25-6a34cc75528e"
-      }
-    },
-    {
-      "key": "04bf61bf-1d22-463f-8584-1b37f7f0f688",
-      "position": 6,
-      "properties": {
-        "name": "Challenges",
-        "progression_name": "Challenges"
-      },
-      "seeding_key": {
-        "activity_section.key": "04bf61bf-1d22-463f-8584-1b37f7f0f688",
-        "lesson_activity.key": "42a0defb-f82c-4bbf-bc25-6a34cc75528e"
-      }
-    },
-    {
-      "key": "f74eca15-cdb1-46e1-80bf-f846818e4e72",
-      "position": 1,
-      "properties": {
-        "progression_name": "Design Your Game"
-      },
-      "seeding_key": {
-        "activity_section.key": "f74eca15-cdb1-46e1-80bf-f846818e4e72",
-        "lesson_activity.key": "10dd992c-3a7e-4569-bfce-5c23d4eec8a7"
-      }
-    },
-    {
-      "key": "42e65353-2a39-4bf3-a663-edd9d5634573",
-      "position": 2,
-      "properties": {
-        "progression_name": "Project - Background and Variables"
-      },
-      "seeding_key": {
-        "activity_section.key": "42e65353-2a39-4bf3-a663-edd9d5634573",
-        "lesson_activity.key": "10dd992c-3a7e-4569-bfce-5c23d4eec8a7"
-      }
-    },
-    {
-      "key": "5900b488-3238-4493-af09-d50e977db332",
-      "position": 3,
-      "properties": {
-        "progression_name": "Project - Sprites and Interactions"
-      },
-      "seeding_key": {
-        "activity_section.key": "5900b488-3238-4493-af09-d50e977db332",
-        "lesson_activity.key": "10dd992c-3a7e-4569-bfce-5c23d4eec8a7"
-      }
-    },
-    {
-      "key": "bcedc642-dc42-4873-8233-1f40f533a75f",
-      "position": 4,
-      "properties": {
-        "progression_name": "Review Your Game"
-      },
-      "seeding_key": {
-        "activity_section.key": "bcedc642-dc42-4873-8233-1f40f533a75f",
-        "lesson_activity.key": "10dd992c-3a7e-4569-bfce-5c23d4eec8a7"
-      }
-    },
-    {
-      "key": "7a37b522-40e2-47d3-b1b9-880e7e678b2d",
-      "position": 5,
-      "properties": {
-        "name": "Congratulations!",
-        "progression_name": "Congratulations!"
-      },
-      "seeding_key": {
-        "activity_section.key": "7a37b522-40e2-47d3-b1b9-880e7e678b2d",
-        "lesson_activity.key": "10dd992c-3a7e-4569-bfce-5c23d4eec8a7"
-      }
-    }
+
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 samples_virtual_2020"
+        ],
         "progression": "Sample Programs"
       },
       "bonus": false,
@@ -1753,8 +339,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "35213e78-7fd3-4dcd-b4d2-410219b6d9b6"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 samples_virtual_2020"
@@ -1763,9 +348,12 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 rect_virtual_2020"
+        ],
         "progression": "Introduction to Game Lab"
       },
       "bonus": false,
@@ -1775,8 +363,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "a98dfb06-455f-4063-978b-034f0915afcb"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 rect_virtual_2020"
@@ -1785,9 +372,12 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 1_virtual_2020"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 1"
       },
       "bonus": false,
@@ -1797,8 +387,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "8a578027-f578-4255-85ea-d686619e32f2"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD: Drawing in Game Lab 1_virtual_2020"
@@ -1807,9 +396,12 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Drawing Squares to Corners_virtual_2020"
+        ],
         "progression": "Using the Grid"
       },
       "bonus": false,
@@ -1819,8 +411,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "84b7e9a4-5eee-4006-ad25-92db3ce66233"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Drawing Squares to Corners_virtual_2020"
@@ -1829,9 +420,12 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 2_virtual_2020"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 2"
       },
       "bonus": false,
@@ -1841,8 +435,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "a9364ea5-2c76-425b-85b2-6b76bc471a96"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD: Drawing in Game Lab 2_virtual_2020"
@@ -1851,9 +444,12 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 fill_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1863,8 +459,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "4e105436-e985-4225-8809-61717764e17c"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 fill_virtual_2020"
@@ -1873,9 +468,12 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 sequence_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1885,8 +483,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "4e105436-e985-4225-8809-61717764e17c"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 sequence_virtual_2020"
@@ -1895,9 +492,12 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 ellipse_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1907,8 +507,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "4e105436-e985-4225-8809-61717764e17c"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 ellipse_virtual_2020"
@@ -1917,9 +516,12 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing practice choice_2020_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1929,8 +531,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "9494926d-7162-4af4-b466-52c23a1518fa"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 drawing practice choice_2020_virtual_2020"
@@ -1939,9 +540,12 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 debug_virtual_2020"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1951,8 +555,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b7ca59da-1614-45d2-b29f-17400a545adf"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 debug_virtual_2020"
@@ -1961,9 +564,12 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawing challenges_2020_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1973,8 +579,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "d4703ef2-a877-4667-8d1b-3cb59f67d2f7"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 drawing challenges_2020_virtual_2020"
@@ -1983,9 +588,12 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Taller Rectangle_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1995,8 +603,7 @@
         ],
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "22e1bca9-1e74-465a-b4c1-ded88ec5de8e"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Random Taller Rectangle_virtual_2020"
@@ -2005,9 +612,12 @@
     {
       "chapter": 13,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Ellipse Behind_2018_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2017,8 +627,7 @@
         ],
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "22e1bca9-1e74-465a-b4c1-ded88ec5de8e"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Random Ellipse Behind_2018_virtual_2020"
@@ -2027,9 +636,12 @@
     {
       "chapter": 14,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random background_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2039,8 +651,7 @@
         ],
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "22e1bca9-1e74-465a-b4c1-ded88ec5de8e"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Random background_virtual_2020"
@@ -2049,9 +660,12 @@
     {
       "chapter": 15,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random background2_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2061,8 +675,7 @@
         ],
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "22e1bca9-1e74-465a-b4c1-ded88ec5de8e"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Random background2_virtual_2020"
@@ -2071,9 +684,12 @@
     {
       "chapter": 16,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Debug Grass_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2083,8 +699,7 @@
         ],
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "22e1bca9-1e74-465a-b4c1-ded88ec5de8e"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Random Debug Grass_virtual_2020"
@@ -2093,9 +708,12 @@
     {
       "chapter": 17,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games parameters practice_2020_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2105,8 +723,7 @@
         ],
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "a2c382e1-6d84-452f-a03f-ec009a2e3d35"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD Games parameters practice_2020_virtual_2020"
@@ -2115,9 +732,12 @@
     {
       "chapter": 18,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Debug Cloud_2018_virtual_2020"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2127,8 +747,7 @@
         ],
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "f97c240a-d1cf-4ee7-8dcd-56b2eb523120"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Random Debug Cloud_2018_virtual_2020"
@@ -2137,9 +756,12 @@
     {
       "chapter": 19,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Parameters challenge_2020_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2149,8 +771,7 @@
         ],
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "53a5850c-c39c-4785-8af6-fab639556f89"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD Games Parameters challenge_2020_virtual_2020"
@@ -2159,9 +780,12 @@
     {
       "chapter": 20,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where X_virtual_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2171,8 +795,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "6f9ce57a-5d6b-45c7-9a58-d92f3ae3bc9c"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Variables Predict Where X_virtual_2020"
@@ -2181,9 +804,12 @@
     {
       "chapter": 21,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Variables - Part 1_virtual_2020"
+        ],
         "progression": "Video: Introduction to Variables"
       },
       "bonus": false,
@@ -2193,8 +819,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "6729599a-337c-46ab-8d5e-5c57515c8d67"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "Introduction to Variables - Part 1_virtual_2020"
@@ -2203,9 +828,12 @@
     {
       "chapter": 22,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where XY_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2215,8 +843,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "8d2fdbab-ab56-4bc9-a25f-644c81ec6780"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Variables Predict Where XY_virtual_2020"
@@ -2225,9 +852,12 @@
     {
       "chapter": 23,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 naming md_virtual"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2237,8 +867,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "8d2fdbab-ab56-4bc9-a25f-644c81ec6780"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 naming md_virtual"
@@ -2247,9 +876,12 @@
     {
       "chapter": 24,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables naming rules v2_2018_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2259,8 +891,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "8d2fdbab-ab56-4bc9-a25f-644c81ec6780"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Variables naming rules v2_2018_virtual_2020"
@@ -2269,9 +900,12 @@
     {
       "chapter": 25,
       "position": 6,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Draw Poppy_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2281,8 +915,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "8d2fdbab-ab56-4bc9-a25f-644c81ec6780"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Variables Draw Poppy_virtual_2020"
@@ -2291,9 +924,12 @@
     {
       "chapter": 26,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games variables practice_2020_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2303,8 +939,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "62208bff-b1ac-4346-94a3-0bcb904f496e"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD Games variables practice_2020_virtual_2020"
@@ -2313,9 +948,12 @@
     {
       "chapter": 27,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables assessment_virtual_2020"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2325,8 +963,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "6cc885f4-667f-40b9-b268-2f301365676c"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Variables assessment_virtual_2020"
@@ -2335,9 +972,12 @@
     {
       "chapter": 28,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games variables challenge_2020_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2347,8 +987,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "351bbb90-bd86-4dff-aec1-dcbdc8ab4750"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD Games variables challenge_2020_virtual_2020"
@@ -2357,9 +996,12 @@
     {
       "chapter": 29,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse_2018_virtual_2020"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -2369,8 +1011,7 @@
         ],
         "lesson.key": "Random Numbers",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "7993c1bd-33d5-4b4d-bbe8-f2185e49d5da"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Random random ellipse_2018_virtual_2020"
@@ -2379,9 +1020,12 @@
     {
       "chapter": 30,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse2_2018_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2391,8 +1035,7 @@
         ],
         "lesson.key": "Random Numbers",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "0215a0d4-8f0d-466b-b645-93c160d00788"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Random random ellipse2_2018_virtual_2020"
@@ -2401,9 +1044,12 @@
     {
       "chapter": 31,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random with assignment_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2413,8 +1059,7 @@
         ],
         "lesson.key": "Random Numbers",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "0215a0d4-8f0d-466b-b645-93c160d00788"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Variables random with assignment_virtual_2020"
@@ -2423,9 +1068,12 @@
     {
       "chapter": 32,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random reassign_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2435,8 +1083,7 @@
         ],
         "lesson.key": "Random Numbers",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "0215a0d4-8f0d-466b-b645-93c160d00788"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Variables random reassign_virtual_2020"
@@ -2445,9 +1092,12 @@
     {
       "chapter": 33,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random practice_2020_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2457,8 +1107,7 @@
         ],
         "lesson.key": "Random Numbers",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "506e0d91-ba02-4e0a-8967-4f106a558f2a"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games random practice_2020_virtual_2020"
@@ -2467,9 +1116,12 @@
     {
       "chapter": 34,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random rainbow snake_2018_virtual_2020"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2479,8 +1131,7 @@
         ],
         "lesson.key": "Random Numbers",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "c47ed57e-2fa6-41ac-9024-61757fad7f03"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Random rainbow snake_2018_virtual_2020"
@@ -2489,9 +1140,12 @@
     {
       "chapter": 35,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games random challenge_2020_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2501,8 +1155,7 @@
         ],
         "lesson.key": "Random Numbers",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "85cc0878-0461-4476-b481-c8e3ac9d4f9f"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games random challenge_2020_virtual_2020"
@@ -2511,9 +1164,12 @@
     {
       "chapter": 36,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites Exploration_virtual_2020"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -2523,8 +1179,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5b3813d5-0da9-4ef8-aae1-acc387785d92"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Sprites Exploration_virtual_2020"
@@ -2533,9 +1188,12 @@
     {
       "chapter": 37,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Sprites in Game Lab_virtual_2020"
+        ],
         "progression": "Video: Introduction to Sprites"
       },
       "bonus": false,
@@ -2545,8 +1203,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "66c7814f-63ec-451e-895c-07df55f12fad"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD: Sprites in Game Lab_virtual_2020"
@@ -2555,9 +1212,12 @@
     {
       "chapter": 38,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2567,8 +1227,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "674f0d67-1968-4aff-92a0-29f7fea6a4f5"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Sprites intro sprites_virtual_2020"
@@ -2577,9 +1236,12 @@
     {
       "chapter": 39,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro debug_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2589,8 +1251,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "674f0d67-1968-4aff-92a0-29f7fea6a4f5"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Sprites intro debug_virtual_2020"
@@ -2599,9 +1260,12 @@
     {
       "chapter": 40,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 1_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2611,8 +1275,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "674f0d67-1968-4aff-92a0-29f7fea6a4f5"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Sprites anitab 1_virtual_2020"
@@ -2621,9 +1284,12 @@
     {
       "chapter": 41,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Animation Tab_virtual_2020"
+        ],
         "progression": "Video: The Animation Tab"
       },
       "bonus": false,
@@ -2633,8 +1299,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "59eb1901-0610-4009-8658-e641d910384f"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD: Animation Tab_virtual_2020"
@@ -2643,9 +1308,12 @@
     {
       "chapter": 42,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites sequencing_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2655,8 +1323,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5f64ecee-93e4-4525-a19c-f5851f22893f"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Sprites sequencing_virtual_2020"
@@ -2665,9 +1332,12 @@
     {
       "chapter": 43,
       "position": 8,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 drawSprites placement match_2019_pilot_2020_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2677,8 +1347,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5f64ecee-93e4-4525-a19c-f5851f22893f"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 drawSprites placement match_2019_pilot_2020_virtual_2020"
@@ -2687,9 +1356,12 @@
     {
       "chapter": 44,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites practice_2020_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2699,8 +1371,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "2d4ce688-b79e-4fbd-8011-cd0d3e74aa76"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD Games Sprites practice_2020_virtual_2020"
@@ -2709,9 +1380,12 @@
     {
       "chapter": 45,
       "position": 10,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites assessment_virtual_2020"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2721,8 +1395,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "29fe0833-327e-47d4-bc45-24ea6be2b45b"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Sprites assessment_virtual_2020"
@@ -2731,9 +1404,12 @@
     {
       "chapter": 46,
       "position": 11,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Sprites Challenges_2020_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2743,8 +1419,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "fc7cd7b8-f9c2-47d7-a3e5-785812e20877"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD Games Sprites Challenges_2020_virtual_2020"
@@ -2753,9 +1428,12 @@
     {
       "chapter": 47,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties predict_virtual_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2765,8 +1443,7 @@
         ],
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "6e35b463-538d-4537-8cfd-e307b265fae8"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD Games properties predict_virtual_2020"
@@ -2775,9 +1452,12 @@
     {
       "chapter": 48,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties xy_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2787,8 +1467,7 @@
         ],
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "1241cf6d-24a2-49c2-a87f-05d48c351436"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD Games properties xy_virtual_2020"
@@ -2797,9 +1476,12 @@
     {
       "chapter": 49,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties new_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2809,8 +1491,7 @@
         ],
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "1241cf6d-24a2-49c2-a87f-05d48c351436"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD Games properties new_virtual_2020"
@@ -2819,9 +1500,12 @@
     {
       "chapter": 50,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties practice_2020_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2831,8 +1515,7 @@
         ],
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "4be81ace-c78e-4514-8798-3c5d4c75da82"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD Games Properties practice_2020_virtual_2020"
@@ -2841,9 +1524,12 @@
     {
       "chapter": 51,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Games properties assessment_virtual_2020"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2853,8 +1539,7 @@
         ],
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "96ab38df-7aef-416f-9c05-4eda4fef7974"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD Games properties assessment_virtual_2020"
@@ -2863,9 +1548,12 @@
     {
       "chapter": 52,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties challenge_2020_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2875,8 +1563,7 @@
         ],
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "a826c930-b933-4125-9030-b5893b4c0993"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD Games Properties challenge_2020_virtual_2020"
@@ -2885,9 +1572,12 @@
     {
       "chapter": 53,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web text explore_virtual_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -2897,8 +1587,7 @@
         ],
         "lesson.key": "Text",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "8c0b36ee-355c-4097-a5ac-56482c98c8a0"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web text explore_virtual_2020"
@@ -2907,9 +1596,12 @@
     {
       "chapter": 54,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites text_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2919,8 +1611,7 @@
         ],
         "lesson.key": "Text",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5b302f80-a58c-467a-aed4-5bb0f503f744"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Sprites text_virtual_2020"
@@ -2929,9 +1620,12 @@
     {
       "chapter": 55,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web text size_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -2941,8 +1635,7 @@
         ],
         "lesson.key": "Text",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5b302f80-a58c-467a-aed4-5bb0f503f744"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web text size_virtual_2020"
@@ -2951,9 +1644,12 @@
     {
       "chapter": 56,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web text practice choice_2020_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2963,8 +1659,7 @@
         ],
         "lesson.key": "Text",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "d6a848e2-3b7b-49ef-a2d5-d56bf0674dda"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web text practice choice_2020_virtual_2020"
@@ -2973,9 +1668,12 @@
     {
       "chapter": 57,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD web text assessment_virtual_2020"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -2985,8 +1683,7 @@
         ],
         "lesson.key": "Text",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "db1adef4-694e-4479-89a1-ade27bab349a"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web text assessment_virtual_2020"
@@ -2995,9 +1692,12 @@
     {
       "chapter": 58,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web text challenge choice_2020_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -3007,8 +1707,7 @@
         ],
         "lesson.key": "Text",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "10788f00-a9de-4c66-be0a-44d2bba8efd4"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web text challenge choice_2020_virtual_2020"
@@ -3017,9 +1716,12 @@
     {
       "chapter": 59,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Introduction to the Draw Loop_virtual_2020"
+        ],
         "progression": "Video: Introduction to the Draw Loop"
       },
       "bonus": false,
@@ -3029,8 +1731,7 @@
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "4186ba96-a835-4afe-bae6-862bd3d1ca4f"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD: Introduction to the Draw Loop_virtual_2020"
@@ -3039,9 +1740,12 @@
     {
       "chapter": 60,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged orange and green_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3051,8 +1755,7 @@
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "87614ac0-f914-46f3-8ca4-c1c322863a30"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Draw Loop Plugged orange and green_virtual_2020"
@@ -3061,9 +1764,12 @@
     {
       "chapter": 61,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged predict 2_virtual_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3073,8 +1779,7 @@
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "ff5e76e3-de74-48bd-9ede-792de7545e3f"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Draw Loop Plugged predict 2_virtual_2020"
@@ -3083,9 +1788,12 @@
     {
       "chapter": 62,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 dancing alien_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3095,8 +1803,7 @@
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "748b681a-182d-466e-ac08-611fad39bafb"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 dancing alien_virtual_2020"
@@ -3105,9 +1812,12 @@
     {
       "chapter": 63,
       "position": 5,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite x_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3117,8 +1827,7 @@
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "748b681a-182d-466e-ac08-611fad39bafb"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Draw Loop Plugged wiggle sprite x_virtual_2020"
@@ -3127,9 +1836,12 @@
     {
       "chapter": 64,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web draw loop practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3139,8 +1851,7 @@
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "45325bf9-77b7-415c-8ef5-113937251cae"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web draw loop practice choice_virtual_2020"
@@ -3149,9 +1860,12 @@
     {
       "chapter": 65,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite y_virtual_2020"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3161,8 +1875,7 @@
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "bb033c32-ed52-4e40-9a51-a7e7011dd38b"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Draw Loop Plugged wiggle sprite y_virtual_2020"
@@ -3171,9 +1884,12 @@
     {
       "chapter": 66,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web draw loop challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -3183,8 +1899,7 @@
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "2adfa7a8-a3b0-4467-bb79-8b20b5ffa2c0"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web draw loop challenge choice_virtual_2020"
@@ -3193,9 +1908,12 @@
     {
       "chapter": 67,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Simple Counter Predict_virtual_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3205,8 +1923,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b87d3d86-5239-44b2-8f36-08aa0ad6e0aa"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 - Simple Counter Predict_virtual_2020"
@@ -3215,9 +1932,12 @@
     {
       "chapter": 68,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Animating Sprite Movement_virtual_2020"
+        ],
         "progression": "Video: Sprite Movement"
       },
       "bonus": false,
@@ -3227,8 +1947,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "fb34aced-3555-4a32-b612-51a0f84e1d94"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD: Animating Sprite Movement_virtual_2020"
@@ -3237,9 +1956,12 @@
     {
       "chapter": 69,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprite Movement Right_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3249,8 +1971,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "50085cef-357e-4257-9ca3-a0852c6b5b43"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Sprite Movement Right_virtual_2020"
@@ -3259,9 +1980,12 @@
     {
       "chapter": 70,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprite Movement Left_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3271,8 +1995,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "50085cef-357e-4257-9ca3-a0852c6b5b43"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Sprite Movement Left_virtual_2020"
@@ -3281,9 +2004,12 @@
     {
       "chapter": 71,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Diagonal Movement_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3293,8 +2019,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "50085cef-357e-4257-9ca3-a0852c6b5b43"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Diagonal Movement_virtual_2020"
@@ -3303,9 +2028,12 @@
     {
       "chapter": 72,
       "position": 6,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprite Movement Predict_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3315,8 +2043,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "50085cef-357e-4257-9ca3-a0852c6b5b43"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Sprite Movement Predict_virtual_2020"
@@ -3325,9 +2052,12 @@
     {
       "chapter": 73,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web movement practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3337,8 +2067,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "44507b57-039c-40b1-afd3-065e04d519b0"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web movement practice choice_virtual_2020"
@@ -3347,9 +2076,12 @@
     {
       "chapter": 74,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Movement Fish_virtual_2020"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3359,8 +2091,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "68abe5c1-3403-4d0d-bb29-e02212902ad8"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Movement Fish_virtual_2020"
@@ -3369,9 +2100,12 @@
     {
       "chapter": 75,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web movement challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -3381,8 +2115,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "fa31114a-9916-4709-a268-c604e5200450"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web movement challenge choice_virtual_2020"
@@ -3391,9 +2124,12 @@
     {
       "chapter": 76,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Boolean Predict_virtual_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3403,8 +2139,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "c8bb6ef6-5258-4860-9f3f-8469da3358d3"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Boolean Predict_virtual_2020"
@@ -3413,9 +2148,12 @@
     {
       "chapter": 77,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Booleans Video_virtual_2020"
+        ],
         "progression": "Video: Booleans"
       },
       "bonus": false,
@@ -3425,8 +2163,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "a1b020cd-6a83-4393-a675-27ac017247f3"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 - Booleans Video_virtual_2020"
@@ -3435,9 +2172,12 @@
     {
       "chapter": 78,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - Matching_2018_2019_pilot_2020_virtual_2020"
+        ],
         "progression": "Quick Check"
       },
       "bonus": false,
@@ -3447,8 +2187,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "06626026-ee30-4756-af49-4f2159cd176d"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 - conditionals - Matching_2018_2019_pilot_2020_virtual_2020"
@@ -3457,9 +2196,12 @@
     {
       "chapter": 79,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - transition_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3469,8 +2211,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "28ed5851-b004-4888-8da9-595dc811c0ca"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 - conditionals - transition_virtual_2020"
@@ -3479,9 +2220,12 @@
     {
       "chapter": 80,
       "position": 5,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - first conditional_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3491,8 +2235,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "28ed5851-b004-4888-8da9-595dc811c0ca"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 - conditionals - first conditional_virtual_2020"
@@ -3501,9 +2244,12 @@
     {
       "chapter": 81,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd U3 conditional statements video_virtual_2020"
+        ],
         "progression": "Video: Conditional Statements"
       },
       "bonus": false,
@@ -3513,8 +2259,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "e1e44f42-7fa4-43f7-8db0-ac960503f36e"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "csd U3 conditional statements video_virtual_2020"
@@ -3523,9 +2268,12 @@
     {
       "chapter": 82,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Conditionals Apple 2_2018_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3535,8 +2283,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "749a4069-41b6-411d-abd3-3e2afd5e43b0"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Conditionals Apple 2_2018_virtual_2020"
@@ -3545,9 +2292,12 @@
     {
       "chapter": 83,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web conditionals practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3557,8 +2307,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "ca311e91-8347-481a-ab27-6b9c6572a16d"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web conditionals practice choice_virtual_2020"
@@ -3567,9 +2316,12 @@
     {
       "chapter": 84,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD web conditionals assessment_virtual_2020"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3579,8 +2331,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "4bca9ec2-a8b7-412b-803d-d101bd856faa"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web conditionals assessment_virtual_2020"
@@ -3589,9 +2340,12 @@
     {
       "chapter": 85,
       "position": 10,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web conditionals challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -3601,8 +2355,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "1830f060-8e84-4f1a-8380-cc74080621dc"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web conditionals challenge choice_virtual_2020"
@@ -3611,9 +2364,12 @@
     {
       "chapter": 86,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Keypress Boolean_2018_virtual_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3623,8 +2379,7 @@
         ],
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "fb3aeafc-f12f-4ce3-acab-368e4bd7cbae"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Keypress Boolean_2018_virtual_2020"
@@ -3633,9 +2388,12 @@
     {
       "chapter": 87,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 keydown conditional_2018_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3645,8 +2403,7 @@
         ],
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "affef772-f801-4968-9fe4-331347be70fd"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 keydown conditional_2018_virtual_2020"
@@ -3655,9 +2412,12 @@
     {
       "chapter": 88,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 UP_ARROW_2018_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3667,8 +2427,7 @@
         ],
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "affef772-f801-4968-9fe4-331347be70fd"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 UP_ARROW_2018_virtual_2020"
@@ -3677,9 +2436,12 @@
     {
       "chapter": 89,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Input Gears_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3689,8 +2451,7 @@
         ],
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "affef772-f801-4968-9fe4-331347be70fd"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Input Gears_virtual_2020"
@@ -3699,9 +2460,12 @@
     {
       "chapter": 90,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web keyboard practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3711,8 +2475,7 @@
         ],
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "86c260b2-a95f-4e66-becf-0eccb3b8c2c2"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web keyboard practice choice_virtual_2020"
@@ -3721,9 +2484,12 @@
     {
       "chapter": 91,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Direction Arrows_2018_virtual_2020"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3733,8 +2499,7 @@
         ],
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "fdb46bf3-6a6f-41c5-a001-bffa9ac05c1c"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Direction Arrows_2018_virtual_2020"
@@ -3743,9 +2508,12 @@
     {
       "chapter": 92,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web keyboard challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -3755,8 +2523,7 @@
         ],
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "68a7acae-32e3-48fb-ad82-4b3bb878e965"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web keyboard challenge choice_virtual_2020"
@@ -3765,9 +2532,12 @@
     {
       "chapter": 93,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 if else predict_virtual_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3777,8 +2547,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "40f3eb00-0162-44ba-a3da-8a9f708e2ea4"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 if else predict_virtual_2020"
@@ -3787,9 +2556,12 @@
     {
       "chapter": 94,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Conditionals Video_virtual_2020"
+        ],
         "progression": "Video: If/Else Statements"
       },
       "bonus": false,
@@ -3799,8 +2571,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "326580d0-9df8-43e2-a19c-10196f359756"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 - Conditionals Video_virtual_2020"
@@ -3809,9 +2580,12 @@
     {
       "chapter": 95,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Else_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3821,8 +2595,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "3d88f8b7-aca6-4d55-80d6-4428b006628f"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Else_virtual_2020"
@@ -3831,9 +2604,12 @@
     {
       "chapter": 96,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games mousedown intro_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3843,8 +2619,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "3d88f8b7-aca6-4d55-80d6-4428b006628f"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games mousedown intro_virtual_2020"
@@ -3853,9 +2628,12 @@
     {
       "chapter": 97,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - complex - mouse down_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3865,8 +2643,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "3d88f8b7-aca6-4d55-80d6-4428b006628f"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 - complex - mouse down_virtual_2020"
@@ -3875,9 +2652,12 @@
     {
       "chapter": 98,
       "position": 6,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 If Else_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3887,8 +2667,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "3d88f8b7-aca6-4d55-80d6-4428b006628f"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 If Else_virtual_2020"
@@ -3897,9 +2676,12 @@
     {
       "chapter": 99,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web mouse practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3909,8 +2691,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "4c3baa4f-1407-42b4-96c4-efd0258172e9"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web mouse practice choice_virtual_2020"
@@ -3919,9 +2700,12 @@
     {
       "chapter": 100,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD web mouse assessment_virtual_2020"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -3931,8 +2715,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "d13dfa6d-fa92-45ac-a494-96717d6a8701"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web mouse assessment_virtual_2020"
@@ -3941,9 +2724,12 @@
     {
       "chapter": 101,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web mouse challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -3953,8 +2739,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "ac2139d1-00f0-4a7b-aafe-13d95c2b3df2"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD web mouse challenge choice_virtual_2020"
@@ -3963,9 +2748,12 @@
     {
       "chapter": 102,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -3975,8 +2763,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "97dc0c22-0aba-4b4c-99b7-ed599c8272c1"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 abstraction velocityX_virtual_2020"
@@ -3985,9 +2772,12 @@
     {
       "chapter": 103,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Sprite Velocity_virtual_2020"
+        ],
         "progression": "Video: Velocity"
       },
       "bonus": false,
@@ -3997,8 +2787,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "2c36bc56-2220-4fe7-a0be-38a239943aa9"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD: Sprite Velocity_virtual_2020"
@@ -4007,9 +2796,12 @@
     {
       "chapter": 104,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityY_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4019,8 +2811,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b6778150-83f6-4d5c-8c0c-9ca0a25742bc"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 abstraction velocityY_virtual_2020"
@@ -4029,9 +2820,12 @@
     {
       "chapter": 105,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction rotation_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4041,8 +2835,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b6778150-83f6-4d5c-8c0c-9ca0a25742bc"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 abstraction rotation_virtual_2020"
@@ -4051,9 +2844,12 @@
     {
       "chapter": 106,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction rotation control_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4063,8 +2859,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b6778150-83f6-4d5c-8c0c-9ca0a25742bc"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 abstraction rotation control_virtual_2020"
@@ -4073,9 +2868,12 @@
     {
       "chapter": 107,
       "position": 6,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX if-statements_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4085,8 +2883,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b6778150-83f6-4d5c-8c0c-9ca0a25742bc"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 abstraction velocityX if-statements_virtual_2020"
@@ -4095,9 +2892,12 @@
     {
       "chapter": 108,
       "position": 7,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games velocity tennis_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4107,8 +2907,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b6778150-83f6-4d5c-8c0c-9ca0a25742bc"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games velocity tennis_virtual_2020"
@@ -4117,9 +2916,12 @@
     {
       "chapter": 109,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games velocity practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4129,8 +2931,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "0a7b11b2-ce9e-4c91-8250-7655f0bbb46e"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games velocity practice choice_virtual_2020"
@@ -4139,9 +2940,12 @@
     {
       "chapter": 110,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX control_virtual_2020"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4151,8 +2955,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "cd2cc9bd-0043-493e-b0b5-e57d4cee5aa2"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 abstraction velocityX control_virtual_2020"
@@ -4161,9 +2964,12 @@
     {
       "chapter": 111,
       "position": 10,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games velocity challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -4173,8 +2979,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "8bb9dff9-6b73-4dbd-bd6e-62f155db6ed8"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games velocity challenge choice_virtual_2020"
@@ -4183,9 +2988,12 @@
     {
       "chapter": 112,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions car intro_virtual_2020"
+        ],
         "progression": "Sample Game"
       },
       "bonus": false,
@@ -4195,8 +3003,7 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "26f227be-7c40-436e-a081-841e5c1d811a"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 collisions car intro_virtual_2020"
@@ -4205,9 +3012,12 @@
     {
       "chapter": 113,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions build isTouching_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4217,8 +3027,7 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b3432e22-9fb7-42c8-b1ee-53b28b603492"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 collisions build isTouching_virtual_2020"
@@ -4227,9 +3036,12 @@
     {
       "chapter": 114,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions isTouching intro_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4239,8 +3051,7 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b3432e22-9fb7-42c8-b1ee-53b28b603492"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 collisions isTouching intro_virtual_2020"
@@ -4249,9 +3060,12 @@
     {
       "chapter": 115,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions egg_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4261,8 +3075,7 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b3432e22-9fb7-42c8-b1ee-53b28b603492"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 collisions egg_virtual_2020"
@@ -4271,9 +3084,12 @@
     {
       "chapter": 116,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions debug isTouching_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4283,8 +3099,7 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b3432e22-9fb7-42c8-b1ee-53b28b603492"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 collisions debug isTouching_virtual_2020"
@@ -4293,9 +3108,12 @@
     {
       "chapter": 117,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games istouching practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4305,8 +3123,7 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b468989a-ae47-4ca1-afbc-e99c4509d83a"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games istouching practice choice_virtual_2020"
@@ -4315,9 +3132,12 @@
     {
       "chapter": 118,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions horse_virtual_2020"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4327,8 +3147,7 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "1ba4850a-162f-4b10-802c-028c7c6e483a"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 collisions horse_virtual_2020"
@@ -4337,9 +3156,12 @@
     {
       "chapter": 119,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games istouching challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -4349,8 +3171,7 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "892fce5b-5ee9-4027-84f6-41bffa422955"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games istouching challenge choice_virtual_2020"
@@ -4359,9 +3180,12 @@
     {
       "chapter": 120,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Complex Movement counter prediction gamelab_virtual_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4371,8 +3195,7 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "88cc357c-3c62-430c-a655-0c44d5e60918"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Complex Movement counter prediction gamelab_virtual_2020"
@@ -4381,9 +3204,12 @@
     {
       "chapter": 121,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction accelerateX_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4393,8 +3219,7 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "cf4aaff6-d3a5-48ed-87ff-4cc731ee39c4"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 abstraction accelerateX_virtual_2020"
@@ -4403,9 +3228,12 @@
     {
       "chapter": 122,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction accelerateY_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4415,8 +3243,7 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "cf4aaff6-d3a5-48ed-87ff-4cc731ee39c4"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 abstraction accelerateY_virtual_2020"
@@ -4425,9 +3252,12 @@
     {
       "chapter": 123,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction decelerateX_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4437,8 +3267,7 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "cf4aaff6-d3a5-48ed-87ff-4cc731ee39c4"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 abstraction decelerateX_virtual_2020"
@@ -4447,9 +3276,12 @@
     {
       "chapter": 124,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games movement2 practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4459,8 +3291,7 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "08c81100-00e9-4417-bd6b-91d1144010c9"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games movement2 practice choice_virtual_2020"
@@ -4469,9 +3300,12 @@
     {
       "chapter": 125,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction decelerateY_virtual_2020"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4481,8 +3315,7 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "ea5cc218-5af8-4b1e-bb25-acaad3844200"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 abstraction decelerateY_virtual_2020"
@@ -4491,9 +3324,12 @@
     {
       "chapter": 126,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games movement2 challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -4503,8 +3339,7 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "da6fb4b2-fd06-446d-bb66-78994562d33b"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games movement2 challenge choice_virtual_2020"
@@ -4513,9 +3348,12 @@
     {
       "chapter": 127,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace intro_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4525,8 +3363,7 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "dbadc3d9-cff4-4c68-9972-6b7020695dad"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 collisions displace intro_virtual_2020"
@@ -4535,9 +3372,12 @@
     {
       "chapter": 128,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions try blocks_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4547,8 +3387,7 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "dbadc3d9-cff4-4c68-9972-6b7020695dad"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 collisions try blocks_virtual_2020"
@@ -4557,9 +3396,12 @@
     {
       "chapter": 129,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games collisions practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4569,8 +3411,7 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "ed4b20ac-6e6f-4277-b2e0-0979ca706e83"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games collisions practice choice_virtual_2020"
@@ -4579,9 +3420,12 @@
     {
       "chapter": 130,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD games collisions assessment_virtual_2020"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -4591,8 +3435,7 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "f0eb699d-6389-4c32-bc0d-579bf5cd40b7"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games collisions assessment_virtual_2020"
@@ -4601,9 +3444,12 @@
     {
       "chapter": 131,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games collisions challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -4613,8 +3459,7 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "6daa57b5-679d-4f0b-bfa2-a98a0b26f2c4"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games collisions challenge choice_virtual_2020"
@@ -4623,9 +3468,12 @@
     {
       "chapter": 132,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 function video_virtual_2020"
+        ],
         "progression": "Video: Functions"
       },
       "bonus": false,
@@ -4635,8 +3483,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "018cf972-1166-4a2c-8c90-30f6d13be4d2"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 function video_virtual_2020"
@@ -4645,9 +3492,12 @@
     {
       "chapter": 133,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Call Function_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4657,8 +3507,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "58da7eae-3be7-4632-bc56-c4ec223b9767"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Functions Call Function_virtual_2020"
@@ -4667,9 +3516,12 @@
     {
       "chapter": 134,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Order Functions_virtual_2020"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -4679,8 +3531,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "58da7eae-3be7-4632-bc56-c4ec223b9767"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Functions Order Functions_virtual_2020"
@@ -4689,9 +3540,12 @@
     {
       "chapter": 135,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Prediction Order of Create_virtual_2020"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -4701,8 +3555,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "96e38939-3534-432e-a2bf-430873c5d238"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Functions Prediction Order of Create_virtual_2020"
@@ -4711,9 +3564,12 @@
     {
       "chapter": 136,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games functions practice choice_virtual_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4723,8 +3579,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "710af326-227c-4709-b1b8-3a239d5f3b1b"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games functions practice choice_virtual_2020"
@@ -4733,9 +3588,12 @@
     {
       "chapter": 137,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Write Reset_virtual_2020"
+        ],
         "progression": "Collector Game"
       },
       "bonus": false,
@@ -4745,8 +3603,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "db44ab83-f087-43fa-be81-f5b089d83a9f"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Functions Write Reset_virtual_2020"
@@ -4755,9 +3612,12 @@
     {
       "chapter": 138,
       "position": 7,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Add IsTouching_virtual_2020"
+        ],
         "progression": "Collector Game"
       },
       "bonus": false,
@@ -4767,8 +3627,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "db44ab83-f087-43fa-be81-f5b089d83a9f"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Functions Add IsTouching_virtual_2020"
@@ -4777,9 +3636,12 @@
     {
       "chapter": 139,
       "position": 8,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Add Change Background_virtual_2020"
+        ],
         "progression": "Collector Game"
       },
       "bonus": false,
@@ -4789,8 +3651,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "db44ab83-f087-43fa-be81-f5b089d83a9f"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 Functions Add Change Background_virtual_2020"
@@ -4799,9 +3660,12 @@
     {
       "chapter": 140,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games functions challenge choice_virtual_2020"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -4811,8 +3675,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "04bf61bf-1d22-463f-8584-1b37f7f0f688"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games functions challenge choice_virtual_2020"
@@ -4821,9 +3684,12 @@
     {
       "chapter": 141,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game intro_2018_2019_pilot_2020_virtual_2020"
+        ],
         "progression": "Design Your Game"
       },
       "bonus": false,
@@ -4833,8 +3699,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "f74eca15-cdb1-46e1-80bf-f846818e4e72"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 game intro_2018_2019_pilot_2020_virtual_2020"
@@ -4843,9 +3708,12 @@
     {
       "chapter": 142,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game variables_virtual_2020"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -4855,8 +3723,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "42e65353-2a39-4bf3-a663-edd9d5634573"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 game variables_virtual_2020"
@@ -4865,9 +3732,12 @@
     {
       "chapter": 143,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game backgrounds_virtual_2020"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -4877,8 +3747,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "42e65353-2a39-4bf3-a663-edd9d5634573"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 game backgrounds_virtual_2020"
@@ -4887,9 +3756,12 @@
     {
       "chapter": 144,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game display boards_virtual_2020"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -4899,8 +3771,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "42e65353-2a39-4bf3-a663-edd9d5634573"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 game display boards_virtual_2020"
@@ -4909,9 +3780,12 @@
     {
       "chapter": 145,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game choose background_virtual_2020"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -4921,8 +3795,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "42e65353-2a39-4bf3-a663-edd9d5634573"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 game choose background_virtual_2020"
@@ -4931,9 +3804,12 @@
     {
       "chapter": 146,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game animations_virtual_2020"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -4943,8 +3819,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5900b488-3238-4493-af09-d50e977db332"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 game animations_virtual_2020"
@@ -4953,9 +3828,12 @@
     {
       "chapter": 147,
       "position": 7,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game create sprites_virtual_2020"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -4965,8 +3843,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5900b488-3238-4493-af09-d50e977db332"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 game create sprites_virtual_2020"
@@ -4975,9 +3852,12 @@
     {
       "chapter": 148,
       "position": 8,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game sprite movement_virtual_2020"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -4987,8 +3867,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5900b488-3238-4493-af09-d50e977db332"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 game sprite movement_virtual_2020"
@@ -4997,9 +3876,12 @@
     {
       "chapter": 149,
       "position": 9,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game user controls_virtual_2020"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -5009,8 +3891,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5900b488-3238-4493-af09-d50e977db332"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 game user controls_virtual_2020"
@@ -5019,9 +3900,12 @@
     {
       "chapter": 150,
       "position": 10,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game interactions_virtual_2020"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -5031,8 +3915,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5900b488-3238-4493-af09-d50e977db332"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD U3 game interactions_virtual_2020"
@@ -5041,9 +3924,12 @@
     {
       "chapter": 151,
       "position": 11,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games project review_virtual_2020"
+        ],
         "progression": "Review Your Game"
       },
       "bonus": false,
@@ -5053,8 +3939,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "bcedc642-dc42-4873-8233-1f40f533a75f"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games project review_virtual_2020"
@@ -5063,9 +3948,12 @@
     {
       "chapter": 152,
       "position": 12,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD games project share_virtual_2020"
+        ],
         "progression": "Congratulations!"
       },
       "bonus": false,
@@ -5075,8 +3963,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "7a37b522-40e2-47d3-b1b9-880e7e678b2d"
+        "script.name": "csd3-virtual"
       },
       "level_keys": [
         "CSD games project share_virtual_2020"
@@ -5092,8 +3979,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "35213e78-7fd3-4dcd-b4d2-410219b6d9b6"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5104,8 +3990,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "a98dfb06-455f-4063-978b-034f0915afcb"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5116,8 +4001,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "8a578027-f578-4255-85ea-d686619e32f2"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5128,8 +4012,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "84b7e9a4-5eee-4006-ad25-92db3ce66233"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5140,8 +4023,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "a9364ea5-2c76-425b-85b2-6b76bc471a96"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5152,8 +4034,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "4e105436-e985-4225-8809-61717764e17c"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5164,8 +4045,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "4e105436-e985-4225-8809-61717764e17c"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5176,8 +4056,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "4e105436-e985-4225-8809-61717764e17c"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5188,8 +4067,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "9494926d-7162-4af4-b466-52c23a1518fa"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5200,8 +4078,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b7ca59da-1614-45d2-b29f-17400a545adf"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5212,8 +4089,7 @@
         ],
         "lesson.key": "Drawing in Game Lab",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "d4703ef2-a877-4667-8d1b-3cb59f67d2f7"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5224,8 +4100,7 @@
         ],
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "22e1bca9-1e74-465a-b4c1-ded88ec5de8e"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5236,8 +4111,7 @@
         ],
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "22e1bca9-1e74-465a-b4c1-ded88ec5de8e"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5248,8 +4122,7 @@
         ],
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "22e1bca9-1e74-465a-b4c1-ded88ec5de8e"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5260,8 +4133,7 @@
         ],
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "22e1bca9-1e74-465a-b4c1-ded88ec5de8e"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5272,8 +4144,7 @@
         ],
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "22e1bca9-1e74-465a-b4c1-ded88ec5de8e"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5284,8 +4155,7 @@
         ],
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "a2c382e1-6d84-452f-a03f-ec009a2e3d35"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5296,8 +4166,7 @@
         ],
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "f97c240a-d1cf-4ee7-8dcd-56b2eb523120"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5308,8 +4177,7 @@
         ],
         "lesson.key": "Shapes and Parameters",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "53a5850c-c39c-4785-8af6-fab639556f89"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5320,8 +4188,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "6f9ce57a-5d6b-45c7-9a58-d92f3ae3bc9c"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5332,8 +4199,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "6729599a-337c-46ab-8d5e-5c57515c8d67"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5344,8 +4210,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "8d2fdbab-ab56-4bc9-a25f-644c81ec6780"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5356,8 +4221,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "8d2fdbab-ab56-4bc9-a25f-644c81ec6780"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5368,8 +4232,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "8d2fdbab-ab56-4bc9-a25f-644c81ec6780"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5380,8 +4243,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "8d2fdbab-ab56-4bc9-a25f-644c81ec6780"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5392,8 +4254,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "62208bff-b1ac-4346-94a3-0bcb904f496e"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5404,8 +4265,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "6cc885f4-667f-40b9-b268-2f301365676c"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5416,8 +4276,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "351bbb90-bd86-4dff-aec1-dcbdc8ab4750"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5428,8 +4287,7 @@
         ],
         "lesson.key": "Random Numbers",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "7993c1bd-33d5-4b4d-bbe8-f2185e49d5da"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5440,8 +4298,7 @@
         ],
         "lesson.key": "Random Numbers",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "0215a0d4-8f0d-466b-b645-93c160d00788"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5452,8 +4309,7 @@
         ],
         "lesson.key": "Random Numbers",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "0215a0d4-8f0d-466b-b645-93c160d00788"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5464,8 +4320,7 @@
         ],
         "lesson.key": "Random Numbers",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "0215a0d4-8f0d-466b-b645-93c160d00788"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5476,8 +4331,7 @@
         ],
         "lesson.key": "Random Numbers",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "506e0d91-ba02-4e0a-8967-4f106a558f2a"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5488,8 +4342,7 @@
         ],
         "lesson.key": "Random Numbers",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "c47ed57e-2fa6-41ac-9024-61757fad7f03"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5500,8 +4353,7 @@
         ],
         "lesson.key": "Random Numbers",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "85cc0878-0461-4476-b481-c8e3ac9d4f9f"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5512,8 +4364,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5b3813d5-0da9-4ef8-aae1-acc387785d92"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5524,8 +4375,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "66c7814f-63ec-451e-895c-07df55f12fad"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5536,8 +4386,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "674f0d67-1968-4aff-92a0-29f7fea6a4f5"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5548,8 +4397,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "674f0d67-1968-4aff-92a0-29f7fea6a4f5"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5560,8 +4408,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "674f0d67-1968-4aff-92a0-29f7fea6a4f5"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5572,8 +4419,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "59eb1901-0610-4009-8658-e641d910384f"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5584,8 +4430,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5f64ecee-93e4-4525-a19c-f5851f22893f"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5596,8 +4441,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5f64ecee-93e4-4525-a19c-f5851f22893f"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5608,8 +4452,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "2d4ce688-b79e-4fbd-8011-cd0d3e74aa76"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5620,8 +4463,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "29fe0833-327e-47d4-bc45-24ea6be2b45b"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5632,8 +4474,7 @@
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "fc7cd7b8-f9c2-47d7-a3e5-785812e20877"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5644,8 +4485,7 @@
         ],
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "6e35b463-538d-4537-8cfd-e307b265fae8"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5656,8 +4496,7 @@
         ],
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "1241cf6d-24a2-49c2-a87f-05d48c351436"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5668,8 +4507,7 @@
         ],
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "1241cf6d-24a2-49c2-a87f-05d48c351436"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5680,8 +4518,7 @@
         ],
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "4be81ace-c78e-4514-8798-3c5d4c75da82"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5692,8 +4529,7 @@
         ],
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "96ab38df-7aef-416f-9c05-4eda4fef7974"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5704,8 +4540,7 @@
         ],
         "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "a826c930-b933-4125-9030-b5893b4c0993"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5716,8 +4551,7 @@
         ],
         "lesson.key": "Text",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "8c0b36ee-355c-4097-a5ac-56482c98c8a0"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5728,8 +4562,7 @@
         ],
         "lesson.key": "Text",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5b302f80-a58c-467a-aed4-5bb0f503f744"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5740,8 +4573,7 @@
         ],
         "lesson.key": "Text",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5b302f80-a58c-467a-aed4-5bb0f503f744"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5752,8 +4584,7 @@
         ],
         "lesson.key": "Text",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "d6a848e2-3b7b-49ef-a2d5-d56bf0674dda"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5764,8 +4595,7 @@
         ],
         "lesson.key": "Text",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "db1adef4-694e-4479-89a1-ade27bab349a"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5776,8 +4606,7 @@
         ],
         "lesson.key": "Text",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "10788f00-a9de-4c66-be0a-44d2bba8efd4"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5788,8 +4617,7 @@
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "4186ba96-a835-4afe-bae6-862bd3d1ca4f"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5800,8 +4628,7 @@
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "87614ac0-f914-46f3-8ca4-c1c322863a30"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5812,8 +4639,7 @@
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "ff5e76e3-de74-48bd-9ede-792de7545e3f"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5824,8 +4650,7 @@
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "748b681a-182d-466e-ac08-611fad39bafb"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5836,8 +4661,7 @@
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "748b681a-182d-466e-ac08-611fad39bafb"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5848,8 +4672,7 @@
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "45325bf9-77b7-415c-8ef5-113937251cae"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5860,8 +4683,7 @@
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "bb033c32-ed52-4e40-9a51-a7e7011dd38b"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5872,8 +4694,7 @@
         ],
         "lesson.key": "The Draw Loop",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "2adfa7a8-a3b0-4467-bb79-8b20b5ffa2c0"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5884,8 +4705,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b87d3d86-5239-44b2-8f36-08aa0ad6e0aa"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5896,8 +4716,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "fb34aced-3555-4a32-b612-51a0f84e1d94"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5908,8 +4727,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "50085cef-357e-4257-9ca3-a0852c6b5b43"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5920,8 +4738,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "50085cef-357e-4257-9ca3-a0852c6b5b43"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5932,8 +4749,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "50085cef-357e-4257-9ca3-a0852c6b5b43"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5944,8 +4760,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "50085cef-357e-4257-9ca3-a0852c6b5b43"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5956,8 +4771,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "44507b57-039c-40b1-afd3-065e04d519b0"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5968,8 +4782,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "68abe5c1-3403-4d0d-bb29-e02212902ad8"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5980,8 +4793,7 @@
         ],
         "lesson.key": "Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "fa31114a-9916-4709-a268-c604e5200450"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -5992,8 +4804,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "c8bb6ef6-5258-4860-9f3f-8469da3358d3"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6004,8 +4815,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "a1b020cd-6a83-4393-a675-27ac017247f3"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6016,8 +4826,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "06626026-ee30-4756-af49-4f2159cd176d"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6028,8 +4837,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "28ed5851-b004-4888-8da9-595dc811c0ca"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6040,8 +4848,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "28ed5851-b004-4888-8da9-595dc811c0ca"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6052,8 +4859,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "e1e44f42-7fa4-43f7-8db0-ac960503f36e"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6064,8 +4870,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "749a4069-41b6-411d-abd3-3e2afd5e43b0"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6076,8 +4881,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "ca311e91-8347-481a-ab27-6b9c6572a16d"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6088,8 +4892,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "4bca9ec2-a8b7-412b-803d-d101bd856faa"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6100,8 +4903,7 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "1830f060-8e84-4f1a-8380-cc74080621dc"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6112,8 +4914,7 @@
         ],
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "fb3aeafc-f12f-4ce3-acab-368e4bd7cbae"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6124,8 +4925,7 @@
         ],
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "affef772-f801-4968-9fe4-331347be70fd"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6136,8 +4936,7 @@
         ],
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "affef772-f801-4968-9fe4-331347be70fd"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6148,8 +4947,7 @@
         ],
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "affef772-f801-4968-9fe4-331347be70fd"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6160,8 +4958,7 @@
         ],
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "86c260b2-a95f-4e66-becf-0eccb3b8c2c2"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6172,8 +4969,7 @@
         ],
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "fdb46bf3-6a6f-41c5-a001-bffa9ac05c1c"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6184,8 +4980,7 @@
         ],
         "lesson.key": "Keyboard Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "68a7acae-32e3-48fb-ad82-4b3bb878e965"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6196,8 +4991,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "40f3eb00-0162-44ba-a3da-8a9f708e2ea4"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6208,8 +5002,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "326580d0-9df8-43e2-a19c-10196f359756"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6220,8 +5013,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "3d88f8b7-aca6-4d55-80d6-4428b006628f"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6232,8 +5024,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "3d88f8b7-aca6-4d55-80d6-4428b006628f"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6244,8 +5035,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "3d88f8b7-aca6-4d55-80d6-4428b006628f"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6256,8 +5046,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "3d88f8b7-aca6-4d55-80d6-4428b006628f"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6268,8 +5057,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "4c3baa4f-1407-42b4-96c4-efd0258172e9"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6280,8 +5068,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "d13dfa6d-fa92-45ac-a494-96717d6a8701"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6292,8 +5079,7 @@
         ],
         "lesson.key": "Mouse Input",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "ac2139d1-00f0-4a7b-aafe-13d95c2b3df2"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6304,8 +5090,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "97dc0c22-0aba-4b4c-99b7-ed599c8272c1"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6316,8 +5101,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "2c36bc56-2220-4fe7-a0be-38a239943aa9"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6328,8 +5112,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b6778150-83f6-4d5c-8c0c-9ca0a25742bc"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6340,8 +5123,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b6778150-83f6-4d5c-8c0c-9ca0a25742bc"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6352,8 +5134,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b6778150-83f6-4d5c-8c0c-9ca0a25742bc"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6364,8 +5145,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b6778150-83f6-4d5c-8c0c-9ca0a25742bc"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6376,8 +5156,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b6778150-83f6-4d5c-8c0c-9ca0a25742bc"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6388,8 +5167,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "0a7b11b2-ce9e-4c91-8250-7655f0bbb46e"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6400,8 +5178,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "cd2cc9bd-0043-493e-b0b5-e57d4cee5aa2"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6412,8 +5189,7 @@
         ],
         "lesson.key": "Velocity",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "8bb9dff9-6b73-4dbd-bd6e-62f155db6ed8"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6424,8 +5200,7 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "26f227be-7c40-436e-a081-841e5c1d811a"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6436,8 +5211,7 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b3432e22-9fb7-42c8-b1ee-53b28b603492"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6448,8 +5222,7 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b3432e22-9fb7-42c8-b1ee-53b28b603492"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6460,8 +5233,7 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b3432e22-9fb7-42c8-b1ee-53b28b603492"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6472,8 +5244,7 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b3432e22-9fb7-42c8-b1ee-53b28b603492"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6484,8 +5255,7 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "b468989a-ae47-4ca1-afbc-e99c4509d83a"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6496,8 +5266,7 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "1ba4850a-162f-4b10-802c-028c7c6e483a"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6508,8 +5277,7 @@
         ],
         "lesson.key": "Collision Detection",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "892fce5b-5ee9-4027-84f6-41bffa422955"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6520,8 +5288,7 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "88cc357c-3c62-430c-a655-0c44d5e60918"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6532,8 +5299,7 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "cf4aaff6-d3a5-48ed-87ff-4cc731ee39c4"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6544,8 +5310,7 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "cf4aaff6-d3a5-48ed-87ff-4cc731ee39c4"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6556,8 +5321,7 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "cf4aaff6-d3a5-48ed-87ff-4cc731ee39c4"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6568,8 +5332,7 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "08c81100-00e9-4417-bd6b-91d1144010c9"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6580,8 +5343,7 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "ea5cc218-5af8-4b1e-bb25-acaad3844200"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6592,8 +5354,7 @@
         ],
         "lesson.key": "Complex Sprite Movement",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "da6fb4b2-fd06-446d-bb66-78994562d33b"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6604,8 +5365,7 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "dbadc3d9-cff4-4c68-9972-6b7020695dad"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6616,8 +5376,7 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "dbadc3d9-cff4-4c68-9972-6b7020695dad"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6628,8 +5387,7 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "ed4b20ac-6e6f-4277-b2e0-0979ca706e83"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6640,8 +5398,7 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "f0eb699d-6389-4c32-bc0d-579bf5cd40b7"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6652,8 +5409,7 @@
         ],
         "lesson.key": "Collisions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "6daa57b5-679d-4f0b-bfa2-a98a0b26f2c4"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6664,8 +5420,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "018cf972-1166-4a2c-8c90-30f6d13be4d2"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6676,8 +5431,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "58da7eae-3be7-4632-bc56-c4ec223b9767"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6688,8 +5442,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "58da7eae-3be7-4632-bc56-c4ec223b9767"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6700,8 +5453,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "96e38939-3534-432e-a2bf-430873c5d238"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6712,8 +5464,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "710af326-227c-4709-b1b8-3a239d5f3b1b"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6724,8 +5475,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "db44ab83-f087-43fa-be81-f5b089d83a9f"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6736,8 +5486,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "db44ab83-f087-43fa-be81-f5b089d83a9f"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6748,8 +5497,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "db44ab83-f087-43fa-be81-f5b089d83a9f"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6760,8 +5508,7 @@
         ],
         "lesson.key": "Functions",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "04bf61bf-1d22-463f-8584-1b37f7f0f688"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6772,8 +5519,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "f74eca15-cdb1-46e1-80bf-f846818e4e72"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6784,8 +5530,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "42e65353-2a39-4bf3-a663-edd9d5634573"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6796,8 +5541,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "42e65353-2a39-4bf3-a663-edd9d5634573"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6808,8 +5552,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "42e65353-2a39-4bf3-a663-edd9d5634573"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6820,8 +5563,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "42e65353-2a39-4bf3-a663-edd9d5634573"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6832,8 +5574,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5900b488-3238-4493-af09-d50e977db332"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6844,8 +5585,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5900b488-3238-4493-af09-d50e977db332"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6856,8 +5596,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5900b488-3238-4493-af09-d50e977db332"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6868,8 +5607,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5900b488-3238-4493-af09-d50e977db332"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6880,8 +5618,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "5900b488-3238-4493-af09-d50e977db332"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6892,8 +5629,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "bcedc642-dc42-4873-8233-1f40f533a75f"
+        "script.name": "csd3-virtual"
       }
     },
     {
@@ -6904,8 +5640,7 @@
         ],
         "lesson.key": "Project - Design a Game",
         "lesson_group.key": "",
-        "script.name": "csd3-virtual",
-        "activity_section.key": "7a37b522-40e2-47d3-b1b9-880e7e678b2d"
+        "script.name": "csd3-virtual"
       }
     }
   ],

@@ -5,17 +5,16 @@
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
-      "is_migrated": true,
       "pilot_experiment": "20-21-virtual-AYW-CSP",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 21:09:20 UTC",
+    "serialized_at": "2021-11-19 20:01:38 UTC",
     "published_state": "pilot",
     "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instructor_audience": "facilitator",
+    "participant_audience": "teacher",
     "seeding_key": {
       "script.name": "vpl-csp-2020"
     }
@@ -156,557 +155,21 @@
     }
   ],
   "lesson_activities": [
-    {
-      "key": "2bea8a13-14d8-46ce-a328-1691cae4e40b",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2bea8a13-14d8-46ce-a328-1691cae4e40b",
-        "lesson.key": "Module 1",
-        "lesson_group.key": "",
-        "script.name": "vpl-csp-2020"
-      }
-    },
-    {
-      "key": "b4ae7dbd-6f8c-4ac3-8f47-0944665026a8",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b4ae7dbd-6f8c-4ac3-8f47-0944665026a8",
-        "lesson.key": "Module 2",
-        "lesson_group.key": "",
-        "script.name": "vpl-csp-2020"
-      }
-    },
-    {
-      "key": "63389cc0-41d4-446f-a81b-878d05a27093",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "63389cc0-41d4-446f-a81b-878d05a27093",
-        "lesson.key": "Module 3",
-        "lesson_group.key": "",
-        "script.name": "vpl-csp-2020"
-      }
-    },
-    {
-      "key": "c37126c3-ffc4-4f08-b036-689bca5d462a",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c37126c3-ffc4-4f08-b036-689bca5d462a",
-        "lesson.key": "Module 4",
-        "lesson_group.key": "",
-        "script.name": "vpl-csp-2020"
-      }
-    },
-    {
-      "key": "7e9828af-85bc-45cb-957e-de14d8c568ec",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "7e9828af-85bc-45cb-957e-de14d8c568ec",
-        "lesson.key": "Module 5",
-        "lesson_group.key": "",
-        "script.name": "vpl-csp-2020"
-      }
-    },
-    {
-      "key": "0428e6c6-053f-4bc3-a9c4-4f66d55e384c",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0428e6c6-053f-4bc3-a9c4-4f66d55e384c",
-        "lesson.key": "Module 6",
-        "lesson_group.key": "",
-        "script.name": "vpl-csp-2020"
-      }
-    },
-    {
-      "key": "24108c7e-c2fd-41c5-8eb9-0b2297788bd7",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "24108c7e-c2fd-41c5-8eb9-0b2297788bd7",
-        "lesson.key": "Module 7",
-        "lesson_group.key": "",
-        "script.name": "vpl-csp-2020"
-      }
-    },
-    {
-      "key": "6c2828fd-8795-4a48-8a98-8cb3c97a4a6f",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "6c2828fd-8795-4a48-8a98-8cb3c97a4a6f",
-        "lesson.key": "Module 8",
-        "lesson_group.key": "",
-        "script.name": "vpl-csp-2020"
-      }
-    }
+
   ],
   "activity_sections": [
-    {
-      "key": "307ff61d-b2ea-4ecf-a467-db3041002fc7",
-      "position": 1,
-      "properties": {
-        "progression_name": "Module 1 Overview (~5 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "307ff61d-b2ea-4ecf-a467-db3041002fc7",
-        "lesson_activity.key": "2bea8a13-14d8-46ce-a328-1691cae4e40b"
-      }
-    },
-    {
-      "key": "3887400e-e3be-4cd7-8d30-3779058bb4b4",
-      "position": 2,
-      "properties": {
-        "progression_name": "Wrapping up Unit 3 (~20 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "3887400e-e3be-4cd7-8d30-3779058bb4b4",
-        "lesson_activity.key": "2bea8a13-14d8-46ce-a328-1691cae4e40b"
-      }
-    },
-    {
-      "key": "e065a720-a684-4ca3-85c8-4eedee434aab",
-      "position": 3,
-      "properties": {
-        "progression_name": "Unit 4 Overview (~30 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "e065a720-a684-4ca3-85c8-4eedee434aab",
-        "lesson_activity.key": "2bea8a13-14d8-46ce-a328-1691cae4e40b"
-      }
-    },
-    {
-      "key": "0f98ca4c-a2b7-438f-a80d-65d9a77e82b6",
-      "position": 4,
-      "properties": {
-        "progression_name": "Introducing EIPM (~25 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "0f98ca4c-a2b7-438f-a80d-65d9a77e82b6",
-        "lesson_activity.key": "2bea8a13-14d8-46ce-a328-1691cae4e40b"
-      }
-    },
-    {
-      "key": "c39824a5-1142-4e0d-b09c-8e378bb2d21a",
-      "position": 5,
-      "properties": {
-        "name": "Module 1 Asynchronous Wrap Up (~10 minutes)",
-        "progression_name": "Module 1 Asynchronous Wrap Up (~10 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "c39824a5-1142-4e0d-b09c-8e378bb2d21a",
-        "lesson_activity.key": "2bea8a13-14d8-46ce-a328-1691cae4e40b"
-      }
-    },
-    {
-      "key": "b6fdebc1-81b8-4d6f-8572-80272aef5fff",
-      "position": 1,
-      "properties": {
-        "progression_name": "Module 2 Overview (~5 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "b6fdebc1-81b8-4d6f-8572-80272aef5fff",
-        "lesson_activity.key": "b4ae7dbd-6f8c-4ac3-8f47-0944665026a8"
-      }
-    },
-    {
-      "key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df",
-      "position": 2,
-      "properties": {
-        "progression_name": "Variables Practice (~35 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df",
-        "lesson_activity.key": "b4ae7dbd-6f8c-4ac3-8f47-0944665026a8"
-      }
-    },
-    {
-      "key": "ea3a9f5c-2e13-4935-b1d1-c9ab5a032aa2",
-      "position": 3,
-      "properties": {
-        "progression_name": "Variables Make (~30 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "ea3a9f5c-2e13-4935-b1d1-c9ab5a032aa2",
-        "lesson_activity.key": "b4ae7dbd-6f8c-4ac3-8f47-0944665026a8"
-      }
-    },
-    {
-      "key": "fcc1428e-5a03-4966-918e-f6c138c7cd48",
-      "position": 4,
-      "properties": {
-        "progression_name": "Collaborative and Independent Work (~10 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "fcc1428e-5a03-4966-918e-f6c138c7cd48",
-        "lesson_activity.key": "b4ae7dbd-6f8c-4ac3-8f47-0944665026a8"
-      }
-    },
-    {
-      "key": "ca416c63-e87a-41c2-bcf9-a739c5601c34",
-      "position": 5,
-      "properties": {
-        "name": "Module 2 Asynchronous Wrap Up (~10 minutes)",
-        "progression_name": "Module 2 Asynchronous Wrap Up (~10 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "ca416c63-e87a-41c2-bcf9-a739c5601c34",
-        "lesson_activity.key": "b4ae7dbd-6f8c-4ac3-8f47-0944665026a8"
-      }
-    },
-    {
-      "key": "fc08be46-e2f9-4413-951b-9df03f1966f3",
-      "position": 1,
-      "properties": {
-        "progression_name": "Module 3 Overview (~5 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "fc08be46-e2f9-4413-951b-9df03f1966f3",
-        "lesson_activity.key": "63389cc0-41d4-446f-a81b-878d05a27093"
-      }
-    },
-    {
-      "key": "92d3a610-1e32-4a05-b7a3-9e3f271f9663",
-      "position": 2,
-      "properties": {
-        "progression_name": "Understanding the Context for Lists (~55 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "92d3a610-1e32-4a05-b7a3-9e3f271f9663",
-        "lesson_activity.key": "63389cc0-41d4-446f-a81b-878d05a27093"
-      }
-    },
-    {
-      "key": "4b2cbac8-d722-4738-9888-31da3cb658f4",
-      "position": 3,
-      "properties": {
-        "progression_name": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "4b2cbac8-d722-4738-9888-31da3cb658f4",
-        "lesson_activity.key": "63389cc0-41d4-446f-a81b-878d05a27093"
-      }
-    },
-    {
-      "key": "0d740156-b9b8-4fae-9949-2a50d89dded4",
-      "position": 4,
-      "properties": {
-        "name": "Module 3 Asynchronous Wrap-Up (~10 minutes)",
-        "progression_name": "Module 3 Asynchronous Wrap-Up (~10 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "0d740156-b9b8-4fae-9949-2a50d89dded4",
-        "lesson_activity.key": "63389cc0-41d4-446f-a81b-878d05a27093"
-      }
-    },
-    {
-      "key": "094a02ef-1d0f-497a-81f1-cb16e4d0ecec",
-      "position": 1,
-      "properties": {
-        "progression_name": "Module 4 Overview (~5 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "094a02ef-1d0f-497a-81f1-cb16e4d0ecec",
-        "lesson_activity.key": "c37126c3-ffc4-4f08-b036-689bca5d462a"
-      }
-    },
-    {
-      "key": "121bbd7b-fbe1-41b8-905b-623959f3ce6a",
-      "position": 2,
-      "properties": {
-        "progression_name": "Content of the Lists EIPM sequence (~25 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "121bbd7b-fbe1-41b8-905b-623959f3ce6a",
-        "lesson_activity.key": "c37126c3-ffc4-4f08-b036-689bca5d462a"
-      }
-    },
-    {
-      "key": "09e4c0a7-e5ef-4a34-99e6-ea824d0ffb1a",
-      "position": 3,
-      "properties": {
-        "progression_name": "Mental models in Unit 5 (~35 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "09e4c0a7-e5ef-4a34-99e6-ea824d0ffb1a",
-        "lesson_activity.key": "c37126c3-ffc4-4f08-b036-689bca5d462a"
-      }
-    },
-    {
-      "key": "4f03c3b0-883a-424b-8440-d18115d75e01",
-      "position": 4,
-      "properties": {
-        "progression_name": "Traversals and datasets (~15 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "4f03c3b0-883a-424b-8440-d18115d75e01",
-        "lesson_activity.key": "c37126c3-ffc4-4f08-b036-689bca5d462a"
-      }
-    },
-    {
-      "key": "07295e92-69db-4082-8cee-29abec412a18",
-      "position": 5,
-      "properties": {
-        "name": "Module 4 Asynchronous Wrap-Up (~10 minutes)",
-        "progression_name": "Module 4 Asynchronous Wrap-Up (~10 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "07295e92-69db-4082-8cee-29abec412a18",
-        "lesson_activity.key": "c37126c3-ffc4-4f08-b036-689bca5d462a"
-      }
-    },
-    {
-      "key": "ce0675d7-dbd6-4e5f-9d39-26497b0652dc",
-      "position": 1,
-      "properties": {
-        "progression_name": "Module 5 overview (~5 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "ce0675d7-dbd6-4e5f-9d39-26497b0652dc",
-        "lesson_activity.key": "7e9828af-85bc-45cb-957e-de14d8c568ec"
-      }
-    },
-    {
-      "key": "dace6d96-a973-46f8-a6ef-87ba7a526927",
-      "position": 2,
-      "properties": {
-        "progression_name": "Understanding Unit 7 (~5 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "dace6d96-a973-46f8-a6ef-87ba7a526927",
-        "lesson_activity.key": "7e9828af-85bc-45cb-957e-de14d8c568ec"
-      }
-    },
-    {
-      "key": "4182884f-92d5-44fe-be66-8869b23292d9",
-      "position": 3,
-      "properties": {
-        "progression_name": "Digging into the \"Parameters and Return Explore\" lesson (~25 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "4182884f-92d5-44fe-be66-8869b23292d9",
-        "lesson_activity.key": "7e9828af-85bc-45cb-957e-de14d8c568ec"
-      }
-    },
-    {
-      "key": "c4903679-5296-49cb-ba97-900dfb053134",
-      "position": 4,
-      "properties": {
-        "progression_name": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134",
-        "lesson_activity.key": "7e9828af-85bc-45cb-957e-de14d8c568ec"
-      }
-    },
-    {
-      "key": "f0137764-763d-4534-a8bf-3d443d30d0d1",
-      "position": 5,
-      "properties": {
-        "progression_name": "Creating inclusive classrooms (~15 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "f0137764-763d-4534-a8bf-3d443d30d0d1",
-        "lesson_activity.key": "7e9828af-85bc-45cb-957e-de14d8c568ec"
-      }
-    },
-    {
-      "key": "f92aad16-a3bf-438e-bcf0-851b1915a629",
-      "position": 6,
-      "properties": {
-        "name": "Module 5 Asynchronous wrap-up (~10 minutes)",
-        "progression_name": "Module 5 Asynchronous wrap-up (~10 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "f92aad16-a3bf-438e-bcf0-851b1915a629",
-        "lesson_activity.key": "7e9828af-85bc-45cb-957e-de14d8c568ec"
-      }
-    },
-    {
-      "key": "a94d5ec5-04f1-4628-98bd-53280983c62d",
-      "position": 1,
-      "properties": {
-        "progression_name": "Module 6 overview (~5 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "a94d5ec5-04f1-4628-98bd-53280983c62d",
-        "lesson_activity.key": "0428e6c6-053f-4bc3-a9c4-4f66d55e384c"
-      }
-    },
-    {
-      "key": "a1c073e4-7c40-4392-bb14-2817bcdd7ecd",
-      "position": 2,
-      "properties": {
-        "progression_name": "Requirements of the Create Performance Task (~20 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "a1c073e4-7c40-4392-bb14-2817bcdd7ecd",
-        "lesson_activity.key": "0428e6c6-053f-4bc3-a9c4-4f66d55e384c"
-      }
-    },
-    {
-      "key": "5957e3e9-8924-43d6-9214-eede54927272",
-      "position": 3,
-      "properties": {
-        "progression_name": "Digging into the Create PT Survival Guide (~40 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "5957e3e9-8924-43d6-9214-eede54927272",
-        "lesson_activity.key": "0428e6c6-053f-4bc3-a9c4-4f66d55e384c"
-      }
-    },
-    {
-      "key": "2f8d9c18-b9fa-4135-a0a0-7cf4a370b202",
-      "position": 4,
-      "properties": {
-        "progression_name": "Role of the teacher during the Create PT (~15 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "2f8d9c18-b9fa-4135-a0a0-7cf4a370b202",
-        "lesson_activity.key": "0428e6c6-053f-4bc3-a9c4-4f66d55e384c"
-      }
-    },
-    {
-      "key": "bcd9a525-f710-492c-83a4-d46e52736eb7",
-      "position": 5,
-      "properties": {
-        "name": "Module 6 Asynchronous Wrap-Up (~10 minutes)",
-        "progression_name": "Module 6 Asynchronous Wrap-Up (~10 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "bcd9a525-f710-492c-83a4-d46e52736eb7",
-        "lesson_activity.key": "0428e6c6-053f-4bc3-a9c4-4f66d55e384c"
-      }
-    },
-    {
-      "key": "9e5d5199-9ea1-4882-887f-918c2fb5ac5c",
-      "position": 1,
-      "properties": {
-        "progression_name": "Module 7 overview (~5 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "9e5d5199-9ea1-4882-887f-918c2fb5ac5c",
-        "lesson_activity.key": "24108c7e-c2fd-41c5-8eb9-0b2297788bd7"
-      }
-    },
-    {
-      "key": "195604f3-62d9-433d-a326-09665268c4cd",
-      "position": 2,
-      "properties": {
-        "progression_name": "Overview of Unit 9 - Data (~10 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "195604f3-62d9-433d-a326-09665268c4cd",
-        "lesson_activity.key": "24108c7e-c2fd-41c5-8eb9-0b2297788bd7"
-      }
-    },
-    {
-      "key": "3e6c1dff-6e2f-4874-88ef-92e21fdc0241",
-      "position": 3,
-      "properties": {
-        "progression_name": "Using the Google Trends tool (~20 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "3e6c1dff-6e2f-4874-88ef-92e21fdc0241",
-        "lesson_activity.key": "24108c7e-c2fd-41c5-8eb9-0b2297788bd7"
-      }
-    },
-    {
-      "key": "6585e7e9-be28-49aa-9941-84b4950646dc",
-      "position": 4,
-      "properties": {
-        "progression_name": "Using the Data Visualizer tool (~45 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "6585e7e9-be28-49aa-9941-84b4950646dc",
-        "lesson_activity.key": "24108c7e-c2fd-41c5-8eb9-0b2297788bd7"
-      }
-    },
-    {
-      "key": "ac801291-7180-4c84-b665-919f3d78f512",
-      "position": 5,
-      "properties": {
-        "name": "Module 7 asynchronous wrap-up (~10 minutes)",
-        "progression_name": "Module 7 asynchronous wrap-up (~10 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "ac801291-7180-4c84-b665-919f3d78f512",
-        "lesson_activity.key": "24108c7e-c2fd-41c5-8eb9-0b2297788bd7"
-      }
-    },
-    {
-      "key": "d7f51e6f-f3d2-4bfb-a455-e61ca295d3ed",
-      "position": 1,
-      "properties": {
-        "progression_name": "Module 8 overview (~5 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "d7f51e6f-f3d2-4bfb-a455-e61ca295d3ed",
-        "lesson_activity.key": "6c2828fd-8795-4a48-8a98-8cb3c97a4a6f"
-      }
-    },
-    {
-      "key": "2025302c-dec6-4dac-aab5-8c3b25996337",
-      "position": 2,
-      "properties": {
-        "progression_name": "Connecting to the CS community (~15 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "2025302c-dec6-4dac-aab5-8c3b25996337",
-        "lesson_activity.key": "6c2828fd-8795-4a48-8a98-8cb3c97a4a6f"
-      }
-    },
-    {
-      "key": "6c4a332b-1355-4a94-ac2e-43b6b0cb83cc",
-      "position": 3,
-      "properties": {
-        "progression_name": "Preparing students for the AP multiple choice exam (~60 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "6c4a332b-1355-4a94-ac2e-43b6b0cb83cc",
-        "lesson_activity.key": "6c2828fd-8795-4a48-8a98-8cb3c97a4a6f"
-      }
-    },
-    {
-      "key": "f75f928d-74a7-45b1-813f-b883f10a7279",
-      "position": 4,
-      "properties": {
-        "name": "Module 8 asynchronous wrap-up (~10 minutes)",
-        "progression_name": "Module 8 asynchronous wrap-up (~10 minutes)"
-      },
-      "seeding_key": {
-        "activity_section.key": "f75f928d-74a7-45b1-813f-b883f10a7279",
-        "lesson_activity.key": "6c2828fd-8795-4a48-8a98-8cb3c97a4a6f"
-      }
-    }
+
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL AYWS1 Workshop Overview"
+        ],
         "progression": "Module 1 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -716,8 +179,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "307ff61d-b2ea-4ecf-a467-db3041002fc7"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL AYWS1 Workshop Overview"
@@ -726,9 +188,12 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Module 1 Unit 3 Context"
+        ],
         "progression": "Wrapping up Unit 3 (~20 minutes)"
       },
       "bonus": false,
@@ -738,8 +203,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "3887400e-e3be-4cd7-8d30-3779058bb4b4"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP Module 1 Unit 3 Context"
@@ -748,9 +212,12 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Unit 4 tasks overview"
+        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
       "bonus": false,
@@ -760,8 +227,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "e065a720-a684-4ca3-85c8-4eedee434aab"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Unit 4 tasks overview"
@@ -770,9 +236,12 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL - U4 L12 Practice PT 1"
+        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
       "bonus": false,
@@ -782,8 +251,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "e065a720-a684-4ca3-85c8-4eedee434aab"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL - U4 L12 Practice PT 1"
@@ -792,9 +260,12 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL U4 L12 Practice PT 2"
+        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
       "bonus": false,
@@ -804,8 +275,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "e065a720-a684-4ca3-85c8-4eedee434aab"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL U4 L12 Practice PT 2"
@@ -814,9 +284,12 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Module 1 Unit 4 Reflection"
+        ],
         "progression": "Unit 4 Overview (~30 minutes)"
       },
       "bonus": false,
@@ -826,8 +299,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "e065a720-a684-4ca3-85c8-4eedee434aab"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP Module 1 Unit 4 Reflection"
@@ -836,9 +308,12 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Module 1 EIPM Reflection"
+        ],
         "progression": "Introducing EIPM (~25 minutes)"
       },
       "bonus": false,
@@ -848,8 +323,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "0f98ca4c-a2b7-438f-a80d-65d9a77e82b6"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP Module 1 EIPM Reflection"
@@ -858,9 +332,12 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Module 1 EIPM goes virtual"
+        ],
         "progression": "Introducing EIPM (~25 minutes)"
       },
       "bonus": false,
@@ -870,8 +347,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "0f98ca4c-a2b7-438f-a80d-65d9a77e82b6"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP Module 1 EIPM goes virtual"
@@ -880,9 +356,12 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 1 Wrap Up"
+        ],
         "progression": "Module 1 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,
@@ -892,8 +371,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c39824a5-1142-4e0d-b09c-8e378bb2d21a"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Module 1 Wrap Up"
@@ -902,9 +380,12 @@
     {
       "chapter": 10,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL AYWS2 Workshop Overview"
+        ],
         "progression": "Module 2 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -914,8 +395,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "b6fdebc1-81b8-4d6f-8572-80272aef5fff"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL AYWS2 Workshop Overview"
@@ -924,9 +404,12 @@
     {
       "chapter": 11,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Variables Practice overview"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -936,8 +419,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Variables Practice overview"
@@ -946,9 +428,12 @@
     {
       "chapter": 12,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL - U4 L03 Variables numbers practice 1"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -958,8 +443,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL - U4 L03 Variables numbers practice 1"
@@ -968,9 +452,12 @@
     {
       "chapter": 13,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables numbers practice 4"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -980,8 +467,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - PL - U4 L03 Variables numbers practice 4"
@@ -990,9 +476,12 @@
     {
       "chapter": 14,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 1"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -1002,8 +491,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - PL - U4 L03 Variables operator practice 1"
@@ -1012,9 +500,12 @@
     {
       "chapter": 15,
       "position": 6,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 3"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -1024,8 +515,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - PL - U4 L03 Variables operator practice 3"
@@ -1034,9 +524,12 @@
     {
       "chapter": 16,
       "position": 7,
-      "activity_section_position": 6,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 2"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -1046,8 +539,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - PL - U4 L03 Variables operator practice 2"
@@ -1056,9 +548,12 @@
     {
       "chapter": 17,
       "position": 8,
-      "activity_section_position": 7,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L03 Variables operator practice 5"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -1068,8 +563,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - PL - U4 L03 Variables operator practice 5"
@@ -1078,9 +572,12 @@
     {
       "chapter": 18,
       "position": 9,
-      "activity_section_position": 8,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL8 - U4 L03 Variables operator practice 6"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -1090,8 +587,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - PL8 - U4 L03 Variables operator practice 6"
@@ -1100,9 +596,12 @@
     {
       "chapter": 19,
       "position": 10,
-      "activity_section_position": 9,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL9 - U4 L03 Variable Scope: Local vs. Global"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -1112,8 +611,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - PL9 - U4 L03 Variable Scope: Local vs. Global"
@@ -1122,9 +620,12 @@
     {
       "chapter": 20,
       "position": 11,
-      "activity_section_position": 10,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - Practice Reflection"
+        ],
         "progression": "Variables Practice (~35 minutes)"
       },
       "bonus": false,
@@ -1134,8 +635,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - PL - Practice Reflection"
@@ -1144,9 +644,12 @@
     {
       "chapter": 21,
       "position": 12,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Variables Make overview"
+        ],
         "progression": "Variables Make (~30 minutes)"
       },
       "bonus": false,
@@ -1156,8 +659,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "ea3a9f5c-2e13-4935-b1d1-c9ab5a032aa2"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Variables Make overview"
@@ -1166,9 +668,12 @@
     {
       "chapter": 22,
       "position": 13,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL U4 L04 Variables Make Project_2020"
+        ],
         "progression": "Variables Make (~30 minutes)"
       },
       "bonus": false,
@@ -1178,8 +683,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "ea3a9f5c-2e13-4935-b1d1-c9ab5a032aa2"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - PL U4 L04 Variables Make Project_2020"
@@ -1188,9 +692,12 @@
     {
       "chapter": 23,
       "position": 14,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - U4 L04 Variables Make Project Submit_2020"
+        ],
         "progression": "Variables Make (~30 minutes)"
       },
       "bonus": false,
@@ -1200,8 +707,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "ea3a9f5c-2e13-4935-b1d1-c9ab5a032aa2"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - PL - U4 L04 Variables Make Project Submit_2020"
@@ -1210,9 +716,12 @@
     {
       "chapter": 24,
       "position": 15,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - Make Reflection"
+        ],
         "progression": "Variables Make (~30 minutes)"
       },
       "bonus": false,
@@ -1222,8 +731,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "ea3a9f5c-2e13-4935-b1d1-c9ab5a032aa2"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - PL - Make Reflection"
@@ -1232,9 +740,12 @@
     {
       "chapter": 25,
       "position": 16,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL - Unit 4 Wrap-up"
+        ],
         "progression": "Collaborative and Independent Work (~10 minutes)"
       },
       "bonus": false,
@@ -1244,8 +755,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "fcc1428e-5a03-4966-918e-f6c138c7cd48"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL - Unit 4 Wrap-up"
@@ -1254,9 +764,12 @@
     {
       "chapter": 26,
       "position": 17,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - PL - Collaboration Reflection"
+        ],
         "progression": "Collaborative and Independent Work (~10 minutes)"
       },
       "bonus": false,
@@ -1266,8 +779,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "fcc1428e-5a03-4966-918e-f6c138c7cd48"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - PL - Collaboration Reflection"
@@ -1276,9 +788,12 @@
     {
       "chapter": 27,
       "position": 18,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 2 Wrap Up"
+        ],
         "progression": "Module 2 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,
@@ -1288,8 +803,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "ca416c63-e87a-41c2-bcf9-a739c5601c34"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Module 2 Wrap Up"
@@ -1298,9 +812,12 @@
     {
       "chapter": 28,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL AYWS3 Workshop Overview"
+        ],
         "progression": "Module 3 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -1310,8 +827,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "fc08be46-e2f9-4413-951b-9df03f1966f3"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL AYWS3 Workshop Overview"
@@ -1320,9 +836,12 @@
     {
       "chapter": 29,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Understanding the context for the Model Lesson overview"
+        ],
         "progression": "Understanding the Context for Lists (~55 minutes)"
       },
       "bonus": false,
@@ -1332,8 +851,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "92d3a610-1e32-4a05-b7a3-9e3f271f9663"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Understanding the context for the Model Lesson overview"
@@ -1342,9 +860,12 @@
     {
       "chapter": 30,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Synch3 - Reflection 1"
+        ],
         "progression": "Understanding the Context for Lists (~55 minutes)"
       },
       "bonus": false,
@@ -1354,8 +875,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "92d3a610-1e32-4a05-b7a3-9e3f271f9663"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Synch3 - Reflection 1"
@@ -1364,9 +884,12 @@
     {
       "chapter": 31,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Synch3 - Reflection 2"
+        ],
         "progression": "Understanding the Context for Lists (~55 minutes)"
       },
       "bonus": false,
@@ -1376,8 +899,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "92d3a610-1e32-4a05-b7a3-9e3f271f9663"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Synch3 - Reflection 2"
@@ -1386,9 +908,12 @@
     {
       "chapter": 32,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Intro to CI"
+        ],
         "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
       },
       "bonus": false,
@@ -1398,8 +923,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4b2cbac8-d722-4738-9888-31da3cb658f4"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Asynch3 - Intro to CI"
@@ -1408,9 +932,12 @@
     {
       "chapter": 33,
       "position": 6,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Broadening the def"
+        ],
         "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
       },
       "bonus": false,
@@ -1420,8 +947,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4b2cbac8-d722-4738-9888-31da3cb658f4"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Asynch3 - Broadening the def"
@@ -1430,9 +956,12 @@
     {
       "chapter": 34,
       "position": 7,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Feedback in CI"
+        ],
         "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
       },
       "bonus": false,
@@ -1442,8 +971,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4b2cbac8-d722-4738-9888-31da3cb658f4"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Asynch3 - Feedback in CI"
@@ -1452,9 +980,12 @@
     {
       "chapter": 35,
       "position": 8,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch3 - Practice feedback"
+        ],
         "progression": "Broadening, labeling, and recognizing CS skills in the classroom (~20 minutes)"
       },
       "bonus": false,
@@ -1464,8 +995,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4b2cbac8-d722-4738-9888-31da3cb658f4"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Asynch3 - Practice feedback"
@@ -1474,9 +1004,12 @@
     {
       "chapter": 36,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 3 Wrap Up"
+        ],
         "progression": "Module 3 Asynchronous Wrap-Up (~10 minutes)"
       },
       "bonus": false,
@@ -1486,8 +1019,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "0d740156-b9b8-4fae-9949-2a50d89dded4"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Module 3 Wrap Up"
@@ -1496,9 +1028,12 @@
     {
       "chapter": 37,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL AYWA4 Workshop Overview"
+        ],
         "progression": "Module 4 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -1508,8 +1043,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "094a02ef-1d0f-497a-81f1-cb16e4d0ecec"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL AYWA4 Workshop Overview"
@@ -1518,9 +1052,12 @@
     {
       "chapter": 38,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Understanding the content of the Lists EIPM sequence"
+        ],
         "progression": "Content of the Lists EIPM sequence (~25 minutes)"
       },
       "bonus": false,
@@ -1530,8 +1067,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "121bbd7b-fbe1-41b8-905b-623959f3ce6a"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Understanding the content of the Lists EIPM sequence"
@@ -1540,9 +1076,12 @@
     {
       "chapter": 39,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Lists EIPM reflection"
+        ],
         "progression": "Content of the Lists EIPM sequence (~25 minutes)"
       },
       "bonus": false,
@@ -1552,8 +1091,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "121bbd7b-fbe1-41b8-905b-623959f3ce6a"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Lists EIPM reflection"
@@ -1562,9 +1100,12 @@
     {
       "chapter": 40,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP AYW4 - Mental Models in Unit 5"
+        ],
         "progression": "Mental models in Unit 5 (~35 minutes)"
       },
       "bonus": false,
@@ -1574,8 +1115,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "09e4c0a7-e5ef-4a34-99e6-ea824d0ffb1a"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP AYW4 - Mental Models in Unit 5"
@@ -1584,9 +1124,12 @@
     {
       "chapter": 41,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch4 - Intro to Traversals"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -1596,8 +1139,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4f03c3b0-883a-424b-8440-d18115d75e01"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Asynch4 - Intro to Traversals"
@@ -1606,9 +1148,12 @@
     {
       "chapter": 42,
       "position": 6,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -1618,8 +1163,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4f03c3b0-883a-424b-8440-d18115d75e01"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify"
@@ -1628,9 +1172,12 @@
     {
       "chapter": 43,
       "position": 7,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch4 - U5L10 Traversals Investigate"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -1640,8 +1187,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4f03c3b0-883a-424b-8440-d18115d75e01"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Asynch4 - U5L10 Traversals Investigate"
@@ -1650,9 +1196,12 @@
     {
       "chapter": 44,
       "position": 8,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -1662,8 +1211,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4f03c3b0-883a-424b-8440-d18115d75e01"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify"
@@ -1672,9 +1220,12 @@
     {
       "chapter": 45,
       "position": 9,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP AYW4 - Reflection on datasets"
+        ],
         "progression": "Traversals and datasets (~15 minutes)"
       },
       "bonus": false,
@@ -1684,8 +1235,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4f03c3b0-883a-424b-8440-d18115d75e01"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP AYW4 - Reflection on datasets"
@@ -1694,9 +1244,12 @@
     {
       "chapter": 46,
       "position": 10,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 4 Wrap Up"
+        ],
         "progression": "Module 4 Asynchronous Wrap-Up (~10 minutes)"
       },
       "bonus": false,
@@ -1706,8 +1259,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "07295e92-69db-4082-8cee-29abec412a18"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Module 4 Wrap Up"
@@ -1716,9 +1268,12 @@
     {
       "chapter": 47,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 5 - Workshop Overview"
+        ],
         "progression": "Module 5 overview (~5 minutes)"
       },
       "bonus": false,
@@ -1728,8 +1283,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "ce0675d7-dbd6-4e5f-9d39-26497b0652dc"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL Module 5 - Workshop Overview"
@@ -1738,9 +1292,12 @@
     {
       "chapter": 48,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Intro to Unit 7"
+        ],
         "progression": "Understanding Unit 7 (~5 minutes)"
       },
       "bonus": false,
@@ -1750,8 +1307,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "dace6d96-a973-46f8-a6ef-87ba7a526927"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M5 - Intro to Unit 7"
@@ -1760,9 +1316,12 @@
     {
       "chapter": 49,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Param Explore"
+        ],
         "progression": "Digging into the \"Parameters and Return Explore\" lesson (~25 minutes)"
       },
       "bonus": false,
@@ -1772,8 +1331,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4182884f-92d5-44fe-be66-8869b23292d9"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M5 - Param Explore"
@@ -1782,9 +1340,12 @@
     {
       "chapter": 50,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Param Prac 1"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1794,8 +1355,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M5 - Param Prac 1"
@@ -1804,9 +1364,12 @@
     {
       "chapter": 51,
       "position": 5,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice Part 1"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1816,8 +1379,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "PL U7 Param Return Practice Part 1"
@@ -1826,9 +1388,12 @@
     {
       "chapter": 52,
       "position": 6,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice Part 2"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1838,8 +1403,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "PL U7 Param Return Practice Part 2"
@@ -1848,9 +1412,12 @@
     {
       "chapter": 53,
       "position": 7,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice Part 4"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1860,8 +1427,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "PL U7 Param Return Practice Part 4"
@@ -1870,9 +1436,12 @@
     {
       "chapter": 54,
       "position": 8,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice Part 3"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1882,8 +1451,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "PL U7 Param Return Practice Part 3"
@@ -1892,9 +1460,12 @@
     {
       "chapter": 55,
       "position": 9,
-      "activity_section_position": 6,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Return Practice Part 5"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1904,8 +1475,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "PL U7 Param Return Practice Part 5"
@@ -1914,9 +1484,12 @@
     {
       "chapter": 56,
       "position": 10,
-      "activity_section_position": 7,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Investigate Calculator App"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1926,8 +1499,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "PL U7 Param Investigate Calculator App"
@@ -1936,9 +1508,12 @@
     {
       "chapter": 57,
       "position": 11,
-      "activity_section_position": 8,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PL U7 Param Practice App 2"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1948,8 +1523,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "PL U7 Param Practice App 2"
@@ -1958,9 +1532,12 @@
     {
       "chapter": 58,
       "position": 12,
-      "activity_section_position": 9,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Param Prac 10"
+        ],
         "progression": "Digging into the \"Parameters and Return Practice\" lesson (~30 minutes)"
       },
       "bonus": false,
@@ -1970,8 +1547,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M5 - Param Prac 10"
@@ -1980,9 +1556,12 @@
     {
       "chapter": 59,
       "position": 13,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M5 - Inclusive Classrooms"
+        ],
         "progression": "Creating inclusive classrooms (~15 minutes)"
       },
       "bonus": false,
@@ -1992,8 +1571,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "f0137764-763d-4534-a8bf-3d443d30d0d1"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M5 - Inclusive Classrooms"
@@ -2002,9 +1580,12 @@
     {
       "chapter": 60,
       "position": 14,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 5 Wrap Up"
+        ],
         "progression": "Module 5 Asynchronous wrap-up (~10 minutes)"
       },
       "bonus": false,
@@ -2014,8 +1595,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "f92aad16-a3bf-438e-bcf0-851b1915a629"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Module 5 Wrap Up"
@@ -2024,9 +1604,12 @@
     {
       "chapter": 61,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 6 - Workshop Overview"
+        ],
         "progression": "Module 6 overview (~5 minutes)"
       },
       "bonus": false,
@@ -2036,8 +1619,7 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "a94d5ec5-04f1-4628-98bd-53280983c62d"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL Module 6 - Workshop Overview"
@@ -2046,9 +1628,12 @@
     {
       "chapter": 62,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M6 - Create PT Reqs"
+        ],
         "progression": "Requirements of the Create Performance Task (~20 minutes)"
       },
       "bonus": false,
@@ -2058,8 +1643,7 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "a1c073e4-7c40-4392-bb14-2817bcdd7ecd"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M6 - Create PT Reqs"
@@ -2068,9 +1652,12 @@
     {
       "chapter": 63,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M6 - Survival Guide"
+        ],
         "progression": "Digging into the Create PT Survival Guide (~40 minutes)"
       },
       "bonus": false,
@@ -2080,8 +1667,7 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "5957e3e9-8924-43d6-9214-eede54927272"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M6 - Survival Guide"
@@ -2090,9 +1676,12 @@
     {
       "chapter": 64,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M6 - Role of teacher"
+        ],
         "progression": "Role of the teacher during the Create PT (~15 minutes)"
       },
       "bonus": false,
@@ -2102,8 +1691,7 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "2f8d9c18-b9fa-4135-a0a0-7cf4a370b202"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M6 - Role of teacher"
@@ -2112,9 +1700,12 @@
     {
       "chapter": 65,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 6 Wrap Up"
+        ],
         "progression": "Module 6 Asynchronous Wrap-Up (~10 minutes)"
       },
       "bonus": false,
@@ -2124,8 +1715,7 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "bcd9a525-f710-492c-83a4-d46e52736eb7"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Module 6 Wrap Up"
@@ -2134,9 +1724,12 @@
     {
       "chapter": 66,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 7 - Workshop Overview"
+        ],
         "progression": "Module 7 overview (~5 minutes)"
       },
       "bonus": false,
@@ -2146,8 +1739,7 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "9e5d5199-9ea1-4882-887f-918c2fb5ac5c"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL Module 7 - Workshop Overview"
@@ -2156,9 +1748,12 @@
     {
       "chapter": 67,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Unit 9 Overview"
+        ],
         "progression": "Overview of Unit 9 - Data (~10 minutes)"
       },
       "bonus": false,
@@ -2168,8 +1763,7 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "195604f3-62d9-433d-a326-09665268c4cd"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M7 - Unit 9 Overview"
@@ -2178,9 +1772,12 @@
     {
       "chapter": 68,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Google Trends"
+        ],
         "progression": "Using the Google Trends tool (~20 minutes)"
       },
       "bonus": false,
@@ -2190,8 +1787,7 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "3e6c1dff-6e2f-4874-88ef-92e21fdc0241"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M7 - Google Trends"
@@ -2200,9 +1796,12 @@
     {
       "chapter": 69,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 1"
+        ],
         "progression": "Using the Data Visualizer tool (~45 minutes)"
       },
       "bonus": false,
@@ -2212,8 +1811,7 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6585e7e9-be28-49aa-9941-84b4950646dc"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M7 - Data Viz 1"
@@ -2222,9 +1820,12 @@
     {
       "chapter": 70,
       "position": 5,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 2"
+        ],
         "progression": "Using the Data Visualizer tool (~45 minutes)"
       },
       "bonus": false,
@@ -2234,8 +1835,7 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6585e7e9-be28-49aa-9941-84b4950646dc"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M7 - Data Viz 2"
@@ -2244,9 +1844,12 @@
     {
       "chapter": 71,
       "position": 6,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 3"
+        ],
         "progression": "Using the Data Visualizer tool (~45 minutes)"
       },
       "bonus": false,
@@ -2256,8 +1859,7 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6585e7e9-be28-49aa-9941-84b4950646dc"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M7 - Data Viz 3"
@@ -2266,9 +1868,12 @@
     {
       "chapter": 72,
       "position": 7,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M7 - Data Viz 4"
+        ],
         "progression": "Using the Data Visualizer tool (~45 minutes)"
       },
       "bonus": false,
@@ -2278,8 +1883,7 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6585e7e9-be28-49aa-9941-84b4950646dc"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M7 - Data Viz 4"
@@ -2288,9 +1892,12 @@
     {
       "chapter": 73,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 7 Wrap Up"
+        ],
         "progression": "Module 7 asynchronous wrap-up (~10 minutes)"
       },
       "bonus": false,
@@ -2300,8 +1907,7 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "ac801291-7180-4c84-b665-919f3d78f512"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Module 7 Wrap Up"
@@ -2310,9 +1916,12 @@
     {
       "chapter": 74,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 8 - Workshop Overview"
+        ],
         "progression": "Module 8 overview (~5 minutes)"
       },
       "bonus": false,
@@ -2322,8 +1931,7 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "d7f51e6f-f3d2-4bfb-a455-e61ca295d3ed"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL Module 8 - Workshop Overview"
@@ -2332,9 +1940,12 @@
     {
       "chapter": 75,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Community 1"
+        ],
         "progression": "Connecting to the CS community (~15 minutes)"
       },
       "bonus": false,
@@ -2344,8 +1955,7 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "2025302c-dec6-4dac-aab5-8c3b25996337"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M8 - Community 1"
@@ -2354,9 +1964,12 @@
     {
       "chapter": 76,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Community 2"
+        ],
         "progression": "Connecting to the CS community (~15 minutes)"
       },
       "bonus": false,
@@ -2366,8 +1979,7 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "2025302c-dec6-4dac-aab5-8c3b25996337"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M8 - Community 2"
@@ -2376,9 +1988,12 @@
     {
       "chapter": 77,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - MC Exam 1"
+        ],
         "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
       },
       "bonus": false,
@@ -2388,8 +2003,7 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c4a332b-1355-4a94-ac2e-43b6b0cb83cc"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M8 - MC Exam 1"
@@ -2398,9 +2012,12 @@
     {
       "chapter": 78,
       "position": 5,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Exam 2"
+        ],
         "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
       },
       "bonus": false,
@@ -2410,8 +2027,7 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c4a332b-1355-4a94-ac2e-43b6b0cb83cc"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M8 - Exam 2"
@@ -2420,9 +2036,12 @@
     {
       "chapter": 79,
       "position": 6,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M8 - Exam 3"
+        ],
         "progression": "Preparing students for the AP multiple choice exam (~60 minutes)"
       },
       "bonus": false,
@@ -2432,8 +2051,7 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c4a332b-1355-4a94-ac2e-43b6b0cb83cc"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP-PL M8 - Exam 3"
@@ -2442,9 +2060,12 @@
     {
       "chapter": 80,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 8 Wrap Up"
+        ],
         "progression": "Module 8 asynchronous wrap-up (~10 minutes)"
       },
       "bonus": false,
@@ -2454,8 +2075,7 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "f75f928d-74a7-45b1-813f-b883f10a7279"
+        "script.name": "vpl-csp-2020"
       },
       "level_keys": [
         "CSP - Module 8 Wrap Up"
@@ -2471,8 +2091,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "307ff61d-b2ea-4ecf-a467-db3041002fc7"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2483,8 +2102,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "3887400e-e3be-4cd7-8d30-3779058bb4b4"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2495,8 +2113,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "e065a720-a684-4ca3-85c8-4eedee434aab"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2507,8 +2124,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "e065a720-a684-4ca3-85c8-4eedee434aab"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2519,8 +2135,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "e065a720-a684-4ca3-85c8-4eedee434aab"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2531,8 +2146,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "e065a720-a684-4ca3-85c8-4eedee434aab"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2543,8 +2157,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "0f98ca4c-a2b7-438f-a80d-65d9a77e82b6"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2555,8 +2168,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "0f98ca4c-a2b7-438f-a80d-65d9a77e82b6"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2567,8 +2179,7 @@
         ],
         "lesson.key": "Module 1",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c39824a5-1142-4e0d-b09c-8e378bb2d21a"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2579,8 +2190,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "b6fdebc1-81b8-4d6f-8572-80272aef5fff"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2591,8 +2201,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2603,8 +2212,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2615,8 +2223,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2627,8 +2234,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2639,8 +2245,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2651,8 +2256,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2663,8 +2267,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2675,8 +2278,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2687,8 +2289,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2699,8 +2300,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c8baf20-8f41-4409-b5fb-c52dbf3544df"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2711,8 +2311,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "ea3a9f5c-2e13-4935-b1d1-c9ab5a032aa2"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2723,8 +2322,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "ea3a9f5c-2e13-4935-b1d1-c9ab5a032aa2"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2735,8 +2333,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "ea3a9f5c-2e13-4935-b1d1-c9ab5a032aa2"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2747,8 +2344,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "ea3a9f5c-2e13-4935-b1d1-c9ab5a032aa2"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2759,8 +2355,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "fcc1428e-5a03-4966-918e-f6c138c7cd48"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2771,8 +2366,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "fcc1428e-5a03-4966-918e-f6c138c7cd48"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2783,8 +2377,7 @@
         ],
         "lesson.key": "Module 2",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "ca416c63-e87a-41c2-bcf9-a739c5601c34"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2795,8 +2388,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "fc08be46-e2f9-4413-951b-9df03f1966f3"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2807,8 +2399,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "92d3a610-1e32-4a05-b7a3-9e3f271f9663"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2819,8 +2410,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "92d3a610-1e32-4a05-b7a3-9e3f271f9663"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2831,8 +2421,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "92d3a610-1e32-4a05-b7a3-9e3f271f9663"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2843,8 +2432,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4b2cbac8-d722-4738-9888-31da3cb658f4"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2855,8 +2443,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4b2cbac8-d722-4738-9888-31da3cb658f4"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2867,8 +2454,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4b2cbac8-d722-4738-9888-31da3cb658f4"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2879,8 +2465,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4b2cbac8-d722-4738-9888-31da3cb658f4"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2891,8 +2476,7 @@
         ],
         "lesson.key": "Module 3",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "0d740156-b9b8-4fae-9949-2a50d89dded4"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2903,8 +2487,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "094a02ef-1d0f-497a-81f1-cb16e4d0ecec"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2915,8 +2498,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "121bbd7b-fbe1-41b8-905b-623959f3ce6a"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2927,8 +2509,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "121bbd7b-fbe1-41b8-905b-623959f3ce6a"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2939,8 +2520,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "09e4c0a7-e5ef-4a34-99e6-ea824d0ffb1a"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2951,8 +2531,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4f03c3b0-883a-424b-8440-d18115d75e01"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2963,8 +2542,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4f03c3b0-883a-424b-8440-d18115d75e01"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2975,8 +2553,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4f03c3b0-883a-424b-8440-d18115d75e01"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2987,8 +2564,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4f03c3b0-883a-424b-8440-d18115d75e01"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -2999,8 +2575,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4f03c3b0-883a-424b-8440-d18115d75e01"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3011,8 +2586,7 @@
         ],
         "lesson.key": "Module 4",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "07295e92-69db-4082-8cee-29abec412a18"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3023,8 +2597,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "ce0675d7-dbd6-4e5f-9d39-26497b0652dc"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3035,8 +2608,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "dace6d96-a973-46f8-a6ef-87ba7a526927"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3047,8 +2619,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "4182884f-92d5-44fe-be66-8869b23292d9"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3059,8 +2630,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3071,8 +2641,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3083,8 +2652,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3095,8 +2663,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3107,8 +2674,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3119,8 +2685,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3131,8 +2696,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3143,8 +2707,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3155,8 +2718,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "c4903679-5296-49cb-ba97-900dfb053134"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3167,8 +2729,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "f0137764-763d-4534-a8bf-3d443d30d0d1"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3179,8 +2740,7 @@
         ],
         "lesson.key": "Module 5",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "f92aad16-a3bf-438e-bcf0-851b1915a629"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3191,8 +2751,7 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "a94d5ec5-04f1-4628-98bd-53280983c62d"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3203,8 +2762,7 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "a1c073e4-7c40-4392-bb14-2817bcdd7ecd"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3215,8 +2773,7 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "5957e3e9-8924-43d6-9214-eede54927272"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3227,8 +2784,7 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "2f8d9c18-b9fa-4135-a0a0-7cf4a370b202"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3239,8 +2795,7 @@
         ],
         "lesson.key": "Module 6",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "bcd9a525-f710-492c-83a4-d46e52736eb7"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3251,8 +2806,7 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "9e5d5199-9ea1-4882-887f-918c2fb5ac5c"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3263,8 +2817,7 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "195604f3-62d9-433d-a326-09665268c4cd"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3275,8 +2828,7 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "3e6c1dff-6e2f-4874-88ef-92e21fdc0241"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3287,8 +2839,7 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6585e7e9-be28-49aa-9941-84b4950646dc"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3299,8 +2850,7 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6585e7e9-be28-49aa-9941-84b4950646dc"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3311,8 +2861,7 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6585e7e9-be28-49aa-9941-84b4950646dc"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3323,8 +2872,7 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6585e7e9-be28-49aa-9941-84b4950646dc"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3335,8 +2883,7 @@
         ],
         "lesson.key": "Module 7",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "ac801291-7180-4c84-b665-919f3d78f512"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3347,8 +2894,7 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "d7f51e6f-f3d2-4bfb-a455-e61ca295d3ed"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3359,8 +2905,7 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "2025302c-dec6-4dac-aab5-8c3b25996337"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3371,8 +2916,7 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "2025302c-dec6-4dac-aab5-8c3b25996337"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3383,8 +2927,7 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c4a332b-1355-4a94-ac2e-43b6b0cb83cc"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3395,8 +2938,7 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c4a332b-1355-4a94-ac2e-43b6b0cb83cc"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3407,8 +2949,7 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "6c4a332b-1355-4a94-ac2e-43b6b0cb83cc"
+        "script.name": "vpl-csp-2020"
       }
     },
     {
@@ -3419,8 +2960,7 @@
         ],
         "lesson.key": "Module 8",
         "lesson_group.key": "",
-        "script.name": "vpl-csp-2020",
-        "activity_section.key": "f75f928d-74a7-45b1-813f-b883f10a7279"
+        "script.name": "vpl-csp-2020"
       }
     }
   ],
