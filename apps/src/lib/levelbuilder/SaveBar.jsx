@@ -12,22 +12,27 @@ export default function SaveBar({
   lastSaved,
   pathForShowButton
 }) {
-  const isShowButtonVisible = handleView || pathForShowButton;
-  const renderShowButton = () => (
-    <button
-      className="btn"
-      type="button"
-      style={styles.saveButton}
-      onClick={handleView || (() => navigateToHref(pathForShowButton))}
-      disabled={isSaving}
-    >
-      Show
-    </button>
-  );
+  const renderShowButtonOrPlaceholder = () => {
+    const isShowButtonVisible = handleView || pathForShowButton;
+
+    const renderShowButton = () => (
+      <button
+        className="btn"
+        type="button"
+        style={styles.saveButton}
+        onClick={handleView || (() => navigateToHref(pathForShowButton))}
+        disabled={isSaving}
+      >
+        Show
+      </button>
+    );
+
+    return isShowButtonVisible ? renderShowButton() : <span />;
+  };
 
   return (
     <div style={styles.saveButtonBackground} className="saveBar">
-      {isShowButtonVisible ? renderShowButton() : <span />}
+      {renderShowButtonOrPlaceholder()}
       <div style={styles.saveButtonArea}>
         {lastSaved && !error && (
           <div style={styles.lastSaved} className="lastSavedMessage">
