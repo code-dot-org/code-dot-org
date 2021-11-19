@@ -119,7 +119,7 @@ class LessonTest < ActiveSupport::TestCase
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group, name: 'My Lesson'
     lesson.objectives.push(create(:objective))
-    lesson.objectives.push(create(:objective, description: nil))
+    lesson.objectives.push(create(:objective))
     lesson.vocabularies.push(create(:vocabulary))
     lesson.vocabularies.push(create(:vocabulary))
     lesson.resources.push(create(:resource))
