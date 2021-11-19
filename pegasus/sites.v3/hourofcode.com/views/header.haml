@@ -3,8 +3,12 @@
     #hoc-header-branding
       %a{href:resolve_url('/')}
         - if @language == 'es' || @language == 'la'
-          %img{src: localized_image('/images/hora-del-codigo-logo.png'), alt: hoc_s(:hour_of_code)}
-        -else
+          %img{src: localized_image('/images/hour-of-code-logo-es.png'), alt: hoc_s(:hour_of_code)}
+        - elsif @language == 'fr'
+          %img{src: localized_image('/images/hour-of-code-logo-fr.png'), alt: hoc_s(:hour_of_code)}
+        - elsif @language == 'pt' || @language == 'po'
+          %img{src: localized_image('/images/hour-of-code-logo-pt.png'), alt: hoc_s(:hour_of_code)}
+        - else
           %img{src: localized_image('/images/hour-of-code-logo.png'), alt: hoc_s(:hour_of_code)}
     #hoc-header-main
       #language-dropdown
