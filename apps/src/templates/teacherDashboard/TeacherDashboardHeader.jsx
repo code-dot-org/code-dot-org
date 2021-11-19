@@ -20,6 +20,7 @@ import {
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import Button from '../Button';
 import DropdownButton from '../DropdownButton';
+import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
 
 class TeacherDashboardHeader extends React.Component {
   static propTypes = {
@@ -70,14 +71,29 @@ class TeacherDashboardHeader extends React.Component {
       />
     ));
 
-  progressNotSavingNotification = () => (
-    <Notification
-      type={NotificationType.failure}
-      notice={i18n.emergencyModeProgressBanner()}
-      details={i18n.emergencyModeProgressBannerDetails()}
-      dismissable={false}
-    />
-  );
+  progressNotSavingNotification() {
+    let details = (
+      <p>
+        {i18n.disabledProgress1()} {i18n.disabledProgressTeacherDashboard2()}{' '}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={disabledBubblesSupportArticle}
+        >
+          {i18n.learnMore()}
+        </a>
+      </p>
+    );
+
+    return (
+      <Notification
+        type={NotificationType.failure}
+        notice={i18n.disabledProgressTeacherDashboard1()}
+        details={details}
+        dismissable={false}
+      />
+    );
+  }
 
   render() {
     return (

@@ -618,6 +618,8 @@
   "disabledProgress1": "Yikes! This week is Hour of Code and we are experiencing even more traffic than we anticipated.",
   "disabledProgress2": "Unfortunately, we are not able to save the progress that you make on your course while we are dealing with this issue. Don't worry, your progress from before this week is still safe.",
   "disabledProgress3": "You can still try Hour of Code tutorials even though your progress won't save.",
+  "disabledProgressTeacherDashboard1": "Warning: Progress not saving",
+  "disabledProgressTeacherDashboard2": "Unfortunately, we are not able to save the progress that your students make on their course while we are dealing with this issue. Don't worry, their progress from before this week is still safe. They can still try Hour of Code tutorials even though their progress won't save.",
   "disableMaker": "Disable Maker Toolkit",
   "discussionGoal": "Discussion Goal",
   "discountCodeSchoolConfirm": "Before you can receive your code, please verify the school at which you teach:",
