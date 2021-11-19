@@ -48,7 +48,7 @@ class ProjectUpdatedAt extends React.Component {
       return (
         <div>
           {msg.savedToGallery()}{' '}
-          {false && this.props.updatedAt && (
+          {this.props.updatedAt && (
             <TimeAgo dateString={this.props.updatedAt} />
           )}
         </div>
