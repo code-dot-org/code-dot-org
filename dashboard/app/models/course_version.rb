@@ -76,10 +76,10 @@ class CourseVersion < ApplicationRecord
 
       course_version = CourseVersion.find_or_initialize_by(
         course_offering: course_offering,
-        key: content_root.version_year,
-        display_name: content_root.version_year,
         content_root: content_root,
       )
+      course_version.key = content_root.version_year
+      course_version.display_name = content_root.version_year
       course_version.published_state = content_root.published_state
     else
       course_version = nil
@@ -89,7 +89,7 @@ class CourseVersion < ApplicationRecord
     # - We can always add a course version if the content_root didn't previously have one
     # - If the content root's previous course version equals the new one, then there's no change
     # - If the content_root doesn't prevent a course version change, we can safely change it
-    if content_root.course_version && content_root.course_version != course_version && content_root.prevent_course_version_change?
+    if content_root.course_version && content_root.course_version&.id != course_version&.id && content_root.prevent_course_version_change?
       raise "cannot change course version of #{content_root.name}"
     end
     course_version.save! if course_version
@@ -98,7 +98,7 @@ class CourseVersion < ApplicationRecord
     #   - family_name or version_year was changed
     #   - is_course? changed from true to false, such as if "is_course true" was removed from a .script file, or
     #     family_name or version_year was removed from a .course file.
-    content_root.course_version&.destroy_and_destroy_parent_if_empty if content_root.course_version != course_version
+    content_root.course_version&.destroy_and_destroy_parent_if_empty if content_root.course_version&.id != course_version&.id
     content_root.course_version = course_version
 
     # TODO: add relevant properties from content root to course_version
