@@ -23,7 +23,10 @@ export const setUserSignedIn = isSignedIn => ({
   isSignedIn
 });
 export const setUserType = userType => ({type: SET_USER_TYPE, userType});
-const setInitialData = serverUser => ({type: SET_INITIAL_DATA, serverUser});
+export const setInitialData = serverUser => ({
+  type: SET_INITIAL_DATA,
+  serverUser
+});
 
 const initialState = {
   userId: null,
