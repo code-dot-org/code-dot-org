@@ -18,7 +18,7 @@ export const sectionShape = PropTypes.shape({
   grade: PropTypes.string,
   providerManaged: PropTypes.bool.isRequired,
   restrictSection: PropTypes.bool,
-  notSavingProgress: PropTypes.bool
+  postMilestoneDisabled: PropTypes.bool
 });
 
 // Used on the Teacher Dashboard for components that

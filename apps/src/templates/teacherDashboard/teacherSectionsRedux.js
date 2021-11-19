@@ -1188,7 +1188,7 @@ export const sectionFromServerSection = serverSection => ({
   isAssigned: serverSection.isAssigned,
   restrictSection: serverSection.restrict_section,
   codeReviewEnabled: serverSection.code_review_enabled,
-  notSavingProgress: serverSection.not_saving_progress
+  postMilestoneDisabled: serverSection.post_milestone_disabled
 });
 
 /**

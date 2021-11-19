@@ -394,7 +394,7 @@ class SectionTest < ActiveSupport::TestCase
         restrict_section: false,
         code_review_enabled: true,
         is_assigned_csa: false,
-        not_saving_progress: false,
+        post_milestone_disabled: false,
         code_review_expires_at: nil
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -438,7 +438,7 @@ class SectionTest < ActiveSupport::TestCase
         restrict_section: false,
         code_review_enabled: true,
         is_assigned_csa: false,
-        not_saving_progress: false,
+        post_milestone_disabled: false,
         code_review_expires_at: nil
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -485,7 +485,7 @@ class SectionTest < ActiveSupport::TestCase
         restrict_section: false,
         code_review_enabled: true,
         is_assigned_csa: false,
-        not_saving_progress: false,
+        post_milestone_disabled: false,
         code_review_expires_at: nil
       }
       # Compare created_at separately because the object's created_at microseconds
@@ -526,7 +526,7 @@ class SectionTest < ActiveSupport::TestCase
         restrict_section: false,
         code_review_enabled: true,
         is_assigned_csa: false,
-        not_saving_progress: false,
+        post_milestone_disabled: false,
         code_review_expires_at: nil
       }
       # Compare created_at separately because the object's created_at microseconds
