@@ -83,8 +83,23 @@
         "pair-programming-vid/coursea/2021": {
           "name": "Програмиране по двойки"
         },
+        "wiggles-go_noodle/coursea/2021": {
+          "name": "Wiggles-Go Noodle ( Шаващи Макарони) "
+        },
         "unplugged-video-happy-maps/coursea/2021": {
           "name": "Щастливи карти"
+        },
+        "happy-map-cards/coursea/2021": {
+          "name": "Честитни Картички с Навигационни Карти"
+        },
+        "activity-answer-happy-maps/coursea/2021": {
+          "name": "Честитни Картички с Навигационни Карти"
+        },
+        "happy-map-cards-xl/coursea/2021": {
+          "name": "Честитни Картички Размер XL с Навигационни Карти"
+        },
+        "pair-programming/coursea/2021": {
+          "name": "Програмиране по Двойки"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "Голямото събитие"
@@ -95,8 +110,23 @@
         "assessment-answer-big-event/coursea/2021": {
           "name": "Голямото събитие"
         },
+        "course_vocabulary/coursea/2021": {
+          "name": "Лексика на Курса "
+        },
         "implementation_guide/coursea/2021": {
           "name": "Ръководство за използване"
+        },
+        "lesson_type_guide/coursea/2021": {
+          "name": "Наръчник за Тип Урок"
+        },
+        "debugging_guide/coursea/2021": {
+          "name": "Наръчник за Отстраняване на Грешки "
+        },
+        "curriculum_guide_1/coursea/2021": {
+          "name": "Учебната Програма"
+        },
+        "2021_change_log/coursea/2021": {
+          "name": "2021 Регистър на Промените"
         },
         "teacher_forum_1/coursea/2021": {
           "name": "Учителски форум"

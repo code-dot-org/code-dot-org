@@ -1,0 +1,59 @@
+name 'SP-VPL-21-mod1-ModuleOverview-CSP'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# About this professional learning course
+
+#### This course is divided into four modules. Each module focuses on a different aspect of preparing to teach CS Principles with Code.org's curriculum for the first time.  
+
+## Module 1: Welcome
+
+##### This module is a short introduction to both Code.org and this professional learning course.
+
+##### **You will:**
+
+* ##### Get an introduction to Code.org and CS Principles.
+* ##### Learn how to engage in this professional learning course.
+
+##### **Suggested Time:** 10 minutes
+
+## Module 2: Navigating Code.org
+
+##### This module will orient you to the tools you will use to support student learning while teaching CS Principles.
+
+##### **You will:**
+
+* ##### Navigate the Code.org website and teacher tools.
+* ##### Set up a classroom section
+* ##### Locate and use course lesson plans and teacher resources.
+* ##### Learn how to access support while teaching the course.
+
+##### **Suggested Time:** 60 minutes
+
+## Module 3: Overview of CS Principles
+
+##### This module will provide you with an overview of the CS Principles curriculum with an emphasis on concepts students will learn and tools students will use throughout the course. Engaging in this module will help you to make decisions about how to select the course content that you will implement in your classroom.
+
+##### **You will:**
+
+* ##### Gain a high-level understanding of the CS Principles curriculum.
+* ##### Become familiar with the programming environments used within CS Principles.
+* ##### Learn what preparation is involved in teaching CS Principles as an AP course.
+
+##### **Suggested time:** 60 minutes
+
+## Module 4: Teaching and learning CS Principles
+
+##### This module will introduce you to to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, following the Explore, Investigate, Practice, and Make (EIPM) sequence to teach a coding concept, and pair programming. 
+
+##### You will also explore the role of the teacher within a CS Principles classroom and make a plan for how you will support student learning while teaching the course.
+
+##### **You will:**
+
+* ##### Consider the role of the teacher in a CS Principles classroom.
+* ##### Learn about authentic CS practices that students will develop throughout the CS Principles course.
+* ##### Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.
+
+##### **Suggested time:** 50 minutes
+MARKDOWN

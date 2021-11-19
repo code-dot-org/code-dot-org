@@ -338,6 +338,8 @@ hr:
         CSF_collector_text_blocks: 'Osnove RZ: Sakupljač'
         CSF_debugging_k1_blocks: Otklanjanje pogriješaka
         CSF_debugging_text_blocks: Otklanjanje pogriješaka
+        CSF_maze_intro_k1_blocks: Naučite o Code Studiu
+        CSF_maze_intro_text_blocks: Naučite o Code Studiu
         CSF_my_robotic_friends: Moji robotski prijatelji
         frozen_intro: Uvod u Sat Kodiranja
         frozen_loops: Uvod u petlje
@@ -382,18 +384,24 @@ hr:
         mc_if_statements: Minecraft - "Ako" naredbe
         mc_congrats_share: Minecraft - Čestitamo
         mc_congrats_no_share: Minecraft - Čestitamo
+        CSF_bb8_skinOverview_C-F: BB-8
+        CSF_bb8_skinOverview_K-1: BB-8
         CSF_loops_AB: Petlje
         hoc_dance_warmup: Plesna zabava - zagrijavanje
         hoc_dance_events: Plesna zabava - događaji
         hoc_dance_properties: Plesna zabava - svojstva
         hoc_dance_congrats: Plesna zabava - zabavljaj se!
         teaching_csf_how_it_works: 'Učenje osnova RZ: Kako tečaj funkcionira'
+        what_is_cs: Što je računalna znanost?
+        lesson_planning: Nastavni plan
         opd_closing: 'Učenje osnova RZ: Zaključak i idući koraci'
+        writing_first_program: Napišite svoj prvi računalni program
         what_is_an_event: Što je događaj?
         teaching_cs_pair_programming: 'Učenje osnova RZ: Programiranje u paru'
         teaching_problem_solving: 'Učenje osnova RZ: Učenje rješavanje problema'
         csd_pair_programming: Programiranje u paru
         csd_applab_parameters: Funkcije s parametrima
+        CSF_Going_Places_Safely: Moje online susjedstvo
         csd_debugging: Otklanjanje pogriješaka
         csp-pd-welcome: Dobrodošao u obitelj!
         how-to-k5-workshops: 'Učenje osnova RZ: Djeca testirala, učitelji odobrili'
@@ -406,12 +414,16 @@ hr:
         hoc_dance_measures_2019: Plesna zabava - mjere
         hoc_dance_properties_2019: Plesna zabava - svojstva
         csd_what_computers_do: Što računala rade?
+        csf_my_online_neighborhood_2020: Moje online susjedstvo
         csf_follow_the_digital_trail: Slijedi digitalni trag
         csd_what_computers_are: Što je računalo?
         csd_how_teamwork_works: Kako funkcionira timski rad
         csd_teamwork_and_disagreement: Timski rad - rješavanje neslaganja
+        csd_ml_intro_to_ai_lab: Uvod u AI laboratorij
+        csd_ml_import_model: Uvoz AI modela
         playlab_2021: Uvod u Laboratorij igara
         playlab_2021_reader: Uvod u Laboratorij igara
+        csd_ml_intro_ai_lab_july2021: Uvod u AI laboratorij
     callout:
       text:
         drag_blocks: Dovuci blok "idi" i zakači ga ispod drugog bloka

@@ -419,7 +419,8 @@
           "78d989e01047ba7043a38650d695abaa": "Wybierz gracza",
           "6e41661ddc1edd50b00b7c607cdcec1a": "wybór 1",
           "7fec9998c3e5a11f435dc6f2f8e399db": "wybór 2",
-          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3"
+          "c3787b1ed128fdeec3ad638c8ba547d3": "wybór 3",
+          "8e7d34ed67fe4ec0910cefee2f5059cd": "Podniebny tancerz"
         },
         "courseC19_playLab_EOC1_2021": {
           "0ab65920c84bec05a22e09feea7fe4ea": "wpisz tutaj tekst",
@@ -524,7 +525,7 @@
           "f6175c6f0b0bcfff0256286315f0eb7b": "Zabawy na imprezy",
           "bf08dd3d1961874f13e77c936aad27e5": "Historia pustej przestrzeni",
           "514b8d5320196898a9ced3efe0d4c802": "Wpisz przymiotnik:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz przedmiot:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz obiekt:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Wpisz część ciała:",
           "5306eed2fd2c43fe033efd6016c0c38b": "Wyścig na     długości!"
         },
@@ -552,7 +553,7 @@
           "f6175c6f0b0bcfff0256286315f0eb7b": "Zabawy na imprezy",
           "bf08dd3d1961874f13e77c936aad27e5": "Historia pustej przestrzeni",
           "514b8d5320196898a9ced3efe0d4c802": "Wpisz przymiotnik:",
-          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz przedmiot:",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Wpisz obiekt:",
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Wpisz część ciała:",
           "5306eed2fd2c43fe033efd6016c0c38b": "Wyścig na     długości!"
         },
@@ -566,7 +567,9 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
         },
         "courseF_text_choice_events": {
-          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
+          "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie",
+          "c529a06c3f8518b63ff6dfac482b335c": "Nazwij tę planetę:",
+          "44506356d48394cd903b579df9de9117": ", mieszkańcu Ziemi!"
         },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "moje pytanie"
@@ -616,6 +619,14 @@
         },
         "helloworld_retro_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Witaj świecie!"
+        },
+        "courseF_label_predict": {
+          "f15045cb7e57652546d4a0b2c695356f": "Co będziesz jeść?",
+          "937dc37c06cc5d89a7096eb048b73590": "już idzie!"
+        },
+        "courseF_text_choice_interview": {
+          "5bd698afd23bccde289bb0b4aa72a518": "Nazwij robota.",
+          "34088af1fb721900963462375b3bbe23": "robot!"
         }
       }
     }

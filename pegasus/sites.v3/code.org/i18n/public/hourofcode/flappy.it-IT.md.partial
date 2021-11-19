@@ -1,11 +1,11 @@
 ---
-title: Teacher Resources - Make a Flappy Game
+title: Risorse per gli insegnanti - Crea un Flappy Game
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Make a Flappy Game: An Hour of Code Tutorial
+# Crea un Flappy Game: un'ora di lezione di codice
 
 {{ hoc_flappy_video }}
 
@@ -13,20 +13,20 @@ video_player: true
 
 ## Risorse per l'insegnante
 
-### Lesson Plans:
+### Schema delle lezioni:
 
-- [Make a Flappy Game]({{ hoc_flappy_cb_url }})
+- [Crea un Flappy Game]({{ hoc_flappy_cb_url }})
 
 ### Attività di approfondimento:
 
-- [Beyond an Hour of Code](http://code.org/learn/beyond)
+- [Oltre Hour of Code](http://code.org/learn/beyond)
 - [Fondamenti di Scienze Informatiche: Corso 2](https://studio.code.org/s/course2)
 
 ### Altre risorse per l'insegnante:
 
-- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
-- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: guida per gli educatori](https://hourofcode.com/how-to)
+- [Le migliori pratiche degli educatori di successo](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Evento live: [Una guida per educatori all’Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -34,7 +34,7 @@ video_player: true
 
 ## Panoramica
 
-Use drag-and-drop programming to make your own Flappy Bird game, and customize it to look different (Flappy Shark, Flappy Santa, whatever). Aggiungi il gioco al tuo telefono con un clic.
+Usa la programmazione drag-and-drop per creare il tuo gioco Flappy Bird, e personalizzalo per avere un aspetto diverso (Flappy Shark, Flappy Santa, qualsiasi cosa). Aggiungi il gioco al tuo telefono con un clic.
 
 **Età raccomandata:** 4-104
 

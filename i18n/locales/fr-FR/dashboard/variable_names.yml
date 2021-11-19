@@ -1,6 +1,8 @@
 fr:
   data:
     variable_names:
+      Actor_1_Counter: Acteur_1_Compteur
+      Actor_2_Counter: Acteur_2_Compteur
       Blue: Bleu
       Green: Vert
       Red: Rouge
@@ -12,6 +14,7 @@ fr:
       cats: tous les chats
       color: couleur
       counter: compteur
+      counter2: compteur2
       dogs: tous les chiens
       energy: l'Énergie
       height: hauteur
