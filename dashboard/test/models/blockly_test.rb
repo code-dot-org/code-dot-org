@@ -554,7 +554,7 @@ XML
     assert_equal expected_translated_hint, localized_hints[0]["hint_markdown"]
   end
 
-  test 'localized_placeholder_text_blocks' do
+  test 'localized_blocks_with_placeholder_texts' do
     test_locale = 'vi-VN'
     original_str = 'Hello'
     localized_str = 'Xin Chao'
@@ -601,7 +601,7 @@ XML
         </blocks>
       </GamelabJr>
     XML
-    localized_block_xml = level.localized_placeholder_text_blocks(block_xml)
+    localized_block_xml = level.localized_blocks_with_placeholder_texts(block_xml)
 
     # Expected result is an one-line XML, in which the original string
     # has been replaced by a localized string.
@@ -609,67 +609,6 @@ XML
     expected_localized_block_xml = block_xml_cleaned.gsub(original_str, localized_str)
 
     assert_equal expected_localized_block_xml, localized_block_xml
-  end
-
-  test 'placeholder text is localized within markdown' do
-    level_name = 'test_localize_markdown_placeholder_text'
-    test_locale = 'vi-VN'
-    original_str = 'Hello'
-    localized_str = 'Xin Chao'
-
-    # Create a simple blockly level markdown string containing the
-    # original string.
-    markdown = <<~HTML
-      Test [link](https://code.org)
-      <block type="gamelab_printText">
-        <value name="TEXT">
-          <block type="text">
-            <title name="TEXT">#{original_str}</title>
-          </block>
-        </value>
-      </block>
-    HTML
-
-    # Add translation mapping to the I18n backend
-    custom_i18n = {
-      'data' => {
-        'placeholder_texts' => {
-          level_name => {
-            # Must generate the string key in the same way it is created in
-            # the get_i18n_strings function in sync-in.rb script.
-            Digest::MD5.hexdigest(original_str) => localized_str
-          }
-        },
-        "short_instructions" => {
-          level_name => markdown
-        },
-        "long_instructions" => {
-          level_name => markdown
-        }
-      }
-    }
-    I18n.locale = test_locale
-    I18n.backend.store_translations test_locale, custom_i18n
-
-    level = create(
-      :level,
-      :blockly,
-      name: level_name,
-      level_num: 'custom',
-      short_instructions: markdown,
-      long_instructions: markdown
-    )
-
-    localized_markdown = level.localized_blockly_in_text(markdown)
-
-    # Expected result is markdown in which the original string
-    # has been replaced by a localized string. Newlines should be
-    # maintained.
-    expected_localized_markdown = markdown.gsub(original_str, localized_str)
-
-    assert_equal expected_localized_markdown, level.localized_blockly_level_options({})['shortInstructions']
-    assert_equal expected_localized_markdown, level.localized_blockly_level_options({})['longInstructions']
-    assert_equal expected_localized_markdown, localized_markdown
   end
 
   test 'handles bad authored hint localization data' do
