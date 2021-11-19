@@ -19,7 +19,10 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import progress from './progress';
 import {getStore} from '../redux';
-import {asyncLoadUserData} from '@cdo/apps/templates/currentUserRedux';
+import {
+  setUserSignedIn,
+  setInitialData
+} from '@cdo/apps/templates/currentUserRedux';
 
 import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
@@ -168,9 +171,42 @@ function setupReduxSubscribers(store) {
 setupReduxSubscribers(getStore());
 
 function setUpGlobalData(store) {
-  store.dispatch(asyncLoadUserData());
+  fetch('/api/v1/users/current')
+    .then(response => response.json())
+    .then(data => {
+      store.dispatch(setUserSignedIn(data.is_signed_in));
+      if (data.is_signed_in) {
+        store.dispatch(setInitialData(data));
+        ensureHeaderSigninState(true, data.username);
+      } else {
+        ensureHeaderSigninState(false);
+      }
+    })
+    .catch(err => {
+      console.log(err);
+    });
 }
 setUpGlobalData(getStore());
+
+function ensureHeaderSigninState(isSignedIn, userName) {
+  const userMenu = document.querySelector(
+    '.header_button.header_user.user_menu'
+  );
+  const signinButton = document.querySelector('#signin_button');
+
+  if (isSignedIn) {
+    console.log('set correct states');
+    userMenu.style.display = 'block';
+    signinButton.style.display = 'none';
+    const displayName = document.querySelector(
+      '.header_button.header_user.user_menu .display_name'
+    );
+    displayName.textContent = userName;
+  } else {
+    userMenu.style.display = 'none';
+    signinButton.style.display = 'block';
+  }
+}
 
 header.showMinimalProjectHeader = function() {
   getStore().dispatch(refreshProjectName());
