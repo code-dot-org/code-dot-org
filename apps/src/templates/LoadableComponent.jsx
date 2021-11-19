@@ -36,9 +36,13 @@ export default function LoadableComponent({
     setIsLoading(false);
   };
 
+  // even with only loadArgs specified here, i get the load function being rerun each render
+  // useEffect(() => {
+  //   loadFunction(...loadArgs, onLoadSuccess, onLoadError);
+  // }, [loadArgs, loadFunction, renderFunction]);
   useEffect(() => {
     loadFunction(...loadArgs, onLoadSuccess, onLoadError);
-  }, [loadArgs, loadFunction, renderFunction]);
+  }, []);
 
   if (isLoading) {
     return <Spinner size={spinnerSize} style={spinnerStyle} />;

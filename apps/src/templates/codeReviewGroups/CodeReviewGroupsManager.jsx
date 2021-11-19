@@ -15,7 +15,6 @@ export const DROPPABLE_ID_UNASSIGNED = 'unassigned';
 // can be found here:
 // https://github.com/atlassian/react-beautiful-dnd
 export default function CodeReviewGroupsManager({groups, setGroups}) {
-  console.log(groups);
   const getGroup = droppableId =>
     _.find(groups, group => group.droppableId === droppableId);
   const getUnassignedGroup = () => getGroup(DROPPABLE_ID_UNASSIGNED);
