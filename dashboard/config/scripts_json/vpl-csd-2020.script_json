@@ -30,11 +30,11 @@
     },
     "new_name": null,
     "family_name": "vpl-csd-2020",
-    "serialized_at": "2021-11-19 20:40:00 UTC",
+    "serialized_at": "2021-11-19 20:49:24 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
-    "instructor_audience": "facilitator",
-    "participant_audience": "teacher",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "vpl-csd-2020"
     }
