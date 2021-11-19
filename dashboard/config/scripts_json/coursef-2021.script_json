@@ -10032,15 +10032,6 @@
       }
     },
     {
-      "key": "7a69d6de-1a75-41da-a511-9cb735e02a5c",
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
-        "objective.key": "7a69d6de-1a75-41da-a511-9cb735e02a5c"
-      }
-    },
-    {
       "key": "7a7f6249-ea7c-40df-a0a6-e4a3f5c61d9f",
       "properties": {
         "description": "Develop programs that respond to user input."
