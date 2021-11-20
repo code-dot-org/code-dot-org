@@ -52,9 +52,11 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2021-10-25 22:54:08 UTC",
+    "serialized_at": "2021-11-19 20:48:19 UTC",
     "published_state": "stable",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "coursee-2020"
     }

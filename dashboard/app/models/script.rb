@@ -2155,7 +2155,11 @@ class Script < ApplicationRecord
   end
 
   def get_unit_resources_pdf_url
-    if is_migrated? && !use_legacy_lesson_plans?
+    return nil unless is_migrated?
+    return nil if use_legacy_lesson_plans?
+
+    # Check if there are any resources that would be included in the rollup PDF, and, therefore, if there's a useful PDF to surface to users
+    if resources.any?(&:should_include_in_pdf?) || student_resources.any?(&:should_include_in_pdf?) || lessons.any? {|l| l.resources.any?(&:should_include_in_pdf?)}
       Services::CurriculumPdfs.get_unit_resources_url(self)
     end
   end
