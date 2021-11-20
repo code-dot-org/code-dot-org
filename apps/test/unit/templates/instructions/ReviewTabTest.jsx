@@ -292,7 +292,7 @@ describe('Code Review Tab', () => {
     });
   });
 
-  describe('viewing as teacher with review enabled', () => {
+  describe('viewing as instructor with review enabled', () => {
     beforeEach(() => {
       wrapper = shallow(
         <ReviewTab

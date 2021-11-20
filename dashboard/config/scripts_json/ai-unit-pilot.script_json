@@ -5,7 +5,6 @@
     "login_required": true,
     "properties": {
       "curriculum_path": "https://curriculum.code.org/ai-unit-pilot/ai-unit/{LESSON}",
-      "has_lesson_plan": true,
       "hideable_lessons": true,
       "pilot_experiment": "ai-unit-pilot",
       "teacher_resources": [
@@ -25,9 +24,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:42 UTC",
+    "serialized_at": "2021-11-19 20:49:39 UTC",
     "published_state": "pilot",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "ai-unit-pilot"
     }

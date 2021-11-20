@@ -62,8 +62,8 @@ class LessonEditor extends Component {
       unplugged: this.props.initialLessonData.unplugged,
       lockable: this.props.initialLessonData.lockable,
       hasLessonPlan: this.props.initialLessonData.hasLessonPlan,
-      creativeCommonsLicense: this.props.initialLessonData
-        .creativeCommonsLicense,
+      creativeCommonsLicense:
+        this.props.initialLessonData.creativeCommonsLicense || '',
       assessment: this.props.initialLessonData.assessment,
       purpose: this.props.initialLessonData.purpose || '',
       preparation: this.props.initialLessonData.preparation || '',
@@ -72,12 +72,6 @@ class LessonEditor extends Component {
       originalLessonData: this.props.initialLessonData
     };
   }
-
-  handleView = () => {
-    navigateToHref(
-      linkWithQueryParams(this.state.originalLessonData.lessonPath)
-    );
-  };
 
   handleSave = (event, shouldCloseAfterSave) => {
     event.preventDefault();
@@ -457,10 +451,14 @@ class LessonEditor extends Component {
 
         <SaveBar
           handleSave={this.handleSave}
-          handleView={this.handleView}
           error={this.state.error}
           isSaving={this.state.isSaving}
           lastSaved={this.state.lastSaved}
+          pathForShowButton={
+            this.props.initialLessonData.hasLessonPlan
+              ? this.state.originalLessonData.lessonPath
+              : undefined
+          }
         />
       </div>
     );

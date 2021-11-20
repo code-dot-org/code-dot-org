@@ -2636,6 +2636,8 @@ da:
             For Loop Fun:
               key: For loop sjov
               name: For loop sjov
+            lesson-5:
+              name: Udbrud
           lesson_groups:
             ramp_up:
               display_name: figure
@@ -2731,6 +2733,8 @@ da:
               display_name: Introduktion
             Introduction:
               display_name: Introduktion
+        outbreak-module:
+          title: Udbrud
         csa-videos:
           lesson_groups:
             lessonGroup-2:
@@ -2778,3 +2782,9 @@ da:
             lesson-1:
               name: Stave-bien
           title: Stave-bien
+        outbreak-csc:
+          title: Udbrud
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Stave-bien

@@ -17,5 +17,5 @@ export const scriptUrlForStudent = (sectionId, scriptName, studentId) => {
     return null;
   }
 
-  return `/s/${scriptName}?section_id=${sectionId}&user_id=${studentId}&viewAs=Teacher`;
+  return `/s/${scriptName}?section_id=${sectionId}&user_id=${studentId}&viewAs=Instructor`;
 };

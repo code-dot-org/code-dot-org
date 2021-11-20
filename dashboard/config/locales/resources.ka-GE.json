@@ -2,6 +2,34 @@
   "ka-GE": {
     "data": {
       "resources": {
+        "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "hocencryption/hoc-encryption/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-guide-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "activity-recap-decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "decode-this-message/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "textcompressioncodestudio/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
+        "video-text-compression/text-compression/unversioned": {
+          "name": "",
+          "url": ""
+        },
         "exploring_apps/coursef/2021": {
           "name": "აპლიკაციების გამოკვლევა"
         },
@@ -10,6 +38,7 @@
           "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
         },
         "sprite_lab_documentation/coursef/2021": {
+          "name": "Sprite ლაბორატორია დოკუმენტაცია",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/coursef/2021": {
@@ -99,6 +128,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "sprite_lab_documentation_1/coursef/2021": {
+          "name": "Sprite ლაბორატორია დოკუმენტაცია",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursef/2021": {
@@ -525,9 +555,11 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
         },
         "sprite_lab_documentation/express/2021": {
+          "name": "Sprite ლაბორატორია დოკუმენტაცია",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprite_lab_documentation_1/express/2021": {
+          "name": "Sprite ლაბორატორია დოკუმენტაცია",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "sprites_in_action/express/2021": {
@@ -593,6 +625,7 @@
           "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
         },
         "sprite_lab_documentation/coursee/2021": {
+          "name": "Sprite ლაბორატორია დოკუმენტაცია",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "be_a_super_digital_citizen_lesson_slides/coursee/2021": {
@@ -666,6 +699,7 @@
           "url": "https://forum.code.org/c/csf/"
         },
         "sprite_lab_documentation_1/coursee/2021": {
+          "name": "Sprite ლაბორატორია დოკუმენტაცია",
           "url": "https://studio.code.org/docs/spritelab/"
         },
         "virtual_lesson_modifications/coursee/2021": {

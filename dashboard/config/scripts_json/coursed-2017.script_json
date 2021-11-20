@@ -6,7 +6,6 @@
     "properties": {
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/coursed/{LESSON}",
       "curriculum_umbrella": "CSF",
-      "family_name": "coursed",
       "has_lesson_plan": true,
       "hideable_lessons": true,
       "is_course": true,
@@ -51,9 +50,11 @@
     },
     "new_name": "coursed-2017",
     "family_name": "coursed",
-    "serialized_at": "2021-10-25 22:53:28 UTC",
+    "serialized_at": "2021-11-19 20:48:14 UTC",
     "published_state": "stable",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "coursed-2017"
     }

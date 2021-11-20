@@ -14,22 +14,10 @@
         }
       ],
       "curriculum_umbrella": "CSP",
-      "exclude_csf_column_in_legend": true,
-      "family_name": "csp2",
-      "has_lesson_plan": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
-      "is_stable": true,
+      "is_migrated": true,
       "project_sharing": true,
-      "script_announcements": [
-        {
-          "notice": "Are you signed up for the AP exam?",
-          "details": "Now's the time to register to take the AP CS Principles exam! Be sure to ask your teacher about your school's registration deadline and sign up today. Click to learn more about six great reasons why you should.",
-          "link": "https://code.org/educate/csp/ap-students",
-          "type": "bullhorn",
-          "visibility": "Student-only"
-        }
-      ],
       "student_detail_progress_view": true,
       "teacher_resources": [
         [
@@ -53,13 +41,16 @@
           "https://studio.code.org/s/csp2-support"
         ]
       ],
+      "use_legacy_lesson_plans": true,
       "version_year": "2018"
     },
     "new_name": null,
     "family_name": "csp2",
-    "serialized_at": "2021-10-25 22:53:47 UTC",
+    "serialized_at": "2021-11-15 21:02:20 UTC",
     "published_state": null,
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp2-2018"
     }
@@ -198,21 +189,332 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "49e55cd9-c8d0-4f11-a581-9c9ac9bd7169",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "49e55cd9-c8d0-4f11-a581-9c9ac9bd7169",
+        "lesson.key": "Bytes and File Sizes",
+        "lesson_group.key": "csp2_1_2018",
+        "script.name": "csp2-2018"
+      }
+    },
+    {
+      "key": "abd91ec2-7ce9-4df1-b0f8-da0b90a52727",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "abd91ec2-7ce9-4df1-b0f8-da0b90a52727",
+        "lesson.key": "Text Compression",
+        "lesson_group.key": "csp2_1_2018",
+        "script.name": "csp2-2018"
+      }
+    },
+    {
+      "key": "149b1aa3-c234-4d2b-ab0e-2c66775c8f58",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "149b1aa3-c234-4d2b-ab0e-2c66775c8f58",
+        "lesson.key": "Encoding B&W Images",
+        "lesson_group.key": "csp2_1_2018",
+        "script.name": "csp2-2018"
+      }
+    },
+    {
+      "key": "9cd8c5a2-53d7-48ca-9bce-9e04a1b42526",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9cd8c5a2-53d7-48ca-9bce-9e04a1b42526",
+        "lesson.key": "Encoding Color Images",
+        "lesson_group.key": "csp2_1_2018",
+        "script.name": "csp2-2018"
+      }
+    },
+    {
+      "key": "0f5183b2-90e0-499f-bfd8-49cff2b1ef25",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0f5183b2-90e0-499f-bfd8-49cff2b1ef25",
+        "lesson.key": "Lossy vs Lossless Compression",
+        "lesson_group.key": "csp2_1_2018",
+        "script.name": "csp2-2018"
+      }
+    },
+    {
+      "key": "d4493166-8472-4d2d-bdd5-832e637dc2cb",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d4493166-8472-4d2d-bdd5-832e637dc2cb",
+        "lesson.key": "Rapid Research - Format Showdown",
+        "lesson_group.key": "csp2_1_2018",
+        "script.name": "csp2-2018"
+      }
+    },
+    {
+      "key": "f6eaabce-76a2-4ce2-ab92-be09a867dcd4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f6eaabce-76a2-4ce2-ab92-be09a867dcd4",
+        "lesson.key": "Unit 2 Assessment",
+        "lesson_group.key": "cspAssessment",
+        "script.name": "csp2-2018"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "801e908d-dad0-4362-9d50-fd21cf8f2147",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "801e908d-dad0-4362-9d50-fd21cf8f2147",
+        "lesson_activity.key": "49e55cd9-c8d0-4f11-a581-9c9ac9bd7169"
+      }
+    },
+    {
+      "key": "fc61a9c6-154d-47f7-b2b3-ff2c1a51f6d7",
+      "position": 2,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "fc61a9c6-154d-47f7-b2b3-ff2c1a51f6d7",
+        "lesson_activity.key": "49e55cd9-c8d0-4f11-a581-9c9ac9bd7169"
+      }
+    },
+    {
+      "key": "7ebec26d-f3c5-4ff4-89ea-8a8c2388d044",
+      "position": 3,
+      "properties": {
+        "name": "Quick Check-In",
+        "progression_name": "Quick Check-In"
+      },
+      "seeding_key": {
+        "activity_section.key": "7ebec26d-f3c5-4ff4-89ea-8a8c2388d044",
+        "lesson_activity.key": "49e55cd9-c8d0-4f11-a581-9c9ac9bd7169"
+      }
+    },
+    {
+      "key": "7d92fb64-643f-4825-9e57-ed74f07a7172",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "7d92fb64-643f-4825-9e57-ed74f07a7172",
+        "lesson_activity.key": "abd91ec2-7ce9-4df1-b0f8-da0b90a52727"
+      }
+    },
+    {
+      "key": "baf3a41b-b148-4667-82a7-e3b622ce4a8b",
+      "position": 2,
+      "properties": {
+        "progression_name": "Text Compression"
+      },
+      "seeding_key": {
+        "activity_section.key": "baf3a41b-b148-4667-82a7-e3b622ce4a8b",
+        "lesson_activity.key": "abd91ec2-7ce9-4df1-b0f8-da0b90a52727"
+      }
+    },
+    {
+      "key": "a54062c0-a460-4aa9-b748-ff2cfe824005",
+      "position": 3,
+      "properties": {
+        "progression_name": "Widget: Text Compression"
+      },
+      "seeding_key": {
+        "activity_section.key": "a54062c0-a460-4aa9-b748-ff2cfe824005",
+        "lesson_activity.key": "abd91ec2-7ce9-4df1-b0f8-da0b90a52727"
+      }
+    },
+    {
+      "key": "6c3b8773-4437-457b-b20b-b2775bc042a2",
+      "position": 4,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "6c3b8773-4437-457b-b20b-b2775bc042a2",
+        "lesson_activity.key": "abd91ec2-7ce9-4df1-b0f8-da0b90a52727"
+      }
+    },
+    {
+      "key": "9d49f0c3-26ac-4c4e-934c-e4f45d16a03f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d49f0c3-26ac-4c4e-934c-e4f45d16a03f",
+        "lesson_activity.key": "149b1aa3-c234-4d2b-ab0e-2c66775c8f58"
+      }
+    },
+    {
+      "key": "bad21027-3482-41ed-bd60-d0c201e420a3",
+      "position": 2,
+      "properties": {
+        "progression_name": "Pixelation Widget: Black and White Pixelation"
+      },
+      "seeding_key": {
+        "activity_section.key": "bad21027-3482-41ed-bd60-d0c201e420a3",
+        "lesson_activity.key": "149b1aa3-c234-4d2b-ab0e-2c66775c8f58"
+      }
+    },
+    {
+      "key": "ad0c4353-4dde-4671-bdcf-3a7ae648a352",
+      "position": 3,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "ad0c4353-4dde-4671-bdcf-3a7ae648a352",
+        "lesson_activity.key": "149b1aa3-c234-4d2b-ab0e-2c66775c8f58"
+      }
+    },
+    {
+      "key": "eb73d85b-474d-4031-9e5d-35589e8cd4f2",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "eb73d85b-474d-4031-9e5d-35589e8cd4f2",
+        "lesson_activity.key": "9cd8c5a2-53d7-48ca-9bce-9e04a1b42526"
+      }
+    },
+    {
+      "key": "40584efd-cc71-4fdb-b598-1989b60ccd46",
+      "position": 2,
+      "properties": {
+        "progression_name": "Images, Pixels, and RGB"
+      },
+      "seeding_key": {
+        "activity_section.key": "40584efd-cc71-4fdb-b598-1989b60ccd46",
+        "lesson_activity.key": "9cd8c5a2-53d7-48ca-9bce-9e04a1b42526"
+      }
+    },
+    {
+      "key": "d432463c-9f2f-49be-96ba-7b2a239a855b",
+      "position": 3,
+      "properties": {
+        "progression_name": "Pixelation"
+      },
+      "seeding_key": {
+        "activity_section.key": "d432463c-9f2f-49be-96ba-7b2a239a855b",
+        "lesson_activity.key": "9cd8c5a2-53d7-48ca-9bce-9e04a1b42526"
+      }
+    },
+    {
+      "key": "8935ad47-3cc8-4ab2-bd71-da43e24713d4",
+      "position": 4,
+      "properties": {
+        "progression_name": "Favicon Instructions"
+      },
+      "seeding_key": {
+        "activity_section.key": "8935ad47-3cc8-4ab2-bd71-da43e24713d4",
+        "lesson_activity.key": "9cd8c5a2-53d7-48ca-9bce-9e04a1b42526"
+      }
+    },
+    {
+      "key": "32856918-54f7-4641-9720-d5810b0a5264",
+      "position": 5,
+      "properties": {
+        "progression_name": "Widget: Color Pixelation"
+      },
+      "seeding_key": {
+        "activity_section.key": "32856918-54f7-4641-9720-d5810b0a5264",
+        "lesson_activity.key": "9cd8c5a2-53d7-48ca-9bce-9e04a1b42526"
+      }
+    },
+    {
+      "key": "f531f4e5-9e05-4c38-832f-3e62144f660a",
+      "position": 6,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "f531f4e5-9e05-4c38-832f-3e62144f660a",
+        "lesson_activity.key": "9cd8c5a2-53d7-48ca-9bce-9e04a1b42526"
+      }
+    },
+    {
+      "key": "cbaf0ad3-1b0f-4190-812e-1ee6dae3f25f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "cbaf0ad3-1b0f-4190-812e-1ee6dae3f25f",
+        "lesson_activity.key": "0f5183b2-90e0-499f-bfd8-49cff2b1ef25"
+      }
+    },
+    {
+      "key": "2a763576-d37f-497c-8767-ccc884dbf7ca",
+      "position": 2,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "2a763576-d37f-497c-8767-ccc884dbf7ca",
+        "lesson_activity.key": "0f5183b2-90e0-499f-bfd8-49cff2b1ef25"
+      }
+    },
+    {
+      "key": "9c101b6e-bbfe-4126-a60d-4294ba965e8d",
+      "position": 1,
+      "properties": {
+        "name": "Lesson Overview",
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "9c101b6e-bbfe-4126-a60d-4294ba965e8d",
+        "lesson_activity.key": "d4493166-8472-4d2d-bdd5-832e637dc2cb"
+      }
+    },
+    {
+      "key": "71bd06f5-b0e9-450b-a1e6-85e47fd4979e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "71bd06f5-b0e9-450b-a1e6-85e47fd4979e",
+        "lesson_activity.key": "f6eaabce-76a2-4ce2-ab92-be09a867dcd4"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U2L01 SFLP"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -222,7 +524,8 @@
         ],
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "801e908d-dad0-4362-9d50-fd21cf8f2147"
       },
       "level_keys": [
         "CSP U2L01 SFLP"
@@ -231,12 +534,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L12 Reflection Free Response_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -246,7 +546,8 @@
         ],
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "fc61a9c6-154d-47f7-b2b3-ff2c1a51f6d7"
       },
       "level_keys": [
         "U1L12 Reflection Free Response_2018"
@@ -255,12 +556,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP_U2_Shakespeare_Question_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -270,7 +568,8 @@
         ],
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "fc61a9c6-154d-47f7-b2b3-ff2c1a51f6d7"
       },
       "level_keys": [
         "CSP_U2_Shakespeare_Question_2018"
@@ -279,12 +578,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "csp-pulse-check-survey-2-levelgroup-U2Ch1_2018"
-        ],
         "progression": "Quick Check-In"
       },
       "bonus": false,
@@ -294,7 +590,8 @@
         ],
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "7ebec26d-f3c5-4ff4-89ea-8a8c2388d044"
       },
       "level_keys": [
         "csp-pulse-check-survey-2-levelgroup-U2Ch1_2018"
@@ -303,12 +600,9 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U2L02 SFLP"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -318,7 +612,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "7d92fb64-643f-4825-9e57-ed74f07a7172"
       },
       "level_keys": [
         "CSP U2L02 SFLP"
@@ -327,12 +622,9 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Text Compression_2018"
-        ],
         "progression": "Text Compression"
       },
       "bonus": false,
@@ -342,7 +634,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "baf3a41b-b148-4667-82a7-e3b622ce4a8b"
       },
       "level_keys": [
         "Text Compression_2018"
@@ -351,12 +644,9 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Widget: Text Compression_2018"
-        ],
         "progression": "Widget: Text Compression"
       },
       "bonus": false,
@@ -366,7 +656,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "a54062c0-a460-4aa9-b748-ff2cfe824005"
       },
       "level_keys": [
         "Widget: Text Compression_2018"
@@ -375,12 +666,9 @@
     {
       "chapter": 8,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L13 - Assess Text Compression reverse process_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -390,7 +678,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "6c3b8773-4437-457b-b20b-b2775bc042a2"
       },
       "level_keys": [
         "U1L13 - Assess Text Compression reverse process_2018"
@@ -399,12 +688,9 @@
     {
       "chapter": 9,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L13 Assess Text Compression amount_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -414,7 +700,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "6c3b8773-4437-457b-b20b-b2775bc042a2"
       },
       "level_keys": [
         "U1L13 Assess Text Compression amount_2018"
@@ -423,12 +710,9 @@
     {
       "chapter": 10,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L13 Assessment 1_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -438,7 +722,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "6c3b8773-4437-457b-b20b-b2775bc042a2"
       },
       "level_keys": [
         "U1L13 Assessment 1_2018"
@@ -447,12 +732,9 @@
     {
       "chapter": 11,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L13 Assessment 2_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -462,7 +744,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "6c3b8773-4437-457b-b20b-b2775bc042a2"
       },
       "level_keys": [
         "U1L13 Assessment 2_2018"
@@ -471,12 +754,9 @@
     {
       "chapter": 12,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U2L03 SFLP"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -486,7 +766,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "9d49f0c3-26ac-4c4e-934c-e4f45d16a03f"
       },
       "level_keys": [
         "CSP U2L03 SFLP"
@@ -495,12 +776,9 @@
     {
       "chapter": 13,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 14 - Make the Letter A_2018"
-        ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
       "bonus": false,
@@ -510,7 +788,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "bad21027-3482-41ed-bd60-d0c201e420a3"
       },
       "level_keys": [
         "Pixelation - Lesson 14 - Make the Letter A_2018"
@@ -519,12 +798,9 @@
     {
       "chapter": 14,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 14 - Fix bit offset_2018"
-        ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
       "bonus": false,
@@ -534,7 +810,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "bad21027-3482-41ed-bd60-d0c201e420a3"
       },
       "level_keys": [
         "Pixelation - Lesson 14 - Fix bit offset_2018"
@@ -543,12 +820,9 @@
     {
       "chapter": 15,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Widget: Black and White Pixelation_2018"
-        ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
       "bonus": false,
@@ -558,7 +832,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "bad21027-3482-41ed-bd60-d0c201e420a3"
       },
       "level_keys": [
         "Widget: Black and White Pixelation_2018"
@@ -567,12 +842,9 @@
     {
       "chapter": 16,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L14 Assessment 1_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -582,7 +854,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "ad0c4353-4dde-4671-bdcf-3a7ae648a352"
       },
       "level_keys": [
         "U1L14 Assessment 1_2018"
@@ -591,12 +864,9 @@
     {
       "chapter": 17,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U1L14 - Assessment 2_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -606,7 +876,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "ad0c4353-4dde-4671-bdcf-3a7ae648a352"
       },
       "level_keys": [
         "U1L14 - Assessment 2_2018"
@@ -615,12 +886,9 @@
     {
       "chapter": 18,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U2L04 SFLP"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -630,7 +898,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "eb73d85b-474d-4031-9e5d-35589e8cd4f2"
       },
       "level_keys": [
         "CSP U2L04 SFLP"
@@ -639,12 +908,9 @@
     {
       "chapter": 19,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Images, Pixels, and RGB_2018"
-        ],
         "progression": "Images, Pixels, and RGB"
       },
       "bonus": false,
@@ -654,7 +920,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "40584efd-cc71-4fdb-b598-1989b60ccd46"
       },
       "level_keys": [
         "Images, Pixels, and RGB_2018"
@@ -663,12 +930,9 @@
     {
       "chapter": 20,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 15 - Complete 3-bit color_2018"
-        ],
         "progression": "Pixelation"
       },
       "bonus": false,
@@ -678,7 +942,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "d432463c-9f2f-49be-96ba-7b2a239a855b"
       },
       "level_keys": [
         "Pixelation - Lesson 15 - Complete 3-bit color_2018"
@@ -687,12 +952,9 @@
     {
       "chapter": 21,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 15 - Color Shades_2018"
-        ],
         "progression": "Pixelation"
       },
       "bonus": false,
@@ -702,7 +964,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "d432463c-9f2f-49be-96ba-7b2a239a855b"
       },
       "level_keys": [
         "Pixelation - Lesson 15 - Color Shades_2018"
@@ -711,12 +974,9 @@
     {
       "chapter": 22,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation - Lesson 15 - Color Shades 4x4_2018"
-        ],
         "progression": "Pixelation"
       },
       "bonus": false,
@@ -726,7 +986,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "d432463c-9f2f-49be-96ba-7b2a239a855b"
       },
       "level_keys": [
         "Pixelation - Lesson 15 - Color Shades 4x4_2018"
@@ -735,12 +996,9 @@
     {
       "chapter": 23,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation Flappy_2018"
-        ],
         "progression": "Pixelation"
       },
       "bonus": false,
@@ -750,7 +1008,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "d432463c-9f2f-49be-96ba-7b2a239a855b"
       },
       "level_keys": [
         "Pixelation Flappy_2018"
@@ -759,12 +1018,9 @@
     {
       "chapter": 24,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Pixelation Bee_2018"
-        ],
         "progression": "Pixelation"
       },
       "bonus": false,
@@ -774,7 +1030,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "d432463c-9f2f-49be-96ba-7b2a239a855b"
       },
       "level_keys": [
         "Pixelation Bee_2018"
@@ -783,12 +1040,9 @@
     {
       "chapter": 25,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Favicon Instructions_2018"
-        ],
         "progression": "Favicon Instructions"
       },
       "bonus": false,
@@ -798,7 +1052,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "8935ad47-3cc8-4ab2-bd71-da43e24713d4"
       },
       "level_keys": [
         "Favicon Instructions_2018"
@@ -807,12 +1062,9 @@
     {
       "chapter": 26,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Widget: Color Pixelation_2018"
-        ],
         "progression": "Widget: Color Pixelation"
       },
       "bonus": false,
@@ -822,7 +1074,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "32856918-54f7-4641-9720-d5810b0a5264"
       },
       "level_keys": [
         "Widget: Color Pixelation_2018"
@@ -831,12 +1084,9 @@
     {
       "chapter": 27,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L5 Color Pixel MC Question_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -846,7 +1096,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "f531f4e5-9e05-4c38-832f-3e62144f660a"
       },
       "level_keys": [
         "U2L5 Color Pixel MC Question_2018"
@@ -855,12 +1106,9 @@
     {
       "chapter": 28,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L5 FR brighten darken image_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -870,7 +1118,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "f531f4e5-9e05-4c38-832f-3e62144f660a"
       },
       "level_keys": [
         "U2L5 FR brighten darken image_2018"
@@ -879,12 +1128,9 @@
     {
       "chapter": 29,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U2L05 SFLP"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -894,7 +1140,8 @@
         ],
         "lesson.key": "Lossy vs Lossless Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "cbaf0ad3-1b0f-4190-812e-1ee6dae3f25f"
       },
       "level_keys": [
         "CSP U2L05 SFLP"
@@ -903,12 +1150,9 @@
     {
       "chapter": 30,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L05 Lossy Lossless MC 1_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -918,7 +1162,8 @@
         ],
         "lesson.key": "Lossy vs Lossless Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "2a763576-d37f-497c-8767-ccc884dbf7ca"
       },
       "level_keys": [
         "U2L05 Lossy Lossless MC 1_2018"
@@ -927,12 +1172,9 @@
     {
       "chapter": 31,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L05 Lossy Lossless MC 2_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -942,7 +1184,8 @@
         ],
         "lesson.key": "Lossy vs Lossless Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "2a763576-d37f-497c-8767-ccc884dbf7ca"
       },
       "level_keys": [
         "U2L05 Lossy Lossless MC 2_2018"
@@ -951,12 +1194,9 @@
     {
       "chapter": 32,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "U2L05 Lossy vs. Lossless FR 1_2018"
-        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -966,7 +1206,8 @@
         ],
         "lesson.key": "Lossy vs Lossless Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "2a763576-d37f-497c-8767-ccc884dbf7ca"
       },
       "level_keys": [
         "U2L05 Lossy vs. Lossless FR 1_2018"
@@ -975,12 +1216,9 @@
     {
       "chapter": 33,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSP U2L06 SFLP"
-        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -990,7 +1228,8 @@
         ],
         "lesson.key": "Rapid Research - Format Showdown",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "9c101b6e-bbfe-4126-a60d-4294ba965e8d"
       },
       "level_keys": [
         "CSP U2L06 SFLP"
@@ -999,12 +1238,9 @@
     {
       "chapter": 34,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 2 Ch1 Cumulative Assessment MC_2018"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1013,7 +1249,8 @@
         ],
         "lesson.key": "Unit 2 Assessment",
         "lesson_group.key": "cspAssessment",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "71bd06f5-b0e9-450b-a1e6-85e47fd4979e"
       },
       "level_keys": [
         "CSP Unit 2 Ch1 Cumulative Assessment MC_2018"
@@ -1029,7 +1266,8 @@
         ],
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "801e908d-dad0-4362-9d50-fd21cf8f2147"
       }
     },
     {
@@ -1040,7 +1278,8 @@
         ],
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "fc61a9c6-154d-47f7-b2b3-ff2c1a51f6d7"
       }
     },
     {
@@ -1051,7 +1290,8 @@
         ],
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "fc61a9c6-154d-47f7-b2b3-ff2c1a51f6d7"
       }
     },
     {
@@ -1062,7 +1302,8 @@
         ],
         "lesson.key": "Bytes and File Sizes",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "7ebec26d-f3c5-4ff4-89ea-8a8c2388d044"
       }
     },
     {
@@ -1073,7 +1314,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "7d92fb64-643f-4825-9e57-ed74f07a7172"
       }
     },
     {
@@ -1084,7 +1326,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "baf3a41b-b148-4667-82a7-e3b622ce4a8b"
       }
     },
     {
@@ -1095,7 +1338,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "a54062c0-a460-4aa9-b748-ff2cfe824005"
       }
     },
     {
@@ -1106,7 +1350,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "6c3b8773-4437-457b-b20b-b2775bc042a2"
       }
     },
     {
@@ -1117,7 +1362,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "6c3b8773-4437-457b-b20b-b2775bc042a2"
       }
     },
     {
@@ -1128,7 +1374,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "6c3b8773-4437-457b-b20b-b2775bc042a2"
       }
     },
     {
@@ -1139,7 +1386,8 @@
         ],
         "lesson.key": "Text Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "6c3b8773-4437-457b-b20b-b2775bc042a2"
       }
     },
     {
@@ -1150,7 +1398,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "9d49f0c3-26ac-4c4e-934c-e4f45d16a03f"
       }
     },
     {
@@ -1161,7 +1410,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "bad21027-3482-41ed-bd60-d0c201e420a3"
       }
     },
     {
@@ -1172,7 +1422,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "bad21027-3482-41ed-bd60-d0c201e420a3"
       }
     },
     {
@@ -1183,7 +1434,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "bad21027-3482-41ed-bd60-d0c201e420a3"
       }
     },
     {
@@ -1194,7 +1446,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "ad0c4353-4dde-4671-bdcf-3a7ae648a352"
       }
     },
     {
@@ -1205,7 +1458,8 @@
         ],
         "lesson.key": "Encoding B&W Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "ad0c4353-4dde-4671-bdcf-3a7ae648a352"
       }
     },
     {
@@ -1216,7 +1470,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "eb73d85b-474d-4031-9e5d-35589e8cd4f2"
       }
     },
     {
@@ -1227,7 +1482,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "40584efd-cc71-4fdb-b598-1989b60ccd46"
       }
     },
     {
@@ -1238,7 +1494,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "d432463c-9f2f-49be-96ba-7b2a239a855b"
       }
     },
     {
@@ -1249,7 +1506,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "d432463c-9f2f-49be-96ba-7b2a239a855b"
       }
     },
     {
@@ -1260,7 +1518,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "d432463c-9f2f-49be-96ba-7b2a239a855b"
       }
     },
     {
@@ -1271,7 +1530,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "d432463c-9f2f-49be-96ba-7b2a239a855b"
       }
     },
     {
@@ -1282,7 +1542,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "d432463c-9f2f-49be-96ba-7b2a239a855b"
       }
     },
     {
@@ -1293,7 +1554,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "8935ad47-3cc8-4ab2-bd71-da43e24713d4"
       }
     },
     {
@@ -1304,7 +1566,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "32856918-54f7-4641-9720-d5810b0a5264"
       }
     },
     {
@@ -1315,7 +1578,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "f531f4e5-9e05-4c38-832f-3e62144f660a"
       }
     },
     {
@@ -1326,7 +1590,8 @@
         ],
         "lesson.key": "Encoding Color Images",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "f531f4e5-9e05-4c38-832f-3e62144f660a"
       }
     },
     {
@@ -1337,7 +1602,8 @@
         ],
         "lesson.key": "Lossy vs Lossless Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "cbaf0ad3-1b0f-4190-812e-1ee6dae3f25f"
       }
     },
     {
@@ -1348,7 +1614,8 @@
         ],
         "lesson.key": "Lossy vs Lossless Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "2a763576-d37f-497c-8767-ccc884dbf7ca"
       }
     },
     {
@@ -1359,7 +1626,8 @@
         ],
         "lesson.key": "Lossy vs Lossless Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "2a763576-d37f-497c-8767-ccc884dbf7ca"
       }
     },
     {
@@ -1370,7 +1638,8 @@
         ],
         "lesson.key": "Lossy vs Lossless Compression",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "2a763576-d37f-497c-8767-ccc884dbf7ca"
       }
     },
     {
@@ -1381,7 +1650,8 @@
         ],
         "lesson.key": "Rapid Research - Format Showdown",
         "lesson_group.key": "csp2_1_2018",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "9c101b6e-bbfe-4126-a60d-4294ba965e8d"
       }
     },
     {
@@ -1392,7 +1662,8 @@
         ],
         "lesson.key": "Unit 2 Assessment",
         "lesson_group.key": "cspAssessment",
-        "script.name": "csp2-2018"
+        "script.name": "csp2-2018",
+        "activity_section.key": "71bd06f5-b0e9-450b-a1e6-85e47fd4979e"
       }
     }
   ],

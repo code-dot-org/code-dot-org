@@ -23,11 +23,11 @@ const CLEAR_RESULTS = 'progress/CLEAR_RESULTS';
 const MERGE_RESULTS = 'progress/MERGE_RESULTS';
 const MERGE_PEER_REVIEW_PROGRESS = 'progress/MERGE_PEER_REVIEW_PROGRESS';
 const UPDATE_FOCUS_AREAS = 'progress/UPDATE_FOCUS_AREAS';
-const SHOW_TEACHER_INFO = 'progress/SHOW_TEACHER_INFO';
 const DISABLE_POST_MILESTONE = 'progress/DISABLE_POST_MILESTONE';
 const SET_IS_HOC_UNIT = 'progress/SET_IS_HOC_UNIT';
 const SET_IS_AGE_13_REQUIRED = 'progress/SET_IS_AGE_13_REQUIRED';
 const SET_IS_SUMMARY_VIEW = 'progress/SET_IS_SUMMARY_VIEW';
+const SET_IS_MINI_VIEW = 'progress/SET_IS_MINI_VIEW';
 const SET_STUDENT_DEFAULTS_SUMMARY_VIEW =
   'progress/SET_STUDENT_DEFAULTS_SUMMARY_VIEW';
 const SET_CURRENT_LESSON_ID = 'progress/SET_CURRENT_LESSON_ID';
@@ -64,13 +64,13 @@ const initialState = {
   focusAreaLessonIds: [],
   peerReviewLessonInfo: null,
   peerReviewsPerformed: [],
-  showTeacherInfo: false,
   postMilestoneDisabled: false,
   isHocScript: null,
   isAge13Required: false,
   // Do students see summary view by default?
   studentDefaultsSummaryView: true,
   isSummaryView: true,
+  isMiniView: false,
   hasFullProgress: false,
   lessonExtrasEnabled: false,
   // Note: usingDbProgress === "user is logged in". However, it is
@@ -183,13 +183,6 @@ export default function reducer(state = initialState, action) {
     };
   }
 
-  if (action.type === SHOW_TEACHER_INFO) {
-    return {
-      ...state,
-      showTeacherInfo: true
-    };
-  }
-
   if (action.type === DISABLE_POST_MILESTONE) {
     return {
       ...state,
@@ -218,6 +211,13 @@ export default function reducer(state = initialState, action) {
     };
   }
 
+  if (action.type === SET_IS_MINI_VIEW) {
+    return {
+      ...state,
+      isMiniView: action.isMiniView
+    };
+  }
+
   if (action.type === SET_STUDENT_DEFAULTS_SUMMARY_VIEW) {
     return {
       ...state,
@@ -230,7 +230,7 @@ export default function reducer(state = initialState, action) {
     return {
       ...state,
       isSummaryView:
-        viewType === ViewType.Student && state.studentDefaultsSummaryView
+        viewType === ViewType.Participant && state.studentDefaultsSummaryView
     };
   }
 
@@ -358,7 +358,6 @@ const userProgressFromServer = (state, dispatch, userId = null) => {
     ) {
       // Default to summary view if teacher is viewing their student, otherwise default to detail view.
       dispatch(setIsSummaryView(data.teacherViewingStudent));
-      dispatch(showTeacherInfo());
     }
 
     if (data.focusAreaLessonIds) {
@@ -475,8 +474,6 @@ export const updateFocusArea = (changeFocusAreaPath, focusAreaLessonIds) => ({
   focusAreaLessonIds
 });
 
-export const showTeacherInfo = () => ({type: SHOW_TEACHER_INFO});
-
 export const disablePostMilestone = () => ({type: DISABLE_POST_MILESTONE});
 export const setIsHocScript = isHocScript => ({
   type: SET_IS_HOC_UNIT,
@@ -489,6 +486,10 @@ export const setIsAge13Required = isAge13Required => ({
 export const setIsSummaryView = isSummaryView => ({
   type: SET_IS_SUMMARY_VIEW,
   isSummaryView
+});
+export const setIsMiniView = isMiniView => ({
+  type: SET_IS_MINI_VIEW,
+  isMiniView
 });
 export const setStudentDefaultsSummaryView = studentDefaultsSummaryView => ({
   type: SET_STUDENT_DEFAULTS_SUMMARY_VIEW,
