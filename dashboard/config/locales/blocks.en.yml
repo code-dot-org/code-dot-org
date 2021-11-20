@@ -1187,7 +1187,6 @@ en:
             '"pop"': pop
             '"rain"': rain
             '"spiral"': spiral
-            '"zigzag"': zig-zag
       gamelab_makeNewSpriteAnon:
         text: make new {ANIMATION_NAME} sprite at {LOCATION}
       gamelab_makeNumSprites:
@@ -1915,12 +1914,39 @@ en:
         text: setup Monster Town with{COUNT}monsters
       Outbreak_stopMoving:
         text: monsters stop moving
+      Poetry_addFrame:
+        text: set frame to {BRUSH}
+        options:
+          BRUSH:
+            '"bamboo"': Bamboo
+            '"beaded"': Beaded
+            '"brick"': Brick
+            '"decorative"': Decorative
+            '"donuts"': Donuts
+            '"fire"': Fire
+            '"flowers"': Flowers
+            '"gilded"': Gilded
+            '"hearts"': Hearts
+            '"iceCream"': Ice Cream
+            '"leaves"': Leaves
+            '"metal"': Metal Frame
+            '"pawPrints"': Paw Prints
+            '"rainbow"': Rainbow
+            '"stars"': Stars
+            '"swirls"': Swirls
+            '"waves"': Waves
+            '"wood"': Wood Frame
+            '"zigzag"': Zig-Zag
       Poetry_addLine:
         text: add line {LINE}
+      Poetry_addTextHighlight:
+        text: add text highlight {COLOR}
       Poetry_animateText:
         text: animate text
       Poetry_destroy:
         text: remove {ANIMATION_NAME}
+      Poetry_glideTo:
+        text: "{SPRITE} glide to {LOCATION}"
       Poetry_hideText:
         text: hide text
       Poetry_makeBurst:
@@ -1930,35 +1956,60 @@ en:
             '"burst"': burst
             '"pop"': pop
             '"rain"': rain
-            '"zigzag"': zig-zag
+            '"spiral"': spiral
       Poetry_makeNewSpriteAnon:
         text: make new {ANIMATION_NAME} sprite at {LOCATION}
       Poetry_makeNumSprites:
         text: make {NUM} new {ANIMATION_NAME} sprites
-      Poetry_playSound:
-        text: play sound {SOUND}
+      Poetry_playMusic:
+        text: play music {SOUND}
         options:
           SOUND:
-            '"sound://category_bell/bells_win_low.mp3"': Bell
             '"sound://category_loops/vibrant_game_welcome_to_heaven_loop_1.mp3"': Bright
+            '"sound://category_loops/vibrant_game_musical_harping_movement_loop_1.mp3"': Calm
+            '"sound://category_nature/steady_campfire_loop.mp3"': Campfire
+            '"sound://category_nature/rain_loop.mp3"': Drizzle
             '"sound://category_background/fire_burning.mp3"': Fireside
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': Forest
             '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': Harps
+            '"sound://category_loops/faultering_desicion_loop1.mp3"': Haunted
+            '"sound://category_background/inside_plane.mp3"': Hum
+            '"sound://category_loops/red_flag_loop1.mp3"': Mission
             '"sound://category_nature/summer_night_loop.mp3"': Night
             '"sound://category_background/ocean_waves.mp3"': Ocean
             '"sound://category_background/rain_thunderstorm_calm.mp3"': Rainy
             '"sound://category_background/rainforest_ambient_sound.mp3"': Rainforest
+            '"sound://category_background/repitition.mp3"': Riding
             '"sound://category_background/wavering_wind.mp3"': Sleepy
-            '"sound://category_background/typewriter.mp3"': Typewriter
+            '"sound://category_loops/stabilizing_breath_loop1.mp3"': Slow
             '"sound://category_background/waterfall.mp3"': Waterfall
-      Poetry_randomWord:
-        text: random word
+      Poetry_playSound:
+        text: play sound {SOUND}
+        options:
+          SOUND:
+            '"sound://category_bell/long_bell_notification.mp3"': Bell
+            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Break
+            '"sound://category_digital/boing_2.mp3"': Boing
+            '"sound://category_pop/bubble_pop_cluster_2.mp3"': Bubble
+            '"sound://category_accent/puzzle_game_accent_chatter_02.mp3"': Chatter
+            '"sound://category_explosion/vibrant_game_cartoon_game_laser_hit_13_boom_doppler.mp3"': Deflate
+            '"sound://category_jump/retro_game_enemy_jump_3.mp3"': Fail
+            '"sound://category_alerts/vibrant_game_flutter_ambient_alert.mp3"': Flutter
+            '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': Jump
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Light
+            '"sound://category_poof/puzzle_game_poof_04.mp3"': Poof
+            '"sound://category_achievements/puzzle_game_achievement_big_03.mp3"': Scan
+            '"sound://category_background/typewriter.mp3"': Typewriter
+            '"sound://category_achievements/vibrant_virtcal_achievment.mp3"': Vibrant
+            '"sound://category_achievements/peaceful_win_1.mp3"': Win
+            '"sound://category_explosion/vibrant_game_arcade_game_negative_hit.mp3"': Whirl
+            '"sound://category_achievements/peaceful_win_6.mp3"': Wind Chimes
       Poetry_setAuthor:
         text: set author {AUTHOR}
       Poetry_setBackground:
-        text: set background color {COLOR}
+        text: set background to {COLOR}
       Poetry_setBackgroundEffect:
-        text: set background effect {EFFECT} {PALETTE}
+        text: set background to {EFFECT} {PALETTE}
         options:
           EFFECT:
             '"colors"': Shifting
@@ -1970,6 +2021,10 @@ en:
             '"blooming"': Blooming
             '"ripples"': Rippling
             '"clouds"': Cloudy
+            '"rain"': Rain
+            '"bubbles"': Bubbles
+            '"confetti"': Confetti
+            '"hearts"': Colorful Hearts
           PALETTE:
             '"rainbow"': Rainbow
             '"grayscale"': Grays
@@ -1994,10 +2049,11 @@ en:
             '"Courier"': Courier
             '"Arial Black"': Arial Black
             '"Impact"': Impact
+            '"Cursive"': Handwriting
       Poetry_setFontColor:
-        text: set font color {FILL}
+        text: set text color {FILL}
       Poetry_setForegroundEffect:
-        text: do {EFFECT} foreground effect
+        text: do {EFFECT} effect
         options:
           EFFECT:
             '"rain"': Rain
@@ -2008,26 +2064,6 @@ en:
             '"starburst"': Starburst
             '"glass"': Shattering Glass
             '"twinkling"': Twinkling
-      Poetry_setPoem:
-        text: set poem {POEM}
-        options:
-          POEM:
-            '"---"': "---"
-            '"hafez"': My Brilliant Image
-            '"carroll_1"': Twinkle, Twinkle Little Star
-            '"rumi_1"': Sing
-            '"field"': Wynken, Blynken, and Nod
-            '"carroll_2"': Crocodile
-            '"twain"': Warm Summer Sun
-            '"wordsworth"': I Wandered Lonely as a Cloud
-            '"carroll_3"': Jabberwocky
-            '"rios"': Don't Go Into the Library
-            '"rumi_2"': Ocean
-            '"hughes_1"': Dream Variations
-            '"hughes"': Harlem
-            '"hopler"': In the Garden
-            '"lomeli"': Return
-            '"singer"': Toasting Marshmallows
       Poetry_setPrompt:
         text: prompt user {LEFT_QUOTE}{NAME}{RIGHT_QUOTE} for variable {VAR}
       Poetry_setPromptWithChoices:

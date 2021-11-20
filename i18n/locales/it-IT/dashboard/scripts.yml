@@ -2262,6 +2262,7 @@ it:
               name: Programma il tuo Minecraft
           student_description: Programma animali e altre creature di Minecraft nella tua versione di questo gioco.
         flappy-impact-study:
+          title: Codice Flappy con sondaggio
           lessons:
             Flappy Code:
               name: Flappy
@@ -2485,6 +2486,7 @@ it:
             Hour of Code 2013:
               name: L'Ora del Codice 2013
         hoc-impact-study:
+          title: Labirinto classico con Survey
           description_short: Prova i fondamenti dell'informatica insieme a tanti personaggi divertenti!
           lessons:
             Hour of Code 2013:
@@ -7979,6 +7981,8 @@ it:
               name: Introduzione al Laboratorio dei Personaggi
             Virus Simulation for Code Bytes:
               name: Codifica di una simulazione
+            Making Sprites:
+              name: Creazione di personaggi
             Sprites in Action:
               name: Personaggi in azione
             End of Course Project:
@@ -8597,6 +8601,7 @@ it:
               description_student: Preparati a creare il tuo prossimo capolavoro. Qui userai i cicli con contatore per creare immagini sbalorditive.
               description_teacher: In questa lezione, gli studenti continuano ad esercitarsi con i cicli, questa volta con l'Artista. Gli studenti completeranno gli esercizi combinando i concetti di variabili, cicli e cicli con contatore per creare progetti complessi. Alla fine avranno la possibilità di creare il proprio progetto in un esercizio libero.
             Virtual Pet:
+              key: Animale virtuale
               name: 'Mini progetto: Animaletto Virtuale'
             End of Course Project:
               key: Progetto di fine corso
@@ -8604,6 +8609,8 @@ it:
               description_student: Progetti così grandi richiedono tempo e molta pianificazione. Trova la tua ispirazione, sviluppa un piano e libera la tua creatività!
             lesson-6:
               name: Introduzione al Laboratorio dei Personaggi
+            lesson-7:
+              name: Creazione di personaggi
             lesson-8:
               name: Personaggi in azione
             lesson-5:
@@ -8735,6 +8742,8 @@ it:
               description_student: Sgranchisciti le dita per programmare alla grande! È ora di iniziare a realizzare il tuo progetto.
             lesson-1:
               name: Ballando col codice
+            lesson-2:
+              name: Creazione di personaggi
             lesson-3:
               name: Personaggi in azione
           lesson_groups:
@@ -8814,6 +8823,8 @@ it:
               name: Codifica di una simulazione
             Course F Introduction:
               name: Introduzione al Laboratorio dei Personaggi
+            Making Sprites:
+              name: Creazione di personaggi
             Sprites in Action:
               name: Personaggi in azione
             introducing-spritelab:
@@ -8883,6 +8894,10 @@ it:
             lessonGroup-2:
               display_name: Contenuto
         csa5-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+        csa6-pilot:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
@@ -9086,6 +9101,11 @@ it:
               display_name: Lezioni
             lessonGroup-3:
               display_name: Progetto
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: Ciao a tutti!
+          title: '"Ciao a tutti!"'
         csa1-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
@@ -9143,10 +9163,6 @@ it:
               name: Componenti
             lesson-2:
               name: Strumenti
-        poetry:
-          lessons:
-            lesson-3:
-              name: Variabili
         spelling-bee:
           lessons:
             lesson-1:
@@ -9158,3 +9174,20 @@ it:
           lesson_groups:
             lessonGroup-2:
               display_name: Contenuto
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Sondaggio Post-corso
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Contenuto
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Ape Sapiente
+        explore-data-1-2021:
+          lessons:
+            Exploring Box Plots and Histograms:
+              name: Visualizzazione dei Dati
+          title: Visualizzazione dei Dati

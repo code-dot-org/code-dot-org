@@ -93,8 +93,8 @@ import autogenerateML from '@cdo/apps/applab/ai';
  */
 const TOP_200_USA = 'Top 200 USA';
 const TOP_200_Worldwide = 'Top 200 Worldwide';
-const TOP_50_USA = 'Top 200 USA';
-const TOP_50_Worldwide = 'Top 200 Worldwide';
+const TOP_50_USA = 'Top 50 USA';
+const TOP_50_Worldwide = 'Top 50 Worldwide';
 
 /**
  * Create a namespace for the application.

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useEffect} from 'react';
 import UsPhoneNumberInput from '../../form_components/UsPhoneNumberInput';
 import {
   PageLabels,
@@ -35,9 +35,11 @@ import {
   FormContext,
   getValidationState
 } from '../../form_components_func/FormComponent';
+import {useRegionalPartner} from '../../components/useRegionalPartner';
 
 const CSD_URL = 'https://code.org/educate/csd';
 const CSP_URL = 'https://code.org/educate/csp';
+const CSA_URL = 'https://code.org/educate/csa';
 const PD_RESOURCES_URL =
   'https://support.code.org/hc/en-us/articles/115003865532';
 const CS_TEACHERS_URL = 'https://code.org/educate/community';
@@ -46,7 +48,18 @@ const US = 'United States';
 
 const AboutYou = props => {
   const {accountEmail, onChange, errors, data} = props;
+  const [regionalPartner] = useRegionalPartner(data);
   const nominated = queryString.parse(window.location.search).nominated;
+
+  useEffect(() => {
+    onChange({
+      regionalPartnerId: regionalPartner?.id,
+      regionalPartnerGroup: regionalPartner?.group,
+      regionalPartnerWorkshopIds: (regionalPartner?.workshops || []).map(
+        workshop => workshop.id
+      )
+    });
+  }, [regionalPartner]);
 
   const resetCountry = () => onChange({country: US});
   const exitApplication = () => (window.location = PD_RESOURCES_URL);
@@ -89,6 +102,46 @@ const AboutYou = props => {
     });
   };
 
+  const renderRegionalPartnerName = () => {
+    const content = regionalPartner?.name ? (
+      <>
+        <p>
+          Your Regional Partner will host the full professional learning program
+          and provide ongoing support as you implement what you’ve learned in
+          the classroom!
+        </p>
+        <p>
+          <strong>Your Regional Partner is: {regionalPartner.name}</strong>
+        </p>
+      </>
+    ) : (
+      <>
+        <p>
+          <strong>
+            There is no Regional Partner in your region at this time
+          </strong>
+        </p>
+        <p>
+          Code.org will review your application and contact you with options for
+          joining the program hosted by a Regional Partner from a different
+          region. Please note that we are not able to guarantee a space for you
+          with another Regional Partner, and you will be responsible for the
+          costs associated with traveling to that location if a virtual option
+          is not available.
+        </p>
+      </>
+    );
+    return (
+      <>
+        <p>
+          Participants are assigned to a program hosted by one of our Regional
+          Partners based on their school's geographic location.
+        </p>
+        {content}
+      </>
+    );
+  };
+
   return (
     <FormContext.Provider value={props}>
       <LabelsContext.Provider value={PageLabels.aboutYou}>
@@ -116,13 +169,13 @@ const AboutYou = props => {
             please visit the{' '}
             <a href={CSD_URL} target="_blank" rel="noopener noreferrer">
               CS Discoveries
-            </a>{' '}
-            and{' '}
+            </a>
+            ,{' '}
             <a href={CSP_URL} target="_blank" rel="noopener noreferrer">
               CS Principles
-            </a>{' '}
-            landing pages. For additional questions regarding the program or
-            application, please{' '}
+            </a>
+            , and <a href={CSA_URL}>CSA</a> landing pages. For additional
+            questions regarding the program or application, please{' '}
             <RegionalPartnerMiniContactPopupLink
               sourcePageId="teacher-application-first-page"
               notes="Please tell me more about the professional learning program for grades 6-12!"
@@ -169,7 +222,7 @@ const AboutYou = props => {
           </p>
           <LabeledInput name="streetAddress" />
           <LabeledInput name="city" />
-          <LabeledInput name="state" />
+          <LabeledSelect name="state" placeholder="Select a state" />
           <LabeledInput name="zipCode" />
 
           <LabeledCheckBoxes name="previousUsedCurriculum" />
@@ -230,6 +283,8 @@ const AboutYou = props => {
             name="principalPhoneNumber"
             autoComplete="never"
           />
+
+          {renderRegionalPartnerName()}
         </FormGroup>
       </LabelsContext.Provider>
     </FormContext.Provider>

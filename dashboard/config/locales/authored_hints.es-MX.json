@@ -515,7 +515,7 @@
           "Course_4_SCV_6_a": "Mira el aspecto de una forma completa\n\n![](https://images.code.org/9e30d3a87186cefe730984feee195806-image-1469642178866.png)"
         },
         "CourseD_Dance_2020_01": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Asegúrate de que un bailarín aparece en la pantalla.\n\n_Este nivel termina después de 4 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Asegúrate de que un bailarín aparezca en la pantalla.\n\n_Este nivel termina después de 4 compases._",
           "challenges": "**Desafíos opcionales**\n\n-   Elige una canción diferente para jugar.\n-   Mueve a tu bailarín a una nueva ubicación.\n-   Crea más de un bailarín."
         },
         "CourseD_Dance_2020_02": {
@@ -527,10 +527,10 @@
           "challenges": "**Desafío opcional**\n\n-   Haz que un bailarín responda a las teclas de flecha izquierda y derecha."
         },
         "CourseD_Dance_2020_04": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 compases.\n\n_Este nivel termina después de 7 compases._"
         },
         "CourseD_Dance_2020_05": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 medidas, tu bailarín necesita estar haciendo un baile distinto después de 4 medidas.\n\n_Este nivel termina después de 12 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 compases, tu bailarín necesita estar haciendo un baile distinto al que hacía después del cuarto compás.\n\n_Este nivel termina después de 11 compases._",
           "challenges": "**Desafío opcional**\n\n-   Cambia el fondo cada vez que los bailarines cambien de movimiento."
         },
         "CourseD_Dance_2020_06": {
@@ -554,41 +554,41 @@
           "alternate": "El bloque alternativo está en la categoría \"Bailarines\"."
         },
         "CourseD_Dance_Party_01": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Asegúrate de que un bailarín aparece en la pantalla.\n\n_Este nivel termina después de 4 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Asegúrate de que un bailarín aparezca en la pantalla.\n\n_Este nivel termina después de 4 compases._",
           "challenges": "**Retos Opcionales**\n\n-   Elige una canción diferente para jugar.\n-   ¡Elige uno distinto que parezca un alce!\n-   Cambia el nombre de tu bailarín."
         },
         "CourseD_Dance_Party_02": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 compases.\n\n_Este nivel termina después de 7 compases._"
         },
         "CourseD_Dance_Party_03": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 medidas, tu bailarín necesita estar haciendo un baile distinto después de 4 medidas.\n\n_Este nivel termina después de 12 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 compases, tu bailarín necesita estar haciendo un baile distinto al que hacía después del cuarto compás.\n\n_Este nivel termina después de 11 compases._"
         },
         "CourseD_Dance_Party_04": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Necesitas cambiar el efecto de fondo en algún momento de la séptima medida de la canción.\n\n_Este nivel termina después de 10 medidas._",
-          "challenges": "**Reto Opcional**\n\nCambia el efecto de fondo en diferentes puntos durante la canción conectando el nuevo bloque en <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> eventos."
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Necesitas cambiar el efecto de fondo en algún momento antes del séptimo compás de la canción.\n\n_Este nivel termina después de 9 compases._",
+          "challenges": "**Desafío opcional**\n\nCambia el efecto de fondo en diferentes momentos durante la canción conectando el bloque nuevo con los de los compases <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml>."
         },
         "CourseD_Dance_Party_06": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Necesitarás tener al menos dos bailarines.\n\n_Este nivel termina después de 6 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Necesitarás tener al menos dos bailarines.\n\n_Este nivel termina después de 5 compases._",
           "challenges": "**Reto Opcional**\n\n-   Añadir un tercer bailarín (o tantos como quieras)\n-   Haz que todos tus bailarines realicen diferentes movimientos en diferentes puntos de la canción."
         },
         "CourseD_Dance_Party_08": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Dos bailarines deben tener un tamaño diferente a 100.\n\n_Este nivel termina después de 6 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Dos bailarines deben tener un tamaño diferente a 100.\n\n_Este nivel termina después de 5 compases._",
           "challenges": "**Reto Opcional**\n\n-   Experimenta cambiando otras propiedades (ancho, altura, rotación, etcétera.)"
         },
         "CourseD_Dance_Party_09": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambiar el color de al menos un bailarín\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambiar el tinte de al menos un bailarín.\n\n_Este nivel termina después de 7 compases._"
         },
         "CourseD_Dance_Party_10": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Las propiedades de dos o más bailarines deben cambiar.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Tienes que cambiar las propiedades de dos o más bailarines.\n\n_Este nivel termina después de 7 compases._"
         },
         "CourseD_Dance_Party_11": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Se creativo!\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Se creativo!\n\n_Este nivel termina después de 7 compases._"
         },
         "CourseD_Dance_Party_11_5": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Se creativo!\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Se creativo!\n\n_Este nivel termina después de 7 compases._"
         },
         "CourseD_Dance_Party_11b": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Utiliza el bloque 'cuando presiona la flecha izquierda' para hacer que el Robot haga un movimiento de baile cuando lo pulses.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Utiliza el bloque `cuando flecha izquierda pulsada` para indicar al Robot que haga un movimiento de baile cuando la pulses.\n\n_Este nivel termina después de 7 compases._"
         },
         "CourseE_HOC 2018 Level_10": {
           "voyage_aquatic_10a": "¿Ves las **linternas marinas** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? ¿Qué condicional usarías con ellas para atravesar el Monumento Oceánico?"
@@ -609,7 +609,7 @@
           "voyage_aquatic_9a": "¡Qué hermoso arrecife de coral! El coral azul será tu mano **derecha** en este viaje. ¡No te fíes de la **siniestra** presencia del coral rojo!"
         },
         "Dance_2019_01": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Asegúrate de que un bailarín aparece en la pantalla.\n\n_Este nivel termina después de 4 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Asegúrate de que un bailarín aparezca en la pantalla.\n\n_Este nivel termina después de 4 compases._",
           "challenges": "**Desafíos opcionales**\n\n-   Elige una canción diferente para jugar.\n-   Mueve a tu bailarín a una nueva ubicación.\n-   Crea más de un bailarín."
         },
         "Dance_2019_02": {
@@ -621,10 +621,10 @@
           "challenges": "**Desafío opcional**\n\n-   Haz que un bailarín responda a las teclas de flecha izquierda y derecha."
         },
         "Dance_2019_04": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 compases.\n\n_Este nivel termina después de 7 compases._"
         },
         "Dance_2019_05": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 medidas, tu bailarín necesita estar haciendo un baile distinto después de 4 medidas.\n\n_Este nivel termina después de 12 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 compases, tu bailarín necesita estar haciendo un baile distinto al que hacía después del cuarto compás.\n\n_Este nivel termina después de 11 compases._",
           "challenges": "**Desafío opcional**\n\n-   Cambia el fondo cada vez que los bailarines cambien de movimiento."
         },
         "Dance_2019_06": {
@@ -645,44 +645,44 @@
           "next_previous": "**Desafío opcional**\n\n-   Puedes usar este nuevo bloque de evento para recorrer una lista de movimientos de baile y establecer el movimiento como `(Aleatorio)`, `(Siguiente)` o `(Anterior)`.\n    <xml><block type=\"Dancelab_changeMoveEachLR\">\n    <title name=\"GROUP\">???</title>\n    <title name=\"MOVE\">\"rand\"</title>\n    <title name=\"DIR\">-1</title>\n    </block></xml>"
         },
         "Dance_Party_01": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Asegúrate de que un bailarín aparece en la pantalla.\n\n_Este nivel termina después de 4 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Asegúrate de que un bailarín aparezca en la pantalla.\n\n_Este nivel termina después de 4 compases._",
           "challenges": "**Retos Opcionales**\n\n-   Elige una canción diferente para jugar.\n-   ¡Elige uno distinto que parezca un alce!\n-   Cambia el nombre de tu bailarín."
         },
         "Dance_Party_02": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 compases.\n\n_Este nivel termina después de 7 compases._"
         },
         "Dance_Party_03": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 medidas, tu bailarín necesita estar haciendo un baile distinto después de 4 medidas.\n\n_Este nivel termina después de 12 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 compases, tu bailarín necesita estar haciendo un baile distinto al que hacía después del cuarto compás.\n\n_Este nivel termina después de 11 compases._"
         },
         "Dance_Party_04": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Necesitas cambiar el efecto de fondo en algún momento de la séptima medida de la canción.\n\n_Este nivel termina después de 10 medidas._",
-          "challenges": "**Reto Opcional**\n\nCambia el efecto de fondo en diferentes puntos durante la canción conectando el nuevo bloque en <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml> eventos."
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Necesitas cambiar el efecto de fondo en algún momento antes del séptimo compás de la canción.\n\n_Este nivel termina después de 9 compases._",
+          "challenges": "**Desafío opcional**\n\nCambia el efecto de fondo en diferentes momentos durante la canción conectando el bloque nuevo con los de los compases <xml><block type=\"Dancelab_atTimestamp\"><title name=\"TIMESTAMP\">???</title><title name=\"UNIT\">\"measures\"</title></block></xml>."
         },
         "Dance_Party_05": {
           "validation": "**¿Cómo paso este nivel?**\n\n-   Tu bailarín necesita recorrer al menos 4 movimientos de baile diferentes antes de que termine el nivel.\n\n_Este nivel termina después de 12 medidas._"
         },
         "Dance_Party_06": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Necesitarás tener al menos dos bailarines.\n\n_Este nivel termina después de 6 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Necesitarás tener al menos dos bailarines.\n\n_Este nivel termina después de 5 compases._",
           "challenges": "**Reto Opcional**\n\n-   Añadir un tercer bailarín (o tantos como quieras)\n-   Haz que todos tus bailarines realicen diferentes movimientos en diferentes puntos de la canción."
         },
         "Dance_Party_08": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Dos bailarines deben tener un tamaño diferente a 100.\n\n_Este nivel termina después de 6 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Dos bailarines deben tener un tamaño diferente a 100.\n\n_Este nivel termina después de 5 compases._",
           "challenges": "**Reto Opcional**\n\n-   Experimenta cambiando otras propiedades (ancho, altura, rotación, etcétera.)"
         },
         "Dance_Party_09": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambiar el color de al menos un bailarín\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Cambiar el tinte de al menos un bailarín.\n\n_Este nivel termina después de 7 compases._"
         },
         "Dance_Party_10": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Las propiedades de dos o más bailarines deben cambiar.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Tienes que cambiar las propiedades de dos o más bailarines.\n\n_Este nivel termina después de 7 compases._"
         },
         "Dance_Party_11": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Se creativo!\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Se creativo!\n\n_Este nivel termina después de 7 compases._"
         },
         "Dance_Party_11_5": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Se creativo!\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   ¡Se creativo!\n\n_Este nivel termina después de 7 compases._"
         },
         "Dance_Party_11b": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Utiliza el bloque 'cuando presiona la flecha izquierda' para hacer que el Robot haga un movimiento de baile cuando lo pulses.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Utiliza el bloque \\`al pulsar izquierda' para hacer que el Robot haga un movimiento de baile cuando lo pulses.\n\n_Este nivel termina después de 7 compases._"
         },
         "Dance_Party_extras_alternate_2019": {
           "alternate": "El bloque alternativo está en la categoría \"Bailarines\"."
@@ -8785,7 +8785,7 @@
           "courseC_starWars_loops5_a": "La mejor solución utiliza un único \"movimiento hacia adelante\", luego un giro y después un bucle."
         },
         "CourseD_Dance_2020_01_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Asegúrate de que un bailarín aparece en la pantalla.\n\n_Este nivel termina después de 4 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Asegúrate de que un bailarín aparezca en la pantalla.\n\n_Este nivel termina después de 4 compases._",
           "challenges": "**Desafíos opcionales**\n\n-   Elige una canción diferente para jugar.\n-   Mueve a tu bailarín a una nueva ubicación.\n-   Crea más de un bailarín."
         },
         "CourseD_Dance_2020_02_2021": {
@@ -8797,10 +8797,10 @@
           "challenges": "**Desafío opcional**\n\n-   Haz que un bailarín responda a las teclas de flecha izquierda y derecha."
         },
         "CourseD_Dance_2020_04_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 medidas.\n\n_Este nivel termina después de 8 medidas._"
+          "validation": "**¿Cómo paso este nivel?**\n\n-   El bailarín necesita cambiar a un nuevo movimiento después de 4 compases.\n\n_Este nivel termina después de 7 compases._"
         },
         "CourseD_Dance_2020_05_2021": {
-          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 medidas, tu bailarín necesita estar haciendo un baile distinto después de 4 medidas.\n\n_Este nivel termina después de 12 medidas._",
+          "validation": "**¿Cómo paso este nivel?**\n\n-   Después de 6 compases, tu bailarín necesita estar haciendo un baile distinto al que hacía después del cuarto compás.\n\n_Este nivel termina después de 11 compases._",
           "challenges": "**Desafío opcional**\n\n-   Cambia el fondo cada vez que los bailarines cambien de movimiento."
         },
         "CourseD_Dance_2020_06_2021": {
@@ -8841,7 +8841,7 @@
           "hint1": "Haz clic en el botón `+` en el bloque de eventos. Llena el espacio vacío en el bloque `cambiar disfraz` con el bloque `sujeto` que se encuentra dentro.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
-          "hint1": "Para darles máscaras a los monstruos, usa el bloque `cambiar disfraz` con un evento `al hacer clic`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\n¡Asegúrate de arrastrar también el pequeño bloque rojo `cliqueado`!",
+          "hint1": "Para darles máscaras a los monstruos, usa el bloque `cambiar disfraz` con un evento `cuando se hace clic en`:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\n¡Asegúrate de arrastrar también el pequeño bloque rojo `pulsado`!",
           "hint2": "El nuevo código para este nivel debería verse así:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
@@ -9886,7 +9886,7 @@
           "courseC_starWars_loops4_b": "Cada loop 'repetir' tendrá sólo un comando dentro de él: `avanzar`."
         },
         "courseC_starWars_loops5_2021": {
-          "courseC_starWars_loops5_a": "La mejor solución utiliza un único \"movimiento hacia adelante\", luego un giro y después un bucle."
+          "courseC_starWars_loops5_a": "La mejor solución utiliza un único `movimiento hacia adelante`, luego un giro y después un bucle."
         },
         "courseC_starWars_loops5_dani": {
           "courseC_starWars_loops5_b": "Para moverte hacia abajo, debes girar y luego avanzar.",
@@ -10640,7 +10640,7 @@
           "behavior_list": "Prueba utilizar comportamientos como \"moverse hacia el este y hacer un bucle\", \"girar a la derecha\" y \"deambular\"."
         },
         "courseF_text_choice_multiprompt": {
-          "when_answered_var": "Intente cambiar la etiqueta de la variable en el bloque \"cuando responda\". Debido a que hay múltiples preguntas, utilice la etiqueta de la _última_ pregunta que será respondida.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
+          "when_answered_var": "Intenta cambiar la etiqueta de la variable en el bloque `cuando responda`. Debido a que hay múltiples avisos, utiliza la etiqueta de la _última_ pregunta que será respondida.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n      <value name=\"VAR\">\n        <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n          <title name=\"VAR\">???</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "courseF_text_concat": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"

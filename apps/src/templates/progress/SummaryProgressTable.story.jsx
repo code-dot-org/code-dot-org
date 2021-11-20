@@ -39,7 +39,7 @@ const defaultProps = {
       fakeLevels(2)
     ]
   },
-  viewAs: ViewType.Student,
+  viewAs: ViewType.Participant,
   lessonIsVisible: () => true
 };
 
@@ -48,7 +48,9 @@ export default storybook => {
     {
       name: 'simple SummaryProgressTable',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+        <Provider
+          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
+        >
           <SummaryProgressTable {...defaultProps} />
         </Provider>
       )
@@ -56,7 +58,9 @@ export default storybook => {
     {
       name: 'SummaryProgressTable with focus area',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+        <Provider
+          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
+        >
           <SummaryProgressTable
             {...defaultProps}
             groupedLesson={{
@@ -78,7 +82,9 @@ export default storybook => {
     {
       name: 'SummaryProgressTable for peer reviews',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+        <Provider
+          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
+        >
           <SummaryProgressTable
             groupedLesson={{
               lessons: [
@@ -125,65 +131,71 @@ export default storybook => {
       )
     },
     {
-      name: 'second lesson is a hidden lesson, viewing as teacher',
+      name: 'second lesson is a hidden lesson, viewing as instructor',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, '2')}>
+        <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, '2')}>
           <SummaryProgressTable
             {...defaultProps}
-            viewAs={ViewType.Teacher}
+            viewAs={ViewType.Instructor}
             lessonIsVisible={(lesson, viewAs) =>
-              lesson.id !== 2 || viewAs === ViewType.Teacher
+              lesson.id !== 2 || viewAs === ViewType.Instructor
             }
           />
         </Provider>
       )
     },
     {
-      name: 'third lesson is a hidden lesson, viewing as teacher',
+      name: 'third lesson is a hidden lesson, viewing as instructor',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, '3')}>
+        <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, '3')}>
           <SummaryProgressTable
             {...defaultProps}
-            viewAs={ViewType.Teacher}
+            viewAs={ViewType.Instructor}
             lessonIsVisible={(lesson, viewAs) =>
-              lesson.id !== 3 || viewAs === ViewType.Teacher
+              lesson.id !== 3 || viewAs === ViewType.Instructor
             }
           />
         </Provider>
       )
     },
     {
-      name: 'second lesson is a hidden lesson, viewing as student',
+      name: 'second lesson is a hidden lesson, viewing as participant',
       description: 'Row 2 should not be visible',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Student, '2')}>
+        <Provider
+          store={createStoreWithHiddenLesson(ViewType.Participant, '2')}
+        >
           <SummaryProgressTable
             {...defaultProps}
             lessonIsVisible={(lesson, viewAs) =>
-              lesson.id !== 2 || viewAs === ViewType.Teacher
+              lesson.id !== 2 || viewAs === ViewType.Instructor
             }
           />
         </Provider>
       )
     },
     {
-      name: 'third row is a hidden lesson, viewing as student',
+      name: 'third row is a hidden lesson, viewing as participant',
       description: 'Row 3 should not be visible, gray still every other row',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Student, '3')}>
+        <Provider
+          store={createStoreWithHiddenLesson(ViewType.Participant, '3')}
+        >
           <SummaryProgressTable
             {...defaultProps}
             lessonIsVisible={(lesson, viewAs) =>
-              lesson.id !== 3 || viewAs === ViewType.Teacher
+              lesson.id !== 3 || viewAs === ViewType.Instructor
             }
           />
         </Provider>
       )
     },
     {
-      name: 'locked lesson in current section as teacher',
+      name: 'locked lesson in current section as instructor',
       story: () => (
-        <Provider store={createStoreWithLockedLesson(ViewType.Teacher, true)}>
+        <Provider
+          store={createStoreWithLockedLesson(ViewType.Instructor, true)}
+        >
           <SummaryProgressTable
             {...defaultProps}
             groupedLesson={{
@@ -194,15 +206,15 @@ export default storybook => {
               ],
               levelsByLesson: [fakeLevels(3), fakeLevels(4), fakeLevels(2)]
             }}
-            viewAs={ViewType.Teacher}
+            viewAs={ViewType.Instructor}
           />
         </Provider>
       )
     },
     {
-      name: 'locked lesson as student',
+      name: 'locked lesson as participant',
       story: () => (
-        <Provider store={createStoreWithLockedLesson(ViewType.Student)}>
+        <Provider store={createStoreWithLockedLesson(ViewType.Participant)}>
           <SummaryProgressTable
             {...defaultProps}
             groupedLesson={{
@@ -225,9 +237,11 @@ export default storybook => {
       )
     },
     {
-      name: 'unlocked lesson in current section as teacher',
+      name: 'unlocked lesson in current section as instructor',
       story: () => (
-        <Provider store={createStoreWithLockedLesson(ViewType.Teacher, true)}>
+        <Provider
+          store={createStoreWithLockedLesson(ViewType.Instructor, true)}
+        >
           <SummaryProgressTable
             {...defaultProps}
             groupedLesson={{
@@ -238,16 +252,16 @@ export default storybook => {
               ],
               levelsByLesson: [fakeLevels(3), fakeLevels(4), fakeLevels(2)]
             }}
-            viewAs={ViewType.Teacher}
+            viewAs={ViewType.Instructor}
             lessonIsVisible={() => true}
           />
         </Provider>
       )
     },
     {
-      name: 'locked, hidden lesson as teacher',
+      name: 'locked, hidden lesson as instructor',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, '2')}>
+        <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, '2')}>
           <SummaryProgressTable
             {...defaultProps}
             groupedLesson={{
@@ -258,9 +272,9 @@ export default storybook => {
               ],
               levelsByLesson: [fakeLevels(3), fakeLevels(4), fakeLevels(2)]
             }}
-            viewAs={ViewType.Teacher}
+            viewAs={ViewType.Instructor}
             lessonIsVisible={(lesson, viewAs) =>
-              lesson.id !== 2 || viewAs === ViewType.Teacher
+              lesson.id !== 2 || viewAs === ViewType.Instructor
             }
           />
         </Provider>
@@ -269,7 +283,9 @@ export default storybook => {
     {
       name: 'unplugged lesson',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
+        <Provider
+          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
+        >
           <SummaryProgressTable
             {...defaultProps}
             groupedLesson={{

@@ -1,17 +1,16 @@
 {
   "pages": {
-    "/projects": "home-learning-2020",
-    "/home": "irobot-classchat"
+    "/projects": "home-learning-2020"
   },
 
   "banners": {
-    "irobot-classchat": {
-      "image": "/images/csjourneys/irobot-classchat.png",
-      "title": "Building robots with iRobot",
-      "body": "Learn how two women are helping build software for robots and designing learning experiences that inspire the next generation of technologists. Recommended for grades K-5. Recording will be available the day after the live session.",
+    "myjourney-sasha": {
+      "image": "/images/csjourneys/sasha-dash.png",
+      "title": "My Journey: Visual storytelling with data",
+      "body": "Learn how a creative technologist uses art, music, data, and technology to create experiential software that both helps scientists and inspires people of all ages. Recommended for grades 6-12.",
       "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat5",
-      "buttonId": "irobot-classchat-details"
+      "buttonUrl": "https://code.org/csjourneys/myjourneychats#chat10",
+      "buttonId": "myjourney-sasha-details"
     },  
     "csjourneys": {
       "image": "/images/csjourneys/teacher-banner.png",

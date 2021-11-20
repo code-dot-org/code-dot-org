@@ -460,6 +460,27 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.preview
   end
 
+  test "update instruction_type" do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    sign_in create(:levelbuilder)
+
+    unit = create :script, instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+    File.stubs(:write).with {|filename, _| filename.end_with? 'scripts.en.yml'}.once
+    File.stubs(:write).with {|filename, _| filename == "#{Rails.root}/config/scripts/#{unit.name}.script"}.once
+    File.stubs(:write).with do |filename, contents|
+      filename == "#{Rails.root}/config/scripts_json/#{unit.name}.script_json" && JSON.parse(contents)['script']['name'] == unit.name
+    end
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      script_text: '',
+      instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+    }
+    assert_response :success
+    unit.reload
+    assert_equal unit.get_instruction_type, SharedCourseConstants::INSTRUCTION_TYPE.self_paced
+  end
+
   test "update published state to in_development" do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
     sign_in create(:levelbuilder)
@@ -1016,6 +1037,50 @@ class ScriptsControllerTest < ActionController::TestCase
     unit.reload
 
     assert_equal({}, unit.properties)
+  end
+
+  test 'setting tts for unit triggers generation of tts for the unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    Script.any_instance.stubs(:tts_update).once
+
+    unit = create :script
+    stub_file_writes(unit.name)
+
+    assert_nil unit.tts
+
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      tts: true
+    }, as: :json
+    assert_response :success
+    unit.reload
+
+    assert_equal true, unit.tts
+  end
+
+  test 'setting tts to false does not trigger generation of tts for the unit' do
+    sign_in create(:levelbuilder)
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+
+    Script.any_instance.stubs(:tts_update).never
+
+    unit = create :script, tts: true
+    stub_file_writes(unit.name)
+
+    assert_equal true, unit.tts
+
+    post :update, params: {
+      id: unit.id,
+      script: {name: unit.name},
+      tts: false
+    }, as: :json
+    assert_response :success
+    unit.reload
+
+    assert_equal nil, unit.tts
   end
 
   test 'published_state is set to nil for script within course' do
@@ -1584,68 +1649,66 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_redirected_to "/s/dogs2"
   end
 
-  test "levelbuilder does not see visible after warning if lesson does not have visible_after property" do
-    sign_in create(:levelbuilder)
+  class LessonVisibleAfterTest < ActionController::TestCase
+    setup do
+      @unit = create :script
+      lesson_group = create :lesson_group, script: @unit
+      lesson = create :lesson, name: 'lesson 1', lesson_group: lesson_group, script: @unit, visible_after: '2020-04-01 08:00:00 -0700'
+      activity = create :lesson_activity, lesson: lesson
+      section = create :activity_section, lesson_activity: activity
+      level = create :level
+      create :script_level, lesson: lesson, activity_section: section, activity_section_position: 1, levels: [level]
+    end
 
-    get :show, params: {id: 'course1'}
-    assert_response :success
-    refute response.body.include? 'visible after'
-  end
+    test "levelbuilder does not see visible after warning if lesson does not have visible_after property" do
+      sign_in create(:levelbuilder)
 
-  test "levelbuilder does not see visible after warning if lesson has visible_after property that is in the past" do
-    Timecop.freeze(Time.new(2020, 4, 2))
-    sign_in create(:levelbuilder)
+      @unit.lessons.first.update!(visible_after: nil)
 
-    create(:level, name: "Level 1")
-    unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-    Script.setup([unit_file])
+      get :show, params: {id: @unit.name}
+      assert_response :success
+      refute response.body.include? 'visible after'
+    end
 
-    get :show, params: {id: 'test-fixture-visible-after'}
-    assert_response :success
-    refute response.body.include? 'visible after'
-    Timecop.return
-  end
+    test "levelbuilder does not see visible after warning if lesson has visible_after property that is in the past" do
+      Timecop.freeze(Time.new(2020, 4, 2))
+      sign_in create(:levelbuilder)
 
-  test "levelbuilder sees visible after warning if lesson has visible_after property that is in the future" do
-    Timecop.freeze(Time.new(2020, 3, 27))
-    sign_in create(:levelbuilder)
+      get :show, params: {id: @unit.name}
+      assert_response :success
+      refute response.body.include? 'visible after'
+      Timecop.return
+    end
 
-    create(:level, name: "Level 1")
-    unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-    Script.setup([unit_file])
+    test "levelbuilder sees visible after warning if lesson has visible_after property that is in the future" do
+      Timecop.freeze(Time.new(2020, 3, 27))
+      sign_in create(:levelbuilder)
 
-    get :show, params: {id: 'test-fixture-visible-after'}
-    assert_response :success
-    assert response.body.include? 'The lesson lesson 1 will be visible after'
-    Timecop.return
-  end
+      get :show, params: {id: @unit.name}
+      assert_response :success
+      assert response.body.include? 'The lesson lesson 1 will be visible after'
+      Timecop.return
+    end
 
-  test "student does not see visible after warning if lesson has visible_after property" do
-    Timecop.freeze(Time.new(2020, 3, 27))
-    sign_in create(:student)
+    test "student does not see visible after warning if lesson has visible_after property" do
+      Timecop.freeze(Time.new(2020, 3, 27))
+      sign_in create(:student)
 
-    create(:level, name: "Level 1")
-    unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-    Script.setup([unit_file])
+      get :show, params: {id: @unit.name}
+      assert_response :success
+      refute response.body.include? 'visible after'
+      Timecop.return
+    end
 
-    get :show, params: {id: 'test-fixture-visible-after'}
-    assert_response :success
-    refute response.body.include? 'visible after'
-    Timecop.return
-  end
+    test "teacher does not see visible after warning if lesson has visible_after property" do
+      Timecop.freeze(Time.new(2020, 3, 27))
+      sign_in create(:teacher)
 
-  test "teacher does not see visible after warning if lesson has visible_after property" do
-    Timecop.freeze(Time.new(2020, 3, 27))
-    sign_in create(:teacher)
-
-    create(:level, name: "Level 1")
-    unit_file = File.join(self.class.fixture_path, "test-fixture-visible-after.script")
-    Script.setup([unit_file])
-
-    get :show, params: {id: 'test-fixture-visible-after'}
-    assert_response :success
-    refute response.body.include? 'visible after'
-    Timecop.return
+      get :show, params: {id: @unit.name}
+      assert_response :success
+      refute response.body.include? 'visible after'
+      Timecop.return
+    end
   end
 
   test_user_gets_response_for :vocab, response: :success, user: :teacher, params: -> {{id: @migrated_unit.name}}

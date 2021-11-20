@@ -67,6 +67,7 @@ const FormController = props => {
     onInitialize = () => {},
     onSetPage = () => {},
     onSuccessfulSubmit = () => {},
+    serializeAdditionalData = () => ({}),
     sessionStorageKey = null,
     submitButtonText = defaultSubmitButtonText,
     getPageProps: getAdditionalPageProps = () => ({}),
@@ -94,17 +95,23 @@ const FormController = props => {
   useEffect(() => {
     onInitialize();
     onSetPageInternal(currentPage);
-
-    if (warnOnExit) {
-      window.addEventListener('beforeunload', event => {
-        if (!submitting) {
-          event.preventDefault();
-          event.returnValue =
-            'Are you sure? Your application may not be saved.';
-        }
-      });
-    }
   }, []);
+
+  useEffect(() => {
+    // this function needs to be recreated because it holds 'submitting' in its closure
+    const exitHandler = event => {
+      if (!submitting) {
+        event.preventDefault();
+        event.returnValue = 'Are you sure? Your application may not be saved.';
+      }
+    };
+    if (warnOnExit) {
+      window.addEventListener('beforeunload', exitHandler);
+    }
+    return () => {
+      window.removeEventListener('beforeunload', exitHandler);
+    };
+  }, [warnOnExit, submitting]);
 
   // on errors changed
   useEffect(() => {
@@ -172,7 +179,7 @@ const FormController = props => {
     );
     const missingRequiredFields = pageRequiredFields.filter(f => !pageData[f]);
     const formatErrors =
-      (page.getErrorMessages && page.getErrorMessages(pageData)) || [];
+      (page.getErrorMessages && page.getErrorMessages(pageData)) || {};
 
     if (missingRequiredFields.length || Object.keys(formatErrors).length) {
       setErrors([...missingRequiredFields, ...Object.keys(formatErrors)]);
@@ -276,7 +283,8 @@ const FormController = props => {
    */
   const serializeFormData = () => {
     return {
-      form_data: data
+      form_data: data,
+      ...serializeAdditionalData()
     };
   };
 
@@ -342,8 +350,6 @@ const FormController = props => {
         }
         setSubmitting(false);
       });
-
-    event.preventDefault();
   };
 
   /**
@@ -538,6 +544,7 @@ FormController.propTypes = {
   onInitialize: PropTypes.func,
   onSetPage: PropTypes.func,
   onSuccessfulSubmit: PropTypes.func,
+  serializeAdditionalData: PropTypes.func,
   sessionStorageKey: PropTypes.string,
   submitButtonText: PropTypes.string,
   validateOnSubmitOnly: PropTypes.bool,

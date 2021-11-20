@@ -163,6 +163,7 @@ FactoryGirl.define do
           end
         end
       end
+
       factory :program_manager do
         transient do
           regional_partner {build :regional_partner}
@@ -171,6 +172,7 @@ FactoryGirl.define do
           create :regional_partner_program_manager, program_manager: user, regional_partner: evaluator.regional_partner
         end
       end
+
       factory :plc_reviewer do
         sequence(:name) {|n| "Plc Reviewer #{n}"}
         sequence(:email) {|n| "test_plc_reviewer_#{n}@example.com.xx"}
@@ -178,6 +180,15 @@ FactoryGirl.define do
           plc_reviewer.permission = UserPermission::PLC_REVIEWER
         end
       end
+
+      factory :universal_instructor do
+        sequence(:name) {|n| "Universal Instructor #{n}"}
+        sequence(:email) {|n| "test_universal_instructor_#{n}@example.com.xx"}
+        after(:create) do |universal_instructor|
+          universal_instructor.permission = UserPermission::UNIVERSAL_INSTRUCTOR
+        end
+      end
+
       factory :district_contact do
         name 'District Contact Person'
         ops_first_name 'District'
@@ -490,10 +501,8 @@ FactoryGirl.define do
 
   factory :level, class: Blockly do
     sequence(:name) {|n| "Level_#{n}"}
-    sequence(:level_num) {|n| "1_2_#{n}"}
+    level_num 'custom'
 
-    # User id must be non-nil for custom level
-    user_id '1'
     game
 
     trait :with_autoplay_video do
@@ -553,6 +562,10 @@ FactoryGirl.define do
     factory :sublevel do
       sequence(:name) {|n| "sub_level_#{n}"}
     end
+  end
+
+  factory :deprecated_blockly_level, parent: :level do
+    sequence(:level_num) {|n| "1_2_#{n}"}
   end
 
   factory :unplugged, parent: :level, class: Unplugged do
@@ -1322,6 +1335,7 @@ FactoryGirl.define do
   factory :regional_partner do
     sequence(:name) {|n| "Partner#{n}"}
     group 1
+    pl_programs_offered ['CSD', 'CSP']
   end
 
   factory :regional_partner_with_mappings, parent: :regional_partner do
@@ -1450,6 +1464,16 @@ FactoryGirl.define do
 
     storage_app_id 1
     comment 'a comment about your project'
+  end
+
+  factory :code_review_group do
+    sequence(:name) {|n| "group_name_#{n}"}
+    association :section
+  end
+
+  factory :code_review_group_member do
+    association :follower
+    association :code_review_group
   end
 
   factory :reviewable_project do

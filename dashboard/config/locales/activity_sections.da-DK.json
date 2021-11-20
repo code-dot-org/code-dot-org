@@ -70,6 +70,20 @@
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Lær mere når du har gennemført Hour of Code"
         },
+        "6e8ec6ed-2ce7-437c-b407-6a371c03d277": {
+          "tips": [
+            null
+          ]
+        },
+        "950807e2-afa0-4c26-9459-4682b3f49602": {
+          "progression_name": "Eksempel"
+        },
+        "51fbff8e-3efa-4697-8f66-bc9c3b27e82b": {
+          "progression_name": "Eksempel"
+        },
+        "a6528f05-51ce-4f9d-ae5e-0cc1543f71b6": {
+          "progression_name": "Fri leg"
+        },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
             null
@@ -144,6 +158,11 @@
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Lær mere når du har gennemført Hour of Code"
         },
+        "60ef9fd2-9e42-48d9-a4ed-793f00a83bee": {
+          "tips": [
+            null
+          ]
+        },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "tips": [
             null
@@ -190,6 +209,11 @@
           ]
         },
         "caf4ebb7-91a6-42bc-a190-6d1a6f595cec": {
+          "tips": [
+            null
+          ]
+        },
+        "6e3db575-9d35-4bad-b17b-37c9dda2bd7f": {
           "tips": [
             null
           ]
@@ -249,6 +273,11 @@
           ]
         },
         "c694a6e6-b265-4802-bfca-bbc9180c8407": {
+          "tips": [
+            null
+          ]
+        },
+        "fbf618cf-ac1f-4cf9-b1e4-884ab667042f": {
           "tips": [
             null
           ]
@@ -322,6 +351,11 @@
         },
         "2113da19-595f-418e-be70-5219f0b47aa8": {
           "progression_name": "Del din app"
+        },
+        "a254a62b-95af-4c05-8d1a-e3f7e54ef798": {
+          "tips": [
+            null
+          ]
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
@@ -471,8 +505,17 @@
             null
           ]
         },
+        "b16d189d-d990-44c4-be49-8f81ac81a96e": {
+          "tips": [
+            null
+          ]
+        },
         "8581ae5d-4d2a-4221-b820-5920dd449b6c": {
           "name": "Introduktion"
+        },
+        "d63c77c1-4167-4360-ab98-25610934beda": {
+          "name": "Udbrud",
+          "progression_name": "Udbrud"
         },
         "0620e645-f84e-47ca-809b-3dcbe803d83e": {
           "progression_name": "Fri leg"
@@ -647,6 +690,10 @@
         },
         "1969fb7f-ee71-41fc-bc5a-e8b44cb3df99": {
           "name": "Introduktion"
+        },
+        "8e60fcd8-37ef-47fe-9588-2ea4eef7a882": {
+          "name": "Udbrud",
+          "progression_name": "Udbrud"
         },
         "76fe757f-0aa5-4dc0-9864-861f6023828e": {
           "tips": [

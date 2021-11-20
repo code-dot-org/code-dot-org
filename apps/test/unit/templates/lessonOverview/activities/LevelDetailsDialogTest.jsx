@@ -14,7 +14,7 @@ describe('LevelDetailsDialogTest', () => {
     handleCloseSpy = sinon.spy();
     defaultProps = {
       handleClose: handleCloseSpy,
-      viewAs: ViewType.Teacher,
+      viewAs: ViewType.Instructor,
       isRtl: false
     };
     loadVideoSpy = sinon.stub(LevelDetailsDialog.prototype, 'loadVideo');
@@ -256,6 +256,46 @@ describe('LevelDetailsDialogTest', () => {
     expect(wrapper.find('h1').contains('Choice 1')).to.be.true;
   });
 
+  it('can display a bubble choice sublevel with example solutions', () => {
+    const bubbleChoiceLevel = {
+      id: 'scriptlevel',
+      url: 'level.url',
+      status: 'not_tried',
+      level: {type: 'BubbleChoice', id: 'level'},
+      sublevels: [
+        {
+          id: '1',
+          status: 'not_tried',
+          name: 'sublevel1',
+          type: 'Weblab',
+          longInstructions: 'long instructions',
+          display_name: 'Choice 1',
+          exampleSolutions: ['link/1']
+        },
+        {
+          id: '2',
+          status: 'not_tried',
+          name: 'sublevel2',
+          type: 'External',
+          markdown: 'Markdown1',
+          display_name: 'Choice 2'
+        }
+      ]
+    };
+    const wrapper = shallow(
+      <LevelDetailsDialog {...defaultProps} scriptLevel={bubbleChoiceLevel} />
+    );
+    wrapper
+      .instance()
+      .handleBubbleChoiceBubbleClick(bubbleChoiceLevel.sublevels[0]);
+    expect(wrapper.find('SublevelCard').length).to.equal(0);
+    expect(wrapper.find('h1').contains('Choice 1')).to.be.true;
+    expect(wrapper.find('TopInstructions').length).to.equal(1);
+    expect(
+      wrapper.find('TopInstructions').props().exampleSolutions[0]
+    ).to.equal('link/1');
+  });
+
   it('can display a CSD/CSP puzzle level', () => {
     const wrapper = shallow(
       <LevelDetailsDialog
@@ -264,6 +304,7 @@ describe('LevelDetailsDialogTest', () => {
           id: 'scriptlevel',
           url: 'level.url',
           status: 'not_tried',
+          exampleSolutions: ['link/1'],
           level: {
             type: 'Weblab',
             id: 'level',
@@ -273,6 +314,9 @@ describe('LevelDetailsDialogTest', () => {
       />
     );
     expect(wrapper.find('TopInstructions').length).to.equal(1);
+    expect(
+      wrapper.find('TopInstructions').props().exampleSolutions[0]
+    ).to.equal('link/1');
   });
 
   it('can display a contained level', () => {

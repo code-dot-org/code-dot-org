@@ -2,7 +2,9 @@
   "func": "randomSeed",
   "category": "Math",
   "paletteParams": [
-    "seed"
+    {
+      "name": "seed"
+    }
   ],
   "params": [
     "99"

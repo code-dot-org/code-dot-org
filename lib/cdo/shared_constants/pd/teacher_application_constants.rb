@@ -59,10 +59,7 @@ module Pd
       choose_your_program: {
         program: clean_multiline(
           "Which professional learning program would you like to participate in for the #{YEAR}
-          school year? Note: this application is only for Computer Science Discoveries and
-          Computer Science Principles. If you are interested in teaching Advanced
-          Placement CSA (in Java), visit this
-          [AP CSA overview](https://code.org/educate/curriculum/apcsa)."
+          school year?"
         ),
         csd_which_grades: clean_multiline(
           "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?
@@ -75,28 +72,35 @@ module Pd
           is not available for grades K-8. (select all that apply)"
         ),
         csp_how_offer: 'How will you offer CS Principles?',
+        csa_already_know: 'Have you previously taught CS or have you learned CS yourself?',
+        csa_phone_screen: clean_multiline(
+          'Are you able to independently write and debug an error-free function (or procedure) with
+          one or more parameters and that uses conditional logic, loops, and an array (or list)?'
+        ),
+        csa_which_grades: clean_multiline(
+          "To which grades does your school plan to offer CSA in the #{YEAR} school year?
+          The Code.org CSA curriculum is recommended for those who have successfully completed
+          a first-year high school algebra course AND an introductory programming course.
+          (select all that apply)"
+        ),
+        csa_how_offer: 'How will you offer CSA?',
         cs_how_many_minutes: clean_multiline(
-          'How many minutes per day is one CS program class section? (Include the
+          'How many minutes per day is one {{CS program}} class section? (Include the
           number of minutes from start to finish that you see your students per class
           period. If it varies from day to day, estimate the average number of minutes
           you meet per class period.)'
         ),
-        cs_how_many_days_per_week: 'How many days per week will your CS program class be offered to one section of students?',
+        cs_how_many_days_per_week: 'How many days per week will your {{CS program}} class be offered to one section of students?',
         cs_how_many_weeks_per_year: 'How many weeks during the year will this course be taught to one section of students?',
         cs_total_course_hours: 'Computed total course hours',
-        csd_which_units: "Which CS Discoveries units do you intend to teach in the #{YEAR} school year?",
-        csp_which_units: "Which CS Principles units do you intend to teach in the #{YEAR} school year?",
-        plan_to_teach: clean_multiline(
-          "Do you plan to personally teach this course in the #{YEAR} school year?"
-        ),
-        replace_existing: 'Will this course replace an existing computer science course in the master schedule? If yes, please list the course(s) that will be replaced.',
-        replace_which_course: 'Which existing course or curriculum will it replace? Mark all that apply.'
+        plan_to_teach: "Do you plan to personally teach this course in the #{YEAR} school year?",
+        replace_existing: 'Will this course replace an existing computer science course in the master schedule?',
+        replace_which_course: 'Which existing course or curriculum will {{CS program}} replace? Mark all that apply.'
       },
       professional_learning_program_requirements:
         {
           committed: 'Are you committed to participating in the entire Professional Learning Program?',
           able_to_attend_multiple: 'Your Regional Partner is hosting the following workshop(s). Please indicate which workshops you are able to attend. Select all that apply.',
-          interested_in_online_program: 'Do you want to be considered for Code.org’s national virtual academic year workshops?',
           pay_fee: 'Will your school be able to pay the fee?',
           understand_fee: "By checking this box, you indicate that you understand there may be a fee for the professional learning program you attend.",
           scholarship_reasons: "Please provide any additional information you'd like to share about why your application should be considered for a scholarship."
@@ -162,9 +166,11 @@ module Pd
         program: LABEL_OVERRIDES[:program],
         csd_which_grades: "To which grades does your school plan to offer CS Discoveries in the #{YEAR} school year?",
         csp_which_grades: "To which grades does your school plan to offer CS Principles in the #{YEAR} school year?",
-        cs_how_many_minutes: "How many minutes will your CS Program class last?",
+        cs_how_many_minutes: "How many minutes will your CS program class last?",
+        cs_how_many_days_per_week: "How many days per week will your CS program class be offered to one section of students?",
         cs_total_course_hours: "Total course hours",
         replace_existing: "Will this course replace an existing computer science course in the master schedule? (Teacher's response)",
+        replace_which_course: "Which existing course or curriculum will this CS program replace? Mark all that apply.",
         previous_used_curriculum: "Have you used Code.org’s CS Discoveries or CS Principles curriculum in the past?",
         previous_yearlong_cdo_pd: "Have you participated in previous yearlong Code.org Professional Learning Programs?",
         able_to_attend_multiple: "Please indicate which workshops you are able to attend.",
@@ -198,8 +204,10 @@ module Pd
         replace_course: "Will this course replace an existing computer science course in the master schedule? (Principal's response)",
         replace_which_course_csp: "Which existing course or curriculum will CS Principles replace?",
         replace_which_course_csd: "Which existing course or curriculum will CS Discoveries replace?",
+        replace_which_course_csa: "Which existing course or curriculum will CSA replace?",
         csp_implementation: "How will you implement CS Principles at your school?",
         csd_implementation: "How will you implement CS Discoveries at your school?",
+        csa_implementation: "How will you implement CSA at your school?",
         committed_to_diversity: "Do you commit to recruiting and enrolling a diverse group of students in this course, representative of the overall demographics of your school?",
         pay_fee: "If there is a fee for the program, will your teacher or your school be able to pay for the fee?",
         share_ap_scores: "Principal authorizes college board to send AP Scores",
@@ -257,6 +265,7 @@ module Pd
       # Minimum requirements
       csd_which_grades: YES_NO,
       csp_which_grades: YES_NO,
+      csa_which_grades: YES_NO,
       committed: YES_NO,
       plan_to_teach: YES_NO,
       previous_yearlong_cdo_pd: YES_NO,
@@ -285,6 +294,15 @@ module Pd
       ],
       criteria_score_questions_csp: [
         :csp_which_grades,
+        :committed,
+        :plan_to_teach,
+        :previous_yearlong_cdo_pd,
+        :replace_existing,
+        :principal_approval,
+        :principal_schedule_confirmed,
+      ],
+      criteria_score_questions_csa: [
+        :csa_which_grades,
         :committed,
         :plan_to_teach,
         :previous_yearlong_cdo_pd,
@@ -347,7 +365,6 @@ module Pd
         :previous_yearlong_cdo_pd,
         :committed,
         :able_to_attend_multiple,
-        :interested_in_online_program,
         :pay_fee,
         :scholarship_reasons,
         :gender_identity,
@@ -357,7 +374,11 @@ module Pd
         :previous_used_curriculum,
         :street_address,
         :city,
-        :state
+        :state,
+        :csa_already_know,
+        :csa_phone_screen,
+        :csa_which_grades,
+        :csa_how_offer,
       ],
       principal: [
         :title,
@@ -381,8 +402,10 @@ module Pd
         :replace_course,
         :replace_which_course_csp,
         :replace_which_course_csd,
+        :replace_which_course_csa,
         :csp_implementation,
         :csd_implementation,
+        :csa_implementation,
         :committed_to_diversity,
         :pay_fee,
         :share_ap_scores,
@@ -415,7 +438,7 @@ module Pd
       unable_to_attend: 'I’m not able to attend any of the above workshop dates. (Please Explain):',
       able_to_attend_single: "Yes, I'm able to attend".freeze,
       no_explain: "No (Please Explain):".freeze,
-      no_pay_fee: 'No, my school/district will not be able to pay the program fee. I would like to be considered for a scholarship.',
+      no_pay_fee: 'No, my school/district would not be able to pay the program fee and I would like to be considered for a scholarship.',
       i_dont_know_explain: "I don't know (Please Explain):",
       not_sure_explain: 'Not sure (Please Explain):'
     }.freeze

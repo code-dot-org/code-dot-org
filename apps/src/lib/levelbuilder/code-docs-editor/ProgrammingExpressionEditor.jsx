@@ -1,10 +1,15 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
+import OrderableList from './OrderableList';
+import ExampleEditor from './ExampleEditor';
+import ParameterEditor from './ParameterEditor';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import {navigateToHref} from '@cdo/apps/utils';
+import Button from '@cdo/apps/templates/Button';
+import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
+import {createUuid, navigateToHref} from '@cdo/apps/utils';
 import $ from 'jquery';
 import color from '@cdo/apps/util/color';
 
@@ -20,9 +25,28 @@ function useProgrammingExpression(initialProgrammingExpression) {
   return [programmingExpression, updateProgrammingExpression];
 }
 
+function renderParameterEditor(param, updateFunc) {
+  return (
+    <ParameterEditor
+      parameter={param}
+      update={(key, value) => updateFunc(key, value)}
+    />
+  );
+}
+
+function renderExampleEditor(example, updateFunc) {
+  return (
+    <ExampleEditor
+      example={example}
+      updateExample={(key, value) => updateFunc(key, value)}
+    />
+  );
+}
+
 export default function ProgrammingExpressionEditor({
   initialProgrammingExpression,
-  environmentCategories
+  environmentCategories,
+  videoOptions
 }) {
   // We don't want to update id or key
   const {
@@ -30,6 +54,10 @@ export default function ProgrammingExpressionEditor({
     key,
     ...remainingProgrammingExpression
   } = initialProgrammingExpression;
+  remainingProgrammingExpression.parameters.forEach(
+    p => (p.key = createUuid())
+  );
+  remainingProgrammingExpression.examples.forEach(e => (e.key = createUuid()));
   const [
     programmingExpression,
     updateProgrammingExpression
@@ -37,6 +65,7 @@ export default function ProgrammingExpressionEditor({
   const [isSaving, setIsSaving] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [error, setError] = useState(null);
+  const [uploadImageDialogOpen, setUploadImageDialogOpen] = useState(false);
 
   const save = () => {
     if (isSaving) {
@@ -87,6 +116,35 @@ export default function ProgrammingExpressionEditor({
       <label>
         Key (Used in URLs)
         <input value={key} readOnly style={styles.textInput} />
+      </label>
+      <label>
+        Video
+        <select
+          value={programmingExpression.videoKey || ''}
+          onChange={e =>
+            updateProgrammingExpression('videoKey', e.target.value)
+          }
+          style={styles.selectInput}
+        >
+          <option value={''}>---</option>
+          {videoOptions.map(video => (
+            <option key={video.key} value={video.key}>
+              {video.name}
+            </option>
+          ))}
+        </select>
+      </label>
+      <label>
+        Image
+        <Button
+          onClick={() => setUploadImageDialogOpen(true)}
+          text="Choose Image"
+          color="gray"
+          icon="plus-circle"
+        />
+        {programmingExpression.imageUrl && (
+          <span>{programmingExpression.imageUrl}</span>
+        )}
       </label>
       <label>
         Short Description
@@ -178,12 +236,34 @@ export default function ProgrammingExpressionEditor({
           helpTip="List of tips for using this code documentation"
         />
       </CollapsibleEditorSection>
+      <CollapsibleEditorSection title="Parameters" collapsed>
+        <OrderableList
+          list={programmingExpression.parameters}
+          setList={list => updateProgrammingExpression('parameters', list)}
+          addButtonText="Add Another Parameter"
+          renderItem={renderParameterEditor}
+        />
+      </CollapsibleEditorSection>
+      <CollapsibleEditorSection title="Examples" collapsed>
+        <OrderableList
+          list={programmingExpression.examples || []}
+          setList={list => updateProgrammingExpression('examples', list)}
+          addButtonText="Add Another Example"
+          renderItem={renderExampleEditor}
+        />
+      </CollapsibleEditorSection>
       <SaveBar
         handleSave={save}
         isSaving={isSaving}
         lastSaved={lastUpdated}
         error={error}
-        handleView={() => navigateToHref('/')}
+        handleView={() => navigateToHref(`/programming_expressions/${id}`)}
+      />
+      <UploadImageDialog
+        isOpen={uploadImageDialogOpen}
+        handleClose={() => setUploadImageDialogOpen(false)}
+        uploadImage={imgUrl => updateProgrammingExpression('imageUrl', imgUrl)}
+        allowExpandable={false}
       />
     </div>
   );
@@ -199,12 +279,15 @@ const programmingExpressionShape = PropTypes.shape({
   content: PropTypes.string,
   syntax: PropTypes.string,
   returnValue: PropTypes.string,
-  tips: PropTypes.string
+  tips: PropTypes.string,
+  parameters: PropTypes.arrayOf(PropTypes.object).isRequired,
+  examples: PropTypes.arrayOf(PropTypes.object).isRequired
 });
 
 ProgrammingExpressionEditor.propTypes = {
   initialProgrammingExpression: programmingExpressionShape.isRequired,
-  environmentCategories: PropTypes.arrayOf(PropTypes.string).isRequired
+  environmentCategories: PropTypes.arrayOf(PropTypes.string).isRequired,
+  videoOptions: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 const styles = {
@@ -223,6 +306,7 @@ const styles = {
     color: '#555',
     border: `1px solid ${color.bootstrap_border_color}`,
     borderRadius: 4,
+    marginBottom: 0,
     marginLeft: 5
   }
 };

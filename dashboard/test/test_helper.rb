@@ -170,9 +170,11 @@ class ActiveSupport::TestCase
 
     tested_script_names.each do |script_name|
       # create a placeholder factory-provided Script if we don't already have a
-      # fixture-provided one
+      # fixture-provided one.
+      # Specify skip_name_format_validation because 'ECSPD' will fail to be
+      # created otherwise, because upper case letters are not allowed.
       script = Script.find_by_name(script_name) ||
-        create(:script, :with_levels, levels_count: 5, name: script_name)
+        create(:script, :with_levels, levels_count: 5, name: script_name, skip_name_format_validation: true)
 
       # make sure that all the Script's ScriptLevels have associated Levels.
       # This is expected during the interim period where we are no longer
@@ -664,20 +666,6 @@ end
 
 def storage_id_for_user_id(user_id)
   Random.new(user_id.to_i).rand(1_000_000)
-end
-
-# A fake slogger implementation that captures the records written to it.
-class FakeSlogger
-  attr_reader :records
-
-  def initialize
-    @records = []
-  end
-
-  def write(json)
-    # Force application: :dashboard to ensure we don't incorrectly use the :pegasus version:
-    @records << json.merge({application: :dashboard})
-  end
 end
 
 def json_response

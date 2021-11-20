@@ -4,14 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "is_migrated": true,
       "peer_reviews_to_complete": 6,
       "professional_learning_course": "CS Discoveries Deeper Learning 2019 - 2020",
       "student_detail_progress_view": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:47:47 UTC",
+    "serialized_at": "2021-11-02 14:29:42 UTC",
     "published_state": "beta",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "dlp19-csd-mod-w2"
     }
@@ -90,21 +94,131 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "c2512567-9476-40b9-859a-8ef0678080a6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c2512567-9476-40b9-859a-8ef0678080a6",
+        "lesson.key": "Deeper Learning Overview",
+        "lesson_group.key": "required",
+        "script.name": "dlp19-csd-mod-w2"
+      }
+    },
+    {
+      "key": "284728b4-e520-491b-a28a-39d425b4af81",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "284728b4-e520-491b-a28a-39d425b4af81",
+        "lesson.key": "Step 1: Develop Understanding",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-w2"
+      }
+    },
+    {
+      "key": "e7d1f176-a62f-4fad-8073-a4ac50ae231f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e7d1f176-a62f-4fad-8073-a4ac50ae231f",
+        "lesson.key": "Step 2: Demonstrate Understanding",
+        "lesson_group.key": "content",
+        "script.name": "dlp19-csd-mod-w2"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "56b5f385-e6c5-49bb-aa0f-1591eb5af292",
+      "position": 1,
+      "properties": {
+        "progression_name": "Background"
+      },
+      "seeding_key": {
+        "activity_section.key": "56b5f385-e6c5-49bb-aa0f-1591eb5af292",
+        "lesson_activity.key": "c2512567-9476-40b9-859a-8ef0678080a6"
+      }
+    },
+    {
+      "key": "83cb3796-7dd1-4e42-98b8-e05827cc9e0f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Process"
+      },
+      "seeding_key": {
+        "activity_section.key": "83cb3796-7dd1-4e42-98b8-e05827cc9e0f",
+        "lesson_activity.key": "c2512567-9476-40b9-859a-8ef0678080a6"
+      }
+    },
+    {
+      "key": "bfc23b0b-6931-4bdc-a3f3-45c4ec22f9ce",
+      "position": 3,
+      "properties": {
+        "progression_name": "Preparation"
+      },
+      "seeding_key": {
+        "activity_section.key": "bfc23b0b-6931-4bdc-a3f3-45c4ec22f9ce",
+        "lesson_activity.key": "c2512567-9476-40b9-859a-8ef0678080a6"
+      }
+    },
+    {
+      "key": "1230fc0c-2e04-4850-a7e0-d69fb3833c31",
+      "position": 4,
+      "properties": {
+        "progression_name": "Evaluation"
+      },
+      "seeding_key": {
+        "activity_section.key": "1230fc0c-2e04-4850-a7e0-d69fb3833c31",
+        "lesson_activity.key": "c2512567-9476-40b9-859a-8ef0678080a6"
+      }
+    },
+    {
+      "key": "eae33d22-8c41-4737-954d-22843099ec07",
+      "position": 5,
+      "properties": {
+        "name": "Due Dates",
+        "progression_name": "Due Dates"
+      },
+      "seeding_key": {
+        "activity_section.key": "eae33d22-8c41-4737-954d-22843099ec07",
+        "lesson_activity.key": "c2512567-9476-40b9-859a-8ef0678080a6"
+      }
+    },
+    {
+      "key": "c606179b-8f19-40a7-978d-b2f4c0392a96",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c606179b-8f19-40a7-978d-b2f4c0392a96",
+        "lesson_activity.key": "284728b4-e520-491b-a28a-39d425b4af81"
+      }
+    },
+    {
+      "key": "1fad59a8-eaf6-4b47-a599-7c2ab28985a6",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1fad59a8-eaf6-4b47-a599-7c2ab28985a6",
+        "lesson_activity.key": "e7d1f176-a62f-4fad-8073-a4ac50ae231f"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19_overview1"
-        ],
         "progression": "Background"
       },
       "bonus": false,
@@ -114,7 +228,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "56b5f385-e6c5-49bb-aa0f-1591eb5af292"
       },
       "level_keys": [
         "dlp19_overview1"
@@ -123,12 +238,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19_overview2"
-        ],
         "progression": "Process"
       },
       "bonus": false,
@@ -138,7 +250,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "83cb3796-7dd1-4e42-98b8-e05827cc9e0f"
       },
       "level_keys": [
         "dlp19_overview2"
@@ -147,12 +260,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19_overview3"
-        ],
         "progression": "Preparation"
       },
       "bonus": false,
@@ -162,7 +272,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "bfc23b0b-6931-4bdc-a3f3-45c4ec22f9ce"
       },
       "level_keys": [
         "dlp19_overview3"
@@ -171,12 +282,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19_overview4"
-        ],
         "progression": "Evaluation"
       },
       "bonus": false,
@@ -186,7 +294,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "1230fc0c-2e04-4850-a7e0-d69fb3833c31"
       },
       "level_keys": [
         "dlp19_overview4"
@@ -195,12 +304,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19_overview5"
-        ],
         "progression": "Due Dates"
       },
       "bonus": false,
@@ -210,7 +316,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "eae33d22-8c41-4737-954d-22843099ec07"
       },
       "level_keys": [
         "dlp19_overview5"
@@ -219,12 +326,9 @@
     {
       "chapter": 6,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19-csd-prework-mod2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -233,7 +337,8 @@
         ],
         "lesson.key": "Step 1: Develop Understanding",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "c606179b-8f19-40a7-978d-b2f4c0392a96"
       },
       "level_keys": [
         "dlp19-csd-prework-mod2"
@@ -242,12 +347,9 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19-csd-mod2-q1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -256,7 +358,8 @@
         ],
         "lesson.key": "Step 2: Demonstrate Understanding",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "1fad59a8-eaf6-4b47-a599-7c2ab28985a6"
       },
       "level_keys": [
         "dlp19-csd-mod2-q1"
@@ -265,12 +368,9 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19-csd-mod2-q2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -279,7 +379,8 @@
         ],
         "lesson.key": "Step 2: Demonstrate Understanding",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "1fad59a8-eaf6-4b47-a599-7c2ab28985a6"
       },
       "level_keys": [
         "dlp19-csd-mod2-q2"
@@ -288,12 +389,9 @@
     {
       "chapter": 9,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "dlp19-csd-mod2-q3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -302,7 +400,8 @@
         ],
         "lesson.key": "Step 2: Demonstrate Understanding",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "1fad59a8-eaf6-4b47-a599-7c2ab28985a6"
       },
       "level_keys": [
         "dlp19-csd-mod2-q3"
@@ -318,7 +417,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "56b5f385-e6c5-49bb-aa0f-1591eb5af292"
       }
     },
     {
@@ -329,7 +429,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "83cb3796-7dd1-4e42-98b8-e05827cc9e0f"
       }
     },
     {
@@ -340,7 +441,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "bfc23b0b-6931-4bdc-a3f3-45c4ec22f9ce"
       }
     },
     {
@@ -351,7 +453,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "1230fc0c-2e04-4850-a7e0-d69fb3833c31"
       }
     },
     {
@@ -362,7 +465,8 @@
         ],
         "lesson.key": "Deeper Learning Overview",
         "lesson_group.key": "required",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "eae33d22-8c41-4737-954d-22843099ec07"
       }
     },
     {
@@ -373,7 +477,8 @@
         ],
         "lesson.key": "Step 1: Develop Understanding",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "c606179b-8f19-40a7-978d-b2f4c0392a96"
       }
     },
     {
@@ -384,7 +489,8 @@
         ],
         "lesson.key": "Step 2: Demonstrate Understanding",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "1fad59a8-eaf6-4b47-a599-7c2ab28985a6"
       }
     },
     {
@@ -395,7 +501,8 @@
         ],
         "lesson.key": "Step 2: Demonstrate Understanding",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "1fad59a8-eaf6-4b47-a599-7c2ab28985a6"
       }
     },
     {
@@ -406,7 +513,8 @@
         ],
         "lesson.key": "Step 2: Demonstrate Understanding",
         "lesson_group.key": "content",
-        "script.name": "dlp19-csd-mod-w2"
+        "script.name": "dlp19-csd-mod-w2",
+        "activity_section.key": "1fad59a8-eaf6-4b47-a599-7c2ab28985a6"
       }
     }
   ],

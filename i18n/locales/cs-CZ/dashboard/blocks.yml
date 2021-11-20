@@ -1534,6 +1534,8 @@ cs:
         text: 'umístění x: {X} Y: {Y}'
       Mikelab_location_picker:
         text: "{LOCATION}"
+      Mikelab_poemTextJoin:
+        text: "{TEXT1} {VAR} {TEXT2}"
       Mikelab_randomColor:
         text: náhodná barva
       Mikelab_removeBehaviorSimple:
@@ -1658,6 +1660,15 @@ cs:
         text: nakonfigurujte Město příšer s{COUNT}příšerami
       Outbreak_stopMoving:
         text: příšery se přestávají pohybovat
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"flowers"': Květiny
+            '"hearts"': Srdce
+            '"iceCream"': Zmrzlina
+            '"rainbow"': Duha
+            '"stars"': Hvězdy
+            '"waves"': Vlny
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1668,6 +1679,9 @@ cs:
         text: vytvoř {NUM} nových {ANIMATION_NAME} postav
       Poetry_playSound:
         text: přehraj zvuk {SOUND}
+        options:
+          SOUND:
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Světlo
       Poetry_setBackground:
         text: nastav barvu pozadí {COLOR}
       Poetry_setBackgroundEffect:
@@ -1678,6 +1692,10 @@ cs:
             '"space"': Vesmír
             '"stars"': Hvězdy
             '"ripples"': Vlny
+            '"rain"': Déšť
+            '"bubbles"': Bubliny
+            '"confetti"': Konfety
+            '"hearts"': Barevná srdíčka
           PALETTE:
             '"rainbow"': Duha
       Poetry_setBackgroundImageAs:

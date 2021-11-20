@@ -1,49 +1,76 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Droppable} from 'react-beautiful-dnd';
-import CodeReviewGroupMember from './CodeReviewGroupMember';
+import i18n from '@cdo/locale';
+import FontAwesome from '../FontAwesome';
+import color from '@cdo/apps/util/color';
+import StudentGroup from './StudentGroup';
 
-// A CodeReviewGroup is a component that
-// CodeReviewGroupMembers can be dragged between as teachers are arranging students
-// in their sections into groups.
-// These are called "Droppables" in the package we're using (React Beautiful DnD).
-// More information on React Beautiful DnD can be found here:
-// https://github.com/atlassian/react-beautiful-dnd
-export default function CodeReviewGroup({members, index}) {
+export default function CodeReviewGroup({
+  droppableId,
+  members,
+  name,
+  onNameUpdate,
+  onDelete
+}) {
+  const handleNameUpdate = event => {
+    onNameUpdate(droppableId, event.target.value);
+  };
   return (
-    <Droppable key={index} droppableId={`${index}`}>
-      {(provided, snapshot) => (
-        <div
-          ref={provided.innerRef}
-          style={getListStyle(snapshot.isDraggingOver)}
-          {...provided.droppableProps}
+    <div style={styles.groupContainer}>
+      <div style={styles.headerContainer}>
+        <input
+          value={name}
+          style={styles.nameInput}
+          onChange={handleNameUpdate}
+          placeholder={i18n.enterGroupName()}
+        />
+        <button
+          style={styles.deleteButtonContainer}
+          onClick={() => onDelete(droppableId)}
+          type={'button'}
+          aria-label={i18n.deleteGroup()}
         >
-          {members.map((member, index) => (
-            <CodeReviewGroupMember
-              key={member.id}
-              member={member}
-              index={index}
-            />
-          ))}
-          {provided.placeholder}
-        </div>
-      )}
-    </Droppable>
+          <FontAwesome icon={'trash'} style={styles.deleteButton} />
+        </button>
+      </div>
+      <StudentGroup
+        droppableId={droppableId}
+        members={members}
+        key={droppableId}
+      />
+    </div>
   );
 }
 
-// TO DO: specify shape of members
 CodeReviewGroup.propTypes = {
+  droppableId: PropTypes.string.isRequired,
   members: PropTypes.array.isRequired,
-  index: PropTypes.number.isRequired
+  name: PropTypes.string.isRequired,
+  onNameUpdate: PropTypes.func.isRequired,
+  onDelete: PropTypes.func.isRequired
 };
 
-const getListStyle = isDraggingOver => ({
-  background: isDraggingOver ? 'lightblue' : 'lightgrey',
-  padding: grid,
-  margin: grid,
-  width: 400,
-  border: '1px solid'
-});
-
-export const grid = 8;
+const styles = {
+  groupContainer: {
+    paddingBottom: 20,
+    paddingLeft: 5
+  },
+  headerContainer: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    border: `1px solid ${color.lighter_gray}`,
+    background: color.lightest_gray,
+    padding: '9px 12px'
+  },
+  nameInput: {
+    padding: '5px 12px',
+    borderRadius: 4,
+    border: `1px solid ${color.lighter_gray}`
+  },
+  deleteButtonContainer: {
+    display: 'flex',
+    border: `1px solid ${color.dark_charcoal}`,
+    borderRadius: 4,
+    margin: 0
+  }
+};

@@ -1634,6 +1634,15 @@ fr:
         text: dispose les monstres au hasard
       Outbreak_stopMoving:
         text: les monstres ne bougent plus
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"flowers"': Fleurs
+            '"hearts"': Cœurs
+            '"iceCream"': Crème glacée
+            '"rainbow"': Arc-en-ciel
+            '"stars"': Étoiles
+            '"waves"': Vagues
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1644,6 +1653,9 @@ fr:
         text: créer {NUM} des nouveau sprites {ANIMATION_NAME}
       Poetry_playSound:
         text: jouer le son {SOUND}
+        options:
+          SOUND:
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Lumière
       Poetry_setBackground:
         text: définir la couleur de fond {COLOR}
       Poetry_setBackgroundEffect:
@@ -1654,6 +1666,10 @@ fr:
             '"space"': Espace
             '"stars"': Étoiles
             '"ripples"': Ondulations
+            '"rain"': Pluie
+            '"bubbles"': Bulles
+            '"confetti"': Confettis
+            '"hearts"': Cœurs colorés
           PALETTE:
             '"rainbow"': Arc-en-ciel
       Poetry_setBackgroundImageAs:

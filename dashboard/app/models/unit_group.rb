@@ -2,19 +2,23 @@
 #
 # Table name: unit_groups
 #
-#  id               :integer          not null, primary key
-#  name             :string(255)
-#  properties       :text(65535)
-#  created_at       :datetime         not null
-#  updated_at       :datetime         not null
-#  published_state  :string(255)      default("in_development"), not null
-#  instruction_type :string(255)      default("teacher_led"), not null
+#  id                   :integer          not null, primary key
+#  name                 :string(255)
+#  properties           :text(65535)
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
+#  published_state      :string(255)      default("in_development"), not null
+#  instruction_type     :string(255)      default("teacher_led"), not null
+#  instructor_audience  :string(255)      default("teacher"), not null
+#  participant_audience :string(255)      default("student"), not null
 #
 # Indexes
 #
-#  index_unit_groups_on_instruction_type  (instruction_type)
-#  index_unit_groups_on_name              (name)
-#  index_unit_groups_on_published_state   (published_state)
+#  index_unit_groups_on_instruction_type      (instruction_type)
+#  index_unit_groups_on_instructor_audience   (instructor_audience)
+#  index_unit_groups_on_name                  (name)
+#  index_unit_groups_on_participant_audience  (participant_audience)
+#  index_unit_groups_on_published_state       (published_state)
 #
 
 require 'cdo/script_constants'
@@ -22,6 +26,7 @@ require 'cdo/shared_constants/curriculum/shared_course_constants'
 
 class UnitGroup < ApplicationRecord
   include SharedCourseConstants
+  include Curriculum::CourseTypes
 
   # Some Courses will have an associated Plc::Course, most will not
   has_one :plc_course, class_name: 'Plc::Course', foreign_key: 'course_id'
@@ -54,7 +59,6 @@ class UnitGroup < ApplicationRecord
   end
 
   validates :published_state, acceptance: {accept: SharedCourseConstants::PUBLISHED_STATE.to_h.values, message: 'must be in_development, pilot, beta, preview or stable'}
-  validates :instruction_type, acceptance: {accept: SharedCourseConstants::INSTRUCTION_TYPE.to_h.values.push(nil), message: 'must be teacher_led or self_paced'}
 
   def skip_name_format_validation
     !!plc_course
@@ -124,6 +128,8 @@ class UnitGroup < ApplicationRecord
     unit_group.properties = hash['properties']
     unit_group.published_state = hash['published_state'] || SharedCourseConstants::PUBLISHED_STATE.in_development
     unit_group.instruction_type = hash['instruction_type'] || SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+    unit_group.instructor_audience = hash['instructor_audience'] || SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+    unit_group.participant_audience = hash['participant_audience'] || SharedCourseConstants::PARTICIPANT_AUDIENCE.student
 
     # add_course_offering creates the course version
     CourseOffering.add_course_offering(unit_group)
@@ -162,6 +168,8 @@ class UnitGroup < ApplicationRecord
         alternate_units: summarize_alternate_units,
         published_state: published_state,
         instruction_type: instruction_type,
+        participant_audience: participant_audience,
+        instructor_audience: instructor_audience,
         properties: properties.sort.to_h,
         resources: resources.sort_by(&:key).map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json},
         student_resources: student_resources.sort_by(&:key).map {|r| Services::ScriptSeed::ResourceSerializer.new(r, scope: {}).as_json}
@@ -230,7 +238,7 @@ class UnitGroup < ApplicationRecord
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
-        unit.update!(published_state: nil, instruction_type: nil)
+        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil)
       end
       unit_group_unit.update!(position: index + 1)
     end
@@ -350,6 +358,9 @@ class UnitGroup < ApplicationRecord
       family_name: family_name,
       version_year: version_year,
       published_state: published_state,
+      instruction_type: instruction_type,
+      instructor_audience: instructor_audience,
+      participant_audience: participant_audience,
       pilot_experiment: pilot_experiment,
       description_short: I18n.t("data.course.name.#{name}.description_short", default: ''),
       description_student: Services::MarkdownPreprocessor.process(I18n.t("data.course.name.#{name}.description_student", default: '')),

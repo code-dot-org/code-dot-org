@@ -4,14 +4,19 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
+      "is_course": true,
       "is_migrated": true,
-      "version_year": "unversioned",
-      "is_course": true
+      "redirect_to": "poem-art-2021",
+      "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "poem-art",
-    "serialized_at": "2021-10-15 18:43:18 UTC",
+    "serialized_at": "2021-11-10 21:07:34 UTC",
     "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "poem-art"
     }
@@ -39,7 +44,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "In this CS and ELA integrated lesson, students will animate a poem with code to illustrate the mood of a poem. During this introductory coding activity, students will read and detect the mood of a poem. Then, they will find corresponding effects and images to help illustrate the poem’s mood. Last, students will use events (code) to illustrate a shift in mood or animate the introduction of new images in a poem. \n\nThis lesson can be completed as a 1-hour standalone lesson. There is also an option to use this lesson as the first lesson of the 5-lesson module called [Coding with Poetry](http://code.org/poetry). By the end of the Coding with Poetry module, students will write their own poems and create a poem generator app to share with friends. \n\nThe Coding with Poetry is part of Code.org’s CS Connections curriculum, which is meant to integrate CS into other subject areas like math, ELA, and science with alignment to CCSS, NGSS, and CSTA standards. \n",
-        "preparation": "- Review and complete the online tutorial yourself: [Poem Art](http://studio.code.org/s/poem-art).\n \n- Be sure to try the activities first before asking your students to complete them. \n- Check your technology and decide if you need to troubleshoot anything in advance.\n- Some levels require sound to play. Hand out headphones ahead of time. \n\n- [Optional] 2 sticky notes per student for the Assessment.\n",
+        "preparation": "- Review and complete the online tutorial yourself: [Poem Art](http://studio.code.org/s/poem-art).\n \n- Be sure to try the activities first before asking your students to complete them. \n- Check your technology and decide if you need to troubleshoot anything in advance.\n- Some levels require sound to play. Hand out headphones ahead of time. \n\n- [Optional] 2 sticky notes per student for the Assessment.\n- [Optional] Pair Programming - Decide if you want students to engage in pair programming. Watch this [video](https://www.youtube.com/watch?v=sxToW3ixrwo) and visit this [Support](https://support.code.org/hc/en-us/articles/115002122788-How-does-pair-programming-on-Code-org-work-) page for more information about pair programming.\n",
         "student_overview": "Poetry is making art with words. Add visual effects and images to your own animated poem. "
       },
       "seeding_key": {
@@ -233,6 +238,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_backgroundEffects"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -254,6 +262,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -275,6 +286,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_sounds"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -296,6 +310,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_events1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -317,6 +334,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_exemplar2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -338,6 +358,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_addSprites"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -359,6 +382,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteBehaviors"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -380,6 +406,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_spriteSizes"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -401,6 +430,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "poetry_hoc_freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -533,8 +565,8 @@
       "url": "https://docs.google.com/presentation/d/1-IAPZSha9BzFtEHzqRKY2Gb8oa2O_ZNaX5RqHyuvBso/edit?usp=sharing",
       "key": "list_of_poems_1",
       "properties": {
-        "type": "Slides",
-        "audience": "Teacher"
+        "audience": "Teacher",
+        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "list_of_poems_1"
@@ -577,13 +609,13 @@
       }
     },
     {
-      "key": "program",
-      "word": "Program",
-      "definition": "A series of steps that have been coded into something that can be run by a machine.",
+      "key": "line",
+      "word": "Line",
+      "definition": "(poetry) - a subdivision of a poem arranged in a row that ends at the right-hand margin. ",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "program"
+        "vocabulary.key": "line"
       }
     },
     {
@@ -597,13 +629,13 @@
       }
     },
     {
-      "key": "line",
-      "word": "Line",
-      "definition": "(poetry) - a subdivision of a poem arranged in a row that ends at the right-hand margin. ",
+      "key": "program",
+      "word": "Program",
+      "definition": "A series of steps that have been coded into something that can be run by a machine.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "line"
+        "vocabulary.key": "program"
       }
     }
   ],
@@ -623,7 +655,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "vocabulary.key": "program"
+        "vocabulary.key": "line"
       }
     },
     {
@@ -635,7 +667,7 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "vocabulary.key": "line"
+        "vocabulary.key": "program"
       }
     }
   ],
@@ -644,13 +676,13 @@
   ],
   "objectives": [
     {
-      "key": "ba0eef71-97bc-4525-824e-3abc2087dbaf",
+      "key": "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f",
       "properties": {
-        "description": "Develop programs that respond to timed events."
+        "description": "Represent figurative and literal language in a text."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "objective.key": "ba0eef71-97bc-4525-824e-3abc2087dbaf"
+        "objective.key": "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f"
       }
     },
     {
@@ -664,38 +696,17 @@
       }
     },
     {
-      "key": "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f",
+      "key": "ba0eef71-97bc-4525-824e-3abc2087dbaf",
       "properties": {
-        "description": "Represent figurative and literal language in a text."
+        "description": "Develop programs that respond to timed events."
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
-        "objective.key": "08ca334f-bc69-46fb-b4ae-0b4b63ec4f7f"
+        "objective.key": "ba0eef71-97bc-4525-824e-3abc2087dbaf"
       }
     }
   ],
   "lessons_standards": [
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "lesson-1",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-15"
-      }
-    },
     {
       "seeding_key": {
         "lesson.key": "lesson-1",
@@ -722,6 +733,27 @@
         "lesson.key": "lesson-1",
         "framework.shortcode": "ccela",
         "standard.shortcode": "5.RL.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
       }
     }
   ],

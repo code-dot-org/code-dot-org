@@ -917,25 +917,6 @@ class LessonTest < ActiveSupport::TestCase
     )
   end
 
-  test 'unit_resource_pdf_url gets url to script resources pdf for migrated script' do
-    script = create :script, name: 'test-script', is_migrated: true, seeded_from: Time.at(0)
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
-
-    assert_equal(
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/#{script.name}+-+Resources.pdf",
-      lesson.unit_resource_pdf_url
-    )
-  end
-
-  test 'unit_resource_pdf_url is nil for non-migrated script' do
-    script = create :script, name: 'test-script', is_migrated: false, seeded_from: Time.at(0)
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
-
-    assert_nil lesson.unit_resource_pdf_url
-  end
-
   test 'no student_lesson_plan_pdf_url for non-migrated scripts' do
     script = create :script, include_student_lesson_plans: true, is_migrated: false
     new_lesson = create :lesson, script: script, key: 'Some Verbose Lesson Name', has_lesson_plan: true
@@ -1119,8 +1100,8 @@ class LessonTest < ActiveSupport::TestCase
     test "variants are removed when cloning lesson into another script" do
       lesson_activity = create :lesson_activity, lesson: @original_lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity
-      level1 = create :maze, name: 'level 1', level_num: 'custom'
-      level2 = create :maze, name: 'level 2', level_num: 'custom'
+      level1 = create :maze, name: 'level 1'
+      level2 = create :maze, name: 'level 2'
       sl = create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
         activity_section: activity_section, activity_section_position: 1
       sl.add_variant(level2)
@@ -1134,7 +1115,7 @@ class LessonTest < ActiveSupport::TestCase
     test "levels are cloned when new_level_suffix is passed in" do
       lesson_activity = create :lesson_activity, lesson: @original_lesson
       activity_section = create :activity_section, lesson_activity: lesson_activity, progression_name: 'progression'
-      level1 = create :maze, name: 'level 1', level_num: 'custom'
+      level1 = create :maze, name: 'level 1'
       create :script_level, script: @original_script, lesson: @original_lesson, levels: [level1],
         activity_section: activity_section, activity_section_position: 1
 

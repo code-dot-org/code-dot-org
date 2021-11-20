@@ -1,8 +1,8 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import {expect} from '../../../../../util/reconfiguredChai';
 import {UnconnectedTeacherPanel as TeacherPanel} from '@cdo/apps/code-studio/components/progress/teacherPanel/TeacherPanel';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import viewAs, {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import SectionSelector from '@cdo/apps/code-studio/components/progress/SectionSelector';
 import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
 import i18n from '@cdo/locale';
@@ -12,16 +12,17 @@ import {LevelStatus} from '@cdo/apps/util/sharedConstants';
 import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import $ from 'jquery';
 import sinon from 'sinon';
+import * as utils from '@cdo/apps/code-studio/utils';
+import {Provider} from 'react-redux';
+import {createStore, combineReducers} from 'redux';
 
 const students = [{id: 1, name: 'Student 1'}, {id: 2, name: 'Student 2'}];
 
 const DEFAULT_PROPS = {
-  onSelectUser: () => {},
-  getSelectedUserId: () => {},
-  sectionData: null,
+  selectUser: () => {},
   unitName: 'A unit',
   pageType: pageTypes.level,
-  viewAs: ViewType.Student,
+  viewAs: ViewType.Participant,
   hasSections: false,
   sectionsAreLoaded: false,
   selectedSection: null,
@@ -29,7 +30,9 @@ const DEFAULT_PROPS = {
   unlockedLessonNames: [],
   students: null,
   levelsWithProgress: [],
-  loadLevelsWithProgress: () => {}
+  loadLevelsWithProgress: () => {},
+  teacherId: 5,
+  exampleSolutions: []
 };
 
 const sectionScriptLevelData = [
@@ -63,14 +66,14 @@ describe('TeacherPanel', () => {
   });
 
   describe('on unit page', () => {
-    it('initial view as student has teacher panel header and view toggle', () => {
-      const wrapper = setUp({viewAs: ViewType.Student});
+    it('initial view as participant has teacher panel header and view toggle', () => {
+      const wrapper = setUp({viewAs: ViewType.Participant});
       expect(wrapper.contains(i18n.teacherPanel())).to.be.true;
       expect(wrapper.find(ViewAsToggle)).to.have.length(1);
     });
 
-    it('initial view as teacher has teacher panel header and view toggle', () => {
-      const wrapper = setUp({viewAs: ViewType.Teacher});
+    it('initial view as instructor has teacher panel header and view toggle', () => {
+      const wrapper = setUp({viewAs: ViewType.Instructor});
       expect(wrapper.contains(i18n.teacherPanel())).to.be.true;
       expect(wrapper.find(ViewAsToggle)).to.have.length(1);
     });
@@ -111,9 +114,9 @@ describe('TeacherPanel', () => {
     expect(wrapper.contains(i18n.teacherDashboard())).to.be.true;
   });
 
-  it('shows section selection instructions if viewing as a teacher, and has sections and lockable lessons', () => {
+  it('shows section selection instructions if viewing as a instructor, and has sections and lockable lessons', () => {
     const wrapper = setUp({
-      viewAs: ViewType.Teacher,
+      viewAs: ViewType.Instructor,
       unitHasLockableLessons: true,
       hasSections: true
     });
@@ -122,7 +125,7 @@ describe('TeacherPanel', () => {
 
   it('adds a warning if there are also unlocked lessons', () => {
     const wrapper = setUp({
-      viewAs: ViewType.Teacher,
+      viewAs: ViewType.Instructor,
       unitHasLockableLessons: true,
       hasSections: true,
       unlockedLessonNames: ['lesson1', 'lesson2']
@@ -135,100 +138,145 @@ describe('TeacherPanel', () => {
   });
 
   describe('StudentTable', () => {
-    it('displays StudentTable for teacher with students', () => {
+    it('displays StudentTable for instructor with students', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         students: students
       });
       expect(wrapper.find(StudentTable)).to.have.length(1);
     });
 
-    it('does not display StudentTable for teacher with no students', () => {
+    it('does not display StudentTable for instructor with no students', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         students: []
       });
       expect(wrapper.find(StudentTable)).to.have.length(0);
     });
 
-    it('does not display StudentTable for view page as student', () => {
+    it('does not display StudentTable for view page as participant', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Student,
+        viewAs: ViewType.Participant,
         students: students
       });
       expect(wrapper.find(StudentTable)).to.have.length(0);
+    });
+
+    it('calls selectUser when user is clicked with isAsync true when on overview page', () => {
+      const store = createStore(combineReducers({viewAs}), {
+        viewAs: ViewType.Instructor
+      });
+
+      const selectUserStub = sinon.stub();
+      const overrideProps = {
+        selectUser: selectUserStub,
+        viewAs: ViewType.Instructor,
+        students: students,
+        pageType: pageTypes.scriptOverview
+      };
+      const props = {...DEFAULT_PROPS, ...overrideProps};
+
+      const wrapper = mount(
+        <Provider store={store}>
+          <TeacherPanel {...props} />
+        </Provider>
+      );
+
+      const secondStudentInTable = wrapper.find('tr').at(1);
+      secondStudentInTable.simulate('click');
+
+      expect(selectUserStub).to.have.been.calledWith(1, true);
+    });
+
+    it('calls selectUser when user is clicked with isAsync false when on level page', () => {
+      const store = createStore(combineReducers({viewAs}), {
+        viewAs: ViewType.Instructor
+      });
+
+      const selectUserStub = sinon.stub();
+      const overrideProps = {
+        selectUser: selectUserStub,
+        viewAs: ViewType.Instructor,
+        students: students,
+        pageType: pageTypes.level
+      };
+      const props = {...DEFAULT_PROPS, ...overrideProps};
+      const wrapper = mount(
+        <Provider store={store}>
+          <TeacherPanel {...props} />
+        </Provider>
+      );
+
+      const secondStudentInTable = wrapper.find('tr').at(1);
+      secondStudentInTable.simulate('click');
+
+      expect(selectUserStub).to.have.been.calledWith(1, false);
     });
   });
 
   describe('SelectedStudentInfo', () => {
     it('on unit does not display SelectedStudentInfo', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         students: students,
-        getSelectedUserId: () => 0
+        pageType: pageTypes.scriptOverview
       });
 
       expect(wrapper.find(SelectedStudentInfo)).to.have.length(0);
     });
 
-    it('on level displays SelectedStudentInfo when student selected', () => {
+    it('on level displays SelectedStudentInfo when students have loaded, passes expected props', () => {
+      sinon
+        .stub(utils, 'queryParams')
+        .withArgs('user_id')
+        .returns('1');
+
       const wrapper = setUp({
-        viewAs: ViewType.Teacher,
+        viewAs: ViewType.Instructor,
         students: students,
-        getSelectedUserId: () => 1,
-        sectionData: {
-          section: {
-            students: students
-          }
-        }
+        teacherId: 5
       });
 
-      expect(wrapper.find(SelectedStudentInfo)).to.have.length(1);
+      const selectedStudentComponent = wrapper.find(SelectedStudentInfo);
+      expect(selectedStudentComponent).to.have.length(1);
+      expect(selectedStudentComponent.props().teacherId).to.equal(5);
+      expect(selectedStudentComponent.props().selectedUserId).to.equal(1);
+
+      utils.queryParams.restore();
     });
   });
 
   describe('Example Solutions', () => {
-    describe('on unit', () => {
-      it('does not display example solutions', () => {
-        const wrapper = setUp({
-          viewAs: ViewType.Teacher
-        });
-        expect(wrapper.find('Button')).to.have.length(0);
+    it('does not display example solutions if the viewType is participant', () => {
+      const wrapper = setUp({
+        viewAs: ViewType.Participant,
+        exampleSolutions: [
+          'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
+        ]
       });
+      expect(wrapper.find('Button')).to.have.length(0);
     });
 
-    describe('on level', () => {
-      it('displays example solution for level with one example solution', () => {
-        const wrapper = setUp({
-          viewAs: ViewType.Teacher,
-          students: students,
-          sectionData: {
-            level_examples: [
-              'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
-            ],
-            section: {
-              students: students
-            }
-          }
-        });
-
-        expect(wrapper.find('Button')).to.have.length(1);
+    it('displays example solution for level with one example solution', () => {
+      const wrapper = setUp({
+        viewAs: ViewType.Instructor,
+        students: students,
+        exampleSolutions: [
+          'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
+        ]
       });
 
-      it('does not display example solution for level with no example solution', () => {
-        const wrapper = setUp({
-          viewAs: ViewType.Teacher,
-          students: students,
-          sectionData: {
-            level_examples: null,
-            section: {
-              students: students
-            }
-          }
-        });
+      expect(wrapper.find('Button')).to.have.length(1);
+    });
 
-        expect(wrapper.find('Button')).to.have.length(0);
+    it('does not display example solution for level with no example solution', () => {
+      const wrapper = setUp({
+        viewAs: ViewType.Instructor,
+        students: students,
+        exampleSolutions: null
       });
+
+      expect(wrapper.find('Button')).to.have.length(0);
     });
   });
 });

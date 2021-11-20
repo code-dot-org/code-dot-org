@@ -24,8 +24,15 @@ import {resourceShape as migratedResourceShape} from '@cdo/apps/lib/levelbuilder
 import {lessonGroupShape} from './shapes';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
-import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import {
+  InstructionType,
+  PublishedState,
+  InstructorAudience,
+  ParticipantAudience
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/templates/Button';
+import Dialog from '@cdo/apps/templates/Dialog';
+import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
 
 const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
 
@@ -41,6 +48,14 @@ class UnitEditor extends React.Component {
     i18nData: PropTypes.object.isRequired,
     initialPublishedState: PropTypes.oneOf(Object.values(PublishedState))
       .isRequired,
+    initialInstructionType: PropTypes.oneOf(Object.values(InstructionType))
+      .isRequired,
+    initialInstructorAudience: PropTypes.oneOf(
+      Object.values(InstructorAudience)
+    ).isRequired,
+    initialParticipantAudience: PropTypes.oneOf(
+      Object.values(ParticipantAudience)
+    ).isRequired,
     initialDeprecated: PropTypes.bool,
     initialLoginRequired: PropTypes.bool,
     initialHideableLessons: PropTypes.bool,
@@ -107,6 +122,7 @@ class UnitEditor extends React.Component {
       isSaving: false,
       error: null,
       lastSaved: null,
+      ttsDialogOpen: false,
       familyName: this.props.initialFamilyName,
       isCourse: this.props.initialIsCourse,
       showCalendar: this.props.initialShowCalendar,
@@ -151,7 +167,10 @@ class UnitEditor extends React.Component {
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       deprecated: this.props.initialDeprecated,
-      publishedState: this.props.initialPublishedState
+      publishedState: this.props.initialPublishedState,
+      instructionType: this.props.initialInstructionType,
+      instructorAudience: this.props.initialInstructorAudience,
+      participantAudience: this.props.initialParticipantAudience
     };
   }
 
@@ -195,10 +214,6 @@ class UnitEditor extends React.Component {
     } else {
       this.setState({showCalendar: !this.state.showCalendar});
     }
-  };
-
-  handleView = () => {
-    navigateToHref(linkWithQueryParams(this.props.scriptPath));
   };
 
   handleSave = (event, shouldCloseAfterSave) => {
@@ -265,6 +280,9 @@ class UnitEditor extends React.Component {
       student_description: this.state.studentDescription,
       announcements: JSON.stringify(this.state.announcements),
       published_state: this.state.publishedState,
+      instruction_type: this.state.instructionType,
+      instructor_audience: this.state.instructorAudience,
+      participant_audience: this.state.participantAudience,
       deprecated: this.state.deprecated,
       login_required: this.state.loginRequired,
       hideable_lessons: this.state.hideableLessons,
@@ -351,6 +369,8 @@ class UnitEditor extends React.Component {
     const textAreaRows = this.state.lessonLevelData
       ? this.state.lessonLevelData.split('\n').length + 5
       : 10;
+    const useMigratedTeacherResources =
+      this.props.isMigrated && !this.state.teacherResources?.length;
     return (
       <div>
         <label>
@@ -483,12 +503,42 @@ class UnitEditor extends React.Component {
               type="checkbox"
               checked={this.state.tts}
               style={styles.checkbox}
-              onChange={() => this.setState({tts: !this.state.tts})}
+              onChange={e => {
+                this.setState({ttsDialogOpen: true});
+              }}
             />
             <HelpTip>
               <p>Check to enable text-to-speech for this unit.</p>
             </HelpTip>
           </label>
+          {this.state.ttsDialogOpen && (
+            <Dialog
+              hideBackdrop={false}
+              isOpen={this.state.ttsDialogOpen}
+              title={this.state.tts ? 'Turn off TTS' : 'Turn on TTS'}
+              cancelText="Cancel"
+              confirmText={this.state.tts ? 'Disable TTS' : 'Generate TTS'}
+              body={
+                this.state.tts
+                  ? 'Are you sure? All of the TTS files for this ' +
+                    'course have already been generated. Any new edits will not be reflected ' +
+                    'in the TTS files for this course.'
+                  : 'Are you sure? This will generate text to speech files for all ' +
+                    'levels in this script. It will also update the TTS files each time edits are ' +
+                    'made to a level. We have to pay for each file generated. Please ' +
+                    'confirm that levels are in a stable state before checking.'
+              }
+              handleClose={e => {
+                this.setState({ttsDialogOpen: false});
+              }}
+              onCancel={e => {
+                this.setState({ttsDialogOpen: false});
+              }}
+              onConfirm={e => {
+                this.setState({ttsDialogOpen: false, tts: !this.state.tts});
+              }}
+            />
+          )}
           <label>
             Is a Maker Unit
             <input
@@ -567,6 +617,31 @@ class UnitEditor extends React.Component {
             />
           </label>
         </CollapsibleEditorSection>
+
+        {this.props.hasCourse && (
+          <CollapsibleEditorSection title="Course Type Settings">
+            <p>
+              This unit is part of a course. Go to the course edit page to set
+              the course type settings for the course and its units.
+            </p>
+          </CollapsibleEditorSection>
+        )}
+        {!this.props.hasCourse && (
+          <CourseTypeEditor
+            instructorAudience={this.state.instructorAudience}
+            participantAudience={this.state.participantAudience}
+            instructionType={this.state.instructionType}
+            handleInstructionTypeChange={e =>
+              this.setState({instructionType: e.target.value})
+            }
+            handleInstructorAudienceChange={e =>
+              this.setState({instructorAudience: e.target.value})
+            }
+            handleParticipantAudienceChange={e =>
+              this.setState({participantAudience: e.target.value})
+            }
+          />
+        )}
 
         <CollapsibleEditorSection title="Announcements">
           <AnnouncementsEditor
@@ -839,7 +914,7 @@ class UnitEditor extends React.Component {
                 updateResources={teacherResources =>
                   this.setState({teacherResources})
                 }
-                useMigratedResources={this.props.isMigrated}
+                useMigratedResources={useMigratedTeacherResources}
                 courseVersionId={this.props.initialCourseVersionId}
                 migratedResources={this.props.migratedTeacherResources}
                 getRollupsUrl={`/s/${this.props.name}/get_rollup_resources`}
@@ -1023,10 +1098,10 @@ class UnitEditor extends React.Component {
         </CollapsibleEditorSection>
         <SaveBar
           handleSave={this.handleSave}
-          handleView={this.handleView}
           error={this.state.error}
           isSaving={this.state.isSaving}
           lastSaved={this.state.lastSaved}
+          pathForShowButton={this.props.scriptPath}
         />
       </div>
     );

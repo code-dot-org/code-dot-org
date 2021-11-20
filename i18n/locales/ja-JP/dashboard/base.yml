@@ -365,6 +365,7 @@ ja:
       minecraft_hero: "マインクラフト ヒーロー\n"
       playlab: 'プレイラボ'
       playlab_k1: "プレイラボ (就学前)\n"
+      poetry: '詩'
       sports: 'スポーツ'
       spritelab: 'スプライト ラボ'
       starwars: 'スター・ウォーズ'
@@ -514,6 +515,7 @@ ja:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. All Rights Reserved.<br />Star Wars&#8482; &copy; %{current_year} Disney and Lucasfilm. All Rights Reserved.<br />Frozen&#8482; &copy; %{current_year} Disney. All Rights Reserved.<br />Ice Age&#8482; &copy; %{current_year} 20th Century Fox. All Rights Reserved.<br />Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. All Rights Reserved.<br />Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. All Rights Reserved.<br />The Amazing World of Gumball is trademark and &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org は <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a> ライセンスのp5.play を使用しています｡'
     powered_by_aws: 'Powered by Amazon Web Services'
+    built_on_github: 'マイクロソフトの GitHub 上に構築'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo　と　Hour of Code&reg; は Code.org の商標です'
     copyright: '著作権'
     more: '見る'
@@ -523,12 +525,14 @@ ja:
     tos_short: '利用規約'
     tos: '利用規約'
     privacy: 'プライバシー ポリシー'
+    privacy_updated: 'プライバシーポリシー (更新)'
     secure: '保護されたバージョン'
     report_abuse: '不正を報告'
     built_on_code_studio: 'コードスタジオに構築された'
     make_my_own_app: '自分のアプリを作る'
     how_it_works: '動作の説明'
     try_hour_of_code: 'アワーオブコードを試してみよう！'
+    store: 'ストア'
   reference_area:
     title: '助けが必要ですか？'
     subtitle: 'ビデオやヒントを見る'

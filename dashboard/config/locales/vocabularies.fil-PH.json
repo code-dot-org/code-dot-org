@@ -11,6 +11,9 @@
         "function/hero/unversioned": {
           "word": "Function"
         },
+        "code/poem-art/2021": {
+          "word": "Code"
+        },
         "debugging/flappy/unversioned": {
           "word": "Pagdedebug"
         },
@@ -41,8 +44,29 @@
         "loops/aquatic/unversioned": {
           "word": "Mga loop"
         },
+        "caesar_cipher_/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "cracking_encryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
+        "decryption/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "Pag-Encrypt"
+          "word": "Pag-Encrypt",
+          "definition": ""
+        },
+        "random_substitution_cipher/hoc-encryption/unversioned": {
+          "word": "",
+          "definition": ""
         },
         "debugging/starwars/unversioned": {
           "word": "Pagdedebug"
@@ -56,6 +80,10 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Pagdedebug"
         },
+        "lossless_compression/text-compression/unversioned": {
+          "word": "",
+          "definition": ""
+        },
         "code/sports/unversioned": {
           "word": "Code"
         },
@@ -67,6 +95,9 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Pagdedebug"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Code"
         },
         "variable/coursef/2021": {
           "word": "Variable"

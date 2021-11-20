@@ -3141,6 +3141,8 @@ el:
               name: Διασκέδαση με το Βρόχο Για
             lesson-8:
               name: Χαρακτήρες σε Δράση
+            lesson-5:
+              name: Έξαρση
           lesson_groups:
             ramp_up:
               display_name: Χαρακτήρας
@@ -3264,6 +3266,8 @@ el:
             Computer Science Fundamentals:
               key: Βασικές αρχές της επιστήμης υπολογιστών
               name: Βασικές αρχές της επιστήμης υπολογιστών
+        outbreak-module:
+          title: Έξαρση
         csa-videos:
           lesson_groups:
             lessonGroup-2:
@@ -3306,12 +3310,14 @@ el:
           lesson_groups:
             lessonGroup-3:
               display_name: Έργο
-        poetry:
-          lessons:
-            lesson-3:
-              name: Μεταβλητές
         spelling-bee:
           lessons:
             lesson-1:
               name: Η μέλισσα της ορθογραφίας
           title: Η μέλισσα της ορθογραφίας
+        outbreak-csc:
+          title: Έξαρση
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Η μέλισσα της ορθογραφίας

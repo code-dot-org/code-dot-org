@@ -1,4 +1,11 @@
 export default function initializeGenerator(blocklyWrapper) {
+  blocklyWrapper.JavaScript.translateVarName = function(name) {
+    return Blockly.JavaScript.nameDB_.getName(
+      name,
+      Blockly.VARIABLE_CATEGORY_NAME
+    );
+  };
+
   // This function was a custom addition in CDO Blockly, so we need to add it here
   // so that our code generation logic still works with Google Blockly
   blocklyWrapper.Generator.blockSpaceToCode = function(name, opt_typeFilter) {
@@ -22,6 +29,21 @@ export default function initializeGenerator(blocklyWrapper) {
     code = code.join('\n');
     code = generator.finish(code);
     return code;
+  };
+
+  const originalBlockToCode = blocklyWrapper.Generator.prototype.blockToCode;
+  blocklyWrapper.Generator.prototype.blockToCode = function(
+    block,
+    opt_thisOnly
+  ) {
+    if (block?.isUnused()) {
+      return '';
+    }
+    return originalBlockToCode.call(
+      this,
+      block,
+      block?.skipNextBlockGeneration || opt_thisOnly
+    );
   };
 
   blocklyWrapper.Generator.prefixLines = function(text, prefix) {

@@ -11,6 +11,9 @@
         "function/hero/unversioned": {
           "word": "Функция"
         },
+        "code/poem-art/2021": {
+          "word": "Код"
+        },
         "debugging/flappy/unversioned": {
           "word": "Отстраняване на грешки"
         },
@@ -64,6 +67,9 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Отстраняване на грешки"
+        },
+        "code/poem-art/unversioned": {
+          "word": "Код"
         },
         "behavior/coursef/2021": {
           "word": "Поведение"

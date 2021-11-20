@@ -1644,6 +1644,15 @@ ar:
         text: x إحداثيات {SPRITE}
       Mikelab_yLocationOf:
         text: إحداثيات Y من {SPRITE}
+      Poetry_addFrame:
+        options:
+          BRUSH:
+            '"flowers"': زهور
+            '"hearts"': قلوب
+            '"iceCream"': آيس كريم
+            '"rainbow"': ألوان
+            '"stars"': نجوم
+            '"waves"': أمواج
       Poetry_makeBurst:
         options:
           EFFECT:
@@ -1653,6 +1662,9 @@ ar:
         text: جعل جديده {ANIMATION_NAME} العفريت في {LOCATION}
       Poetry_playSound:
         text: بلاي ساوند {SOUND}
+        options:
+          SOUND:
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': ضوء
       Poetry_setBackground:
         text: عيّن لون الخلفية {COLOR}
       Poetry_setBackgroundEffect:
@@ -1663,6 +1675,10 @@ ar:
             '"space"': الفضاء
             '"stars"': نجوم
             '"ripples"': تموجات
+            '"rain"': مطر
+            '"bubbles"': فقاعات
+            '"confetti"': قصاصات من الورق
+            '"hearts"': قلوب ملونة
           PALETTE:
             '"rainbow"': ألوان
       Poetry_setBackgroundImageAs:

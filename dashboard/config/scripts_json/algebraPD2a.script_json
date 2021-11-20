@@ -4,13 +4,16 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "pd": true,
+      "is_migrated": true,
       "professional_learning_course": "CS in Algebra Legacy"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-08-03 22:46:49 UTC",
+    "serialized_at": "2021-11-02 14:29:03 UTC",
     "published_state": "beta",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "algebraPD2a"
     }
@@ -241,21 +244,338 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "84fe3de1-bbcf-4abd-b5e0-a96e1e06e2a2",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "84fe3de1-bbcf-4abd-b5e0-a96e1e06e2a2",
+        "lesson.key": "Evaluation Blocks",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2a"
+      }
+    },
+    {
+      "key": "bb622960-530e-4ede-b997-2190d6ffaec9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "bb622960-530e-4ede-b997-2190d6ffaec9",
+        "lesson.key": "Strings and Images",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2a"
+      }
+    },
+    {
+      "key": "438b07e1-58fd-4c77-bc04-634490338be4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "438b07e1-58fd-4c77-bc04-634490338be4",
+        "lesson.key": "Defining Variables",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2a"
+      }
+    },
+    {
+      "key": "77891433-0d70-4df4-a357-1be577c629d7",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "77891433-0d70-4df4-a357-1be577c629d7",
+        "lesson.key": "Big Game - Variables",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2a"
+      }
+    },
+    {
+      "key": "880db7c0-63ce-424e-90dc-1a2d08180cd3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "880db7c0-63ce-424e-90dc-1a2d08180cd3",
+        "lesson.key": "Rocket-Height",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2a"
+      }
+    },
+    {
+      "key": "4f4c2b46-4ab8-4f90-95d1-180902105b62",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4f4c2b46-4ab8-4f90-95d1-180902105b62",
+        "lesson.key": "The Design Recipe",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2a"
+      }
+    },
+    {
+      "key": "273ed57a-3f6e-4e8a-9735-b52203836dd8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "273ed57a-3f6e-4e8a-9735-b52203836dd8",
+        "lesson.key": "Big Game - Animation",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2a"
+      }
+    },
+    {
+      "key": "9ec41791-3419-44d2-8c0b-9e0a4b25d679",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9ec41791-3419-44d2-8c0b-9e0a4b25d679",
+        "lesson.key": "Booleans",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2a"
+      }
+    },
+    {
+      "key": "12e3d92d-4a3b-4446-a8ac-8ddabd6dec9d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "12e3d92d-4a3b-4446-a8ac-8ddabd6dec9d",
+        "lesson.key": "Sam the Bat",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2a"
+      }
+    },
+    {
+      "key": "a264525c-71dc-4cd1-aef3-4f4bf74895d0",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a264525c-71dc-4cd1-aef3-4f4bf74895d0",
+        "lesson.key": "Big Game - Booleans",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2a"
+      }
+    },
+    {
+      "key": "1457d3df-47b3-4683-8b10-e17b6682fbb6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1457d3df-47b3-4683-8b10-e17b6682fbb6",
+        "lesson.key": "Luigi's Pizza",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2a"
+      }
+    },
+    {
+      "key": "822d9125-7df2-4a94-8652-10069f558d1d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "822d9125-7df2-4a94-8652-10069f558d1d",
+        "lesson.key": "Big Game - Player Movement",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2a"
+      }
+    },
+    {
+      "key": "aa47a9db-5502-4adf-b17e-97073758788b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "aa47a9db-5502-4adf-b17e-97073758788b",
+        "lesson.key": "Big GAme - Collision Detection",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2a"
+      }
+    },
+    {
+      "key": "cb966550-40ee-4df9-a6dc-d31df0f5b633",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cb966550-40ee-4df9-a6dc-d31df0f5b633",
+        "lesson.key": "Free Play",
+        "lesson_group.key": "",
+        "script.name": "algebraPD2a"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc",
+        "lesson_activity.key": "84fe3de1-bbcf-4abd-b5e0-a96e1e06e2a2"
+      }
+    },
+    {
+      "key": "54041952-8ae2-4b68-bade-8b46a2e4a67f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "54041952-8ae2-4b68-bade-8b46a2e4a67f",
+        "lesson_activity.key": "bb622960-530e-4ede-b997-2190d6ffaec9"
+      }
+    },
+    {
+      "key": "42392bc9-dc8e-4156-bd4e-c5d02790feec",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "42392bc9-dc8e-4156-bd4e-c5d02790feec",
+        "lesson_activity.key": "438b07e1-58fd-4c77-bc04-634490338be4"
+      }
+    },
+    {
+      "key": "0af9f0b7-714d-46a3-a2d3-b75e14e24d03",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0af9f0b7-714d-46a3-a2d3-b75e14e24d03",
+        "lesson_activity.key": "77891433-0d70-4df4-a357-1be577c629d7"
+      }
+    },
+    {
+      "key": "1aba981f-c2aa-4996-8c8a-bf022dabe4cf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1aba981f-c2aa-4996-8c8a-bf022dabe4cf",
+        "lesson_activity.key": "880db7c0-63ce-424e-90dc-1a2d08180cd3"
+      }
+    },
+    {
+      "key": "92583ae6-8ecf-4a52-97cb-b4cb770a0b30",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "92583ae6-8ecf-4a52-97cb-b4cb770a0b30",
+        "lesson_activity.key": "4f4c2b46-4ab8-4f90-95d1-180902105b62"
+      }
+    },
+    {
+      "key": "ddadd8d0-15a0-4559-b9eb-b833c2d33cfe",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ddadd8d0-15a0-4559-b9eb-b833c2d33cfe",
+        "lesson_activity.key": "273ed57a-3f6e-4e8a-9735-b52203836dd8"
+      }
+    },
+    {
+      "key": "e9913d4d-9da4-4a4d-be26-f81d01584543",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e9913d4d-9da4-4a4d-be26-f81d01584543",
+        "lesson_activity.key": "9ec41791-3419-44d2-8c0b-9e0a4b25d679"
+      }
+    },
+    {
+      "key": "a06bdd0f-1f85-44e0-93eb-3027ce4b1686",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a06bdd0f-1f85-44e0-93eb-3027ce4b1686",
+        "lesson_activity.key": "12e3d92d-4a3b-4446-a8ac-8ddabd6dec9d"
+      }
+    },
+    {
+      "key": "18538fad-8b87-4105-989e-129fe73b07b7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "18538fad-8b87-4105-989e-129fe73b07b7",
+        "lesson_activity.key": "a264525c-71dc-4cd1-aef3-4f4bf74895d0"
+      }
+    },
+    {
+      "key": "2c59f272-6479-4b7b-b604-aad15f7d38fe",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2c59f272-6479-4b7b-b604-aad15f7d38fe",
+        "lesson_activity.key": "1457d3df-47b3-4683-8b10-e17b6682fbb6"
+      }
+    },
+    {
+      "key": "a0f803c0-3424-4196-8f71-9f869ae83781",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a0f803c0-3424-4196-8f71-9f869ae83781",
+        "lesson_activity.key": "822d9125-7df2-4a94-8652-10069f558d1d"
+      }
+    },
+    {
+      "key": "0fd9fe63-7219-4ecc-9ecc-0219fa60d2a1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0fd9fe63-7219-4ecc-9ecc-0219fa60d2a1",
+        "lesson_activity.key": "aa47a9db-5502-4adf-b17e-97073758788b"
+      }
+    },
+    {
+      "key": "2d2cc0ea-1769-4341-84ce-069368f7cb6b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2d2cc0ea-1769-4341-84ce-069368f7cb6b",
+        "lesson_activity.key": "cb966550-40ee-4df9-a6dc-d31df0f5b633"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval .1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -264,7 +584,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       },
       "level_keys": [
         "Calc Circles of Eval .1"
@@ -273,12 +594,9 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval .2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -287,7 +605,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       },
       "level_keys": [
         "Calc Circles of Eval .2"
@@ -296,12 +615,9 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval .3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -310,7 +626,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       },
       "level_keys": [
         "Calc Circles of Eval .3"
@@ -319,12 +636,9 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -333,7 +647,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       },
       "level_keys": [
         "Calc Circles of Eval 2"
@@ -342,12 +657,9 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -356,7 +668,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       },
       "level_keys": [
         "Calc Circles of Eval 3"
@@ -365,12 +678,9 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -379,7 +689,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       },
       "level_keys": [
         "Calc Circles of Eval 7"
@@ -388,12 +699,9 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval 8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -402,7 +710,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       },
       "level_keys": [
         "Calc Circles of Eval 8"
@@ -411,12 +720,9 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Math 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -425,7 +731,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       },
       "level_keys": [
         "Blocks to Math 1"
@@ -434,12 +741,9 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Blocks to Math 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -448,7 +752,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       },
       "level_keys": [
         "Blocks to Math 3"
@@ -457,12 +762,9 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Circles of Eval Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -471,7 +773,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       },
       "level_keys": [
         "Calc Circles of Eval Free Play"
@@ -480,12 +783,9 @@
     {
       "chapter": 11,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images .1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -494,7 +794,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "54041952-8ae2-4b68-bade-8b46a2e4a67f"
       },
       "level_keys": [
         "Eval Strings Images .1"
@@ -503,12 +804,9 @@
     {
       "chapter": 12,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images .2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -517,7 +815,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "54041952-8ae2-4b68-bade-8b46a2e4a67f"
       },
       "level_keys": [
         "Eval Strings Images .2"
@@ -526,12 +825,9 @@
     {
       "chapter": 13,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -540,7 +836,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "54041952-8ae2-4b68-bade-8b46a2e4a67f"
       },
       "level_keys": [
         "Eval Strings Images 1"
@@ -549,12 +846,9 @@
     {
       "chapter": 14,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -563,7 +857,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "54041952-8ae2-4b68-bade-8b46a2e4a67f"
       },
       "level_keys": [
         "Eval Strings Images 2"
@@ -572,12 +867,9 @@
     {
       "chapter": 15,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -586,7 +878,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "54041952-8ae2-4b68-bade-8b46a2e4a67f"
       },
       "level_keys": [
         "Eval Strings Images 3"
@@ -595,12 +888,9 @@
     {
       "chapter": 16,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -609,7 +899,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "54041952-8ae2-4b68-bade-8b46a2e4a67f"
       },
       "level_keys": [
         "Eval Strings Images 4"
@@ -618,12 +909,9 @@
     {
       "chapter": 17,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Strings Images Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -632,7 +920,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "54041952-8ae2-4b68-bade-8b46a2e4a67f"
       },
       "level_keys": [
         "Eval Strings Images Free Play"
@@ -641,12 +930,9 @@
     {
       "chapter": 18,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MSM Defining Vars 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -655,7 +941,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "42392bc9-dc8e-4156-bd4e-c5d02790feec"
       },
       "level_keys": [
         "MSM Defining Vars 1"
@@ -664,12 +951,9 @@
     {
       "chapter": 19,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MSM Defining Vars 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -678,7 +962,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "42392bc9-dc8e-4156-bd4e-c5d02790feec"
       },
       "level_keys": [
         "MSM Defining Vars 2"
@@ -687,12 +972,9 @@
     {
       "chapter": 20,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MSM Defining Vars 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -701,7 +983,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "42392bc9-dc8e-4156-bd4e-c5d02790feec"
       },
       "level_keys": [
         "MSM Defining Vars 3"
@@ -710,12 +993,9 @@
     {
       "chapter": 21,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MSM Defining Vars 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -724,7 +1004,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "42392bc9-dc8e-4156-bd4e-c5d02790feec"
       },
       "level_keys": [
         "MSM Defining Vars 4"
@@ -733,12 +1014,9 @@
     {
       "chapter": 22,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Defining Vars Free Play 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -747,7 +1025,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "42392bc9-dc8e-4156-bd4e-c5d02790feec"
       },
       "level_keys": [
         "Eval Defining Vars Free Play 1"
@@ -756,12 +1035,9 @@
     {
       "chapter": 23,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Vars 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -770,7 +1046,8 @@
         ],
         "lesson.key": "Big Game - Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "0af9f0b7-714d-46a3-a2d3-b75e14e24d03"
       },
       "level_keys": [
         "Big Game Vars 1"
@@ -779,12 +1056,9 @@
     {
       "chapter": 24,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Vars 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -793,7 +1067,8 @@
         ],
         "lesson.key": "Big Game - Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "0af9f0b7-714d-46a3-a2d3-b75e14e24d03"
       },
       "level_keys": [
         "Big Game Vars 2"
@@ -802,12 +1077,9 @@
     {
       "chapter": 25,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Vars 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -816,7 +1088,8 @@
         ],
         "lesson.key": "Big Game - Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "0af9f0b7-714d-46a3-a2d3-b75e14e24d03"
       },
       "level_keys": [
         "Big Game Vars 3"
@@ -825,12 +1098,9 @@
     {
       "chapter": 26,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Vars 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -839,7 +1109,8 @@
         ],
         "lesson.key": "Big Game - Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "0af9f0b7-714d-46a3-a2d3-b75e14e24d03"
       },
       "level_keys": [
         "Big Game Vars 4"
@@ -848,12 +1119,9 @@
     {
       "chapter": 27,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -862,7 +1130,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "1aba981f-c2aa-4996-8c8a-bf022dabe4cf"
       },
       "level_keys": [
         "Play Lab Rocket 1"
@@ -871,12 +1140,9 @@
     {
       "chapter": 28,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Rocket Contract 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -885,7 +1151,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "1aba981f-c2aa-4996-8c8a-bf022dabe4cf"
       },
       "level_keys": [
         "Rocket Contract 1"
@@ -894,12 +1161,9 @@
     {
       "chapter": 29,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Rocket 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -908,7 +1172,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "1aba981f-c2aa-4996-8c8a-bf022dabe4cf"
       },
       "level_keys": [
         "Calc Rocket 1"
@@ -917,12 +1182,9 @@
     {
       "chapter": 30,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Rocket 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -931,7 +1193,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "1aba981f-c2aa-4996-8c8a-bf022dabe4cf"
       },
       "level_keys": [
         "Calc Rocket 2"
@@ -940,12 +1203,9 @@
     {
       "chapter": 31,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -954,7 +1214,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "1aba981f-c2aa-4996-8c8a-bf022dabe4cf"
       },
       "level_keys": [
         "Play Lab Rocket 2"
@@ -963,12 +1224,9 @@
     {
       "chapter": 32,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -977,7 +1235,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "1aba981f-c2aa-4996-8c8a-bf022dabe4cf"
       },
       "level_keys": [
         "Play Lab Rocket 3"
@@ -986,12 +1245,9 @@
     {
       "chapter": 33,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Play Lab Rocket Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1000,7 +1256,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "1aba981f-c2aa-4996-8c8a-bf022dabe4cf"
       },
       "level_keys": [
         "Play Lab Rocket Free Play"
@@ -1009,12 +1266,9 @@
     {
       "chapter": 34,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Design Recipe .1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1023,7 +1277,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "92583ae6-8ecf-4a52-97cb-b4cb770a0b30"
       },
       "level_keys": [
         "Eval Design Recipe .1"
@@ -1032,12 +1287,9 @@
     {
       "chapter": 35,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Design Recipe 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1046,7 +1298,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "92583ae6-8ecf-4a52-97cb-b4cb770a0b30"
       },
       "level_keys": [
         "Eval Design Recipe 3"
@@ -1055,12 +1308,9 @@
     {
       "chapter": 36,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Design Recipe 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1069,7 +1319,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "92583ae6-8ecf-4a52-97cb-b4cb770a0b30"
       },
       "level_keys": [
         "Eval Design Recipe 4"
@@ -1078,12 +1329,9 @@
     {
       "chapter": 37,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Design Recipe 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1092,7 +1340,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "92583ae6-8ecf-4a52-97cb-b4cb770a0b30"
       },
       "level_keys": [
         "Eval Design Recipe 5"
@@ -1101,12 +1350,9 @@
     {
       "chapter": 38,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Design Recipe Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1115,7 +1361,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "92583ae6-8ecf-4a52-97cb-b4cb770a0b30"
       },
       "level_keys": [
         "Eval Design Recipe Free Play"
@@ -1124,12 +1371,9 @@
     {
       "chapter": 39,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Animation 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1138,7 +1382,8 @@
         ],
         "lesson.key": "Big Game - Animation",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "ddadd8d0-15a0-4559-b9eb-b833c2d33cfe"
       },
       "level_keys": [
         "Big Game Animation 1"
@@ -1147,12 +1392,9 @@
     {
       "chapter": 40,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Animation 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1161,7 +1403,8 @@
         ],
         "lesson.key": "Big Game - Animation",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "ddadd8d0-15a0-4559-b9eb-b833c2d33cfe"
       },
       "level_keys": [
         "Big Game Animation 2"
@@ -1170,12 +1413,9 @@
     {
       "chapter": 41,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Animation 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1184,7 +1424,8 @@
         ],
         "lesson.key": "Big Game - Animation",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "ddadd8d0-15a0-4559-b9eb-b833c2d33cfe"
       },
       "level_keys": [
         "Big Game Animation 3"
@@ -1193,12 +1434,9 @@
     {
       "chapter": 42,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Animation 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1207,7 +1445,8 @@
         ],
         "lesson.key": "Big Game - Animation",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "ddadd8d0-15a0-4559-b9eb-b833c2d33cfe"
       },
       "level_keys": [
         "Big Game Animation 4"
@@ -1216,12 +1455,9 @@
     {
       "chapter": 43,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1230,7 +1466,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "e9913d4d-9da4-4a4d-be26-f81d01584543"
       },
       "level_keys": [
         "Eval Booleans 1"
@@ -1239,12 +1476,9 @@
     {
       "chapter": 44,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1253,7 +1487,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "e9913d4d-9da4-4a4d-be26-f81d01584543"
       },
       "level_keys": [
         "Eval Booleans 2"
@@ -1262,12 +1497,9 @@
     {
       "chapter": 45,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1276,7 +1508,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "e9913d4d-9da4-4a4d-be26-f81d01584543"
       },
       "level_keys": [
         "Eval Booleans 3"
@@ -1285,12 +1518,9 @@
     {
       "chapter": 46,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1299,7 +1529,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "e9913d4d-9da4-4a4d-be26-f81d01584543"
       },
       "level_keys": [
         "Eval Booleans 4"
@@ -1308,12 +1539,9 @@
     {
       "chapter": 47,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1322,7 +1550,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "e9913d4d-9da4-4a4d-be26-f81d01584543"
       },
       "level_keys": [
         "Eval Booleans 5"
@@ -1331,12 +1560,9 @@
     {
       "chapter": 48,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans 6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1345,7 +1571,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "e9913d4d-9da4-4a4d-be26-f81d01584543"
       },
       "level_keys": [
         "Eval Booleans 6"
@@ -1354,12 +1581,9 @@
     {
       "chapter": 49,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Booleans Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1368,7 +1592,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "e9913d4d-9da4-4a4d-be26-f81d01584543"
       },
       "level_keys": [
         "Eval Booleans Free Play"
@@ -1377,12 +1602,9 @@
     {
       "chapter": 50,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sam the Butterfly 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1391,7 +1613,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "a06bdd0f-1f85-44e0-93eb-3027ce4b1686"
       },
       "level_keys": [
         "Sam the Butterfly 1"
@@ -1400,12 +1623,9 @@
     {
       "chapter": 51,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sam the Butterfly 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1414,7 +1634,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "a06bdd0f-1f85-44e0-93eb-3027ce4b1686"
       },
       "level_keys": [
         "Sam the Butterfly 2"
@@ -1423,12 +1644,9 @@
     {
       "chapter": 52,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sam the Butterfly 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1437,7 +1655,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "a06bdd0f-1f85-44e0-93eb-3027ce4b1686"
       },
       "level_keys": [
         "Sam the Butterfly 3"
@@ -1446,12 +1665,9 @@
     {
       "chapter": 53,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sam the Butterfly 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1460,7 +1676,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "a06bdd0f-1f85-44e0-93eb-3027ce4b1686"
       },
       "level_keys": [
         "Sam the Butterfly 4"
@@ -1469,12 +1686,9 @@
     {
       "chapter": 54,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Sam the Butterfly 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1483,7 +1697,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "a06bdd0f-1f85-44e0-93eb-3027ce4b1686"
       },
       "level_keys": [
         "Sam the Butterfly 5"
@@ -1492,12 +1707,9 @@
     {
       "chapter": 55,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Booleans 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1506,7 +1718,8 @@
         ],
         "lesson.key": "Big Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "18538fad-8b87-4105-989e-129fe73b07b7"
       },
       "level_keys": [
         "Big Game Booleans 1"
@@ -1515,12 +1728,9 @@
     {
       "chapter": 56,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Booleans 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1529,7 +1739,8 @@
         ],
         "lesson.key": "Big Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "18538fad-8b87-4105-989e-129fe73b07b7"
       },
       "level_keys": [
         "Big Game Booleans 4"
@@ -1538,12 +1749,9 @@
     {
       "chapter": 57,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Booleans 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1552,7 +1760,8 @@
         ],
         "lesson.key": "Big Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "18538fad-8b87-4105-989e-129fe73b07b7"
       },
       "level_keys": [
         "Big Game Booleans 2"
@@ -1561,12 +1770,9 @@
     {
       "chapter": 58,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Booleans 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1575,7 +1781,8 @@
         ],
         "lesson.key": "Big Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "18538fad-8b87-4105-989e-129fe73b07b7"
       },
       "level_keys": [
         "Big Game Booleans 3"
@@ -1584,12 +1791,9 @@
     {
       "chapter": 59,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Booleans 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1598,7 +1802,8 @@
         ],
         "lesson.key": "Big Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "18538fad-8b87-4105-989e-129fe73b07b7"
       },
       "level_keys": [
         "Big Game Booleans 5"
@@ -1607,12 +1812,9 @@
     {
       "chapter": 60,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Luigi's Pizza 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1621,7 +1823,8 @@
         ],
         "lesson.key": "Luigi's Pizza",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "2c59f272-6479-4b7b-b604-aad15f7d38fe"
       },
       "level_keys": [
         "Luigi's Pizza 1"
@@ -1630,12 +1833,9 @@
     {
       "chapter": 61,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Luigi's Pizza 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1644,7 +1844,8 @@
         ],
         "lesson.key": "Luigi's Pizza",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "2c59f272-6479-4b7b-b604-aad15f7d38fe"
       },
       "level_keys": [
         "Luigi's Pizza 2"
@@ -1653,12 +1854,9 @@
     {
       "chapter": 62,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Luigi's Pizza 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1667,7 +1865,8 @@
         ],
         "lesson.key": "Luigi's Pizza",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "2c59f272-6479-4b7b-b604-aad15f7d38fe"
       },
       "level_keys": [
         "Luigi's Pizza 3"
@@ -1676,12 +1875,9 @@
     {
       "chapter": 63,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Luigi's Pizza 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1690,7 +1886,8 @@
         ],
         "lesson.key": "Luigi's Pizza",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "2c59f272-6479-4b7b-b604-aad15f7d38fe"
       },
       "level_keys": [
         "Luigi's Pizza 4"
@@ -1699,12 +1896,9 @@
     {
       "chapter": 64,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Player 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1713,7 +1907,8 @@
         ],
         "lesson.key": "Big Game - Player Movement",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "a0f803c0-3424-4196-8f71-9f869ae83781"
       },
       "level_keys": [
         "Big Game Player 1"
@@ -1722,12 +1917,9 @@
     {
       "chapter": 65,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Player 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1736,7 +1928,8 @@
         ],
         "lesson.key": "Big Game - Player Movement",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "a0f803c0-3424-4196-8f71-9f869ae83781"
       },
       "level_keys": [
         "Big Game Player 2"
@@ -1745,12 +1938,9 @@
     {
       "chapter": 66,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Collision 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1759,7 +1949,8 @@
         ],
         "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "0fd9fe63-7219-4ecc-9ecc-0219fa60d2a1"
       },
       "level_keys": [
         "Big Game Collision 1"
@@ -1768,12 +1959,9 @@
     {
       "chapter": 67,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Collision 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1782,7 +1970,8 @@
         ],
         "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "0fd9fe63-7219-4ecc-9ecc-0219fa60d2a1"
       },
       "level_keys": [
         "Big Game Collision 4"
@@ -1791,12 +1980,9 @@
     {
       "chapter": 68,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Collision 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1805,7 +1991,8 @@
         ],
         "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "0fd9fe63-7219-4ecc-9ecc-0219fa60d2a1"
       },
       "level_keys": [
         "Big Game Collision 3"
@@ -1814,12 +2001,9 @@
     {
       "chapter": 69,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Game Final"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1828,7 +2012,8 @@
         ],
         "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "0fd9fe63-7219-4ecc-9ecc-0219fa60d2a1"
       },
       "level_keys": [
         "Big Game Final"
@@ -1837,12 +2022,9 @@
     {
       "chapter": 70,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1851,7 +2033,8 @@
         ],
         "lesson.key": "Free Play",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "2d2cc0ea-1769-4341-84ce-069368f7cb6b"
       },
       "level_keys": [
         "Calc Free Play"
@@ -1860,12 +2043,9 @@
     {
       "chapter": 71,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1874,7 +2054,8 @@
         ],
         "lesson.key": "Free Play",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "2d2cc0ea-1769-4341-84ce-069368f7cb6b"
       },
       "level_keys": [
         "Eval Free Play"
@@ -1890,7 +2071,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       }
     },
     {
@@ -1901,7 +2083,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       }
     },
     {
@@ -1912,7 +2095,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       }
     },
     {
@@ -1923,7 +2107,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       }
     },
     {
@@ -1934,7 +2119,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       }
     },
     {
@@ -1945,7 +2131,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       }
     },
     {
@@ -1956,7 +2143,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       }
     },
     {
@@ -1967,7 +2155,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       }
     },
     {
@@ -1978,7 +2167,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       }
     },
     {
@@ -1989,7 +2179,8 @@
         ],
         "lesson.key": "Evaluation Blocks",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "5f779ccf-0398-4f54-bd61-447fe9f9dcfc"
       }
     },
     {
@@ -2000,7 +2191,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "54041952-8ae2-4b68-bade-8b46a2e4a67f"
       }
     },
     {
@@ -2011,7 +2203,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "54041952-8ae2-4b68-bade-8b46a2e4a67f"
       }
     },
     {
@@ -2022,7 +2215,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "54041952-8ae2-4b68-bade-8b46a2e4a67f"
       }
     },
     {
@@ -2033,7 +2227,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "54041952-8ae2-4b68-bade-8b46a2e4a67f"
       }
     },
     {
@@ -2044,7 +2239,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "54041952-8ae2-4b68-bade-8b46a2e4a67f"
       }
     },
     {
@@ -2055,7 +2251,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "54041952-8ae2-4b68-bade-8b46a2e4a67f"
       }
     },
     {
@@ -2066,7 +2263,8 @@
         ],
         "lesson.key": "Strings and Images",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "54041952-8ae2-4b68-bade-8b46a2e4a67f"
       }
     },
     {
@@ -2077,7 +2275,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "42392bc9-dc8e-4156-bd4e-c5d02790feec"
       }
     },
     {
@@ -2088,7 +2287,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "42392bc9-dc8e-4156-bd4e-c5d02790feec"
       }
     },
     {
@@ -2099,7 +2299,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "42392bc9-dc8e-4156-bd4e-c5d02790feec"
       }
     },
     {
@@ -2110,7 +2311,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "42392bc9-dc8e-4156-bd4e-c5d02790feec"
       }
     },
     {
@@ -2121,7 +2323,8 @@
         ],
         "lesson.key": "Defining Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "42392bc9-dc8e-4156-bd4e-c5d02790feec"
       }
     },
     {
@@ -2132,7 +2335,8 @@
         ],
         "lesson.key": "Big Game - Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "0af9f0b7-714d-46a3-a2d3-b75e14e24d03"
       }
     },
     {
@@ -2143,7 +2347,8 @@
         ],
         "lesson.key": "Big Game - Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "0af9f0b7-714d-46a3-a2d3-b75e14e24d03"
       }
     },
     {
@@ -2154,7 +2359,8 @@
         ],
         "lesson.key": "Big Game - Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "0af9f0b7-714d-46a3-a2d3-b75e14e24d03"
       }
     },
     {
@@ -2165,7 +2371,8 @@
         ],
         "lesson.key": "Big Game - Variables",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "0af9f0b7-714d-46a3-a2d3-b75e14e24d03"
       }
     },
     {
@@ -2176,7 +2383,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "1aba981f-c2aa-4996-8c8a-bf022dabe4cf"
       }
     },
     {
@@ -2187,7 +2395,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "1aba981f-c2aa-4996-8c8a-bf022dabe4cf"
       }
     },
     {
@@ -2198,7 +2407,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "1aba981f-c2aa-4996-8c8a-bf022dabe4cf"
       }
     },
     {
@@ -2209,7 +2419,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "1aba981f-c2aa-4996-8c8a-bf022dabe4cf"
       }
     },
     {
@@ -2220,7 +2431,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "1aba981f-c2aa-4996-8c8a-bf022dabe4cf"
       }
     },
     {
@@ -2231,7 +2443,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "1aba981f-c2aa-4996-8c8a-bf022dabe4cf"
       }
     },
     {
@@ -2242,7 +2455,8 @@
         ],
         "lesson.key": "Rocket-Height",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "1aba981f-c2aa-4996-8c8a-bf022dabe4cf"
       }
     },
     {
@@ -2253,7 +2467,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "92583ae6-8ecf-4a52-97cb-b4cb770a0b30"
       }
     },
     {
@@ -2264,7 +2479,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "92583ae6-8ecf-4a52-97cb-b4cb770a0b30"
       }
     },
     {
@@ -2275,7 +2491,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "92583ae6-8ecf-4a52-97cb-b4cb770a0b30"
       }
     },
     {
@@ -2286,7 +2503,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "92583ae6-8ecf-4a52-97cb-b4cb770a0b30"
       }
     },
     {
@@ -2297,7 +2515,8 @@
         ],
         "lesson.key": "The Design Recipe",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "92583ae6-8ecf-4a52-97cb-b4cb770a0b30"
       }
     },
     {
@@ -2308,7 +2527,8 @@
         ],
         "lesson.key": "Big Game - Animation",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "ddadd8d0-15a0-4559-b9eb-b833c2d33cfe"
       }
     },
     {
@@ -2319,7 +2539,8 @@
         ],
         "lesson.key": "Big Game - Animation",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "ddadd8d0-15a0-4559-b9eb-b833c2d33cfe"
       }
     },
     {
@@ -2330,7 +2551,8 @@
         ],
         "lesson.key": "Big Game - Animation",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "ddadd8d0-15a0-4559-b9eb-b833c2d33cfe"
       }
     },
     {
@@ -2341,7 +2563,8 @@
         ],
         "lesson.key": "Big Game - Animation",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "ddadd8d0-15a0-4559-b9eb-b833c2d33cfe"
       }
     },
     {
@@ -2352,7 +2575,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "e9913d4d-9da4-4a4d-be26-f81d01584543"
       }
     },
     {
@@ -2363,7 +2587,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "e9913d4d-9da4-4a4d-be26-f81d01584543"
       }
     },
     {
@@ -2374,7 +2599,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "e9913d4d-9da4-4a4d-be26-f81d01584543"
       }
     },
     {
@@ -2385,7 +2611,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "e9913d4d-9da4-4a4d-be26-f81d01584543"
       }
     },
     {
@@ -2396,7 +2623,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "e9913d4d-9da4-4a4d-be26-f81d01584543"
       }
     },
     {
@@ -2407,7 +2635,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "e9913d4d-9da4-4a4d-be26-f81d01584543"
       }
     },
     {
@@ -2418,7 +2647,8 @@
         ],
         "lesson.key": "Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "e9913d4d-9da4-4a4d-be26-f81d01584543"
       }
     },
     {
@@ -2429,7 +2659,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "a06bdd0f-1f85-44e0-93eb-3027ce4b1686"
       }
     },
     {
@@ -2440,7 +2671,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "a06bdd0f-1f85-44e0-93eb-3027ce4b1686"
       }
     },
     {
@@ -2451,7 +2683,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "a06bdd0f-1f85-44e0-93eb-3027ce4b1686"
       }
     },
     {
@@ -2462,7 +2695,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "a06bdd0f-1f85-44e0-93eb-3027ce4b1686"
       }
     },
     {
@@ -2473,7 +2707,8 @@
         ],
         "lesson.key": "Sam the Bat",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "a06bdd0f-1f85-44e0-93eb-3027ce4b1686"
       }
     },
     {
@@ -2484,7 +2719,8 @@
         ],
         "lesson.key": "Big Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "18538fad-8b87-4105-989e-129fe73b07b7"
       }
     },
     {
@@ -2495,7 +2731,8 @@
         ],
         "lesson.key": "Big Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "18538fad-8b87-4105-989e-129fe73b07b7"
       }
     },
     {
@@ -2506,7 +2743,8 @@
         ],
         "lesson.key": "Big Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "18538fad-8b87-4105-989e-129fe73b07b7"
       }
     },
     {
@@ -2517,7 +2755,8 @@
         ],
         "lesson.key": "Big Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "18538fad-8b87-4105-989e-129fe73b07b7"
       }
     },
     {
@@ -2528,7 +2767,8 @@
         ],
         "lesson.key": "Big Game - Booleans",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "18538fad-8b87-4105-989e-129fe73b07b7"
       }
     },
     {
@@ -2539,7 +2779,8 @@
         ],
         "lesson.key": "Luigi's Pizza",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "2c59f272-6479-4b7b-b604-aad15f7d38fe"
       }
     },
     {
@@ -2550,7 +2791,8 @@
         ],
         "lesson.key": "Luigi's Pizza",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "2c59f272-6479-4b7b-b604-aad15f7d38fe"
       }
     },
     {
@@ -2561,7 +2803,8 @@
         ],
         "lesson.key": "Luigi's Pizza",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "2c59f272-6479-4b7b-b604-aad15f7d38fe"
       }
     },
     {
@@ -2572,7 +2815,8 @@
         ],
         "lesson.key": "Luigi's Pizza",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "2c59f272-6479-4b7b-b604-aad15f7d38fe"
       }
     },
     {
@@ -2583,7 +2827,8 @@
         ],
         "lesson.key": "Big Game - Player Movement",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "a0f803c0-3424-4196-8f71-9f869ae83781"
       }
     },
     {
@@ -2594,7 +2839,8 @@
         ],
         "lesson.key": "Big Game - Player Movement",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "a0f803c0-3424-4196-8f71-9f869ae83781"
       }
     },
     {
@@ -2605,7 +2851,8 @@
         ],
         "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "0fd9fe63-7219-4ecc-9ecc-0219fa60d2a1"
       }
     },
     {
@@ -2616,7 +2863,8 @@
         ],
         "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "0fd9fe63-7219-4ecc-9ecc-0219fa60d2a1"
       }
     },
     {
@@ -2627,7 +2875,8 @@
         ],
         "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "0fd9fe63-7219-4ecc-9ecc-0219fa60d2a1"
       }
     },
     {
@@ -2638,7 +2887,8 @@
         ],
         "lesson.key": "Big GAme - Collision Detection",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "0fd9fe63-7219-4ecc-9ecc-0219fa60d2a1"
       }
     },
     {
@@ -2649,7 +2899,8 @@
         ],
         "lesson.key": "Free Play",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "2d2cc0ea-1769-4341-84ce-069368f7cb6b"
       }
     },
     {
@@ -2660,7 +2911,8 @@
         ],
         "lesson.key": "Free Play",
         "lesson_group.key": "",
-        "script.name": "algebraPD2a"
+        "script.name": "algebraPD2a",
+        "activity_section.key": "2d2cc0ea-1769-4341-84ce-069368f7cb6b"
       }
     }
   ],
