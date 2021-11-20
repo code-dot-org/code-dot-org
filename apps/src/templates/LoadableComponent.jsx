@@ -1,8 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
+import useDeepCompareEffect from 'use-deep-compare-effect';
 
 /**
  * A wrapper component that loads data for another component and
@@ -40,9 +41,9 @@ export default function LoadableComponent({
   // useEffect(() => {
   //   loadFunction(...loadArgs, onLoadSuccess, onLoadError);
   // }, [loadArgs, loadFunction, renderFunction]);
-  useEffect(() => {
+  useDeepCompareEffect(() => {
     loadFunction(...loadArgs, onLoadSuccess, onLoadError);
-  }, []);
+  }, [loadArgs]);
 
   if (isLoading) {
     return <Spinner size={spinnerSize} style={spinnerStyle} />;

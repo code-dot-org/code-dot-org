@@ -31,6 +31,7 @@ export default function ManageCodeReviewGroups({
     console.log('submitted');
   };
 
+  // TO DO:
   // [x] change button text on confirm/cancel
   // [x] add ability to disable confirmation button
   // disable buttons until changes made
@@ -43,6 +44,10 @@ export default function ManageCodeReviewGroups({
   // on success, show changes have been saved message. disable buttons until more change madde. remove after some time?
   // on fail, show error has occurred message. remove after some time?
 
+  // OTHER OPTIONS:
+  // wrap dialog in loadablecomponent -- spinner next to button?
+  // pull in loading logic here, so spinner is in body of modal
+  // continue to use state in codereviewgroupsmanager, and have non-react groups variable in here
   return (
     <div style={{...styles.buttonContainer, ...buttonContainerStyle}}>
       {/* use div instead of button HTML element via __useDeprecatedTag
