@@ -6,18 +6,17 @@
     "properties": {
       "hideable_lessons": true,
       "is_course": true,
-      "is_migrated": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
       "version_year": "unversioned"
     },
     "new_name": null,
     "family_name": "csp5-virtual",
-    "serialized_at": "2021-11-15 21:04:56 UTC",
+    "serialized_at": "2021-11-19 20:48:44 UTC",
     "published_state": "preview",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csp5-virtual"
     }
@@ -203,729 +202,21 @@
     }
   ],
   "lesson_activities": [
-    {
-      "key": "fdd6ec9b-8d38-4e0b-b72a-f198cfc7bd5a",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "fdd6ec9b-8d38-4e0b-b72a-f198cfc7bd5a",
-        "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "",
-        "script.name": "csp5-virtual"
-      }
-    },
-    {
-      "key": "992bb30c-80fa-405f-8f65-8b8b9b5efbd0",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "992bb30c-80fa-405f-8f65-8b8b9b5efbd0",
-        "lesson.key": "Buttons and Events",
-        "lesson_group.key": "",
-        "script.name": "csp5-virtual"
-      }
-    },
-    {
-      "key": "dc847bb5-d163-42b9-be27-318bd28b47d9",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "dc847bb5-d163-42b9-be27-318bd28b47d9",
-        "lesson.key": "Multi-screen Apps",
-        "lesson_group.key": "",
-        "script.name": "csp5-virtual"
-      }
-    },
-    {
-      "key": "5baa0caa-ff72-42b8-9f4f-fe4840441cb6",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5baa0caa-ff72-42b8-9f4f-fe4840441cb6",
-        "lesson.key": "Variables",
-        "lesson_group.key": "",
-        "script.name": "csp5-virtual"
-      }
-    },
-    {
-      "key": "06346449-eecc-4f67-a0a4-93c084f304ed",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "06346449-eecc-4f67-a0a4-93c084f304ed",
-        "lesson.key": "Building an App: Clicker Game",
-        "lesson_group.key": "",
-        "script.name": "csp5-virtual"
-      }
-    },
-    {
-      "key": "ccd45bcf-697b-479e-9bdf-2a0a4580f591",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ccd45bcf-697b-479e-9bdf-2a0a4580f591",
-        "lesson.key": "If-Statements",
-        "lesson_group.key": "",
-        "script.name": "csp5-virtual"
-      }
-    },
-    {
-      "key": "b08397b8-6810-4c47-9b80-1aa8c45c11d5",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b08397b8-6810-4c47-9b80-1aa8c45c11d5",
-        "lesson.key": "User Input and Strings",
-        "lesson_group.key": "",
-        "script.name": "csp5-virtual"
-      }
-    },
-    {
-      "key": "b2de0a5e-872e-4b45-aaf3-dc497b9e675b",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b2de0a5e-872e-4b45-aaf3-dc497b9e675b",
-        "lesson.key": "Boolean Expressions and \"If\" Statements",
-        "lesson_group.key": "",
-        "script.name": "csp5-virtual"
-      }
-    },
-    {
-      "key": "3df9ef28-d51f-4b41-b7db-e153d2bae053",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "3df9ef28-d51f-4b41-b7db-e153d2bae053",
-        "lesson.key": "\"if-else-if\" and Conditional Logic",
-        "lesson_group.key": "",
-        "script.name": "csp5-virtual"
-      }
-    },
-    {
-      "key": "8cd8eb5e-c7bb-4dfa-8943-ac5cff3475d7",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8cd8eb5e-c7bb-4dfa-8943-ac5cff3475d7",
-        "lesson.key": "Building an App: Color Sleuth",
-        "lesson_group.key": "",
-        "script.name": "csp5-virtual"
-      }
-    },
-    {
-      "key": "8c68c2f2-d625-4005-8595-7aed6f5a0f59",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8c68c2f2-d625-4005-8595-7aed6f5a0f59",
-        "lesson.key": "Keep Going!",
-        "lesson_group.key": "",
-        "script.name": "csp5-virtual"
-      }
-    }
+
   ],
   "activity_sections": [
-    {
-      "key": "261bc3d7-99ae-4ed0-8e5d-8ab157892508",
-      "position": 1,
-      "properties": {
-        "progression_name": "Setting Properties"
-      },
-      "seeding_key": {
-        "activity_section.key": "261bc3d7-99ae-4ed0-8e5d-8ab157892508",
-        "lesson_activity.key": "fdd6ec9b-8d38-4e0b-b72a-f198cfc7bd5a"
-      }
-    },
-    {
-      "key": "977eba4f-382b-47d7-a2de-1a624faa5d70",
-      "position": 2,
-      "properties": {
-        "progression_name": "Make it Interactive"
-      },
-      "seeding_key": {
-        "activity_section.key": "977eba4f-382b-47d7-a2de-1a624faa5d70",
-        "lesson_activity.key": "fdd6ec9b-8d38-4e0b-b72a-f198cfc7bd5a"
-      }
-    },
-    {
-      "key": "e56d036f-07b2-44b2-bbf4-988e7af06e77",
-      "position": 3,
-      "properties": {
-        "progression_name": "Images and Sounds"
-      },
-      "seeding_key": {
-        "activity_section.key": "e56d036f-07b2-44b2-bbf4-988e7af06e77",
-        "lesson_activity.key": "fdd6ec9b-8d38-4e0b-b72a-f198cfc7bd5a"
-      }
-    },
-    {
-      "key": "1aaf83fe-7a8c-4857-a1fc-2beef36b1549",
-      "position": 4,
-      "properties": {
-        "name": "Design Mode",
-        "progression_name": "Design Mode"
-      },
-      "seeding_key": {
-        "activity_section.key": "1aaf83fe-7a8c-4857-a1fc-2beef36b1549",
-        "lesson_activity.key": "fdd6ec9b-8d38-4e0b-b72a-f198cfc7bd5a"
-      }
-    },
-    {
-      "key": "f0cfda2f-3d2e-409e-b5c8-bf34477c3d50",
-      "position": 1,
-      "properties": {
-        "progression_name": "Intro to Debugging and Common Problems"
-      },
-      "seeding_key": {
-        "activity_section.key": "f0cfda2f-3d2e-409e-b5c8-bf34477c3d50",
-        "lesson_activity.key": "992bb30c-80fa-405f-8f65-8b8b9b5efbd0"
-      }
-    },
-    {
-      "key": "b73912a8-1492-46cf-8808-69d306e21de8",
-      "position": 2,
-      "properties": {
-        "progression_name": "How setPosition and Screen Dimensions Work"
-      },
-      "seeding_key": {
-        "activity_section.key": "b73912a8-1492-46cf-8808-69d306e21de8",
-        "lesson_activity.key": "992bb30c-80fa-405f-8f65-8b8b9b5efbd0"
-      }
-    },
-    {
-      "key": "99d9d571-065c-424a-8796-6ae5b017d5ed",
-      "position": 3,
-      "properties": {
-        "progression_name": "Using Labels"
-      },
-      "seeding_key": {
-        "activity_section.key": "99d9d571-065c-424a-8796-6ae5b017d5ed",
-        "lesson_activity.key": "992bb30c-80fa-405f-8f65-8b8b9b5efbd0"
-      }
-    },
-    {
-      "key": "c09c4372-7638-4e71-8870-34e7c40e7bf7",
-      "position": 4,
-      "properties": {
-        "progression_name": "Event Types"
-      },
-      "seeding_key": {
-        "activity_section.key": "c09c4372-7638-4e71-8870-34e7c40e7bf7",
-        "lesson_activity.key": "992bb30c-80fa-405f-8f65-8b8b9b5efbd0"
-      }
-    },
-    {
-      "key": "baa6ad21-c00e-4040-9e80-29ebe7b10486",
-      "position": 5,
-      "properties": {
-        "progression_name": "How Images Work"
-      },
-      "seeding_key": {
-        "activity_section.key": "baa6ad21-c00e-4040-9e80-29ebe7b10486",
-        "lesson_activity.key": "992bb30c-80fa-405f-8f65-8b8b9b5efbd0"
-      }
-    },
-    {
-      "key": "25c4eb02-685f-4b98-a266-7bdf33597da9",
-      "position": 6,
-      "properties": {
-        "name": "Chaser Game v.1",
-        "progression_name": "Chaser Game v.1"
-      },
-      "seeding_key": {
-        "activity_section.key": "25c4eb02-685f-4b98-a266-7bdf33597da9",
-        "lesson_activity.key": "992bb30c-80fa-405f-8f65-8b8b9b5efbd0"
-      }
-    },
-    {
-      "key": "94872738-cd77-42ad-bc13-71cf2aa70bd1",
-      "position": 1,
-      "properties": {
-        "progression_name": "Debugging with Console.log"
-      },
-      "seeding_key": {
-        "activity_section.key": "94872738-cd77-42ad-bc13-71cf2aa70bd1",
-        "lesson_activity.key": "dc847bb5-d163-42b9-be27-318bd28b47d9"
-      }
-    },
-    {
-      "key": "799fbc93-10ca-4271-9dad-6fe987283a7e",
-      "position": 2,
-      "properties": {
-        "progression_name": "Making a Multi-Screen Chaser Game v.2"
-      },
-      "seeding_key": {
-        "activity_section.key": "799fbc93-10ca-4271-9dad-6fe987283a7e",
-        "lesson_activity.key": "dc847bb5-d163-42b9-be27-318bd28b47d9"
-      }
-    },
-    {
-      "key": "83945bbe-cadb-4ced-bbab-84c3cd27e705",
-      "position": 3,
-      "properties": {
-        "name": "Project: Multi-Screen Chaser Game",
-        "progression_name": "Project: Multi-Screen Chaser Game"
-      },
-      "seeding_key": {
-        "activity_section.key": "83945bbe-cadb-4ced-bbab-84c3cd27e705",
-        "lesson_activity.key": "dc847bb5-d163-42b9-be27-318bd28b47d9"
-      }
-    },
-    {
-      "key": "39e3e0c5-50fa-4721-b87a-a9edb5e0e5be",
-      "position": 1,
-      "properties": {
-        "progression_name": "Introduction to Variables - Part 1"
-      },
-      "seeding_key": {
-        "activity_section.key": "39e3e0c5-50fa-4721-b87a-a9edb5e0e5be",
-        "lesson_activity.key": "5baa0caa-ff72-42b8-9f4f-fe4840441cb6"
-      }
-    },
-    {
-      "key": "389b8ff6-0688-414d-94dc-c9847a2e0a10",
-      "position": 2,
-      "properties": {
-        "progression_name": "Basic Mechanics of Variables"
-      },
-      "seeding_key": {
-        "activity_section.key": "389b8ff6-0688-414d-94dc-c9847a2e0a10",
-        "lesson_activity.key": "5baa0caa-ff72-42b8-9f4f-fe4840441cb6"
-      }
-    },
-    {
-      "key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7",
-      "position": 3,
-      "properties": {
-        "progression_name": "Other Ways to Assign Values to Variables"
-      },
-      "seeding_key": {
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7",
-        "lesson_activity.key": "5baa0caa-ff72-42b8-9f4f-fe4840441cb6"
-      }
-    },
-    {
-      "key": "aa794730-4582-492b-baac-3bdedd66974f",
-      "position": 4,
-      "properties": {
-        "progression_name": "Introduction to Variables - Part 2"
-      },
-      "seeding_key": {
-        "activity_section.key": "aa794730-4582-492b-baac-3bdedd66974f",
-        "lesson_activity.key": "5baa0caa-ff72-42b8-9f4f-fe4840441cb6"
-      }
-    },
-    {
-      "key": "48cab23e-ed10-46d2-8e07-dfd5a53227aa",
-      "position": 5,
-      "properties": {
-        "name": "The Mental Model for Variables",
-        "progression_name": "The Mental Model for Variables"
-      },
-      "seeding_key": {
-        "activity_section.key": "48cab23e-ed10-46d2-8e07-dfd5a53227aa",
-        "lesson_activity.key": "5baa0caa-ff72-42b8-9f4f-fe4840441cb6"
-      }
-    },
-    {
-      "key": "07d4c0b8-ddfd-4842-a06d-cc77133b2737",
-      "position": 1,
-      "properties": {
-        "progression_name": "Clicker Game Demonstration"
-      },
-      "seeding_key": {
-        "activity_section.key": "07d4c0b8-ddfd-4842-a06d-cc77133b2737",
-        "lesson_activity.key": "06346449-eecc-4f67-a0a4-93c084f304ed"
-      }
-    },
-    {
-      "key": "c9c1eb8b-d1da-4b47-9460-83c61874c25d",
-      "position": 2,
-      "properties": {
-        "progression_name": "AppLab Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "c9c1eb8b-d1da-4b47-9460-83c61874c25d",
-        "lesson_activity.key": "06346449-eecc-4f67-a0a4-93c084f304ed"
-      }
-    },
-    {
-      "key": "0f3246bf-5db6-41f5-a50d-b3b584a41baf",
-      "position": 3,
-      "properties": {
-        "progression_name": "Debugging Variables"
-      },
-      "seeding_key": {
-        "activity_section.key": "0f3246bf-5db6-41f5-a50d-b3b584a41baf",
-        "lesson_activity.key": "06346449-eecc-4f67-a0a4-93c084f304ed"
-      }
-    },
-    {
-      "key": "a15efcb2-ee82-4236-81db-cc4476c13434",
-      "position": 4,
-      "properties": {
-        "name": "Using Variables",
-        "progression_name": "Using Variables"
-      },
-      "seeding_key": {
-        "activity_section.key": "a15efcb2-ee82-4236-81db-cc4476c13434",
-        "lesson_activity.key": "06346449-eecc-4f67-a0a4-93c084f304ed"
-      }
-    },
-    {
-      "key": "4105c85e-d894-4026-8020-831d92d7432d",
-      "position": 1,
-      "properties": {
-        "name": "Simple Decisions with if-statements",
-        "progression_name": "Simple Decisions with if-statements"
-      },
-      "seeding_key": {
-        "activity_section.key": "4105c85e-d894-4026-8020-831d92d7432d",
-        "lesson_activity.key": "ccd45bcf-697b-479e-9bdf-2a0a4580f591"
-      }
-    },
-    {
-      "key": "b457b042-ae34-4fea-9140-fa585dbf3cbc",
-      "position": 1,
-      "properties": {
-        "progression_name": "Mad Lib Demonstration"
-      },
-      "seeding_key": {
-        "activity_section.key": "b457b042-ae34-4fea-9140-fa585dbf3cbc",
-        "lesson_activity.key": "b08397b8-6810-4c47-9b80-1aa8c45c11d5"
-      }
-    },
-    {
-      "key": "2b0d8439-d7f7-47e5-a947-ae65cce87abf",
-      "position": 2,
-      "properties": {
-        "progression_name": "Strings in Apps"
-      },
-      "seeding_key": {
-        "activity_section.key": "2b0d8439-d7f7-47e5-a947-ae65cce87abf",
-        "lesson_activity.key": "b08397b8-6810-4c47-9b80-1aa8c45c11d5"
-      }
-    },
-    {
-      "key": "4e737bd4-f1ae-48c9-9749-3a730820d79d",
-      "position": 3,
-      "properties": {
-        "name": "Mad Lib Game",
-        "progression_name": "Mad Lib Game"
-      },
-      "seeding_key": {
-        "activity_section.key": "4e737bd4-f1ae-48c9-9749-3a730820d79d",
-        "lesson_activity.key": "b08397b8-6810-4c47-9b80-1aa8c45c11d5"
-      }
-    },
-    {
-      "key": "31c3f472-6e32-44a9-9ba9-6a90ef107954",
-      "position": 1,
-      "properties": {
-        "progression_name": "Introduction to Conditionals: Boolean Expressions"
-      },
-      "seeding_key": {
-        "activity_section.key": "31c3f472-6e32-44a9-9ba9-6a90ef107954",
-        "lesson_activity.key": "b2de0a5e-872e-4b45-aaf3-dc497b9e675b"
-      }
-    },
-    {
-      "key": "479b5365-ddcb-48df-8fa8-a755d9b084a0",
-      "position": 2,
-      "properties": {
-        "progression_name": "Boolean Expressions and Comparison Operators"
-      },
-      "seeding_key": {
-        "activity_section.key": "479b5365-ddcb-48df-8fa8-a755d9b084a0",
-        "lesson_activity.key": "b2de0a5e-872e-4b45-aaf3-dc497b9e675b"
-      }
-    },
-    {
-      "key": "327a76a2-e1a4-4a39-8ecb-fd5482d79800",
-      "position": 3,
-      "properties": {
-        "progression_name": "Comparison Operators Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "327a76a2-e1a4-4a39-8ecb-fd5482d79800",
-        "lesson_activity.key": "b2de0a5e-872e-4b45-aaf3-dc497b9e675b"
-      }
-    },
-    {
-      "key": "a43f9af7-f80a-4be6-a445-dd0158bee159",
-      "position": 4,
-      "properties": {
-        "progression_name": "Introduction to Conditionals: if Statements"
-      },
-      "seeding_key": {
-        "activity_section.key": "a43f9af7-f80a-4be6-a445-dd0158bee159",
-        "lesson_activity.key": "b2de0a5e-872e-4b45-aaf3-dc497b9e675b"
-      }
-    },
-    {
-      "key": "e06a2303-375f-4ce4-9525-59df2b7f32fd",
-      "position": 5,
-      "properties": {
-        "progression_name": "if Statements"
-      },
-      "seeding_key": {
-        "activity_section.key": "e06a2303-375f-4ce4-9525-59df2b7f32fd",
-        "lesson_activity.key": "b2de0a5e-872e-4b45-aaf3-dc497b9e675b"
-      }
-    },
-    {
-      "key": "80726e85-2fa6-4a62-ba0f-47b02b8c7604",
-      "position": 6,
-      "properties": {
-        "progression_name": "Introduction to Conditionals: if-else Statements"
-      },
-      "seeding_key": {
-        "activity_section.key": "80726e85-2fa6-4a62-ba0f-47b02b8c7604",
-        "lesson_activity.key": "b2de0a5e-872e-4b45-aaf3-dc497b9e675b"
-      }
-    },
-    {
-      "key": "22942368-5ef5-4db2-8056-77444426e67e",
-      "position": 7,
-      "properties": {
-        "progression_name": "if-else Statements"
-      },
-      "seeding_key": {
-        "activity_section.key": "22942368-5ef5-4db2-8056-77444426e67e",
-        "lesson_activity.key": "b2de0a5e-872e-4b45-aaf3-dc497b9e675b"
-      }
-    },
-    {
-      "key": "0985fb9d-192f-4c00-a84b-0b0d70f581ce",
-      "position": 8,
-      "properties": {
-        "name": "Dropdown Menus",
-        "progression_name": "Dropdown Menus"
-      },
-      "seeding_key": {
-        "activity_section.key": "0985fb9d-192f-4c00-a84b-0b0d70f581ce",
-        "lesson_activity.key": "b2de0a5e-872e-4b45-aaf3-dc497b9e675b"
-      }
-    },
-    {
-      "key": "59bf788d-c45d-4e97-b341-cb96e943d4cc",
-      "position": 1,
-      "properties": {
-        "progression_name": "Introduction to Conditionals: if-else-if Statements"
-      },
-      "seeding_key": {
-        "activity_section.key": "59bf788d-c45d-4e97-b341-cb96e943d4cc",
-        "lesson_activity.key": "3df9ef28-d51f-4b41-b7db-e153d2bae053"
-      }
-    },
-    {
-      "key": "3fbd492d-1e17-4070-8250-4fbf119a2313",
-      "position": 2,
-      "properties": {
-        "progression_name": "How \"if-else-if\" Works"
-      },
-      "seeding_key": {
-        "activity_section.key": "3fbd492d-1e17-4070-8250-4fbf119a2313",
-        "lesson_activity.key": "3df9ef28-d51f-4b41-b7db-e153d2bae053"
-      }
-    },
-    {
-      "key": "c1f6248c-7009-4f91-94b8-ec25470d6167",
-      "position": 3,
-      "properties": {
-        "progression_name": "Introduction to Conditionals: Compound Boolean Expressions"
-      },
-      "seeding_key": {
-        "activity_section.key": "c1f6248c-7009-4f91-94b8-ec25470d6167",
-        "lesson_activity.key": "3df9ef28-d51f-4b41-b7db-e153d2bae053"
-      }
-    },
-    {
-      "key": "bdf2f041-b403-4009-aac7-eb30d87955c8",
-      "position": 4,
-      "properties": {
-        "progression_name": "How the Boolean &&, || and ! Operators Work"
-      },
-      "seeding_key": {
-        "activity_section.key": "bdf2f041-b403-4009-aac7-eb30d87955c8",
-        "lesson_activity.key": "3df9ef28-d51f-4b41-b7db-e153d2bae053"
-      }
-    },
-    {
-      "key": "b86deb3e-eb2e-4e69-80d4-4afa9102769c",
-      "position": 5,
-      "properties": {
-        "name": "How Compound Boolean Expressions Work",
-        "progression_name": "How Compound Boolean Expressions Work"
-      },
-      "seeding_key": {
-        "activity_section.key": "b86deb3e-eb2e-4e69-80d4-4afa9102769c",
-        "lesson_activity.key": "3df9ef28-d51f-4b41-b7db-e153d2bae053"
-      }
-    },
-    {
-      "key": "a7a9b733-faee-49a4-9e39-1d6ae0de6036",
-      "position": 1,
-      "properties": {
-        "progression_name": "Color Sleuth - Demo and Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "a7a9b733-faee-49a4-9e39-1d6ae0de6036",
-        "lesson_activity.key": "8cd8eb5e-c7bb-4dfa-8943-ac5cff3475d7"
-      }
-    },
-    {
-      "key": "486ce0e0-5392-4188-a7ae-6f7c160fd025",
-      "position": 2,
-      "properties": {
-        "progression_name": "RGB Colors"
-      },
-      "seeding_key": {
-        "activity_section.key": "486ce0e0-5392-4188-a7ae-6f7c160fd025",
-        "lesson_activity.key": "8cd8eb5e-c7bb-4dfa-8943-ac5cff3475d7"
-      }
-    },
-    {
-      "key": "380d7b64-cffd-45e8-8f15-8ec77d2c4a72",
-      "position": 3,
-      "properties": {
-        "progression_name": "Specifying Colors"
-      },
-      "seeding_key": {
-        "activity_section.key": "380d7b64-cffd-45e8-8f15-8ec77d2c4a72",
-        "lesson_activity.key": "8cd8eb5e-c7bb-4dfa-8943-ac5cff3475d7"
-      }
-    },
-    {
-      "key": "292f6fbc-888d-4500-8618-655ed691adab",
-      "position": 4,
-      "properties": {
-        "progression_name": "Using setProperty"
-      },
-      "seeding_key": {
-        "activity_section.key": "292f6fbc-888d-4500-8618-655ed691adab",
-        "lesson_activity.key": "8cd8eb5e-c7bb-4dfa-8943-ac5cff3475d7"
-      }
-    },
-    {
-      "key": "688b606a-6924-4881-8fcc-08eaefa23e84",
-      "position": 5,
-      "properties": {
-        "progression_name": "How to Pick a Random Button"
-      },
-      "seeding_key": {
-        "activity_section.key": "688b606a-6924-4881-8fcc-08eaefa23e84",
-        "lesson_activity.key": "8cd8eb5e-c7bb-4dfa-8943-ac5cff3475d7"
-      }
-    },
-    {
-      "key": "129b88e9-6e94-411b-9aac-fc6838fe0eab",
-      "position": 6,
-      "properties": {
-        "progression_name": "How to Make a Random Color"
-      },
-      "seeding_key": {
-        "activity_section.key": "129b88e9-6e94-411b-9aac-fc6838fe0eab",
-        "lesson_activity.key": "8cd8eb5e-c7bb-4dfa-8943-ac5cff3475d7"
-      }
-    },
-    {
-      "key": "e648581a-a96c-4aff-9429-93eab9a72699",
-      "position": 7,
-      "properties": {
-        "progression_name": "Functions in Your Color Sleuth App"
-      },
-      "seeding_key": {
-        "activity_section.key": "e648581a-a96c-4aff-9429-93eab9a72699",
-        "lesson_activity.key": "8cd8eb5e-c7bb-4dfa-8943-ac5cff3475d7"
-      }
-    },
-    {
-      "key": "0f8f8bdc-fd28-454a-a57e-b8d27cd44a70",
-      "position": 8,
-      "properties": {
-        "progression_name": "Activating Buttons"
-      },
-      "seeding_key": {
-        "activity_section.key": "0f8f8bdc-fd28-454a-a57e-b8d27cd44a70",
-        "lesson_activity.key": "8cd8eb5e-c7bb-4dfa-8943-ac5cff3475d7"
-      }
-    },
-    {
-      "key": "ca2f8ca9-7f65-484c-a2f9-e7c721c875aa",
-      "position": 9,
-      "properties": {
-        "progression_name": "How to Switch Player Turns"
-      },
-      "seeding_key": {
-        "activity_section.key": "ca2f8ca9-7f65-484c-a2f9-e7c721c875aa",
-        "lesson_activity.key": "8cd8eb5e-c7bb-4dfa-8943-ac5cff3475d7"
-      }
-    },
-    {
-      "key": "b3b00067-e5e8-498d-910f-a19c203e0626",
-      "position": 10,
-      "properties": {
-        "progression_name": "Updating the Score"
-      },
-      "seeding_key": {
-        "activity_section.key": "b3b00067-e5e8-498d-910f-a19c203e0626",
-        "lesson_activity.key": "8cd8eb5e-c7bb-4dfa-8943-ac5cff3475d7"
-      }
-    },
-    {
-      "key": "1b32c4d8-3433-4e92-ae0a-34ddd943add1",
-      "position": 11,
-      "properties": {
-        "name": "Project: Color Sleuth",
-        "progression_name": "Project: Color Sleuth"
-      },
-      "seeding_key": {
-        "activity_section.key": "1b32c4d8-3433-4e92-ae0a-34ddd943add1",
-        "lesson_activity.key": "8cd8eb5e-c7bb-4dfa-8943-ac5cff3475d7"
-      }
-    },
-    {
-      "key": "bde66413-dee8-49fc-994d-c9251e0e7d85",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "bde66413-dee8-49fc-994d-c9251e0e7d85",
-        "lesson_activity.key": "8c68c2f2-d625-4005-8595-7aed6f5a0f59"
-      }
-    }
+
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual1"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -935,8 +226,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "261bc3d7-99ae-4ed0-8e5d-8ab157892508"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_HOC_virtual1"
@@ -945,9 +235,12 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual2"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -957,8 +250,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "261bc3d7-99ae-4ed0-8e5d-8ab157892508"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_HOC_virtual2"
@@ -967,9 +259,12 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual3"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -979,8 +274,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "261bc3d7-99ae-4ed0-8e5d-8ab157892508"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_HOC_virtual3"
@@ -989,9 +283,12 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual4"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -1001,8 +298,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "261bc3d7-99ae-4ed0-8e5d-8ab157892508"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_HOC_virtual4"
@@ -1011,9 +307,12 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual5"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -1023,8 +322,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "977eba4f-382b-47d7-a2de-1a624faa5d70"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_HOC_virtual5"
@@ -1033,9 +331,12 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual6"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -1045,8 +346,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "977eba4f-382b-47d7-a2de-1a624faa5d70"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_HOC_virtual6"
@@ -1055,9 +355,12 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual7"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -1067,8 +370,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "977eba4f-382b-47d7-a2de-1a624faa5d70"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_HOC_virtual7"
@@ -1077,9 +379,12 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual8"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -1089,8 +394,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e56d036f-07b2-44b2-bbf4-988e7af06e77"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_HOC_virtual8"
@@ -1099,9 +403,12 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual9"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -1111,8 +418,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e56d036f-07b2-44b2-bbf4-988e7af06e77"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_HOC_virtual9"
@@ -1121,9 +427,12 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual10"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -1133,8 +442,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "1aaf83fe-7a8c-4857-a1fc-2beef36b1549"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_HOC_virtual10"
@@ -1143,9 +451,12 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual11"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -1155,8 +466,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "1aaf83fe-7a8c-4857-a1fc-2beef36b1549"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_HOC_virtual11"
@@ -1165,9 +475,12 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual12"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -1177,8 +490,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "1aaf83fe-7a8c-4857-a1fc-2beef36b1549"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_HOC_virtual12"
@@ -1187,9 +499,12 @@
     {
       "chapter": 13,
       "position": 13,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual13"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -1199,8 +514,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "1aaf83fe-7a8c-4857-a1fc-2beef36b1549"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_HOC_virtual13"
@@ -1209,9 +523,12 @@
     {
       "chapter": 14,
       "position": 14,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual15"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -1221,8 +538,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "1aaf83fe-7a8c-4857-a1fc-2beef36b1549"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_HOC_virtual15"
@@ -1231,9 +547,12 @@
     {
       "chapter": 15,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_video_new_debugging_virtual"
+        ],
         "progression": "Intro to Debugging and Common Problems"
       },
       "bonus": false,
@@ -1243,8 +562,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "f0cfda2f-3d2e-409e-b5c8-bf34477c3d50"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_video_new_debugging_virtual"
@@ -1253,9 +571,12 @@
     {
       "chapter": 16,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_predict_applab_onEventWithWrongID_virtual"
+        ],
         "progression": "Intro to Debugging and Common Problems"
       },
       "bonus": false,
@@ -1265,8 +586,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "f0cfda2f-3d2e-409e-b5c8-bf34477c3d50"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_predict_applab_onEventWithWrongID_virtual"
@@ -1275,9 +595,12 @@
     {
       "chapter": 17,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_Debugging predict unexpected behavior - two onEvents to _virtual"
+        ],
         "progression": "Intro to Debugging and Common Problems"
       },
       "bonus": false,
@@ -1287,8 +610,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "f0cfda2f-3d2e-409e-b5c8-bf34477c3d50"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_Debugging predict unexpected behavior - two onEvents to _virtual"
@@ -1297,9 +619,12 @@
     {
       "chapter": 18,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L13 - Debugging IDs case sensitive_virtual"
+        ],
         "progression": "Intro to Debugging and Common Problems"
       },
       "bonus": false,
@@ -1309,8 +634,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "f0cfda2f-3d2e-409e-b5c8-bf34477c3d50"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L13 - Debugging IDs case sensitive_virtual"
@@ -1319,9 +643,12 @@
     {
       "chapter": 19,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L13 - Debugging 3_virtual"
+        ],
         "progression": "Intro to Debugging and Common Problems"
       },
       "bonus": false,
@@ -1331,8 +658,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "f0cfda2f-3d2e-409e-b5c8-bf34477c3d50"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L13 - Debugging 3_virtual"
@@ -1341,9 +667,12 @@
     {
       "chapter": 20,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How setPosition and screen dimensions work_2018_2019_virtual"
+        ],
         "progression": "How setPosition and Screen Dimensions Work"
       },
       "bonus": false,
@@ -1353,8 +682,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b73912a8-1492-46cf-8808-69d306e21de8"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "How setPosition and screen dimensions work_2018_2019_virtual"
@@ -1363,9 +691,12 @@
     {
       "chapter": 21,
       "position": 7,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_setPosition to fixed location_virtual"
+        ],
         "progression": "How setPosition and Screen Dimensions Work"
       },
       "bonus": false,
@@ -1375,8 +706,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b73912a8-1492-46cf-8808-69d306e21de8"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_setPosition to fixed location_virtual"
@@ -1385,9 +715,12 @@
     {
       "chapter": 22,
       "position": 8,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - setPosition to move button_virtual"
+        ],
         "progression": "How setPosition and Screen Dimensions Work"
       },
       "bonus": false,
@@ -1397,8 +730,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b73912a8-1492-46cf-8808-69d306e21de8"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L16 - setPosition to move button_virtual"
@@ -1407,9 +739,12 @@
     {
       "chapter": 23,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_AddLabelToChaserGame_virtual"
+        ],
         "progression": "Using Labels"
       },
       "bonus": false,
@@ -1419,8 +754,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "99d9d571-065c-424a-8796-6ae5b017d5ed"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_AddLabelToChaserGame_virtual"
@@ -1429,9 +763,12 @@
     {
       "chapter": 24,
       "position": 10,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_playWithEventTypes_virtual"
+        ],
         "progression": "Event Types"
       },
       "bonus": false,
@@ -1441,8 +778,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "c09c4372-7638-4e71-8870-34e7c40e7bf7"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_playWithEventTypes_virtual"
@@ -1451,9 +787,12 @@
     {
       "chapter": 25,
       "position": 11,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How Images Work_2018_2019_virtual"
+        ],
         "progression": "How Images Work"
       },
       "bonus": false,
@@ -1463,8 +802,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "baa6ad21-c00e-4040-9e80-29ebe7b10486"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "How Images Work_2018_2019_virtual"
@@ -1473,9 +811,12 @@
     {
       "chapter": 26,
       "position": 12,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Finalize Your Chaser Game v.1_virtual"
+        ],
         "progression": "Chaser Game v.1"
       },
       "bonus": false,
@@ -1485,8 +826,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "25c4eb02-685f-4b98-a266-7bdf33597da9"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "Finalize Your Chaser Game v.1_virtual"
@@ -1495,9 +835,12 @@
     {
       "chapter": 27,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 First Time Console.log_virtual"
+        ],
         "progression": "Debugging with Console.log"
       },
       "bonus": false,
@@ -1507,8 +850,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "94872738-cd77-42ad-bc13-71cf2aa70bd1"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5 First Time Console.log_virtual"
@@ -1517,9 +859,12 @@
     {
       "chapter": 28,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 console.log in event v. global_virtual"
+        ],
         "progression": "Debugging with Console.log"
       },
       "bonus": false,
@@ -1529,8 +874,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "94872738-cd77-42ad-bc13-71cf2aa70bd1"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5 console.log in event v. global_virtual"
@@ -1539,9 +883,12 @@
     {
       "chapter": 29,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 console.log debug when mouse events happen_virtual"
+        ],
         "progression": "Debugging with Console.log"
       },
       "bonus": false,
@@ -1551,8 +898,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "94872738-cd77-42ad-bc13-71cf2aa70bd1"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5 console.log debug when mouse events happen_virtual"
@@ -1561,9 +907,12 @@
     {
       "chapter": 30,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Debugging Overlapping Objects and Screen Events_virtual"
+        ],
         "progression": "Debugging with Console.log"
       },
       "bonus": false,
@@ -1573,8 +922,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "94872738-cd77-42ad-bc13-71cf2aa70bd1"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5 Debugging Overlapping Objects and Screen Events_virtual"
@@ -1583,9 +931,12 @@
     {
       "chapter": 31,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Debugging with Console.log_2018_2019_virtual"
+        ],
         "progression": "Debugging with Console.log"
       },
       "bonus": false,
@@ -1595,8 +946,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "94872738-cd77-42ad-bc13-71cf2aa70bd1"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "Debugging with Console.log_2018_2019_virtual"
@@ -1605,9 +955,12 @@
     {
       "chapter": 32,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Tips For Working on Your Own_2018_2019_virtual"
+        ],
         "progression": "Making a Multi-Screen Chaser Game v.2"
       },
       "bonus": false,
@@ -1617,8 +970,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "799fbc93-10ca-4271-9dad-6fe987283a7e"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "Tips For Working on Your Own_2018_2019_virtual"
@@ -1627,9 +979,12 @@
     {
       "chapter": 33,
       "position": 7,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making a Multi Screen Chaser Game v.2_2018_2019_virtual"
+        ],
         "progression": "Making a Multi-Screen Chaser Game v.2"
       },
       "bonus": false,
@@ -1639,8 +994,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "799fbc93-10ca-4271-9dad-6fe987283a7e"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "Making a Multi Screen Chaser Game v.2_2018_2019_virtual"
@@ -1649,9 +1003,12 @@
     {
       "chapter": 34,
       "position": 8,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Add welcome screen to chaser game_virtual"
+        ],
         "progression": "Making a Multi-Screen Chaser Game v.2"
       },
       "bonus": false,
@@ -1661,8 +1018,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "799fbc93-10ca-4271-9dad-6fe987283a7e"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5 Add welcome screen to chaser game_virtual"
@@ -1671,9 +1027,12 @@
     {
       "chapter": 35,
       "position": 9,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Add full screen image to bg of chaser game_virtual"
+        ],
         "progression": "Making a Multi-Screen Chaser Game v.2"
       },
       "bonus": false,
@@ -1683,8 +1042,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "799fbc93-10ca-4271-9dad-6fe987283a7e"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5 Add full screen image to bg of chaser game_virtual"
@@ -1693,9 +1051,12 @@
     {
       "chapter": 36,
       "position": 10,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Add game over screen_virtual"
+        ],
         "progression": "Project: Multi-Screen Chaser Game"
       },
       "bonus": false,
@@ -1705,8 +1066,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "83945bbe-cadb-4ced-bbab-84c3cd27e705"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5 Add game over screen_virtual"
@@ -1715,9 +1075,12 @@
     {
       "chapter": 37,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Variables - Part 1_virtual"
+        ],
         "progression": "Introduction to Variables - Part 1"
       },
       "bonus": false,
@@ -1727,8 +1090,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "39e3e0c5-50fa-4721-b87a-a9edb5e0e5be"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "Introduction to Variables - Part 1_virtual"
@@ -1737,9 +1099,12 @@
     {
       "chapter": 38,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L19 - three basic ops of variables_virtual"
+        ],
         "progression": "Basic Mechanics of Variables"
       },
       "bonus": false,
@@ -1749,8 +1114,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "389b8ff6-0688-414d-94dc-c9847a2e0a10"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L19 - three basic ops of variables_virtual"
@@ -1759,9 +1123,12 @@
     {
       "chapter": 39,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L19 - fix the var name syntax error v2_virtual"
+        ],
         "progression": "Basic Mechanics of Variables"
       },
       "bonus": false,
@@ -1771,8 +1138,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "389b8ff6-0688-414d-94dc-c9847a2e0a10"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L19 - fix the var name syntax error v2_virtual"
@@ -1781,9 +1147,12 @@
     {
       "chapter": 40,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L19 - write var and string with same name v2_virtual"
+        ],
         "progression": "Basic Mechanics of Variables"
       },
       "bonus": false,
@@ -1793,8 +1162,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "389b8ff6-0688-414d-94dc-c9847a2e0a10"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L19 - write var and string with same name v2_virtual"
@@ -1803,9 +1171,12 @@
     {
       "chapter": 41,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3- Variables - Create And Assign_virtual"
+        ],
         "progression": "Basic Mechanics of Variables"
       },
       "bonus": false,
@@ -1815,8 +1186,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "389b8ff6-0688-414d-94dc-c9847a2e0a10"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3- Variables - Create And Assign_virtual"
@@ -1825,9 +1195,12 @@
     {
       "chapter": 42,
       "position": 6,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3- Variables - Text Mode_virtual"
+        ],
         "progression": "Basic Mechanics of Variables"
       },
       "bonus": false,
@@ -1837,8 +1210,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "389b8ff6-0688-414d-94dc-c9847a2e0a10"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3- Variables - Text Mode_virtual"
@@ -1847,9 +1219,12 @@
     {
       "chapter": 43,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Variables - Set to Expression_virtual"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -1859,8 +1234,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3 - Variables - Set to Expression_virtual"
@@ -1869,9 +1243,12 @@
     {
       "chapter": 44,
       "position": 8,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - concatenate simple_virtual"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -1881,8 +1258,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L14 - concatenate simple_virtual"
@@ -1891,9 +1267,12 @@
     {
       "chapter": 45,
       "position": 9,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - concatenate simple2_virtual"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -1903,8 +1282,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L14 - concatenate simple2_virtual"
@@ -1913,9 +1291,12 @@
     {
       "chapter": 46,
       "position": 10,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Variables - Set to Expression with Other Variables_virtual"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -1925,8 +1306,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3 - Variables - Set to Expression with Other Variables_virtual"
@@ -1935,9 +1315,12 @@
     {
       "chapter": 47,
       "position": 11,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - Assigning Random Value_virtual"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -1947,8 +1330,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L14 - Assigning Random Value_virtual"
@@ -1957,9 +1339,12 @@
     {
       "chapter": 48,
       "position": 12,
-      "activity_section_position": 6,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - Mini Calculator embed_virtual"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -1969,8 +1354,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L14 - Mini Calculator embed_virtual"
@@ -1979,9 +1363,12 @@
     {
       "chapter": 49,
       "position": 13,
-      "activity_section_position": 7,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - User Input Division calculator_virtual"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -1991,8 +1378,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L14 - User Input Division calculator_virtual"
@@ -2001,9 +1387,12 @@
     {
       "chapter": 50,
       "position": 14,
-      "activity_section_position": 8,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L19 - test reassignment of two vars_virtual"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -2013,8 +1402,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L19 - test reassignment of two vars_virtual"
@@ -2023,9 +1411,12 @@
     {
       "chapter": 51,
       "position": 15,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Variables - Part 2_virtual"
+        ],
         "progression": "Introduction to Variables - Part 2"
       },
       "bonus": false,
@@ -2035,8 +1426,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "aa794730-4582-492b-baac-3bdedd66974f"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "Introduction to Variables - Part 2_virtual"
@@ -2045,9 +1435,12 @@
     {
       "chapter": 52,
       "position": 16,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Mental Model for Variables_2018_2019_virtual"
+        ],
         "progression": "The Mental Model for Variables"
       },
       "bonus": false,
@@ -2057,8 +1450,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "48cab23e-ed10-46d2-8e07-dfd5a53227aa"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "The Mental Model for Variables_2018_2019_virtual"
@@ -2067,9 +1459,12 @@
     {
       "chapter": 53,
       "position": 17,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - Variable ReAssignment pt2_virtual"
+        ],
         "progression": "The Mental Model for Variables"
       },
       "bonus": false,
@@ -2079,8 +1474,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "48cab23e-ed10-46d2-8e07-dfd5a53227aa"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L14 - Variable ReAssignment pt2_virtual"
@@ -2089,9 +1483,12 @@
     {
       "chapter": 54,
       "position": 18,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L19 - variable reassignment challenge pt2_virtual"
+        ],
         "progression": "The Mental Model for Variables"
       },
       "bonus": false,
@@ -2101,8 +1498,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "48cab23e-ed10-46d2-8e07-dfd5a53227aa"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L19 - variable reassignment challenge pt2_virtual"
@@ -2111,9 +1507,12 @@
     {
       "chapter": 55,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 full clicker demo_virtual"
+        ],
         "progression": "Clicker Game Demonstration"
       },
       "bonus": false,
@@ -2123,8 +1522,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "07d4c0b8-ddfd-4842-a06d-cc77133b2737"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3 full clicker demo_virtual"
@@ -2133,9 +1531,12 @@
     {
       "chapter": 56,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - practice with setText_virtual"
+        ],
         "progression": "AppLab Practice"
       },
       "bonus": false,
@@ -2145,8 +1546,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "c9c1eb8b-d1da-4b47-9460-83c61874c25d"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L15 - practice with setText_virtual"
@@ -2155,9 +1555,12 @@
     {
       "chapter": 57,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - DEMO up down count practice app_virtual"
+        ],
         "progression": "AppLab Practice"
       },
       "bonus": false,
@@ -2167,8 +1570,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "c9c1eb8b-d1da-4b47-9460-83c61874c25d"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L15 - DEMO up down count practice app_virtual"
@@ -2177,9 +1579,12 @@
     {
       "chapter": 58,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - global var example count up_virtual"
+        ],
         "progression": "AppLab Practice"
       },
       "bonus": false,
@@ -2189,8 +1594,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "c9c1eb8b-d1da-4b47-9460-83c61874c25d"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L15 - global var example count up_virtual"
@@ -2199,9 +1603,12 @@
     {
       "chapter": 59,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - variable scoping problem debugging_virtual"
+        ],
         "progression": "AppLab Practice"
       },
       "bonus": false,
@@ -2211,8 +1618,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "c9c1eb8b-d1da-4b47-9460-83c61874c25d"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L15 - variable scoping problem debugging_virtual"
@@ -2221,9 +1627,12 @@
     {
       "chapter": 60,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Variable Scope: Local vs. Global_2018_2019_virtual"
+        ],
         "progression": "Debugging Variables"
       },
       "bonus": false,
@@ -2233,8 +1642,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0f3246bf-5db6-41f5-a50d-b3b584a41baf"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "Variable Scope: Local vs. Global_2018_2019_virtual"
@@ -2243,9 +1651,12 @@
     {
       "chapter": 61,
       "position": 7,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - add code to make count down work_virtual"
+        ],
         "progression": "Debugging Variables"
       },
       "bonus": false,
@@ -2255,8 +1666,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0f3246bf-5db6-41f5-a50d-b3b584a41baf"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L15 - add code to make count down work_virtual"
@@ -2265,9 +1675,12 @@
     {
       "chapter": 62,
       "position": 8,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - count upDown bug forget to set text_virtual"
+        ],
         "progression": "Debugging Variables"
       },
       "bonus": false,
@@ -2277,8 +1690,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0f3246bf-5db6-41f5-a50d-b3b584a41baf"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L15 - count upDown bug forget to set text_virtual"
@@ -2287,9 +1699,12 @@
     {
       "chapter": 63,
       "position": 9,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - count upDown bug logic error wrong update_virtual"
+        ],
         "progression": "Debugging Variables"
       },
       "bonus": false,
@@ -2299,8 +1714,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0f3246bf-5db6-41f5-a50d-b3b584a41baf"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L15 - count upDown bug logic error wrong update_virtual"
@@ -2309,9 +1723,12 @@
     {
       "chapter": 64,
       "position": 10,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - mini clicker update score_virtual"
+        ],
         "progression": "Using Variables"
       },
       "bonus": false,
@@ -2321,8 +1738,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "a15efcb2-ee82-4236-81db-cc4476c13434"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L15 - mini clicker update score_virtual"
@@ -2331,9 +1747,12 @@
     {
       "chapter": 65,
       "position": 11,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 click add lives_virtual"
+        ],
         "progression": "Using Variables"
       },
       "bonus": false,
@@ -2343,8 +1762,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "a15efcb2-ee82-4236-81db-cc4476c13434"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L15 click add lives_virtual"
@@ -2353,9 +1771,12 @@
     {
       "chapter": 66,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Simple Decisions with if-statements_2018_2019_virtual"
+        ],
         "progression": "Simple Decisions with if-statements"
       },
       "bonus": false,
@@ -2365,8 +1786,7 @@
         ],
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4105c85e-d894-4026-8020-831d92d7432d"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "Simple Decisions with if-statements_2018_2019_virtual"
@@ -2375,9 +1795,12 @@
     {
       "chapter": 67,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - Simple If-statements in UpDown App_virtual"
+        ],
         "progression": "Simple Decisions with if-statements"
       },
       "bonus": false,
@@ -2387,8 +1810,7 @@
         ],
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4105c85e-d894-4026-8020-831d92d7432d"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L15 - Simple If-statements in UpDown App_virtual"
@@ -2397,9 +1819,12 @@
     {
       "chapter": 68,
       "position": 3,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - Add reset button to UpDown app_virtual"
+        ],
         "progression": "Simple Decisions with if-statements"
       },
       "bonus": false,
@@ -2409,8 +1834,7 @@
         ],
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4105c85e-d894-4026-8020-831d92d7432d"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L15 - Add reset button to UpDown app_virtual"
@@ -2419,9 +1843,12 @@
     {
       "chapter": 69,
       "position": 4,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - Debugging Simple If-statements =v==_virtual"
+        ],
         "progression": "Simple Decisions with if-statements"
       },
       "bonus": false,
@@ -2431,8 +1858,7 @@
         ],
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4105c85e-d894-4026-8020-831d92d7432d"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L15 - Debugging Simple If-statements =v==_virtual"
@@ -2441,9 +1867,12 @@
     {
       "chapter": 70,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - Debug forget to update var on reset in UpDown ap_virtual"
+        ],
         "progression": "Simple Decisions with if-statements"
       },
       "bonus": false,
@@ -2453,8 +1882,7 @@
         ],
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4105c85e-d894-4026-8020-831d92d7432d"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L15 - Debug forget to update var on reset in UpDown ap_virtual"
@@ -2463,9 +1891,12 @@
     {
       "chapter": 71,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 Mad Lib Demo_virtual"
+        ],
         "progression": "Mad Lib Demonstration"
       },
       "bonus": false,
@@ -2475,8 +1906,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b457b042-ae34-4fea-9140-fa585dbf3cbc"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L16 Mad Lib Demo_virtual"
@@ -2485,9 +1915,12 @@
     {
       "chapter": 72,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - introStrings_virtual"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -2497,8 +1930,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2b0d8439-d7f7-47e5-a947-ae65cce87abf"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L16 - introStrings_virtual"
@@ -2507,9 +1939,12 @@
     {
       "chapter": 73,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - doubleQuotes_virtual"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -2519,8 +1954,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2b0d8439-d7f7-47e5-a947-ae65cce87abf"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L16 - doubleQuotes_virtual"
@@ -2529,9 +1963,12 @@
     {
       "chapter": 74,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - textInput getText write_virtual"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -2541,8 +1978,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2b0d8439-d7f7-47e5-a947-ae65cce87abf"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L16 - textInput getText write_virtual"
@@ -2551,9 +1987,12 @@
     {
       "chapter": 75,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - intro getText_virtual"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -2563,8 +2002,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2b0d8439-d7f7-47e5-a947-ae65cce87abf"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L16 - intro getText_virtual"
@@ -2573,9 +2011,12 @@
     {
       "chapter": 76,
       "position": 6,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - User Input - Save getText To Variable_virtual"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -2585,8 +2026,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2b0d8439-d7f7-47e5-a947-ae65cce87abf"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3 - User Input - Save getText To Variable_virtual"
@@ -2595,9 +2035,12 @@
     {
       "chapter": 77,
       "position": 7,
-      "activity_section_position": 6,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - outputWithTextArea_virtual"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -2607,8 +2050,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2b0d8439-d7f7-47e5-a947-ae65cce87abf"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L16 - outputWithTextArea_virtual"
@@ -2617,9 +2059,12 @@
     {
       "chapter": 78,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 Mad Lib Student Setup_virtual"
+        ],
         "progression": "Mad Lib Game"
       },
       "bonus": false,
@@ -2629,8 +2074,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4e737bd4-f1ae-48c9-9749-3a730820d79d"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L16 Mad Lib Student Setup_virtual"
@@ -2639,9 +2083,12 @@
     {
       "chapter": 79,
       "position": 9,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 Mad Lib setText_virtual"
+        ],
         "progression": "Mad Lib Game"
       },
       "bonus": false,
@@ -2651,8 +2098,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4e737bd4-f1ae-48c9-9749-3a730820d79d"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L16 Mad Lib setText_virtual"
@@ -2661,9 +2107,12 @@
     {
       "chapter": 80,
       "position": 10,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 Mad Lib getText_virtual"
+        ],
         "progression": "Mad Lib Game"
       },
       "bonus": false,
@@ -2673,8 +2122,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4e737bd4-f1ae-48c9-9749-3a730820d79d"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L16 Mad Lib getText_virtual"
@@ -2683,9 +2131,12 @@
     {
       "chapter": 81,
       "position": 11,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 Mad Lib Clear Input_virtual"
+        ],
         "progression": "Mad Lib Game"
       },
       "bonus": false,
@@ -2695,8 +2146,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4e737bd4-f1ae-48c9-9749-3a730820d79d"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L16 Mad Lib Clear Input_virtual"
@@ -2705,9 +2155,12 @@
     {
       "chapter": 82,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Conditionals: Boolean Expressions_virtual"
+        ],
         "progression": "Introduction to Conditionals: Boolean Expressions"
       },
       "bonus": false,
@@ -2717,8 +2170,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "31c3f472-6e32-44a9-9ba9-6a90ef107954"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "Introduction to Conditionals: Boolean Expressions_virtual"
@@ -2727,9 +2179,12 @@
     {
       "chapter": 83,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Boolean Expressions and Comparison Operators_2018_2019_virtual"
+        ],
         "progression": "Boolean Expressions and Comparison Operators"
       },
       "bonus": false,
@@ -2739,8 +2194,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "479b5365-ddcb-48df-8fa8-a755d9b084a0"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "Boolean Expressions and Comparison Operators_2018_2019_virtual"
@@ -2749,9 +2203,12 @@
     {
       "chapter": 84,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L18 comparison operators_virtual"
+        ],
         "progression": "Comparison Operators Practice"
       },
       "bonus": false,
@@ -2761,8 +2218,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "327a76a2-e1a4-4a39-8ecb-fd5482d79800"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3L18 comparison operators_virtual"
@@ -2771,9 +2227,12 @@
     {
       "chapter": 85,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Conditionals: if Statements_virtual"
+        ],
         "progression": "Introduction to Conditionals: if Statements"
       },
       "bonus": false,
@@ -2783,8 +2242,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "a43f9af7-f80a-4be6-a445-dd0158bee159"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "Introduction to Conditionals: if Statements_virtual"
@@ -2793,9 +2251,12 @@
     {
       "chapter": 86,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How If Statements Work pt 1_2018_2019_virtual"
+        ],
         "progression": "if Statements"
       },
       "bonus": false,
@@ -2805,8 +2266,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e06a2303-375f-4ce4-9525-59df2b7f32fd"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "How If Statements Work pt 1_2018_2019_virtual"
@@ -2815,9 +2275,12 @@
     {
       "chapter": 87,
       "position": 6,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_basic if - check driving age_virtual"
+        ],
         "progression": "if Statements"
       },
       "bonus": false,
@@ -2827,8 +2290,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e06a2303-375f-4ce4-9525-59df2b7f32fd"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_basic if - check driving age_virtual"
@@ -2837,9 +2299,12 @@
     {
       "chapter": 88,
       "position": 7,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_basic if - DIY secret number_virtual"
+        ],
         "progression": "if Statements"
       },
       "bonus": false,
@@ -2849,8 +2314,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e06a2303-375f-4ce4-9525-59df2b7f32fd"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_basic if - DIY secret number_virtual"
@@ -2859,9 +2323,12 @@
     {
       "chapter": 89,
       "position": 8,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Check Password if statement lock image_virtual"
+        ],
         "progression": "if Statements"
       },
       "bonus": false,
@@ -2871,8 +2338,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e06a2303-375f-4ce4-9525-59df2b7f32fd"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 Check Password if statement lock image_virtual"
@@ -2881,9 +2347,12 @@
     {
       "chapter": 90,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Conditionals: if-else Statements_virtual"
+        ],
         "progression": "Introduction to Conditionals: if-else Statements"
       },
       "bonus": false,
@@ -2893,8 +2362,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "80726e85-2fa6-4a62-ba0f-47b02b8c7604"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "Introduction to Conditionals: if-else Statements_virtual"
@@ -2903,9 +2371,12 @@
     {
       "chapter": 91,
       "position": 10,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How If-Else Statements Work_2018_2019_virtual"
+        ],
         "progression": "if-else Statements"
       },
       "bonus": false,
@@ -2915,8 +2386,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "22942368-5ef5-4db2-8056-77444426e67e"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "How If-Else Statements Work_2018_2019_virtual"
@@ -2925,9 +2395,12 @@
     {
       "chapter": 92,
       "position": 11,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 if-else simple movie ratings example_virtual"
+        ],
         "progression": "if-else Statements"
       },
       "bonus": false,
@@ -2937,8 +2410,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "22942368-5ef5-4db2-8056-77444426e67e"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 if-else simple movie ratings example_virtual"
@@ -2947,9 +2419,12 @@
     {
       "chapter": 93,
       "position": 12,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_basic if-else - driving age_virtual"
+        ],
         "progression": "if-else Statements"
       },
       "bonus": false,
@@ -2959,8 +2434,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "22942368-5ef5-4db2-8056-77444426e67e"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_basic if-else - driving age_virtual"
@@ -2969,9 +2443,12 @@
     {
       "chapter": 94,
       "position": 13,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Check Password if-else string_virtual"
+        ],
         "progression": "if-else Statements"
       },
       "bonus": false,
@@ -2981,8 +2458,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "22942368-5ef5-4db2-8056-77444426e67e"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 Check Password if-else string_virtual"
@@ -2991,9 +2467,12 @@
     {
       "chapter": 95,
       "position": 14,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How Dropdown Menus Work_2018_2019_virtual"
+        ],
         "progression": "Dropdown Menus"
       },
       "bonus": false,
@@ -3003,8 +2482,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0985fb9d-192f-4c00-a84b-0b0d70f581ce"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "How Dropdown Menus Work_2018_2019_virtual"
@@ -3013,9 +2491,12 @@
     {
       "chapter": 96,
       "position": 15,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 if-else dropdown movie checker_virtual"
+        ],
         "progression": "Dropdown Menus"
       },
       "bonus": false,
@@ -3025,8 +2506,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0985fb9d-192f-4c00-a84b-0b0d70f581ce"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 if-else dropdown movie checker_virtual"
@@ -3035,9 +2515,12 @@
     {
       "chapter": 97,
       "position": 16,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 if-else dropdown guess dice_virtual"
+        ],
         "progression": "Dropdown Menus"
       },
       "bonus": false,
@@ -3047,8 +2530,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0985fb9d-192f-4c00-a84b-0b0d70f581ce"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 if-else dropdown guess dice_virtual"
@@ -3057,9 +2539,12 @@
     {
       "chapter": 98,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Conditionals: if-else-if Statements_virtual"
+        ],
         "progression": "Introduction to Conditionals: if-else-if Statements"
       },
       "bonus": false,
@@ -3069,8 +2554,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "59bf788d-c45d-4e97-b341-cb96e943d4cc"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "Introduction to Conditionals: if-else-if Statements_virtual"
@@ -3079,9 +2563,12 @@
     {
       "chapter": 99,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How \"if-else-if\" Works_2018_2019_virtual"
+        ],
         "progression": "How \"if-else-if\" Works"
       },
       "bonus": false,
@@ -3091,8 +2578,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "3fbd492d-1e17-4070-8250-4fbf119a2313"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "How \"if-else-if\" Works_2018_2019_virtual"
@@ -3101,9 +2587,12 @@
     {
       "chapter": 100,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 if-else-if movie example_virtual"
+        ],
         "progression": "How \"if-else-if\" Works"
       },
       "bonus": false,
@@ -3113,8 +2602,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "3fbd492d-1e17-4070-8250-4fbf119a2313"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 if-else-if movie example_virtual"
@@ -3123,9 +2611,12 @@
     {
       "chapter": 101,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 if-else-if quiz grade_virtual"
+        ],
         "progression": "How \"if-else-if\" Works"
       },
       "bonus": false,
@@ -3135,8 +2626,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "3fbd492d-1e17-4070-8250-4fbf119a2313"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 if-else-if quiz grade_virtual"
@@ -3145,9 +2635,12 @@
     {
       "chapter": 102,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - High Low - Else if_virtual"
+        ],
         "progression": "How \"if-else-if\" Works"
       },
       "bonus": false,
@@ -3157,8 +2650,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "3fbd492d-1e17-4070-8250-4fbf119a2313"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3 - High Low - Else if_virtual"
@@ -3167,9 +2659,12 @@
     {
       "chapter": 103,
       "position": 6,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - High Low - Debug_virtual"
+        ],
         "progression": "How \"if-else-if\" Works"
       },
       "bonus": false,
@@ -3179,8 +2674,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "3fbd492d-1e17-4070-8250-4fbf119a2313"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3 - High Low - Debug_virtual"
@@ -3189,9 +2683,12 @@
     {
       "chapter": 104,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Conditionals: Compound Boolean Expressions_virtual"
+        ],
         "progression": "Introduction to Conditionals: Compound Boolean Expressions"
       },
       "bonus": false,
@@ -3201,8 +2698,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "c1f6248c-7009-4f91-94b8-ec25470d6167"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "Introduction to Conditionals: Compound Boolean Expressions_virtual"
@@ -3211,9 +2707,12 @@
     {
       "chapter": 105,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Conditionals - Simple OR_virtual"
+        ],
         "progression": "How the Boolean &&, || and ! Operators Work"
       },
       "bonus": false,
@@ -3223,8 +2722,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "bdf2f041-b403-4009-aac7-eb30d87955c8"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3 - Conditionals - Simple OR_virtual"
@@ -3233,9 +2731,12 @@
     {
       "chapter": 106,
       "position": 9,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Conditionals - Simple AND_virtual"
+        ],
         "progression": "How the Boolean &&, || and ! Operators Work"
       },
       "bonus": false,
@@ -3245,8 +2746,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "bdf2f041-b403-4009-aac7-eb30d87955c8"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3 - Conditionals - Simple AND_virtual"
@@ -3255,9 +2755,12 @@
     {
       "chapter": 107,
       "position": 10,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Conditionals - Combine AND OR Simple_virtual"
+        ],
         "progression": "How Compound Boolean Expressions Work"
       },
       "bonus": false,
@@ -3267,8 +2770,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b86deb3e-eb2e-4e69-80d4-4afa9102769c"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3 - Conditionals - Combine AND OR Simple_virtual"
@@ -3277,9 +2779,12 @@
     {
       "chapter": 108,
       "position": 11,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 compound boolean museum example_virtual"
+        ],
         "progression": "How Compound Boolean Expressions Work"
       },
       "bonus": false,
@@ -3289,8 +2794,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b86deb3e-eb2e-4e69-80d4-4afa9102769c"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 compound boolean museum example_virtual"
@@ -3299,9 +2803,12 @@
     {
       "chapter": 109,
       "position": 12,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Conditionals - Combine AND OR and NOT_virtual"
+        ],
         "progression": "How Compound Boolean Expressions Work"
       },
       "bonus": false,
@@ -3311,8 +2818,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b86deb3e-eb2e-4e69-80d4-4afa9102769c"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5_U3 - Conditionals - Combine AND OR and NOT_virtual"
@@ -3321,9 +2827,12 @@
     {
       "chapter": 110,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Color Sleuth Demo_virtual"
+        ],
         "progression": "Color Sleuth - Demo and Overview"
       },
       "bonus": false,
@@ -3333,8 +2842,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "a7a9b733-faee-49a4-9e39-1d6ae0de6036"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSPU5 Color Sleuth Demo_virtual"
@@ -3343,9 +2851,12 @@
     {
       "chapter": 111,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP5 virtual RGB intro_virtual"
+        ],
         "progression": "RGB Colors"
       },
       "bonus": false,
@@ -3355,8 +2866,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "486ce0e0-5392-4188-a7ae-6f7c160fd025"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "CSP5 virtual RGB intro_virtual"
@@ -3365,9 +2875,12 @@
     {
       "chapter": 112,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How Set Property Works_2018_2019_virtual"
+        ],
         "progression": "Specifying Colors"
       },
       "bonus": false,
@@ -3377,8 +2890,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "380d7b64-cffd-45e8-8f15-8ec77d2c4a72"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "How Set Property Works_2018_2019_virtual"
@@ -3387,9 +2899,12 @@
     {
       "chapter": 113,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth part 1_virtual"
+        ],
         "progression": "Using setProperty"
       },
       "bonus": false,
@@ -3399,8 +2914,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "292f6fbc-888d-4500-8618-655ed691adab"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 ColorSleuth part 1_virtual"
@@ -3409,9 +2923,12 @@
     {
       "chapter": 114,
       "position": 5,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth part 2 small color change_virtual"
+        ],
         "progression": "Using setProperty"
       },
       "bonus": false,
@@ -3421,8 +2938,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "292f6fbc-888d-4500-8618-655ed691adab"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 ColorSleuth part 2 small color change_virtual"
@@ -3431,9 +2947,12 @@
     {
       "chapter": 115,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth part 3 pick random button_virtual"
+        ],
         "progression": "How to Pick a Random Button"
       },
       "bonus": false,
@@ -3443,8 +2962,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "688b606a-6924-4881-8fcc-08eaefa23e84"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 ColorSleuth part 3 pick random button_virtual"
@@ -3453,9 +2971,12 @@
     {
       "chapter": 116,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth part 4 make random RGB string_virtual"
+        ],
         "progression": "How to Make a Random Color"
       },
       "bonus": false,
@@ -3465,8 +2986,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "129b88e9-6e94-411b-9aac-fc6838fe0eab"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 ColorSleuth part 4 make random RGB string_virtual"
@@ -3475,9 +2995,12 @@
     {
       "chapter": 117,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_applab_functions_virtual"
+        ],
         "progression": "Functions in Your Color Sleuth App"
       },
       "bonus": false,
@@ -3487,8 +3010,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e648581a-a96c-4aff-9429-93eab9a72699"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "csp_applab_functions_virtual"
@@ -3497,9 +3019,12 @@
     {
       "chapter": 118,
       "position": 9,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth part 5 make setBoard function_virtual"
+        ],
         "progression": "Functions in Your Color Sleuth App"
       },
       "bonus": false,
@@ -3509,8 +3034,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e648581a-a96c-4aff-9429-93eab9a72699"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 ColorSleuth part 5 make setBoard function_virtual"
@@ -3519,9 +3043,12 @@
     {
       "chapter": 119,
       "position": 10,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth add global var correct plus console.log_virtual"
+        ],
         "progression": "Functions in Your Color Sleuth App"
       },
       "bonus": false,
@@ -3531,8 +3058,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e648581a-a96c-4aff-9429-93eab9a72699"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 ColorSleuth add global var correct plus console.log_virtual"
@@ -3541,9 +3067,12 @@
     {
       "chapter": 120,
       "position": 11,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth checkCorrect make global var_virtual"
+        ],
         "progression": "Activating Buttons"
       },
       "bonus": false,
@@ -3553,8 +3082,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0f8f8bdc-fd28-454a-a57e-b8d27cd44a70"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 ColorSleuth checkCorrect make global var_virtual"
@@ -3563,9 +3091,12 @@
     {
       "chapter": 121,
       "position": 12,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth checkCorrect part1 link to event handlers_virtual"
+        ],
         "progression": "Activating Buttons"
       },
       "bonus": false,
@@ -3575,8 +3106,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0f8f8bdc-fd28-454a-a57e-b8d27cd44a70"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 ColorSleuth checkCorrect part1 link to event handlers_virtual"
@@ -3585,9 +3115,12 @@
     {
       "chapter": 122,
       "position": 13,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth checkCorrect part2 add if statement to check co_virtual"
+        ],
         "progression": "Activating Buttons"
       },
       "bonus": false,
@@ -3597,8 +3130,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0f8f8bdc-fd28-454a-a57e-b8d27cd44a70"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 ColorSleuth checkCorrect part2 add if statement to check co_virtual"
@@ -3607,9 +3139,12 @@
     {
       "chapter": 123,
       "position": 14,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth nextTurn pt1 add var and function and console.l_virtual"
+        ],
         "progression": "How to Switch Player Turns"
       },
       "bonus": false,
@@ -3619,8 +3154,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "ca2f8ca9-7f65-484c-a2f9-e7c721c875aa"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 ColorSleuth nextTurn pt1 add var and function and console.l_virtual"
@@ -3629,9 +3163,12 @@
     {
       "chapter": 124,
       "position": 15,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth nextTurn pt2 update UI to indicate turn_virtual"
+        ],
         "progression": "How to Switch Player Turns"
       },
       "bonus": false,
@@ -3641,8 +3178,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "ca2f8ca9-7f65-484c-a2f9-e7c721c875aa"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 ColorSleuth nextTurn pt2 update UI to indicate turn_virtual"
@@ -3651,9 +3187,12 @@
     {
       "chapter": 125,
       "position": 16,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth scoring pt1 vars function stub console_virtual"
+        ],
         "progression": "Updating the Score"
       },
       "bonus": false,
@@ -3663,8 +3202,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b3b00067-e5e8-498d-910f-a19c203e0626"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 ColorSleuth scoring pt1 vars function stub console_virtual"
@@ -3673,9 +3211,12 @@
     {
       "chapter": 126,
       "position": 17,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth scoring pt3 update UI for scoring_virtual"
+        ],
         "progression": "Updating the Score"
       },
       "bonus": false,
@@ -3685,8 +3226,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b3b00067-e5e8-498d-910f-a19c203e0626"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "U5 ColorSleuth scoring pt3 update UI for scoring_virtual"
@@ -3695,9 +3235,12 @@
     {
       "chapter": 127,
       "position": 18,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Project: Finish Color Sleuth_virtual"
+        ],
         "progression": "Project: Color Sleuth"
       },
       "bonus": false,
@@ -3707,8 +3250,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "1b32c4d8-3433-4e92-ae0a-34ddd943add1"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "Project: Finish Color Sleuth_virtual"
@@ -3717,9 +3259,12 @@
     {
       "chapter": 128,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp5 virtual bubblechoice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3728,8 +3273,7 @@
         ],
         "lesson.key": "Keep Going!",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "bde66413-dee8-49fc-994d-c9251e0e7d85"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "csp5 virtual bubblechoice"
@@ -3738,9 +3282,12 @@
     {
       "chapter": 129,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp5 virtual ending"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3749,8 +3296,7 @@
         ],
         "lesson.key": "Keep Going!",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "bde66413-dee8-49fc-994d-c9251e0e7d85"
+        "script.name": "csp5-virtual"
       },
       "level_keys": [
         "csp5 virtual ending"
@@ -3766,8 +3312,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "261bc3d7-99ae-4ed0-8e5d-8ab157892508"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3778,8 +3323,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "261bc3d7-99ae-4ed0-8e5d-8ab157892508"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3790,8 +3334,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "261bc3d7-99ae-4ed0-8e5d-8ab157892508"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3802,8 +3345,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "261bc3d7-99ae-4ed0-8e5d-8ab157892508"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3814,8 +3356,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "977eba4f-382b-47d7-a2de-1a624faa5d70"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3826,8 +3367,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "977eba4f-382b-47d7-a2de-1a624faa5d70"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3838,8 +3378,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "977eba4f-382b-47d7-a2de-1a624faa5d70"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3850,8 +3389,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e56d036f-07b2-44b2-bbf4-988e7af06e77"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3862,8 +3400,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e56d036f-07b2-44b2-bbf4-988e7af06e77"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3874,8 +3411,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "1aaf83fe-7a8c-4857-a1fc-2beef36b1549"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3886,8 +3422,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "1aaf83fe-7a8c-4857-a1fc-2beef36b1549"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3898,8 +3433,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "1aaf83fe-7a8c-4857-a1fc-2beef36b1549"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3910,8 +3444,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "1aaf83fe-7a8c-4857-a1fc-2beef36b1549"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3922,8 +3455,7 @@
         ],
         "lesson.key": "Intro to App Lab",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "1aaf83fe-7a8c-4857-a1fc-2beef36b1549"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3934,8 +3466,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "f0cfda2f-3d2e-409e-b5c8-bf34477c3d50"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3946,8 +3477,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "f0cfda2f-3d2e-409e-b5c8-bf34477c3d50"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3958,8 +3488,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "f0cfda2f-3d2e-409e-b5c8-bf34477c3d50"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3970,8 +3499,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "f0cfda2f-3d2e-409e-b5c8-bf34477c3d50"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3982,8 +3510,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "f0cfda2f-3d2e-409e-b5c8-bf34477c3d50"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -3994,8 +3521,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b73912a8-1492-46cf-8808-69d306e21de8"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4006,8 +3532,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b73912a8-1492-46cf-8808-69d306e21de8"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4018,8 +3543,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b73912a8-1492-46cf-8808-69d306e21de8"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4030,8 +3554,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "99d9d571-065c-424a-8796-6ae5b017d5ed"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4042,8 +3565,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "c09c4372-7638-4e71-8870-34e7c40e7bf7"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4054,8 +3576,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "baa6ad21-c00e-4040-9e80-29ebe7b10486"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4066,8 +3587,7 @@
         ],
         "lesson.key": "Buttons and Events",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "25c4eb02-685f-4b98-a266-7bdf33597da9"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4078,8 +3598,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "94872738-cd77-42ad-bc13-71cf2aa70bd1"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4090,8 +3609,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "94872738-cd77-42ad-bc13-71cf2aa70bd1"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4102,8 +3620,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "94872738-cd77-42ad-bc13-71cf2aa70bd1"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4114,8 +3631,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "94872738-cd77-42ad-bc13-71cf2aa70bd1"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4126,8 +3642,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "94872738-cd77-42ad-bc13-71cf2aa70bd1"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4138,8 +3653,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "799fbc93-10ca-4271-9dad-6fe987283a7e"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4150,8 +3664,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "799fbc93-10ca-4271-9dad-6fe987283a7e"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4162,8 +3675,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "799fbc93-10ca-4271-9dad-6fe987283a7e"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4174,8 +3686,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "799fbc93-10ca-4271-9dad-6fe987283a7e"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4186,8 +3697,7 @@
         ],
         "lesson.key": "Multi-screen Apps",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "83945bbe-cadb-4ced-bbab-84c3cd27e705"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4198,8 +3708,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "39e3e0c5-50fa-4721-b87a-a9edb5e0e5be"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4210,8 +3719,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "389b8ff6-0688-414d-94dc-c9847a2e0a10"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4222,8 +3730,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "389b8ff6-0688-414d-94dc-c9847a2e0a10"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4234,8 +3741,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "389b8ff6-0688-414d-94dc-c9847a2e0a10"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4246,8 +3752,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "389b8ff6-0688-414d-94dc-c9847a2e0a10"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4258,8 +3763,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "389b8ff6-0688-414d-94dc-c9847a2e0a10"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4270,8 +3774,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4282,8 +3785,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4294,8 +3796,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4306,8 +3807,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4318,8 +3818,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4330,8 +3829,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4342,8 +3840,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4354,8 +3851,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2c4bd7fe-26cb-44f2-babd-150f3948feb7"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4366,8 +3862,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "aa794730-4582-492b-baac-3bdedd66974f"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4378,8 +3873,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "48cab23e-ed10-46d2-8e07-dfd5a53227aa"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4390,8 +3884,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "48cab23e-ed10-46d2-8e07-dfd5a53227aa"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4402,8 +3895,7 @@
         ],
         "lesson.key": "Variables",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "48cab23e-ed10-46d2-8e07-dfd5a53227aa"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4414,8 +3906,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "07d4c0b8-ddfd-4842-a06d-cc77133b2737"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4426,8 +3917,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "c9c1eb8b-d1da-4b47-9460-83c61874c25d"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4438,8 +3928,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "c9c1eb8b-d1da-4b47-9460-83c61874c25d"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4450,8 +3939,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "c9c1eb8b-d1da-4b47-9460-83c61874c25d"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4462,8 +3950,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "c9c1eb8b-d1da-4b47-9460-83c61874c25d"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4474,8 +3961,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0f3246bf-5db6-41f5-a50d-b3b584a41baf"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4486,8 +3972,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0f3246bf-5db6-41f5-a50d-b3b584a41baf"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4498,8 +3983,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0f3246bf-5db6-41f5-a50d-b3b584a41baf"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4510,8 +3994,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0f3246bf-5db6-41f5-a50d-b3b584a41baf"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4522,8 +4005,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "a15efcb2-ee82-4236-81db-cc4476c13434"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4534,8 +4016,7 @@
         ],
         "lesson.key": "Building an App: Clicker Game",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "a15efcb2-ee82-4236-81db-cc4476c13434"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4546,8 +4027,7 @@
         ],
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4105c85e-d894-4026-8020-831d92d7432d"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4558,8 +4038,7 @@
         ],
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4105c85e-d894-4026-8020-831d92d7432d"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4570,8 +4049,7 @@
         ],
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4105c85e-d894-4026-8020-831d92d7432d"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4582,8 +4060,7 @@
         ],
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4105c85e-d894-4026-8020-831d92d7432d"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4594,8 +4071,7 @@
         ],
         "lesson.key": "If-Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4105c85e-d894-4026-8020-831d92d7432d"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4606,8 +4082,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b457b042-ae34-4fea-9140-fa585dbf3cbc"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4618,8 +4093,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2b0d8439-d7f7-47e5-a947-ae65cce87abf"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4630,8 +4104,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2b0d8439-d7f7-47e5-a947-ae65cce87abf"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4642,8 +4115,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2b0d8439-d7f7-47e5-a947-ae65cce87abf"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4654,8 +4126,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2b0d8439-d7f7-47e5-a947-ae65cce87abf"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4666,8 +4137,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2b0d8439-d7f7-47e5-a947-ae65cce87abf"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4678,8 +4148,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "2b0d8439-d7f7-47e5-a947-ae65cce87abf"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4690,8 +4159,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4e737bd4-f1ae-48c9-9749-3a730820d79d"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4702,8 +4170,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4e737bd4-f1ae-48c9-9749-3a730820d79d"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4714,8 +4181,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4e737bd4-f1ae-48c9-9749-3a730820d79d"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4726,8 +4192,7 @@
         ],
         "lesson.key": "User Input and Strings",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "4e737bd4-f1ae-48c9-9749-3a730820d79d"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4738,8 +4203,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "31c3f472-6e32-44a9-9ba9-6a90ef107954"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4750,8 +4214,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "479b5365-ddcb-48df-8fa8-a755d9b084a0"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4762,8 +4225,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "327a76a2-e1a4-4a39-8ecb-fd5482d79800"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4774,8 +4236,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "a43f9af7-f80a-4be6-a445-dd0158bee159"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4786,8 +4247,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e06a2303-375f-4ce4-9525-59df2b7f32fd"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4798,8 +4258,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e06a2303-375f-4ce4-9525-59df2b7f32fd"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4810,8 +4269,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e06a2303-375f-4ce4-9525-59df2b7f32fd"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4822,8 +4280,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e06a2303-375f-4ce4-9525-59df2b7f32fd"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4834,8 +4291,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "80726e85-2fa6-4a62-ba0f-47b02b8c7604"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4846,8 +4302,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "22942368-5ef5-4db2-8056-77444426e67e"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4858,8 +4313,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "22942368-5ef5-4db2-8056-77444426e67e"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4870,8 +4324,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "22942368-5ef5-4db2-8056-77444426e67e"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4882,8 +4335,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "22942368-5ef5-4db2-8056-77444426e67e"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4894,8 +4346,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0985fb9d-192f-4c00-a84b-0b0d70f581ce"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4906,8 +4357,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0985fb9d-192f-4c00-a84b-0b0d70f581ce"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4918,8 +4368,7 @@
         ],
         "lesson.key": "Boolean Expressions and \"If\" Statements",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0985fb9d-192f-4c00-a84b-0b0d70f581ce"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4930,8 +4379,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "59bf788d-c45d-4e97-b341-cb96e943d4cc"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4942,8 +4390,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "3fbd492d-1e17-4070-8250-4fbf119a2313"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4954,8 +4401,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "3fbd492d-1e17-4070-8250-4fbf119a2313"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4966,8 +4412,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "3fbd492d-1e17-4070-8250-4fbf119a2313"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4978,8 +4423,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "3fbd492d-1e17-4070-8250-4fbf119a2313"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -4990,8 +4434,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "3fbd492d-1e17-4070-8250-4fbf119a2313"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5002,8 +4445,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "c1f6248c-7009-4f91-94b8-ec25470d6167"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5014,8 +4456,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "bdf2f041-b403-4009-aac7-eb30d87955c8"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5026,8 +4467,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "bdf2f041-b403-4009-aac7-eb30d87955c8"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5038,8 +4478,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b86deb3e-eb2e-4e69-80d4-4afa9102769c"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5050,8 +4489,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b86deb3e-eb2e-4e69-80d4-4afa9102769c"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5062,8 +4500,7 @@
         ],
         "lesson.key": "\"if-else-if\" and Conditional Logic",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b86deb3e-eb2e-4e69-80d4-4afa9102769c"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5074,8 +4511,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "a7a9b733-faee-49a4-9e39-1d6ae0de6036"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5086,8 +4522,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "486ce0e0-5392-4188-a7ae-6f7c160fd025"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5098,8 +4533,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "380d7b64-cffd-45e8-8f15-8ec77d2c4a72"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5110,8 +4544,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "292f6fbc-888d-4500-8618-655ed691adab"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5122,8 +4555,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "292f6fbc-888d-4500-8618-655ed691adab"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5134,8 +4566,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "688b606a-6924-4881-8fcc-08eaefa23e84"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5146,8 +4577,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "129b88e9-6e94-411b-9aac-fc6838fe0eab"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5158,8 +4588,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e648581a-a96c-4aff-9429-93eab9a72699"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5170,8 +4599,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e648581a-a96c-4aff-9429-93eab9a72699"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5182,8 +4610,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "e648581a-a96c-4aff-9429-93eab9a72699"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5194,8 +4621,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0f8f8bdc-fd28-454a-a57e-b8d27cd44a70"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5206,8 +4632,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0f8f8bdc-fd28-454a-a57e-b8d27cd44a70"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5218,8 +4643,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "0f8f8bdc-fd28-454a-a57e-b8d27cd44a70"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5230,8 +4654,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "ca2f8ca9-7f65-484c-a2f9-e7c721c875aa"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5242,8 +4665,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "ca2f8ca9-7f65-484c-a2f9-e7c721c875aa"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5254,8 +4676,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b3b00067-e5e8-498d-910f-a19c203e0626"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5266,8 +4687,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "b3b00067-e5e8-498d-910f-a19c203e0626"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5278,8 +4698,7 @@
         ],
         "lesson.key": "Building an App: Color Sleuth",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "1b32c4d8-3433-4e92-ae0a-34ddd943add1"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5290,8 +4709,7 @@
         ],
         "lesson.key": "Keep Going!",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "bde66413-dee8-49fc-994d-c9251e0e7d85"
+        "script.name": "csp5-virtual"
       }
     },
     {
@@ -5302,8 +4720,7 @@
         ],
         "lesson.key": "Keep Going!",
         "lesson_group.key": "",
-        "script.name": "csp5-virtual",
-        "activity_section.key": "bde66413-dee8-49fc-994d-c9251e0e7d85"
+        "script.name": "csp5-virtual"
       }
     }
   ],

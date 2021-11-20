@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "hello-world-emoji",
-    "serialized_at": "2021-11-17 19:08:30 UTC",
+    "serialized_at": "2021-11-19 20:49:57 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -143,8 +143,7 @@
       "key": "f6a21949-1c94-4269-acae-98046f6a9052",
       "position": 2,
       "properties": {
-        "name": "Hello World",
-        "progression_name": "Hello World"
+        "name": "Hello World"
       },
       "seeding_key": {
         "activity_section.key": "f6a21949-1c94-4269-acae-98046f6a9052",
@@ -184,8 +183,7 @@
       "properties": {
         "level_keys": [
           "helloworld_emoji_say"
-        ],
-        "progression": "Hello World"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -209,8 +207,7 @@
       "properties": {
         "level_keys": [
           "helloworld_emoji_location"
-        ],
-        "progression": "Hello World"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -234,8 +231,7 @@
       "properties": {
         "level_keys": [
           "helloworld_emoji_multi"
-        ],
-        "progression": "Hello World"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -259,8 +255,7 @@
       "properties": {
         "level_keys": [
           "helloworld_emoji_click"
-        ],
-        "progression": "Hello World"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -284,8 +279,7 @@
       "properties": {
         "level_keys": [
           "helloworld_emoji_events"
-        ],
-        "progression": "Hello World"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -309,8 +303,7 @@
       "properties": {
         "level_keys": [
           "helloworld_emoji_backgrounds"
-        ],
-        "progression": "Hello World"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -334,8 +327,7 @@
       "properties": {
         "level_keys": [
           "helloworld_emoji_costumes"
-        ],
-        "progression": "Hello World"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -359,8 +351,7 @@
       "properties": {
         "level_keys": [
           "helloworld_emoji_sizes"
-        ],
-        "progression": "Hello World"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -384,8 +375,7 @@
       "properties": {
         "level_keys": [
           "helloworld_emoji_behaviors"
-        ],
-        "progression": "Hello World"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -409,8 +399,7 @@
       "properties": {
         "level_keys": [
           "helloworld_emoji_sounds"
-        ],
-        "progression": "Hello World"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -434,8 +423,7 @@
       "properties": {
         "level_keys": [
           "helloworld_emoji_freeplay"
-        ],
-        "progression": "Hello World"
+        ]
       },
       "bonus": false,
       "seeding_key": {
