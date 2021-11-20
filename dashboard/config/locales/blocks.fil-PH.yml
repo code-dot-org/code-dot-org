@@ -1576,12 +1576,11 @@ fil:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Sorbetes
-            Stars: Mga Bituin
-            Fireworks: Fireworks
-            '"rainbow"': Bahaghari
-            '"hearts"': Mga Puso
             '"flowers"': Mga Bulaklak
+            '"hearts"': Mga Puso
+            '"iceCream"': Sorbetes
+            '"rainbow"': Bahaghari
+            '"stars"': Mga Bituin
             '"waves"': Mga Alon
       Poetry_makeBurst:
         options:
@@ -1593,7 +1592,7 @@ fil:
         text: Ang ... {SOUND}
         options:
           SOUND:
-            Light: Ilaw
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Ilaw
       Poetry_setBackground:
         text: set background color {COLOR}
       Poetry_setBackgroundEffect:

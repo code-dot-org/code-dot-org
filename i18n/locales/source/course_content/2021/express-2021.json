@@ -1107,7 +1107,7 @@
     "display_name": "Time Events",
     "bubble_choice_description": "Make the sprite begin a new behavior after some time has passed.",
     "short_instructions": "Make the sprite spin one way, then another way.",
-    "long_instructions": "# Opposite Behaviors\n\n<div style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\nSome behaviors do opposite things, like `moving east`/`moving west`, `growing`/`shrinking`, or `spinning right`/`spinning left`. If a sprite has two opposite behaviors it might seem like the sprite isn't do anything at all. \n\n## Do This\n\n-   Run the code and see what happens at 3 seconds.\n-   Add a `sprite stops` block under the event.\n-   Use this block to stop the old behavior.\n\n_The sprite should now spin one way, then another way._",
+    "long_instructions": "# Opposite Behaviors\n\n<div style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\nSome behaviors do opposite things, like `moving east`/`moving west`, `growing`/`shrinking`, or `spinning right`/`spinning left`. If a sprite has two opposite behaviors it might seem like the sprite isn't doing anything at all. \n\n## Do This\n\n-   Run the code and see what happens at 3 seconds.\n-   Add a `sprite stops` block under the event.\n-   Use this block to stop the old behavior.\n\n_The sprite should now spin one way, then another way._",
     "callouts": {
       "stops_block": "New blocks here!"
     },

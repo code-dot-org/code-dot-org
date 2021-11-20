@@ -12,9 +12,11 @@
     },
     "new_name": null,
     "family_name": "csp5-virtual",
-    "serialized_at": "2021-10-25 22:54:12 UTC",
+    "serialized_at": "2021-11-19 20:48:44 UTC",
     "published_state": "preview",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csp5-virtual"
     }

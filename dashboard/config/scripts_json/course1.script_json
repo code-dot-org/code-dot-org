@@ -6,7 +6,6 @@
     "properties": {
       "curriculum_path": "https://code.org/curriculum/course1/{LESSON}/Teacher",
       "curriculum_umbrella": "CSF",
-      "has_lesson_plan": true,
       "hideable_lessons": true,
       "is_course": true,
       "lesson_extras_available": true,
@@ -20,9 +19,11 @@
     },
     "new_name": null,
     "family_name": "course1",
-    "serialized_at": "2021-10-25 22:52:59 UTC",
+    "serialized_at": "2021-11-19 20:48:04 UTC",
     "published_state": "preview",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "course1"
     }

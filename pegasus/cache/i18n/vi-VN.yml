@@ -1030,6 +1030,12 @@ vi-VN:
   coursed-2020_gradelevel: Lớp 8 +
   coursee-2020_gradelevel: 8-12 tuổi
   coursef-2020_gradelevel: 9-13 tuổi
+  coursea-2021_gradelevel: Tuổi từ 4-7
+  courseb-2021_gradelevel: 5-8 tuổi
+  coursec-2021_gradelevel: 6-10 tuổi
+  coursed-2021_gradelevel: Lớp 8 +
+  coursee-2021_gradelevel: 8-12 tuổi
+  coursef-2021_gradelevel: 9-13 tuổi
   accelerated_gradelevel: Lứa tuổi 10 + (sau khóa học 3)
   thinkersmithspanish_platformtext: Không dùng máy tính
   thinkersmith_platformtext: Không dùng máy tính
@@ -1581,3 +1587,4 @@ vi-VN:
   ai_cognimates_description: Nền tảng giáo dục AI để làm game, lập trình robot và
     đào tạo.
   ai_try_activity: Thử hoạt động
+  outbreak_tile_title: Dịch bệnh bùng phát

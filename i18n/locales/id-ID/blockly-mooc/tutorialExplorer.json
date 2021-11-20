@@ -21,6 +21,7 @@
   "filterPlatformIos": "iPad/iPhone",
   "filterPlatformNoInternet": "Buruk atau tidak ada internet",
   "filterPlatformNoComputers": "Tidak ada komputer atau perangkat",
+  "filterPlatformScreenReader": "Pembaca layar",
   "filterTopics": "Topik",
   "filterTopicsScience": "Ilmu pengetahuan",
   "filterTopicsMath": "Matematika",

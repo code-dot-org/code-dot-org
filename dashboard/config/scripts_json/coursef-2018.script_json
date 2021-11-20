@@ -6,7 +6,6 @@
     "properties": {
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/coursef/{LESSON}",
       "curriculum_umbrella": "CSF",
-      "family_name": "coursef",
       "has_lesson_plan": true,
       "hideable_lessons": true,
       "is_course": true,
@@ -44,9 +43,11 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-10-25 22:53:46 UTC",
+    "serialized_at": "2021-11-19 20:48:22 UTC",
     "published_state": "stable",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "coursef-2018"
     }
