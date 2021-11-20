@@ -330,7 +330,7 @@ describe('animationList', function() {
       defaultSprites.propsByKey['animation_1'].sourceUrl = 'cat';
 
       store.dispatch(
-        setInitialAnimationList(animationList, true, true, defaultSprites)
+        setInitialAnimationList(animationList, defaultSprites, true)
       );
       expect(
         store.getState().animationList.propsByKey['animation_1'].sourceUrl
