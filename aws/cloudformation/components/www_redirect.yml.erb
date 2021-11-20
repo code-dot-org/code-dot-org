@@ -37,7 +37,11 @@
     Properties:
       CachePolicyConfig:
         Name: RedirectCachePolicy
-        ParametersInCacheKeyAndForwardedToOrigin: 
+        MinTTL: 3600
+        MaxTTL: 31536000
+        DefaultTTL: 86400
+        ParametersInCacheKeyAndForwardedToOrigin:
+          EnableAcceptEncodingGzip: false
           CookiesConfig: 
             CookieBehavior: none
           HeadersConfig: 
