@@ -12,11 +12,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-17 22:50:16 UTC",
+    "serialized_at": "2021-11-21 17:37:31 UTC",
     "published_state": "in_development",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csdu6-playground"
     }
@@ -3246,6 +3246,34 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+<<<<<<< HEAD
+=======
+        "level_keys": [
+          "CSD U6 - Screen Inputs - SB1_2022"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U6 - Screen Inputs - SB1_2022"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csdu6-playground",
+        "activity_section.key": "0420e75c-da97-45a5-8e48-ffdae2a168bf"
+      },
+      "level_keys": [
+        "CSD U6 - Screen Inputs - SB1_2022"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+>>>>>>> update-course-settings
         "level_keys": [
           "CSD U6 - Screen Inputs - Prac_2022"
         ],
