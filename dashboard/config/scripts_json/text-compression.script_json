@@ -11,9 +11,9 @@
     },
     "new_name": null,
     "family_name": "text-compression",
-    "serialized_at": "2021-11-21 17:34:19 UTC",
+    "serialized_at": "2021-11-21 17:37:13 UTC",
     "published_state": "preview",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {

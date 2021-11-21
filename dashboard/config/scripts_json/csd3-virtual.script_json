@@ -21,9 +21,9 @@
     },
     "new_name": null,
     "family_name": "csd3-virtual",
-    "serialized_at": "2021-11-21 17:33:41 UTC",
+    "serialized_at": "2021-11-21 17:36:38 UTC",
     "published_state": "preview",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {

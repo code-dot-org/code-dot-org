@@ -51,9 +51,9 @@
     },
     "new_name": "coursef-2017",
     "family_name": "coursef",
-    "serialized_at": "2021-11-21 17:33:33 UTC",
+    "serialized_at": "2021-11-21 17:36:31 UTC",
     "published_state": "stable",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {

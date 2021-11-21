@@ -12,9 +12,9 @@
     },
     "new_name": null,
     "family_name": "fit2019-apprentice",
-    "serialized_at": "2021-11-21 17:34:05 UTC",
+    "serialized_at": "2021-11-21 17:36:59 UTC",
     "published_state": "preview",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
     "instructor_audience": "plc_reviewer",
     "participant_audience": "facilitator",
     "seeding_key": {

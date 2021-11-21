@@ -11,9 +11,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-21 17:33:47 UTC",
+    "serialized_at": "2021-11-21 17:36:43 UTC",
     "published_state": "beta",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
     "instructor_audience": "plc_reviewer",
     "participant_audience": "facilitator",
     "seeding_key": {
