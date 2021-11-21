@@ -206,6 +206,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
   blocklyWrapper.wrapSettableProperty('assetUrl');
   blocklyWrapper.wrapSettableProperty('behaviorEditor');
+  blocklyWrapper.wrapSettableProperty('customSimpleDialog');
   blocklyWrapper.wrapSettableProperty('BROKEN_CONTROL_POINTS');
   blocklyWrapper.wrapSettableProperty('BUMP_UNCONNECTED');
   blocklyWrapper.wrapSettableProperty('HSV_SATURATION');
@@ -323,6 +324,10 @@ function initializeBlocklyWrapper(blocklyInstance) {
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
     blocklyWrapper.assetUrl = opt_options.assetUrl || (path => `./${path}`);
+
+    // CDO Blockly takes customSimpleDialog as an inject option and uses it
+    // instead of the default prompt dialogs, so we should also set it here.
+    blocklyWrapper.customSimpleDialog = opt_options.customSimpleDialog;
 
     // Shrink container to make room for the workspace header
     container.style.height = `calc(100% - ${
