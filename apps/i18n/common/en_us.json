@@ -1590,6 +1590,8 @@
   "removeStudentHeader": "Are you sure you want to remove this student?",
   "removeUnusedStudentHeader": "Are you sure you want to remove {studentName}?",
   "rename": "Rename",
+  "renameAll": "Rename all {variableName}",
+  "renameThis": "Rename this variable",
   "repeat": "repeat",
   "replayButton": "Replay",
   "reportAbuse": "Report Abuse",
