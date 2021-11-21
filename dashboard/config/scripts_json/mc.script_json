@@ -11,9 +11,11 @@
     },
     "new_name": null,
     "family_name": "mc",
-    "serialized_at": "2021-10-25 22:53:12 UTC",
+    "serialized_at": "2021-11-21 17:34:10 UTC",
     "published_state": "preview",
     "instruction_type": null,
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "mc"
     }
