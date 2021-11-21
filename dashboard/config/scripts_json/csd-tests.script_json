@@ -10,11 +10,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:48:26 UTC",
+    "serialized_at": "2021-10-26 22:12:56 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csd-tests"
     }
@@ -159,9 +159,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U1 Test define a computer"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -183,9 +180,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U1 Test PSP match"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -207,9 +201,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U1 IOSP match"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -231,9 +222,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U1 Test define problem"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -255,9 +243,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U1 Test storage FR"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -279,9 +264,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U1 Test Feedback FR"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -303,9 +285,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U1 Test Collaborate FR"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -327,9 +306,6 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U1 Test Iteration FR"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -351,9 +327,6 @@
       "activity_section_position": 9,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSD U1 Test"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -375,9 +348,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 Test HTML Usage"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -399,9 +369,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 Test ContentStructureStyle"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -423,9 +390,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 Test Classes"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -447,9 +411,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 Test Debug"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -471,9 +432,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 Test code stylesheet"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -495,9 +453,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 Test code styles"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -519,9 +474,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 Test Copyright"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -543,9 +495,6 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 Test Bug FR"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -567,9 +516,6 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 Test Copyright FR"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -591,9 +537,6 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U2 Test DigCit FR"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -615,9 +558,6 @@
       "activity_section_position": 11,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSD Web Development Post-Project Test"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -639,9 +579,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Test clean code"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -663,9 +600,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Test functions"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -687,9 +621,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Test variables"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -711,9 +642,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Test planning"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -735,9 +663,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Test debugging"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -759,9 +684,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Test comment"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -783,9 +705,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Test debug FR"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -807,9 +726,6 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Test parameter FR"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -831,9 +747,6 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Test collaboration FR"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -855,9 +768,6 @@
       "activity_section_position": 10,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSD Interactive Animations and Games Post-Project Test"
-        ]
       },
       "bonus": false,
       "seeding_key": {

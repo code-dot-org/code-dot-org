@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:49:02 UTC",
+    "serialized_at": "2021-10-26 22:16:03 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "flappy-impact-study"
     }
@@ -157,9 +157,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "HOC pre-survey 2016 levelgroup"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -181,9 +178,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -205,9 +199,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -229,9 +220,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -253,9 +241,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -277,9 +262,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -301,9 +283,6 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_6"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -325,9 +304,6 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_7"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -349,9 +325,6 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_8"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -373,9 +346,6 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_9"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -397,9 +367,6 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "flappy_11"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -421,9 +388,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "HOC post-survey 2016 levelgroup"
-        ]
       },
       "bonus": false,
       "seeding_key": {

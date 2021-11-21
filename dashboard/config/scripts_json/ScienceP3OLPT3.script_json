@@ -9,11 +9,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:47:53 UTC",
+    "serialized_at": "2021-11-02 14:28:52 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "ScienceP3OLPT3"
     }
@@ -196,9 +196,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD3OLP33 intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -220,9 +217,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2 timeline"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -244,9 +238,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ECSPD PD details"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -268,9 +259,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PD check your progress"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -292,9 +280,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD33 rubric"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -316,9 +301,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD33 implement2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -340,9 +322,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD33 refresh"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -364,9 +343,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD33 refresh2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -388,9 +364,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD33 thanks"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -412,9 +385,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD33 reflection"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -436,9 +406,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD33 end"
-        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:49:40 UTC",
+    "serialized_at": "2021-10-26 22:11:20 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "ai-classroom-test"
     }
@@ -116,9 +116,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-class test-ai lab foods"
-        ],
         "progression": "Introduction to AI Lab"
       },
       "bonus": false,
@@ -141,9 +138,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-class test-ai lab choice-parent"
-        ],
         "progression": "Explore AI Lab"
       },
       "bonus": false,
@@ -166,9 +160,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-class test-app lab import"
-        ],
         "progression": "Import a Model to App Lab"
       },
       "bonus": false,
@@ -191,9 +182,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "ml-class test-app lab choice parent"
-        ],
         "progression": "Customize Your App"
       },
       "bonus": false,

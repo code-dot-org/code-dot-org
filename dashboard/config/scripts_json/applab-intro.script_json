@@ -13,11 +13,9 @@
     },
     "new_name": null,
     "family_name": "applab-intro",
-    "serialized_at": "2021-11-19 20:47:59 UTC",
+    "serialized_at": "2021-10-25 22:53:32 UTC",
     "published_state": "preview",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "applab-intro"
     }

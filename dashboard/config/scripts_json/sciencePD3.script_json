@@ -9,11 +9,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:49:19 UTC",
+    "serialized_at": "2021-11-02 14:30:07 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "sciencePD3"
     }
@@ -158,9 +158,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPDpart4_S1_L1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -182,9 +179,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2Part4_S1_L2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -206,9 +200,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2Part4_S1_L3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -230,9 +221,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2Part4_S2_L1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -254,9 +242,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2Part4_S2_L2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -278,9 +263,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2Part4_S3_L1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -302,9 +284,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2Part4_S3_L2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -326,9 +305,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "sciPD2Part4_S3_L3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
