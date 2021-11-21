@@ -24,7 +24,11 @@ export default class FieldVariable extends GoogleBlockly.FieldVariable {
             msg.renameAllPromptTitle({variableName: oldVar}),
             msg.rename(),
             oldVar,
-            x => console.log(x)
+            newName =>
+              this.sourceBlock_.workspace.renameVariableById(
+                this.variable_.getId(),
+                newName
+              )
           );
           break;
         case RENAME_THIS_ID:
