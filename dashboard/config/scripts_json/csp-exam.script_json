@@ -11,11 +11,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:48:35 UTC",
+    "serialized_at": "2021-10-26 22:14:27 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp-exam"
     }
@@ -464,9 +464,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -488,9 +485,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 1 Ch2 Cumulative Assessment MC Group_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -512,9 +506,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 2 Ch1 Cumulative Assessment MC_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -536,9 +527,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 2 Ch2 Cumulative Assessment MC_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -560,9 +548,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 3 Ch1 Cumulative Assessment MC Group_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -584,9 +569,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 4 Ch1 Cumulative Assessment MC_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -608,9 +590,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 5 Cumulative Assessment 1 MC_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -632,9 +611,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 5 Cumulative Assessment 2 MC_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -656,9 +632,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 5 Cumulative Assessment 3 MC_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -680,9 +653,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Unit 5 Cumulative Assessment 4 MC_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -704,9 +674,6 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "level_keys": [
-          "CSP Cumulative Assess A_exam_prep"
-        ]
       },
       "bonus": false,
       "seeding_key": {

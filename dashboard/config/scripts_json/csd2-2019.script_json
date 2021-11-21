@@ -6,9 +6,12 @@
     "properties": {
       "curriculum_path": "https://curriculum.code.org/csd-19/unit2/{LESSON}",
       "curriculum_umbrella": "CSD",
+      "exclude_csf_column_in_legend": true,
+      "family_name": "csd2",
+      "has_lesson_plan": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
-      "is_migrated": true,
+      "is_stable": true,
       "project_sharing": true,
       "student_detail_progress_view": true,
       "teacher_resources": [
@@ -34,16 +37,13 @@
         ]
       ],
       "tts": true,
-      "use_legacy_lesson_plans": true,
       "version_year": "2019"
     },
     "new_name": null,
     "family_name": "csd2",
-    "serialized_at": "2021-11-15 20:58:18 UTC",
+    "serialized_at": "2021-10-25 22:53:55 UTC",
     "published_state": null,
     "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "csd2-2019"
     }
@@ -329,962 +329,21 @@
     }
   ],
   "lesson_activities": [
-    {
-      "key": "a88c8f88-88f9-4590-9123-46bf5608ee34",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a88c8f88-88f9-4590-9123-46bf5608ee34",
-        "lesson.key": "Exploring Websites",
-        "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019"
-      }
-    },
-    {
-      "key": "c4f9b063-4ea7-4b87-9bdb-6105e8579ca5",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c4f9b063-4ea7-4b87-9bdb-6105e8579ca5",
-        "lesson.key": "Websites for Expression ",
-        "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019"
-      }
-    },
-    {
-      "key": "ed41ea87-b959-4053-96de-0dc5e5e50e5c",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ed41ea87-b959-4053-96de-0dc5e5e50e5c",
-        "lesson.key": "Intro to HTML",
-        "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019"
-      }
-    },
-    {
-      "key": "015a54f7-f186-4b00-b193-1bac05235240",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "015a54f7-f186-4b00-b193-1bac05235240",
-        "lesson.key": "Headings",
-        "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019"
-      }
-    },
-    {
-      "key": "d4e1a36e-6095-4680-b126-86223e5ce4e2",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d4e1a36e-6095-4680-b126-86223e5ce4e2",
-        "lesson.key": "Digital Footprint",
-        "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019"
-      }
-    },
-    {
-      "key": "44647720-7118-4832-bc62-5e2061492c9d",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "44647720-7118-4832-bc62-5e2061492c9d",
-        "lesson.key": "Lists",
-        "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019"
-      }
-    },
-    {
-      "key": "62a8b317-9318-4020-a12e-b47742bfe0e7",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "62a8b317-9318-4020-a12e-b47742bfe0e7",
-        "lesson.key": "Intellectual Property and Images",
-        "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019"
-      }
-    },
-    {
-      "key": "fca33447-4d23-433c-97e8-7437a5324141",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "fca33447-4d23-433c-97e8-7437a5324141",
-        "lesson.key": "Clean Code and Debugging",
-        "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019"
-      }
-    },
-    {
-      "key": "518d25c5-816e-4330-ac9a-2969ba373579",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "518d25c5-816e-4330-ac9a-2969ba373579",
-        "lesson.key": "Project - Multi-Page Websites",
-        "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019"
-      }
-    },
-    {
-      "key": "70326c31-4a36-4207-88ff-1e3ae14d67c8",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "70326c31-4a36-4207-88ff-1e3ae14d67c8",
-        "lesson.key": "Styling Text with CSS",
-        "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019"
-      }
-    },
-    {
-      "key": "d90499ae-8746-42e6-a49b-a67f5653a906",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "d90499ae-8746-42e6-a49b-a67f5653a906",
-        "lesson.key": "Styling Elements with CSS",
-        "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019"
-      }
-    },
-    {
-      "key": "47ee318f-12d3-439d-a88e-49df3d320669",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "47ee318f-12d3-439d-a88e-49df3d320669",
-        "lesson.key": "Sources and Search Engines",
-        "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019"
-      }
-    },
-    {
-      "key": "b9377910-2ed9-4f79-9176-095da0506283",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b9377910-2ed9-4f79-9176-095da0506283",
-        "lesson.key": "RGB Colors and Classes",
-        "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019"
-      }
-    },
-    {
-      "key": "ea719888-2ae7-4acd-9783-009e6744e142",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ea719888-2ae7-4acd-9783-009e6744e142",
-        "lesson.key": "Project - Personal Portfolio Website",
-        "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019"
-      }
-    },
-    {
-      "key": "5c672516-04f3-484d-a5bc-8808b4bba3b3",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "5c672516-04f3-484d-a5bc-8808b4bba3b3",
-        "lesson.key": "Post-Project Test",
-        "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019"
-      }
-    },
-    {
-      "key": "06c4a690-d2a7-4e5b-ac4b-d064673db8cd",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "06c4a690-d2a7-4e5b-ac4b-d064673db8cd",
-        "lesson.key": "CS Discoveries Post Course survey",
-        "lesson_group.key": "cspSurvey",
-        "script.name": "csd2-2019"
-      }
-    }
+
   ],
   "activity_sections": [
-    {
-      "key": "ad55ae28-5794-4f0d-8970-dafde8dd2281",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "ad55ae28-5794-4f0d-8970-dafde8dd2281",
-        "lesson_activity.key": "a88c8f88-88f9-4590-9123-46bf5608ee34"
-      }
-    },
-    {
-      "key": "1509e490-4f28-4bc4-9303-c5c156208213",
-      "position": 2,
-      "properties": {
-        "name": "Top Websites",
-        "progression_name": "Top Websites"
-      },
-      "seeding_key": {
-        "activity_section.key": "1509e490-4f28-4bc4-9303-c5c156208213",
-        "lesson_activity.key": "a88c8f88-88f9-4590-9123-46bf5608ee34"
-      }
-    },
-    {
-      "key": "7d345d9c-3308-4a84-b288-512e51e57815",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "7d345d9c-3308-4a84-b288-512e51e57815",
-        "lesson_activity.key": "c4f9b063-4ea7-4b87-9bdb-6105e8579ca5"
-      }
-    },
-    {
-      "key": "0cc1b631-05c8-4129-b2e9-65f02c303d16",
-      "position": 2,
-      "properties": {
-        "name": "Exemplar Personal Websites",
-        "progression_name": "Exemplar Personal Websites"
-      },
-      "seeding_key": {
-        "activity_section.key": "0cc1b631-05c8-4129-b2e9-65f02c303d16",
-        "lesson_activity.key": "c4f9b063-4ea7-4b87-9bdb-6105e8579ca5"
-      }
-    },
-    {
-      "key": "f00dd0ff-7a04-4e7f-b6ca-3c7a96143f2c",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "f00dd0ff-7a04-4e7f-b6ca-3c7a96143f2c",
-        "lesson_activity.key": "ed41ea87-b959-4053-96de-0dc5e5e50e5c"
-      }
-    },
-    {
-      "key": "b5c36c8d-8c3c-4b22-b17f-08e8aec0a2ed",
-      "position": 2,
-      "properties": {
-        "progression_name": "Experiment with Web Lab"
-      },
-      "seeding_key": {
-        "activity_section.key": "b5c36c8d-8c3c-4b22-b17f-08e8aec0a2ed",
-        "lesson_activity.key": "ed41ea87-b959-4053-96de-0dc5e5e50e5c"
-      }
-    },
-    {
-      "key": "8c2f362f-8cc3-42f2-856c-4a7bb2aa3077",
-      "position": 3,
-      "properties": {
-        "progression_name": "Video: Intro to Web Lab - Part 1"
-      },
-      "seeding_key": {
-        "activity_section.key": "8c2f362f-8cc3-42f2-856c-4a7bb2aa3077",
-        "lesson_activity.key": "ed41ea87-b959-4053-96de-0dc5e5e50e5c"
-      }
-    },
-    {
-      "key": "39bd7199-1d64-4d15-86e7-c038ca4fc357",
-      "position": 4,
-      "properties": {
-        "progression_name": "Explore HTML"
-      },
-      "seeding_key": {
-        "activity_section.key": "39bd7199-1d64-4d15-86e7-c038ca4fc357",
-        "lesson_activity.key": "ed41ea87-b959-4053-96de-0dc5e5e50e5c"
-      }
-    },
-    {
-      "key": "598465cb-b907-49ca-84db-a93fef632f71",
-      "position": 5,
-      "properties": {
-        "progression_name": "Video: Intro to Web Lab - Part 2"
-      },
-      "seeding_key": {
-        "activity_section.key": "598465cb-b907-49ca-84db-a93fef632f71",
-        "lesson_activity.key": "ed41ea87-b959-4053-96de-0dc5e5e50e5c"
-      }
-    },
-    {
-      "key": "28e77263-87a7-47ad-a222-a4751bb6dafa",
-      "position": 6,
-      "properties": {
-        "progression_name": "HTML Tags"
-      },
-      "seeding_key": {
-        "activity_section.key": "28e77263-87a7-47ad-a222-a4751bb6dafa",
-        "lesson_activity.key": "ed41ea87-b959-4053-96de-0dc5e5e50e5c"
-      }
-    },
-    {
-      "key": "e4b2218a-c9ae-4c6b-9134-9ef9891e8876",
-      "position": 7,
-      "properties": {
-        "name": "Using HTML Tags",
-        "progression_name": "Using HTML Tags"
-      },
-      "seeding_key": {
-        "activity_section.key": "e4b2218a-c9ae-4c6b-9134-9ef9891e8876",
-        "lesson_activity.key": "ed41ea87-b959-4053-96de-0dc5e5e50e5c"
-      }
-    },
-    {
-      "key": "3301a127-c982-46a9-8280-14b318701aa8",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "3301a127-c982-46a9-8280-14b318701aa8",
-        "lesson_activity.key": "015a54f7-f186-4b00-b193-1bac05235240"
-      }
-    },
-    {
-      "key": "4dcbbc45-c3df-4c2c-a75e-c5b2b5cc23db",
-      "position": 2,
-      "properties": {
-        "progression_name": "Pair Programming"
-      },
-      "seeding_key": {
-        "activity_section.key": "4dcbbc45-c3df-4c2c-a75e-c5b2b5cc23db",
-        "lesson_activity.key": "015a54f7-f186-4b00-b193-1bac05235240"
-      }
-    },
-    {
-      "key": "6c3bc892-7aba-43bd-a742-7d73bbf74ed3",
-      "position": 3,
-      "properties": {
-        "progression_name": "Headings"
-      },
-      "seeding_key": {
-        "activity_section.key": "6c3bc892-7aba-43bd-a742-7d73bbf74ed3",
-        "lesson_activity.key": "015a54f7-f186-4b00-b193-1bac05235240"
-      }
-    },
-    {
-      "key": "0baf0b6a-4bf6-4e7e-9eac-75d23fb486b5",
-      "position": 4,
-      "properties": {
-        "progression_name": "Headings in HTML"
-      },
-      "seeding_key": {
-        "activity_section.key": "0baf0b6a-4bf6-4e7e-9eac-75d23fb486b5",
-        "lesson_activity.key": "015a54f7-f186-4b00-b193-1bac05235240"
-      }
-    },
-    {
-      "key": "73085527-63a6-4397-85ee-cd5351ba8bf0",
-      "position": 5,
-      "properties": {
-        "progression_name": "Problem Solving Process for Programming"
-      },
-      "seeding_key": {
-        "activity_section.key": "73085527-63a6-4397-85ee-cd5351ba8bf0",
-        "lesson_activity.key": "015a54f7-f186-4b00-b193-1bac05235240"
-      }
-    },
-    {
-      "key": "153d29d2-5ef0-416c-b01c-ddea76493073",
-      "position": 6,
-      "properties": {
-        "name": "Your Personal Website",
-        "progression_name": "Your Personal Website"
-      },
-      "seeding_key": {
-        "activity_section.key": "153d29d2-5ef0-416c-b01c-ddea76493073",
-        "lesson_activity.key": "015a54f7-f186-4b00-b193-1bac05235240"
-      }
-    },
-    {
-      "key": "4a6905c1-5b88-4beb-af1a-9b5d90235006",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "4a6905c1-5b88-4beb-af1a-9b5d90235006",
-        "lesson_activity.key": "d4e1a36e-6095-4680-b126-86223e5ce4e2"
-      }
-    },
-    {
-      "key": "ed1c64a1-b450-4f4d-b509-3bc5dfe85c3a",
-      "position": 2,
-      "properties": {
-        "name": "Social Sleuth",
-        "progression_name": "Social Sleuth"
-      },
-      "seeding_key": {
-        "activity_section.key": "ed1c64a1-b450-4f4d-b509-3bc5dfe85c3a",
-        "lesson_activity.key": "d4e1a36e-6095-4680-b126-86223e5ce4e2"
-      }
-    },
-    {
-      "key": "b268b7d7-903b-4f3b-8ffc-fe89a1dceb48",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "b268b7d7-903b-4f3b-8ffc-fe89a1dceb48",
-        "lesson_activity.key": "44647720-7118-4832-bc62-5e2061492c9d"
-      }
-    },
-    {
-      "key": "96c1880e-e7f9-43dd-a4e8-d89a104289cc",
-      "position": 2,
-      "properties": {
-        "progression_name": "Lists"
-      },
-      "seeding_key": {
-        "activity_section.key": "96c1880e-e7f9-43dd-a4e8-d89a104289cc",
-        "lesson_activity.key": "44647720-7118-4832-bc62-5e2061492c9d"
-      }
-    },
-    {
-      "key": "f0d0bab0-1583-48e8-ad7b-194e498fcece",
-      "position": 3,
-      "properties": {
-        "progression_name": "Lists in HTML"
-      },
-      "seeding_key": {
-        "activity_section.key": "f0d0bab0-1583-48e8-ad7b-194e498fcece",
-        "lesson_activity.key": "44647720-7118-4832-bc62-5e2061492c9d"
-      }
-    },
-    {
-      "key": "26be687e-b195-4229-8240-3e3f18674be1",
-      "position": 4,
-      "properties": {
-        "progression_name": "Expanding Your Website"
-      },
-      "seeding_key": {
-        "activity_section.key": "26be687e-b195-4229-8240-3e3f18674be1",
-        "lesson_activity.key": "44647720-7118-4832-bc62-5e2061492c9d"
-      }
-    },
-    {
-      "key": "dd7a00c0-9d3a-4678-968e-1fdb7f03ff5b",
-      "position": 5,
-      "properties": {
-        "name": "Expanding Personal Website",
-        "progression_name": "Expanding Personal Website"
-      },
-      "seeding_key": {
-        "activity_section.key": "dd7a00c0-9d3a-4678-968e-1fdb7f03ff5b",
-        "lesson_activity.key": "44647720-7118-4832-bc62-5e2061492c9d"
-      }
-    },
-    {
-      "key": "a97be019-18c2-445a-a713-d4fade4af9e2",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "a97be019-18c2-445a-a713-d4fade4af9e2",
-        "lesson_activity.key": "62a8b317-9318-4020-a12e-b47742bfe0e7"
-      }
-    },
-    {
-      "key": "2a1838a5-708c-4af3-baf7-54864c87153a",
-      "position": 2,
-      "properties": {
-        "progression_name": "Adding Images"
-      },
-      "seeding_key": {
-        "activity_section.key": "2a1838a5-708c-4af3-baf7-54864c87153a",
-        "lesson_activity.key": "62a8b317-9318-4020-a12e-b47742bfe0e7"
-      }
-    },
-    {
-      "key": "24179087-12c5-4d00-871f-f7856b5d35b9",
-      "position": 3,
-      "properties": {
-        "progression_name": "Images in HTML"
-      },
-      "seeding_key": {
-        "activity_section.key": "24179087-12c5-4d00-871f-f7856b5d35b9",
-        "lesson_activity.key": "62a8b317-9318-4020-a12e-b47742bfe0e7"
-      }
-    },
-    {
-      "key": "43cd8249-3d88-496c-b52f-6a03f5380029",
-      "position": 4,
-      "properties": {
-        "progression_name": "Creative Commons Search"
-      },
-      "seeding_key": {
-        "activity_section.key": "43cd8249-3d88-496c-b52f-6a03f5380029",
-        "lesson_activity.key": "62a8b317-9318-4020-a12e-b47742bfe0e7"
-      }
-    },
-    {
-      "key": "c08ce93f-748c-4544-ad15-d9e4303c318b",
-      "position": 5,
-      "properties": {
-        "name": "Attribution",
-        "progression_name": "Attribution"
-      },
-      "seeding_key": {
-        "activity_section.key": "c08ce93f-748c-4544-ad15-d9e4303c318b",
-        "lesson_activity.key": "62a8b317-9318-4020-a12e-b47742bfe0e7"
-      }
-    },
-    {
-      "key": "75510b66-6276-4220-82e4-b0d28453127b",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "75510b66-6276-4220-82e4-b0d28453127b",
-        "lesson_activity.key": "fca33447-4d23-433c-97e8-7437a5324141"
-      }
-    },
-    {
-      "key": "9b99bbac-c605-4a93-a573-277dbf0d31fe",
-      "position": 2,
-      "properties": {
-        "progression_name": "Debugging"
-      },
-      "seeding_key": {
-        "activity_section.key": "9b99bbac-c605-4a93-a573-277dbf0d31fe",
-        "lesson_activity.key": "fca33447-4d23-433c-97e8-7437a5324141"
-      }
-    },
-    {
-      "key": "2315317c-9f63-4980-95ac-9e2c25658fef",
-      "position": 3,
-      "properties": {
-        "progression_name": "Formatting HTML"
-      },
-      "seeding_key": {
-        "activity_section.key": "2315317c-9f63-4980-95ac-9e2c25658fef",
-        "lesson_activity.key": "fca33447-4d23-433c-97e8-7437a5324141"
-      }
-    },
-    {
-      "key": "4d3fa0f3-0dea-4ff7-9e48-f2ea1fb5e6b6",
-      "position": 4,
-      "properties": {
-        "name": "Challenge",
-        "progression_name": "Challenge"
-      },
-      "seeding_key": {
-        "activity_section.key": "4d3fa0f3-0dea-4ff7-9e48-f2ea1fb5e6b6",
-        "lesson_activity.key": "fca33447-4d23-433c-97e8-7437a5324141"
-      }
-    },
-    {
-      "key": "736313a5-2b8b-4290-bda7-c60ae0ffd965",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "736313a5-2b8b-4290-bda7-c60ae0ffd965",
-        "lesson_activity.key": "518d25c5-816e-4330-ac9a-2969ba373579"
-      }
-    },
-    {
-      "key": "96ae3592-0ae8-4f4c-8e30-cd29f8ac7bd3",
-      "position": 2,
-      "properties": {
-        "progression_name": "Linking Pages"
-      },
-      "seeding_key": {
-        "activity_section.key": "96ae3592-0ae8-4f4c-8e30-cd29f8ac7bd3",
-        "lesson_activity.key": "518d25c5-816e-4330-ac9a-2969ba373579"
-      }
-    },
-    {
-      "key": "90332559-0ced-42cf-b103-e30e0fc60e83",
-      "position": 3,
-      "properties": {
-        "progression_name": "Hyperlinks"
-      },
-      "seeding_key": {
-        "activity_section.key": "90332559-0ced-42cf-b103-e30e0fc60e83",
-        "lesson_activity.key": "518d25c5-816e-4330-ac9a-2969ba373579"
-      }
-    },
-    {
-      "key": "a64ebebb-2737-43a0-b4d8-f7971096b3e0",
-      "position": 4,
-      "properties": {
-        "progression_name": "Project Guide"
-      },
-      "seeding_key": {
-        "activity_section.key": "a64ebebb-2737-43a0-b4d8-f7971096b3e0",
-        "lesson_activity.key": "518d25c5-816e-4330-ac9a-2969ba373579"
-      }
-    },
-    {
-      "key": "174b4817-ee38-47a4-be7c-dbf4c4d752ea",
-      "position": 5,
-      "properties": {
-        "progression_name": "Website Project"
-      },
-      "seeding_key": {
-        "activity_section.key": "174b4817-ee38-47a4-be7c-dbf4c4d752ea",
-        "lesson_activity.key": "518d25c5-816e-4330-ac9a-2969ba373579"
-      }
-    },
-    {
-      "key": "5df340df-5ad6-48a7-8a71-0e4fc7c1ebcc",
-      "position": 6,
-      "properties": {
-        "progression_name": "Publishing Your Website"
-      },
-      "seeding_key": {
-        "activity_section.key": "5df340df-5ad6-48a7-8a71-0e4fc7c1ebcc",
-        "lesson_activity.key": "518d25c5-816e-4330-ac9a-2969ba373579"
-      }
-    },
-    {
-      "key": "301881e9-8b2a-430a-9bf3-928038396c1f",
-      "position": 7,
-      "properties": {
-        "name": "Reflection",
-        "progression_name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "301881e9-8b2a-430a-9bf3-928038396c1f",
-        "lesson_activity.key": "518d25c5-816e-4330-ac9a-2969ba373579"
-      }
-    },
-    {
-      "key": "fda3726d-3496-4e33-90c6-cb20afa549f3",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "fda3726d-3496-4e33-90c6-cb20afa549f3",
-        "lesson_activity.key": "70326c31-4a36-4207-88ff-1e3ae14d67c8"
-      }
-    },
-    {
-      "key": "bcf6fb6e-2324-4127-ba60-222522b9fb8e",
-      "position": 2,
-      "properties": {
-        "progression_name": "Exploration: Adding Style"
-      },
-      "seeding_key": {
-        "activity_section.key": "bcf6fb6e-2324-4127-ba60-222522b9fb8e",
-        "lesson_activity.key": "70326c31-4a36-4207-88ff-1e3ae14d67c8"
-      }
-    },
-    {
-      "key": "678c8582-c423-4275-906d-3d274c819ba3",
-      "position": 3,
-      "properties": {
-        "progression_name": "Video: Intro to CSS"
-      },
-      "seeding_key": {
-        "activity_section.key": "678c8582-c423-4275-906d-3d274c819ba3",
-        "lesson_activity.key": "70326c31-4a36-4207-88ff-1e3ae14d67c8"
-      }
-    },
-    {
-      "key": "56cd783c-a590-459e-8396-0d8ae9113c33",
-      "position": 4,
-      "properties": {
-        "progression_name": "Styling Text"
-      },
-      "seeding_key": {
-        "activity_section.key": "56cd783c-a590-459e-8396-0d8ae9113c33",
-        "lesson_activity.key": "70326c31-4a36-4207-88ff-1e3ae14d67c8"
-      }
-    },
-    {
-      "key": "0d59897a-ae98-46f2-837b-8a7b0d1342ab",
-      "position": 5,
-      "properties": {
-        "progression_name": "CSS and Style Sheets"
-      },
-      "seeding_key": {
-        "activity_section.key": "0d59897a-ae98-46f2-837b-8a7b0d1342ab",
-        "lesson_activity.key": "70326c31-4a36-4207-88ff-1e3ae14d67c8"
-      }
-    },
-    {
-      "key": "c4e01fc4-3de0-44bd-9e2b-cf8b923b2683",
-      "position": 6,
-      "properties": {
-        "progression_name": "Fonts and Style"
-      },
-      "seeding_key": {
-        "activity_section.key": "c4e01fc4-3de0-44bd-9e2b-cf8b923b2683",
-        "lesson_activity.key": "70326c31-4a36-4207-88ff-1e3ae14d67c8"
-      }
-    },
-    {
-      "key": "c60f092c-2f98-4aaf-b2b7-931df50e8aaa",
-      "position": 7,
-      "properties": {
-        "progression_name": "CSS Text Properties"
-      },
-      "seeding_key": {
-        "activity_section.key": "c60f092c-2f98-4aaf-b2b7-931df50e8aaa",
-        "lesson_activity.key": "70326c31-4a36-4207-88ff-1e3ae14d67c8"
-      }
-    },
-    {
-      "key": "22000d8e-1492-45fa-8a30-1f07493663a9",
-      "position": 8,
-      "properties": {
-        "progression_name": "Video: Intro to CSS Part 2"
-      },
-      "seeding_key": {
-        "activity_section.key": "22000d8e-1492-45fa-8a30-1f07493663a9",
-        "lesson_activity.key": "70326c31-4a36-4207-88ff-1e3ae14d67c8"
-      }
-    },
-    {
-      "key": "f3a122c4-ee10-4fad-b5f9-721462b2241e",
-      "position": 9,
-      "properties": {
-        "name": "Styling your Website",
-        "progression_name": "Styling your Website"
-      },
-      "seeding_key": {
-        "activity_section.key": "f3a122c4-ee10-4fad-b5f9-721462b2241e",
-        "lesson_activity.key": "70326c31-4a36-4207-88ff-1e3ae14d67c8"
-      }
-    },
-    {
-      "key": "4a7ed6a2-f245-466b-9905-654053dfae20",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "4a7ed6a2-f245-466b-9905-654053dfae20",
-        "lesson_activity.key": "d90499ae-8746-42e6-a49b-a67f5653a906"
-      }
-    },
-    {
-      "key": "a5f399ab-d90b-47c1-81a8-330c0b7ec280",
-      "position": 2,
-      "properties": {
-        "progression_name": "Exploring more CSS"
-      },
-      "seeding_key": {
-        "activity_section.key": "a5f399ab-d90b-47c1-81a8-330c0b7ec280",
-        "lesson_activity.key": "d90499ae-8746-42e6-a49b-a67f5653a906"
-      }
-    },
-    {
-      "key": "e0b14ff7-4c11-4a91-9e96-826a95bfcf75",
-      "position": 3,
-      "properties": {
-        "progression_name": "The Body Element"
-      },
-      "seeding_key": {
-        "activity_section.key": "e0b14ff7-4c11-4a91-9e96-826a95bfcf75",
-        "lesson_activity.key": "d90499ae-8746-42e6-a49b-a67f5653a906"
-      }
-    },
-    {
-      "key": "990479e4-56db-453b-9ea2-3505c8c6d180",
-      "position": 4,
-      "properties": {
-        "progression_name": "Layout with CSS"
-      },
-      "seeding_key": {
-        "activity_section.key": "990479e4-56db-453b-9ea2-3505c8c6d180",
-        "lesson_activity.key": "d90499ae-8746-42e6-a49b-a67f5653a906"
-      }
-    },
-    {
-      "key": "2045b63e-3235-4461-be53-ffe6dd026f7a",
-      "position": 5,
-      "properties": {
-        "progression_name": "Layout Properties"
-      },
-      "seeding_key": {
-        "activity_section.key": "2045b63e-3235-4461-be53-ffe6dd026f7a",
-        "lesson_activity.key": "d90499ae-8746-42e6-a49b-a67f5653a906"
-      }
-    },
-    {
-      "key": "47cc5dcc-0c01-4b6e-a03b-34f664cfa7d5",
-      "position": 6,
-      "properties": {
-        "name": "Styling your Website",
-        "progression_name": "Styling your Website"
-      },
-      "seeding_key": {
-        "activity_section.key": "47cc5dcc-0c01-4b6e-a03b-34f664cfa7d5",
-        "lesson_activity.key": "d90499ae-8746-42e6-a49b-a67f5653a906"
-      }
-    },
-    {
-      "key": "2682cf14-5543-4e2c-b9d0-72f37f11b0ce",
-      "position": 1,
-      "properties": {
-        "name": "Lesson Overview",
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "2682cf14-5543-4e2c-b9d0-72f37f11b0ce",
-        "lesson_activity.key": "47ee318f-12d3-439d-a88e-49df3d320669"
-      }
-    },
-    {
-      "key": "51011585-64b1-4bbb-94db-e1f9ebbae76b",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "51011585-64b1-4bbb-94db-e1f9ebbae76b",
-        "lesson_activity.key": "b9377910-2ed9-4f79-9176-095da0506283"
-      }
-    },
-    {
-      "key": "801d256e-1027-4bfd-8073-8ae4dd1a59c1",
-      "position": 2,
-      "properties": {
-        "progression_name": "RGB Widget"
-      },
-      "seeding_key": {
-        "activity_section.key": "801d256e-1027-4bfd-8073-8ae4dd1a59c1",
-        "lesson_activity.key": "b9377910-2ed9-4f79-9176-095da0506283"
-      }
-    },
-    {
-      "key": "ff300b87-d5fc-4e61-986c-e5915e272a81",
-      "position": 3,
-      "properties": {
-        "progression_name": "RGB Exploration"
-      },
-      "seeding_key": {
-        "activity_section.key": "ff300b87-d5fc-4e61-986c-e5915e272a81",
-        "lesson_activity.key": "b9377910-2ed9-4f79-9176-095da0506283"
-      }
-    },
-    {
-      "key": "011ef4d6-4373-4beb-ab13-e77d1fa25dc5",
-      "position": 4,
-      "properties": {
-        "progression_name": "CSS Classes"
-      },
-      "seeding_key": {
-        "activity_section.key": "011ef4d6-4373-4beb-ab13-e77d1fa25dc5",
-        "lesson_activity.key": "b9377910-2ed9-4f79-9176-095da0506283"
-      }
-    },
-    {
-      "key": "61b544a1-8893-4617-b22a-75b38cce57b8",
-      "position": 5,
-      "properties": {
-        "name": "Styling with Classes",
-        "progression_name": "Styling with Classes"
-      },
-      "seeding_key": {
-        "activity_section.key": "61b544a1-8893-4617-b22a-75b38cce57b8",
-        "lesson_activity.key": "b9377910-2ed9-4f79-9176-095da0506283"
-      }
-    },
-    {
-      "key": "fb4df271-45ec-4fb0-8247-0dfebe05cbd1",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "fb4df271-45ec-4fb0-8247-0dfebe05cbd1",
-        "lesson_activity.key": "ea719888-2ae7-4acd-9783-009e6744e142"
-      }
-    },
-    {
-      "key": "40b3d972-3f44-4395-b859-04dd02960e30",
-      "position": 2,
-      "properties": {
-        "progression_name": "Final Personal Website"
-      },
-      "seeding_key": {
-        "activity_section.key": "40b3d972-3f44-4395-b859-04dd02960e30",
-        "lesson_activity.key": "ea719888-2ae7-4acd-9783-009e6744e142"
-      }
-    },
-    {
-      "key": "c3775f6e-614c-43a0-bc6f-c5a3da7a12bb",
-      "position": 3,
-      "properties": {
-        "name": "Reflection",
-        "progression_name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "c3775f6e-614c-43a0-bc6f-c5a3da7a12bb",
-        "lesson_activity.key": "ea719888-2ae7-4acd-9783-009e6744e142"
-      }
-    },
-    {
-      "key": "e7208b53-2bf9-45ef-acb0-d734d8ee58a8",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "e7208b53-2bf9-45ef-acb0-d734d8ee58a8",
-        "lesson_activity.key": "5c672516-04f3-484d-a5bc-8808b4bba3b3"
-      }
-    },
-    {
-      "key": "b1a94684-a07a-4b04-bb0e-1514c9ae4885",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "b1a94684-a07a-4b04-bb0e-1514c9ae4885",
-        "lesson_activity.key": "06c4a690-d2a7-4e5b-ac4b-d064673db8cd"
-      }
-    }
+
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L01 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1294,8 +353,7 @@
         ],
         "lesson.key": "Exploring Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "ad55ae28-5794-4f0d-8970-dafde8dd2281"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2L01 TFMD_2019"
@@ -1304,9 +362,12 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Top Websites_2018_2019"
+        ],
         "progression": "Top Websites"
       },
       "bonus": false,
@@ -1316,8 +377,7 @@
         ],
         "lesson.key": "Exploring Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "1509e490-4f28-4bc4-9303-c5c156208213"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Top Websites_2018_2019"
@@ -1326,9 +386,12 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L02 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1338,8 +401,7 @@
         ],
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "7d345d9c-3308-4a84-b288-512e51e57815"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2L02 TFMD_2019"
@@ -1348,9 +410,12 @@
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Expression Exemplars_2018_2019"
+        ],
         "progression": "Exemplar Personal Websites"
       },
       "bonus": false,
@@ -1360,8 +425,7 @@
         ],
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "0cc1b631-05c8-4129-b2e9-65f02c303d16"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Expression Exemplars_2018_2019"
@@ -1370,9 +434,12 @@
     {
       "chapter": 5,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L03 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1382,8 +449,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "f00dd0ff-7a04-4e7f-b6ca-3c7a96143f2c"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2L03 TFMD_2019"
@@ -1392,9 +458,12 @@
     {
       "chapter": 6,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - Type Anything_2019"
+        ],
         "progression": "Experiment with Web Lab"
       },
       "bonus": false,
@@ -1404,8 +473,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "b5c36c8d-8c3c-4b22-b17f-08e8aec0a2ed"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSDU2 - Type Anything_2019"
@@ -1414,9 +482,12 @@
     {
       "chapter": 7,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Web Lab - Part 1_2019"
+        ],
         "progression": "Video: Intro to Web Lab - Part 1"
       },
       "bonus": false,
@@ -1426,8 +497,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "8c2f362f-8cc3-42f2-856c-4a7bb2aa3077"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "Intro to Web Lab - Part 1_2019"
@@ -1436,9 +506,12 @@
     {
       "chapter": 8,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Inspector Warm Up_2019"
+        ],
         "progression": "Explore HTML"
       },
       "bonus": false,
@@ -1448,8 +521,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "39bd7199-1d64-4d15-86e7-c038ca4fc357"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Inspector Warm Up_2019"
@@ -1458,9 +530,12 @@
     {
       "chapter": 9,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Web Lab - Part 2_2019"
+        ],
         "progression": "Video: Intro to Web Lab - Part 2"
       },
       "bonus": false,
@@ -1470,8 +545,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "598465cb-b907-49ca-84db-a93fef632f71"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "Intro to Web Lab - Part 2_2019"
@@ -1480,9 +554,12 @@
     {
       "chapter": 10,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML Tags Map_2019"
+        ],
         "progression": "HTML Tags"
       },
       "bonus": false,
@@ -1492,8 +569,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "28e77263-87a7-47ad-a222-a4751bb6dafa"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 HTML Tags Map_2019"
@@ -1502,9 +578,12 @@
     {
       "chapter": 11,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML Adding Paragraphs_2019"
+        ],
         "progression": "Using HTML Tags"
       },
       "bonus": false,
@@ -1514,8 +593,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "e4b2218a-c9ae-4c6b-9134-9ef9891e8876"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 HTML Adding Paragraphs_2019"
@@ -1524,9 +602,12 @@
     {
       "chapter": 12,
       "position": 8,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML Adding Paragraphs pt 2_2019"
+        ],
         "progression": "Using HTML Tags"
       },
       "bonus": false,
@@ -1536,8 +617,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "e4b2218a-c9ae-4c6b-9134-9ef9891e8876"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 HTML Adding Paragraphs pt 2_2019"
@@ -1546,9 +626,12 @@
     {
       "chapter": 13,
       "position": 9,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML Debug Paragraphs_2019"
+        ],
         "progression": "Using HTML Tags"
       },
       "bonus": false,
@@ -1558,8 +641,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "e4b2218a-c9ae-4c6b-9134-9ef9891e8876"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 HTML Debug Paragraphs_2019"
@@ -1568,9 +650,12 @@
     {
       "chapter": 14,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L04 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1580,8 +665,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "3301a127-c982-46a9-8280-14b318701aa8"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2L04 TFMD_2019"
@@ -1590,9 +674,12 @@
     {
       "chapter": 15,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Pair Programming Video_2019"
+        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -1602,8 +689,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "4dcbbc45-c3df-4c2c-a75e-c5b2b5cc23db"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Pair Programming Video_2019"
@@ -1612,9 +698,12 @@
     {
       "chapter": 16,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Heading Demo_2019"
+        ],
         "progression": "Headings"
       },
       "bonus": false,
@@ -1624,8 +713,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "6c3bc892-7aba-43bd-a742-7d73bbf74ed3"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Heading Demo_2019"
@@ -1634,9 +722,12 @@
     {
       "chapter": 17,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Heading Sizes_2019"
+        ],
         "progression": "Headings"
       },
       "bonus": false,
@@ -1646,8 +737,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "6c3bc892-7aba-43bd-a742-7d73bbf74ed3"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Heading Sizes_2019"
@@ -1656,9 +746,12 @@
     {
       "chapter": 18,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Header Size MC_2018_2019"
+        ],
         "progression": "Headings"
       },
       "bonus": false,
@@ -1668,8 +761,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "6c3bc892-7aba-43bd-a742-7d73bbf74ed3"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD Header Size MC_2018_2019"
@@ -1678,9 +770,12 @@
     {
       "chapter": 19,
       "position": 6,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 Heading Test_2019"
+        ],
         "progression": "Headings"
       },
       "bonus": false,
@@ -1690,8 +785,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "6c3bc892-7aba-43bd-a742-7d73bbf74ed3"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Heading Test_2019"
@@ -1700,9 +794,12 @@
     {
       "chapter": 20,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Headers map_2019"
+        ],
         "progression": "Headings in HTML"
       },
       "bonus": false,
@@ -1712,8 +809,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "0baf0b6a-4bf6-4e7e-9eac-75d23fb486b5"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Headers map_2019"
@@ -1722,9 +818,12 @@
     {
       "chapter": 21,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 PSP Programming_2018_2019"
+        ],
         "progression": "Problem Solving Process for Programming"
       },
       "bonus": false,
@@ -1734,8 +833,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "73085527-63a6-4397-85ee-cd5351ba8bf0"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 PSP Programming_2018_2019"
@@ -1744,9 +842,12 @@
     {
       "chapter": 22,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Design Project_2018_2019"
+        ],
         "progression": "Your Personal Website"
       },
       "bonus": false,
@@ -1756,8 +857,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "153d29d2-5ef0-416c-b01c-ddea76493073"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Design Project_2018_2019"
@@ -1766,9 +866,12 @@
     {
       "chapter": 23,
       "position": 10,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Project Start_2019"
+        ],
         "progression": "Your Personal Website"
       },
       "bonus": false,
@@ -1778,8 +881,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "153d29d2-5ef0-416c-b01c-ddea76493073"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Project Start_2019"
@@ -1788,9 +890,12 @@
     {
       "chapter": 24,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L05 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1800,8 +905,7 @@
         ],
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "4a6905c1-5b88-4beb-af1a-9b5d90235006"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2L05 TFMD_2019"
@@ -1810,9 +914,12 @@
     {
       "chapter": 25,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Social Sleuth_2018_2019"
+        ],
         "progression": "Social Sleuth"
       },
       "bonus": false,
@@ -1822,8 +929,7 @@
         ],
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "ed1c64a1-b450-4f4d-b509-3bc5dfe85c3a"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "Social Sleuth_2018_2019"
@@ -1832,9 +938,12 @@
     {
       "chapter": 26,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L06 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1844,8 +953,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "b268b7d7-903b-4f3b-8ffc-fe89a1dceb48"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2L06 TFMD_2019"
@@ -1854,9 +962,12 @@
     {
       "chapter": 27,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 lists intro_2019"
+        ],
         "progression": "Lists"
       },
       "bonus": false,
@@ -1866,8 +977,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "96c1880e-e7f9-43dd-a4e8-d89a104289cc"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 lists intro_2019"
@@ -1876,9 +986,12 @@
     {
       "chapter": 28,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 unordered list_2019"
+        ],
         "progression": "Lists"
       },
       "bonus": false,
@@ -1888,8 +1001,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "96c1880e-e7f9-43dd-a4e8-d89a104289cc"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 unordered list_2019"
@@ -1898,9 +1010,12 @@
     {
       "chapter": 29,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 ordered list_2019"
+        ],
         "progression": "Lists"
       },
       "bonus": false,
@@ -1910,8 +1025,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "96c1880e-e7f9-43dd-a4e8-d89a104289cc"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 ordered list_2019"
@@ -1920,9 +1034,12 @@
     {
       "chapter": 30,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 lists match_2018_2019"
+        ],
         "progression": "Lists"
       },
       "bonus": false,
@@ -1932,8 +1049,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "96c1880e-e7f9-43dd-a4e8-d89a104289cc"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 lists match_2018_2019"
@@ -1942,9 +1058,12 @@
     {
       "chapter": 31,
       "position": 6,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 un_ordered lists"
+        ],
         "progression": "Lists"
       },
       "bonus": false,
@@ -1954,8 +1073,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "96c1880e-e7f9-43dd-a4e8-d89a104289cc"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 un_ordered lists"
@@ -1964,9 +1082,12 @@
     {
       "chapter": 32,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 lists map_2019"
+        ],
         "progression": "Lists in HTML"
       },
       "bonus": false,
@@ -1976,8 +1097,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "f0d0bab0-1583-48e8-ad7b-194e498fcece"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 lists map_2019"
@@ -1986,9 +1106,12 @@
     {
       "chapter": 33,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 expand project_2018_2019"
+        ],
         "progression": "Expanding Your Website"
       },
       "bonus": false,
@@ -1998,8 +1121,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "26be687e-b195-4229-8240-3e3f18674be1"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 expand project_2018_2019"
@@ -2008,9 +1130,12 @@
     {
       "chapter": 34,
       "position": 9,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 new page_2019"
+        ],
         "progression": "Expanding Personal Website"
       },
       "bonus": false,
@@ -2020,8 +1145,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "dd7a00c0-9d3a-4678-968e-1fdb7f03ff5b"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 new page_2019"
@@ -2030,9 +1154,12 @@
     {
       "chapter": 35,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L07 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2042,8 +1169,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "a97be019-18c2-445a-a713-d4fade4af9e2"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2L07 TFMD_2019"
@@ -2052,9 +1178,12 @@
     {
       "chapter": 36,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 1_2019"
+        ],
         "progression": "Adding Images"
       },
       "bonus": false,
@@ -2064,8 +1193,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "2a1838a5-708c-4af3-baf7-54864c87153a"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Image Tag 1_2019"
@@ -2074,9 +1202,12 @@
     {
       "chapter": 37,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag Debug_2019"
+        ],
         "progression": "Adding Images"
       },
       "bonus": false,
@@ -2086,8 +1217,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "2a1838a5-708c-4af3-baf7-54864c87153a"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Image Tag Debug_2019"
@@ -2096,9 +1226,12 @@
     {
       "chapter": 38,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 image debug match"
+        ],
         "progression": "Adding Images"
       },
       "bonus": false,
@@ -2108,8 +1241,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "2a1838a5-708c-4af3-baf7-54864c87153a"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 image debug match"
@@ -2118,9 +1250,12 @@
     {
       "chapter": 39,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 2_2019"
+        ],
         "progression": "Adding Images"
       },
       "bonus": false,
@@ -2130,8 +1265,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "2a1838a5-708c-4af3-baf7-54864c87153a"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Image Tag 2_2019"
@@ -2140,9 +1274,12 @@
     {
       "chapter": 40,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 images map_2019"
+        ],
         "progression": "Images in HTML"
       },
       "bonus": false,
@@ -2152,8 +1289,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "24179087-12c5-4d00-871f-f7856b5d35b9"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 images map_2019"
@@ -2162,9 +1298,12 @@
     {
       "chapter": 41,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CC Search Map_2019"
+        ],
         "progression": "Creative Commons Search"
       },
       "bonus": false,
@@ -2174,8 +1313,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "43cd8249-3d88-496c-b52f-6a03f5380029"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 CC Search Map_2019"
@@ -2184,9 +1322,12 @@
     {
       "chapter": 42,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag Attribution_2019"
+        ],
         "progression": "Attribution"
       },
       "bonus": false,
@@ -2196,8 +1337,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "c08ce93f-748c-4544-ad15-d9e4303c318b"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Image Tag Attribution_2019"
@@ -2206,9 +1346,12 @@
     {
       "chapter": 43,
       "position": 9,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Info Page Final Touches_2019"
+        ],
         "progression": "Attribution"
       },
       "bonus": false,
@@ -2218,8 +1361,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "c08ce93f-748c-4544-ad15-d9e4303c318b"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Info Page Final Touches_2019"
@@ -2228,9 +1370,12 @@
     {
       "chapter": 44,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L08 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2240,8 +1385,7 @@
         ],
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "75510b66-6276-4220-82e4-b0d28453127b"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2L08 TFMD_2019"
@@ -2250,9 +1394,12 @@
     {
       "chapter": 45,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Debugging 1_2019"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -2262,8 +1409,7 @@
         ],
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "9b99bbac-c605-4a93-a573-277dbf0d31fe"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Debugging 1_2019"
@@ -2272,9 +1418,12 @@
     {
       "chapter": 46,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Debugging 2_2019"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -2284,8 +1433,7 @@
         ],
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "9b99bbac-c605-4a93-a573-277dbf0d31fe"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Debugging 2_2019"
@@ -2294,9 +1442,12 @@
     {
       "chapter": 47,
       "position": 4,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Debugging 3_2019"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -2306,8 +1457,7 @@
         ],
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "9b99bbac-c605-4a93-a573-277dbf0d31fe"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Debugging 3_2019"
@@ -2316,9 +1466,12 @@
     {
       "chapter": 48,
       "position": 5,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Debugging 4_2019"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -2328,8 +1481,7 @@
         ],
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "9b99bbac-c605-4a93-a573-277dbf0d31fe"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Debugging 4_2019"
@@ -2338,9 +1490,12 @@
     {
       "chapter": 49,
       "position": 6,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 commenting_2019"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -2350,8 +1505,7 @@
         ],
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "9b99bbac-c605-4a93-a573-277dbf0d31fe"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 commenting_2019"
@@ -2360,9 +1514,12 @@
     {
       "chapter": 50,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 formatting map_2019"
+        ],
         "progression": "Formatting HTML"
       },
       "bonus": false,
@@ -2372,8 +1529,7 @@
         ],
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "2315317c-9f63-4980-95ac-9e2c25658fef"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 formatting map_2019"
@@ -2382,9 +1538,12 @@
     {
       "chapter": 51,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 challenge_2019"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -2394,8 +1553,7 @@
         ],
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "4d3fa0f3-0dea-4ff7-9e48-f2ea1fb5e6b6"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 challenge_2019"
@@ -2404,9 +1562,12 @@
     {
       "chapter": 52,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L09 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2416,8 +1577,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "736313a5-2b8b-4290-bda7-c60ae0ffd965"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2L09 TFMD_2019"
@@ -2426,9 +1586,12 @@
     {
       "chapter": 53,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 link demo_2019"
+        ],
         "progression": "Linking Pages"
       },
       "bonus": false,
@@ -2438,8 +1601,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "96ae3592-0ae8-4f4c-8e30-cd29f8ac7bd3"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 link demo_2019"
@@ -2448,9 +1610,12 @@
     {
       "chapter": 54,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 navigation_2019"
+        ],
         "progression": "Linking Pages"
       },
       "bonus": false,
@@ -2460,8 +1625,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "96ae3592-0ae8-4f4c-8e30-cd29f8ac7bd3"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 navigation_2019"
@@ -2470,9 +1634,12 @@
     {
       "chapter": 55,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 a tag map_2019"
+        ],
         "progression": "Hyperlinks"
       },
       "bonus": false,
@@ -2482,8 +1649,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "90332559-0ced-42cf-b103-e30e0fc60e83"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 a tag map_2019"
@@ -2492,9 +1658,12 @@
     {
       "chapter": 56,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 project guide_2018_2019"
+        ],
         "progression": "Project Guide"
       },
       "bonus": false,
@@ -2504,8 +1673,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "a64ebebb-2737-43a0-b4d8-f7971096b3e0"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 project guide_2018_2019"
@@ -2514,9 +1682,12 @@
     {
       "chapter": 57,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 create page_2019"
+        ],
         "progression": "Website Project"
       },
       "bonus": false,
@@ -2526,8 +1697,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "174b4817-ee38-47a4-be7c-dbf4c4d752ea"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 create page_2019"
@@ -2536,9 +1706,12 @@
     {
       "chapter": 58,
       "position": 7,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 upload images_2019"
+        ],
         "progression": "Website Project"
       },
       "bonus": false,
@@ -2548,8 +1721,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "174b4817-ee38-47a4-be7c-dbf4c4d752ea"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 upload images_2019"
@@ -2558,9 +1730,12 @@
     {
       "chapter": 59,
       "position": 8,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 add content_2019"
+        ],
         "progression": "Website Project"
       },
       "bonus": false,
@@ -2570,8 +1745,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "174b4817-ee38-47a4-be7c-dbf4c4d752ea"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 add content_2019"
@@ -2580,9 +1754,12 @@
     {
       "chapter": 60,
       "position": 9,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 header footer_2019"
+        ],
         "progression": "Website Project"
       },
       "bonus": false,
@@ -2592,8 +1769,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "174b4817-ee38-47a4-be7c-dbf4c4d752ea"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 header footer_2019"
@@ -2602,9 +1778,12 @@
     {
       "chapter": 61,
       "position": 10,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 project review_2019"
+        ],
         "progression": "Website Project"
       },
       "bonus": false,
@@ -2614,8 +1793,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "174b4817-ee38-47a4-be7c-dbf4c4d752ea"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 project review_2019"
@@ -2624,9 +1802,12 @@
     {
       "chapter": 62,
       "position": 11,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 publish video"
+        ],
         "progression": "Publishing Your Website"
       },
       "bonus": false,
@@ -2636,8 +1817,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "5df340df-5ad6-48a7-8a71-0e4fc7c1ebcc"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 publish video"
@@ -2646,9 +1826,12 @@
     {
       "chapter": 63,
       "position": 12,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 project share_2019"
+        ],
         "progression": "Publishing Your Website"
       },
       "bonus": false,
@@ -2658,8 +1841,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "5df340df-5ad6-48a7-8a71-0e4fc7c1ebcc"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 project share_2019"
@@ -2668,9 +1850,12 @@
     {
       "chapter": 64,
       "position": 13,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -2680,8 +1865,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "301881e9-8b2a-430a-9bf3-928038396c1f"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019"
@@ -2690,9 +1874,12 @@
     {
       "chapter": 65,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L10 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2702,8 +1889,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "fda3726d-3496-4e33-90c6-cb20afa549f3"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2L10 TFMD_2019"
@@ -2712,9 +1898,12 @@
     {
       "chapter": 66,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS explore CSS_2019"
+        ],
         "progression": "Exploration: Adding Style"
       },
       "bonus": false,
@@ -2724,8 +1913,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "bcf6fb6e-2324-4127-ba60-222522b9fb8e"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 CSS explore CSS_2019"
@@ -2734,9 +1922,12 @@
     {
       "chapter": 67,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video: Intro to CSS_2019"
+        ],
         "progression": "Video: Intro to CSS"
       },
       "bonus": false,
@@ -2746,8 +1937,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "678c8582-c423-4275-906d-3d274c819ba3"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "Video: Intro to CSS_2019"
@@ -2756,9 +1946,12 @@
     {
       "chapter": 68,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style h1_2019"
+        ],
         "progression": "Styling Text"
       },
       "bonus": false,
@@ -2768,8 +1961,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "56cd783c-a590-459e-8396-0d8ae9113c33"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 text style h1_2019"
@@ -2778,9 +1970,12 @@
     {
       "chapter": 69,
       "position": 5,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style h3_2019"
+        ],
         "progression": "Styling Text"
       },
       "bonus": false,
@@ -2790,8 +1985,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "56cd783c-a590-459e-8396-0d8ae9113c33"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 text style h3_2019"
@@ -2800,9 +1994,12 @@
     {
       "chapter": 70,
       "position": 6,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Style Sheet Map_2019"
+        ],
         "progression": "CSS and Style Sheets"
       },
       "bonus": false,
@@ -2812,8 +2009,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "0d59897a-ae98-46f2-837b-8a7b0d1342ab"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Style Sheet Map_2019"
@@ -2822,9 +2018,12 @@
     {
       "chapter": 71,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style size_2019"
+        ],
         "progression": "Fonts and Style"
       },
       "bonus": false,
@@ -2834,8 +2033,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "c4e01fc4-3de0-44bd-9e2b-cf8b923b2683"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 text style size_2019"
@@ -2844,9 +2042,12 @@
     {
       "chapter": 72,
       "position": 8,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style font family_2019"
+        ],
         "progression": "Fonts and Style"
       },
       "bonus": false,
@@ -2856,8 +2057,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "c4e01fc4-3de0-44bd-9e2b-cf8b923b2683"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 text style font family_2019"
@@ -2866,9 +2066,12 @@
     {
       "chapter": 73,
       "position": 9,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style decoration_2019"
+        ],
         "progression": "Fonts and Style"
       },
       "bonus": false,
@@ -2878,8 +2081,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "c4e01fc4-3de0-44bd-9e2b-cf8b923b2683"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 text style decoration_2019"
@@ -2888,9 +2090,12 @@
     {
       "chapter": 74,
       "position": 10,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style text align_2019"
+        ],
         "progression": "Fonts and Style"
       },
       "bonus": false,
@@ -2900,8 +2105,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "c4e01fc4-3de0-44bd-9e2b-cf8b923b2683"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 text style text align_2019"
@@ -2910,9 +2114,12 @@
     {
       "chapter": 75,
       "position": 11,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Text Properties Map_2019"
+        ],
         "progression": "CSS Text Properties"
       },
       "bonus": false,
@@ -2922,8 +2129,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "c60f092c-2f98-4aaf-b2b7-931df50e8aaa"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Text Properties Map_2019"
@@ -2932,9 +2138,12 @@
     {
       "chapter": 76,
       "position": 12,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video: Intro to CSS Part 2_2019"
+        ],
         "progression": "Video: Intro to CSS Part 2"
       },
       "bonus": false,
@@ -2944,8 +2153,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "22000d8e-1492-45fa-8a30-1f07493663a9"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "Video: Intro to CSS Part 2_2019"
@@ -2954,9 +2162,12 @@
     {
       "chapter": 77,
       "position": 13,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 add file_2019"
+        ],
         "progression": "Styling your Website"
       },
       "bonus": false,
@@ -2966,8 +2177,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "f3a122c4-ee10-4fad-b5f9-721462b2241e"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 add file_2019"
@@ -2976,9 +2186,12 @@
     {
       "chapter": 78,
       "position": 14,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style freeplay_2019"
+        ],
         "progression": "Styling your Website"
       },
       "bonus": false,
@@ -2988,8 +2201,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "f3a122c4-ee10-4fad-b5f9-721462b2241e"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 text style freeplay_2019"
@@ -2998,9 +2210,12 @@
     {
       "chapter": 79,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L11 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3010,8 +2225,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "4a7ed6a2-f245-466b-9905-654053dfae20"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2L11 TFMD_2019"
@@ -3020,9 +2234,12 @@
     {
       "chapter": 80,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style sample_2019"
+        ],
         "progression": "Exploring more CSS"
       },
       "bonus": false,
@@ -3032,8 +2249,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "a5f399ab-d90b-47c1-81a8-330c0b7ec280"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 layout style sample_2019"
@@ -3042,9 +2258,12 @@
     {
       "chapter": 81,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style bgcolor_2019"
+        ],
         "progression": "Exploring more CSS"
       },
       "bonus": false,
@@ -3054,8 +2273,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "a5f399ab-d90b-47c1-81a8-330c0b7ec280"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 layout style bgcolor_2019"
@@ -3064,9 +2282,12 @@
     {
       "chapter": 82,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSS U2 Body Map_2019"
+        ],
         "progression": "The Body Element"
       },
       "bonus": false,
@@ -3076,8 +2297,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "e0b14ff7-4c11-4a91-9e96-826a95bfcf75"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSS U2 Body Map_2019"
@@ -3086,9 +2306,12 @@
     {
       "chapter": 83,
       "position": 5,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style body_2019"
+        ],
         "progression": "Layout with CSS"
       },
       "bonus": false,
@@ -3098,8 +2321,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "990479e4-56db-453b-9ea2-3505c8c6d180"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 layout style body_2019"
@@ -3108,9 +2330,12 @@
     {
       "chapter": 84,
       "position": 6,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style border_2019"
+        ],
         "progression": "Layout with CSS"
       },
       "bonus": false,
@@ -3120,8 +2345,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "990479e4-56db-453b-9ea2-3505c8c6d180"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 layout style border_2019"
@@ -3130,9 +2354,12 @@
     {
       "chapter": 85,
       "position": 7,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style borderradius_2019"
+        ],
         "progression": "Layout with CSS"
       },
       "bonus": false,
@@ -3142,8 +2369,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "990479e4-56db-453b-9ea2-3505c8c6d180"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 layout style borderradius_2019"
@@ -3152,9 +2378,12 @@
     {
       "chapter": 86,
       "position": 8,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style float_2019"
+        ],
         "progression": "Layout with CSS"
       },
       "bonus": false,
@@ -3164,8 +2393,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "990479e4-56db-453b-9ea2-3505c8c6d180"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 layout style float_2019"
@@ -3174,9 +2402,12 @@
     {
       "chapter": 87,
       "position": 9,
-      "activity_section_position": 5,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style width_2019"
+        ],
         "progression": "Layout with CSS"
       },
       "bonus": false,
@@ -3186,8 +2417,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "990479e4-56db-453b-9ea2-3505c8c6d180"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 layout style width_2019"
@@ -3196,9 +2426,12 @@
     {
       "chapter": 88,
       "position": 10,
-      "activity_section_position": 6,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style margin_2019"
+        ],
         "progression": "Layout with CSS"
       },
       "bonus": false,
@@ -3208,8 +2441,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "990479e4-56db-453b-9ea2-3505c8c6d180"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 layout style margin_2019"
@@ -3218,9 +2450,12 @@
     {
       "chapter": 89,
       "position": 11,
-      "activity_section_position": 7,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 add style_2019"
+        ],
         "progression": "Layout with CSS"
       },
       "bonus": false,
@@ -3230,8 +2465,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "990479e4-56db-453b-9ea2-3505c8c6d180"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 add style_2019"
@@ -3240,9 +2474,12 @@
     {
       "chapter": 90,
       "position": 12,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Layout Properties Map_2019"
+        ],
         "progression": "Layout Properties"
       },
       "bonus": false,
@@ -3252,8 +2489,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "2045b63e-3235-4461-be53-ffe6dd026f7a"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 Layout Properties Map_2019"
@@ -3262,9 +2498,12 @@
     {
       "chapter": 91,
       "position": 13,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style freeplay_2019"
+        ],
         "progression": "Styling your Website"
       },
       "bonus": false,
@@ -3274,8 +2513,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "47cc5dcc-0c01-4b6e-a03b-34f664cfa7d5"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 layout style freeplay_2019"
@@ -3284,9 +2522,12 @@
     {
       "chapter": 92,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3296,8 +2537,7 @@
         ],
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "2682cf14-5543-4e2c-b9d0-72f37f11b0ce"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2L12 TFMD_2019"
@@ -3306,9 +2546,12 @@
     {
       "chapter": 93,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L13 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3318,8 +2561,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "51011585-64b1-4bbb-94db-e1f9ebbae76b"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2L13 TFMD_2019"
@@ -3328,9 +2570,12 @@
     {
       "chapter": 94,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 RGB intro_2019"
+        ],
         "progression": "RGB Widget"
       },
       "bonus": false,
@@ -3340,8 +2585,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "801d256e-1027-4bfd-8073-8ae4dd1a59c1"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 RGB intro_2019"
@@ -3350,9 +2594,12 @@
     {
       "chapter": 95,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 RGB winter_2019"
+        ],
         "progression": "RGB Exploration"
       },
       "bonus": false,
@@ -3362,8 +2609,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "ff300b87-d5fc-4e61-986c-e5915e272a81"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 RGB winter_2019"
@@ -3372,9 +2618,12 @@
     {
       "chapter": 96,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 RGB summer_2019"
+        ],
         "progression": "RGB Exploration"
       },
       "bonus": false,
@@ -3384,8 +2633,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "ff300b87-d5fc-4e61-986c-e5915e272a81"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 RGB summer_2019"
@@ -3394,9 +2642,12 @@
     {
       "chapter": 97,
       "position": 5,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 RGB others_2019"
+        ],
         "progression": "RGB Exploration"
       },
       "bonus": false,
@@ -3406,8 +2657,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "ff300b87-d5fc-4e61-986c-e5915e272a81"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 RGB others_2019"
@@ -3416,9 +2666,12 @@
     {
       "chapter": 98,
       "position": 6,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 classes sample_2019"
+        ],
         "progression": "RGB Exploration"
       },
       "bonus": false,
@@ -3428,8 +2681,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "ff300b87-d5fc-4e61-986c-e5915e272a81"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 classes sample_2019"
@@ -3438,9 +2690,12 @@
     {
       "chapter": 99,
       "position": 7,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS Classes Map_2019"
+        ],
         "progression": "CSS Classes"
       },
       "bonus": false,
@@ -3450,8 +2705,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "011ef4d6-4373-4beb-ab13-e77d1fa25dc5"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 CSS Classes Map_2019"
@@ -3460,9 +2714,12 @@
     {
       "chapter": 100,
       "position": 8,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 classes modify_2019"
+        ],
         "progression": "Styling with Classes"
       },
       "bonus": false,
@@ -3472,8 +2729,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "61b544a1-8893-4617-b22a-75b38cce57b8"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 classes modify_2019"
@@ -3482,9 +2738,12 @@
     {
       "chapter": 101,
       "position": 9,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 classes spring_2019"
+        ],
         "progression": "Styling with Classes"
       },
       "bonus": false,
@@ -3494,8 +2753,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "61b544a1-8893-4617-b22a-75b38cce57b8"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 classes spring_2019"
@@ -3504,9 +2762,12 @@
     {
       "chapter": 102,
       "position": 10,
-      "activity_section_position": 3,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 classes summer_2019"
+        ],
         "progression": "Styling with Classes"
       },
       "bonus": false,
@@ -3516,8 +2777,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "61b544a1-8893-4617-b22a-75b38cce57b8"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2 classes summer_2019"
@@ -3526,9 +2786,12 @@
     {
       "chapter": 103,
       "position": 11,
-      "activity_section_position": 4,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - PW - Class Style Personal Site_2019"
+        ],
         "progression": "Styling with Classes"
       },
       "bonus": false,
@@ -3538,8 +2801,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "61b544a1-8893-4617-b22a-75b38cce57b8"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSDU2 - PW - Class Style Personal Site_2019"
@@ -3548,9 +2810,12 @@
     {
       "chapter": 104,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L14 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3560,8 +2825,7 @@
         ],
         "lesson.key": "Project - Personal Portfolio Website",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "fb4df271-45ec-4fb0-8247-0dfebe05cbd1"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD U2L14 TFMD_2019"
@@ -3570,9 +2834,12 @@
     {
       "chapter": 105,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Final Personal Website_2019"
+        ],
         "progression": "Final Personal Website"
       },
       "bonus": false,
@@ -3582,8 +2849,7 @@
         ],
         "lesson.key": "Project - Personal Portfolio Website",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "40b3d972-3f44-4395-b859-04dd02960e30"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "Final Personal Website_2019"
@@ -3592,9 +2858,12 @@
     {
       "chapter": 106,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -3604,8 +2873,7 @@
         ],
         "lesson.key": "Project - Personal Portfolio Website",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "c3775f6e-614c-43a0-bc6f-c5a3da7a12bb"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "csd-pulse-check-survey-1-levelgroup U2Ch2_2018_2019"
@@ -3614,9 +2882,12 @@
     {
       "chapter": 107,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Web Development Post-Project Test"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3625,8 +2896,7 @@
         ],
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "e7208b53-2bf9-45ef-acb0-d734d8ee58a8"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "CSD Web Development Post-Project Test"
@@ -3635,9 +2905,12 @@
     {
       "chapter": 108,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-intro-2019"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3646,8 +2919,7 @@
         ],
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csd2-2019",
-        "activity_section.key": "b1a94684-a07a-4b04-bb0e-1514c9ae4885"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "csd-post-survey-intro-2019"
@@ -3656,9 +2928,12 @@
     {
       "chapter": 109,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-levelgroup_2019"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3667,8 +2942,7 @@
         ],
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csd2-2019",
-        "activity_section.key": "b1a94684-a07a-4b04-bb0e-1514c9ae4885"
+        "script.name": "csd2-2019"
       },
       "level_keys": [
         "csd-post-survey-levelgroup_2019"
@@ -3684,8 +2958,7 @@
         ],
         "lesson.key": "Exploring Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "ad55ae28-5794-4f0d-8970-dafde8dd2281"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3696,8 +2969,7 @@
         ],
         "lesson.key": "Exploring Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "1509e490-4f28-4bc4-9303-c5c156208213"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3708,8 +2980,7 @@
         ],
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "7d345d9c-3308-4a84-b288-512e51e57815"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3720,8 +2991,7 @@
         ],
         "lesson.key": "Websites for Expression ",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "0cc1b631-05c8-4129-b2e9-65f02c303d16"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3732,8 +3002,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "f00dd0ff-7a04-4e7f-b6ca-3c7a96143f2c"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3744,8 +3013,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "b5c36c8d-8c3c-4b22-b17f-08e8aec0a2ed"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3756,8 +3024,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "8c2f362f-8cc3-42f2-856c-4a7bb2aa3077"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3768,8 +3035,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "39bd7199-1d64-4d15-86e7-c038ca4fc357"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3780,8 +3046,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "598465cb-b907-49ca-84db-a93fef632f71"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3792,8 +3057,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "28e77263-87a7-47ad-a222-a4751bb6dafa"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3804,8 +3068,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "e4b2218a-c9ae-4c6b-9134-9ef9891e8876"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3816,8 +3079,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "e4b2218a-c9ae-4c6b-9134-9ef9891e8876"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3828,8 +3090,7 @@
         ],
         "lesson.key": "Intro to HTML",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "e4b2218a-c9ae-4c6b-9134-9ef9891e8876"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3840,8 +3101,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "3301a127-c982-46a9-8280-14b318701aa8"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3852,8 +3112,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "4dcbbc45-c3df-4c2c-a75e-c5b2b5cc23db"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3864,8 +3123,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "6c3bc892-7aba-43bd-a742-7d73bbf74ed3"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3876,8 +3134,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "6c3bc892-7aba-43bd-a742-7d73bbf74ed3"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3888,8 +3145,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "6c3bc892-7aba-43bd-a742-7d73bbf74ed3"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3900,8 +3156,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "6c3bc892-7aba-43bd-a742-7d73bbf74ed3"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3912,8 +3167,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "0baf0b6a-4bf6-4e7e-9eac-75d23fb486b5"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3924,8 +3178,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "73085527-63a6-4397-85ee-cd5351ba8bf0"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3936,8 +3189,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "153d29d2-5ef0-416c-b01c-ddea76493073"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3948,8 +3200,7 @@
         ],
         "lesson.key": "Headings",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "153d29d2-5ef0-416c-b01c-ddea76493073"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3960,8 +3211,7 @@
         ],
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "4a6905c1-5b88-4beb-af1a-9b5d90235006"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3972,8 +3222,7 @@
         ],
         "lesson.key": "Digital Footprint",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "ed1c64a1-b450-4f4d-b509-3bc5dfe85c3a"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3984,8 +3233,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "b268b7d7-903b-4f3b-8ffc-fe89a1dceb48"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -3996,8 +3244,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "96c1880e-e7f9-43dd-a4e8-d89a104289cc"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4008,8 +3255,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "96c1880e-e7f9-43dd-a4e8-d89a104289cc"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4020,8 +3266,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "96c1880e-e7f9-43dd-a4e8-d89a104289cc"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4032,8 +3277,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "96c1880e-e7f9-43dd-a4e8-d89a104289cc"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4044,8 +3288,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "96c1880e-e7f9-43dd-a4e8-d89a104289cc"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4056,8 +3299,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "f0d0bab0-1583-48e8-ad7b-194e498fcece"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4068,8 +3310,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "26be687e-b195-4229-8240-3e3f18674be1"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4080,8 +3321,7 @@
         ],
         "lesson.key": "Lists",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "dd7a00c0-9d3a-4678-968e-1fdb7f03ff5b"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4092,8 +3332,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "a97be019-18c2-445a-a713-d4fade4af9e2"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4104,8 +3343,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "2a1838a5-708c-4af3-baf7-54864c87153a"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4116,8 +3354,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "2a1838a5-708c-4af3-baf7-54864c87153a"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4128,8 +3365,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "2a1838a5-708c-4af3-baf7-54864c87153a"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4140,8 +3376,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "2a1838a5-708c-4af3-baf7-54864c87153a"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4152,8 +3387,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "24179087-12c5-4d00-871f-f7856b5d35b9"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4164,8 +3398,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "43cd8249-3d88-496c-b52f-6a03f5380029"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4176,8 +3409,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "c08ce93f-748c-4544-ad15-d9e4303c318b"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4188,8 +3420,7 @@
         ],
         "lesson.key": "Intellectual Property and Images",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "c08ce93f-748c-4544-ad15-d9e4303c318b"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4200,8 +3431,7 @@
         ],
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "75510b66-6276-4220-82e4-b0d28453127b"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4212,8 +3442,7 @@
         ],
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "9b99bbac-c605-4a93-a573-277dbf0d31fe"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4224,8 +3453,7 @@
         ],
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "9b99bbac-c605-4a93-a573-277dbf0d31fe"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4236,8 +3464,7 @@
         ],
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "9b99bbac-c605-4a93-a573-277dbf0d31fe"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4248,8 +3475,7 @@
         ],
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "9b99bbac-c605-4a93-a573-277dbf0d31fe"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4260,8 +3486,7 @@
         ],
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "9b99bbac-c605-4a93-a573-277dbf0d31fe"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4272,8 +3497,7 @@
         ],
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "2315317c-9f63-4980-95ac-9e2c25658fef"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4284,8 +3508,7 @@
         ],
         "lesson.key": "Clean Code and Debugging",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "4d3fa0f3-0dea-4ff7-9e48-f2ea1fb5e6b6"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4296,8 +3519,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "736313a5-2b8b-4290-bda7-c60ae0ffd965"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4308,8 +3530,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "96ae3592-0ae8-4f4c-8e30-cd29f8ac7bd3"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4320,8 +3541,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "96ae3592-0ae8-4f4c-8e30-cd29f8ac7bd3"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4332,8 +3552,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "90332559-0ced-42cf-b103-e30e0fc60e83"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4344,8 +3563,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "a64ebebb-2737-43a0-b4d8-f7971096b3e0"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4356,8 +3574,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "174b4817-ee38-47a4-be7c-dbf4c4d752ea"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4368,8 +3585,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "174b4817-ee38-47a4-be7c-dbf4c4d752ea"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4380,8 +3596,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "174b4817-ee38-47a4-be7c-dbf4c4d752ea"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4392,8 +3607,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "174b4817-ee38-47a4-be7c-dbf4c4d752ea"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4404,8 +3618,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "174b4817-ee38-47a4-be7c-dbf4c4d752ea"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4416,8 +3629,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "5df340df-5ad6-48a7-8a71-0e4fc7c1ebcc"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4428,8 +3640,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "5df340df-5ad6-48a7-8a71-0e4fc7c1ebcc"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4440,8 +3651,7 @@
         ],
         "lesson.key": "Project - Multi-Page Websites",
         "lesson_group.key": "csd2_1",
-        "script.name": "csd2-2019",
-        "activity_section.key": "301881e9-8b2a-430a-9bf3-928038396c1f"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4452,8 +3662,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "fda3726d-3496-4e33-90c6-cb20afa549f3"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4464,8 +3673,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "bcf6fb6e-2324-4127-ba60-222522b9fb8e"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4476,8 +3684,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "678c8582-c423-4275-906d-3d274c819ba3"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4488,8 +3695,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "56cd783c-a590-459e-8396-0d8ae9113c33"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4500,8 +3706,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "56cd783c-a590-459e-8396-0d8ae9113c33"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4512,8 +3717,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "0d59897a-ae98-46f2-837b-8a7b0d1342ab"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4524,8 +3728,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "c4e01fc4-3de0-44bd-9e2b-cf8b923b2683"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4536,8 +3739,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "c4e01fc4-3de0-44bd-9e2b-cf8b923b2683"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4548,8 +3750,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "c4e01fc4-3de0-44bd-9e2b-cf8b923b2683"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4560,8 +3761,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "c4e01fc4-3de0-44bd-9e2b-cf8b923b2683"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4572,8 +3772,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "c60f092c-2f98-4aaf-b2b7-931df50e8aaa"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4584,8 +3783,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "22000d8e-1492-45fa-8a30-1f07493663a9"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4596,8 +3794,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "f3a122c4-ee10-4fad-b5f9-721462b2241e"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4608,8 +3805,7 @@
         ],
         "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "f3a122c4-ee10-4fad-b5f9-721462b2241e"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4620,8 +3816,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "4a7ed6a2-f245-466b-9905-654053dfae20"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4632,8 +3827,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "a5f399ab-d90b-47c1-81a8-330c0b7ec280"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4644,8 +3838,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "a5f399ab-d90b-47c1-81a8-330c0b7ec280"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4656,8 +3849,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "e0b14ff7-4c11-4a91-9e96-826a95bfcf75"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4668,8 +3860,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "990479e4-56db-453b-9ea2-3505c8c6d180"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4680,8 +3871,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "990479e4-56db-453b-9ea2-3505c8c6d180"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4692,8 +3882,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "990479e4-56db-453b-9ea2-3505c8c6d180"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4704,8 +3893,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "990479e4-56db-453b-9ea2-3505c8c6d180"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4716,8 +3904,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "990479e4-56db-453b-9ea2-3505c8c6d180"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4728,8 +3915,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "990479e4-56db-453b-9ea2-3505c8c6d180"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4740,8 +3926,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "990479e4-56db-453b-9ea2-3505c8c6d180"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4752,8 +3937,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "2045b63e-3235-4461-be53-ffe6dd026f7a"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4764,8 +3948,7 @@
         ],
         "lesson.key": "Styling Elements with CSS",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "47cc5dcc-0c01-4b6e-a03b-34f664cfa7d5"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4776,8 +3959,7 @@
         ],
         "lesson.key": "Sources and Search Engines",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "2682cf14-5543-4e2c-b9d0-72f37f11b0ce"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4788,8 +3970,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "51011585-64b1-4bbb-94db-e1f9ebbae76b"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4800,8 +3981,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "801d256e-1027-4bfd-8073-8ae4dd1a59c1"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4812,8 +3992,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "ff300b87-d5fc-4e61-986c-e5915e272a81"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4824,8 +4003,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "ff300b87-d5fc-4e61-986c-e5915e272a81"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4836,8 +4014,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "ff300b87-d5fc-4e61-986c-e5915e272a81"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4848,8 +4025,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "ff300b87-d5fc-4e61-986c-e5915e272a81"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4860,8 +4036,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "011ef4d6-4373-4beb-ab13-e77d1fa25dc5"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4872,8 +4047,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "61b544a1-8893-4617-b22a-75b38cce57b8"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4884,8 +4058,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "61b544a1-8893-4617-b22a-75b38cce57b8"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4896,8 +4069,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "61b544a1-8893-4617-b22a-75b38cce57b8"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4908,8 +4080,7 @@
         ],
         "lesson.key": "RGB Colors and Classes",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "61b544a1-8893-4617-b22a-75b38cce57b8"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4920,8 +4091,7 @@
         ],
         "lesson.key": "Project - Personal Portfolio Website",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "fb4df271-45ec-4fb0-8247-0dfebe05cbd1"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4932,8 +4102,7 @@
         ],
         "lesson.key": "Project - Personal Portfolio Website",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "40b3d972-3f44-4395-b859-04dd02960e30"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4944,8 +4113,7 @@
         ],
         "lesson.key": "Project - Personal Portfolio Website",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "c3775f6e-614c-43a0-bc6f-c5a3da7a12bb"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4956,8 +4124,7 @@
         ],
         "lesson.key": "Post-Project Test",
         "lesson_group.key": "csd2_2",
-        "script.name": "csd2-2019",
-        "activity_section.key": "e7208b53-2bf9-45ef-acb0-d734d8ee58a8"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4968,8 +4135,7 @@
         ],
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csd2-2019",
-        "activity_section.key": "b1a94684-a07a-4b04-bb0e-1514c9ae4885"
+        "script.name": "csd2-2019"
       }
     },
     {
@@ -4980,8 +4146,7 @@
         ],
         "lesson.key": "CS Discoveries Post Course survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csd2-2019",
-        "activity_section.key": "b1a94684-a07a-4b04-bb0e-1514c9ae4885"
+        "script.name": "csd2-2019"
       }
     }
   ],

@@ -6,6 +6,7 @@
     "properties": {
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/coursea/{LESSON}",
       "curriculum_umbrella": "CSF",
+      "family_name": "coursea",
       "has_lesson_plan": true,
       "hideable_lessons": true,
       "is_course": true,
@@ -47,11 +48,9 @@
     },
     "new_name": "coursea-2017",
     "family_name": "coursea",
-    "serialized_at": "2021-11-19 20:48:07 UTC",
+    "serialized_at": "2021-10-25 22:53:27 UTC",
     "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "coursea-2017"
     }

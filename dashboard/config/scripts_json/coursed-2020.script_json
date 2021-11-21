@@ -47,11 +47,9 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-11-19 20:48:16 UTC",
+    "serialized_at": "2021-10-25 22:54:08 UTC",
     "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "coursed-2020"
     }

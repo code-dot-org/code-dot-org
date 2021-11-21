@@ -10,11 +10,9 @@
     },
     "new_name": null,
     "family_name": "poembot-hoc",
-    "serialized_at": "2021-11-19 20:49:50 UTC",
+    "serialized_at": "2021-10-25 22:54:58 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "poetry-hoc"
     }

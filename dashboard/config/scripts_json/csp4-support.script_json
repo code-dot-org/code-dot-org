@@ -11,11 +11,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:48:42 UTC",
+    "serialized_at": "2021-11-02 14:29:35 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp4-support"
     }
@@ -798,9 +798,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "What's inside and how is it organized?"
-        ],
         "progression": "What's inside and how is it organized?"
       },
       "bonus": false,
@@ -823,9 +820,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Introduction to Unit 4"
-        ],
         "progression": "Introduction to Unit 4"
       },
       "bonus": false,
@@ -848,9 +842,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 4 Tool Talk"
-        ],
         "progression": "Unit 4 Tool Talk"
       },
       "bonus": false,
@@ -873,9 +864,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 4: Practice PT highlights"
-        ],
         "progression": "Unit 4: Practice PT highlights"
       },
       "bonus": false,
@@ -898,9 +886,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 4 Self-Assessment"
-        ],
         "progression": "Unit 4 Self-Assessment"
       },
       "bonus": false,
@@ -923,9 +908,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "4.1 - 4.4 Lesson Connections"
-        ],
         "progression": "4.1 - 4.4 Lesson Connections"
       },
       "bonus": false,
@@ -948,9 +930,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "What is \"Big\" Data?"
-        ],
         "progression": "What is \"Big\" Data?"
       },
       "bonus": false,
@@ -973,9 +952,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Website: Data Breaches"
-        ],
         "progression": "Website: Data Breaches"
       },
       "bonus": false,
@@ -998,9 +974,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Raw Data Podcast: Gold or Pyrite"
-        ],
         "progression": "Raw Data Podcast: Gold or Pyrite"
       },
       "bonus": false,
@@ -1023,9 +996,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Big Data in the CSP Framework"
-        ],
         "progression": "Big Data in the CSP Framework"
       },
       "bonus": false,
@@ -1048,9 +1018,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L1 - 4: Teaching and Student Support Plan"
-        ],
         "progression": "U4 L1 - 4: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -1073,9 +1040,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "4.5 - 4.7 Lesson Connections"
-        ],
         "progression": "4.5 - 4.7 Lesson Connections"
       },
       "bonus": false,
@@ -1098,9 +1062,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Encryption in CS"
-        ],
         "progression": "Encryption in CS"
       },
       "bonus": false,
@@ -1123,9 +1084,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Crack a Caesar Cipher"
-        ],
         "progression": "Crack a Caesar Cipher"
       },
       "bonus": false,
@@ -1148,9 +1106,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Terminology Recap"
-        ],
         "progression": "Terminology Recap"
       },
       "bonus": false,
@@ -1173,9 +1128,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "New Challenge Introduction"
-        ],
         "progression": "New Challenge Introduction"
       },
       "bonus": false,
@@ -1198,9 +1150,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Crack Random Substitution"
-        ],
         "progression": "Crack Random Substitution"
       },
       "bonus": false,
@@ -1223,9 +1172,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Technique: Frequency Analysis"
-        ],
         "progression": "Technique: Frequency Analysis"
       },
       "bonus": false,
@@ -1248,9 +1194,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Modular Arithmetic"
-        ],
         "progression": "Modular Arithmetic"
       },
       "bonus": false,
@@ -1273,9 +1216,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Looking at More Encryption Algorithms"
-        ],
         "progression": "Looking at More Encryption Algorithms"
       },
       "bonus": false,
@@ -1298,9 +1238,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Raw Data Podcast: Data Confidential"
-        ],
         "progression": "Raw Data Podcast: Data Confidential"
       },
       "bonus": false,
@@ -1323,9 +1260,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L5 - 7: Teaching and Student Support Plan"
-        ],
         "progression": "U4 L5 - 7: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -1348,9 +1282,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "4.8 - 4.9 Lesson Connections"
-        ],
         "progression": "4.8 - 4.9 Lesson Connections"
       },
       "bonus": false,
@@ -1373,9 +1304,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "A Closer Look at the Final Practice for the Explore PT"
-        ],
         "progression": "A Closer Look at the Final Practice for the Explore PT"
       },
       "bonus": false,
@@ -1398,9 +1326,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "U4 L8 - 9: Teaching and Student Support Plan"
-        ],
         "progression": "U4 L8 - 9: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -1423,9 +1348,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: Group Work and Peer Learning"
-        ],
         "progression": "Overview: Group Work and Peer Learning"
       },
       "bonus": false,
@@ -1448,9 +1370,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Collaborative Learning and Group Work: Description and Strategies"
-        ],
         "progression": "Collaborative Learning and Group Work: Description and Strategies"
       },
       "bonus": false,
@@ -1473,9 +1392,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "The Official Peer Instruction Blog"
-        ],
         "progression": "The Official Peer Instruction Blog"
       },
       "bonus": false,
@@ -1498,9 +1414,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "the Journal of Peer Learning"
-        ],
         "progression": "the Journal of Peer Learning"
       },
       "bonus": false,
@@ -1523,9 +1436,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 4 Teaching Practice Plan: Group Work and Peer Learning"
-        ],
         "progression": "Unit 4 Teaching Practice Plan: Group Work and Peer Learning"
       },
       "bonus": false,
@@ -1548,9 +1458,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: Balancing Teachers and Tools"
-        ],
         "progression": "Overview: Balancing Teachers and Tools"
       },
       "bonus": false,
@@ -1573,9 +1480,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Balancing Teacher and Tools in Unit 4"
-        ],
         "progression": "Balancing Teacher and Tools in Unit 4"
       },
       "bonus": false,
@@ -1598,9 +1502,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Classroom Management Tips for School Computer Labs"
-        ],
         "progression": "Classroom Management Tips for School Computer Labs"
       },
       "bonus": false,
@@ -1623,9 +1524,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Considerations for the 1-to-1 Classroom"
-        ],
         "progression": "Considerations for the 1-to-1 Classroom"
       },
       "bonus": false,
@@ -1648,9 +1546,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 4 Teaching Practice Plan: Balancing Teacher and Tools"
-        ],
         "progression": "Unit 4 Teaching Practice Plan: Balancing Teacher and Tools"
       },
       "bonus": false,
@@ -1673,9 +1568,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: Discovery Learning"
-        ],
         "progression": "Overview: Discovery Learning"
       },
       "bonus": false,
@@ -1698,9 +1590,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Discovery learning definition and history"
-        ],
         "progression": "Discovery learning definition and history"
       },
       "bonus": false,
@@ -1723,9 +1612,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Discovery learning techniques"
-        ],
         "progression": "Discovery learning techniques"
       },
       "bonus": false,
@@ -1748,9 +1634,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 4 Teaching Practice Plan: Discovery Learning"
-        ],
         "progression": "Unit 4 Teaching Practice Plan: Discovery Learning"
       },
       "bonus": false,
@@ -1773,9 +1656,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Overview: Capturing Student Learning"
-        ],
         "progression": "Overview: Capturing Student Learning"
       },
       "bonus": false,
@@ -1798,9 +1678,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Assessing Student Learning in Unit 4"
-        ],
         "progression": "Assessing Student Learning in Unit 4"
       },
       "bonus": false,
@@ -1823,9 +1700,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "What is the difference between formative and summative assessment?"
-        ],
         "progression": "What is the difference between formative and summative assessment?"
       },
       "bonus": false,
@@ -1848,9 +1722,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Designing Assessment Questions"
-        ],
         "progression": "Designing Assessment Questions"
       },
       "bonus": false,
@@ -1873,9 +1744,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Classroom Assessment Techniques"
-        ],
         "progression": "Classroom Assessment Techniques"
       },
       "bonus": false,
@@ -1898,9 +1766,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Unit 4 Teaching Practice Plan: Assessing Student Learning"
-        ],
         "progression": "Unit 4 Teaching Practice Plan: Assessing Student Learning"
       },
       "bonus": false,

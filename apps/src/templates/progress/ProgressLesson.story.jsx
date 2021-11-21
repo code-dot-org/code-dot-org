@@ -3,10 +3,6 @@ import {UnconnectedProgressLesson as ProgressLesson} from './ProgressLesson';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {fakeLesson, fakeLevels} from './progressTestHelpers';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import progress from '@cdo/apps/code-studio/progressRedux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
-import lessonLock from '@cdo/apps/code-studio/lessonLockRedux';
 
 const defaultProps = {
   lesson: fakeLesson('Maze', 1),
@@ -24,6 +20,7 @@ const defaultProps = {
       name: 'Last progression'
     }
   ],
+  showTeacherInfo: false,
   viewAs: ViewType.Instructor,
   lessonIsVisible: () => true,
   lessonIsLockedForUser: () => false,
@@ -32,35 +29,10 @@ const defaultProps = {
   lockableAuthorizedLoaded: true
 };
 
-const initialState = {
-  progress: {
-    lessonGroups: [],
-    lessons: [
-      {
-        levels: []
-      }
-    ],
-    focusAreaLessonIds: [],
-    isSummaryView: false,
-    professionalLearningCourse: false,
-    scriptName: 'script-name'
-  },
-  teacherSections: {
-    sectionsAreLoaded: true,
-    sections: {},
-    sectionIds: []
-  },
-  hiddenLesson: {},
-  lessonLock: {}
-};
-
 export default storybook => {
   storybook
     .storiesOf('Progress/ProgressLesson', module)
-    .withReduxStore(
-      {progress, teacherSections, hiddenLesson, lessonLock},
-      initialState
-    )
+    .withReduxStore()
     .addStoryTable([
       {
         name: 'progress lesson',

@@ -1,86 +1,70 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {navigateToHref} from '@cdo/apps/utils';
 
-export default function SaveBar({
-  error,
-  handleSave,
-  handleView,
-  isSaving,
-  lastSaved,
-  pathForShowButton
-}) {
-  const renderShowButtonOrPlaceholder = () => {
-    const isShowButtonVisible = handleView || pathForShowButton;
-
-    const renderShowButton = () => (
-      <button
-        className="btn"
-        type="button"
-        style={styles.saveButton}
-        onClick={handleView || (() => navigateToHref(pathForShowButton))}
-        disabled={isSaving}
-      >
-        Show
-      </button>
-    );
-
-    return isShowButtonVisible ? renderShowButton() : <span />;
+export default class SaveBar extends Component {
+  static propTypes = {
+    lastSaved: PropTypes.number,
+    error: PropTypes.string,
+    handleSave: PropTypes.func.isRequired,
+    handleView: PropTypes.func.isRequired,
+    isSaving: PropTypes.bool
   };
 
-  return (
-    <div style={styles.saveButtonBackground} className="saveBar">
-      {renderShowButtonOrPlaceholder()}
-      <div style={styles.saveButtonArea}>
-        {lastSaved && !error && (
-          <div style={styles.lastSaved} className="lastSavedMessage">
-            {`Last saved at: ${new Date(lastSaved).toLocaleString()}`}
-          </div>
-        )}
-        {error && <div style={styles.error}>{`Error Saving: ${error}`}</div>}
-        {isSaving && (
-          <div style={styles.spinner}>
-            <FontAwesome icon="spinner" className="fa-spin" />
-          </div>
-        )}
+  render() {
+    return (
+      <div style={styles.saveButtonBackground} className="saveBar">
         <button
           className="btn"
           type="button"
           style={styles.saveButton}
-          onClick={e => handleSave(e, false)}
-          disabled={isSaving}
+          onClick={this.props.handleView}
+          disabled={this.props.isSaving}
         >
-          Save and Keep Editing
+          Show
         </button>
-        <button
-          className="btn btn-primary"
-          type="submit"
-          style={styles.saveButton}
-          onClick={e => handleSave(e, true)}
-          disabled={isSaving}
-        >
-          Save and Close
-        </button>
+        <div style={styles.saveButtonArea}>
+          {this.props.lastSaved && !this.props.error && (
+            <div style={styles.lastSaved} className="lastSavedMessage">
+              {`Last saved at: ${new Date(
+                this.props.lastSaved
+              ).toLocaleString()}`}
+            </div>
+          )}
+          {this.props.error && (
+            <div style={styles.error}>{`Error Saving: ${
+              this.props.error
+            }`}</div>
+          )}
+          {this.props.isSaving && (
+            <div style={styles.spinner}>
+              <FontAwesome icon="spinner" className="fa-spin" />
+            </div>
+          )}
+          <button
+            className="btn"
+            type="button"
+            style={styles.saveButton}
+            onClick={e => this.props.handleSave(e, false)}
+            disabled={this.props.isSaving}
+          >
+            Save and Keep Editing
+          </button>
+          <button
+            className="btn btn-primary"
+            type="submit"
+            style={styles.saveButton}
+            onClick={e => this.props.handleSave(e, true)}
+            disabled={this.props.isSaving}
+          >
+            Save and Close
+          </button>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
-
-SaveBar.propTypes = {
-  error: PropTypes.string,
-  handleSave: PropTypes.func.isRequired,
-  handleView: PropTypes.func,
-  isSaving: PropTypes.bool,
-  lastSaved: PropTypes.number,
-  pathForShowButton: PropTypes.string
-};
-
-SaveBar.defaultProps = {
-  isSaving: false,
-  lastSaved: 0
-};
 
 const styles = {
   saveButtonBackground: {

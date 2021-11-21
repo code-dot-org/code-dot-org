@@ -8,7 +8,6 @@ import sectionData, {
   setTtsAutoplayEnabled,
   setCodeReviewEnabled
 } from '@cdo/apps/redux/sectionDataRedux';
-import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
 
 $(document).ready(initPage);
 
@@ -23,10 +22,6 @@ function initPage() {
   getStore().dispatch(setTtsAutoplayEnabled(ttsAutoplayEnabled));
   const codeReviewEnabled = config.code_review_enabled;
   getStore().dispatch(setCodeReviewEnabled(codeReviewEnabled));
-
-  // If viewing the unit overview components on the level page it is in
-  // the mini view
-  getStore().dispatch(setIsMiniView(true));
 
   const redirectDialogMountPoint = document.getElementById('redirect-dialog');
   const unversionedRedirectDialogMountPoint = document.getElementById(

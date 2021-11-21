@@ -27,6 +27,7 @@ class ProgressLesson extends React.Component {
     // redux provided
     scriptId: PropTypes.number,
     currentLessonId: PropTypes.number,
+    showTeacherInfo: PropTypes.bool.isRequired,
     viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
     lessonIsVisible: PropTypes.func.isRequired,
     lessonIsLockedForUser: PropTypes.func.isRequired,
@@ -34,8 +35,7 @@ class ProgressLesson extends React.Component {
     lockableAuthorized: PropTypes.bool,
     lockableAuthorizedLoaded: PropTypes.bool.isRequired,
     lessonIsLockedForAllStudents: PropTypes.func.isRequired,
-    isRtl: PropTypes.bool,
-    isMiniView: PropTypes.bool
+    isRtl: PropTypes.bool
   };
 
   constructor(props) {
@@ -84,6 +84,7 @@ class ProgressLesson extends React.Component {
     const {
       lesson,
       levels,
+      showTeacherInfo,
       viewAs,
       lessonIsVisible,
       lessonIsLockedForUser,
@@ -216,7 +217,7 @@ class ProgressLesson extends React.Component {
             />
           )}
         </div>
-        {viewAs === ViewType.Instructor && !this.props.isMiniView && (
+        {showTeacherInfo && viewAs === ViewType.Instructor && (
           <ProgressLessonTeacherInfo
             lesson={lesson}
             lessonUrl={lessonUrl}
@@ -304,6 +305,7 @@ export const UnconnectedProgressLesson = ProgressLesson;
 
 export default connect(state => ({
   currentLessonId: state.progress.currentLessonId,
+  showTeacherInfo: state.progress.showTeacherInfo,
   viewAs: state.viewAs,
   lockableAuthorized: state.lessonLock.lockableAuthorized,
   lockableAuthorizedLoaded: state.lessonLock.lockableAuthorizedLoaded,
@@ -314,6 +316,5 @@ export default connect(state => ({
     lessonIsLockedForAllStudents(lessonId, state),
   selectedSectionId: state.teacherSections.selectedSectionId.toString(),
   scriptId: state.progress.scriptId,
-  isRtl: state.isRtl,
-  isMiniView: state.progress.isMiniView
+  isRtl: state.isRtl
 }))(ProgressLesson);

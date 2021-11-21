@@ -54,20 +54,7 @@ class ProgrammingExpressionsController < ApplicationController
   end
 
   def show
-    if params[:id]
-      @programming_expression = ProgrammingExpression.find(params[:id])
-      return render :not_found unless @programming_expression
-    else
-      render :not_found
-    end
-  end
-
-  def show_by_keys
-    if params[:programming_environment_name] && params[:programming_expression_key]
-      @programming_expression = ProgrammingEnvironment.find_by_name(params[:programming_environment_name])&.programming_expressions&.find_by_key(params[:programming_expression_key])
-      return render :show if @programming_expression
-    end
-    render :not_found
+    @programming_expression = ProgrammingExpression.find(params[:id])
   end
 
   private

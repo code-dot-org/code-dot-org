@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:48:00 UTC",
+    "serialized_at": "2021-10-26 22:11:37 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "asUnplugged"
     }
@@ -394,9 +394,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "UnplugHappyMaps"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -418,9 +415,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "MoveIt"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -442,9 +436,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PlantASeed"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -466,9 +457,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "GraphPaperProgramming"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -490,9 +478,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "BuildingAFoundation"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -514,9 +499,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "GettingLoopy"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -538,9 +520,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "BigEvent"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -562,9 +541,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "BinaryBracelets"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -586,9 +562,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "SongwritingParameters"
-        ]
       },
       "bonus": false,
       "seeding_key": {

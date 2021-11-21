@@ -11,21 +11,8 @@ import RetryProjectSaveDialog from './RetryProjectSaveDialog';
 class ProjectUpdatedAt extends React.Component {
   static propTypes = {
     status: PropTypes.oneOf(Object.values(statuses)),
-    updatedAt: PropTypes.string,
-    onContentUpdated: PropTypes.func
+    updatedAt: PropTypes.string
   };
-
-  componentDidMount() {
-    if (this.props.onContentUpdated) {
-      this.props.onContentUpdated();
-    }
-  }
-
-  componentDidUpdate() {
-    if (this.props.onContentUpdated) {
-      this.props.onContentUpdated();
-    }
-  }
 
   renderText() {
     if (this.props.status === statuses.error) {

@@ -46,9 +46,6 @@ export function handleException(exceptionDetails, callback) {
     case JavabuilderExceptionType.MISSING_PROJECT_FILE_NAME:
       error = msg.javabuilderMissingFilenameError();
       break;
-    case JavabuilderExceptionType.INVALID_CLASS:
-      error = msg.javabuilderInvalidClassError({causeMessage});
-      break;
 
     // Internal exceptions
     case JavabuilderExceptionType.INTERNAL_RUNTIME_EXCEPTION:
