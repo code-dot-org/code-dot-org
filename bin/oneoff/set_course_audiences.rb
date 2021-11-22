@@ -1,10 +1,14 @@
 #!/usr/bin/env ruby
+
 # Sets instructor_audience and participant_audience on UnitGroup and Script
 # Scripts that are in UnitGroups get their audiences from
 # their UnitGroup so we don't need to set their audience values
+
 require_relative '../../dashboard/config/environment'
+
 def set_course_audiences
   raise unless Rails.application.config.levelbuilder_mode
+
   Script.all.each do |script|
     # scripts in unit_groups get their audiences from their unit group
     next if script.unit_group
@@ -27,6 +31,7 @@ def set_course_audiences
                                  else
                                    SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
                                  end
+
     script.participant_audience = if ['csd1-dlp-18', 'csd2-dlp-18', 'csd3-dlp-18', 'csd4-dlp-18', 'csd5-dlp-18',
                                       'csd6-dlp-18', 'csp1-dlp-18', 'csp2-dlp-18', 'csp3-dlp-18', 'csp4-dlp-18',
                                       'csp5-dlp-18', ' csp-create-dlp-18', 'csp-explore-dlp-18', 'csp-novice-18',
@@ -43,6 +48,7 @@ def set_course_audiences
                                   else
                                     SharedCourseConstants::PARTICIPANT_AUDIENCE.student
                                   end
+
     script.update!(skip_name_format_validation: true)
     script.write_script_json
   end
@@ -69,4 +75,5 @@ def set_course_audiences
     course.write_serialization
   end
 end
+
 set_course_audiences
