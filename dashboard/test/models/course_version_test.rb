@@ -21,6 +21,7 @@ class CourseVersionTest < ActiveSupport::TestCase
 
   test "add_course_version updates existing CourseVersion for script if properties change" do
     course_version = create :course_version, :with_unit, :with_course_offering
+    previous_id = course_version.id.freeze
     script = course_version.content_root
     offering = course_version.course_offering
 
@@ -32,6 +33,7 @@ class CourseVersionTest < ActiveSupport::TestCase
     assert_equal '2060', script.course_version.display_name
     assert_equal script.course_version, CourseVersion.find_by(course_offering: course_version.course_offering, key: '2060')
     assert_nil CourseVersion.find_by(course_offering: offering, key: '2050') # old CourseVersion should be deleted
+    assert_equal previous_id, script.course_version.id
   end
 
   test "add_course_version deletes CourseVersion for script if is_course is changed to false" do
