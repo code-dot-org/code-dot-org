@@ -8,9 +8,9 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 19:48:03 UTC",
+    "serialized_at": "2021-11-22 19:57:39 UTC",
     "published_state": "beta",
-    "instruction_type": null,
+    "instruction_type": "self_paced",
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {

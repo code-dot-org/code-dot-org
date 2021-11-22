@@ -20,9 +20,9 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2021-11-22 19:47:48 UTC",
+    "serialized_at": "2021-11-22 19:57:23 UTC",
     "published_state": "stable",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {

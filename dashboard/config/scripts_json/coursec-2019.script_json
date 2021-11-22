@@ -47,9 +47,9 @@
     },
     "new_name": null,
     "family_name": "coursec",
-    "serialized_at": "2021-11-22 19:46:26 UTC",
+    "serialized_at": "2021-11-22 19:56:01 UTC",
     "published_state": "stable",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {
