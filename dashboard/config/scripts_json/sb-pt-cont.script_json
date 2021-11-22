@@ -12,9 +12,11 @@
     },
     "new_name": null,
     "family_name": "sb-pt-cont",
-    "serialized_at": "2021-10-25 22:54:52 UTC",
+    "serialized_at": "2021-11-22 17:09:08 UTC",
     "published_state": "pilot",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "sb-pt-cont"
     }

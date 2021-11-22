@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:15:41 UTC",
+    "serialized_at": "2021-11-22 17:07:03 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1107,6 +1107,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L02v2 - Finding Trends"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1128,6 +1131,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L04v2 - Student Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1149,6 +1155,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GoodBadVisualizations_v1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1170,6 +1179,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GoodBadVisualizations_v2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1191,6 +1203,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L03v2 - Student Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1212,6 +1227,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Student Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1233,6 +1251,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Getting Started"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1254,6 +1275,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Scatter Plot"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1275,6 +1299,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Line Chart"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1296,6 +1323,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Bar Chart"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1317,6 +1347,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Free Play"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1338,6 +1371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L06v2 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1359,6 +1395,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L16 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1380,6 +1419,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Cleaning Data - Activity Guide"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1401,6 +1443,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Cleaning Data Activity Guide Pt2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1422,6 +1467,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 Cleaning Data Activity Guide Pt3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1443,6 +1491,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L16 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1464,6 +1515,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L16 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1485,6 +1539,9 @@
       "activity_section_position": 7,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L16 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1506,6 +1563,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L08v2 Student Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1527,6 +1587,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L08v2 Making Pivot Tables"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1548,6 +1611,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L08v2 Making Pivot Tables Part 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1569,6 +1635,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L08v2 Making Pivot Tables Part 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1590,6 +1659,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L12 - Student Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1611,6 +1683,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L01 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1632,6 +1707,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L01 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1653,6 +1731,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L01 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1674,6 +1755,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L01 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1695,6 +1779,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L02 Student Lesson Introduction Video"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1716,6 +1803,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - eventParameter"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1737,6 +1827,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - dotNotation"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1758,6 +1851,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - createDotNotation"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1779,6 +1875,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - arraysOfObjects"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1800,6 +1899,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - accessingPropertiesInArray"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1821,6 +1923,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - exemplarContactsApp"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1842,6 +1947,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - readStarterCode"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1863,6 +1971,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - createContactsData"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1884,6 +1995,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - showContact1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1905,6 +2019,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - showContact2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1926,6 +2043,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - showContact3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1947,6 +2067,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - pullValues"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1968,6 +2091,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - createContactObject"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1989,6 +2115,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - resetIndexAndShow"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2010,6 +2139,9 @@
       "activity_section_position": 16,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Objects - showSampleImage"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2031,6 +2163,9 @@
       "activity_section_position": 17,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L02 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2052,6 +2187,9 @@
       "activity_section_position": 18,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L02 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2073,6 +2211,9 @@
       "activity_section_position": 19,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L02 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2094,6 +2235,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L03 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2115,6 +2259,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - CreateRecord - 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2136,6 +2283,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - CreateRecord - 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2157,6 +2307,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - CreateRecord - 2.5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2178,6 +2331,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - CreateRecord - 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2199,6 +2355,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - CreateRecord - 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2220,6 +2379,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - CreateRecord - 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2241,6 +2403,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Edit Data Table by Hand"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2262,6 +2427,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - debug column names are case sensitive"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2283,6 +2451,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Add Row By Hand"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2304,6 +2475,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - add createRecord to contacts App"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2325,6 +2499,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - fix contacts by hand in data table"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2346,6 +2523,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - last stage test adding contcts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2367,6 +2547,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L04 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2388,6 +2571,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Read Record - 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2409,6 +2595,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Read Record - 1.2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2430,6 +2619,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Read Record - 1.3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2451,6 +2643,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Read Record - 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2472,6 +2667,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Read Record - 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2493,6 +2691,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Read Record - 4.1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2514,6 +2715,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Read Record - 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2535,6 +2739,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Unique Ids Explanation"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2556,6 +2763,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - deleteRecords 0"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2577,6 +2787,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - deleteRecords 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2598,6 +2811,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - deleteRecords 2 delete object"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2619,6 +2835,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - ReadRecords - Contacts App 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2640,6 +2859,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Read Record - Local vs Remote Data External"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2661,6 +2883,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - ReadRecords - Contacts App 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2682,6 +2907,9 @@
       "activity_section_position": 16,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - ReadRecords - Contacts App 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2703,6 +2931,9 @@
       "activity_section_position": 17,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - ReadRecords - Contacts App 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2724,6 +2955,9 @@
       "activity_section_position": 18,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - ReadRecords - Contacts App 5 make delete work"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2745,6 +2979,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L05 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2766,6 +3003,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L05 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2787,6 +3027,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L05 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2808,6 +3051,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L05 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2829,6 +3075,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L06 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2850,6 +3099,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L06 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2871,6 +3123,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L06 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2892,6 +3147,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L06 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2913,6 +3171,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L07 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2934,6 +3195,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - Import Data 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2955,6 +3219,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - Import Data 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2976,6 +3243,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - Remixing Apps with Data"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2997,6 +3267,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - Export Data"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3018,6 +3291,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - drawChartFromRecords 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3039,6 +3315,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - Scatter Chart"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3060,6 +3339,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - Line Chart 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3081,6 +3363,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - Line Chart 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3102,6 +3387,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - drawChartFromRecords Options 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3123,6 +3411,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Charts - drawChartFromRecords Options 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3144,6 +3435,9 @@
       "activity_section_position": 12,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L07 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3165,6 +3459,9 @@
       "activity_section_position": 13,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L07 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3186,6 +3483,9 @@
       "activity_section_position": 14,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L07 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3207,6 +3507,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L08 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3228,6 +3531,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L08 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3249,6 +3555,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L08 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3270,6 +3579,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L08 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3291,6 +3603,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L09 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3312,6 +3627,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L09 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3333,6 +3651,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L09 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3354,6 +3675,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L09 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3375,6 +3699,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L10 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3396,6 +3723,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L10 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3417,6 +3747,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L10 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3438,6 +3771,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L10 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3459,6 +3795,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L11 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3480,6 +3819,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L11 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3501,6 +3843,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L11 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3522,6 +3867,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L11 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3543,6 +3891,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L12 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3564,6 +3915,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L12 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3585,6 +3939,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L12 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3606,6 +3963,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L12 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3627,6 +3987,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L13 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3648,6 +4011,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L13 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3669,6 +4035,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L13 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3690,6 +4059,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L13 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3711,6 +4083,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L14 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3732,6 +4107,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L14 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3753,6 +4131,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L14 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3774,6 +4155,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L14 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3795,6 +4179,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L15 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3816,6 +4203,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L15 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3837,6 +4227,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L15 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3858,6 +4251,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L15 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3879,6 +4275,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L17 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3900,6 +4299,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L17 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3921,6 +4323,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L17 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3942,6 +4347,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L17 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3963,6 +4371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L18 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3984,6 +4395,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L18 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4005,6 +4419,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L18 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4026,6 +4443,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L18 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4047,6 +4467,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L19 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4068,6 +4491,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L19 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4089,6 +4515,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L19 Choose 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4110,6 +4539,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L19 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4131,6 +4563,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Data Unit -Counting Records - Hard Way"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4152,6 +4587,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Data Unit -Counting Records - Easy Way"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4173,6 +4611,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Data Unit - Counting Multiple Things"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4194,6 +4635,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L22 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4215,6 +4659,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L17 - introKeyValue"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4236,6 +4683,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L17 - setKeyValue"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4257,6 +4707,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L17 - twoSetKeyValue"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4278,6 +4731,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L17 - introCallbacks"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4299,6 +4755,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L17 - getKeyValue"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4320,6 +4779,9 @@
       "activity_section_position": 7,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L22 Free Response Getting Started"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4341,6 +4803,9 @@
       "activity_section_position": 8,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L22 Assessment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4362,6 +4827,9 @@
       "activity_section_position": 9,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L22 Reflection"
+        ]
       },
       "bonus": false,
       "seeding_key": {

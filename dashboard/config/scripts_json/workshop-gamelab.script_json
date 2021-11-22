@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:17:51 UTC",
+    "serialized_at": "2021-11-22 17:07:19 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -305,6 +305,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Game Lab Workshop: Introduction"
+        ],
         "progression": "Workshop Introduction"
       },
       "bonus": false,
@@ -327,6 +330,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 1"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 1"
       },
       "bonus": false,
@@ -349,6 +355,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Rectangle"
+        ],
         "progression": "The Draw Loop"
       },
       "bonus": false,
@@ -371,6 +380,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Order of Blocks"
+        ],
         "progression": "The Draw Loop"
       },
       "bonus": false,
@@ -393,6 +405,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Fill"
+        ],
         "progression": "The Draw Loop"
       },
       "bonus": false,
@@ -415,6 +430,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Game Lab Workshop: Random"
+        ],
         "progression": "The Draw Loop"
       },
       "bonus": false,
@@ -437,6 +455,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Game Lab Workshop: Draw Loop"
+        ],
         "progression": "The Draw Loop"
       },
       "bonus": false,
@@ -459,6 +480,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Introduction to the Draw Loop"
+        ],
         "progression": "Video: Introduction to the Draw Loop"
       },
       "bonus": false,
@@ -481,6 +505,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GameLab Workshop: Draw Loop Shapes"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -502,6 +529,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Animation"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -523,6 +553,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables make a square"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -544,6 +577,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Variables misconceptions try it"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -565,6 +601,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Counters counter square movement"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -586,6 +625,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Game Lab Workshop: Variables to Sprites"
+        ],
         "progression": "Fast-Forward: Variables to Sprites"
       },
       "bonus": false,
@@ -608,6 +650,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Sprites in Game Lab"
+        ],
         "progression": "Video: Introduction to Sprites"
       },
       "bonus": false,
@@ -630,6 +675,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites"
+        ],
         "progression": "Video: The Animation Tab"
       },
       "bonus": false,
@@ -652,6 +700,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites animating with sprites"
+        ],
         "progression": "Video: The Animation Tab"
       },
       "bonus": false,
@@ -674,6 +725,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites debug watchers"
+        ],
         "progression": "Video: The Animation Tab"
       },
       "bonus": false,
@@ -696,6 +750,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites debug background"
+        ],
         "progression": "Video: The Animation Tab"
       },
       "bonus": false,
@@ -718,6 +775,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Animation Tab"
+        ],
         "progression": "Video: The Animation Tab"
       },
       "bonus": false,
@@ -740,6 +800,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - images - first sprite with image"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -761,6 +824,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - images - changing scene"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -782,6 +848,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Sprites and Mod - Mouse X and Y"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -803,6 +872,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Booleans Video"
+        ],
         "progression": "Video: Booleans"
       },
       "bonus": false,
@@ -825,6 +897,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Boolean Modify"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -846,6 +921,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - Matching"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -867,6 +945,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Keypress Boolean"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -888,6 +969,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 UP_ARROW"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -909,6 +993,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Direction Arrows"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -930,6 +1017,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 If Else"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -951,6 +1041,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Keypress Watchers"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -972,6 +1065,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Keypress Matching"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -993,6 +1089,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 SFLP Card Project"
+        ],
         "progression": "CSD U3 SFLP Card Project"
       },
       "bonus": false,
@@ -1015,6 +1114,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Exemplar"
+        ],
         "progression": "CSD U3 Interactive Card Exemplar"
       },
       "bonus": false,
@@ -1037,6 +1139,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Background"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1058,6 +1163,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Sprites"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1079,6 +1187,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card User Input"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1100,6 +1211,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Other Conditionals"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1121,6 +1235,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Final"
+        ]
       },
       "bonus": false,
       "seeding_key": {

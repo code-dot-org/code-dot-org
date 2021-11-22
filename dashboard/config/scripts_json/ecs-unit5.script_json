@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:29:50 UTC",
+    "serialized_at": "2021-11-22 17:07:12 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -247,6 +247,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3- unit 5- welcome"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -268,6 +271,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 about"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -289,6 +295,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDECS tour"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -310,6 +319,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 plan"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -331,6 +343,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD course goals"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -352,6 +367,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 intro to u5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -373,6 +391,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 what is data"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -394,6 +415,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 tools"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -415,6 +439,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 connections"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -436,6 +463,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 1-3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -457,6 +487,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 4-5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -478,6 +511,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 6-7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -499,6 +535,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -520,6 +559,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 9-12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -541,6 +583,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 13"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -562,6 +607,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 14-16"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -583,6 +631,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 17"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -604,6 +655,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 18-20"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -625,6 +679,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 21"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -646,6 +703,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 22-24"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -667,6 +727,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 25"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -688,6 +751,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 26-27"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -709,6 +775,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 28-29"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -730,6 +799,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 day 30"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -751,6 +823,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 what is a challenge"
+        ],
         "progression": "ECS Unit 5 Challenge Selection"
       },
       "bonus": false,
@@ -773,6 +848,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD3-u5 list of challenges"
+        ],
         "progression": "ECS Unit 5 Challenge Selection"
       },
       "bonus": false,
@@ -795,6 +873,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECS Unit 5 Challenge Selection"
+        ],
         "progression": "ECS Unit 5 Challenge Selection"
       },
       "bonus": false,
@@ -817,6 +898,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSD3-u5 do the challenge"
+        ],
         "progression": "ECS Unit 5 Challenge Submission"
       },
       "bonus": false,
@@ -839,6 +923,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u2 create your extension"
+        ],
         "progression": "ECS Unit 5 Challenge Submission"
       },
       "bonus": false,
@@ -861,6 +948,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u2 reflect on challenge"
+        ],
         "progression": "ECS Unit 5 Challenge Submission"
       },
       "bonus": false,
@@ -883,6 +973,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u2 expectations"
+        ],
         "progression": "ECS Unit 5 Challenge Submission"
       },
       "bonus": false,
@@ -905,6 +998,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECS Unit 5 Challenge Submission"
+        ],
         "progression": "ECS Unit 5 Challenge Submission"
       },
       "bonus": false,
@@ -927,6 +1023,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Challenge Reflection"
+        ]
       },
       "bonus": false,
       "seeding_key": {
