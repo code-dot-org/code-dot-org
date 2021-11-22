@@ -47,7 +47,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2021-11-15 21:01:24 UTC",
+    "serialized_at": "2021-11-22 17:08:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1728,6 +1728,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6L01 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1750,6 +1753,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 Innovation_2018_2019"
+        ],
         "progression": "Innovation Research"
       },
       "bonus": false,
@@ -1772,6 +1778,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6L02 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1794,6 +1803,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 setProperty predict app_2019"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -1816,6 +1828,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 setProperty Text_2019"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -1838,6 +1853,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 setProperty xy_2019"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -1860,6 +1878,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 setProperty Map_2019"
+        ],
         "progression": "Designing Screens with Code"
       },
       "bonus": false,
@@ -1882,6 +1903,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 setProperty xy click_2019"
+        ],
         "progression": "Events and Properties"
       },
       "bonus": false,
@@ -1904,6 +1928,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 setProperty xy random_2019"
+        ],
         "progression": "Events and Properties"
       },
       "bonus": false,
@@ -1926,6 +1953,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 setProperty hidden_2019"
+        ],
         "progression": "Events and Properties"
       },
       "bonus": false,
@@ -1948,6 +1978,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 setProperty hidden 2_2019"
+        ],
         "progression": "Events and Properties"
       },
       "bonus": false,
@@ -1970,6 +2003,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 emotion machine example_2019"
+        ],
         "progression": "Emotion Machine Example"
       },
       "bonus": false,
@@ -1992,6 +2028,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 emotion machine 1_2019"
+        ],
         "progression": "Building an App"
       },
       "bonus": false,
@@ -2014,6 +2053,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 emotion machine 2_2019"
+        ],
         "progression": "Building an App"
       },
       "bonus": false,
@@ -2036,6 +2078,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 emotion machine 3_2019"
+        ],
         "progression": "Building an App"
       },
       "bonus": false,
@@ -2058,6 +2103,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 emotion machine 4_2019"
+        ],
         "progression": "Building an App"
       },
       "bonus": false,
@@ -2080,6 +2128,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6L03 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2102,6 +2153,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 hardware software video_2019"
+        ],
         "progression": "Hardware and Software"
       },
       "bonus": false,
@@ -2124,6 +2178,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD LEDs Map_2019"
+        ],
         "progression": "Circuit Playground: Introduction"
       },
       "bonus": false,
@@ -2146,6 +2203,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 Circuit Playground Test_2019"
+        ],
         "progression": "Using the LED"
       },
       "bonus": false,
@@ -2168,6 +2228,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 test LED_2019"
+        ],
         "progression": "Using the LED"
       },
       "bonus": false,
@@ -2190,6 +2253,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 predict LED button_2019"
+        ],
         "progression": "Using the LED"
       },
       "bonus": false,
@@ -2212,6 +2278,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 add LED button_2019"
+        ],
         "progression": "Using the LED"
       },
       "bonus": false,
@@ -2234,6 +2303,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 LED toggle_2019"
+        ],
         "progression": "Using the LED"
       },
       "bonus": false,
@@ -2256,6 +2328,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 LED all_2019"
+        ],
         "progression": "Using the LED"
       },
       "bonus": false,
@@ -2278,6 +2353,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 LED create intro_2018_2019"
+        ],
         "progression": "LED Apps"
       },
       "bonus": false,
@@ -2300,6 +2378,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 light show_2019"
+        ],
         "progression": "LED Apps"
       },
       "bonus": false,
@@ -2322,6 +2403,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 Catch the Mouse_2019"
+        ],
         "progression": "LED Apps"
       },
       "bonus": false,
@@ -2344,6 +2428,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 create LED app_2019"
+        ],
         "progression": "LED Apps"
       },
       "bonus": false,
@@ -2366,6 +2453,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 create LED app 2_2019"
+        ],
         "progression": "LED Apps"
       },
       "bonus": false,
@@ -2388,6 +2478,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6L04 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2410,6 +2503,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 GameLab Input 1_2019"
+        ],
         "progression": "Input Examples"
       },
       "bonus": false,
@@ -2432,6 +2528,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 AppLab Input 1_2019"
+        ],
         "progression": "Input Examples"
       },
       "bonus": false,
@@ -2454,6 +2553,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6L05 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2476,6 +2578,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - button LED prediction_2019"
+        ],
         "progression": "Board Events"
       },
       "bonus": false,
@@ -2498,6 +2603,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - LED buttonL_2019"
+        ],
         "progression": "Board Events"
       },
       "bonus": false,
@@ -2520,6 +2628,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSDU6 - LED toggle buttonL up_2019"
+        ],
         "progression": "Board Events"
       },
       "bonus": false,
@@ -2542,6 +2653,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD onBoardEvent Map_2019"
+        ],
         "progression": "Responding to Board Events"
       },
       "bonus": false,
@@ -2564,6 +2678,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - lightswitch toggleswitch_2019"
+        ],
         "progression": "Using the Switch"
       },
       "bonus": false,
@@ -2586,6 +2703,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - toggle state LED prediction_2019"
+        ],
         "progression": "Using the Switch"
       },
       "bonus": false,
@@ -2608,6 +2728,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - toggleswitch state setProp_2019"
+        ],
         "progression": "Using the Switch"
       },
       "bonus": false,
@@ -2630,6 +2753,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Board Buttons Map_2019"
+        ],
         "progression": "Buttons and Switch"
       },
       "bonus": false,
@@ -2652,6 +2778,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - buzzer intro_2019"
+        ],
         "progression": "The Buzzer"
       },
       "bonus": false,
@@ -2674,6 +2803,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - buzzer duration_2019"
+        ],
         "progression": "The Buzzer"
       },
       "bonus": false,
@@ -2696,6 +2828,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - buzzer duration buttons_2019"
+        ],
         "progression": "The Buzzer"
       },
       "bonus": false,
@@ -2718,6 +2853,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Buzzer Map_2019"
+        ],
         "progression": "Circuit Playground: Buzzer"
       },
       "bonus": false,
@@ -2740,6 +2878,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - board event challenge_2019"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -2761,6 +2902,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6L06 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2783,6 +2927,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 getProperty Demo_2019"
+        ],
         "progression": "Getting Properties"
       },
       "bonus": false,
@@ -2805,6 +2952,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 getProperty input_2019"
+        ],
         "progression": "Getting Properties"
       },
       "bonus": false,
@@ -2827,6 +2977,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 getProperty dropdown_2019"
+        ],
         "progression": "Getting Properties"
       },
       "bonus": false,
@@ -2849,6 +3002,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 getProperty board predict_2019"
+        ],
         "progression": "Getting Properties"
       },
       "bonus": false,
@@ -2871,6 +3027,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 getProperty buzzer_2019"
+        ],
         "progression": "Getting Properties"
       },
       "bonus": false,
@@ -2893,6 +3052,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 getProperty Map_2019"
+        ],
         "progression": "getProperty"
       },
       "bonus": false,
@@ -2915,6 +3077,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 slider intro_2019"
+        ],
         "progression": "Sliders"
       },
       "bonus": false,
@@ -2937,6 +3102,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 frequency_2019"
+        ],
         "progression": "Sliders"
       },
       "bonus": false,
@@ -2959,6 +3127,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 interval_2019"
+        ],
         "progression": "Sliders"
       },
       "bonus": false,
@@ -2981,6 +3152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 change_2019"
+        ],
         "progression": "Change"
       },
       "bonus": false,
@@ -3003,6 +3177,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 get toggle_2019"
+        ],
         "progression": "Change"
       },
       "bonus": false,
@@ -3025,6 +3202,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 getters debug_2019"
+        ],
         "progression": "Change"
       },
       "bonus": false,
@@ -3047,6 +3227,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 Event Types_2019"
+        ],
         "progression": "Event Types"
       },
       "bonus": false,
@@ -3069,6 +3252,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 move motorcycle_2019"
+        ],
         "progression": "Motorcycle"
       },
       "bonus": false,
@@ -3091,6 +3277,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 design motorcycle_2019"
+        ],
         "progression": "Motorcycle"
       },
       "bonus": false,
@@ -3113,6 +3302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 challenge motorcycle_2019"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3134,6 +3326,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6L07 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3156,6 +3351,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 sensor experiment embedded_2019"
+        ],
         "progression": "Sensor Experiment"
       },
       "bonus": false,
@@ -3178,6 +3376,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 analog sound_2019"
+        ],
         "progression": "Reading Sensors"
       },
       "bonus": false,
@@ -3200,6 +3401,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 analog light_2019"
+        ],
         "progression": "Reading Sensors"
       },
       "bonus": false,
@@ -3222,6 +3426,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 analog temp_2019"
+        ],
         "progression": "Reading Sensors"
       },
       "bonus": false,
@@ -3244,6 +3451,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Board Sensors Map_2019"
+        ],
         "progression": "Analog Sensors"
       },
       "bonus": false,
@@ -3266,6 +3476,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 analog predict_2019"
+        ],
         "progression": "Sensor Events"
       },
       "bonus": false,
@@ -3288,6 +3501,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 analog data_2019"
+        ],
         "progression": "Sensor Events"
       },
       "bonus": false,
@@ -3310,6 +3526,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 analog change_2019"
+        ],
         "progression": "Sensor Events"
       },
       "bonus": false,
@@ -3332,6 +3551,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 analog threshold_2019"
+        ],
         "progression": "Sensor Events"
       },
       "bonus": false,
@@ -3354,6 +3576,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Polling Events Map_2019"
+        ],
         "progression": "Polling Events"
       },
       "bonus": false,
@@ -3376,6 +3601,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Set Scale Map_2019"
+        ],
         "progression": "Changing Sensor Scale"
       },
       "bonus": false,
@@ -3398,6 +3626,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 analog rbg 1_2019"
+        ],
         "progression": "Sensors to Colors"
       },
       "bonus": false,
@@ -3420,6 +3651,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 analog rbg 2_2019"
+        ],
         "progression": "Sensors to Colors"
       },
       "bonus": false,
@@ -3442,6 +3676,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 analog rgb 3_2019"
+        ],
         "progression": "Sensors to Colors"
       },
       "bonus": false,
@@ -3464,6 +3701,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 analog challenge_2019"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3485,6 +3725,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6L08 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3507,6 +3750,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 emoji race demo_2019"
+        ],
         "progression": "Sample Program"
       },
       "bonus": false,
@@ -3529,6 +3775,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 tugowar stop_2018_2019"
+        ],
         "progression": "Plan Your Project"
       },
       "bonus": false,
@@ -3551,6 +3800,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 tugowar design 1_2019"
+        ],
         "progression": "Screen Design"
       },
       "bonus": false,
@@ -3573,6 +3825,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 tugowar design 1.5_2019"
+        ],
         "progression": "Screen Design"
       },
       "bonus": false,
@@ -3595,6 +3850,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 tugowar design 2_2019"
+        ],
         "progression": "Screen Design"
       },
       "bonus": false,
@@ -3617,6 +3875,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 tugowar variables 1_2019"
+        ],
         "progression": "Finishing Functions"
       },
       "bonus": false,
@@ -3639,6 +3900,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 tugowar variables 2_2019"
+        ],
         "progression": "Finishing Functions"
       },
       "bonus": false,
@@ -3661,6 +3925,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 tugowar variables 3_2019"
+        ],
         "progression": "Finishing Functions"
       },
       "bonus": false,
@@ -3683,6 +3950,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 tugowar conditional_2019"
+        ],
         "progression": "Checking for a Winner"
       },
       "bonus": false,
@@ -3705,6 +3975,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 tugowar setScreen_2019"
+        ],
         "progression": "Checking for a Winner"
       },
       "bonus": false,
@@ -3727,6 +4000,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 tugowar setProperty_2019"
+        ],
         "progression": "Checking for a Winner"
       },
       "bonus": false,
@@ -3749,6 +4025,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 tugowar buzzer_2019"
+        ],
         "progression": "Checking for a Winner"
       },
       "bonus": false,
@@ -3771,6 +4050,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 tugowar final_2019"
+        ],
         "progression": "Make it Your Own"
       },
       "bonus": false,
@@ -3793,6 +4075,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6L09 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3815,6 +4100,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 tugowar demo_2019"
+        ],
         "progression": "Demo - Bug Grab"
       },
       "bonus": false,
@@ -3837,6 +4125,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 game project stop_2018_2019"
+        ],
         "progression": "Plan Your Project"
       },
       "bonus": false,
@@ -3859,6 +4150,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 game project screens_2019"
+        ],
         "progression": "Screen Design"
       },
       "bonus": false,
@@ -3881,6 +4175,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 game project screen links_2019"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -3903,6 +4200,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 game project board events_2019"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -3925,6 +4225,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 game project functions define_2019"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -3947,6 +4250,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 game project functions call_2019"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -3969,6 +4275,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 game project finish_2019"
+        ],
         "progression": "Finishing Touches"
       },
       "bonus": false,
@@ -3991,6 +4300,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch1_2018_2019"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -4013,6 +4325,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6L10 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -4035,6 +4350,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 arrays video"
+        ],
         "progression": "Video: Introduction to Arrays"
       },
       "bonus": false,
@@ -4057,6 +4375,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 arrays select predict_2019"
+        ],
         "progression": "Introduction to Arrays"
       },
       "bonus": false,
@@ -4079,6 +4400,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 arrays select rainbow_2019"
+        ],
         "progression": "Introduction to Arrays"
       },
       "bonus": false,
@@ -4101,6 +4425,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 array select days_2019"
+        ],
         "progression": "Introduction to Arrays"
       },
       "bonus": false,
@@ -4123,6 +4450,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 arrays select random_2019"
+        ],
         "progression": "Introduction to Arrays"
       },
       "bonus": false,
@@ -4145,6 +4475,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSDU6 arrays select variable_2019"
+        ],
         "progression": "Introduction to Arrays"
       },
       "bonus": false,
@@ -4167,6 +4500,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 arrays intro_2019"
+        ],
         "progression": "Arrays"
       },
       "bonus": false,
@@ -4189,6 +4525,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 array multi_2018_2019"
+        ],
         "progression": "Using Arrays"
       },
       "bonus": false,
@@ -4211,6 +4550,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 colorLeds predict_2019"
+        ],
         "progression": "Color LEDs"
       },
       "bonus": false,
@@ -4233,6 +4575,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 colorLED on_2019"
+        ],
         "progression": "Color LEDs"
       },
       "bonus": false,
@@ -4255,6 +4600,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 LEDs color_2019"
+        ],
         "progression": "Color LEDs"
       },
       "bonus": false,
@@ -4277,6 +4625,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 colorLeds debug_2019"
+        ],
         "progression": "Color LEDs"
       },
       "bonus": false,
@@ -4299,6 +4650,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 colorLeds intensity_2019"
+        ],
         "progression": "Color LEDs"
       },
       "bonus": false,
@@ -4321,6 +4675,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD colorLed Map_2019"
+        ],
         "progression": "Circuit Playground: Color LEDs"
       },
       "bonus": false,
@@ -4343,6 +4700,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 colorLeds light pattern_2019"
+        ],
         "progression": "Light Show"
       },
       "bonus": false,
@@ -4365,6 +4725,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 light pattern off_2019"
+        ],
         "progression": "Light Show"
       },
       "bonus": false,
@@ -4387,6 +4750,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 light pattern challenge_2019"
+        ],
         "progression": "Challenge Levels"
       },
       "bonus": true,
@@ -4409,6 +4775,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6L11 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -4431,6 +4800,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 circuit playground piano_2019"
+        ],
         "progression": "Playing Notes"
       },
       "bonus": false,
@@ -4453,6 +4825,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 frequency modification_2019"
+        ],
         "progression": "Playing Notes"
       },
       "bonus": false,
@@ -4475,6 +4850,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 frequency creation_2019"
+        ],
         "progression": "Playing Notes"
       },
       "bonus": false,
@@ -4497,6 +4875,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 piano with notes_2019"
+        ],
         "progression": "Playing Notes"
       },
       "bonus": false,
@@ -4519,6 +4900,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making Music_2019"
+        ],
         "progression": "Making Music"
       },
       "bonus": false,
@@ -4541,6 +4925,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 array piano_2019"
+        ],
         "progression": "Musical Arrays"
       },
       "bonus": false,
@@ -4563,6 +4950,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 random array notes_2019"
+        ],
         "progression": "Musical Arrays"
       },
       "bonus": false,
@@ -4585,6 +4975,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSDU6 making new arrays_2019"
+        ],
         "progression": "Musical Arrays"
       },
       "bonus": false,
@@ -4607,6 +5000,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-Arrays_2019"
+        ],
         "progression": "Modifying Arrays"
       },
       "bonus": false,
@@ -4629,6 +5025,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 play predict code_2019"
+        ],
         "progression": "Making Songs"
       },
       "bonus": false,
@@ -4651,6 +5050,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 play songs_2019"
+        ],
         "progression": "Making Songs"
       },
       "bonus": false,
@@ -4673,6 +5075,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 play null notes_2019"
+        ],
         "progression": "Making Songs"
       },
       "bonus": false,
@@ -4695,6 +5100,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CDU U6 Playground Sound Board_2019"
+        ],
         "progression": "Making Songs"
       },
       "bonus": false,
@@ -4717,6 +5125,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 buzzer 2d arrays_2019"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -4738,6 +5149,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 buzzer.stop_2019"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -4759,6 +5173,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6L12 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -4781,6 +5198,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 for loop click predict_2019"
+        ],
         "progression": "Programs that Repeat"
       },
       "bonus": false,
@@ -4803,6 +5223,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 for loop click exit_2019"
+        ],
         "progression": "Programs that Repeat"
       },
       "bonus": false,
@@ -4825,6 +5248,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: For Loop_2019"
+        ],
         "progression": "Video: For Loops"
       },
       "bonus": false,
@@ -4847,6 +5273,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - for loop - predict print_2019"
+        ],
         "progression": "For Loops"
       },
       "bonus": false,
@@ -4869,6 +5298,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 for loop button array_2019"
+        ],
         "progression": "For Loops"
       },
       "bonus": false,
@@ -4891,6 +5323,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 for loop list.length_2019"
+        ],
         "progression": "For Loops"
       },
       "bonus": false,
@@ -4913,6 +5348,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 for loop images_2019"
+        ],
         "progression": "For Loops"
       },
       "bonus": false,
@@ -4935,6 +5373,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 for loop map_2019"
+        ],
         "progression": "For Loops"
       },
       "bonus": false,
@@ -4957,6 +5398,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 for loop led on_2019"
+        ],
         "progression": "For Loops and Color LEDs"
       },
       "bonus": false,
@@ -4979,6 +5423,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 for loop led off_2019"
+        ],
         "progression": "For Loops and Color LEDs"
       },
       "bonus": false,
@@ -5001,6 +5448,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 for loop led color_2019"
+        ],
         "progression": "For Loops and Color LEDs"
       },
       "bonus": false,
@@ -5023,6 +5473,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 for loop led personalize_2019"
+        ],
         "progression": "For Loops and Color LEDs"
       },
       "bonus": false,
@@ -5045,6 +5498,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6L13 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -5067,6 +5523,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 Airplane predict_2019"
+        ],
         "progression": "Orientation"
       },
       "bonus": false,
@@ -5089,6 +5548,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 investigate orientation_2019"
+        ],
         "progression": "Orientation"
       },
       "bonus": false,
@@ -5111,6 +5573,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 directional leds pitch_2019"
+        ],
         "progression": "Orientation"
       },
       "bonus": false,
@@ -5133,6 +5598,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 directional LEDs roll_2019"
+        ],
         "progression": "Orientation"
       },
       "bonus": false,
@@ -5155,6 +5623,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Accelerometer_2019"
+        ],
         "progression": "The Accelerometer"
       },
       "bonus": false,
@@ -5177,6 +5648,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 stillness game predict code_2019"
+        ],
         "progression": "Accelerometer Events"
       },
       "bonus": false,
@@ -5199,6 +5673,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 Pedometer_2019"
+        ],
         "progression": "Accelerometer Events"
       },
       "bonus": false,
@@ -5221,6 +5698,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Using Accelerometer Events_2019"
+        ],
         "progression": "Using Accelerometer Events"
       },
       "bonus": false,
@@ -5243,6 +5723,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Revisiting the Counter Pattern_2019"
+        ],
         "progression": "Revisiting the Counter Pattern"
       },
       "bonus": false,
@@ -5265,6 +5748,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 goalie_2019"
+        ],
         "progression": "Accelerometer Events"
       },
       "bonus": false,
@@ -5287,6 +5773,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 Driver pt1_2019"
+        ],
         "progression": "Accelerometer Events"
       },
       "bonus": false,
@@ -5309,6 +5798,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 Driver pt 2_2019"
+        ],
         "progression": "Accelerometer Events"
       },
       "bonus": false,
@@ -5331,6 +5823,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6L14 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -5353,6 +5848,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 params predict_2019"
+        ],
         "progression": "Functions with Parameters"
       },
       "bonus": false,
@@ -5375,6 +5873,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 functions paramters video_2019"
+        ],
         "progression": "Functions with Parameters"
       },
       "bonus": false,
@@ -5397,6 +5898,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 params modify clouds_2019"
+        ],
         "progression": "Functions with Parameters"
       },
       "bonus": false,
@@ -5419,6 +5923,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 params modify planes_2019"
+        ],
         "progression": "Functions with Parameters"
       },
       "bonus": false,
@@ -5441,6 +5948,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 params create colors_2019"
+        ],
         "progression": "Functions with Parameters"
       },
       "bonus": false,
@@ -5463,6 +5973,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 iter predict bubbles_2019"
+        ],
         "progression": "Iteration and Parameters"
       },
       "bonus": false,
@@ -5485,6 +5998,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 iter modify bugs_2019"
+        ],
         "progression": "Iteration and Parameters"
       },
       "bonus": false,
@@ -5507,6 +6023,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 iter create notes_2019"
+        ],
         "progression": "Iteration and Parameters"
       },
       "bonus": false,
@@ -5529,6 +6048,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 params starchaser intro_2019"
+        ],
         "progression": "Star Chaser"
       },
       "bonus": false,
@@ -5551,6 +6073,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 params starchaser 1_2019"
+        ],
         "progression": "Star Chaser"
       },
       "bonus": false,
@@ -5573,6 +6098,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 params starchaser 2_2019"
+        ],
         "progression": "Star Chaser"
       },
       "bonus": false,
@@ -5595,6 +6123,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 params starchaser 3_2019"
+        ],
         "progression": "Star Chaser"
       },
       "bonus": false,
@@ -5617,6 +6148,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 params starchaser 4_2019"
+        ],
         "progression": "Star Chaser"
       },
       "bonus": false,
@@ -5639,6 +6173,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 params starchaser 5_2019"
+        ],
         "progression": "Star Chaser"
       },
       "bonus": false,
@@ -5661,6 +6198,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 params starchaser challenge 1_2019"
+        ],
         "progression": "Star Chaser"
       },
       "bonus": true,
@@ -5683,6 +6223,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 params starchaser challenge 2_2019"
+        ],
         "progression": "Star Chaser"
       },
       "bonus": true,
@@ -5705,6 +6248,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6L15 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -5727,6 +6273,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 circuit logic video_2019"
+        ],
         "progression": "Circuits and Logic"
       },
       "bonus": false,
@@ -5749,6 +6298,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 circuit predict_2019"
+        ],
         "progression": "Simple Circuits"
       },
       "bonus": false,
@@ -5771,6 +6323,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 circuit LED map_2019"
+        ],
         "progression": "Simple Circuits"
       },
       "bonus": false,
@@ -5793,6 +6348,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 circuit pinMode_2019"
+        ],
         "progression": "Simple Circuits"
       },
       "bonus": false,
@@ -5815,6 +6373,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 circuit createLed_2019"
+        ],
         "progression": "Simple Circuits"
       },
       "bonus": false,
@@ -5837,6 +6398,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 circuit multi led_2019"
+        ],
         "progression": "Simple Circuits"
       },
       "bonus": false,
@@ -5859,6 +6423,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 circuit smart bike blinkers_2019"
+        ],
         "progression": "Smart Bike - Blinkers"
       },
       "bonus": false,
@@ -5881,6 +6448,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 circuit smart bike blinker buttons_2019"
+        ],
         "progression": "Smart Bike - Blinkers"
       },
       "bonus": false,
@@ -5903,6 +6473,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 circuit smart bike blinker build_2018_2019"
+        ],
         "progression": "Smart Bike - Blinkers"
       },
       "bonus": false,
@@ -5925,6 +6498,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 circuit button map_2019"
+        ],
         "progression": "Button Circuits"
       },
       "bonus": false,
@@ -5947,6 +6523,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 circuit createButton_2019"
+        ],
         "progression": "Button Circuits"
       },
       "bonus": false,
@@ -5969,6 +6548,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 circuit smart bike buzzer_2019"
+        ],
         "progression": "Finish the Prototype"
       },
       "bonus": false,
@@ -5991,6 +6573,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 circuit smart bike light_2019"
+        ],
         "progression": "Finish the Prototype"
       },
       "bonus": false,
@@ -6013,6 +6598,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U6 circuit smart bike final_2019"
+        ],
         "progression": "Finish the Prototype"
       },
       "bonus": false,
@@ -6035,6 +6623,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6L16 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -6057,6 +6648,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 final intro_2018_2019"
+        ],
         "progression": "Design Your Prototype"
       },
       "bonus": false,
@@ -6079,6 +6673,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - final project 1_2019"
+        ],
         "progression": "User Interface"
       },
       "bonus": false,
@@ -6101,6 +6698,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - final project 2_2019"
+        ],
         "progression": "User Interface"
       },
       "bonus": false,
@@ -6123,6 +6723,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - final project 3_2019"
+        ],
         "progression": "Board Input and Output"
       },
       "bonus": false,
@@ -6145,6 +6748,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - final project 5_2019"
+        ],
         "progression": "Board Input and Output"
       },
       "bonus": false,
@@ -6167,6 +6773,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - final project 4_2019"
+        ],
         "progression": "Finishing Touches"
       },
       "bonus": false,
@@ -6189,6 +6798,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - final project 6_2019"
+        ],
         "progression": "Finishing Touches"
       },
       "bonus": false,
@@ -6211,6 +6823,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U6Ch2_2018_2019"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -6233,6 +6848,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Physical Computing Post-Project Test"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6254,6 +6872,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-intro-2019"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6275,6 +6896,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-levelgroup_2019"
+        ]
       },
       "bonus": false,
       "seeding_key": {

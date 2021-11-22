@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:30:06 UTC",
+    "serialized_at": "2021-11-22 17:07:01 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -310,6 +310,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2b intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -331,6 +334,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDECS tour"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -352,6 +358,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 timeline"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -373,6 +382,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD PD details"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -394,6 +406,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 StarLogoNova"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -415,6 +430,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD StarLogo intro 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -436,6 +454,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD StarLogo intro 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -457,6 +478,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD StarLogo intro 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -478,6 +502,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD StarLogo intro 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -499,6 +526,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciencePD2b remixing"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -520,6 +550,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 mods"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -541,6 +574,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 remember"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -562,6 +598,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 challenge"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -583,6 +622,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 SLN explore"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -604,6 +646,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 sliders"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -625,6 +670,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD breeds"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -646,6 +694,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 camera"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -667,6 +718,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 wiggle"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -688,6 +742,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 color"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -709,6 +766,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 procedures"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -730,6 +790,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 conditionals"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -751,6 +814,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 remix1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -772,6 +838,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 implement1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -793,6 +862,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 implement2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -814,6 +886,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2 thanks"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -835,6 +910,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2b reflection"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -856,6 +934,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sciPD2b end"
+        ]
       },
       "bonus": false,
       "seeding_key": {

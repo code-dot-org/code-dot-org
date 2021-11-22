@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:29:36 UTC",
+    "serialized_at": "2021-11-22 17:07:27 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -194,6 +194,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "deeper learning"
+        ],
         "progression": "Background"
       },
       "bonus": false,
@@ -216,6 +219,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp deeper learning timeline"
+        ],
         "progression": "Deadlines and Payment"
       },
       "bonus": false,
@@ -238,6 +244,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "deeper learning recommendations- csp"
+        ],
         "progression": "Resource Recommendations"
       },
       "bonus": false,
@@ -260,6 +269,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "peer review recommendations"
+        ],
         "progression": "Guidelines For Peer Review"
       },
       "bonus": false,
@@ -282,6 +294,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp5dlp-lessons"
+        ],
         "progression": "Lesson Connections and Philosophy"
       },
       "bonus": false,
@@ -304,6 +319,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp5dlp-tools"
+        ],
         "progression": "Tool Philosophy and Use"
       },
       "bonus": false,
@@ -326,6 +344,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp5dlp-assessment"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,

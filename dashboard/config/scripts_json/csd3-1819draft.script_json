@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:13:27 UTC",
+    "serialized_at": "2021-11-22 17:07:39 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -2205,6 +2205,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Lesson Overview 1"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2227,6 +2230,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment"
+        ],
         "progression": "Exploring CS in Entertainment"
       },
       "bonus": false,
@@ -2249,6 +2255,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 4"
+        ],
         "progression": "Sample Programs"
       },
       "bonus": false,
@@ -2271,6 +2280,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 3"
+        ],
         "progression": "Sample Programs"
       },
       "bonus": false,
@@ -2293,6 +2305,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 1"
+        ],
         "progression": "Sample Programs"
       },
       "bonus": false,
@@ -2315,6 +2330,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Entertainment Sample 2"
+        ],
         "progression": "Sample Programs"
       },
       "bonus": false,
@@ -2337,6 +2355,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Lesson Overview 2"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2359,6 +2380,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Plotting Shapes Shape Lab"
+        ],
         "progression": "Drawing Shapes"
       },
       "bonus": false,
@@ -2381,6 +2405,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Lesson Overview 3"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2403,6 +2430,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 rect"
+        ],
         "progression": "Introduction to Game Lab"
       },
       "bonus": false,
@@ -2425,6 +2455,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 1"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 1"
       },
       "bonus": false,
@@ -2447,6 +2480,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Drawing Squares to Corners"
+        ],
         "progression": "Using the Grid"
       },
       "bonus": false,
@@ -2469,6 +2505,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 2"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 2"
       },
       "bonus": false,
@@ -2491,6 +2530,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 fill"
+        ],
         "progression": "Drawing"
       },
       "bonus": false,
@@ -2513,6 +2555,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 sequence"
+        ],
         "progression": "Drawing"
       },
       "bonus": false,
@@ -2535,6 +2580,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 ellipse"
+        ],
         "progression": "Drawing"
       },
       "bonus": false,
@@ -2557,6 +2605,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 debug"
+        ],
         "progression": "Drawing"
       },
       "bonus": false,
@@ -2579,6 +2630,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 plotting shapes map"
+        ],
         "progression": "Plotting Shapes in Game Lab"
       },
       "bonus": false,
@@ -2601,6 +2655,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 picture"
+        ],
         "progression": "Challenges"
       },
       "bonus": true,
@@ -2623,6 +2680,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 challenge face"
+        ],
         "progression": "Challenges"
       },
       "bonus": true,
@@ -2645,6 +2705,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 challenge new shape"
+        ],
         "progression": "Challenges"
       },
       "bonus": true,
@@ -2667,6 +2730,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L3 Freeplay"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -2688,6 +2754,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Lesson Overview 4"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2710,6 +2779,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Taller Rectangle"
+        ],
         "progression": "New Shapes"
       },
       "bonus": false,
@@ -2732,6 +2804,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 shape size map"
+        ],
         "progression": "Shapes and Parameters"
       },
       "bonus": false,
@@ -2754,6 +2829,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Ellipse Behind_2018"
+        ],
         "progression": "More Parameters"
       },
       "bonus": false,
@@ -2776,6 +2854,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random background"
+        ],
         "progression": "More Parameters"
       },
       "bonus": false,
@@ -2798,6 +2879,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random background2"
+        ],
         "progression": "More Parameters"
       },
       "bonus": false,
@@ -2820,6 +2904,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Debug Grass_2018"
+        ],
         "progression": "More Parameters"
       },
       "bonus": false,
@@ -2842,6 +2929,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Debug Cloud-2018"
+        ],
         "progression": "More Parameters"
       },
       "bonus": false,
@@ -2864,6 +2954,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse-2018"
+        ],
         "progression": "More Parameters"
       },
       "bonus": false,
@@ -2886,6 +2979,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random Number Map Level"
+        ],
         "progression": "Random Numbers"
       },
       "bonus": false,
@@ -2908,6 +3004,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random random ellipse2-2018"
+        ],
         "progression": "Using Random Numbers"
       },
       "bonus": false,
@@ -2930,6 +3029,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Random rainbow snake-2018"
+        ],
         "progression": "Using Random Numbers"
       },
       "bonus": false,
@@ -2952,6 +3054,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L4 Freeplay"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -2973,6 +3078,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Lesson Overview 5"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2995,6 +3103,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Variables - Part 1"
+        ],
         "progression": "Introduction to Variables - Part 1"
       },
       "bonus": false,
@@ -3017,6 +3128,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where X"
+        ],
         "progression": "Intro to Variables"
       },
       "bonus": false,
@@ -3039,6 +3153,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Map"
+        ],
         "progression": "Variables"
       },
       "bonus": false,
@@ -3061,6 +3178,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Predict Where XY"
+        ],
         "progression": "Intro to Variables"
       },
       "bonus": false,
@@ -3083,6 +3203,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables change circle size"
+        ],
         "progression": "Intro to Variables"
       },
       "bonus": false,
@@ -3105,6 +3228,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Draw Poppy"
+        ],
         "progression": "Intro to Variables"
       },
       "bonus": false,
@@ -3127,6 +3253,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 naming map"
+        ],
         "progression": "Naming Variables"
       },
       "bonus": false,
@@ -3149,6 +3278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables naming rules v2-2018"
+        ],
         "progression": "Intro to Variables"
       },
       "bonus": false,
@@ -3171,6 +3303,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables random with assignment"
+        ],
         "progression": "Intro to Variables"
       },
       "bonus": false,
@@ -3193,6 +3328,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Draw Challenge"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3214,6 +3352,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Variables Challenge"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3235,6 +3376,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L5 Freeplay"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3256,6 +3400,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Lesson Overview 6"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3278,6 +3425,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Sprites in Game Lab"
+        ],
         "progression": "Video: Introduction to Sprites"
       },
       "bonus": false,
@@ -3300,6 +3450,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites Map"
+        ],
         "progression": "Creating Sprites"
       },
       "bonus": false,
@@ -3322,6 +3475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro sprites"
+        ],
         "progression": "Intro to Sprites"
       },
       "bonus": false,
@@ -3344,6 +3500,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro predict"
+        ],
         "progression": "Intro to Sprites"
       },
       "bonus": false,
@@ -3366,6 +3525,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites intro debug"
+        ],
         "progression": "Intro to Sprites"
       },
       "bonus": false,
@@ -3388,6 +3550,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Animation Tab"
+        ],
         "progression": "Video: The Animation Tab"
       },
       "bonus": false,
@@ -3410,6 +3575,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Animation Tab Map"
+        ],
         "progression": "The Animation Tab"
       },
       "bonus": false,
@@ -3432,6 +3600,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 1"
+        ],
         "progression": "Adding Images"
       },
       "bonus": false,
@@ -3454,6 +3625,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 2"
+        ],
         "progression": "Adding Images"
       },
       "bonus": false,
@@ -3476,6 +3650,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites anitab 3"
+        ],
         "progression": "Adding Images"
       },
       "bonus": false,
@@ -3498,6 +3675,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites text"
+        ],
         "progression": "Adding Text"
       },
       "bonus": false,
@@ -3520,6 +3700,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites text debug-2018"
+        ],
         "progression": "Adding Text"
       },
       "bonus": false,
@@ -3542,6 +3725,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Scene Example-2018"
+        ],
         "progression": "Sprite Scenes"
       },
       "bonus": false,
@@ -3564,6 +3750,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene drawing"
+        ],
         "progression": "Making Scenes"
       },
       "bonus": false,
@@ -3586,6 +3775,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene sprites"
+        ],
         "progression": "Making Scenes"
       },
       "bonus": false,
@@ -3608,6 +3800,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene text"
+        ],
         "progression": "Making Scenes"
       },
       "bonus": false,
@@ -3630,6 +3825,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprites scene challenge"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3651,6 +3849,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L6 Freeplay"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3672,6 +3873,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Lesson Overview 7"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3694,6 +3898,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Introduction to the Draw Loop"
+        ],
         "progression": "Video: Introduction to the Draw Loop"
       },
       "bonus": false,
@@ -3716,6 +3923,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged predict 1"
+        ],
         "progression": "Shapes and the Draw Loop"
       },
       "bonus": false,
@@ -3738,6 +3948,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 The Draw Loop Map"
+        ],
         "progression": "The Draw Loop"
       },
       "bonus": false,
@@ -3760,6 +3973,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged orange and green"
+        ],
         "progression": "Shapes and the Draw Loop"
       },
       "bonus": false,
@@ -3782,6 +3998,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged predict 2"
+        ],
         "progression": "Shapes and the Draw Loop"
       },
       "bonus": false,
@@ -3804,6 +4023,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 dancing alien"
+        ],
         "progression": "Sprites and the Draw Loop"
       },
       "bonus": false,
@@ -3826,6 +4048,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprite Properties Map"
+        ],
         "progression": "Sprite Properties"
       },
       "bonus": false,
@@ -3848,6 +4073,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite x"
+        ],
         "progression": "Sprites and the Draw Loop"
       },
       "bonus": false,
@@ -3870,6 +4098,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite y"
+        ],
         "progression": "Sprites and the Draw Loop"
       },
       "bonus": false,
@@ -3892,6 +4123,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite rotation"
+        ],
         "progression": "Sprites and the Draw Loop"
       },
       "bonus": false,
@@ -3914,6 +4148,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Draw Loop Plugged update your scene"
+        ],
         "progression": "Animate Your Scene"
       },
       "bonus": false,
@@ -3936,6 +4173,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L7 Freeplay"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3957,6 +4197,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Lesson Overview 8"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3979,6 +4222,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Lesson Overview 9"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -4001,6 +4247,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Animating Sprite Movement"
+        ],
         "progression": "Video: Sprite Movement"
       },
       "bonus": false,
@@ -4023,6 +4272,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Counter Pattern Map"
+        ],
         "progression": "The Counter Pattern"
       },
       "bonus": false,
@@ -4045,6 +4297,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Simple Counter Predict"
+        ],
         "progression": "Movement with the Counter Pattern"
       },
       "bonus": false,
@@ -4067,6 +4322,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprite Movement Right"
+        ],
         "progression": "Movement with the Counter Pattern"
       },
       "bonus": false,
@@ -4089,6 +4347,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprite Movement Left"
+        ],
         "progression": "Movement with the Counter Pattern"
       },
       "bonus": false,
@@ -4111,6 +4372,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Sprite Movement Predict"
+        ],
         "progression": "Movement with the Counter Pattern"
       },
       "bonus": false,
@@ -4133,6 +4397,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Diagonal Movement"
+        ],
         "progression": "Movement with the Counter Pattern"
       },
       "bonus": false,
@@ -4155,6 +4422,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Watchers Map"
+        ],
         "progression": "Debugging with Watchers"
       },
       "bonus": false,
@@ -4177,6 +4447,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Watcher Predict"
+        ],
         "progression": "Animating Sprites"
       },
       "bonus": false,
@@ -4199,6 +4472,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Watcher Debug"
+        ],
         "progression": "Animating Sprites"
       },
       "bonus": false,
@@ -4221,6 +4497,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Movement Fish"
+        ],
         "progression": "Animating Sprites"
       },
       "bonus": false,
@@ -4243,6 +4522,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Movement Gears"
+        ],
         "progression": "Animating Sprites"
       },
       "bonus": false,
@@ -4265,6 +4547,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Movement Your Own 1"
+        ],
         "progression": "Create Your Own Animation"
       },
       "bonus": false,
@@ -4287,6 +4572,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Movement Your Own 2"
+        ],
         "progression": "Create Your Own Animation"
       },
       "bonus": false,
@@ -4309,6 +4597,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Movement Challenges"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -4330,6 +4621,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L9 Freeplay"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -4351,6 +4645,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Lesson Overview 10"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -4373,6 +4670,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Lesson Overview 11"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -4395,6 +4695,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Boolean Predict"
+        ],
         "progression": "Make a Prediction"
       },
       "bonus": false,
@@ -4417,6 +4720,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Booleans Video"
+        ],
         "progression": "Video: Booleans"
       },
       "bonus": false,
@@ -4439,6 +4745,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Booleans Map"
+        ],
         "progression": "Booleans and Comparison Operators"
       },
       "bonus": false,
@@ -4461,6 +4770,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Boolean Modify"
+        ],
         "progression": "Boolean Comparison"
       },
       "bonus": false,
@@ -4483,6 +4795,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - Matching"
+        ],
         "progression": "Boolean Comparison"
       },
       "bonus": false,
@@ -4505,6 +4820,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - transition"
+        ],
         "progression": "Boolean Comparison"
       },
       "bonus": false,
@@ -4527,6 +4845,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Conditionals Apple-2018"
+        ],
         "progression": "Boolean Comparison"
       },
       "bonus": false,
@@ -4549,6 +4870,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD If Statements Map"
+        ],
         "progression": "If Statements"
       },
       "bonus": false,
@@ -4571,6 +4895,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - first conditional"
+        ],
         "progression": "Basic Conditionals"
       },
       "bonus": false,
@@ -4593,6 +4920,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Conditionals Apple 2-2018"
+        ],
         "progression": "Basic Conditionals"
       },
       "bonus": false,
@@ -4615,6 +4945,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - conditionals - first conditional 2-2018"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -4636,6 +4969,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L11 Freeplay"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -4657,6 +4993,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Lesson Overview 12"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -4679,6 +5018,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Keypress Boolean-2018"
+        ],
         "progression": "Keyboard Input"
       },
       "bonus": false,
@@ -4701,6 +5043,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 keydown conditional-2018"
+        ],
         "progression": "Keyboard Input"
       },
       "bonus": false,
@@ -4723,6 +5068,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 UP_ARROW-2018"
+        ],
         "progression": "Keyboard Input"
       },
       "bonus": false,
@@ -4745,6 +5093,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Input Fish"
+        ],
         "progression": "Keyboard Input"
       },
       "bonus": false,
@@ -4767,6 +5118,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Input Gears"
+        ],
         "progression": "Keyboard Input"
       },
       "bonus": false,
@@ -4789,6 +5143,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Direction Arrows-2018"
+        ],
         "progression": "Keyboard Input"
       },
       "bonus": false,
@@ -4811,6 +5168,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Animation Edit Map"
+        ],
         "progression": "Editing Images"
       },
       "bonus": false,
@@ -4833,6 +5193,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Direction Animations-2018"
+        ],
         "progression": "Keyboard Input"
       },
       "bonus": false,
@@ -4855,6 +5218,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Keyboard Input Challenge-2018"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -4876,6 +5242,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L12 Freeplay"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -4897,6 +5266,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Lesson Overview 13"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -4919,6 +5291,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Mouse Input Bee 1"
+        ],
         "progression": "Follow the Mouse"
       },
       "bonus": false,
@@ -4941,6 +5316,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Mouse Input Bee 2"
+        ],
         "progression": "Follow the Mouse"
       },
       "bonus": false,
@@ -4963,6 +5341,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Conditionals Video"
+        ],
         "progression": "Video: Conditionals"
       },
       "bonus": false,
@@ -4985,6 +5366,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD If Else Map"
+        ],
         "progression": "If-Else Statements"
       },
       "bonus": false,
@@ -5007,6 +5391,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Else"
+        ],
         "progression": "Input with If-Else"
       },
       "bonus": false,
@@ -5029,6 +5416,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 If Else"
+        ],
         "progression": "Input with If-Else"
       },
       "bonus": false,
@@ -5051,6 +5441,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Keypress Watchers"
+        ],
         "progression": "Input with If-Else"
       },
       "bonus": false,
@@ -5073,6 +5466,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Keypress Matching"
+        ],
         "progression": "Input with If-Else"
       },
       "bonus": false,
@@ -5095,6 +5491,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - complex - mouse down"
+        ],
         "progression": "Input with If-Else"
       },
       "bonus": false,
@@ -5117,6 +5516,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - complex - key up and down"
+        ],
         "progression": "Input with If-Else"
       },
       "bonus": false,
@@ -5139,6 +5541,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - complex - mouse move"
+        ],
         "progression": "Input with If-Else"
       },
       "bonus": false,
@@ -5161,6 +5566,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Compound Nested Challenge"
+        ],
         "progression": "Challenge: Checking for Multiple Conditions"
       },
       "bonus": false,
@@ -5183,6 +5591,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L13 Freeplay"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -5205,6 +5616,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Lesson Overview 14"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -5227,6 +5641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Exemplar"
+        ],
         "progression": "CSD U3 Interactive Card Exemplar"
       },
       "bonus": false,
@@ -5249,6 +5666,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Background"
+        ],
         "progression": "Project Work"
       },
       "bonus": false,
@@ -5271,6 +5691,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Sprites"
+        ],
         "progression": "Project Work"
       },
       "bonus": false,
@@ -5293,6 +5716,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card User Input"
+        ],
         "progression": "Project Work"
       },
       "bonus": false,
@@ -5315,6 +5741,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Other Conditionals"
+        ],
         "progression": "Project Work"
       },
       "bonus": false,
@@ -5337,6 +5766,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Interactive Card Final"
+        ],
         "progression": "Project Work"
       },
       "bonus": false,
@@ -5359,6 +5791,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U3Ch1"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -5381,6 +5816,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 SFLP Velocity"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -5403,6 +5841,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Sprite Velocity"
+        ],
         "progression": "Video: Velocity"
       },
       "bonus": false,
@@ -5425,6 +5866,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 velocity map"
+        ],
         "progression": "Sprite Velocity"
       },
       "bonus": false,
@@ -5447,6 +5891,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX"
+        ],
         "progression": "Velocity"
       },
       "bonus": false,
@@ -5469,6 +5916,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityY"
+        ],
         "progression": "Velocity"
       },
       "bonus": false,
@@ -5491,6 +5941,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction rotation"
+        ],
         "progression": "Velocity"
       },
       "bonus": false,
@@ -5513,6 +5966,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction rotation control"
+        ],
         "progression": "Velocity"
       },
       "bonus": false,
@@ -5535,6 +5991,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityY control"
+        ],
         "progression": "Velocity"
       },
       "bonus": false,
@@ -5557,6 +6016,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX if-statements"
+        ],
         "progression": "Velocity"
       },
       "bonus": false,
@@ -5579,6 +6041,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction velocityX control"
+        ],
         "progression": "Velocity"
       },
       "bonus": false,
@@ -5601,6 +6066,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction jump-2018"
+        ],
         "progression": "Side Scroller"
       },
       "bonus": false,
@@ -5623,6 +6091,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction tumbleweed"
+        ],
         "progression": "Side Scroller"
       },
       "bonus": false,
@@ -5645,6 +6116,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction looping"
+        ],
         "progression": "Side Scroller"
       },
       "bonus": false,
@@ -5667,6 +6141,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L15 Freeplay"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -5689,6 +6166,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Collision Detection"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -5711,6 +6191,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions car intro"
+        ],
         "progression": "Sample Game"
       },
       "bonus": false,
@@ -5733,6 +6216,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions build isTouching"
+        ],
         "progression": "Collision Detection"
       },
       "bonus": false,
@@ -5755,6 +6241,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions isTouching intro"
+        ],
         "progression": "isTouching"
       },
       "bonus": false,
@@ -5777,6 +6266,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions egg"
+        ],
         "progression": "isTouching"
       },
       "bonus": false,
@@ -5799,6 +6291,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions egg2"
+        ],
         "progression": "isTouching"
       },
       "bonus": false,
@@ -5821,6 +6316,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions horse"
+        ],
         "progression": "isTouching"
       },
       "bonus": false,
@@ -5843,6 +6341,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions debug isTouching"
+        ],
         "progression": "isTouching"
       },
       "bonus": false,
@@ -5865,6 +6366,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions scoreboard"
+        ],
         "progression": "Collisions in Games"
       },
       "bonus": false,
@@ -5887,6 +6391,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions sidescroll2"
+        ],
         "progression": "Collisions in Games"
       },
       "bonus": false,
@@ -5909,6 +6416,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 istouching map"
+        ],
         "progression": "Collision Detection Review"
       },
       "bonus": false,
@@ -5931,6 +6441,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L16 Freeplay"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -5953,6 +6466,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 complex sprite movement SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -5975,6 +6491,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Complex Movement counter prediction gamelab"
+        ],
         "progression": "Velocity and the Counter Pattern"
       },
       "bonus": false,
@@ -5997,6 +6516,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction accelerateX"
+        ],
         "progression": "Velocity and the Counter Pattern"
       },
       "bonus": false,
@@ -6019,6 +6541,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction accelerateY"
+        ],
         "progression": "Velocity and the Counter Pattern"
       },
       "bonus": false,
@@ -6041,6 +6566,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction accelerateY up"
+        ],
         "progression": "Velocity and the Counter Pattern"
       },
       "bonus": false,
@@ -6063,6 +6591,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction decelerateX"
+        ],
         "progression": "Velocity and the Counter Pattern"
       },
       "bonus": false,
@@ -6085,6 +6616,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction decelerateY"
+        ],
         "progression": "Velocity and the Counter Pattern"
       },
       "bonus": false,
@@ -6107,6 +6641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction jumping"
+        ],
         "progression": "Flyer Game"
       },
       "bonus": false,
@@ -6129,6 +6666,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction left right counter"
+        ],
         "progression": "Flyer Game"
       },
       "bonus": false,
@@ -6151,6 +6691,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction left right counter 2"
+        ],
         "progression": "Flyer Game"
       },
       "bonus": false,
@@ -6173,6 +6716,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction add coin"
+        ],
         "progression": "Flyer Game"
       },
       "bonus": false,
@@ -6195,6 +6741,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction reset coin"
+        ],
         "progression": "Flyer Game"
       },
       "bonus": false,
@@ -6217,6 +6766,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 abstraction make it your own"
+        ],
         "progression": "Flyer Game"
       },
       "bonus": false,
@@ -6239,6 +6791,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 acceleration map"
+        ],
         "progression": "Velocity and the Counter Pattern Review"
       },
       "bonus": false,
@@ -6261,6 +6816,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L17 Freeplay"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -6283,6 +6841,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Collisions SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -6305,6 +6866,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions predict set velocity code"
+        ],
         "progression": "Sprite Interactions"
       },
       "bonus": false,
@@ -6327,6 +6891,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace x"
+        ],
         "progression": "Collisions"
       },
       "bonus": false,
@@ -6349,6 +6916,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace y"
+        ],
         "progression": "Collisions"
       },
       "bonus": false,
@@ -6371,6 +6941,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions displace intro"
+        ],
         "progression": "Collisions"
       },
       "bonus": false,
@@ -6393,6 +6966,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions try blocks"
+        ],
         "progression": "Collisions"
       },
       "bonus": false,
@@ -6415,6 +6991,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions types"
+        ],
         "progression": "Collisions"
       },
       "bonus": false,
@@ -6437,6 +7016,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions turtle"
+        ],
         "progression": "Collisions"
       },
       "bonus": false,
@@ -6459,6 +7041,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions debug"
+        ],
         "progression": "Collisions"
       },
       "bonus": false,
@@ -6481,6 +7066,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions setCollider"
+        ],
         "progression": "Collisions"
       },
       "bonus": false,
@@ -6503,6 +7091,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions bounciness"
+        ],
         "progression": "Collisions"
       },
       "bonus": false,
@@ -6525,6 +7116,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions flyman add obstacles"
+        ],
         "progression": "Flyer Game"
       },
       "bonus": false,
@@ -6547,6 +7141,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions flyman bounceOff"
+        ],
         "progression": "Flyer Game"
       },
       "bonus": false,
@@ -6569,6 +7166,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions flyman displace coin"
+        ],
         "progression": "Flyer Game"
       },
       "bonus": false,
@@ -6591,6 +7191,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions flyman change colliders"
+        ],
         "progression": "Flyer Game"
       },
       "bonus": false,
@@ -6613,6 +7216,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 collisions flyman make it your own"
+        ],
         "progression": "Flyer Game"
       },
       "bonus": false,
@@ -6635,6 +7241,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 interactions map"
+        ],
         "progression": "Sprite Interactions Review"
       },
       "bonus": false,
@@ -6657,6 +7266,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L18 Freeplay"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -6679,6 +7291,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -6701,6 +7316,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Call Function"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -6723,6 +7341,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Order Functions"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -6745,6 +7366,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Prediction Order of Create"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -6767,6 +7391,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Call Draw Loop"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -6789,6 +7416,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Reset Sprite"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -6811,6 +7441,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Randomize Sprite"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -6833,6 +7466,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Create Function"
+        ],
         "progression": "Functions"
       },
       "bonus": false,
@@ -6855,6 +7491,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Write Reset"
+        ],
         "progression": "Collector Game"
       },
       "bonus": false,
@@ -6877,6 +7516,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Add IsTouching"
+        ],
         "progression": "Collector Game"
       },
       "bonus": false,
@@ -6899,6 +7541,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Add Change Background"
+        ],
         "progression": "Collector Game"
       },
       "bonus": false,
@@ -6921,6 +7566,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 functions review"
+        ],
         "progression": "Functions Review"
       },
       "bonus": false,
@@ -6943,6 +7591,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L19 Freeplay"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -6965,6 +7616,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Defender SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -6987,6 +7641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti Play Defender"
+        ],
         "progression": "Sample Game"
       },
       "bonus": false,
@@ -7009,6 +7666,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti STOP project guide"
+        ],
         "progression": "Plan Your Project"
       },
       "bonus": false,
@@ -7031,6 +7691,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti introducing multiframe"
+        ],
         "progression": "Multiframe Animations"
       },
       "bonus": false,
@@ -7053,6 +7716,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti slow down"
+        ],
         "progression": "Multiframe Animations"
       },
       "bonus": false,
@@ -7075,6 +7741,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti mirror animation"
+        ],
         "progression": "Multiframe Animations"
       },
       "bonus": false,
@@ -7097,6 +7766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender animate cake enemies"
+        ],
         "progression": "Cake Defender"
       },
       "bonus": false,
@@ -7119,6 +7791,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender enemies move"
+        ],
         "progression": "Cake Defender"
       },
       "bonus": false,
@@ -7141,6 +7816,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender enemies touch cake"
+        ],
         "progression": "Cake Defender"
       },
       "bonus": false,
@@ -7163,6 +7841,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender enemies touch cake sprite2"
+        ],
         "progression": "Cake Defender"
       },
       "bonus": false,
@@ -7185,6 +7866,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender create set enemies"
+        ],
         "progression": "Cake Defender"
       },
       "bonus": false,
@@ -7207,6 +7891,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender move player"
+        ],
         "progression": "Cake Defender"
       },
       "bonus": false,
@@ -7229,6 +7916,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender move up down"
+        ],
         "progression": "Cake Defender"
       },
       "bonus": false,
@@ -7251,6 +7941,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender animate player"
+        ],
         "progression": "Cake Defender"
       },
       "bonus": false,
@@ -7273,6 +7966,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender displace enemies"
+        ],
         "progression": "Cake Defender"
       },
       "bonus": false,
@@ -7295,6 +7991,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender touch water"
+        ],
         "progression": "Cake Defender"
       },
       "bonus": false,
@@ -7317,6 +8016,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 AnimationsMulti defender make it your own"
+        ],
         "progression": "Cake Defender"
       },
       "bonus": false,
@@ -7339,6 +8041,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Using the Game Design Process SLFP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -7361,6 +8066,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform sample1"
+        ],
         "progression": "Sample Platform Jumper Game"
       },
       "bonus": false,
@@ -7383,6 +8091,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform intro"
+        ],
         "progression": "CSD U3 platform intro"
       },
       "bonus": false,
@@ -7405,6 +8116,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform background1"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
       "bonus": false,
@@ -7427,6 +8141,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform variable1"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
       "bonus": false,
@@ -7449,6 +8166,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform background2"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
       "bonus": false,
@@ -7471,6 +8191,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform scoreboard"
+        ],
         "progression": "Platform Jumper - Background and Variables"
       },
       "bonus": false,
@@ -7493,6 +8216,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform platform1"
+        ],
         "progression": "Platform Jumper - Platforms"
       },
       "bonus": false,
@@ -7515,6 +8241,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform platform2"
+        ],
         "progression": "Platform Jumper - Platforms"
       },
       "bonus": false,
@@ -7537,6 +8266,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform platform3"
+        ],
         "progression": "Platform Jumper - Platforms"
       },
       "bonus": false,
@@ -7559,6 +8291,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform items1"
+        ],
         "progression": "Platform Jumper - Items"
       },
       "bonus": false,
@@ -7581,6 +8316,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform items2"
+        ],
         "progression": "Platform Jumper - Items"
       },
       "bonus": false,
@@ -7603,6 +8341,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform items3"
+        ],
         "progression": "Platform Jumper - Items"
       },
       "bonus": false,
@@ -7625,6 +8366,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player1"
+        ],
         "progression": "Platform Jumper - Player"
       },
       "bonus": false,
@@ -7647,6 +8391,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player2"
+        ],
         "progression": "Platform Jumper - Player"
       },
       "bonus": false,
@@ -7669,6 +8416,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player3"
+        ],
         "progression": "Platform Jumper - Player"
       },
       "bonus": false,
@@ -7691,6 +8441,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform player4"
+        ],
         "progression": "Platform Jumper - Player"
       },
       "bonus": false,
@@ -7713,6 +8466,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform sample2"
+        ],
         "progression": "Plane Jumper"
       },
       "bonus": false,
@@ -7735,6 +8491,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform sample3"
+        ],
         "progression": "Bunny Jumper"
       },
       "bonus": false,
@@ -7757,6 +8516,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 platform challenge"
+        ],
         "progression": "Improve Your Game"
       },
       "bonus": false,
@@ -7779,6 +8541,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Project Build a Game SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -7801,6 +8566,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game intro"
+        ],
         "progression": "Design Your Game"
       },
       "bonus": false,
@@ -7823,6 +8591,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game variables"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -7845,6 +8616,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game backgrounds"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -7867,6 +8641,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game display boards"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -7889,6 +8666,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game choose background"
+        ],
         "progression": "Project - Background and Variables"
       },
       "bonus": false,
@@ -7911,6 +8691,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game animations"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -7933,6 +8716,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game create sprites"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -7955,6 +8741,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game sprite movement"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -7977,6 +8766,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game user controls"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -7999,6 +8791,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 game interactions"
+        ],
         "progression": "Project - Sprites and Interactions"
       },
       "bonus": false,
@@ -8021,6 +8816,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 finishing touches"
+        ],
         "progression": "Project - Finishing Touches"
       },
       "bonus": false,
@@ -8043,6 +8841,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U3Ch2"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -8065,6 +8866,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-2017-levelgroup"
+        ]
       },
       "bonus": false,
       "seeding_key": {

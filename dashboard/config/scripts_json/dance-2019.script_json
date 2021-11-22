@@ -12,9 +12,11 @@
     },
     "new_name": null,
     "family_name": "dance-2019",
-    "serialized_at": "2021-10-25 22:54:02 UTC",
+    "serialized_at": "2021-11-22 17:08:11 UTC",
     "published_state": "preview",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "dance-2019"
     }

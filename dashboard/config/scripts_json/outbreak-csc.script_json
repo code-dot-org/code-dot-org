@@ -11,9 +11,11 @@
     },
     "new_name": null,
     "family_name": "outbreak-csc",
-    "serialized_at": "2021-10-25 22:55:01 UTC",
+    "serialized_at": "2021-11-22 17:09:16 UTC",
     "published_state": "in_development",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "outbreak-csc"
     }

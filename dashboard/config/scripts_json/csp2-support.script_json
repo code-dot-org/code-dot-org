@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:29:29 UTC",
+    "serialized_at": "2021-11-22 17:07:15 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1061,6 +1061,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "What's inside and how is it organized?"
+        ],
         "progression": "What's inside and how is it organized?"
       },
       "bonus": false,
@@ -1083,6 +1086,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Unit 2"
+        ],
         "progression": "Introduction to Unit 2"
       },
       "bonus": false,
@@ -1105,6 +1111,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Curriculum Framework Connections in Unit 2"
+        ],
         "progression": "Curriculum Framework Connections in Unit 2"
       },
       "bonus": false,
@@ -1127,6 +1136,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 2 Tool Talk"
+        ],
         "progression": "Unit 2 Tool Talk"
       },
       "bonus": false,
@@ -1149,6 +1161,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Practice Performance Tasks in Unit 2"
+        ],
         "progression": "Practice Performance Tasks in Unit 2"
       },
       "bonus": false,
@@ -1171,6 +1186,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 2 Self-Assessment"
+        ],
         "progression": "Unit 2 Self-Assessment"
       },
       "bonus": false,
@@ -1193,6 +1211,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 2 Vocab and Concept Review Activity"
+        ],
         "progression": "Unit 2 Vocab and Concept Review Activity"
       },
       "bonus": false,
@@ -1215,6 +1236,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AP Test Prep Guidance"
+        ],
         "progression": "AP Test Prep Guidance"
       },
       "bonus": false,
@@ -1237,6 +1261,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2.1 and 2.2 Lesson Connections"
+        ],
         "progression": "2.1 and 2.2 Lesson Connections"
       },
       "bonus": false,
@@ -1259,6 +1286,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview of File Sizes and Metrics"
+        ],
         "progression": "Overview of File Sizes and Metrics"
       },
       "bonus": false,
@@ -1281,6 +1311,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Lossless Compression and the Text Compression Widget"
+        ],
         "progression": "Introduction to Lossless Compression and the Text Compression Widget"
       },
       "bonus": false,
@@ -1303,6 +1336,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "What is a Heuristic?"
+        ],
         "progression": "What is a Heuristic?"
       },
       "bonus": false,
@@ -1325,6 +1361,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How to: Text Compression Widget"
+        ],
         "progression": "How to: Text Compression Widget"
       },
       "bonus": false,
@@ -1347,6 +1386,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Text Compression"
+        ],
         "progression": "Widget: Text Compression"
       },
       "bonus": false,
@@ -1369,6 +1411,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Task: Write your own Heuristic"
+        ],
         "progression": "Task: Write your own Heuristic"
       },
       "bonus": false,
@@ -1391,6 +1436,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2 L1 - 2: Teaching and Student Support Plan"
+        ],
         "progression": "U2 L1 - 2: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -1413,6 +1461,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2.3 and 2.4 Lesson Connections"
+        ],
         "progression": "2.3 and 2.4 Lesson Connections"
       },
       "bonus": false,
@@ -1435,6 +1486,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How are Images Encoded?"
+        ],
         "progression": "How are Images Encoded?"
       },
       "bonus": false,
@@ -1457,6 +1511,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "A Note On Metadata in the Curriculum Framework"
+        ],
         "progression": "A Note On Metadata in the Curriculum Framework"
       },
       "bonus": false,
@@ -1479,6 +1536,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Black and White Pixelation"
+        ],
         "progression": "Widget: Black and White Pixelation"
       },
       "bonus": false,
@@ -1501,6 +1561,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Binary, Hex, and Images"
+        ],
         "progression": "Binary, Hex, and Images"
       },
       "bonus": false,
@@ -1523,6 +1586,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Color Pixelation"
+        ],
         "progression": "Widget: Color Pixelation"
       },
       "bonus": false,
@@ -1545,6 +1611,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Task: Make your own Favicon"
+        ],
         "progression": "Task: Make your own Favicon"
       },
       "bonus": false,
@@ -1567,6 +1636,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2 L3 - 4: Teaching and Student Support Plan"
+        ],
         "progression": "U2 L3 - 4: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -1589,6 +1661,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2.5 and 2.6 Lesson Connections"
+        ],
         "progression": "2.5 and 2.6 Lesson Connections"
       },
       "bonus": false,
@@ -1611,6 +1686,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Lossy Compression"
+        ],
         "progression": "Introduction to Lossy Compression"
       },
       "bonus": false,
@@ -1633,6 +1711,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lossy vs. Lossless Compression"
+        ],
         "progression": "Lossy vs. Lossless Compression"
       },
       "bonus": false,
@@ -1655,6 +1736,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Task: Encode an Experience"
+        ],
         "progression": "Task: Encode an Experience"
       },
       "bonus": false,
@@ -1677,6 +1761,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2 L5 - 6: Teaching and Student Support Plan"
+        ],
         "progression": "U2 L5 - 6: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -1699,6 +1786,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2.7 -  10 Lesson Connections"
+        ],
         "progression": "2.7 -  10 Lesson Connections"
       },
       "bonus": false,
@@ -1721,6 +1811,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How to: Setup your Class Data Tracker"
+        ],
         "progression": "How to: Setup your Class Data Tracker"
       },
       "bonus": false,
@@ -1743,6 +1836,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Correlation vs Causation"
+        ],
         "progression": "Correlation vs Causation"
       },
       "bonus": false,
@@ -1765,6 +1861,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How to: Use Google Trends"
+        ],
         "progression": "How to: Use Google Trends"
       },
       "bonus": false,
@@ -1787,6 +1886,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Task: Explore Google Trends"
+        ],
         "progression": "Task: Explore Google Trends"
       },
       "bonus": false,
@@ -1809,6 +1911,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "What Makes an Effective Visualization?"
+        ],
         "progression": "What Makes an Effective Visualization?"
       },
       "bonus": false,
@@ -1831,6 +1936,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Data Visualizations 101"
+        ],
         "progression": "Data Visualizations 101"
       },
       "bonus": false,
@@ -1853,6 +1961,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2 L7 - 10: Teaching and Student Support Plan"
+        ],
         "progression": "U2 L7 - 10: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -1875,6 +1986,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2.11 - 15 Lesson Connections"
+        ],
         "progression": "2.11 - 15 Lesson Connections"
       },
       "bonus": false,
@@ -1897,6 +2011,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How to: Make Charts from your Data"
+        ],
         "progression": "How to: Make Charts from your Data"
       },
       "bonus": false,
@@ -1919,6 +2036,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Selecting an Appropriate Visualization for your Data"
+        ],
         "progression": "Selecting an Appropriate Visualization for your Data"
       },
       "bonus": false,
@@ -1941,6 +2061,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Cleaning Data"
+        ],
         "progression": "Cleaning Data"
       },
       "bonus": false,
@@ -1963,6 +2086,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Summary Tables 101"
+        ],
         "progression": "Summary Tables 101"
       },
       "bonus": false,
@@ -1985,6 +2111,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2 L11 - 15: Teaching and Student Support Plan"
+        ],
         "progression": "U2 L11 - 15: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -2007,6 +2136,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ],
         "progression": "Overview: Group Work and Peer Learning"
       },
       "bonus": false,
@@ -2029,6 +2161,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ],
         "progression": "Collaborative Learning and Group Work: Description and Strategies"
       },
       "bonus": false,
@@ -2051,6 +2186,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Official Peer Instruction Blog"
+        ],
         "progression": "The Official Peer Instruction Blog"
       },
       "bonus": false,
@@ -2073,6 +2211,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "the Journal of Peer Learning"
+        ],
         "progression": "the Journal of Peer Learning"
       },
       "bonus": false,
@@ -2095,6 +2236,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 2 Teaching Practice Plan: Group Work and Peer Learning"
+        ],
         "progression": "Unit 2 Teaching Practice Plan: Group Work and Peer Learning"
       },
       "bonus": false,
@@ -2117,6 +2261,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ],
         "progression": "Overview: Balancing Teachers and Tools"
       },
       "bonus": false,
@@ -2139,6 +2286,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Classroom Management Tips for School Computer Labs"
+        ],
         "progression": "Classroom Management Tips for School Computer Labs"
       },
       "bonus": false,
@@ -2161,6 +2311,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Considerations for the 1-to-1 Classroom"
+        ],
         "progression": "Considerations for the 1-to-1 Classroom"
       },
       "bonus": false,
@@ -2183,6 +2336,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 2 Teaching Practice Plan: Balancing Teacher and Tools"
+        ],
         "progression": "Unit 2 Teaching Practice Plan: Balancing Teacher and Tools"
       },
       "bonus": false,
@@ -2205,6 +2361,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview: Discovery Learning"
+        ],
         "progression": "Overview: Discovery Learning"
       },
       "bonus": false,
@@ -2227,6 +2386,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Discovery learning definition and history"
+        ],
         "progression": "Discovery learning definition and history"
       },
       "bonus": false,
@@ -2249,6 +2411,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Discovery learning techniques"
+        ],
         "progression": "Discovery learning techniques"
       },
       "bonus": false,
@@ -2271,6 +2436,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 2 Teaching Practice Plan: Discovery Learning"
+        ],
         "progression": "Unit 2 Teaching Practice Plan: Discovery Learning"
       },
       "bonus": false,
@@ -2293,6 +2461,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview: Capturing Student Learning"
+        ],
         "progression": "Overview: Capturing Student Learning"
       },
       "bonus": false,
@@ -2315,6 +2486,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ],
         "progression": "What is the difference between formative and summative assessment?"
       },
       "bonus": false,
@@ -2337,6 +2511,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Designing Assessment Questions"
+        ],
         "progression": "Designing Assessment Questions"
       },
       "bonus": false,
@@ -2359,6 +2536,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Classroom Assessment Techniques"
+        ],
         "progression": "Classroom Assessment Techniques"
       },
       "bonus": false,
@@ -2381,6 +2561,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 2 Teaching Practice Plan: Assessing Student Learning"
+        ],
         "progression": "Unit 2 Teaching Practice Plan: Assessing Student Learning"
       },
       "bonus": false,
