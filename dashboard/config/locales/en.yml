@@ -431,6 +431,8 @@ en:
       starwars: 'Star Wars'
       starwarsblocks: 'Star Wars (Blocks)'
       starwarsblocks_hour: 'Star Wars (Blocks)'
+      student: 'Hi Student'
+      teacher: 'Hi Teacher'
       weblab: 'Web Lab'
       view_all: 'View all projects...'
 
