@@ -5220,7 +5220,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 9 NEW",
+        "level.key": "2-3 Artist 9",
         "script_level.level_keys": [
           "2-3 Artist 9",
           "2-3 Artist 9 NEW"
@@ -5233,7 +5233,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 9",
+        "level.key": "2-3 Artist 9 NEW",
         "script_level.level_keys": [
           "2-3 Artist 9",
           "2-3 Artist 9 NEW"
