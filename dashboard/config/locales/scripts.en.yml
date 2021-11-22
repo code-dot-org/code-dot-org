@@ -6713,6 +6713,7 @@ en:
             Complete Unit 2 Deeper Learning Reflections:
               name: Complete Unit 2 Deeper Learning Reflections
           student_description: 'This is Unit 2 of the Deeper Learning Plan for Code.org CSP facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 2 of the Code.org CSP Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+          name: csp2-dlp
         csp3-dlp:
           title: CSP Unit 3 Deeper Learning
           description_audience: CS Principles Facilitators in Training
@@ -6729,6 +6730,7 @@ en:
             Complete Unit 3 Deeper Learning Reflections:
               name: Complete Unit 3 Deeper Learning Reflections
           student_description: 'This is Unit 3 of the Deeper Learning Plan for Code.org CSP facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 3 of the Code.org CSP Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+          name: csp3-dlp
         csp4-dlp:
           title: CSP Unit 4 Deeper Learning
           description_audience: CS Principles Facilitators in Training
@@ -6745,6 +6747,7 @@ en:
             Complete Unit 4 Deeper Learning Reflections:
               name: Complete Unit 4 Deeper Learning Reflections
           student_description: 'This is Unit 4 of the Deeper Learning Plan for Code.org CSP facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 4 of the Code.org CSP Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+          name: csp4-dlp
         csp5-dlp:
           title: CSP Unit 5 Deeper Learning
           description_audience: CS Principles Facilitators in Training
@@ -6761,6 +6764,7 @@ en:
             Complete Unit 5 Deeper Learning Reflections:
               name: Complete Unit 5 Deeper Learning Reflections
           student_description: 'This is Unit 5 of the Deeper Learning Plan for Code.org CSP facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 5 of the Code.org CSP Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+          name: csp5-dlp
         csd1-dlp:
           title: CS Discoveries Unit 1 Deeper Learning
           description_audience: CS Discoveries Facilitators in Training
@@ -6777,6 +6781,7 @@ en:
             Complete Unit 1 Deeper Learning Reflections:
               name: Complete Unit 1 Deeper Learning Reflections
           student_description: 'This is Unit 1 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 1 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+          name: csd1-dlp
         csd6-dlp:
           title: CS Discoveries Unit 6 Deeper Learning
           description_audience: CS Discoveries Facilitators in Training
@@ -6793,6 +6798,7 @@ en:
             Complete Unit 6 Deeper Learning Reflections:
               name: Complete Unit 6 Deeper Learning Reflections
           student_description: This is Unit 6 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 6 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you've submitted your own reflections for the unit.
+          name: csd6-dlp
         csd5-dlp:
           title: CS Discoveries Unit 5 Deeper Learning
           description_audience: CS Discoveries Facilitators in Training
@@ -6809,6 +6815,7 @@ en:
             Complete Unit 5 Deeper Learning Reflections:
               name: Complete Unit 5 Deeper Learning Reflections
           student_description: This is Unit 5 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 5 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you've submitted your own reflections for the unit.
+          name: csd5-dlp
         csd4-dlp:
           title: CS Discoveries Unit 4 Deeper Learning
           description_audience: CS Discoveries Facilitators in Training
@@ -6825,6 +6832,7 @@ en:
             Complete Unit 4 Deeper Learning Reflections:
               name: Complete Unit 4 Deeper Learning Reflections
           student_description: This is Unit 4 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 4 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you've submitted your own reflections for the unit.
+          name: csd4-dlp
         csd3-dlp:
           title: CS Discoveries Unit 3 Deeper Learning
           description_audience: CS Discoveries Facilitators in Training
@@ -6841,6 +6849,7 @@ en:
             Complete Unit 3 Deeper Learning Reflections:
               name: Complete Unit 3 Deeper Learning Reflections
           student_description: This is Unit 3 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 3 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you've submitted your own reflections for the unit.
+          name: csd3-dlp
         csd2-dlp:
           title: CS Discoveries Unit 2 Deeper Learning
           description_audience: CS Discoveries Facilitators in Training
@@ -6857,6 +6866,7 @@ en:
             Complete Unit 2 Deeper Learning Reflections:
               name: Complete Unit 2 Deeper Learning Reflections
           student_description: This is Unit 2 of the Deeper Learning Plan for Code.org CS Discoveries facilitators in training. Here you will find reflection prompts and guidances for demonstrating proficiency of Unit 2 of the Code.org CS Discoveries Curriculum. Peer review items are available at the bottom of this page, once you've submitted your own reflections for the unit.
+          name: csd2-dlp
         allthettsthings:
           lesson_groups: {}
           lessons:
@@ -10524,6 +10534,7 @@ en:
             Complete Create Deeper Learning Reflections:
               name: Complete Create Deeper Learning Reflections
           student_description: 'This is the Create AP Unit of the Deeper Learning Plan for Code.org CS Principles facilitators in training. Here you will find reflection prompts and guidance for demonstrating proficiency as a facilitator of the Create AP Unit of the Code.org CS Principles Curriculum. Peer review items are available at the bottom of this page, once you''ve submitted your own reflections for the unit. '
+          name: csp-create-dlp-18
         csd-post-survey:
           title: CSD Student Post-Course Survey ('18-'19)
           description_audience: CSD Students
@@ -25131,6 +25142,7 @@ en:
           description_audience: ''
           description_short: ''
           description: ''
+          student_description: ''
         dlp21-csd:
           lessons: {}
           lesson_groups:
