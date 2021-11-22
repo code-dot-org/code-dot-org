@@ -191,7 +191,6 @@ describe('StudentLessonOverview', () => {
     const wrapper = shallow(
       <StudentLessonOverview {...defaultProps} lessonLevels={lessonLevels} />
     );
-    console.log(wrapper.find('#level-section'));
     assert.equal(wrapper.find('#level-section').length, 1);
     expect(wrapper.text()).to.contain('Lesson 1');
   });
