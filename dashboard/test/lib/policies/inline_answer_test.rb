@@ -6,7 +6,7 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
     @teacher = create :teacher
     @student = create :student
     @facilitator = create :facilitator
-    @code_instructor = create :code_instructor
+    @universal_instructor = create :universal_instructor
     @plc_reviewer = create :plc_reviewer
     @levelbuilder = create :levelbuilder
 
@@ -22,8 +22,8 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
     @script_level_facilitator_instructed = create(:script_level, script: @facilitator_instructed_unit)
     @plc_reviewer_instructed_unit = create(:script, name: 'plc-reviewer-instructed-unit', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer)
     @script_level_plc_reviewer_instructed = create(:script_level, script: @plc_reviewer_instructed_unit)
-    @code_instructor_instructed_unit = create(:script, name: 'code-instructor-instructed-unit', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_instructor)
-    @script_level_code_instructor_instructed = create(:script_level, script: @code_instructor_instructed_unit)
+    @universal_instructor_instructed_unit = create(:script, name: 'universal-instructor-instructed-unit', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor)
+    @script_level_universal_instructor_instructed = create(:script_level, script: @universal_instructor_instructed_unit)
 
     @plc_models_script = create(:script, name: 'old-style-pl-course', professional_learning_course: true)
   end
@@ -44,8 +44,8 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
     assert Policies::InlineAnswer.visible_for_script_level?(@plc_reviewer, @script_level_plc_reviewer_instructed)
   end
 
-  test 'visible_for_script_level? returns true for code instructor in unit instructed by code instructor' do
-    assert Policies::InlineAnswer.visible_for_script_level?(@code_instructor, @script_level_code_instructor_instructed)
+  test 'visible_for_script_level? returns true for universal instructor in unit instructed by universal instructor' do
+    assert Policies::InlineAnswer.visible_for_script_level?(@universal_instructor, @script_level_universal_instructor_instructed)
   end
 
   test 'visible_for_script_level? returns false for if user can not instruct unit' do
@@ -99,8 +99,8 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
     assert Policies::InlineAnswer.visible_for_script?(@plc_reviewer, @plc_reviewer_instructed_unit)
   end
 
-  test 'visible_for_script? returns true for code instructor in unit instructed by code instructor' do
-    assert Policies::InlineAnswer.visible_for_script?(@code_instructor, @code_instructor_instructed_unit)
+  test 'visible_for_script? returns true for universal instructor in unit instructed by universal instructor' do
+    assert Policies::InlineAnswer.visible_for_script?(@universal_instructor, @universal_instructor_instructed_unit)
   end
 
   test 'visible_for_script? returns false for if user can not instruct unit' do
