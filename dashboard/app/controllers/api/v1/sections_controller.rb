@@ -18,7 +18,6 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # GET /api/v1/sections
   # Get the set of sections owned by the current user
   def index
-    prevent_caching
     render json: current_user.sections.map(&:summarize)
   end
 
