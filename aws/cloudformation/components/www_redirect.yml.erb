@@ -102,6 +102,7 @@
     Type: "AWS::IAM::Role"
     Properties:
       Path: "/"
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
       ManagedPolicyArns:
         - "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
       AssumeRolePolicyDocument:
