@@ -50,11 +50,11 @@
     },
     "new_name": "coursee-2017",
     "family_name": "coursee",
-    "serialized_at": "2021-11-22 17:07:25 UTC",
+    "serialized_at": "2021-11-22 19:46:32 UTC",
     "published_state": "stable",
     "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "coursee-2017"
     }
@@ -6517,19 +6517,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_maze_ramp1",
-        "script_level.level_keys": [
-          "courseD_scrat_ramp1",
-          "courseE_maze_ramp1"
-        ],
-        "lesson.key": "Introduction",
-        "lesson_group.key": "csf_e_2",
-        "script.name": "coursee-2017",
-        "activity_section.key": "091c9eb6-182a-479a-96b1-355bf6e8ad19"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseD_scrat_ramp1",
         "script_level.level_keys": [
           "courseD_scrat_ramp1",
@@ -6543,10 +6530,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_maze_ramp2",
+        "level.key": "courseE_maze_ramp1",
         "script_level.level_keys": [
-          "courseD_scrat_ramp2",
-          "courseE_maze_ramp2"
+          "courseD_scrat_ramp1",
+          "courseE_maze_ramp1"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "csf_e_2",
@@ -6569,10 +6556,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_maze_ramp3",
+        "level.key": "courseE_maze_ramp2",
         "script_level.level_keys": [
-          "courseD_scrat_ramp3",
-          "courseE_maze_ramp3"
+          "courseD_scrat_ramp2",
+          "courseE_maze_ramp2"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "csf_e_2",
@@ -6595,10 +6582,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp4",
+        "level.key": "courseE_maze_ramp3",
         "script_level.level_keys": [
-          "courseD_scrat_ramp4",
-          "courseE_maze_ramp4"
+          "courseD_scrat_ramp3",
+          "courseE_maze_ramp3"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "csf_e_2",
@@ -6621,10 +6608,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_maze_ramp5",
+        "level.key": "courseD_scrat_ramp4",
         "script_level.level_keys": [
-          "courseD_scrat_ramp5",
-          "courseE_maze_ramp5"
+          "courseD_scrat_ramp4",
+          "courseE_maze_ramp4"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "csf_e_2",
@@ -6647,7 +6634,20 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_maze_predict1",
+        "level.key": "courseE_maze_ramp5",
+        "script_level.level_keys": [
+          "courseD_scrat_ramp5",
+          "courseE_maze_ramp5"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "coursee-2017",
+        "activity_section.key": "091c9eb6-182a-479a-96b1-355bf6e8ad19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_scrat_predict1",
         "script_level.level_keys": [
           "courseD_scrat_predict1",
           "courseE_maze_predict1"
@@ -6660,7 +6660,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_predict1",
+        "level.key": "courseE_maze_predict1",
         "script_level.level_keys": [
           "courseD_scrat_predict1",
           "courseE_maze_predict1"
@@ -6699,19 +6699,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_maze_ramp6",
-        "script_level.level_keys": [
-          "courseD_scrat_ramp6",
-          "courseE_maze_ramp6"
-        ],
-        "lesson.key": "Introduction",
-        "lesson_group.key": "csf_e_2",
-        "script.name": "coursee-2017",
-        "activity_section.key": "091c9eb6-182a-479a-96b1-355bf6e8ad19"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseD_scrat_ramp6",
         "script_level.level_keys": [
           "courseD_scrat_ramp6",
@@ -6725,7 +6712,20 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp7",
+        "level.key": "courseE_maze_ramp6",
+        "script_level.level_keys": [
+          "courseD_scrat_ramp6",
+          "courseE_maze_ramp6"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "csf_e_2",
+        "script.name": "coursee-2017",
+        "activity_section.key": "091c9eb6-182a-479a-96b1-355bf6e8ad19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_maze_ramp7",
         "script_level.level_keys": [
           "courseD_scrat_ramp7",
           "courseE_maze_ramp7"
@@ -6738,7 +6738,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_maze_ramp7",
+        "level.key": "courseD_scrat_ramp7",
         "script_level.level_keys": [
           "courseD_scrat_ramp7",
           "courseE_maze_ramp7"
@@ -6835,7 +6835,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_farmer_ramp12",
+        "level.key": "courseE_farmer_ramp11b",
         "script_level.level_keys": [
           "courseE_farmer_ramp11b",
           "courseE_farmer_ramp12"
@@ -6848,7 +6848,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_farmer_ramp11b",
+        "level.key": "courseE_farmer_ramp12",
         "script_level.level_keys": [
           "courseE_farmer_ramp11b",
           "courseE_farmer_ramp12"
@@ -6887,7 +6887,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_video_ifElse",
+        "level.key": "courseE_farmer_ramp12_forswap",
         "script_level.level_keys": [
           "courseE_farmer_ramp12_forswap",
           "courseE_video_ifElse"
@@ -6900,7 +6900,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_farmer_ramp12_forswap",
+        "level.key": "courseE_video_ifElse",
         "script_level.level_keys": [
           "courseE_farmer_ramp12_forswap",
           "courseE_video_ifElse"
@@ -6939,7 +6939,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_farmer_ramp13",
+        "level.key": "courseE_farmer_ramp12c",
         "script_level.level_keys": [
           "courseE_farmer_ramp12c",
           "courseE_farmer_ramp13"
@@ -6952,7 +6952,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_farmer_ramp12c",
+        "level.key": "courseE_farmer_ramp13",
         "script_level.level_keys": [
           "courseE_farmer_ramp12c",
           "courseE_farmer_ramp13"
@@ -7029,7 +7029,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_farmer_ramp15",
+        "level.key": "courseE_farmer_ramp12f",
         "script_level.level_keys": [
           "courseE_farmer_ramp12f",
           "courseE_farmer_ramp15"
@@ -7042,7 +7042,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_farmer_ramp12f",
+        "level.key": "courseE_farmer_ramp15",
         "script_level.level_keys": [
           "courseE_farmer_ramp12f",
           "courseE_farmer_ramp15"

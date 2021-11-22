@@ -21,11 +21,11 @@
     },
     "new_name": null,
     "family_name": "course2",
-    "serialized_at": "2021-11-22 17:06:51 UTC",
+    "serialized_at": "2021-11-22 19:46:19 UTC",
     "published_state": "preview",
     "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "course2"
     }
@@ -5220,7 +5220,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 9",
+        "level.key": "2-3 Artist 9 NEW",
         "script_level.level_keys": [
           "2-3 Artist 9",
           "2-3 Artist 9 NEW"
@@ -5233,7 +5233,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "2-3 Artist 9 NEW",
+        "level.key": "2-3 Artist 9",
         "script_level.level_keys": [
           "2-3 Artist 9",
           "2-3 Artist 9 NEW"
