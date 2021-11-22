@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-16 21:56:41 UTC",
+    "serialized_at": "2021-11-17 14:57:34 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -240,6 +240,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "Students explore system reliability by considering the end users of programs and conducting tests to check that programs meet their needs and expectations. Students identify strategies to test system reliability and recognize their role as software engineers in developing and maintaining functioning software.",
+        "preparation": "* Print copies of the Testing Software handout (one per pair of students)",
+        "student_overview": "You explore system reliability by considering the end users of programs and conducting tests to check that programs meet their needs and expectations. You identify strategies to test system reliability and recognize your role as a software engineer in developing and maintaining functioning software."
       },
       "seeding_key": {
         "lesson.key": "lesson-15",
@@ -772,6 +775,48 @@
       "seeding_key": {
         "lesson_activity.key": "bd28a32d-3718-4a9a-a3b5-cbdf9b5d8283",
         "lesson.key": "lesson-14",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "5bfbc94a-b7be-4c51-9019-35bd4ce4924f",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5bfbc94a-b7be-4c51-9019-35bd4ce4924f",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1",
+        "lesson.key": "lesson-15",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa7-pilot"
+      }
+    },
+    {
+      "key": "c62a3762-11b1-4dc1-9f4f-ad9d9d821146",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c62a3762-11b1-4dc1-9f4f-ad9d9d821146",
+        "lesson.key": "lesson-15",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa7-pilot"
       }
@@ -2450,8 +2495,19 @@
       }
     },
     {
-      "key": "5d33c976-d8a1-4a03-8efd-aea9e7c25cbb",
+      "key": "f755466f-6a9f-4cf4-9904-ff450500c73d",
       "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the Recursion video."
+      },
+      "seeding_key": {
+        "activity_section.key": "f755466f-6a9f-4cf4-9904-ff450500c73d",
+        "lesson_activity.key": "13e0f40d-f086-4ec2-be94-62753a5dfaf5"
+      }
+    },
+    {
+      "key": "5d33c976-d8a1-4a03-8efd-aea9e7c25cbb",
+      "position": 5,
       "properties": {
         "description": "Lets practice tracing recursive methods with `String`s, arrays, or `ArrayList`s.",
         "remarks": true
@@ -2463,7 +2519,7 @@
     },
     {
       "key": "4d5820dc-1a92-42c9-95bd-585c8113b46c",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Do This: Direct students to complete Levels 2 and 3 on Code Studio. On Level 2, students complete a choice level tracing recursive methods with `String`s, arrays, or `ArrayList`s. Students continue to complete a Check for Understanding on Level 3."
       },
@@ -2474,7 +2530,7 @@
     },
     {
       "key": "6f61dd89-3d55-48a6-9d98-06129804b43c",
-      "position": 6,
+      "position": 7,
       "properties": {
         "description": "Before working towards the next benchmark, it is helpful to assess your achievement of this benchmark and get feedback on your development so far.",
         "duration": "20",
@@ -2488,7 +2544,7 @@
     },
     {
       "key": "a41894df-1528-41fa-9723-f70fcba85e7f",
-      "position": 7,
+      "position": 8,
       "properties": {
         "description": "**Group:** Place students in groups of three to four.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Project Development Feedback handout to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the feedback process.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students identify a question to frame the feedback session.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students take turns presenting their work and framing questions and sharing feedback. Students should take notes on their Project Development Feedback handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students individually respond to the prompts on their Project Development Feedback handout."
       },
@@ -2537,6 +2593,168 @@
       "seeding_key": {
         "activity_section.key": "907a8f5c-2230-491e-8b3d-c23379887a46",
         "lesson_activity.key": "bd28a32d-3718-4a9a-a3b5-cbdf9b5d8283"
+      }
+    },
+    {
+      "key": "fc6e27e3-863a-4cfc-8319-e4845f27c5d1",
+      "position": 1,
+      "properties": {
+        "description": "We have all used software that didn't work as intended or as we expected. As an end user, this can be frustrating and cause significant impacts on how we perform certain tasks. As a software engineer, this can be frustrating when our end users are not satisfied, or our programs cause a negative impact.",
+        "name": "Software Impacts",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "fc6e27e3-863a-4cfc-8319-e4845f27c5d1",
+        "lesson_activity.key": "5bfbc94a-b7be-4c51-9019-35bd4ce4924f"
+      }
+    },
+    {
+      "key": "8f7eae17-995b-41e1-b079-5439fb253a27",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *When have you encountered bugs and issues when using a program or app?*\n* *Who were the various end users of this software?*\n* *How were their user stories impacted?*\n\n**Discussion Goal:** Students share programs and apps they have used and examples of bugs and issues they have encountered. Students identify the different end users of these programs and apps and their user stories. Students suggest how bugs and issues might impact their user stories in their software examples."
+      },
+      "seeding_key": {
+        "activity_section.key": "8f7eae17-995b-41e1-b079-5439fb253a27",
+        "lesson_activity.key": "5bfbc94a-b7be-4c51-9019-35bd4ce4924f"
+      }
+    },
+    {
+      "key": "29f91ce7-71be-4c6a-837a-9a13c242c945",
+      "position": 1,
+      "properties": {
+        "description": "The example programs you shared all compiled but still had bugs and issues that led to these experiences. As software engineers, how do we find these bugs and issues before they impact the user? We will explore some programs and their user stories to identify strategies.",
+        "duration": "20",
+        "name": "Finding Bugs and Issues",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "29f91ce7-71be-4c6a-837a-9a13c242c945",
+        "lesson_activity.key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1"
+      }
+    },
+    {
+      "key": "b7da1014-58ff-4b03-b7d2-ad9b5a804513",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give a copy of the Testing Software handout to each pair.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students select a choice level to explore and test using the guided questions on the Testing Software handout.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The programs on these choice levels compile but contain bugs and issues discovered from testing the user stories and identifying edge cases. Students should realize a program compiling does not mean that the program is error-free."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b7da1014-58ff-4b03-b7d2-ad9b5a804513",
+        "lesson_activity.key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1"
+      }
+    },
+    {
+      "key": "954c3561-3d90-47ce-8311-8aa642f82b05",
+      "position": 3,
+      "properties": {
+        "description": "As you explored and tested the example programs, you found strategies to identify and correct bugs and issues. In doing so, you found ways to maximize system reliability.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "954c3561-3d90-47ce-8311-8aa642f82b05",
+        "lesson_activity.key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1"
+      }
+    },
+    {
+      "key": "58def599-5056-4656-9f07-21dc06d7f9cc",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define system reliability.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *As software engineers, what strategies can we use to maximize system reliability?*\n\n**Discussion Goal:** Students suggest various strategies they used when exploring the programs. These strategies include considering the different ways an end user will use the program to test their user stories, identifying and testing edge cases, and using code reviews to obtain a fresh perspective to discover possible bugs and issues.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You could choose to capture these strategies on chart paper or a digital whiteboard to post in the classroom."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "58def599-5056-4656-9f07-21dc06d7f9cc",
+        "lesson_activity.key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1"
+      }
+    },
+    {
+      "key": "4b3a28e6-619a-4d4c-a89d-d1dc1c8cdb2d",
+      "position": 5,
+      "properties": {
+        "description": "Using the items on your Project Planning Board, continue to develop your Title Sequence Project. Each time you complete a goal, commit your code and move the tasks to the next column. There should only be one item in the “In Progress” column at a time, meaning that each item should be entirely completed before moving on to the next item.",
+        "duration": "15",
+        "name": "Project Development",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4b3a28e6-619a-4d4c-a89d-d1dc1c8cdb2d",
+        "lesson_activity.key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1"
+      }
+    },
+    {
+      "key": "31172e96-8758-43ab-8890-730889243c98",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to work on their Title Sequence Project. Students do a code review with a partner to receive feedback and improve their work.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students to refer to their Project Planning Board to decide what tasks to work on during this time."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "31172e96-8758-43ab-8890-730889243c98",
+        "lesson_activity.key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1"
+      }
+    },
+    {
+      "key": "8c6d537d-9433-4acf-b654-af3f236a076a",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board and Project Backlog with any tasks they completed, changed, or added."
+      },
+      "seeding_key": {
+        "activity_section.key": "8c6d537d-9433-4acf-b654-af3f236a076a",
+        "lesson_activity.key": "5f495fbf-cf29-4324-b7c8-22b893ce48e1"
+      }
+    },
+    {
+      "key": "41f6acf2-a66d-49ba-bc3e-f0ac48bd852e",
+      "position": 1,
+      "properties": {
+        "description": "You have learned a lot in this unit, and now it is time to Show What You Know! We will spend the next three days on our Title Sequence Project. Then we will spend a day answering an AP-style free-response question. We will then wrap up the unit with a multiple-choice assessment.",
+        "name": "Show What You Know Week Preview",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "41f6acf2-a66d-49ba-bc3e-f0ac48bd852e",
+        "lesson_activity.key": "c62a3762-11b1-4dc1-9f4f-ad9d9d821146"
+      }
+    },
+    {
+      "key": "c8b52ccf-10a7-4ac6-aed1-7f47064eef81",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the goals of the project workdays.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their Project Planning Board with any tasks they completed, changed, or added.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8b52ccf-10a7-4ac6-aed1-7f47064eef81",
+        "lesson_activity.key": "c62a3762-11b1-4dc1-9f4f-ad9d9d821146"
+      }
+    },
+    {
+      "key": "36aaea62-0281-423a-8bb8-89d629c064d0",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "36aaea62-0281-423a-8bb8-89d629c064d0",
+        "lesson_activity.key": "c62a3762-11b1-4dc1-9f4f-ad9d9d821146"
       }
     },
     {
@@ -3162,6 +3380,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Java Lab Sandbox"
+        ],
         "progression": "Java Lab"
       },
       "bonus": false,
@@ -3184,6 +3405,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Neighborhood Sandbox"
+        ],
         "progression": "The Neighborhood"
       },
       "bonus": false,
@@ -3206,6 +3430,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Theater Sandbox"
+        ],
         "progression": "The Theater"
       },
       "bonus": false,
@@ -3228,6 +3455,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Playground Sandbox"
+        ],
         "progression": "The Playground"
       },
       "bonus": false,
@@ -3306,6 +3536,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_frq_writing_5"
+      }
+    },
+    {
+      "name": "[KEY] U7L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1QOWaRz8JQeKGbF8IATV4m9WpeR3mqbESGrzuDMoO6NA/edit?usp=sharing",
+      "key": "_key_u7l10_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_u7l10_extra_practice"
       }
     },
     {
@@ -3522,6 +3764,18 @@
       },
       "seeding_key": {
         "resource.key": "title_sequence_project_planning_guide"
+      }
+    },
+    {
+      "name": "U7L10 Extra Practice",
+      "url": "https://docs.google.com/document/d/1Q7YuwFQ91JFMd0NI2QDpY_1FUvZ19AlizKb-WAzlTYs/edit?usp=sharing",
+      "key": "u7l10_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "u7l10_extra_practice"
       }
     },
     {
@@ -3792,6 +4046,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "_key_u7l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "u7l10_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "resource.key": "unit_7_presentation_slides"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-2",
         "resource.key": "unit_7_presentation_slides"
       }
@@ -4055,6 +4327,16 @@
       }
     },
     {
+      "key": "system_reliability",
+      "word": "System Reliability",
+      "definition": "A system's ability to function without failure",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "system_reliability"
+      }
+    },
+    {
       "key": "title_sequence",
       "word": "Title Sequence",
       "definition": "A scene or sequence of scenes shown at the beginning of a movie or TV show that includes the title and opening credits",
@@ -4134,6 +4416,12 @@
       "seeding_key": {
         "lesson.key": "lesson-12",
         "vocabulary.key": "recursive_case"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "vocabulary.key": "system_reliability"
       }
     },
     {
@@ -4342,6 +4630,16 @@
       }
     },
     {
+      "key": "b469859e-5a63-414b-82ef-f05e3db4404b",
+      "properties": {
+        "description": "Identify strategies for maximizing system reliability"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "objective.key": "b469859e-5a63-414b-82ef-f05e3db4404b"
+      }
+    },
+    {
       "key": "ca562fed-16b2-478f-92be-d5dff6b0c22f",
       "properties": {
         "description": "Identify the recursive call and base case in a recursive method"
@@ -4359,6 +4657,16 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "objective.key": "cabfd901-3224-472b-a166-742c8c901761"
+      }
+    },
+    {
+      "key": "d838628f-311e-48ce-91ed-58cd2b4f16b8",
+      "properties": {
+        "description": "Describe issues and impacts resulting from software bugs"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "objective.key": "d838628f-311e-48ce-91ed-58cd2b4f16b8"
       }
     },
     {
@@ -4532,6 +4840,20 @@
         "lesson.key": "lesson-14",
         "framework.shortcode": "csa",
         "standard.shortcode": "CON-2.O.6"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "IOC-1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-15",
+        "framework.shortcode": "csa",
+        "standard.shortcode": "IOC-1.A.3"
       }
     },
     {

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {
   PlaygroundFontStyleType,
   PlaygroundFontTypeFontFamilies
-} from './constants';
+} from '../constants';
 
 export default class PlaygroundText extends React.Component {
   static propTypes = {
