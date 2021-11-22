@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:29:17 UTC",
+    "serialized_at": "2021-11-22 17:07:51 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -170,6 +170,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Deeper Learning Overview"
+        ],
         "progression": "Background"
       },
       "bonus": false,
@@ -192,6 +195,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd deeper learning timeline 2018-2019"
+        ],
         "progression": "Deadlines and Payment"
       },
       "bonus": false,
@@ -214,6 +220,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp supports - csd"
+        ],
         "progression": "Resource Recommendations"
       },
       "bonus": false,
@@ -236,6 +245,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "peer review recommendations 18-19"
+        ],
         "progression": "Guidelines For Peer Review"
       },
       "bonus": false,
@@ -258,6 +270,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd6dlp-q1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -279,6 +294,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd6dlp-q2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -300,6 +318,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd6dlp-q3"
+        ]
       },
       "bonus": false,
       "seeding_key": {

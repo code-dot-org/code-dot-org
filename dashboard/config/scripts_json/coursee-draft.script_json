@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-04 13:53:48 UTC",
+    "serialized_at": "2021-11-22 17:07:17 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -2632,6 +2632,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_video_createFunctions_copy"
+        ]
       },
       "bonus": false,
       "seeding_key": {

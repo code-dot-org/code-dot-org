@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:11:23 UTC",
+    "serialized_at": "2021-11-22 17:07:36 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -767,6 +767,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-levelgroup-2019"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -788,6 +791,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-2019"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -809,6 +815,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-2017-levelgroup"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -830,6 +839,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pre-survey-2017-levelgroup"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -851,6 +863,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup"
+        ],
         "progression": "pulse check model"
       },
       "bonus": false,
@@ -873,6 +888,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-2017-levelgroup"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -894,6 +912,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2017-levelgroup"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -915,6 +936,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2018-levelgroup"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -936,6 +960,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-2017-levelgroup-2018-2nd-semester"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -957,6 +984,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-2017-levelgroup_2018"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -978,6 +1008,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2017-levelgroup_2018"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -999,6 +1032,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Levelgroup-for-testing-stuff"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1020,6 +1056,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pre-survey-levelgroup_2021"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1041,6 +1080,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-intro-2019_pilot_2021"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1062,6 +1104,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-2017-levelgroup_2018_2019_pilot_2021"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1083,6 +1128,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-intro-2019_2021"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1104,6 +1152,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-post-survey-levelgroup_2021"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1125,6 +1176,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_2021"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1146,6 +1200,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-levelgroup-2020"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1167,6 +1224,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_21_22"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1188,6 +1248,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pre-survey-levelgroup_21_22"
+        ]
       },
       "bonus": false,
       "seeding_key": {

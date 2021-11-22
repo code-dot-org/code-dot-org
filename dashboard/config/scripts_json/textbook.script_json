@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:17:25 UTC",
+    "serialized_at": "2021-11-22 17:07:40 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -81,6 +81,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Test Map Level"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -102,6 +105,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "e_textbook_nested_loops_wrapup"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -123,6 +129,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_bee_seq1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -144,6 +153,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseA_bee_seq2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
