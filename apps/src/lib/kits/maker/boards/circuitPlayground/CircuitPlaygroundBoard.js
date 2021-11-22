@@ -49,14 +49,7 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
 
     /** @private {SerialPort} serial port controller */
     this.serialPort_ = null;
-    firehoseClient.putRecord(
-      {
-        study: 'maker-serial-port',
-        study_group: 'serial-port-lifecycle',
-        event: 'serial-port-constructor-set-to-null'
-      },
-      {includeUserId: true}
-    );
+    this.logWithFirehose('serial-port-constructor-set-to-null');
 
     /** @private {five.Board} A johnny-five board controller */
     this.fiveBoard_ = null;
@@ -98,14 +91,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
       const board = new five.Board({io: playground, repl: false, debug: false});
       board.once('ready', () => {
         this.serialPort_ = serialPort;
-        firehoseClient.putRecord(
-          {
-            study: 'maker-serial-port',
-            study_group: 'serial-port-lifecycle',
-            event: 'serial-port-set',
-            data_json: JSON.stringify({serialPort, name})
-          },
-          {includeUserId: true}
+        this.logWithFirehose(
+          'serial-port-set',
+          JSON.stringify({serialPort, name})
         );
 
         this.fiveBoard_ = board;
@@ -236,24 +224,10 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
         // node serialport in the Code.org Maker App.
         if (this.serialPort_ && typeof this.serialPort_.close === 'function') {
           this.serialPort_.close();
-          firehoseClient.putRecord(
-            {
-              study: 'maker-serial-port',
-              study_group: 'serial-port-lifecycle',
-              event: 'serial-port-closed'
-            },
-            {includeUserId: true}
-          );
+          this.logWithFirehose('serial-port-closed');
         }
         this.serialPort_ = null;
-        firehoseClient.putRecord(
-          {
-            study: 'maker-serial-port',
-            study_group: 'serial-port-lifecycle',
-            event: 'serial-port-cleared'
-          },
-          {includeUserId: true}
-        );
+        this.logWithFirehose('serial-port-cleared');
         resolve();
       }, 50);
     });
@@ -287,23 +261,9 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
      */
     if (this.serialPort_) {
       this.serialPort_.queue = [];
-      firehoseClient.putRecord(
-        {
-          study: 'maker-serial-port',
-          study_group: 'serial-port-lifecycle',
-          event: 'serial-port-queue-cleared'
-        },
-        {includeUserId: true}
-      );
+      this.logWithFirehose('serial-port-queue-cleared');
     } else {
-      firehoseClient.putRecord(
-        {
-          study: 'maker-serial-port',
-          study_group: 'serial-port-lifecycle',
-          event: 'serial-port-undefined'
-        },
-        {includeUserId: true}
-      );
+      this.logWithFirehose('serial-port-undefined');
     }
 
     cleanupCircuitPlaygroundComponents(
@@ -392,6 +352,18 @@ export default class CircuitPlaygroundBoard extends EventEmitter {
    */
   boardConnected() {
     return !!this.fiveBoard_;
+  }
+
+  logWithFirehose(eventString, dataJson = null) {
+    firehoseClient.putRecord(
+      {
+        study: 'maker-serial-port',
+        study_group: 'serial-port-lifecycle',
+        event: eventString,
+        data_json: dataJson
+      },
+      {includeUserId: true}
+    );
   }
 
   /**
