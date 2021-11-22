@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:17:12 UTC",
+    "serialized_at": "2021-11-22 17:07:22 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -94,6 +94,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Modulo Clock"
+        ],
         "progression": "The Modulo Clock"
       },
       "bonus": false,
@@ -116,6 +119,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Public Key Cryptography Widget"
+        ],
         "progression": "Public Key Cryptography Widget"
       },
       "bonus": false,

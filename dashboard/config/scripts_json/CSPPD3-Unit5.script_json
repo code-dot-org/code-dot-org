@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:28:34 UTC",
+    "serialized_at": "2021-11-22 17:07:06 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -310,6 +310,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 Welcome"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -331,6 +334,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 overview"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -352,6 +358,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PD check your progress"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -373,6 +382,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 tips for prep"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -394,6 +406,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u2 plan"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -415,6 +430,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 unit 5 overview"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -436,6 +454,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 breakdown of u5 chunks"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -457,6 +478,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 philosophy and tools"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -478,6 +502,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 unit overview checkin"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -499,6 +526,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 chapter 1 concepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -520,6 +550,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 chapter 1 resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -541,6 +574,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 Explore PT checkin"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -562,6 +598,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 chapter 2 concepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -583,6 +622,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 chapter 2 resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -604,6 +646,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 Create PT checkin"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -625,6 +670,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 challenge overview"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -646,6 +694,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 completing the challenge"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -667,6 +718,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 list of challenges"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -688,6 +742,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 pick a challenge"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -709,6 +766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 complete the challenge overview"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -730,6 +790,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 do the challenge"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -751,6 +814,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 reflect on challenge"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -772,6 +838,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 share out overview"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -793,6 +862,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 post to forum"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -814,6 +886,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 submit forum link"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -835,6 +910,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u5 post survey"
+        ]
       },
       "bonus": false,
       "seeding_key": {

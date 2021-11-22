@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:11:14 UTC",
+    "serialized_at": "2021-11-22 17:06:56 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -119,6 +119,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Video - Lesson 14 - B and W"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -140,6 +143,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Make the Letter A"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -161,6 +167,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Fix bit offset"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -182,6 +191,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Make your own B and W Image"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -203,6 +215,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Video - Color 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -224,6 +239,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Complete 3-bit color"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -245,6 +263,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Video - Color 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -266,6 +287,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Shades"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -287,6 +311,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Video - Color 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -308,6 +335,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Shades 4x4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -329,6 +359,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation Flappy"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -350,6 +383,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation Bee"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -371,6 +407,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Favicon Instructions"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -392,6 +431,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Free Play"
+        ]
       },
       "bonus": false,
       "seeding_key": {

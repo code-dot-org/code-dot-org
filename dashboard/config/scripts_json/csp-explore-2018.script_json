@@ -45,7 +45,7 @@
     },
     "new_name": null,
     "family_name": "csp-explore",
-    "serialized_at": "2021-11-15 21:01:46 UTC",
+    "serialized_at": "2021-11-22 17:07:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -264,6 +264,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP ExploreL01 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -286,6 +289,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-pt-tech-setup-and-tools_2018"
+        ],
         "progression": "Reminder: Tech Setup - AP Digital Portfolio, Making PDFs, and Videos"
       },
       "bonus": false,
@@ -308,6 +314,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP ExploreL02 SFLP_2018"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -330,6 +339,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP ExploreL03 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -352,6 +364,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2018-markdown-with-link-to-survey_v2"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,

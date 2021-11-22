@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:29:44 UTC",
+    "serialized_at": "2021-11-22 17:08:10 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -219,6 +219,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19_overview1"
+        ],
         "progression": "Background"
       },
       "bonus": false,
@@ -241,6 +244,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19_overview2"
+        ],
         "progression": "Process"
       },
       "bonus": false,
@@ -263,6 +269,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19_overview3"
+        ],
         "progression": "Preparation"
       },
       "bonus": false,
@@ -285,6 +294,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19_overview4"
+        ],
         "progression": "Evaluation"
       },
       "bonus": false,
@@ -307,6 +319,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19_overview5"
+        ],
         "progression": "Due Dates"
       },
       "bonus": false,
@@ -329,6 +344,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19-csp-prework-mod4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -350,6 +368,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19-csp-mod4-q1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -371,6 +392,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19-csp-mod4-q2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -392,6 +416,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "dlp19-csp-mod4-q3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
