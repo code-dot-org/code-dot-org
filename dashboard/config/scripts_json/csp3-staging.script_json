@@ -12,11 +12,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:07:36 UTC",
+    "serialized_at": "2021-11-22 19:46:58 UTC",
     "published_state": "beta",
     "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csp3-staging"
     }
@@ -4460,7 +4460,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_control_3",
+        "level.key": "csp_affirmation_intervention_3",
         "script_level.level_keys": [
           "csp_affirmation_control_3",
           "csp_affirmation_intervention_3"
@@ -4473,7 +4473,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_intervention_3",
+        "level.key": "csp_affirmation_control_3",
         "script_level.level_keys": [
           "csp_affirmation_control_3",
           "csp_affirmation_intervention_3"

@@ -43,11 +43,11 @@
     },
     "new_name": null,
     "family_name": "coursef",
-    "serialized_at": "2021-11-22 17:08:20 UTC",
+    "serialized_at": "2021-11-22 19:46:42 UTC",
     "published_state": "stable",
     "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "coursef-2020"
     }
