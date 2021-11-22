@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:13:11 UTC",
+    "serialized_at": "2021-11-22 17:08:31 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -844,6 +844,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Web Sample Pages_2020_virtual"
+        ],
         "progression": "Sample Personal Web Pages"
       },
       "bonus": false,
@@ -866,6 +869,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - Type Anything_virtual"
+        ],
         "progression": "Experiment with Web Lab"
       },
       "bonus": false,
@@ -888,6 +894,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Web Lab - Part 1_virtual"
+        ],
         "progression": "Video: Intro to Web Lab - Part 1"
       },
       "bonus": false,
@@ -910,6 +919,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Inspector Warm Up_virtual"
+        ],
         "progression": "Explore HTML"
       },
       "bonus": false,
@@ -932,6 +944,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Web Lab - Part 2_virtual"
+        ],
         "progression": "Video: Intro to Web Lab - Part 2"
       },
       "bonus": false,
@@ -954,6 +969,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML Adding Paragraphs_virtual"
+        ],
         "progression": "Using HTML Tags"
       },
       "bonus": false,
@@ -976,6 +994,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML Adding Paragraphs pt 2_virtual"
+        ],
         "progression": "Using HTML Tags"
       },
       "bonus": false,
@@ -998,6 +1019,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Web Debugging_virtual"
+        ],
         "progression": "Video: Debugging"
       },
       "bonus": false,
@@ -1020,6 +1044,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML Debug Paragraphs_virtual"
+        ],
         "progression": "Using HTML Tags"
       },
       "bonus": false,
@@ -1042,6 +1069,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Heading debug_virtual"
+        ],
         "progression": "Using HTML Tags"
       },
       "bonus": false,
@@ -1064,6 +1094,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Heading Demo_virtual"
+        ],
         "progression": "Headings"
       },
       "bonus": false,
@@ -1086,6 +1119,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Heading Sizes_virtual"
+        ],
         "progression": "Headings"
       },
       "bonus": false,
@@ -1108,6 +1144,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Web Headings practice_2020_virtual"
+        ],
         "progression": "Headings"
       },
       "bonus": false,
@@ -1130,6 +1169,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Header Size MC_2018_2019_pilot_2020_virtual"
+        ],
         "progression": "Headings"
       },
       "bonus": false,
@@ -1152,6 +1194,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 Heading Test_virtual"
+        ],
         "progression": "Headings"
       },
       "bonus": false,
@@ -1174,6 +1219,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Web Headings challenge_2020_virtual"
+        ],
         "progression": "HTML Headings"
       },
       "bonus": false,
@@ -1196,6 +1244,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS explore CSS_virtual"
+        ],
         "progression": "Exploration: Adding Style"
       },
       "bonus": false,
@@ -1218,6 +1269,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video: Intro to CSS_virtual"
+        ],
         "progression": "Video: Intro to CSS"
       },
       "bonus": false,
@@ -1240,6 +1294,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style h1_virtual"
+        ],
         "progression": "Styling Text"
       },
       "bonus": false,
@@ -1262,6 +1319,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style h3_virtual"
+        ],
         "progression": "Styling Text"
       },
       "bonus": false,
@@ -1284,6 +1344,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style size_virtual"
+        ],
         "progression": "Styling Text"
       },
       "bonus": false,
@@ -1306,6 +1369,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video: Intro to CSS Part 2_virtual"
+        ],
         "progression": "Video: Intro to CSS Part 2"
       },
       "bonus": false,
@@ -1328,6 +1394,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 add file_virtual"
+        ],
         "progression": "Styling your Website"
       },
       "bonus": false,
@@ -1350,6 +1419,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS practice_pilot_2020_virtual"
+        ],
         "progression": "Styling Text"
       },
       "bonus": false,
@@ -1372,6 +1444,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Web CSS Assessment_virtual"
+        ],
         "progression": "Styling Text"
       },
       "bonus": false,
@@ -1394,6 +1469,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS challenge_pilot_2020_virtual"
+        ],
         "progression": "Styling Text"
       },
       "bonus": false,
@@ -1416,6 +1494,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 1_virtual"
+        ],
         "progression": "Adding Images"
       },
       "bonus": false,
@@ -1438,6 +1519,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Credit_virtual"
+        ],
         "progression": "Adding Images"
       },
       "bonus": false,
@@ -1460,6 +1544,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag Debug_virtual"
+        ],
         "progression": "Adding Images"
       },
       "bonus": false,
@@ -1482,6 +1569,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image choose name_virtual"
+        ],
         "progression": "Adding Images"
       },
       "bonus": false,
@@ -1504,6 +1594,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 2_virtual"
+        ],
         "progression": "Adding Images"
       },
       "bonus": false,
@@ -1526,6 +1619,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image practice_pilot_2020_virtual"
+        ],
         "progression": "Adding Images"
       },
       "bonus": false,
@@ -1548,6 +1644,9 @@
       "activity_section_position": 7,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image assessment_virtual"
+        ],
         "progression": "Adding Images"
       },
       "bonus": false,
@@ -1570,6 +1669,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image challenge_pilot_2020_virtual"
+        ],
         "progression": "Adding Images Challenges"
       },
       "bonus": false,
@@ -1592,6 +1694,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Expression Exemplars_2018_2019_pilot_2020_virtual"
+        ],
         "progression": "Exemplar Personal Websites"
       },
       "bonus": false,
@@ -1614,6 +1719,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style sample_virtual"
+        ],
         "progression": "Exploring more CSS"
       },
       "bonus": false,
@@ -1636,6 +1744,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style bgcolor_virtual"
+        ],
         "progression": "Exploring more CSS"
       },
       "bonus": false,
@@ -1658,6 +1769,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style body_virtual"
+        ],
         "progression": "Layout with CSS"
       },
       "bonus": false,
@@ -1680,6 +1794,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style float_virtual"
+        ],
         "progression": "Layout with CSS"
       },
       "bonus": false,
@@ -1702,6 +1819,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style width_virtual"
+        ],
         "progression": "Layout with CSS"
       },
       "bonus": false,
@@ -1724,6 +1844,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style practice_pilot_2020_virtual"
+        ],
         "progression": "Layout with CSS"
       },
       "bonus": false,
@@ -1746,6 +1869,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 add style_virtual"
+        ],
         "progression": "Layout with CSS"
       },
       "bonus": false,
@@ -1768,6 +1894,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style challenge_pilot_2020_virtual"
+        ],
         "progression": "Layout with CSS"
       },
       "bonus": false,
@@ -1790,6 +1919,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 project guide_2018_2019_pilot_2020_virtual"
+        ],
         "progression": "Project Guide"
       },
       "bonus": false,
@@ -1812,6 +1944,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 upload images_virtual"
+        ],
         "progression": "Website Project"
       },
       "bonus": false,
@@ -1834,6 +1969,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 add content_virtual"
+        ],
         "progression": "Website Project"
       },
       "bonus": false,
@@ -1856,6 +1994,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS_virtual"
+        ],
         "progression": "Website Project"
       },
       "bonus": false,
@@ -1878,6 +2019,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 project review_virtual"
+        ],
         "progression": "Website Project"
       },
       "bonus": false,
@@ -1900,6 +2044,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 publish video_virtual"
+        ],
         "progression": "Publishing Your Website"
       },
       "bonus": false,
@@ -1922,6 +2069,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 project share_virtual"
+        ],
         "progression": "Publishing Your Website"
       },
       "bonus": false,
@@ -1944,6 +2094,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Top Websites_2018_2019_pilot_2020_virtual"
+        ],
         "progression": "Top Websites"
       },
       "bonus": false,
@@ -1966,6 +2119,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 classes sample_virtual"
+        ],
         "progression": "Styling with Classes"
       },
       "bonus": false,
@@ -1988,6 +2144,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 classes modify_virtual"
+        ],
         "progression": "Styling with Classes"
       },
       "bonus": false,
@@ -2010,6 +2169,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 classes spring_virtual"
+        ],
         "progression": "Styling with Classes"
       },
       "bonus": false,
@@ -2032,6 +2194,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 classes summer_virtual"
+        ],
         "progression": "Styling with Classes"
       },
       "bonus": false,
@@ -2054,6 +2219,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 RGB intro_virtual"
+        ],
         "progression": "RGB Widget"
       },
       "bonus": false,
@@ -2076,6 +2244,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 link demo_virtual"
+        ],
         "progression": "Exploring Links"
       },
       "bonus": false,
@@ -2098,6 +2269,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 making links_virtual"
+        ],
         "progression": "Links and Navigation"
       },
       "bonus": false,
@@ -2120,6 +2294,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 naming links_virtual"
+        ],
         "progression": "Links and Navigation"
       },
       "bonus": false,
@@ -2142,6 +2319,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 nav bar_virtual"
+        ],
         "progression": "Links and Navigation"
       },
       "bonus": false,
@@ -2164,6 +2344,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 adding pages_virtual"
+        ],
         "progression": "Adding Pages"
       },
       "bonus": false,
@@ -2186,6 +2369,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 naming pages_virtual"
+        ],
         "progression": "Adding Pages"
       },
       "bonus": false,
@@ -2208,6 +2394,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 external links_virtual"
+        ],
         "progression": "Challenge: External Links"
       },
       "bonus": false,
@@ -2230,6 +2419,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web upload images multi_virtual"
+        ],
         "progression": "Upload Your Images"
       },
       "bonus": false,
@@ -2252,6 +2444,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 create page_virtual"
+        ],
         "progression": "Create Your Pages"
       },
       "bonus": false,
@@ -2274,6 +2469,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web add html_virtual"
+        ],
         "progression": "Add Content"
       },
       "bonus": false,
@@ -2296,6 +2494,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web add CSS_virtual"
+        ],
         "progression": "Add Style"
       },
       "bonus": false,
@@ -2318,6 +2519,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web check_virtual"
+        ],
         "progression": "Check Your Work"
       },
       "bonus": false,
@@ -2340,6 +2544,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Web incorporate feedback_virtual"
+        ],
         "progression": "Final Personal Website"
       },
       "bonus": false,

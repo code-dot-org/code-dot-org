@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-12 20:47:55 UTC",
+    "serialized_at": "2021-11-22 17:09:07 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -601,6 +601,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-BiasOverview-AIML"
+        ],
         "progression": "Consider real world implications"
       },
       "bonus": false,
@@ -723,6 +726,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L14examples-AIML"
+        ],
         "progression": "Consider real world implications"
       },
       "bonus": false,
@@ -745,6 +751,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-ProjectOverview-AIML"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
@@ -792,6 +801,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-MakeAPlan-AIML"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
@@ -814,6 +826,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-WrapUp"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
