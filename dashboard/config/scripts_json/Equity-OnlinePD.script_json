@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:28:48 UTC",
+    "serialized_at": "2021-11-22 17:07:01 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -196,6 +196,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity Welcome"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -217,6 +220,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity About"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -238,6 +244,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity Participation"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -259,6 +268,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity Stage1Go"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -280,6 +292,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity Define"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -301,6 +316,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity CS"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -322,6 +340,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity Strategies"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -343,6 +364,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity Stage2Go"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -364,6 +388,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity Self Assess"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -385,6 +412,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity Goals"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -406,6 +436,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity Resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -427,6 +460,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity Reflection"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -448,6 +484,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity Stage3Go"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -469,6 +508,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity Review"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -490,6 +532,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity Keep Learning"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -511,6 +556,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity Celebrate"
+        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:28:28 UTC",
+    "serialized_at": "2021-11-22 17:06:56 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -310,6 +310,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD presurvey"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -331,6 +334,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Welcome to the Family!"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -352,6 +358,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDECS tour"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -373,6 +382,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDECS commitment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -394,6 +406,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDECS commitment match"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -415,6 +430,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDECS attendance commitment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -436,6 +454,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD pause"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -457,6 +478,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD program overview"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -478,6 +502,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD curriculum overview"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -499,6 +526,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD unit matching"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -520,6 +550,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD course goals"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -541,6 +574,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD PT description"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -562,6 +598,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD AP quiz"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -583,6 +622,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD PD overview"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -604,6 +646,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD PD Phases"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -625,6 +670,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD phase matching"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -646,6 +694,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD PD goals"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -667,6 +718,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD program overlap"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -688,6 +742,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD instructional materials"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -709,6 +766,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD materials overview"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -730,6 +790,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD materials question1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -751,6 +814,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD impact of CS"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -772,6 +838,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD impact vid1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -793,6 +862,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD impact vid2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -814,6 +886,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD impact vid2 question"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -835,6 +910,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD impact in program"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -856,6 +934,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD what is growth mindset"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -877,6 +958,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD growth mindset in the classroom"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -898,6 +982,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD growth mindset question"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -919,6 +1006,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD growth mindset strategies"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -940,6 +1030,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD strategies"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -961,6 +1054,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD teaching strategies video"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -982,6 +1078,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD strategies"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1003,6 +1102,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD facilitators"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1024,6 +1126,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD forum introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1045,6 +1150,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD PD details"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1066,6 +1174,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD postsurvey"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1087,6 +1198,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD end of p1"
+        ]
       },
       "bonus": false,
       "seeding_key": {

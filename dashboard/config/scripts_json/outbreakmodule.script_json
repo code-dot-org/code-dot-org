@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:17:04 UTC",
+    "serialized_at": "2021-11-22 17:09:02 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -231,6 +231,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_story"
+        ],
         "progression": "Welcome to Monster Town"
       },
       "bonus": false,
@@ -253,6 +256,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "outbreak_rampup_sprites_make"
+        ],
         "progression": "Setup"
       },
       "bonus": false,
@@ -275,6 +281,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "outbreak_rampup_sprites_properties"
+        ],
         "progression": "Setup"
       },
       "bonus": false,
@@ -297,6 +306,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_lesson1_markdown"
+        ],
         "progression": "Sometimes, but Not Always"
       },
       "bonus": false,
@@ -319,6 +331,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "contagion_lesson1_markdown"
+        ],
         "progression": "Telling a Data Story"
       },
       "bonus": false,

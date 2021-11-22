@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:28:27 UTC",
+    "serialized_at": "2021-11-22 17:07:04 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -310,6 +310,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u3 breakdown of u3 chunks"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -331,6 +334,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u3 tips for prep"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -352,6 +358,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 1 concepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -373,6 +382,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 1 resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -394,6 +406,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 2 concepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -415,6 +430,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 2 resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -436,6 +454,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 3 concepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -457,6 +478,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 3 resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -478,6 +502,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 4 concepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -499,6 +526,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 4 resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -520,6 +550,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 5 concepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -541,6 +574,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u3 chunk 5 resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -562,6 +598,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPPD3-u3 practice PT"
+        ]
       },
       "bonus": false,
       "seeding_key": {

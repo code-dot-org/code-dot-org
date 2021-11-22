@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:16:50 UTC",
+    "serialized_at": "2021-11-22 17:06:55 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -423,6 +423,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator Setup"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -444,6 +447,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator Setup 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -465,6 +471,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator Setup 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -486,6 +495,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "NetSim Standalone SendAB"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -507,6 +519,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "NetSim Standalone Sending Numbers"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -528,6 +543,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "NetSim Standalone Sending Numbers Ascii"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -549,6 +567,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "NetSim Standalone Broadcast"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -570,6 +591,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "NetSim Standalone Classroom Routers"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -591,6 +615,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "NetSim Standalone Packets TCP"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -612,6 +639,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "NetSim Standalone Manual DNS"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -633,6 +663,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "NetSim Standalone Automatic DNS"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -654,6 +687,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "NetSim Standalone Freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {

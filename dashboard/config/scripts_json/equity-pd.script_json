@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:29:51 UTC",
+    "serialized_at": "2021-11-22 17:07:01 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -120,6 +120,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -141,6 +144,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity v equality"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -162,6 +168,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity is more"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -183,6 +192,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity in CS"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -204,6 +216,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity lead 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -225,6 +240,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity activity"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -246,6 +264,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity vids"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -267,6 +288,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity expect"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -288,6 +312,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "equity discuss"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -309,6 +336,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Equity Resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
