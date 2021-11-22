@@ -16,7 +16,6 @@ module Pd::Application
   class Tag < ApplicationRecord
     self.table_name = 'pd_application_tags'
 
-    # comment
     has_and_belongs_to_many :pd_applications, class_name: '::Pd::Application::ApplicationBase', foreign_key: 'pd_application_tag_id', association_foreign_key: 'pd_application_id'
   end
 end
