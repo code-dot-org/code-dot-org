@@ -14,9 +14,11 @@
     },
     "new_name": null,
     "family_name": "ui-test-versioned-script",
-    "serialized_at": "2021-10-25 22:54:47 UTC",
+    "serialized_at": "2021-11-22 17:09:01 UTC",
     "published_state": "beta",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "allthemigratedthings"
     }

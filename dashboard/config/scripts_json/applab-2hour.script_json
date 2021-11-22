@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:11:26 UTC",
+    "serialized_at": "2021-11-22 17:07:19 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -296,6 +296,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Building a UI with Design Mode"
+        ],
         "progression": "Building a UI with Design Mode"
       },
       "bonus": false,
@@ -318,6 +321,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Design Mode Video"
+        ],
         "progression": "Choosing Good IDs"
       },
       "bonus": false,
@@ -340,6 +346,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 15"
+        ],
         "progression": "Choosing Good IDs"
       },
       "bonus": false,
@@ -362,6 +371,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 4"
+        ],
         "progression": "Choosing Good IDs"
       },
       "bonus": false,
@@ -384,6 +396,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Choosing Good IDs"
+        ],
         "progression": "Choosing Good IDs"
       },
       "bonus": false,
@@ -406,6 +421,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 - Design Mode Text"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -427,6 +445,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U4 - Design Mode Input Widgets"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -448,6 +469,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 21"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -469,6 +493,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode Icons"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -490,6 +517,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 18"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -511,6 +541,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Responding to User Input"
+        ],
         "progression": "Responding to User Input"
       },
       "bonus": false,
@@ -533,6 +566,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 16"
+        ],
         "progression": "Multi-Screen Apps"
       },
       "bonus": false,
@@ -555,6 +591,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 3"
+        ],
         "progression": "Multi-Screen Apps"
       },
       "bonus": false,
@@ -577,6 +616,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 17"
+        ],
         "progression": "Multi-Screen Apps"
       },
       "bonus": false,
@@ -599,6 +641,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Multi-Screen Apps"
+        ],
         "progression": "Multi-Screen Apps"
       },
       "bonus": false,
@@ -621,6 +666,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 19"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -642,6 +690,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 - Design Mode - 20"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -663,6 +714,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Connecting Screens"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -684,6 +738,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Connecting Screens Getting Back"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -705,6 +762,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Functionality visible"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -726,6 +786,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD - Getters and Setters"
+        ],
         "progression": "Getters and Setters"
       },
       "bonus": false,
@@ -748,6 +811,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - setScreen"
+        ],
         "progression": "Using Getters and Setters"
       },
       "bonus": false,
@@ -770,6 +836,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - setText"
+        ],
         "progression": "Using Getters and Setters"
       },
       "bonus": false,
@@ -792,6 +861,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - hide show"
+        ],
         "progression": "Using Getters and Setters"
       },
       "bonus": false,
@@ -814,6 +886,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - getText"
+        ],
         "progression": "Using Getters and Setters"
       },
       "bonus": false,
@@ -836,6 +911,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - dropdown setText"
+        ],
         "progression": "Using Getters and Setters"
       },
       "bonus": false,
@@ -858,6 +936,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - get set with text input"
+        ],
         "progression": "Using Getters and Setters"
       },
       "bonus": false,
@@ -880,6 +961,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - getNumber practice"
+        ],
         "progression": "Using Getters and Setters"
       },
       "bonus": false,
@@ -902,6 +986,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: getText vs getNumber"
+        ],
         "progression": "getText vs getNumber"
       },
       "bonus": false,
@@ -924,6 +1011,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - getNumber"
+        ],
         "progression": "getNumber"
       },
       "bonus": false,
@@ -946,6 +1036,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: setProperty"
+        ],
         "progression": "setProperty"
       },
       "bonus": false,
@@ -968,6 +1061,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - setProperty first level"
+        ],
         "progression": "UI Element Properties"
       },
       "bonus": false,
@@ -990,6 +1086,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - setProperty Image"
+        ],
         "progression": "UI Element Properties"
       },
       "bonus": false,
@@ -1012,6 +1111,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - setProperty"
+        ],
         "progression": "UI Element Properties"
       },
       "bonus": false,

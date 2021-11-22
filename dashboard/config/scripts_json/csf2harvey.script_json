@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:14:21 UTC",
+    "serialized_at": "2021-11-22 17:07:18 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -160,6 +160,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "harvey_snowflake_artist1"
+        ],
         "progression": "Snowflake #1 (Converted to the Artist)"
       },
       "bonus": false,
@@ -182,6 +185,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "harvey_snowflake_artist2"
+        ],
         "progression": "Snowflake #2 (Converted to the Artist)"
       },
       "bonus": false,
@@ -204,6 +210,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "expresslink"
+        ],
         "progression": "Express Course"
       },
       "bonus": false,
@@ -226,6 +235,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "harvey_pixelation"
+        ],
         "progression": "Pixelation Widget"
       },
       "bonus": false,

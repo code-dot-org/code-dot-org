@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:14:50 UTC",
+    "serialized_at": "2021-11-22 17:06:55 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -690,6 +690,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L1 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -711,6 +714,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L1 Innovation - Video"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -732,6 +738,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L1 - FR computer science word association"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -753,6 +762,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L2 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -774,6 +786,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L2 Multiple Choice Assessment Question"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -795,6 +810,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L2 Free response assessment question"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -816,6 +834,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L2 Free response reflection question"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -837,6 +858,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L3 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -858,6 +882,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L3 Free response reflection question"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -879,6 +906,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L3 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -900,6 +930,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L3 Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -921,6 +954,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L4 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -942,6 +978,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L4 NetSim SendAB"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -963,6 +1002,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L4 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -984,6 +1026,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L4 Free Response Reflection"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1005,6 +1050,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L5 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1026,6 +1074,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L5 How the Internet Works - Video"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1047,6 +1098,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L5 Matching Assessment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1068,6 +1122,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L6 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1089,6 +1146,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 Assessment multiple choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1110,6 +1170,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L6 Free Response Reflection"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1131,6 +1194,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L7 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1152,6 +1218,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Odometer"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1173,6 +1242,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L7 Free Response Assessment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1194,6 +1266,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L7 Free Response Reflection"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1215,6 +1290,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L8 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1236,6 +1314,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L8 NetSim numbers with decimal"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1257,6 +1338,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L8 Free Response Reflection"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1278,6 +1362,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L8 Free Response2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1299,6 +1386,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L8 Multiple Choice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1320,6 +1410,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1341,6 +1434,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L9 Free Response Assessment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1362,6 +1458,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L10 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1383,6 +1482,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L10 NetSim numbers with decimal"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1404,6 +1506,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1425,6 +1530,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 Assessment 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1446,6 +1554,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L10 Assessment Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1467,6 +1578,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L11 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1488,6 +1602,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L11 NetSim numbers with Ascii"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1509,6 +1626,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1530,6 +1650,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Assessment 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1551,6 +1674,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Reflection Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1572,6 +1698,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L11 Collaboration Reflection"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1593,6 +1722,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L12 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1614,6 +1746,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L12 Reflection Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1635,6 +1770,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L13 Student Lesson Summary"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1656,6 +1794,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L13 Text Compression"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1677,6 +1818,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 - Assess Text Compression reverse process"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1698,6 +1842,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 Assess Text Compression amount"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1719,6 +1866,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1740,6 +1890,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 Assessment 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1761,6 +1914,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L14 Student Lesson Summary"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1782,6 +1938,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Make the Letter A"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1803,6 +1962,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Fix bit offset"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1824,6 +1986,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Make your own B and W Image"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1845,6 +2010,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L14 Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1866,6 +2034,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L14 - Assessment 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1887,6 +2058,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L15 Student Lesson Summary"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1908,6 +2082,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Complete 3-bit color"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1929,6 +2106,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Shades"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1950,6 +2130,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Shades 4x4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1971,6 +2154,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation Flappy"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1992,6 +2178,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation Bee"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2013,6 +2202,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Favicon Instructions"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2034,6 +2226,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Free Play"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2055,6 +2250,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "a bit about pixels"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2076,6 +2274,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L16 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2097,6 +2298,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L16 - Matching File Compression Types"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2118,6 +2322,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L17 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
