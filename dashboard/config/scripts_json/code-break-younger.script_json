@@ -12,9 +12,9 @@
     },
     "new_name": null,
     "family_name": "code-break-younger",
-    "serialized_at": "2021-11-22 19:46:16 UTC",
+    "serialized_at": "2021-11-22 19:55:49 UTC",
     "published_state": "preview",
-    "instruction_type": null,
+    "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {
