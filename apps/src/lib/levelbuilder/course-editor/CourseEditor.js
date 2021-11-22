@@ -104,10 +104,6 @@ class CourseEditor extends Component {
     this.setState({announcements: newAnnouncements});
   };
 
-  handleView = () => {
-    navigateToHref(linkWithQueryParams(this.props.coursePath));
-  };
-
   handleSave = (event, shouldCloseAfterSave) => {
     event.preventDefault();
 
@@ -396,10 +392,10 @@ class CourseEditor extends Component {
         </CollapsibleEditorSection>
         <SaveBar
           handleSave={this.handleSave}
-          handleView={this.handleView}
           error={this.state.error}
           isSaving={this.state.isSaving}
           lastSaved={this.state.lastSaved}
+          pathForShowButton={this.props.coursePath}
         />
       </div>
     );
