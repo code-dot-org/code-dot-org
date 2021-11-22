@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:17:21 UTC",
+    "serialized_at": "2021-11-22 17:07:35 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -312,6 +312,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_square_v_rect_FR"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -333,6 +336,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_plan_code_FR"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -354,6 +360,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_turtle_subgoal_q1_mc"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -375,6 +384,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_turtle_subgoal_q2_mc"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -396,6 +408,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_turtle_subgoal_q3_mc"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -417,6 +432,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_subgoal_q4_mc"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -438,6 +456,9 @@
       "activity_section_position": 7,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "subgoals_U3_turtle_prediction_FR"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -459,6 +480,9 @@
       "activity_section_position": 8,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "subgoals_u3_top_down_FR"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -480,6 +504,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 Three Steps"
+        ],
         "progression": "Some app lab progression"
       },
       "bonus": false,
@@ -502,6 +529,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 draw diamond"
+        ],
         "progression": "Some app lab progression"
       },
       "bonus": false,
@@ -524,6 +554,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_turtle_subgoal_q1_mc"
+        ],
         "progression": "Check for understanding"
       },
       "bonus": false,
@@ -546,6 +579,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp3_U3_turtle_subgoal_mc_levelgroup"
+        ],
         "progression": "Check for understanding"
       },
       "bonus": false,
@@ -568,6 +604,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "subgoals_assessement_levelgroup_test2"
+        ],
         "progression": "Check for understanding (diff between 3 and 4)"
       },
       "bonus": false,
@@ -590,6 +629,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 Draw a T using turnAround"
+        ],
         "progression": "Some app lab progression"
       },
       "bonus": false,
@@ -612,6 +654,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_U3_square_v_rect_FR"
+        ],
         "progression": "Some app lab progression"
       },
       "bonus": false,
@@ -634,6 +679,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 define turnRight and draw a rectangle"
+        ],
         "progression": "Some app lab progression"
       },
       "bonus": false,
@@ -656,6 +704,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "subgoal_assessments_levelgroup_test"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -677,6 +728,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SG CSP Abstraction in Programming 2"
+        ],
         "progression": "Lesson 5.6 - (new) Abstraction in Programming"
       },
       "bonus": false,
@@ -699,6 +753,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SG U3 whats a comment"
+        ],
         "progression": "Lesson 8.8 - (new) What is a comment?"
       },
       "bonus": false,
@@ -721,6 +778,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SG U3L08 how to add comments"
+        ],
         "progression": "Lesson 8.9 - How to add comments - Review for instructions and starting code"
       },
       "bonus": false,

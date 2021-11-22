@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 21:01:47 UTC",
+    "serialized_at": "2021-11-22 17:07:22 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -85,6 +85,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2018-levelgroup"
+        ],
         "progression": "CS Principles Post-course Survey"
       },
       "bonus": false,

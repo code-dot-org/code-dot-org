@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 20:58:27 UTC",
+    "serialized_at": "2021-11-22 17:08:13 UTC",
     "published_state": "pilot",
     "instruction_type": null,
     "instructor_audience": null,
@@ -120,6 +120,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML miniproject choices"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -141,6 +144,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS miniproject choices"
+        ]
       },
       "bonus": false,
       "seeding_key": {

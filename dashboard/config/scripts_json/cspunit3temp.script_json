@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:15:31 UTC",
+    "serialized_at": "2021-11-22 17:07:04 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -347,6 +347,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L28 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -368,6 +371,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -389,6 +395,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -410,6 +419,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -431,6 +443,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - Typing in Console"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -452,6 +467,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -473,6 +491,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -494,6 +515,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -515,6 +539,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -536,6 +563,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -557,6 +587,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -578,6 +611,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops -  Complex Condition"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -599,6 +635,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -620,6 +659,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - 11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -641,6 +683,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - 12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -662,6 +707,9 @@
       "activity_section_position": 16,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - Plus Plus"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -683,6 +731,9 @@
       "activity_section_position": 17,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - Minus Minus"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -704,6 +755,9 @@
       "activity_section_position": 18,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - plus and minus = operator"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -725,6 +779,9 @@
       "activity_section_position": 19,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - minus = operator"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -746,6 +803,9 @@
       "activity_section_position": 20,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - 14"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -767,6 +827,9 @@
       "activity_section_position": 21,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops - 15"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -788,6 +851,9 @@
       "activity_section_position": 22,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L28 Free Response Wrap Up"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -809,6 +875,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L29 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -830,6 +899,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simulation - Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -851,6 +923,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simulation - 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -872,6 +947,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simulation - 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -893,6 +971,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simulation - 2.1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -914,6 +995,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simulation - 2.5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -935,6 +1019,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Simulation Updating Hypotheses"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -956,6 +1043,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simulation - 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -977,6 +1067,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simulation - 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -998,6 +1091,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simulation - 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1019,6 +1115,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Simulations Hypotheses Reflections"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1040,6 +1139,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simulation - 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1061,6 +1163,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L30 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1082,6 +1187,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - createFirstArray"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1103,6 +1211,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - appendItem"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1124,6 +1235,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - introIndex"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1145,6 +1259,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - indexPractice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1166,6 +1283,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - assignment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1187,6 +1307,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - assignment2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1208,6 +1331,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - assignment3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1229,6 +1355,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - stringsInArrays"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1250,6 +1379,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - insertingItems"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1271,6 +1403,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - remove"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1292,6 +1427,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - insertionErrors"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1313,6 +1451,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - length"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1334,6 +1475,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - lengthMinus1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1355,6 +1499,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - expressionsAsIndexes"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1376,6 +1523,9 @@
       "activity_section_position": 16,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - Demo App"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1397,6 +1547,9 @@
       "activity_section_position": 17,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - favThings giveIDs"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1418,6 +1571,9 @@
       "activity_section_position": 18,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - favThings createArray"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1439,6 +1595,9 @@
       "activity_section_position": 19,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - favThings firstOutput"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1460,6 +1619,9 @@
       "activity_section_position": 20,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - favThings Counting Variable"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1481,6 +1643,9 @@
       "activity_section_position": 21,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - favThings Next"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1502,6 +1667,9 @@
       "activity_section_position": 22,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - favThings Prev"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1523,6 +1691,9 @@
       "activity_section_position": 23,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - favThings addItem"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1544,6 +1715,9 @@
       "activity_section_position": 24,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - favThings bounds"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1565,6 +1739,9 @@
       "activity_section_position": 25,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - favThings keepPlaying"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1586,6 +1763,9 @@
       "activity_section_position": 26,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - Wrap Up 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1607,6 +1787,9 @@
       "activity_section_position": 27,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays - Wrap Up 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1628,6 +1811,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L31 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1649,6 +1835,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Keys - Demo App"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1670,6 +1859,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L25 - drag out key event"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1691,6 +1883,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Keys - Key Up and Down"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1712,6 +1907,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L25 - play sound when up key"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1733,6 +1931,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Keys - Multiple Keys"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1754,6 +1955,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Keys - Buttons and Keys"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1775,6 +1979,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Keys - Functions"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1796,6 +2003,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Keys - Add Image URLs"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1817,6 +2027,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Keys - Final Image Scroller"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1838,6 +2051,9 @@
       "activity_section_position": 11,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3- Keys - Code Refactoring Exit Ticket"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1859,6 +2075,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L32 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1880,6 +2099,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops And Arrays - Intro For Loop"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1901,6 +2123,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops And Arrays - Print Array"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1922,6 +2147,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops And Arrays - Add 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1943,6 +2171,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops And Arrays - Divid by 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1964,6 +2195,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops And Arrays - Loop Array If"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1985,6 +2219,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops And Arrays - Linear Search"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2006,6 +2243,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops And Arrays - Counting Times"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2027,6 +2267,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops And Arrays - Printing Single True"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2048,6 +2291,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops And Arrays - Search with Boolean Var"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2069,6 +2315,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops And Arrays - Make it a Function"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2090,6 +2339,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops And Arrays - Make it a Function - add list parameter"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2111,6 +2363,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops And Arrays - General Search Param"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2132,6 +2387,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Loops And Arrays - Find Min"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2153,6 +2411,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L27 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2174,6 +2435,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Arrays and Loops - Explain Functions with Returns"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2195,6 +2459,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Return Values - useMinVal"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2216,6 +2483,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Return Values - writeMaxVal"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2237,6 +2507,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Return Values - debuggingMaxVal"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2258,6 +2531,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Return Values - debuggingConstrain"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2279,6 +2555,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Return Values - constrainTurtle"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2300,6 +2579,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Return Values - wrapTurtle"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2321,6 +2603,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L33 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2342,6 +2627,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - introCanvas"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2363,6 +2651,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - 200dots"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2384,6 +2675,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - transparentDots"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2405,6 +2699,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - clickToAdd"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2426,6 +2723,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - usingOffsetXY"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2447,6 +2747,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - draw at click point"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2468,6 +2771,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - changeToMouseMove"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2489,6 +2795,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - shiftKey"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2510,6 +2819,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - appendToArray"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2531,6 +2843,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - redrawRandom"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2552,6 +2867,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - redrawRandom2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2573,6 +2891,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - redrawOriginal"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2594,6 +2915,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - delete"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2615,6 +2939,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - movementFunction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2636,6 +2963,9 @@
       "activity_section_position": 16,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - movementFunction fix Orig"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2657,6 +2987,9 @@
       "activity_section_position": 17,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - sprayPaint"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2678,6 +3011,9 @@
       "activity_section_position": 18,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Canvas - sketch"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2699,6 +3035,9 @@
       "activity_section_position": 19,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L33 Free Response Getting Started"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2720,6 +3059,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L34 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2741,6 +3083,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Practice Create Performance Task"
+        ]
       },
       "bonus": false,
       "seeding_key": {
