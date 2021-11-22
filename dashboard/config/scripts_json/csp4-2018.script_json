@@ -53,7 +53,7 @@
     },
     "new_name": null,
     "family_name": "csp4",
-    "serialized_at": "2021-11-15 21:03:19 UTC",
+    "serialized_at": "2021-11-22 17:07:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -899,6 +899,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L01 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -921,6 +924,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L1 - MC moores law_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -943,6 +949,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L1 - MC big data def_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -965,6 +974,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pulse-check-survey-5-levelgroup-U4Ch1_2018"
+        ],
         "progression": "Quick Check-In"
       },
       "bonus": false,
@@ -987,6 +999,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L08 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1009,6 +1024,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L8 google trends MC_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1031,6 +1049,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L8 google trends hypothesis_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1053,6 +1074,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 4 google trends MC_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1075,6 +1099,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 4 trends as predictors_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1097,6 +1124,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L09 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1119,6 +1149,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L9 What is digital divide MC_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1141,6 +1174,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L9 FR digital divide issue_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1163,6 +1199,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 4 MC data bias_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1185,6 +1224,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L02 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1207,6 +1249,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - Data and Medicine_2018"
+        ],
         "progression": "Data and Medicine"
       },
       "bonus": false,
@@ -1229,6 +1274,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - CS is Changing Everything_2018"
+        ],
         "progression": "CS is Changing Everything"
       },
       "bonus": false,
@@ -1251,6 +1299,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L2 - FR Practice AP response about data_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1273,6 +1324,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L03 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1295,6 +1349,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4-AP-Practice-Choose-The-Data-Concern_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1317,6 +1374,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L3 - FR Identifying people_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1339,6 +1399,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L04 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1361,6 +1424,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4-AP-Practice-Justify-the-Score_2018"
+        ],
         "progression": "AP Practice Response - Justify the Score"
       },
       "bonus": false,
@@ -1383,6 +1449,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L4 - MC cost of free_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1405,6 +1474,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L4 - FR cost of free_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1427,6 +1499,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L05 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1449,6 +1524,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack a Caesar Cipher_2018"
+        ],
         "progression": "Crack a Caesar Cipher"
       },
       "bonus": false,
@@ -1471,6 +1549,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Terminology Recap_2018"
+        ],
         "progression": "Terminology Recap"
       },
       "bonus": false,
@@ -1493,6 +1574,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Challenge Introduction_2018"
+        ],
         "progression": "New Challenge Introduction"
       },
       "bonus": false,
@@ -1515,6 +1599,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack Random Substitution_2018"
+        ],
         "progression": "Crack Random Substitution"
       },
       "bonus": false,
@@ -1537,6 +1624,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Technique: Frequency Analysis_2018"
+        ],
         "progression": "Technique: Frequency Analysis"
       },
       "bonus": false,
@@ -1559,6 +1649,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Free Response Getting Started_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1581,6 +1674,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Assessment1_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1603,6 +1699,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Assessment3_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1625,6 +1724,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Assessment4_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1647,6 +1749,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Free Response Wrap Up_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1669,6 +1774,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Free Response Wrap Up_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1691,6 +1799,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L06 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1713,6 +1824,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Vigenere Cipher Widget_2018"
+        ],
         "progression": "The Vigenere Cipher Widget"
       },
       "bonus": false,
@@ -1735,6 +1849,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How Secure Is Your Password?_2018"
+        ],
         "progression": "How Secure Is Your Password?"
       },
       "bonus": false,
@@ -1757,6 +1874,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - Encryption and Public Keys_2018"
+        ],
         "progression": "Encryption and Public Keys"
       },
       "bonus": false,
@@ -1779,6 +1899,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Free Response Getting Started_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1801,6 +1924,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Assessment_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1823,6 +1949,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Free Response Wrap Up_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1845,6 +1974,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Assessment2_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1867,6 +1999,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L15 Assessment1_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1889,6 +2024,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L07 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1911,6 +2049,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - Encryption and Public Keys_2018"
+        ],
         "progression": "Encryption and Public Keys"
       },
       "bonus": false,
@@ -1933,6 +2074,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Cups and Beans Activity_2018"
+        ],
         "progression": "Cups and Beans Activity"
       },
       "bonus": false,
@@ -1955,6 +2099,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Modulo Clock Instructions_2018"
+        ],
         "progression": "Modulo Clock Instructions"
       },
       "bonus": false,
@@ -1977,6 +2124,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Modulo Clock_2018"
+        ],
         "progression": "The Modulo Clock"
       },
       "bonus": false,
@@ -1999,6 +2149,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Public Key Crypto Widget Instructions_2018"
+        ],
         "progression": "Public Key Crypto Widget Instructions"
       },
       "bonus": false,
@@ -2021,6 +2174,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Public Key Cryptography Widget_2018"
+        ],
         "progression": "Public Key Cryptography Widget"
       },
       "bonus": false,
@@ -2043,6 +2199,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L18 Free Response Assessment 1_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2065,6 +2224,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L18 Match terms to cups and beans analogy_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2087,6 +2249,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L19 Free Response Getting Started_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2109,6 +2274,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L19 mutlichoice 20 mod 15_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2131,6 +2299,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L19 multichoice 13 MOD 17_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2153,6 +2324,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L19 Free Response Wrap Up_2018"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2175,6 +2349,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L08 SFLP"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2197,6 +2374,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - Cybersecurity and Crime_2018"
+        ],
         "progression": "Cybersecurity and Crime"
       },
       "bonus": false,
@@ -2219,6 +2399,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 4 Ch1 Cumulative Assessment MC_2018"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2240,6 +2423,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2018-markdown-with-link-to-survey_v2"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,

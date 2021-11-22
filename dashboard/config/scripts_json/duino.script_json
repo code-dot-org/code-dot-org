@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:15:53 UTC",
+    "serialized_at": "2021-11-22 17:07:03 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -195,6 +195,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "duino battery led"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -216,6 +219,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "duino button led"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -237,6 +243,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "duino multi leds"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -258,6 +267,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "duino pov"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -279,6 +291,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "duino music"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -300,6 +315,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "duino auduino"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -321,6 +339,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "duino junkbot build"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -342,6 +363,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "duino junkbot software"
+        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:11:42 UTC",
+    "serialized_at": "2021-11-22 17:08:27 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -975,6 +975,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode Placeholder"
+        ],
         "progression": "Code Break: Episode 1"
       },
       "bonus": false,
@@ -997,6 +1000,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 1 Instructions"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1019,6 +1025,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E01 Practice"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1041,6 +1050,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 1 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1063,6 +1075,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E01 Challenges"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1085,6 +1100,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 1 Share"
+        ],
         "progression": "Share Your Work!"
       },
       "bonus": false,
@@ -1107,6 +1125,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 2 Placeholder"
+        ],
         "progression": "Code Break: Episode 2"
       },
       "bonus": false,
@@ -1129,6 +1150,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 2 Instructions"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1151,6 +1175,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 2 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1173,6 +1200,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E02 Challenges"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1195,6 +1225,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 2 Share"
+        ],
         "progression": "Share Your Work!"
       },
       "bonus": false,
@@ -1217,6 +1250,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 3 Placeholder"
+        ],
         "progression": "Code Break: Episode 3"
       },
       "bonus": false,
@@ -1239,6 +1275,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 3 Instructions"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1261,6 +1300,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E03 Practice"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1283,6 +1325,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 3 Video"
+        ],
         "progression": "Video"
       },
       "bonus": false,
@@ -1305,6 +1350,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 3 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1327,6 +1375,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E03 Int Challenge"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1349,6 +1400,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 3 Share"
+        ],
         "progression": "Share Your Work!"
       },
       "bonus": false,
@@ -1371,6 +1425,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 4 Placeholder"
+        ],
         "progression": "Code Break: Episode 4"
       },
       "bonus": false,
@@ -1393,6 +1450,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 4 Instructions"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1415,6 +1475,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E04 Practice"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1437,6 +1500,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 4 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1459,6 +1525,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E04 Challenges"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1481,6 +1550,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 4 Share"
+        ],
         "progression": "Share Your Work!"
       },
       "bonus": false,
@@ -1503,6 +1575,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 5 Placeholder"
+        ],
         "progression": "Code Break: Episode 5"
       },
       "bonus": false,
@@ -1525,6 +1600,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 5 Instructions"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1547,6 +1625,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E05 Practice"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1569,6 +1650,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 5 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1591,6 +1675,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E05 Challenges"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1613,6 +1700,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 5 Share"
+        ],
         "progression": "Share Your Work!"
       },
       "bonus": false,
@@ -1635,6 +1725,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 6 Placeholder"
+        ],
         "progression": "Code Break: Episode 6"
       },
       "bonus": false,
@@ -1657,6 +1750,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 6 Instructions"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1679,6 +1775,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak e05 Practice Web lab"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1701,6 +1800,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 6 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1723,6 +1825,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E06 Challenges"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1745,6 +1850,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 6 Share"
+        ],
         "progression": "Share Your Work!"
       },
       "bonus": false,
@@ -1767,6 +1875,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 7 Placeholder"
+        ],
         "progression": "Code Break: Episode 7"
       },
       "bonus": false,
@@ -1789,6 +1900,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 7 Instructions"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1811,6 +1925,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
       "bonus": false,
@@ -1833,6 +1950,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
       "bonus": false,
@@ -1855,6 +1975,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
       "bonus": false,
@@ -1877,6 +2000,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
       "bonus": false,
@@ -1899,6 +2025,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
       "bonus": false,
@@ -1921,6 +2050,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals5_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
       "bonus": false,
@@ -1943,6 +2075,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals6_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
       "bonus": false,
@@ -1965,6 +2100,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
       "bonus": false,
@@ -1987,6 +2125,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_predict2_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
       "bonus": false,
@@ -2010,6 +2151,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseD_bee_conditionals8_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
       "bonus": false,
@@ -2032,6 +2176,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals9_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
       "bonus": false,
@@ -2054,6 +2201,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals10_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
       "bonus": false,
@@ -2076,6 +2226,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVidIfElse_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
       "bonus": false,
@@ -2098,6 +2251,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge1_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
       "bonus": false,
@@ -2120,6 +2276,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge2_2019"
+        ],
         "progression": "If-Else with Bee Practice"
       },
       "bonus": false,
@@ -2142,6 +2301,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E7 Practice Magic 8 Ball"
+        ],
         "progression": "App Lab Practice"
       },
       "bonus": false,
@@ -2164,6 +2326,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 7 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2186,6 +2351,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E07 Challenges"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2208,6 +2376,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 7 Share"
+        ],
         "progression": "Share Your Work!"
       },
       "bonus": false,
@@ -2230,6 +2401,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 8 Placeholder"
+        ],
         "progression": "Code Break: Episode 8"
       },
       "bonus": false,
@@ -2252,6 +2426,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 8 Instructions"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2274,6 +2451,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_1_2019"
+        ],
         "progression": "Variables with Bee"
       },
       "bonus": false,
@@ -2296,6 +2476,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_2_2019"
+        ],
         "progression": "Variables with Bee"
       },
       "bonus": false,
@@ -2318,6 +2501,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_3_2019"
+        ],
         "progression": "Variables with Bee"
       },
       "bonus": false,
@@ -2340,6 +2526,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_4_2019"
+        ],
         "progression": "Variables with Bee"
       },
       "bonus": false,
@@ -2362,6 +2551,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_5_2019"
+        ],
         "progression": "Variables with Bee"
       },
       "bonus": false,
@@ -2385,6 +2577,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseF_bee_variables_6_2019"
+        ],
         "progression": "Variables with Bee"
       },
       "bonus": false,
@@ -2407,6 +2602,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_7_2019"
+        ],
         "progression": "Variables with Bee"
       },
       "bonus": false,
@@ -2429,6 +2627,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseF_bee_variables_8_2019"
+        ],
         "progression": "Variables with Bee"
       },
       "bonus": false,
@@ -2451,6 +2652,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 8 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2473,6 +2677,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E08 Challenges"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2495,6 +2702,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 8 Share"
+        ],
         "progression": "Share Your Work!"
       },
       "bonus": false,
@@ -2517,6 +2727,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 9 Placeholder"
+        ],
         "progression": "Code Break: Episode 9"
       },
       "bonus": false,
@@ -2539,6 +2752,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 9 Instructions"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2561,6 +2777,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_01"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2583,6 +2802,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_02"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2605,6 +2827,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_03"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2627,6 +2852,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_04"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2649,6 +2877,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_05"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2671,6 +2902,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_06"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2693,6 +2927,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_08"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2715,6 +2952,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_09"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2737,6 +2977,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_10"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2759,6 +3002,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_11"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2781,6 +3027,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_11b"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2803,6 +3052,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_Party_11_5"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2825,6 +3077,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 9 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2847,6 +3102,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E09 Challenges"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -2869,6 +3127,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 9 Share"
+        ],
         "progression": "Share Your Work!"
       },
       "bonus": false,
@@ -2891,6 +3152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 10 Placeholder"
+        ],
         "progression": "Code Break: Episode 10"
       },
       "bonus": false,
@@ -2913,6 +3177,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 10 Instructions"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2935,6 +3202,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Video_Machine_Learning"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2957,6 +3227,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_FishVTrash"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2979,6 +3252,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_CreaturesVTrashDemo"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3001,6 +3277,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_CreaturesVTrash"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3023,6 +3302,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Video_Training_Data"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3045,6 +3327,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Short"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3067,6 +3352,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Video_Societal_Implications"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3089,6 +3377,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseF_Oceans_Long"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3111,6 +3402,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 10 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -3133,6 +3427,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 10 Share"
+        ],
         "progression": "Share Your Work!"
       },
       "bonus": false,
@@ -3155,6 +3452,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 11 Placeholder"
+        ],
         "progression": "Code Break: Episode 11"
       },
       "bonus": false,
@@ -3177,6 +3477,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 11 Instructions"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3199,6 +3502,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_01_RETRY_2019"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3221,6 +3527,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_02_Cole_2019"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3243,6 +3552,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_03_Cole_2019"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3265,6 +3577,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_04_Cole_2019"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3287,6 +3602,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_04POINT5_RYAN_2019"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3309,6 +3627,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_05_Cole_2019"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3331,6 +3652,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_06_Cole_2019"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3353,6 +3677,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Function intro Ryan_2019"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3375,6 +3702,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_07_Cole_2019"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3397,6 +3727,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_10_RETRY_2019"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3419,6 +3752,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_Ali_2019"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3441,6 +3777,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MC_HOC_2017_FP20x20_2019"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -3463,6 +3802,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 11 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -3485,6 +3827,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E11 Challenges"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -3507,6 +3852,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 11 Share"
+        ],
         "progression": "Share Your Work!"
       },
       "bonus": false,
@@ -3529,6 +3877,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak Episode 12 Placeholder"
+        ],
         "progression": "Code Break: Episode 12"
       },
       "bonus": false,
@@ -3551,6 +3902,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 12 Instructions"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3573,6 +3927,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E12 Practice Mike2"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3595,6 +3952,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 12 Challenge Instructions"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -3617,6 +3977,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CodeBreak E12 Challenges"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -3639,6 +4002,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Episode 12 Share"
+        ],
         "progression": "Share Your Work!"
       },
       "bonus": false,

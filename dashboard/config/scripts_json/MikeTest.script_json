@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:28:51 UTC",
+    "serialized_at": "2021-11-22 17:07:11 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -158,6 +158,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MikeTest1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -179,6 +182,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MikeTest2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -200,6 +206,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MikeTest3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -221,6 +230,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "MikeAssessment1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -242,6 +254,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bounce_12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -263,6 +278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Functions 12 Mike"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -284,6 +302,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3 Artist Free Play"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -305,6 +326,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mike Pair Programming"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -326,6 +350,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MikeStarNested"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -347,6 +374,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MikeStarHard"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -368,6 +398,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MikeStar"
+        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:11:19 UTC",
+    "serialized_at": "2021-11-22 17:06:56 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -81,6 +81,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDK5 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {

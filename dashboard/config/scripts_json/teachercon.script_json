@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:17:23 UTC",
+    "serialized_at": "2021-11-22 17:07:11 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -819,6 +819,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Welcome to TeacherCon!"
+        ],
         "progression": "Welcome to TeacherCon!"
       },
       "bonus": false,
@@ -841,6 +844,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "TeacherCon Agenda"
+        ],
         "progression": "TeacherCon Agenda"
       },
       "bonus": false,
@@ -863,6 +869,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "TeacherCon Self-Assessment"
+        ],
         "progression": "TeacherCon Self-Assessment"
       },
       "bonus": false,
@@ -885,6 +894,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L4 Lesson Overview"
+        ],
         "progression": "U1L4 Lesson Overview"
       },
       "bonus": false,
@@ -907,6 +919,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L6 Lesson Overview"
+        ],
         "progression": "U1L6 Lesson Overview"
       },
       "bonus": false,
@@ -929,6 +944,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L9 Lesson Overview"
+        ],
         "progression": "U1L9 Lesson Overview"
       },
       "bonus": false,
@@ -951,6 +969,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L10 Lesson Overview"
+        ],
         "progression": "U1L10 Lesson Overview"
       },
       "bonus": false,
@@ -973,6 +994,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L11 Lesson Overview"
+        ],
         "progression": "U1L11 Lesson Overview"
       },
       "bonus": false,
@@ -995,6 +1019,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L2 Lesson Overview"
+        ],
         "progression": "U2L2 Lesson Overview"
       },
       "bonus": false,
@@ -1017,6 +1044,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L3 Lesson Overview"
+        ],
         "progression": "U2L3 Lesson Overview"
       },
       "bonus": false,
@@ -1039,6 +1069,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L10 Lesson Overview"
+        ],
         "progression": "U2L10 Lesson Overview"
       },
       "bonus": false,
@@ -1061,6 +1094,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ],
         "progression": "Exploring Practices and Strategies during TeacherCon"
       },
       "bonus": false,
@@ -1083,6 +1119,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ],
         "progression": "Overview: Group Work and Peer Learning"
       },
       "bonus": false,
@@ -1105,6 +1144,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ],
         "progression": "Collaborative Learning and Group Work: Description and Strategies"
       },
       "bonus": false,
@@ -1127,6 +1169,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Official Peer Instruction Blog"
+        ],
         "progression": "The Official Peer Instruction Blog"
       },
       "bonus": false,
@@ -1149,6 +1194,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "the Journal of Peer Learning"
+        ],
         "progression": "the Journal of Peer Learning"
       },
       "bonus": false,
@@ -1171,6 +1219,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Tuesday Report: Group Work and Peer Learning in Unit 1"
+        ],
         "progression": "Tuesday Report: Group Work and Peer Learning in Unit 1"
       },
       "bonus": false,
@@ -1193,6 +1244,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Wednesday Report: Group Work and Peer Learning in Unit 1"
+        ],
         "progression": "Wednesday Report: Group Work and Peer Learning in Unit 1"
       },
       "bonus": false,
@@ -1215,6 +1269,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ],
         "progression": "Exploring Practices and Strategies during TeacherCon"
       },
       "bonus": false,
@@ -1237,6 +1294,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ],
         "progression": "Overview: Balancing Teachers and Tools"
       },
       "bonus": false,
@@ -1259,6 +1319,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Tuesday Report: Balancing Teachers and Tools in Unit 1"
+        ],
         "progression": "Tuesday Report: Balancing Teachers and Tools in Unit 1"
       },
       "bonus": false,
@@ -1281,6 +1344,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Wednesday Report: Balancing Teachers and Tools in Unit 1"
+        ],
         "progression": "Wednesday Report: Balancing Teachers and Tools in Unit 1"
       },
       "bonus": false,
@@ -1303,6 +1369,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ],
         "progression": "Exploring Practices and Strategies during TeacherCon"
       },
       "bonus": false,
@@ -1325,6 +1394,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview: Discovery Learning"
+        ],
         "progression": "Overview: Discovery Learning"
       },
       "bonus": false,
@@ -1347,6 +1419,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Discovery learning definition and history"
+        ],
         "progression": "Discovery learning definition and history"
       },
       "bonus": false,
@@ -1369,6 +1444,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Discovery learning techniques"
+        ],
         "progression": "Discovery learning techniques"
       },
       "bonus": false,
@@ -1391,6 +1469,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Tuesday Report: Discovery Learning in Unit 1"
+        ],
         "progression": "Tuesday Report: Discovery Learning in Unit 1"
       },
       "bonus": false,
@@ -1413,6 +1494,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Wednesday Report: Discovery Learning in Unit 1"
+        ],
         "progression": "Wednesday Report: Discovery Learning in Unit 1"
       },
       "bonus": false,
@@ -1435,6 +1519,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Exploring Practices and Strategies during TeacherCon"
+        ],
         "progression": "Exploring Practices and Strategies during TeacherCon"
       },
       "bonus": false,
@@ -1457,6 +1544,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview: Capturing Student Learning"
+        ],
         "progression": "Overview: Capturing Student Learning"
       },
       "bonus": false,
@@ -1479,6 +1569,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ],
         "progression": "What is the difference between formative and summative assessment?"
       },
       "bonus": false,
@@ -1501,6 +1594,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Classroom Assessment Techniques"
+        ],
         "progression": "Classroom Assessment Techniques"
       },
       "bonus": false,
@@ -1523,6 +1619,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Tuesday Report: Measuring Student Learning in Unit 1"
+        ],
         "progression": "Tuesday Report: Measuring Student Learning in Unit 1"
       },
       "bonus": false,
@@ -1545,6 +1644,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Wednesday Report: Measuring Student Learning in Unit 1"
+        ],
         "progression": "Wednesday Report: Measuring Student Learning in Unit 1"
       },
       "bonus": false,
