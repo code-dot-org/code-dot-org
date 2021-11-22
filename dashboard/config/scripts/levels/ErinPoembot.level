@@ -1,0 +1,116 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2021-08-30T21:40:41.000Z",
+  "level_num": "custom",
+  "user_id": 9,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "false",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_animation_mode": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "true",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "edit_code": "false",
+    "helper_libraries": [
+      "NativeSpriteLab"
+    ],
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "hide_custom_blocks": "true",
+    "use_default_sprites": "false",
+    "auto_run_setup": "DRAW_LOOP",
+    "parent_level_id": 23011,
+    "show_type_hints": "true",
+    "include_shared_functions": "false",
+    "block_pool": "gamelab",
+    "block_pools": [
+      "GamelabJr",
+      "PoemBot"
+    ],
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "downButton",
+      "upButton"
+    ],
+    "mini_toolbox": "true",
+    "validation_enabled": "false",
+    "hide_pause_button": "false",
+    "start_animations": "{\r\n  \"orderedKeys\": [],\r\n  \"propsByKey\": {}\r\n}",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2021-08-30T14:40:41.382-07:00\",\"changed\":[\"cloned from \\\"New PoemBot Project\\\"\"],\"cloned_from\":\"New PoemBot Project\"}]"
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="PoemBot_stringValue"/>
+        <block type="PoemBot_randomWord"/>
+        <block type="PoemBot_textConcat"/>
+        <block type="variables_set"/>
+        <block type="variables_get"/>
+        <block type="PoemBot_setFont"/>
+        <block type="PoemBot_setTitle"/>
+        <block type="PoemBot_setFontColor">
+          <value name="COLOR">
+            <block type="colour_picker">
+              <title name="COLOUR">#99ff99</title>
+            </block>
+          </value>
+        </block>
+        <block type="PoemBot_setAuthor"/>
+        <block type="PoemBot_addLine"/>
+        <block type="PoemBot_showPoem"/>
+        <block type="PoemBot_hidePoem"/>
+        <block type="gamelab_setPrompt"/>
+        <block type="gamelab_setPromptWithChoices"/>
+        <block type="gamelab_whenAllPromptsAnswered"/>
+        <block type="PoemBot_setBackgroundEffect"/>
+        <block type="PoemBot_setForegroundEffect"/>
+        <block type="PoemBot_whenLineShows">
+          <value name="N">
+            <block type="math_number">
+              <title name="NUM">3</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>
