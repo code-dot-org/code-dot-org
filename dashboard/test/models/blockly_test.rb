@@ -511,6 +511,7 @@ XML
   end
 
   test 'localizes authored hints with embedded behavior block' do
+    DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false).returns(true)
     test_locale = :"es-MX"
     level_name = 'test_localize_authored_hints_with_embedded_behavior_block'
     hint = <<~HINT
@@ -612,6 +613,7 @@ XML
   end
 
   test 'placeholder text is localized within markdown' do
+    DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false).returns(true)
     level_name = 'test_localize_markdown_placeholder_text'
     test_locale = 'vi-VN'
     original_str = 'Hello'
@@ -675,6 +677,7 @@ XML
   end
 
   test 'placeholder text is localized within markdown with malformed HTML' do
+    DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false).returns(true)
     # This test was created because we ran into an issue when translating blocks in markdown text
     # where the text had malformed HTML, for example missing closing tag or orphaned closing tags.
     level_name = 'test_localize_markdown_placeholder_text_with_bad_html'
