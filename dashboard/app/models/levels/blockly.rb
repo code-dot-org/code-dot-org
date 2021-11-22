@@ -86,6 +86,9 @@ class Blockly < Level
     self.scrollbars = nil if scrollbars == 'nil'
   end
 
+  # DCDO key for turning this feature on or off.
+  BLOCKLY_I18N_IN_TEXT_DCDO_KEY = 'blockly_i18n_in_text'.freeze
+
   # These serialized fields will be serialized/deserialized as straight XML
   def xml_blocks
     %w(initialization_blocks start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
@@ -471,7 +474,7 @@ class Blockly < Level
   # @param text [String] Text which might have blockly XML embedded in it and needs localization.
   # @return [String] Text with localized blockly blocks.
   def localized_blockly_in_text(text)
-    return unless text
+    return text unless text && DCDO.get(BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false)
     # Tracks the original xml and maps it to the translated xml.
     translated_xml_texts = {}
     # Selects each <xml></xml> because these might be blockly blocks which need translation.
@@ -485,7 +488,7 @@ class Blockly < Level
     end
     # Replace the untranslated <xml></xml> with the translated <xml></xml>.
     translated_xml_texts.each do |orig_xml, translated_xml|
-      text = text.gsub!(orig_xml, translated_xml)
+      text = text.gsub(orig_xml, translated_xml)
     end
     text
   end
