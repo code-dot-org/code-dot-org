@@ -188,23 +188,23 @@ function setUpGlobalData(store) {
 }
 setUpGlobalData(getStore());
 
+// Some of our cached pages can become cached by the browser with the
+// wrong sign-in state. This is a patch to ensure that the header displays
+// the correct sign-in state for the user.
 function ensureHeaderSigninState(isSignedIn, userName) {
-  const userMenu = document.querySelector(
-    '.header_button.header_user.user_menu'
-  );
+  const userMenu = document.querySelector('#header_user_menu');
   const signinButton = document.querySelector('#signin_button');
 
-  if (isSignedIn) {
-    console.log('set correct states');
+  if (isSignedIn && userMenu.style.display === 'none') {
+    console.log('replaced');
     userMenu.style.display = 'block';
     signinButton.style.display = 'none';
-    const displayName = document.querySelector(
-      '.header_button.header_user.user_menu .display_name'
-    );
+
+    const displayName = document.querySelector('#header_display_name');
     displayName.textContent = userName;
-  } else {
+  } else if (!isSignedIn && signinButton.style.display === 'none') {
     userMenu.style.display = 'none';
-    signinButton.style.display = 'block';
+    signinButton.style.display = 'inline';
   }
 }
 
