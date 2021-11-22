@@ -48,7 +48,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 21:05:01 UTC",
+    "serialized_at": "2021-11-22 17:08:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -819,6 +819,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L1 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -841,6 +844,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L1 CFU Return"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -863,6 +869,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L2 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -885,6 +894,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Investigate Rock"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -907,6 +919,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Investigate Poetry App"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -929,6 +944,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L2 CSP CFU Param and Return"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -951,6 +969,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L3 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -973,6 +994,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 1"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -995,6 +1019,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 2"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -1017,6 +1044,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 4"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -1039,6 +1069,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 3"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -1061,6 +1094,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice Part 5"
+        ],
         "progression": "console.log Practice"
       },
       "bonus": false,
@@ -1083,6 +1119,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Investigate Calculator App"
+        ],
         "progression": "App Practice"
       },
       "bonus": false,
@@ -1105,6 +1144,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Practice App 2"
+        ],
         "progression": "App Practice"
       },
       "bonus": false,
@@ -1127,6 +1169,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Practice MOD"
+        ],
         "progression": "MOD Practice"
       },
       "bonus": false,
@@ -1149,6 +1194,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U73 CFU Param Return AP"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -1171,6 +1219,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L4 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1193,6 +1244,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Make RPS App_2020"
+        ],
         "progression": "Try the Rock Paper Scissors App"
       },
       "bonus": false,
@@ -1215,6 +1269,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Make RPS App Project_2020"
+        ],
         "progression": "Make the Rock Paper Scissors App"
       },
       "bonus": false,
@@ -1237,6 +1294,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L5 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1259,6 +1319,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7 L04 Exit Ticket"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1281,6 +1344,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L6 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1303,6 +1369,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7L6 States App Investigation"
+        ],
         "progression": "States App"
       },
       "bonus": false,
@@ -1325,6 +1394,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7L6 Pigify App Investigation"
+        ],
         "progression": "Pigify App"
       },
       "bonus": false,
@@ -1347,6 +1419,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L6 CSP CFU Libraries"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1369,6 +1444,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L7 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1391,6 +1469,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 3"
+        ],
         "progression": "Using Libraries"
       },
       "bonus": false,
@@ -1413,6 +1494,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 5"
+        ],
         "progression": "Using Libraries"
       },
       "bonus": false,
@@ -1435,6 +1519,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 2"
+        ],
         "progression": "Testing Libraries"
       },
       "bonus": false,
@@ -1457,6 +1544,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 1"
+        ],
         "progression": "Testing Libraries"
       },
       "bonus": false,
@@ -1479,6 +1569,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 4"
+        ],
         "progression": "Testing Libraries"
       },
       "bonus": false,
@@ -1501,6 +1594,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U77 CFU Libraries AP"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1523,6 +1619,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L8 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1545,6 +1644,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Part 1"
+        ],
         "progression": "Build Your Library"
       },
       "bonus": false,
@@ -1567,6 +1669,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L9 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1589,6 +1694,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Part 2"
+        ],
         "progression": "Build Your Library"
       },
       "bonus": false,
@@ -1611,6 +1719,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Test a Library"
+        ],
         "progression": "Test a Classmate's Library"
       },
       "bonus": false,
@@ -1633,6 +1744,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L10 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1655,6 +1769,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Part 3"
+        ],
         "progression": "Build Your Library"
       },
       "bonus": false,
@@ -1677,6 +1794,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U7L12 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1699,6 +1819,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 7 AP-Style Assessment _2020"
+        ],
         "progression": "Unit 7 Exam"
       },
       "bonus": false,
@@ -1721,6 +1844,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,

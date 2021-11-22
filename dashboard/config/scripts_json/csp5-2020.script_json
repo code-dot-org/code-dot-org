@@ -48,7 +48,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 21:04:47 UTC",
+    "serialized_at": "2021-11-22 17:08:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1343,6 +1343,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L1 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1365,6 +1368,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L01 Introduction to Lists"
+        ],
         "progression": "Introduction to Lists"
       },
       "bonus": false,
@@ -1387,6 +1393,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Lists - Part 2_2018"
+        ],
         "progression": "Introduction to Lists"
       },
       "bonus": false,
@@ -1409,6 +1418,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-20-21-u5-assess-lists"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -1431,6 +1443,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L2 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1453,6 +1468,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Lists - Part 4_2018"
+        ],
         "progression": "Accessing Lists"
       },
       "bonus": false,
@@ -1475,6 +1493,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Lists Investigate Outfitly Code"
+        ],
         "progression": "Accessing Lists"
       },
       "bonus": false,
@@ -1497,6 +1518,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Lists Investigate Bandly Code"
+        ],
         "progression": "Accessing Lists"
       },
       "bonus": false,
@@ -1519,6 +1543,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Lists - Part 3_2018"
+        ],
         "progression": "Changing Lists"
       },
       "bonus": false,
@@ -1541,6 +1568,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Lists Investigate Partnersly Code"
+        ],
         "progression": "Changing Lists"
       },
       "bonus": false,
@@ -1563,6 +1593,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Random List Access Pattern"
+        ],
         "progression": "List Patterns"
       },
       "bonus": false,
@@ -1585,6 +1618,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "List Scrolling Pattern"
+        ],
         "progression": "List Patterns"
       },
       "bonus": false,
@@ -1607,6 +1643,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L3 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1629,6 +1668,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 1"
+        ],
         "progression": "Setting up Lists"
       },
       "bonus": false,
@@ -1651,6 +1693,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 2"
+        ],
         "progression": "Setting up Lists"
       },
       "bonus": false,
@@ -1673,6 +1718,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 3.75"
+        ],
         "progression": "Accessing Elements in a List"
       },
       "bonus": false,
@@ -1695,6 +1743,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 3.5"
+        ],
         "progression": "Accessing Elements in a List"
       },
       "bonus": false,
@@ -1717,6 +1768,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 10"
+        ],
         "progression": "Accessing Elements in a List"
       },
       "bonus": false,
@@ -1739,6 +1793,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice Strings 2"
+        ],
         "progression": "Strings and Indexes"
       },
       "bonus": false,
@@ -1761,6 +1818,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice Strings 3"
+        ],
         "progression": "Strings and Indexes"
       },
       "bonus": false,
@@ -1783,6 +1843,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 4"
+        ],
         "progression": "List Operations"
       },
       "bonus": false,
@@ -1805,6 +1868,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 5"
+        ],
         "progression": "List Operations"
       },
       "bonus": false,
@@ -1827,6 +1893,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 9"
+        ],
         "progression": "List Operations"
       },
       "bonus": false,
@@ -1849,6 +1918,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 L03 Lists Practice 6"
+        ],
         "progression": "List Operations"
       },
       "bonus": false,
@@ -1871,6 +1943,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L3 CFU Lists Psuedocode"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -1893,6 +1968,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L3 CFU Lists Psuedocode 2"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -1915,6 +1993,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L4 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1937,6 +2018,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Lists Make Project Sample App 2020"
+        ],
         "progression": "Try the Reminders App"
       },
       "bonus": false,
@@ -1959,6 +2043,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 Lists Make Project 2020"
+        ],
         "progression": "Make the Reminders App"
       },
       "bonus": false,
@@ -1981,6 +2068,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L5 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2003,6 +2093,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_applab_loops_2018"
+        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -2025,6 +2118,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L5 CSP CFU Looping"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2047,6 +2143,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L6 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2069,6 +2168,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Investigate Coin Flipper Predict"
+        ],
         "progression": "Coin Flipper App"
       },
       "bonus": false,
@@ -2091,6 +2193,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Investigate Coin Flipper"
+        ],
         "progression": "Coin Flipper App"
       },
       "bonus": false,
@@ -2113,6 +2218,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Investigate Font Tester"
+        ],
         "progression": "Font Tester App"
       },
       "bonus": false,
@@ -2135,6 +2243,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L6 CSP CFU Element Looping"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2157,6 +2268,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L7 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2179,6 +2293,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 1"
+        ],
         "progression": "While Loop Practice"
       },
       "bonus": false,
@@ -2201,6 +2318,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 2"
+        ],
         "progression": "While Loop Practice"
       },
       "bonus": false,
@@ -2223,6 +2343,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 3"
+        ],
         "progression": "While Loop Practice"
       },
       "bonus": false,
@@ -2245,6 +2368,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 4"
+        ],
         "progression": "For Loop Practice"
       },
       "bonus": false,
@@ -2267,6 +2393,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 5"
+        ],
         "progression": "For Loop Practice"
       },
       "bonus": false,
@@ -2289,6 +2418,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Part 6"
+        ],
         "progression": "For Loop Practice"
       },
       "bonus": false,
@@ -2311,6 +2443,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Sentence Randomizer"
+        ],
         "progression": "Loops and Screen Elements"
       },
       "bonus": false,
@@ -2333,6 +2468,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Practice Dice Roller"
+        ],
         "progression": "Loops and Screen Elements"
       },
       "bonus": false,
@@ -2355,6 +2493,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L7 CFU Loops Psuedocode"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -2377,6 +2518,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L7 CFU Loops Psuedocode 2"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -2399,6 +2543,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L8 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2421,6 +2568,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Loops Make Wallpaper App Example 2020"
+        ],
         "progression": "Try the Lock Screen Maker"
       },
       "bonus": false,
@@ -2443,6 +2593,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 Loops Make Wallpaper App 2020"
+        ],
         "progression": "Make the Lock Screen Maker"
       },
       "bonus": false,
@@ -2465,6 +2618,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L9 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2487,6 +2643,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Processing Lists with Loops_2018"
+        ],
         "progression": "Introduction to Traversal"
       },
       "bonus": false,
@@ -2509,6 +2668,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 L09 Traversals Exit Ticket"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2531,6 +2693,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L10 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2553,6 +2718,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Investigate Mile Tracker Modify"
+        ],
         "progression": "Mile Tracker Investigation"
       },
       "bonus": false,
@@ -2575,6 +2743,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L10 Traversals Investigate"
+        ],
         "progression": "Intro to Datasets"
       },
       "bonus": false,
@@ -2597,6 +2768,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Investigate Dog Finder Modify"
+        ],
         "progression": "Dog Finder Investigation"
       },
       "bonus": false,
@@ -2619,6 +2793,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "List Filter Pattern"
+        ],
         "progression": "Traversal Patterns"
       },
       "bonus": false,
@@ -2641,6 +2818,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "List Reduce Pattern"
+        ],
         "progression": "Traversal Patterns"
       },
       "bonus": false,
@@ -2663,6 +2843,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U5L10 CFU Traversals"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2685,6 +2868,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L11 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2707,6 +2893,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 1"
+        ],
         "progression": "Traversal Practice"
       },
       "bonus": false,
@@ -2729,6 +2918,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 2"
+        ],
         "progression": "Traversal Practice"
       },
       "bonus": false,
@@ -2751,6 +2943,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 3"
+        ],
         "progression": "Traversal Practice"
       },
       "bonus": false,
@@ -2773,6 +2968,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 4"
+        ],
         "progression": "Filter and Reduce Practice"
       },
       "bonus": false,
@@ -2795,6 +2993,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 5"
+        ],
         "progression": "Filter and Reduce Practice"
       },
       "bonus": false,
@@ -2817,6 +3018,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 6"
+        ],
         "progression": "Filter and Reduce Practice"
       },
       "bonus": false,
@@ -2839,6 +3043,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Practice Part 7"
+        ],
         "progression": "App Practice"
       },
       "bonus": false,
@@ -2861,6 +3068,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5L11 CFU For Each Psuedocode"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -2883,6 +3093,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L12 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2905,6 +3118,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Make Project Sample App 2020"
+        ],
         "progression": "Try the Random Forecaster App"
       },
       "bonus": false,
@@ -2927,6 +3143,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 Traversals Make Project 2020"
+        ],
         "progression": "Make the Random Forecaster App"
       },
       "bonus": false,
@@ -2949,6 +3168,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L13 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2971,6 +3193,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L14 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2993,6 +3218,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Hackathon Project Day 2"
+        ],
         "progression": "Hackathon Project"
       },
       "bonus": false,
@@ -3015,6 +3243,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L15 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3037,6 +3268,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Hackathon Project Day 3"
+        ],
         "progression": "Hackathon Project"
       },
       "bonus": false,
@@ -3059,6 +3293,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L16 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3081,6 +3318,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Hackathon Project Day 4"
+        ],
         "progression": "Hackathon Project"
       },
       "bonus": false,
@@ -3103,6 +3343,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L17 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3125,6 +3368,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U5 Hackathon Project Day 5"
+        ],
         "progression": "Hackathon Project"
       },
       "bonus": false,
@@ -3147,6 +3393,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U5L18 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -3169,6 +3418,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 5 AP-Style Assessment _2020"
+        ],
         "progression": "Unit 5 Exam"
       },
       "bonus": false,
@@ -3191,6 +3443,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
