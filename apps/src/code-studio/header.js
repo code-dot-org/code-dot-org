@@ -196,7 +196,6 @@ function ensureHeaderSigninState(isSignedIn, userName) {
   const signinButton = document.querySelector('#signin_button');
 
   if (isSignedIn && userMenu.style.display === 'none') {
-    console.log('replaced');
     userMenu.style.display = 'block';
     signinButton.style.display = 'none';
 
