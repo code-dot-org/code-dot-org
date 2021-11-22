@@ -72,24 +72,18 @@ class TeacherDashboardHeader extends React.Component {
     ));
 
   progressNotSavingNotification() {
-    let details = (
-      <p>
-        {i18n.disabledProgress1()} {i18n.disabledProgressTeacherDashboard2()}{' '}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={disabledBubblesSupportArticle}
-        >
-          {i18n.learnMore()}
-        </a>
-      </p>
-    );
-
     return (
       <Notification
         type={NotificationType.failure}
         notice={i18n.disabledProgressTeacherDashboard1()}
-        details={details}
+        details={
+          i18n.disabledProgress1() +
+          ' ' +
+          i18n.disabledProgressTeacherDashboard2()
+        }
+        detailsLinkText={i18n.learnMore()}
+        detailsLink={disabledBubblesSupportArticle}
+        detailsLinkNewWindow={true}
         dismissable={false}
       />
     );
