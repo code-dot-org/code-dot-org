@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:28:41 UTC",
+    "serialized_at": "2021-11-22 17:07:01 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -424,6 +424,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online Welcome"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -445,6 +448,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDECS tour"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -466,6 +472,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD PD details"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -487,6 +496,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -508,6 +520,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD course goals"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -529,6 +544,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD strategies"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -550,6 +568,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online Units"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -571,6 +592,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D1-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -592,6 +616,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D1-2 Resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -613,6 +640,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D1-2 Assessment 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -634,6 +664,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D1-2 Resources 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -655,6 +688,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D1-2 Strategies"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -676,6 +712,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D1-2 Forum"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -697,6 +736,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D3-4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -718,6 +760,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D3-4 Resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -739,6 +784,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D3-4 Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -760,6 +808,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D3-4 Resources 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -781,6 +832,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD online U1D3-4 Forum"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -802,6 +856,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D5-7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -823,6 +880,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D5-7 Resources 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -844,6 +904,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D5-7 Assessment 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -865,6 +928,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D5-7 Resources 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -886,6 +952,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D5-7 Forum"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -907,6 +976,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D8-9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -928,6 +1000,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D8-9 Resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -949,6 +1024,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D8-9 Resources 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -970,6 +1048,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D8-9 Forum"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -991,6 +1072,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1012,6 +1096,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D10 Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1033,6 +1120,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D10 Resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1054,6 +1144,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D10 Assessment 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1075,6 +1168,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D10 Forum"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1096,6 +1192,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D11-14"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1117,6 +1216,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D11-14 Assessment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1138,6 +1240,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D11-14 Resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1159,6 +1264,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D11-14 Forum"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1180,6 +1288,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D15-16"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1201,6 +1312,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D15-16 Resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1222,6 +1336,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D15-16 Forum"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1243,6 +1360,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D17-19"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1264,6 +1384,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D17-19 Resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1285,6 +1408,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D17-19 Assessment 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1306,6 +1432,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D17-19 Reflection"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1327,6 +1456,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1D17-19 Forum"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1348,6 +1480,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Online U1Reflection"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1369,6 +1504,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U1Conclusion"
+        ]
       },
       "bonus": false,
       "seeding_key": {

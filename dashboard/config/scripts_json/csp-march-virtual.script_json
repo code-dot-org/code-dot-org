@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:29:21 UTC",
+    "serialized_at": "2021-11-22 17:08:25 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -197,6 +197,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mar20 Prework_0"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -218,6 +221,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mar20 Part1_1"
+        ],
         "progression": "Overview and Setup"
       },
       "bonus": false,
@@ -240,6 +246,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mar20 Part1_2"
+        ],
         "progression": "Overview and Setup"
       },
       "bonus": false,
@@ -262,6 +271,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mar20 Part1_Task1"
+        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -284,6 +296,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mar20 Part1_Task2"
+        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -306,6 +321,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mar20 Part1_Task3"
+        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -328,6 +346,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mar20 Part1_Task4"
+        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -350,6 +371,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mar20 Part1_Task5"
+        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -372,6 +396,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mar20 Part1_Task6"
+        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -394,6 +421,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mar20 Part1_Task7"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -416,6 +446,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mar20 Part2_1"
+        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -438,6 +471,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mar20 Part2_Task1"
+        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -460,6 +496,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mar20 Part2_Task2"
+        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -482,6 +521,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mar20 Part2_Task3"
+        ],
         "progression": "Tasks"
       },
       "bonus": false,
@@ -504,6 +546,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mar20 Part2_Task4"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,

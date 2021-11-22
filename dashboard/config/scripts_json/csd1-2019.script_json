@@ -34,7 +34,7 @@
     },
     "new_name": null,
     "family_name": "csd1",
-    "serialized_at": "2021-11-15 20:57:54 UTC",
+    "serialized_at": "2021-11-22 17:07:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -523,6 +523,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pre-survey-levelgroup_2019"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -544,6 +547,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L01 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -566,6 +572,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L02 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -588,6 +597,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Problem Solving Process Video"
+        ],
         "progression": "Video: Problem Solving Process"
       },
       "bonus": false,
@@ -610,6 +622,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L03 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -632,6 +647,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L04 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -654,6 +672,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD What Makes a Computer a Computer Video_2019"
+        ],
         "progression": "Video: What Makes a Computer, a Computer?"
       },
       "bonus": false,
@@ -676,6 +697,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L05 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -698,6 +722,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L06 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -720,6 +747,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L07 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -742,6 +772,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1L09 TFMD_2019"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -764,6 +797,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U1Ch2_2018_2019"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -786,6 +822,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U1 Test"
+        ]
       },
       "bonus": false,
       "seeding_key": {

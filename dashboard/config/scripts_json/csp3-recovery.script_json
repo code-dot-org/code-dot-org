@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:14:31 UTC",
+    "serialized_at": "2021-11-22 17:07:36 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -86,6 +86,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - introUnderTheSea - clone for recovery"
+        ],
         "progression": "Click here for instructions on how to recover your Under the Sea project code."
       },
       "bonus": false,
