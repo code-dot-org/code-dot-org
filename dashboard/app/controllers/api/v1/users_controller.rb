@@ -15,7 +15,6 @@ class Api::V1::UsersController < Api::V1::JsonApiController
 
   # GET /api/v1/users/current
   def current
-    prevent_caching
     if current_user
       render json: {
         id: current_user.id,
