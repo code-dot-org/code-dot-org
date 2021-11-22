@@ -98,7 +98,7 @@ const MarketingAnnouncementBanner = ({announcement, marginBottom}) => {
   const button = {
     id: announcement.buttonId
       ? announcement.buttonId
-      : 'special-announcement-btn-1',
+      : 'marketing-announcement-banner-btn',
     url: announcement.buttonUrl,
     text: announcement.buttonText,
     onClick: () => logEvent('cta_button_clicked')
