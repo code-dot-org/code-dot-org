@@ -30,9 +30,8 @@ class StudentLessonOverview extends Component {
     isSignedIn: PropTypes.bool.isRequired
   };
 
-  determineLevelDisplay = () => {
-    console.log(this.props.lessonLevels);
-    return this.props.lessonLevels ? (
+  renderLevels = () => {
+    return this.props.lessonLevels?.length ? (
       <ProgressLessonContent
         levels={this.props.lessonLevels}
         disabled={false}
@@ -132,7 +131,7 @@ class StudentLessonOverview extends Component {
         )}
         <div id="level-section">
           <h2>{i18n.levels()}</h2>
-          {this.determineLevelDisplay()}
+          {this.renderLevels()}
         </div>
       </div>
     );
