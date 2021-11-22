@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:12:59 UTC",
+    "serialized_at": "2021-11-22 17:07:22 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -423,6 +423,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 1 Overview"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -445,6 +448,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 2 Overview"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -467,6 +473,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 3 Overview"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -489,6 +498,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 4 Overview"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -511,6 +523,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 5 Overview"
+        ],
         "progression": "Unit 1 Lesson 5 Overview"
       },
       "bonus": false,
@@ -533,6 +548,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 6 Overview"
+        ],
         "progression": "Unit 1 Lesson 6 Overview"
       },
       "bonus": false,
@@ -555,6 +573,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 - PixFilter 1x1 intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -576,6 +597,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 - PixFilter Filter Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -597,6 +621,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 - PixFilter Mushroom"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -618,6 +645,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 - PixFilter Filter Revisit"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -639,6 +669,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 - PixFilter Mario"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -660,6 +693,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 - PixFilter UnFilter"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -681,6 +717,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 - PixFilter FreePlay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -702,6 +741,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 7 Overview"
+        ],
         "progression": "Unit 1 Lesson 7 Overview"
       },
       "bonus": false,
@@ -724,6 +766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 8 Overview"
+        ],
         "progression": "Unit 1 Lesson 8 Overview"
       },
       "bonus": false,
@@ -746,6 +791,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 Input Output Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -767,6 +815,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 Input Output C1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -788,6 +839,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 Input Output C2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -809,6 +863,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 Input Output C3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -830,6 +887,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 Input Output C4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -851,6 +911,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 1 Lesson 9 Overview"
+        ],
         "progression": "Unit 1 Lesson 9 Overview"
       },
       "bonus": false,

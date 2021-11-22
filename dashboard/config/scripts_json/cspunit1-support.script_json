@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:14:45 UTC",
+    "serialized_at": "2021-11-22 17:07:10 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -236,6 +236,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Sample Free Response"
+        ],
         "progression": "Sample Free Response"
       },
       "bonus": false,
@@ -258,6 +261,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L5 How the Internet Works - Video"
+        ],
         "progression": "U1L5 How the Internet Works - Video"
       },
       "bonus": false,
@@ -280,6 +286,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Sample External Resource"
+        ],
         "progression": "Sample External Resource"
       },
       "bonus": false,
@@ -302,6 +311,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Empty Markdown Level"
+        ],
         "progression": "Empty Markdown Level"
       },
       "bonus": false,
@@ -324,6 +336,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Sample CSP Assessment"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -345,6 +360,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L2 Free Response Reflection"
+        ],
         "progression": "U3L2 Free Response Reflection"
       },
       "bonus": false,

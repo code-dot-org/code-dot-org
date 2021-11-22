@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:28:55 UTC",
+    "serialized_at": "2021-11-22 17:06:55 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -462,6 +462,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -483,6 +486,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -504,6 +510,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -525,6 +534,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -546,6 +558,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -567,6 +582,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -588,6 +606,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -609,6 +630,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -630,6 +654,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval Free Play"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -651,6 +678,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images .1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -672,6 +702,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images .2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -693,6 +726,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -714,6 +750,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -735,6 +774,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -756,6 +798,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -777,6 +822,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -798,6 +846,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -819,6 +870,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -840,6 +894,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -861,6 +918,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Multi Strings Images 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -882,6 +942,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images Free Play"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -903,6 +966,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Play Lab Rocket 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -924,6 +990,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Play Lab Rocket 2B"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -945,6 +1014,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Play Lab Rocket 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -966,6 +1038,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Play Lab Rocket 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -987,6 +1062,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Play Lab Rocket 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1008,6 +1086,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Play Lab Rocket Free Play"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1029,6 +1110,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Design Recipe .1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1050,6 +1134,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Design Recipe 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1071,6 +1158,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Design Recipe 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1092,6 +1182,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Design Recipe 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1113,6 +1206,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Design Recipe 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1134,6 +1230,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Design Recipe 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1155,6 +1254,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Design Recipe 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1176,6 +1278,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Design Recipe 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1197,6 +1302,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Design Recipe 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1218,6 +1326,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Big Game Animation 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1239,6 +1350,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Big Game Animation 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1260,6 +1374,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Big Game Animation 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1281,6 +1398,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Big Game Animation 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1302,6 +1422,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Booleans 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1323,6 +1446,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Booleans 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1344,6 +1470,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Booleans 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1365,6 +1494,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Booleans 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1386,6 +1518,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Booleans 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1407,6 +1542,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Booleans 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1428,6 +1566,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Blocks to Bools 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1449,6 +1590,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Blocks to Bools 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1470,6 +1614,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Blocks to Bools 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1491,6 +1638,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Blocks to Bools 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1512,6 +1662,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Sam the Butterfly 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1533,6 +1686,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Sam the Butterfly 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1554,6 +1710,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Sam the Butterfly 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1575,6 +1734,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Sam the Butterfly 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1596,6 +1758,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Sam the Butterfly 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1617,6 +1782,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Big Game Booleans 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1638,6 +1806,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Big Game Booleans 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1659,6 +1830,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Big Game Booleans 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1680,6 +1854,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Big Game Booleans 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1701,6 +1878,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Big Game Booleans 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1722,6 +1902,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Luigi's Pizza 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1743,6 +1926,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Luigi's Pizza 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1764,6 +1950,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Luigi's Pizza 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1785,6 +1974,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Luigi's Pizza 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1806,6 +1998,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Big Game Collision 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1827,6 +2022,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Big Game Collision 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1848,6 +2046,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Big Game Collision 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1869,6 +2070,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Big Game Collision 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1890,6 +2094,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Big Game Final"
+        ]
       },
       "bonus": false,
       "seeding_key": {

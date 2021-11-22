@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:14:21 UTC",
+    "serialized_at": "2021-11-22 17:07:18 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -152,6 +152,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 2 Lesson 7 Overview"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -174,6 +177,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - Intro to CSS"
+        ],
         "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
@@ -196,6 +202,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - Selector and Property"
+        ],
         "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
@@ -218,6 +227,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - p tags"
+        ],
         "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
@@ -240,6 +252,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - head body"
+        ],
         "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
@@ -262,6 +277,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - title element in head"
+        ],
         "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
@@ -284,6 +302,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - body tags"
+        ],
         "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
@@ -306,6 +327,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - text properties"
+        ],
         "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
@@ -328,6 +352,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - font properties"
+        ],
         "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
@@ -350,6 +377,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - image properties"
+        ],
         "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
@@ -372,6 +402,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Stop: Intro to CSS"
+        ],
         "progression": "Stop: Intro to CSS"
       },
       "bonus": false,
@@ -394,6 +427,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - About Me Page Styling"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -415,6 +451,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Brand Book Example"
+        ],
         "progression": "Brand Book Example"
       },
       "bonus": false,
@@ -437,6 +476,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 Pick Your Fonts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -458,6 +500,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 Pick Your Colors"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -479,6 +524,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - External Style Sheets"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -500,6 +548,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - Link Tag"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -521,6 +572,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - Using Your Font"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -542,6 +596,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - Developing Brand Style"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -563,6 +620,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - Separate Content and Style"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -584,6 +644,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - PW - Divs to break up the page"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -605,6 +668,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - PW - External Style Sheets"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -626,6 +692,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - PW - Consistent Personal Site Style"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -647,6 +716,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 Make Your Logo"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -668,6 +740,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - PW - Image as A Link"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -689,6 +764,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - PW - Favicon"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -710,6 +788,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - PW - ESS Final touches"
+        ]
       },
       "bonus": false,
       "seeding_key": {
