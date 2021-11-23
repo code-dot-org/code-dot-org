@@ -206,7 +206,7 @@ describe('animationList', function() {
     });
   });
 
-  let createAnimationList = function(count) {
+  let createAnimationList = function(count, v3Sources = false) {
     let orderedKeys = [];
     let propsByKey = {};
     let baseKey = 'animation';
@@ -216,28 +216,7 @@ describe('animationList', function() {
 
       propsByKey[key] = {
         name: key,
-        sourceUrl: null,
-        frameSize: {x: 100, y: 100},
-        frameCount: 1,
-        looping: true,
-        frameDelay: 4,
-        version: null
-      };
-    }
-    return {orderedKeys: orderedKeys, propsByKey: propsByKey};
-  };
-
-  let createAnimationListToMigrate = function(count) {
-    let orderedKeys = [];
-    let propsByKey = {};
-    let baseKey = 'animation';
-    for (let i = 1; i <= count; i++) {
-      let key = baseKey + '_' + i;
-      orderedKeys.push(key);
-
-      propsByKey[key] = {
-        name: key,
-        sourceUrl: 'source/v3/url',
+        sourceUrl: v3Sources ? 'source/v3/url' : null,
         frameSize: {x: 100, y: 100},
         frameCount: 1,
         looping: true,
@@ -251,7 +230,7 @@ describe('animationList', function() {
   describe('action: set initial animationList', function() {
     let server, store;
     beforeEach(function() {
-      project.getCurrentId.returns('');
+      project.getCurrentId.returns('123');
       server = sinon.fakeServer.create();
       server.respondWith('imageBody');
       store = createStore(
@@ -325,7 +304,7 @@ describe('animationList', function() {
     });
 
     it('when animationList has migratable animations, check that animation is substituted', function() {
-      let animationList = createAnimationListToMigrate(2);
+      let animationList = createAnimationList(2, true);
       let defaultSprites = createAnimationList(2);
       defaultSprites.propsByKey['animation_1'].sourceUrl = 'cat';
 
