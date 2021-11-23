@@ -11,6 +11,11 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-11-22 19:56:31 UTC",
+    "published_state": "pilot",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csp1-pilot"
     }
