@@ -10,7 +10,8 @@ import i18n from '@cdo/locale';
 import LessonLockDialog from '@cdo/apps/code-studio/components/progress/LessonLockDialog';
 import {
   openLockDialog,
-  closeLockDialog
+  closeLockDialog,
+  refetchSectionLockStatus
 } from '@cdo/apps/code-studio/lessonLockRedux';
 import {lessonType} from './progressTypes';
 
@@ -23,11 +24,18 @@ class LessonLock extends React.Component {
     sectionsAreLoaded: PropTypes.bool.isRequired,
     saving: PropTypes.bool.isRequired,
     openLockDialog: PropTypes.func.isRequired,
-    closeLockDialog: PropTypes.func.isRequired
+    closeLockDialog: PropTypes.func.isRequired,
+    refetchSectionLockStatus: PropTypes.func.isRequired
   };
 
   openLockDialog = () => {
-    const {openLockDialog, sectionId, lesson} = this.props;
+    const {
+      openLockDialog,
+      sectionId,
+      lesson,
+      refetchSectionLockStatus
+    } = this.props;
+    refetchSectionLockStatus(sectionId);
     openLockDialog(sectionId, lesson.id);
   };
 
@@ -78,5 +86,5 @@ export default connect(
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
     saving: state.lessonLock.saving
   }),
-  {openLockDialog, closeLockDialog}
+  {openLockDialog, closeLockDialog, refetchSectionLockStatus}
 )(LessonLock);
