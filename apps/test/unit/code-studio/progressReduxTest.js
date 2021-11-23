@@ -391,12 +391,12 @@ describe('progressReduxTest', () => {
     // stuff like updating query param. We just want to test the core action
     // it ultimately dispatches.
     describe('setViewType', () => {
-      it('toggles to detail view when setting viewAs to instructor', () => {
+      it('toggles to detail view when setting viewAs to Teacher', () => {
         const state = {
           ...initialState,
           isSummaryView: true
         };
-        const nextState = reducer(state, setViewType(ViewType.Instructor));
+        const nextState = reducer(state, setViewType(ViewType.Teacher));
         assert.strictEqual(nextState.isSummaryView, false);
       });
 
@@ -406,7 +406,7 @@ describe('progressReduxTest', () => {
           studentDefaultsSummaryView: true,
           isSummaryView: false
         };
-        const nextState = reducer(state, setViewType(ViewType.Instructor));
+        const nextState = reducer(state, setViewType(ViewType.Teacher));
         assert.strictEqual(nextState.isSummaryView, false);
       });
 
@@ -416,7 +416,7 @@ describe('progressReduxTest', () => {
           studentDefaultsSummaryView: false,
           isSummaryView: true
         };
-        const nextState = reducer(state, setViewType(ViewType.Instructor));
+        const nextState = reducer(state, setViewType(ViewType.Teacher));
         assert.strictEqual(nextState.isSummaryView, false);
       });
     });
@@ -1377,6 +1377,7 @@ describe('progressReduxTest', () => {
         'progress/CLEAR_RESULTS',
         'verifiedTeacher/SET_VERIFIED',
         'progress/SET_IS_SUMMARY_VIEW',
+        'progress/SHOW_TEACHER_INFO',
         'progress/UPDATE_FOCUS_AREAS',
         'lessonLock/AUTHORIZE_LOCKABLE',
         'progress/SET_UNIT_COMPLETED',

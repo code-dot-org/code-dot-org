@@ -140,9 +140,7 @@ class CourseOverview extends Component {
     } = this.props;
 
     const showNotification =
-      viewAs === ViewType.Instructor &&
-      !isVerifiedTeacher &&
-      hasVerifiedResources;
+      viewAs === ViewType.Teacher && !isVerifiedTeacher && hasVerifiedResources;
 
     // Only display viewable versions in course version dropdown.
     const filteredVersions = versions.filter(version => version.canViewVersion);
@@ -211,7 +209,7 @@ class CourseOverview extends Component {
           style={styles.description}
           openExternalLinksInNewTab={true}
           markdown={
-            viewAs === ViewType.Participant
+            viewAs === ViewType.Student
               ? descriptionStudent
               : descriptionTeacher
           }
@@ -227,7 +225,7 @@ class CourseOverview extends Component {
             studentResources={studentResources}
             showAssignButton={showAssignButton}
             useMigratedResources={useMigratedResources}
-            isTeacher={viewAs === ViewType.Instructor}
+            isTeacher={viewAs === ViewType.Teacher}
           />
         </div>
         {scripts.map((script, index) => (

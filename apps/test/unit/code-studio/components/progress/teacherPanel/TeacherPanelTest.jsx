@@ -22,7 +22,7 @@ const DEFAULT_PROPS = {
   selectUser: () => {},
   unitName: 'A unit',
   pageType: pageTypes.level,
-  viewAs: ViewType.Participant,
+  viewAs: ViewType.Student,
   hasSections: false,
   sectionsAreLoaded: false,
   selectedSection: null,
@@ -66,14 +66,14 @@ describe('TeacherPanel', () => {
   });
 
   describe('on unit page', () => {
-    it('initial view as participant has teacher panel header and view toggle', () => {
-      const wrapper = setUp({viewAs: ViewType.Participant});
+    it('initial view as student has teacher panel header and view toggle', () => {
+      const wrapper = setUp({viewAs: ViewType.Student});
       expect(wrapper.contains(i18n.teacherPanel())).to.be.true;
       expect(wrapper.find(ViewAsToggle)).to.have.length(1);
     });
 
-    it('initial view as instructor has teacher panel header and view toggle', () => {
-      const wrapper = setUp({viewAs: ViewType.Instructor});
+    it('initial view as teacher has teacher panel header and view toggle', () => {
+      const wrapper = setUp({viewAs: ViewType.Teacher});
       expect(wrapper.contains(i18n.teacherPanel())).to.be.true;
       expect(wrapper.find(ViewAsToggle)).to.have.length(1);
     });
@@ -114,9 +114,9 @@ describe('TeacherPanel', () => {
     expect(wrapper.contains(i18n.teacherDashboard())).to.be.true;
   });
 
-  it('shows section selection instructions if viewing as a instructor, and has sections and lockable lessons', () => {
+  it('shows section selection instructions if viewing as a teacher, and has sections and lockable lessons', () => {
     const wrapper = setUp({
-      viewAs: ViewType.Instructor,
+      viewAs: ViewType.Teacher,
       unitHasLockableLessons: true,
       hasSections: true
     });
@@ -125,7 +125,7 @@ describe('TeacherPanel', () => {
 
   it('adds a warning if there are also unlocked lessons', () => {
     const wrapper = setUp({
-      viewAs: ViewType.Instructor,
+      viewAs: ViewType.Teacher,
       unitHasLockableLessons: true,
       hasSections: true,
       unlockedLessonNames: ['lesson1', 'lesson2']
@@ -138,25 +138,25 @@ describe('TeacherPanel', () => {
   });
 
   describe('StudentTable', () => {
-    it('displays StudentTable for instructor with students', () => {
+    it('displays StudentTable for teacher with students', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Instructor,
+        viewAs: ViewType.Teacher,
         students: students
       });
       expect(wrapper.find(StudentTable)).to.have.length(1);
     });
 
-    it('does not display StudentTable for instructor with no students', () => {
+    it('does not display StudentTable for teacher with no students', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Instructor,
+        viewAs: ViewType.Teacher,
         students: []
       });
       expect(wrapper.find(StudentTable)).to.have.length(0);
     });
 
-    it('does not display StudentTable for view page as participant', () => {
+    it('does not display StudentTable for view page as student', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Participant,
+        viewAs: ViewType.Student,
         students: students
       });
       expect(wrapper.find(StudentTable)).to.have.length(0);
@@ -164,13 +164,13 @@ describe('TeacherPanel', () => {
 
     it('calls selectUser when user is clicked with isAsync true when on overview page', () => {
       const store = createStore(combineReducers({viewAs}), {
-        viewAs: ViewType.Instructor
+        viewAs: ViewType.Teacher
       });
 
       const selectUserStub = sinon.stub();
       const overrideProps = {
         selectUser: selectUserStub,
-        viewAs: ViewType.Instructor,
+        viewAs: ViewType.Teacher,
         students: students,
         pageType: pageTypes.scriptOverview
       };
@@ -190,13 +190,13 @@ describe('TeacherPanel', () => {
 
     it('calls selectUser when user is clicked with isAsync false when on level page', () => {
       const store = createStore(combineReducers({viewAs}), {
-        viewAs: ViewType.Instructor
+        viewAs: ViewType.Teacher
       });
 
       const selectUserStub = sinon.stub();
       const overrideProps = {
         selectUser: selectUserStub,
-        viewAs: ViewType.Instructor,
+        viewAs: ViewType.Teacher,
         students: students,
         pageType: pageTypes.level
       };
@@ -217,7 +217,7 @@ describe('TeacherPanel', () => {
   describe('SelectedStudentInfo', () => {
     it('on unit does not display SelectedStudentInfo', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Instructor,
+        viewAs: ViewType.Teacher,
         students: students,
         pageType: pageTypes.scriptOverview
       });
@@ -232,7 +232,7 @@ describe('TeacherPanel', () => {
         .returns('1');
 
       const wrapper = setUp({
-        viewAs: ViewType.Instructor,
+        viewAs: ViewType.Teacher,
         students: students,
         teacherId: 5
       });
@@ -247,9 +247,9 @@ describe('TeacherPanel', () => {
   });
 
   describe('Example Solutions', () => {
-    it('does not display example solutions if the viewType is participant', () => {
+    it('does not display example solutions if the viewType is student', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Participant,
+        viewAs: ViewType.Student,
         exampleSolutions: [
           'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
         ]
@@ -259,7 +259,7 @@ describe('TeacherPanel', () => {
 
     it('displays example solution for level with one example solution', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Instructor,
+        viewAs: ViewType.Teacher,
         students: students,
         exampleSolutions: [
           'https://studio.code.org/projects/applab/8cik_q8RCK57-Zv4Xeot_Q/view'
@@ -271,7 +271,7 @@ describe('TeacherPanel', () => {
 
     it('does not display example solution for level with no example solution', () => {
       const wrapper = setUp({
-        viewAs: ViewType.Instructor,
+        viewAs: ViewType.Teacher,
         students: students,
         exampleSolutions: null
       });

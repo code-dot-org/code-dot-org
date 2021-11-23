@@ -1094,7 +1094,6 @@ bg:
           EFFECT:
             '"burst"': пръсва
             '"rain"': дъжд
-            '"spiral"': спирала
       Poetry_setBackgroundEffect:
         options:
           EFFECT:

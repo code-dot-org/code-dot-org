@@ -38,7 +38,7 @@ export class TeacherFeedback extends Component {
     latestFeedback: teacherFeedbackShape,
     token: PropTypes.string,
     //Provided by Redux
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     verifiedTeacher: PropTypes.bool,
     selectedSectionId: PropTypes.string,
     updateUserProgress: PropTypes.func.isRequired,
@@ -265,12 +265,12 @@ export class TeacherFeedback extends Component {
       ? latestFeedback.comment
       : placeholderWarning;
 
-    // The comment section (review state, comment and status) is only displayed
-    // if it's editable or if the participant is viewing their feedback.
+    // The comment section (reivew state, comment and status) is only displayed
+    // if it's editable or if the student is viewing their feedback.
     const displayCommentSection =
-      isEditable || (viewAs === ViewType.Participant && !!latestFeedback);
+      isEditable || (viewAs === ViewType.Student && !!latestFeedback);
 
-    const displayComment = !!comment || viewAs === ViewType.Instructor;
+    const displayComment = !!comment || viewAs === ViewType.Teacher;
 
     if (!visible) {
       return null;
@@ -291,9 +291,9 @@ export class TeacherFeedback extends Component {
         )}
         {displayCommentSection && (
           <div style={styles.commentAndFooter}>
-            {viewAs === ViewType.Instructor &&
+            {viewAs === ViewType.Teacher &&
               this.renderCommentAreaHeaderForTeacher()}
-            {viewAs === ViewType.Participant &&
+            {viewAs === ViewType.Student &&
               this.renderCommentAreaHeaderForStudent()}
             {displayComment && (
               <Comment
@@ -304,8 +304,7 @@ export class TeacherFeedback extends Component {
               />
             )}
             <div style={styles.footer}>
-              {viewAs === ViewType.Instructor &&
-                this.renderSubmitFeedbackButton()}
+              {viewAs === ViewType.Teacher && this.renderSubmitFeedbackButton()}
               {!!latestFeedback && (
                 <FeedbackStatus
                   viewAs={viewAs}

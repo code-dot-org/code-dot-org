@@ -1,5 +1,5 @@
 import {assert} from 'chai';
-import sinon, {stub} from 'sinon';
+import {stub} from 'sinon';
 import reducer, {
   ViewType,
   changeViewType
@@ -12,7 +12,6 @@ import {
 } from '@cdo/apps/redux';
 import * as appsUtils from '@cdo/apps/utils';
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
-import {expect} from '../../util/reconfiguredChai';
 
 describe('viewAs redux', () => {
   // Create a store so that we get the benefits of our thunk middleware
@@ -21,47 +20,24 @@ describe('viewAs redux', () => {
     stubRedux();
     registerReducers({viewAs: reducer});
     store = getStore();
-
-    sinon.stub(codeStudioUtils, 'updateQueryParam');
   });
 
   afterEach(() => {
-    codeStudioUtils.updateQueryParam.restore();
     restoreRedux();
   });
 
-  it('can set as instructor', () => {
-    const action = changeViewType(ViewType.Instructor);
+  it('can set as teacher', () => {
+    const action = changeViewType(ViewType.Teacher);
     store.dispatch(action);
     const nextState = store.getState();
-    assert.equal(nextState.viewAs, ViewType.Instructor);
+    assert.equal(nextState.viewAs, ViewType.Teacher);
   });
 
-  it('setting teacher redirects to instructor', () => {
-    const action = changeViewType('Teacher');
+  it('can set as student', () => {
+    const action = changeViewType(ViewType.Student);
     store.dispatch(action);
     const nextState = store.getState();
-    assert.equal(nextState.viewAs, ViewType.Instructor);
-    expect(
-      codeStudioUtils.updateQueryParam
-    ).to.have.been.calledOnce.and.calledWith('viewAs', 'Instructor');
-  });
-
-  it('can set as participant', () => {
-    const action = changeViewType(ViewType.Participant);
-    store.dispatch(action);
-    const nextState = store.getState();
-    assert.equal(nextState.viewAs, ViewType.Participant);
-  });
-
-  it('setting student redirects to participant', () => {
-    const action = changeViewType('Student');
-    store.dispatch(action);
-    const nextState = store.getState();
-    assert.equal(nextState.viewAs, ViewType.Participant);
-    expect(
-      codeStudioUtils.updateQueryParam
-    ).to.have.been.calledOnce.and.calledWith('viewAs', 'Participant');
+    assert.equal(nextState.viewAs, ViewType.Student);
   });
 
   it('does not allow for invalid view types', () => {
@@ -75,15 +51,17 @@ describe('viewAs redux', () => {
     before(() => {
       stub(appsUtils, 'reload');
       stub(codeStudioUtils, 'queryParams').callsFake(() => 'fake_user_id');
+      stub(codeStudioUtils, 'updateQueryParam');
     });
 
     after(() => {
       appsUtils.reload.restore();
       codeStudioUtils.queryParams.restore();
+      codeStudioUtils.updateQueryParam.restore();
     });
 
-    it('changes the window location when changing to particpant with user_id', () => {
-      const action = changeViewType(ViewType.Participant);
+    it('changes the window location when changing to Student with user_id', () => {
+      const action = changeViewType(ViewType.Student);
       store.dispatch(action);
       assert(codeStudioUtils.queryParams.calledWith('user_id'));
       assert(codeStudioUtils.updateQueryParam.calledWith('user_id', undefined));

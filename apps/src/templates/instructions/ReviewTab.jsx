@@ -433,7 +433,7 @@ export const UnconnectedReviewTab = ReviewTab;
 export default connect(state => ({
   codeReviewEnabled: state.sectionData.section.codeReviewEnabled,
   viewAsCodeReviewer: state.pageConstants.isCodeReviewing,
-  viewAsTeacher: state.viewAs === ViewType.Instructor,
+  viewAsTeacher: state.viewAs === ViewType.Teacher,
   channelId: state.pageConstants.channelId,
   serverLevelId: state.pageConstants.serverLevelId,
   serverScriptId: state.pageConstants.serverScriptId

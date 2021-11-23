@@ -1,5 +1,5 @@
 ---
-title: Návod na používanie Hodiny kódu
+title: Hour of Code How-to Guide
 ---
 
 {{ signup_button }}

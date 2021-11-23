@@ -14,6 +14,7 @@
       ],
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-18/pre-express/{LESSON}",
       "curriculum_umbrella": "CSF",
+      "family_name": "pre-express",
       "has_lesson_plan": true,
       "hideable_lessons": true,
       "is_course": true,
@@ -41,11 +42,9 @@
     },
     "new_name": null,
     "family_name": "pre-express",
-    "serialized_at": "2021-11-19 20:49:15 UTC",
+    "serialized_at": "2021-10-25 22:53:50 UTC",
     "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "pre-express-2018"
     }

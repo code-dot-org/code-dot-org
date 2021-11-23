@@ -6,9 +6,9 @@ title: Ресурсы
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Популяризируйте Час кода
+# Содействовие с Час кода
 
-### Найдите все ресурсы, которые понадобятся вам для привлечения внимания к Часу кода. Не уверены, с чего начать? Начните с нашего руководства [как провести Час кода в своем регионе]({{ how_to_url }})!
+### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code]({{ how_to_url }})!
 
 * * *
 
@@ -18,101 +18,101 @@ title: Ресурсы
 
 ## Повесьте эти плакаты у себя в школе
 
-Появились новые постеры с Малалой, Стефеном Карри, Шакирой и другими! В этом году в каждом комплекте также будет 6 постеров и 126 стикеров "Я прошел Час кода". Количество ограничено, поэтому [закажите ваши постеры](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) как можно скорее. Для того чтобы напечатать постеры самостоятельно, просто нажмите на изображение ниже и сохраните версию для печати.
+A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so [order your posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) soon. To print on your own, simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 
-* Вам нужны наши постеры прошлых лет? [Вы найдете их здесь]({{ promote/previous_posters_url }})!
+* Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
 
 ## Разместите в социальных сетях:
 
-[![изображение](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![изображение](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![изображение](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![изображение](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![image](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![image](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 <a id="logo"></a>
 
 ## Используйте логотип Часа кода, чтобы распространить его
 
-[![изображение]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![изображение]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
+[![image]({{ hoc_logo_fit_200 }})]({{ hoc_logo }}) [![image]({{ hdc_logo_fit_200 }})]({{ hdc_logo }})
 
 [Скачать бесплатную версию](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" и "Hora del Código" являются торговыми марками. Мы не хотим препятствовать их использованию, но хотели бы быть уверены, что их использование соответствует некоторым ограничениям:**
+**"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
 
-1. Любые ссылки на "Час кода", "Hour of Code" или "Hora del Código" должны использоваться не как ваше собственное название, а как отсылка к Часу кода как общественному движению.
+1. Any reference to "Hour of Code" or "Hora del Código" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement.
 
 <ul style="margin-top: 0px">
   <li>
-    <strong>Пример правильного использования</strong>: "Участвуйте в Часе кода™ на ВАША-КОМПАНИЯ.com."
+    <strong>Good example</strong>: "Participate in the Hour of Code™ at YOUR-COMPANY.com."
   </li>
   <li>
-    <strong>Пример неправильного использования</strong>: "Попробуйте Час кода от ВАШЕЙ КОМПАНИИ".
+    <strong>Bad example</strong>: "Try Hour of Code by YOUR-COMPANY."
   </li>
 </ul>
 
-1. Используйте надстрочный знак "TM" в самых заметных местах, где вы упоминаете "Час кода" и надстрочный знак "Ⓡ" в самых заметных местах, где вы упоминаете "Hora del Código" — на вашем веб-сайте и в описании приложений.
-2. Укажите на вашей странице (или в футер), включая ссылки на CSEdWeek и сайты [Code.org]({{ codeorg_link }}), следующий текст:
+1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
+2. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
     
-    *“The 'Hour of Code™'/'Hora del Código®' — это общенациональная инициатива Недели образования информатике [csedweek.org] and Code.org [code.org], направленная на вовлечение миллионов учеников в один час информатики и программирования."*
+    *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-3. Не используйте "Hour of Code" или "Hora del Código" в названиях приложений.
+3. No use of "Hour of Code" or "Hora del Código" in app names.
 
 <a id="stickers"></a>
 
 ## Печатать эти наклейки, чтобы дать вашим ученикам
 
-(Стикеры имеют диаметр 1", по 63 шт. на лист) <br />
+(Stickers are 1" diameter, 63 per sheet) <br />
 
-[![изображение](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
+[![image](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
-## Приглашайте людей из вашего сообщества на ваш Час кода и продвигайте ваше мероприятие через электронную почту
+## Invite people in your community to your Hour of Code and promote your event through email
 
-### Узнайте [больше информации и посмотрите список языков, которые вы можете использовать]({{ promote/stats_url }}), рассказывая о Часе кода.
+### Find [more information and language you can use]({{ promote/stats_url }}) when talking about the Hour of Code.
 
 * * *
 
 <a id="email"></a>
 
-### Попросите вашу школу, работодателя и друзей зарегистрироваться:
+### Ask your school, employer, or friends to sign up:
 
-**Тема письма:** Присоединяйтесь ко мне и более 100 миллионов участников Часа кода <br />
+**Subject line:** Join me and over 100 million students for an Hour of Code <br />
 
-Компьютеры есть везде, они меняют каждую отрасль на планете. But only 51% of all high schools teach computer science. Но есть и хорошие новости: мы можем это изменить! Если вы слышали о прошлогоднем "Часе Кода", то вы возможно знаете, что он вошел в историю. Час Кода посетили более 100 миллиона учащихся.
+Компьютеры есть везде, они меняют каждую отрасль на планете. But only 47% of all high schools teach computer science. Good news is, we’re on our way to change this! Если вы слышали о прошлогоднем "Часе Кода", то вы возможно знаете, что он вошел в историю. Час Кода посетили более 100 миллиона учащихся.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Более 100 партнеров собрались вместе, чтобы поддержать это движение. Каждый Apple Store мира проводил Час кода, а такие мировые лидеры, как Президент Обама и Канадский премьер-министр Джастин Трюдо в ходе кампании написали свои первые строки кода.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Более 100 партнеров собрались вместе, чтобы поддержать это движение. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-Давайте достигнем более высоких показателей в этом году. Прошу вас принять участие в Часе кода {{ campaign_date/year }}. Примите, пожалуйста, участие в мероприятиях Часа кода во время Недели обучения информатике, {{ campaign_date/full }}.
+This year, let's make it even bigger. I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
 
-Выступите с речью. Организуйте мероприятие. Предложите местной школе принять участие. Или попробуйте сами поучаствовать в "Часе Кода" — понимание основ программирования может быть интересно всем.
+Get the word out. Host an event. Ask a local school to sign up. Or try the Hour of Code yourself—everyone can benefit from learning the basics.
 
-Начните на http://hourofcode.com/{{ country_language }} <br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
 <a id="help-schools"></a>
 
-### Волонтеры в школе:
+### Volunteer at a school:
 
-#### [Получите здесь больше ресурсов и информации о волонтерах в школах]({{ how_to_volunteers_url }}).
+#### [Find more resources and information about volunteering in schools here]({{ how_to_volunteers_url }}).
 
-**Тема:** Мы можем помочь вам с организацией Часа кода?
+**Subject line:** Can we help you host an Hour of Code?
 
-В период {{ campaign_date/short }} десять процентов обучающихся со всего мира примут участие в Неделе обучения информатике, посетив Час кода в своей школе. Это возможность для каждого ученика узнать, как работают окружающие нас технологии.
+Between {{ campaign_date/short }}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
 
-[Наша организация/Мое имя] хотел(а) бы помочь [название школы] в организации мероприятия Часа кода. Мы можем помочь учителям провести Час кода в классах (для этого даже не нужны компьютеры!), а если вы хотели бы провести встречу в школе, мы можем предложить вам спикера, который расскажет о том, как работают технологии, и в чем заключается работа инженера по программному обеспечению.
+[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
 
-Ученики создадут собственные приложения или игры, которые они смогут показать своим родителям, а также получат сертификаты Часа кода, которые смогут забрать домой. И, кроме прочего, это очень весело! В ходе интерактивных практических занятий обучающиеся самым доступным образом получат навыки вычислительного мышления.
+The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
 
-Компьютеры есть везде, они меняют каждую отрасль на планете. But only 51% of all high schools teach computer science. Но есть и хорошие новости: мы можем это изменить! Если вы уже что-то слышали о Часе кода, вы, возможно, знаете, что это событие привлекло более 100 миллионов учеников со всего мира. Даже мировые лидеры, такие как Президент Обама и Канадский премьер-министр Джастин Трюдо, написали в рамках кампании свои первые строки кода.
+Компьютеры есть везде, они меняют каждую отрасль на планете. But only 47% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-Вы можете прочитать больше о событии на http://hourofcode.com. Вы также можете запланировать время для обсуждения того, как [название школы] может принять участие в этом мероприятии. <br />
+You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
 
 * * *
 
@@ -120,19 +120,19 @@ With the Hour of Code, computer science has been on homepages of Google, MSN, Ya
 
 ### Расскажите родителям о событии в вашей школе:
 
-**Тема:** Наши ученики меняют будущее благодаря Часу кода
+**Subject line:** Our students are changing the future with an Hour of Code
 
 Уважаемые родители,
 
-Мы живём в мире, окружённом технологиями. И мы знаем, что, какую бы область обучения ни выбрали наши ученики, их способность добиваться успеха будет всё больше зависеть от понимания того, как работает технология.
+Мы живём в мире, окружённом технологиями. And we know that whatever field our students choose to go into as adults, their ability to succeed will increasingly depend on understanding how technology works.
 
-But only a fraction of us are learning **how** technology works. Only 51% of all high schools teach computer science.
+But only a tiny fraction of us are learning **how** technology works. Only 47% of all high schools teach computer science.
 
-Вот почему вся наша школа присоединяется к крупнейшему в истории обучения событию: Часу Кода, который проводится в рамках Недели обучения информатике ({{ campaign_date/full }}). В Часе Кода приняли участие уже более 100 миллионов учеников во всем мире. Час кода утверждает, что [ИМЯ ШКОЛЫ] готова к обучению фундаментальным навыкам XXI века. Чтобы продолжить привлекать учеников к программированию, мы хотим сделать наше мероприятие "Час Программирования" огромным. Я призываю вас стать добровольцем, выйти на местные СМИ, делиться новостями в социальных сетях и подумать о том, чтобы организовать дополнительные мероприятия Часа кода в сообществе.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. Чтобы продолжить привлекать учеников к программированию, мы хотим сделать наше мероприятие "Час Программирования" огромным. I encourage you to volunteer, reach out to local media, share the news on social media channels and consider hosting additional Hour of Code events in the community.
 
 Это шанс изменить будущее образования в [НАЗВАНИЕ ГОРОДА].
 
-Посетите сайт http://hourofcode.com/{{ country_language }} и помогите нам распространить эту информацию.<br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 
@@ -140,15 +140,15 @@ But only a fraction of us are learning **how** technology works. Only 51% of all
 
 ### Пригласите СМИ на ваше мероприятие:
 
-#### [Используйте наш комплект материалов для прессы, чтобы узнать больше о том, как пригласить СМИ на наше мероприятие.]({{ promote/press_kit_url }})
+#### [Check out our press kit for more information on inviting media to your event.]({{ promote/press_kit_url }})
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 51% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Но есть и хорошие новости: мы можем это изменить.
+Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Но есть и хорошие новости: мы можем это изменить.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Более 100 партнеров собрались вместе, чтобы поддержать это движение. В каждом магазине Apple в мире прошел Час кода. Even President Obama wrote his first line of code as part of the campaign.
 
-Вот почему каждый из [число X] учащихся [НАЗВАНИЕ ШКОЛЫ] принимает участие в самом крупном в истории учебном мероприятии: Часе кода, проводимом во время Недели обучения информатике (с 6 по 12 декабря).
+Вот почему каждый из [число X] учащихся [НАИМЕНОВАНИЕ ШКОЛЫ] принимает участие в самом крупном в истории учебном мероприятии: Часе кода, проводимом во время Недели образования в области компьютерных наук (с 3 по 9 декабря).
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
@@ -164,19 +164,19 @@ I look forward to being in touch. <br />
 
 ### Пригласите местного политика на мероприятие в вашей школе:
 
-#### [Нужно больше информации? Познакомьтесь с ресурсами, которые можно использовать для приглашения политиков на ваше мероприятие]({{ how_to_public_officials_url }}).
+#### [Need more info? Take a look at our resources for inviting politicians to attend your event]({{ how_to_public_officials_url }}).
 
-**Тема**: Присоединяйтесь к нашей школе - мы меняем будущее благодаря Часу кода
+**Subject line**: Join our school as we change the future with an Hour of Code
 
 Уважаемый [ФАМИЛИЯ Мэра/Губернатора/Депутата]:
 
-Знаете ли вы, что программирование является главным источником зарплат в США? В стране открыто 500 000 вакансий в области информатики, но в прошлом году всего лишь 42 969 выпускников вышли на рынок труда.
+Did you know that computing is the #1 source of wages in the U.S.? There are more than 500,000 computing jobs open nationwide, but last year only 42,969 computer science students graduated into the workforce.
 
-Сегодня информатика является основополагающей для всех отраслей, но при этом много школ до сих пор не преподают ее. В нашей школе [НАЗВАНИЕ ШКОЛЫ] мы пытаемся изменить ситуацию.
+Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-Вот почему вся наша школа присоединяется к крупнейшему в истории обучения событию: Часу Кода, который проводится в рамках Недели обучения информатике ({{ campaign_date/full }}). В Часе Кода приняли участие уже более 100 миллионов учеников во всем мире.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). More than 100 million students worldwide have already tried an Hour of Code.
 
-Мы приглашаем Вас принять участие в нашем мероприятии под названием "Час кода" и выступить на нашем стартовом собрании. Оно будет проходить [ЧИСЛО, ВРЕМЯ, МЕСТО] и даст понять, что в [Название области или города] готовы обучать важным навыкам XXI века. Мы хотим быть уверенными в том, что наши ученики находятся в передних рядах создания технологий будущего, а не только их потребления.
+I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. We want to ensure that our students are on the forefront of creating technology of the future—not just consuming it.
 
 Пожалуйста, свяжитесь со мной по [НОМЕР ТЕЛЕФОНА ИЛИ АДРЕС ЭЛ. ПОЧТЫ]. С нетерпением жду Ваше сообщение.
 

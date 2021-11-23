@@ -13,7 +13,7 @@ import {
 
 const defaultProps = {
   announcements: [],
-  viewAs: ViewType.Instructor,
+  viewAs: ViewType.Teacher,
   width: 1000
 };
 
@@ -28,7 +28,7 @@ describe('Announcements', () => {
     assert.equal(wrapper.find(Notification).length, 0);
   });
 
-  it('displays old teacher announcement for instructor', () => {
+  it('displays old teacher announcement for teacher', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
@@ -38,18 +38,18 @@ describe('Announcements', () => {
     assert.equal(wrapper.find(Notification).length, 1);
   });
 
-  it('does not display old teacher announcement for participant', () => {
+  it('does not display old teacher announcement for student', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
         announcements={[fakeOldTeacherAnnouncement]}
-        viewAs={ViewType.Participant}
+        viewAs={ViewType.Student}
       />
     );
     assert.equal(wrapper.find(Notification).length, 0);
   });
 
-  it('displays new teacher announcement for instructor', () => {
+  it('displays new teacher announcement for teacher', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
@@ -59,7 +59,7 @@ describe('Announcements', () => {
     assert.equal(wrapper.find(Notification).length, 1);
   });
 
-  it('has only instructor announcements', () => {
+  it('has only teacher announcements', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
@@ -73,22 +73,22 @@ describe('Announcements', () => {
     assert.equal(wrapper.find(Notification).length, 2);
   });
 
-  it('has participant announcement if necessary', () => {
+  it('has student announcement if necessary', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
-        viewAs={ViewType.Participant}
+        viewAs={ViewType.Student}
         announcements={[fakeStudentAnnouncement]}
       />
     );
     assert.equal(wrapper.find(Notification).length, 1);
   });
 
-  it('has all participant announcements but no instructor announcements if necessary', () => {
+  it('has all student announcements but no teacher announcements if necessary', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}
-        viewAs={ViewType.Participant}
+        viewAs={ViewType.Student}
         announcements={[
           fakeStudentAnnouncement,
           fakeTeacherAndStudentAnnouncement,
@@ -100,7 +100,7 @@ describe('Announcements', () => {
     assert.equal(wrapper.find(Notification).length, 2);
   });
 
-  it('displays instructor announcement with analytics data', () => {
+  it('displays teacher announcement with analytics data', () => {
     const wrapper = shallow(
       <Announcements
         {...defaultProps}

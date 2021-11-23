@@ -24,7 +24,7 @@ const defaultProps = {
   scriptId: 42,
   scriptName: 'test-script',
   unitTitle: 'Unit test script title',
-  viewAs: ViewType.Participant,
+  viewAs: ViewType.Student,
   isRtl: false,
   teacherResources: [],
   studentResources: [],
@@ -33,11 +33,11 @@ const defaultProps = {
 };
 
 describe('UnitOverviewTopRow', () => {
-  it('renders "Try Now" for participant', () => {
+  it('renders "Try Now" for student', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
-        viewAs={ViewType.Participant}
+        viewAs={ViewType.Student}
         unitProgress={NOT_STARTED}
       />
     );
@@ -71,11 +71,11 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders "Continue" for participant', () => {
+  it('renders "Continue" for student', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
-        viewAs={ViewType.Participant}
+        viewAs={ViewType.Student}
         unitProgress={IN_PROGRESS}
       />
     );
@@ -92,11 +92,11 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders "Print Certificate" for participant', () => {
+  it('renders "Print Certificate" for student', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
-        viewAs={ViewType.Participant}
+        viewAs={ViewType.Student}
         unitProgress={COMPLETED}
       />
     );
@@ -113,9 +113,9 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('renders SectionAssigner for instructor', () => {
+  it('renders SectionAssigner for teacher', () => {
     const wrapper = shallow(
-      <UnitOverviewTopRow {...defaultProps} viewAs={ViewType.Instructor} />
+      <UnitOverviewTopRow {...defaultProps} viewAs={ViewType.Teacher} />
     );
 
     expect(
@@ -138,12 +138,12 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  describe('instructor resources', () => {
-    it('renders resources for instructor', () => {
+  describe('teacher resources', () => {
+    it('renders resources for teacher', () => {
       const wrapper = shallow(
         <UnitOverviewTopRow
           {...defaultProps}
-          viewAs={ViewType.Instructor}
+          viewAs={ViewType.Teacher}
           teacherResources={[
             {
               type: ResourceType.curriculum,
@@ -175,11 +175,11 @@ describe('UnitOverviewTopRow', () => {
       ).to.be.true;
     });
 
-    it('renders migrated resources for instructor on a migrated script', () => {
+    it('renders migrated resources for teacher on a migrated script', () => {
       const wrapper = shallow(
         <UnitOverviewTopRow
           {...defaultProps}
-          viewAs={ViewType.Instructor}
+          viewAs={ViewType.Teacher}
           isMigrated={true}
           migratedTeacherResources={[
             {
@@ -224,7 +224,7 @@ describe('UnitOverviewTopRow', () => {
       const wrapper = shallow(
         <UnitOverviewTopRow
           {...defaultProps}
-          viewAs={ViewType.Instructor}
+          viewAs={ViewType.Teacher}
           isMigrated={true}
           teacherResources={[
             {
@@ -272,14 +272,14 @@ describe('UnitOverviewTopRow', () => {
     });
   });
 
-  it('renders the unit calendar when showCalendar true for instructor', () => {
+  it('renders the unit calendar when showCalendar true for teacher', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
         showCalendar
         unitCalendarLessons={testLessons}
         weeklyInstructionalMinutes={90}
-        viewAs={ViewType.Instructor}
+        viewAs={ViewType.Teacher}
       />
     );
     expect(
@@ -293,13 +293,13 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.true;
   });
 
-  it('does not render the unit calendar when showCalendar false for instructor', () => {
+  it('does not render the unit calendar when showCalendar false for teacher', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
         unitCalendarLessons={testLessons}
         weeklyInstructionalMinutes={90}
-        viewAs={ViewType.Instructor}
+        viewAs={ViewType.Teacher}
       />
     );
     expect(
@@ -313,14 +313,14 @@ describe('UnitOverviewTopRow', () => {
     ).to.be.false;
   });
 
-  it('does not render the unit calendar for participant', () => {
+  it('does not render the unit calendar for student', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
         showCalendar
         unitCalendarLessons={testLessons}
         weeklyInstructionalMinutes={90}
-        viewAs={ViewType.Participant}
+        viewAs={ViewType.Student}
       />
     );
     expect(
@@ -340,7 +340,7 @@ describe('UnitOverviewTopRow', () => {
         {...defaultProps}
         scriptOverviewPdfUrl="/link/to/script_overview.pdf"
         scriptResourcesPdfUrl="/link/to/script_resources.pdf"
-        viewAs={ViewType.Instructor}
+        viewAs={ViewType.Teacher}
       />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(1);
@@ -358,13 +358,13 @@ describe('UnitOverviewTopRow', () => {
     ]);
   });
 
-  it('does not render printing option dropdown for participants', () => {
+  it('does not render printing option dropdown for students', () => {
     const wrapper = shallow(
       <UnitOverviewTopRow
         {...defaultProps}
         scriptOverviewPdfUrl="/link/to/script_overview.pdf"
         scriptResourcesPdfUrl="/link/to/script_resources.pdf"
-        viewAs={ViewType.Participant}
+        viewAs={ViewType.Student}
       />
     );
     expect(wrapper.find(DropdownButton).length).to.equal(0);

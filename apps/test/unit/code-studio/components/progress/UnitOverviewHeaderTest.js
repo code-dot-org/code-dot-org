@@ -13,7 +13,7 @@ const defaultProps = {
   plcHeaderProps: undefined,
   announcements: [],
   isSignedIn: true,
-  viewAs: ViewType.Instructor,
+  viewAs: ViewType.Teacher,
   isVerifiedTeacher: true,
   hasVerifiedResources: false,
   scriptId: 99,
@@ -61,7 +61,7 @@ describe('UnitOverviewHeader', () => {
     assert.equal(wrapper.find('Announcements').props().announcements.length, 0);
   });
 
-  it('includes a single notification default for non-verified instructors', () => {
+  it('includes a single notification default for non-verified teachers', () => {
     const wrapper = shallow(
       <UnitOverviewHeader
         {...defaultProps}
@@ -74,7 +74,7 @@ describe('UnitOverviewHeader', () => {
     assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
-  it('has non-verified and provided instructor announcements if necessary', () => {
+  it('has non-verified and provided teacher announcements if necessary', () => {
     const wrapper = shallow(
       <UnitOverviewHeader
         {...defaultProps}
@@ -92,13 +92,13 @@ describe('UnitOverviewHeader', () => {
     assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
   });
 
-  it('has participant announcement if viewing as participant', () => {
+  it('has student announcement if viewing as student', () => {
     const wrapper = shallow(
       <UnitOverviewHeader
         {...defaultProps}
         hasVerifiedResources={true}
         isVerifiedTeacher={false}
-        viewAs={ViewType.Participant}
+        viewAs={ViewType.Student}
         announcements={[fakeStudentAnnouncement]}
       />,
       {disableLifecycleMethods: true}
@@ -156,7 +156,7 @@ describe('UnitOverviewHeader', () => {
     assert.equal(true, coursea2018.isSelected);
   });
 
-  it('has correct unit description for instructor', () => {
+  it('has correct unit description for teacher', () => {
     const wrapper = shallow(<UnitOverviewHeader {...defaultProps} />, {
       disableLifecycleMethods: true
     });
@@ -165,9 +165,9 @@ describe('UnitOverviewHeader', () => {
     );
   });
 
-  it('has correct unit description for participant', () => {
+  it('has correct unit description for student', () => {
     const wrapper = shallow(
-      <UnitOverviewHeader {...defaultProps} viewAs={ViewType.Participant} />,
+      <UnitOverviewHeader {...defaultProps} viewAs={ViewType.Student} />,
       {
         disableLifecycleMethods: true
       }

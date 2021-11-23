@@ -1679,9 +1679,7 @@
           "swimming left and right2": "plávať vľavo a vpravo2",
           "moving north2": "posúvať sa na sever2",
           "jittering2": "chvenie2",
-          "patrolling2": "hliadkovať2",
-          "moving with arrow keys2": "posúvanie pomocou  klávesov so šípkami2",
-          "driving with arrow keys2": "ovládanie pomocou  klávesov so šípkami2"
+          "patrolling2": "hliadkovať2"
         },
         "courseF_apps_card": {
           "driving with arrow keys": "ovládanie pomocou šípok",
@@ -1697,8 +1695,7 @@
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
           "spinning right": "točenie vpravo",
-          "spinning left": "točenie vľavo",
-          "blocking movement": "blokovací pohyb"
+          "spinning left": "točenie vľavo"
         },
         "courseF_apps_chatbot": {
           "driving with arrow keys": "ovládanie pomocou šípok",
@@ -1726,10 +1723,7 @@
           "moving north2": "posúvať sa na sever2",
           "jittering2": "chvenie2",
           "moving west2": "posúvať sa na západ2",
-          "patrolling2": "hliadkovať2",
-          "blocking movement": "blokovací pohyb",
-          "moving with arrow keys2": "posúvanie pomocou  klávesov so šípkami2",
-          "driving with arrow keys2": "ovládanie pomocou  klávesov so šípkami2"
+          "patrolling2": "hliadkovať2"
         },
         "courseF_apps_collector": {
           "wandering": "túlať sa",
@@ -1757,10 +1751,7 @@
           "swimming left and right2": "plávať vľavo a vpravo2",
           "moving north2": "posúvať sa na sever2",
           "jittering2": "chvenie2",
-          "patrolling2": "hliadkovať2",
-          "flying west and looping": "let na západ a cyklenie",
-          "moving with arrow keys2": "posúvanie pomocou  klávesov so šípkami2",
-          "driving with arrow keys2": "ovládanie pomocou  klávesov so šípkami2"
+          "patrolling2": "hliadkovať2"
         },
         "courseF_apps_madlib": {
           "wandering": "túlať sa",
@@ -1815,8 +1806,7 @@
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
           "spinning right": "točenie vpravo",
-          "spinning left": "točenie vľavo",
-          "blocking movement": "blokovací pohyb"
+          "spinning left": "točenie vľavo"
         },
         "courseF_editable_chatbot": {
           "driving with arrow keys": "ovládanie pomocou šípok",
@@ -1832,8 +1822,7 @@
           "moving south": "posúvať sa na juh",
           "moving west": "posúvať sa na západ",
           "spinning right": "točenie vpravo",
-          "spinning left": "točenie vľavo",
-          "blocking movement": "blokovací pohyb"
+          "spinning left": "točenie vľavo"
         },
         "courseF_editable_madlib": {
           "wandering": "túlať sa",

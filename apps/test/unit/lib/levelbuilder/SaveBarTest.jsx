@@ -3,25 +3,31 @@ import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import * as utils from '@cdo/apps/utils';
 
 describe('SaveBar', () => {
-  let handleSave;
+  let defaultProps, handleSave, handleView;
   beforeEach(() => {
     handleSave = sinon.spy();
+    handleView = sinon.spy();
+    defaultProps = {
+      isSaving: false,
+      error: null,
+      lastSaved: null,
+      handleSave,
+      handleView
+    };
   });
 
   it('renders default props', () => {
-    const wrapper = shallow(<SaveBar handleSave={handleSave} />);
-    expect(wrapper.find('button').length).to.equal(2); // show button not rendered
+    const wrapper = shallow(<SaveBar {...defaultProps} />);
+    expect(wrapper.find('button').length).to.equal(3);
     expect(wrapper.find('FontAwesome').length).to.equal(0); //spinner isn't showing
   });
 
   it('can save and keep editing', () => {
-    const handleSave = sinon.spy();
-    const wrapper = shallow(<SaveBar handleSave={handleSave} />);
+    const wrapper = shallow(<SaveBar {...defaultProps} />);
 
-    const saveAndKeepEditingButton = wrapper.find('button').at(0);
+    const saveAndKeepEditingButton = wrapper.find('button').at(1);
     expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
       .true;
     saveAndKeepEditingButton.simulate('click');
@@ -30,9 +36,7 @@ describe('SaveBar', () => {
   });
 
   it('shows spinner when isSaving is true', () => {
-    const wrapper = shallow(
-      <SaveBar handleSave={handleSave} isSaving={true} />
-    );
+    const wrapper = shallow(<SaveBar {...defaultProps} isSaving={true} />);
 
     // check the the spinner is showing
     expect(wrapper.find('FontAwesome').length).to.equal(1);
@@ -40,7 +44,7 @@ describe('SaveBar', () => {
 
   it('shows lastSaved when there is no error', () => {
     const wrapper = shallow(
-      <SaveBar handleSave={handleSave} lastSaved={Date.now()} />
+      <SaveBar {...defaultProps} lastSaved={Date.now()} />
     );
 
     expect(wrapper.find('.lastSavedMessage').text()).to.include(
@@ -50,7 +54,7 @@ describe('SaveBar', () => {
 
   it('shows error when props error is set', () => {
     const wrapper = shallow(
-      <SaveBar handleSave={handleSave} error={'There was an error'} />
+      <SaveBar {...defaultProps} error={'There was an error'} />
     );
     expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
     expect(
@@ -59,50 +63,22 @@ describe('SaveBar', () => {
   });
 
   it('can save and close', () => {
-    const handleSave = sinon.spy();
-    const wrapper = shallow(<SaveBar handleSave={handleSave} />);
+    const wrapper = shallow(<SaveBar {...defaultProps} />);
 
-    const saveAndCloseButton = wrapper.find('button').at(1);
+    const saveAndCloseButton = wrapper.find('button').at(2);
     expect(saveAndCloseButton.contains('Save and Close')).to.be.true;
     saveAndCloseButton.simulate('click');
 
     expect(handleSave).to.have.been.calledOnce;
   });
 
-  it('can show with custom handleView, even if path is given', () => {
-    const handleView = sinon.spy();
-    sinon.stub(utils, 'navigateToHref');
-    const wrapper = shallow(
-      <SaveBar
-        handleSave={handleSave}
-        handleView={handleView}
-        pathForShowButton={'/my/path'}
-      />
-    );
+  it('can go to item with show', () => {
+    const wrapper = shallow(<SaveBar {...defaultProps} />);
 
-    const showButton = wrapper.find('button').at(0);
-    expect(showButton.contains('Show')).to.be.true;
-    showButton.simulate('click');
+    const saveAndCloseButton = wrapper.find('button').at(0);
+    expect(saveAndCloseButton.contains('Show')).to.be.true;
+    saveAndCloseButton.simulate('click');
 
-    expect(utils.navigateToHref).not.to.have.been.called;
     expect(handleView).to.have.been.calledOnce;
-
-    utils.navigateToHref.restore();
-  });
-
-  it('can show with custom path', () => {
-    const path = '/my/path';
-    sinon.stub(utils, 'navigateToHref');
-    const wrapper = shallow(
-      <SaveBar handleSave={handleSave} pathForShowButton={path} />
-    );
-
-    const showButton = wrapper.find('button').at(0);
-    expect(showButton.contains('Show')).to.be.true;
-    showButton.simulate('click');
-
-    expect(utils.navigateToHref).to.have.been.calledWith(path);
-
-    utils.navigateToHref.restore();
   });
 });

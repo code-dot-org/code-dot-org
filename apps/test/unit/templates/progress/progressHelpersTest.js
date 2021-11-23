@@ -35,35 +35,35 @@ describe('progressHelpers', () => {
       })
     };
 
-    it('returns false for hidden lessons while viewing as participant', () => {
+    it('returns false for hidden lessons while viewing as student', () => {
       assert.strictEqual(
-        lessonIsVisible(hiddenLesson, state, ViewType.Participant),
+        lessonIsVisible(hiddenLesson, state, ViewType.Student),
         false
       );
     });
 
-    it('returns true for hidden lessons while viewing as an instructor ', () => {
+    it('returns true for hidden lessons while viewing as a teacher', () => {
       assert.strictEqual(
-        lessonIsVisible(hiddenLesson, state, ViewType.Instructor),
+        lessonIsVisible(hiddenLesson, state, ViewType.Teacher),
         true
       );
     });
 
-    it('returns true for non-hidden lessons while viewing as a participant', () => {
+    it('returns true for non-hidden lessons while viewing as a student', () => {
       assert.strictEqual(
-        lessonIsVisible(visibleLesson, state, ViewType.Participant),
+        lessonIsVisible(visibleLesson, state, ViewType.Student),
         true
       );
     });
 
-    it('returns true for non-hidden lessons while viewing as an instructor', () => {
+    it('returns true for non-hidden lessons while viewing as a teacher', () => {
       assert.strictEqual(
-        lessonIsVisible(visibleLesson, state, ViewType.Instructor),
+        lessonIsVisible(visibleLesson, state, ViewType.Teacher),
         true
       );
     });
 
-    it('returns true for a lockable lesson as instructor', () => {
+    it('returns true for a lockable lesson as teacher', () => {
       const localState = {
         ...state,
         lessonLock: {
@@ -71,7 +71,7 @@ describe('progressHelpers', () => {
         }
       };
       assert.strictEqual(
-        lessonIsVisible(lockableLesson, localState, ViewType.Instructor),
+        lessonIsVisible(lockableLesson, localState, ViewType.Teacher),
         true
       );
     });
@@ -101,7 +101,7 @@ describe('progressHelpers', () => {
           nonLockableLesson,
           unlockedLevels,
           state,
-          ViewType.Participant
+          ViewType.Student
         ),
         false
       );
@@ -119,13 +119,13 @@ describe('progressHelpers', () => {
           lockableLesson,
           unlockedLevels,
           localState,
-          ViewType.Participant
+          ViewType.Student
         ),
         true
       );
     });
 
-    it('returns true for lockable lesson for non-verified instructor', () => {
+    it('returns true for lockable lesson for non-verified teacher', () => {
       const localState = {
         ...state,
         lessonLock: {
@@ -137,7 +137,7 @@ describe('progressHelpers', () => {
           lockableLesson,
           unlockedLevels,
           localState,
-          ViewType.Instructor
+          ViewType.Teacher
         ),
         true
       );
@@ -149,7 +149,7 @@ describe('progressHelpers', () => {
           lockableLesson,
           lockedLevels,
           state,
-          ViewType.Participant
+          ViewType.Student
         ),
         true
       );

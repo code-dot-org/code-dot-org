@@ -6,9 +6,9 @@ title: Nguồn tài liệu
 
 <link rel="stylesheet" type="text/css" href="/css/promote-page.css"></link>
 
-# Quảng bá Giờ lập trình
+# Quảng bá Hour of Code
 
-### Hãy tìm kiếm mọi nguồn lực bạn cần để thu hút sự chú ý cho Giờ lập trình của bạn. Bạn không biết phải bắt đầu từ đâu? Hãy bắt đầu với [hướng dẫn cách tổ chức Giờ lập trình]({{ how_to_url }}) của chúng tôi!
+### Find all the resources you need to bring attention to your Hour of Code. Not sure where to begin? Start with our [how-to guide for hosting an Hour of Code]({{ how_to_url }})!
 
 * * *
 
@@ -18,19 +18,19 @@ title: Nguồn tài liệu
 
 ## Treo poster này trong trường học
 
-Bộ poster mới có sự góp mặt của Malala, Stephen Curry, Shakira và nhiều người nổi tiếng khác! Năm nay, mỗi bộ sẽ bao gồm 6 poster và 126 sticker "Tôi đã tham gia Giờ lập trình". Số lượng có hạn nên [hãy đặt poster](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) sớm nhé. Nếu bạn muốn tự in, chỉ cần nhấp chuột vào ảnh bên dưới để xem và lưu lại phiên bản có thể in được.
+A new poster set is available featuring Malala, Stephen Curry, Shakira and more! This year, each set will also come with 6 posters and 126 "I did the Hour of Code" stickers. Supplies are limited, so [order your posters](https://smile.amazon.com/Code-Hour-Poster-Set-2018/dp/B07J6T18DH) soon. To print on your own, simply click an image below to view and save a printable version.
 
 {{ promote_new_posters }}
 
-* Bạn đang tìm poster của các năm trước? [Tìm ở đây nhé]({{ promote/previous_posters_url }})!
+* Looking for our posters from previous years? [Find them here]({{ promote/previous_posters_url }})!
 
 <a id="social"></a>
 
 ## Đăng trên mạng xã hội
 
-[![hình ảnh](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![hình ảnh](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![hình ảnh](/images/social-media/fit-250/social-1.png)](/images/social-media/social-1.png)&nbsp;&nbsp;&nbsp;&nbsp; [![hình ảnh](/images/social-media/fit-250/social-2.png)](/images/social-media/social-2.png)&nbsp;&nbsp;&nbsp;&nbsp; [![hình ảnh](/images/social-media/fit-250/social-3.png)](/images/social-media/social-3.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
-[![hình ảnh](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![hình ảnh](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
+[![hình ảnh](/images/social-media/fit-250/bill_gates.png)](/images/social-media/bill_gates.png)&nbsp;&nbsp;&nbsp;&nbsp; [![hình ảnh](/images/social-media/fit-250/malala_yousafzai.png)](/images/social-media/malala_yousafzai.png)&nbsp;&nbsp;&nbsp;&nbsp; [![hình ảnh](/images/social-media/fit-250/chris_bosh.png)](/images/social-media/chris_bosh.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
 [![hình ảnh](/images/social-media/fit-250/karlie_kloss.png)](/images/social-media/karlie_kloss.png)&nbsp;&nbsp;&nbsp;&nbsp; [![hình ảnh](/images/social-media/fit-250/satya_nadella.png)](/images/social-media/satya_nadella.png)&nbsp;&nbsp;&nbsp;&nbsp; [![hình ảnh](/images/social-media/fit-250/jeff_bezos.png)](/images/social-media/jeff_bezos.png)&nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -42,77 +42,77 @@ Bộ poster mới có sự góp mặt của Malala, Stephen Curry, Shakira và n
 
 [Tải về phiên bản hi-res](http://images.code.org/share/hour-of-code-logo.zip)
 
-**"Hour of Code" (Giờ lập trình) và "Hora del Código" đã được đăng ký bản quyền. Chúng tôi không muốn ngăn bạn sử dụng, nhưng chúng tôi mong bạn sử dụng trong những giới hạn nhất định:**
+**"Hour of Code" and "Hora del Código" are trademarked. We don't want to prevent their usage, but we do want to make sure usage fits within a few limits:**
 
-1. Bất kỳ thông tin nào tham chiếu đến “Giờ lập trình” hay "Hora del Código" nên được sử dụng sao cho không ngụ ý rằng đây là thương hiệu riêng của bạn, mà phải thể hiện rằng Giờ lập trình là một phong trào cơ sở.
+1. Any reference to "Hour of Code" or "Hora del Código" should be used in a fashion that doesn't suggest that it's your own brand name, but rather referencing the Hour of Code as a grassroots movement.
 
 <ul style="margin-top: 0px">
   <li>
-    <strong>Ví dụ đúng</strong>: “Hãy tham gia Hour of Code™ (Giờ lập trình) tại TO-CHUC-CUA-BAN.com.”
+    <strong>Good example</strong>: "Participate in the Hour of Code™ at YOUR-COMPANY.com."
   </li>
   <li>
-    <strong>Ví dụ sai</strong>: “Hãy thử tham gia Giờ lập trình của TO-CHUC-CUA-BAN."
+    <strong>Bad example</strong>: "Try Hour of Code by YOUR-COMPANY."
   </li>
 </ul>
 
-1. Hãy dùng chỉ số trên “TM” ở vị trí nổi bật nhất mà bạn nhắc tới “Hour of Code” (Giờ lập trình) và thêm chỉ số trên “Ⓡ” ở vị trí nổi bật nhất mà bạn nhắc tới “Hora del Código”, cả ở trên trang web và phần mô tả ứng dụng của bạn.
-2. Thêm ngôn ngữ trên trang web của bạn (hoặc ở phần chân trang), có liên kết đến CSEdWeek và trang web [Code.org]({{ codeorg_link }}) có nội dung như sau:
+1. Use a "TM" superscript in the most prominent places you mention "Hour of Code" and a "Ⓡ" superscript in the most prominent places you mention "Hora del Código", both on your web site and in app descriptions.
+2. Include language on your page (or in the footer), including links to the CSEdWeek and [Code.org]({{ codeorg_link }}) websites, that says the following:
     
-    *“'Hour of Code™'/'Hora del Código®' (Giờ lập trình) là sáng kiến toàn cầu của Tuần lễ Giáo dục Khoa học Máy tính [csedweek.org] và Code.org [code.org] nhằm giới thiệu hàng triệu học sinh tham gia học khoa học máy tính và lập trình máy tính trong một giờ.”*
+    *“The 'Hour of Code™'/'Hora del Código®' is a global initiative by Computer Science Education Week [csedweek.org] and Code.org [code.org] to introduce millions of students to one hour of computer science and computer programming.”*
 
-3. Không sử dụng “Hour of Code” hoặc “Hora del Código” trong tên ứng dụng.
+3. No use of "Hour of Code" or "Hora del Código" in app names.
 
 <a id="stickers"></a>
 
 ## In những stickers để cung cấp cho học sinh của bạn
 
-(Sticker có đường kính 2,5 cm, 63 cái mỗi trang) <br />
+(Stickers are 1" diameter, 63 per sheet) <br />
 
 [![hình ảnh](/images/fit-250/hour-of-code-stickers.png)](/images/hour-of-code-stickers.pdf)
 
 <a id="sample-emails"></a>
 
-## Mời mọi người trong cộng đồng tham gia Giờ lập trình của bạn và quảng bá sự kiện qua email
+## Invite people in your community to your Hour of Code and promote your event through email
 
-### Xem [thêm thông tin và ngôn ngữ bạn có thể dùng]({{ promote/stats_url }}) khi nói về Giờ lập trình.
+### Find [more information and language you can use]({{ promote/stats_url }}) when talking about the Hour of Code.
 
 * * *
 
 <a id="email"></a>
 
-### Mời trường học, chủ lao động hoặc bạn bè đăng ký:
+### Ask your school, employer, or friends to sign up:
 
-**Dòng tiêu đề:** Hãy cùng tôi và hơn 100 triệu học sinh tham gia Giờ lập trình <br />
+**Subject line:** Join me and over 100 million students for an Hour of Code <br />
 
-Máy tính có ở khắp mọi nơi và đang thay đổi mọi ngành công nghiệp trên hành tinh. But only 51% of all high schools teach computer science. Tin tốt là chúng tôi đang thay đổi thực trạng này! Nếu bạn đã nghe nói về Hour of Code trước đây, bạn có thể biết nó đã làm nên lịch sử. Hơn 100 triệu sinh viên đã cố gắng Hour of Code.
+Máy tính có ở khắp mọi nơi, thay đổi mọi ngành công nghiệp trên hành tinh. But only 47% of all high schools teach computer science. Good news is, we’re on our way to change this! Nếu bạn đã nghe nói về Hour of Code trước đây, bạn có thể biết nó đã làm nên lịch sử. Hơn 100 triệu sinh viên đã cố gắng Hour of Code.
 
-With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Hơn 100 đối tác đã tham gia hỗ trợ cho sự kiện này. Tất cả Cửa hàng Apple trên thế giới đều đã tổ chức Giờ lập trình và những nhà lãnh đạo như Tổng thống Obama và Thủ tướng Canada Justin Trudeau đã viết những dòng mã lệnh đầu tiên khi tham gia chiến dịch.
+With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Hơn 100 đối tác đã tham gia hỗ trợ cho sự kiện này. Every Apple Store in the world has hosted an Hour of Code, and leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-Chúng ta cùng tổ chức sự kiện lớn hơn trong năm nay nhé. Tôi đang mời bạn tham gia Giờ lập trình {{ campaign_date/year }}. Hãy tham gia sự kiện Giờ lập trình trong Tuần lễ Giáo dục Khoa học Máy tính, {{ campaign_date/full }}.
+This year, let's make it even bigger. I’m asking you to join the Hour of Code {{ campaign_date/year }}. Please get involved with an Hour of Code event during Computer Science Education Week, {{ campaign_date/full }}.
 
 Hãy nói ra. Hãy tổ chức một sự kiện. Mời một trường học địa phương đăng nhập. Hoặc tự thử nghiệm Hour of Code\--- mọi người đều tìm thấy lợi ích từ những điều cơ bản.
 
-Bắt đầu tại http://hourofcode.com/{{ country_language }} <br />
+Get started at http://hourofcode.com/{{ country_language }} <br />
 
 * * *
 
 <a id="help-schools"></a>
 
-### Tình nguyện tại trường học:
+### Volunteer at a school:
 
-#### [Tìm thêm thông tin và nguồn lực hỗ trợ về chương trình tình nguyện tại trường học ở đây]({{ how_to_volunteers_url }}).
+#### [Find more resources and information about volunteering in schools here]({{ how_to_volunteers_url }}).
 
-**Dòng tiêu đề:** Chúng tôi có thể giúp bạn tổ chức Giờ lập trình được không?
+**Subject line:** Can we help you host an Hour of Code?
 
-Trong {{ campaign_date/short }}, 10% học sinh trên khắp thế giới sẽ ăn mừng Tuần lễ Giáo dục Khoa học Máy tính bằng cách tham gia Giờ lập trình tại trường học. Đây là cơ hội cho trẻ em tìm hiểu cách hoạt động của công nghệ xung quanh chúng ta.
+Between {{ campaign_date/short }}, ten percent of students around the world will celebrate Computer Science Education Week by doing an Hour of Code at their school. It’s an opportunity for every child to learn how the technology around us works.
 
-[Tổ chức của tôi/Tên của tôi] rất vui lòng hỗ trợ [tên trường] tổ chức sự kiện Giờ lập trình. Chúng tôi có thể giúp giáo viên tổ chức Giờ lập trình trong lớp (mà thậm chí không cần máy tính!) hoặc nếu bạn muốn tổ chức hội thảo trường học, chúng tôi có thể sắp xếp người diễn thuyết nói về cách hoạt động của công nghệ và công việc của kỹ sư phần mềm.
+[Our organization/My name] would love to help [school name] run an Hour of Code event. We can help teachers host an Hour of Code in their classrooms (we don’t even need computers!) or if you would like to host a school assembly, we can arrange for a speaker to talk about how technology works and what it’s like to be a software engineer.
 
-Học sinh sẽ tự tạo ứng dụng và game để khoe với cha mẹ. Chúng tôi cũng sẽ in chứng chỉ Giờ lập trình để các em mang về nhà. Sự kiện này sẽ rất vui đấy! Với các hoạt động thực hành tương tác, học sinh sẽ tìm hiểu các kỹ năng tư duy máy tính bằng phương pháp dễ tiếp cận.
+The students will create their own apps or games they can show their parents, and we’ll also print Hour of Code certificates they can bring home. And, it’s fun! With interactive, hands-on activities, students will learn computational thinking skills in an approachable way.
 
-Máy tính có ở khắp mọi nơi và đang thay đổi mọi ngành công nghiệp trên hành tinh. But only 51% of all high schools teach computer science. Tin tốt là chúng tôi đang thay đổi thực trạng này! Nếu bạn đã từng nghe tới Giờ lập trình trước đây, có thể bạn biết rằng sự kiện này đã làm nên lịch sử - hơn 100 triệu học sinh trên toàn thế giới đã tham gia Giờ lập trình. Ngay cả các nhà lãnh đạo như Tổng thống Obama và Thủ tưởng Canada Justin Trudeau cũng đã viết những dòng mã lệnh đầu tiên khi tham gia chiến dịch này.
+Máy tính có ở khắp mọi nơi, thay đổi mọi ngành công nghiệp trên hành tinh. But only 47% of all high schools teach computer science. The good news is, we’re on our way to change this! If you've heard about the Hour of Code before, you might know it made history - more than 100 million students around the world have tried an Hour of Code. Even leaders like President Obama and Canadian Prime Minister Justin Trudeau wrote their first lines of code as part of the campaign.
 
-Bạn có thể đọc thêm về sự kiện tại http://hourofcode.com. Ngoài ra, hãy cho chúng tôi biết nếu bạn muốn lên lịch hẹn để trò chuyện về cách tham gia của [tên trường].<br />
+You can read more about the event at http://hourofcode.com. Or, let us know if you’d like to schedule some time to talk about how [school name] can participate. <br />
 
 * * *
 
@@ -120,19 +120,19 @@ Bạn có thể đọc thêm về sự kiện tại http://hourofcode.com. Ngoà
 
 ### Thông báo cho phụ huynh về sự kiện diễn ra ở trường học:
 
-**Dòng tiêu đề:** Các em học sinh của chúng ta đang thay đổi tương lai với Giờ lập trình
+**Subject line:** Our students are changing the future with an Hour of Code
 
 Các bậc phụ huynh thân mến,
 
 Chúng ta đang được sống trong thế giới của công nghệ. Và chúng ta đều hiểu rằng dù khi lớn lên những đứa trẻ của chúng ta có chọn đi theo chuyên ngành nào thì khả năng thành công của chúng sẽ cao hơn nếu các em có những hiểu biết cơ bản về của công nghệ.
 
-But only a fraction of us are learning **how** technology works. Only 51% of all high schools teach computer science.
+But only a tiny fraction of us are learning **how** technology works. Only 47% of all high schools teach computer science.
 
-Đó là lý do cả trường ta sẽ tham gia sự kiện học tập lớn nhất trong lịch sử này: Giờ lập trình trong Tuần lễ Giáo dục Khoa học Máy tính ({{ campaign_date/full }}). Hơn 100 triệu sinh viên toàn thế giới đã cố gắng Hour of Code. Giờ lập trình của chúng ta sẽ gửi đi thông điệp rằng [TÊN TRƯỜNG] đã sẵn sàng giảng dạy những kỹ năng căn bản của thế kỷ 21 này. Để tiếp tục mang hoạt động lập trình đến con em của các bạn, chúng tôi muốn làm cho sự kiện Giờ Lập trình với quy mô lớn hơn. Tôi khuyến khích các bạn hãy tham gia tình nguyện, liên hệ với phương tiện truyền thông địa phương, chia sẻ tin tức trên kênh phương tiện truyền thông xã hội của các bạn và xem xét việc tổ chức thêm sự kiện Giờ Lập Trình ở cộng đồng.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). Hơn 100 triệu sinh viên toàn thế giới đã cố gắng Hour of Code. Our Hour of Code is making a statement that [SCHOOL NAME] is ready to teach these foundational 21st-century skills. Để tiếp tục mang hoạt động lập trình đến con em của các bạn, chúng tôi muốn làm cho sự kiện Giờ Lập trình với quy mô lớn hơn. Tôi khuyến khích các bạn hãy tham gia tình nguyện, liên hệ với phương tiện truyền thông địa phương, chia sẻ tin tức trên kênh phương tiện truyền thông xã hội của các bạn và xem xét việc tổ chức thêm sự kiện Giờ Lập Trình ở cộng đồng.
 
 Đây là thời cơ để thay đổi nền giáo dục tương lai ở [THỊ TRẤN/ TÊN THÀNH PHỐ].
 
-Xem chi tiết tại http://hourofcode.com/{{ country_language }} và giúp quảng bá sự kiện.<br />
+See http://hourofcode.com/{{ country_language }} for details, and help spread the word. <br />
 
 * * *
 
@@ -140,15 +140,15 @@ Xem chi tiết tại http://hourofcode.com/{{ country_language }} và giúp qu�
 
 ### Lôi cuốn truyền thông vào sự kiện:
 
-#### [Xem bộ công cụ truyền thông của chúng tôi để biết thêm thông tin về việc mời các đơn vị truyền thông tới dự sự kiện của bạn.]({{ promote/press_kit_url }})
+#### [Check out our press kit for more information on inviting media to your event.]({{ promote/press_kit_url }})
 
 **Subject line**: Local school joins mission to introduce students to computer science
 
-Computers are everywhere, changing every industry on the planet, but only 51% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Tin tốt là chúng tôi đang trên đường thay đổi điều đó.
+Computers are everywhere, changing every industry on the planet, but only 47% of all high schools teach computer science. Young women and students from marginalized racial and ethnic groups are severely underrepresented in computer science classes, and in the tech industry. Tin tốt là chúng tôi đang trên đường thay đổi điều đó.
 
 With the Hour of Code, computer science has been on homepages of Google, MSN, Yahoo!, and Disney. Hơn 100 đối tác đã tham gia hỗ trợ cho sự kiện này. Tất cả Apple Store trên thế giới đều tổ chức Giờ lập trình. Even President Obama wrote his first line of code as part of the campaign.
 
-Đó là lý do tại sao toàn bộ [số X] học sinh tại [TÊN TRƯỜNG] sẽ tham gia sự kiện học tập lớn nhất trong lịch sử: Giờ lập trình trong Tuần lễ Giáo dục Khoa học Máy tính (ngày 6-12 tháng 12).
+Đó là lý do tại sao toàn bộ [X number] học sinh tại [SCHOOL NAME] sẽ tham gia vào sự kiện học tập lớn nhất trong lịch sử: Giờ Lập Trình, trong Tuần lễ Giáo dục về Khoa học Máy tính (ngày 3-9 tháng 12).
 
 I'm writing to invite you to attend our kickoff assembly and to see kids start the activity on [DATE].
 
@@ -164,19 +164,19 @@ I look forward to being in touch. <br />
 
 ### Mời một chính trị gia địa phương tham gia sự kiện ở trường học của bạn:
 
-#### [Bạn cần thêm thông tin? Hãy xem các nguồn lực hỗ trợ mời các chính trị gia tới dự sự kiện của bạn]({{ how_to_public_officials_url }}).
+#### [Need more info? Take a look at our resources for inviting politicians to attend your event]({{ how_to_public_officials_url }}).
 
-**Dòng tiêu đề**: Hãy cùng trường chúng tôi thay đổi tương lai với Giờ lập trình
+**Subject line**: Join our school as we change the future with an Hour of Code
 
 [Họ của Thị trưởng/Thống đốc/Ban đại diện/thượng nghị sĩ] kính mến:
 
 Ông/bà có biết rằng máy tính là nguồn #1 của lương tại Mỹ.? Có hơn 500.000 tính toán công việc mở trên toàn quốc, nhưng năm ngoái chỉ 42,969 máy tính khoa học sinh viên tốt nghiệp vào lực lượng lao động.
 
-Khoa học máy tính là nền tảng của mọi ngành công nghiệp hiện nay, nhưng hầu hết các trường học không dạy môn này. Tại [TÊN TRƯỜNG], chúng tôi đang cố gắng thay đổi thực trạng đó.
+Computer science is foundational for every industry today, yet most schools don’t teach it. At [SCHOOL NAME], we are trying to change that.
 
-Đó là lý do cả trường ta sẽ tham gia sự kiện học tập lớn nhất trong lịch sử này: Giờ lập trình trong Tuần lễ Giáo dục Khoa học Máy tính ({{ campaign_date/full }}). Hơn 100 triệu sinh viên toàn thế giới đã cố gắng Hour of Code.
+That’s why our entire school is joining in on the largest learning event in history: The Hour of Code, during Computer Science Education Week ({{ campaign_date/full }}). Hơn 100 triệu sinh viên toàn thế giới đã cố gắng Hour of Code.
 
-Tôi viết thư này kính mời ông/bà tham dự sự kiện Giờ lập trình và phát kiểu tại hội nghị khai mạc của chúng tôi. Sự kiện sẽ diễn ra vào [NGÀY, GIỜ, ĐỊA ĐIỂM] và sẽ trịnh trọng tuyên bố rằng [Tên thành phố hoặc bang] đã sẵn sàng giảng dạy những kỹ năng thiết yếu của thế kỷ 21 cho học sinh. Chúng tôi muốn đảm bảo rằng học sinh của chúng tôi đang đi đầu trong việc tạo ra các công nghệ của tương lai-không chỉ tiêu thụ nó.
+I'm writing to invite you to join our Hour of Code event and speak at our kickoff assembly. It’ll take place on [DATE, TIME, PLACE], and will make a strong statement that [State or City name] is ready to teach our students critical 21st-century skills. Chúng tôi muốn đảm bảo rằng học sinh của chúng tôi đang đi đầu trong việc tạo ra các công nghệ của tương lai-không chỉ tiêu thụ nó.
 
 Làm ơn liên hệ với chúng tôi theo số [SỐ ĐIỆN THOẠI HOẶC ĐỊA CHỈ EMAIL]. Tôi mong chờ hồi âm của ông/bà.
 

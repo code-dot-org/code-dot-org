@@ -50,29 +50,25 @@ export default storybook => {
     {
       name: 'simple DetailProgressTable',
       story: () => (
-        <Provider
-          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
-        >
+        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
           <DetailProgressTable groupedLesson={groupedLesson} />
         </Provider>
       )
     },
     {
-      name: 'with hidden lesson as instructor',
+      name: 'with hidden lesson as teacher',
       description: 'lesson 2 should be white with dashed outline',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, '2')}>
+        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, '2')}>
           <DetailProgressTable groupedLesson={groupedLesson} />
         </Provider>
       )
     },
     {
-      name: 'with hidden lesson as participant',
+      name: 'with hidden lesson as student',
       description: 'lesson 2 should be invisible',
       story: () => (
-        <Provider
-          store={createStoreWithHiddenLesson(ViewType.Participant, '2')}
-        >
+        <Provider store={createStoreWithHiddenLesson(ViewType.Student, '2')}>
           <DetailProgressTable groupedLesson={groupedLesson} />
         </Provider>
       )

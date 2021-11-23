@@ -217,7 +217,6 @@ function PoemSelector(props) {
           searchable={false}
           onChange={onChange}
           options={getPoemOptions()}
-          disabled={props.isRunning}
         />
       </div>
     </div>
@@ -227,7 +226,6 @@ function PoemSelector(props) {
 PoemSelector.propTypes = {
   // from Redux
   selectedPoem: poemShape.isRequired,
-  isRunning: PropTypes.bool.isRequired,
   onChangePoem: PropTypes.func.isRequired
 };
 
@@ -263,8 +261,7 @@ const styles = {
 
 export default connect(
   state => ({
-    selectedPoem: state.poetry.selectedPoem,
-    isRunning: state.runState.isRunning
+    selectedPoem: state.poetry.selectedPoem
   }),
   dispatch => ({
     onChangePoem(poem) {

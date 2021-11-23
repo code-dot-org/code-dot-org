@@ -9,11 +9,11 @@ describe('ViewAsToggle', () => {
   it('calls changeViewType when ToggleGroup changes', () => {
     const spy = sinon.spy();
     const wrapper = shallow(
-      <ViewAsToggle viewAs={ViewType.Participant} changeViewType={spy} />
+      <ViewAsToggle viewAs={ViewType.Student} changeViewType={spy} />
     );
     expect(spy).not.to.have.been.called;
 
-    wrapper.find('Connect(ToggleGroup)').prop('onChange')(ViewType.Instructor);
-    expect(spy).to.have.been.calledOnce.and.calledWith(ViewType.Instructor);
+    wrapper.find('Connect(ToggleGroup)').prop('onChange')(ViewType.Teacher);
+    expect(spy).to.have.been.calledOnce.and.calledWith(ViewType.Teacher);
   });
 });

@@ -24,8 +24,7 @@ export const sectionDataPropType = PropTypes.shape({
   codeReviewEnabled: PropTypes.bool,
   isAssignedCSA: PropTypes.bool,
   lessonExtras: PropTypes.bool,
-  ttsAutoplayEnabled: PropTypes.bool,
-  codeReviewExpiresAt: PropTypes.number
+  ttsAutoplayEnabled: PropTypes.bool
 });
 
 /**
@@ -34,8 +33,6 @@ export const sectionDataPropType = PropTypes.shape({
 export const SET_SECTION = 'sectionData/SET_SECTION';
 export const SET_TTS_AUTOPLAY_ENABLED = 'sectionData/SET_TTS_AUTOPLAY_ENABLED';
 export const SET_CODE_REVIEW_ENABLED = 'sectionData/SET_CODE_REVIEW_ENABLED';
-export const SET_CODE_REVIEW_EXPIRES_AT =
-  'sectionData/SET_CODE_REVIEW_EXPIRES_AT';
 
 /**
  * Action creators
@@ -54,10 +51,7 @@ export const setSection = section => {
     codeReviewEnabled: section.code_review_enabled,
     isAssignedCSA: section.is_assigned_csa,
     lessonExtras: section.lesson_extras,
-    ttsAutoplayEnabled: section.tts_autoplay_enabled,
-    codeReviewExpiresAt: section.code_review_expires_at
-      ? Date.parse(section.code_review_expires_at)
-      : null
+    ttsAutoplayEnabled: section.tts_autoplay_enabled
   };
   return {type: SET_SECTION, section: filteredSectionData};
 };
@@ -70,11 +64,6 @@ export const setTtsAutoplayEnabled = ttsAutoplayEnabled => ({
 export const setCodeReviewEnabled = codeReviewEnabled => ({
   type: SET_CODE_REVIEW_ENABLED,
   codeReviewEnabled
-});
-
-export const setCodeReviewExpiresAt = codeReviewExpiresAt => ({
-  type: SET_CODE_REVIEW_EXPIRES_AT,
-  codeReviewExpiresAt
 });
 
 /**
@@ -114,19 +103,6 @@ export default function sectionData(state = initialState, action) {
       section: {
         ...state.section,
         codeReviewEnabled: action.codeReviewEnabled
-      }
-    };
-  }
-
-  if (action.type === SET_CODE_REVIEW_EXPIRES_AT) {
-    const expirationTime = action.codeReviewExpiresAt
-      ? Date.parse(action.codeReviewExpiresAt)
-      : null;
-    return {
-      ...state,
-      section: {
-        ...state.section,
-        codeReviewExpiresAt: expirationTime
       }
     };
   }

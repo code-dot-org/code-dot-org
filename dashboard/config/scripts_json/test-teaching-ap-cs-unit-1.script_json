@@ -8,11 +8,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:49:21 UTC",
+    "serialized_at": "2021-10-26 22:17:24 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "test-teaching-ap-cs-unit-1"
     }
@@ -334,9 +334,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD Welcome Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -358,9 +355,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS tour"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -382,9 +376,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS commitment"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -406,9 +397,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -430,9 +418,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 1 lessons"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -454,9 +439,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 PIvideo"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -478,9 +460,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -502,9 +481,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 2 lessons"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -526,9 +502,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 2 reflection"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -550,9 +523,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -574,9 +544,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 3 lessons"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -598,9 +565,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 share protocol"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -622,9 +586,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 4"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -646,9 +607,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 chunk 4 lessons"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -670,9 +628,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 share compression"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -694,9 +649,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 PT"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -718,9 +670,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 PT activity"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -742,9 +691,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 PT forum"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -766,9 +712,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 congrats"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -790,9 +733,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSPPD2 next step announcements"
-        ]
       },
       "bonus": false,
       "seeding_key": {

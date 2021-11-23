@@ -3,7 +3,11 @@ import {Provider} from 'react-redux';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
 import {LevelKind} from '@cdo/apps/util/sharedConstants';
-import {initProgress, lessons} from '@cdo/apps/code-studio/progressRedux';
+import {
+  initProgress,
+  lessons,
+  showTeacherInfo
+} from '@cdo/apps/code-studio/progressRedux';
 import {
   authorizeLockable,
   setSectionLockStatus
@@ -71,7 +75,8 @@ const createStore = ({
   if (teacherVerified) {
     store.dispatch(authorizeLockable());
   }
-  store.dispatch(setViewType(ViewType.Instructor));
+  store.dispatch(showTeacherInfo());
+  store.dispatch(setViewType(ViewType.Teacher));
   store.dispatch(
     setHiddenLessons(
       {

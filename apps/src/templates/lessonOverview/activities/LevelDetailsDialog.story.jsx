@@ -8,7 +8,7 @@ const defaultProps = {
   handleClose: () => {
     console.log('closed');
   },
-  viewAs: ViewType.Instructor,
+  viewAs: ViewType.Teacher,
   isRtl: false
 };
 

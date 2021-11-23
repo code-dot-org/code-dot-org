@@ -1,28 +1,28 @@
 ---
-title: Materi Pembelajaran Guru - Artis
+title: Teacher Resources - Artist
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Artis: Tutorial Hour of Code
+# Artist: An Hour of Code Tutorial
 
 {{ hoc_artist_video }}
 
 [col-50]
 
-## Materi Pembelajaran Guru
+## Teacher Resources
 
-### Aktivitas Ekstensi:
+### Extension Activities:
 
-- [Melampaui Hour of Code](http://code.org/learn/beyond)
-- [Dasar-Dasar Ilmu Komputer: Kursus 2](https://studio.code.org/s/course2)
+- [Beyond an Hour of Code](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
 
-### Materi Pembelajaran Guru Lainnya:
+### Other Teacher Resources:
 
-- [Hour of Code: Cara Memandu bagi Pendidik](https://hourofcode.com/how-to)
-- [Praktik Terbaik dari Para Pendidik Sukses](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Event Siaran Langsung: [Panduan Pendidik tentang Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
+- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -30,12 +30,12 @@ video_player: true
 
 ## Gambaran
 
-Buat gambar dan desain keren bersama Artis!
+Draw cool pictures and designs with the Artist!
 
-**Rentang Usia yang Dianjurkan:** 4-104
+**Recommended Age Range:** 4-104
 
-**Persyaratan Teknologi:** Browser modem + tablet
+**Technology Requirements:** Modern browsers + tablets
 
-<a href="http://studio.code.org/s/artist/reset"><button>Coba tutorial</button></a>
+<a href="http://studio.code.org/s/artist/reset"><button>Try the tutorial</button></a>
 
 [/col-50]

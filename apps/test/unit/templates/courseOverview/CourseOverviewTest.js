@@ -19,7 +19,7 @@ const defaultProps = {
     '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* ',
   sectionsInfo: [],
   teacherResources: [],
-  viewAs: ViewType.Instructor,
+  viewAs: ViewType.Teacher,
   scripts: [
     {
       course_id: 30,
@@ -68,19 +68,19 @@ const fakeTeacherAndStudentAnnouncement = {
 };
 
 describe('CourseOverview', () => {
-  it('has correct course description for instructor', () => {
+  it('has correct course description for teacher', () => {
     const wrapper = shallow(<CourseOverview {...defaultProps} />);
     expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
       '# Teacher description \n This is the course description with [link](https://studio.code.org/home) **Bold** *italics* '
     );
   });
 
-  it('has correct course description for participant', () => {
+  it('has correct course description for student', () => {
     const wrapper = shallow(
       <CourseOverview
         {...defaultProps}
         isTeacher={false}
-        viewAs={ViewType.Participant}
+        viewAs={ViewType.Student}
       />
     );
     expect(wrapper.find('SafeMarkdown').prop('markdown')).to.equal(
@@ -88,7 +88,7 @@ describe('CourseOverview', () => {
     );
   });
 
-  it('has non-verified and provided instructor announcements if necessary', () => {
+  it('has non-verified and provided teacher announcements if necessary', () => {
     const wrapper = shallow(
       <CourseOverview
         {...defaultProps}
@@ -101,18 +101,18 @@ describe('CourseOverview', () => {
     assert.equal(wrapper.find('Announcements').props().announcements.length, 2);
   });
 
-  it('has participant announcement if viewing as participant', () => {
+  it('has student announcement if viewing as student', () => {
     const wrapper = shallow(
       <CourseOverview
         {...defaultProps}
-        viewAs={ViewType.Participant}
+        viewAs={ViewType.Student}
         announcements={[fakeStudentAnnouncement]}
       />
     );
     assert.equal(wrapper.find('Announcements').props().announcements.length, 1);
   });
 
-  it('renders a top row for instructors', () => {
+  it('renders a top row for teachers', () => {
     const wrapper = shallow(
       <CourseOverview {...defaultProps} isTeacher={true} />
     );
@@ -131,12 +131,12 @@ describe('CourseOverview', () => {
       hasVerifiedResources: true
     };
 
-    it('is shown to unverified instructors if course has verified resources', () => {
+    it('is shown to unverified teachers if course has verified resources', () => {
       const wrapper = shallow(<CourseOverview {...propsToShow} />);
       assert.equal(wrapper.find('VerifiedResourcesNotification').length, 1);
     });
 
-    it('is not shown if instructor is verified', () => {
+    it('is not shown if teacher is verified', () => {
       const wrapper = shallow(
         <CourseOverview {...propsToShow} isVerifiedTeacher={true} />
       );
@@ -150,9 +150,9 @@ describe('CourseOverview', () => {
       assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
     });
 
-    it('is not shown while viewing as participant', () => {
+    it('is not shown while viewing as student', () => {
       const wrapper = shallow(
-        <CourseOverview {...propsToShow} viewAs={ViewType.Participant} />
+        <CourseOverview {...propsToShow} viewAs={ViewType.Student} />
       );
       assert.equal(wrapper.find('VerifiedResourcesNotification').length, 0);
     });

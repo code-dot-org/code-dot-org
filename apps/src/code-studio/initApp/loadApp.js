@@ -299,15 +299,6 @@ async function loadAppAsync(appOptions) {
     appOptions.disableSocialShare = true;
   }
 
-  const sectionId = clientState.queryParams('section_id') || '';
-  const exampleSolutionsRequest = $.ajax(
-    `/api/example_solutions/${appOptions.serverScriptLevelId}/${
-      appOptions.serverLevelId
-    }?section_id=${sectionId}`
-  );
-
-  // Kick off userAppOptionsRequest before awaiting exampleSolutionsRequest to ensure requests
-  // are made in parallel
   const userAppOptionsRequest = $.ajax({
     url:
       `/api/user_app_options` +
@@ -321,19 +312,20 @@ async function loadAppAsync(appOptions) {
     }
   });
 
-  try {
-    const exampleSolutions = await exampleSolutionsRequest;
-
-    if (exampleSolutions) {
-      appOptions.exampleSolutions = exampleSolutions;
-    }
-  } catch (err) {
-    console.error('Could not load example solutions');
-  }
+  const sectionId = clientState.queryParams('section_id') || '';
+  const exampleSolutionsRequest = $.ajax(
+    `/api/example_solutions/${appOptions.serverScriptLevelId}/${
+      appOptions.serverLevelId
+    }?section_id=${sectionId}`
+  );
 
   try {
-    const data = await userAppOptionsRequest;
+    const [data, exampleSolutions] = await Promise.all([
+      userAppOptionsRequest,
+      exampleSolutionsRequest
+    ]);
 
+    appOptions.exampleSolutions = exampleSolutions;
     appOptions.disableSocialShare = data.disableSocialShare;
 
     if (data.isStarted) {
@@ -375,7 +367,7 @@ async function loadAppAsync(appOptions) {
     }
   } catch (err) {
     // TODO: Show an error to the user here? (LP-1815)
-    console.error('Could not load app options');
+    console.error('Could not load user progress.');
     return appOptions;
   }
 }

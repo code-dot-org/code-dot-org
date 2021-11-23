@@ -4,7 +4,6 @@ import {shallow} from 'enzyme';
 import i18n from '@cdo/locale';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DisabledBubblesModal from '@cdo/apps/code-studio/DisabledBubblesModal';
-import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
 
 describe('DisabledBubblesModal', () => {
   it('is open to begin with', () => {
@@ -20,7 +19,7 @@ describe('DisabledBubblesModal', () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href={disabledBubblesSupportArticle}
+                href="https://support.code.org/hc/en-us/articles/115002660852"
               >
                 {i18n.learnMore()}
               </a>

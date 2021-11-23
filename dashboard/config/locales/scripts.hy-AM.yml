@@ -2750,10 +2750,6 @@ hy:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
-        csa6-pilot:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -2860,11 +2856,3 @@ hy:
           lesson_groups:
             lessonGroup-2:
               display_name: պարունակություն
-        csa6-pilot-facilitator:
-          lesson_groups:
-            lessonGroup-2:
-              display_name: պարունակություն
-        spelling-bee-2021:
-          lessons:
-            lesson-1:
-              name: Spelling Bee

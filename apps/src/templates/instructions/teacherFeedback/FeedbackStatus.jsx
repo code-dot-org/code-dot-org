@@ -8,7 +8,7 @@ import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 
 class FeedbackStatus extends Component {
   static propTypes = {
-    viewAs: PropTypes.oneOf(Object.values(ViewType)).isRequired,
+    viewAs: PropTypes.oneOf(['Teacher', 'Student']).isRequired,
     latestFeedback: PropTypes.object.isRequired
   };
 
@@ -94,11 +94,11 @@ class FeedbackStatus extends Component {
       return null;
     }
 
-    if (viewAs === ViewType.Participant) {
+    if (viewAs === ViewType.Student) {
       return this.renderStudentView();
     }
 
-    if (viewAs === ViewType.Instructor) {
+    if (viewAs === ViewType.Teacher) {
       if (
         latestFeedback.student_last_updated &&
         latestFeedback.student_last_updated > latestFeedback.created_at

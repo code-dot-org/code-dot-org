@@ -1,244 +1,244 @@
 ---
-title: Hour of Code ボランティア向けハウツーガイド
+title: Hour of Code How-To Guide for Volunteers
 ---
 
-# 学校などでボランティア活動を行う方法 
+# How to volunteer with a school or classroom
 
-### 多くの教師が生徒の学習意欲を高めるため、ボランティアを求めています。
+### Thousands of teachers are looking for volunteers to inspire their students. Make a difference today!
 
-[<button>ボランティア登録をしましょう</button>]({{ urls/volunteer }})
+[<button>ボランティアとして登録してください。</button>]({{ urls/volunteer }})
 
 * * *
 
-コンピューター的思考を養うと、問題解決能力、論理的思考、創造力を身に付けることができます。 また、テクノロジーは世界中の産業を変革しています。 今日の生徒は、テクノロジーを利用するだけでなく、それを創造する力をつけるべきです。
+Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it.
 
-Hour of Codeはアメリカで2013年から始まった、子どもたちにコンピューターサイエンス教育を普及させようという運動です。コンピューターサイエンスの基礎を学べる１時間のチュートリアルが準備されており、この教材を使って誰もがイベントやワークショップで子供達に教えたり、子供達が自習したりできるようになっています。[チュートリアルを見てみる](%{codeorg_url}). コンピューターサイエンスへの意識高揚、および生徒のコンピューターサイエンスへの学習意欲を促すボランティアとしてのご協力をお願いします。とくに、歴史的に不幸な時代を経ている人種、民族の若い女性や生徒の学習意欲の向上にご協力ください。
+The Hour of Code is a one-hour introduction to computer science designed to demystify “code,” show that anybody can learn the basics, and to broaden participation in the field of computer science. You can help raise awareness of the computer science movement and volunteer to inspire more students to try computer science, particularly young women and students from historically marginalized racial and ethnic groups.
 
-- [ボランティアになるには？](#who-can-volunteer)
-- [なぜボランティア活動が必要？](#why-volunteer)
-- [ボランティアの選任は？](#selection)
-- [特定の学校でボランティア活動をしたいときは ？](#choose-a-school)
-- [準備の仕方は？](#how-to-prepare)
-- [イベントを開催したいときは](#hosting-an-event)
-- [Hour of Code のことを広く知らせる](#promote-hour-of-code)
-- [Hour of Codeをサポートする他の方法](#support-hour-of-code)
-- [ボランティアに関するFAQ](#faq)
+- [Who can volunteer?](#who-can-volunteer)
+- [なぜボランティアをするのか](#why-volunteer)
+- [How do volunteers get selected?](#selection)
+- [What if I want to volunteer with a specific school?](#choose-a-school)
+- [準備の仕方](#how-to-prepare)
+- [When you're hosting an event](#hosting-an-event)
+- [Spread the word about the Hour of Code](#promote-hour-of-code)
+- [More ways to support the Hour of Code](#support-hour-of-code)
+- [Volunteer FAQ](#faq)
 
-対面でも、会社でも、どこでもボランティア活動は、学生のコンピューターサイエンスとそのポテンシャルに対する考え方に大きな影響を与えます。 [ご不明な点等ございましたら、ボランティアツールキット]({{ localized_files/hoc_volunteer_toolkit }})をご覧ください。.
+Whether you volunteer virtually, in-person, or with your company, your efforts can make a huge impact on the way students view computer science and their own potential. Take a look at our [volunteer toolkit if you still have questions]({{ localized_files/hoc_volunteer_toolkit }}).
 
 * * *
 
 <a id="who-can-volunteer"></a>
 
-## ボランティアになるには？
+## Who can volunteer?
 
-コンピューターサイエンス教育とテクノロジーにおけるダイバーシティ拡大に熱意のある方なら誰でもボランティアになることができます。 さまざまな経験を持っているボランティアのご参加を期待しています。 Hour of Code は、すべての年齢層、学習レベルの人に向けたさまざまなアクティビティを実施しています。ボランティアになるには、特段のプログラミングの専門家である必要ありません！
+Anyone passionate about computer science education and increasing diversity in tech can be a volunteer! We’d love to see volunteers of all backgrounds participate. The Hour of Code features a large variety of activities for all ages and skill levels, so you don’t need to be a programming expert to volunteer!
 
-授業でのゲストスピーカーになってもよいし、または授業中の教師をサポートしてもよいでしょう。 [今すぐ登録して](https://code.org/volunteer)学生のコンピューターサイエンスの学習を手伝いましょう。
+You can be a guest speaker in a classroom, or help a teacher run the activity. [Sign up today](https://code.org/volunteer) to inspire students to keep learning computer science.
 
 * * *
 
 <a id="why-volunteer"></a>
 
-## なぜボランティア活動が必要？
+## なぜボランティアをするのか
 
-コンピューターサイエンスは21世紀の現在、必須の分野となっています。ところが、学校ではいまだに教えていないのです。 この点、 Hour of Code は、年間を通じて学生がコンピューターサイエンスの学習で最も利用していると言われています。 ボランティア活動をしていただくと、教師は今まで以上にコンピューターサイエンスを教えやすくなります。
+Computer science is the defining field of the 21st century, yet most schools still don’t teach it. One Hour of Code may be the most access to computer science that these students receive in a given year. By volunteering, you can make it even easier for teachers to bring CS into their classroom.
 
 [![](/images/fit-600/Marketing/HoC-2015-ACE-HS--42.jpg)]({{ urls/learn }})
 
-過去、ボランティア活動をしていただいた方々の体験をお読みください。
+Check out some testimonials from past volunteers:
 
 - 「私の経験の中で最も大きかったのは、クラス全体が女性で人種も様々だったことです。そうした子どもたちに刺激を与える機会に恵まれたのは、私たちの産業の未来にとって幸先がよいことでしょう。」 
 - 「若い女の子に技術習得を勧めることがとくに楽しかったです。地元の次の世代の人々の手助けをしている気分になりました。」 
-- 「私は、子どもたちがワクワクしているのを眺めるのが大好きです。 これは、先生たちが気づいた嬉しい出来事なのですが、学業ではさほど優秀ではなかった生徒がまるで開発者のような思考をもって自信に満ちていたそうです。 
+- 「私は、子どもたちがワクワクしているのを眺めるのが大好きです。 One amazing thing was that the teachers noticed that some of the students who didn’t do as well academically were excelling at thinking like a developer and helping others - giving them a place to feel confident.” 
 
-[<button>ボランティア登録をしましょう</button>]({{ urls/volunteer }})
+[<button>ボランティアとして登録してください。</button>]({{ urls/volunteer }})
 
 * * *
 
 <a id="selection"></a>
 
-## ボランティアの選任は？
+## How do volunteers get selected?
 
-教師はこの[ボランティアマップ](https://code.org/volunteer/local)でボランティアを探すことができます。 学校の近くに住んでいるボランティアの場合、教師がこのマップでそのボランティアを見つけ、そのプロフィールを見ることができます。ボランティアの情報はで漏れなく記入し、教師がボランティアに連絡する可能性を高めましょう。
+Teachers can search for volunteers on our [volunteer map](http://code.org/volunteer/local). If you’re located near their classroom, teachers will review your profile on the map, so try to complete as much as possible to increase the chance that a teacher will contact you.
 
 [![](/images/fit-600/Marketing/2018_HoC-489-resized.jpg)]({{ urls/learn }})
 
-ボランティアとして選ばれた場合、ボランティアプラットフォームを通じて教師から連絡が入ります（当方からはボランティアのメールアドレスを教師に教えることはありません）。 教師と協力し合って、教師主催のイベントにどのようにすれば貢献できるのか、また対面での訪問やバーチャル式のボランティア活動について考えます。
+When selected, a teacher will contact you through the volunteer platform (we will never share your email address with the teacher). Work with them to determine how you can best contribute to their event, and if you’ll be visiting in-person or volunteering virtually.
 
-教師からのリクエストがあまりに多くて困った場合は、協力可能な項目を変更するか、または教師からのリクエストメールの最下部にあるリンクをクリックして退会することもできます。
+If you are receiving too many requests from teachers, you can always update your preferences or unsubscribe by clicking the link provided at the bottom of any email request from a teacher.
 
 * * *
 
 <a id="choose-a-school"></a>
 
-## 特定の学校でボランティア活動をしたいときは ？
+## What if I want to volunteer with a specific school?
 
-ボランティアになるのに、ボランティアマップに頼らなくでも大丈夫です。もし学校にボランティア活動をできそうなクラスがあれば、直接その学校の教師、管理者にボランティア活動の申し出をしてもよいでしょう。
+You don’t have to use our volunteer map in order to volunteer! In fact, we recommend reaching out to teachers and administrators directly if there’s a classroom you’d like to volunteer with.
 
-ボランティア活動を始めるには： - 親または保護者の方は、Hour of Code実施の協力をするお子様の担当の教師に直接、[このメール](https://hourofcode.com/us/promote/resources#help-schools) をお送りください。 - 他の学校でのボランティア活動をお考えでしたら、その学校のウェブサイトにアクセスし、学校長、副校長、テクノロジーまたはコンピューターサイエンスのインストラクター、学校のPTSAの連絡先を探して連絡をとってみてください。 このほか、ボーイズ・アンド・ガールズ・クラブ・オブ・アメリカ、ジュニア・アチーブメント、YMCA支所などイベントを共同主催する組織、団体とパートナーシップを結ぶという方法もあります。 Hour of Codeを主催してる学校が見つからない場合は、勤務している会社でのイベントに協力をしてもよいでしょう。 こちらに関心があり始めてみたいと思う方は、[企業向けのハウツーガイド](https://hourofcode.com/us/how-to/companies) をご覧ください。
+To get started: - If you’re a parent or guardian, send [this email](https://hourofcode.com/us/promote/resources#help-schools) to your child’s teacher offering to help them run an Hour of Code. - If you have another school in mind, visit their website to find appropriate contacts to reach out to such as a principal or vice principal, technology or computer science instructors, or even the school’s PTSA. You could also partner with organizations such as the Boys & Girls Clubs of America, Junior Achievement, a YMCA branch, and more to co-host an event. - If you’re unable to find a school that is hosting an Hour of Code, you can volunteer to help run your own event with your company. Check out our [How-To Guide for Companies](https://hourofcode.com/us/how-to/companies) to learn more and get inspired.
 
 * * *
 
 <a id="how-to-prepare"></a>
 
-## 準備の仕方は？
+## 準備の仕方
 
-Hour of Code イベントにリモートまたは対面方式にて参加する場合、以下の段取りを済ませておけばボランティア活動を円滑に進めることができます。
+Whether you’re attending an Hour of Code event remotely or in-person, you’ll have a much smoother experience if you make these preparations beforehand.
 
 [![](/images/fit-600/Marketing/4Q9A5575.jpg)]({{ urls/learn }})
 
-### 主催者に会う
+### Meet with the Organizer
 
-授業にてボランティア活動を行う場合は、事前に教師と以下の段取りについて相談しましょう。
+If you’re volunteering with a classroom, discuss these logistics with the teacher ahead of time:
 
-- イベントでの役割。 テクノロジーの分野でボランティア活動をする場合は、過去の体験談を話すよう依頼があると思われます。たとえば、テクノロジーの分野に関わるようなった経緯。 あなたにとってコンピューターサイエンスとは？ どのようなお仕事をしていますか。そのお仕事にテクノロジーはどのように関わっていますか？ 
-- 対面方式でのボランティアを希望する場合、現地および学校の保健事情と安全のガイドラインを理解しておく必要があります。それらの手順によっては、現地到着を少し早める必要があります。 
-- バーチャル方式または対面方式でボランティア活動をする場合、その回数と内容について決めておきます。 
-- バーチャル方式でボランティアをする場合、教師と話し合いの上、最適なテレビ会議プラットフォームを決めて、イベントの試行をする必要があります。 
-- 教師がすでに Hour of Code イベントの内容を決定している場合は、事前に [それらを確認](https://hourofcode.com/us/learn) しておきます。 
+- Your role at the event. If you work in tech, you might be asked to share your personal experiences or story: How did you get involved in a career in tech? Why is computer science important to you? What are some things you do as part of your job and how does that relate to technology? 
+- If you’ll be volunteering in-person, make sure you both understand local and school health and safety guidelines. Depending on their procedures you may need to arrive a little early. 
+- If you’ll be volunteering virtually or in-person as this can determine what times you need to be present and in what capacity. 
+- If you’re volunteering virtually, work with the teacher to determine the best video conferencing platform to use and try conducting a test run of the event together. 
+- If the teacher has predetermined Hour of Code activities for the event, be aware so that you can [explore them](https://hourofcode.com/us/learn) ahead of time. 
 
-### 参加者のことを配慮する
+### Think about your participants
 
-- ボランティア活動の相手である生徒のこと、およびどのような内容が生徒の共感を得ることができるのか考えます。 コンピューターは今や世界のどこにでも存在し、生徒たちもコンピューター科学者になれること理解してもらいます。 生徒の年齢、経験、性別を配慮し、生徒の興味を引きそうな話題を用意しておきます。 [若い女性](http://code.org/girls) に参加意欲を促すためのガイダンスを参照してください。 
-- 生徒の積極性を促しましょう！ 教師と協力して[意欲を促すビデオ](https://hourofcode.com/us/promote/resources#videos) を選んでおきます。このビデオで授業での集中力を高め、生徒にやる気を起こさせます。 
-- バーチャル方式でボランティア活動をする場合は、生徒の注意を持続させるためプレゼン用のスライドを用意しておきます。
+- Consider the students you will be speaking to and what might resonate with them. As a volunteer, you can help them to realize that computing is everywhere and they too can become computer scientists. Consider their ages, backgrounds, and gender identities and come prepared with topics that may appeal to their interests. Here is additional guidance on how to inspire [young women](http://code.org/girls) to participate. 
+- Get the students excited! Work with the teacher to pick out an [inspirational video](https://hourofcode.com/us/promote/resources#videos) that can help focus the class and get them excited to do an Hour of Code. 
+- If you are a virtual volunteer, consider making a few slides as part of your presentation to help keep students engaged.
 
-その他の情報を希望する方は、 [こちらのヒントをご覧ください。](https://code.org/files/CSTT_Volunteers.pdf).
+Need more resources? [Check out these other tips](https://code.org/files/CSTT_Volunteers.pdf).
 
 * * *
 
 <a id="hosting-an-event"></a>
 
-## イベントを開催したいときは
+## When you're hosting an event
 
-授業でイベントを主催することになった場合は、参考になるアジェンダのサンプルをご利用ください。 活動当日のスケジュールは教師と事前に合意を得て、話す内容のポイントについても話し合っておきます。 教室を実際に訪問する際には、教室入室の許可を得て、イベントに参加する教師に会っておきます。
+If you are the host of an event with a classroom, use the sample agenda to guide you. Confirm the agreed schedule for the day and discuss any talking points with the teacher beforehand. If you are physically visiting the class, make sure you sign in with the school and greet the teacher the day-of your event.
 
-Hour of Code を自宅または地元で開催することを検討している場合は、[保護者](https://hourofcode.com/us/how-to/parents) と [組織・団体](https://hourofcode.com/us/how-to/companies)向けの詳細なハウツーガイドをご覧ください。
+If you’re considering hosting the Hour of Code at home or in the community, we recommend taking a look at some of our in-depth How-To Guides for [parents](https://hourofcode.com/us/how-to/parents) and [organizations or companies](https://hourofcode.com/us/how-to/companies).
 
 ### 1. この手引きビデオを見る <iframe width="500" height="255" src="//www.youtube.com/embed/SrnvvWDm73k" frameborder="0" allowfullscreen mark="crwd-mark"></iframe> 
 
-### 2. イベントの日程、形式、場所を決定する
+### 2. Determine a date, format, and location for your event
 
-学校、教師と共に意義のある活動とは何かについて協議します。 これまで、イベントではさまざまなスタイルで開催されてきました。たとえば、[バーチャル方式](https://hourofcode.com/us/how-to/virtual)、対面式、会場が会社オフィスまたは地元の会場、対象が全年齢の生徒などです。 以上のほか、[法人パートナー](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf)や [ドナー](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) は過去、協力していただき示唆に富んだアイデアも提示していますので参考にしてくだい。
+Work with the school or teacher to discuss what makes the most sense. We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual) or in-person, at the company office or held in the community, and for students of all ages! You can also take a look at what other [corporate partners](https://medium.com/@codeorg/amazon-microsoft-google-vista-and-more-rally-to-bring-the-hour-of-code-to-students-worldwide-4641325542cf) and [donors](https://medium.com/@codeorg/how-code-orgs-corporate-supporters-helped-spread-the-love-for-2019-s-hour-of-code-73a3c088f10f) have done in the past for some inspiring ideas.
 
 <br />
 
-#### アジェンダのサンプル
+#### Sample Agenda:
 
-|時間 | アジェンダ項目 | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1～5 分 | [アイデアを生むビデオ](https://hourofcode.com/us/promote/resources#videos)|  
-を見る |5～10 分 | 自己紹介と生徒のことを知る: 勤務先は？仕事の内容は？仕事で最も気に入っている部分は？ 何にまたは誰からの影響が強いのか？ コンピューターサイエンスに関心を持ったきっかけは？ 指導者はいましたか？ 生徒に質問をし、質疑応答の時間も設けます。   
-|30～60 分 | コード！ 予定しているイベントが対面方式の場合、生徒の質問に答えたり、ちょっと難しいパズルで生徒を指導したりします。 答えはすぐ出さないようにして、どこが間違ったのが自ら発見できるような質問をし、また生徒からの質問があれば、生徒同士で質問し合うよう指示します。 バーチャル方式でボランティア活動を行う場合は、教師と一緒にどのような方法がベストなのか相談します。 イベントが終了しましたら、生徒がどれだけ進歩と遂げたのかイベントを振り返るとよいでしょう。 | | |1～3 分 | 感謝の言葉を述べ、互いに別れの言葉を述べる。 会社記念品 ([ステッカー](#celebrate)などは喜ばれます)を配布します。 | | <br />
+|Time | Agenda Item | |\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---\---- | \---\---\---\---\----- | |1-5 minutes | Show an [inspirational video](https://hourofcode.com/us/promote/resources#videos)|  
+|5-10 minutes | Introduce yourself and learn more about the students: Where do you work, what do you do, and what do you love most about your job? 誰に感銘を受けたのか コンピューターサイエンスに関心を持ったきっかけ コンピューターサイエンスを学ぶ際にメンターはいたかどうか 子どもたちにも質問をする。質疑応答の時間も設ける。 |  
+|30-60 minutes | Code! If your event is in-person, this is the time to answer questions and guide students through tough puzzles. Try not to give them the solution outright, instead, try asking them questions so they can answer themselves what went wrong, and encourage students to ask each other if they have questions. If you are volunteering virtually, work with the teacher on what the best approach might be. It may make more sense to return at the end of the session to see what progress students have made. | | |1-3 minutes | Thank everyone and share inspirational parting words. Hand out any of your company swag ([stickers](#celebrate) are awesome)! | | <br />
 
-#### イベントについての他のアイデア
+#### Other ideas to add to your event
 
-- なぜ、コンピューターが我々の生活に大きなインパクトを与えているのか、男の子も女の子も興味を持つ分野の実例を交えて、人の命を救い、人を助け、人をつなげているのか、説明してみる。 
-- 技術系企業であれば、現在開発中の革新的な新製品をデモビデオで紹介してもよいでしょう。技術系企業ではない場合は、会社が抱える問題を解決し目標達成のために技術をどのように活かしているのかを話題にします。 
+- Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people. 
+- If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
 - 会社のソフトウェアエンジニアを招待して、なぜコンピュータサイエンス学ぼうと思ったのか、どんな開発や研究をしているのか話してもらう。
-- 予定しているイベントを進めるのがグループ、または現地学校でボランティア活動をするグループの場合、グループ全員が着用する[カスタムTシャツ](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) をお求めください。
+- If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your group.
 
-### 技術的ニーズに計画的に対応
+### 3. Plan your technology needs
 
 [![](/images/fit-600/Marketing/Excel-Charter-SchoolHoC-2015-stills-9.jpg)]({{ urls/learn }})
 
-#### デバイス：
+#### Devices:
 
-最良のHour of Code体験にはインターネット接続されたコンピュータがつきものです。 But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! テクノロジーを使わないアクティビティには、クラスルームのセクションをフィルターにかけ、「コンピューター、デバイスの不在」のオプションを表示します。
+最良のHour of Code体験にはインターネット接続されたコンピュータがつきものです。 But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
 
-- コンピューター、デバイスの**動作テスト**を行います。ブラウザの音声と動画が正常に機能していることを確認します。
-- **必要なデバイスが不足していますか？ ** ペアプログラミングを使ってみてください。 生徒たちがグループで活動すれば、先生にあまり頼らずにお互い助け合いながら進めることができます。 さらに、子どもたちはコンピュータサイエンスが一人だけでやるものではないことに気づくでしょう。
-- 参加者のために**ヘッドホンを用意**しますが、チュートリアルで最良の音声で聞きたいという参加者がいましたら、自分のヘッドホンを持参するよう指示します。
-- **低帯域ですか**？参加者が自分の動画をダウンロードしなくてもよいように、イベント最初の方で動画を見せます。またはコンピューターを使わないか、オフラインでのアクティビティを試してみます。
+- **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
+- **Don't have enough devices?** Use pair programming. 生徒たちがグループで活動すれば、先生にあまり頼らずにお互い助け合いながら進めることができます。 さらに、子どもたちはコンピュータサイエンスが一人だけでやるものではないことに気づくでしょう。
+- **Provide headphones** for your participants or ask them to bring their own if they’ll be trying tutorials that work best with sounds.
+- **Have low bandwidth**? Plan to show videos at the front of the event, so each participant isn't downloading their own videos. Or try the unplugged / offline activities.
 
-#### バーチャル方式のイベント
+#### Virtual Events:
 
-イベントがバーチャル方式で実施される場合、イベント開始の前に会議プラットフォームを決めておく（またテストする）必要があります。 このプラットフォーム選定は、参加する生徒の数に影響を及ぼします。生徒の参加依頼またはイベント促進を行う前に選定しておくことが望まれます。 Hour of Codeをリモートで実施する場合のヒントについては、 [Hour of Code イベント向けアドバイス](https://hourofcode.com/us/how-to/virtual)をご覧ください。
+If your event is going to be virtual, you’ll want to decide on your conference platform (and test it) prior to your event. This may impact the number of students you feel comfortable engaging, so it’s best to determine this prior to inviting a classroom or promoting your event. For ideas on how to run a remote Hour of Code, read our [tips for a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
-### 4. アクティビティを選択する
+### 4. Choose an activity
 
-全年齢グループと経験レベルに対応したさまざまな楽しい生徒ガイダンス付きチュートリアルが用意されています 。 通常、生徒は自発的にチュートリアルで学ぼうとしますが、参加者全員で[アイデアを生むビデオ](https://hourofcode.com/us/promote/resources#videos) を視聴してから始めてもよいでしょう。
+We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
 
-<a href="https://hourofcode.com/us/learn">どのようなアクティビティが良いのか探してみて、</a> 生徒向けのチュートリアル1つでよいのか事前に決めておきます。または、生徒たちに自分達で選ばせてもよいでしょう。 **Hour of Codeのアクティビティ**は最低限の準備時間で済むようになっており、参加者は自分自身のペースやスキルレベルに応じて参加できる自習式となっています。
+<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **すべてのHour of Codeアクティビティ**は最低限の準備時間で済むようになっており、参加者は自分自身のペースやスキルレベルに応じて参加できる自習式となっています。
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-イベントの適切なロードマップができていれば、生徒、学校、地域社会に誘いの声をかけることができます。 まず、何らかの関係のある地元の学校に声をかけるか、それとも Hour of Code イベントの[マップを確認](https://hourofcode.com/us/map)してみましょう。
+Once you have a solid roadmap for your event, you can then start inviting students, a school, or the larger community. We recommend starting with a local school you have a relationship with or [browsing our map](https://hourofcode.com/us/map) of Hour of Code events.
 
 <a id="celebrate"></a>
 
-### 5. 認定
+### 5. Celebrate
 
 [![](/images/fit-600/Marketing/2018_HoC-391.jpg)]({{ urls/learn }})
 
-生徒やゲストがそれぞれHour of Codeを完了しましたら、次はその努力を称えてあげましょう。以下はイベントをさらに意義あるものにするためのヒントです。
+After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
 
-- 参加者や生徒の[認定書を配布します。]({{ urls/certificates }}) 
-- [「私はHour of Codeを無事完了しました」ステッカーを印刷するか、]({{ promote/resources_stickers }})他の賞として[Code.org Amazon Store](https://code.org/shop)からグッズを入手します。 
+- [Share certificates]({{ urls/certificates }}) for participants and students.
+- [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop). 
 - Hour of Codeのイベントの様子を撮影した写真やビデオをソーシャルメディア上で共有しましょう。 #HourOfCodeハッシュタグや@codeorg参照を使うと、我々があなたの取り組みをハイライトすることもできます！
 
 * * *
 
 <a id="promote-hour-of-code"></a>
 
-## Hour of Code のことを広く知らせる
+## Spread the word about the Hour of Code
 
-良い方法の1つとして、Hour of Codeという語句を広く一般に広めることです。
+One of the best ways to help is to spread the word and promote the Hour of Code.
 
 [![](/images/fit-600/Marketing/g8TUlHzF.jpeg)]({{ urls/learn }})
 
-### 1. イベントを登録する
+### 1. Register Your Event
 
-Hour of Code イベントに登録すると、Hour of Codeの主催を成功に導くためのニュースやヒントが含まれる役立つメールが届きます。 地元の学校、保護者に近くでイベントが開催されることを知らせる方法なども記載されています。
+When you sign up your Hour of Code event, you’ll receive helpful email communications with news and tips for hosting a successful Hour of Code. It’s also how you can let local schools or parents know that you’re hosting an event near them.
 
-### 2. ソーシャルメディアへの投稿
+### 2. Post on Social Media
 
-以下のサンプルコンテンツをソーシャルメディアに投稿して従業員に読んでもらい、コンピューターサイエンスの現状についての意識高揚に協力してください。
+Help raise awareness of the computer science movement with this sample content to post on social media and share with your employees.
 
-#### Hour of Code 概要
+#### Hour of Code general announcement
 
-- 私たちの生活を変えているコンピューターサイエンス。#HourOfCode https://hourofcode.com/で生徒がその変化の一端を担うことができるようサポートします。 
-- テクノロジーという単語の使用は避け、その言葉の意味を構築する方法を知ることが重要です。 #HourOfCode. https://hourofcode.com/で学習を始める人を応援しましょう。 
+- Computer science is changing our world. Help students be part of this change starting with one #HourOfCode. https://hourofcode.com/ 
+- Don’t just use technology—learn how to build it. Help someone start with an #HourOfCode. https://hourofcode.com/ 
 
-#### データ
+#### Stats
 
-- 米国学校の45％しかコンピューターサイエンスを教えていないことをご存知でしたか。#HourOfCode https://hourofcode.com/で生徒がコンピューターサイエンスを学べるよう機会を与えることが大切です。 
-- 米国では、ソフトウェア専門家の26% が女性で占められています。#HourOfCode https://hourofcode.com/でより多くの若い女性にコンピューターサイエンスの魅力を知ってもらいましょう。 
-- コンピューター関連職の67％が実はIT分野に属していません。#HourOfCode https://hourofcode.com/でコンピューターサイエンスが学校の標準カリキュラムとして扱われるようサポートしましょう。 
+- Did you know only 45% of U.S. schools teach computer science? Give every student the chance to learn one #HourOfCode https://hourofcode.com/ 
+- In the U.S., only 26% of software professionals are women. Introduce more young women to computer science with #HourOfCode https://hourofcode.com/ 
+- 67% of computing jobs in the U.S. are not in the tech sector. Help put computer science in the standard curriculum with #HourOfCode https://hourofcode.com/ 
 
-#### 自分のストーリーを作成
+#### Create your own
 
-- 1つの #HourOfCode が [自分のストーリーを記入]になります。 https://hourofcode.com/ 
-- 私は、[fill in your thoughts]という信念で#HourOfCode をサポートしています。皆さんの参加をお待ちしております。https://hourofcode.com 
+- One #HourOfCode can lead to [fill in your story]. https://hourofcode.com/ 
+- I’m supporting #HourOfCode because [fill in your thoughts]. Join us https://hourofcode.com 
 
-#### エンジニエアの方へ
+#### Engineer-specific
 
-- 初めてコードを学習して人生で大きな影響を受けた方は、近くにいる生徒が初めて#HourOfCode https://code.org/volunteerを書くのを手伝いましょう。 
-- コードを学習した方なら、自分のストーリーを教えてください。近くの生徒が初めての#HourOfCode https://code.org/volunteerで学習するよう促しましょう。
+- If your very first line of code changed your life, help students near you write their first #HourOfCode https://code.org/volunteer 
+- If you learned to code—what’s your story? Inspire a student near you through their first #HourOfCode https://code.org/volunteer
 
-イベントを地域の人々に知らせるポスター、ビデオ、ステッカー、その他の方法についての<a href="https://hourofcode.com/promote/resources#posters">詳細はこちら</a>
+<a href="https://hourofcode.com/promote/resources#posters">Learn more</a> about posters, videos, stickers and other ways to promote your event to your community.
 
 * * *
 
 <a id="support-hour-of-code"></a>
 
-## Hour of Codeをサポートする他の方法
+## More ways to support the Hour of Code
 
 [![](/images/fit-600/Marketing/girl-strong-coding.png)]({{ urls/learn }})
 
-- [Code.org swag](https://store.code.org/)を着用してコンピューターサイエンスの意識を高めてください。（販売収益はコンピューターサイエンス教育を受ける生徒の支援に充てられます。）
-- [AmazonSmile](https://code.org/donate/amazonsmile)でショッピングをするときは、 Code.org を選択して購入してください。 
-- コンピューターサイエンスの重要性と、従業員にコンピューターサイエンスを広めることを促す全従業員宛メールを送信するよう会社CEOに依頼してみてください。
-- 他の従業員と一緒になって[キャンペーン](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2)を盛り上げてください。 
-- どの生徒もコンピューターサイエンスを学べる機会がもてるよう、[この請願書に署名してください。](https://code.org/promote) 
-- Code.org が今後とも教材を無償にし、その教材を誰もが利用できるよう[寄付](https://code.org/donate) をお願いいたします。 
+- Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
+- Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile). 
+- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
+- Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
+- [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science. 
+- [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all. 
 
-Code.org とHour of Codeの支援についてのご提案がありましたら、[Code.org/Help](https://code.org/help)にアクセスをお願いいたします。 
+For more suggestions on how to support Code.org and the Hour of Code, visit [Code.org/Help](https://code.org/help)
 
 * * *
 
 <a id="faq"></a>
 
-## ボランティアに関するFAQ
+## Volunteering FAQ
 
 ### まだ先生からの応募がありません。ボランティアをしたいのですが、どうしたらいいですか？
 
@@ -247,20 +247,20 @@ Code.org とHour of Codeの支援についてのご提案がありましたら�
 
 ### 学校での開催は何時間くらいですか？
 
-対面式のアクティビティは通常 6～90 分かかりますが、バーチャル方式では通常 20～30 分のアクティビティとなります。  
+An in-person classroom visit usually lasts 60-90 minutes while a virtual classroom visit usually lasts 20-30 minutes.   
 
 
 ### Hour of Codeアクティビティを行うのに適切な年齢はどのくらいですか？
 
-Code.org と私たちのパートナーは、Hour of Code のすべてのアクティビティを考案し、さまざまなバックグラウンドをもつ、すべての学年 (K-12) の生徒の参加を希望しています。大人も含めたすべての人が楽しめるアクティビティです。  
+Code.org and our partners design all the Hour of Code activities to engage students of all grade levels (K-12) from all backgrounds. Everyone - even adults - can have fun playing!   
 
 
-### どうすれば、技術ボランティアまたはゲストスピーカーとして選ばれますか？
+### How do I get selected as a technical volunteer or guest speaker?
 
-先生方は[ボランティアマップ](https://code.org/volunteer/local)からボランティアを探します できるだけプロフィールを完成させることで、より多くの先生からの依頼を受ける可能性が高まります ゲストスピーカーやテクニカルサポートなど、なりたいボランティアのタイプがある場合は、プロフィールにその旨を明記してください。   
-
-
-ボランティアとして選ばれた場合、ボランティアプラットフォームを通じて教師から連絡が入ります（当方からはボランティアのメールアドレスを教師に教えることはありません）。 もし、先生からのボランティアのリクエストが多すぎた場合は、あなたはメールの下部のリンクからいつでもプロフィールを更新したり、退会することができます。   
+先生方は[ボランティアマップ](https://code.org/volunteer/local)からボランティアを探します できるだけプロフィールを完成させることで、より多くの先生からの依頼を受ける可能性が高まります If you have a preference on how you’d like to volunteer, such as being a guest speaker or as technical support, please indicate that in the description of your profile.   
 
 
-[<button>ボランティア登録をしましょう</button>]({{ urls/volunteer }})
+When selected, a teacher will contact you through the volunteer platform (your email address will never be shared with the teacher). もし、先生からのボランティアのリクエストが多すぎた場合は、あなたはメールの下部のリンクからいつでもプロフィールを更新したり、退会することができます。   
+
+
+[<button>ボランティアとして登録してください。</button>]({{ urls/volunteer }})

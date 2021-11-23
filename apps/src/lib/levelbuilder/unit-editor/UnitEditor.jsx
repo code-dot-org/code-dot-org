@@ -216,6 +216,10 @@ class UnitEditor extends React.Component {
     }
   };
 
+  handleView = () => {
+    navigateToHref(linkWithQueryParams(this.props.scriptPath));
+  };
+
   handleSave = (event, shouldCloseAfterSave) => {
     event.preventDefault();
 
@@ -1098,10 +1102,10 @@ class UnitEditor extends React.Component {
         </CollapsibleEditorSection>
         <SaveBar
           handleSave={this.handleSave}
+          handleView={this.handleView}
           error={this.state.error}
           isSaving={this.state.isSaving}
           lastSaved={this.state.lastSaved}
-          pathForShowButton={this.props.scriptPath}
         />
       </div>
     );

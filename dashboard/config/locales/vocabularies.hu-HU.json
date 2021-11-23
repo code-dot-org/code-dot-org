@@ -11,9 +11,6 @@
         "function/hero/unversioned": {
           "word": "Függvény"
         },
-        "code/poem-art/2021": {
-          "word": "Kód"
-        },
         "debugging/flappy/unversioned": {
           "word": "Hibakeresés"
         },
@@ -44,30 +41,6 @@
         "loops/aquatic/unversioned": {
           "word": "hurkok"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/starwars/unversioned": {
           "word": "Hibakeresés"
         },
@@ -80,10 +53,6 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Hibakeresés"
         },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/sports/unversioned": {
           "word": "Kód"
         },
@@ -95,9 +64,6 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Hibakeresés"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Kód"
         },
         "behavior/coursef/2021": {
           "word": "Viselkedés"

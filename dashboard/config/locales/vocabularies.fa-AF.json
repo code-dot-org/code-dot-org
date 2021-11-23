@@ -2,31 +2,55 @@
   "fa-AF": {
     "data": {
       "vocabularies": {
-        "caesar_cipher_/hoc-encryption/unversioned": {
+        "click/pre-express/2021": {
           "word": "",
           "definition": ""
         },
-        "cipher/hoc-encryption/unversioned": {
+        "drag/pre-express/2021": {
           "word": "",
           "definition": ""
         },
-        "cracking_encryption/hoc-encryption/unversioned": {
+        "drop/pre-express/2021": {
           "word": "",
           "definition": ""
         },
-        "decryption/hoc-encryption/unversioned": {
+        "double_click/pre-express/2021": {
           "word": "",
           "definition": ""
         },
-        "encryption/hoc-encryption/unversioned": {
+        "algorithm/pre-express/2021": {
           "word": "",
           "definition": ""
         },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
+        "bug/pre-express/2021": {
           "word": "",
           "definition": ""
         },
-        "lossless_compression/text-compression/unversioned": {
+        "debugging/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "program/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "programming/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "persistence/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "loop/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "repeat/pre-express/2021": {
+          "word": "",
+          "definition": ""
+        },
+        "event/pre-express/2021": {
           "word": "",
           "definition": ""
         }

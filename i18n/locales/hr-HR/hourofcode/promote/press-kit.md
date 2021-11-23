@@ -1,5 +1,5 @@
 ---
-title: Materijal za novinare
+title: Mterijal za novinare
 ---
 
 {{ signup_button }}

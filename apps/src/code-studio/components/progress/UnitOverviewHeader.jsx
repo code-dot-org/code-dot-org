@@ -113,9 +113,7 @@ class UnitOverviewHeader extends Component {
     } = this.props;
 
     const displayVerifiedResources =
-      viewAs === ViewType.Instructor &&
-      !isVerifiedTeacher &&
-      hasVerifiedResources;
+      viewAs === ViewType.Teacher && !isVerifiedTeacher && hasVerifiedResources;
 
     const displayVersionWarning =
       showRedirectWarning &&
@@ -208,14 +206,14 @@ class UnitOverviewHeader extends Component {
                 />
               )}
             </div>
-            {viewAs === ViewType.Instructor && (
+            {viewAs === ViewType.Teacher && (
               <SafeMarkdown
                 style={styles.description}
                 openExternalLinksInNewTab={true}
                 markdown={unitDescription}
               />
             )}
-            {viewAs === ViewType.Participant && (
+            {viewAs === ViewType.Student && (
               <SafeMarkdown
                 style={styles.description}
                 openExternalLinksInNewTab={true}

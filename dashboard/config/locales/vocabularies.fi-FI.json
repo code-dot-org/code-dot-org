@@ -11,9 +11,6 @@
         "function/hero/unversioned": {
           "word": "Funktio"
         },
-        "code/poem-art/2021": {
-          "word": "Koodi"
-        },
         "debugging/flappy/unversioned": {
           "word": "Virheen etsintä"
         },
@@ -44,30 +41,6 @@
         "loops/aquatic/unversioned": {
           "word": "Silmukat"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/starwars/unversioned": {
           "word": "Virheen etsintä"
         },
@@ -80,10 +53,6 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Virheen etsintä"
         },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/sports/unversioned": {
           "word": "Koodi"
         },
@@ -95,9 +64,6 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Virheen etsintä"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Koodi"
         },
         "variable/coursef/2021": {
           "word": "Muuttuja"

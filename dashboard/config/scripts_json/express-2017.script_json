@@ -6,6 +6,7 @@
     "properties": {
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csf-1718/express/{LESSON}",
       "curriculum_umbrella": "CSF",
+      "family_name": "express",
       "has_lesson_plan": true,
       "hideable_lessons": true,
       "is_course": true,
@@ -50,11 +51,9 @@
     },
     "new_name": "express-2017",
     "family_name": "express",
-    "serialized_at": "2021-11-19 20:48:56 UTC",
+    "serialized_at": "2021-10-25 22:53:30 UTC",
     "published_state": "stable",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
     "seeding_key": {
       "script.name": "express-2017"
     }
@@ -7401,18 +7400,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp1",
-        "script_level.level_keys": [
-          "courseD_scrat_ramp1",
-          "courseE_maze_ramp1"
-        ],
-        "lesson.key": "Introduction",
-        "lesson_group.key": "content",
-        "script.name": "express-2017"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseE_maze_ramp1",
         "script_level.level_keys": [
           "courseD_scrat_ramp1",
@@ -7425,10 +7412,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_maze_ramp2",
+        "level.key": "courseD_scrat_ramp1",
         "script_level.level_keys": [
-          "courseD_scrat_ramp2",
-          "courseE_maze_ramp2"
+          "courseD_scrat_ramp1",
+          "courseE_maze_ramp1"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7449,10 +7436,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp3",
+        "level.key": "courseE_maze_ramp2",
         "script_level.level_keys": [
-          "courseD_scrat_ramp3",
-          "courseE_maze_ramp3"
+          "courseD_scrat_ramp2",
+          "courseE_maze_ramp2"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7473,10 +7460,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp4",
+        "level.key": "courseD_scrat_ramp3",
         "script_level.level_keys": [
-          "courseD_scrat_ramp4",
-          "courseE_maze_ramp4"
+          "courseD_scrat_ramp3",
+          "courseE_maze_ramp3"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7497,10 +7484,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp5",
+        "level.key": "courseD_scrat_ramp4",
         "script_level.level_keys": [
-          "courseD_scrat_ramp5",
-          "courseE_maze_ramp5"
+          "courseD_scrat_ramp4",
+          "courseE_maze_ramp4"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7521,10 +7508,10 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_predict1",
+        "level.key": "courseD_scrat_ramp5",
         "script_level.level_keys": [
-          "courseD_scrat_predict1",
-          "courseE_maze_predict1"
+          "courseD_scrat_ramp5",
+          "courseE_maze_ramp5"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "content",
@@ -7545,7 +7532,19 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseCDEF_video_AngryBirdLoops",
+        "level.key": "courseD_scrat_predict1",
+        "script_level.level_keys": [
+          "courseD_scrat_predict1",
+          "courseE_maze_predict1"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "content",
+        "script.name": "express-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseD_video_ScratLoops",
         "script_level.level_keys": [
           "courseCDEF_video_AngryBirdLoops",
           "courseD_video_ScratLoops"
@@ -7557,7 +7556,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_video_ScratLoops",
+        "level.key": "courseCDEF_video_AngryBirdLoops",
         "script_level.level_keys": [
           "courseCDEF_video_AngryBirdLoops",
           "courseD_video_ScratLoops"
@@ -7593,18 +7592,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp7",
-        "script_level.level_keys": [
-          "courseD_scrat_ramp7",
-          "courseE_maze_ramp7"
-        ],
-        "lesson.key": "Introduction",
-        "lesson_group.key": "content",
-        "script.name": "express-2017"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseE_maze_ramp7",
         "script_level.level_keys": [
           "courseD_scrat_ramp7",
@@ -7617,7 +7604,19 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseD_scrat_ramp8",
+        "level.key": "courseD_scrat_ramp7",
+        "script_level.level_keys": [
+          "courseD_scrat_ramp7",
+          "courseE_maze_ramp7"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "content",
+        "script.name": "express-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_ramp8",
         "script_level.level_keys": [
           "courseD_scrat_ramp8",
           "courseE_artist_ramp8"
@@ -7629,7 +7628,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_artist_ramp8",
+        "level.key": "courseD_scrat_ramp8",
         "script_level.level_keys": [
           "courseD_scrat_ramp8",
           "courseE_artist_ramp8"
@@ -7665,18 +7664,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_artist_ramp8_2",
-        "script_level.level_keys": [
-          "courseE_artist_ramp8_2",
-          "courseE_artist_ramp9"
-        ],
-        "lesson.key": "Introduction",
-        "lesson_group.key": "content",
-        "script.name": "express-2017"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseE_artist_ramp9",
         "script_level.level_keys": [
           "courseE_artist_ramp8_2",
@@ -7689,7 +7676,19 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseC_video_angles2",
+        "level.key": "courseE_artist_ramp8_2",
+        "script_level.level_keys": [
+          "courseE_artist_ramp8_2",
+          "courseE_artist_ramp9"
+        ],
+        "lesson.key": "Introduction",
+        "lesson_group.key": "content",
+        "script.name": "express-2017"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_artist_predict1",
         "script_level.level_keys": [
           "courseC_video_angles2",
           "courseE_artist_predict1"
@@ -7701,7 +7700,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "courseE_artist_predict1",
+        "level.key": "courseC_video_angles2",
         "script_level.level_keys": [
           "courseC_video_angles2",
           "courseE_artist_predict1"

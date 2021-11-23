@@ -393,8 +393,7 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         code_review_enabled: true,
-        is_assigned_csa: false,
-        code_review_expires_at: nil
+        is_assigned_csa: false
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -436,8 +435,7 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         code_review_enabled: true,
-        is_assigned_csa: false,
-        code_review_expires_at: nil
+        is_assigned_csa: false
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -482,8 +480,7 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         code_review_enabled: true,
-        is_assigned_csa: false,
-        code_review_expires_at: nil
+        is_assigned_csa: false
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -522,8 +519,7 @@ class SectionTest < ActiveSupport::TestCase
         students: [],
         restrict_section: false,
         code_review_enabled: true,
-        is_assigned_csa: false,
-        code_review_expires_at: nil
+        is_assigned_csa: false
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -577,27 +573,6 @@ class SectionTest < ActiveSupport::TestCase
   test 'valid_grade? does not accept invalid numbers and strings' do
     refute Section.valid_grade?("Something else")
     refute Section.valid_grade?("56")
-  end
-
-  test 'code review disabled for sections with no code review expiration' do
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
-    section = create :section
-
-    refute section.code_review_enabled?
-  end
-
-  test 'code review enabled for sections with code review expiration later than current time' do
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
-    section = create :section, code_review_expires_at: Time.now.utc + 1.day
-
-    assert section.code_review_enabled?
-  end
-
-  test 'code review disabled for sections with code review expiration before current time' do
-    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
-    section = create :section, code_review_expires_at: Time.now.utc - 1.day
-
-    refute section.code_review_enabled?
   end
 
   test 'reset_code_review_groups creates new code review groups' do
@@ -668,8 +643,8 @@ class SectionTest < ActiveSupport::TestCase
     end
 
     # Create 2 code review groups
-    @group1 = create :code_review_group, section: @code_review_group_section
-    @group2 = create :code_review_group, section: @code_review_group_section
+    @group1 = CodeReviewGroup.create(section_id: @code_review_group_section.id, name: "group1")
+    @group2 = CodeReviewGroup.create(section_id: @code_review_group_section.id, name: "group2")
     # put student 0 and 1 in group 1, and student 2 in group 2
     CodeReviewGroupMember.create(follower_id: @followers[0].id, code_review_group_id: @group1.id)
     CodeReviewGroupMember.create(follower_id: @followers[1].id, code_review_group_id: @group1.id)

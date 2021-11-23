@@ -1,10 +1,10 @@
 ---
-title: ऑवर ऑफ़ कोड वर्चुअल इवेंट्स के लिए हाउ-टू गाइड
+title: Hour of Code How-To Guide for Virtual Events
 ---
 
 {{ signup_button }}
 
-# वर्चुअल ऑवर ऑफ़ कोड इवेंट के लिए टिप्स
+# Tips for a virtual Hour of Code event
 
 ### You don't have to be in-person to run a successful Hour of Code!
 

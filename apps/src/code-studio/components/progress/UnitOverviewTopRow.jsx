@@ -129,7 +129,7 @@ class UnitOverviewTopRow extends React.Component {
 
     return (
       <div style={styles.buttonRow} className="unit-overview-top-row">
-        {!professionalLearningCourse && viewAs === ViewType.Participant && (
+        {!professionalLearningCourse && viewAs === ViewType.Student && (
           <div style={styles.buttonsInRow}>
             <Button
               __useDeprecatedTag
@@ -160,7 +160,7 @@ class UnitOverviewTopRow extends React.Component {
 
         <div style={styles.resourcesRow}>
           {!professionalLearningCourse &&
-            viewAs === ViewType.Instructor &&
+            viewAs === ViewType.Teacher &&
             ((!useMigratedTeacherResources && teacherResources.length > 0) ||
               (useMigratedTeacherResources &&
                 migratedTeacherResources.length > 0)) && (
@@ -171,7 +171,7 @@ class UnitOverviewTopRow extends React.Component {
                 useMigratedResources={useMigratedTeacherResources}
               />
             )}
-          {pdfDropdownOptions.length > 0 && viewAs === ViewType.Instructor && (
+          {pdfDropdownOptions.length > 0 && viewAs === ViewType.Teacher && (
             <div style={{marginRight: 5}}>
               <DropdownButton
                 text={i18n.printingOptions()}
@@ -191,7 +191,7 @@ class UnitOverviewTopRow extends React.Component {
               </DropdownButton>
             </div>
           )}
-          {showCalendar && viewAs === ViewType.Instructor && (
+          {showCalendar && viewAs === ViewType.Teacher && (
             <UnitCalendarButton
               lessons={unitCalendarLessons}
               weeklyInstructionalMinutes={weeklyInstructionalMinutes}
@@ -199,7 +199,7 @@ class UnitOverviewTopRow extends React.Component {
             />
           )}
         </div>
-        {!professionalLearningCourse && viewAs === ViewType.Instructor && (
+        {!professionalLearningCourse && viewAs === ViewType.Teacher && (
           <SectionAssigner
             sections={sectionsForDropdown}
             selectedSectionId={selectedSectionId}

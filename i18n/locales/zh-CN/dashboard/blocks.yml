@@ -1740,11 +1740,12 @@ zh-CN:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': 花朵
-            '"hearts"': 心
-            '"iceCream"': 冰淇淋
+            Ice Cream: 冰淇淋
+            Stars: 星星
+            Fireworks: 烟火
             '"rainbow"': 彩虹
-            '"stars"': 星星
+            '"hearts"': 心
+            '"flowers"': 花朵
             '"waves"': 波浪
       Poetry_makeBurst:
         options:
@@ -1758,7 +1759,7 @@ zh-CN:
         text: 播放音效{SOUND}
         options:
           SOUND:
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': 光
+            Light: 光
       Poetry_setBackground:
         text: 设置背景颜色为 {COLOR}
       Poetry_setBackgroundEffect:

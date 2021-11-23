@@ -19,7 +19,7 @@ const DEFAULT_PROPS = {
   serverLevelId: 123,
   teacher: 5,
   latestFeedback: null,
-  viewAs: ViewType.Instructor,
+  viewAs: 'Teacher',
   verifiedTeacher: true,
   selectedSectionId: '789',
   canHaveFeedbackReviewState: true,
@@ -54,7 +54,7 @@ describe('TeacherFeedback', () => {
     expect(wrapper.isEmptyRender()).to.be.true;
   });
 
-  describe('viewed as instructor - looking at participant work', () => {
+  describe('viewed as Teacher - looking at student work', () => {
     describe('without previous feedback', () => {
       it('does not display FeedbackStatus', () => {
         const wrapper = setUp({rubric: null, latestFeedback: null});
@@ -67,7 +67,7 @@ describe('TeacherFeedback', () => {
         expect(rubric).to.have.length(1);
         expect(rubric.props().rubric).to.equal(RUBRIC);
         expect(rubric.props().isEditable).to.equal(true);
-        expect(rubric.props().viewAs).to.equal(ViewType.Instructor);
+        expect(rubric.props().viewAs).to.equal(ViewType.Teacher);
       });
 
       it('does not display a rubric if there is no rubric', () => {
@@ -106,7 +106,7 @@ describe('TeacherFeedback', () => {
         const wrapper = setUp({latestFeedback});
         const statusComponent = wrapper.find(FeedbackStatus);
         expect(statusComponent).to.have.length(1);
-        expect(statusComponent.props().viewAs).to.equal(ViewType.Instructor);
+        expect(statusComponent.props().viewAs).to.equal('Teacher');
         expect(statusComponent.props().latestFeedback).to.equal(latestFeedback);
       });
 
@@ -179,7 +179,7 @@ describe('TeacherFeedback', () => {
     });
   });
 
-  describe('viewed as instructor - not looking at participant work', () => {
+  describe('viewed as teacher - not looking at student work', () => {
     it('displays readonly rubric if rubric exists for level', () => {
       const wrapper = setUp({isEditable: false, rubric: RUBRIC});
       const rubric = wrapper.find(Rubric);
@@ -199,9 +199,9 @@ describe('TeacherFeedback', () => {
     });
   });
 
-  describe('viewed as a participant', () => {
+  describe('viewed as a Student', () => {
     const STUDENT_PROPS = {
-      viewAs: ViewType.Participant,
+      viewAs: 'Student',
       isEditable: false
     };
     describe('without previous feedback given', () => {
@@ -222,7 +222,7 @@ describe('TeacherFeedback', () => {
         expect(rubric).to.have.length(1);
         expect(rubric.props().rubric).to.equal(RUBRIC);
         expect(rubric.props().isEditable).to.equal(false);
-        expect(rubric.props().viewAs).to.equal(ViewType.Participant);
+        expect(rubric.props().viewAs).to.equal(ViewType.Student);
       });
 
       it('does not display the comment area', () => {
@@ -264,7 +264,7 @@ describe('TeacherFeedback', () => {
 
         const statusComponent = wrapper.find(FeedbackStatus);
         expect(statusComponent).to.have.length(1);
-        expect(statusComponent.props().viewAs).to.equal(ViewType.Participant);
+        expect(statusComponent.props().viewAs).to.equal('Student');
         expect(statusComponent.props().latestFeedback).to.equal(latestFeedback);
       });
 
@@ -293,7 +293,7 @@ describe('TeacherFeedback', () => {
         expect(rubric.props().rubric).to.equal(RUBRIC);
         expect(rubric.props().performance).to.equal('performanceLevel2');
         expect(rubric.props().isEditable).to.equal(false);
-        expect(rubric.props().viewAs).to.equal(ViewType.Participant);
+        expect(rubric.props().viewAs).to.equal(ViewType.Student);
       });
 
       it('renders the comment with expected props if there is a comment', () => {

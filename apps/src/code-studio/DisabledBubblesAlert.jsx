@@ -1,7 +1,6 @@
 import React from 'react';
 import Alert from '@cdo/apps/templates/alert';
 import i18n from '@cdo/locale';
-import {disabledBubblesSupportArticle} from './disabledBubbles';
 
 /**
  * Component that displays a small notification at the top of the page when
@@ -38,7 +37,7 @@ export default class DisabledBubblesAlert extends React.Component {
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href={disabledBubblesSupportArticle}
+            href="https://support.code.org/hc/en-us/articles/115002660852"
           >
             {i18n.learnMore()}
           </a>

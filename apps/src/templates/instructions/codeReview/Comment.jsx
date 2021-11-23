@@ -109,7 +109,7 @@ class Comment extends Component {
       });
     }
     if (viewAsTeacher) {
-      // Instructors can delete comments
+      // Teachers can delete comments
       menuItems.push({
         onClick: onDelete,
         text: javalabMsg.delete(),
@@ -184,7 +184,7 @@ class Comment extends Component {
 
 export const UnconnectedComment = Comment;
 export default connect(state => ({
-  viewAsTeacher: state.viewAs === ViewType.Instructor
+  viewAsTeacher: state.viewAs === ViewType.Teacher
 }))(Comment);
 
 const styles = {

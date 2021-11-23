@@ -239,8 +239,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
 
   # POST /api/v1/sections/<id>/code_review_enabled
   def set_code_review_enabled
-    # ensure a string or boolean gets parsed correctly
-    enable_code_review = ActiveModel::Type::Boolean.new.cast(params[:enabled])
+    enable_code_review = params[:enabled].to_bool
     @section.update_code_review_expiration(enable_code_review)
     @section.save
     render json: {result: 'success', expiration: @section.code_review_expires_at}

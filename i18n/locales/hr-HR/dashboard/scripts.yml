@@ -2279,10 +2279,6 @@ hr:
           lessons:
             CS Discoveries:
               name: RZ otkrića
-        ml-playground:
-          lessons:
-            intro-categorical:
-              name: Uvod u AI laboratorij
         2021drafting:
           lesson_groups:
             introduction:
@@ -2508,14 +2504,6 @@ hr:
               display_name: Uvod
             Introduction:
               display_name: Uvod
-        aiml-2021:
-          lessons:
-            lesson5:
-              name: Uvod u AI laboratorij
-        csd7-2021:
-          lessons:
-            Introduction to AI Lab:
-              name: Uvod u AI laboratorij
         csa-videos:
           lesson_groups:
             lessonGroup-2:
@@ -2551,7 +2539,3 @@ hr:
             lesson-1:
               name: Slovkanje
           title: Slovkanje
-        spelling-bee-2021:
-          lessons:
-            lesson-1:
-              name: Slovkanje

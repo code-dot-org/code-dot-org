@@ -29,10 +29,20 @@
       ],
       "curriculum_path": "https://curriculum.code.org/{LOCALE}/csp-20/unit6/{LESSON}",
       "curriculum_umbrella": "CSP",
+      "has_lesson_plan": true,
       "has_verified_resources": true,
       "hideable_lessons": true,
-      "is_migrated": true,
+      "is_stable": true,
       "project_sharing": true,
+      "script_announcements": [
+        {
+          "notice": "",
+          "details": "Are you teaching in a Virtual setting or Socially-Distanced classroom? Check out our forum post for information and resources. ",
+          "link": "https://forum.code.org/t/announcing-modifications-for-virtual-and-socially-distanced-classrooms/33005",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
       "student_detail_progress_view": true,
       "teacher_resources": [
         [
@@ -43,16 +53,13 @@
           "standardMappings",
           "https://curriculum.code.org/csp-20/unit6/standards/"
         ]
-      ],
-      "use_legacy_lesson_plans": true
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 21:04:58 UTC",
+    "serialized_at": "2021-10-25 22:54:11 UTC",
     "published_state": null,
     "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp6-2020"
     }
@@ -191,301 +198,21 @@
     }
   ],
   "lesson_activities": [
-    {
-      "key": "fd186594-3975-40ec-928c-d9538dff7689",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "fd186594-3975-40ec-928c-d9538dff7689",
-        "lesson.key": "Algorithms Solve Problems",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020"
-      }
-    },
-    {
-      "key": "3c496885-bfde-4988-896d-74ab964c603c",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "3c496885-bfde-4988-896d-74ab964c603c",
-        "lesson.key": "Algorithm Efficiency",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020"
-      }
-    },
-    {
-      "key": "042344f6-3e98-49b0-a569-5b5d7c70b5cb",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "042344f6-3e98-49b0-a569-5b5d7c70b5cb",
-        "lesson.key": "Unreasonable Time",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020"
-      }
-    },
-    {
-      "key": "72dc7fae-4032-4ff9-9289-235f3db4624d",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "72dc7fae-4032-4ff9-9289-235f3db4624d",
-        "lesson.key": "The Limits of Algorithms",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020"
-      }
-    },
-    {
-      "key": "c9b6922f-08db-4551-8357-172201a52b7e",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c9b6922f-08db-4551-8357-172201a52b7e",
-        "lesson.key": "Parallel and Distributed Algorithms",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020"
-      }
-    },
-    {
-      "key": "c46157a4-b9d1-4acf-9b87-20b4f8cc9ded",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "c46157a4-b9d1-4acf-9b87-20b4f8cc9ded",
-        "lesson.key": "Lesson 6: Assessment Day",
-        "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020"
-      }
-    },
-    {
-      "key": "bad9e695-0750-4694-bb6f-a5f06569746c",
-      "position": 1,
-      "properties": {
-        "name": "Levels"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bad9e695-0750-4694-bb6f-a5f06569746c",
-        "lesson.key": "CS Principles Post-Course Survey",
-        "lesson_group.key": "cspSurvey2020",
-        "script.name": "csp6-2020"
-      }
-    }
+
   ],
   "activity_sections": [
-    {
-      "key": "8691d1ae-834f-4608-be1f-5ef802cf2546",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "8691d1ae-834f-4608-be1f-5ef802cf2546",
-        "lesson_activity.key": "fd186594-3975-40ec-928c-d9538dff7689"
-      }
-    },
-    {
-      "key": "cef3d693-2d39-4668-982d-61549af7c8d9",
-      "position": 2,
-      "properties": {
-        "name": "Check For Understanding",
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "cef3d693-2d39-4668-982d-61549af7c8d9",
-        "lesson_activity.key": "fd186594-3975-40ec-928c-d9538dff7689"
-      }
-    },
-    {
-      "key": "3d0d6814-5c33-43d0-bfa5-72a7d3017a0e",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "3d0d6814-5c33-43d0-bfa5-72a7d3017a0e",
-        "lesson_activity.key": "3c496885-bfde-4988-896d-74ab964c603c"
-      }
-    },
-    {
-      "key": "82472b74-0e06-47f5-9ed9-159b7de33f9b",
-      "position": 2,
-      "properties": {
-        "progression_name": "Widget: Ticket Generator"
-      },
-      "seeding_key": {
-        "activity_section.key": "82472b74-0e06-47f5-9ed9-159b7de33f9b",
-        "lesson_activity.key": "3c496885-bfde-4988-896d-74ab964c603c"
-      }
-    },
-    {
-      "key": "cdc97c34-fa5e-4dfd-bb8a-aa57fab70b5b",
-      "position": 3,
-      "properties": {
-        "name": "Check For Understanding",
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "cdc97c34-fa5e-4dfd-bb8a-aa57fab70b5b",
-        "lesson_activity.key": "3c496885-bfde-4988-896d-74ab964c603c"
-      }
-    },
-    {
-      "key": "bb1574b5-8326-483c-b76c-59cf1f43991a",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "bb1574b5-8326-483c-b76c-59cf1f43991a",
-        "lesson_activity.key": "042344f6-3e98-49b0-a569-5b5d7c70b5cb"
-      }
-    },
-    {
-      "key": "56c6272f-7e78-4c6e-8873-6ff6aeeb2d69",
-      "position": 2,
-      "properties": {
-        "progression_name": "Widget: Ticket Generator"
-      },
-      "seeding_key": {
-        "activity_section.key": "56c6272f-7e78-4c6e-8873-6ff6aeeb2d69",
-        "lesson_activity.key": "042344f6-3e98-49b0-a569-5b5d7c70b5cb"
-      }
-    },
-    {
-      "key": "85b2178b-8310-47c9-8ff0-20591c9f569e",
-      "position": 3,
-      "properties": {
-        "name": "Check For Understanding",
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "85b2178b-8310-47c9-8ff0-20591c9f569e",
-        "lesson_activity.key": "042344f6-3e98-49b0-a569-5b5d7c70b5cb"
-      }
-    },
-    {
-      "key": "57da7aa9-9dff-4627-b2d3-b5d2176f3c70",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "57da7aa9-9dff-4627-b2d3-b5d2176f3c70",
-        "lesson_activity.key": "72dc7fae-4032-4ff9-9289-235f3db4624d"
-      }
-    },
-    {
-      "key": "5036c88c-ad6b-4fbd-aaa1-c19edbc516f5",
-      "position": 2,
-      "properties": {
-        "progression_name": "Widget: Traveling Salesman"
-      },
-      "seeding_key": {
-        "activity_section.key": "5036c88c-ad6b-4fbd-aaa1-c19edbc516f5",
-        "lesson_activity.key": "72dc7fae-4032-4ff9-9289-235f3db4624d"
-      }
-    },
-    {
-      "key": "4615f119-0d0f-414f-b31e-6a83b3a09313",
-      "position": 3,
-      "properties": {
-        "progression_name": "Widget: Traveling Salesman - Random Nodes"
-      },
-      "seeding_key": {
-        "activity_section.key": "4615f119-0d0f-414f-b31e-6a83b3a09313",
-        "lesson_activity.key": "72dc7fae-4032-4ff9-9289-235f3db4624d"
-      }
-    },
-    {
-      "key": "b09d755e-28cf-486c-a648-18c453c083cb",
-      "position": 4,
-      "properties": {
-        "name": "Check For Understanding",
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "b09d755e-28cf-486c-a648-18c453c083cb",
-        "lesson_activity.key": "72dc7fae-4032-4ff9-9289-235f3db4624d"
-      }
-    },
-    {
-      "key": "05fe466d-78d4-4d78-96c7-b16ddbabf716",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "05fe466d-78d4-4d78-96c7-b16ddbabf716",
-        "lesson_activity.key": "c9b6922f-08db-4551-8357-172201a52b7e"
-      }
-    },
-    {
-      "key": "37b23d67-4168-4214-83fe-592eedb0a96b",
-      "position": 2,
-      "properties": {
-        "name": "Check For Understanding",
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "37b23d67-4168-4214-83fe-592eedb0a96b",
-        "lesson_activity.key": "c9b6922f-08db-4551-8357-172201a52b7e"
-      }
-    },
-    {
-      "key": "0d9fd7cb-546a-490d-828f-dd785ccb98eb",
-      "position": 1,
-      "properties": {
-        "progression_name": "Lesson Overview"
-      },
-      "seeding_key": {
-        "activity_section.key": "0d9fd7cb-546a-490d-828f-dd785ccb98eb",
-        "lesson_activity.key": "c46157a4-b9d1-4acf-9b87-20b4f8cc9ded"
-      }
-    },
-    {
-      "key": "0ab77820-ea5d-4f0a-a546-ffb1fd1d389c",
-      "position": 2,
-      "properties": {
-        "name": "Unit 6 Exam",
-        "progression_name": "Unit 6 Exam"
-      },
-      "seeding_key": {
-        "activity_section.key": "0ab77820-ea5d-4f0a-a546-ffb1fd1d389c",
-        "lesson_activity.key": "c46157a4-b9d1-4acf-9b87-20b4f8cc9ded"
-      }
-    },
-    {
-      "key": "f9fa9606-3171-4bca-8f1e-4f559abb3f08",
-      "position": 1,
-      "properties": {
-        "name": "Post-Course Survey Instructions",
-        "progression_name": "Post-Course Survey Instructions"
-      },
-      "seeding_key": {
-        "activity_section.key": "f9fa9606-3171-4bca-8f1e-4f559abb3f08",
-        "lesson_activity.key": "bad9e695-0750-4694-bb6f-a5f06569746c"
-      }
-    }
+
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L1 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -495,8 +222,7 @@
         ],
         "lesson.key": "Algorithms Solve Problems",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "8691d1ae-834f-4608-be1f-5ef802cf2546"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "CSP U6L1 SFLP 20-21"
@@ -505,9 +231,12 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6 L01 Algorithms vs Problems"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -517,8 +246,7 @@
         ],
         "lesson.key": "Algorithms Solve Problems",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "cef3d693-2d39-4668-982d-61549af7c8d9"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "U6 L01 Algorithms vs Problems"
@@ -527,9 +255,12 @@
     {
       "chapter": 3,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L2 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -539,8 +270,7 @@
         ],
         "lesson.key": "Algorithm Efficiency",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "3d0d6814-5c33-43d0-bfa5-72a7d3017a0e"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "CSP U6L2 SFLP 20-21"
@@ -549,9 +279,12 @@
     {
       "chapter": 4,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L2 Ticket Generator"
+        ],
         "progression": "Widget: Ticket Generator"
       },
       "bonus": false,
@@ -561,8 +294,7 @@
         ],
         "lesson.key": "Algorithm Efficiency",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "82472b74-0e06-47f5-9ed9-159b7de33f9b"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "CSP U6L2 Ticket Generator"
@@ -571,9 +303,12 @@
     {
       "chapter": 5,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6L2 CFU Binary Search Steps"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -583,8 +318,7 @@
         ],
         "lesson.key": "Algorithm Efficiency",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "cdc97c34-fa5e-4dfd-bb8a-aa57fab70b5b"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "U6L2 CFU Binary Search Steps"
@@ -593,9 +327,12 @@
     {
       "chapter": 6,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6L2 CFU Efficiency and Algorithms"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -605,8 +342,7 @@
         ],
         "lesson.key": "Algorithm Efficiency",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "cdc97c34-fa5e-4dfd-bb8a-aa57fab70b5b"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "U6L2 CFU Efficiency and Algorithms"
@@ -615,9 +351,12 @@
     {
       "chapter": 7,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L3 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -627,8 +366,7 @@
         ],
         "lesson.key": "Unreasonable Time",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "bb1574b5-8326-483c-b76c-59cf1f43991a"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "CSP U6L3 SFLP 20-21"
@@ -637,9 +375,12 @@
     {
       "chapter": 8,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L2 Ticket Generator"
+        ],
         "progression": "Widget: Ticket Generator"
       },
       "bonus": false,
@@ -649,8 +390,7 @@
         ],
         "lesson.key": "Unreasonable Time",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "56c6272f-7e78-4c6e-8873-6ff6aeeb2d69"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "CSP U6L2 Ticket Generator"
@@ -659,9 +399,12 @@
     {
       "chapter": 9,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6L3 CFU Reasonable vs Unreasonable"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -671,8 +414,7 @@
         ],
         "lesson.key": "Unreasonable Time",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "85b2178b-8310-47c9-8ff0-20591c9f569e"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "U6L3 CFU Reasonable vs Unreasonable"
@@ -681,9 +423,12 @@
     {
       "chapter": 10,
       "position": 4,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6 L03 Evaluate Reasonable or Not"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -693,8 +438,7 @@
         ],
         "lesson.key": "Unreasonable Time",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "85b2178b-8310-47c9-8ff0-20591c9f569e"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "U6 L03 Evaluate Reasonable or Not"
@@ -703,9 +447,12 @@
     {
       "chapter": 11,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L4 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -715,8 +462,7 @@
         ],
         "lesson.key": "The Limits of Algorithms",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "57da7aa9-9dff-4627-b2d3-b5d2176f3c70"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "CSP U6L4 SFLP 20-21"
@@ -725,9 +471,12 @@
     {
       "chapter": 12,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L4 Traveling Salesman"
+        ],
         "progression": "Widget: Traveling Salesman"
       },
       "bonus": false,
@@ -737,8 +486,7 @@
         ],
         "lesson.key": "The Limits of Algorithms",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "5036c88c-ad6b-4fbd-aaa1-c19edbc516f5"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "CSP U6L4 Traveling Salesman"
@@ -747,9 +495,12 @@
     {
       "chapter": 13,
       "position": 3,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L4 Random Traveling Salesman"
+        ],
         "progression": "Widget: Traveling Salesman - Random Nodes"
       },
       "bonus": false,
@@ -759,8 +510,7 @@
         ],
         "lesson.key": "The Limits of Algorithms",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "4615f119-0d0f-414f-b31e-6a83b3a09313"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "CSP U6L4 Random Traveling Salesman"
@@ -769,9 +519,12 @@
     {
       "chapter": 14,
       "position": 4,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6L4 CFU Reason for Heuristics"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -781,8 +534,7 @@
         ],
         "lesson.key": "The Limits of Algorithms",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "b09d755e-28cf-486c-a648-18c453c083cb"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "U6L4 CFU Reason for Heuristics"
@@ -791,9 +543,12 @@
     {
       "chapter": 15,
       "position": 5,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6 L04 Unreasonable vs Undecidable"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -803,8 +558,7 @@
         ],
         "lesson.key": "The Limits of Algorithms",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "b09d755e-28cf-486c-a648-18c453c083cb"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "U6 L04 Unreasonable vs Undecidable"
@@ -813,9 +567,12 @@
     {
       "chapter": 16,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L5 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -825,8 +582,7 @@
         ],
         "lesson.key": "Parallel and Distributed Algorithms",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "05fe466d-78d4-4d78-96c7-b16ddbabf716"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "CSP U6L5 SFLP 20-21"
@@ -835,9 +591,12 @@
     {
       "chapter": 17,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6L5 CFU Calculate Speedup"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -847,8 +606,7 @@
         ],
         "lesson.key": "Parallel and Distributed Algorithms",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "37b23d67-4168-4214-83fe-592eedb0a96b"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "U6L5 CFU Calculate Speedup"
@@ -857,9 +615,12 @@
     {
       "chapter": 18,
       "position": 3,
-      "activity_section_position": 2,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U6 L05 Speedup Forever"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -869,8 +630,7 @@
         ],
         "lesson.key": "Parallel and Distributed Algorithms",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "37b23d67-4168-4214-83fe-592eedb0a96b"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "U6 L05 Speedup Forever"
@@ -879,9 +639,12 @@
     {
       "chapter": 19,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U6L6 SFLP 20-21"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -891,8 +654,7 @@
         ],
         "lesson.key": "Lesson 6: Assessment Day",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "0d9fd7cb-546a-490d-828f-dd785ccb98eb"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "CSP U6L6 SFLP 20-21"
@@ -901,9 +663,12 @@
     {
       "chapter": 20,
       "position": 2,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 6 AP-Style Assessment _2020"
+        ],
         "progression": "Unit 6 Exam"
       },
       "bonus": false,
@@ -913,8 +678,7 @@
         ],
         "lesson.key": "Lesson 6: Assessment Day",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "0ab77820-ea5d-4f0a-a546-ffb1fd1d389c"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "CSP Unit 6 AP-Style Assessment _2020"
@@ -923,9 +687,12 @@
     {
       "chapter": 21,
       "position": 1,
-      "activity_section_position": 1,
+      "activity_section_position": null,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2020-markdown-with-link-to-survey"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -935,8 +702,7 @@
         ],
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "f9fa9606-3171-4bca-8f1e-4f559abb3f08"
+        "script.name": "csp6-2020"
       },
       "level_keys": [
         "csp-post-survey-2020-markdown-with-link-to-survey"
@@ -952,8 +718,7 @@
         ],
         "lesson.key": "Algorithms Solve Problems",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "8691d1ae-834f-4608-be1f-5ef802cf2546"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -964,8 +729,7 @@
         ],
         "lesson.key": "Algorithms Solve Problems",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "cef3d693-2d39-4668-982d-61549af7c8d9"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -976,8 +740,7 @@
         ],
         "lesson.key": "Algorithm Efficiency",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "3d0d6814-5c33-43d0-bfa5-72a7d3017a0e"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -988,8 +751,7 @@
         ],
         "lesson.key": "Algorithm Efficiency",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "82472b74-0e06-47f5-9ed9-159b7de33f9b"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1000,8 +762,7 @@
         ],
         "lesson.key": "Algorithm Efficiency",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "cdc97c34-fa5e-4dfd-bb8a-aa57fab70b5b"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1012,8 +773,7 @@
         ],
         "lesson.key": "Algorithm Efficiency",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "cdc97c34-fa5e-4dfd-bb8a-aa57fab70b5b"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1024,8 +784,7 @@
         ],
         "lesson.key": "Unreasonable Time",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "bb1574b5-8326-483c-b76c-59cf1f43991a"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1036,8 +795,7 @@
         ],
         "lesson.key": "Unreasonable Time",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "56c6272f-7e78-4c6e-8873-6ff6aeeb2d69"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1048,8 +806,7 @@
         ],
         "lesson.key": "Unreasonable Time",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "85b2178b-8310-47c9-8ff0-20591c9f569e"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1060,8 +817,7 @@
         ],
         "lesson.key": "Unreasonable Time",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "85b2178b-8310-47c9-8ff0-20591c9f569e"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1072,8 +828,7 @@
         ],
         "lesson.key": "The Limits of Algorithms",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "57da7aa9-9dff-4627-b2d3-b5d2176f3c70"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1084,8 +839,7 @@
         ],
         "lesson.key": "The Limits of Algorithms",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "5036c88c-ad6b-4fbd-aaa1-c19edbc516f5"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1096,8 +850,7 @@
         ],
         "lesson.key": "The Limits of Algorithms",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "4615f119-0d0f-414f-b31e-6a83b3a09313"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1108,8 +861,7 @@
         ],
         "lesson.key": "The Limits of Algorithms",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "b09d755e-28cf-486c-a648-18c453c083cb"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1120,8 +872,7 @@
         ],
         "lesson.key": "The Limits of Algorithms",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "b09d755e-28cf-486c-a648-18c453c083cb"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1132,8 +883,7 @@
         ],
         "lesson.key": "Parallel and Distributed Algorithms",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "05fe466d-78d4-4d78-96c7-b16ddbabf716"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1144,8 +894,7 @@
         ],
         "lesson.key": "Parallel and Distributed Algorithms",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "37b23d67-4168-4214-83fe-592eedb0a96b"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1156,8 +905,7 @@
         ],
         "lesson.key": "Parallel and Distributed Algorithms",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "37b23d67-4168-4214-83fe-592eedb0a96b"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1168,8 +916,7 @@
         ],
         "lesson.key": "Lesson 6: Assessment Day",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "0d9fd7cb-546a-490d-828f-dd785ccb98eb"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1180,8 +927,7 @@
         ],
         "lesson.key": "Lesson 6: Assessment Day",
         "lesson_group.key": "csp_unit6_2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "0ab77820-ea5d-4f0a-a546-ffb1fd1d389c"
+        "script.name": "csp6-2020"
       }
     },
     {
@@ -1192,8 +938,7 @@
         ],
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey2020",
-        "script.name": "csp6-2020",
-        "activity_section.key": "f9fa9606-3171-4bca-8f1e-4f559abb3f08"
+        "script.name": "csp6-2020"
       }
     }
   ],

@@ -11,9 +11,6 @@
         "function/hero/unversioned": {
           "word": "ფუნქცია"
         },
-        "code/poem-art/2021": {
-          "word": "კოდი"
-        },
         "debugging/flappy/unversioned": {
           "word": "გამართვა"
         },
@@ -38,38 +35,14 @@
         "debugging/aquatic/unversioned": {
           "word": "გამართვა"
         },
-        "condition/aquatic/unversioned": {
-          "word": "პირობა"
-        },
         "conditionals/aquatic/unversioned": {
           "word": "პირობითი ბრძანებები"
         },
         "loops/aquatic/unversioned": {
           "word": "ციკლები"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "დაშიფრვა",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "დაშიფრვა"
         },
         "debugging/starwars/unversioned": {
           "word": "გამართვა"
@@ -83,10 +56,6 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "გამართვა"
         },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/sports/unversioned": {
           "word": "კოდი"
         },
@@ -98,9 +67,6 @@
         },
         "debugging/basketball/unversioned": {
           "word": "გამართვა"
-        },
-        "code/poem-art/unversioned": {
-          "word": "კოდი"
         },
         "sprite/coursef/2021": {
           "word": "სპრაიტი"
@@ -150,9 +116,6 @@
         "conditionals/coursed/2021": {
           "word": "პირობითი ბრძანებები"
         },
-        "condition/coursed/2021": {
-          "word": "პირობა"
-        },
         "debugging/express/2021": {
           "word": "გამართვა"
         },
@@ -161,9 +124,6 @@
         },
         "sprite/express/2021": {
           "word": "სპრაიტი"
-        },
-        "condition/express/2021": {
-          "word": "პირობა"
         },
         "conditionals/express/2021": {
           "word": "პირობითი ბრძანებები"
@@ -191,9 +151,6 @@
         },
         "function/coursee/2021": {
           "word": "ფუნქცია"
-        },
-        "condition/coursee/2021": {
-          "word": "პირობა"
         },
         "conditionals/coursee/2021": {
           "word": "პირობითი ბრძანებები"

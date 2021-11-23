@@ -9,11 +9,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:47:57 UTC",
+    "serialized_at": "2021-11-02 14:29:12 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "algebrapdnext"
     }
@@ -272,9 +272,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg P2 Welcome"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -296,9 +293,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDECS tour"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -320,9 +314,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Cirlces of Eval"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -344,9 +335,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg block match"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -368,9 +356,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Puzzle Tips"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -392,9 +377,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Puzzles Pre"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -416,9 +398,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg DR 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -440,9 +419,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg DR Multi 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -464,9 +440,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg DR Text 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -488,9 +461,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg DR Multi 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -512,9 +482,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg DR Match 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -536,9 +503,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Design Recipe Video"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -560,9 +524,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Design Recipe 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -584,9 +545,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Design Recipe 5"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -608,9 +566,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Calc Design Recipe 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -632,9 +587,6 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Eval Design Recipe Free Play"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -656,9 +608,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Dashboard 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -680,9 +629,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Dashboard 2"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -704,9 +650,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Dashboard 3"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -728,9 +671,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Teacher Plan"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -752,9 +692,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Prep a Lesson"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -776,9 +713,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Prep on Paper"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -800,9 +734,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "PDAlg Prep Sandbox"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -824,9 +755,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "Lesson Prep Final"
-        ]
       },
       "bonus": false,
       "seeding_key": {

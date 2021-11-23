@@ -98,9 +98,7 @@ class LessonOverview extends Component {
     } = this.props;
 
     const displayVerifiedResourcesNotification =
-      viewAs === ViewType.Instructor &&
-      !isVerifiedTeacher &&
-      hasVerifiedResources;
+      viewAs === ViewType.Teacher && !isVerifiedTeacher && hasVerifiedResources;
 
     const pdfDropdownOptions = this.compilePdfDropdownOptions();
 

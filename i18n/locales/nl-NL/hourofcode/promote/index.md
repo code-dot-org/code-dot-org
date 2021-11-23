@@ -4,28 +4,28 @@ title: Vertel het verder
 
 {{ signup_button }}
 
-# Laat uw hele gemeenschap deelnemen aan de 'Hour of Code'.
+# Get your community involved in the Hour of Code
 
-## 1. Zegt het voort!
+## 1. Spreid het woord
 
 Vertel uw vrienden over **#HourOfCode**!
 
 {{ promote/share_buttons }}
 
-## 2. Vraag uw hele school om een 'Hour of Code' aan te bieden
+## 2. Vraag je hele school om een CodeUur aan te bieden
 
-[Verstuur dit e-mailbericht]({{ promote/sample_emails }}) naar de hoofdmeester en daag elke klas van uw school uit om zich aan te melden.
+[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
 
 ## 3. Vraag uw werkgever betrokken te raken
 
-[Verstuur dit e-mailbericht]({{ promote/sample_emails }}) naar uw manager of de CEO van uw bedrijf.
+[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
 
 ## 5. Promoot het CodeUur in uw gemeenschap
 
-[Werf een locale groep]({{ promote/sample_emails }}) - jongens en meisjes van scouting, kerk, universiteit, veteranenorganisatie, vakbond of zelfs wat vrienden. U hoeft niet op school te zitten om nieuwe skills te leren. Gebruik deze [posters, banners, stickers, video's en meer](/promote/resources) voor uw eigen evenement.
+[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. U hoeft niet op school te zitten om nieuwe skills te leren. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
 
-## 5. Vraag een politicus de 'Hour of Code' te ondersteunen
+## 5. Vraag een politicus het CodeUur te ondersteunen
 
-[Verstuur dit e-mailbericht]({{ promote/sample_emails }}) naar uw locale vertegenwoordigers, gemeenteraad, of schoolbestuur en nodig hen uit uw school te bezoeken voor de 'Hour of Code'. Het kan steun bieden aan programmering binnen uw gemeente in maar één uur.
+[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Het kan steun bieden aan programmering binnen uw gemeente in maar één uur.
 
 {{ signup_button }}

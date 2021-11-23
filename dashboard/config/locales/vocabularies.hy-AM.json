@@ -11,9 +11,6 @@
         "function/hero/unversioned": {
           "word": "Ֆունկցիա"
         },
-        "code/poem-art/2021": {
-          "word": "Կոդ"
-        },
         "debugging/flappy/unversioned": {
           "word": "Debugging"
         },
@@ -44,30 +41,6 @@
         "loops/aquatic/unversioned": {
           "word": "loops"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/starwars/unversioned": {
           "word": "Debugging"
         },
@@ -80,10 +53,6 @@
         "debugging/starwarsblocks/unversioned": {
           "word": "Debugging"
         },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "code/sports/unversioned": {
           "word": "Կոդ"
         },
@@ -95,9 +64,6 @@
         },
         "debugging/basketball/unversioned": {
           "word": "Debugging"
-        },
-        "code/poem-art/unversioned": {
-          "word": "Կոդ"
         },
         "variable/coursef/2021": {
           "word": "Փոփոխական"

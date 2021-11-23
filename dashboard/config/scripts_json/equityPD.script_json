@@ -9,11 +9,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 20:48:56 UTC",
+    "serialized_at": "2021-11-02 14:29:52 UTC",
     "published_state": "beta",
-    "instruction_type": "teacher_led",
-    "instructor_audience": "teacher",
-    "participant_audience": "student",
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "equityPD"
     }
@@ -120,9 +120,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity Intro"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -144,9 +141,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity v equality"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -168,9 +162,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity is more"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -192,9 +183,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity in CS"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -216,9 +204,6 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity lead 1"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -240,9 +225,6 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity activity"
-        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -264,9 +246,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "equity vids"
-        ]
       },
       "bonus": false,
       "seeding_key": {

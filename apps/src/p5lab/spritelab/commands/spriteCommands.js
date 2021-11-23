@@ -13,7 +13,6 @@ export const commands = {
     sprites.forEach(sprite => {
       sprite.destroy();
       this.removeAllBehaviors(sprite);
-      this.removeSpeechBubblesForSprite(sprite);
       this.deleteSprite(sprite.id);
     });
   },

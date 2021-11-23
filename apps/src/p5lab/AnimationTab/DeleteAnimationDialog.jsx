@@ -20,6 +20,8 @@ export default class DeleteAnimationDialog extends React.Component {
         assetType = i18n.animation();
         break;
       case P5LabType.SPRITELAB:
+        assetType = i18n.costume();
+        break;
       case P5LabType.POETRY:
         assetType = i18n.costume();
         break;

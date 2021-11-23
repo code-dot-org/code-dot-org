@@ -1,28 +1,28 @@
 ---
-title: Források tanároknak - Artist
+title: Teacher Resources - Artist
 nav: hoc_teacher_resources_nav
 theme: responsive
 video_player: true
 ---
 
-# Artist: Kódolás órája bemutató
+# Artist: An Hour of Code Tutorial
 
 {{ hoc_artist_video }}
 
 [col-50]
 
-## Források tanároknak
+## Teacher Resources
 
-### Tevékenységek kiterjesztése:
+### Extension Activities:
 
-- [A Kódolás óráján túl](http://code.org/learn/beyond)
-- [Informatikai alapismeretek: 2. kurzus](https://studio.code.org/s/course2)
+- [Beyond an Hour of Code](http://code.org/learn/beyond)
+- [Computer Science Fundamentals: Course 2](https://studio.code.org/s/course2)
 
-### Egyéb források tanároknak:
+### Other Teacher Resources:
 
-- [Kódolás órája: Módszertani útmutató oktatóknak](https://hourofcode.com/how-to)
-- [Legjobb gyakorlatok sikeres oktatóktól](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
-- Élő esemény: [Egy oktató útmutatója a Kódolás órájához](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
+- [Hour of Code: How-To Guide for Educators](https://hourofcode.com/how-to)
+- [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)
+- Live Event: [An Educator's Guide to the Hour of Code](https://www.eventbrite.com/e/an-educators-guide-to-the-hour-of-code-tickets-17987415845)
 
 [/col-50]
 
@@ -30,12 +30,12 @@ video_player: true
 
 ## Áttekintés
 
-Rajzolj klassz képeket és formákat az Artist segítségével!
+Draw cool pictures and designs with the Artist!
 
-**Javasolt korosztály:** 4-104
+**Recommended Age Range:** 4-104
 
-**Technológiai igények:** Modern böngészők + tabletek
+**Technology Requirements:** Modern browsers + tablets
 
-<a href="http://studio.code.org/s/artist/reset"><button>Próbáld ki a bemutatót</button></a>
+<a href="http://studio.code.org/s/artist/reset"><button>Try the tutorial</button></a>
 
 [/col-50]

@@ -5,7 +5,7 @@ title: Hur hålla i en Kodtimme - företag
 {{ signup_button }}
 
 # Att arrangera Hour of Code via ditt företag
-### Upptäck hur ni och era anställda kan inspirera studenter att prova datorvetenskap!
+### Find out how you and your employees can inspire students to try computer science!
 
 ***
 

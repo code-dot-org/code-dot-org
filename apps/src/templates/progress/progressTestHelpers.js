@@ -89,23 +89,6 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
     },
     viewAs: viewAs,
     teacherSections: {
-      sectionIds: ['11'],
-      sectionsAreLoaded: true,
-      sections: {
-        '11': {
-          id: 11,
-          name: 'test section',
-          lesson_extras: true,
-          pairing_allowed: true,
-          studentCount: 4,
-          code: 'TQGSJR',
-          providerManaged: false,
-          lessons: {},
-          ttsAutoplayEnabled: false,
-          lessonExtras: false,
-          pairingAllowed: true
-        }
-      },
       selectedSectionId: '11'
     },
     hiddenLesson: Immutable.fromJS({
@@ -114,7 +97,7 @@ export const createStoreWithHiddenLesson = (viewAs, lessonId) => {
       }
     }),
     progress: {
-      scriptName: 'script-name'
+      showTeacherInfo: false
     },
     currentUser: {
       userId: 1
@@ -148,7 +131,9 @@ export const createStoreWithLockedLesson = (
         '11': {[lessonId]: true}
       }
     }),
-    progress: {},
+    progress: {
+      showTeacherInfo: false
+    },
     currentUser: {
       userId: 1
     }

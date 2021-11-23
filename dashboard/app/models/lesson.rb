@@ -325,6 +325,12 @@ class Lesson < ApplicationRecord
     end
   end
 
+  def unit_resource_pdf_url
+    if script.is_migrated?
+      Services::CurriculumPdfs.get_unit_resources_url(script)
+    end
+  end
+
   def lesson_plan_base_url
     CDO.code_org_url "/curriculum/#{script.name}/#{relative_position}"
   end
@@ -518,7 +524,7 @@ class Lesson < ApplicationRecord
       courseVersionStandardsUrl: course_version_standards_url,
       isVerifiedTeacher: user&.authorized_teacher?,
       hasVerifiedResources: lockable || lesson_plan_has_verified_resources,
-      scriptResourcesPdfUrl: script.get_unit_resources_pdf_url
+      scriptResourcesPdfUrl: unit_resource_pdf_url
     }
   end
 
@@ -713,12 +719,11 @@ class Lesson < ApplicationRecord
     return unless objectives
 
     self.objectives = objectives.map do |objective|
-      next nil unless objective['description'].present?
       persisted_objective = objective['id'].blank? ? Objective.new(key: SecureRandom.uuid) : Objective.find(objective['id'])
       persisted_objective.description = objective['description']
       persisted_objective.save!
       persisted_objective
-    end.compact
+    end
   end
 
   # Used for seeding from JSON. Returns the full set of information needed to

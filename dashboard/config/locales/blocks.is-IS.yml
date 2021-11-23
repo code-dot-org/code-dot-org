@@ -1663,11 +1663,12 @@ is:
       Poetry_addFrame:
         options:
           BRUSH:
-            '"flowers"': Blóm
-            '"hearts"': Hjörtu
-            '"iceCream"': Rjómaís
+            Ice Cream: Rjómaís
+            Stars: Stjörnur
+            Fireworks: Flugeldar
             '"rainbow"': Regnbogi
-            '"stars"': Stjörnur
+            '"hearts"': Hjörtu
+            '"flowers"': Blóm
             '"waves"': Bylgjur
       Poetry_makeBurst:
         options:
@@ -1681,8 +1682,8 @@ is:
         text: spilaHljóð {SOUND}
         options:
           SOUND:
-            '"sound://category_explosion/puzzle_game_break_magic_05.mp3"': Rjúfa
-            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Ljós
+            Break: Rjúfa
+            Light: Ljós
       Poetry_setBackground:
         text: stilla bakgrunnslitinn {COLOR}
       Poetry_setBackgroundEffect:

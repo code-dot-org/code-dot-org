@@ -56,37 +56,34 @@ describe('initViewAs', function() {
     mockQueryStringParse.restore();
   });
 
-  it('defaults to Participant', function() {
+  it('defaults to Student', function() {
     initViewAs(mockStore, {});
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
+    assert(mockSetViewType.calledWith('Student'));
   });
 
-  // TODO(dmcavoy): Update so it is based on instructor instead of account type
-  it('defaults to instructor if current user is a teacher', function() {
+  it('defaults to Teacher iff current user is a teacher', function() {
     initViewAs(mockStore, {user_type: 'teacher'});
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
+    assert(mockSetViewType.calledWith('Teacher'));
   });
 
-  // TODO(dmcavoy): Update so it is based on participant instead of account type
   it('prevents overriding default if current user is a student', function() {
-    mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Instructor});
+    mockQueryStringParse.returns({viewAs: 'Teacher'});
     initViewAs(mockStore, {user_type: 'student'});
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
+    assert(mockSetViewType.calledWith('Student'));
   });
 
-  // TODO(dmcavoy): Update so it is based on participant instead of account type
   it('allows overriding default if current user is not a student', function() {
-    mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Instructor});
+    mockQueryStringParse.returns({viewAs: 'Teacher'});
 
     initViewAs(mockStore, {});
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
+    assert(mockSetViewType.calledWith('Teacher'));
 
     initViewAs(mockStore, {user_type: 'teacher'});
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
+    assert(mockSetViewType.calledWith('Teacher'));
 
-    mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Participant});
+    mockQueryStringParse.returns({viewAs: 'Student'});
 
     initViewAs(mockStore, {user_type: 'teacher'});
-    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
+    assert(mockSetViewType.calledWith('Student'));
   });
 });

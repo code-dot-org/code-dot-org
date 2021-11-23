@@ -123,7 +123,6 @@ class AnimationPicker extends React.Component {
           hideBackgrounds={this.props.hideBackgrounds}
           canDraw={this.props.canDraw}
           selectedAnimations={this.props.selectedAnimations}
-          pickerType={this.props.pickerType}
         />
         <StylizedBaseDialog
           title={msg.animationPicker_leaveSelectionTitle()}
