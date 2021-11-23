@@ -499,6 +499,18 @@ const FormController = props => {
       );
     }
 
+    const saveButton = (
+      <Button
+        bsStyle="gray"
+        style={styles.saveButton}
+        key="save"
+        id="save"
+        onClick={() => console.log('Hi!')}
+      >
+        Save and Return Later
+      </Button>
+    );
+
     const pageButtons = pageComponents.length > 1 && (
       <Pagination
         style={styles.pageButtons}
@@ -513,6 +525,7 @@ const FormController = props => {
         {backButton}
         {pageButtons}
         {nextButton}
+        {saveButton}
       </FormGroup>
     );
   };
@@ -531,6 +544,9 @@ const styles = {
   pageButtons: {
     verticalAlign: 'middle',
     margin: '0 10px'
+  },
+  saveButton: {
+    marginLeft: '10px'
   }
 };
 
