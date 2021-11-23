@@ -8,6 +8,7 @@ import {
 } from '../../code-studio/components/progress/FakeAnnouncementsTestData';
 import _ from 'lodash';
 import Button from '@cdo/apps/templates/Button';
+import {fakeLevels} from '@cdo/apps/templates/progress/progressTestHelpers';
 
 describe('StudentLessonOverview', () => {
   let defaultProps;
@@ -183,5 +184,21 @@ describe('StudentLessonOverview', () => {
 
     const wrapper = shallow(<StudentLessonOverview {...newDefaultProps} />);
     assert.equal(wrapper.find('#unit-test-introduced-code').length, 0);
+  });
+
+  it('displays levels with progress if levels present', () => {
+    const lessonLevels = fakeLevels(4);
+    const wrapper = shallow(
+      <StudentLessonOverview {...defaultProps} lessonLevels={lessonLevels} />
+    );
+    assert.equal(wrapper.find('#level-section').length, 1);
+    expect(wrapper.text()).to.contain('Lesson 1');
+  });
+
+  it('Does not render levels if no levels present', () => {
+    const wrapper = shallow(
+      <StudentLessonOverview {...defaultProps} lessonLevels={[]} />
+    );
+    expect(wrapper.find('#level-section')).to.eql({});
   });
 });

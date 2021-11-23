@@ -304,6 +304,8 @@ class Section < ApplicationRecord
       restrict_section: restrict_section,
       code_review_enabled: code_review_enabled?,
       is_assigned_csa: assigned_csa?,
+      # this will be true when we are in emergency mode, for the scripts returned by ScriptConfig.hoc_scripts and ScriptConfig.csf_scripts
+      post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
       code_review_expires_at: code_review_expires_at
     }
   end

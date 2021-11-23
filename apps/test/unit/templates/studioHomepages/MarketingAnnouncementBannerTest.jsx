@@ -17,7 +17,8 @@ const DEFAULT_PROPS = {
     title: 'Announcement Title',
     body: 'Descriptive information..',
     buttonUrl: '/takemehere',
-    buttonText: 'Click me'
+    buttonText: 'Click me',
+    buttonId: 'announcement-button'
   },
   marginBottom: '20px'
 };
@@ -105,5 +106,26 @@ describe('MarketingAnnouncementBanner', () => {
     });
 
     utils.tryGetLocalStorage.restore();
+    firehoseSpy.restore();
+  });
+
+  it('sends event to firehose when button is clicked', () => {
+    sinon.stub(utils, 'tryGetLocalStorage').returns(null);
+    const firehoseSpy = sinon.spy(firehoseClient, 'putRecord');
+
+    const wrapper = setUp();
+    wrapper.find('a#announcement-button').simulate('click');
+    expect(firehoseSpy.calledOnce);
+    firehoseSpy.calledWith({
+      study: 'teacher_signedin_homepage',
+      study_group: 'homepage_banner',
+      event: 'cta_button_clicked',
+      data_json: JSON.stringify({
+        banner_title: 'Announcement Title'
+      })
+    });
+
+    utils.tryGetLocalStorage.restore();
+    firehoseSpy.restore();
   });
 });
