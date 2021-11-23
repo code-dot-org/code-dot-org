@@ -69,7 +69,7 @@
 -# and adjust as needed for cached pages (see header.js in apps)
 - signin_display = current_user.present? ? "none" : "inline"
 %a.linktag{href: CDO.studio_url('users/sign_in'), class: 'button-signin', id: 'signin_button', style: "display: #{signin_display}"}
-  .header_button.header_user
+  .header_button.header_user#header_user_signin
     %span= I18n.t("#{loc_prefix}signin")
     .signin_callout_wrapper
 
