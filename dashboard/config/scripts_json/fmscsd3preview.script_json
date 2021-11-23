@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:16:04 UTC",
+    "serialized_at": "2021-11-22 17:07:22 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -177,6 +177,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Lesson Overview 2"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -199,6 +202,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Describe the Picture"
+        ],
         "progression": "Describe the Picture"
       },
       "bonus": false,
@@ -221,6 +227,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD-U3-SFLP Simple Drawing"
+        ],
         "progression": "U3L01 Overview"
       },
       "bonus": false,
@@ -243,6 +252,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 1"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 1"
       },
       "bonus": false,
@@ -265,6 +277,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Rectangle"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 2"
       },
       "bonus": false,
@@ -287,6 +302,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Rectangle Width and Height"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 2"
       },
       "bonus": false,
@@ -309,6 +327,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - X and Y values"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 2"
       },
       "bonus": false,
@@ -331,6 +352,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Order of Blocks"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 2"
       },
       "bonus": false,
@@ -353,6 +377,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 2"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 2"
       },
       "bonus": false,
@@ -375,6 +402,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Fill"
+        ],
         "progression": "Stop: Plan Your Drawing"
       },
       "bonus": false,
@@ -397,6 +427,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Oval"
+        ],
         "progression": "Stop: Plan Your Drawing"
       },
       "bonus": false,
@@ -419,6 +452,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Simple Shape Drawing"
+        ],
         "progression": "Stop: Plan Your Drawing"
       },
       "bonus": false,
@@ -441,6 +477,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Ellipse and No Fill"
+        ],
         "progression": "Stop: Plan Your Drawing"
       },
       "bonus": false,
@@ -463,6 +502,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Stroke and Stroke Weight"
+        ],
         "progression": "Stop: Plan Your Drawing"
       },
       "bonus": false,
@@ -485,6 +527,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - No Fill"
+        ],
         "progression": "Stop: Plan Your Drawing"
       },
       "bonus": false,
@@ -507,6 +552,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Comments"
+        ],
         "progression": "Stop: Plan Your Drawing"
       },
       "bonus": false,
@@ -529,6 +577,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Road Rects and Color"
+        ],
         "progression": "Stop: Plan Your Drawing"
       },
       "bonus": false,
@@ -551,6 +602,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Road Ellipse"
+        ],
         "progression": "Stop: Plan Your Drawing"
       },
       "bonus": false,
@@ -573,6 +627,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - regular polygon"
+        ],
         "progression": "Stop: Plan Your Drawing"
       },
       "bonus": false,
@@ -595,6 +652,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - text"
+        ],
         "progression": "Stop: Plan Your Drawing"
       },
       "bonus": false,
@@ -617,6 +677,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Plan Personal Drawing"
+        ],
         "progression": "Stop: Plan Your Drawing"
       },
       "bonus": false,
@@ -639,6 +702,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 - Simple Drawing - Personal Drawing"
+        ]
       },
       "bonus": false,
       "seeding_key": {

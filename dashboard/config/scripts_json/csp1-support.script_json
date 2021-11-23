@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:29:25 UTC",
+    "serialized_at": "2021-11-22 17:07:14 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -1178,6 +1178,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "What's inside and how is it organized?"
+        ],
         "progression": "What's inside and how is it organized?"
       },
       "bonus": false,
@@ -1200,6 +1203,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Unit 1"
+        ],
         "progression": "Introduction to Unit 1"
       },
       "bonus": false,
@@ -1222,6 +1228,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 1 Teaching Philosophy and Commentary"
+        ],
         "progression": "Unit 1 Teaching Philosophy and Commentary"
       },
       "bonus": false,
@@ -1244,6 +1253,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Teaching with the Internet Simulator"
+        ],
         "progression": "Teaching with the Internet Simulator"
       },
       "bonus": false,
@@ -1266,6 +1278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Practice Performance Tasks in Unit 1"
+        ],
         "progression": "Practice Performance Tasks in Unit 1"
       },
       "bonus": false,
@@ -1288,6 +1303,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 1 Self-Assessment"
+        ],
         "progression": "Unit 1 Self-Assessment"
       },
       "bonus": false,
@@ -1310,6 +1328,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Unit 1 Vocab and Concept Review Activity"
+        ],
         "progression": "Unit 1 Vocab and Concept Review Activity"
       },
       "bonus": false,
@@ -1332,6 +1353,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AP Test Prep Guidance"
+        ],
         "progression": "AP Test Prep Guidance"
       },
       "bonus": false,
@@ -1354,6 +1378,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lesson 1.2 Overview"
+        ],
         "progression": "Lesson 1.2 Overview"
       },
       "bonus": false,
@@ -1376,6 +1403,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Understanding Communication Protocols"
+        ],
         "progression": "Understanding Communication Protocols"
       },
       "bonus": false,
@@ -1398,6 +1428,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lesson 1.3 Overview"
+        ],
         "progression": "Lesson 1.3 Overview"
       },
       "bonus": false,
@@ -1420,6 +1453,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Binary as an Encoding Scheme"
+        ],
         "progression": "Binary as an Encoding Scheme"
       },
       "bonus": false,
@@ -1442,6 +1478,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator: Sending Binary Messages"
+        ],
         "progression": "Internet Simulator: Sending Binary Messages"
       },
       "bonus": false,
@@ -1464,6 +1503,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Internet: Wires, Cables, and Wifi"
+        ],
         "progression": "The Internet: Wires, Cables, and Wifi"
       },
       "bonus": false,
@@ -1486,6 +1528,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lessons 2 - 3: Teaching and Student Support Plan"
+        ],
         "progression": "Lessons 2 - 3: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -1508,6 +1553,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lesson 1.4 Overview"
+        ],
         "progression": "Lesson 1.4 Overview"
       },
       "bonus": false,
@@ -1530,6 +1578,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Why Teach Number Systems?"
+        ],
         "progression": "Why Teach Number Systems?"
       },
       "bonus": false,
@@ -1552,6 +1603,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lesson 1.5 Overview"
+        ],
         "progression": "Lesson 1.5 Overview"
       },
       "bonus": false,
@@ -1574,6 +1628,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lesson 1.6 Overview"
+        ],
         "progression": "Lesson 1.6 Overview"
       },
       "bonus": false,
@@ -1596,6 +1653,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Sending Numbers: The Big Picture"
+        ],
         "progression": "Sending Numbers: The Big Picture"
       },
       "bonus": false,
@@ -1618,6 +1678,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator: Sending Numbers"
+        ],
         "progression": "Internet Simulator: Sending Numbers"
       },
       "bonus": false,
@@ -1640,6 +1703,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Reflection: Create your Own Number System"
+        ],
         "progression": "Reflection: Create your Own Number System"
       },
       "bonus": false,
@@ -1662,6 +1728,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lessons 4 - 6: Teaching and Student Support Plan"
+        ],
         "progression": "Lessons 4 - 6: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -1684,6 +1753,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lesson 1.7 Overview"
+        ],
         "progression": "Lesson 1.7 Overview"
       },
       "bonus": false,
@@ -1706,6 +1778,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "What is ASCII?"
+        ],
         "progression": "What is ASCII?"
       },
       "bonus": false,
@@ -1728,6 +1803,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Task: ASCII Representation of your Name"
+        ],
         "progression": "Task: ASCII Representation of your Name"
       },
       "bonus": false,
@@ -1750,6 +1828,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "What is HTML?"
+        ],
         "progression": "What is HTML?"
       },
       "bonus": false,
@@ -1772,6 +1853,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator: Sending Text"
+        ],
         "progression": "Internet Simulator: Sending Text"
       },
       "bonus": false,
@@ -1794,6 +1878,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lesson 7: Teaching and Student Support Plan"
+        ],
         "progression": "Lesson 7: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -1816,6 +1903,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lesson 1.9 Overview"
+        ],
         "progression": "Lesson 1.9 Overview"
       },
       "bonus": false,
@@ -1838,6 +1928,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Addressing in the Game of Battleship"
+        ],
         "progression": "Addressing in the Game of Battleship"
       },
       "bonus": false,
@@ -1860,6 +1953,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Task: Develop a Battleship Protocol"
+        ],
         "progression": "Task: Develop a Battleship Protocol"
       },
       "bonus": false,
@@ -1882,6 +1978,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator: Broadcast"
+        ],
         "progression": "Internet Simulator: Broadcast"
       },
       "bonus": false,
@@ -1904,6 +2003,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Internet: IP Addresses & DNS"
+        ],
         "progression": "The Internet: IP Addresses & DNS"
       },
       "bonus": false,
@@ -1926,6 +2028,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lesson 9: Teaching and Student Support Plan"
+        ],
         "progression": "Lesson 9: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -1948,6 +2053,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lesson 1.10 Overview"
+        ],
         "progression": "Lesson 1.10 Overview"
       },
       "bonus": false,
@@ -1970,6 +2078,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator: Routers"
+        ],
         "progression": "Internet Simulator: Routers"
       },
       "bonus": false,
@@ -1992,6 +2103,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lesson 1.11 Overview"
+        ],
         "progression": "Lesson 1.11 Overview"
       },
       "bonus": false,
@@ -2014,6 +2128,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator: Packets"
+        ],
         "progression": "Internet Simulator: Packets"
       },
       "bonus": false,
@@ -2036,6 +2153,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Internet: Packets, Routing, and Reliability"
+        ],
         "progression": "The Internet: Packets, Routing, and Reliability"
       },
       "bonus": false,
@@ -2058,6 +2178,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lessons 10 - 11: Teaching and Student Support Plan"
+        ],
         "progression": "Lessons 10 - 11: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -2080,6 +2203,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lesson 1.12 Overview"
+        ],
         "progression": "Lesson 1.12 Overview"
       },
       "bonus": false,
@@ -2102,6 +2228,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Internet Simulator: DNS"
+        ],
         "progression": "Internet Simulator: DNS"
       },
       "bonus": false,
@@ -2124,6 +2253,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Internet: IP Addresses & DNS"
+        ],
         "progression": "The Internet: IP Addresses & DNS"
       },
       "bonus": false,
@@ -2146,6 +2278,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lesson 1.13 Overview"
+        ],
         "progression": "Lesson 1.13 Overview"
       },
       "bonus": false,
@@ -2168,6 +2303,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Internet: HTTP and HTML"
+        ],
         "progression": "The Internet: HTTP and HTML"
       },
       "bonus": false,
@@ -2190,6 +2328,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lessons 12 - 13: Teaching and Student Support Plan"
+        ],
         "progression": "Lessons 12 - 13: Teaching and Student Support Plan"
       },
       "bonus": false,
@@ -2212,6 +2353,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview: Group Work and Peer Learning"
+        ],
         "progression": "Overview: Group Work and Peer Learning"
       },
       "bonus": false,
@@ -2234,6 +2378,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Group Work and Peer Learning in Unit 1"
+        ],
         "progression": "Group Work and Peer Learning in Unit 1"
       },
       "bonus": false,
@@ -2256,6 +2403,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Collaborative Learning and Group Work: Description and Strategies"
+        ],
         "progression": "Collaborative Learning and Group Work: Description and Strategies"
       },
       "bonus": false,
@@ -2278,6 +2428,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Official Peer Instruction Blog"
+        ],
         "progression": "The Official Peer Instruction Blog"
       },
       "bonus": false,
@@ -2300,6 +2453,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "the Journal of Peer Learning"
+        ],
         "progression": "the Journal of Peer Learning"
       },
       "bonus": false,
@@ -2322,6 +2478,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Teaching Practice Plan: Group Work and Peer Learning"
+        ],
         "progression": "Teaching Practice Plan: Group Work and Peer Learning"
       },
       "bonus": false,
@@ -2344,6 +2503,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview: Balancing Teachers and Tools"
+        ],
         "progression": "Overview: Balancing Teachers and Tools"
       },
       "bonus": false,
@@ -2366,6 +2528,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Balancing Teacher and Tools in Unit 1"
+        ],
         "progression": "Balancing Teacher and Tools in Unit 1"
       },
       "bonus": false,
@@ -2388,6 +2553,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Classroom Management Tips for School Computer Labs"
+        ],
         "progression": "Classroom Management Tips for School Computer Labs"
       },
       "bonus": false,
@@ -2410,6 +2578,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Considerations for the 1-to-1 Classroom"
+        ],
         "progression": "Considerations for the 1-to-1 Classroom"
       },
       "bonus": false,
@@ -2432,6 +2603,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Teaching Practice Plan: Balancing Teacher and Tools"
+        ],
         "progression": "Teaching Practice Plan: Balancing Teacher and Tools"
       },
       "bonus": false,
@@ -2454,6 +2628,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview: Discovery Learning"
+        ],
         "progression": "Overview: Discovery Learning"
       },
       "bonus": false,
@@ -2476,6 +2653,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Discovery Learning in Unit 1"
+        ],
         "progression": "Discovery Learning in Unit 1"
       },
       "bonus": false,
@@ -2498,6 +2678,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Discovery learning definition and history"
+        ],
         "progression": "Discovery learning definition and history"
       },
       "bonus": false,
@@ -2520,6 +2703,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Discovery learning techniques"
+        ],
         "progression": "Discovery learning techniques"
       },
       "bonus": false,
@@ -2542,6 +2728,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Teaching Practice Plan: Discovery Learning"
+        ],
         "progression": "Teaching Practice Plan: Discovery Learning"
       },
       "bonus": false,
@@ -2564,6 +2753,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Overview: Capturing Student Learning"
+        ],
         "progression": "Overview: Capturing Student Learning"
       },
       "bonus": false,
@@ -2586,6 +2778,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Assessing Student Learning in Unit 1"
+        ],
         "progression": "Assessing Student Learning in Unit 1"
       },
       "bonus": false,
@@ -2608,6 +2803,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "What is the difference between formative and summative assessment?"
+        ],
         "progression": "What is the difference between formative and summative assessment?"
       },
       "bonus": false,
@@ -2630,6 +2828,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Designing Assessment Questions"
+        ],
         "progression": "Designing Assessment Questions"
       },
       "bonus": false,
@@ -2652,6 +2853,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Classroom Assessment Techniques"
+        ],
         "progression": "Classroom Assessment Techniques"
       },
       "bonus": false,
@@ -2674,6 +2878,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Teaching Practice Plan: Assessing Student Learning"
+        ],
         "progression": "Teaching Practice Plan: Assessing Student Learning"
       },
       "bonus": false,
