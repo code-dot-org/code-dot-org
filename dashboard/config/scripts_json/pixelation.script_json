@@ -10,11 +10,11 @@
     },
     "new_name": null,
     "family_name": "pixelation",
-    "serialized_at": "2021-11-15 21:08:01 UTC",
+    "serialized_at": "2021-11-22 19:57:09 UTC",
     "published_state": "preview",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "pixelation"
     }
@@ -235,6 +235,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation 4x4 Empty"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -256,6 +259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -277,6 +283,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Complete 3-bit color"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -298,6 +307,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Shades"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -319,6 +331,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Shades 4x4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -340,6 +355,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation Flappy"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -361,6 +379,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation Bee"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -382,6 +403,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Mixing Colors"
+        ]
       },
       "bonus": false,
       "seeding_key": {

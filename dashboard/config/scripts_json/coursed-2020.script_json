@@ -38,11 +38,11 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2021-11-18 00:27:10 UTC",
+    "serialized_at": "2021-11-22 19:56:07 UTC",
     "published_state": "stable",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "coursed-2020"
     }
@@ -1560,6 +1560,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GraphPaperProgramming-Unplugged_2020"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1581,6 +1584,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_ramp1_2020"
+        ],
         "progression": "Maze Intro: Programming with Blocks"
       },
       "bonus": false,
@@ -1603,6 +1609,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp1_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1625,6 +1634,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp2_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1647,6 +1659,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp3_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1669,6 +1684,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_intro4_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1691,6 +1709,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1713,6 +1734,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_intro5a_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1736,6 +1760,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseD_maze_ramp5b_2020"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1758,6 +1785,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_intro5c_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1780,6 +1810,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5d_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1802,6 +1835,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "RelayProgramming-Unplugged_2020"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1823,6 +1859,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_debugging_2020"
+        ],
         "progression": "De-bugging with the Step Button"
       },
       "bonus": false,
@@ -1845,6 +1884,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_debugging1a_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1867,6 +1909,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_debugging2a_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1889,6 +1934,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_debugging3a_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1911,6 +1959,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_debugging4a_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1933,6 +1984,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_debugging5a_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1956,6 +2010,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseD_collector_debugging6a_2020"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -1978,6 +2035,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_debugging8a_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2000,6 +2060,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_debugging9a_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2022,6 +2085,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bounce_events1s_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2044,6 +2110,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bounce_events2s_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2066,6 +2135,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bounce_events5s_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2088,6 +2160,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bounce_events6s_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2110,6 +2185,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bounce_events7s_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2132,6 +2210,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bounce_events10s_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2154,6 +2235,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bounce_events11s_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2176,6 +2260,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bounce_events12s_2020"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2198,6 +2285,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseE_video_StarWarsProject_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2220,6 +2310,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_7_no_video"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2242,6 +2335,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_8"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2264,6 +2360,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_9"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2286,6 +2385,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_10"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2308,6 +2410,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_11"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2330,6 +2435,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_12"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2352,6 +2460,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_13"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2374,6 +2485,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_14"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2396,6 +2510,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:Studio:hoc2015_blockly_15"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2418,6 +2535,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -2440,6 +2560,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_01"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2462,6 +2585,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid2"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -2484,6 +2610,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_02"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -2506,6 +2635,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_03"
+        ],
         "progression": "Events"
       },
       "bonus": false,
@@ -2528,6 +2660,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid3"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -2550,6 +2685,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_04"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -2572,6 +2710,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_05"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -2594,6 +2735,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_06"
+        ],
         "progression": "Measures"
       },
       "bonus": false,
@@ -2616,6 +2760,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid4"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -2638,6 +2785,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_07"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -2660,6 +2810,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_08"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -2682,6 +2835,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_09"
+        ],
         "progression": "Properties"
       },
       "bonus": false,
@@ -2704,6 +2860,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_vid5"
+        ],
         "progression": "Wrap-up"
       },
       "bonus": false,
@@ -2726,6 +2885,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_10"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -2748,6 +2910,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus1"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -2769,6 +2934,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CourseD_Dance_2020_bonus3"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -2790,6 +2958,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_iceage_loops1_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2812,6 +2983,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_iceage_loops2_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2834,6 +3008,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "scrat_loops_C-F_video_2020"
+        ],
         "progression": "Using the Repeat Block"
       },
       "bonus": false,
@@ -2856,6 +3033,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_iceage_loops3_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2878,6 +3058,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_iceage_loops4_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2900,6 +3083,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_iceage_loops6_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2922,6 +3108,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_iceage_loops7_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2944,6 +3133,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_iceage_loops8_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2966,6 +3158,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_iceage_loops9_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -2989,6 +3184,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseD_iceage_loops10_2020"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3011,6 +3209,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_iceage_loops11_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3033,6 +3234,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_iceage_loops12_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3055,6 +3259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_video_artistIntro_2020"
+        ],
         "progression": "Artist Intro with JR Hildebrand"
       },
       "bonus": false,
@@ -3077,6 +3284,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops1_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3099,6 +3309,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops2_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3121,6 +3334,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_video_loopsArtist_2020"
+        ],
         "progression": "Loops with the Artist"
       },
       "bonus": false,
@@ -3143,6 +3359,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops3_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3165,6 +3384,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops4_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3187,6 +3409,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops5_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3209,6 +3434,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops6_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3231,6 +3459,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops7_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3254,6 +3485,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "ramp_artist_loops8_2020"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3276,6 +3510,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ramp_artist_loops9_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3298,6 +3535,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops1a_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3320,6 +3560,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops1_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3342,6 +3585,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_nestedLoops_2020"
+        ],
         "progression": "Nested Loops with the Bee"
       },
       "bonus": false,
@@ -3364,6 +3610,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops2_predict1_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3386,6 +3635,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops2_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3408,6 +3660,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops3_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3430,6 +3685,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops4_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3452,6 +3710,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops5_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3474,6 +3735,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops6_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3497,6 +3761,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseD_bee_nestedLoops7_2020"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3519,6 +3786,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops8_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3541,6 +3811,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops9_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3563,6 +3836,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops9_predict2_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3585,6 +3861,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_harvester_nested_loops_challenge1_2020"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3606,6 +3885,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_nested_loops_challenge2_2020"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3627,6 +3909,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ConditionalsWithCards-Unplugged_2020"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3648,6 +3933,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1_2020"
+        ],
         "progression": "Conditionals: If Statements"
       },
       "bonus": false,
@@ -3670,6 +3958,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3692,6 +3983,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3714,6 +4008,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3736,6 +4033,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3758,6 +4058,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals5_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3780,6 +4083,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals6_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3802,6 +4108,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVidIfElse_2020"
+        ],
         "progression": "Conditionals: If and If/Else Statements"
       },
       "bonus": false,
@@ -3824,6 +4133,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3846,6 +4158,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_predict2_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -3869,6 +4184,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseD_bee_conditionals8_2020"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -3891,6 +4209,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals9_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3913,6 +4234,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals10_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3935,6 +4259,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge1_2020"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3956,6 +4283,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals_challenge2_2020"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -3977,6 +4307,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while1_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3999,6 +4332,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while2_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4021,6 +4357,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while3_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4043,6 +4382,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_whileIntro_2020"
+        ],
         "progression": "While Loops with the Farmer"
       },
       "bonus": false,
@@ -4065,6 +4407,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while4_predict1_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4087,6 +4432,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while4_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4109,6 +4457,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while5_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4131,6 +4482,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while6_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4153,6 +4507,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while7_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4176,6 +4533,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseD_farmer_while8_2020"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4198,6 +4558,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while9_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4220,6 +4583,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while10_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4242,6 +4608,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while10_predict2_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4264,6 +4633,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while_challenge1_2020"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -4285,6 +4657,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until1_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4307,6 +4682,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_repeatUntil_2020"
+        ],
         "progression": "Repeat Until Statements"
       },
       "bonus": false,
@@ -4329,6 +4707,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until2_predict1_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4351,6 +4732,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until3_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4373,6 +4757,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until4_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4395,6 +4782,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until5_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4417,6 +4807,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until6_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4439,6 +4832,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until7_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4462,6 +4858,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseD_maze_until9_2020"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4484,6 +4883,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until10_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4506,6 +4908,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until10_predict2_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4528,6 +4933,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "harvester_skinOverview_video_2020"
+        ],
         "progression": "The Harvester"
       },
       "bonus": false,
@@ -4550,6 +4958,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops1_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4572,6 +4983,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops2_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4594,6 +5008,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops3_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4616,6 +5033,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops4_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4638,6 +5058,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops5_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4660,6 +5083,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops6_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4683,6 +5109,9 @@
       "assessment": false,
       "properties": {
         "challenge": true,
+        "level_keys": [
+          "courseD_farmer_condLoops7_2020"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -4705,6 +5134,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops8_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4727,6 +5159,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops9_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4749,6 +5184,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops9_predict1_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -4771,6 +5209,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops_challenge1_2020"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -4792,6 +5233,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops_challenge2_2020"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -4813,6 +5257,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BinaryImages-Unplugged_2020"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4834,6 +5281,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_external_binary1_2018_2019_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4856,6 +5306,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary1_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4878,6 +5331,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary2_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4900,6 +5356,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary3_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4922,6 +5381,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary4_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4944,6 +5406,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary5_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4966,6 +5431,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary6_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -4988,6 +5456,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary7_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5010,6 +5481,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary8_2020"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5032,6 +5506,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary8_predict1_2020"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -5054,6 +5531,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binaryFP_2020"
+        ],
         "progression": "Free Play"
       },
       "bonus": false,
@@ -5076,6 +5556,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary_challenge1_2020"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -5097,6 +5580,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary_challenge2_2020"
+        ]
       },
       "bonus": true,
       "seeding_key": {
@@ -5118,6 +5604,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csf_be_a_super_digital_citizen"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5139,6 +5628,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_project_exemplars_2020_2021"
+        ],
         "progression": "Example projects"
       },
       "bonus": false,
@@ -5161,6 +5653,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_EOC_2020"
+        ],
         "progression": "Create your project"
       },
       "bonus": false,

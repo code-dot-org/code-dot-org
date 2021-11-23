@@ -9,11 +9,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 21:01:48 UTC",
+    "serialized_at": "2021-11-22 19:56:31 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csp-pre-survey"
     }
@@ -272,6 +272,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP pre-assessment survey"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -293,6 +296,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 1 Ch1 Cumulative Assessment MC Group",
+          "CSP Unit 1 Ch1 Cumulative Assessment MC Group v2"
+        ],
         "variants": {
           "CSP Unit 1 Ch1 Cumulative Assessment MC Group": {
             "active": false
@@ -321,6 +328,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 2 Ch2 Cumulative Assessment MC"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -342,6 +352,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 3 Ch1 Cumulative Assessment MC Group"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -363,6 +376,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 4 Ch1 Cumulative Assessment MC"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -384,6 +400,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp_ap_questions"
+        ]
       },
       "bonus": false,
       "seeding_key": {
