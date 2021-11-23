@@ -1,77 +1,123 @@
-require 'test_helper'
-
 class AbilityTest < ActiveSupport::TestCase
   self.use_transactional_test_case = true
   setup_all do
-    @public_script = create(:script).tap do |script|
-      @public_script_level = create(:script_level, script: script)
+    @public_teacher_to_student_unit = create(:script, name: 'teacher-to-student', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
+      @public_teacher_to_student_script_level = create(:script_level, script: script)
     end
 
-    @login_required_script = create(:script, login_required: true).tap do |script|
+    @public_facilitator_to_teacher_unit = create(:script, name: 'facilitator-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.facilitator, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
+      @public_facilitator_to_teacher_script_level = create(:script_level, script: script)
+    end
+
+    @public_code_instructor_to_teacher_unit = create(:script, name: 'code-instructor-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
+      @public_code_instructor_to_teacher_script_level = create(:script_level, script: script)
+    end
+
+    @public_plc_reviewer_to_facilitator_unit = create(:script, name: 'plc-reviewer-to-facilitator', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator).tap do |script|
+      @public_plc_reviewer_to_facilitator_script_level = create(:script_level, script: script)
+    end
+
+    @login_required_script = create(:script, login_required: true, name: 'login-required', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
       @login_required_script_level = create(:script_level, script: script)
     end
 
-    @login_required_migrated_script = create(:script, login_required: true, is_migrated: true).tap do |script|
+    @login_required_migrated_script = create(:script, login_required: true, is_migrated: true, name: 'migrated-login-required', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.student).tap do |script|
       @login_required_migrated_lesson = create(:lesson, script: script, has_lesson_plan: true)
     end
   end
 
   test "as guest" do
     ability = Ability.new(User.new)
-
     assert ability.can?(:read, Game)
     assert ability.can?(:read, Level)
     assert ability.can?(:read, Activity)
-
     refute ability.can?(:destroy, Game)
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
-
     refute ability.can?(:read, Section)
+    assert ability.can?(:read, Script.find_by_name('ECSPD'))
+    assert ability.can?(:read, Script.find_by_name('flappy'))
 
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
-    assert ability.can?(:read, @public_script)
-    assert ability.can?(:read, @login_required_script)
+    assert ability.can?(:read, @public_teacher_to_student_unit)
+    assert ability.cannot?(:read, @public_facilitator_to_teacher_unit)
+    assert ability.cannot?(:read, @public_code_instructor_to_teacher_unit)
+    assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_unit)
 
+    assert ability.can?(:read, @login_required_script)
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
-    assert ability.can?(:read, @public_script_level)
-    refute ability.can?(:read, @public_script_level, {login_required: "true"})
+    assert ability.can?(:read, @public_teacher_to_student_script_level)
+    refute ability.can?(:read, @public_facilitator_to_teacher_script_level)
+    refute ability.can?(:read, @public_code_instructor_to_teacher_script_level)
+    refute ability.can?(:read, @public_plc_reviewer_to_facilitator_script_level)
+    refute ability.can?(:read, @public_teacher_to_student_script_level, {login_required: "true"})
     refute ability.can?(:read, @login_required_script_level)
   end
 
   test "as student" do
     ability = Ability.new(create(:student))
-
     assert ability.can?(:read, Game)
     assert ability.can?(:read, Level)
     assert ability.can?(:read, Activity)
-
     refute ability.can?(:destroy, Game)
     refute ability.can?(:destroy, Level)
     refute ability.can?(:destroy, Activity)
-
     refute ability.can?(:read, Section)
-
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
-    assert ability.can?(:read, @public_script)
-    assert ability.can?(:read, @login_required_script)
+    assert ability.can?(:read, @public_teacher_to_student_unit)
+    assert ability.cannot?(:read, @public_facilitator_to_teacher_unit)
+    assert ability.cannot?(:read, @public_code_instructor_to_teacher_unit)
+    assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_unit)
 
+    assert ability.can?(:read, @login_required_script)
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
-    assert ability.can?(:read, @public_script_level)
-    assert ability.can?(:read, @public_script_level, {login_required: "true"})
+    assert ability.can?(:read, @public_teacher_to_student_script_level)
+    assert ability.cannot?(:read, @public_facilitator_to_teacher_script_level)
+    assert ability.cannot?(:read, @public_code_instructor_to_teacher_script_level)
+    assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_script_level)
+    assert ability.can?(:read, @public_teacher_to_student_script_level, {login_required: "true"})
     assert ability.can?(:read, @login_required_script_level)
   end
 
   test "as teacher" do
     ability = Ability.new(create(:teacher))
+    assert ability.can?(:read, Game)
+    assert ability.can?(:read, Level)
+    assert ability.can?(:read, Activity)
+    refute ability.can?(:destroy, Game)
+    refute ability.can?(:destroy, Level)
+    refute ability.can?(:destroy, Activity)
+    assert ability.can?(:read, Section)
+    assert ability.can?(:read, Script.find_by_name('ECSPD'))
+    assert ability.can?(:read, Script.find_by_name('flappy'))
+
+    assert ability.can?(:read, @public_teacher_to_student_unit)
+    assert ability.can?(:read, @public_facilitator_to_teacher_unit)
+    assert ability.can?(:read, @public_code_instructor_to_teacher_unit)
+    assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_unit)
+
+    assert ability.can?(:read, @login_required_script)
+    assert ability.can?(:read, @login_required_migrated_lesson)
+    assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
+
+    assert ability.can?(:read, @public_teacher_to_student_script_level)
+    assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
+    assert ability.can?(:read, @public_code_instructor_to_teacher_script_level)
+    assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_script_level)
+    assert ability.can?(:read, @public_teacher_to_student_script_level, {login_required: "true"})
+    assert ability.can?(:read, @login_required_script_level)
+  end
+
+  test "as facilitator" do
+    ability = Ability.new(create(:facilitator))
 
     assert ability.can?(:read, Game)
     assert ability.can?(:read, Level)
@@ -86,20 +132,91 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.can?(:read, Script.find_by_name('ECSPD'))
     assert ability.can?(:read, Script.find_by_name('flappy'))
 
-    assert ability.can?(:read, @public_script)
-    assert ability.can?(:read, @login_required_script)
+    assert ability.can?(:read, @public_teacher_to_student_unit)
+    assert ability.can?(:read, @public_facilitator_to_teacher_unit)
+    assert ability.can?(:read, @public_code_instructor_to_teacher_unit)
+    assert ability.can?(:read, @public_plc_reviewer_to_facilitator_unit)
 
+    assert ability.can?(:read, @login_required_script)
     assert ability.can?(:read, @login_required_migrated_lesson)
     assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
 
-    assert ability.can?(:read, @public_script_level)
-    assert ability.can?(:read, @public_script_level, {login_required: "true"})
+    assert ability.can?(:read, @public_teacher_to_student_script_level)
+    assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
+    assert ability.can?(:read, @public_code_instructor_to_teacher_script_level)
+    assert ability.can?(:read, @public_plc_reviewer_to_facilitator_script_level)
+    assert ability.can?(:read, @public_teacher_to_student_script_level, {login_required: "true"})
+    assert ability.can?(:read, @login_required_script_level)
+  end
+
+  test "as plc reviewer" do
+    ability = Ability.new(create(:facilitator))
+
+    assert ability.can?(:read, Game)
+    assert ability.can?(:read, Level)
+    assert ability.can?(:read, Activity)
+
+    refute ability.can?(:destroy, Game)
+    refute ability.can?(:destroy, Level)
+    refute ability.can?(:destroy, Activity)
+
+    assert ability.can?(:read, Section)
+
+    assert ability.can?(:read, Script.find_by_name('ECSPD'))
+    assert ability.can?(:read, Script.find_by_name('flappy'))
+
+    assert ability.can?(:read, @public_teacher_to_student_unit)
+    assert ability.can?(:read, @public_facilitator_to_teacher_unit)
+    assert ability.can?(:read, @public_code_instructor_to_teacher_unit)
+    assert ability.can?(:read, @public_plc_reviewer_to_facilitator_unit)
+
+    assert ability.can?(:read, @login_required_script)
+    assert ability.can?(:read, @login_required_migrated_lesson)
+    assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
+
+    assert ability.can?(:read, @public_teacher_to_student_script_level)
+    assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
+    assert ability.can?(:read, @public_code_instructor_to_teacher_script_level)
+    assert ability.can?(:read, @public_plc_reviewer_to_facilitator_script_level)
+    assert ability.can?(:read, @public_teacher_to_student_script_level, {login_required: "true"})
+    assert ability.can?(:read, @login_required_script_level)
+  end
+
+  test "as code instructor" do
+    ability = Ability.new(create(:code_instructor))
+
+    assert ability.can?(:read, Game)
+    assert ability.can?(:read, Level)
+    assert ability.can?(:read, Activity)
+
+    refute ability.can?(:destroy, Game)
+    refute ability.can?(:destroy, Level)
+    refute ability.can?(:destroy, Activity)
+
+    assert ability.can?(:read, Section)
+
+    assert ability.can?(:read, Script.find_by_name('ECSPD'))
+    assert ability.can?(:read, Script.find_by_name('flappy'))
+
+    assert ability.can?(:read, @public_teacher_to_student_unit)
+    assert ability.can?(:read, @public_facilitator_to_teacher_unit)
+    assert ability.can?(:read, @public_code_instructor_to_teacher_unit)
+    assert ability.can?(:read, @public_plc_reviewer_to_facilitator_unit)
+
+    assert ability.can?(:read, @login_required_script)
+    assert ability.can?(:read, @login_required_migrated_lesson)
+    assert ability.can?(:student_lesson_plan, @login_required_migrated_lesson)
+
+    assert ability.can?(:read, @public_teacher_to_student_script_level)
+    assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
+    assert ability.can?(:read, @public_code_instructor_to_teacher_script_level)
+    assert ability.can?(:read, @public_plc_reviewer_to_facilitator_script_level)
+    assert ability.can?(:read, @public_teacher_to_student_script_level, {login_required: "true"})
     assert ability.can?(:read, @login_required_script_level)
   end
 
   test "as admin" do
     ability = Ability.new(create(:admin))
-
     assert ability.cannot?(:read, Activity)
     assert ability.cannot?(:read, Game)
     assert ability.cannot?(:read, Level)
@@ -107,21 +224,25 @@ class AbilityTest < ActiveSupport::TestCase
     assert ability.cannot?(:read, ScriptLevel)
     assert ability.cannot?(:read, UserLevel)
     assert ability.cannot?(:read, UserScript)
-
     assert ability.cannot?(:destroy, Game)
     assert ability.cannot?(:destroy, Level)
     assert ability.cannot?(:destroy, Activity)
-
     assert ability.cannot?(:read, Script.find_by_name('ECSPD'))
     assert ability.cannot?(:read, Script.find_by_name('flappy'))
 
-    assert ability.cannot?(:read, @public_script)
-    assert ability.cannot?(:read, @login_required_script)
+    assert ability.cannot?(:read, @public_teacher_to_student_unit)
+    assert ability.cannot?(:read, @public_facilitator_to_teacher_unit)
+    assert ability.cannot?(:read, @public_code_instructor_to_teacher_unit)
+    assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_unit)
 
+    assert ability.cannot?(:read, @login_required_script)
     assert ability.cannot?(:read, @login_required_migrated_lesson)
     assert ability.cannot?(:student_lesson_plan, @login_required_migrated_lesson)
 
-    assert ability.cannot?(:read, @public_script_level)
+    assert ability.cannot?(:read, @public_teacher_to_student_script_level)
+    assert ability.cannot?(:read, @public_facilitator_to_teacher_script_level)
+    assert ability.cannot?(:read, @public_code_instructor_to_teacher_script_level)
+    assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_script_level)
     assert ability.cannot?(:read, @login_required_script_level)
   end
 

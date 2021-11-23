@@ -249,8 +249,8 @@ class Ability
       end
     end
 
-    can [:vocab, :resources, :code, :standards], UnitGroup do
-      true
+    can [:vocab, :resources, :code, :standards], UnitGroup do |unit_group|
+      unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
     end
 
     # Override UnitGroup, Unit, Lesson and ScriptLevel.
@@ -260,17 +260,17 @@ class Ability
       elsif unit_group.pilot?
         unit_group.has_pilot_access?(user)
       else
-        true
+        unit_group.can_be_participant?(user) || unit_group.can_be_instructor?(user)
       end
     end
 
-    can :read, Script do |script|
-      if script.in_development?
+    can :read, Script do |unit|
+      if unit.in_development?
         user.permission?(UserPermission::LEVELBUILDER)
-      elsif script.pilot?
-        script.has_pilot_access?(user)
+      elsif unit.pilot?
+        unit.has_pilot_access?(user)
       else
-        true
+        unit.can_be_participant?(user) || unit.can_be_instructor?(user)
       end
     end
 
@@ -281,10 +281,12 @@ class Ability
       elsif script.pilot?
         script.has_pilot_access?(user)
       else
+        return false unless script.can_be_participant?(user) || script.can_be_instructor?(user)
+
         # login is required if this script always requires it or if request
         # params were passed to authorize! and includes login_required=true
         login_required = script.login_required? || (!params.nil? && params[:login_required] == "true")
-        user.persisted? || !login_required
+        (user.persisted? || !login_required) && (script.can_be_participant?(user) || script.can_be_instructor?(user))
       end
     end
 
@@ -299,7 +301,7 @@ class Ability
       elsif script.pilot?
         script.has_pilot_access?(user)
       else
-        true
+        script.can_be_participant?(user) || script.can_be_instructor?(user)
       end
     end
 
