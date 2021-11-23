@@ -27,6 +27,8 @@ class Objective < ApplicationRecord
     description
   )
 
+  validates_presence_of :description
+
   def summarize_for_edit
     {id: id, description: description, key: key}
   end
