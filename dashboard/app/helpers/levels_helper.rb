@@ -310,7 +310,7 @@ module LevelsHelper
     end
 
     # Blockly caches level properties, whereas this field depends on the user
-    @app_options['teacherMarkdown'] = @level.localized_teacher_markdown if can_view_teacher_markdown?
+    @app_options['teacherMarkdown'] = @level.localized_teacher_markdown if Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
 
     @app_options[:dialog] = {
       skipSound: !!(@level.properties['options'].try(:[], 'skip_sound')),
@@ -932,20 +932,10 @@ module LevelsHelper
     end
   end
 
-  def can_view_teacher_markdown?
-    if current_user.try(:authorized_teacher?)
-      true
-    elsif current_user.try(:teacher?) && @script
-      @script.k5_course? || @script.k5_draft_course?
-    else
-      false
-    end
-  end
-
   # Should the multi calling on this helper function include answers to be rendered into the client?
   # Caller indicates whether the level is standalone or not.
   def include_multi_answers?(standalone)
-    standalone || Policies::InlineAnswer.visible?(current_user, @script_level)
+    standalone || Policies::InlineAnswer.visible_for_script_level?(current_user, @script_level)
   end
 
   # Finds the existing LevelSourceImage corresponding to the specified level
