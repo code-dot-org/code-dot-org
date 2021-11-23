@@ -10,7 +10,7 @@ class Policies::InlineAnswerTest < ActiveSupport::TestCase
     @plc_reviewer = create :plc_reviewer
     @levelbuilder = create :levelbuilder
 
-    unit_group = create(:unit_group, instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher)
+    unit_group = create(:unit_group, name: 'teacher-instructed-course', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher)
     @unit_in_course = create(:script, name: 'unit-in-course')
     create(:unit_group_unit, script: @unit_in_course, unit_group: unit_group, position: 1)
     @unit_in_course.reload
