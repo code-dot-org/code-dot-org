@@ -18,7 +18,7 @@
           LambdaFunctionAssociations:
             # Trigging upon origin-request ensures redirect is cached
             - EventType: origin-request
-              LambdaFunctionARN: !Ref WwwRedirectLambdaVersion1
+              LambdaFunctionARN: !Ref <%=app%>WwwRedirectLambdaVersion1
           ForwardedValues:
             QueryString: "false"
             Headers:
@@ -55,7 +55,7 @@
     Type: AWS::Lambda::Function
     Properties:
       Runtime: nodejs14.x
-      Role: !GetAtt WwwRedirectLambdaRole.Arn
+      Role: !GetAtt <%=app%>WwwRedirectLambdaRole.Arn
       Handler: index.handler
       Code:
         ZipFile: |
@@ -96,7 +96,7 @@
   <%=app%>WwwRedirectLambdaVersion1:
     Type: AWS::Lambda::Version
     Properties:
-      FunctionName: !Ref WwwRedirectLambda
+      FunctionName: !Ref <%=app%>WwwRedirectLambda
 
   <%=app%>WwwRedirectLambdaRole:
     Type: "AWS::IAM::Role"
