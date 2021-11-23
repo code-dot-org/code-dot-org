@@ -1550,6 +1550,16 @@ export default class P5Lab {
   }
 
   /**
+   * Get the feedback message for the feedback dialog.
+   * Subclasses can override this behavior.
+   * @param {boolean} _isFreePlay Unused by this implementation
+   * @returns {string}
+   */
+  getReinfFeedbackMsg(_isFreePlay) {
+    return this.getMsg().reinfFeedbackMsg();
+  }
+
+  /**
    * App specific displayFeedback function that calls into
    * this.studioApp_.displayFeedback when appropriate
    */
@@ -1572,7 +1582,9 @@ export default class P5Lab {
       // feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png")
       showingSharing: !level.disableSharing && level.freePlay,
       appStrings: {
-        reinfFeedbackMsg: msg.reinfFeedbackMsg(),
+        reinfFeedbackMsg: this.getReinfFeedbackMsg(
+          this.testResults === TestResults.FREE_PLAY
+        ),
         sharingText: msg.shareGame()
       },
       hideXButton: true,
