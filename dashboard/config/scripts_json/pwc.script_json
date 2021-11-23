@@ -14,11 +14,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 21:08:34 UTC",
+    "serialized_at": "2021-11-22 19:57:12 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "pwc"
     }
@@ -508,6 +508,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pwc_problemsolving"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -530,6 +533,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Computer Science is Changing Everything"
+        ],
         "progression": "Computer Science is Changing Everything"
       },
       "bonus": false,
@@ -552,6 +558,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pwc_technologyfoundations"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -574,6 +583,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD What Makes a Computer a Computer Video"
+        ],
         "progression": "Video: What Makes a Computer, a Computer?"
       },
       "bonus": false,
@@ -596,6 +608,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pwc_data"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -618,6 +633,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Waze Data Video"
+        ],
         "progression": "Problem Solving"
       },
       "bonus": false,
@@ -640,6 +658,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Amazon Data Video"
+        ],
         "progression": "Problem Solving"
       },
       "bonus": false,
@@ -662,6 +683,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pwc_programming"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -684,6 +708,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pwc_webdevelopment"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -706,6 +733,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pwc_appdevunplugged"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -728,6 +758,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pwc_appdev"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -750,6 +783,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pwc_cybersecurity"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,
@@ -772,6 +808,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack a Caesar Cipher"
+        ],
         "progression": "Crack a Caesar Cipher"
       },
       "bonus": false,
@@ -794,6 +833,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Terminology Recap"
+        ],
         "progression": "Terminology Recap"
       },
       "bonus": false,
@@ -816,6 +858,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Challenge Introduction"
+        ],
         "progression": "New Challenge Introduction"
       },
       "bonus": false,
@@ -838,6 +883,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack Random Substitution"
+        ],
         "progression": "Crack Random Substitution"
       },
       "bonus": false,
@@ -860,6 +908,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Technique: Frequency Analysis"
+        ],
         "progression": "Technique: Frequency Analysis"
       },
       "bonus": false,
@@ -882,6 +933,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - Encryption and Public Keys"
+        ],
         "progression": "Video - Encryption and Public Keys"
       },
       "bonus": false,
@@ -904,6 +958,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "pwc_internetofthings"
+        ],
         "progression": "Introduction"
       },
       "bonus": false,

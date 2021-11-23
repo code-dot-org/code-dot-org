@@ -13,11 +13,11 @@
     },
     "new_name": null,
     "family_name": "csp5-virtual",
-    "serialized_at": "2021-11-15 21:04:56 UTC",
+    "serialized_at": "2021-11-22 19:56:41 UTC",
     "published_state": "preview",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csp5-virtual"
     }
@@ -926,6 +926,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual1"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -948,6 +951,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual2"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -970,6 +976,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual3"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -992,6 +1001,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual4"
+        ],
         "progression": "Setting Properties"
       },
       "bonus": false,
@@ -1014,6 +1026,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual5"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -1036,6 +1051,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual6"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -1058,6 +1076,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual7"
+        ],
         "progression": "Make it Interactive"
       },
       "bonus": false,
@@ -1080,6 +1101,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual8"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -1102,6 +1126,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual9"
+        ],
         "progression": "Images and Sounds"
       },
       "bonus": false,
@@ -1124,6 +1151,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual10"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -1146,6 +1176,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual11"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -1168,6 +1201,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual12"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -1190,6 +1226,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual13"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -1212,6 +1251,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_HOC_virtual15"
+        ],
         "progression": "Design Mode"
       },
       "bonus": false,
@@ -1234,6 +1276,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_video_new_debugging_virtual"
+        ],
         "progression": "Intro to Debugging and Common Problems"
       },
       "bonus": false,
@@ -1256,6 +1301,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_predict_applab_onEventWithWrongID_virtual"
+        ],
         "progression": "Intro to Debugging and Common Problems"
       },
       "bonus": false,
@@ -1278,6 +1326,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_Debugging predict unexpected behavior - two onEvents to _virtual"
+        ],
         "progression": "Intro to Debugging and Common Problems"
       },
       "bonus": false,
@@ -1300,6 +1351,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L13 - Debugging IDs case sensitive_virtual"
+        ],
         "progression": "Intro to Debugging and Common Problems"
       },
       "bonus": false,
@@ -1322,6 +1376,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L13 - Debugging 3_virtual"
+        ],
         "progression": "Intro to Debugging and Common Problems"
       },
       "bonus": false,
@@ -1344,6 +1401,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How setPosition and screen dimensions work_2018_2019_virtual"
+        ],
         "progression": "How setPosition and Screen Dimensions Work"
       },
       "bonus": false,
@@ -1366,6 +1426,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_setPosition to fixed location_virtual"
+        ],
         "progression": "How setPosition and Screen Dimensions Work"
       },
       "bonus": false,
@@ -1388,6 +1451,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - setPosition to move button_virtual"
+        ],
         "progression": "How setPosition and Screen Dimensions Work"
       },
       "bonus": false,
@@ -1410,6 +1476,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_AddLabelToChaserGame_virtual"
+        ],
         "progression": "Using Labels"
       },
       "bonus": false,
@@ -1432,6 +1501,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_playWithEventTypes_virtual"
+        ],
         "progression": "Event Types"
       },
       "bonus": false,
@@ -1454,6 +1526,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How Images Work_2018_2019_virtual"
+        ],
         "progression": "How Images Work"
       },
       "bonus": false,
@@ -1476,6 +1551,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Finalize Your Chaser Game v.1_virtual"
+        ],
         "progression": "Chaser Game v.1"
       },
       "bonus": false,
@@ -1498,6 +1576,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 First Time Console.log_virtual"
+        ],
         "progression": "Debugging with Console.log"
       },
       "bonus": false,
@@ -1520,6 +1601,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 console.log in event v. global_virtual"
+        ],
         "progression": "Debugging with Console.log"
       },
       "bonus": false,
@@ -1542,6 +1626,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 console.log debug when mouse events happen_virtual"
+        ],
         "progression": "Debugging with Console.log"
       },
       "bonus": false,
@@ -1564,6 +1651,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Debugging Overlapping Objects and Screen Events_virtual"
+        ],
         "progression": "Debugging with Console.log"
       },
       "bonus": false,
@@ -1586,6 +1676,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Debugging with Console.log_2018_2019_virtual"
+        ],
         "progression": "Debugging with Console.log"
       },
       "bonus": false,
@@ -1608,6 +1701,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Tips For Working on Your Own_2018_2019_virtual"
+        ],
         "progression": "Making a Multi-Screen Chaser Game v.2"
       },
       "bonus": false,
@@ -1630,6 +1726,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making a Multi Screen Chaser Game v.2_2018_2019_virtual"
+        ],
         "progression": "Making a Multi-Screen Chaser Game v.2"
       },
       "bonus": false,
@@ -1652,6 +1751,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Add welcome screen to chaser game_virtual"
+        ],
         "progression": "Making a Multi-Screen Chaser Game v.2"
       },
       "bonus": false,
@@ -1674,6 +1776,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Add full screen image to bg of chaser game_virtual"
+        ],
         "progression": "Making a Multi-Screen Chaser Game v.2"
       },
       "bonus": false,
@@ -1696,6 +1801,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Add game over screen_virtual"
+        ],
         "progression": "Project: Multi-Screen Chaser Game"
       },
       "bonus": false,
@@ -1718,6 +1826,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Variables - Part 1_virtual"
+        ],
         "progression": "Introduction to Variables - Part 1"
       },
       "bonus": false,
@@ -1740,6 +1851,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L19 - three basic ops of variables_virtual"
+        ],
         "progression": "Basic Mechanics of Variables"
       },
       "bonus": false,
@@ -1762,6 +1876,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L19 - fix the var name syntax error v2_virtual"
+        ],
         "progression": "Basic Mechanics of Variables"
       },
       "bonus": false,
@@ -1784,6 +1901,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L19 - write var and string with same name v2_virtual"
+        ],
         "progression": "Basic Mechanics of Variables"
       },
       "bonus": false,
@@ -1806,6 +1926,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3- Variables - Create And Assign_virtual"
+        ],
         "progression": "Basic Mechanics of Variables"
       },
       "bonus": false,
@@ -1828,6 +1951,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3- Variables - Text Mode_virtual"
+        ],
         "progression": "Basic Mechanics of Variables"
       },
       "bonus": false,
@@ -1850,6 +1976,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Variables - Set to Expression_virtual"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -1872,6 +2001,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - concatenate simple_virtual"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -1894,6 +2026,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - concatenate simple2_virtual"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -1916,6 +2051,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Variables - Set to Expression with Other Variables_virtual"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -1938,6 +2076,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - Assigning Random Value_virtual"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -1960,6 +2101,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - Mini Calculator embed_virtual"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -1982,6 +2126,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - User Input Division calculator_virtual"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -2004,6 +2151,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L19 - test reassignment of two vars_virtual"
+        ],
         "progression": "Other Ways to Assign Values to Variables"
       },
       "bonus": false,
@@ -2026,6 +2176,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Variables - Part 2_virtual"
+        ],
         "progression": "Introduction to Variables - Part 2"
       },
       "bonus": false,
@@ -2048,6 +2201,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Mental Model for Variables_2018_2019_virtual"
+        ],
         "progression": "The Mental Model for Variables"
       },
       "bonus": false,
@@ -2070,6 +2226,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L14 - Variable ReAssignment pt2_virtual"
+        ],
         "progression": "The Mental Model for Variables"
       },
       "bonus": false,
@@ -2092,6 +2251,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L19 - variable reassignment challenge pt2_virtual"
+        ],
         "progression": "The Mental Model for Variables"
       },
       "bonus": false,
@@ -2114,6 +2276,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 full clicker demo_virtual"
+        ],
         "progression": "Clicker Game Demonstration"
       },
       "bonus": false,
@@ -2136,6 +2301,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - practice with setText_virtual"
+        ],
         "progression": "AppLab Practice"
       },
       "bonus": false,
@@ -2158,6 +2326,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - DEMO up down count practice app_virtual"
+        ],
         "progression": "AppLab Practice"
       },
       "bonus": false,
@@ -2180,6 +2351,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - global var example count up_virtual"
+        ],
         "progression": "AppLab Practice"
       },
       "bonus": false,
@@ -2202,6 +2376,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - variable scoping problem debugging_virtual"
+        ],
         "progression": "AppLab Practice"
       },
       "bonus": false,
@@ -2224,6 +2401,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Variable Scope: Local vs. Global_2018_2019_virtual"
+        ],
         "progression": "Debugging Variables"
       },
       "bonus": false,
@@ -2246,6 +2426,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - add code to make count down work_virtual"
+        ],
         "progression": "Debugging Variables"
       },
       "bonus": false,
@@ -2268,6 +2451,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - count upDown bug forget to set text_virtual"
+        ],
         "progression": "Debugging Variables"
       },
       "bonus": false,
@@ -2290,6 +2476,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - count upDown bug logic error wrong update_virtual"
+        ],
         "progression": "Debugging Variables"
       },
       "bonus": false,
@@ -2312,6 +2501,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - mini clicker update score_virtual"
+        ],
         "progression": "Using Variables"
       },
       "bonus": false,
@@ -2334,6 +2526,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 click add lives_virtual"
+        ],
         "progression": "Using Variables"
       },
       "bonus": false,
@@ -2356,6 +2551,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Simple Decisions with if-statements_2018_2019_virtual"
+        ],
         "progression": "Simple Decisions with if-statements"
       },
       "bonus": false,
@@ -2378,6 +2576,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - Simple If-statements in UpDown App_virtual"
+        ],
         "progression": "Simple Decisions with if-statements"
       },
       "bonus": false,
@@ -2400,6 +2601,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - Add reset button to UpDown app_virtual"
+        ],
         "progression": "Simple Decisions with if-statements"
       },
       "bonus": false,
@@ -2422,6 +2626,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - Debugging Simple If-statements =v==_virtual"
+        ],
         "progression": "Simple Decisions with if-statements"
       },
       "bonus": false,
@@ -2444,6 +2651,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L15 - Debug forget to update var on reset in UpDown ap_virtual"
+        ],
         "progression": "Simple Decisions with if-statements"
       },
       "bonus": false,
@@ -2466,6 +2676,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 Mad Lib Demo_virtual"
+        ],
         "progression": "Mad Lib Demonstration"
       },
       "bonus": false,
@@ -2488,6 +2701,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - introStrings_virtual"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -2510,6 +2726,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - doubleQuotes_virtual"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -2532,6 +2751,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - textInput getText write_virtual"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -2554,6 +2776,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - intro getText_virtual"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -2576,6 +2801,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - User Input - Save getText To Variable_virtual"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -2598,6 +2826,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 - outputWithTextArea_virtual"
+        ],
         "progression": "Strings in Apps"
       },
       "bonus": false,
@@ -2620,6 +2851,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 Mad Lib Student Setup_virtual"
+        ],
         "progression": "Mad Lib Game"
       },
       "bonus": false,
@@ -2642,6 +2876,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 Mad Lib setText_virtual"
+        ],
         "progression": "Mad Lib Game"
       },
       "bonus": false,
@@ -2664,6 +2901,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 Mad Lib getText_virtual"
+        ],
         "progression": "Mad Lib Game"
       },
       "bonus": false,
@@ -2686,6 +2926,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L16 Mad Lib Clear Input_virtual"
+        ],
         "progression": "Mad Lib Game"
       },
       "bonus": false,
@@ -2708,6 +2951,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Conditionals: Boolean Expressions_virtual"
+        ],
         "progression": "Introduction to Conditionals: Boolean Expressions"
       },
       "bonus": false,
@@ -2730,6 +2976,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Boolean Expressions and Comparison Operators_2018_2019_virtual"
+        ],
         "progression": "Boolean Expressions and Comparison Operators"
       },
       "bonus": false,
@@ -2752,6 +3001,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3L18 comparison operators_virtual"
+        ],
         "progression": "Comparison Operators Practice"
       },
       "bonus": false,
@@ -2774,6 +3026,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Conditionals: if Statements_virtual"
+        ],
         "progression": "Introduction to Conditionals: if Statements"
       },
       "bonus": false,
@@ -2796,6 +3051,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How If Statements Work pt 1_2018_2019_virtual"
+        ],
         "progression": "if Statements"
       },
       "bonus": false,
@@ -2818,6 +3076,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_basic if - check driving age_virtual"
+        ],
         "progression": "if Statements"
       },
       "bonus": false,
@@ -2840,6 +3101,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_basic if - DIY secret number_virtual"
+        ],
         "progression": "if Statements"
       },
       "bonus": false,
@@ -2862,6 +3126,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Check Password if statement lock image_virtual"
+        ],
         "progression": "if Statements"
       },
       "bonus": false,
@@ -2884,6 +3151,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Conditionals: if-else Statements_virtual"
+        ],
         "progression": "Introduction to Conditionals: if-else Statements"
       },
       "bonus": false,
@@ -2906,6 +3176,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How If-Else Statements Work_2018_2019_virtual"
+        ],
         "progression": "if-else Statements"
       },
       "bonus": false,
@@ -2928,6 +3201,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 if-else simple movie ratings example_virtual"
+        ],
         "progression": "if-else Statements"
       },
       "bonus": false,
@@ -2950,6 +3226,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_basic if-else - driving age_virtual"
+        ],
         "progression": "if-else Statements"
       },
       "bonus": false,
@@ -2972,6 +3251,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 Check Password if-else string_virtual"
+        ],
         "progression": "if-else Statements"
       },
       "bonus": false,
@@ -2994,6 +3276,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How Dropdown Menus Work_2018_2019_virtual"
+        ],
         "progression": "Dropdown Menus"
       },
       "bonus": false,
@@ -3016,6 +3301,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 if-else dropdown movie checker_virtual"
+        ],
         "progression": "Dropdown Menus"
       },
       "bonus": false,
@@ -3038,6 +3326,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 if-else dropdown guess dice_virtual"
+        ],
         "progression": "Dropdown Menus"
       },
       "bonus": false,
@@ -3060,6 +3351,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Conditionals: if-else-if Statements_virtual"
+        ],
         "progression": "Introduction to Conditionals: if-else-if Statements"
       },
       "bonus": false,
@@ -3082,6 +3376,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How \"if-else-if\" Works_2018_2019_virtual"
+        ],
         "progression": "How \"if-else-if\" Works"
       },
       "bonus": false,
@@ -3104,6 +3401,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 if-else-if movie example_virtual"
+        ],
         "progression": "How \"if-else-if\" Works"
       },
       "bonus": false,
@@ -3126,6 +3426,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 if-else-if quiz grade_virtual"
+        ],
         "progression": "How \"if-else-if\" Works"
       },
       "bonus": false,
@@ -3148,6 +3451,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - High Low - Else if_virtual"
+        ],
         "progression": "How \"if-else-if\" Works"
       },
       "bonus": false,
@@ -3170,6 +3476,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - High Low - Debug_virtual"
+        ],
         "progression": "How \"if-else-if\" Works"
       },
       "bonus": false,
@@ -3192,6 +3501,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Conditionals: Compound Boolean Expressions_virtual"
+        ],
         "progression": "Introduction to Conditionals: Compound Boolean Expressions"
       },
       "bonus": false,
@@ -3214,6 +3526,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Conditionals - Simple OR_virtual"
+        ],
         "progression": "How the Boolean &&, || and ! Operators Work"
       },
       "bonus": false,
@@ -3236,6 +3551,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Conditionals - Simple AND_virtual"
+        ],
         "progression": "How the Boolean &&, || and ! Operators Work"
       },
       "bonus": false,
@@ -3258,6 +3576,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Conditionals - Combine AND OR Simple_virtual"
+        ],
         "progression": "How Compound Boolean Expressions Work"
       },
       "bonus": false,
@@ -3280,6 +3601,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 compound boolean museum example_virtual"
+        ],
         "progression": "How Compound Boolean Expressions Work"
       },
       "bonus": false,
@@ -3302,6 +3626,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5_U3 - Conditionals - Combine AND OR and NOT_virtual"
+        ],
         "progression": "How Compound Boolean Expressions Work"
       },
       "bonus": false,
@@ -3324,6 +3651,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPU5 Color Sleuth Demo_virtual"
+        ],
         "progression": "Color Sleuth - Demo and Overview"
       },
       "bonus": false,
@@ -3346,6 +3676,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP5 virtual RGB intro_virtual"
+        ],
         "progression": "RGB Colors"
       },
       "bonus": false,
@@ -3368,6 +3701,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "How Set Property Works_2018_2019_virtual"
+        ],
         "progression": "Specifying Colors"
       },
       "bonus": false,
@@ -3390,6 +3726,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth part 1_virtual"
+        ],
         "progression": "Using setProperty"
       },
       "bonus": false,
@@ -3412,6 +3751,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth part 2 small color change_virtual"
+        ],
         "progression": "Using setProperty"
       },
       "bonus": false,
@@ -3434,6 +3776,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth part 3 pick random button_virtual"
+        ],
         "progression": "How to Pick a Random Button"
       },
       "bonus": false,
@@ -3456,6 +3801,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth part 4 make random RGB string_virtual"
+        ],
         "progression": "How to Make a Random Color"
       },
       "bonus": false,
@@ -3478,6 +3826,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_applab_functions_virtual"
+        ],
         "progression": "Functions in Your Color Sleuth App"
       },
       "bonus": false,
@@ -3500,6 +3851,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth part 5 make setBoard function_virtual"
+        ],
         "progression": "Functions in Your Color Sleuth App"
       },
       "bonus": false,
@@ -3522,6 +3876,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth add global var correct plus console.log_virtual"
+        ],
         "progression": "Functions in Your Color Sleuth App"
       },
       "bonus": false,
@@ -3544,6 +3901,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth checkCorrect make global var_virtual"
+        ],
         "progression": "Activating Buttons"
       },
       "bonus": false,
@@ -3566,6 +3926,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth checkCorrect part1 link to event handlers_virtual"
+        ],
         "progression": "Activating Buttons"
       },
       "bonus": false,
@@ -3588,6 +3951,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth checkCorrect part2 add if statement to check co_virtual"
+        ],
         "progression": "Activating Buttons"
       },
       "bonus": false,
@@ -3610,6 +3976,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth nextTurn pt1 add var and function and console.l_virtual"
+        ],
         "progression": "How to Switch Player Turns"
       },
       "bonus": false,
@@ -3632,6 +4001,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth nextTurn pt2 update UI to indicate turn_virtual"
+        ],
         "progression": "How to Switch Player Turns"
       },
       "bonus": false,
@@ -3654,6 +4026,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth scoring pt1 vars function stub console_virtual"
+        ],
         "progression": "Updating the Score"
       },
       "bonus": false,
@@ -3676,6 +4051,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U5 ColorSleuth scoring pt3 update UI for scoring_virtual"
+        ],
         "progression": "Updating the Score"
       },
       "bonus": false,
@@ -3698,6 +4076,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Project: Finish Color Sleuth_virtual"
+        ],
         "progression": "Project: Color Sleuth"
       },
       "bonus": false,
@@ -3720,6 +4101,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp5 virtual bubblechoice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3741,6 +4125,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp5 virtual ending"
+        ]
       },
       "bonus": false,
       "seeding_key": {

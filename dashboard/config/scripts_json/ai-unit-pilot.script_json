@@ -26,11 +26,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 20:52:57 UTC",
+    "serialized_at": "2021-11-22 19:57:33 UTC",
     "published_state": "pilot",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "ai-unit-pilot"
     }
@@ -1042,6 +1042,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD AIL01 autoSFLP_pilot-2021"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1064,6 +1067,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash"
+        ],
         "progression": "Recognizing Fish"
       },
       "bonus": false,
@@ -1086,6 +1092,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short"
+        ],
         "progression": "Recognizing Fish Features"
       },
       "bonus": false,
@@ -1108,6 +1117,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long"
+        ],
         "progression": "Recognizing Expressions"
       },
       "bonus": false,
@@ -1130,6 +1142,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD AIL02 autoSFLP_pilot-2021"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1152,6 +1167,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-L2 unsupervised - 1"
+        ],
         "progression": "Looking for Patterns"
       },
       "bonus": false,
@@ -1174,6 +1192,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-L2 supervised - green glass door"
+        ],
         "progression": "Green Glass Door"
       },
       "bonus": false,
@@ -1196,6 +1217,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD AIL03 autoSFLP_pilot-2021"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1218,6 +1242,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoes random"
+        ],
         "progression": "Shoe Recommender"
       },
       "bonus": false,
@@ -1240,6 +1267,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoes decision tree"
+        ],
         "progression": "Improved Shoe Recommender"
       },
       "bonus": false,
@@ -1262,6 +1292,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoes data"
+        ],
         "progression": "Ultimate Shoe Recommender"
       },
       "bonus": false,
@@ -1284,6 +1317,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoes points"
+        ],
         "progression": "Ultimate Shoe Recommender"
       },
       "bonus": false,
@@ -1306,6 +1342,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD AIL04 autoSFLP_pilot-2021"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1328,6 +1367,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD AIL05 autoSFLP_pilot-2021"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1350,6 +1392,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro categorical-tacos"
+        ],
         "progression": "Dataset #1: Tacos"
       },
       "bonus": false,
@@ -1372,6 +1417,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro categorical-ice cream"
+        ],
         "progression": "Dataset #2: Ice Cream"
       },
       "bonus": false,
@@ -1394,6 +1442,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro categorical-pizza"
+        ],
         "progression": "Dataset #3: Pizza"
       },
       "bonus": false,
@@ -1416,6 +1467,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro categorical-food choices"
+        ],
         "progression": "You Choose: Restaurant Recommendations"
       },
       "bonus": false,
@@ -1438,6 +1492,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD AIL06 autoSFLP_pilot-2021"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1460,6 +1517,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Full Year Pilot Experiments Dashboard - AI Models"
+        ],
         "progression": "(Enable AI Models)"
       },
       "bonus": false,
@@ -1482,6 +1542,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-vacation example"
+        ],
         "progression": "What is your Ideal Vacation?"
       },
       "bonus": false,
@@ -1504,6 +1567,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-import 1"
+        ],
         "progression": "Import Your Model"
       },
       "bonus": false,
@@ -1526,6 +1592,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-2"
+        ],
         "progression": "Changing Screens"
       },
       "bonus": false,
@@ -1548,6 +1617,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-1"
+        ],
         "progression": "Changing Screens"
       },
       "bonus": false,
@@ -1570,6 +1642,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-3"
+        ],
         "progression": "Changing Screens"
       },
       "bonus": false,
@@ -1592,6 +1667,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-practice choice"
+        ],
         "progression": "You Choose: Quiz Apps"
       },
       "bonus": false,
@@ -1614,6 +1692,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD AIL07 autoSFLP_pilot-2021"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1636,6 +1717,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical app v2"
+        ],
         "progression": "Medical Priority App"
       },
       "bonus": false,
@@ -1658,6 +1742,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical-1"
+        ],
         "progression": "Medical Dataset Model Cards"
       },
       "bonus": false,
@@ -1680,6 +1767,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical-2"
+        ],
         "progression": "Medical Dataset Model Cards"
       },
       "bonus": false,
@@ -1702,6 +1792,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical-3"
+        ],
         "progression": "Medical Dataset Model Cards"
       },
       "bonus": false,
@@ -1724,6 +1817,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD AIL08 autoSFLP_pilot-2021"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1746,6 +1842,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-numerical ai lab-safari 1"
+        ],
         "progression": "Safari Planner"
       },
       "bonus": false,
@@ -1768,6 +1867,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD AIL09 autoSFLP_pilot-2021"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1790,6 +1892,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD AIL10 autoSFLP_pilot-2021"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1812,6 +1917,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1A"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -1834,6 +1942,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-pet model card"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -1856,6 +1967,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1B"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -1878,6 +1992,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1C"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -1900,6 +2017,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1D"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -1922,6 +2042,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1E"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -1944,6 +2067,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use models applab-practice choice"
+        ],
         "progression": "You Choose: Improve Your App"
       },
       "bonus": false,
@@ -1966,6 +2092,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD AIL11 autoSFLP_pilot-2021"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -1988,6 +2117,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-customize-raspado"
+        ],
         "progression": "Raspado Recommender"
       },
       "bonus": false,
@@ -2010,6 +2142,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3A"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -2032,6 +2167,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3_EditA"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -2054,6 +2192,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3_EditB"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -2076,6 +2217,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3_EditC"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -2098,6 +2242,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3C"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -2120,6 +2267,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3D"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -2142,6 +2292,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3E"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -2164,6 +2317,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-customize apps-practice choice"
+        ],
         "progression": "You Choose: Improve Your App"
       },
       "bonus": false,
@@ -2186,6 +2342,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD AIL12 autoSFLP_pilot-2021"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2208,6 +2367,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions-zoo1"
+        ],
         "progression": "Zoo Predictions"
       },
       "bonus": false,
@@ -2230,6 +2392,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions- import app"
+        ],
         "progression": "Importing Your Model"
       },
       "bonus": false,
@@ -2252,6 +2417,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions- customize app"
+        ],
         "progression": "Customizing Your App"
       },
       "bonus": false,
@@ -2274,6 +2442,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD AIL13 autoSFLP_pilot-2021"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2296,6 +2467,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD AIL14 autoSFLP_pilot-2021"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2318,6 +2492,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD AIL15 autoSFLP_pilot-2021"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2340,6 +2517,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-planning app-ai lab"
+        ],
         "progression": "Planning Your App - AI Lab"
       },
       "bonus": false,
@@ -2362,6 +2542,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD AIL16 autoSFLP_pilot-2021"
+        ],
         "progression": "Lesson Overview"
       },
       "bonus": false,
@@ -2384,6 +2567,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-final project-ai lab"
+        ],
         "progression": "App with Real-World Data - AI Lab"
       },
       "bonus": false,
@@ -2406,6 +2592,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-final project-app lab"
+        ],
         "progression": "App with Real-World Data - App Lab"
       },
       "bonus": false,

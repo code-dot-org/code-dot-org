@@ -11,11 +11,11 @@
     },
     "new_name": null,
     "family_name": "csp-mid-survey",
-    "serialized_at": "2021-11-15 21:01:47 UTC",
+    "serialized_at": "2021-11-22 19:56:30 UTC",
     "published_state": "preview",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "csp-mid-survey"
     }
@@ -87,6 +87,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2017-levelgroup_2018"
+        ],
         "progression": "CS Principles Mid-year Survey"
       },
       "bonus": false,

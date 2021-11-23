@@ -13,11 +13,11 @@
     },
     "new_name": null,
     "family_name": "algebraa",
-    "serialized_at": "2021-11-15 20:52:50 UTC",
+    "serialized_at": "2021-11-22 19:55:36 UTC",
     "published_state": "preview",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "AlgebraA"
     }
@@ -431,6 +431,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval .1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -452,6 +455,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval .2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -473,6 +479,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval .3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -494,6 +503,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval .4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -515,6 +527,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -536,6 +551,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -557,6 +575,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -578,6 +599,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -599,6 +623,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -620,6 +647,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval 9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -641,6 +671,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Blocks to Math 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -662,6 +695,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Blocks to Math 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -683,6 +719,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Blocks to Math 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -704,6 +743,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Blocks to Math 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -725,6 +767,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Circles of Eval Free Play"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -746,6 +791,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images .1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -767,6 +815,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images .2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -788,6 +839,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -809,6 +863,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -830,6 +887,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -851,6 +911,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -872,6 +935,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -893,6 +959,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -914,6 +983,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -935,6 +1007,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -956,6 +1031,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Multi Strings Images 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -977,6 +1055,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Strings Images Free Play"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -998,6 +1079,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Contracts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1019,6 +1103,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Contracts A"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1040,6 +1127,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Contracts B"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1061,6 +1151,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Contracts C"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1082,6 +1175,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Contracts D"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1103,6 +1199,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Contracts E"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1124,6 +1223,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Contracts F"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1145,6 +1247,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Contracts 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1166,6 +1271,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Contracts 4 B"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1187,6 +1295,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Vars 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1208,6 +1319,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Vars 1.1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1229,6 +1343,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Vars 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1250,6 +1367,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Vars 2.1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1271,6 +1391,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MSM Defining Vars 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1292,6 +1415,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MSM Defining Vars 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1313,6 +1439,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MSM Defining Vars 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1334,6 +1463,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "MSM Defining Vars 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1355,6 +1487,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Defining Vars Free Play 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1376,6 +1511,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "msm variables multi 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1397,6 +1535,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "msm variables multi 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1418,6 +1559,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "msm variables multi 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1439,6 +1583,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "msm variables multi 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1460,6 +1607,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "msm variables multi 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1481,6 +1631,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "msm variables multi 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1502,6 +1655,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "DesignRecipe"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1523,6 +1679,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Define Funcs 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1544,6 +1703,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Define Funcs 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1565,6 +1727,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Define Funcs 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1586,6 +1751,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Define Funcs 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1607,6 +1775,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Define Funcs 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1628,6 +1799,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Define Funcs 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1649,6 +1823,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Define Funcs 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1670,6 +1847,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Define Funcs 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1691,6 +1871,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Define Funcs 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1712,6 +1895,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Multi Define Funcs 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1733,6 +1919,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Multi Define Funcs 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1754,6 +1943,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Multi Define Funcs 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1775,6 +1967,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "msm variables multi 10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1796,6 +1991,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "msm variables multi 11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1817,6 +2015,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "msm variables multi 13"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1838,6 +2039,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "DesignRecipe"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1859,6 +2063,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Design Recipe .1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1880,6 +2087,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Design Recipe 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1901,6 +2111,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Design Recipe 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1922,6 +2135,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Design Recipe 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1943,6 +2159,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Design Recipe 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1964,6 +2183,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Design Recipe 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1985,6 +2207,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Design Recipe 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2006,6 +2231,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Design Recipe 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2027,6 +2255,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Calc Design Recipe 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2048,6 +2279,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Eval Design Recipe Free Play"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2069,6 +2303,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Play Lab Rocket 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2090,6 +2327,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Rocket Height Course A"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2111,6 +2351,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Play Lab Rocket 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2132,6 +2375,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Play Lab Rocket 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2153,6 +2399,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Play Lab Rocket 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2174,6 +2423,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Play Lab Rocket 8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2195,6 +2447,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Play Lab Rocket Free Play"
+        ]
       },
       "bonus": false,
       "seeding_key": {

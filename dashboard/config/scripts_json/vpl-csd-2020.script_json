@@ -29,11 +29,11 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-15 21:09:06 UTC",
+    "serialized_at": "2021-11-22 19:57:19 UTC",
     "published_state": "pilot",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "vpl-csd-2020"
     }
@@ -813,6 +813,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPL - CSD-PL AYWS1 Debugging Intro"
+        ],
         "progression": "Module 1 Overview"
       },
       "bonus": false,
@@ -835,6 +838,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 1 Summer Review Overview"
+        ],
         "progression": "Summer Workshop Review (~ 10 - 20 mins)"
       },
       "bonus": false,
@@ -857,6 +863,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD 2020 Summer Review"
+        ],
         "progression": "Summer Workshop Review (~ 10 - 20 mins)"
       },
       "bonus": false,
@@ -879,6 +888,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Variables Overview"
+        ],
         "progression": "New Content (~ 35 mins)"
       },
       "bonus": false,
@@ -901,6 +913,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module Variable Video with Reflection"
+        ],
         "progression": "New Content (~ 35 mins)"
       },
       "bonus": false,
@@ -923,6 +938,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD U3 Variables Predict Where XY_2020"
+        ],
         "progression": "New Content (~ 35 mins)"
       },
       "bonus": false,
@@ -945,6 +963,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Variable Resources"
+        ],
         "progression": "New Content (~ 35 mins)"
       },
       "bonus": false,
@@ -967,6 +988,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD U3 Variables naming rules v2_2018_2020"
+        ],
         "progression": "New Content (~ 35 mins)"
       },
       "bonus": false,
@@ -989,6 +1013,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Random Numbers Overview"
+        ],
         "progression": "New Content (~ 35 mins)"
       },
       "bonus": false,
@@ -1011,6 +1038,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD U3 Random random ellipse2_2018_2020"
+        ],
         "progression": "New Content (~ 35 mins)"
       },
       "bonus": false,
@@ -1033,6 +1063,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 1 New Content Reflection"
+        ],
         "progression": "New Content (~ 35 mins)"
       },
       "bonus": false,
@@ -1055,6 +1088,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL- CSD - Module 1 Debugging OverviewOPD-K5 Pair_copy"
+        ],
         "progression": "Debugging (~ 25 mins)"
       },
       "bonus": false,
@@ -1077,6 +1113,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 1 Debugging Reflection 1"
+        ],
         "progression": "Debugging (~ 25 mins)"
       },
       "bonus": false,
@@ -1099,6 +1138,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD Games variables practice_2020"
+        ],
         "progression": "Debugging (~ 25 mins)"
       },
       "bonus": false,
@@ -1121,6 +1163,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 1 Debugging Reflection 2"
+        ],
         "progression": "Debugging (~ 25 mins)"
       },
       "bonus": false,
@@ -1143,6 +1188,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 1 Wrap Up"
+        ],
         "progression": "Module 1 Asynchronous Wrap Up (~ 10 mins)"
       },
       "bonus": false,
@@ -1165,6 +1213,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 2 Overview"
+        ],
         "progression": "Module 2 Overview"
       },
       "bonus": false,
@@ -1187,6 +1238,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 1 - CI"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -1209,6 +1263,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD: Introduction to the Draw Loop_2020"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -1231,6 +1288,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Draw Loop"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -1253,6 +1313,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 2 CI The Draw Loop Reflection"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -1275,6 +1338,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD: Animating Sprite Movement_2020"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -1297,6 +1363,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Sprite Movement"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -1319,6 +1388,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 2 CI Sprite Movement Reflection"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -1341,6 +1413,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U3 - Booleans Video_2020"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -1363,6 +1438,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Conditionals"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -1385,6 +1463,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 2 CI Conditionals Reflection"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -1407,6 +1488,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Conclusions and Connections"
+        ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
       "bonus": false,
@@ -1429,6 +1513,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U3 Chapter 1 Project"
+        ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
       "bonus": false,
@@ -1451,6 +1538,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD: Sprite Velocity_2020"
+        ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
       "bonus": false,
@@ -1473,6 +1563,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U3 collisions car intro_2020"
+        ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
       "bonus": false,
@@ -1495,6 +1588,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U3 game intro_2018_2019_pilot_2020"
+        ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
       "bonus": false,
@@ -1517,6 +1613,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 2 Wrap Up"
+        ],
         "progression": "Module 2 Asynchronous Wrap Up (~ 10 mins)"
       },
       "bonus": false,
@@ -1539,6 +1638,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 3 Overview"
+        ],
         "progression": "Module 3 Overview"
       },
       "bonus": false,
@@ -1561,6 +1663,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M3 Check-in"
+        ],
         "progression": "Check In (~5 mins)"
       },
       "bonus": false,
@@ -1583,6 +1688,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M3 Theme Introduction"
+        ],
         "progression": "Theme Introduction (~5 mins)"
       },
       "bonus": false,
@@ -1605,6 +1713,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 3 Curriculum Investigation Overview"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -1627,6 +1738,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 3 - U4L1 Investigation"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -1649,6 +1763,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 3 - Problem Solving Process Guide"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -1671,6 +1788,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 3 Problem Solving Process"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -1693,6 +1813,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 3 - U4L2 Investigation"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -1715,6 +1838,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 3 U4L2 Reflection"
+        ],
         "progression": "Reflection (~5 mins)"
       },
       "bonus": false,
@@ -1737,6 +1863,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 3 U4L2 Intro Group Dynamics"
+        ],
         "progression": "Intro to Group Dynamics (~5 mins)"
       },
       "bonus": false,
@@ -1759,6 +1888,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 3 Wrap Up"
+        ],
         "progression": "Module 3 Asynchronous Wrap Up (~10 mins)"
       },
       "bonus": false,
@@ -1781,6 +1913,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 4 Overview"
+        ],
         "progression": "Module 4 Overview"
       },
       "bonus": false,
@@ -1803,6 +1938,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - CI"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -1825,6 +1963,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - CI2"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -1847,6 +1988,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 4 U4L4 Reflection"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -1869,6 +2013,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - U4L8 CI"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -1891,6 +2038,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 4 U4L8 Reflection"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -1913,6 +2063,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - L12 GoalsTasks"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -1935,6 +2088,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 4 Video Reflection"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -1957,6 +2113,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module - U4L12Level3"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -1979,6 +2138,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - U4L12Level4"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -2001,6 +2163,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - U4L12Level5"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -2023,6 +2188,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - U4L12Level6"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -2045,6 +2213,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 4 U4L12 Reflection"
+        ],
         "progression": "Lesson Investigation (~70 mins)"
       },
       "bonus": false,
@@ -2067,6 +2238,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - Conclusions and Connections"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -2089,6 +2263,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U4 Chapter 1 Project"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -2111,6 +2288,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 - L13 LInkingScreens"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -2133,6 +2313,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U4 Chapter 2 Project"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -2155,6 +2338,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 Wrap Up"
+        ],
         "progression": "Module 4 Asynchronous Wrap Up (~10 mins)"
       },
       "bonus": false,
@@ -2177,6 +2363,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 5 Overview"
+        ],
         "progression": "Module 5 Overview"
       },
       "bonus": false,
@@ -2199,6 +2388,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M5 Theme Introduction"
+        ],
         "progression": "Theme Introduction (~5 mins)"
       },
       "bonus": false,
@@ -2221,6 +2413,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI"
+        ],
         "progression": "Lesson Investigation (~65 mins)"
       },
       "bonus": false,
@@ -2243,6 +2438,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L1"
+        ],
         "progression": "Lesson Investigation (~65 mins)"
       },
       "bonus": false,
@@ -2265,6 +2463,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L2"
+        ],
         "progression": "Lesson Investigation (~65 mins)"
       },
       "bonus": false,
@@ -2287,6 +2488,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L3"
+        ],
         "progression": "Lesson Investigation (~65 mins)"
       },
       "bonus": false,
@@ -2309,6 +2513,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L4"
+        ],
         "progression": "Lesson Investigation (~65 mins)"
       },
       "bonus": false,
@@ -2331,6 +2538,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L4_1"
+        ],
         "progression": "Lesson Investigation (~65 mins)"
       },
       "bonus": false,
@@ -2353,6 +2563,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L4_2"
+        ],
         "progression": "Lesson Investigation (~65 mins)"
       },
       "bonus": false,
@@ -2375,6 +2588,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L4_3"
+        ],
         "progression": "Lesson Investigation (~65 mins)"
       },
       "bonus": false,
@@ -2397,6 +2613,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD -  Module 5 - CI - L4_4"
+        ],
         "progression": "Lesson Investigation (~65 mins)"
       },
       "bonus": false,
@@ -2419,6 +2638,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 - CI - L4_5"
+        ],
         "progression": "Lesson Investigation (~65 mins)"
       },
       "bonus": false,
@@ -2441,6 +2663,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 5 Reflection"
+        ],
         "progression": "Reflection (~5 mins)"
       },
       "bonus": false,
@@ -2463,6 +2688,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 5 - Supporting Equity"
+        ],
         "progression": "Supporting Equity (~10 mins)"
       },
       "bonus": false,
@@ -2485,6 +2713,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 Wrap Up"
+        ],
         "progression": "Wrap Up (~10 mins)"
       },
       "bonus": false,
@@ -2507,6 +2738,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 Overview"
+        ],
         "progression": "Module 6 Overview"
       },
       "bonus": false,
@@ -2529,6 +2763,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - CI"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -2551,6 +2788,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - CI - U5L6"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -2573,6 +2813,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 U5L6 Reflection"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -2595,6 +2838,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - Problem Solving Process Guide"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -2617,6 +2863,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - CI - U5L9"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -2639,6 +2888,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 PSP Reflection"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -2661,6 +2913,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 U5L9 Reflection"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -2683,6 +2938,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - CI - U5L13"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -2705,6 +2963,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 U5L13 Reflection"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -2727,6 +2988,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 Unit Reflection"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -2749,6 +3013,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - Conclusions and Connections"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -2771,6 +3038,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U5 Chapter 1 Project"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -2793,6 +3063,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U5 Chapter 2 Project"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -2815,6 +3088,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 5 - Differentiation"
+        ],
         "progression": "Differentiation (~10 mins)"
       },
       "bonus": false,
@@ -2837,6 +3113,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 Wrap Up"
+        ],
         "progression": "Wrap Up (~10 mins)"
       },
       "bonus": false,
@@ -2859,6 +3138,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 7 Overview"
+        ],
         "progression": "Module 7 Overview"
       },
       "bonus": false,
@@ -2881,6 +3163,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M7 Theme Introduction"
+        ],
         "progression": "Theme Introduction (~5 mins)"
       },
       "bonus": false,
@@ -2903,6 +3188,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI-U6"
+        ],
         "progression": "Curriculum Investigation Overview"
       },
       "bonus": false,
@@ -2925,6 +3213,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L1"
+        ],
         "progression": "Unit 6: Lesson 1 - Innovations in Computing (~10 mins)"
       },
       "bonus": false,
@@ -2947,6 +3238,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI"
+        ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
       "bonus": false,
@@ -2969,6 +3263,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L2a"
+        ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
       "bonus": false,
@@ -2991,6 +3288,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 - U6L2 Level 1"
+        ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
       "bonus": false,
@@ -3013,6 +3313,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 - U6L2 Level 2"
+        ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
       "bonus": false,
@@ -3035,6 +3338,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 - U6L2 Level 3"
+        ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
       "bonus": false,
@@ -3057,6 +3363,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 - U6L2 Level 4"
+        ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
       "bonus": false,
@@ -3079,6 +3388,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 U6L2 Level 5"
+        ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
       "bonus": false,
@@ -3101,6 +3413,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module  U6L2 Reflection"
+        ],
         "progression": "Unit 6: Lesson 2 - Designing Screens with Code (~20 mins)"
       },
       "bonus": false,
@@ -3123,6 +3438,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L3"
+        ],
         "progression": "Unit 6: Lesson 3 - The Circuit Playground (~20 mins)"
       },
       "bonus": false,
@@ -3145,6 +3463,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L4"
+        ],
         "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
       },
       "bonus": false,
@@ -3167,6 +3488,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 U6L4 Level 2"
+        ],
         "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
       },
       "bonus": false,
@@ -3189,6 +3513,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 - U6L4 Level 3"
+        ],
         "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
       },
       "bonus": false,
@@ -3211,6 +3538,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 8 U6L4 Reflection"
+        ],
         "progression": "Unit 6: Lesson 4 - Input Unplugged (~10 mins)"
       },
       "bonus": false,
@@ -3233,6 +3563,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 7 PSP Reflection"
+        ],
         "progression": "Reflection: Problem Solving Process for Programming (~5 mins)"
       },
       "bonus": false,
@@ -3255,6 +3588,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 7 - Alternative Unit"
+        ],
         "progression": "Preview: Alternate Units to Unit 6 (~10 mins)"
       },
       "bonus": false,
@@ -3277,6 +3613,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 8 - Alternative Unit"
+        ],
         "progression": "Preview: Alternate Units to Unit 6 (~10 mins)"
       },
       "bonus": false,
@@ -3299,6 +3638,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 Wrap Up"
+        ],
         "progression": "Module 7 Asynchronous Wrap Up (~10 mins)"
       },
       "bonus": false,
@@ -3321,6 +3663,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 8 Overview"
+        ],
         "progression": "Module 8 Overview"
       },
       "bonus": false,
@@ -3343,6 +3688,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - CI"
+        ],
         "progression": "Curriculum Investigation Overview"
       },
       "bonus": false,
@@ -3365,6 +3713,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U6L6"
+        ],
         "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
       "bonus": false,
@@ -3387,6 +3738,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U6L6 Lesson 2"
+        ],
         "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
       "bonus": false,
@@ -3409,6 +3763,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U6L6 Level 3"
+        ],
         "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
       "bonus": false,
@@ -3431,6 +3788,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - U6L6 - Level 4"
+        ],
         "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
       "bonus": false,
@@ -3453,6 +3813,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 8  U6L6 Reflection"
+        ],
         "progression": "Unit 6: Lesson 6 -  Getting Properties (~20 - 25 mins)"
       },
       "bonus": false,
@@ -3475,6 +3838,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 - Conclusions and Connections2"
+        ],
         "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
       "bonus": false,
@@ -3497,6 +3863,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U6 Chapter 1 Project"
+        ],
         "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
       "bonus": false,
@@ -3519,6 +3888,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M8 Conclusions and Connections Reflection"
+        ],
         "progression": "Conclusions and Connections (~20 - 25 mins)"
       },
       "bonus": false,
@@ -3541,6 +3913,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 7 - Equity Journey"
+        ],
         "progression": "Equity Journey (~5 mins)"
       },
       "bonus": false,
@@ -3563,6 +3938,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 8 Wrap Up"
+        ],
         "progression": "Module 8 Asynchronous Wrap Up (~10 mins)"
       },
       "bonus": false,
