@@ -62,7 +62,7 @@ describe('LightSensor', function() {
       expect(lightSensor.value).to.equal(110);
 
       boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 123;
-      expect(lightSensor.value).to.equal(58.23);
+      expect(lightSensor.value).to.equal(58);
     });
   });
 
@@ -91,13 +91,13 @@ describe('LightSensor', function() {
 
       // Test the average of the first second of data
       lightSensor.state.currentBufferWriteIndex = 20;
-      expect(lightSensor.getAveragedValue(1000)).to.equal(9.5);
+      expect(lightSensor.getAveragedValue(1000)).to.equal(10);
 
       // Test that the full buffer can be averaged
       lightSensor.state.currentBufferWriteIndex =
         MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL + 1;
       expect(lightSensor.getAveragedValue(MAX_SENSOR_BUFFER_DURATION)).to.equal(
-        29.5
+        30
       );
 
       // Test that one index can be averaged
@@ -112,7 +112,7 @@ describe('LightSensor', function() {
       // Test the average if the requested duration is longer than what has been recorded
       lightSensor.state.currentBufferWriteIndex = 20;
       expect(lightSensor.getAveragedValue(MAX_SENSOR_BUFFER_DURATION)).to.equal(
-        9.5
+        10
       );
     });
 
@@ -127,7 +127,7 @@ describe('LightSensor', function() {
       }
 
       lightSensor.state.currentBufferWriteIndex = 20;
-      expect(lightSensor.getAveragedValue(800)).to.equal(11.96);
+      expect(lightSensor.getAveragedValue(800)).to.equal(12);
     });
   });
 
