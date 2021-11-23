@@ -117,25 +117,9 @@ class ScriptDSL < BaseDSL
         lockable: properties[:lockable],
         has_lesson_plan: properties[:has_lesson_plan],
         unplugged: properties[:unplugged],
-        visible_after: determine_visible_after_time(properties[:visible_after]),
         script_levels: []
       }.compact
     end
-  end
-
-  # If visible_after value is blank default to next wednesday at 8am PDT
-  # Otherwise use the supplied time
-  def determine_visible_after_time(visible_after_value)
-    if visible_after_value == ''
-      current_time = Time.now
-      raw_diff_to_wed = 3 - current_time.wday
-      # Make sure it is the next wednesday not the one that just passed
-      diff_to_next_wed = raw_diff_to_wed % 7
-      next_wednesday = current_time + diff_to_next_wed.day
-      visible_after_value = Time.new(next_wednesday.year, next_wednesday.month, next_wednesday.day, 8, 0, 0, '-07:00').to_s
-    end
-
-    visible_after_value
   end
 
   def parse_output
@@ -392,7 +376,6 @@ class ScriptDSL < BaseDSL
     t += ", display_name: '#{escape(lesson.name)}'" if lesson.name
     t += ', lockable: true' if lesson.lockable
     t += ", has_lesson_plan: #{!!lesson.has_lesson_plan}"
-    t += ", visible_after: '#{escape(lesson.visible_after)}'" if lesson.visible_after
     t += ', unplugged: true' if lesson.unplugged
     s << t
     lesson.script_levels.each do |sl|
