@@ -7,6 +7,7 @@ import AnimationPickerBody from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker
 import {createUuid} from '@cdo/apps/utils';
 import color from '@cdo/apps/util/color';
 import PropTypes from 'prop-types';
+import {PICKER_TYPE} from '@cdo/apps/p5lab/AnimationPicker/AnimationPicker';
 
 const THUMBNAIL_SIZE = 50;
 const THUMBNAIL_BORDER_WIDTH = 1;
@@ -102,6 +103,7 @@ export default class SelectStartAnimations extends React.Component {
                 console.log('Not supported at this time')
               }
               onPickLibraryAnimation={this.addAnimationToList}
+              onAnimationSelectionComplete={() => {}}
               onUploadClick={() => console.log('Not supported at this time')}
               playAnimations={false}
               libraryManifest={this.state.levelAnimationsManifest}
@@ -110,6 +112,8 @@ export default class SelectStartAnimations extends React.Component {
               navigable={true}
               hideBackgrounds={false}
               canDraw={false}
+              pickerType={PICKER_TYPE.spritelab}
+              selectedAnimations={[]}
             />
           </div>
         )}
@@ -119,6 +123,7 @@ export default class SelectStartAnimations extends React.Component {
             is13Plus={true}
             onDrawYourOwnClick={() => console.log('Not supported at this time')}
             onPickLibraryAnimation={this.addAnimationToList}
+            onAnimationSelectionComplete={() => {}}
             onUploadClick={() => console.log('Not supported at this time')}
             playAnimations={false}
             libraryManifest={this.state.libraryManifest}
@@ -127,6 +132,8 @@ export default class SelectStartAnimations extends React.Component {
             navigable={true}
             hideBackgrounds={false}
             canDraw={false}
+            pickerType={PICKER_TYPE.spritelab}
+            selectedAnimations={[]}
           />
         </div>
         <p>{JSON.stringify({orderedKeys, propsByKey})}</p>
