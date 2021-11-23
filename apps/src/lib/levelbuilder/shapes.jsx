@@ -42,7 +42,8 @@ export const scriptLevelShape = PropTypes.shape({
   // other script level options
   bonus: PropTypes.bool,
   assessment: PropTypes.bool,
-  challenge: PropTypes.bool
+  challenge: PropTypes.bool,
+  instructorInTraining: PropTypes.bool
 });
 
 export const tipShape = PropTypes.shape({

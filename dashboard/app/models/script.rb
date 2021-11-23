@@ -1685,7 +1685,7 @@ class Script < ApplicationRecord
       courseVersionId: get_course_version&.id,
       unitPath: script_path(self),
       lessonExtrasAvailableForUnit: lesson_extras_available,
-      isProfessionalLearningCourse: false #TODO(dmcavoy): update once audiences for courses are set
+      isProfessionalLearningCourse: pl_course?
     }
   end
 
