@@ -389,7 +389,7 @@ class ApiController < ApplicationController
   # Get /api/teacher_panel_section
   def teacher_panel_section
     prevent_caching
-    teacher_sections = current_user&.sections
+    teacher_sections = current_user&.sections&.where(hidden: false)
 
     if teacher_sections.blank?
       head :no_content
