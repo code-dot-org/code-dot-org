@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:12:31 UTC",
+    "serialized_at": "2021-11-22 17:07:16 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -657,6 +657,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_ramp1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -678,6 +681,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -699,6 +705,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -720,6 +729,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -741,6 +753,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -762,6 +777,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -783,6 +801,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseCDEF_video_AngryBirdLoops"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -804,6 +825,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -825,6 +849,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -846,6 +873,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_ramp8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -867,6 +897,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_ramp9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -888,6 +921,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_ramp10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -909,6 +945,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_ramp11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -930,6 +969,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_angles"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -951,6 +993,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_ramp12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -972,6 +1017,9 @@
       "activity_section_position": 16,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_ramp13"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -993,6 +1041,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "GraphPaperProgramming"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1014,6 +1065,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "elementary_video_pairProgramming"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1035,6 +1089,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bounce_1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1056,6 +1113,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bounce_2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1077,6 +1137,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bounce_3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1098,6 +1161,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bounce_4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1119,6 +1185,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bounce_5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1140,6 +1209,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bounce_6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1161,6 +1233,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bounce_7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1182,6 +1257,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bounce_10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1203,6 +1281,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bounce_11"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1224,6 +1305,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "bounce_12"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1245,6 +1329,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1266,6 +1353,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_nestedLoops"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1287,6 +1377,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops2_predict1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1308,6 +1401,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1329,6 +1425,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1350,6 +1449,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1371,6 +1473,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1392,6 +1497,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_nestedLoops6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1413,7 +1521,10 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseD_bee_nestedLoops7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1435,6 +1546,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1456,6 +1570,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1477,6 +1594,9 @@
       "activity_section_position": 12,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "courseD_bee_nestedLoops9_predict2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1498,6 +1618,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1519,6 +1642,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops1a"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1540,6 +1666,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_nestedLoopsArtist"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1561,6 +1690,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1582,6 +1714,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1603,6 +1738,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1624,6 +1762,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1645,6 +1786,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1666,6 +1810,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1687,7 +1834,10 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseD_artist_nestedLoops9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1709,6 +1859,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1730,6 +1883,9 @@
       "activity_section_position": 12,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoops9_predict1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1751,6 +1907,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_nestedLoopsFP"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1772,6 +1931,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "RelayProgramming"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1793,6 +1955,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_debugging"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1814,6 +1979,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_debugging1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1835,6 +2003,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_debugging2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1856,6 +2027,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_debugging3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1877,6 +2051,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_debugging4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1898,7 +2075,10 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseD_bee_debugging5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1920,7 +2100,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseD_bee_debugging6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1942,6 +2125,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_debugging7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1963,6 +2149,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_debugging8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1984,6 +2173,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_debugging9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2005,6 +2197,9 @@
       "activity_section_position": 11,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "courseD_bee_debugging9_predict1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2026,6 +2221,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2047,6 +2245,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2068,6 +2269,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2089,6 +2293,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_whileIntro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2110,6 +2317,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while4_predict1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2131,6 +2341,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2152,6 +2365,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2173,6 +2389,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2194,6 +2413,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2215,7 +2437,10 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseD_farmer_while8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2237,6 +2462,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2258,6 +2486,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2279,6 +2510,9 @@
       "activity_section_position": 13,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_while10_predict2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2300,6 +2534,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Conditionals"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2321,6 +2558,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVid1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2342,6 +2582,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals1_predict1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2363,6 +2606,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2384,6 +2630,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2405,6 +2654,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2426,6 +2678,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2447,6 +2702,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2468,6 +2726,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionalsVidIfElse"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2489,6 +2750,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2510,6 +2774,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals7_predict2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2531,7 +2798,10 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseD_bee_conditionals8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2553,6 +2823,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2574,6 +2847,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_bee_conditionals10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2595,6 +2871,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2616,6 +2895,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_repeatUntil"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2637,6 +2919,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until2_predict1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2658,6 +2943,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2679,6 +2967,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2700,6 +2991,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2721,6 +3015,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2742,6 +3039,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2763,6 +3063,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_ifElse"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2784,6 +3087,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2805,7 +3111,10 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseD_maze_until9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2827,6 +3136,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until10"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2848,6 +3160,9 @@
       "activity_section_position": 13,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "courseD_maze_until10_predict2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2869,6 +3184,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2890,6 +3208,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2911,6 +3232,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2932,6 +3256,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2953,6 +3280,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2974,6 +3304,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2995,7 +3328,10 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseD_farmer_condLoops7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3017,6 +3353,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3038,6 +3377,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops9"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3059,6 +3401,9 @@
       "activity_section_position": 10,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_condLoops9_predict1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3080,6 +3425,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_unplugged_digitalCitizenship"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3101,6 +3449,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_playLab_cond1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3122,6 +3473,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_playLab_cond2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3143,6 +3497,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_playLab_cond3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3164,6 +3521,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_playLab_cond4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3185,6 +3545,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_playLab_cond5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3206,6 +3569,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_playLab_cond6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3227,6 +3593,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_playLab_condFP"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3248,6 +3617,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "BinaryImages"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3269,6 +3641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_external_binary1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3290,6 +3665,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3311,6 +3689,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3332,6 +3713,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3353,6 +3737,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3374,6 +3761,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3395,6 +3785,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3416,6 +3809,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3437,6 +3833,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary8"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3458,6 +3857,9 @@
       "activity_section_position": 10,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binary8_predict1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3479,6 +3881,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_binaryFP"
+        ]
       },
       "bonus": false,
       "seeding_key": {

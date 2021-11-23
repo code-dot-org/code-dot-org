@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:29:40 UTC",
+    "serialized_at": "2021-11-22 17:07:00 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -310,6 +310,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSPfac intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -331,6 +334,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "a bit about pixels"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -352,6 +358,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Make the Letter A"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -373,6 +382,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Fix bit offset"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -394,6 +406,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Make your own B and W Image"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -415,6 +430,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Complete 3-bit color"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -436,6 +454,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L13 Text Compression"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -457,6 +478,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L4 NetSim SendAB"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -478,6 +502,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L8 NetSim numbers no decimal"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -499,6 +526,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L5 NetSim Classroom Internet"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -520,6 +550,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L7 NetSim Need for Packets"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -541,6 +574,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L10 NetSim Automatic DNS"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -562,6 +598,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L2 Using Simple Commands"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -583,6 +622,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 Define and use turnAround"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -604,6 +646,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - Starry Night Starter Code"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -625,6 +670,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - Enchantment Under the Sea"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -646,6 +694,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L13 - Turtle move with button"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -667,6 +718,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L16 - use images"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -688,6 +742,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "broadcast lesson plan"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -709,6 +766,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L2 Student Lesson Introduction"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -730,6 +790,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L2 NetSim Hub Mode"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -751,6 +814,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L02 Free Response Reflection"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -772,6 +838,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L02 Assessment2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -793,6 +862,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "text compression lesson plan"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -814,6 +886,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L13 Student Lesson Summary"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -835,6 +910,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L13 Text Compression"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -856,6 +934,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L13 Assessment 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -877,6 +958,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L13 Assessment 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -898,6 +982,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L13 Reflection Free Response"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -919,6 +1006,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L13 Reflection 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -940,6 +1030,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L13 Reflection 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "fit2019-apprentice",
-    "serialized_at": "2021-11-02 14:29:53 UTC",
+    "serialized_at": "2021-11-22 17:08:09 UTC",
     "published_state": "preview",
     "instruction_type": null,
     "instructor_audience": null,
@@ -292,6 +292,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "welcome-apprentice-18"
+        ],
         "progression": "Welcome Apprentice Facilitators!"
       },
       "bonus": false,
@@ -314,6 +317,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "morning-prep-monday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -335,6 +341,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "feel-monday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -356,6 +365,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "debrief-monday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -377,6 +389,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "engagement-monday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -398,6 +413,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "novice-monday-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -419,6 +437,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "morning-prep-tuesday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -440,6 +461,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "feel-tuesday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -461,6 +485,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "instructional-strategy-tuesday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -482,6 +509,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "debrief-tuesday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -503,6 +533,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "engagement-tuesday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -524,6 +557,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "novice-tuesday-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -545,6 +581,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "morning-prep-wednesday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -566,6 +605,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "feel-wednesday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -587,6 +629,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "getting-buy-in-wednesday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -608,6 +653,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "debrief-wednesday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -629,6 +677,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "engagement-wednesday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -650,6 +701,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "novice-wednesday-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -671,6 +725,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "morning-prep-thursday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -692,6 +749,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "feel-thursday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -713,6 +773,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "recruiting-thursday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -734,6 +797,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "debrief-thursday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -755,6 +821,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "engagement-thursday"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -776,6 +845,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "novice-thursday-2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -797,6 +869,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "apprentice-congrats"
+        ],
         "progression": "Congrats on completing the apprentice program!"
       },
       "bonus": false,

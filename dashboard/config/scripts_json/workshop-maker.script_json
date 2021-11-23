@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:17:53 UTC",
+    "serialized_at": "2021-11-22 17:07:19 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -390,6 +390,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Review: Design Mode, IDs, and Events"
+        ],
         "progression": "Review: Design Mode, IDs, and Events"
       },
       "bonus": false,
@@ -412,6 +415,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Review Events"
+        ],
         "progression": "Review: Event-driven Programming"
       },
       "bonus": false,
@@ -434,6 +440,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD - Getters and Setters"
+        ],
         "progression": "Getters and Setters"
       },
       "bonus": false,
@@ -456,6 +465,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - setText"
+        ],
         "progression": "Using Getters and Setters"
       },
       "bonus": false,
@@ -478,6 +490,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - UI and Inputs - hide show"
+        ],
         "progression": "Using Getters and Setters"
       },
       "bonus": false,
@@ -500,6 +515,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Circuit Playground Map: LEDS"
+        ],
         "progression": "Circuit Playground: LEDs"
       },
       "bonus": false,
@@ -522,6 +540,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 Circuit Playground Test"
+        ],
         "progression": "Using the LED"
       },
       "bonus": false,
@@ -544,6 +565,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 LED basics led.on"
+        ],
         "progression": "Using the LED"
       },
       "bonus": false,
@@ -566,6 +590,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 LED basics onEvent"
+        ],
         "progression": "Using the LED"
       },
       "bonus": false,
@@ -588,6 +615,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 LED basics led.off()"
+        ],
         "progression": "Using the LED"
       },
       "bonus": false,
@@ -610,6 +640,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 LED predict"
+        ],
         "progression": "Using the LED"
       },
       "bonus": false,
@@ -632,6 +665,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 LED alarm silent"
+        ],
         "progression": "Using the LED"
       },
       "bonus": false,
@@ -654,6 +690,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Circuit Playground Map: Buzzer"
+        ],
         "progression": "Circuit Playground: Buzzer"
       },
       "bonus": false,
@@ -676,6 +715,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 buzzer freq"
+        ],
         "progression": "Using the Buzzer"
       },
       "bonus": false,
@@ -698,6 +740,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 buzzer stop"
+        ],
         "progression": "Using the Buzzer"
       },
       "bonus": false,
@@ -720,6 +765,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 buzzer alarm"
+        ],
         "progression": "Using the Buzzer"
       },
       "bonus": false,
@@ -742,6 +790,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Challenge: Buzzer and LED"
+        ],
         "progression": "Challenge: Buzzer and LED"
       },
       "bonus": false,
@@ -764,6 +815,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Map: onBoardEvent"
+        ],
         "progression": "Responding to Board Events"
       },
       "bonus": false,
@@ -786,6 +840,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - button screen buttonL"
+        ],
         "progression": "Board Events"
       },
       "bonus": false,
@@ -808,6 +865,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - button screen buttonR"
+        ],
         "progression": "Board Events"
       },
       "bonus": false,
@@ -830,6 +890,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Map: Board Buttons"
+        ],
         "progression": "Buttons and Switch"
       },
       "bonus": false,
@@ -852,6 +915,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - button toggle"
+        ],
         "progression": "Using the Buttons"
       },
       "bonus": false,
@@ -874,6 +940,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - button on off"
+        ],
         "progression": "Using the Buttons"
       },
       "bonus": false,
@@ -896,6 +965,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - button up down predict"
+        ],
         "progression": "Using the Buttons"
       },
       "bonus": false,
@@ -918,6 +990,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - button up down"
+        ],
         "progression": "Using the Buttons"
       },
       "bonus": false,
@@ -940,6 +1015,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - button tug o war right button"
+        ],
         "progression": "Tug o War Game"
       },
       "bonus": false,
@@ -962,6 +1040,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - button tug o war left button"
+        ],
         "progression": "Tug o War Game"
       },
       "bonus": false,
@@ -984,6 +1065,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - button tug o war challenge"
+        ],
         "progression": "Tug o War game"
       },
       "bonus": false,
@@ -1006,6 +1090,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - sensors experiment"
+        ],
         "progression": "Sensor Experiment"
       },
       "bonus": false,
@@ -1028,6 +1115,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Map: Board Sensors"
+        ],
         "progression": "Analog Sensors"
       },
       "bonus": false,
@@ -1050,6 +1140,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - sensors sound"
+        ],
         "progression": "Using Sensors"
       },
       "bonus": false,
@@ -1072,6 +1165,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - sensors light"
+        ],
         "progression": "Using Sensors"
       },
       "bonus": false,
@@ -1094,6 +1190,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - sensors temp"
+        ],
         "progression": "Using Sensors"
       },
       "bonus": false,
@@ -1116,6 +1215,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - sensors predict"
+        ],
         "progression": "Using Sensors"
       },
       "bonus": false,
@@ -1138,6 +1240,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Map: Polling Events"
+        ],
         "progression": "Polling Events"
       },
       "bonus": false,
@@ -1160,6 +1265,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 - sensors temp f c"
+        ],
         "progression": "Displaying Sensor Values"
       },
       "bonus": false,
@@ -1182,6 +1290,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU6 light sensor alarm"
+        ],
         "progression": "Challenge: Explore!"
       },
       "bonus": false,
@@ -1204,6 +1315,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "maker workshop final"
+        ],
         "progression": "Challenge: Explore!"
       },
       "bonus": false,

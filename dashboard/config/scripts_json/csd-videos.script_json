@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:12:58 UTC",
+    "serialized_at": "2021-11-22 17:08:08 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -514,6 +514,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD What Makes a Computer a Computer Video_2019"
+        ],
         "progression": "Video: What Makes a Computer, a Computer?"
       },
       "bonus": false,
@@ -536,6 +539,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Web Lab - Part 1_2019"
+        ],
         "progression": "Video: Intro to Web Lab - Part 1"
       },
       "bonus": false,
@@ -558,6 +564,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Intro to Web Lab - Part 2_2019"
+        ],
         "progression": "Video: Intro to Web Lab - Part 2"
       },
       "bonus": false,
@@ -580,6 +589,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Pair Programming Video_2019"
+        ],
         "progression": "Pair Programming"
       },
       "bonus": false,
@@ -602,6 +614,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video: Intro to CSS_2019"
+        ],
         "progression": "Video: Intro to CSS"
       },
       "bonus": false,
@@ -624,6 +639,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video: Intro to CSS Part 2_2019"
+        ],
         "progression": "Video: Intro to CSS Part 2"
       },
       "bonus": false,
@@ -646,6 +664,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 1_2019"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 1"
       },
       "bonus": false,
@@ -668,6 +689,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Drawing in Game Lab 2_2019"
+        ],
         "progression": "Video: Drawing in Game Lab - Part 2"
       },
       "bonus": false,
@@ -690,6 +714,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Introduction to Variables - Part 1_2019"
+        ],
         "progression": "Introduction to Variables"
       },
       "bonus": false,
@@ -712,6 +739,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Sprites in Game Lab_2019"
+        ],
         "progression": "Video: Introduction to Sprites"
       },
       "bonus": false,
@@ -734,6 +764,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Animation Tab_2019"
+        ],
         "progression": "Video: The Animation Tab"
       },
       "bonus": false,
@@ -756,6 +789,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Introduction to the Draw Loop_2019"
+        ],
         "progression": "Video: Introduction to the Draw Loop"
       },
       "bonus": false,
@@ -778,6 +814,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Animating Sprite Movement_2019"
+        ],
         "progression": "Video: Sprite Movement"
       },
       "bonus": false,
@@ -800,6 +839,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Booleans Video_2019"
+        ],
         "progression": "Video: Booleans"
       },
       "bonus": false,
@@ -822,6 +864,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd U3 conditional statements video_2019"
+        ],
         "progression": "Video: Conditional Statements"
       },
       "bonus": false,
@@ -844,6 +889,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 - Conditionals Video_2019"
+        ],
         "progression": "Video: If/Else Statements"
       },
       "bonus": false,
@@ -866,6 +914,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: Sprite Velocity_2019"
+        ],
         "progression": "Video: Velocity"
       },
       "bonus": false,
@@ -888,6 +939,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 Functions Call Function_2019"
+        ],
         "progression": "Video: Calling and Defining Functions"
       },
       "bonus": false,
@@ -910,6 +964,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU4 Design Mode Video_2019"
+        ],
         "progression": "Intro to Design Mode"
       },
       "bonus": false,
@@ -932,6 +989,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 binary video_2019"
+        ],
         "progression": "Binary and Data"
       },
       "bonus": false,
@@ -954,6 +1014,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Netflix Data Video_2019"
+        ],
         "progression": "How Netflix Uses Data"
       },
       "bonus": false,
@@ -976,6 +1039,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Waze Data Video_2019"
+        ],
         "progression": "How Waze Uses Data"
       },
       "bonus": false,
@@ -998,6 +1064,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U5 Amazon Data Video_2019"
+        ],
         "progression": "How Amazon Uses Data"
       },
       "bonus": false,
@@ -1020,6 +1089,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 hardware software video_2019"
+        ],
         "progression": "Hardware and Software"
       },
       "bonus": false,
@@ -1042,6 +1114,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 arrays video"
+        ],
         "progression": "Video: Introduction to Arrays"
       },
       "bonus": false,
@@ -1064,6 +1139,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD: For Loop_2019"
+        ],
         "progression": "Video: For Loops"
       },
       "bonus": false,
@@ -1086,6 +1164,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U6 functions paramters video_2019"
+        ],
         "progression": "Functions with Parameters"
       },
       "bonus": false,

@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:17:20 UTC",
+    "serialized_at": "2021-11-22 17:07:51 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -166,6 +166,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 1-validated"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -187,6 +190,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 2-validated"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -208,6 +214,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 3-validated"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -229,6 +238,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 4-validated"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -250,6 +262,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 5-validated"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -271,6 +286,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 6-validated"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -292,6 +310,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Fish Tank 7-validated"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -313,6 +334,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 1-validated"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -334,6 +358,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -355,6 +382,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -376,6 +406,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -397,6 +430,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -418,6 +454,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -439,6 +478,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party 7"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -460,6 +502,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Dance Party Freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -481,6 +526,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -502,6 +550,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -523,6 +574,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -544,6 +598,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 4"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -565,6 +622,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 5"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -586,6 +646,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet 6"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -607,6 +670,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Virtual Pet Freeplay"
+        ]
       },
       "bonus": false,
       "seeding_key": {

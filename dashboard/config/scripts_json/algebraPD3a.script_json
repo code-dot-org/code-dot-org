@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:29:09 UTC",
+    "serialized_at": "2021-11-22 17:07:02 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -196,6 +196,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDAlg Updates Tweaks"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -217,6 +220,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDAlg Updates Space"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -238,6 +244,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDAlg Updates Errors"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -259,6 +268,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDAlg Updates Cond"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -280,6 +292,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDAlg Big Game"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -301,6 +316,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDAlg Big Game Remix"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -322,6 +340,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDAlg Big Game History"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -343,6 +364,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDAlg Projects"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -364,6 +388,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDAlg Design Recipe Updates"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -385,6 +412,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDAlg Design Recipe Examples"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -406,6 +436,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDAlg Design Recipe Required"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -427,6 +460,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDAlg Design Recipe Delete"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -448,6 +484,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDAlg Prep a Lesson"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -469,6 +508,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDAlg Prep on Paper"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -490,6 +532,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDAlg Prep Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -511,6 +556,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Lesson Prep Final"
+        ]
       },
       "bonus": false,
       "seeding_key": {
