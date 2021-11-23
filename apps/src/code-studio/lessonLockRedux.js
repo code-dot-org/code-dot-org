@@ -316,7 +316,7 @@ export const setSectionLockStatus = sections => ({
 /**
  * Set the lock status for students in sections based on data from server
  */
-export const refreshSectionLockStatus = (sections, sectionId) => ({
+const refreshSectionLockStatus = (sections, sectionId) => ({
   type: REFRESH_SECTION_LOCK_STATUS,
   sections,
   sectionId

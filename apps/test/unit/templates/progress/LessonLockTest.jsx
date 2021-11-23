@@ -20,19 +20,24 @@ const DEFAULT_PROPS = {
   sectionsAreLoaded: false,
   saving: false,
   openLockDialog: () => {},
-  closeLockDialog: () => {}
+  closeLockDialog: () => {},
+  refetchSectionLockStatus: () => {}
+};
+
+const setUp = (overrideProps = {}) => {
+  const props = {...DEFAULT_PROPS, ...overrideProps};
+  return shallow(<LessonLock {...props} />);
 };
 
 describe('LessonLock', () => {
   it('renders a loading message before sections are loaded', () => {
-    const wrapper = shallow(<LessonLock {...DEFAULT_PROPS} />);
+    const wrapper = setUp();
     expect(wrapper).to.containMatchingElement(<div>{i18n.loading()}</div>);
   });
 
   it('renders a button and dialog after sections are loaded', () => {
-    const wrapper = shallow(
-      <LessonLock {...DEFAULT_PROPS} sectionsAreLoaded={true} />
-    );
+    const wrapper = setUp({sectionsAreLoaded: true});
+
     expect(wrapper).to.containMatchingElement(
       <div>
         <div>
@@ -49,9 +54,8 @@ describe('LessonLock', () => {
   });
 
   it('changes button text while saving', () => {
-    const wrapper = shallow(
-      <LessonLock {...DEFAULT_PROPS} sectionsAreLoaded={true} saving={true} />
-    );
+    const wrapper = setUp({sectionsAreLoaded: true, saving: true});
+
     expect(wrapper).to.containMatchingElement(
       <Button __useDeprecatedTag text={i18n.saving()} icon="lock" />
     );
@@ -60,14 +64,13 @@ describe('LessonLock', () => {
   it('hooks up callbacks correctly', () => {
     const openSpy = sinon.spy();
     const closeSpy = sinon.spy();
-    const wrapper = shallow(
-      <LessonLock
-        {...DEFAULT_PROPS}
-        sectionsAreLoaded={true}
-        openLockDialog={openSpy}
-        closeLockDialog={closeSpy}
-      />
-    );
+    const refetchSpy = sinon.spy();
+    const wrapper = setUp({
+      sectionsAreLoaded: true,
+      openLockDialog: openSpy,
+      closeLockDialog: closeSpy,
+      refetchSectionLockStatus: refetchSpy
+    });
 
     // Close callback gets passed through to the dialog unchanged.
     expect(wrapper).to.containMatchingElement(
@@ -84,5 +87,6 @@ describe('LessonLock', () => {
       FAKE_SECTION_ID,
       FAKE_LESSON_ID
     );
+    expect(refetchSpy).to.have.been.calledOnce.and.calledWith(FAKE_SECTION_ID);
   });
 });
