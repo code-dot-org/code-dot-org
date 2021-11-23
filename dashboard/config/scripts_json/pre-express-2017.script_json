@@ -50,11 +50,11 @@
     },
     "new_name": "pre-express-2017",
     "family_name": "pre-express",
-    "serialized_at": "2021-11-22 17:07:28 UTC",
+    "serialized_at": "2021-11-22 19:57:10 UTC",
     "published_state": "stable",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "pre-express-2017"
     }
