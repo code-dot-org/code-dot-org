@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:17:03 UTC",
+    "serialized_at": "2021-11-22 17:07:26 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -415,6 +415,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-tuesday-unit"
+        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -437,6 +440,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-tuesday-unit2"
+        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -459,6 +465,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-tuesday-pedagogy"
+        ],
         "progression": "Pedagogy Reflection"
       },
       "bonus": false,
@@ -481,6 +490,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-tuesday-facilitation"
+        ],
         "progression": "Facilitation Reflection"
       },
       "bonus": false,
@@ -503,6 +515,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-wednesday-unit"
+        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -525,6 +540,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-wednesday-unit2"
+        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -547,6 +565,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-wednesday-pedagogy"
+        ],
         "progression": "Pedagogy Reflection"
       },
       "bonus": false,
@@ -569,6 +590,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-wednesday-facilitation"
+        ],
         "progression": "Facilitation Reflection"
       },
       "bonus": false,
@@ -591,6 +615,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-thursday-unit"
+        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -613,6 +640,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-thursday-unit2"
+        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -635,6 +665,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-thursday-pedagogy"
+        ],
         "progression": "Pedagogy Reflection"
       },
       "bonus": false,
@@ -657,6 +690,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-thursday-pedagogy2"
+        ],
         "progression": "Pedagogy Reflection"
       },
       "bonus": false,
@@ -679,6 +715,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-thursday-facilitation"
+        ],
         "progression": "Facilitation Reflection"
       },
       "bonus": false,
@@ -701,6 +740,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-tuesday-unit"
+        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -723,6 +765,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-tuesday-unit2"
+        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -745,6 +790,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-tuesday-pedagogy"
+        ],
         "progression": "Teacher Pedagogy Reflection"
       },
       "bonus": false,
@@ -767,6 +815,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-tuesday-facilitation"
+        ],
         "progression": "Facilitation Reflection"
       },
       "bonus": false,
@@ -789,6 +840,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-wednesday-unit"
+        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -811,6 +865,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-wednesday-unit2"
+        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -833,6 +890,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-wednesday-pedagogy"
+        ],
         "progression": "Teacher Pedagogy Reflection"
       },
       "bonus": false,
@@ -855,6 +915,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-wednesday-facilitation"
+        ],
         "progression": "Facilitation Reflection"
       },
       "bonus": false,
@@ -877,6 +940,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-thursday-unit"
+        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -899,6 +965,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-thursday-unit2"
+        ],
         "progression": "Unit Reflection"
       },
       "bonus": false,
@@ -921,6 +990,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-thursday-pedagogy"
+        ],
         "progression": "Pedagogy Reflection"
       },
       "bonus": false,
@@ -943,6 +1015,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-thursday-pedagogy2"
+        ],
         "progression": "Pedagogy Reflection"
       },
       "bonus": false,
@@ -965,6 +1040,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd-thursday-facilitation"
+        ],
         "progression": "Facilitation Reflection"
       },
       "bonus": false,

@@ -37,7 +37,7 @@
     },
     "new_name": "csp2-2017",
     "family_name": "csp2",
-    "serialized_at": "2021-11-15 21:02:18 UTC",
+    "serialized_at": "2021-11-22 17:07:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1220,6 +1220,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L1 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1242,6 +1245,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L12 Reflection Free Response"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1264,6 +1270,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP_U2_Shakespeare_Question"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1286,6 +1295,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pulse-check-survey-2-levelgroup-U2Ch1"
+        ],
         "progression": "Quick Check-In"
       },
       "bonus": false,
@@ -1308,6 +1320,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L2 Student Lesson Summary"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1330,6 +1345,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Text Compression"
+        ],
         "progression": "Text Compression"
       },
       "bonus": false,
@@ -1352,6 +1370,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Text Compression"
+        ],
         "progression": "Widget: Text Compression"
       },
       "bonus": false,
@@ -1374,6 +1395,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 - Assess Text Compression reverse process"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1396,6 +1420,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 Assess Text Compression amount"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1418,6 +1445,9 @@
       "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 Assessment 1"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1440,6 +1470,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L13 Assessment 2"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1462,6 +1495,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L3 Student Lesson Summary"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1484,6 +1520,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Make the Letter A"
+        ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
       "bonus": false,
@@ -1506,6 +1545,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 14 - Fix bit offset"
+        ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
       "bonus": false,
@@ -1528,6 +1570,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Black and White Pixelation"
+        ],
         "progression": "Pixelation Widget: Black and White Pixelation"
       },
       "bonus": false,
@@ -1550,6 +1595,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L14 Assessment 1"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1572,6 +1620,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L14 - Assessment 2"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1594,6 +1645,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L4 Student Lesson Summary"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1616,6 +1670,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Images, Pixels, and RGB"
+        ],
         "progression": "Images, Pixels, and RGB"
       },
       "bonus": false,
@@ -1638,6 +1695,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Complete 3-bit color"
+        ],
         "progression": "Pixelation"
       },
       "bonus": false,
@@ -1660,6 +1720,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Shades"
+        ],
         "progression": "Pixelation"
       },
       "bonus": false,
@@ -1682,6 +1745,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation - Lesson 15 - Color Shades 4x4"
+        ],
         "progression": "Pixelation"
       },
       "bonus": false,
@@ -1704,6 +1770,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation Flappy"
+        ],
         "progression": "Pixelation"
       },
       "bonus": false,
@@ -1726,6 +1795,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Pixelation Bee"
+        ],
         "progression": "Pixelation"
       },
       "bonus": false,
@@ -1748,6 +1820,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Favicon Instructions"
+        ],
         "progression": "Favicon Instructions"
       },
       "bonus": false,
@@ -1770,6 +1845,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Widget: Color Pixelation"
+        ],
         "progression": "Widget: Color Pixelation"
       },
       "bonus": false,
@@ -1792,6 +1870,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L5 Color Pixel MC Question"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1814,6 +1895,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L5 FR brighten darken image"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1836,6 +1920,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L5 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1858,6 +1945,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U1L16 - Matching File Compression Types"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -1880,6 +1970,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L6 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1902,6 +1995,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 2 Ch1 Cumulative Assessment MC"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -1923,6 +2019,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L7 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1945,6 +2044,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pulse-check-survey-3-levelgroup-U2Ch2"
+        ],
         "progression": "Quick Check-In"
       },
       "bonus": false,
@@ -1967,6 +2069,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L8 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -1989,6 +2094,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L8 google trends MC"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2011,6 +2119,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L8 google trends hypothesis"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2033,6 +2144,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L9 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -2055,6 +2169,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L9 What is digital divide MC"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2077,6 +2194,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L9 FR digital divide issue"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2099,6 +2219,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L10 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -2121,6 +2244,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Collection A: Good and Bad Visualizations"
+        ],
         "progression": "Collection A: Good and Bad Visualizations"
       },
       "bonus": false,
@@ -2143,6 +2269,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Collection B: Good and Bad Visualizations"
+        ],
         "progression": "Collection B: Good and Bad Visualizations"
       },
       "bonus": false,
@@ -2165,6 +2294,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L10 FR why best worst viz"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2187,6 +2319,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L11 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -2209,6 +2344,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Downloading the Data Set"
+        ],
         "progression": "Downloading the Data Set"
       },
       "bonus": false,
@@ -2231,6 +2369,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making a Scatter Plot"
+        ],
         "progression": "Making a Scatter Plot"
       },
       "bonus": false,
@@ -2253,6 +2394,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making a Line Chart"
+        ],
         "progression": "Making a Line Chart"
       },
       "bonus": false,
@@ -2275,6 +2419,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making a Bar Chart"
+        ],
         "progression": "Making a Bar Chart"
       },
       "bonus": false,
@@ -2297,6 +2444,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Editing Chart Appearance"
+        ],
         "progression": "Editing Chart Appearance"
       },
       "bonus": false,
@@ -2319,6 +2469,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4 - Making Data Visualizations - Free Play"
+        ],
         "progression": "Making Data Visualizations - Free Play"
       },
       "bonus": false,
@@ -2341,6 +2494,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L10 FR describe what you made from lesson prompt"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2363,6 +2519,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L12 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -2385,6 +2544,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L12 FR reflection on collaboration"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2407,6 +2569,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L13 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -2429,6 +2594,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Getting to Know Your Data"
+        ],
         "progression": "Getting to Know Your Data"
       },
       "bonus": false,
@@ -2451,6 +2619,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Cleaning Data"
+        ],
         "progression": "Cleaning Data"
       },
       "bonus": false,
@@ -2473,6 +2644,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Categorizing Data"
+        ],
         "progression": "Categorizing Data"
       },
       "bonus": false,
@@ -2495,6 +2669,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Cleaning Data MC"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2517,6 +2694,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 FR Reflection data analysis objective"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2539,6 +2719,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L14 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -2561,6 +2744,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making Pivot Tables Part 1 - The Basics"
+        ],
         "progression": "Making Pivot Tables Part 1 - The Basics"
       },
       "bonus": false,
@@ -2583,6 +2769,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Making Pivot Tables Part 2 - Manipulation and Visualization"
+        ],
         "progression": "Making Pivot Tables Part 2 - Manipulation and Visualizations"
       },
       "bonus": false,
@@ -2605,6 +2794,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4L08v2 Making Pivot Tables Part 3"
+        ],
         "progression": "Making Pivot Tables Part 3"
       },
       "bonus": false,
@@ -2627,6 +2819,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Summary Tables MC"
+        ],
         "progression": "Check Your Understanding"
       },
       "bonus": false,
@@ -2649,6 +2844,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "v2 U2L15 Student Lesson Introduction"
+        ],
         "progression": "Lesson Vocabulary & Resources"
       },
       "bonus": false,
@@ -2671,6 +2869,10 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp_affirmation_control_2",
+          "csp_affirmation_intervention_2"
+        ],
         "progression": "Pre-test reflection",
         "variants": {
           "csp_affirmation_intervention_2": {
@@ -2700,6 +2902,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 2 Ch2 Cumulative Assessment MC"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2721,6 +2926,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2018-markdown-with-link-to-survey"
+        ],
         "progression": "Click here! Complete the CS Principles post-course survey"
       },
       "bonus": false,
@@ -2743,6 +2951,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Click Here!"
+        ],
         "progression": "Participate in a longitudinal study!"
       },
       "bonus": false,
@@ -3555,7 +3766,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_control_2",
+        "level.key": "csp_affirmation_intervention_2",
         "script_level.level_keys": [
           "csp_affirmation_control_2",
           "csp_affirmation_intervention_2"
@@ -3568,7 +3779,7 @@
     },
     {
       "seeding_key": {
-        "level.key": "csp_affirmation_intervention_2",
+        "level.key": "csp_affirmation_control_2",
         "script_level.level_keys": [
           "csp_affirmation_control_2",
           "csp_affirmation_intervention_2"

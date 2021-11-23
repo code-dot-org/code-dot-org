@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:28:45 UTC",
+    "serialized_at": "2021-11-22 17:07:02 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -272,6 +272,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECS Phase 3 Unit4 Welcome"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -293,6 +296,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECS Phase 3 Unit 4 Overview"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -314,6 +320,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDECS tour"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -335,6 +344,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PD check your progress"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -356,6 +368,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Unit 4 Outline"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -377,6 +392,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD P3 Plan"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -398,6 +416,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Unit4 Connections"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -419,6 +440,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Unit 4 Lesson Overview"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -440,6 +464,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Forum-ECSPD-Unit 4-Teaching Practice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -461,6 +488,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Unit 4 Manage"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -482,6 +512,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Phase 3 - Unit 4 - Teaching Practice"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -503,6 +536,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD scratch"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -524,6 +560,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Unit 4 Strategy Review"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -545,6 +584,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD strategies"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -566,6 +608,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 D 1 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -587,6 +632,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 D 2-3 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -608,6 +656,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 D 4 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -629,6 +680,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 D 5-6 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -650,6 +704,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 D 7-8 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -671,6 +728,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 D 9 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -692,6 +752,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 D 10-13 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -713,6 +776,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 D 14 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -734,6 +800,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 D 15 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -755,6 +824,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 D 16-17 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -776,6 +848,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 D 18 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -797,6 +872,9 @@
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 D 19 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -818,6 +896,9 @@
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 D 20-23 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -839,6 +920,9 @@
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 D 24 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -860,6 +944,9 @@
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 D 25-30 Intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -881,6 +968,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 Challenges"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -902,6 +992,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD U4 Challenge Decision"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -923,6 +1016,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD unit 4 Pick Challenge"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -944,6 +1040,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSU4 Challenge Submission fin"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -965,6 +1064,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Challenge Reflection"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -986,6 +1088,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ECSPD Unit 3 Survey"
+        ]
       },
       "bonus": false,
       "seeding_key": {

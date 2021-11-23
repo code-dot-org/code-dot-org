@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:17:12 UTC",
+    "serialized_at": "2021-11-22 17:06:56 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -81,6 +81,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDK5 Intro C"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -102,6 +105,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "2-3"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -123,6 +129,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDK5 Visual Languages"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -144,6 +153,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDK5 Pair programming match"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -165,6 +177,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDK5 Strategies O"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -186,6 +201,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PDK5 Promo Video 2"
+        ]
       },
       "bonus": false,
       "seeding_key": {

@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:11:37 UTC",
+    "serialized_at": "2021-11-22 17:07:37 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -81,6 +81,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AWS Demo"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -102,6 +105,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AWS applab"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -123,6 +129,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "AWS link"
+        ]
       },
       "bonus": false,
       "seeding_key": {
