@@ -177,7 +177,7 @@ function setUpGlobalData(store) {
       store.dispatch(setUserSignedIn(data.is_signed_in));
       if (data.is_signed_in) {
         store.dispatch(setInitialData(data));
-        ensureHeaderSigninState(true, data.username);
+        ensureHeaderSigninState(true, data.short_name);
       } else {
         ensureHeaderSigninState(false);
       }
@@ -189,9 +189,9 @@ function setUpGlobalData(store) {
 setUpGlobalData(getStore());
 
 // Some of our cached pages can become cached by the browser with the
-// wrong sign-in state. This is a patch to ensure that the header displays
-// the correct sign-in state for the user.
-function ensureHeaderSigninState(isSignedIn, userName) {
+// wrong sign-in state. This is a temporary patch to ensure that the header
+// displays the correct sign-in state for the user.
+function ensureHeaderSigninState(isSignedIn, shortName) {
   const userMenu = document.querySelector('#header_user_menu');
   const signinButton = document.querySelector('#signin_button');
 
@@ -200,7 +200,7 @@ function ensureHeaderSigninState(isSignedIn, userName) {
     signinButton.style.display = 'none';
 
     const displayName = document.querySelector('#header_display_name');
-    displayName.textContent = userName;
+    displayName.textContent = shortName;
   } else if (!isSignedIn && signinButton.style.display === 'none') {
     userMenu.style.display = 'none';
     signinButton.style.display = 'inline';
