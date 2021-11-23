@@ -10,9 +10,9 @@
     "family_name": null,
     "serialized_at": "2021-11-06 22:52:04 UTC",
     "published_state": "stable",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "ui-test-script-in-course-2017"
     }
