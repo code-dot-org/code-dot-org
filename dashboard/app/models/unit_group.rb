@@ -523,6 +523,9 @@ class UnitGroup < ApplicationRecord
   # @param user [User]
   # @return [Boolean] Whether the user can view the course.
   def can_view_version?(user = nil)
+    # Must be part of instructor or participant audience to view version
+    return false unless can_be_participant?(user) || can_be_instructor?(user)
+
     latest_course_version = UnitGroup.latest_stable_version(family_name)
     is_latest = latest_course_version == self
 

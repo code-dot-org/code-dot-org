@@ -9,8 +9,8 @@ class AbilityTest < ActiveSupport::TestCase
       @public_facilitator_to_teacher_script_level = create(:script_level, script: script)
     end
 
-    @public_code_instructor_to_teacher_unit = create(:script, name: 'code-instructor-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.code_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
-      @public_code_instructor_to_teacher_script_level = create(:script_level, script: script)
+    @public_universal_instructor_to_teacher_unit = create(:script, name: 'universal-instructor-to-teacher', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.universal_instructor, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher).tap do |script|
+      @public_universal_instructor_to_teacher_script_level = create(:script_level, script: script)
     end
 
     @public_plc_reviewer_to_facilitator_unit = create(:script, name: 'plc-reviewer-to-facilitator', instructor_audience: SharedCourseConstants::INSTRUCTOR_AUDIENCE.plc_reviewer, participant_audience: SharedCourseConstants::PARTICIPANT_AUDIENCE.facilitator).tap do |script|
@@ -43,7 +43,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.cannot?(:read, @public_facilitator_to_teacher_unit)
-    assert ability.cannot?(:read, @public_code_instructor_to_teacher_unit)
+    assert ability.cannot?(:read, @public_universal_instructor_to_teacher_unit)
     assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_unit)
 
     assert ability.can?(:read, @login_required_script)
@@ -52,7 +52,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     refute ability.can?(:read, @public_facilitator_to_teacher_script_level)
-    refute ability.can?(:read, @public_code_instructor_to_teacher_script_level)
+    refute ability.can?(:read, @public_universal_instructor_to_teacher_script_level)
     refute ability.can?(:read, @public_plc_reviewer_to_facilitator_script_level)
     refute ability.can?(:read, @public_teacher_to_student_script_level, {login_required: "true"})
     refute ability.can?(:read, @login_required_script_level)
@@ -72,7 +72,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.cannot?(:read, @public_facilitator_to_teacher_unit)
-    assert ability.cannot?(:read, @public_code_instructor_to_teacher_unit)
+    assert ability.cannot?(:read, @public_universal_instructor_to_teacher_unit)
     assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_unit)
 
     assert ability.can?(:read, @login_required_script)
@@ -81,7 +81,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.cannot?(:read, @public_facilitator_to_teacher_script_level)
-    assert ability.cannot?(:read, @public_code_instructor_to_teacher_script_level)
+    assert ability.cannot?(:read, @public_universal_instructor_to_teacher_script_level)
     assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_script_level)
     assert ability.can?(:read, @public_teacher_to_student_script_level, {login_required: "true"})
     assert ability.can?(:read, @login_required_script_level)
@@ -101,7 +101,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
-    assert ability.can?(:read, @public_code_instructor_to_teacher_unit)
+    assert ability.can?(:read, @public_universal_instructor_to_teacher_unit)
     assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_unit)
 
     assert ability.can?(:read, @login_required_script)
@@ -110,7 +110,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
-    assert ability.can?(:read, @public_code_instructor_to_teacher_script_level)
+    assert ability.can?(:read, @public_universal_instructor_to_teacher_script_level)
     assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_script_level)
     assert ability.can?(:read, @public_teacher_to_student_script_level, {login_required: "true"})
     assert ability.can?(:read, @login_required_script_level)
@@ -134,7 +134,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
-    assert ability.can?(:read, @public_code_instructor_to_teacher_unit)
+    assert ability.can?(:read, @public_universal_instructor_to_teacher_unit)
     assert ability.can?(:read, @public_plc_reviewer_to_facilitator_unit)
 
     assert ability.can?(:read, @login_required_script)
@@ -143,7 +143,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
-    assert ability.can?(:read, @public_code_instructor_to_teacher_script_level)
+    assert ability.can?(:read, @public_universal_instructor_to_teacher_script_level)
     assert ability.can?(:read, @public_plc_reviewer_to_facilitator_script_level)
     assert ability.can?(:read, @public_teacher_to_student_script_level, {login_required: "true"})
     assert ability.can?(:read, @login_required_script_level)
@@ -167,7 +167,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
-    assert ability.can?(:read, @public_code_instructor_to_teacher_unit)
+    assert ability.can?(:read, @public_universal_instructor_to_teacher_unit)
     assert ability.can?(:read, @public_plc_reviewer_to_facilitator_unit)
 
     assert ability.can?(:read, @login_required_script)
@@ -176,14 +176,14 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
-    assert ability.can?(:read, @public_code_instructor_to_teacher_script_level)
+    assert ability.can?(:read, @public_universal_instructor_to_teacher_script_level)
     assert ability.can?(:read, @public_plc_reviewer_to_facilitator_script_level)
     assert ability.can?(:read, @public_teacher_to_student_script_level, {login_required: "true"})
     assert ability.can?(:read, @login_required_script_level)
   end
 
-  test "as code instructor" do
-    ability = Ability.new(create(:code_instructor))
+  test "as universal instructor" do
+    ability = Ability.new(create(:universal_instructor))
 
     assert ability.can?(:read, Game)
     assert ability.can?(:read, Level)
@@ -200,7 +200,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_teacher_to_student_unit)
     assert ability.can?(:read, @public_facilitator_to_teacher_unit)
-    assert ability.can?(:read, @public_code_instructor_to_teacher_unit)
+    assert ability.can?(:read, @public_universal_instructor_to_teacher_unit)
     assert ability.can?(:read, @public_plc_reviewer_to_facilitator_unit)
 
     assert ability.can?(:read, @login_required_script)
@@ -209,7 +209,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.can?(:read, @public_teacher_to_student_script_level)
     assert ability.can?(:read, @public_facilitator_to_teacher_script_level)
-    assert ability.can?(:read, @public_code_instructor_to_teacher_script_level)
+    assert ability.can?(:read, @public_universal_instructor_to_teacher_script_level)
     assert ability.can?(:read, @public_plc_reviewer_to_facilitator_script_level)
     assert ability.can?(:read, @public_teacher_to_student_script_level, {login_required: "true"})
     assert ability.can?(:read, @login_required_script_level)
@@ -232,7 +232,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.cannot?(:read, @public_teacher_to_student_unit)
     assert ability.cannot?(:read, @public_facilitator_to_teacher_unit)
-    assert ability.cannot?(:read, @public_code_instructor_to_teacher_unit)
+    assert ability.cannot?(:read, @public_universal_instructor_to_teacher_unit)
     assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_unit)
 
     assert ability.cannot?(:read, @login_required_script)
@@ -241,7 +241,7 @@ class AbilityTest < ActiveSupport::TestCase
 
     assert ability.cannot?(:read, @public_teacher_to_student_script_level)
     assert ability.cannot?(:read, @public_facilitator_to_teacher_script_level)
-    assert ability.cannot?(:read, @public_code_instructor_to_teacher_script_level)
+    assert ability.cannot?(:read, @public_universal_instructor_to_teacher_script_level)
     assert ability.cannot?(:read, @public_plc_reviewer_to_facilitator_script_level)
     assert ability.cannot?(:read, @login_required_script_level)
   end
