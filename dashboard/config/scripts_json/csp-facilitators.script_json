@@ -9,7 +9,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-02 14:29:20 UTC",
+    "serialized_at": "2021-11-22 17:07:10 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -158,6 +158,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "text compression intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -179,6 +182,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L13 Text Compression"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -200,6 +206,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "introduction to turtle"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -221,6 +230,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L2 Using Simple Commands"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -242,6 +254,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L2_TurtleSquare_right"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -263,6 +278,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L2_Turtle3by3Grid"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -284,6 +302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "introduction to events"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -305,6 +326,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L13 - Turtle move with button"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -326,6 +350,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U313 drag Two Buttons"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -347,6 +374,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L13 eventsDetails"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -368,6 +398,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U313 Two Buttons with Ids"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -389,6 +422,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L13 - Debug Id Problem"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -410,6 +446,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L13 - Debugging 1"
+        ]
       },
       "bonus": false,
       "seeding_key": {

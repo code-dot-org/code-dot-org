@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-26 22:14:41 UTC",
+    "serialized_at": "2021-11-22 17:07:09 UTC",
     "published_state": "beta",
     "instruction_type": null,
     "instructor_audience": null,
@@ -367,6 +367,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 AP Performance Task Tech Setup - Student Links"
+        ],
         "progression": "U6 AP Performance Task Tech Setup - Student Links"
       },
       "bonus": false,
@@ -389,6 +392,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 Create PT Review - Student Links"
+        ],
         "progression": "U6 Create PT Review - Student Links"
       },
       "bonus": false,
@@ -411,6 +417,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 Create PT - Make a Plan - Student Links"
+        ],
         "progression": "U6 Create PT - Make a Plan - Student Links"
       },
       "bonus": false,
@@ -433,6 +442,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 Create PT - Complete the Task - Student Links"
+        ],
         "progression": "U6 Create PT - Complete the Task - Student Links"
       },
       "bonus": false,
@@ -455,6 +467,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 Explore PT Review - Student Links"
+        ],
         "progression": "U6 Explore PT Review - Student Links"
       },
       "bonus": false,
@@ -477,6 +492,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 Explore PT - Make a Plan - Student Links"
+        ],
         "progression": "U6 Explore PT - Make a Plan - Student Links"
       },
       "bonus": false,
@@ -499,6 +517,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U6 Explore PT - Complete the Task - Student Links"
+        ],
         "progression": "U6 Explore PT - Complete the Task - Student Links"
       },
       "bonus": false,
@@ -521,6 +542,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Click Here!"
+        ],
         "progression": "Click Here!"
       },
       "bonus": false,

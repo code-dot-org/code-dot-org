@@ -99,6 +99,9 @@ export const commands = {
       return;
     }
     sprite.setScale(sprite.getScale() - 1 / 100);
+    if (sprite.scale < 0) {
+      sprite.scale = 0;
+    }
   },
 
   spinning_left(spriteArg) {

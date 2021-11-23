@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-19 00:33:12 UTC",
+    "serialized_at": "2021-11-22 17:09:07 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -330,6 +330,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSP-21-Navigation"
+        ],
         "progression": "Wrap up"
       },
       "bonus": false,
