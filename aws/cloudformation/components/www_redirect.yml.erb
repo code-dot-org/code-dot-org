@@ -1,4 +1,4 @@
-  RedirectDistribution:
+  <%=app%>RedirectDistribution:
     Type: AWS::CloudFront::Distribution
     Properties:
       DistributionConfig:
@@ -32,7 +32,7 @@
           AcmCertificateArn: <%= certificate_arn %>
           SslSupportMethod: sni-only
 
-  RedirectCachePolicy:
+  <%=app%>RedirectCachePolicy:
     Type: AWS::CloudFront::CachePolicy
     Properties:
       CachePolicyConfig:
@@ -51,7 +51,7 @@
           QueryStringsConfig: 
             QueryStringBehavior: all
 
-  WwwRedirectLambda:
+  <%=app%>WwwRedirectLambda:
     Type: AWS::Lambda::Function
     Properties:
       Runtime: nodejs14.x
@@ -93,12 +93,12 @@
         Mode: Active
 
   # To make a new version, bump the NAME of this resource and all references
-  WwwRedirectLambdaVersion1:
+  <%=app%>WwwRedirectLambdaVersion1:
     Type: AWS::Lambda::Version
     Properties:
       FunctionName: !Ref WwwRedirectLambda
 
-  WwwRedirectLambdaRole:
+  <%=app%>WwwRedirectLambdaRole:
     Type: "AWS::IAM::Role"
     Properties:
       Path: "/"
