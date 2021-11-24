@@ -23,7 +23,7 @@ Scenario: Send lesson dialog opens and closes
 
 @no_mobile
 Scenario: Send lesson dialog copy link button works
-  Given I am on "http://studio.code.org/s/coursec-2017"
+  Given I am on "http://studio.code.org/s/coursec-2019"
   When I open the send lesson dialog for lesson 2
   Then I wait until element ".modal" is visible
   And I wait until element "#uitest-copy-button" is visible
