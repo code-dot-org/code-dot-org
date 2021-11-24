@@ -11,16 +11,6 @@ And(/^I get levelbuilder access$/) do
   browser_request(url: '/api/test/levelbuilder_access', method: 'POST')
 end
 
-Given(/^I create a temp unit and lesson$/) do
-  response = browser_request(
-    url: '/api/test/create_script',
-    method: 'POST'
-  )
-  data = JSON.parse(response)
-  @temp_script_name = data['script_name']
-  @temp_lesson_id = data['lesson_id']
-end
-
 Given(/^I create a temp migrated unit with lessons$/) do
   response = browser_request(
     url: '/api/test/create_migrated_script',
