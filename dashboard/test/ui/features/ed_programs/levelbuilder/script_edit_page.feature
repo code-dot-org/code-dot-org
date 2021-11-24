@@ -6,14 +6,14 @@
 @no_safari
 Feature: Using the Script Edit Page
 
-Scenario: View the script edit page
+Scenario: View the unit edit page
   Given I create a levelbuilder named "Levi"
   And I create a temp migrated unit with lessons
   And I view the temp unit overview page
   And I view the temp unit edit page
   And I delete the temp unit with lessons
 
-Scenario: View the script edit page in locale besides en-US
+Scenario: View the unit edit page in locale besides en-US
   Given I am on "http://studio.code.org/home/lang/es"
   And I create a levelbuilder named "Levi"
   And I create a temp migrated unit with lessons
@@ -24,7 +24,7 @@ Scenario: View the script edit page in locale besides en-US
   And I wait until element "#homepage-container" contains text "Editing on levelbuilder is only supported in English (en-US locale)."
   And I delete the temp unit with lessons
 
-Scenario: Save changes to a script
+Scenario: Save changes to a unit
   Given I create a levelbuilder named "Levi"
   And I create a temp migrated unit with lessons
   And I view the temp unit overview page
@@ -53,7 +53,7 @@ Scenario: Save changes to a script
 
   And I delete the temp unit with lessons
 
-Scenario: Navigate from script edit page for migrated script to lesson edit page
+Scenario: Navigate from unit edit page for migrated unit to lesson edit page
   Given I create a levelbuilder named "Levi"
   And I create a temp migrated unit with lessons
   And I view the temp unit overview page
