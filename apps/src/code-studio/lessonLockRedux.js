@@ -331,6 +331,8 @@ export const refetchSectionLockStatus = sectionId => {
       data: {script_id: scriptId}
     })
       .done(data => {
+        console.log('maureen data');
+        console.log(data);
         dispatch(refreshSectionLockStatus(data, sectionId));
       })
       .fail(err => {
