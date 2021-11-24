@@ -29,14 +29,20 @@
           # Use shared Realtime Log config
           RealtimeLogConfigArn: !ImportValue AccessLogs-Config
         ViewerCertificate:
-          AcmCertificateArn: <%= certificate_arn %>
+          AcmCertificateArn: !Ref <%=app%>RedirectedDomainCertificate
           SslSupportMethod: sni-only
+
+  <%=app%>RedirectedDomainCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Properties:
+      DomainName: www.<%= CDO.pegasus_hostname %>
+      ValidationMethod: DNS
 
   <%=app%>RedirectCachePolicy:
     Type: AWS::CloudFront::CachePolicy
     Properties:
       CachePolicyConfig:
-        Name: RedirectCachePolicy
+        Name: <%=app%>RedirectCachePolicy
         MinTTL: 3600
         MaxTTL: 31536000
         DefaultTTL: 86400
