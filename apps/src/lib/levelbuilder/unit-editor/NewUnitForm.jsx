@@ -4,12 +4,6 @@ import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 import PropTypes from 'prop-types';
 
-const buttonStyle = {
-  marginLeft: 0,
-  marginTop: 10,
-  marginBottom: 20
-};
-
 export default function NewUnitForm(props) {
   const [courseStyle, setCourseStyle] = useState('');
   const [selectedFamilyName, setSelectedFamilyName] = useState('');
@@ -204,7 +198,11 @@ export default function NewUnitForm(props) {
           <input name="is_migrated" value={true} type="hidden" />
           <input name="lesson_groups" value={'[]'} type="hidden" />
           <br />
-          <button className="btn btn-primary" type="submit" style={buttonStyle}>
+          <button
+            className="btn btn-primary"
+            type="submit"
+            style={styles.buttonStyle}
+          >
             Save Changes
           </button>
         </div>
@@ -239,5 +237,10 @@ const styles = {
     marginBottom: 10,
     border: '1px solid ' + color.light_gray,
     padding: 10
+  },
+  buttonStyle: {
+    marginLeft: 0,
+    marginTop: 10,
+    marginBottom: 20
   }
 };
