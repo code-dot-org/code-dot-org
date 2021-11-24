@@ -79,7 +79,7 @@ class TestController < ApplicationController
     lesson = lesson_group.lessons.create(
       script: script,
       key: 'temp-lesson',
-      name: 'Temp Lesson',
+      name: 'Temp Lesson With Lesson Plan',
       has_lesson_plan: true,
       relative_position: 1,
       absolute_position: 1
