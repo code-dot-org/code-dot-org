@@ -2733,16 +2733,23 @@
             "parameters": {
               "points": "body",
               "length": "délka"
-            }
+            },
+            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou"
           },
           "draw a circle": {
-            "name": "nakresli kružnici"
+            "name": "nakresli kružnici",
+            "description": "nakresli kruh s daným poloměrem",
+            "parameters": {
+              "radius": "poloměr"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "délka",
-              "repeat": "opakuj"
-            }
+              "repeat": "opakuj",
+              "sides": "strany"
+            },
+            "name": "nakresli větrník"
           },
           "draw a triangle": {
             "name": "nakresli trojúhelník",
@@ -2753,7 +2760,8 @@
           "draw a shape": {
             "name": "nakresli tvar",
             "parameters": {
-              "length": "délka"
+              "length": "délka",
+              "sides": "strany"
             }
           },
           "draw a house": {
@@ -2876,16 +2884,23 @@
             "parameters": {
               "points": "body",
               "length": "délka"
-            }
+            },
+            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou"
           },
           "draw a circle": {
-            "name": "nakresli kružnici"
+            "name": "nakresli kružnici",
+            "description": "nakresli kruh s daným poloměrem",
+            "parameters": {
+              "radius": "poloměr"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "délka",
-              "repeat": "opakuj"
-            }
+              "repeat": "opakuj",
+              "sides": "strany"
+            },
+            "name": "nakresli větrník"
           },
           "draw a triangle": {
             "name": "nakresli trojúhelník",
@@ -2896,7 +2911,8 @@
           "draw a shape": {
             "name": "nakresli tvar",
             "parameters": {
-              "length": "délka"
+              "length": "délka",
+              "sides": "strany"
             }
           },
           "draw a house": {
@@ -2918,16 +2934,23 @@
             "parameters": {
               "points": "body",
               "length": "délka"
-            }
+            },
+            "description": "nakresli hvězdu s daným počtem bodů a stranami s danou délkou"
           },
           "draw a circle": {
-            "name": "nakresli kružnici"
+            "name": "nakresli kružnici",
+            "description": "nakresli kruh s daným poloměrem",
+            "parameters": {
+              "radius": "poloměr"
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "délka",
-              "repeat": "opakuj"
-            }
+              "repeat": "opakuj",
+              "sides": "strany"
+            },
+            "name": "nakresli větrník"
           },
           "draw a triangle": {
             "name": "nakresli trojúhelník",
@@ -2938,7 +2961,8 @@
           "draw a shape": {
             "name": "nakresli tvar",
             "parameters": {
-              "length": "délka"
+              "length": "délka",
+              "sides": "strany"
             }
           },
           "draw a house": {

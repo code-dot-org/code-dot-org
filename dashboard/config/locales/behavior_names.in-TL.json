@@ -2833,7 +2833,16 @@
           "moving north": "crwdns2694997:0crwdne2694997:0",
           "moving south": "crwdns2694999:0crwdne2694999:0",
           "moving west": "crwdns2695001:0crwdne2695001:0",
-          "spinning right": "crwdns2695003:0crwdne2695003:0"
+          "spinning right": "crwdns2695003:0crwdne2695003:0",
+          "spinning left": "crwdns2715251:0crwdne2715251:0",
+          "moving with arrow keys": "crwdns2715253:0crwdne2715253:0",
+          "driving with arrow keys": "crwdns2715255:0crwdne2715255:0",
+          "fluttering": "crwdns2715257:0crwdne2715257:0",
+          "wobbling": "crwdns2715259:0crwdne2715259:0",
+          "moving west and looping": "crwdns2715261:0crwdne2715261:0",
+          "moving east and looping": "crwdns2715263:0crwdne2715263:0",
+          "moving north and looping": "crwdns2715265:0crwdne2715265:0",
+          "moving south and looping": "crwdns2715267:0crwdne2715267:0"
         },
         "helloworld_animals_behaviors": {
           "wandering": "crwdns2695067:0crwdne2695067:0",
@@ -2922,7 +2931,16 @@
           "moving north": "crwdns2695247:0crwdne2695247:0",
           "moving south": "crwdns2695249:0crwdne2695249:0",
           "moving west": "crwdns2695251:0crwdne2695251:0",
-          "spinning right": "crwdns2695253:0crwdne2695253:0"
+          "spinning right": "crwdns2695253:0crwdne2695253:0",
+          "spinning left": "crwdns2715269:0crwdne2715269:0",
+          "moving with arrow keys": "crwdns2715271:0crwdne2715271:0",
+          "driving with arrow keys": "crwdns2715273:0crwdne2715273:0",
+          "fluttering": "crwdns2715275:0crwdne2715275:0",
+          "wobbling": "crwdns2715277:0crwdne2715277:0",
+          "moving west and looping": "crwdns2715279:0crwdne2715279:0",
+          "moving east and looping": "crwdns2715281:0crwdne2715281:0",
+          "moving north and looping": "crwdns2715283:0crwdne2715283:0",
+          "moving south and looping": "crwdns2715285:0crwdne2715285:0"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "crwdns2695317:0crwdne2695317:0",
@@ -3011,7 +3029,16 @@
           "moving north": "crwdns2694787:0crwdne2694787:0",
           "moving south": "crwdns2694789:0crwdne2694789:0",
           "moving west": "crwdns2694791:0crwdne2694791:0",
-          "spinning right": "crwdns2694793:0crwdne2694793:0"
+          "spinning right": "crwdns2694793:0crwdne2694793:0",
+          "spinning left": "crwdns2715229:0crwdne2715229:0",
+          "moving with arrow keys": "crwdns2715231:0crwdne2715231:0",
+          "driving with arrow keys": "crwdns2715233:0crwdne2715233:0",
+          "fluttering": "crwdns2715235:0crwdne2715235:0",
+          "wobbling": "crwdns2715237:0crwdne2715237:0",
+          "moving west and looping": "crwdns2715239:0crwdne2715239:0",
+          "moving east and looping": "crwdns2715241:0crwdne2715241:0",
+          "moving north and looping": "crwdns2715243:0crwdne2715243:0",
+          "moving south and looping": "crwdns2715245:0crwdne2715245:0"
         },
         "helloworld_food_behaviors": {
           "wandering": "crwdns2696119:0crwdne2696119:0",
@@ -3100,7 +3127,16 @@
           "moving north": "crwdns2694537:0crwdne2694537:0",
           "moving south": "crwdns2694539:0crwdne2694539:0",
           "moving west": "crwdns2694541:0crwdne2694541:0",
-          "spinning right": "crwdns2694543:0crwdne2694543:0"
+          "spinning right": "crwdns2694543:0crwdne2694543:0",
+          "spinning left": "crwdns2715207:0crwdne2715207:0",
+          "moving with arrow keys": "crwdns2715209:0crwdne2715209:0",
+          "driving with arrow keys": "crwdns2715211:0crwdne2715211:0",
+          "fluttering": "crwdns2715213:0crwdne2715213:0",
+          "wobbling": "crwdns2715215:0crwdne2715215:0",
+          "moving west and looping": "crwdns2715217:0crwdne2715217:0",
+          "moving east and looping": "crwdns2715219:0crwdne2715219:0",
+          "moving north and looping": "crwdns2715221:0crwdne2715221:0",
+          "moving south and looping": "crwdns2715223:0crwdne2715223:0"
         },
         "helloworld_retro_behaviors": {
           "wandering": "crwdns2694607:0crwdne2694607:0",

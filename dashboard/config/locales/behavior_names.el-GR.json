@@ -197,6 +197,18 @@
         },
         "poetry_hoc_spriteBehaviors": {
           "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_animals_backgrounds": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_emoji_backgrounds": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_food_backgrounds": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
+        },
+        "helloworld_retro_backgrounds": {
+          "moving with arrow keys": "μετακίνηση με τα πλήκτρα βέλους"
         }
       }
     }

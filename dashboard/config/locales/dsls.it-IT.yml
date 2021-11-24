@@ -8962,6 +8962,7 @@ it-IT:
         description: Hai raggiunto l'ultima lezione! Scegli un progetto da creare.
       courseB_EOC_2021:
         display_name: Progetto di fine corso
+        description: Hai raggiunto l'ultima lezione! Scegli un progetto da creare.
       courseC_multi_artist_prog6_predict1_2021:
         answers:
         - text: L'artista disegnerà un triangolo con tre lati uguali.

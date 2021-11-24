@@ -690,7 +690,8 @@
           "courseC_maze_programming2_1": "Toto je panel. Zde najdeš další bloky, které ti pomůžou dokončit úkol."
         },
         "courseD_maze_ramp3_2021": {
-          "stone_block_2": "Šedé bloky není možné zahodit."
+          "stone_block_2": "Šedé bloky není možné zahodit.",
+          "courseC_maze_programming3_2": "Přebytečné bloky můžeš přesouvat do sady nástrojů, když je chceš vyhodit."
         },
         "courseD_maze_ramp5_2021": {
           "": "Tyto bloky na sobě nemají žádná čísla. Můžeš jich použít, kolik chceš!"
@@ -845,7 +846,8 @@
           "poetry_selector": "Vyberte jakoukoli báseň nebo zadejte svou vlastní!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Nový blok!"
+          "poetry_sound": "Nový blok!",
+          "poetry_music": "Nový blok!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Nový blok!",
@@ -969,7 +971,29 @@
         },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Tady najdete bloky kódu.",
-          "pause_button": "Svou animaci vyzkoušejte tímto tlačítkem. "
+          "pause_button": "Svou animaci vyzkoušejte tímto tlačítkem. ",
+          "run_button": "Svou animaci vyzkoušejte tímto tlačítkem. "
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Použij tenhle blok pro okamžik, kdy Valda narazí do dinosaura."
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Tenhle blok ti umožní přesouvat postavy do různých částí herního prostoru."
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Číslice 4 na dýni značí, že jsou k dispozici 4 dýně, které můžeš posbírat."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "Tohle je tvůj limit bloků. Sděluje ti, kolik těchto bloků ti ještě zbývá k použití."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Tady najdeš cyklus „for“."
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "Tady najdeš svoje proměnné."
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "Kliknutím sem zobrazíš, jak toto chování funguje."
         }
       }
     }

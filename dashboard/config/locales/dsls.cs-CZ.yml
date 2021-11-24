@@ -2964,6 +2964,7 @@ cs-CZ:
           očkování a další.\n\nO svůj simulační model se můžete podělit s ostatními
           nebo můžete sdílet své návrhy, co můžeme dělat, abychom pomohli ochránit
           zdravé obyvatele našeho města, až k nám virus dorazí. \n"
+        content1: sem uveď popis
       MyLoopyRoboticFriends-Unplugged_2021:
         markdown: |-
           # Mí robotičtí přátelé
@@ -3030,11 +3031,14 @@ cs-CZ:
       courseC_multi_starWars_predict1_2021:
         answers:
         - text: BB-8 se nepohne.
+          feedback: Špatně. Blok „repeat“ způsobí, že se BB-8 posune 5krát dopředu.
         - text: BB-8 se pohne o jedno políčko.
+          feedback: Špatně. Blok „repeat“ způsobí, že se BB-8 posune 5krát dopředu.
         - text: BB-8 se posune pět krát za sebou a sebere všechen šrot.
           correct: true
           feedback: Správně!
         - text: BB-8 se pohne jen o tři políčka.
+          feedback: Špatně. Blok „repeat“ způsobí, že se BB-8 posune 5krát dopředu.
         questions:
         - text: Co se stane, když klikneš spustit?
       courseC_multi_starWars_predict2_2021:
@@ -3117,13 +3121,25 @@ cs-CZ:
         - {}
       courseF_multi_bee_for3_predict1_2021:
         answers:
-        - {}
-        - correct: true
+        - text: 'Včela se posune dopředu a nasbírá všechen nektar ze všech květů. '
+          feedback: Špatně. Cyklus „for“ umožní včele sebrat správné množství nektaru,
+            ale je nastavený jen na dosažení 4 květů.
+        - text: Včela se posune dopředu a nasbírá všechen nektar ze všech květů kromě
+            jednoho.
+          correct: true
           feedback: Správně!
-        - {}
+        - text: 'Včela se posune dopředu a nasbírá jeden nektar z každého květu. '
+          feedback: Špatně. Cyklus „for“ umožní včele sebrat správné množství nektaru,
+            ale je nastavený jen na dosažení 4 květů.
         - text: 'Včela se pohne vpřed a nasbírá jeden nektar z květin číslo 1 a 4. '
+          feedback: Špatně. Cyklus „for“ umožní včele sebrat správné množství nektaru,
+            ale je nastavený jen na dosažení 4 květů.
         questions:
-        - {}
+        - text: Přečti si tenhle kód. Co se stane, když dáš "Spustit"?
+        markdown: |+
+          Ovšem použití cyklů „for“ tuhle úlohu hodně usnadní.
+
+
       courseF_sprites_predict_multi:
         answers:
         - text: Obě letadla se pohnou o jedno pole podél mřížky a poté se zastaví.
@@ -3232,6 +3248,7 @@ cs-CZ:
 
 
           Až budete hotovi, sdílejte svou simulaci s ostatními. Sdílejte svou zprávu o tom, co si myslíte, že bychom mohli udělat pro to, aby ostatní zůstali zdraví, když do města dorazí nějaký virus.
+        content1: sem uveď popis
       EnvelopeVariables-Unplugged_2021_2:
         markdown: |
           # Příběhy prázdného prostoru
@@ -3409,6 +3426,8 @@ cs-CZ:
         display_name: Projekt na zakončení kurzu
       courseD_EOC_2021:
         display_name: Projekt na zakončení kurzu
+        description: Dospěl(a) jsi k poslední lekci kurzu D. Vyber si projekt, který
+          chceš vytvořit.
       courseD_EOC_examples_2021:
         description: Právě se chystáte zahájit svůj závěrečný projekt. Než začnete,
           věnujte nějaký čas studiu těchto příkladů projektů.
@@ -3649,8 +3668,12 @@ cs-CZ:
         display_name: Projekt na zakončení kurzu
       courseF_EOC_2021:
         display_name: Projekt na zakončení kurzu
+        description: Dospěl(a) jsi na konec kurzu F. Vyber si projekt, který chceš
+          vytvořit.
       courseF_EOC_examples_2021:
         display_name: Projekt na zakončení kurzu
+        description: Dospěl(a) jsi na konec kurzu F. Vyber si projekt, který chceš
+          vytvořit.
       courseF_EOC_samples_2021:
         description: Právě se chystáte zahájit svůj závěrečný projekt. Než začnete,
           věnujte nějaký čas studiu těchto příkladů projektů.
@@ -3765,6 +3788,7 @@ cs-CZ:
           text, který budete zobrazovat na obrazovce.\n* Popis nebo výkres sprajtů,
           které budete potřebovat (a jejich chování).\n\nJestliže si nejste jisti,
           zda jste připraveni pokračovat dále, zeptejte se svého učitele!"
+        content1: sem uveď popis
       coursee_prediction_artistfunction2_2021:
         answers:
         - {}
@@ -3821,3 +3845,34 @@ cs-CZ:
           * Pozastavit se a zamyslet se online.
 
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      ForLoopFun-Unplugged_2021:
+        markdown: |
+          # Zábava s cykly „for“
+
+          Víme, že cykly nám umožňují dělat věci znovu a znovu, teď se ale naučíme používat cykly s přidanou strukturou, kterou zabudujeme přímo do nich.
+      Internet-Unplugged_2021:
+        markdown: |
+          # Internet
+
+          Postav si ve třídě vlastní internet jen pomocí ústřižků papíru.
+      PowerOfWords-Unplugged_2021:
+        markdown: |
+          # Moc slova
+
+          ## Co máte dělat, když někdo použije zlý nebo urážlivý jazyk na internetu?
+      csf_be_a_super_digital_citizen_2021:
+        content1: sem uveď popis
+      csf_password_power-up_2021:
+        content1: sem uveď popis
+        markdown: |
+          #  Posil své heslo
+
+          ## Důležité tipy k heslům
+
+          * Začni zapamatovatelnou **frází**.
+          * Tvoje heslo by měli znát jenom tví **rodiče**.
+          * Nikdy do hesla nedávej žádné **soukromé** informace o své identitě.
+          * Každé heslo by mělo mít aspoň **osm** znaků.
+          * Heslo by mělo zahrnovat písmena, čísla a **symboly**.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)

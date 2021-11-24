@@ -207,6 +207,36 @@
         "courseF_text_choice_interview": {
           "5bd698afd23bccde289bb0b4aa72a518": "ரோபோ என்று பெயரிடுங்கள். ",
           "34088af1fb721900963462375b3bbe23": "ரோபோ! "
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "தேர்வு 1 ",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "தேர்வு 2 ",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "தேர்வு 3 "
+        },
+        "courseE_aboutme_3_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "வணக்கம், உலகம்!"
+        },
+        "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "வணக்கம், உலகம்!"
+        },
+        "courseE_aboutme_5_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "வணக்கம், உலகம்!",
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "ஏய்! "
+        },
+        "courseF_variables_predict": {
+          "f6429fe0f1a76611670df7e1234af936": "உங்கள் பெயர் என்ன? "
+        },
+        "helloworld_animals_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "வணக்கம், உலகம்!"
+        },
+        "helloworld_emoji_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "வணக்கம், உலகம்!"
+        },
+        "helloworld_food_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "வணக்கம், உலகம்!"
+        },
+        "helloworld_retro_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "வணக்கம், உலகம்!"
         }
       }
     }

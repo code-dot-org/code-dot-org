@@ -46,14 +46,23 @@
         "CourseF_outbreak2": "Simulasi Virus",
         "CourseF_outbreak3": "Simulasi Virus",
         "CourseF_outbreak4": "Ubahsuai Simulasi Anda",
-        "CourseF_outbreak7": "Peluang Rawak",
-        "CourseF_outbreak8": "Imuniti dan Vaksin",
+        "CourseF_outbreak7": "Kekebalan dan Vaksin",
+        "CourseF_outbreak8": "Kongsi Mesej",
         "courseF_apps_pet": "Haiwan Peliharaan Maya",
         "courseF_bee_for5_2021": "Pembolehubah",
         "ramp_artist_loops4_2021": "Gerakan Bintang",
         "CourseF_outbreak5": "Ubahsuai Simulasi Anda",
-        "international_outbreak_freeplay": "Kongsi Mesej",
-        "CourseF_outbreak6": "Peluang Rawak"
+        "international_outbreak_freeplay": "Kotak Alatan Standard",
+        "CourseF_outbreak6": "Peluang Rawak",
+        "helloworld_animals_sizes": "Saiz",
+        "helloworld_animals_sounds": "Bunyi",
+        "helloworld_emoji_sizes": "Saiz",
+        "helloworld_emoji_sounds": "Bunyi",
+        "helloworld_food_sizes": "Saiz",
+        "helloworld_food_sounds": "Bunyi",
+        "helloworld_retro_location": "Peristiwa Masa",
+        "helloworld_retro_sizes": "Saiz",
+        "helloworld_retro_sounds": "Bunyi"
       }
     }
   }

@@ -107,9 +107,9 @@
         "CourseF_outbreak2": "การจำลองไวรัส",
         "CourseF_outbreak3": "การจำลองไวรัส",
         "CourseF_outbreak4": "ปรับเปลี่ยนการจำลองของคุณ",
-        "CourseF_outbreak6": "การรักษาตัว",
-        "CourseF_outbreak7": "โอกาสแบบสุ่ม",
-        "CourseF_outbreak8": "ภูมิคุ้มกันและวัคซีน",
+        "CourseF_outbreak6": "โอกาสแบบสุ่ม",
+        "CourseF_outbreak7": "ภูมิคุ้มกันและวัคซีน",
+        "CourseF_outbreak8": "แชร์ข้อความ",
         "courseF_apps_pet": "สัตว์เลี้ยงเสมือนจริง",
         "courseF_bee_for5_2021": "ตัวแปร",
         "courseF_events_freeplay_aquatic": "สัตว์น้ำ",
@@ -117,7 +117,15 @@
         "ramp_artist_loops4_2021": "สตาร์",
         "CourseF_outbreak5": "ปรับเปลี่ยนการจำลองของคุณ",
         "outbreak5": "การรักษาตัว",
-        "international_outbreak_freeplay": "แชร์ข้อความ"
+        "international_outbreak_freeplay": "กล่องเครื่องมือมาตรฐาน",
+        "helloworld_animals_sizes": "ขนาด",
+        "helloworld_animals_sounds": "เสียง",
+        "helloworld_emoji_sizes": "ขนาด",
+        "helloworld_emoji_sounds": "เสียง",
+        "helloworld_food_sizes": "ขนาด",
+        "helloworld_food_sounds": "เสียง",
+        "helloworld_retro_sizes": "ขนาด",
+        "helloworld_retro_sounds": "เสียง"
       }
     }
   }

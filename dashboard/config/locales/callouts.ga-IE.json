@@ -1763,7 +1763,8 @@
           "poetry_new_block": "Bloc nua!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Bloc nua!"
+          "poetry_sound": "Bloc nua!",
+          "poetry_music": "Bloc nua!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Bloc nua!",

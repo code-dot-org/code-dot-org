@@ -174,7 +174,8 @@
           "3e11a2dc6edb909c47778bed75a81769": "मजकूर येथे"
         },
         "courseC19_playLab_EOC6_2021": {
-          "5cec903c4d41c49412a70a94d54999ee": "तुम्ही काहीतरी लिहू शकता."
+          "5cec903c4d41c49412a70a94d54999ee": "तुम्ही काहीतरी लिहू शकता.",
+          "3e11a2dc6edb909c47778bed75a81769": "मजकूर येथे"
         },
         "courseC19_playLab_sample1_2021": {
           "5cec903c4d41c49412a70a94d54999ee": "तुम्ही काहीतरी लिहू शकता.",
@@ -217,6 +218,26 @@
         },
         "helloworld_retro_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "हॅलो, वर्ल्ड !"
+        },
+        "courseC19_playLab_EOC1_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "इथे टेक्स्ट टाईप करा",
+          "30fcc1693fa8402931d13ac3a5f396fd": "इथे शीर्षक टाईप करा"
+        },
+        "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "इथे टेक्स्ट टाईप करा",
+          "30fcc1693fa8402931d13ac3a5f396fd": "इथे शीर्षक टाईप करा"
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "इथे टेक्स्ट टाईप करा",
+          "30fcc1693fa8402931d13ac3a5f396fd": "इथे शीर्षक टाईप करा"
+        },
+        "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "इथे टेक्स्ट टाईप करा",
+          "30fcc1693fa8402931d13ac3a5f396fd": "इथे शीर्षक टाईप करा"
+        },
+        "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "इथे टेक्स्ट टाईप करा",
+          "30fcc1693fa8402931d13ac3a5f396fd": "इथे शीर्षक टाईप करा"
         }
       }
     }

@@ -313,7 +313,16 @@
         "helloworld_food_sizes": "Velikost",
         "helloworld_food_sounds": "Zvuky",
         "helloworld_retro_sizes": "Velikost",
-        "helloworld_retro_sounds": "Zvuky"
+        "helloworld_retro_sounds": "Zvuky",
+        "CourseD_EOC_artist_2021": "Vytvoř kresbu",
+        "CourseD_EOC_bounce1_2021": "Vytvoř basketbalovou hru",
+        "CourseEF_video_MakeSprite_2021-2": "Jak přimět sprajta",
+        "CourseF_Project_SpriteLab_2021": "Vytvoř projekt Laboratoř sprajtů",
+        "CourseF_video_introSpriteLab_2021": "Tohle je Laboratoř sprajtů",
+        "courseF_apps_collector": "Sběratelská hra",
+        "courseF_lotsofsprites_video": "Jak přimět sprajta",
+        "courseF_pilotVideo_events": "Jak přimět sprajta",
+        "courseF_sprites_properties": "Vlastnosti sprajtu"
       }
     }
   }

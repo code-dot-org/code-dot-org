@@ -449,10 +449,12 @@
         "poetry_hoc_freeplay": {
           "poetry_burst": "नवीन ब्लॉक!",
           "poetry_multiple_sprites": "नवीन ब्लॉक!",
-          "poetry_new_block": "नवीन ब्लॉक!"
+          "poetry_new_block": "नवीन ब्लॉक!",
+          "poetry_selector": "कोणतीही कविता निवडा, किंवा तुमची स्वतःची कविता प्रविष्ट करा!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "नवीन ब्लॉक!"
+          "poetry_sound": "नवीन ब्लॉक!",
+          "poetry_music": "नवीन ब्लॉक!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "नवीन ब्लॉक!",
@@ -676,6 +678,68 @@
         "helloworld_retro_say": {
           "hello_world_say": "स्प्राईट्सला बोलण्यासाठी या ब्लॉकचा वापर करा.",
           "hello_world_make_sprite": "स्प्राईट तयार करण्यासाठी या ब्लॉकचा वापर करा."
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "ही संख्या तुम्हाला यातील किती ब्लॉक्स तुम्ही या कोड्यात वापरू शकता, ते सांगते."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "ही संख्या म्हणजे अंतिम उत्तरात या प्रकारचा फक्त एक ब्लॉक वापरता येईल."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "तुम्हाला माहिती आहे का की जेव्हा गरज असेल तेव्हा तुम्ही एका रेषेवर काही काढू शकता?"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "हे कॉलआऊट आहे"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "इव्हेंट ॲरोची दिशा बदलण्यासाठी येथे क्लिक करा."
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "त्यामुळे तुम्ही एक 'रँडम' आवाज निवडू शकाल, म्हणजे तुम्ही ऐकेपर्यंत कोणता आवाज येईल हे तुम्हाला माहीत नसेल!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "सगळे ब्लॉक्स जोडल्यावर, तुमचा प्रोग्रॅम सुरू करण्यासाठी \"Run\" दाबा. "
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "खजिना गोळा करण्यासाठी हा ब्लॉक वापरा."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "पुढच्या पातळीपर्यंत जाण्यासाठी पात्राला या ध्वजापर्यंत पोचवा."
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "जेव्हा वॅडल्स आणि चॉम्पचा एकमेकांना स्पर्श होतो तेव्हा हा ब्लॉक वापरा!"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "ब्लॉक्समुळे तुम्ही पात्रांना गेम स्पेसमधील वेगवेगळ्या ठिकाणी हलवू शकता."
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "भोपळ्यावरील चार ही संख्या तुम्हाला दाखवते की अजून चार भोपळे तोडण्यासाठी उपलब्ध आहेत. "
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "टूलबॉक्समधील ब्लॉक्स तुमच्या वर्कस्पेसमध्ये ड्रॅग करा."
+        },
+        "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "ही तुमच्या ब्लॉकची मर्यादा आहे. तुमच्याकडे वापरण्यासाठी किती ब्लॉक्स शिल्लक आहेत, हे ती तुम्हाला सांगते."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "या ब्लॉक्सवर संख्या नाही आहेत. तुम्ही हवे तितके ब्लॉक्स वापरू शकता! "
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "सगळे ब्लॉक्स जोडल्यावर, तुमचा प्रोग्रॅम सुरू करण्यासाठी \"Run\" दाबा."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "हा टूलबॉक्स आहे. इथे तुम्हाला तुमची कोडी पूर्ण करण्यासाठी अतिरिक्त ब्लॉक्स दिसतील."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "अतिरिक्त ब्लॉक्स फेकून देण्यासाठी तुम्ही ते टूलबॉक्समध्ये ड्रॅग करू शकता.",
+          "stone_block_2": "ग्रे ब्लॉक्स फेकून देता येत नाहीत."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "या ब्लॉक्सवर संख्या नाही आहेत. तुम्ही हवे तितके ब्लॉक्स वापरू शकता! "
+        },
+        "poetry_hoc_backgroundEffects": {
+          "poetry_background": "कोड ब्लॉक्स येथे शोधा.",
+          "run_button": "या बटणासह आपल्या अॅनिमेशनची चाचणी घ्या."
         }
       }
     }

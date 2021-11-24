@@ -1434,7 +1434,8 @@
           "poetry_new_block": "Ny blokk!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Ny blokk!"
+          "poetry_sound": "Ny blokk!",
+          "poetry_music": "Ny blokk!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Ny blokk!",

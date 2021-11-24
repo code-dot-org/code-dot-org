@@ -1798,7 +1798,8 @@
           "poetry_new_block": "Nýr kubbur!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Nýr kubbur!"
+          "poetry_sound": "Nýr kubbur!",
+          "poetry_music": "Nýr kubbur!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Nýr kubbur!",

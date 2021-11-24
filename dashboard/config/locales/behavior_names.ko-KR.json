@@ -2731,7 +2731,8 @@
           "moving north": "북쪽으로 이동",
           "moving south": "남쪽으로 이동",
           "moving west": "서쪽으로 이동",
-          "spinning right": "오른쪽으로 회전"
+          "spinning right": "오른쪽으로 회전",
+          "spinning left": "왼쪽으로 회전"
         },
         "helloworld_animals_behaviors": {
           "wandering": "배회",
@@ -2792,7 +2793,8 @@
           "moving north": "북쪽으로 이동",
           "moving south": "남쪽으로 이동",
           "moving west": "서쪽으로 이동",
-          "spinning right": "오른쪽으로 회전"
+          "spinning right": "오른쪽으로 회전",
+          "spinning left": "왼쪽으로 회전"
         },
         "helloworld_emoji_behaviors": {
           "wandering": "배회",
@@ -2853,7 +2855,8 @@
           "moving north": "북쪽으로 이동",
           "moving south": "남쪽으로 이동",
           "moving west": "서쪽으로 이동",
-          "spinning right": "오른쪽으로 회전"
+          "spinning right": "오른쪽으로 회전",
+          "spinning left": "왼쪽으로 회전"
         },
         "helloworld_food_costumes": {
           "moving east": "동쪽으로 이동",
@@ -2901,7 +2904,8 @@
           "moving north": "북쪽으로 이동",
           "moving south": "남쪽으로 이동",
           "moving west": "서쪽으로 이동",
-          "spinning right": "오른쪽으로 회전"
+          "spinning right": "오른쪽으로 회전",
+          "spinning left": "왼쪽으로 회전"
         },
         "helloworld_retro_behaviors": {
           "wandering": "배회",

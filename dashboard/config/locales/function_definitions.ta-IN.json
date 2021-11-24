@@ -1355,17 +1355,25 @@
           "draw a star": {
             "name": "நட்சத்திரம் வரைக",
             "parameters": {
-              "length": "நீளம்"
-            }
+              "length": "நீளம்",
+              "points": "புள்ளிகள் "
+            },
+            "description": "கொடுக்கப்பட்ட புள்ளிகள் மற்றும் கொடுக்கப்பட்ட நீளத்தின் பக்கங்களைக் கொண்ட ஒரு நட்சத்திரத்தை வரையவும்"
           },
           "draw a circle": {
-            "name": "ஒரு வட்டத்தை வரையவும்"
+            "name": "ஒரு வட்டத்தை வரையவும்",
+            "description": "கொடுக்கப்பட்ட ஆரம் கொண்ட ஒரு வட்டத்தை வரையவும் ",
+            "parameters": {
+              "radius": "ஆரம் "
+            }
           },
           "draw a pinwheel": {
             "parameters": {
               "length": "நீளம்",
-              "repeat": "மறுபடி"
-            }
+              "repeat": "மறுபடி",
+              "sides": "பக்கங்களிலும் "
+            },
+            "name": "ஒரு பின்வீல் வரையவும் "
           },
           "draw a triangle": {
             "name": "ஒரு முக்கோணத்தை வரையவும்",
@@ -1375,8 +1383,10 @@
           },
           "draw a shape": {
             "parameters": {
-              "length": "நீளம்"
-            }
+              "length": "நீளம்",
+              "sides": "பக்கங்களிலும் "
+            },
+            "name": "ஒரு வடிவத்தை வரையவும் "
           },
           "draw a house": {
             "name": "ஒரு வீட்டை வரையவும்",
@@ -1467,7 +1477,8 @@
           "draw flame": {
             "parameters": {
               "x": "x"
-            }
+            },
+            "name": "சுடர் வரைய"
           }
         },
         "courseC_data wizard_2021": {
@@ -1483,6 +1494,9 @@
         "courseE_artist_functions2_2021": {
           "draw a square": {
             "name": "ஒரு சதுரத்தை வரையவும்"
+          },
+          "draw ear stems": {
+            "name": "காது தண்டுகளை வரையவும்"
           }
         },
         "courseE_artist_functions2_dani": {
@@ -1513,6 +1527,9 @@
         "courseE_artist_functions8_2021": {
           "do something": {
             "name": "ஏதேனும் இயக்கு"
+          },
+          "staggered squares": {
+            "name": "தடுமாறிய சதுரங்கள் "
           }
         },
         "courseE_artist_functions8a_2021": {
@@ -1526,11 +1543,26 @@
         "courseE_artist_functions8b_2021": {
           "do something": {
             "name": "ஏதேனும் இயக்கு"
+          },
+          "draw a line of squares": {
+            "name": "சதுரங்களின் கோட்டை வரையவும்"
+          },
+          "draw square": {
+            "name": "சதுரத்தை வரையவும்"
           }
         },
         "courseE_artist_functions8c_2021": {
           "do something": {
             "name": "ஏதேனும் இயக்கு"
+          },
+          "draw a line of squares": {
+            "name": "சதுரங்களின் கோட்டை வரையவும்"
+          },
+          "draw square": {
+            "name": "சதுரத்தை வரையவும்"
+          },
+          "staggered squares": {
+            "name": "தடுமாறிய சதுரங்கள் "
           }
         },
         "courseE_artist_functions9_2021": {
@@ -1561,6 +1593,12 @@
         "courseE_artist_functions_predict2_2021": {
           "do something": {
             "name": "ஏதேனும் இயக்கு"
+          },
+          "draw line of polygons": {
+            "name": "பலகோணங்களின் கோட்டை வரையவும்"
+          },
+          "draw polygon": {
+            "name": "பலகோணம் வரையவும்"
           }
         },
         "courseF_apps_collector": {
@@ -1653,6 +1691,21 @@
         "CourseF_app_computer": {
           "reset game": {
             "name": "விளையாட்டு மீட்டமை "
+          }
+        },
+        "courseB_artist_loops_challenge2_2021": {
+          "potential solution": {
+            "name": "சாத்தியமான தீர்வு"
+          }
+        },
+        "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "ஒரு சாளரத்தை வரையவும்"
+          }
+        },
+        "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "நகர்ந்து, கவுண்டருடன் அமிர்தத்தைப் பெறுங்கள் "
           }
         }
       }

@@ -197,6 +197,18 @@
         },
         "poetry_hoc_spriteBehaviors": {
           "moving with arrow keys": "flytta med piltangenter"
+        },
+        "helloworld_animals_backgrounds": {
+          "moving with arrow keys": "flytta med piltangenter"
+        },
+        "helloworld_emoji_backgrounds": {
+          "moving with arrow keys": "flytta med piltangenter"
+        },
+        "helloworld_food_backgrounds": {
+          "moving with arrow keys": "flytta med piltangenter"
+        },
+        "helloworld_retro_backgrounds": {
+          "moving with arrow keys": "flytta med piltangenter"
         }
       }
     }

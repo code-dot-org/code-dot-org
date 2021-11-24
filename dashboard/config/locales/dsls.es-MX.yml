@@ -6,14 +6,17 @@ es-MX:
         answers:
         - text: Comienza con un cuadrado<br/>Pon un triángulo sobre el cuadrado<br/>Pon
             un triángulo debajo del cuadrado
+          correct: true
         - text: Comienza con un cuadrado<br/>Pon un triángulo a la derecha del cuadrado<br/>Pon
             un paralelogramo debajo del cuadrado<br/>Pon un triángulo a la derecha
             del paralelogramo
           correct: true
         - text: Comienza con un cuadrado<br/>Pon un paralelogramo sobre el cuadrado<br/>Pon
             un triángulo a la derecha del paralelogramo
+          correct: true
         - text: Comienza con un cuadrado<br/>Pon un triángulo debajo del cuadrado<br/>Pon
             un paralelogramo a la derecha del triángulo
+          correct: true
         content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
         - text: Elige un algoritmo para la imagen provista.
@@ -21,10 +24,13 @@ es-MX:
       2-3 Algorithms Multi 2:
         answers:
         - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
+          correct: true
         - text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
           correct: true
         - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
+          correct: true
         - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
+          correct: true
         content1: Comienza con un triángulo<br/>Pon un cuadrado debajo del triángulo<br/>Pon
           otro triángulo debajo del cuadrado
         questions:
@@ -62,10 +68,13 @@ es-MX:
       2-3 Conditionals Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+          correct: true
         - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
+          correct: true
         - text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
           correct: true
         - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
+          correct: true
         content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         questions:
         - text: Según las reglas del juego, ¿qué conjunto de naipes tiene la puntuación
@@ -84,8 +93,11 @@ es-MX:
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
           correct: true
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
+          correct: true
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
+          correct: true
         - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
+          correct: true
         content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         questions:
         - text: "¿Cómo usarías los bucles para simplificar esta secuencia?"
@@ -104,9 +116,11 @@ es-MX:
       2-3 Graph Paper Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
+          correct: true
         - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
           correct: true
         - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+          correct: true
         content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
         - text: "¿Qué programa crea esta imagen?"
@@ -125,10 +139,13 @@ es-MX:
       2-3 Maze Multi 2:
         answers:
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
+          correct: true
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
           correct: true
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
+          correct: true
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
+          correct: true
         content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         questions:
         - text: "¿Qué conjunto de bloques me hará llegar hasta el cerdo?"
@@ -136,7 +153,9 @@ es-MX:
       2-3 Relay Programming Multi 1:
         answers:
         - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+          correct: true
         - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
+          correct: true
         - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
           correct: true
         content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
@@ -146,7 +165,9 @@ es-MX:
       2-3 Relay Programming Multi 2:
         answers:
         - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+          correct: true
         - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
+          correct: true
         - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
           correct: true
         questions:
@@ -155,10 +176,13 @@ es-MX:
       2-3 artist debug multi 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a1.png"
+          correct: true
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a2.png"
           correct: true
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a3.png"
+          correct: true
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+          correct: true
         content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
           700"
         questions:
@@ -169,7 +193,9 @@ es-MX:
         - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a1.png"
           correct: true
         - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a2.png"
+          correct: true
         - text: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_a3.png"
+          correct: true
         content1: "/script_assets/2-3_images/artist/2-3_artistfunctions_multi_1_q.png,
           500"
         questions:
@@ -192,10 +218,13 @@ es-MX:
       2-3 artist loops multi 1:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+          correct: true
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+          correct: true
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
           correct: true
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+          correct: true
         content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
           500"
         questions:
@@ -204,8 +233,11 @@ es-MX:
       2-3 artist loops multi 2:
         answers:
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+          correct: true
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+          correct: true
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+          correct: true
         - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
           correct: true
         content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
@@ -229,20 +261,26 @@ es-MX:
       2-3 bee conditionals multi 1:
         answers:
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+          correct: true
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
+          correct: true
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
           correct: true
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
+          correct: true
         questions:
         - text: "¿Cuál de las comparaciones de abajo es verdadera?"
         title: Condicionales de la Abeja - Opción múltiple 1
       2-3 bee conditionals multi 3:
         answers:
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
+          correct: true
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
           correct: true
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+          correct: true
         - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
+          correct: true
         content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
           500"
         questions:
@@ -253,8 +291,11 @@ es-MX:
         - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
           correct: true
         - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+          correct: true
         - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+          correct: true
         - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
+          correct: true
         content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
         questions:
         - text: "¿Qué bloques recogen todo el néctar?"
@@ -273,10 +314,13 @@ es-MX:
       2-3 maze multi 1:
         answers:
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
+          correct: true
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
           correct: true
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+          correct: true
         - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
+          correct: true
         content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
         questions:
         - text: "¿Qué conjunto de bloques es la respuesta correcta?"
@@ -298,8 +342,11 @@ es-MX:
       4-5 Algorithms Multi 1:
         answers:
         - text: Cepillarte los dientes
+          correct: true
         - text: Hornear galletas
+          correct: true
         - text: Hacer las compras con una lista
+          correct: true
         - text: Banana
           correct: true
         questions:
@@ -322,10 +369,13 @@ es-MX:
       4-5 Computational Thinking Multi 1:
         answers:
         - text: Seattle _____ una _____ _____.
+          correct: true
         - text: _____ es una ciudad _____.
           correct: true
         - text: _____ es una _____ _____.
+          correct: true
         - text: Eugene es una ciudad _____.
+          correct: true
         content1: Aquí hay tres oraciones. ¿Cuál de las plantillas que están debajo
           realiza la abstracción correcta de tal forma que las tres coincidan con
           el mismo patrón que la plantilla?
@@ -336,6 +386,7 @@ es-MX:
       4-5 Crowdsourcing Multi 1:
         answers:
         - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a1.png"
+          correct: true
         - text: "/script_assets/4-5_images/unplugged/crowdsourcing_2_a2.png"
           correct: true
         questions:
@@ -346,18 +397,24 @@ es-MX:
         - text: Limpiar tu cuarto
           correct: true
         - text: Comer tu postre
+          correct: true
         - text: Cepillar tu cabello
+          correct: true
         - text: Lavar tu cara
+          correct: true
         questions:
         - text: "¿Cuál de estas actividades sería más adecuada para el crowdsourcing?"
         title: Opción múltiple
       4-5 Digital Footprint Multi 1:
         answers:
         - text: Tu fecha de nacimiento
+          correct: true
         - text: Tu comida favorita
           correct: true
         - text: Tu dirección
+          correct: true
         - text: El número de tarjeta de crédito de tus padres
+          correct: true
         questions:
         - text: "¿Qué parte de la información mencionada debajo puedes compartir en
             Internet?"
@@ -365,8 +422,11 @@ es-MX:
       4-5 Internet Multi 1:
         answers:
         - text: 23.23.224.106
+          correct: true
         - text: 54.209.61.132
+          correct: true
         - text: 64.14.68.10
+          correct: true
         - text: 54.243.71.82
           correct: true
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
@@ -377,10 +437,13 @@ es-MX:
       4-5 Internet Multi 2:
         answers:
         - text: code.org
+          correct: true
         - text: csisfun.com
           correct: true
         - text: thinkersmith.org
+          correct: true
         - text: khanacademy.org
+          correct: true
         content1: "/script_assets/4-5_images/unplugged/internet_1_q.png"
         questions:
         - text: Si el DNS te lleva a la página en la dirección IP 100.42.50.110, ¿en
@@ -389,6 +452,7 @@ es-MX:
       4-5 Songwriting Multi 1:
         answers:
         - text: Mi amor, mi amor, brinca hasta mi amor,
+          correct: true
         - text: Mi amor, mi amor, brinca hasta mi amor, <br/>Mi amor, mi amor, brinca
             hasta mi amor, <br/>Mi amor, mi amor, brinca hasta mi amor, <br/>Brinca
             hasta mi amor, mi querido.
@@ -397,9 +461,11 @@ es-MX:
             hasta mi amor, <br/>Mi amor, mi amor, brinca hasta mi amor, <br/>Brinca
             hasta mi amor, mi querido.<br/><br/><p>Una mosca está en la leche, <br/>fuera,
             mosca, fuera,
+          correct: true
         - text: Una mosca está en la leche, <br/>fuera, mosca, fuera, <br/>Una mosca
             está en la leche, <br/>fuera, mosca, fuera, <br/>Una mosca está en la
             leche, <br/>fuera, mosca, fuera, <br/>Brinca hasta mi amor, mi querido.
+          correct: true
         content1: "/script_assets/4-5_images/unplugged/songwriting_1_q.png"
         questions:
         - text: "¿Cuál es la parte más larga de esta canción que puedes definir como
@@ -423,9 +489,11 @@ es-MX:
       4-5 Suncatchers Multi 1:
         answers:
         - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a1.png"
+          correct: true
         - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a2.png"
           correct: true
         - text: "/script_assets/4-5_images/unplugged/suncatchers_2_a3.png"
+          correct: true
         content1: "/script_assets/4-5_images/unplugged/suncatchers_2_q.png"
         questions:
         - text: "¿Cuál de los siguientes programas <em>no</em> hace la misma secuencia
@@ -434,10 +502,13 @@ es-MX:
       4-5 artist loops multi 1:
         answers:
         - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a1.png"
+          correct: true
         - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a2.png"
           correct: true
         - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a3.png"
+          correct: true
         - text: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_a4.png"
+          correct: true
         content1: "/script_assets/4-5_images/artist/4-5_artistloops_multi_1_q.png,
           500"
         questions:
@@ -446,30 +517,39 @@ es-MX:
       4-5 artist multi 1:
         answers:
         - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a1.png"
+          correct: true
         - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a2.png"
           correct: true
         - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a3.png"
+          correct: true
         - text: "/script_assets/4-5_images/artist/4-5_artist_multi_1_a4.png"
+          correct: true
         questions:
         - text: "¿Qué bloques dibujan un rectángulo con un perímetro de 100?"
         title: El Artista - Opción múltiple
       4-5 artist multi 2:
         answers:
         - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a1.png"
+          correct: true
         - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a2.png"
+          correct: true
         - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a3.png"
           correct: true
         - text: "/script_assets/4-5_images/artist/4-5_artist_multi_2_a4.png"
+          correct: true
         questions:
         - text: "¿Qué dibujo es simétrico?"
         title: El Artista - Opción múltiple
       4-5 bee conditionals multi 1:
         answers:
         - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a1.png"
+          correct: true
         - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a2.png"
+          correct: true
         - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a3.png"
           correct: true
         - text: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_a4.png"
+          correct: true
         content1: "/script_assets/4-5_images/bee/4-5_beeconditionals_multi_1_q.png"
         content2: Una flor morada puede tener 3, 2 o 1 néctares, pero tú no sabes
           la cantidad. ¿Qué bloques comprueban y recogen correctamente todo el néctar
@@ -480,10 +560,13 @@ es-MX:
       4-5 bee debug multi 1:
         answers:
         - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a2.png"
+          correct: true
         - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a3.png"
           correct: true
         - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a1.png"
+          correct: true
         - text: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_a4.png"
+          correct: true
         content1: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q1.png"
         content2: "/script_assets/4-5_images/bee/4-5_beedebug_multi_1_q2.png"
         questions:
@@ -494,8 +577,11 @@ es-MX:
         - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a1.png"
           correct: true
         - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a2.png"
+          correct: true
         - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a3.png"
+          correct: true
         - text: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_a4.png"
+          correct: true
         content1: "/script_assets/4-5_images/bee/4-5_beeloops_multi_1_q.png"
         questions:
         - text: "¿Qué bloques resolverán el desafío?"
@@ -505,8 +591,11 @@ es-MX:
         - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a1.png"
           correct: true
         - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a2.png"
+          correct: true
         - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a3.png"
+          correct: true
         - text: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_a4.png"
+          correct: true
         content1: "/script_assets/4-5_images/maze/4-5_mazeconditionals_multi_1_q.png,
           500"
         questions:
@@ -528,8 +617,11 @@ es-MX:
         - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a1.png"
           correct: true
         - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a2.png"
+          correct: true
         - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a3.png"
+          correct: true
         - text: "/script_assets/4-5_images/maze/4-5_maze_multi_1_a4.png"
+          correct: true
         content1: "/script_assets/4-5_images/maze/4-5_maze_multi_1_q.png, 500"
         questions:
         - text: "¿Qué bloques resuelven el desafío?"
@@ -712,13 +804,16 @@ es-MX:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
             AM.png
+          correct: true
         - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
             AM.png
           correct: true
         - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
             AM.png
+          correct: true
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
+          correct: true
         content1: Mira el código a continuación y predice cómo se mostrarán los títulos.
           Elige entre una de las opciones de la derecha.
         title: Verificación rápida de títulos
@@ -738,13 +833,16 @@ es-MX:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
             AM.png
+          correct: true
         - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
             AM.png
           correct: true
         - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
             AM.png
+          correct: true
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
+          correct: true
         content1: Mira el código a continuación y predice cómo se mostrarán los títulos.
           Elige entre una de las opciones de la derecha.
         title: Verificación rápida de títulos
@@ -764,13 +862,16 @@ es-MX:
         answers:
         - text: https://images.code.org/a4e973cc13db380ca1e1efeb4263974f-image-1473432905067.53.47
             AM.png
+          correct: true
         - text: https://images.code.org/1c660b4e54a3e835250597cb261d8e17-image-1473432905068.54.08
             AM.png
           correct: true
         - text: https://images.code.org/22e9ae6a04afd8251b29939a6fa63411-image-1473432905069.54.25
             AM.png
+          correct: true
         - text: https://images.code.org/0eee565202089d44a6bb5633603c45e0-image-1473432905069.54.50
             AM.png
+          correct: true
         content1: Mira el código a continuación y predice cómo se mostrarán los títulos.
           Elige entre una de las opciones de la derecha.
         title: Verificación rápida de títulos
@@ -1523,8 +1624,11 @@ es-MX:
         - text: verdadero<br>falso<br>verdadero
           correct: true
         - text: "  0<br>200<br>100"
+          correct: true
         - text: "  verdadero<br>error<br>verdadero"
+          correct: true
         - text: "  falso<br>verdadero<br>falso"
+          correct: true
         questions:
         - text: "¿Qué resultado se imprimirá en la consola con este programa?"
         title: Título
@@ -1541,8 +1645,11 @@ es-MX:
         - text: verdadero<br>falso<br>verdadero
           correct: true
         - text: "  0<br>200<br>100"
+          correct: true
         - text: "  verdadero<br>error<br>verdadero"
+          correct: true
         - text: "  falso<br>verdadero<br>falso"
+          correct: true
         questions:
         - text: "¿Qué resultado se imprimirá en la consola con este programa?"
         title: Título
@@ -1559,8 +1666,11 @@ es-MX:
         - text: verdadero<br>falso<br>verdadero
           correct: true
         - text: "  0<br>200<br>100"
+          correct: true
         - text: "  verdadero<br>error<br>verdadero"
+          correct: true
         - text: "  falso<br>verdadero<br>falso"
+          correct: true
         questions:
         - text: "¿Qué resultado se imprimirá en la consola con este programa?"
         title: Título
@@ -1653,10 +1763,12 @@ es-MX:
         answers:
         - text: Se dibujará el cuadrado rojo, pero no el verde. No puedes llamar funciones
             después de que se crean.
+          correct: true
           feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
             es una buena idea agruparlas en la parte inferior para que estén organizadas!
         - text: Se dibujará el cuadrado verde, pero no el rojo. No puedes llamar funciones
             antes de que sean creadas.
+          correct: true
           feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
             es una buena idea agruparlas en la parte inferior para que estén organizadas!
         - text: Se dibujarán ambos cuadrados. Puedes crear funciones en cualquier
@@ -1665,6 +1777,7 @@ es-MX:
           feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
             es una buena idea agruparlas en la parte inferior para que estén organizadas!
         - text: No se dibujará ningún cuadrado. Hay un error en el código.
+          correct: true
           feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
             es una buena idea agruparlas en la parte inferior para que estén organizadas!
         markdown: |-
@@ -1677,10 +1790,12 @@ es-MX:
         answers:
         - text: Se dibujará el cuadrado rojo, pero no el verde. No puedes llamar funciones
             después de que se crean.
+          correct: true
           feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
             es una buena idea agruparlas en la parte inferior para que estén organizadas!
         - text: Se dibujará el cuadrado verde, pero no el rojo. No puedes llamar funciones
             antes de que sean creadas.
+          correct: true
           feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
             es una buena idea agruparlas en la parte inferior para que estén organizadas!
         - text: Se dibujarán ambos cuadrados. Puedes crear funciones en cualquier
@@ -1689,6 +1804,7 @@ es-MX:
           feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
             es una buena idea agruparlas en la parte inferior para que estén organizadas!
         - text: No se dibujará ningún cuadrado. Hay un error en el código.
+          correct: true
           feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
             es una buena idea agruparlas en la parte inferior para que estén organizadas!
         markdown: |-
@@ -1701,10 +1817,12 @@ es-MX:
         answers:
         - text: Se dibujará el cuadrado rojo, pero no el verde. No puedes llamar funciones
             después de que se crean.
+          correct: true
           feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
             es una buena idea agruparlas en la parte inferior para que estén organizadas!
         - text: Se dibujará el cuadrado verde, pero no el rojo. No puedes llamar funciones
             antes de que sean creadas.
+          correct: true
           feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
             es una buena idea agruparlas en la parte inferior para que estén organizadas!
         - text: Se dibujarán ambos cuadrados. Puedes crear funciones en cualquier
@@ -1713,6 +1831,7 @@ es-MX:
           feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
             es una buena idea agruparlas en la parte inferior para que estén organizadas!
         - text: No se dibujará ningún cuadrado. Hay un error en el código.
+          correct: true
           feedback: Puedes crear funciones en cualquier parte de tu código. ¡Aunque
             es una buena idea agruparlas en la parte inferior para que estén organizadas!
         markdown: |-
@@ -2045,13 +2164,16 @@ es-MX:
         answers:
         - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
             style='border: 1px solid #ccc'>"
+          correct: true
         - text: "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif'
             style='border: 1px solid #ccc'>"
+          correct: true
         - text: "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif'
             style='border: 1px solid #ccc'>"
           correct: true
         - text: "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif'
             style='border: 1px solid #ccc'>"
+          correct: true
         questions:
         - text: Lee este programa y predice cuál de las siguientes animaciones se
             producirá.
@@ -2059,13 +2181,16 @@ es-MX:
         answers:
         - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
             style='border: 1px solid #ccc'>"
+          correct: true
         - text: "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif'
             style='border: 1px solid #ccc'>"
+          correct: true
         - text: "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif'
             style='border: 1px solid #ccc'>"
           correct: true
         - text: "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif'
             style='border: 1px solid #ccc'>"
+          correct: true
         questions:
         - text: Lee este programa y predice cuál de las siguientes animaciones se
             producirá.
@@ -2073,13 +2198,16 @@ es-MX:
         answers:
         - text: "<img src='https://images.code.org/649915789345f5958475cd2b91e0630c-image-1491939133180.gif'
             style='border: 1px solid #ccc'>"
+          correct: true
         - text: "<img src='https://images.code.org/2f5e7773ae2f99d6217929bd58490393-image-1491939162998.gif'
             style='border: 1px solid #ccc'>"
+          correct: true
         - text: "<img src='https://images.code.org/7c43fbce8cbbe7c15614203290f806e7-image-1491939169414.gif'
             style='border: 1px solid #ccc'>"
           correct: true
         - text: "<img src='https://images.code.org/c62dbed9a37b03958cb056bf493bd59c-image-1491939175575.gif'
             style='border: 1px solid #ccc'>"
+          correct: true
         questions:
         - text: Lee este programa y predice cuál de las siguientes animaciones se
             producirá.
@@ -2087,13 +2215,16 @@ es-MX:
         answers:
         - text: '<img src="https://images.code.org/9fe7b64b9f4f566213a02ce2fcc78af3-image-1491255143541.png"
             style="width: 150px; border: 1px solid">'
+          correct: true
         - text: '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png"
             style="width: 150px; border: 1px solid">'
+          correct: true
         - text: '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png"
             style="width: 150px; border: 1px solid">'
           correct: true
         - text: '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png"
             style="width: 150px; border: 1px solid">'
+          correct: true
         questions:
         - text: "¿Dónde estará el sprite <code>miSprite</code> una vez que se ejecute?"
       CSD U3 Sprites intro predict multi_2018:
@@ -2101,8 +2232,11 @@ es-MX:
         - text: "![](https://images.code.org/ad526743d374c692b411f61a52b89398-image-1579828535705.png)"
           correct: true
         - text: "![](https://images.code.org/975d041b251956c9f821ab976f22a005-image-1579828535713.png)"
+          correct: true
         - text: "![](https://images.code.org/6e19ea3d0036aa734e9b9cd6a4b3fbc8-image-1579828535708.png)"
+          correct: true
         - text: "![](https://images.code.org/d3f8937565496bba2654f0eb3935554b-image-1579828535710.png)"
+          correct: true
         questions:
         - text: "¿Dónde estará el sprite <code>miSprite</code> una vez que se ejecute?"
       CSD U3 Sprites intro predict multi_2018_2019:
@@ -2112,10 +2246,13 @@ es-MX:
           correct: true
         - text: '<img src="https://images.code.org/1e4cf8b84af44ac064f99c3370267f5c-image-1491255399012.png"
             style="width: 150px; border: 1px solid">'
+          correct: true
         - text: '<img src="https://images.code.org/5c6c1e71f8a36fc4c871342e0c447dad-image-1491255426577.png"
             style="width: 150px; border: 1px solid">'
+          correct: true
         - text: '<img src="https://images.code.org/7804e61306e15e3b5a2e0e9cc5906442-image-1491255443696.png"
             style="width: 150px; border: 1px solid">'
+          correct: true
         questions:
         - text: "¿Dónde estará el sprite <code>miSprite</code> una vez que se ejecute?"
       CSD U3 Using the Game Design Process SLFP:
@@ -2951,10 +3088,13 @@ es-MX:
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
             PM.png" width="200px" />
+          correct: true
         - text: <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
             PM.png" width="200px" />
+          correct: true
         - text: <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
             PM.png" width="200px" />
+          correct: true
         - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png" width="200px"
           correct: true
@@ -2968,10 +3108,13 @@ es-MX:
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
             PM.png" width="200px" />
+          correct: true
         - text: <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
             PM.png" width="200px" />
+          correct: true
         - text: <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
             PM.png" width="200px" />
+          correct: true
         - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png" width="200px"
           correct: true
@@ -2985,10 +3128,13 @@ es-MX:
         answers:
         - text: <img src="https://images.code.org/fc497646edb1fc92a4dfdca09030f294-image-1512686800362.42.54
             PM.png" width="200px" />
+          correct: true
         - text: <img src="https://images.code.org/d9b2a9eca6e2027c032bbc6c1e47e107-image-1512686800356.44.34
             PM.png" width="200px" />
+          correct: true
         - text: <img src="https://images.code.org/ae34c1d87e697c789303c5c1b602b7c6-image-1512686800360.44.11
             PM.png" width="200px" />
+          correct: true
         - text: <img src="https://images.code.org/d220337a4cd1ec31b0a5bb70eaf6bffe-image-1512686800364.42.00
             PM.png" width="200px"
           correct: true
@@ -3098,10 +3244,13 @@ es-MX:
         answers:
         - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
             style="max-width: 100px;">'
+          correct: true
         - text: '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png"
             style="max-width: 100px;">'
+          correct: true
         - text: '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png"
             style="max-width: 100px;">'
+          correct: true
         - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
             style="max-width: 100px;">'
           correct: true
@@ -3116,10 +3265,13 @@ es-MX:
         answers:
         - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
             style="max-width: 100px;">'
+          correct: true
         - text: '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png"
             style="max-width: 100px;">'
+          correct: true
         - text: '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png"
             style="max-width: 100px;">'
+          correct: true
         - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
             style="max-width: 100px;">'
           correct: true
@@ -3134,10 +3286,13 @@ es-MX:
         answers:
         - text: '<img src="https://images.code.org/f1bc9eacc1144bee60b1f04373e583e3-image-1507311692368.png"
             style="max-width: 100px;">'
+          correct: true
         - text: '<img src="https://images.code.org/f30263a5f6e47e6548706288e67b220d-image-1507311692372.png"
             style="max-width: 100px;">'
+          correct: true
         - text: '<img src="https://images.code.org/772be0de5cfed112f9066c05d2ea6bb7-image-1507311692376.png"
             style="max-width: 100px;">'
+          correct: true
         - text: '<img src="https://images.code.org/cea9a118066ffc296f1023f395e61058-image-1507311692360.png"
             style="max-width: 100px;">'
           correct: true
@@ -3708,10 +3863,13 @@ es-MX:
       K-1 Artist 1 Multi 1:
         answers:
         - text: "/script_assets/k_1_images/artist_images/W-S-S.png"
+          correct: true
         - text: "/script_assets/k_1_images/artist_images/E-S-S.png"
           correct: true
         - text: "/script_assets/k_1_images/artist_images/S-E-E.png"
+          correct: true
         - text: "/script_assets/k_1_images/artist_images/E-S.png"
+          correct: true
         content1: "/script_assets/k_1_images/artist_images/rshort_dlong.png, 500"
         questions:
         - text: "¿Qué bloques resuelven este desafío?"
@@ -3721,8 +3879,11 @@ es-MX:
         - text: "/script_assets/k_1_images/artist_images/N-E-S-W.png"
           correct: true
         - text: "/script_assets/k_1_images/artist_images/E-S-W-N.png"
+          correct: true
         - text: "/script_assets/k_1_images/artist_images/N-S-E-W.png"
+          correct: true
         - text: "/script_assets/k_1_images/artist_images/N-W-S-E.png"
+          correct: true
         content1: "/script_assets/k_1_images/artist_images/square.png, 500"
         questions:
         - text: "¿Qué bloques dibujan el cuadrado?"
@@ -3743,10 +3904,13 @@ es-MX:
       K-1 Bee 1 Multi 1:
         answers:
         - text: "/script_assets/k_1_images/bee_images/nectar.png"
+          correct: true
         - text: "/script_assets/k_1_images/bee_images/2nectar.png"
           correct: true
         - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+          correct: true
         - text: "/script_assets/k_1_images/bee_images/4nectar.png"
+          correct: true
         content1: "/script_assets/k_1_images/bee_images/1nectar+2nectar.png"
         questions:
         - text: "¿Cuántos néctares hay?"
@@ -3754,8 +3918,11 @@ es-MX:
       K-1 Bee 1 Multi 2:
         answers:
         - text: "/script_assets/k_1_images/bee_images/nectar.png"
+          correct: true
         - text: "/script_assets/k_1_images/bee_images/2nectar.png"
+          correct: true
         - text: "/script_assets/k_1_images/bee_images/3nectar.png"
+          correct: true
         - text: "/script_assets/k_1_images/bee_images/4nectar.png"
           correct: true
         content1: "/script_assets/k_1_images/bee_images/2nectar+2nectar.png"
@@ -3791,7 +3958,9 @@ es-MX:
       K-1 Digital Footprint Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+          correct: true
         - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
+          correct: true
         - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
           correct: true
         content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
@@ -3803,7 +3972,9 @@ es-MX:
         - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a1.png"
           correct: true
         - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a2.png"
+          correct: true
         - text: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_a3.png"
+          correct: true
         content1: "/script_assets/k_1_images/unplugged_images/getting_loopy_1_q.png"
         questions:
         - text: "¿Cómo usarías los bucles para simplificar esta secuencia?"
@@ -3811,10 +3982,13 @@ es-MX:
       K-1 Happy Maps Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/up.png"
+          correct: true
         - text: "/script_assets/k_1_images/unplugged_images/down.png"
           correct: true
         - text: "/script_assets/k_1_images/unplugged_images/left.png"
+          correct: true
         - text: "/script_assets/k_1_images/unplugged_images/right.png"
+          correct: true
         content1: "/script_assets/k_1_images/unplugged_images/happy_maps_1q.png"
         questions:
         - text: "¿Qué flecha lleva al Flurb hacia el tesoro?"
@@ -3824,7 +3998,9 @@ es-MX:
         - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a1.png"
           correct: true
         - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a2.png"
+          correct: true
         - text: "/script_assets/k_1_images/unplugged_images/keep_it_private_1_a3.png"
+          correct: true
         questions:
         - text: "¿Qué información <strong>no</strong> deberías compartir en línea?"
         title: Opción múltiple
@@ -3833,8 +4009,11 @@ es-MX:
         - text: "/script_assets/k_1_images/move_blocks/N.png"
           correct: true
         - text: "/script_assets/k_1_images/move_blocks/S.png"
+          correct: true
         - text: "/script_assets/k_1_images/move_blocks/E.png"
+          correct: true
         - text: "/script_assets/k_1_images/move_blocks/W.png"
+          correct: true
         content1: "/script_assets/k_1_images/maze_images/EESq.png, 700"
         questions:
         - text: "¿Qué opción debería ser el bloque final?"
@@ -3844,7 +4023,9 @@ es-MX:
         - text: "/script_assets/k_1_images/move_blocks/r3_N.png"
           correct: true
         - text: "/script_assets/k_1_images/move_blocks/r3_NN.png"
+          correct: true
         - text: "/script_assets/k_1_images/move_blocks/r4_N.png"
+          correct: true
         content1: "/script_assets/k_1_images/move_blocks/NNNequals.png, 300"
         questions:
         - text: "¿Qué bloque 'repetir' es el mismo?"
@@ -3852,7 +4033,9 @@ es-MX:
       K-1 Maze Loops Multi 2:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/r3_S.png"
+          correct: true
         - text: "/script_assets/k_1_images/move_blocks/r3_ES.png"
+          correct: true
         - text: "/script_assets/k_1_images/move_blocks/r3_SE.png"
           correct: true
         content1: "/script_assets/k_1_images/move_blocks/SESESEequals.png, 240"
@@ -3875,10 +4058,13 @@ es-MX:
       K-1 Maze Multiple Choice 2:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/EN.png"
+          correct: true
         - text: "/script_assets/k_1_images/move_blocks/ES.png"
+          correct: true
         - text: "/script_assets/k_1_images/move_blocks/WS.png"
           correct: true
         - text: "/script_assets/k_1_images/move_blocks/WN.png"
+          correct: true
         content1: "/script_assets/k_1_images/maze_images/maze_WS.png, 500"
         questions:
         - text: "¿Qué respuesta resuelve este nivel?"
@@ -3886,10 +4072,13 @@ es-MX:
       K-1 Move It Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/rightright.png"
+          correct: true
         - text: "/script_assets/k_1_images/unplugged_images/leftleft.png"
           correct: true
         - text: "/script_assets/k_1_images/unplugged_images/upleft.png"
+          correct: true
         - text: "/script_assets/k_1_images/unplugged_images/leftdown.png"
+          correct: true
         content1: "/script_assets/k_1_images/unplugged_images/move_it_1_q.png"
         questions:
         - text: "¿Qué algoritmo lleva al Flurb hasta las flores?"
@@ -3897,7 +4086,9 @@ es-MX:
       K-1 Plant a Seed Multi 1:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/poke-hole.png"
+          correct: true
         - text: "/script_assets/k_1_images/unplugged_images/foot-in-shoe.png"
+          correct: true
         - text: "/script_assets/k_1_images/unplugged_images/dirty-teeth.png"
           correct: true
         content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_1_q.png"
@@ -3907,9 +4098,11 @@ es-MX:
       K-1 Plant a Seed Multi 2:
         answers:
         - text: "/script_assets/k_1_images/unplugged_images/brush-teeth.png"
+          correct: true
         - text: "/script_assets/k_1_images/unplugged_images/cover-seed.png"
           correct: true
         - text: "/script_assets/k_1_images/unplugged_images/water-pot.png"
+          correct: true
         content1: "/script_assets/k_1_images/unplugged_images/plant_a_seed_2_q.png"
         questions:
         - text: "¿Qué paso debe llenar el espacio en blanco en este algoritmo?"
@@ -3917,9 +4110,11 @@ es-MX:
       K-1 Word Search Multi 1:
         answers:
         - text: "/script_assets/k_1_images/move_blocks/EEES.png"
+          correct: true
         - text: "/script_assets/k_1_images/move_blocks/EESS.png"
           correct: true
         - text: "/script_assets/k_1_images/move_blocks/ESSS.png"
+          correct: true
         content1: "/script_assets/k_1_images/search_images/move.png, 450"
         questions:
         - text: ¿Qué bloques forman la palabra "MOVE"?
@@ -3927,9 +4122,11 @@ es-MX:
       K-1 Word Search Multi 3:
         answers:
         - text: ESTABLECER
+          correct: true
         - text: CUADRADO
           correct: true
         - text: SUR
+          correct: true
         content1: "/script_assets/k_1_images/search_images/square.png, 700"
         questions:
         - text: "¿Qué palabra se forma?"
@@ -4798,9 +4995,9 @@ es-MX:
         markdown: |+
           # Primeros pasos > Realiza la encuesta previa
 
-          Queremos que aproveches al máximo este desarrollo profesional. Por esa razón, te pedimos que completes [esta breve encuesta previa] (https://form.jotform.com/90556900301146). La encuesta te pedirá que reflexiones sobre tus objetivos para este curso y nos contará un poco sobre quién eres y cómo podemos apoyarte.
+          Queremos que aproveches al máximo este desarrollo profesional. Por esa razón, te pedimos que completes [esta breve encuesta previa](https://docs.google.com/forms/d/e/1FAIpQLSea7ByKUzSO_oh0dxruJO8tu0e3-no4xt0u7yLaL6ZbWz9O4g/viewform). La encuesta te pedirá que reflexiones sobre tus objetivos para este curso y nos contará un poco sobre quién eres y cómo podemos apoyarte.
 
-          <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/>">Realiza la encuesta previa</a>
+          <a class="btn btn-large btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSea7ByKUzSO_oh0dxruJO8tu0e3-no4xt0u7yLaL6ZbWz9O4g/viewform">Realiza la encuesta previa</a>
 
       OPD-K5 Puzzles:
         markdown: |
@@ -6834,13 +7031,16 @@ es-MX:
       behaviors 1 predict:
         answers:
         - text: El sprite girará
+          correct: true
           feedback: Incorrecto.
         - text: El sprite se encogerá.
           correct: true
           feedback: "¡Correcto!"
         - text: El sprite se moverá.
+          correct: true
           feedback: Incorrecto.
         - text: El sprite cambiará los colores.
+          correct: true
           feedback: Incorrecto
         questions:
         - text: Haz clic en el botón "editar" para ver cómo funciona el `comportamiento
@@ -6848,13 +7048,16 @@ es-MX:
       behaviors 1 predict_2020:
         answers:
         - text: El sprite girará
+          correct: true
           feedback: Incorrecto.
         - text: El sprite se encogerá.
           correct: true
           feedback: "¡Correcto!"
         - text: El sprite se moverá.
+          correct: true
           feedback: Incorrecto.
         - text: El sprite cambiará los colores.
+          correct: true
           feedback: Incorrecto
         questions:
         - text: Haz clic en el botón "editar" para ver cómo funciona el `comportamiento
@@ -6862,13 +7065,16 @@ es-MX:
       behaviors 4 predict:
         answers:
         - text: A la izquierda y abajo
+          correct: true
           feedback: Incorrecto.
         - text: En diagonal
           correct: true
           feedback: "¡Correcto!"
         - text: Zigzag
+          correct: true
           feedback: 'Incorrecto. '
         - text: Abajo y a la izquierda
+          correct: true
           feedback: Incorrecto
         questions:
         - text: Haz una predicción. ¿En qué dirección se moverá el satélite hacia
@@ -6876,13 +7082,16 @@ es-MX:
       behaviors 4 predict_2020:
         answers:
         - text: A la izquierda y abajo
+          correct: true
           feedback: Incorrecto.
         - text: En diagonal
           correct: true
           feedback: "¡Correcto!"
         - text: Zigzag
+          correct: true
           feedback: 'Incorrecto. '
         - text: Abajo y a la izquierda
+          correct: true
           feedback: Incorrecto
         questions:
         - text: Haz una predicción. ¿En qué dirección se moverá el satélite hacia
@@ -6890,13 +7099,16 @@ es-MX:
       courseC_multi_artist_prog6_predict1:
         answers:
         - text: El artista dibujará un triángulo con tres lados iguales.
+          correct: true
           feedback: Incorrecto. El artista dibuja un cuadrado.
         - text: El artista dibujará una sola línea.
+          correct: true
           feedback: Incorrecto. El artista dibuja un cuadrado.
         - text: El artista dibuja un cuadrado.
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: El artista dibuja un cuadrado.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
@@ -6904,13 +7116,16 @@ es-MX:
       courseC_multi_artist_prog6_predict1_2018:
         answers:
         - text: El artista dibujará un triángulo con tres lados iguales.
+          correct: true
           feedback: Incorrecto. El artista dibuja un cuadrado.
         - text: El artista dibujará una sola línea.
+          correct: true
           feedback: Incorrecto. El artista dibuja un cuadrado.
         - text: El artista dibujará un cuadrado.
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: El artista dibuja un cuadrado.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
@@ -6918,13 +7133,16 @@ es-MX:
       courseC_multi_artist_prog6_predict1_2018_2019:
         answers:
         - text: El artista dibujará un triángulo con tres lados iguales.
+          correct: true
           feedback: Incorrecto. El artista dibuja un cuadrado.
         - text: El artista dibujará una sola línea.
+          correct: true
           feedback: Incorrecto. El artista dibuja un cuadrado.
         - text: El artista dibujará un cuadrado.
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: El artista dibuja un cuadrado.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
@@ -6932,13 +7150,16 @@ es-MX:
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
         answers:
         - text: El artista dibujará un triángulo con tres lados iguales.
+          correct: true
           feedback: Incorrecto. El artista dibuja un cuadrado.
         - text: El artista dibujará una sola línea.
+          correct: true
           feedback: Incorrecto. El artista dibuja un cuadrado.
         - text: El artista dibujará un cuadrado.
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: El artista dibuja un cuadrado.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
@@ -6946,15 +7167,18 @@ es-MX:
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
+          correct: true
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
             3 loops. 4 veces 3 es 12!
         - text: '12'
           correct: true
           feedback: "¡Correcto!"
         - text: '15'
+          correct: true
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
             3 loops. 4 veces 3 es 12!
         - text: No lo sé.
+          correct: true
           feedback: El granjero recogerá 4 calabazas en cada uno de los 3 loops. ¡4
             veces 3 es 12!
         questions:
@@ -6963,15 +7187,18 @@ es-MX:
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - text: '4'
+          correct: true
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
             3 loops. 4 veces 3 es 12!
         - text: '12'
           correct: true
           feedback: "¡Correcto!"
         - text: '15'
+          correct: true
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
             3 loops. 4 veces 3 es 12!
         - text: No lo sé.
+          correct: true
           feedback: El granjero recogerá 4 calabazas en cada uno de los 3 loops. ¡4
             veces 3 es 12!
         questions:
@@ -6980,15 +7207,18 @@ es-MX:
       courseC_multi_harvester_loops11_predict1_2018_2019:
         answers:
         - text: '4'
+          correct: true
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
             3 loops. 4 veces 3 es 12!
         - text: '12'
           correct: true
           feedback: "¡Correcto!"
         - text: '15'
+          correct: true
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
             3 loops. 4 veces 3 es 12!
         - text: No lo sé.
+          correct: true
           feedback: El granjero recogerá 4 calabazas en cada uno de los 3 loops. ¡4
             veces 3 es 12!
         questions:
@@ -6997,15 +7227,18 @@ es-MX:
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
         answers:
         - text: '4'
+          correct: true
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
             3 loops. 4 veces 3 es 12!
         - text: '12'
           correct: true
           feedback: "¡Correcto!"
         - text: '15'
+          correct: true
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
             3 loops. 4 veces 3 es 12!
         - text: No lo sé.
+          correct: true
           feedback: El granjero recogerá 4 calabazas en cada uno de los 3 loops. ¡4
             veces 3 es 12!
         questions:
@@ -7014,15 +7247,18 @@ es-MX:
       courseC_multi_maze_debugging8_predict1:
         answers:
         - text: El programa no fallará. Scrat llegará hasta la bellota.
+          correct: true
           feedback: Incorrecto. Scrat va por el camino equivocado luego de su último
             giro.
         - text: Scrat irá en la dirección equivocada luego de su último giro.
           correct: true
           feedback: "¡Correcto!"
         - text: Scrat da muy pocos pasos y no llega hasta la bellota.
+          correct: true
           feedback: Incorrecto. Dará unos pasos de más, porque Scrat giró en la dirección
             equivocada.
         - text: No lo sé.
+          correct: true
           feedback: 'El primer error es que Scrat va por el camino equivocado después
             de su último giro. '
         questions:
@@ -7031,15 +7267,18 @@ es-MX:
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - text: El programa no fallará. Scrat llegará hasta la bellota.
+          correct: true
           feedback: Incorrecto. Scrat va por el camino equivocado luego de su último
             giro.
         - text: Scrat irá en la dirección equivocada luego de su último giro.
           correct: true
           feedback: "¡Correcto!"
         - text: Scrat da muy pocos pasos y no llega hasta la bellota.
+          correct: true
           feedback: Incorrecto. Dará unos pasos de más, porque Scrat giró en la dirección
             equivocada.
         - text: No lo sé.
+          correct: true
           feedback: 'El primer error es que Scrat va por el camino equivocado después
             de su último giro. '
         questions:
@@ -7048,15 +7287,18 @@ es-MX:
       courseC_multi_maze_debugging8_predict1_2018_2019:
         answers:
         - text: El programa no fallará. Scrat llegará hasta la bellota.
+          correct: true
           feedback: Incorrecto. Scrat va por el camino equivocado luego de su último
             giro.
         - text: Scrat irá en la dirección equivocada luego de su último giro.
           correct: true
           feedback: "¡Correcto!"
         - text: Scrat da muy pocos pasos y no llega hasta la bellota.
+          correct: true
           feedback: Incorrecto. Dará unos pasos de más, porque Scrat giró en la dirección
             equivocada.
         - text: No lo sé.
+          correct: true
           feedback: 'El primer error es que Scrat va por el camino equivocado después
             de su último giro. '
         questions:
@@ -7065,6 +7307,7 @@ es-MX:
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
         answers:
         - text: Scrat llegará a la bellota. No hay errores en el código.
+          correct: true
           feedback: Incorrecto. Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota.
         - text: Scrat no llegará a la bellota, porque gira en sentido equivocado.
@@ -7077,6 +7320,7 @@ es-MX:
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
         - text: No lo sé.
+          correct: true
           feedback: Hay dos errores en este código. En primer lugar, Scrat gira en
             la dirección equivocada y a continuación, Scrat no se mueve hacia adelante
             suficientes veces para llegar a la bellota.
@@ -7086,15 +7330,18 @@ es-MX:
       courseC_multi_maze_programming8_predict1:
         answers:
         - text: El pájaro quedará a un paso del cerdo.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro chocará con el TNT.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: No lo sé.
+          correct: true
           feedback: En este código, el pájaro llega perfectamente hasta el cerdo.
         questions:
         - text: Lee el siguiente código con atención. ¿Qué sucederá cuando hagas clic
@@ -7102,15 +7349,18 @@ es-MX:
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - text: El pájaro quedará a un paso del cerdo.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro chocará con el TNT.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: No lo sé.
+          correct: true
           feedback: En este código, el pájaro llega perfectamente hasta el cerdo.
         questions:
         - text: Lee el siguiente código con atención. ¿Qué sucederá cuando hagas clic
@@ -7118,15 +7368,18 @@ es-MX:
       courseC_multi_maze_programming8_predict1_2018_2019:
         answers:
         - text: El pájaro quedará a un paso del cerdo.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro chocará con el TNT.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: No lo sé.
+          correct: true
           feedback: En este código, el pájaro llega perfectamente hasta el cerdo.
         questions:
         - text: Lee el siguiente código con atención. ¿Qué sucederá cuando hagas clic
@@ -7134,15 +7387,18 @@ es-MX:
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - text: El pájaro quedará a un paso del cerdo.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro chocará con el TNT.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: No lo sé.
+          correct: true
           feedback: En este código, el pájaro llega perfectamente hasta el cerdo.
         questions:
         - text: Lee el siguiente código con atención. ¿Qué sucederá cuando hagas clic
@@ -7150,58 +7406,71 @@ es-MX:
       courseC_multi_starWars_predict1:
         answers:
         - text: BB-8 no se moverá.
+          correct: true
           feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá solo un espacio
+          correct: true
           feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá 5 veces y recogerá toda la chatarra
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé
+          correct: true
           feedback: El bloque repetir hará que BB-8 avance 5 veces.
         questions:
         - text: ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?
       courseC_multi_starWars_predict1_2018:
         answers:
         - text: BB-8 no se moverá.
+          correct: true
           feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá solo un espacio
+          correct: true
           feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá 5 veces y recogerá toda la chatarra
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé
+          correct: true
           feedback: El bloque repetir hará que BB-8 avance 5 veces.
         questions:
         - text: ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?
       courseC_multi_starWars_predict1_2018_2019:
         answers:
         - text: BB-8 no se moverá.
+          correct: true
           feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá solo un espacio
+          correct: true
           feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá 5 veces y recogerá toda la chatarra
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé
+          correct: true
           feedback: El bloque repetir hará que BB-8 avance 5 veces.
         questions:
         - text: ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?
       courseC_multi_starWars_predict1_2018_2019_2020:
         answers:
         - text: BB-8 no se moverá.
+          correct: true
           feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá solo un espacio
+          correct: true
           feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá 5 veces y recogerá toda la chatarra
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé
+          correct: true
           feedback: El bloque repetir hará que BB-8 avance 5 veces.
         questions:
         - text: ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?
       courseC_multi_starWars_predict2:
         answers:
         - text: BB-8 irá demasiado lejos en el primer bucle.
+          correct: true
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
@@ -7209,9 +7478,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: BB-8 recogerá toda la chatarra sin problemas.
+          correct: true
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: No lo sé.
+          correct: true
           feedback: El primer loop sólo le permite a BB-8 avanzar 2 espacios, cuando
             necesita avanzar 3 espacios.
         questions:
@@ -7220,6 +7491,7 @@ es-MX:
       courseC_multi_starWars_predict2_2018:
         answers:
         - text: BB-8 irá demasiado lejos en el primer bucle.
+          correct: true
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
@@ -7227,9 +7499,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: BB-8 recogerá toda la chatarra sin problemas.
+          correct: true
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: No lo sé.
+          correct: true
           feedback: El primer loop sólo le permite a BB-8 avanzar 2 espacios, cuando
             necesita avanzar 3 espacios.
         questions:
@@ -7238,6 +7512,7 @@ es-MX:
       courseC_multi_starWars_predict2_2018_2019:
         answers:
         - text: BB-8 irá demasiado lejos en el primer bucle.
+          correct: true
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
@@ -7245,9 +7520,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: BB-8 recogerá toda la chatarra sin problemas.
+          correct: true
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: No lo sé.
+          correct: true
           feedback: El primer loop sólo le permite a BB-8 avanzar 2 espacios, cuando
             necesita avanzar 3 espacios.
         questions:
@@ -7256,6 +7533,7 @@ es-MX:
       courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
         - text: BB-8 irá demasiado lejos en el primer bucle.
+          correct: true
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
@@ -7263,9 +7541,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: BB-8 recogerá toda la chatarra sin problemas.
+          correct: true
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: No lo sé.
+          correct: true
           feedback: El primer loop sólo le permite a BB-8 avanzar 2 espacios, cuando
             necesita avanzar 3 espacios.
         questions:
@@ -7318,10 +7598,13 @@ es-MX:
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: A
+          correct: true
           feedback: Incorrecto.
         - text: B
+          correct: true
           feedback: Incorrecto.
         - text: C
+          correct: true
           feedback: Incorrecto.
         - text: D
           correct: true
@@ -7347,10 +7630,13 @@ es-MX:
       courseD_multi_artist_binary8_predict1_2018:
         answers:
         - text: A
+          correct: true
           feedback: Incorrecto.
         - text: B
+          correct: true
           feedback: Incorrecto.
         - text: C
+          correct: true
           feedback: Incorrecto.
         - text: D
           correct: true
@@ -7376,10 +7662,13 @@ es-MX:
       courseD_multi_artist_binary8_predict1_2018_2019:
         answers:
         - text: A
+          correct: true
           feedback: Incorrecto.
         - text: B
+          correct: true
           feedback: Incorrecto.
         - text: C
+          correct: true
           feedback: Incorrecto.
         - text: D
           correct: true
@@ -7405,10 +7694,13 @@ es-MX:
       courseD_multi_artist_binary8_predict1_2018_2019_2020:
         answers:
         - text: A
+          correct: true
           feedback: Incorrecto.
         - text: B
+          correct: true
           feedback: Incorrecto.
         - text: C
+          correct: true
           feedback: Incorrecto.
         - text: D
           correct: true
@@ -7437,12 +7729,15 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: B
+          correct: true
           feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
             repite un círculo 4 veces.
         - text: C
+          correct: true
           feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
             repite un círculo 4 veces.
         - text: No lo sé.
+          correct: true
           feedback: El loop interior hace un pentágono, y el loop exterior repite
             un círculo 4 veces.
         questions:
@@ -7461,12 +7756,15 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: B
+          correct: true
           feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
             repite un círculo 4 veces.
         - text: C
+          correct: true
           feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
             repite un círculo 4 veces.
         - text: No lo sé.
+          correct: true
           feedback: El loop interior hace un pentágono, y el loop exterior repite
             un círculo 4 veces.
         questions:
@@ -7485,12 +7783,15 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: B
+          correct: true
           feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
             repite un círculo 4 veces.
         - text: C
+          correct: true
           feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
             repite un círculo 4 veces.
         - text: No lo sé.
+          correct: true
           feedback: El loop interior hace un pentágono, y el loop exterior repite
             un círculo 4 veces.
         questions:
@@ -7509,12 +7810,15 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: B
+          correct: true
           feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
             repite un círculo 4 veces.
         - text: C
+          correct: true
           feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
             repite un círculo 4 veces.
         - text: No lo sé.
+          correct: true
           feedback: El loop interior hace un pentágono, y el loop exterior repite
             un círculo 4 veces.
         questions:
@@ -7531,6 +7835,7 @@ es-MX:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
+          correct: true
           feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
             obtener néctar solamente si hay una flor debajo de la nube.
         - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
@@ -7538,9 +7843,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
+          correct: true
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
+          correct: true
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
@@ -7552,6 +7859,7 @@ es-MX:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
+          correct: true
           feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
             obtener néctar solamente si hay una flor debajo de la nube.
         - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
@@ -7559,9 +7867,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
+          correct: true
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
+          correct: true
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
@@ -7573,6 +7883,7 @@ es-MX:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
+          correct: true
           feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
             obtener néctar solamente si hay una flor debajo de la nube.
         - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
@@ -7580,9 +7891,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
+          correct: true
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
+          correct: true
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
@@ -7594,6 +7907,7 @@ es-MX:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
+          correct: true
           feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
             obtener néctar solamente si hay una flor debajo de la nube.
         - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
@@ -7601,9 +7915,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
+          correct: true
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
+          correct: true
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
@@ -7615,6 +7931,7 @@ es-MX:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
+          correct: true
           feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
             obtener néctar solamente si hay una flor debajo de la nube.
         - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
@@ -7622,9 +7939,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
+          correct: true
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
+          correct: true
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
@@ -7638,12 +7957,15 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: La abeja tratará de obtener el néctar de las flores y del panal.
+          correct: true
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja tomar
             el néctar de cada flor y la miel de cada panal.
         - text: La abeja tratará de obtener la miel de las flores y del panal.
+          correct: true
           feedback: Incorrecto. Incorrecto. El bloque 'si hay flor' permite a la abeja
             tomar néctar de cada flor y miel de cada panal..
         - text: No lo sé.
+          correct: true
           feedback: El bloque `si en la flor` permite a la abeja tomar el néctar de
             cada flor y la miel de cada panal.
         questions:
@@ -7656,12 +7978,15 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: La abeja tratará de obtener el néctar de las flores y del panal.
+          correct: true
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja tomar
             el néctar de cada flor y la miel de cada panal.
         - text: La abeja tratará de obtener la miel de las flores y del panal.
+          correct: true
           feedback: Incorrecto. Incorrecto. El bloque 'si hay flor' permite a la abeja
             tomar néctar de cada flor y miel de cada panal..
         - text: No lo sé.
+          correct: true
           feedback: El bloque `si en la flor` permite a la abeja tomar el néctar de
             cada flor y la miel de cada panal.
         questions:
@@ -7674,12 +7999,15 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: La abeja tratará de obtener el néctar de las flores y del panal.
+          correct: true
           feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
             néctar en cada flor y hacer miel en cada panal.
         - text: La abeja tratará de obtener la miel de las flores y del panal.
+          correct: true
           feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
             a la abeja recoger néctar en cada flor y hacer miel en cada panal.
         - text: No lo sé.
+          correct: true
           feedback: El bloque ´si en una flor´ le permite a la abeja recoger néctar
             en cada flor y hacer miel en cada panal.
         questions:
@@ -7692,12 +8020,15 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: La abeja tratará de obtener el néctar de las flores y del panal.
+          correct: true
           feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
             néctar en cada flor y hacer miel en cada panal.
         - text: La abeja tratará de obtener la miel de las flores y del panal.
+          correct: true
           feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
             a la abeja recoger néctar en cada flor y hacer miel en cada panal.
         - text: No lo sé.
+          correct: true
           feedback: El bloque ´si en una flor´ le permite a la abeja recoger néctar
             en cada flor y hacer miel en cada panal.
         questions:
@@ -7707,15 +8038,18 @@ es-MX:
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - text: La abeja avanzará y obtendrá el néctar solo una vez.
+          correct: true
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
             el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
+          correct: true
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
             el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá todo el néctar.
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: La abeja enlaza la acción en bucle de avanzar y recoger el néctar,
             lo que permite resolver el desafío.
         questions:
@@ -7724,15 +8058,18 @@ es-MX:
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - text: La abeja avanzará y obtendrá el néctar solo una vez.
+          correct: true
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
             el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
+          correct: true
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
             el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá todo el néctar.
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: La abeja enlaza la acción en bucle de avanzar y recoger el néctar,
             lo que permite resolver el desafío.
         questions:
@@ -7741,15 +8078,18 @@ es-MX:
       courseD_multi_bee_nestedLoops2_predict1_2018_2019:
         answers:
         - text: La abeja avanzará y obtendrá el néctar solo una vez.
+          correct: true
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
             el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
+          correct: true
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
             el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá todo el néctar.
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: La abeja enlaza la acción en bucle de avanzar y recoger el néctar,
             lo que permite resolver el desafío.
         questions:
@@ -7758,15 +8098,18 @@ es-MX:
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - text: La abeja avanzará y obtendrá el néctar solo una vez.
+          correct: true
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
             el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
+          correct: true
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
             el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá todo el néctar.
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: La abeja enlaza la acción en bucle de avanzar y recoger el néctar,
             lo que permite resolver el desafío.
         questions:
@@ -7775,6 +8118,7 @@ es-MX:
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - text: '4'
+          correct: true
           feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
             y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
             bucle que ocurre dos veces. ¡4 veces 2 es 8!
@@ -7782,10 +8126,12 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: '12'
+          correct: true
           feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
             y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
             bucle que ocurre dos veces. ¡4 veces 2 es 8!
         - text: No lo sé.
+          correct: true
           feedback: La abeja recoge 2 néctares en un bucle de avance, y luego 2 néctares
             en un bucle hacia abajo. Esto está todo dentro de otro bucle que ocurre
             dos veces. ¡4 veces 2 es 8!
@@ -7795,6 +8141,7 @@ es-MX:
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
         - text: '4'
+          correct: true
           feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
             y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
             bucle que ocurre dos veces. ¡4 veces 2 es 8!
@@ -7802,10 +8149,12 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: '12'
+          correct: true
           feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
             y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
             bucle que ocurre dos veces. ¡4 veces 2 es 8!
         - text: No lo sé.
+          correct: true
           feedback: La abeja recoge 2 néctares en un bucle de avance, y luego 2 néctares
             en un bucle hacia abajo. Esto está todo dentro de otro bucle que ocurre
             dos veces. ¡4 veces 2 es 8!
@@ -7815,6 +8164,7 @@ es-MX:
       courseD_multi_bee_nestedLoops9_predict2_2018_2019:
         answers:
         - text: '4'
+          correct: true
           feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
             y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
             bucle que ocurre dos veces. ¡4 veces 2 es 8!
@@ -7822,10 +8172,12 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: '12'
+          correct: true
           feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
             y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
             bucle que ocurre dos veces. ¡4 veces 2 es 8!
         - text: No lo sé.
+          correct: true
           feedback: La abeja recoge 2 néctares en un bucle de avance, y luego 2 néctares
             en un bucle hacia abajo. Esto está todo dentro de otro bucle que ocurre
             dos veces. ¡4 veces 2 es 8!
@@ -7835,6 +8187,7 @@ es-MX:
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
         answers:
         - text: '4'
+          correct: true
           feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
             y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
             bucle que ocurre dos veces. ¡4 veces 2 es 8!
@@ -7842,10 +8195,12 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: '12'
+          correct: true
           feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
             y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
             bucle que ocurre dos veces. ¡4 veces 2 es 8!
         - text: No lo sé.
+          correct: true
           feedback: La abeja recoge 2 néctares en un bucle de avance, y luego 2 néctares
             en un bucle hacia abajo. Esto está todo dentro de otro bucle que ocurre
             dos veces. ¡4 veces 2 es 8!
@@ -7855,10 +8210,12 @@ es-MX:
       courseD_multi_collector_debugging10_predict1:
         answers:
         - text: Laurel girará en la dirección incorrecta al tratar de hacer un cuadrado.
+          correct: true
           feedback: Incorrecto. Esto es en parte correcto, pero el bucle no se ejecuta
             el tiempo suficiente para obtener todo el tesoro.
         - text: 'El bucle no se ejecuta el tiempo suficiente como para que Laurel
             obtenga todo el tesoro. '
+          correct: true
           feedback: Incorrecto. Esto fue parcialmente correcto, pues la abeja tomó
             el camino equivocado al tratar de hacer un cuadrado.
         - text: Laurel gira en la dirección equivocada *y* el bucle no se ejecuta
@@ -7866,6 +8223,7 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: Laurel gira en la dirección equivocada *y* el bucle no se ejecuta
             el tiempo suficiente como para que Laurel obtenga todo el tesoro.
         questions:
@@ -7875,8 +8233,10 @@ es-MX:
       courseD_multi_farmer_condLoops9_predict1:
         answers:
         - text: La cosechadora recogerá todos los cultivos.
+          correct: true
           feedback: Incorrecto. Aquí no hay ningún código para recoger la calabaza.
         - text: La cosechadora no recogerá cultivos en el camino que está tomando.
+          correct: true
           feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
             varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
@@ -7884,6 +8244,7 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: En este código, la cosechadora hará un patrón de escalones varias
             veces y recogerá la mayor cantidad de maíz o lechuga que encuentre. No
             recogerá la calabaza.
@@ -7896,8 +8257,10 @@ es-MX:
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - text: La cosechadora recogerá todos los cultivos.
+          correct: true
           feedback: Incorrecto. Aquí no hay ningún código para recoger la calabaza.
         - text: La cosechadora no recogerá cultivos en el camino que está tomando.
+          correct: true
           feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
             varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
@@ -7905,6 +8268,7 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: En este código, la cosechadora hará un patrón de escalones varias
             veces y recolectará la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
@@ -7917,8 +8281,10 @@ es-MX:
       courseD_multi_farmer_condLoops9_predict1_2018_2019:
         answers:
         - text: La cosechadora recogerá todos los cultivos.
+          correct: true
           feedback: Incorrecto. Aquí no hay ningún código para recoger la calabaza.
         - text: La cosechadora no recogerá cultivos en el camino que está tomando.
+          correct: true
           feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
             varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
@@ -7926,6 +8292,7 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: En este código, la cosechadora hará un patrón de escalones varias
             veces y recolectará la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
@@ -7938,8 +8305,10 @@ es-MX:
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
         answers:
         - text: La cosechadora recogerá todos los cultivos.
+          correct: true
           feedback: Incorrecto. Aquí no hay ningún código para recoger la calabaza.
         - text: La cosechadora no recogerá cultivos en el camino que está tomando.
+          correct: true
           feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
             varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
@@ -7947,6 +8316,7 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: En este código, la cosechadora hará un patrón de escalones varias
             veces y recolectará la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
@@ -7959,6 +8329,7 @@ es-MX:
       courseD_multi_farmer_ramp13:
         answers:
         - text: La granjera llegará al final del camino y cosechará las calabazas.
+          correct: true
           feedback: Incorrecto. El bloque `recoger calabaza` está dentro del bucle,
             por lo que la granjera intentará recoger calabazas en cada paso, en lugar
             de hacerlo solo al final.
@@ -7967,10 +8338,12 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: La granjera caminará cuatro espacios e intentará recoger una calabaza.
+          correct: true
           feedback: Incorrecto. El bloque `recoger calabaza` está dentro del bucle,
             por lo que la granjera intentará recoger calabazas en cada paso, en lugar
             de hacerlo solo al final.
         - text: No lo sé.
+          correct: true
           feedback: El bloque `recoger calabaza` está dentro del bucle, por lo que
             la granjera intentará recoger calabazas en cada paso, en lugar de hacerlo
             solo al final.
@@ -7983,14 +8356,17 @@ es-MX:
       courseD_multi_farmer_while10_predict2:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
+          correct: true
           feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
         - text: Este código dejará los orificios completamente intactos.
+          correct: true
           feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
             de bucle, pero no existe un código para limpiar la tierra de la pila.
         - text: No lo sé.
+          correct: true
           feedback: El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero
             no existe un código para limpiar la tierra de la pila.
         questions:
@@ -7999,14 +8375,17 @@ es-MX:
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
+          correct: true
           feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
         - text: Este código dejará los orificios completamente intactos.
+          correct: true
           feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
             de bucle, pero no existe un código para limpiar la tierra de la pila.
         - text: No lo sé.
+          correct: true
           feedback: El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero
             no existe un código para limpiar la tierra de la pila.
         questions:
@@ -8015,14 +8394,17 @@ es-MX:
       courseD_multi_farmer_while10_predict2_2018_2019:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
+          correct: true
           feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
         - text: Este código dejará los orificios completamente intactos.
+          correct: true
           feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
             de bucle, pero no existe un código para limpiar la tierra de la pila.
         - text: No lo sé.
+          correct: true
           feedback: El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero
             no existe un código para limpiar la tierra de la pila.
         questions:
@@ -8031,14 +8413,17 @@ es-MX:
       courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
+          correct: true
           feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
         - text: Este código dejará los orificios completamente intactos.
+          correct: true
           feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
             de bucle, pero no existe un código para limpiar la tierra de la pila.
         - text: No lo sé.
+          correct: true
           feedback: El bucle `mientras` podrá manejar cualquier tamaño de bucle, pero
             no existe un código para limpiar la tierra de la pila.
         questions:
@@ -8047,9 +8432,11 @@ es-MX:
       courseD_multi_farmer_while4_predict1:
         answers:
         - text: No sucederá nada.
+          correct: true
           feedback: Incorrecto. La granjera removerá la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera nunca dejará de quitar la tierra.
+          correct: true
           feedback: Incorrecto. La granjera removerá la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
@@ -8057,6 +8444,7 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: La granjera quitará la tierra mientras exista una pila, y luego
             se detendrá cuando la pila desaparezca
         questions:
@@ -8065,9 +8453,11 @@ es-MX:
       courseD_multi_farmer_while4_predict1_2018:
         answers:
         - text: No sucederá nada.
+          correct: true
           feedback: Incorrecto. La granjera removerá la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera nunca dejará de quitar la tierra.
+          correct: true
           feedback: Incorrecto. La granjera removerá la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
@@ -8075,6 +8465,7 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: La granjera quitará la tierra mientras exista una pila, y luego
             se detendrá cuando la pila desaparezca
         questions:
@@ -8083,9 +8474,11 @@ es-MX:
       courseD_multi_farmer_while4_predict1_2018_2019:
         answers:
         - text: No sucederá nada.
+          correct: true
           feedback: Incorrecto. La granjera removerá la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera nunca dejará de quitar la tierra.
+          correct: true
           feedback: Incorrecto. La granjera removerá la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
@@ -8093,6 +8486,7 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: La granjera quitará la tierra mientras exista una pila, y luego
             se detendrá cuando la pila desaparezca
         questions:
@@ -8101,9 +8495,11 @@ es-MX:
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
         answers:
         - text: No sucederá nada.
+          correct: true
           feedback: Incorrecto. La granjera removerá la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera nunca dejará de quitar la tierra.
+          correct: true
           feedback: Incorrecto. La granjera removerá la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
@@ -8111,6 +8507,7 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: La granjera quitará la tierra mientras exista una pila, y luego
             se detendrá cuando la pila desaparezca
         questions:
@@ -8122,13 +8519,16 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: El zombie llegará al girasol.
+          correct: true
           feedback: Incorrecto. En este código, busca un giro a la derecha *antes*
             de ver si puede ir derecho. Debido a esto, el desafío falla.
         - text: El zombie girará a la derecha en el primer camino y dará vueltas en
             círculos sin parar.
+          correct: true
           feedback: Incorrecto. El zombie busca un giro a la derecha o un camino recto.
             Nunca mira para girar a la izquierda, por lo que se atasca casi inmediatamente.
         - text: No lo sé.
+          correct: true
           feedback: En este código, busca un giro a la derecha *antes* de ver si puede
             ir derecho. Debido a esto, el desafío falla.
         questions:
@@ -8140,13 +8540,16 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: El zombie llegará al girasol.
+          correct: true
           feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
             ir y venir.
         - text: El zombie girará a la derecha en el primer camino y dará vueltas en
             círculos sin parar.
+          correct: true
           feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
             ir y venir.
         - text: No lo sé.
+          correct: true
           feedback: En este código, el zombie pasará el camino correcto, y no dejará
             de ir y venir.
         questions:
@@ -8158,13 +8561,16 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: El zombie llegará al girasol.
+          correct: true
           feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
             ir y venir.
         - text: El zombie girará a la derecha en el primer camino y dará vueltas en
             círculos sin parar.
+          correct: true
           feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
             ir y venir.
         - text: No lo sé.
+          correct: true
           feedback: En este código, el zombie pasará el camino correcto, y no dejará
             de ir y venir.
         questions:
@@ -8176,13 +8582,16 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: El zombie llegará al girasol.
+          correct: true
           feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
             ir y venir.
         - text: El zombie girará a la derecha en el primer camino y dará vueltas en
             círculos sin parar.
+          correct: true
           feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
             ir y venir.
         - text: No lo sé.
+          correct: true
           feedback: En este código, el zombie pasará el camino correcto, y no dejará
             de ir y venir.
         questions:
@@ -8191,6 +8600,7 @@ es-MX:
       courseD_multi_maze_until2_predict1:
         answers:
         - text: El pájaro no se moverá en lo absoluto.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
             al cerdo!
@@ -8198,10 +8608,12 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro avanzará y chocará con el TNT.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino seguro, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta
             llegar al cerdo!
         - text: No lo sé.
+          correct: true
           feedback: En este código, el pájaro avanza mientras haya un camino, y luego
             gira a la izquierda. ¡Seguirá haciendo esto hasta llegar al cerdo!
         questions:
@@ -8210,6 +8622,7 @@ es-MX:
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - text: El pájaro no se moverá en lo absoluto.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
             al cerdo!
@@ -8217,10 +8630,12 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro avanzará y chocará con el TNT.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino seguro, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta
             llegar al cerdo!
         - text: No lo sé.
+          correct: true
           feedback: En este código, el pájaro avanza mientras haya un camino, y luego
             gira a la izquierda. ¡Seguirá haciendo esto hasta llegar al cerdo!
         questions:
@@ -8229,6 +8644,7 @@ es-MX:
       courseD_multi_maze_until2_predict1_2018_2019:
         answers:
         - text: El pájaro no se moverá en lo absoluto.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
             al cerdo!
@@ -8236,10 +8652,12 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro avanzará y chocará con el TNT.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino seguro, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta
             llegar al cerdo!
         - text: No lo sé.
+          correct: true
           feedback: En este código, el pájaro avanza mientras haya un camino, y luego
             gira a la izquierda. ¡Seguirá haciendo esto hasta llegar al cerdo!
         questions:
@@ -8248,6 +8666,7 @@ es-MX:
       courseD_multi_maze_until2_predict1_2018_2019_2020:
         answers:
         - text: El pájaro no se moverá en lo absoluto.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
             al cerdo!
@@ -8255,10 +8674,12 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro avanzará y chocará con el TNT.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino seguro, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta
             llegar al cerdo!
         - text: No lo sé.
+          correct: true
           feedback: En este código, el pájaro avanza mientras haya un camino, y luego
             gira a la izquierda. ¡Seguirá haciendo esto hasta llegar al cerdo!
         questions:
@@ -8267,6 +8688,7 @@ es-MX:
       courseD_multi_scrat_predict1:
         answers:
         - text: Nada. Scrat no se moverá en absoluto.
+          correct: true
           feedback: Incorrecto. Colocar el bloque 'avanzar' dentro del bloque 'repetir'
             hará que Scrat avance tres veces.
         - text: Scrat avanzará tres veces, girará, y luego avanzará tres veces más.
@@ -8274,9 +8696,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: Scrat avanzará, y luego girará y chocará.
+          correct: true
           feedback: Incorrecto. Colocar el bloque 'avanzar' dentro del bloque 'repetir'
             hará que Scrat avance tres veces.
         - text: No lo sé.
+          correct: true
           feedback: Poner el bloque 'avanzar' dentro del bloque 'repetir' hará que
             Scrat avance tres veces. Luego, gira y avanza otras tres veces, ¡y llega
             hasta la bellota!
@@ -8312,12 +8736,15 @@ es-MX:
           feedback: "¡Correcto! No importa que haya una cantidad diferente de miel.
             La función está programada para manejar eso."
         - text: La abeja no hará miel suficiente.
+          correct: true
           feedback: Incorrecto. La función está programada para manejar cualquier
             cantidad de miel superior a 0.
         - text: La abeja intentará hacer demasiada miel.
+          correct: true
           feedback: Incorrecto. La función está programada para manejar cualquier
             cantidad de miel superior a 0.
         - text: No lo sé.
+          correct: true
           feedback: El programa también trabajará para resolver este desafío. Está
             programado para manejar cualquier cantidad de miel superior a 0.
         questions:
@@ -8327,12 +8754,15 @@ es-MX:
       courseE_multi_farmer_functions11_predict:
         answers:
         - text: La cosechadora recogerá dos calabazas.
+          correct: true
           feedback: Incorrecto. La cosechadora no llama a la función `revisar y escoger`
             hasta que llega al maíz.
         - text: La cosechadora recogerá todas las calabazas.
+          correct: true
           feedback: Incorrecto. La cosechadora no llama a la función `revisar y escoger`
             hasta que llega al maíz.
         - text: La cosechadora recogerá la lechuga.
+          correct: true
           feedback: Incorrecto. La cosechadora solo gira una vez y termina en el maíz.
         - text: La cosechadora recogerá el maíz.
           correct: true
@@ -8342,15 +8772,18 @@ es-MX:
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - text: La cosechadora recogerá dos calabazas.
+          correct: true
           feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         - text: La cosechadora recogerá todas las calabazas.
+          correct: true
           feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         - text: La cosechadora recogerá la lechuga.
           correct: true
           feedback: "¡Correcto!"
         - text: La cosechadora recogerá el maíz.
+          correct: true
           feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         questions:
@@ -8358,15 +8791,18 @@ es-MX:
       courseE_multi_farmer_functions11_predict_2018_2019:
         answers:
         - text: La cosechadora recogerá dos calabazas.
+          correct: true
           feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         - text: La cosechadora recogerá todas las calabazas.
+          correct: true
           feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         - text: La cosechadora recogerá la lechuga.
           correct: true
           feedback: "¡Correcto!"
         - text: La cosechadora recogerá el maíz.
+          correct: true
           feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         questions:
@@ -8374,15 +8810,18 @@ es-MX:
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
         - text: La cosechadora recogerá dos calabazas.
+          correct: true
           feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         - text: La cosechadora recogerá todas las calabazas.
+          correct: true
           feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         - text: La cosechadora recogerá la lechuga.
           correct: true
           feedback: "¡Correcto!"
         - text: La cosechadora recogerá el maíz.
+          correct: true
           feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         questions:
@@ -8390,12 +8829,15 @@ es-MX:
       courseE_prediction_artistFunction1:
         answers:
         - text: Nada. No se llama a la función en el programa.
+          correct: true
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará un solo cuadrado.
+          correct: true
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará dos cuadrados que se superponen.
+          correct: true
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
         - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
@@ -8407,12 +8849,15 @@ es-MX:
       courseE_prediction_artistFunction1_2018:
         answers:
         - text: Nada. No se llama a la función en el programa.
+          correct: true
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará un solo cuadrado.
+          correct: true
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará dos cuadrados que se superponen.
+          correct: true
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
         - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
@@ -8424,12 +8869,15 @@ es-MX:
       courseE_prediction_artistFunction1_2018_2019:
         answers:
         - text: Nada. No se llama a la función en el programa.
+          correct: true
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará un solo cuadrado.
+          correct: true
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará dos cuadrados que se superponen.
+          correct: true
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
         - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
@@ -8441,12 +8889,15 @@ es-MX:
       courseE_prediction_artistFunction1_2018_2019_2020:
         answers:
         - text: Nada. No se llama a la función en el programa.
+          correct: true
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará un solo cuadrado.
+          correct: true
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará dos cuadrados que se superponen.
+          correct: true
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
         - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
@@ -8458,12 +8909,15 @@ es-MX:
       courseE_prediction_artistFunction1_copy:
         answers:
         - text: Nada. No se llama a la función en el programa.
+          correct: true
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará un solo cuadrado.
+          correct: true
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará dos cuadrados que se superponen.
+          correct: true
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
         - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
@@ -8538,14 +8992,17 @@ es-MX:
       courseF_bee_variables_8a_2018:
         answers:
         - text: La abeja no recogerá néctar, porque la variable no se llama "recoger".
+          correct: true
           feedback: Incorrecto. El nombre de tu variable no afecta su valor.
         - text: La abeja solo recogerá 2 néctares.
           correct: true
           feedback: "¡Correcto!"
         - text: La abeja recogerá todo el néctar.
+          correct: true
           feedback: Incorrecto. La variable vuelve a 0 antes de las dos últimas llamadas
             de funciones.
         - text: No lo sé.
+          correct: true
           feedback: La variable vuelve a 0 antes de las dos últimas llamadas de funciones,
             donde se agrega 1 cada vez. La abeja recogerá 2 unidades de néctar.
         questions:
@@ -8555,14 +9012,17 @@ es-MX:
       courseF_bee_variables_8a_2018_2019:
         answers:
         - text: La abeja no recogerá néctar, porque la variable no se llama "recoger".
+          correct: true
           feedback: Incorrecto. El nombre de tu variable no afecta su valor.
         - text: La abeja solo recogerá 2 néctares.
           correct: true
           feedback: "¡Correcto!"
         - text: La abeja recogerá todo el néctar.
+          correct: true
           feedback: Incorrecto. La variable vuelve a 0 antes de las dos últimas llamadas
             de funciones.
         - text: No lo sé.
+          correct: true
           feedback: La variable vuelve a 0 antes de las dos últimas llamadas de funciones,
             donde se agrega 1 cada vez. La abeja recogerá 2 unidades de néctar.
         questions:
@@ -8572,14 +9032,17 @@ es-MX:
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
         - text: La abeja no recogerá néctar, porque la variable no se llama "recoger".
+          correct: true
           feedback: Incorrecto. El nombre de tu variable no afecta su valor.
         - text: La abeja solo recogerá 2 néctares.
           correct: true
           feedback: "¡Correcto!"
         - text: La abeja recogerá todo el néctar.
+          correct: true
           feedback: Incorrecto. La variable vuelve a 0 antes de las dos últimas llamadas
             de funciones.
         - text: No lo sé.
+          correct: true
           feedback: La variable vuelve a 0 antes de las dos últimas llamadas de funciones,
             donde se agrega 1 cada vez. La abeja recogerá 2 unidades de néctar.
         questions:
@@ -8787,9 +9250,11 @@ es-MX:
         answers:
         - text: El artista dibujará una línea recta que aumenta su grosor de un lado
             al otro del espacio de juego.
+          correct: true
           feedback: Incorrecto. El artista gira entre repeticiones del bucle `desde`.
         - text: 'El artista dibujará una espiral y, cada vez que pase por el bucle
             `desde`, la línea se volverá más larga y más delgada. '
+          correct: true
           feedback: Incorrecto. Cada vez que pasa por el bucle `desde`, el artista
             dibuja una línea más larga y más gruesa.
         - text: El artista dibujará una espiral y, cada vez que pase por el bucle
@@ -8797,6 +9262,7 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: Incorrecto. Cada vez que pasa por el bucle `desde`, el artista
             dibuja una línea más larga y más gruesa.
         questions:
@@ -8807,9 +9273,11 @@ es-MX:
         answers:
         - text: El artista dibujará una línea recta que aumenta su grosor de un lado
             al otro del espacio de juego.
+          correct: true
           feedback: Incorrecto. El artista gira entre repeticiones del bucle `desde`.
         - text: 'El artista dibujará una espiral y, cada vez que pase por el bucle
             `desde`, la línea se volverá más larga y más delgada. '
+          correct: true
           feedback: Incorrecto. Cada vez que pasa por el bucle `desde`, el artista
             dibuja una línea más larga y más gruesa.
         - text: El artista dibujará una espiral y, cada vez que pase por el bucle
@@ -8817,6 +9285,7 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: Incorrecto. Cada vez que pasa por el bucle `desde`, el artista
             dibuja una línea más larga y más gruesa.
         questions:
@@ -8827,9 +9296,11 @@ es-MX:
         answers:
         - text: El artista dibujará una línea recta que aumenta su grosor de un lado
             al otro del espacio de juego.
+          correct: true
           feedback: Incorrecto. El artista gira entre repeticiones del bucle `desde`.
         - text: 'El artista dibujará una espiral y, cada vez que pase por el bucle
             `desde`, la línea se volverá más larga y más delgada. '
+          correct: true
           feedback: Incorrecto. Cada vez que pasa por el bucle `desde`, el artista
             dibuja una línea más larga y más gruesa.
         - text: El artista dibujará una espiral y, cada vez que pase por el bucle
@@ -8837,6 +9308,7 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: Incorrecto. Cada vez que pasa por el bucle `desde`, el artista
             dibuja una línea más larga y más gruesa.
         questions:
@@ -8847,9 +9319,11 @@ es-MX:
         answers:
         - text: El artista dibujará una línea recta que aumenta su grosor de un lado
             al otro del espacio de juego.
+          correct: true
           feedback: Incorrecto. El artista gira entre repeticiones del bucle `desde`.
         - text: 'El artista dibujará una espiral y, cada vez que pase por el bucle
             `desde`, la línea se volverá más larga y más delgada. '
+          correct: true
           feedback: Incorrecto. Cada vez que pasa por el bucle `desde`, el artista
             dibuja una línea más larga y más gruesa.
         - text: El artista dibujará una espiral y, cada vez que pase por el bucle
@@ -8857,6 +9331,7 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: No lo sé.
+          correct: true
           feedback: Incorrecto. Cada vez que pasa por el bucle `desde`, el artista
             dibuja una línea más larga y más gruesa.
         questions:
@@ -8871,13 +9346,16 @@ es-MX:
           feedback: "¡Correcto!"
         - text: El artista usará dos funciones diferentes para dibujar dos cajas de
             diferente tamaño.
+          correct: true
           feedback: Incorrecto. Los parámetros te permiten usar una única función
             para crear diferentes resultados.
         - text: El artista usará dos funciones diferentes para dibujar una caja del
             mismo tamaño dos veces.
+          correct: true
           feedback: Incorrecto. Los parámetros te permiten usar una única función
             para crear diferentes resultados.
         - text: No lo sé.
+          correct: true
           feedback: El programa usa parámetros para que una única función pueda crear
             dos cajas de diferente tamaño.
         markdown: |+
@@ -8892,12 +9370,15 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
+          correct: true
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que estar en el bucle `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
+          correct: true
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
         - text: No lo sé.
+          correct: true
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
             `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
         questions:
@@ -8909,12 +9390,15 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
+          correct: true
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que estar en el bucle `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
+          correct: true
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
         - text: No lo sé.
+          correct: true
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
             `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
         questions:
@@ -8926,12 +9410,15 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
+          correct: true
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que estar en el bucle `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
+          correct: true
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
         - text: No lo sé.
+          correct: true
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
             `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
         questions:
@@ -8943,12 +9430,15 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
+          correct: true
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que estar en el bucle `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
+          correct: true
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
         - text: No lo sé.
+          correct: true
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
             `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
         questions:
@@ -8958,6 +9448,7 @@ es-MX:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
+          correct: true
           feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
             obtener néctar solamente si hay una flor debajo de la nube.
         - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
@@ -8965,9 +9456,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
+          correct: true
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
+          correct: true
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         markdown: 'La nube bloquea la vista. Podría haber una flor debajo de esta
@@ -8983,13 +9476,16 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: La abeja tratará de obtener el néctar de las flores y del panal.
+          correct: true
           feedback: Incorrecto. El bloque `si en la flor` permite a la abeja obtener
             el néctar de cada flor y hacer la miel si no hay una flor (y, por lo tanto,
             hay un panal).
         - text: La abeja tratará de obtener la miel de las flores y del panal.
+          correct: true
           feedback: Incorrecto. Incorrecto. El bloque `si en la flor` permite a la
             abeja obtener el néctar de cada flor y la miel de cada panal.
         - text: No lo sé.
+          correct: true
           feedback: El bloque `si en la flor` permite a la abeja tomar el néctar de
             cada flor; de lo contrario, hará miel.
         markdown: 'A veces la nube cubre una flor, ¡y a veces cubre un panal! De una
@@ -9002,6 +9498,7 @@ es-MX:
       courseF_multi_bee_for3_predict1:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
+          correct: true
           feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
             correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
@@ -9009,10 +9506,12 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
+          correct: true
           feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
             correcta de néctar, pero solo llegará a 4 flores.
         - text: 'La abeja avanzará y tratará de recoger más néctar del que hay en
             las flores. '
+          correct: true
           feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
             correcta de néctar, pero solo llegará a 4 flores.
         questions:
@@ -9022,6 +9521,7 @@ es-MX:
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
+          correct: true
           feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
             correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
@@ -9029,9 +9529,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
+          correct: true
           feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
             correcta de néctar, pero solo llegará a 4 flores.
         - text: 'No lo sé. '
+          correct: true
           feedback: Con el bucle `desde`, la abeja podrá recoger la cantidad correcta
             de néctar, pero solo llegará a 4 flores.
         questions:
@@ -9041,6 +9543,7 @@ es-MX:
       courseF_multi_bee_for3_predict1_2018_2019:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
+          correct: true
           feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
             correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
@@ -9048,9 +9551,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
+          correct: true
           feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
             correcta de néctar, pero solo llegará a 4 flores.
         - text: 'No lo sé. '
+          correct: true
           feedback: Con el bucle `desde`, la abeja podrá recoger la cantidad correcta
             de néctar, pero solo llegará a 4 flores.
         questions:
@@ -9060,6 +9565,7 @@ es-MX:
       courseF_multi_bee_for3_predict1_2018_2019_2020:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
+          correct: true
           feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
             correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
@@ -9067,9 +9573,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
+          correct: true
           feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
             correcta de néctar, pero solo llegará a 4 flores.
         - text: 'No lo sé. '
+          correct: true
           feedback: Con el bucle `desde`, la abeja podrá recoger la cantidad correcta
             de néctar, pero solo llegará a 4 flores.
         questions:
@@ -9079,6 +9587,7 @@ es-MX:
       courseF_multi_bee_fwp9_predict1:
         answers:
         - text: La abeja no recogerá néctar o miel.
+          correct: true
           feedback: Incorrecto. La función está definida por un parámetro para recoger
             todo el néctar o la miel que se encuentre.
         - text: 'La abeja recogerá tres néctares o mieles, y luego dos néctares o
@@ -9087,9 +9596,11 @@ es-MX:
           feedback: "¡Correcto! La función está definida por un parámetro para recoger
             todo el néctar o la miel que se encuentre."
         - text: 'La abeja recogerá un solo néctar o miel en cada repetición del bucle. '
+          correct: true
           feedback: Incorrecto. La función está definida por un parámetro para recoger
             todo el néctar o la miel que se encuentre.
         - text: No lo sé.
+          correct: true
           feedback: Al hacer clic para ver dentro de la función, verás que está definida
             por un parámetro para recoger todo el néctar o la miel que se encuentre.
         markdown: |+
@@ -9104,12 +9615,15 @@ es-MX:
           correct: true
           feedback: 'Correcto. '
         - text: El pirata diría "Encantado de conocerte", y eso sería todo.
+          correct: true
           feedback: Incorrecto. Observa que el bloque `unirse` inserta el nombre en
             la oración del pirata.
         - text: El pirata diría "Ali", y eso sería todo.
+          correct: true
           feedback: Incorrecto. Observa que el bloque `unirse` inserta el nombre en
             la oración del pirata.
         - text: No lo sé.
+          correct: true
           feedback: 'Incorrecto. Observa que el bloque `unirse` inserta el nombre
             (Ali) en la oración del pirata. '
         markdown: "**Este desafío usa un nuevo bloque llamado `preguntar`.**\n\nEl
@@ -9163,15 +9677,18 @@ es-MX:
       coursee_prediction_artistfunction2:
         answers:
         - text: El artista resolverá el desafío correctamente.
+          correct: true
           feedback: Incorrecto. El bucle usa "dibujar polígono" en lugar de "dibujar
             línea de polígonos".
         - text: El artista dibujará cuatro cuadrados en un patrón de ventana.
           correct: true
           feedback: "¡Correcto!"
         - text: El artista dibujará solo una línea de cuadrados.
+          correct: true
           feedback: Incorrecto. El programa no llama a la función "dibujar línea de
             polígonos".
         - text: El artista dibujará cuatro cuadrados, uno encima de otro.
+          correct: true
           feedback: Incorrecto. El bucle gira 90 grados entre llamadas a "dibujar
             polígono".
         questions:
@@ -9179,15 +9696,18 @@ es-MX:
       coursee_prediction_artistfunction2_2018:
         answers:
         - text: El artista resolverá el desafío correctamente.
+          correct: true
           feedback: Incorrecto. El bucle usa "dibujar polígono" en lugar de "dibujar
             línea de polígonos".
         - text: El artista dibujará cuatro cuadrados en un patrón de ventana.
           correct: true
           feedback: "¡Correcto!"
         - text: El artista dibujará solo una línea de cuadrados.
+          correct: true
           feedback: Incorrecto. El programa no llama a la función "dibujar línea de
             polígonos".
         - text: El artista dibujará cuatro cuadrados, uno encima de otro.
+          correct: true
           feedback: Incorrecto. El bucle gira 90 grados entre llamadas a "dibujar
             polígono".
         questions:
@@ -9195,15 +9715,18 @@ es-MX:
       coursee_prediction_artistfunction2_2018_2019:
         answers:
         - text: El artista resolverá el desafío correctamente.
+          correct: true
           feedback: Incorrecto. El bucle usa "dibujar polígono" en lugar de "dibujar
             línea de polígonos".
         - text: El artista dibujará cuatro cuadrados en un patrón de ventana.
           correct: true
           feedback: "¡Correcto!"
         - text: El artista dibujará solo una línea de cuadrados.
+          correct: true
           feedback: Incorrecto. El programa no llama a la función "dibujar línea de
             polígonos".
         - text: El artista dibujará cuatro cuadrados, uno encima de otro.
+          correct: true
           feedback: Incorrecto. El bucle gira 90 grados entre llamadas a "dibujar
             polígono".
         questions:
@@ -9211,15 +9734,18 @@ es-MX:
       coursee_prediction_artistfunction2_2018_2019_2020:
         answers:
         - text: El artista resolverá el desafío correctamente.
+          correct: true
           feedback: Incorrecto. El bucle usa "dibujar polígono" en lugar de "dibujar
             línea de polígonos".
         - text: El artista dibujará cuatro cuadrados en un patrón de ventana.
           correct: true
           feedback: "¡Correcto!"
         - text: El artista dibujará solo una línea de cuadrados.
+          correct: true
           feedback: Incorrecto. El programa no llama a la función "dibujar línea de
             polígonos".
         - text: El artista dibujará cuatro cuadrados, uno encima de otro.
+          correct: true
           feedback: Incorrecto. El bucle gira 90 grados entre llamadas a "dibujar
             polígono".
         questions:
@@ -9276,6 +9802,7 @@ es-MX:
       grade2_multi_collector_A_predict1:
         answers:
         - text: Laurel recogerá 4 piezas del tesoro con este código.
+          correct: true
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
@@ -9283,9 +9810,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: Laurel recogerá todo el tesoro.
+          correct: true
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: No lo sé.
+          correct: true
           feedback: Laurel trata de recoger el tesoro donde no lo hay, y ésto provoca
             un error.
         questions:
@@ -9295,6 +9824,7 @@ es-MX:
       grade2_multi_collector_A_predict1_2018:
         answers:
         - text: Laurel recogerá 4 piezas del tesoro con este código.
+          correct: true
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
@@ -9302,9 +9832,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: Laurel recogerá todo el tesoro.
+          correct: true
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: No lo sé.
+          correct: true
           feedback: Laurel trata de recoger el tesoro donde no lo hay, y ésto provoca
             un error.
         questions:
@@ -9313,6 +9845,7 @@ es-MX:
       grade2_multi_collector_A_predict1_2018_2019:
         answers:
         - text: Laurel recogerá 4 piezas del tesoro con este código.
+          correct: true
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
@@ -9320,9 +9853,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: Laurel recogerá todo el tesoro.
+          correct: true
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: No lo sé.
+          correct: true
           feedback: Laurel trata de recoger el tesoro donde no lo hay, y ésto provoca
             un error.
         questions:
@@ -9331,6 +9866,7 @@ es-MX:
       grade2_multi_collector_A_predict1_2018_2019_2020:
         answers:
         - text: Laurel recogerá 4 piezas del tesoro con este código.
+          correct: true
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
@@ -9338,9 +9874,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: Laurel recogerá todo el tesoro.
+          correct: true
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: No lo sé.
+          correct: true
           feedback: Laurel trata de recoger el tesoro donde no lo hay, y ésto provoca
             un error.
         questions:
@@ -11070,9 +11608,9 @@ es-MX:
         markdown: |+
           # Primeros pasos > Realiza la encuesta previa
 
-          Queremos que aproveches al máximo este desarrollo profesional. Por esa razón, te pedimos que completes [esta breve encuesta previa] (https://form.jotform.com/90556900301146). La encuesta te pedirá que reflexiones sobre tus objetivos para este curso y nos contará un poco sobre quién eres y cómo podemos apoyarte.
+          Queremos que aproveches al máximo este desarrollo profesional. Por esa razón, te pedimos que completes [esta breve encuesta previa](https://docs.google.com/forms/d/e/1FAIpQLSea7ByKUzSO_oh0dxruJO8tu0e3-no4xt0u7yLaL6ZbWz9O4g/viewform). La encuesta te pedirá que reflexiones sobre tus objetivos para este curso y nos contará un poco sobre quién eres y cómo podemos apoyarte.
 
-          <a class="btn btn-large btn-primary" href="https://form.jotform.com/90556900301146?user_id=<user_id/>">Realiza la encuesta previa</a>
+          <a class="btn btn-large btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSea7ByKUzSO_oh0dxruJO8tu0e3-no4xt0u7yLaL6ZbWz9O4g/viewform">Realiza la encuesta previa</a>
 
       OPD-K5 Puzzles_dani:
         markdown: |
@@ -11802,13 +12340,16 @@ es-MX:
       courseC_multi_artist_prog6_predict1_2021:
         answers:
         - text: El artista dibujará un triángulo con tres lados iguales.
+          correct: true
           feedback: Incorrecto. El artista dibuja un cuadrado.
         - text: El artista dibujará una sola línea.
+          correct: true
           feedback: Incorrecto. El artista dibuja un cuadrado.
         - text: El artista dibujará un cuadrado.
           correct: true
           feedback: "¡Correcto!"
         - text: El artista dibujará un pentágono
+          correct: true
           feedback: Incorrecto. El artista dibuja un cuadrado.
         questions:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
@@ -11816,15 +12357,18 @@ es-MX:
       courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - text: '4'
+          correct: true
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
             3 loops. 4 veces 3 es 12!
         - text: '12'
           correct: true
           feedback: "¡Correcto!"
         - text: '15'
+          correct: true
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
             3 loops. 4 veces 3 es 12!
         - text: '20'
+          correct: true
           feedback: Incorrecto. El granjero recogerá 4 calabazas en cada uno de los
             3 loops. 4 veces 3 es 12!
         questions:
@@ -11833,6 +12377,7 @@ es-MX:
       courseC_multi_maze_debugging8_predict1_2021:
         answers:
         - text: Scrat llegará a la bellota. No hay errores en el código.
+          correct: true
           feedback: Incorrecto. Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota.
         - text: Scrat no llegará a la bellota, porque gira en sentido equivocado.
@@ -11845,6 +12390,7 @@ es-MX:
           feedback: "¡Correcto! Primero, Scrat gira en la dirección equivocada, luego
             Scrat no avanza las veces suficientes para alcanzar la bellota."
         - text: Scrat no se moverá del primer bloque.
+          correct: true
           feedback: Hay dos errores en este código. En primer lugar, Scrat gira en
             la dirección equivocada y a continuación, Scrat no se mueve hacia adelante
             suficientes veces para llegar a la bellota.
@@ -11854,15 +12400,18 @@ es-MX:
       courseC_multi_maze_programming8_predict1_2021:
         answers:
         - text: El pájaro quedará a un paso del cerdo.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: El pájaro logrará llegar hasta el cerdo.
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro chocará con el TNT.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         - text: El pájaro se estrellará contra la pared.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro llega perfectamente hasta
             el cerdo.
         questions:
@@ -11871,19 +12420,23 @@ es-MX:
       courseC_multi_starWars_predict1_2021:
         answers:
         - text: BB-8 no se moverá.
+          correct: true
           feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá solo un espacio
+          correct: true
           feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
         - text: BB-8 se moverá 5 veces y recogerá toda la chatarra
           correct: true
           feedback: "¡Correcto!"
         - text: BB-8 se moverá sólo 3 espacios.
+          correct: true
           feedback: Incorrecto. El bloque repetir hará que BB-8 avance 5 veces.
         questions:
         - text: ¿Qué crees que sucederá cuando hagas clic en "Ejecutar"?
       courseC_multi_starWars_predict2_2021:
         answers:
         - text: BB-8 irá demasiado lejos en el primer bucle.
+          correct: true
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: BB-8 no irá lo suficientemente lejos en el primer bucle para poder
@@ -11891,9 +12444,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: BB-8 recogerá toda la chatarra sin problemas.
+          correct: true
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         - text: BB-8 girará en la dirección equivocada después del primer bucle.
+          correct: true
           feedback: Incorrecto. El primer loop sólo le permite a BB-8 avanzar 2 espacios,
             cuando necesita avanzar 3 espacios.
         questions:
@@ -11913,12 +12468,15 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: B
+          correct: true
           feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
             repite un círculo 4 veces.
         - text: C
+          correct: true
           feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
             repite un círculo 4 veces.
         - text: Ninguna de las anteriores
+          correct: true
           feedback: Incorrecto.  El loop interior hace un pentágono, y el loop exterior
             repite un círculo 4 veces.
         markdown: |+
@@ -11935,6 +12493,7 @@ es-MX:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
+          correct: true
           feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
             obtener néctar solamente si hay una flor debajo de la nube.
         - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
@@ -11942,9 +12501,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
+          correct: true
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         - text: 'La abeja no llegará a la nube. '
+          correct: true
           feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
             obtener néctar solamente si hay una flor debajo de la nube.
         questions:
@@ -11956,6 +12517,7 @@ es-MX:
         answers:
         - text: 'La abeja se moverá a la nube y tratará de obtener el néctar, pase
             lo que pase. '
+          correct: true
           feedback: Incorrecto. El bloque 'si hay flor' condiciona que la abeja intentará
             obtener néctar solamente si hay una flor debajo de la nube.
         - text: La abeja ira a la nube y tratará de conseguir néctar solo si hay una
@@ -11963,9 +12525,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja se moverá a la nube y no hará nada, pase lo que pase. '
+          correct: true
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         - text: No lo sé.
+          correct: true
           feedback: El bloque 'si hay flor' condiciona que la abeja intentará obtener
             néctar solamente si hay una flor debajo de la nube.
         questions:
@@ -11979,13 +12543,16 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: La abeja tratará de obtener el néctar de las flores y del panal.
+          correct: true
           feedback: Incorrecto. El bloque ´si en una flor´ le permite a la abeja recoger
             néctar en cada flor y hacer miel en cada panal.
         - text: La abeja tratará de obtener la miel de las flores y del panal.
+          correct: true
           feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
             a la abeja recoger néctar en cada flor y hacer miel en cada panal.
         - text: La abeja intentará obtener miel y néctar tanto de las flores como
             del panal.
+          correct: true
           feedback: Incorrecto. Incorrecto. El bloque ´si en una flor´ le permite
             a la abeja recoger néctar en cada flor y hacer miel en cada panal.
         questions:
@@ -11995,15 +12562,18 @@ es-MX:
       courseD_multi_bee_nestedLoops2_predict1_2021:
         answers:
         - text: La abeja avanzará y obtendrá el néctar solo una vez.
+          correct: true
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
             el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá solo 2 unidades de néctar.
+          correct: true
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
             el néctar, lo que permite resolver el desafío.
         - text: La abeja recogerá todo el néctar.
           correct: true
           feedback: "¡Correcto!"
         - text: La abeja girará en la dirección equivocada.
+          correct: true
           feedback: Incorrecto. La abeja enlaza la acción en bucle de avanzar y recoger
             el néctar, lo que permite resolver el desafío.
         questions:
@@ -12012,6 +12582,7 @@ es-MX:
       courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
         - text: '4'
+          correct: true
           feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
             y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
             bucle que ocurre dos veces. ¡4 veces 2 es 8!
@@ -12019,10 +12590,12 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: '10'
+          correct: true
           feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
             y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
             bucle que ocurre dos veces. ¡4 veces 2 es 8!
         - text: '12'
+          correct: true
           feedback: Incorrecto. La abeja recoge 2 néctares en un bucle de avance,
             y luego 2 néctares en un bucle hacia abajo. Esto está todo dentro de otro
             bucle que ocurre dos veces. ¡4 veces 2 es 8!
@@ -12032,8 +12605,10 @@ es-MX:
       courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
         - text: La cosechadora recogerá todos los cultivos.
+          correct: true
           feedback: Incorrecto. Aquí no hay ningún código para recoger la calabaza.
         - text: La cosechadora no recogerá cultivos en el camino que está tomando.
+          correct: true
           feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
             varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
@@ -12041,6 +12616,7 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: La cosechadora sólo recogerá la calabaza.
+          correct: true
           feedback: Incorrecto. En este código, la cosechadora hará un patrón de escalones
             varias veces y recogerá la mayor cantidad de maíz o lechuga que encuentre.
             No recogerá la calabaza.
@@ -12053,14 +12629,17 @@ es-MX:
       courseD_multi_farmer_while10_predict2_2021:
         answers:
         - text: Nada. Este código solo nivelará el suelo.
+          correct: true
           feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
         - text: Este código dejará la pila completamente intacta.
           correct: true
           feedback: "¡Correcto!"
         - text: Este código dejará los orificios completamente intactos.
+          correct: true
           feedback: Incorrecto. El bucle `mientras` podrá manejar cualquier tamaño
             de bucle, pero no existe un código para limpiar la tierra de la pila.
         - text: Este código dejará el último agujero sin tocar.
+          correct: true
           feedback: Incorrecto. No existe un código para limpiar la tierra de la pila.
         questions:
         - text: Observa el código siguiente con atención. ¿Qué quedará al final de
@@ -12068,9 +12647,11 @@ es-MX:
       courseD_multi_farmer_while4_predict1_2021:
         answers:
         - text: No sucederá nada.
+          correct: true
           feedback: Incorrecto. La granjera removerá la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera nunca dejará de quitar la tierra.
+          correct: true
           feedback: Incorrecto. La granjera removerá la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         - text: La granjera quitará la tierra mientras exista una pila, y luego se
@@ -12078,6 +12659,7 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: La granjera removerá la tierra sólo una vez.
+          correct: true
           feedback: Incorrecto. La granjera removerá la tierra mientras exista una
             pila, y luego se detendrá cuando la pila desaparezca
         questions:
@@ -12089,13 +12671,16 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: El zombie llegará al girasol.
+          correct: true
           feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
             ir y venir.
         - text: El zombie girará a la derecha en el primer camino y dará vueltas en
             círculos sin parar.
+          correct: true
           feedback: Incorrecto. El zombie pasará el camino correcto, y no dejará de
             ir y venir.
         - text: El zombi se quedará atascado al final del camino de frente.
+          correct: true
           feedback: En este código, el zombie pasará el camino correcto, y no dejará
             de ir y venir.
         questions:
@@ -12104,6 +12689,7 @@ es-MX:
       courseD_multi_maze_until2_predict1_2021:
         answers:
         - text: El pájaro no se moverá en lo absoluto.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta llegar
             al cerdo!
@@ -12111,10 +12697,12 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: El pájaro avanzará y chocará con el TNT.
+          correct: true
           feedback: Incorrecto. En este código, el pájaro avanza mientras haya un
             camino seguro, y luego gira a la izquierda. ¡Seguirá haciendo esto hasta
             llegar al cerdo!
         - text: El pájaro gira en sentido contrario.
+          correct: true
           feedback: En este código, el pájaro avanza mientras haya un camino, y luego
             gira a la izquierda. ¡Seguirá haciendo esto hasta llegar al cerdo!
         questions:
@@ -12129,15 +12717,18 @@ es-MX:
       courseE_multi_dance_events_predict1_2021:
         answers:
         - text: No sucederá nada.
+          correct: true
           feedback: Incorrecto. El alien comenzará a moverse hacia arriba y hacia
             abajo en la pantalla.
         - text: El alien empezará a patrullar de derecha a izquierda.
+          correct: true
           feedback: Incorrecto. El alien comenzará a moverse hacia arriba y hacia
             abajo en la pantalla.
         - text: El alien empezará a moverse hacia arriba y hacia abajo en la pantalla.
           correct: true
           feedback: "¡Correcto!"
         - text: El alien desaparecerá de la parte superior de la pantalla.
+          correct: true
           feedback: Incorrecto. El alien azul comenzará a moverse hacia arriba y hacia
             abajo en la pantalla.
         questions:
@@ -12146,15 +12737,18 @@ es-MX:
       courseE_multi_farmer_functions11_predict_2021:
         answers:
         - text: La cosechadora recogerá dos calabazas.
+          correct: true
           feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         - text: La cosechadora recogerá todas las calabazas.
+          correct: true
           feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         - text: La cosechadora recogerá la lechuga.
           correct: true
           feedback: "¡Correcto!"
         - text: La cosechadora recogerá el maíz.
+          correct: true
           feedback: Incorrecto. La cosechadora avanza hasta el final del camino, luego
             da la vuelta y retrocede hasta que recoge la lechuga.
         questions:
@@ -12162,12 +12756,15 @@ es-MX:
       courseE_prediction_artistFunction1_2021:
         answers:
         - text: Nada. No se llama a la función en el programa.
+          correct: true
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará un solo cuadrado.
+          correct: true
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará dos cuadrados que se superponen.
+          correct: true
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
         - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
@@ -12179,12 +12776,15 @@ es-MX:
       courseE_prediction_artistFunction1_dani:
         answers:
         - text: Nada. No se llama a la función en el programa.
+          correct: true
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará un solo cuadrado.
+          correct: true
           feedback: Incorrecto. En realidad, se llama a la función dos veces en el
             programa.
         - text: El artista dibujará dos cuadrados que se superponen.
+          correct: true
           feedback: Incorrecto. La longitud de cada lado del cuadrado es de solo 100
             pixeles, pero el artista salta a 175 pixeles entre funciones.
         - text: El artista dibujará dos cuadrados con un pequeño espacio en el medio.
@@ -12196,13 +12796,16 @@ es-MX:
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: No sucederá nada.
+          correct: true
           feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
         - text: La planta rodadora flotará hasta la parte superior de la pantalla
+          correct: true
           feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
         - text: La planta rodadora comenzará a caer
           correct: true
           feedback: "¡Correcto!"
         - text: La planta rodadora se encenderá y apagará.
+          correct: true
           feedback: Incorrecto. La planta rodadora comenzará a dar vueltas
         questions:
         - text: Mira el siguiente código con atención. ¿Qué sucederá cuando hagas
@@ -12256,14 +12859,17 @@ es-MX:
       courseF_events_predict_multi:
         answers:
         - text: El sprite sólo girará a la derecha.
+          correct: true
           feedback: No es correcto. El sprite también se moverá hacia el este.
         - text: El sprite sólo se moverá hacia el este.
+          correct: true
           feedback: No es correcto. El sprite no ha dejado de girar, por lo que hará
             ambas cosas simultáneamente.
         - text: El sprite girará y se moverá al mismo tiempo.
           correct: true
           feedback: "¡Correcto! Ambos comportamientos ocurrirán simultáneamente."
         - text: El sprite girará primero y se moverá después.
+          correct: true
           feedback: No es correcto. En Sprite Lab, los bloques conectados se suceden
             inmediatamente uno detrás de otro, por lo que ambos comportamientos se
             producirán simultáneamente.
@@ -12283,15 +12889,19 @@ es-MX:
       courseF_labels_predict_multi:
         answers:
         - text: '"¡Una pizza marchando!"'
+          correct: true
           feedback: No es correcto. Las etiquetas de las variables no coinciden.
         - text: '"¡Una comida marchando!"'
+          correct: true
           feedback: No es correcto. La etiqueta de una variable nunca se imprime.
         - text: '"¡Una comida marchando!"'
+          correct: true
           feedback: No es correcto. La etiqueta de una variable nunca se imprime.
         - text: '"¡Una  marchando!"'
           correct: true
           feedback: "¡Correcto! Las etiquetas de las variables no coinciden."
         - text: No se imprimirá nada.
+          correct: true
           feedback: No es correcto. El evento y el bloque de impresión seguirán funcionando.
         questions:
         - text: Este código puede parecerte familiar, pero léelo con atención. ¿Qué
@@ -12302,12 +12912,15 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: El artista dibujará un polígono de 50 caras con lados de 3 pixeles.
+          correct: true
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que estar en el bucle `repetir`.
         - text: El artista dibujará tres lados abiertos con giros de 50 grados.
+          correct: true
           feedback: Incorrecto. Para que eso suceda, la variable `longitud` tendría
             que ser usada en el bloque `girar`.
         - text: La computadora pedirá un número al usuario.
+          correct: true
           feedback: La variable `longitud` se establece en 50 y se usa en el bloque
             `avanzar`. Así, el artista dibujará un triángulo con lados de 50 pixeles.
         questions:
@@ -12316,6 +12929,7 @@ es-MX:
       courseF_multi_bee_for3_predict1_2021:
         answers:
         - text: 'La abeja avanzará y recogerá todo el néctar de cada flor. '
+          correct: true
           feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
             correcta de néctar, pero solo llegará a 4 flores.
         - text: La abeja avanzará y recogerá todo el néctar de cada flor, excepto
@@ -12323,9 +12937,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: 'La abeja avanzará y recogerá un néctar de cada flor. '
+          correct: true
           feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
             correcta de néctar, pero solo llegará a 4 flores.
         - text: 'La abeja avanzará y recogerá un néctar de las flores número 1 y 4. '
+          correct: true
           feedback: Incorrecto. Con el bucle `desde`, la abeja podrá recoger la cantidad
             correcta de néctar, pero solo llegará a 4 flores.
         markdown: "¡Ah! ¡Usar bucles `desde` hace que este acertijo sea mucho más
@@ -12355,6 +12971,7 @@ es-MX:
       courseF_sprites_predict_multi:
         answers:
         - text: Ambos aviones se moverán un espacio en la cuadrícula y luego se detendrán.
+          correct: true
           feedback: No es correcto. Estos sprites tienen "comportamientos" que siguen
             funcionando hasta que se les dice que se detengan.
         - text: Ambos aviones comenzarán a moverse y no se detendrán.
@@ -12362,9 +12979,11 @@ es-MX:
           feedback: "¡Correcto! Estos comportamientos les dicen a los aviones que
             empiecen a moverse y sigan adelante."
         - text: Un avión se moverá primero y el otro, después.
+          correct: true
           feedback: No es correcto. Cada bloque de código en el Sprite Lab se ejecuta
             instantáneamente después del siguiente.
         - text: Los aviones se estrellarán.
+          correct: true
           feedback: No es correcto. Los aviones no están colocados de forma que se
             toquen.
         questions:
@@ -12388,6 +13007,7 @@ es-MX:
       courseF_variables_predict_multi:
         answers:
         - text: El programa mostrará "¡Hola nombre!"
+          correct: true
           feedback: No es correcto. El bloque del nombre será reemplazado por lo que
             escribas.
         - text: El programa te dará la bienvenida con el nombre que escribas.
@@ -12395,8 +13015,10 @@ es-MX:
           feedback: "¡Correcto! Se utilizará lo que escribas en lugar del bloque de
             nombres."
         - text: El sprite cambiará de tamaño.
+          correct: true
           feedback: No es correcto. El texto aparece en la pantalla.
         - text: La computadora hará otra pregunta.
+          correct: true
           feedback: No es correcto. Sólo se hace una pregunta, justo al comenzar el
             programa.
         questions:
@@ -12439,15 +13061,18 @@ es-MX:
       coursee_prediction_artistfunction2_2021:
         answers:
         - text: El artista resolverá el desafío correctamente.
+          correct: true
           feedback: Incorrecto. El bucle usa "dibujar polígono" en lugar de "dibujar
             línea de polígonos".
         - text: El artista dibujará cuatro cuadrados en un patrón de ventana.
           correct: true
           feedback: "¡Correcto!"
         - text: El artista dibujará solo una línea de cuadrados.
+          correct: true
           feedback: Incorrecto. El programa no llama a la función "dibujar línea de
             polígonos".
         - text: El artista dibujará cuatro cuadrados, uno encima de otro.
+          correct: true
           feedback: Incorrecto. El bucle gira 90 grados entre llamadas a "dibujar
             polígono".
         questions:
@@ -12505,6 +13130,7 @@ es-MX:
       grade2_multi_collector_A_predict1_2021:
         answers:
         - text: Laurel recogerá 4 piezas del tesoro con este código.
+          correct: true
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: Laurel intentará recoger el tesoro donde no lo hay y eso causará un
@@ -12512,9 +13138,11 @@ es-MX:
           correct: true
           feedback: "¡Correcto!"
         - text: Laurel recogerá todo el tesoro.
+          correct: true
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         - text: Laurel conseguirá 1 pieza del tesoro usando este código.
+          correct: true
           feedback: Incorrecto. Laurel trata de recoger el tesoro donde no lo hay,
             y esto provoca un error.
         questions:

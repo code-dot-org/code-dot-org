@@ -197,6 +197,18 @@
         },
         "poetry_hoc_spriteBehaviors": {
           "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_animals_backgrounds": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_emoji_backgrounds": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_food_backgrounds": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
+        },
+        "helloworld_retro_backgrounds": {
+          "moving with arrow keys": "bewegen met de pijtjestoetsen"
         }
       }
     }

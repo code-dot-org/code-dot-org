@@ -519,7 +519,8 @@
           "poetry_new_block": "Uus plokk!"
         },
         "poetry_hoc_sounds": {
-          "poetry_sound": "Uus plokk!"
+          "poetry_sound": "Uus plokk!",
+          "poetry_music": "Uus plokk!"
         },
         "poetry_hoc_spriteBehaviors": {
           "poetry_sprite_begins": "Uus plokk!",

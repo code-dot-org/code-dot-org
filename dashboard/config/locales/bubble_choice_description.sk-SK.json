@@ -30,7 +30,7 @@
         "courseF_sprites_positioning": "Precvič si vytváranie postáv a ich umiestňovanie.",
         "courseF_sprites_properties": "Nauč sa meniť veľkosť postáv.",
         "courseF_text_choice_color": "Spýtaj sa používateľa na názov farby a použi ho vo svojom programe.",
-        "courseF_text_choice_conversation": "Pomocou blokov „tlačiť“ dosiahni, aby sa dve postavy porozprávali.",
+        "courseF_text_choice_conversation": "Pomocou blokov `tlačiť` dosiahni, aby sa dve postavy porozprávali.",
         "courseF_text_choice_events": "Pridaj blok s udalosťou, aby sa text zobrazil správne.",
         "courseF_text_choice_freeplay": "Vytvor si vlastný program s textom, výzvami a premennými!",
         "courseF_text_print": "Nastav postavu tak, aby sa jej po nejakom čase aktivovalo nové správanie.",
@@ -68,7 +68,7 @@
         "courseF_apps_collector": "Pozbieraj predmety čo najrýchlejšie!",
         "courseF_apps_madlib": "Tento program ťa požiada o zadanie niekoľkých slov a potom ti pomocou týchto slov porozpráva bláznivý príbeh!",
         "courseF_apps_pet": "Ťahaj predmety k psovi a sleduj jeho reakciu!",
-        "courseF_editable_card": "Tento program ti položí niekoľko otázok a potom pre teba vytvorí blahoželanie!",
+        "courseF_editable_card": "Tento program ti položí niekoľko otázok a potom pre teba vytvorí pohľadnicu!",
         "courseF_editable_chatbot": "Tento robot ti bude klásť otázky a zapamätá si, čo napíšeš! Zadávaj svoje odpovede a rozprávaj sa s robotom!",
         "courseF_editable_madlib": "Tento program ťa požiada o zadanie niekoľkých slov a potom ti pomocou týchto slov porozpráva bláznivý príbeh!",
         "courseF_events_freeplay_air": "Vytvor si leteckú scénu s vtákmi a inými vecami, ktoré môžeš vidieť na oblohe.",
@@ -84,7 +84,20 @@
         "courseF_variables_card_finish": "Dotiahni svoj projekt do konca a potom sa oň podeľ!",
         "courseF_variables_chatbot_finish": "Dotiahni svoj projekt do konca a potom sa oň podeľ!",
         "courseF_variables_madlib_finish": "Dotiahni svoj projekt do konca a potom sa oň podeľ!",
-        "international_outbreak_freeplay": "Pokračujte s rovnakými blokmi, ktoré už poznáte!"
+        "international_outbreak_freeplay": "Pokračujte s rovnakými blokmi, ktoré už poznáte!",
+        "CourseF_outbreak5": "Pomôž svojim postavám, aby sa časom automaticky zlepšovali!",
+        "CourseF_outbreak8": "Použi svoj projekt na šírenie posolstva. Čo chceš, aby sa z neho naučili ostatní?",
+        "courseF_variables_card": "Vytvor si prvú výzvu, potom pridaj postavy a správanie.",
+        "courseF_variables_chatbot": "Vytvor si prvú výzvu, potom pridaj postavy a správanie.",
+        "courseF_variables_madlib": "Vytvor si prvú výzvu, potom pridaj postavy a správanie.",
+        "helloworld_animals_costumes": "Nauč sa meniť vzhľad postavičiek.",
+        "helloworld_animals_sounds": "Nauč sa prehrávať zvuky.",
+        "helloworld_emoji_costumes": "Nauč sa meniť vzhľad postavičiek.",
+        "helloworld_emoji_sounds": "Nauč sa prehrávať zvuky.",
+        "helloworld_food_costumes": "Nauč sa meniť vzhľad postavičiek.",
+        "helloworld_food_sounds": "Nauč sa prehrávať zvuky.",
+        "helloworld_retro_costumes": "Nauč sa meniť vzhľad postavičiek.",
+        "helloworld_retro_sounds": "Nauč sa prehrávať zvuky."
       }
     }
   }

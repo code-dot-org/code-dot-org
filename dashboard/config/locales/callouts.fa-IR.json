@@ -148,6 +148,15 @@
         },
         "frozen square snowflake": {
           "replace_questions": "از منوی کشویی برای جایگزین کردن \"???\" با یک عدد استفاده کنید"
+        },
+        "Overworld Move to Sheep_2021": {
+          "craft_run_button_callout": "\"اجرا\" را بزن تا برنامه‌ات اجرا بشه"
+        },
+        "Underground Avoiding Lava_2021": {
+          "craft_callout_moveforward": "این کد برای گدازه (مواد مذاب) بررسی خواهد شد، می توانید برای حرکت به جلو یک دستور اضافه کنید؟"
+        },
+        "Underground Iron_2021": {
+          "craft_what_is_iron": "این آهن را استخراج کنید!"
         }
       }
     }
