@@ -11,16 +11,19 @@ const buttonStyle = {
 };
 
 export default function NewUnitForm(props) {
-  const [standalone, setStandalone] = useState('');
-  const [selectedFamilyName, setSelectedFamilyName] = useState(null);
-  const [newFamilyName, setNewFamilyName] = useState(null);
-  const [versionedCourse, setVersionedCourse] = useState(null);
+  const [courseStyle, setCourseStyle] = useState('');
+  const [selectedFamilyName, setSelectedFamilyName] = useState('');
+  const [newFamilyName, setNewFamilyName] = useState('');
+  const [versionedCourse, setVersionedCourse] = useState('');
   const [versionYear, setVersionYear] = useState('');
 
   const getScriptName = () => {
     const familyName = selectedFamilyName ? selectedFamilyName : newFamilyName;
 
-    const name = versionYear ? familyName + '-' + versionYear : familyName;
+    const name =
+      versionYear !== 'unversioned'
+        ? familyName + '-' + versionYear
+        : familyName;
     return name;
   };
 
@@ -31,17 +34,17 @@ export default function NewUnitForm(props) {
         Is this unit going to be in a course with one unit or multiple units?
         <select
           style={styles.dropdown}
-          value={standalone}
+          value={courseStyle}
           name="is_course"
-          onChange={e => setStandalone(e.target.value)}
+          onChange={e => setCourseStyle(e.target.value)}
         >
           <option key={'empty'} value={''}>
             {''}
           </option>
-          <option key={'multi-unit'} value={false}>
+          <option key={'multi-unit'} value={'multi-unit'}>
             {'Multiple Units'}
           </option>
-          <option key={'single-unit'} value={true}>
+          <option key={'single-unit'} value={'single-unit'}>
             {'Single Unit'}
           </option>
           ))}
@@ -53,7 +56,7 @@ export default function NewUnitForm(props) {
           </p>
         </HelpTip>
       </label>
-      {standalone && (
+      {courseStyle === 'single-unit' && (
         <div>
           <input
             name="family_name"
@@ -67,9 +70,9 @@ export default function NewUnitForm(props) {
               style={styles.dropdown}
               className="familyNameSelector"
               onChange={e => setSelectedFamilyName(e.target.value)}
-              disabled={newFamilyName}
+              disabled={newFamilyName !== ''}
             >
-              <option value={null}>(None)</option>
+              <option value={''}>(None)</option>
               {props.families.map(familyOption => (
                 <option key={familyOption} value={familyOption}>
                   {familyOption}
@@ -83,7 +86,7 @@ export default function NewUnitForm(props) {
                 value={newFamilyName}
                 style={styles.smallInput}
                 onChange={e => setNewFamilyName(e.target.value)}
-                disabled={selectedFamilyName}
+                disabled={selectedFamilyName !== ''}
               />
             </span>
             <HelpTip>
@@ -95,7 +98,7 @@ export default function NewUnitForm(props) {
               </p>
             </HelpTip>
           </label>
-          {(selectedFamilyName || newFamilyName) && (
+          {(selectedFamilyName !== '' || newFamilyName !== '') && (
             <div>
               <label>
                 Is this course going to get updated yearly?
@@ -104,18 +107,21 @@ export default function NewUnitForm(props) {
                   value={versionedCourse}
                   onChange={e => {
                     setVersionedCourse(e.target.value);
-                    if (!versionedCourse) {
+                    if (e.target.value === 'no') {
                       setVersionYear('unversioned');
+                    } else {
+                      // Make sure to clear version year if change this question
+                      setVersionYear('');
                     }
                   }}
                 >
-                  <option key={'empty'} value={null}>
+                  <option key={'empty'} value={''}>
                     {''}
                   </option>
-                  <option key={'yes'} value={true}>
+                  <option key={'yes'} value={'yes'}>
                     {'Yes'}
                   </option>
-                  <option key={'no'} value={false}>
+                  <option key={'no'} value={'no'}>
                     {'No'}
                   </option>
                 </select>
@@ -127,7 +133,7 @@ export default function NewUnitForm(props) {
                   </p>
                 </HelpTip>
               </label>
-              {(versionedCourse || versionYear) && (
+              {versionedCourse !== '' && (
                 <label>
                   What year is this course for?
                   <select
@@ -135,7 +141,7 @@ export default function NewUnitForm(props) {
                     name="version_year"
                     style={styles.dropdown}
                     className="versionYearSelector"
-                    disabled={!versionedCourse}
+                    disabled={versionedCourse === 'no'}
                     onChange={event => setVersionYear(event.target.value)}
                   >
                     <option value="">(None)</option>
@@ -147,7 +153,7 @@ export default function NewUnitForm(props) {
                   </select>
                 </label>
               )}
-              {versionYear && (
+              {versionYear !== '' && (
                 <label>
                   The Unit Slug for this course will be:
                   <HelpTip>
@@ -169,7 +175,7 @@ export default function NewUnitForm(props) {
           )}
         </div>
       )}
-      {(!standalone || versionYear) && (
+      {courseStyle === 'multi-unit' && (
         <label>
           Unit Slug
           <HelpTip>
@@ -183,13 +189,15 @@ export default function NewUnitForm(props) {
           <input name="script[name]" />
         </label>
       )}
-      <input name="is_migrated" value={true} type="hidden" />
-      <input name="lesson_groups" value={'[]'} type="hidden" />
-      <br />
-      {standalone && (
-        <button className="btn btn-primary" type="submit" style={buttonStyle}>
-          Save Changes
-        </button>
+      {(courseStyle === 'multi-unit' || versionYear) && (
+        <div>
+          <input name="is_migrated" value={true} type="hidden" />
+          <input name="lesson_groups" value={'[]'} type="hidden" />
+          <br />
+          <button className="btn btn-primary" type="submit" style={buttonStyle}>
+            Save Changes
+          </button>
+        </div>
       )}
     </form>
   );
