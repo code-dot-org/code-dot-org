@@ -11,18 +11,6 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert_equal course_offering, version2.course_offering
   end
 
-  # "Integration tests" of on seeding from .script and .course files.
-  # Other cases are covered by directly testing add_course_offering below.
-  test "Script.setup creates CourseOffering and CourseVersion if is_course is true" do
-    script_file = File.join(self.class.fixture_path, 'test-script-course-version.script')
-    script_names, _ = Script.setup([script_file])
-    script = Script.find_by!(name: script_names.first)
-
-    offering = script.course_version.course_offering
-    assert_equal 'xyz', offering.key
-    assert_equal CourseVersion.where(key: '1234'), offering.course_versions
-  end
-
   test "ScriptSeed.seed_from_json_file creates CourseOffering and CourseVersion if is_course is true" do
     script_file = File.join(self.class.fixture_path, 'test-new-seed-course-offering.script_json')
     script = Services::ScriptSeed.seed_from_json_file(script_file)
