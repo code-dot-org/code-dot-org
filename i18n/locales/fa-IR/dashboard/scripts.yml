@@ -1,3 +1,4 @@
+---
 fa:
   data:
     script:
@@ -565,12 +566,6 @@ fa:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: خوش آمدی!
             Wrap-up:
@@ -611,12 +606,6 @@ fa:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: خوش آمدی!
             Wrap-up:
@@ -626,12 +615,6 @@ fa:
           description: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           description_short: 'فاز 2 آنلاین: مطالعه مخلوط تابستان'
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: خوش آمدی!
             Wrap-up:
@@ -690,13 +673,13 @@ fa:
         starwars:
           lessons:
             Hour of Code 2015:
-              name: 'ساعت کدنویسی 2015'
+              name: ساعت کدنویسی 2015
         mc:
           description: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین کرافت
           description_short: یک جهان ماینکرفتی را از طریق کد کاوش کنید.
           lessons:
             Hour of Code 2015:
-              name: 'ساعت کدنویسی 2015'
+              name: ساعت کدنویسی 2015
           student_description: استفاده از بلوکهای کد برای ماجراجویی استیو یا الکس در ماین کرافت
         ScienceP3OLPT3:
           lessons:
@@ -892,12 +875,6 @@ fa:
               name: 'بدون دستگاه: ترانه سرایی با پارامترها'
         ecs-unit1:
           lessons:
-            0: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
-            1: |-
-              Unit 1, Days 1-2
-              What Is a Computer?
             Welcome!:
               name: خوش آمدی!
             Wrap-up:
@@ -1183,7 +1160,7 @@ fa:
             Functions:
               name: توابع
             'null':
-              name: 'تهی'
+              name: تهی
         coursef-ramp:
           lessons:
             'Algorithms: Tangrams':
@@ -1388,7 +1365,7 @@ fa:
           description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ! با کد زدن به دنیای ماینکرافت سفر کنید.
           lessons:
             'Minecraft\: Hero''s Journey Hour of Code':
-              name: 'ماینکرافت\: سفر قهرمانان ساعتی با کد'
+              name: 'ماینکرافت: سفر قهرمانان ساعتی با کد'
             Minecraft Hour of Code:
               name: 'ماینکرافت: سفر قهرمانان'
           student_description: ماینکرافت برگشته برای سایت ساعتی با کد با یه فعالیت داغ! با کد زدن به دنیای ماینکرافت سفر کنید.
@@ -1527,7 +1504,7 @@ fa:
         csd6-2018:
           lessons:
             Functions with Parameters_:
-              name: معادله با پارامترها_
+              name: معادله با پارامترها\_
             Functions with Parameters:
               name: معادله با پارامترها
         coursee-2018:
@@ -1808,7 +1785,7 @@ fa:
               display_name: بررسی اجمالی
           lessons:
             'null':
-              name: 'تهی'
+              name: تهی
         coursec-2019:
           lesson_groups:
             csf_digcit:

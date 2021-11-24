@@ -1,3 +1,4 @@
+---
 fa:
   data:
     blocks:
@@ -443,8 +444,8 @@ fa:
       Mikelab_whenYesNoClicked:
         options:
           KEY:
-            '"yes"': 'بله'
-            '"no"': 'نه'
+            '"yes"': بله
+            '"no"': نه
       Mikelab_whileKeyPressed:
         options:
           KEY:
