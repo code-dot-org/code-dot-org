@@ -32,6 +32,13 @@ class JavabuilderSessionsController < ApplicationController
     # expire token in 15 minutes
     expiration_time = (Time.now + 15.minutes).to_i
     session_id = SecureRandom.hex(18)
+
+    javabuilder_bucket = JavabuilderBucket.new(storage_id, storage_app_id, level_id, session_id)
+    javabuilder_bucket.copy_sources
+    javabuilder_bucket.copy_assets
+    javabuilder_bucket.copy_starter_assets
+    javabuilder_bucket.copy_maze
+
     payload = {
       iat: issued_at_time,
       iss: CDO.dashboard_hostname,
@@ -47,6 +54,8 @@ class JavabuilderSessionsController < ApplicationController
       execution_type: execution_type,
       options: options
     }
+
+    p payload
 
     # log payload to firehose
     FirehoseClient.instance.put_record(

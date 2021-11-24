@@ -124,7 +124,8 @@ module Cdo
         # DNS record that redirects requests to localhost. Javabuilder, as a
         # separate service, uses a different port. Therefore, we can access the
         # the service directly.
-        'ws://localhost:8080/javabuilder'
+        # 'ws://localhost:8080/javabuilder'
+        'wss://javabuilder-sanchit.dev-code.org'
       else
         # TODO: Update to use this URL once we have Route53 set up for API Gateway
         # site_url('javabuilder.code.org', '', 'wss')
