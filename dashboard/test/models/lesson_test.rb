@@ -119,7 +119,7 @@ class LessonTest < ActiveSupport::TestCase
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group, name: 'My Lesson'
     lesson.objectives.push(create(:objective))
-    lesson.objectives.push(create(:objective, description: nil))
+    lesson.objectives.push(create(:objective))
     lesson.vocabularies.push(create(:vocabulary))
     lesson.vocabularies.push(create(:vocabulary))
     lesson.resources.push(create(:resource))
@@ -623,49 +623,6 @@ class LessonTest < ActiveSupport::TestCase
         'lesson.key' => lesson.key
       }
       assert_equal expected, lesson.seeding_key(seed_context)
-    end
-  end
-
-  class StagePublishedTests < ActiveSupport::TestCase
-    setup do
-      @student = create :student
-      @teacher = create :teacher
-      @levelbuilder = create :levelbuilder
-
-      Timecop.freeze(Time.new(2020, 3, 27, 0, 0, 0, "-07:00"))
-
-      @script_with_visible_after_lessons = create :script
-      @lesson_future_visible_after = create :lesson, name: 'lesson 1', script: @script_with_visible_after_lessons, visible_after: '2020-04-01 08:00:00 -0700'
-      @lesson_past_visible_after = create :lesson, name: 'lesson 2', script: @script_with_visible_after_lessons, visible_after: '2020-03-01 08:00:00 -0700'
-      @lesson_no_visible_after = create :lesson, name: 'lesson 3', script: @script_with_visible_after_lessons
-    end
-
-    teardown do
-      Timecop.return
-    end
-
-    test "published? returns true if levelbuilder" do
-      assert @lesson_future_visible_after.published?(@levelbuilder)
-      assert @lesson_past_visible_after.published?(@levelbuilder)
-      assert @lesson_no_visible_after.published?(@levelbuilder)
-    end
-
-    test "published? returns true if lesson does not have visible_after date" do
-      assert @lesson_no_visible_after.published?(@teacher)
-      assert @lesson_no_visible_after.published?(@student)
-      assert @lesson_no_visible_after.published?(nil)
-    end
-
-    test "published? returns true if lesson visible_after date is in past" do
-      assert @lesson_past_visible_after.published?(@teacher)
-      assert @lesson_past_visible_after.published?(@student)
-      assert @lesson_past_visible_after.published?(nil)
-    end
-
-    test "published? returns false if lesson visible_after date is in future" do
-      refute @lesson_future_visible_after.published?(@teacher)
-      refute @lesson_future_visible_after.published?(@student)
-      refute @lesson_future_visible_after.published?(nil)
     end
   end
 
