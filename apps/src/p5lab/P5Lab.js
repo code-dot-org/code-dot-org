@@ -1559,6 +1559,11 @@ export default class P5Lab {
     return this.getMsg().reinfFeedbackMsg();
   }
 
+  // Determines whether or not to show the "print" option in the feedback dialog.
+  disablePrinting() {
+    return false;
+  }
+
   /**
    * App specific displayFeedback function that calls into
    * this.studioApp_.displayFeedback when appropriate
@@ -1589,7 +1594,8 @@ export default class P5Lab {
       },
       hideXButton: true,
       saveToProjectGallery: saveToProjectGallery,
-      disableSaveToGallery: !isSignedIn
+      disableSaveToGallery: !isSignedIn,
+      disablePrinting: this.disablePrinting()
     });
   }
 
