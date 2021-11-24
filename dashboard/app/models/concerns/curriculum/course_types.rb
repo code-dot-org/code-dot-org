@@ -19,6 +19,8 @@ module Curriculum::CourseTypes
   # can be the instructors of any course. Student accounts should never be able to be the instructor
   # of any course.
   def can_be_instructor?(user)
+    return false unless user
+
     # If unit is in a unit group then decide based on unit group audience
     return unit_group.can_be_instructor?(user) if is_a?(Script) && unit_group
 
@@ -41,6 +43,9 @@ module Curriculum::CourseTypes
   def can_be_participant?(user)
     # If unit is in a unit group then decide based on unit group audience
     return unit_group.can_be_participant?(user) if is_a?(Script) && unit_group
+
+    # Signed out users can only use student facing courses
+    return false if !user && participant_audience != 'student'
 
     if participant_audience == 'facilitator'
       return user.permission?(UserPermission::FACILITATOR)

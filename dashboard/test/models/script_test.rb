@@ -728,12 +728,12 @@ class ScriptTest < ActiveSupport::TestCase
       @facilitator = create :facilitator
       @plc_reviewer = create :plc_reviewer
 
-      @coursea_2017 = create(:script, name: 'coursea-2017', family_name: 'coursea', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
-      @coursea_2018 = create(:unit_group, name: 'coursea-2018', family_name: 'coursea', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
-      @coursea_2019 = create(:unit_group, name: 'coursea-2019', family_name: 'coursea', version_year: '2019')
+      @coursez_2017 = create(:script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+      @coursez_2018 = create(:unit_group, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+      @coursez_2019 = create(:unit_group, name: 'coursez-2019', family_name: 'coursez', version_year: '2019')
 
-      @pl_coursea_2017 = create(:script, name: 'coursea-2017', family_name: 'coursea', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
-      @pl_coursea_2018 = create(:unit_group, name: 'coursea-2018', family_name: 'coursea', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+      @pl_coursez_2017 = create(:script, name: 'coursez-2017', family_name: 'coursez', version_year: '2017', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
+      @pl_coursez_2018 = create(:unit_group, name: 'coursez-2018', family_name: 'coursez', version_year: '2018', published_state: SharedCourseConstants::PUBLISHED_STATE.stable)
     end
 
     test 'can_view_version? is true for instructor audience for old versions' do
