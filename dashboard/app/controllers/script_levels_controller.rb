@@ -125,10 +125,6 @@ class ScriptLevelsController < ApplicationController
       return
     end
 
-    # If the lesson is not released yet (visible_after is in the future) then don't
-    # let a user go to the script_level page in that lesson
-    return head(:forbidden) unless @script_level.lesson.published?(current_user)
-
     # In the case of puzzle_page or sublevel_position, send param through to be included in the
     # generation of the script level path.
     extra_params = {}
