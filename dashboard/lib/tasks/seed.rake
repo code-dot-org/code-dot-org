@@ -167,10 +167,6 @@ namespace :seed do
   ].map {|script| "config/scripts_json/#{script}.script_json"}.freeze
   SEEDED = 'config/scripts/.seeded'.freeze
 
-  file SEEDED => [SCRIPTS_GLOB, :environment].flatten do
-    update_scripts
-  end
-
   # Update scripts in the database from their file definitions.
   #
   # @param [Hash] opts the options to update the scripts with.
