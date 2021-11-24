@@ -250,6 +250,7 @@ class ScriptsController < ApplicationController
   end
 
   def unit_params
+    put params
     params.require(:script).permit(:name)
   end
 
