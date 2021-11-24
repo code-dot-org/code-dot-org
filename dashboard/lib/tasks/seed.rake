@@ -102,6 +102,7 @@ namespace :seed do
     'coursec-2019',
     'coursee-2019',
     'coursea-2020',
+    'csd3-2019',
     'csp1-2017',
     'csp2-2017',
     'csp3-2017',
