@@ -38,11 +38,11 @@ export default class LessonExtras extends React.Component {
       case /lessons/.test(nextLevelPath):
         nextMessage = i18n.extrasNextLesson({number: nextLessonNumber});
         break;
-      case /s/.test(nextLevelPath):
-        nextMessage = i18n.extrasNextUnitOverview();
+      case /congrats/.test(nextLevelPath):
+        nextMessage = i18n.extrasNextFinish();
         break;
       default:
-        i18n.extrasNextFinish();
+        nextMessage = i18n.extrasNextUnitOverview();
     }
 
     return (
