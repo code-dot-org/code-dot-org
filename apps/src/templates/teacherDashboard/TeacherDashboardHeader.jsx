@@ -20,6 +20,7 @@ import {
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import Button from '../Button';
 import DropdownButton from '../DropdownButton';
+import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
 
 class TeacherDashboardHeader extends React.Component {
   static propTypes = {
@@ -70,6 +71,24 @@ class TeacherDashboardHeader extends React.Component {
       />
     ));
 
+  progressNotSavingNotification() {
+    return (
+      <Notification
+        type={NotificationType.failure}
+        notice={i18n.disabledProgressTeacherDashboard1()}
+        details={
+          i18n.disabledProgress1() +
+          ' ' +
+          i18n.disabledProgressTeacherDashboard2()
+        }
+        detailsLinkText={i18n.learnMore()}
+        detailsLink={disabledBubblesSupportArticle}
+        detailsLinkNewWindow={true}
+        dismissable={false}
+      />
+    );
+  }
+
   render() {
     return (
       <div>
@@ -83,6 +102,9 @@ class TeacherDashboardHeader extends React.Component {
           restrictSection={this.props.selectedSection.restrictSection}
           loginType={this.props.selectedSection.loginType}
         />
+        {this.props.selectedSection.postMilestoneDisabled && (
+          <this.progressNotSavingNotification />
+        )}
         <div style={styles.header}>
           <div>
             <h1>{this.props.selectedSection.name}</h1>
