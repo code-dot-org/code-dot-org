@@ -479,10 +479,10 @@ class Blockly < Level
     translated_xml_texts = {}
     # Selects each <xml></xml> because these might be blockly blocks which need translation.
     text.scan(/<xml>[\s\S]*?<\/xml>/).each do |xml_text|
-      text_xml_doc = Nokogiri::XML(xml_text)
+      text_xml_doc = Nokogiri::XML(xml_text, &:noblanks)
       localized_function_blocks_xml(text_xml_doc)
       localize_all_placeholder_text_block_types(text_xml_doc)
-      translated_xml_text = text_xml_doc.to_html(encoding: 'UTF-8').strip
+      translated_xml_text = text_xml_doc.serialize(save_with: XML_OPTIONS, encoding: 'UTF-8').strip
       translated_xml_texts[xml_text] = translated_xml_text
       # TODO: add `localized_variable_blocks_xml(text_xml_doc)`
     end
