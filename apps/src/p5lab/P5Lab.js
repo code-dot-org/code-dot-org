@@ -1552,10 +1552,10 @@ export default class P5Lab {
   /**
    * Get the feedback message for the feedback dialog.
    * Subclasses can override this behavior.
-   * @param {boolean} _isFreePlay Unused by this implementation
+   * @param {boolean} _isFinalFreePlayLevel Unused by this implementation
    * @returns {string}
    */
-  getReinfFeedbackMsg(_isFreePlay) {
+  getReinfFeedbackMsg(_isFinalFreePlayLevel) {
     return this.getMsg().reinfFeedbackMsg();
   }
 
@@ -1572,6 +1572,13 @@ export default class P5Lab {
     var level = this.level;
     let msg = this.getMsg();
 
+    // Allow P5Labs to decide what string should be rendered in the feedback dialog.
+    const isFinalFreePlayLevel = this.studioApp_.isFinalFreePlayLevel(
+      this.testResults,
+      this.response
+    );
+    const reinfFeedbackMsg = this.getReinfFeedbackMsg(isFinalFreePlayLevel);
+
     const isSignedIn =
       getStore().getState().currentUser.signInState === SignInState.SignedIn;
 
@@ -1587,9 +1594,7 @@ export default class P5Lab {
       // feedbackImage: feedbackImageCanvas.canvas.toDataURL("image/png")
       showingSharing: !level.disableSharing && level.freePlay,
       appStrings: {
-        reinfFeedbackMsg: this.getReinfFeedbackMsg(
-          this.testResults === TestResults.FREE_PLAY
-        ),
+        reinfFeedbackMsg,
         sharingText: msg.shareGame()
       },
       hideXButton: true,
