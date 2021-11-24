@@ -32,6 +32,8 @@ export default function NewUnitForm(props) {
       return selectedFamilyName;
     } else if (newFamilyName !== '') {
       return newFamilyName;
+    } else {
+      return '';
     }
   };
 
