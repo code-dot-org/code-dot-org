@@ -27,6 +27,14 @@ export default function NewUnitForm(props) {
     return name;
   };
 
+  const getFamilyNameValue = () => {
+    if (selectedFamilyName !== '') {
+      return selectedFamilyName;
+    } else if (newFamilyName !== '') {
+      return newFamilyName;
+    }
+  };
+
   return (
     <form action="/s" method="post">
       <RailsAuthenticityToken />
@@ -60,7 +68,7 @@ export default function NewUnitForm(props) {
         <div>
           <input
             name="family_name"
-            value={selectedFamilyName || newFamilyName}
+            value={getFamilyNameValue()}
             type="hidden"
           />
           <label>
