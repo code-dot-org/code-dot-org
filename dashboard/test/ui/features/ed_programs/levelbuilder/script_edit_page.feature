@@ -8,7 +8,7 @@ Feature: Using the Script Edit Page
 
 Scenario: View the script edit page
   Given I create a levelbuilder named "Levi"
-  And I create a temp unit and lesson
+  And I create a temp migrated unit with lessons
   And I view the temp unit overview page
   And I view the temp unit edit page
   And I delete the temp unit with lessons
@@ -16,7 +16,7 @@ Scenario: View the script edit page
 Scenario: View the script edit page in locale besides en-US
   Given I am on "http://studio.code.org/home/lang/es"
   And I create a levelbuilder named "Levi"
-  And I create a temp unit and lesson
+  And I create a temp migrated unit with lessons
   And I view the temp unit overview page
   And I try to view the temp unit edit page
   And I get redirected to "/" via "dashboard"
@@ -26,7 +26,7 @@ Scenario: View the script edit page in locale besides en-US
 
 Scenario: Save changes to a script
   Given I create a levelbuilder named "Levi"
-  And I create a temp unit and lesson
+  And I create a temp migrated unit with lessons
   And I view the temp unit overview page
   And element ".progress-bubble" contains text "1"
   And element ".progress-bubble" does not contain text "2"
