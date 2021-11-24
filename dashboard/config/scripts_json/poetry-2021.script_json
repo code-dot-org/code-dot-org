@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-22 17:09:18 UTC",
+    "serialized_at": "2021-11-23 20:29:28 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1285,7 +1285,13 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** “Planning Your Poem Generator Video” slide to the class and show the video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Code Studio:** Have students log in to their Code Studio accounts and start at Level 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Show the “Levels 3, 4, 5, 6  - Your Turn” slide. \n",
         "duration": "17",
-        "name": "Your Turn"
+        "name": "Your Turn",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This \"Planning Your Poem Generator App\" video is 3:45 minutes long. Use the time stamps below to remind students how to code the corresponding aspects of their program. \n\n- 0:00-0:34 Setting up your planning handout\n- 0:43-1:36 Adding three prompts and labeling variables **(Level 3)**\n- 1:36-2:06 Adding title and author **(Level 4)** \n- 2:06-2:51 Adding each line with the correct variable label **(Level 5)**\n- 2:51-3:45 Debugging your code "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ea6fb562-19ae-4240-9336-d9bafccec32d",

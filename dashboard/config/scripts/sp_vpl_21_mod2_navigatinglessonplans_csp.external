@@ -9,9 +9,9 @@ markdown <<MARKDOWN
 
 ##### **Step 1:** Open a new tab and log into your teacher account on Code.org. 
 
-##### **Step 2:** Click on "CS Discoveries" in the "Courses" column of the "Class Sections" table on the "My Dashboard" page. 
+##### **Step 2:** Click on "CS Principles" in the "Courses" column of the "Class Sections" table on the "My Dashboard" page. 
 
-(If you have not created class sections, navigate to the CS Discoveries curriculum from the "My Courses" section of the "My Dashboard" page.)
+(If you have not created class sections, navigate to the CS Principles curriculum from the "My Courses" section of the "My Dashboard" page.)
 
 ##### **Step 3:** Navigate to the Unit you would like to view and click on the "Go to Unit" button.
 
@@ -20,9 +20,7 @@ markdown <<MARKDOWN
 
 <hr style="clear:both">
 
-
-
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vTVhTiSAQydKUrGrGNaDQ_m7-IeAQ9dLo7MzlWWeJKQ5HdKI2Nrn9QOI2gV-hZTPgV7vbIa1zFrIcgS/pub?w=708&h=612" alt="Screenshot showing the CS Discoveries course overview page with an orange arrow pointing to the 'Go to Unit' button for Unit 1." style="float: left; height: 400px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/b129bf05800507765e86d08fe308d1f4-image-1637628439285.png" alt="Screenshot showing the CS Principles course overview page with an orange arrow pointing to the 'Go to Unit' button for Unit 1." style="float: left; height: 235px; width:450; clear: both; margin: 0 20px 20px 0;">
 
 ## Course overview page
 
@@ -30,7 +28,7 @@ The course overview page contains a short description of each unit within the co
 
 <hr style="clear:both">
 
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vTsMcAjhEPf8bUwJ6p1oIXmKaZu40kRwep8HfBRCyx5AN9WAWXmcCMx-vlmLW25V0cgcPcpbUNUIRrA/pub?w=750&h=703"  alt="Screenshot showing the Unit 1 overview page with an orange arrow pointing to the 'View Lesson Plan' button for Lesson 1" style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/fd9a21875858986a0907c5362a7e4bd7-image-1637628360871.png"  alt="Screenshot showing the Unit 1 overview page with an orange arrow pointing to the 'View Lesson Plan' button for Lesson 1" style="float: left; height: 249px; width:450px; clear: both; margin: 0 20px 20px 0;">
 
 
 ## Unit overview page
@@ -39,13 +37,11 @@ The unit overview page contains a short description of each lesson within the un
 
 <hr style="clear:both">
 
-<img src="https://docs.google.com/drawings/d/e/2PACX-1vRp9xZI8Ex6PMPLyUfZLmTvMAGN79K7IX0-W1FfjwWGvX4h9x31QqbeYR0kBEYQ7tsFfwuBPMBb0EfZ/pub?w=696&h=556"  alt="Screenshot showing the Unit 1, Lesson 1 plan with an orange arrow demonstrating how to find other lessons in the unit." style="float: left; height: 350px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/049ee95d374d503c27e56205729d2697-image-1637628469343.png"  alt="Screenshot showing the Unit 1, Lesson 1 plan with an orange arrow demonstrating how to find other lessons in the unit." style="float: left; height: 234px; width: 450px; clear: both; margin: 0 20px 20px 0;">
 
 ## Lesson plans
 
 Within the lesson plan, you will find a teaching guide, lesson objectives, links to student and teacher lesson resources, standards alignment, and all other content necessary for teaching the lesson. You can also preview student facing levels from within the lesson plan. To navigate between lessons, you can click the purple "Other Lessons in this Unit" button and choose a different lesson plan to view.
 
 <div style="clear:both"/>
-
-
 MARKDOWN
