@@ -69,7 +69,15 @@ def get_i18n_strings(level)
       authored_hints = JSON.parse(level.authored_hints)
       i18n_strings['authored_hints'] = Hash.new unless authored_hints.empty?
       authored_hints.each do |hint|
-        i18n_strings['authored_hints'][hint['hint_id']] = hint['hint_markdown']
+        markdown = hint['hint_markdown']
+        i18n_strings['authored_hints'][hint['hint_id']] = markdown
+        # parse and store placeholder texts
+        processed_markdown = Nokogiri::HTML(markdown, &:noblanks)
+        placeholders = get_all_placeholder_text_types(processed_markdown)
+        if placeholders.present?
+          i18n_strings['placeholder_texts'] = Hash.new
+          i18n_strings['placeholder_texts'].merge! placeholders
+        end
       end
     end
 
@@ -80,6 +88,20 @@ def get_i18n_strings(level)
       callouts.each do |callout|
         i18n_strings['callouts'][callout['localization_key']] = callout['callout_text']
       end
+    end
+
+    # parse markdown properties for potential placeholder texts
+    documents = []
+    %w(
+      short_instructions
+      long_instructions
+    ).each do |prop|
+      documents.push level.try(prop) if level.try(prop)
+    end
+    i18n_strings['placeholder_texts'] = i18n_strings['placeholder_texts'] || Hash.new unless documents.empty?
+    documents.each do |document|
+      processed_doc = Nokogiri::HTML(document, &:noblanks)
+      i18n_strings['placeholder_texts'].merge! get_all_placeholder_text_types(processed_doc)
     end
 
     level_xml = Nokogiri::XML(level.to_xml, &:noblanks)
@@ -136,10 +158,8 @@ def get_i18n_strings(level)
       end
 
       ## Placeholder texts
-      i18n_strings['placeholder_texts'] = Hash.new
-      i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'text', ['TEXT'])
-      i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'studio_ask', ['TEXT'])
-      i18n_strings['placeholder_texts'].merge! get_placeholder_texts(blocks, 'studio_showTitleScreen', %w(TEXT TITLE))
+      i18n_strings['placeholder_texts'] = i18n_strings['placeholder_texts'] || Hash.new
+      i18n_strings['placeholder_texts'].merge! get_all_placeholder_text_types(blocks)
     end
   end
 
@@ -161,9 +181,17 @@ def get_i18n_strings(level)
   i18n_strings.delete_if {|_, value| value.blank?}
 end
 
-def get_placeholder_texts(blocks, block_type, title_names)
+def get_all_placeholder_text_types(blocks)
   results = {}
-  blocks.xpath("//block[@type=\"#{block_type}\"]").each do |block|
+  results.merge! get_placeholder_texts(blocks, 'text', ['TEXT'])
+  results.merge! get_placeholder_texts(blocks, 'studio_ask', ['TEXT'])
+  results.merge! get_placeholder_texts(blocks, 'studio_showTitleScreen', %w(TEXT TITLE))
+  results
+end
+
+def get_placeholder_texts(document, block_type, title_names)
+  results = {}
+  document.xpath("//block[@type=\"#{block_type}\"]").each do |block|
     title_names.each do |title_name|
       title = block.at_xpath("./title[@name=\"#{title_name}\"]")
 
