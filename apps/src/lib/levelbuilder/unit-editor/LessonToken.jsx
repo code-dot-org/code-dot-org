@@ -83,7 +83,6 @@ export class LessonTokenContents extends Component {
   };
 
   handleRemove = () => {
-    console.log('handleRemove');
     this.props.removeLesson(this.props.lesson.position);
   };
 
