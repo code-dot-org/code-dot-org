@@ -1975,10 +1975,21 @@ FeedbackUtils.prototype.hasExceededLimitedBlocks_ = function() {
   return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
 };
 
+/**
+ * Determine if this is the final level in a progression based on server response.
+ * See {} for details
+ * @param {Object} response
+ * @returns {boolean}
+ */
 FeedbackUtils.prototype.isFinalLevel = function(response) {
   return response?.message === 'no more levels';
 };
 
-FeedbackUtils.prototype.isFreePlay = function(feedbackType) {
-  return feedbackType === TestResults.FREE_PLAY;
+/**
+ * Determine if this is a freeplay level based on level result.
+ * @param {TestResults} result
+ * @returns {boolean}
+ */
+FeedbackUtils.prototype.isFreePlay = function(result) {
+  return result === TestResults.FREE_PLAY;
 };
