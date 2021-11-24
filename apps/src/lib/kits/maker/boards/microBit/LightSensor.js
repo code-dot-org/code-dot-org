@@ -140,7 +140,7 @@ export default class LightSensor extends EventEmitter {
     );
   }
 
-  setRange(min, max) {
+  setScale(min, max) {
     this.state.rangeMin = min;
     this.state.rangeMax = max;
   }

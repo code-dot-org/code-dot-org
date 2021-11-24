@@ -51,7 +51,7 @@ describe('LightSensor', function() {
     });
 
     it(`after ranges are set to 10 and 110`, () => {
-      lightSensor.setRange(10, 110);
+      lightSensor.setScale(10, 110);
 
       boardClient.analogChannel[SENSOR_CHANNELS.lightSensor] = 0;
       expect(lightSensor.value).to.equal(10);
@@ -117,7 +117,7 @@ describe('LightSensor', function() {
     });
 
     it(`returns average of values in buffer within the set range`, () => {
-      lightSensor.setRange(10, 110);
+      lightSensor.setScale(10, 110);
 
       lightSensor.state.buffer = new Float32Array(
         MAX_SENSOR_BUFFER_DURATION / SAMPLE_INTERVAL
