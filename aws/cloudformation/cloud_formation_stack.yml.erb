@@ -239,7 +239,7 @@ Resources:
       DistributionConfig: <%= cloudfront_config(app) %>
 <%   end -%>
 
-<%   if cdn_enabled -%>
+<%   if cdn_enabled && app == 'Pegasus' -%>
 <%=    component 'www_redirect', app: app -%>
 <%  end -%>
 
