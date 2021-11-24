@@ -12,11 +12,11 @@
     },
     "new_name": null,
     "family_name": "ai-ethics",
-    "serialized_at": "2021-11-10 20:24:18 UTC",
+    "serialized_at": "2021-11-22 19:57:49 UTC",
     "published_state": "beta",
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "ai-ethics"
     }

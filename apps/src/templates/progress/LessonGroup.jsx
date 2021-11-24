@@ -80,7 +80,7 @@ class LessonGroup extends React.Component {
 
     const hasVisibleLesson = lessons.some(lesson => lessonIsVisible(lesson));
 
-    if (!hasVisibleLesson && viewAs === ViewType.Student) {
+    if (!hasVisibleLesson && viewAs === ViewType.Participant) {
       return null;
     }
 

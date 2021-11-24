@@ -119,7 +119,7 @@ class LessonTest < ActiveSupport::TestCase
     lesson_group = create :lesson_group, script: script
     lesson = create :lesson, script: script, lesson_group: lesson_group, name: 'My Lesson'
     lesson.objectives.push(create(:objective))
-    lesson.objectives.push(create(:objective, description: nil))
+    lesson.objectives.push(create(:objective))
     lesson.vocabularies.push(create(:vocabulary))
     lesson.vocabularies.push(create(:vocabulary))
     lesson.resources.push(create(:resource))
@@ -915,25 +915,6 @@ class LessonTest < ActiveSupport::TestCase
       new_lesson.student_lesson_plan_pdf_url,
       "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/student-lesson-plans/Some+Verbose+Lesson+Name.pdf"
     )
-  end
-
-  test 'unit_resource_pdf_url gets url to script resources pdf for migrated script' do
-    script = create :script, name: 'test-script', is_migrated: true, seeded_from: Time.at(0)
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
-
-    assert_equal(
-      "https://lesson-plans.code.org/#{script.name}/#{Time.parse(script.seeded_from).to_s(:number)}/#{script.name}+-+Resources.pdf",
-      lesson.unit_resource_pdf_url
-    )
-  end
-
-  test 'unit_resource_pdf_url is nil for non-migrated script' do
-    script = create :script, name: 'test-script', is_migrated: false, seeded_from: Time.at(0)
-    lesson_group = create :lesson_group, script: script
-    lesson = create :lesson, lesson_group: lesson_group, script: script, has_lesson_plan: true
-
-    assert_nil lesson.unit_resource_pdf_url
   end
 
   test 'no student_lesson_plan_pdf_url for non-migrated scripts' do

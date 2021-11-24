@@ -6,14 +6,17 @@
     "properties": {
       "editor_experiment": "broward",
       "hideable_lessons": true,
+      "is_migrated": true,
       "lesson_extras_available": true,
       "pilot_experiment": "time4cs-control"
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-10-25 22:54:03 UTC",
+    "serialized_at": "2021-11-22 17:08:12 UTC",
     "published_state": "pilot",
     "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "time4cs-control-unit-1"
     }
@@ -303,16 +306,689 @@
     }
   ],
   "lesson_activities": [
-
+    {
+      "key": "ad895f84-7d40-4966-9a01-b752212a0431",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ad895f84-7d40-4966-9a01-b752212a0431",
+        "lesson.key": "Sequencing in Maze",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "234341f1-d3a2-43b4-a612-d9f5a42ccced",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "234341f1-d3a2-43b4-a612-d9f5a42ccced",
+        "lesson.key": "Programming and Loops with the Artist",
+        "lesson_group.key": "csf_loops",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "665085e3-a74a-4030-b4ae-472ba2a3aaf8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "665085e3-a74a-4030-b4ae-472ba2a3aaf8",
+        "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "e3ccec9b-2ea7-42d8-84e3-210ff5a0c269",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e3ccec9b-2ea7-42d8-84e3-210ff5a0c269",
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "2351e6ea-26cb-44bd-bfd7-f9ad649ecb87",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2351e6ea-26cb-44bd-bfd7-f9ad649ecb87",
+        "lesson.key": "Events: The Big Event",
+        "lesson_group.key": "csf_events",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "87c3add5-13c7-4f97-b868-673039007453",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "87c3add5-13c7-4f97-b868-673039007453",
+        "lesson.key": "Simon Says",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "541083ab-d97d-4553-b1be-270731c2d736",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "541083ab-d97d-4553-b1be-270731c2d736",
+        "lesson.key": "Learning Sprites with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "54a30a37-867f-4e72-b1e5-16d093db2957",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "54a30a37-867f-4e72-b1e5-16d093db2957",
+        "lesson.key": "Alien Dance Party with Sprite Lab",
+        "lesson_group.key": "csf_sprites",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "d6b8b361-6252-44a1-8548-cb0d5fa1a617",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d6b8b361-6252-44a1-8548-cb0d5fa1a617",
+        "lesson.key": "Private and Personal Information",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "c9fc3ddb-b2b9-4ed6-a28c-b4b3c85c5c96",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9fc3ddb-b2b9-4ed6-a28c-b4b3c85c5c96",
+        "lesson.key": "About Me",
+        "lesson_group.key": "csf_digcit",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "80c7d763-0979-40fd-8a44-a72ab03b54c5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "80c7d763-0979-40fd-8a44-a72ab03b54c5",
+        "lesson.key": "Access Ability",
+        "lesson_group.key": "csf_impacts",
+        "script.name": "time4cs-control-unit-1"
+      }
+    },
+    {
+      "key": "466d84dc-17e0-487d-9534-72969c44db29",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "466d84dc-17e0-487d-9534-72969c44db29",
+        "lesson.key": "Conditionals Review",
+        "lesson_group.key": "ramp_up",
+        "script.name": "time4cs-control-unit-1"
+      }
+    }
   ],
   "activity_sections": [
-
+    {
+      "key": "53250308-9101-46cc-96a6-3d038a44150e",
+      "position": 1,
+      "properties": {
+        "progression_name": "Maze Intro: Programming with Blocks"
+      },
+      "seeding_key": {
+        "activity_section.key": "53250308-9101-46cc-96a6-3d038a44150e",
+        "lesson_activity.key": "ad895f84-7d40-4966-9a01-b752212a0431"
+      }
+    },
+    {
+      "key": "9d483459-b7f8-4279-9aca-1539f14739d2",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d483459-b7f8-4279-9aca-1539f14739d2",
+        "lesson_activity.key": "ad895f84-7d40-4966-9a01-b752212a0431"
+      }
+    },
+    {
+      "key": "e76b02ab-9fc9-4235-9307-a3bcea89f186",
+      "position": 3,
+      "properties": {
+        "progression_name": "Debugging with the Step Button"
+      },
+      "seeding_key": {
+        "activity_section.key": "e76b02ab-9fc9-4235-9307-a3bcea89f186",
+        "lesson_activity.key": "ad895f84-7d40-4966-9a01-b752212a0431"
+      }
+    },
+    {
+      "key": "ff2d49fa-283b-40e8-817b-544bc9e280c6",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "ff2d49fa-283b-40e8-817b-544bc9e280c6",
+        "lesson_activity.key": "ad895f84-7d40-4966-9a01-b752212a0431"
+      }
+    },
+    {
+      "key": "dce09c17-1458-4d64-b06c-a0c762a62951",
+      "position": 5,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "dce09c17-1458-4d64-b06c-a0c762a62951",
+        "lesson_activity.key": "ad895f84-7d40-4966-9a01-b752212a0431"
+      }
+    },
+    {
+      "key": "a76b0c4a-009f-446a-9a77-0e006406a4a2",
+      "position": 6,
+      "properties": {
+        "name": "Practice",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "a76b0c4a-009f-446a-9a77-0e006406a4a2",
+        "lesson_activity.key": "ad895f84-7d40-4966-9a01-b752212a0431"
+      }
+    },
+    {
+      "key": "84d7f8e2-32f2-4b00-a32f-0da621dc5e40",
+      "position": 1,
+      "properties": {
+        "progression_name": "Artist Intro with JR Hildebrande"
+      },
+      "seeding_key": {
+        "activity_section.key": "84d7f8e2-32f2-4b00-a32f-0da621dc5e40",
+        "lesson_activity.key": "234341f1-d3a2-43b4-a612-d9f5a42ccced"
+      }
+    },
+    {
+      "key": "0997c992-b359-4b4a-b817-2277c73a36d9",
+      "position": 2,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "0997c992-b359-4b4a-b817-2277c73a36d9",
+        "lesson_activity.key": "234341f1-d3a2-43b4-a612-d9f5a42ccced"
+      }
+    },
+    {
+      "key": "81a45a92-f3ab-400c-80b2-dbef02312380",
+      "position": 3,
+      "properties": {
+        "progression_name": "Loops with the Artist"
+      },
+      "seeding_key": {
+        "activity_section.key": "81a45a92-f3ab-400c-80b2-dbef02312380",
+        "lesson_activity.key": "234341f1-d3a2-43b4-a612-d9f5a42ccced"
+      }
+    },
+    {
+      "key": "a895c8e9-fe8f-4fd3-a03a-e2d1b9703abd",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "a895c8e9-fe8f-4fd3-a03a-e2d1b9703abd",
+        "lesson_activity.key": "234341f1-d3a2-43b4-a612-d9f5a42ccced"
+      }
+    },
+    {
+      "key": "6edfc578-520b-4743-b10c-863263d9075f",
+      "position": 5,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "6edfc578-520b-4743-b10c-863263d9075f",
+        "lesson_activity.key": "234341f1-d3a2-43b4-a612-d9f5a42ccced"
+      }
+    },
+    {
+      "key": "ae0d6456-147a-42c6-be9e-be89b7585a95",
+      "position": 6,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae0d6456-147a-42c6-be9e-be89b7585a95",
+        "lesson_activity.key": "234341f1-d3a2-43b4-a612-d9f5a42ccced"
+      }
+    },
+    {
+      "key": "26ac909d-47cf-4280-9edb-366a6597804b",
+      "position": 7,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "26ac909d-47cf-4280-9edb-366a6597804b",
+        "lesson_activity.key": "234341f1-d3a2-43b4-a612-d9f5a42ccced"
+      }
+    },
+    {
+      "key": "014dc3bb-675f-4c30-8045-bba0a330ca3b",
+      "position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "014dc3bb-675f-4c30-8045-bba0a330ca3b",
+        "lesson_activity.key": "234341f1-d3a2-43b4-a612-d9f5a42ccced"
+      }
+    },
+    {
+      "key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105",
+      "position": 1,
+      "properties": {
+        "name": "Practice",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105",
+        "lesson_activity.key": "665085e3-a74a-4030-b4ae-472ba2a3aaf8"
+      }
+    },
+    {
+      "key": "e5e79efb-3c86-4d9a-a0cb-cb2d58ae185f",
+      "position": 1,
+      "properties": {
+        "progression_name": "While Loops with the Farmer"
+      },
+      "seeding_key": {
+        "activity_section.key": "e5e79efb-3c86-4d9a-a0cb-cb2d58ae185f",
+        "lesson_activity.key": "e3ccec9b-2ea7-42d8-84e3-210ff5a0c269"
+      }
+    },
+    {
+      "key": "6e9db22b-fced-4c5a-9f59-afa05c3e9a17",
+      "position": 2,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "6e9db22b-fced-4c5a-9f59-afa05c3e9a17",
+        "lesson_activity.key": "e3ccec9b-2ea7-42d8-84e3-210ff5a0c269"
+      }
+    },
+    {
+      "key": "0808b2a7-7160-44eb-a51d-56fcbeef3e60",
+      "position": 3,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "0808b2a7-7160-44eb-a51d-56fcbeef3e60",
+        "lesson_activity.key": "e3ccec9b-2ea7-42d8-84e3-210ff5a0c269"
+      }
+    },
+    {
+      "key": "eb911116-742c-4625-9d48-22836f4f1de6",
+      "position": 4,
+      "properties": {
+        "progression_name": "Repeat Unit Statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "eb911116-742c-4625-9d48-22836f4f1de6",
+        "lesson_activity.key": "e3ccec9b-2ea7-42d8-84e3-210ff5a0c269"
+      }
+    },
+    {
+      "key": "66f27b78-5750-41e4-b190-c0899e9fb9ee",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "66f27b78-5750-41e4-b190-c0899e9fb9ee",
+        "lesson_activity.key": "e3ccec9b-2ea7-42d8-84e3-210ff5a0c269"
+      }
+    },
+    {
+      "key": "038d7800-e2d5-4112-b85e-f738a4228bbf",
+      "position": 6,
+      "properties": {
+        "progression_name": "\"If/Else\" with the Bee"
+      },
+      "seeding_key": {
+        "activity_section.key": "038d7800-e2d5-4112-b85e-f738a4228bbf",
+        "lesson_activity.key": "e3ccec9b-2ea7-42d8-84e3-210ff5a0c269"
+      }
+    },
+    {
+      "key": "3c7aa8d2-821a-4759-b076-27d5a928ea56",
+      "position": 7,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c7aa8d2-821a-4759-b076-27d5a928ea56",
+        "lesson_activity.key": "e3ccec9b-2ea7-42d8-84e3-210ff5a0c269"
+      }
+    },
+    {
+      "key": "87bec8fe-6b7b-43ec-9011-8b7cd0c4f9d4",
+      "position": 8,
+      "properties": {
+        "name": "Practice",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "87bec8fe-6b7b-43ec-9011-8b7cd0c4f9d4",
+        "lesson_activity.key": "e3ccec9b-2ea7-42d8-84e3-210ff5a0c269"
+      }
+    },
+    {
+      "key": "f93fe928-ed1c-4017-9bdc-9c93adb3fac7",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f93fe928-ed1c-4017-9bdc-9c93adb3fac7",
+        "lesson_activity.key": "2351e6ea-26cb-44bd-bfd7-f9ad649ecb87"
+      }
+    },
+    {
+      "key": "6902d733-548f-4b80-b7d2-25ae83348c8b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6902d733-548f-4b80-b7d2-25ae83348c8b",
+        "lesson_activity.key": "87c3add5-13c7-4f97-b868-673039007453"
+      }
+    },
+    {
+      "key": "4c27fa29-a4ed-49b4-a7a1-a434a97f6fa9",
+      "position": 1,
+      "properties": {
+        "progression_name": "Introducing Sprite Lab"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c27fa29-a4ed-49b4-a7a1-a434a97f6fa9",
+        "lesson_activity.key": "541083ab-d97d-4553-b1be-270731c2d736"
+      }
+    },
+    {
+      "key": "c5d00d48-a649-4f03-aa1d-5689ff63cf5c",
+      "position": 2,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "c5d00d48-a649-4f03-aa1d-5689ff63cf5c",
+        "lesson_activity.key": "541083ab-d97d-4553-b1be-270731c2d736"
+      }
+    },
+    {
+      "key": "7603113a-f162-45c7-bfbe-2e71b00dbace",
+      "position": 3,
+      "properties": {
+        "progression_name": "Mini-Project: Swimming Fish"
+      },
+      "seeding_key": {
+        "activity_section.key": "7603113a-f162-45c7-bfbe-2e71b00dbace",
+        "lesson_activity.key": "541083ab-d97d-4553-b1be-270731c2d736"
+      }
+    },
+    {
+      "key": "b25fae51-9f6f-403a-ada5-c736ca01f23f",
+      "position": 4,
+      "properties": {
+        "progression_name": "How to Make a Sprite"
+      },
+      "seeding_key": {
+        "activity_section.key": "b25fae51-9f6f-403a-ada5-c736ca01f23f",
+        "lesson_activity.key": "541083ab-d97d-4553-b1be-270731c2d736"
+      }
+    },
+    {
+      "key": "5db6a3a3-9b25-4259-83d5-d6037b4eae98",
+      "position": 5,
+      "properties": {
+        "progression_name": "Mini-Project: Swimming Fish (continued)"
+      },
+      "seeding_key": {
+        "activity_section.key": "5db6a3a3-9b25-4259-83d5-d6037b4eae98",
+        "lesson_activity.key": "541083ab-d97d-4553-b1be-270731c2d736"
+      }
+    },
+    {
+      "key": "814298af-75d3-41dd-8c7c-3e48369b6ed2",
+      "position": 6,
+      "properties": {
+        "name": "Free Play",
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "814298af-75d3-41dd-8c7c-3e48369b6ed2",
+        "lesson_activity.key": "541083ab-d97d-4553-b1be-270731c2d736"
+      }
+    },
+    {
+      "key": "eb0b78f9-d723-42ca-9cc4-9a0eb287bc03",
+      "position": 1,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "eb0b78f9-d723-42ca-9cc4-9a0eb287bc03",
+        "lesson_activity.key": "54a30a37-867f-4e72-b1e5-16d093db2957"
+      }
+    },
+    {
+      "key": "1272304b-5b0b-4391-abc6-949a395facbe",
+      "position": 2,
+      "properties": {
+        "progression_name": "Video"
+      },
+      "seeding_key": {
+        "activity_section.key": "1272304b-5b0b-4391-abc6-949a395facbe",
+        "lesson_activity.key": "54a30a37-867f-4e72-b1e5-16d093db2957"
+      }
+    },
+    {
+      "key": "4c52bd36-ddaf-4b67-8b97-f64f175ecba0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Mini-Project: Alien Dance Moves"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c52bd36-ddaf-4b67-8b97-f64f175ecba0",
+        "lesson_activity.key": "54a30a37-867f-4e72-b1e5-16d093db2957"
+      }
+    },
+    {
+      "key": "75b48c9b-1b5a-4d47-85a1-3f46a2963eae",
+      "position": 4,
+      "properties": {
+        "name": "Mini-Project: Alien Dance Party",
+        "progression_name": "Mini-Project: Alien Dance Party"
+      },
+      "seeding_key": {
+        "activity_section.key": "75b48c9b-1b5a-4d47-85a1-3f46a2963eae",
+        "lesson_activity.key": "54a30a37-867f-4e72-b1e5-16d093db2957"
+      }
+    },
+    {
+      "key": "9d1dc7a9-79a5-4e63-889e-5f286010a21f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9d1dc7a9-79a5-4e63-889e-5f286010a21f",
+        "lesson_activity.key": "d6b8b361-6252-44a1-8548-cb0d5fa1a617"
+      }
+    },
+    {
+      "key": "b1a977c8-1423-4d1a-9324-f0b4df055be3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Free Play"
+      },
+      "seeding_key": {
+        "activity_section.key": "b1a977c8-1423-4d1a-9324-f0b4df055be3",
+        "lesson_activity.key": "c9fc3ddb-b2b9-4ed6-a28c-b4b3c85c5c96"
+      }
+    },
+    {
+      "key": "96f48458-63ea-4ad5-8347-f71d5c618f7b",
+      "position": 2,
+      "properties": {
+        "name": "Mini-project: Interactive Poster",
+        "progression_name": "Mini-project: Interactive Poster"
+      },
+      "seeding_key": {
+        "activity_section.key": "96f48458-63ea-4ad5-8347-f71d5c618f7b",
+        "lesson_activity.key": "c9fc3ddb-b2b9-4ed6-a28c-b4b3c85c5c96"
+      }
+    },
+    {
+      "key": "0293258b-4640-44c0-a537-c7d30315449d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0293258b-4640-44c0-a537-c7d30315449d",
+        "lesson_activity.key": "80c7d763-0979-40fd-8a44-a72ab03b54c5"
+      }
+    },
+    {
+      "key": "c9016160-6bed-4cf4-821a-99a4c1c83fb0",
+      "position": 1,
+      "properties": {
+        "progression_name": "While Loops with the Farmer"
+      },
+      "seeding_key": {
+        "activity_section.key": "c9016160-6bed-4cf4-821a-99a4c1c83fb0",
+        "lesson_activity.key": "466d84dc-17e0-487d-9534-72969c44db29"
+      }
+    },
+    {
+      "key": "dedb856f-72da-4f9a-b1a6-920150f54b26",
+      "position": 2,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "dedb856f-72da-4f9a-b1a6-920150f54b26",
+        "lesson_activity.key": "466d84dc-17e0-487d-9534-72969c44db29"
+      }
+    },
+    {
+      "key": "8106c296-d5b6-4c9f-a526-4c3341274ae0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "8106c296-d5b6-4c9f-a526-4c3341274ae0",
+        "lesson_activity.key": "466d84dc-17e0-487d-9534-72969c44db29"
+      }
+    },
+    {
+      "key": "0f00ff2c-60ac-4156-8af3-d7049598229b",
+      "position": 4,
+      "properties": {
+        "progression_name": "Repeat Unit Statements"
+      },
+      "seeding_key": {
+        "activity_section.key": "0f00ff2c-60ac-4156-8af3-d7049598229b",
+        "lesson_activity.key": "466d84dc-17e0-487d-9534-72969c44db29"
+      }
+    },
+    {
+      "key": "7d8a2261-ecba-4850-8026-3c3a3279d88a",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "7d8a2261-ecba-4850-8026-3c3a3279d88a",
+        "lesson_activity.key": "466d84dc-17e0-487d-9534-72969c44db29"
+      }
+    },
+    {
+      "key": "86d292fd-cd7e-4cd7-9bf8-be94da5f4e06",
+      "position": 6,
+      "properties": {
+        "progression_name": "\"If/Else\" with the Bee"
+      },
+      "seeding_key": {
+        "activity_section.key": "86d292fd-cd7e-4cd7-9bf8-be94da5f4e06",
+        "lesson_activity.key": "466d84dc-17e0-487d-9534-72969c44db29"
+      }
+    },
+    {
+      "key": "90fcccd4-e61c-4243-8147-9e741edfe2fb",
+      "position": 7,
+      "properties": {
+        "progression_name": "Challenge"
+      },
+      "seeding_key": {
+        "activity_section.key": "90fcccd4-e61c-4243-8147-9e741edfe2fb",
+        "lesson_activity.key": "466d84dc-17e0-487d-9534-72969c44db29"
+      }
+    },
+    {
+      "key": "05160988-ce84-481c-acce-41847453f86b",
+      "position": 8,
+      "properties": {
+        "name": "Practice",
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "05160988-ce84-481c-acce-41847453f86b",
+        "lesson_activity.key": "466d84dc-17e0-487d-9534-72969c44db29"
+      }
+    }
   ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -327,7 +1003,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "53250308-9101-46cc-96a6-3d038a44150e"
       },
       "level_keys": [
         "courseD_video_ramp1_control"
@@ -336,7 +1013,7 @@
     {
       "chapter": 2,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -351,7 +1028,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "9d483459-b7f8-4279-9aca-1539f14739d2"
       },
       "level_keys": [
         "courseD_maze_ramp1_control"
@@ -360,7 +1038,7 @@
     {
       "chapter": 3,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -375,7 +1053,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "9d483459-b7f8-4279-9aca-1539f14739d2"
       },
       "level_keys": [
         "courseC_maze_debugging9_control"
@@ -384,7 +1063,7 @@
     {
       "chapter": 4,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -399,7 +1078,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "9d483459-b7f8-4279-9aca-1539f14739d2"
       },
       "level_keys": [
         "courseD_maze_ramp3_control"
@@ -408,7 +1088,7 @@
     {
       "chapter": 5,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -423,7 +1103,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "e76b02ab-9fc9-4235-9307-a3bcea89f186"
       },
       "level_keys": [
         "courseC_video_debugging_control"
@@ -432,7 +1113,7 @@
     {
       "chapter": 6,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -447,7 +1128,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "ff2d49fa-283b-40e8-817b-544bc9e280c6"
       },
       "level_keys": [
         "courseC_maze_debugging2_control"
@@ -456,7 +1138,7 @@
     {
       "chapter": 7,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -471,7 +1153,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "ff2d49fa-283b-40e8-817b-544bc9e280c6"
       },
       "level_keys": [
         "courseD_maze_ramp4_control"
@@ -480,7 +1163,7 @@
     {
       "chapter": 8,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -495,7 +1178,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "ff2d49fa-283b-40e8-817b-544bc9e280c6"
       },
       "level_keys": [
         "courseC_maze_debugging4_control"
@@ -504,7 +1188,7 @@
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -519,7 +1203,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "ff2d49fa-283b-40e8-817b-544bc9e280c6"
       },
       "level_keys": [
         "courseC_maze_debugging6_control"
@@ -528,7 +1213,7 @@
     {
       "chapter": 10,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -544,7 +1229,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "dce09c17-1458-4d64-b06c-a0c762a62951"
       },
       "level_keys": [
         "courseC_maze_debugging7_control"
@@ -553,7 +1239,7 @@
     {
       "chapter": 11,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -568,7 +1254,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "a76b0c4a-009f-446a-9a77-0e006406a4a2"
       },
       "level_keys": [
         "courseD_maze_ramp5a_control"
@@ -577,7 +1264,7 @@
     {
       "chapter": 12,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -592,7 +1279,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "a76b0c4a-009f-446a-9a77-0e006406a4a2"
       },
       "level_keys": [
         "courseD_maze_ramp5c_control"
@@ -601,7 +1289,7 @@
     {
       "chapter": 13,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -616,7 +1304,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "84d7f8e2-32f2-4b00-a32f-0da621dc5e40"
       },
       "level_keys": [
         "courseC_video_artist_control"
@@ -625,7 +1314,7 @@
     {
       "chapter": 14,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -640,7 +1329,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "0997c992-b359-4b4a-b817-2277c73a36d9"
       },
       "level_keys": [
         "courseC_artist_prog1_control"
@@ -649,7 +1339,7 @@
     {
       "chapter": 15,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -664,7 +1354,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "0997c992-b359-4b4a-b817-2277c73a36d9"
       },
       "level_keys": [
         "courseC_artist_prog2_control"
@@ -673,7 +1364,7 @@
     {
       "chapter": 16,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -688,7 +1379,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "81a45a92-f3ab-400c-80b2-dbef02312380"
       },
       "level_keys": [
         "ramp_video_loopsArtist_control"
@@ -697,7 +1389,7 @@
     {
       "chapter": 17,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -712,7 +1404,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "a895c8e9-fe8f-4fd3-a03a-e2d1b9703abd"
       },
       "level_keys": [
         "courseC_artist_prog3_control"
@@ -721,7 +1414,7 @@
     {
       "chapter": 18,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -736,7 +1429,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "a895c8e9-fe8f-4fd3-a03a-e2d1b9703abd"
       },
       "level_keys": [
         "courseC_artist_prog4_control"
@@ -745,7 +1439,7 @@
     {
       "chapter": 19,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -761,7 +1455,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "6edfc578-520b-4743-b10c-863263d9075f"
       },
       "level_keys": [
         "courseC_artist_prog7_control"
@@ -770,7 +1465,7 @@
     {
       "chapter": 20,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -785,7 +1480,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "ae0d6456-147a-42c6-be9e-be89b7585a95"
       },
       "level_keys": [
         "ramp_artist_loops4_control"
@@ -794,7 +1490,7 @@
     {
       "chapter": 21,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -809,7 +1505,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "ae0d6456-147a-42c6-be9e-be89b7585a95"
       },
       "level_keys": [
         "ramp_artist_loops5_control"
@@ -818,7 +1515,7 @@
     {
       "chapter": 22,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -833,7 +1530,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "ae0d6456-147a-42c6-be9e-be89b7585a95"
       },
       "level_keys": [
         "ramp_artist_loops6_control"
@@ -842,7 +1540,7 @@
     {
       "chapter": 23,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -858,7 +1556,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "26ac909d-47cf-4280-9edb-366a6597804b"
       },
       "level_keys": [
         "ramp_artist_loops8_control"
@@ -867,7 +1566,7 @@
     {
       "chapter": 24,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -881,7 +1580,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "014dc3bb-675f-4c30-8045-bba0a330ca3b"
       },
       "level_keys": [
         "courseC_artist_prog_challenge1_control"
@@ -890,7 +1590,7 @@
     {
       "chapter": 25,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -904,7 +1604,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "014dc3bb-675f-4c30-8045-bba0a330ca3b"
       },
       "level_keys": [
         "courseC_artist_prog_challenge2a_control"
@@ -913,7 +1614,7 @@
     {
       "chapter": 26,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -928,7 +1629,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_1_control"
@@ -937,7 +1639,7 @@
     {
       "chapter": 27,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -952,7 +1654,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_2_control"
@@ -961,7 +1664,7 @@
     {
       "chapter": 28,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -976,7 +1679,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_3_control"
@@ -985,7 +1689,7 @@
     {
       "chapter": 29,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1000,7 +1704,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_4_control"
@@ -1009,7 +1714,7 @@
     {
       "chapter": 30,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1024,7 +1729,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_5_control"
@@ -1033,7 +1739,7 @@
     {
       "chapter": 31,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1048,7 +1754,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_6_control"
@@ -1057,7 +1764,7 @@
     {
       "chapter": 32,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1072,7 +1779,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_7a_control"
@@ -1081,7 +1789,7 @@
     {
       "chapter": 33,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1096,7 +1804,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_8_control"
@@ -1105,7 +1814,7 @@
     {
       "chapter": 34,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 9,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1120,7 +1829,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_9b_control"
@@ -1129,7 +1839,7 @@
     {
       "chapter": 35,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 10,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1144,7 +1854,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_10_control"
@@ -1153,7 +1864,7 @@
     {
       "chapter": 36,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1168,7 +1879,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       },
       "level_keys": [
         "CourseE_HOC 2018 Level_11_control"
@@ -1177,7 +1889,7 @@
     {
       "chapter": 37,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1192,7 +1904,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "e5e79efb-3c86-4d9a-a0cb-cb2d58ae185f"
       },
       "level_keys": [
         "courseD_video_whileIntro_control"
@@ -1201,7 +1914,7 @@
     {
       "chapter": 38,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1216,7 +1929,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "6e9db22b-fced-4c5a-9f59-afa05c3e9a17"
       },
       "level_keys": [
         "courseD_farmer_while4_predict1_control"
@@ -1225,7 +1939,7 @@
     {
       "chapter": 39,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1240,7 +1954,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "0808b2a7-7160-44eb-a51d-56fcbeef3e60"
       },
       "level_keys": [
         "courseE_farmer_ramp11a_control"
@@ -1249,7 +1964,7 @@
     {
       "chapter": 40,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1264,7 +1979,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "0808b2a7-7160-44eb-a51d-56fcbeef3e60"
       },
       "level_keys": [
         "courseE_farmer_ramp11b_control"
@@ -1273,7 +1989,7 @@
     {
       "chapter": 41,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1288,7 +2004,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "0808b2a7-7160-44eb-a51d-56fcbeef3e60"
       },
       "level_keys": [
         "courseE_farmer_ramp12b_control"
@@ -1297,7 +2014,7 @@
     {
       "chapter": 42,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1312,7 +2029,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "0808b2a7-7160-44eb-a51d-56fcbeef3e60"
       },
       "level_keys": [
         "courseE_farmer_ramp12_forswap_control"
@@ -1321,7 +2039,7 @@
     {
       "chapter": 43,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1336,7 +2054,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "eb911116-742c-4625-9d48-22836f4f1de6"
       },
       "level_keys": [
         "courseD_video_repeatUntil_control"
@@ -1345,7 +2064,7 @@
     {
       "chapter": 44,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1360,7 +2079,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "66f27b78-5750-41e4-b190-c0899e9fb9ee"
       },
       "level_keys": [
         "courseE_farmer_ramp12c_control"
@@ -1369,7 +2089,7 @@
     {
       "chapter": 45,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1384,7 +2104,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "66f27b78-5750-41e4-b190-c0899e9fb9ee"
       },
       "level_keys": [
         "courseE_farmer_ramp12d_control"
@@ -1393,7 +2114,7 @@
     {
       "chapter": 46,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1408,7 +2129,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "66f27b78-5750-41e4-b190-c0899e9fb9ee"
       },
       "level_keys": [
         "courseE_farmer_ramp12e_control"
@@ -1417,7 +2139,7 @@
     {
       "chapter": 47,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1432,7 +2154,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "038d7800-e2d5-4112-b85e-f738a4228bbf"
       },
       "level_keys": [
         "courseE_video_BeeifElse_control"
@@ -1441,7 +2164,7 @@
     {
       "chapter": 48,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -1457,7 +2180,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "3c7aa8d2-821a-4759-b076-27d5a928ea56"
       },
       "level_keys": [
         "courseE_farmer_ramp12f_control"
@@ -1466,7 +2190,7 @@
     {
       "chapter": 49,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1481,7 +2205,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "87bec8fe-6b7b-43ec-9011-8b7cd0c4f9d4"
       },
       "level_keys": [
         "courseE_farmer_ramp12g_control"
@@ -1490,7 +2215,7 @@
     {
       "chapter": 50,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1504,7 +2229,8 @@
         ],
         "lesson.key": "Events: The Big Event",
         "lesson_group.key": "csf_events",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "f93fe928-ed1c-4017-9bdc-9c93adb3fac7"
       },
       "level_keys": [
         "BigEvent-Unplugged_control"
@@ -1513,7 +2239,7 @@
     {
       "chapter": 51,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1527,7 +2253,8 @@
         ],
         "lesson.key": "Simon Says",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "6902d733-548f-4b80-b7d2-25ae83348c8b"
       },
       "level_keys": [
         "SimonSays-Unplugged_control"
@@ -1536,7 +2263,7 @@
     {
       "chapter": 52,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1551,7 +2278,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "4c27fa29-a4ed-49b4-a7a1-a434a97f6fa9"
       },
       "level_keys": [
         "CourseEF_video_IntroSpriteLab_control"
@@ -1560,7 +2288,7 @@
     {
       "chapter": 53,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1575,7 +2303,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "c5d00d48-a649-4f03-aa1d-5689ff63cf5c"
       },
       "level_keys": [
         "Fish Tank 1-validated_control"
@@ -1584,7 +2313,7 @@
     {
       "chapter": 54,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1599,7 +2328,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "7603113a-f162-45c7-bfbe-2e71b00dbace"
       },
       "level_keys": [
         "Fish Tank 2-validated_control"
@@ -1608,7 +2338,7 @@
     {
       "chapter": 55,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1623,7 +2353,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "7603113a-f162-45c7-bfbe-2e71b00dbace"
       },
       "level_keys": [
         "Fish Tank 3-validated_control"
@@ -1632,7 +2363,7 @@
     {
       "chapter": 56,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1647,7 +2378,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "7603113a-f162-45c7-bfbe-2e71b00dbace"
       },
       "level_keys": [
         "Fish Tank 4-validated_control"
@@ -1656,7 +2388,7 @@
     {
       "chapter": 57,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1671,7 +2403,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "b25fae51-9f6f-403a-ada5-c736ca01f23f"
       },
       "level_keys": [
         "CourseEF_video_MakeSprite_control"
@@ -1680,7 +2413,7 @@
     {
       "chapter": 58,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1695,7 +2428,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "5db6a3a3-9b25-4259-83d5-d6037b4eae98"
       },
       "level_keys": [
         "Fish Tank 5-validated_control"
@@ -1704,7 +2438,7 @@
     {
       "chapter": 59,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1719,7 +2453,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "5db6a3a3-9b25-4259-83d5-d6037b4eae98"
       },
       "level_keys": [
         "Fish Tank 6-validated_control"
@@ -1728,7 +2463,7 @@
     {
       "chapter": 60,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1743,7 +2478,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "814298af-75d3-41dd-8c7c-3e48369b6ed2"
       },
       "level_keys": [
         "Fish Tank 7-validated_control"
@@ -1752,7 +2488,7 @@
     {
       "chapter": 61,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1767,7 +2503,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "eb0b78f9-d723-42ca-9cc4-9a0eb287bc03"
       },
       "level_keys": [
         "Dance Party 1-validated_control"
@@ -1776,7 +2513,7 @@
     {
       "chapter": 62,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1791,7 +2528,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "1272304b-5b0b-4391-abc6-949a395facbe"
       },
       "level_keys": [
         "CDEF_video_SpritesInAction_control"
@@ -1800,7 +2538,7 @@
     {
       "chapter": 63,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1815,7 +2553,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "4c52bd36-ddaf-4b67-8b97-f64f175ecba0"
       },
       "level_keys": [
         "Dance Party 2_control"
@@ -1824,7 +2563,7 @@
     {
       "chapter": 64,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1839,7 +2578,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "4c52bd36-ddaf-4b67-8b97-f64f175ecba0"
       },
       "level_keys": [
         "Dance Party 3_control"
@@ -1848,7 +2588,7 @@
     {
       "chapter": 65,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1863,7 +2603,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "4c52bd36-ddaf-4b67-8b97-f64f175ecba0"
       },
       "level_keys": [
         "Dance Party 4_control"
@@ -1872,7 +2613,7 @@
     {
       "chapter": 66,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1887,7 +2628,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "4c52bd36-ddaf-4b67-8b97-f64f175ecba0"
       },
       "level_keys": [
         "Dance Party 5_control"
@@ -1896,7 +2638,7 @@
     {
       "chapter": 67,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1911,7 +2653,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "75b48c9b-1b5a-4d47-85a1-3f46a2963eae"
       },
       "level_keys": [
         "Dance Party 6_control"
@@ -1920,7 +2663,7 @@
     {
       "chapter": 68,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1935,7 +2678,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "75b48c9b-1b5a-4d47-85a1-3f46a2963eae"
       },
       "level_keys": [
         "Dance Party 7_control"
@@ -1944,7 +2688,7 @@
     {
       "chapter": 69,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1959,7 +2703,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "75b48c9b-1b5a-4d47-85a1-3f46a2963eae"
       },
       "level_keys": [
         "Dance Party Freeplay_control"
@@ -1968,7 +2713,7 @@
     {
       "chapter": 70,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -1982,7 +2727,8 @@
         ],
         "lesson.key": "Private and Personal Information",
         "lesson_group.key": "csf_digcit",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "9d1dc7a9-79a5-4e63-889e-5f286010a21f"
       },
       "level_keys": [
         "PrivatePersonalInformation-Unplugged_control"
@@ -1991,7 +2737,7 @@
     {
       "chapter": 71,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2006,7 +2752,8 @@
         ],
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "b1a977c8-1423-4d1a-9324-f0b4df055be3"
       },
       "level_keys": [
         "courseE_aboutme_1_control"
@@ -2015,7 +2762,7 @@
     {
       "chapter": 72,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2030,7 +2777,8 @@
         ],
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "96f48458-63ea-4ad5-8347-f71d5c618f7b"
       },
       "level_keys": [
         "courseE_aboutme_2_control"
@@ -2039,7 +2787,7 @@
     {
       "chapter": 73,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2054,7 +2802,8 @@
         ],
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "96f48458-63ea-4ad5-8347-f71d5c618f7b"
       },
       "level_keys": [
         "courseE_aboutme_3_control"
@@ -2063,7 +2812,7 @@
     {
       "chapter": 74,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2078,7 +2827,8 @@
         ],
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "96f48458-63ea-4ad5-8347-f71d5c618f7b"
       },
       "level_keys": [
         "courseE_aboutme_4_control"
@@ -2087,7 +2837,7 @@
     {
       "chapter": 75,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2102,7 +2852,8 @@
         ],
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "96f48458-63ea-4ad5-8347-f71d5c618f7b"
       },
       "level_keys": [
         "courseE_aboutme_5_control"
@@ -2111,7 +2862,7 @@
     {
       "chapter": 76,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2126,7 +2877,8 @@
         ],
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "96f48458-63ea-4ad5-8347-f71d5c618f7b"
       },
       "level_keys": [
         "courseE_aboutme_6_control"
@@ -2135,7 +2887,7 @@
     {
       "chapter": 77,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2149,7 +2901,8 @@
         ],
         "lesson.key": "Access Ability",
         "lesson_group.key": "csf_impacts",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "0293258b-4640-44c0-a537-c7d30315449d"
       },
       "level_keys": [
         "DesigningForAccessibilityMarkdownLevel_2019_control"
@@ -2158,7 +2911,7 @@
     {
       "chapter": 78,
       "position": 1,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2173,7 +2926,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "c9016160-6bed-4cf4-821a-99a4c1c83fb0"
       },
       "level_keys": [
         "courseD_video_whileIntro_control"
@@ -2182,7 +2936,7 @@
     {
       "chapter": 79,
       "position": 2,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2197,7 +2951,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "dedb856f-72da-4f9a-b1a6-920150f54b26"
       },
       "level_keys": [
         "courseD_farmer_while4_predict1_control"
@@ -2206,7 +2961,7 @@
     {
       "chapter": 80,
       "position": 3,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2221,7 +2976,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "8106c296-d5b6-4c9f-a526-4c3341274ae0"
       },
       "level_keys": [
         "courseE_farmer_ramp11a_control"
@@ -2230,7 +2986,7 @@
     {
       "chapter": 81,
       "position": 4,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2245,7 +3001,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "8106c296-d5b6-4c9f-a526-4c3341274ae0"
       },
       "level_keys": [
         "courseE_farmer_ramp11b_control"
@@ -2254,7 +3011,7 @@
     {
       "chapter": 82,
       "position": 5,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2269,7 +3026,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "8106c296-d5b6-4c9f-a526-4c3341274ae0"
       },
       "level_keys": [
         "courseE_farmer_ramp12b_control"
@@ -2278,7 +3036,7 @@
     {
       "chapter": 83,
       "position": 6,
-      "activity_section_position": null,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2293,7 +3051,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "8106c296-d5b6-4c9f-a526-4c3341274ae0"
       },
       "level_keys": [
         "courseE_farmer_ramp12_forswap_control"
@@ -2302,7 +3061,7 @@
     {
       "chapter": 84,
       "position": 7,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2317,7 +3076,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "0f00ff2c-60ac-4156-8af3-d7049598229b"
       },
       "level_keys": [
         "courseD_video_repeatUntil_control"
@@ -2326,7 +3086,7 @@
     {
       "chapter": 85,
       "position": 8,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2341,7 +3101,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "7d8a2261-ecba-4850-8026-3c3a3279d88a"
       },
       "level_keys": [
         "courseE_farmer_ramp12c_control"
@@ -2350,7 +3111,7 @@
     {
       "chapter": 86,
       "position": 9,
-      "activity_section_position": null,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2365,7 +3126,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "7d8a2261-ecba-4850-8026-3c3a3279d88a"
       },
       "level_keys": [
         "courseE_farmer_ramp12d_control"
@@ -2374,7 +3136,7 @@
     {
       "chapter": 87,
       "position": 10,
-      "activity_section_position": null,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2389,7 +3151,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "7d8a2261-ecba-4850-8026-3c3a3279d88a"
       },
       "level_keys": [
         "courseE_farmer_ramp12e_control"
@@ -2398,7 +3161,7 @@
     {
       "chapter": 88,
       "position": 11,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2413,7 +3176,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "86d292fd-cd7e-4cd7-9bf8-be94da5f4e06"
       },
       "level_keys": [
         "courseE_video_BeeifElse_control"
@@ -2422,7 +3186,7 @@
     {
       "chapter": 89,
       "position": 12,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "challenge": true,
@@ -2438,7 +3202,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "90fcccd4-e61c-4243-8147-9e741edfe2fb"
       },
       "level_keys": [
         "courseE_farmer_ramp12f_control"
@@ -2447,7 +3212,7 @@
     {
       "chapter": 90,
       "position": 13,
-      "activity_section_position": null,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
@@ -2462,7 +3227,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "05160988-ce84-481c-acce-41847453f86b"
       },
       "level_keys": [
         "courseE_farmer_ramp12g_control"
@@ -2478,7 +3244,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "53250308-9101-46cc-96a6-3d038a44150e"
       }
     },
     {
@@ -2489,7 +3256,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "9d483459-b7f8-4279-9aca-1539f14739d2"
       }
     },
     {
@@ -2500,7 +3268,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "9d483459-b7f8-4279-9aca-1539f14739d2"
       }
     },
     {
@@ -2511,7 +3280,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "9d483459-b7f8-4279-9aca-1539f14739d2"
       }
     },
     {
@@ -2522,7 +3292,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "e76b02ab-9fc9-4235-9307-a3bcea89f186"
       }
     },
     {
@@ -2533,7 +3304,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "ff2d49fa-283b-40e8-817b-544bc9e280c6"
       }
     },
     {
@@ -2544,7 +3316,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "ff2d49fa-283b-40e8-817b-544bc9e280c6"
       }
     },
     {
@@ -2555,7 +3328,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "ff2d49fa-283b-40e8-817b-544bc9e280c6"
       }
     },
     {
@@ -2566,7 +3340,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "ff2d49fa-283b-40e8-817b-544bc9e280c6"
       }
     },
     {
@@ -2577,7 +3352,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "dce09c17-1458-4d64-b06c-a0c762a62951"
       }
     },
     {
@@ -2588,7 +3364,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "a76b0c4a-009f-446a-9a77-0e006406a4a2"
       }
     },
     {
@@ -2599,7 +3376,8 @@
         ],
         "lesson.key": "Sequencing in Maze",
         "lesson_group.key": "csf_sequencing",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "a76b0c4a-009f-446a-9a77-0e006406a4a2"
       }
     },
     {
@@ -2610,7 +3388,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "84d7f8e2-32f2-4b00-a32f-0da621dc5e40"
       }
     },
     {
@@ -2621,7 +3400,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "0997c992-b359-4b4a-b817-2277c73a36d9"
       }
     },
     {
@@ -2632,7 +3412,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "0997c992-b359-4b4a-b817-2277c73a36d9"
       }
     },
     {
@@ -2643,7 +3424,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "81a45a92-f3ab-400c-80b2-dbef02312380"
       }
     },
     {
@@ -2654,7 +3436,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "a895c8e9-fe8f-4fd3-a03a-e2d1b9703abd"
       }
     },
     {
@@ -2665,7 +3448,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "a895c8e9-fe8f-4fd3-a03a-e2d1b9703abd"
       }
     },
     {
@@ -2676,7 +3460,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "6edfc578-520b-4743-b10c-863263d9075f"
       }
     },
     {
@@ -2687,7 +3472,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "ae0d6456-147a-42c6-be9e-be89b7585a95"
       }
     },
     {
@@ -2698,7 +3484,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "ae0d6456-147a-42c6-be9e-be89b7585a95"
       }
     },
     {
@@ -2709,7 +3496,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "ae0d6456-147a-42c6-be9e-be89b7585a95"
       }
     },
     {
@@ -2720,7 +3508,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "26ac909d-47cf-4280-9edb-366a6597804b"
       }
     },
     {
@@ -2731,7 +3520,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "014dc3bb-675f-4c30-8045-bba0a330ca3b"
       }
     },
     {
@@ -2742,7 +3532,8 @@
         ],
         "lesson.key": "Programming and Loops with the Artist",
         "lesson_group.key": "csf_loops",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "014dc3bb-675f-4c30-8045-bba0a330ca3b"
       }
     },
     {
@@ -2753,7 +3544,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       }
     },
     {
@@ -2764,7 +3556,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       }
     },
     {
@@ -2775,7 +3568,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       }
     },
     {
@@ -2786,7 +3580,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       }
     },
     {
@@ -2797,7 +3592,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       }
     },
     {
@@ -2808,7 +3604,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       }
     },
     {
@@ -2819,7 +3616,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       }
     },
     {
@@ -2830,7 +3628,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       }
     },
     {
@@ -2841,7 +3640,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       }
     },
     {
@@ -2852,7 +3652,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       }
     },
     {
@@ -2863,7 +3664,8 @@
         ],
         "lesson.key": "Conditionals in Minecraft: Voyage Aquatic",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "fa79cb5e-a0e2-4448-b4b0-6fb156252105"
       }
     },
     {
@@ -2874,7 +3676,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "e5e79efb-3c86-4d9a-a0cb-cb2d58ae185f"
       }
     },
     {
@@ -2885,7 +3688,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "6e9db22b-fced-4c5a-9f59-afa05c3e9a17"
       }
     },
     {
@@ -2896,7 +3700,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "0808b2a7-7160-44eb-a51d-56fcbeef3e60"
       }
     },
     {
@@ -2907,7 +3712,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "0808b2a7-7160-44eb-a51d-56fcbeef3e60"
       }
     },
     {
@@ -2918,7 +3724,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "0808b2a7-7160-44eb-a51d-56fcbeef3e60"
       }
     },
     {
@@ -2929,7 +3736,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "0808b2a7-7160-44eb-a51d-56fcbeef3e60"
       }
     },
     {
@@ -2940,7 +3748,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "eb911116-742c-4625-9d48-22836f4f1de6"
       }
     },
     {
@@ -2951,7 +3760,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "66f27b78-5750-41e4-b190-c0899e9fb9ee"
       }
     },
     {
@@ -2962,7 +3772,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "66f27b78-5750-41e4-b190-c0899e9fb9ee"
       }
     },
     {
@@ -2973,7 +3784,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "66f27b78-5750-41e4-b190-c0899e9fb9ee"
       }
     },
     {
@@ -2984,7 +3796,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "038d7800-e2d5-4112-b85e-f738a4228bbf"
       }
     },
     {
@@ -2995,7 +3808,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "3c7aa8d2-821a-4759-b076-27d5a928ea56"
       }
     },
     {
@@ -3006,7 +3820,8 @@
         ],
         "lesson.key": "Conditionals",
         "lesson_group.key": "csf_conditionals",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "87bec8fe-6b7b-43ec-9011-8b7cd0c4f9d4"
       }
     },
     {
@@ -3017,7 +3832,8 @@
         ],
         "lesson.key": "Events: The Big Event",
         "lesson_group.key": "csf_events",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "f93fe928-ed1c-4017-9bdc-9c93adb3fac7"
       }
     },
     {
@@ -3028,7 +3844,8 @@
         ],
         "lesson.key": "Simon Says",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "6902d733-548f-4b80-b7d2-25ae83348c8b"
       }
     },
     {
@@ -3039,7 +3856,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "4c27fa29-a4ed-49b4-a7a1-a434a97f6fa9"
       }
     },
     {
@@ -3050,7 +3868,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "c5d00d48-a649-4f03-aa1d-5689ff63cf5c"
       }
     },
     {
@@ -3061,7 +3880,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "7603113a-f162-45c7-bfbe-2e71b00dbace"
       }
     },
     {
@@ -3072,7 +3892,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "7603113a-f162-45c7-bfbe-2e71b00dbace"
       }
     },
     {
@@ -3083,7 +3904,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "7603113a-f162-45c7-bfbe-2e71b00dbace"
       }
     },
     {
@@ -3094,7 +3916,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "b25fae51-9f6f-403a-ada5-c736ca01f23f"
       }
     },
     {
@@ -3105,7 +3928,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "5db6a3a3-9b25-4259-83d5-d6037b4eae98"
       }
     },
     {
@@ -3116,7 +3940,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "5db6a3a3-9b25-4259-83d5-d6037b4eae98"
       }
     },
     {
@@ -3127,7 +3952,8 @@
         ],
         "lesson.key": "Learning Sprites with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "814298af-75d3-41dd-8c7c-3e48369b6ed2"
       }
     },
     {
@@ -3138,7 +3964,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "eb0b78f9-d723-42ca-9cc4-9a0eb287bc03"
       }
     },
     {
@@ -3149,7 +3976,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "1272304b-5b0b-4391-abc6-949a395facbe"
       }
     },
     {
@@ -3160,7 +3988,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "4c52bd36-ddaf-4b67-8b97-f64f175ecba0"
       }
     },
     {
@@ -3171,7 +4000,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "4c52bd36-ddaf-4b67-8b97-f64f175ecba0"
       }
     },
     {
@@ -3182,7 +4012,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "4c52bd36-ddaf-4b67-8b97-f64f175ecba0"
       }
     },
     {
@@ -3193,7 +4024,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "4c52bd36-ddaf-4b67-8b97-f64f175ecba0"
       }
     },
     {
@@ -3204,7 +4036,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "75b48c9b-1b5a-4d47-85a1-3f46a2963eae"
       }
     },
     {
@@ -3215,7 +4048,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "75b48c9b-1b5a-4d47-85a1-3f46a2963eae"
       }
     },
     {
@@ -3226,7 +4060,8 @@
         ],
         "lesson.key": "Alien Dance Party with Sprite Lab",
         "lesson_group.key": "csf_sprites",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "75b48c9b-1b5a-4d47-85a1-3f46a2963eae"
       }
     },
     {
@@ -3237,7 +4072,8 @@
         ],
         "lesson.key": "Private and Personal Information",
         "lesson_group.key": "csf_digcit",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "9d1dc7a9-79a5-4e63-889e-5f286010a21f"
       }
     },
     {
@@ -3248,7 +4084,8 @@
         ],
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "b1a977c8-1423-4d1a-9324-f0b4df055be3"
       }
     },
     {
@@ -3259,7 +4096,8 @@
         ],
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "96f48458-63ea-4ad5-8347-f71d5c618f7b"
       }
     },
     {
@@ -3270,7 +4108,8 @@
         ],
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "96f48458-63ea-4ad5-8347-f71d5c618f7b"
       }
     },
     {
@@ -3281,7 +4120,8 @@
         ],
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "96f48458-63ea-4ad5-8347-f71d5c618f7b"
       }
     },
     {
@@ -3292,7 +4132,8 @@
         ],
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "96f48458-63ea-4ad5-8347-f71d5c618f7b"
       }
     },
     {
@@ -3303,7 +4144,8 @@
         ],
         "lesson.key": "About Me",
         "lesson_group.key": "csf_digcit",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "96f48458-63ea-4ad5-8347-f71d5c618f7b"
       }
     },
     {
@@ -3314,7 +4156,8 @@
         ],
         "lesson.key": "Access Ability",
         "lesson_group.key": "csf_impacts",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "0293258b-4640-44c0-a537-c7d30315449d"
       }
     },
     {
@@ -3325,7 +4168,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "c9016160-6bed-4cf4-821a-99a4c1c83fb0"
       }
     },
     {
@@ -3336,7 +4180,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "dedb856f-72da-4f9a-b1a6-920150f54b26"
       }
     },
     {
@@ -3347,7 +4192,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "8106c296-d5b6-4c9f-a526-4c3341274ae0"
       }
     },
     {
@@ -3358,7 +4204,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "8106c296-d5b6-4c9f-a526-4c3341274ae0"
       }
     },
     {
@@ -3369,7 +4216,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "8106c296-d5b6-4c9f-a526-4c3341274ae0"
       }
     },
     {
@@ -3380,7 +4228,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "8106c296-d5b6-4c9f-a526-4c3341274ae0"
       }
     },
     {
@@ -3391,7 +4240,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "0f00ff2c-60ac-4156-8af3-d7049598229b"
       }
     },
     {
@@ -3402,7 +4252,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "7d8a2261-ecba-4850-8026-3c3a3279d88a"
       }
     },
     {
@@ -3413,7 +4264,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "7d8a2261-ecba-4850-8026-3c3a3279d88a"
       }
     },
     {
@@ -3424,7 +4276,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "7d8a2261-ecba-4850-8026-3c3a3279d88a"
       }
     },
     {
@@ -3435,7 +4288,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "86d292fd-cd7e-4cd7-9bf8-be94da5f4e06"
       }
     },
     {
@@ -3446,7 +4300,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "90fcccd4-e61c-4243-8147-9e741edfe2fb"
       }
     },
     {
@@ -3457,7 +4312,8 @@
         ],
         "lesson.key": "Conditionals Review",
         "lesson_group.key": "ramp_up",
-        "script.name": "time4cs-control-unit-1"
+        "script.name": "time4cs-control-unit-1",
+        "activity_section.key": "05160988-ce84-481c-acce-41847453f86b"
       }
     }
   ],
