@@ -512,6 +512,7 @@ XML
 
   test 'localizes authored hints with embedded behavior block' do
     DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false).returns(true)
+    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
     test_locale = :"es-MX"
     level_name = 'test_localize_authored_hints_with_embedded_behavior_block'
     hint = <<~HINT
@@ -614,6 +615,7 @@ XML
 
   test 'placeholder text is localized within markdown' do
     DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false).returns(true)
+    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
     level_name = 'test_localize_markdown_placeholder_text'
     test_locale = 'vi-VN'
     original_str = 'Hello'
@@ -623,15 +625,7 @@ XML
     # original string.
     markdown = <<~HTML
       Test [link](https://code.org)
-      <xml>
-        <block type="gamelab_printText">
-          <value name="TEXT">
-            <block type="text">
-              <title name="TEXT">#{original_str}</title>
-            </block>
-          </value>
-        </block>
-      </xml>
+      <xml><block type="gamelab_printText"><value name="TEXT"><block type="text"><title name="TEXT">#{original_str}</title></block></value></block></xml>
     HTML
 
     # Add translation mapping to the I18n backend
@@ -678,6 +672,7 @@ XML
 
   test 'placeholder text is localized within markdown with malformed HTML' do
     DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false).returns(true)
+    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
     # This test was created because we ran into an issue when translating blocks in markdown text
     # where the text had malformed HTML, for example missing closing tag or orphaned closing tags.
     level_name = 'test_localize_markdown_placeholder_text_with_bad_html'
@@ -691,15 +686,7 @@ XML
       <img src="example.com/example.png">
       <img src="example.com/example2.png">
       </div>
-      <xml>
-        <block type="gamelab_printText">
-          <value name="TEXT">
-            <block type="text">
-              <title name="TEXT">#{original_str}</title>
-            </block>
-          </value>
-        </block>
-      </xml>
+      <xml><block type="gamelab_printText"><value name="TEXT"><block type="text"><title name="TEXT">#{original_str}</title></block></value></block></xml>
     HTML
 
     # Add translation mapping to the I18n backend
