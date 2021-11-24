@@ -427,10 +427,18 @@ describe('fullyLockedLessonMapping', () => {
 });
 
 describe('refetchSectionLockStatus', () => {
+  let store;
+  let reducerSpy;
   const lockStatusResponse = _.cloneDeep(fakeSectionData);
   lockStatusResponse[section1Id]['lessons'][lesson1Id][1].locked = true;
 
+  // Intercept all XHR requests, storing the last one
   beforeEach(() => {
+    reducerSpy = sinon.spy(reducer);
+    stubRedux();
+    registerReducers({lessonLock: reducerSpy});
+    store = getStore();
+
     sinon.stub($, 'ajax').returns({
       done: successCallback => {
         successCallback(lockStatusResponse);
@@ -440,16 +448,22 @@ describe('refetchSectionLockStatus', () => {
   });
 
   afterEach(() => {
+    restoreRedux();
     $.ajax.restore();
   });
 
   it('updates lessonsBySectionId', () => {
-    let state = reducer(undefined, setSectionLockStatus(fakeSectionData));
-    let student2 = state.lessonsBySectionId[section1Id][lesson1Id][1];
+    store.dispatch(setSectionLockStatus(fakeSectionData));
+    console.log(store.getState().lessonLock);
+    let student2 = store.getState().lessonLock.lessonsBySectionId[section1Id][
+      lesson1Id
+    ][1];
     assert.equal(student2.locked, false);
 
-    state = reducer(state, refetchSectionLockStatus(section1Id));
-    student2 = state.lessonsBySectionId[section1Id][lesson1Id][1];
+    store.dispatch(refetchSectionLockStatus(section1Id));
+    student2 = store.getState().lessonLock.lessonsBySectionId[section1Id][
+      lesson1Id
+    ][1];
     assert.equal(student2.locked, true);
   });
 });
