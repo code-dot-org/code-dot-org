@@ -38,15 +38,13 @@
 
   - if @level.video_full_width
     .buttons.below-video-right{style: "float: right; max-width: 20%"}
-      %a.btn.btn-large.btn-primary.next-lesson.submitButton
-        =t('continue')
+      = button_tag t('continue'), class: "btn btn-large btn-primary next-lesson submitButton"
 
   %br/
   %br/
 
   - unless @level.video_full_width
     .buttons
-      %a.btn.btn-large.btn-primary.next-lesson.submitButton
-        =t('continue')
+      = button_tag t('continue'), class: "btn btn-large btn-primary next-lesson submitButton"
 
   = render partial: 'levels/teacher_markdown', locals: {data: {'teacher_markdown' => @level.localized_teacher_markdown}}
