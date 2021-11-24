@@ -9,7 +9,7 @@ export const getStudentsForSection = async () => {
   }
 
   try {
-    const response = await fetch(request);
+    const response = await fetch(request, {credentials: 'same-origin'});
     // This API returns with "No Content" when there is no section to be loaded
     // for the teacher panel, checking "OK" ensures a section was returned
     if (response.statusText === 'OK') {
@@ -23,7 +23,9 @@ export const getStudentsForSection = async () => {
 // Query the server for lock status of this teacher's students
 export const queryLockStatus = async scriptId => {
   try {
-    const response = await fetch(`/api/lock_status?script_id=${scriptId}`);
+    const response = await fetch(`/api/lock_status?script_id=${scriptId}`, {
+      credentials: 'same-origin'
+    });
     const data = await response.json();
 
     // Extract the state that teacherSectionsRedux cares about
