@@ -1063,7 +1063,7 @@ class Script < ApplicationRecord
         family_name: unit_data[:family_name],
         published_state: new_suffix ? SharedCourseConstants::PUBLISHED_STATE.in_development : unit_data[:published_state],
         instruction_type: new_suffix ? SharedCourseConstants::INSTRUCTION_TYPE.teacher_led : unit_data[:instruction_type],
-        participant_audience: new_suffix ? SharedCourseConstants::PARTICIPANT_AUDIENCE.teacher : unit_data[:participant_audience],
+        participant_audience: new_suffix ? SharedCourseConstants::PARTICIPANT_AUDIENCE.student : unit_data[:participant_audience],
         instructor_audience: new_suffix ? SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher : unit_data[:instructor_audience],
         properties: Script.build_property_hash(unit_data).merge(new_properties)
       }, lesson_groups]
