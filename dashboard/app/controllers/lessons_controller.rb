@@ -48,6 +48,7 @@ class LessonsController < ApplicationController
     return render :forbidden unless can?(:read, @lesson)
 
     @lesson_data = @lesson.summarize_for_student_lesson_plan
+    @script_name = script.name
   end
 
   # GET /s/csd1-2021/lessons/1/edit where 1 is the relative position of the lesson in the script
