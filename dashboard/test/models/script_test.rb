@@ -141,9 +141,7 @@ class ScriptTest < ActiveSupport::TestCase
     # from .script_json when is_migrated is specified in the .script file.
     # use 'custom' level num to make level key match level name.
     create :maze, name: 'test_maze_level'
-    unit_file = File.join(self.class.fixture_path, 'config', 'scripts', 'test-migrated-models.script')
-    Script.setup([unit_file])
-
+    Script.seed_from_json_file('test-migrated-models')
     unit = Script.find_by_name('test-migrated-models')
     assert unit.is_migrated
     assert_equal 1, unit.lesson_groups.count
@@ -1224,10 +1222,8 @@ class ScriptTest < ActiveSupport::TestCase
     }
     I18n.backend.store_translations I18n.locale, i18n['en']
 
-    unit_file = File.join(self.class.fixture_path, 'test-plc.script')
     Script.stubs(:unit_json_directory).returns(self.class.fixture_path)
-    unit_names, _custom_i18n = Script.setup([unit_file])
-    unit = Script.find_by!(name: unit_names.first)
+    unit = Script.seed_from_json_file('test-plc')
 
     assert unit.old_professional_learning_course?
     assert_equal 'Test plc course', unit.professional_learning_course
