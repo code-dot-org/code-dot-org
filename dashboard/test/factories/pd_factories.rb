@@ -857,6 +857,12 @@ FactoryGirl.define do
         application.lock!
       end
     end
+
+    trait :incomplete do
+      after(:create) do |application|
+        application.update!(status: 'incomplete')
+      end
+    end
   end
 
   # ----- Principal ----- #

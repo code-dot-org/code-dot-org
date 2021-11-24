@@ -85,11 +85,11 @@ module Pd::Application
     has_many :emails, class_name: 'Pd::Application::Email', foreign_key: 'pd_application_id'
 
     validates :status, exclusion: {in: ['interview'], message: '%{value} is reserved for facilitator applications.'}
-    validates :course, presence: true, inclusion: {in: VALID_COURSES}
+    validates :course, presence: true, inclusion: {in: VALID_COURSES}, unless: -> {status == 'incomplete'}
     validates_uniqueness_of :user_id
     validate :workshop_present_if_required_for_status, if: -> {status_changed?}
 
-    before_validation :set_course_from_program
+    before_validation :set_course_from_program, unless: -> {program.nil?}
     before_save :save_partner, if: -> {form_data_changed? && regional_partner_id.nil? && !deleted?}
     before_save :log_status, if: -> {status_changed?}
 
@@ -350,6 +350,7 @@ module Pd::Application
         accepted_no_cost_registration
         registration_sent
         paid
+        incomplete
         withdrawn
       )
     end
@@ -1147,10 +1148,10 @@ module Pd::Application
     end
 
     # Called after the application is created. Do any manipulation needed for the form data
-    # hash here, as well as wend emails
+    # hash here, as well as send emails
     def on_successful_create
       update_user_school_info!
-      queue_email :confirmation, deliver_now: true
+      queue_email :confirmation, deliver_now: true unless -> {status == 'incomplete'}
 
       form_data_hash = sanitize_form_data_hash
 
@@ -1164,11 +1165,11 @@ module Pd::Application
         }
       )
 
-      auto_score!
+      auto_score! unless -> {status == 'incomplete'}
       save
 
       unless regional_partner&.applications_principal_approval == RegionalPartner::SELECTIVE_APPROVAL
-        queue_email :principal_approval, deliver_now: true
+        queue_email :principal_approval, deliver_now: true unless -> {status == 'incomplete'}
       end
     end
 
