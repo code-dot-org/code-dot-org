@@ -102,12 +102,6 @@ namespace :seed do
     'coursec-2019',
     'coursee-2019',
     'coursea-2020',
-    'csd1-2019',
-    'csd2-2019',
-    'csd3-2019',
-    'csd4-2019',
-    'csd5-2019',
-    'csd6-2019',
     'csp1-2017',
     'csp2-2017',
     'csp3-2017',
@@ -240,7 +234,7 @@ namespace :seed do
 
   timed_task courses_ui_tests: :environment do
     # seed those courses that are needed for UI tests
-    %w(allthethingscourse csp-2017 csp-2018 csd-2019 csp-2019 csp-2020).each do |course_name|
+    %w(allthethingscourse csp-2017 csp-2018 csp-2019 csp-2020).each do |course_name|
       UnitGroup.load_from_path("config/courses/#{course_name}.course")
     end
     %w(ui-test-course-2017 ui-test-course-2019).each do |course_name|
