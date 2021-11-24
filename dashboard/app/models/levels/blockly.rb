@@ -479,12 +479,18 @@ class Blockly < Level
     translated_xml_texts = {}
     # Selects each <xml></xml> because these might be blockly blocks which need translation.
     text.scan(/<xml>[\s\S]*?<\/xml>/).each do |xml_text|
-      text_xml_doc = Nokogiri::XML(xml_text, &:noblanks)
-      localized_function_blocks_xml(text_xml_doc)
-      localize_all_placeholder_text_block_types(text_xml_doc)
-      translated_xml_text = text_xml_doc.serialize(save_with: XML_OPTIONS, encoding: 'UTF-8').strip
+      xml_doc = Nokogiri::XML(xml_text, &:noblanks)
+      localized_function_blocks_xml(xml_doc)
+      localize_all_placeholder_text_block_types(xml_doc)
+      # TODO: add `localized_variable_blocks_xml(xml_doc)`
+      # NO_EMPTY_TAGS used because <mutation /> blocks fail to render correctly but
+      # <mutation></mutation> works.
+      # `encoding: 'UTF-8'` used to avoid unnecessary escaping of accented characters like é and á.
+      translated_xml_text = xml_doc.serialize(
+        save_with: XML_OPTIONS | Nokogiri::XML::Node::SaveOptions::NO_EMPTY_TAGS,
+        encoding: 'UTF-8'
+      ).strip
       translated_xml_texts[xml_text] = translated_xml_text
-      # TODO: add `localized_variable_blocks_xml(text_xml_doc)`
     end
     # Replace the untranslated <xml></xml> with the translated <xml></xml>.
     translated_xml_texts.each do |orig_xml, translated_xml|
