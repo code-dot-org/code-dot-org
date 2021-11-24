@@ -16,9 +16,9 @@ Feature: Using the assessments tab in the teacher dashboard to get feedback for 
     And I select the "Computer Science Principles" option in dropdown "uitest-assignment-family"
     And I wait until element "#assignment-version-year" is visible
     And I press "assignment-version-year"
-    And I click selector ".assignment-version-title:contains('18-'19)" once I see it
+    And I click selector ".assignment-version-title:contains('19-'20)" once I see it
     And I wait until element "#uitest-secondary-assignment" is visible
-    And I select the "CSP Unit 3 - Intro to Programming ('18-'19)" option in dropdown "uitest-secondary-assignment"
+    And I select the "CSP Unit 3 - Intro to Programming ('19-'20)" option in dropdown "uitest-secondary-assignment"
     And I press the first ".uitest-saveButton" element
     And I wait until element ".modal-backdrop" is gone
 
