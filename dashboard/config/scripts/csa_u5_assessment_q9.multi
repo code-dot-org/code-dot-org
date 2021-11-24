@@ -1,11 +1,11 @@
 name 'CSA U5 Assessment q9'
 height 'auto'
 
-wrong ‘0’
-right ‘1’
-wrong ‘2’
-wrong ‘3’
-wrong ‘9’
+wrong ‘Result = 0’
+right ‘Result = 1’
+wrong ‘Result = 2’
+wrong ‘Result = 3’
+wrong ‘Result = 9’
 
 
 

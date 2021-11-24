@@ -40,6 +40,9 @@
     "standalone_app_name": "poetry",
     "authored_hints": "[]",
     "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
     "default_poem": null
   },
   "game_id": 69,
@@ -47,75 +50,75 @@
   "created_at": "2021-10-25T12:47:50.000Z",
   "level_num": "custom",
   "user_id": 13468,
-  "audit_log": "[{\"changed_at\":\"2021-10-25T12:47:49.984+00:00\",\"changed\":[\"cloned from \\\"poetry_module_choices_exemplar\\\"\"],\"cloned_from\":\"poetry_module_choices_exemplar\"},{\"changed_at\":\"2021-10-25 12:47:57 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-28 00:22:23 +0000\",\"changed\":[\"start_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2021-10-29 16:22:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 16:22:52 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 16:23:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 16:24:19 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 19:35:12 +0000\",\"changed\":[\"start_blocks\",\"hide_animation_mode\",\"hide_share_and_remix\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-11-10 18:27:21 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-11-10 18:30:48 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-11-11 03:10:45 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-11-15 19:24:32 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-11-15 19:48:17 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2021-10-25T12:47:49.984+00:00\",\"changed\":[\"cloned from \\\"poetry_module_choices_exemplar\\\"\"],\"cloned_from\":\"poetry_module_choices_exemplar\"},{\"changed_at\":\"2021-10-25 12:47:57 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-28 00:22:23 +0000\",\"changed\":[\"start_blocks\",\"include_shared_functions\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":886,\"changed_by_email\":\"anjali+labs@code.org\"},{\"changed_at\":\"2021-10-29 16:22:25 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 16:22:52 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 16:23:14 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 16:24:19 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-10-29 19:35:12 +0000\",\"changed\":[\"start_blocks\",\"hide_animation_mode\",\"hide_share_and_remix\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-11-10 18:27:21 +0000\",\"changed\":[\"start_blocks\",\"long_instructions\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-11-10 18:30:48 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-11-11 03:10:45 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2021-11-15 19:24:32 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-11-15 19:48:17 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\",\"default_poem\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-11-23 17:30:39 +0000\",\"changed\":[\"start_blocks\",\"preload_asset_list\",\"default_poem\",\"contained_level_names\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" movable="false">
+        <block type="when_run" movable="false" deletable="false">
           <next>
-            <block type="gamelab_setPromptWithChoices">
+            <block type="gamelab_setPromptWithChoices" deletable="false">
               <value name="QUESTION">
-                <block type="text" can_disconnect_from_parent="false">
+                <block type="text" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">Enter a food:</title>
                 </block>
               </value>
               <value name="VAR">
-                <block type="variables_get" can_disconnect_from_parent="false">
+                <block type="variables_get" can_disconnect_from_parent="false" deletable="false">
                   <title name="VAR">food</title>
                 </block>
               </value>
               <value name="A">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">sandwich</title>
                 </block>
               </value>
               <value name="B">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">salad</title>
                 </block>
               </value>
               <value name="C">
-                <block type="Poetry_stringValue" can_disconnect_from_parent="false">
+                <block type="Poetry_stringValue" can_disconnect_from_parent="false" deletable="false">
                   <title name="TEXT">cupcake</title>
                 </block>
               </value>
             </block>
           </next>
         </block>
-        <block type="gamelab_whenAllPromptsAnswered">
+        <block type="gamelab_whenAllPromptsAnswered" deletable="false">
           <next>
-            <block type="Poetry_setTitle">
+            <block type="Poetry_setTitle" deletable="false">
               <value name="TITLE">
-                <block type="gamelab_textJoin">
+                <block type="gamelab_textJoin" deletable="false">
                   <title name="TEXT1">An Ode to Food</title>
                 </block>
               </value>
               <next>
-                <block type="Poetry_addLine">
+                <block type="Poetry_addLine" deletable="false">
                   <value name="LINE">
-                    <block type="gamelab_textJoin">
+                    <block type="gamelab_textJoin" deletable="false">
                       <title name="TEXT1">Life is too short</title>
                     </block>
                   </value>
                   <next>
-                    <block type="Poetry_addLine">
+                    <block type="Poetry_addLine" deletable="false">
                       <value name="LINE">
-                        <block type="gamelab_textJoin">
+                        <block type="gamelab_textJoin" deletable="false">
                           <title name="TEXT1">to eat a bad </title>
                           <value name="TEXT2">
-                            <block type="gamelab_textVariableJoin">
+                            <block type="gamelab_textVariableJoin" deletable="false">
                               <title name="VAR">food</title>
                             </block>
                           </value>
                         </block>
                       </value>
                       <next>
-                        <block type="Poetry_animateText">
+                        <block type="Poetry_animateText" deletable="false">
                           <next>
-                            <block type="Poetry_setBackgroundEffect">
+                            <block type="Poetry_setBackgroundEffect" deletable="false">
                               <title name="EFFECT">"squiggles"</title>
                               <title name="PALETTE">"summer"</title>
                             </block>
@@ -129,48 +132,48 @@
             </block>
           </next>
         </block>
-        <block type="Poetry_whenLineShows">
+        <block type="Poetry_whenLineShows" deletable="false">
           <title name="N">2</title>
           <next>
-            <block type="gamelab_ifVarEquals">
+            <block type="gamelab_ifVarEquals" deletable="false">
               <title name="NUM">food</title>
               <value name="VAL">
-                <block type="Poetry_stringValue">
+                <block type="Poetry_stringValue" deletable="false">
                   <title name="TEXT">sandwich</title>
                 </block>
               </value>
               <statement name="STATEMENT">
-                <block type="Poetry_makeBurst">
+                <block type="Poetry_makeBurst" deletable="false">
                   <title name="EFFECT">"pop"</title>
                   <title name="NUM">10</title>
                   <title name="ANIMATION_NAME">"face_burger"</title>
                 </block>
               </statement>
               <next>
-                <block type="gamelab_ifVarEquals">
+                <block type="gamelab_ifVarEquals" deletable="false">
                   <title name="NUM">food</title>
                   <value name="VAL">
-                    <block type="Poetry_stringValue">
+                    <block type="Poetry_stringValue" deletable="false">
                       <title name="TEXT">salad</title>
                     </block>
                   </value>
                   <statement name="STATEMENT">
-                    <block type="Poetry_makeBurst">
+                    <block type="Poetry_makeBurst" deletable="false">
                       <title name="EFFECT">"pop"</title>
                       <title name="NUM">10</title>
                       <title name="ANIMATION_NAME">"face_salad"</title>
                     </block>
                   </statement>
                   <next>
-                    <block type="gamelab_ifVarEquals">
+                    <block type="gamelab_ifVarEquals" deletable="false">
                       <title name="NUM">food</title>
                       <value name="VAL">
-                        <block type="Poetry_stringValue">
+                        <block type="Poetry_stringValue" deletable="false">
                           <title name="TEXT">cupcake</title>
                         </block>
                       </value>
                       <statement name="STATEMENT">
-                        <block type="Poetry_makeBurst">
+                        <block type="Poetry_makeBurst" deletable="false">
                           <title name="EFFECT">"pop"</title>
                           <title name="NUM">10</title>
                           <title name="ANIMATION_NAME">"face_cupcake"</title>

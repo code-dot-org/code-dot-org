@@ -27570,5 +27570,15 @@ en:
           lesson_groups: {}
           name: counting-csc-2021
         hello-world-gabrielle-validation:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Lesson
+              description_student: 
+              description_teacher: 
           lesson_groups: {}
+          name: hello-world-gabrielle-validation
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
