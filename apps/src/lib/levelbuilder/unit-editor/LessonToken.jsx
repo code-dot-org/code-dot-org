@@ -83,6 +83,7 @@ export class LessonTokenContents extends Component {
   };
 
   handleRemove = () => {
+    console.log('handleRemove');
     this.props.removeLesson(this.props.lesson.position);
   };
 
@@ -93,6 +94,7 @@ export class LessonTokenContents extends Component {
   render() {
     return (
       <div
+        className="uitest-lesson-token-contents"
         style={Object.assign({}, styles.lessonToken, {
           transform: `translate3d(0, ${this.props.y}px, 0) scale(${
             this.props.scale
