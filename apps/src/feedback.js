@@ -1977,7 +1977,8 @@ FeedbackUtils.prototype.hasExceededLimitedBlocks_ = function() {
 
 /**
  * Determine if this is the final level in a progression based on server response.
- * See {} for details
+ * For details, see:
+ * https://github.com/code-dot-org/code-dot-org/blob/a6d3762e5756e825fef15182042845d01c05f1e6/dashboard/app/helpers/script_levels_helper.rb#L30
  * @param {Object} response
  * @returns {boolean}
  */
