@@ -45,7 +45,7 @@ const setUp = overrideProps => {
 
 const setUpWithMount = async overrideProps => {
   const store = createStore(combineReducers({viewAs}), {
-    viewAs: ViewType.Teacher
+    viewAs: ViewType.Instructor
   });
 
   const props = {...DEFAULT_PROPS, ...overrideProps};
@@ -139,7 +139,7 @@ describe('TeacherPanel', () => {
 
     const setStudentsForCurrentSectionStub = sinon.stub();
     const overrideProps = {
-      viewAs: ViewType.Teacher,
+      viewAs: ViewType.Instructor,
       pageType: pageTypes.scriptOverview,
       setStudentsForCurrentSection: setStudentsForCurrentSectionStub
     };
@@ -171,7 +171,7 @@ describe('TeacherPanel', () => {
     const setSectionsStub = sinon.stub();
     const setSectionLockStatusStub = sinon.stub();
     const overrideProps = {
-      viewAs: ViewType.Teacher,
+      viewAs: ViewType.Instructor,
       pageType: pageTypes.level,
       setSections: setSectionsStub,
       setSectionLockStatus: setSectionLockStatusStub
