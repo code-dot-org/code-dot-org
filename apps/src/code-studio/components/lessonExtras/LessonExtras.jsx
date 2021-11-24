@@ -32,9 +32,18 @@ export default class LessonExtras extends React.Component {
       projectTypes,
       showLessonExtrasWarning
     } = this.props;
-    const nextMessage = /stage/.test(nextLevelPath)
-      ? i18n.extrasNextLesson({number: nextLessonNumber})
-      : i18n.extrasNextFinish();
+
+    let nextMessage = '';
+    switch (true) {
+      case /lessons/.test(nextLevelPath):
+        nextMessage = i18n.extrasNextLesson({number: nextLessonNumber});
+        break;
+      case /s/.test(nextLevelPath):
+        nextMessage = i18n.extrasNextUnitOverview();
+        break;
+      default:
+        i18n.extrasNextFinish();
+    }
 
     return (
       <div>

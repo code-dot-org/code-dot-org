@@ -663,6 +663,8 @@ class Lesson < ApplicationRecord
   end
 
   def next_level_path_for_lesson_extras(user)
+    return script_path(script) if
+    script.show_unit_overview_between_lessons?(user)
     next_level = next_level_for_lesson_extras(user)
     next_level ?
       build_script_level_path(next_level) : script_completion_redirect(script)
