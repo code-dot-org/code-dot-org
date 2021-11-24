@@ -75,7 +75,8 @@ const sections = [
     studentCount: 10,
     hidden: false,
     restrict_section: false,
-    code_review_enabled: true
+    code_review_enabled: true,
+    post_milestone_disabled: false
   },
   {
     id: 12,
@@ -97,7 +98,8 @@ const sections = [
     studentCount: 1,
     hidden: false,
     restrict_section: false,
-    code_review_enabled: true
+    code_review_enabled: true,
+    post_milestone_disabled: false
   },
   {
     id: 307,
@@ -119,7 +121,8 @@ const sections = [
     studentCount: 0,
     hidden: false,
     restrict_section: false,
-    code_review_enabled: true
+    code_review_enabled: true,
+    post_milestone_disabled: false
   }
 ];
 
@@ -646,7 +649,8 @@ describe('teacherSectionsRedux', () => {
         hidden: false,
         isAssigned: undefined,
         restrictSection: false,
-        codeReviewEnabled: true
+        codeReviewEnabled: true,
+        postMilestoneDisabled: false
       });
     });
   });
@@ -787,7 +791,8 @@ describe('teacherSectionsRedux', () => {
       createdAt: createdAt,
       hidden: false,
       restrict_section: false,
-      code_review_enabled: true
+      code_review_enabled: true,
+      post_milestone_disabled: false
     };
 
     function successResponse(customProps = {}) {
@@ -939,7 +944,8 @@ describe('teacherSectionsRedux', () => {
           hidden: false,
           isAssigned: undefined,
           restrictSection: false,
-          codeReviewEnabled: true
+          codeReviewEnabled: true,
+          postMilestoneDisabled: false
         }
       });
     });
@@ -995,7 +1001,8 @@ describe('teacherSectionsRedux', () => {
       script_id: null,
       hidden: false,
       restrict_section: false,
-      code_review_enabled: true
+      code_review_enabled: true,
+      post_milestone_disabled: false
     };
 
     function successResponse(sectionId, customProps = {}) {
@@ -1228,7 +1235,8 @@ describe('teacherSectionsRedux', () => {
       studentCount: 10,
       hidden: false,
       restrict_section: false,
-      code_review_enabled: true
+      code_review_enabled: true,
+      post_milestone_disabled: false
     };
 
     it('transfers some fields directly, mapping from snake_case to camelCase', () => {
@@ -1257,6 +1265,10 @@ describe('teacherSectionsRedux', () => {
       assert.strictEqual(
         section.code_review_enabled,
         serverSection.codeReviewEnabled
+      );
+      assert.strictEqual(
+        section.post_milestone_disabled,
+        serverSection.postMilestoneDisabled
       );
     });
 

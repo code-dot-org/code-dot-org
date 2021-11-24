@@ -7,6 +7,10 @@
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-11-22 19:56:43 UTC",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "cspplayground"
     }
