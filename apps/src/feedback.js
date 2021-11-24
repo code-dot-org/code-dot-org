@@ -174,9 +174,6 @@ FeedbackUtils.prototype.displayFeedback = function(
 
   feedback.className += canContinue ? ' win-feedback' : ' failure-feedback';
 
-  var finalLevel =
-    options.response && options.response.message === 'no more levels';
-
   feedback.appendChild(
     this.getFeedbackButtons_({
       feedbackType: options.feedbackType,
@@ -186,7 +183,7 @@ FeedbackUtils.prototype.displayFeedback = function(
       continueText: options.continueText,
       isK1: options.level.isK1,
       freePlay: options.level.freePlay,
-      finalLevel: finalLevel
+      finalLevel: this.isFinalLevel(options.response)
     })
   );
 
@@ -877,8 +874,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
       case TestResults.FREE_PLAY:
       case TestResults.BETTER_THAN_IDEAL:
       case TestResults.PASS_WITH_EXTRA_TOP_BLOCKS:
-        var finalLevel =
-          options.response && options.response.message === 'no more levels';
+        var finalLevel = this.isFinalLevel(options.response);
         var lessonCompleted = null;
         if (options.response && options.response.lesson_changing) {
           lessonCompleted = options.response.lesson_changing.previous.name;
@@ -889,7 +885,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
           puzzleNumber: options.level.puzzle_number || 0
         };
         if (
-          options.feedbackType === TestResults.FREE_PLAY &&
+          this.isFreePlay(options.feedbackType) &&
           !options.level.disableSharing
         ) {
           var reinfFeedbackMsg =
@@ -1977,4 +1973,12 @@ FeedbackUtils.prototype.hasMatchingDescendant_ = function(node, filter) {
 FeedbackUtils.prototype.hasExceededLimitedBlocks_ = function() {
   const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;
   return blockLimits.blockLimitExceeded && blockLimits.blockLimitExceeded();
+};
+
+FeedbackUtils.prototype.isFinalLevel = function(response) {
+  return response?.message === 'no more levels';
+};
+
+FeedbackUtils.prototype.isFreePlay = function(feedbackType) {
+  return feedbackType === TestResults.FREE_PLAY;
 };
