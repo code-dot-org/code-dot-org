@@ -1097,6 +1097,8 @@ mr:
             MOVES.ClapHigh: मासा
       Mikelab_joinText:
         text: "{TEXT} {NEXT}"
+      Mikelab_poemTextJoin:
+        text: "{TEXT1}{VAR}{TEXT2}"
       Mikelab_randomColor:
         text: कोणताही रंग
       Mikelab_setProp:
@@ -1149,15 +1151,14 @@ mr:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: आईसक्रीम
-            Stars: तारे
-            Fireworks: फटाके
-            '"rainbow"': इंद्रधनुष्य
             '"hearts"': ह्रदय
+            '"iceCream"': आईसक्रीम
+            '"rainbow"': इंद्रधनुष्य
+            '"stars"': तारे
       Poetry_playSound:
         options:
           SOUND:
-            Light: प्रकाश
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': प्रकाश
       Poetry_setBackground:
         text: पार्श्वभूमीचा रंग {COLOR} करा
       Poetry_setBackgroundEffect:

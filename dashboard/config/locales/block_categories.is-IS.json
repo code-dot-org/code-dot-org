@@ -1,76 +1,28 @@
 {
-  "is-IS": {
-    "data": {
-      "block_categories": {
-        "Course F: Artist Project_2020": {
-          "Actions": "Aðgerðir",
-          "Brushes": "Penslar",
-          "Loops": "Lykkjur",
-          "Math": "Reikningur",
-          "Logic": "Rökvísi",
-          "Functions": "Föll",
-          "Variables": "Breytur"
-        },
-        "CourseD_EOC_dance": {
-          "World": "Heimur",
-          "Dancers": "Dansarar",
-          "Properties": "Eiginleikar",
-          "Events": "Atvik",
-          "Numbers": "Tölur",
-          "Logic": "Rökvísi"
-        },
-        "CourseD_EOC_starwars": {
-          "Actions": "Aðgerðir",
-          "Events": "Atvik",
-          "Loops": "Lykkjur",
-          "Math": "Reikningur",
-          "Logic": "Rökvísi",
-          "Games/Score": "Leikir/skor"
-        },
-        "CourseE_Project_SpriteLab_2020": {
-          "World": "Heimur",
-          "Sprites": "Kvikar",
-          "Actions": "Aðgerðir",
-          "Events": "Atvik",
-          "Behaviors": "Hegðun"
-        },
-        "CourseF_Project_SpriteLab_2020": {
-          "World": "Heimur",
-          "Sprites": "Kvikar",
-          "Locations": "Staðir",
-          "Actions": "Aðgerðir",
-          "Events": "Atvik",
-          "Behaviors": "Hegðun",
-          "Variables": "Breytur",
-          "Math": "Reikningur",
-          "Logic": "Rökvísi",
-          "Functions": "Föll",
-          "Text": "texti",
-          "Comments": "Athugasemdir"
-        },
-        "outbreak_freeplay": {
-          "World": "Heimur",
-          "Sprites": "Kvikar",
-          "Actions": "Aðgerðir",
-          "Behaviors": "Hegðun",
-          "Events": "Atvik",
-          "Locations": "Staðir",
-          "Logic": "Rökvísi",
-          "Loops": "Lykkjur",
-          "Math": "Reikningur",
-          "Variables": "Breytur",
-          "Functions": "Föll",
-          "Comments": "Athugasemdir"
-        },
-        "outbreak_freeplay_basic": {
-          "World": "Heimur",
-          "Sprites": "Kvikar",
-          "Actions": "Aðgerðir",
-          "Events": "Atvik",
-          "Logic": "Rökvísi",
-          "Math": "Reikningur"
-        }
-      }
-    }
-  }
+  "Actions": "Aðgerðir",
+  "Advanced": "Ítarlegt",
+  "Behaviors": "Hegðun",
+  "Brushes": "Penslar",
+  "Color": "Litir",
+  "Comment": "Athugasemd",
+  "Comments": "Athugasemdir",
+  "Conditionals": "Skilyrði",
+  "Dancers": "Dansarar",
+  "Default": "Sjálfgefið",
+  "Events": "Atvik",
+  "Functions": "Föll",
+  "Functions ": "Föll ",
+  "Game/Score": "Leikur/skor",
+  "Games/Score": "Leikir/skor",
+  "Groups": "Hópar",
+  "Locations": "Staðir",
+  "Logic": "Rökvísi",
+  "Loops": "Lykkjur",
+  "Math": "Reikningur",
+  "Numbers": "Tölur",
+  "Sprites": "Kvikar",
+  "Text": "texti",
+  "Variables": "Breytur",
+  "Variables ": "Breytur ",
+  "World": "Heimur"
 }

@@ -1587,12 +1587,11 @@ th:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: ไอศกรีม
-            Stars: ดาว
-            Fireworks: พลุ
-            '"rainbow"': สายรุ้ง
-            '"hearts"': หัวใจ
             '"flowers"': ดอกไม้
+            '"hearts"': หัวใจ
+            '"iceCream"': ไอศกรีม
+            '"rainbow"': สายรุ้ง
+            '"stars"': ดาว
             '"waves"': คลื่น
       Poetry_makeBurst:
         options:
@@ -1604,7 +1603,7 @@ th:
         text: เล่นเสียง {SOUND}
         options:
           SOUND:
-            Light: อ่อน
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': อ่อน
       Poetry_setBackground:
         text: กำหนดสีแบ็กกราวนด์ {COLOR}
       Poetry_setBackgroundEffect:

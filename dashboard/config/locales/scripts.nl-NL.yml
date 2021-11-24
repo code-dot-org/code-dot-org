@@ -836,6 +836,8 @@ nl:
               name: Web Lab
             Standalone video:
               name: Alleenstaande video
+            Sprite Lab:
+              name: Sprite Lab
             ML Fish:
               name: ML Vis
           student_description: Alle de level types voor UI testing
@@ -1056,6 +1058,7 @@ nl:
           student_description: Gebruik blokken code om Steve of Alex te helpen op
             hun avontuur door deze Minecraft-wereld.
         oceans:
+          title: AI voor oceanen
           lessons:
             Oceans:
               name: Oceanen
@@ -1180,6 +1183,9 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
+          lessons:
+            Simple Encryption:
+              name: Eenvoudige versleuteling
         csp5-2017:
           description: Deze module vervolgt de introductie van de basisconcepten van
             programmeren. Dit biedt de mogelijkheid om rijke, interactieve apps te
@@ -1546,6 +1552,10 @@ nl:
           lessons:
             'Lessons 10 - 11: Routers, Redundancy, and Packets':
               name: 'Lessen 10 - 11: Routers, Redundantie en Pakketten'
+        hoc-encryption:
+          lessons:
+            Simple Encryption:
+              name: Eenvoudige versleuteling
         csd2-2017:
           lessons:
             new stage:
@@ -1585,6 +1595,7 @@ nl:
           student_description: Ga dieren en andere Minecraft wezens programmeren in
             je eigen Minecraft omgeving.
         flappy-impact-study:
+          title: Flappy Code met enquête
           lessons:
             Flappy Code:
               name: Flappy Code
@@ -1601,6 +1612,8 @@ nl:
             Your Digital Footprint:
               name: Jouw Digitale Voetafdruk
         coursec-draft:
+          description_short: Leer de basisprincipes van informatica en creëer je eigen
+            kunst, verhalen en games.
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
@@ -1611,6 +1624,8 @@ nl:
             Building a Foundation:
               name: Een Basis Bouwen
         coursed-draft:
+          description_short: Leer de basisprincipes van informatica en creëer je eigen
+            kunst, verhalen en games.
           lessons:
             Conditionals with Cards:
               name: Statements met Kaarten
@@ -1625,6 +1640,8 @@ nl:
             Introduction:
               name: Introductie
         coursee-draft:
+          description_short: Leer de basisprincipes van informatica en creëer je eigen
+            kunst, verhalen en games.
           lesson_groups:
             content:
               display_name: Content
@@ -1644,6 +1661,8 @@ nl:
             Conditionals:
               name: Voorwaardelijke instructies
         coursef-draft:
+          description_short: Leer de basisprincipes van informatica en creëer je eigen
+            kunst, verhalen en games.
           lesson_groups:
             content:
               display_name: Content
@@ -1669,11 +1688,17 @@ nl:
             Hour of Code 2013:
               name: Uur van Code 2013
         hoc-impact-study:
+          title: Klassiek doolhof met enquête
           description_short: Probeer de grondbeginselen van de informatica met veel
             leuke figuren!
           lessons:
             Hour of Code 2013:
               name: Uur van Code 2013
+        sports:
+          title: Codeer je eigen sportspel
+          description_short: Mix en match over sporten
+          description: Mix en match over sporten
+          student_description: Mix en match over sporten
         2016_sciencePD-phase2b:
           lessons:
             Welcome!:
@@ -1948,27 +1973,70 @@ nl:
             Bounce:
               name: Stuiter
         coursea-2017:
+          title: Cursus A
+          assignment_family_title: Cursus A
           description_audience: 'Leeftijden: 4-7'
+          description_short: Een inleiding tot informatica voor pre-readers.
+          description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmen in het echte leven: Plant een zaadje'
+          student_description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
         courseb-2017:
+          title: Cursus B
+          assignment_family_title: Cursus B
           description_audience: 'Leeftijden: 5-8'
+          description_short: Een inleiding tot informatica voor pre-readers. (Vergelijkbaar
+            met cursus A, maar met meer variatie voor oudere studenten.)
+          description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmen in het echte leven: Plant een zaadje'
+          student_description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
         coursec-2017:
+          title: Cursus C
+          assignment_family_title: Cursus C
           description_audience: 'Leeftijden: 6-10'
+          description_short: Leer de basisprincipes van informatica en creëer je eigen
+            kunst, verhalen en games.
+          description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal
+            uw initialen in binair, onderzoek verschillende probleemoplossende technieken
+            en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de
+            cursus je eigen spel of verhaal dat je kunt delen!
           lessons:
             'Real-life Algorithms: Paper Planes':
               name: 'Algoritmen in het echt: Papieren Vliegtuigjes'
+          student_description: Maak programma's met sequencing, loops en gebeurtenissen.
+            Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende
+            technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde
+            van de cursus je eigen spel of verhaal dat je kunt delen!
         coursed-2017:
+          title: Cursus D
+          assignment_family_title: Cursus D
           description_audience: 'Leeftijden: 7-11'
+          description_short: Behandel snel concepten uit Cursus C en ga verder met
+            algoritmen, geneste loops, conditionals en meer.
           lessons:
             Nested Loops:
               name: Genestelde lussen
         coursee-2017:
+          title: Cursus E
+          assignment_family_title: Cursus E
           description_audience: 'Leeftijden: 8-12'
+          description_short: Behandel snel concepten in Cursus C & D en ga dan verder
+            met functies.
+          description: Begin met coderen met algoritmen, loops, conditionals en gebeurtenissen
+            en daarna ga je verder met functies. Ontwerp en maak in het tweede deel
+            van deze cursus een sluitsteenproject dat je kunt delen met je vrienden
+            en familie.
           lesson_groups:
             extra_course_content:
               display_name: Extra cursusinhoud
@@ -1989,13 +2057,31 @@ nl:
               name: Een Basis Bouwen
             Nested Loops:
               name: Genestelde lussen
+          student_description: Begin met coderen met algoritmen, loops, conditionals
+            en gebeurtenissen en daarna ga je verder met functies. Ontwerp en maak
+            in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen
+            met je vrienden en familie.
         coursef-2017:
+          title: Cursus F
+          assignment_family_title: Cursus F
           description_audience: 'Leeftijden: 9-13'
+          description_short: Leer alle concepten in Informatica Fundamentals en creëer
+            je eigen kunst, verhaal of spel.
+          description: Leer verschillende soorten loops, gebeurtenissen, functies
+            en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
+            technieken en bespreek maatschappelijke gevolgen van computergebruik en
+            internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject
+            dat je kunt delen met vrienden en familie.
           lessons:
             'Algorithms: Tangrams':
               name: 'Algoritmen: Tangrams'
             Building a Foundation:
               name: Een Basis Bouwen
+          student_description: Leer verschillende soorten loops, gebeurtenissen, functies
+            en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
+            technieken en bespreek maatschappelijke gevolgen van computergebruik en
+            internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject
+            dat je kunt delen met vrienden en familie.
         csdnovice:
           lessons:
             Tuesday:
@@ -2094,7 +2180,12 @@ nl:
             TTS:
               name: Spraakuitvoer
         express-2017:
+          title: Express-cursus
+          assignment_family_title: Express-cursus
           description_audience: 'Leeftijden: 9-18'
+          description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
           lesson_groups:
             content:
               display_name: Content
@@ -2119,13 +2210,22 @@ nl:
               name: Een Basis Bouwen
             Nested Loops:
               name: Genestelde lussen
+          student_description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
         pre-express-2017:
           description_audience: 'Leeftijden: 4-8'
+          description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
           lessons:
             'Real-life Algorithms: Plant a Seed':
               name: 'Algoritmen in het echte leven: Plant een zaadje'
             Spelling Bee:
               name: Spellingswedstrijd
+          student_description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
         subgoal-labels-opt-in:
           lessons:
             deprecated:
@@ -2269,6 +2369,8 @@ nl:
           lessons:
             new stage:
               name: nieuw niveau
+            Simple Encryption:
+              name: Eenvoudige versleuteling
         hero:
           title: 'Minecraft: Heldenreis'
           description_short: Minecraft is terug bij Uur Code met een gloednieuwe activiteit!
@@ -2398,6 +2500,12 @@ nl:
             Intellectual Property and Images:
               name: Intellectuele Eigendom en Afbeeldingen
         coursea-2018:
+          title: Cursus A (2018)
+          assignment_family_title: Cursus A
+          description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
+          description_short: Een inleiding tot informatica voor pre-readers.
           description_audience: 'Leeftijden: 4-7'
           lessons:
             'Debugging: Unspotted Bugs':
@@ -2412,7 +2520,15 @@ nl:
               name: Veilig Reizen
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie en het Grote Project
+          student_description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
         express-2018:
+          title: Express-cursus
+          assignment_family_title: Express-cursus
+          description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
           description_audience: 'Leeftijden: 9-18'
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -2447,7 +2563,15 @@ nl:
               name: Estafette Programmeren
             Graph Paper Programming:
               name: Programmeren op Ruitjespapier
+          student_description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
         courseb-2018:
+          title: Cursus B (2018)
+          assignment_family_title: Cursus B
+          description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
           description_audience: 'Leeftijden: 5-8'
           lessons:
             'Real-life Algorithms: Plant a Seed':
@@ -2456,7 +2580,12 @@ nl:
               name: Jouw Digitale Voetafdruk
             Move It, Move It:
               name: verplaats het, verplaats het
+          student_description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
         coursed-2018:
+          title: Cursus D (2018)
+          assignment_family_title: Cursus D
           description_audience: 'Leeftijden: 7-11'
           lessons:
             'Algorithms: Graph Paper Programming':
@@ -2480,6 +2609,14 @@ nl:
             pet game:
               name: huisdierspel
         coursec-2018:
+          title: Cursus C (2018)
+          assignment_family_title: Cursus C
+          description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal
+            uw initialen in binair, onderzoek verschillende probleemoplossende technieken
+            en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de
+            cursus je eigen spel of verhaal dat je kunt delen!
+          description_short: Leer de basisprincipes van informatica en creëer je eigen
+            kunst, verhalen en games.
           description_audience: 'Leeftijden: 6-10'
           lessons:
             Building a Foundation:
@@ -2490,6 +2627,10 @@ nl:
               name: De grote gebeurtenis
             Binary Bracelets:
               name: Binaire armbanden
+          student_description: Maak programma's met sequencing, loops en gebeurtenissen.
+            Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende
+            technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde
+            van de cursus je eigen spel of verhaal dat je kunt delen!
         csd6-2018:
           lesson_groups:
             csd6_1:
@@ -2504,6 +2645,12 @@ nl:
             Functions with Parameters:
               name: Functies met Parameters
         coursee-2018:
+          title: Cursus E (2018)
+          assignment_family_title: Cursus E
+          description: Begin met coderen met algoritmen, loops, conditionals en gebeurtenissen
+            en daarna ga je verder met functies. Ontwerp en maak in het tweede deel
+            van deze cursus een sluitsteenproject dat je kunt delen met je vrienden
+            en familie.
           description_audience: 'Leeftijden: 8-12'
           lesson_groups:
             extra_course_content:
@@ -2527,7 +2674,20 @@ nl:
               name: Statements met Kaarten
             Minecraft Hour of Code:
               name: Minecraft programmeer uur
+          student_description: Begin met coderen met algoritmen, loops, conditionals
+            en gebeurtenissen en daarna ga je verder met functies. Ontwerp en maak
+            in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen
+            met je vrienden en familie.
         coursef-2018:
+          title: Cursus F (2018)
+          assignment_family_title: Cursus F
+          description: Leer verschillende soorten loops, gebeurtenissen, functies
+            en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
+            technieken en bespreek maatschappelijke gevolgen van computergebruik en
+            internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject
+            dat je kunt delen met vrienden en familie.
+          description_short: Leer alle concepten in Informatica Fundamentals en creëer
+            je eigen kunst, verhaal of spel.
           description_audience: 'Leeftijden: 9-13'
           lessons:
             'Programming: My Robotic Friends':
@@ -2548,6 +2708,11 @@ nl:
               name: Liedjes schrijven met Parameters
             Conditionals with Cards:
               name: Statements met Kaarten
+          student_description: Leer verschillende soorten loops, gebeurtenissen, functies
+            en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
+            technieken en bespreek maatschappelijke gevolgen van computergebruik en
+            internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject
+            dat je kunt delen met vrienden en familie.
         csp1-2018:
           lesson_groups:
             cspSurvey:
@@ -2634,6 +2799,9 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
+          lessons:
+            Simple Encryption:
+              name: Eenvoudige versleuteling
         csp5-2018:
           description: Deze module vervolgt de introductie van de basisconcepten van
             programmeren. Dit biedt de mogelijkheid om rijke, interactieve apps te
@@ -2836,6 +3004,9 @@ nl:
             Day 4:
               name: Dag 4
         pre-express-2018:
+          description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
           description_audience: 'Leeftijden: 4-8'
           lessons:
             'Debugging: Unspotted Bugs':
@@ -2852,6 +3023,9 @@ nl:
               name: Jouw Digitale Voetafdruk
             'Persistence & Frustration: Stevie and the Big Project':
               name: Stevie en het Grote Project
+          student_description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
         fit-test:
           lesson_groups:
             required:
@@ -2935,6 +3109,14 @@ nl:
           student_description: Breid de kennis van het eerste uur uit met uitgebreide
             projectideeën.
         coursef-2019:
+          title: Cursus F (2019)
+          description: Leer verschillende soorten loops, gebeurtenissen, functies
+            en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
+            technieken en bespreek maatschappelijke gevolgen van computergebruik en
+            internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject
+            dat je kunt delen met vrienden en familie.
+          description_short: Leer alle concepten in Informatica Fundamentals en creëer
+            je eigen kunst, verhaal of spel.
           description_audience: 'Leeftijden: 9-13'
           lesson_groups:
             ramp_up:
@@ -2964,11 +3146,19 @@ nl:
               name: Het Internet
             Crowdsourcing:
               name: Crowdsourcing
+          student_description: Leer verschillende soorten loops, gebeurtenissen, functies
+            en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
+            technieken en bespreek maatschappelijke gevolgen van computergebruik en
+            internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject
+            dat je kunt delen met vrienden en familie.
         dance-low:
           lessons:
             Dance Party:
               name: Dansfeest
         coursed-2019:
+          title: Cursus D (2019)
+          description: Studenten ontwikkelen hun begrip van loops, conditionals en
+            gebeurtenissen. Naast codering leren studenten over digitaal burgerschap.
           description_audience: 'Leeftijden: 7-11'
           lesson_groups:
             csf_events:
@@ -2996,7 +3186,14 @@ nl:
               name: Bouw een Star Wars Spel!
             Dance Party:
               name: Dansfeest
+          student_description: Studenten ontwikkelen hun begrip van loops, conditionals
+            en gebeurtenissen. Naast codering leren studenten over digitaal burgerschap.
         coursee-2019:
+          title: Cursus E (2019)
+          description: Begin met coderen met algoritmen, loops, conditionals en gebeurtenissen
+            en daarna ga je verder met functies. Ontwerp en maak in het tweede deel
+            van deze cursus een sluitsteenproject dat je kunt delen met je vrienden
+            en familie.
           description_audience: 'Leeftijden: 8-12'
           lesson_groups:
             ramp_up:
@@ -3026,7 +3223,12 @@ nl:
               name: Crowdsourcing
             Songwriting:
               name: Songwriting
+          student_description: Begin met coderen met algoritmen, loops, conditionals
+            en gebeurtenissen en daarna ga je verder met functies. Ontwerp en maak
+            in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen
+            met je vrienden en familie.
         express-2019:
+          title: Express-cursus (2019)
           description_audience: 'Leeftijden: 9-18'
           lesson_groups:
             csf_warmup:
@@ -3095,6 +3297,13 @@ nl:
           student_description: Breid de kennis van het eerste uur uit met uitgebreide
             projectideeën.
         coursec-2019:
+          title: Cursus C (2019)
+          description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal
+            uw initialen in binair, onderzoek verschillende probleemoplossende technieken
+            en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de
+            cursus je eigen spel of verhaal dat je kunt delen!
+          description_short: Leer de basisprincipes van informatica en creëer je eigen
+            kunst, verhalen en games.
           description_audience: 'Leeftijden: 6-10'
           lesson_groups:
             csf_digcit:
@@ -3112,6 +3321,10 @@ nl:
               name: De grote gebeurtenis
             Binary Bracelets:
               name: Binaire armbanden
+          student_description: Maak programma's met sequencing, loops en gebeurtenissen.
+            Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende
+            technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde
+            van de cursus je eigen spel of verhaal dat je kunt delen!
         csp-mid-survey:
           lesson_groups:
             cspSurvey:
@@ -3119,6 +3332,11 @@ nl:
         gamelab:
           title: Game Lab
         coursea-2019:
+          title: Cursus A (2019)
+          description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
+          description_short: Een inleiding tot informatica voor pre-readers.
           description_audience: 'Leeftijden: 4-7'
           lesson_groups:
             csf_digcit:
@@ -3132,7 +3350,14 @@ nl:
               name: Vrolijke Routes
             Going Places Safely:
               name: Veilig Reizen
+          student_description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
         courseb-2019:
+          title: Cursus B (2019)
+          description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
           description_audience: 'Leeftijden: 5-8'
           lesson_groups:
             csf_digcit:
@@ -3148,6 +3373,9 @@ nl:
               name: Jouw Digitale Voetafdruk
             'Loops: Getting Loopy':
               name: Rondjes lopen
+          student_description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
         pre-express-2019:
           description_audience: 'Leeftijden: 4-8'
           lesson_groups:
@@ -3316,6 +3544,9 @@ nl:
           lesson_groups:
             cspSurvey:
               display_name: Vragenlijst
+          lessons:
+            Simple Encryption:
+              name: Eenvoudige versleuteling
         csp5-2019:
           description: Deze module vervolgt de introductie van de basisconcepten van
             programmeren. Dit biedt de mogelijkheid om rijke, interactieve apps te
@@ -4085,6 +4316,8 @@ nl:
               name: Functies
             Next steps:
               name: Volgende stappen
+            Sprite Lab:
+              name: Sprite Lab
             Variables:
               name: Variabelen
             For Loops:
@@ -4414,6 +4647,11 @@ nl:
             Sprites:
               name: Sprites
         coursea-2020:
+          title: Cursus A (2020)
+          description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
+          description_short: Een inleiding tot informatica voor pre-readers.
           description_audience: 'Leeftijden: 4-7'
           lesson_groups:
             csf_digcit:
@@ -4427,7 +4665,14 @@ nl:
               name: Veilig Reizen
             'Programming: Happy Maps':
               name: Vrolijke Routes
+          student_description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
         courseb-2020:
+          title: Cursus B (2020)
+          description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
           description_audience: 'Leeftijden: 5-8'
           lesson_groups:
             csf_digcit:
@@ -4443,7 +4688,17 @@ nl:
               name: verplaats het, verplaats het
             'Loops: Getting Loopy':
               name: Rondjes lopen
+          student_description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
         coursec-2020:
+          title: Cursus C (2020)
+          description: Maak programma's met sequencing, loops en gebeurtenissen. Vertaal
+            uw initialen in binair, onderzoek verschillende probleemoplossende technieken
+            en leer hoe u kunt reageren op cyberpesten. Maak aan het einde van de
+            cursus je eigen spel of verhaal dat je kunt delen!
+          description_short: Leer de basisprincipes van informatica en creëer je eigen
+            kunst, verhalen en games.
           description_audience: 'Leeftijden: 6-10'
           lesson_groups:
             csf_digcit:
@@ -4459,7 +4714,14 @@ nl:
               name: Binaire armbanden
             'Events: The Big Event':
               name: De grote gebeurtenis
+          student_description: Maak programma's met sequencing, loops en gebeurtenissen.
+            Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende
+            technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde
+            van de cursus je eigen spel of verhaal dat je kunt delen!
         coursed-2020:
+          title: Cursus D (2020)
+          description: Studenten ontwikkelen hun begrip van loops, conditionals en
+            gebeurtenissen. Naast codering leren studenten over digitaal burgerschap.
           description_audience: 'Leeftijden: 7-11'
           lesson_groups:
             csf_events:
@@ -4487,7 +4749,14 @@ nl:
               name: Digitaal Burgerschap
             Dance Party:
               name: Dansfeest
+          student_description: Studenten ontwikkelen hun begrip van loops, conditionals
+            en gebeurtenissen. Naast codering leren studenten over digitaal burgerschap.
         coursee-2020:
+          title: Cursus E (2020)
+          description: Begin met coderen met algoritmen, loops, conditionals en gebeurtenissen
+            en daarna ga je verder met functies. Ontwerp en maak in het tweede deel
+            van deze cursus een sluitsteenproject dat je kunt delen met je vrienden
+            en familie.
           description_audience: 'Leeftijden: 8-12'
           lesson_groups:
             ramp_up:
@@ -4503,7 +4772,19 @@ nl:
           lessons:
             'Functions: Songwriting':
               name: Songwriting
+          student_description: Begin met coderen met algoritmen, loops, conditionals
+            en gebeurtenissen en daarna ga je verder met functies. Ontwerp en maak
+            in het tweede deel van deze cursus een sluitsteenproject dat je kunt delen
+            met je vrienden en familie.
         coursef-2020:
+          title: Cursus F (2020)
+          description: Leer verschillende soorten loops, gebeurtenissen, functies
+            en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
+            technieken en bespreek maatschappelijke gevolgen van computergebruik en
+            internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject
+            dat je kunt delen met vrienden en familie.
+          description_short: Leer alle concepten in Informatica Fundamentals en creëer
+            je eigen kunst, verhaal of spel.
           description_audience: 'Leeftijden: 9-13'
           lesson_groups:
             ramp_up:
@@ -4525,7 +4806,15 @@ nl:
               name: Het Internet
             Crowdsourcing:
               name: Crowdsourcing
+            AI for Oceans:
+              name: AI voor oceanen
+          student_description: Leer verschillende soorten loops, gebeurtenissen, functies
+            en conditionals te gebruiken. Onderzoek verschillende probleemoplossende
+            technieken en bespreek maatschappelijke gevolgen van computergebruik en
+            internet. Ontwerp en maak in het tweede deel van deze cursus een sluitsteenproject
+            dat je kunt delen met vrienden en familie.
         express-2020:
+          title: Express-cursus (2020)
           description_audience: 'Leeftijden: 9-18'
           lesson_groups:
             csf_warmup:
@@ -4836,6 +5125,8 @@ nl:
               name: Variabelen
             For Loops:
               name: For-lussen
+            Sprite Lab:
+              name: Sprite Lab
             Next steps:
               name: Volgende stappen
           lesson_groups:
@@ -4955,12 +5246,24 @@ nl:
               name: Module 8
         curriculum-sandbox-levels:
           lessons:
+            Course A:
+              name: Cursus A
+            Course B:
+              name: Cursus B
+            Course E:
+              name: Cursus E
+            Course F:
+              name: Cursus F
             csf:
               name: Basis
         virustest:
           title: Een uitbraak simuleren
           description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak
             te simuleren.
+        ml-playground:
+          lessons:
+            AI for Oceans:
+              name: AI voor oceanen
         outbreak:
           lessons:
             Virus Simulation for Code Bytes:
@@ -5300,6 +5603,7 @@ nl:
             'Project: Innovation Simulation Part 7':
               key: 'Project: Innovatiesimulatie Deel 7'
         coursea-2021:
+          description_short: Een inleiding tot informatica voor pre-readers.
           description_audience: 'Leeftijden: 4-7'
           lessons:
             'Programming: Happy Maps':
@@ -5311,6 +5615,9 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
+          student_description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
         courseb-2021:
           description_audience: 'Leeftijden: 5-8'
           lessons:
@@ -5326,7 +5633,12 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
+          student_description: Leer de basisprincipes van informatica en internetveiligheid.
+            Maak aan het einde van de cursus je eigen spel of verhaal dat je kunt
+            delen.
         coursec-2021:
+          description_short: Leer de basisprincipes van informatica en creëer je eigen
+            kunst, verhalen en games.
           description_audience: 'Leeftijden: 6-10'
           lessons:
             Binary Bracelets:
@@ -5343,6 +5655,10 @@ nl:
               display_name: Lussen
             csf_events:
               display_name: Gebeurtenissen
+          student_description: Maak programma's met sequencing, loops en gebeurtenissen.
+            Vertaal uw initialen in binair, onderzoek verschillende probleemoplossende
+            technieken en leer hoe u kunt reageren op cyberpesten. Maak aan het einde
+            van de cursus je eigen spel of verhaal dat je kunt delen!
         coursed-2021:
           description_audience: 'Leeftijden: 7-11'
           lessons:
@@ -5405,17 +5721,23 @@ nl:
             csf_functions:
               display_name: Functies
         coursef-2021:
+          description_short: Leer alle concepten in Informatica Fundamentals en creëer
+            je eigen kunst, verhaal of spel.
           description_audience: 'Leeftijden: 9-13'
           lessons:
             Envelope Variables:
               key: Envelop variabelen
               name: Envelop variabelen
+            AI for Oceans:
+              key: AI voor oceanen
             Internet:
               key: Internet
               name: Het Internet
             For Loop Fun:
               key: For Lus fun
               name: For Lus fun
+            lesson-5:
+              name: Uitbraak
           lesson_groups:
             ramp_up:
               display_name: Sprites
@@ -5529,6 +5851,10 @@ nl:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
         k5-onlinepd-2021:
           lessons:
             Loops:
@@ -5549,6 +5875,8 @@ nl:
             For Loops:
               key: For-lussen
               name: For-lussen
+            Sprite Lab:
+              key: Sprite Lab
             Next steps:
               key: Volgende stappen
             Module 1:
@@ -5669,6 +5997,12 @@ nl:
           lessons:
             lesson-9:
               name: Leraar gemeenschap
+        self-paced-pl-csd6-2021:
+          lessons:
+            lesson-3:
+              name: 'Eenheid 2: Webontwikkeling'
+        outbreak-module:
+          title: Uitbraak
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -5732,6 +6066,8 @@ nl:
           lessons:
             lesson-12:
               name: Hulpmiddelen
+            lesson-17:
+              name: Console
             lesson-18:
               name: Widgets
           lesson_groups:
@@ -5739,6 +6075,11 @@ nl:
               display_name: Lessen
             lessonGroup-3:
               display_name: Project
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: Hallo, wereld!
+          title: '"Hallo, wereld!"'
         csa1-pilot-facilitator:
           lesson_groups:
             lessonGroup-2:
@@ -5798,7 +6139,17 @@ nl:
             lesson-1:
               name: Spellingswedstrijd
           title: Spellingswedstrijd
+        outbreak-csc:
+          title: Uitbraak
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Content
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Spellingswedstrijd

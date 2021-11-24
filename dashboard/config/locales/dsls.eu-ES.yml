@@ -739,6 +739,12 @@ eu-ES:
         - {}
         questions:
         - {}
+      HappyMaps-Unplugged_2021:
+        markdown: |+
+          # Mapa zoriontsuak
+
+          Sortu algoritmo bat karaktere bat labirinto batean zehar mugitzeko.
+
       K-1 Artist 1 Multi 1:
         answers:
         - {}
@@ -934,6 +940,11 @@ eu-ES:
         questions:
         - text: Ze hitz irakurtzen da letraz letra?
         title: Aukera anitzak
+      SimonSays-Unplugged_2021:
+        markdown: |
+          # Jarraitu algoritmoa
+
+          Jolastu eta pentsatu zer komando behar diren emaitza egokia lortzeko.
       behaviors 1 predict:
         answers:
         - {}
@@ -966,6 +977,12 @@ eu-ES:
         - {}
         questions:
         - {}
+      courseAB_EOC_2021:
+        description: Iritsi zara azken ikasgaira! Aukeratu zer proiektu sortu nahi
+          duzun.
+      courseB_EOC_2021:
+        description: Iritsi zara azken ikasgaira! Aukeratu zer proiektu sortu nahi
+          duzun.
       courseC_multi_artist_prog6_predict1:
         answers:
         - {}
@@ -991,6 +1008,14 @@ eu-ES:
         questions:
         - {}
       courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2021:
         answers:
         - {}
         - {}
@@ -1030,6 +1055,14 @@ eu-ES:
         - {}
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
@@ -1055,6 +1088,14 @@ eu-ES:
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
         answers:
         - {}
         - {}
@@ -1094,6 +1135,14 @@ eu-ES:
         - {}
         questions:
         - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict1:
         answers:
         - {}
@@ -1126,6 +1175,14 @@ eu-ES:
         - {}
         questions:
         - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict2:
         answers:
         - {}
@@ -1151,6 +1208,14 @@ eu-ES:
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
         answers:
         - {}
         - {}
@@ -1222,6 +1287,14 @@ eu-ES:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -1254,7 +1327,23 @@ eu-ES:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - {}
         - {}
@@ -1294,6 +1383,14 @@ eu-ES:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - {}
@@ -1326,6 +1423,14 @@ eu-ES:
         - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - {}
@@ -1351,6 +1456,14 @@ eu-ES:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
         - {}
         - {}
@@ -1398,6 +1511,14 @@ eu-ES:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
@@ -1438,6 +1559,14 @@ eu-ES:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
         answers:
         - {}
@@ -1463,6 +1592,14 @@ eu-ES:
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
         answers:
         - {}
         - {}
@@ -1502,6 +1639,14 @@ eu-ES:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
@@ -1534,6 +1679,14 @@ eu-ES:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_scrat_predict1:
         answers:
         - {}
@@ -1548,6 +1701,21 @@ eu-ES:
         - {}
         - {}
         - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - feedback: Gaizki. Aliena pantailan gora eta behera mugitzen hasiko da
+        - text: 'Aliena eskuinetik ezkerrera patruilatzen hasiko da.
+
+'
+          feedback: Gaizki. Aliena pantailan gora eta behera mugitzen hasiko da
+        - text: Aliena pantailan gora eta behera mugitzen hasiko da
+        - text: 'Aliena pantailaren goialdetik desagertuko da.
+
+'
+          feedback: Gaizki. Alien urdina pantailan gora eta behera mugitzen hasiko
+            da
         questions:
         - {}
       courseE_multi_farmer_functions11_predict:
@@ -1575,6 +1743,14 @@ eu-ES:
         questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
         answers:
         - {}
         - {}
@@ -1614,7 +1790,31 @@ eu-ES:
         - {}
         questions:
         - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
         answers:
         - {}
         - {}
@@ -1640,6 +1840,23 @@ eu-ES:
         - {}
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
         - {}
         - {}
         - {}
@@ -1718,6 +1935,14 @@ eu-ES:
         - {}
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -1766,6 +1991,14 @@ eu-ES:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -1775,6 +2008,22 @@ eu-ES:
         questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
         answers:
         - {}
         - {}
@@ -1814,6 +2063,24 @@ eu-ES:
         - {}
         questions:
         - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csf_digital_trails_2021:
+        markdown: |
+          # Jarraitu ibilbide digitala
+
+          ## Zer informazio dago zure aztarna digitalean?
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |
+          # Nire lineako auzokidea
+
+          ## Nola joaten zara segurtasunez lekuetara linean?
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -1846,121 +2113,6 @@ eu-ES:
         - {}
         questions:
         - {}
-      outbreak_freeplay_choice:
-        display_name: Joku askea
-      courseC_multi_artist_prog6_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_dani:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_dani:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_events_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_labels_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_sprites_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
       grade2_multi_collector_A_predict1_2021:
         answers:
         - {}
@@ -1969,157 +2121,3 @@ eu-ES:
         - {}
         questions:
         - {}
-      SimonSays-Unplugged_2021:
-        markdown: |
-          # Jarraitu algoritmoa
-
-          Jolastu eta pentsatu zer komando behar diren emaitza egokia lortzeko.
-      courseAB_EOC_2021:
-        description: Iritsi zara azken ikasgaira! Aukeratu zer proiektu sortu nahi
-          duzun.
-      courseB_EOC_2021:
-        description: Iritsi zara azken ikasgaira! Aukeratu zer proiektu sortu nahi
-          duzun.
-      courseD_multi_artist_nestedLoops9_predict1_2021:
-        answers:
-        - text: A
-        - text: B
-        - text: C
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_dance_events_predict1_2021:
-        answers:
-        - feedback: Gaizki. Aliena pantailan gora eta behera mugitzen hasiko da
-        - text: 'Aliena eskuinetik ezkerrera patruilatzen hasiko da.
-
-'
-          feedback: Gaizki. Aliena pantailan gora eta behera mugitzen hasiko da
-        - text: Aliena pantailan gora eta behera mugitzen hasiko da
-        - text: 'Aliena pantailaren goialdetik desagertuko da.
-
-'
-          feedback: Gaizki. Alien urdina pantailan gora eta behera mugitzen hasiko
-            da
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_swim_fish_behavior_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      coursee_prediction_artistfunction2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      HappyMaps-Unplugged_2021:
-        markdown: |+
-          # Mapa zoriontsuak
-
-          Sortu algoritmo bat karaktere bat labirinto batean zehar mugitzeko.
-
-      csf_safety_in_my_online_neighborhood_2021:
-        markdown: |
-          # Nire lineako auzokidea
-
-          ## Nola joaten zara segurtasunez lekuetara linean?
-      csf_digital_trails_2021:
-        markdown: |
-          # Jarraitu ibilbide digitala
-
-          ## Zer informazio dago zure aztarna digitalean?

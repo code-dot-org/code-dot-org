@@ -843,6 +843,10 @@ no-NO:
         - {}
         questions:
         - {}
+      CourseF_outbreak_story:
+        content1: beskrivelse her
+      CourseF_outbreak_story2:
+        content1: beskrivelse her
       Dance_Party_extras_intro:
         markdown: |
           # Fortsett å danse
@@ -938,6 +942,11 @@ no-NO:
           Diskant\n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
           style=\"float: left; margin: 10px\">\n<a href=\"9\">\n<h2>\nØk hastigheten,
           Senk hastigheten</h2>\n\n<img src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n"
+      HappyMaps-Unplugged_2021:
+        markdown: |-
+          # Glade Kart
+
+          Lag en algoritme for å bevege en figur gjennom labyrinten
       Internet Simulator Setup:
         content1: beskrivelse her
       Internet Simulator Setup 2:
@@ -1149,6 +1158,8 @@ no-NO:
         content1: beskrivelse her
       OPD-K5 Stage3aGo_copy:
         content1: beskrivelse her
+      OPD-K5 Stage3aGo_dani:
+        content1: beskrivelse her
       OPD-K5 conditionals introduced:
         content1: beskrivelse her
       OPD-K5 debugging:
@@ -1284,6 +1295,14 @@ no-NO:
         - {}
         questions:
         - {}
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
@@ -1309,6 +1328,14 @@ no-NO:
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+        - text: '12'
+        - text: '15'
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - text: '4'
         - text: '12'
@@ -1348,6 +1375,14 @@ no-NO:
         - {}
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
@@ -1373,6 +1408,14 @@ no-NO:
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
         answers:
         - {}
         - {}
@@ -1412,6 +1455,14 @@ no-NO:
         - text: Jeg vet ikke
         questions:
         - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict2:
         answers:
         - {}
@@ -1437,6 +1488,14 @@ no-NO:
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
         answers:
         - {}
         - {}
@@ -1508,6 +1567,14 @@ no-NO:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -1540,7 +1607,23 @@ no-NO:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - {}
         - {}
@@ -1580,6 +1663,14 @@ no-NO:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - {}
@@ -1605,6 +1696,14 @@ no-NO:
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
         answers:
         - {}
         - {}
@@ -1644,6 +1743,14 @@ no-NO:
         - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
       courseD_multi_collector_debugging10_predict1:
         answers:
         - {}
@@ -1677,6 +1784,14 @@ no-NO:
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
         - {}
         - {}
@@ -1724,6 +1839,14 @@ no-NO:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
         answers:
         - {}
@@ -1749,6 +1872,14 @@ no-NO:
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
         answers:
         - {}
         - {}
@@ -1788,6 +1919,14 @@ no-NO:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
@@ -1820,6 +1959,14 @@ no-NO:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_scrat_predict1:
         answers:
         - {}
@@ -1829,6 +1976,14 @@ no-NO:
         questions:
         - {}
       courseE_multi_bee_functions_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
         answers:
         - {}
         - {}
@@ -1868,6 +2023,14 @@ no-NO:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1:
         answers:
         - {}
@@ -1900,7 +2063,31 @@ no-NO:
         - {}
         questions:
         - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
         answers:
         - {}
         - {}
@@ -1926,6 +2113,23 @@ no-NO:
         - {}
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
         - {}
         - {}
         - {}
@@ -2004,6 +2208,14 @@ no-NO:
         - {}
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -2052,6 +2264,14 @@ no-NO:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -2068,6 +2288,24 @@ no-NO:
         - {}
         questions:
         - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: beskrivelse her
       coursee_prediction_artistfunction2:
         answers:
         - {}
@@ -2100,16 +2338,41 @@ no-NO:
         - {}
         questions:
         - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
         title: CS Funns Slutt på Kursets Elevundersøkelse
       csd-post-survey-levelgroup-2018:
         title: CS Funns Slutt på Kursets Elevundersøkelse
+      csd-pre-survey-2017-levelgroup:
+        title: CS Funns Før-Kurs' Studentundersøkelse
+      csd-pre-survey-2017-levelgroup_2018:
+        title: CS Funns Før-Kurs' Studentundersøkelse
+      csd-pre-survey-levelgroup_2019:
+        title: CS Funns Før-Kurs' Studentundersøkelse
       csf_be_a_super_digital_citizen:
+        content1: beskrivelse her
+      csf_be_a_super_digital_citizen_2021:
         content1: beskrivelse her
       csf_password_power-up:
         content1: beskrivelse her
+      csf_password_power-up_2021:
+        content1: beskrivelse her
       csf_putting_a_stop_to_online_meanness:
         content1: beskrivelse her
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: beskrivelse her
+      csf_safety_in_my_online_neighborhood_2021:
+        markdown: |-
+          # Mitt Nabolag på nettet
+
+          ## Hvordan beveger du deg trygt på nettet?
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -2142,265 +2405,6 @@ no-NO:
         - {}
         questions:
         - {}
-      csd-pre-survey-2017-levelgroup:
-        title: CS Funns Før-Kurs' Studentundersøkelse
-      csd-pre-survey-2017-levelgroup_2018:
-        title: CS Funns Før-Kurs' Studentundersøkelse
-      csd-pre-survey-levelgroup_2019:
-        title: CS Funns Før-Kurs' Studentundersøkelse
-      outbreak_story:
-        content1: beskrivelse her
-      outbreak_story2:
-        content1: beskrivelse her
-      outbreak_freeplay_choice:
-        display_name: Fritt spill
-      CourseF_outbreak_story:
-        content1: beskrivelse her
-      CourseF_outbreak_story2:
-        content1: beskrivelse her
-      OPD-K5 Stage3aGo_dani:
-        content1: beskrivelse her
-      courseC_multi_artist_prog6_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1_2021:
-        answers:
-        - text: '4'
-        - text: '12'
-        - text: '15'
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1_2021:
-        answers:
-        - text: A
-        - text: B
-        - text: C
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_dani:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2_2021:
-        answers:
-        - text: '4'
-        - text: '8'
-        - text: '10'
-        - text: '12'
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_dance_events_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_dani:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_swim_fish_behavior_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_events_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_labels_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_sprites_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables_stop:
-        content1: beskrivelse her
-      coursee_prediction_artistfunction2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      csf_be_a_super_digital_citizen_2021:
-        content1: beskrivelse her
-      csf_password_power-up_2021:
-        content1: beskrivelse her
-      csf_putting_a_stop_to_online_meanness_2021:
-        content1: beskrivelse her
       grade2_multi_collector_A_predict1_2021:
         answers:
         - {}
@@ -2409,13 +2413,3 @@ no-NO:
         - {}
         questions:
         - {}
-      HappyMaps-Unplugged_2021:
-        markdown: |-
-          # Glade Kart
-
-          Lag en algoritme for å bevege en figur gjennom labyrinten
-      csf_safety_in_my_online_neighborhood_2021:
-        markdown: |-
-          # Mitt Nabolag på nettet
-
-          ## Hvordan beveger du deg trygt på nettet?

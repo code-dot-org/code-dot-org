@@ -998,6 +998,97 @@ ro-RO:
           * **pixel** - prescurtare pentru "picture element", e unitatea fundamentală a unei imagini digitale, de obicei un pătrat minuscul sau un punct conținând o singură culoare dintr-o imagine mai mare.
 
 
+      CourseF_outbreak_story:
+        content1: descrierea aici
+        markdown: "Epideme: Cod Propriu de Simulare\n\n## Bine Ai Venit în Orașul
+          Monstrullui!\nOrașul Monstrului era, de obiceim un loc vesel și sănătos.
+          Monștrii Orașului Monstrului iubeau să se plimbe și să își viziteze prietenii.
+          \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nÎntr-o zi, unul dintre monștri a început să se simtă
+          rău. Monstrul a căpătat un **virus**! Un virus este un germen mic, care
+          te poate face să devii bolnav. Ceilalți monștri nu au fost prea îngrijorați.
+          Au continuat să îți viziteze prietenii.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nCurând după aceea, alți doi monștri s-au îmbolnăvit.
+          De același virus! Se pare că au luat virusul de la prietenul lor.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nÎncet, virusul s-a  împrăștiat la alți monștri din
+          apropiere. Monștrii sănătoși au început să se îngrijoreze că s-ar putea
+          îmbolnăvi. Monștrii bolnavi au început să se îngrijoreze că ar putea să
+          îi îmbolnăvească pe ceilalți.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">"
+      CourseF_outbreak_story2:
+        content1: descrierea aici
+        markdown: "# Epidemie: Gândind Ca un Om de Știință\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulările sun un mod minunat de a
+          învăța lucrurile care pot fi greu de observat în lumea reală. Ele îi ajută
+          pe oamenii de știință să rezolve probleme și să testeze idei noi în mod
+          sigur și eficient. Simularea ta este un mod de a arăta cum poate arăta o
+          epidemie virusală înt Orașul Monstrului.\n\n## Resetează și Reia!\nChiar
+          dacă scrii codul personal, este imposibil să știi exact ce se va întâmpla
+          când apeși pe rulare. Monștrii colindă aleatoriu, deci nu poți știi dacă
+          virului se va împrăștia rapid sau lent. Ori de câte ori schimbi codul, asigură-te
+          să fulezi simularea ta mai mult de o dată. Lucrurile nu se petrec la fel
+          de două ori!\n\n## Culegerea Datelor\nÎncearcă să scrii observațiile pe
+          măsură ce rulezi simularea. Poți număra monștrii care se îmbolnăvesc sau
+          folosi un temporizator pentru a vedea cât de rapid se petrec lucrurile.
+          De exemplu, cât durează până ce toți monștrii se îmbolnăvesc dacă niciunul
+          nu poartă măști?\n\n## Predicții\nDacă înțelegi modelul tău, poți să îl
+          folosești pentru a face predicții. Poți chiar să schimbi modul de funcționare
+          a simulării și să presupui ce va fi diferit. De exemplu:\n* Ce s-ar întâmpla
+          acă ar fi de două ori mai mulți monștri?\n* Ce s-ar întâmpla dacă monștrii
+          s-ar mișca cu jumătate din viteză?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Este Orașul Monstrului ca lumea reală?\nExistă
+          o limită a cât de ralist poate fi orice model\n* Ce are în comun simularea
+          epidemiei tale cu epidemiile virale din lumea reală?\n* Care sunt diferențele?\nCând
+          termini această activitate, discută aceste întrebări cu profesorii sau familia
+          ta!\n\n## Ce mai putem modela?\nAi creat deja un model de lucru al epidemiei
+          din Orașul Monstrului. Care sunt lucrurile pe care simularea ta nu le poate
+          face sau care arată ce ai dori să facă? Apasă continuă pentru a continua
+          si a învăța să modelezi și mai mult:\n* Mărind numărul de monștri în simulare\n*
+          Ajutând monștrii să își revină din virus\n* Probabilitate, imunitate, vaccinuri
+          și multe altele!\n\nDe asemenea, poți să partajezi modelul tău de simulare
+          cu alții, sau să partajezi un mesaj despre ce crezi că putem să facem ca
+          să îi menținem pe ceilalți sănătoși atunci când un virus intră în oraș. "
       Dance_Party_extras_intro:
         markdown: "# Continuă să dansezi!\n\nPentru partea a 2-a, vei crea proiectul
           tau. Nu sunt puzzleuri aici - în schimb sunt un număr de proiecte care arată
@@ -1251,1191 +1342,6 @@ ro-RO:
         content1: descrierea aici
       New Challenge Introduction:
         content1: descrierea aici
-      OPD-K5 Reviewing Reflections:
-        content1: descrierea aici
-      OPD-K5 Stage3aGo:
-        content1: descrierea aici
-      OPD-K5 Stage3aGo_copy:
-        content1: descrierea aici
-      OPD-K5 conditionals introduced:
-        content1: descrierea aici
-      OPD-K5 debugging:
-        content1: descrierea aici
-      OPD-K5 diving deeper intro:
-        content1: descrierea aici
-      OPD-K5 events introduced:
-        content1: descrierea aici
-      OPD-K5 for loops:
-        content1: descrierea aici
-      OPD-K5 for loops intro:
-        content1: descrierea aici
-      OPD-K5 for loops introduction:
-        content1: descrierea aici
-      OPD-K5 functions introduced:
-        content1: descrierea aici
-      OPD-K5 journaling:
-        content1: descrierea aici
-      OPD-K5 lesson implementation planning:
-        content1: descrierea aici
-      OPD-K5 lesson plans:
-        content1: descrierea aici
-      OPD-K5 loops introduced:
-        content1: descrierea aici
-      OPD-K5 project:
-        content1: descrierea aici
-      OPD-K5 projects introduction:
-        content1: descrierea aici
-      OPD-K5 role_of_teacher:
-        content1: descrierea aici
-      OPD-K5 sequencing introduced:
-        content1: descrierea aici
-      OPD-K5 sprite lab:
-        content1: descrierea aici
-      OPD-K5 sprite lab introduction:
-        content1: descrierea aici
-      OPD-K5 sprite lab unplugged:
-        content1: descrierea aici
-      OPD-K5 sprite lab video:
-        content1: descrierea aici
-      OPD-K5 types of lessons:
-        content1: descrierea aici
-      OPD-K5 using lesson plans:
-        content1: descrierea aici
-      OPD-K5 variables:
-        content1: descrierea aici
-      OPD-K5 variables introduction:
-        content1: descrierea aici
-      OPD-K5 variables unplugged:
-        content1: descrierea aici
-      OPD-K5 where to next:
-        content1: descrierea aici
-      OPD-K5-projects-1:
-        content1: descrierea aici
-      Prepare for your presentation:
-        content1: descrierea aici
-      'Technique: Frequency Analysis':
-        content1: descrierea aici
-      Terminology Recap:
-        content1: descrierea aici
-      Unit 1 Lesson 2 Overview:
-        markdown: |
-          #Prezentare generală
-
-          În această lecție vei învăța un proces formal de rezolvare de probleme, proces care te va ajuta să abordezi și alte categorii de probleme.
-
-          ##Resurse
-
-          * [Procesul de rezolvare a unei probleme - Ghid de lecție](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
-      Unit 1 Lesson 3 Overview:
-        markdown: |
-          #Prezentare generală
-
-          În această lecție vei aplica procesul de rezolvare de probleme pe diferite categorii de probleme pentru a învăța cum fiecare pas din algoritm te ajută să dezvolți și să îmbunătățești soluțiile.
-
-          ## Resurse
-
-          * [Rezolvare de probleme - Ghid de lecție](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
-      Unit 1 Lesson 4 Overview:
-        markdown: |
-          #Prezentare generală
-
-          În această lecție vei începe să analizezi modul în care calculatoarele ajută la rezolvarea anumitor categorii de probleme și vei învăța caracteristicile importante ale fiecărui calculator.
-
-          ## Resurse
-
-          * [Ce este un calculator - Ghid de lecție](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
-      behaviors 1 predict:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-          feedback: Incorect
-        questions:
-        - {}
-      behaviors 1 predict_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-          feedback: Incorect
-        questions:
-        - {}
-      behaviors 4 predict:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-          feedback: Incorect
-        questions:
-        - {}
-      behaviors 4 predict_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-          feedback: Incorect
-        questions:
-        - {}
-      courseC_multi_artist_prog6_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_artist_prog6_predict1_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_artist_prog6_predict1_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_artist_prog6_predict1_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1:
-        answers:
-        - text: '4'
-          correct: true
-        - text: '12'
-          correct: true
-        - text: '15'
-          correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1_2018:
-        answers:
-        - text: '4'
-          correct: true
-        - text: '12'
-          correct: true
-        - text: '15'
-          correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1_2018_2019:
-        answers:
-        - text: '4'
-          correct: true
-        - text: '12'
-          correct: true
-        - text: '15'
-          correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
-        answers:
-        - text: '4'
-          correct: true
-        - text: '12'
-          correct: true
-        - text: '15'
-          correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_starWars_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - text: Nu știu
-          correct: true
-        questions:
-        - {}
-      courseC_multi_starWars_predict1_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - text: Nu știu
-          correct: true
-        questions:
-        - {}
-      courseC_multi_starWars_predict1_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - text: Nu știu
-          correct: true
-        questions:
-        - {}
-      courseC_multi_starWars_predict1_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - text: Nu știu
-          correct: true
-        questions:
-        - {}
-      courseC_multi_starWars_predict2:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_starWars_predict2_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_starWars_predict2_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseC_multi_starWars_predict2_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_artist_binary8_predict1:
-        answers:
-        - text: A
-          correct: true
-        - text: B
-          correct: true
-        - text: C
-          correct: true
-        - text: D
-          correct: true
-        questions:
-        - {}
-      courseD_multi_artist_binary8_predict1_2018:
-        answers:
-        - text: A
-          correct: true
-        - text: B
-          correct: true
-        - text: C
-          correct: true
-        - text: D
-          correct: true
-        questions:
-        - {}
-      courseD_multi_artist_binary8_predict1_2018_2019:
-        answers:
-        - text: A
-          correct: true
-        - text: B
-          correct: true
-        - text: C
-          correct: true
-        - text: D
-          correct: true
-        questions:
-        - {}
-      courseD_multi_artist_binary8_predict1_2018_2019_2020:
-        answers:
-        - text: A
-          correct: true
-        - text: B
-          correct: true
-        - text: C
-          correct: true
-        - text: D
-          correct: true
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1:
-        answers:
-        - text: A
-          correct: true
-        - text: B
-          correct: true
-        - text: C
-          correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1_2018:
-        answers:
-        - text: A
-          correct: true
-        - text: B
-          correct: true
-        - text: C
-          correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
-        answers:
-        - text: A
-          correct: true
-        - text: B
-          correct: true
-        - text: C
-          correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
-        answers:
-        - text: A
-          correct: true
-        - text: B
-          correct: true
-        - text: C
-          correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_copy:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2:
-        answers:
-        - text: '4'
-          correct: true
-        - text: '8'
-          correct: true
-        - text: '12'
-          correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2_2018:
-        answers:
-        - text: '4'
-          correct: true
-        - text: '8'
-          correct: true
-        - text: '12'
-          correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
-        answers:
-        - text: '4'
-          correct: true
-        - text: '8'
-          correct: true
-        - text: '12'
-          correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
-        answers:
-        - text: '4'
-          correct: true
-        - text: '8'
-          correct: true
-        - text: '12'
-          correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_collector_debugging10_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_farmer_ramp13:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseD_multi_scrat_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseE_multi_bee_functions_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseE_prediction_artistFunction1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_copy:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_bee_variables_8a_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_bee_variables_8a_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_bee_variables_8a_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_artist_for10_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_artist_for10_predict1_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_artist_for10_predict1_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_artist_for10_predict1_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_artist_fwp2_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_bee_conditionals1_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_bee_conditionals7_predict2:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_bee_fwp9_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      courseF_multi_playlab_variables4c_predictive1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      coursee_prediction_artistfunction2:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      coursee_prediction_artistfunction2_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      coursee_prediction_artistfunction2_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      coursee_prediction_artistfunction2_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      csd-pre-survey-2017-levelgroup:
-        markdown: |
-          #Prezentare generală
-
-          Lecția se desfășoară în grupuri care încearcă să proiecteze bărci construite din folie de aluminiu, bărci care vor transporta cât se poate de multe monede. La sfârșitul lecției, grupurile vor discuta despre experiența avută în timpul activității de proiectare și vor descoperi legături între tipurile de algoritmi pe care le vor folosi de-a lungul cursului.
-
-          ##Resurse
-
-          * [Bărci de aluminiu](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Ghid de lecție (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
-      csf_be_a_super_digital_citizen:
-        content1: descrierea aici
-      csf_password_power-up:
-        content1: descrierea aici
-      csf_putting_a_stop_to_online_meanness:
-        content1: descrierea aici
-      grade2_multi_collector_A_predict1:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      grade2_multi_collector_A_predict1_2018:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      grade2_multi_collector_A_predict1_2018_2019:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      grade2_multi_collector_A_predict1_2018_2019_2020:
-        answers:
-        - correct: true
-        - correct: true
-        - correct: true
-        - correct: true
-        questions:
-        - {}
-      Unit 1 Lesson 1 Overview:
-        markdown: |
-          #Prezentare generală
-
-          Lecția se desfășoară în grupuri care încearcă să proiecteze bărci construite din folie de aluminiu, bărci care vor transporta cât se poate de multe monede. La sfârșitul lecției, grupurile vor discuta despre experiența avută în timpul activității de proiectare și vor descoperi legături între tipurile de algoritmi pe care le vor folosi de-a lungul cursului.
-
-          ##Resurse
-
-          * [Bărci de aluminiu](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Ghid de lecție (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
-      outbreak_story:
-        content1: descrierea aici
-        markdown: "Epideme: Cod Propriu de Simulare\n\n## Bine Ai Venit în Orașul
-          Monstrullui!\nOrașul Monstrului era, de obiceim un loc vesel și sănătos.
-          Monștrii Orașului Monstrului iubeau să se plimbe și să își viziteze prietenii.
-          \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\nÎntr-o zi, unul dintre monștri a început să se simtă
-          rău. Monstrul a căpătat un **virus**! Un virus este un germen mic, care
-          te poate face să devii bolnav. Ceilalți monștri nu au fost prea îngrijorați.
-          Au continuat să îți viziteze prietenii.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\nCurând după aceea, alți doi monștri s-au îmbolnăvit.
-          De același virus! Se pare că au luat virusul de la prietenul lor.\n\n<img
-          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\nÎncet, virusul s-a  împrăștiat la alți monștri din
-          apropiere. Monștrii sănătoși au început să se îngrijoreze că s-ar putea
-          îmbolnăvi. Monștrii bolnavi au început să se îngrijoreze că ar putea să
-          îi îmbolnăvească pe ceilalți.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">"
-      outbreak_story2:
-        content1: descrierea aici
-        markdown: "# Epidemie: Gândind Ca un Om de Știință\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
-          style=\"float:right; width:30%\">\n\nSimulările sun un mod minunat de a
-          învăța lucrurile care pot fi greu de observat în lumea reală. Ele îi ajută
-          pe oamenii de știință să rezolve probleme și să testeze idei noi în mod
-          sigur și eficient. Simularea ta este un mod de a arăta cum poate arăta o
-          epidemie virusală înt Orașul Monstrului.\n\n## Resetează și Reia!\nChiar
-          dacă scrii codul personal, este imposibil să știi exact ce se va întâmpla
-          când apeși pe rulare. Monștrii colindă aleatoriu, deci nu poți știi dacă
-          virului se va împrăștia rapid sau lent. Ori de câte ori schimbi codul, asigură-te
-          să fulezi simularea ta mai mult de o dată. Lucrurile nu se petrec la fel
-          de două ori!\n\n## Culegerea Datelor\nÎncearcă să scrii observațiile pe
-          măsură ce rulezi simularea. Poți număra monștrii care se îmbolnăvesc sau
-          folosi un temporizator pentru a vedea cât de rapid se petrec lucrurile.
-          De exemplu, cât durează până ce toți monștrii se îmbolnăvesc dacă niciunul
-          nu poartă măști?\n\n## Predicții\nDacă înțelegi modelul tău, poți să îl
-          folosești pentru a face predicții. Poți chiar să schimbi modul de funcționare
-          a simulării și să presupui ce va fi diferit. De exemplu:\n* Ce s-ar întâmpla
-          acă ar fi de două ori mai mulți monștri?\n* Ce s-ar întâmpla dacă monștrii
-          s-ar mișca cu jumătate din viteză?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
-          style=\"float:right\">\n\n## Este Orașul Monstrului ca lumea reală?\nExistă
-          o limită a cât de ralist poate fi orice model\n* Ce are în comun simularea
-          epidemiei tale cu epidemiile virale din lumea reală?\n* Care sunt diferențele?\nCând
-          termini această activitate, discută aceste întrebări cu profesorii sau familia
-          ta!\n\n## Ce mai putem modela?\nAi creat deja un model de lucru al epidemiei
-          din Orașul Monstrului. Care sunt lucrurile pe care simularea ta nu le poate
-          face sau care arată ce ai dori să facă? Apasă continuă pentru a continua
-          si a învăța să modelezi și mai mult:\n* Mărind numărul de monștri în simulare\n*
-          Ajutând monștrii să își revină din virus\n* Probabilitate, imunitate, vaccinuri
-          și multe altele!\n\nDe asemenea, poți să partajezi modelul tău de simulare
-          cu alții, sau să partajezi un mesaj despre ce crezi că putem să facem ca
-          să îi menținem pe ceilalți sănătoși atunci când un virus intră în oraș. "
-      outbreak_freeplay_choice:
-        display_name: Joc la liber
-        description: Ai terminat tutorialul! Continuă să faci schimbări sau îmbunătățiri
-          ale proiectului tău. Poți alege să continui să lucrezi cu aceleazi blocuri
-          sau să încerci o cutie cu instrumente expandată.
       OPD-K5 CS Courses:
         markdown: "# Planificare > Cum să începeți pe Code.org## Pasul 1: Alegeți
           un cursToate cursurile noastre – de la preșcolari la elevi de liceu – sunt
@@ -2551,105 +1457,6 @@ ro-RO:
           continuați cu planurile de lecție zilnice pentru a vă ghida elevii, cu activitățile
           offline pe care le puteți desfășura fără să aveți nevoie de un computer
           și cu forumurile pentru a lua legătura cu alți profesori.'
-      courseD_EOC_2020:
-        display_name: Proiect de final de curs
-      courseE_EOC_2020:
-        display_name: Proiect de final de curs
-      courseExpress_EOC_2020:
-        display_name: Proiect de final de curs
-      courseF_EOC_2020:
-        display_name: Proiect de final de curs
-      CourseF_outbreak_story:
-        content1: descrierea aici
-        markdown: "Epideme: Cod Propriu de Simulare\n\n## Bine Ai Venit în Orașul
-          Monstrullui!\nOrașul Monstrului era, de obiceim un loc vesel și sănătos.
-          Monștrii Orașului Monstrului iubeau să se plimbe și să își viziteze prietenii.
-          \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\nÎntr-o zi, unul dintre monștri a început să se simtă
-          rău. Monstrul a căpătat un **virus**! Un virus este un germen mic, care
-          te poate face să devii bolnav. Ceilalți monștri nu au fost prea îngrijorați.
-          Au continuat să îți viziteze prietenii.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\nCurând după aceea, alți doi monștri s-au îmbolnăvit.
-          De același virus! Se pare că au luat virusul de la prietenul lor.\n\n<img
-          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">\n\nÎncet, virusul s-a  împrăștiat la alți monștri din
-          apropiere. Monștrii sănătoși au început să se îngrijoreze că s-ar putea
-          îmbolnăvi. Monștrii bolnavi au început să se îngrijoreze că ar putea să
-          îi îmbolnăvească pe ceilalți.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
-          style=\"width:8%\">"
-      CourseF_outbreak_story2:
-        content1: descrierea aici
-        markdown: "# Epidemie: Gândind Ca un Om de Știință\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
-          style=\"float:right; width:30%\">\n\nSimulările sun un mod minunat de a
-          învăța lucrurile care pot fi greu de observat în lumea reală. Ele îi ajută
-          pe oamenii de știință să rezolve probleme și să testeze idei noi în mod
-          sigur și eficient. Simularea ta este un mod de a arăta cum poate arăta o
-          epidemie virusală înt Orașul Monstrului.\n\n## Resetează și Reia!\nChiar
-          dacă scrii codul personal, este imposibil să știi exact ce se va întâmpla
-          când apeși pe rulare. Monștrii colindă aleatoriu, deci nu poți știi dacă
-          virului se va împrăștia rapid sau lent. Ori de câte ori schimbi codul, asigură-te
-          să fulezi simularea ta mai mult de o dată. Lucrurile nu se petrec la fel
-          de două ori!\n\n## Culegerea Datelor\nÎncearcă să scrii observațiile pe
-          măsură ce rulezi simularea. Poți număra monștrii care se îmbolnăvesc sau
-          folosi un temporizator pentru a vedea cât de rapid se petrec lucrurile.
-          De exemplu, cât durează până ce toți monștrii se îmbolnăvesc dacă niciunul
-          nu poartă măști?\n\n## Predicții\nDacă înțelegi modelul tău, poți să îl
-          folosești pentru a face predicții. Poți chiar să schimbi modul de funcționare
-          a simulării și să presupui ce va fi diferit. De exemplu:\n* Ce s-ar întâmpla
-          acă ar fi de două ori mai mulți monștri?\n* Ce s-ar întâmpla dacă monștrii
-          s-ar mișca cu jumătate din viteză?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
-          style=\"float:right\">\n\n## Este Orașul Monstrului ca lumea reală?\nExistă
-          o limită a cât de ralist poate fi orice model\n* Ce are în comun simularea
-          epidemiei tale cu epidemiile virale din lumea reală?\n* Care sunt diferențele?\nCând
-          termini această activitate, discută aceste întrebări cu profesorii sau familia
-          ta!\n\n## Ce mai putem modela?\nAi creat deja un model de lucru al epidemiei
-          din Orașul Monstrului. Care sunt lucrurile pe care simularea ta nu le poate
-          face sau care arată ce ai dori să facă? Apasă continuă pentru a continua
-          si a învăța să modelezi și mai mult:\n* Mărind numărul de monștri în simulare\n*
-          Ajutând monștrii să își revină din virus\n* Probabilitate, imunitate, vaccinuri
-          și multe altele!\n\nDe asemenea, poți să partajezi modelul tău de simulare
-          cu alții, sau să partajezi un mesaj despre ce crezi că putem să facem ca
-          să îi menținem pe ceilalți sănătoși atunci când un virus intră în oraș. "
       OPD-K5 CS Courses_dani:
         markdown: "# Planificare > Cum să începeți pe Code.org## Pasul 1: Alegeți
           un cursToate cursurile noastre – de la preșcolari la elevi de liceu – sunt
@@ -2676,17 +1483,231 @@ ro-RO:
           continuați cu planurile de lecție zilnice pentru a vă ghida elevii, cu activitățile
           offline pe care le puteți desfășura fără să aveți nevoie de un computer
           și cu forumurile pentru a lua legătura cu alți profesori."
+      OPD-K5 Reviewing Reflections:
+        content1: descrierea aici
+      OPD-K5 Stage3aGo:
+        content1: descrierea aici
+      OPD-K5 Stage3aGo_copy:
+        content1: descrierea aici
       OPD-K5 Stage3aGo_dani:
         content1: descrierea aici
+      OPD-K5 conditionals introduced:
+        content1: descrierea aici
+      OPD-K5 debugging:
+        content1: descrierea aici
+      OPD-K5 diving deeper intro:
+        content1: descrierea aici
+      OPD-K5 events introduced:
+        content1: descrierea aici
+      OPD-K5 for loops:
+        content1: descrierea aici
+      OPD-K5 for loops intro:
+        content1: descrierea aici
+      OPD-K5 for loops introduction:
+        content1: descrierea aici
+      OPD-K5 functions introduced:
+        content1: descrierea aici
+      OPD-K5 journaling:
+        content1: descrierea aici
+      OPD-K5 lesson implementation planning:
+        content1: descrierea aici
+      OPD-K5 lesson plans:
+        content1: descrierea aici
+      OPD-K5 loops introduced:
+        content1: descrierea aici
+      OPD-K5 project:
+        content1: descrierea aici
+      OPD-K5 projects introduction:
+        content1: descrierea aici
+      OPD-K5 role_of_teacher:
+        content1: descrierea aici
+      OPD-K5 sequencing introduced:
+        content1: descrierea aici
+      OPD-K5 sprite lab:
+        content1: descrierea aici
+      OPD-K5 sprite lab introduction:
+        content1: descrierea aici
+      OPD-K5 sprite lab unplugged:
+        content1: descrierea aici
+      OPD-K5 sprite lab video:
+        content1: descrierea aici
+      OPD-K5 types of lessons:
+        content1: descrierea aici
+      OPD-K5 using lesson plans:
+        content1: descrierea aici
+      OPD-K5 variables:
+        content1: descrierea aici
+      OPD-K5 variables introduction:
+        content1: descrierea aici
+      OPD-K5 variables unplugged:
+        content1: descrierea aici
+      OPD-K5 where to next:
+        content1: descrierea aici
+      OPD-K5-projects-1:
+        content1: descrierea aici
+      Prepare for your presentation:
+        content1: descrierea aici
+      'Technique: Frequency Analysis':
+        content1: descrierea aici
+      Terminology Recap:
+        content1: descrierea aici
+      Unit 1 Lesson 1 Overview:
+        markdown: |
+          #Prezentare generală
+
+          Lecția se desfășoară în grupuri care încearcă să proiecteze bărci construite din folie de aluminiu, bărci care vor transporta cât se poate de multe monede. La sfârșitul lecției, grupurile vor discuta despre experiența avută în timpul activității de proiectare și vor descoperi legături între tipurile de algoritmi pe care le vor folosi de-a lungul cursului.
+
+          ##Resurse
+
+          * [Bărci de aluminiu](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Ghid de lecție (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+      Unit 1 Lesson 2 Overview:
+        markdown: |
+          #Prezentare generală
+
+          În această lecție vei învăța un proces formal de rezolvare de probleme, proces care te va ajuta să abordezi și alte categorii de probleme.
+
+          ##Resurse
+
+          * [Procesul de rezolvare a unei probleme - Ghid de lecție](https://docs.google.com/document/d/1xEPMYIDy70fWCgyLymBNmxkE-6uJ7BYOXSmV8Vyt-SQ/export?format=pdf)
+      Unit 1 Lesson 3 Overview:
+        markdown: |
+          #Prezentare generală
+
+          În această lecție vei aplica procesul de rezolvare de probleme pe diferite categorii de probleme pentru a învăța cum fiecare pas din algoritm te ajută să dezvolți și să îmbunătățești soluțiile.
+
+          ## Resurse
+
+          * [Rezolvare de probleme - Ghid de lecție](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+      Unit 1 Lesson 4 Overview:
+        markdown: |
+          #Prezentare generală
+
+          În această lecție vei începe să analizezi modul în care calculatoarele ajută la rezolvarea anumitor categorii de probleme și vei învăța caracteristicile importante ale fiecărui calculator.
+
+          ## Resurse
+
+          * [Ce este un calculator - Ghid de lecție](https://docs.google.com/document/d/1g4dPcsx2xADEZI0FiMYApLr0hh3_-89NDWd2y86sS6I/export?format=pdf)
+      behaviors 1 predict:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+          feedback: Incorect
+        questions:
+        - {}
+      behaviors 1 predict_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+          feedback: Incorect
+        questions:
+        - {}
+      behaviors 4 predict:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+          feedback: Incorect
+        questions:
+        - {}
+      behaviors 4 predict_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+          feedback: Incorect
+        questions:
+        - {}
       courseAB_EOC_2021:
         display_name: Proiect de final de curs
       courseB_EOC_2021:
         display_name: Proiect de final de curs
+      courseC_multi_artist_prog6_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict1_2018_2019_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       courseC_multi_artist_prog6_predict1_2021:
         answers:
         - correct: true
         - correct: true
         - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1:
+        answers:
+        - text: '4'
+          correct: true
+        - text: '12'
+          correct: true
+        - text: '15'
+          correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018:
+        answers:
+        - text: '4'
+          correct: true
+        - text: '12'
+          correct: true
+        - text: '15'
+          correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019:
+        answers:
+        - text: '4'
+          correct: true
+        - text: '12'
+          correct: true
+        - text: '15'
+          correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+          correct: true
+        - text: '12'
+          correct: true
+        - text: '15'
+          correct: true
         - correct: true
         questions:
         - {}
@@ -2702,7 +1723,71 @@ ro-RO:
           correct: true
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2018_2019_2020:
         answers:
         - correct: true
         - correct: true
@@ -2718,7 +1803,75 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      courseC_multi_starWars_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - text: Nu știu
+          correct: true
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - text: Nu știu
+          correct: true
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - text: Nu știu
+          correct: true
+        questions:
+        - {}
+      courseC_multi_starWars_predict1_2018_2019_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - text: Nu știu
+          correct: true
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_starWars_predict2:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2018_2019_2020:
         answers:
         - correct: true
         - correct: true
@@ -2734,8 +1887,102 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      courseD_EOC_2020:
+        display_name: Proiect de final de curs
       courseD_EOC_2021:
         display_name: Proiect de final de curs
+      courseD_multi_artist_binary8_predict1:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+          correct: true
+        - text: C
+          correct: true
+        - text: D
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+          correct: true
+        - text: C
+          correct: true
+        - text: D
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+          correct: true
+        - text: C
+          correct: true
+        - text: D
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_binary8_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+          correct: true
+        - text: C
+          correct: true
+        - text: D
+          correct: true
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+          correct: true
+        - text: C
+          correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+          correct: true
+        - text: C
+          correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+          correct: true
+        - text: C
+          correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict1_2018_2019_2020:
+        answers:
+        - text: A
+          correct: true
+        - text: B
+          correct: true
+        - text: C
+          correct: true
+        - correct: true
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
         - text: A
@@ -2747,7 +1994,47 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_2018_2019_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_copy:
         answers:
         - correct: true
         - correct: true
@@ -2763,7 +2050,71 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_conditionals7_predict2_2018_2019_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
         answers:
         - correct: true
         - correct: true
@@ -2779,6 +2130,50 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      courseD_multi_bee_nestedLoops9_predict2:
+        answers:
+        - text: '4'
+          correct: true
+        - text: '8'
+          correct: true
+        - text: '12'
+          correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018:
+        answers:
+        - text: '4'
+          correct: true
+        - text: '8'
+          correct: true
+        - text: '12'
+          correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019:
+        answers:
+        - text: '4'
+          correct: true
+        - text: '8'
+          correct: true
+        - text: '12'
+          correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - text: '4'
+          correct: true
+        - text: '8'
+          correct: true
+        - text: '12'
+          correct: true
+        - correct: true
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
         - text: '4'
@@ -2791,7 +2186,87 @@ ro-RO:
           correct: true
         questions:
         - {}
+      courseD_multi_collector_debugging10_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_ramp13:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_while10_predict2_2018_2019_2020:
         answers:
         - correct: true
         - correct: true
@@ -2807,7 +2282,71 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      courseD_multi_farmer_while4_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_maze_until10_predict2_2018_2019_2020:
         answers:
         - correct: true
         - correct: true
@@ -2823,6 +2362,38 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      courseD_multi_maze_until2_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1_2021:
         answers:
         - correct: true
@@ -2831,11 +2402,61 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      courseD_multi_scrat_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_EOC_2020:
+        display_name: Proiect de final de curs
       courseE_EOC_2021:
         display_name: Proiect de final de curs
       courseE_EOC_examples_2021:
         display_name: Proiect de final de curs
+      courseE_multi_bee_functions_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       courseE_multi_dance_events_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2018_2019_2020:
         answers:
         - correct: true
         - correct: true
@@ -2851,7 +2472,47 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      courseE_prediction_artistFunction1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_2018_2019_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       courseE_prediction_artistFunction1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_copy:
         answers:
         - correct: true
         - correct: true
@@ -2875,12 +2536,40 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      courseExpress_EOC_2020:
+        display_name: Proiect de final de curs
+      courseF_EOC_2020:
+        display_name: Proiect de final de curs
       courseF_EOC_2021:
         display_name: Proiect de final de curs
       courseF_EOC_examples_2021:
         display_name: Proiect de final de curs
       courseF_EOC_samples_2021:
         display_name: Proiect de final de curs
+      courseF_bee_variables_8a_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_bee_variables_8a_2018_2019_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       courseF_events_predict_multi:
         answers:
         - correct: true
@@ -2898,6 +2587,78 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      courseF_multi_artist_for10_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_artist_for10_predict1_2018_2019_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_artist_fwp2_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict1_2018_2019_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       courseF_multi_artist_variables3a_predict1_2021:
         answers:
         - correct: true
@@ -2906,7 +2667,71 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      courseF_multi_bee_conditionals1_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_bee_conditionals7_predict2:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_bee_for3_predict1_2018_2019_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_bee_fwp9_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_multi_playlab_variables4c_predictive1:
         answers:
         - correct: true
         - correct: true
@@ -2932,6 +2757,38 @@ ro-RO:
         - {}
       courseF_variables_stop:
         content1: descrierea aici
+      coursee_prediction_artistfunction2:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      coursee_prediction_artistfunction2_2018_2019_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       coursee_prediction_artistfunction2_2021:
         answers:
         - correct: true
@@ -2940,14 +2797,52 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      csf_be_a_super_digital_citizen:
+        content1: descrierea aici
       csf_be_a_super_digital_citizen_2021:
         content1: descrierea aici
+      csf_password_power-up:
+        content1: descrierea aici
       csf_password_power-up_2021:
+        content1: descrierea aici
+      csf_putting_a_stop_to_online_meanness:
         content1: descrierea aici
       csf_putting_a_stop_to_online_meanness_2021:
         content1: descrierea aici
       express_EOC_2021:
         display_name: Proiect de final de curs
+      grade2_multi_collector_A_predict1:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      grade2_multi_collector_A_predict1_2018_2019_2020:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       grade2_multi_collector_A_predict1_2021:
         answers:
         - correct: true

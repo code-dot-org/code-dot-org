@@ -239,6 +239,8 @@ sr-SP:
         - {}
         - {}
         - {}
+        content1: Свако возило је растављено на мање делове. Повежи возила са листом
+          делова које им одговара.
         questions:
         - text: |-
             **Точкови (са једне стране): 2**
@@ -253,19 +255,17 @@ sr-SP:
             **Точкови (са једне стране): 3**
             **Прозори (са једне стране): 2**
         title: Упаривање
-        content1: Свако возило је растављено на мање делове. Повежи возила са листом
-          делова које им одговара.
       4-5 Computational Thinking Multi 1:
         answers:
         - {}
         - {}
         - {}
         - {}
+        content1: Имамо три реченице. Који одговор испод може да се примени на све
+          три реченице као шаблон?
         questions:
         - {}
         title: Вишеструки избор
-        content1: Имамо три реченице. Који одговор испод може да се примени на све
-          три реченице као шаблон?
       4-5 Crowdsourcing Multi 1:
         answers:
         - {}
@@ -983,6 +983,14 @@ sr-SP:
         - {}
         questions:
         - {}
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_harvester_loops11_predict1:
         answers:
         - {}
@@ -1008,6 +1016,14 @@ sr-SP:
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - {}
         - {}
@@ -1047,6 +1063,14 @@ sr-SP:
         - {}
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
@@ -1072,6 +1096,14 @@ sr-SP:
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
         answers:
         - {}
         - {}
@@ -1111,6 +1143,14 @@ sr-SP:
         - {}
         questions:
         - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict2:
         answers:
         - {}
@@ -1136,6 +1176,14 @@ sr-SP:
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
         answers:
         - {}
         - {}
@@ -1207,6 +1255,14 @@ sr-SP:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: А
+        - text: Б
+        - text: Ц
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -1239,7 +1295,23 @@ sr-SP:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - {}
         - {}
@@ -1279,6 +1351,14 @@ sr-SP:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - {}
@@ -1311,6 +1391,14 @@ sr-SP:
         - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops9_predict2:
         answers:
         - {}
@@ -1336,6 +1424,14 @@ sr-SP:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
         answers:
         - {}
         - {}
@@ -1383,6 +1479,14 @@ sr-SP:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_ramp13:
         answers:
         - {}
@@ -1423,6 +1527,14 @@ sr-SP:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
         answers:
         - {}
@@ -1448,6 +1560,14 @@ sr-SP:
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
         answers:
         - {}
         - {}
@@ -1487,6 +1607,14 @@ sr-SP:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
@@ -1519,6 +1647,14 @@ sr-SP:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_scrat_predict1:
         answers:
         - {}
@@ -1528,6 +1664,14 @@ sr-SP:
         questions:
         - {}
       courseE_multi_bee_functions_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
         answers:
         - {}
         - {}
@@ -1567,6 +1711,14 @@ sr-SP:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1:
         answers:
         - {}
@@ -1599,7 +1751,31 @@ sr-SP:
         - {}
         questions:
         - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
         answers:
         - {}
         - {}
@@ -1625,6 +1801,23 @@ sr-SP:
         - {}
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
         - {}
         - {}
         - {}
@@ -1703,6 +1896,14 @@ sr-SP:
         - {}
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -1751,6 +1952,14 @@ sr-SP:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -1760,6 +1969,22 @@ sr-SP:
         questions:
         - {}
       courseF_multi_playlab_variables4c_predictive1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
         answers:
         - {}
         - {}
@@ -1799,6 +2024,14 @@ sr-SP:
         - {}
         questions:
         - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -1824,241 +2057,6 @@ sr-SP:
         questions:
         - {}
       grade2_multi_collector_A_predict1_2018_2019_2020:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      outbreak_freeplay_choice:
-        display_name: Free Play
-      courseC_multi_artist_prog6_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1_2021:
-        answers:
-        - text: А
-        - text: Б
-        - text: Ц
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_dani:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_dance_events_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_dani:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_swim_fish_behavior_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_events_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_labels_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_sprites_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      coursee_prediction_artistfunction2_2021:
         answers:
         - {}
         - {}

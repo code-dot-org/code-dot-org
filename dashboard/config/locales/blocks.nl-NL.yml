@@ -1577,12 +1577,11 @@ nl:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Ijsco
-            Stars: Sterren
-            Fireworks: Vuurwerk
-            '"rainbow"': Regenboog
-            '"hearts"': Hartjes
             '"flowers"': Bloemen
+            '"hearts"': Hartjes
+            '"iceCream"': Ijsco
+            '"rainbow"': Regenboog
+            '"stars"': Sterren
             '"waves"': Golven
       Poetry_makeBurst:
         options:
@@ -1594,7 +1593,7 @@ nl:
         text: PlaySound {SOUND}
         options:
           SOUND:
-            Light: Licht
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Licht
       Poetry_setBackground:
         text: stel {COLOR} in als achtergrondkleur
       Poetry_setBackgroundEffect:

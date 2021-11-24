@@ -1477,12 +1477,11 @@ ms:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Aiskrim
-            Stars: Bintang
-            Fireworks: Bunga Api
-            '"rainbow"': Pelangi
-            '"hearts"': Hati
             '"flowers"': Bunga
+            '"hearts"': Hati
+            '"iceCream"': Aiskrim
+            '"rainbow"': Pelangi
+            '"stars"': Bintang
             '"waves"': Gelombang
       Poetry_makeNewSpriteAnon:
         text: membuat baru {ANIMATION_NAME} bidadari {LOCATION} 123_321
@@ -1490,7 +1489,7 @@ ms:
         text: PlaySound {SOUND}
         options:
           SOUND:
-            Light: Lampu
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Lampu
       Poetry_setBackground:
         text: tetapkan warna {COLOR} latar belakang
       Poetry_setBackgroundEffect:

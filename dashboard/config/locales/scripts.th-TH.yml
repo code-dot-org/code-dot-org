@@ -7118,6 +7118,8 @@ th:
             lesson-6:
               description_student: คุณจะได้พูดถึงบทบาทของคอมพิวเตอร์และเทคโนโลยีที่มีต่อชีวิตของคุณ
                 โดยเน้นว่าแอปและเครื่องมือจะช่วยให้ผู้ใช้เลือกใช้แอปและเครื่องมือได้ด้วยวิธีใดบ้าง
+            lesson-5:
+              name: การระบาด
             lesson-2:
               name: พลังของถ้อยคำ
               description_student: ไม่มีใครยอมรับเรื่องบูลลี่ได้หรอก บทเรียนนี้จะสอนให้คุณรู้ว่าอะไรที่เหมาะหรือไม่เหมาะพูดออนไลน์
@@ -7420,6 +7422,8 @@ th:
           lessons:
             lesson-4:
               name: ขั้นตอนการออกแบบ
+        outbreak-module:
+          title: การระบาด
         csa-videos:
           lesson_groups:
             lessonGroup-2:
@@ -7451,9 +7455,17 @@ th:
             lesson-1:
               name: ภาพรวม
         csa-u6-dev:
+          lessons:
+            lesson-17:
+              name: แผงหน้าปัด
           lesson_groups:
             lessonGroup-3:
               display_name: โปรเจกต์
+        hello-world-draft:
+          lessons:
+            lesson-1:
+              name: สวัสดีทุกคน!
+          title: สวัสดีทุกคน!
         csdu6-playground:
           lessons:
             lesson-19:
@@ -7467,3 +7479,9 @@ th:
             lesson-1:
               name: ผึ้งนักสะกดคำ
           title: ผึ้งนักสะกดคำ
+        outbreak-csc:
+          title: การระบาด
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: ผึ้งนักสะกดคำ

@@ -2,885 +2,149 @@
   "fa-IR": {
     "data": {
       "vocabularies": {
-        "code/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/minecraft/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/hero/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "debugging/hero/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/hero/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "function/hero/unversioned": {
-          "word": "تابع",
-          "definition": ""
+          "word": "تابع"
         },
         "code/poem-art/2021": {
-          "word": "کد",
-          "definition": ""
-        },
-        "event/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/flappy/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "کد"
         },
         "debugging/flappy/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/flappy/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/hourofcode/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "debugging/hourofcode/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/hourofcode/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/frozen/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "debugging/frozen/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/frozen/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/iceage/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "debugging/iceage/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/iceage/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "code/artist/unversioned": {
-          "word": "کد",
-          "definition": ""
+          "word": "کد"
         },
         "debugging/artist/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/artist/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "debugging/gumball/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/dance/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "debugging/aquatic/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "conditionals/aquatic/unversioned": {
-          "word": "شرطی ها",
-          "definition": ""
+          "word": "شرطی ها"
         },
         "loops/aquatic/unversioned": {
-          "word": "حلقه‌ها",
-          "definition": ""
-        },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "حلقه‌ها"
         },
         "debugging/starwars/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/mc/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "debugging/mc/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/mc/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/playlab/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "debugging/playlab/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/playlab/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "debugging/starwarsblocks/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/sports/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "code/sports/unversioned": {
-          "word": "کد",
-          "definition": ""
+          "word": "کد"
         },
         "debugging/sports/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/sports/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/infinity/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "debugging/infinity/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/infinity/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/basketball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/basketball/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "debugging/basketball/unversioned": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/basketball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "machine_learning/oceans/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "code/poem-art/unversioned": {
-          "word": "کد",
-          "definition": ""
-        },
-        "event/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "program/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "event/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "user/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "behavior/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "کد"
         },
         "variable/coursef/2021": {
-          "word": "متغیر",
-          "definition": ""
-        },
-        "prompt/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "input/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "models_and_simulations/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "machine_learning/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "dns/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "متغیر"
         },
         "internet/coursef/2021": {
-          "word": "اینترنت",
-          "definition": ""
-        },
-        "packets/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "servers/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "url/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "dsl_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "fiber_optic_cable/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "ip_address/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "wi_fi/coursef/2021": {
-          "word": "",
-          "definition": ""
+          "word": "اینترنت"
         },
         "define/coursef/2021": {
-          "word": "تعریف کن",
-          "definition": ""
-        },
-        "prepare/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/coursef/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "تعریف کن"
         },
         "debugging/courseb/2021": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drop/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "double_click/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/courseb/2021": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "programming/courseb/2021": {
-          "word": "برنامه نویسی",
-          "definition": ""
-        },
-        "persistence/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/courseb/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه نویسی"
         },
         "debugging/coursea/2021": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drop/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "double_click/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursea/2021": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "programming/coursea/2021": {
-          "word": "برنامه نویسی",
-          "definition": ""
-        },
-        "loop/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursea/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه نویسی"
         },
         "debugging/coursec/2021": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sequencing/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "programming/coursec/2021": {
-          "word": "برنامه نویسی",
-          "definition": ""
-        },
-        "loop/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursec/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursec/2021": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه نویسی"
         },
         "binary/coursec/2021": {
-          "word": "دو دویی",
-          "definition": ""
-        },
-        "algorithm/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "دو دویی"
         },
         "debugging/coursed/2021": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "loop/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "programming/coursed/2021": {
-          "word": "برنامه نویسی",
-          "definition": ""
-        },
-        "frustrated/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "persistence/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/coursed/2021": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه نویسی"
         },
         "conditionals/coursed/2021": {
-          "word": "شرطی ها",
-          "definition": ""
-        },
-        "pseudocode/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "while_loop/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/coursed/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "شرطی ها"
         },
         "debugging/express/2021": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "sequencing/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "program/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "programming/express/2021": {
-          "word": "برنامه نویسی",
-          "definition": ""
-        },
-        "behavior/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "code/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "command/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "condition/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه نویسی"
         },
         "conditionals/express/2021": {
-          "word": "شرطی ها",
-          "definition": ""
-        },
-        "while_loop/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "until/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "شرطی ها"
         },
         "function/express/2021": {
-          "word": "تابع",
-          "definition": ""
+          "word": "تابع"
         },
         "variable/express/2021": {
-          "word": "متغیر",
-          "definition": ""
-        },
-        "prompt/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "for_loop/express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "متغیر"
         },
         "define/express/2021": {
-          "word": "تعریف کن",
-          "definition": ""
-        },
-        "prepare/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drag/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "drop/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "double_click/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "bug/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "تعریف کن"
         },
         "debugging/pre-express/2021": {
-          "word": "اشکال‌زدایی",
-          "definition": ""
-        },
-        "program/pre-express/2021": {
-          "word": "",
-          "definition": ""
+          "word": "اشکال‌زدایی"
         },
         "programming/pre-express/2021": {
-          "word": "برنامه نویسی",
-          "definition": ""
-        },
-        "persistence/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "loop/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/pre-express/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "behavior/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "algorithm/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "sprite/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "event/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "برنامه نویسی"
         },
         "copyright/coursee/2021": {
-          "word": "حق کپی برداری و نشر",
-          "definition": ""
-        },
-        "loop/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "repeat/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "حق کپی برداری و نشر"
         },
         "function/coursee/2021": {
-          "word": "تابع",
-          "definition": ""
-        },
-        "condition/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "تابع"
         },
         "conditionals/coursee/2021": {
-          "word": "شرطی ها",
-          "definition": ""
-        },
-        "while_loop/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "شرطی ها"
         },
         "define/coursee/2021": {
-          "word": "تعریف کن",
-          "definition": ""
-        },
-        "prepare/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "reflect/coursee/2021": {
-          "word": "",
-          "definition": ""
-        },
-        "try/coursee/2021": {
-          "word": "",
-          "definition": ""
+          "word": "تعریف کن"
         }
       }
     }

@@ -846,6 +846,10 @@ ka-GE:
         - {}
         questions:
         - {}
+      CourseF_outbreak_story:
+        content1: მიუთითეთ აღწერა
+      CourseF_outbreak_story2:
+        content1: მიუთითეთ აღწერა
       Internet Simulator Setup:
         content1: მიუთითეთ აღწერა
       Internet Simulator Setup 2:
@@ -1057,6 +1061,8 @@ ka-GE:
         content1: მიუთითეთ აღწერა
       OPD-K5 Stage3aGo_copy:
         content1: მიუთითეთ აღწერა
+      OPD-K5 Stage3aGo_dani:
+        content1: მიუთითეთ აღწერა
       OPD-K5 conditionals introduced:
         content1: მიუთითეთ აღწერა
       OPD-K5 debugging:
@@ -1181,6 +1187,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
@@ -1206,6 +1220,14 @@ ka-GE:
         questions:
         - {}
       courseC_multi_harvester_loops11_predict1_2018_2019_2020:
+        answers:
+        - text: '4'
+        - text: '12'
+        - text: '15'
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict1_2021:
         answers:
         - text: '4'
         - text: '12'
@@ -1245,6 +1267,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_programming8_predict1:
         answers:
         - {}
@@ -1270,6 +1300,14 @@ ka-GE:
         questions:
         - {}
       courseC_multi_maze_programming8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict1_2021:
         answers:
         - {}
         - {}
@@ -1309,6 +1347,14 @@ ka-GE:
         - text: არ ვიცი
         questions:
         - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict2:
         answers:
         - {}
@@ -1341,6 +1387,17 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseC_multi_starWars_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_EOC_examples_2021:
+        description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
+          პროექტების ნიმუშები.
       courseD_multi_artist_binary8_predict1:
         answers:
         - text: ა
@@ -1405,6 +1462,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: ა
+        - text: ბ
+        - text: გ
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -1437,7 +1502,23 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - {}
         - {}
@@ -1477,6 +1558,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - {}
@@ -1502,6 +1591,14 @@ ka-GE:
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
         answers:
         - {}
         - {}
@@ -1541,6 +1638,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+        - {}
+        - text: '12'
+        questions:
+        - {}
       courseD_multi_collector_debugging10_predict1:
         answers:
         - {}
@@ -1574,6 +1679,14 @@ ka-GE:
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
         - {}
         - {}
@@ -1621,6 +1734,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
         answers:
         - {}
@@ -1646,6 +1767,14 @@ ka-GE:
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
         answers:
         - {}
         - {}
@@ -1685,6 +1814,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
@@ -1710,6 +1847,14 @@ ka-GE:
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict1_2021:
         answers:
         - {}
         - {}
@@ -1752,6 +1897,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseE_multi_dance_events_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict:
         answers:
         - {}
@@ -1777,6 +1930,14 @@ ka-GE:
         questions:
         - {}
       courseE_multi_farmer_functions11_predict_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_farmer_functions11_predict_2021:
         answers:
         - {}
         - {}
@@ -1816,7 +1977,23 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
         answers:
         - {}
         - {}
@@ -1828,8 +2005,19 @@ ka-GE:
         content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseE_project_exemplars_2019_2020:
         content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseE_swim_fish_behavior_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseExpress_project_exemplars_2019_2020:
         content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_EOC_samples_2021:
+        description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
+          პროექტების ნიმუშები.
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -1848,6 +2036,23 @@ ka-GE:
         - {}
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
         - {}
         - {}
         - {}
@@ -1970,6 +2175,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -2018,6 +2231,14 @@ ka-GE:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -2038,6 +2259,24 @@ ka-GE:
         content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
       courseF_project_exemplars_2019_2020:
         content1: ტესტის გაფორმების სახელმძღვანელოს გვერდი
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: მიუთითეთ აღწერა
       coursee_prediction_artistfunction2:
         answers:
         - {}
@@ -2070,12 +2309,29 @@ ka-GE:
         - {}
         questions:
         - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csf_be_a_super_digital_citizen:
+        content1: მიუთითეთ აღწერა
+      csf_be_a_super_digital_citizen_2021:
         content1: მიუთითეთ აღწერა
       csf_password_power-up:
         content1: მიუთითეთ აღწერა
+      csf_password_power-up_2021:
+        content1: მიუთითეთ აღწერა
       csf_putting_a_stop_to_online_meanness:
         content1: მიუთითეთ აღწერა
+      csf_putting_a_stop_to_online_meanness_2021:
+        content1: მიუთითეთ აღწერა
+      express_EOC_examples_2021:
+        description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
+          პროექტების ნიმუშები.
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -2108,259 +2364,6 @@ ka-GE:
         - {}
         questions:
         - {}
-      outbreak_story:
-        content1: მიუთითეთ აღწერა
-      outbreak_story2:
-        content1: მიუთითეთ აღწერა
-      outbreak_freeplay_choice:
-        display_name: თავისუფალი თამაში
-      CourseF_outbreak_story:
-        content1: მიუთითეთ აღწერა
-      CourseF_outbreak_story2:
-        content1: მიუთითეთ აღწერა
-      OPD-K5 Stage3aGo_dani:
-        content1: მიუთითეთ აღწერა
-      courseC_multi_artist_prog6_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1_2021:
-        answers:
-        - text: '4'
-        - text: '12'
-        - text: '15'
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_artist_nestedLoops9_predict1_2021:
-        answers:
-        - text: ა
-        - text: ბ
-        - text: გ
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_dani:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2_2021:
-        answers:
-        - text: '4'
-        - text: '8'
-        - {}
-        - text: '12'
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_dance_events_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_dani:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_swim_fish_behavior_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_events_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_labels_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_sprites_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables_stop:
-        content1: მიუთითეთ აღწერა
-      coursee_prediction_artistfunction2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      csf_be_a_super_digital_citizen_2021:
-        content1: მიუთითეთ აღწერა
-      csf_password_power-up_2021:
-        content1: მიუთითეთ აღწერა
-      csf_putting_a_stop_to_online_meanness_2021:
-        content1: მიუთითეთ აღწერა
       grade2_multi_collector_A_predict1_2021:
         answers:
         - {}
@@ -2369,12 +2372,3 @@ ka-GE:
         - {}
         questions:
         - {}
-      courseD_EOC_examples_2021:
-        description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
-          პროექტების ნიმუშები.
-      courseF_EOC_samples_2021:
-        description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
-          პროექტების ნიმუშები.
-      express_EOC_examples_2021:
-        description: მალე თქვენს ბოლო პროექტს დაიწყებთ. სანამ დაიწყებთ, დაათვალიერეთ
-          პროექტების ნიმუშები.

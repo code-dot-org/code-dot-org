@@ -114,7 +114,6 @@
           "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
         },
         "code/gumball/unversioned": {
-          "word": "",
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
         },
         "debugging/gumball/unversioned": {
@@ -159,32 +158,10 @@
           "word": "くりかえし",
           "definition": "何度も何度も何かをするという行為。"
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "encryption/hoc-encryption/unversioned": {
-          "word": "暗号化",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "暗号化"
         },
         "code/starwars/unversioned": {
-          "word": "",
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
         },
         "debugging/starwars/unversioned": {
@@ -229,8 +206,7 @@
           "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
         },
         "lossless_compression/text-compression/unversioned": {
-          "word": "可逆圧縮",
-          "definition": ""
+          "word": "可逆圧縮"
         },
         "event/sports/unversioned": {
           "word": "イベント",
@@ -274,7 +250,6 @@
           "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
         },
         "code/dance-extras-2019/unversioned": {
-          "word": "",
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
         },
         "event/dance-extras-2019/unversioned": {
@@ -301,24 +276,14 @@
           "definition": "コンピュータがどのようにパターンを認識し、明示的にプログラムされずに意思決定を行う方法"
         },
         "code/poem-art/unversioned": {
-          "word": "コード",
-          "definition": ""
+          "word": "コード"
         },
         "event/poem-art/unversioned": {
           "word": "イベント",
           "definition": "何かを引き起こすアクション。"
         },
         "program/poem-art/unversioned": {
-          "word": "プログラム",
-          "definition": ""
-        },
-        "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "プログラム"
         },
         "event/outbreak/unversioned": {
           "word": "イベント",
@@ -613,7 +578,6 @@
           "definition": "何かを引き起こすアクション。"
         },
         "code/coursed/2021": {
-          "word": "",
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
         },
         "repeat/coursed/2021": {

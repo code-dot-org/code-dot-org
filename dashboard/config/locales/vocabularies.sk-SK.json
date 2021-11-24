@@ -2,10 +2,6 @@
   "sk-SK": {
     "data": {
       "vocabularies": {
-        "code/dance-extras/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "event/dance-extras/unversioned": {
           "word": "Udalosť",
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
@@ -13,10 +9,6 @@
         "program/dance-extras/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/minecraft/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "debugging/minecraft/unversioned": {
           "word": "Hľadanie a odstraňovanie chýb",
@@ -34,10 +26,6 @@
           "word": "Cyklus",
           "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
         },
-        "code/hero/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/hero/unversioned": {
           "word": "Hľadanie a odstraňovanie chýb",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
@@ -52,27 +40,23 @@
         },
         "code/poem-art/2021": {
           "word": "Kód",
-          "definition": ""
+          "definition": "(v) zapísať pokyny pre počítač."
         },
         "event/poem-art/2021": {
           "word": "Udalosť",
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
         },
         "line/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Riadok",
+          "definition": "(poézia) - členenie básne usporiadané v riadku, ktorý končí na pravom okraji. "
         },
         "mood/poem-art/2021": {
-          "word": "",
-          "definition": ""
+          "word": "Nálada",
+          "definition": "vyjadrenie pocitu, atmosféry alebo emócie v umení alebo písaní."
         },
         "program/poem-art/2021": {
           "word": "Program",
-          "definition": ""
-        },
-        "code/flappy/unversioned": {
-          "word": "",
-          "definition": ""
+          "definition": "Séria krokov, ktoré boli zakódované do niečoho, čo môže byť spustené strojom."
         },
         "debugging/flappy/unversioned": {
           "word": "Hľadanie a odstraňovanie chýb",
@@ -82,10 +66,6 @@
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
-        "code/hourofcode/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/hourofcode/unversioned": {
           "word": "Hľadanie a odstraňovanie chýb",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
@@ -94,10 +74,6 @@
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
-        "code/frozen/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/frozen/unversioned": {
           "word": "Hľadanie a odstraňovanie chýb",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
@@ -105,10 +81,6 @@
         "program/frozen/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/iceage/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "debugging/iceage/unversioned": {
           "word": "Hľadanie a odstraňovanie chýb",
@@ -129,10 +101,6 @@
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
-        "code/gumball/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/gumball/unversioned": {
           "word": "Hľadanie a odstraňovanie chýb",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
@@ -148,14 +116,6 @@
         "program/dance/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/dance/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/aquatic/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "debugging/aquatic/unversioned": {
           "word": "Hľadanie a odstraňovanie chýb",
@@ -177,34 +137,6 @@
           "word": "Cykly",
           "definition": "Štruktúra, ktorá nám umožňuje robiť veci dokola."
         },
-        "caesar_cipher_/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "cracking_encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "decryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "encryption/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "random_substitution_cipher/hoc-encryption/unversioned": {
-          "word": "",
-          "definition": ""
-        },
-        "code/starwars/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/starwars/unversioned": {
           "word": "Hľadanie a odstraňovanie chýb",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
@@ -212,10 +144,6 @@
         "program/starwars/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/mc/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "debugging/mc/unversioned": {
           "word": "Hľadanie a odstraňovanie chýb",
@@ -225,10 +153,6 @@
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
-        "code/playlab/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/playlab/unversioned": {
           "word": "Hľadanie a odstraňovanie chýb",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
@@ -237,10 +161,6 @@
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
-        "code/starwarsblocks/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "debugging/starwarsblocks/unversioned": {
           "word": "Hľadanie a odstraňovanie chýb",
           "definition": "Hľadanie a odstraňovanie chýb v algoritme alebo programe."
@@ -248,10 +168,6 @@
         "program/starwarsblocks/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "lossless_compression/text-compression/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "event/sports/unversioned": {
           "word": "Udalosť",
@@ -267,10 +183,6 @@
         "program/sports/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/infinity/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "debugging/infinity/unversioned": {
           "word": "Hľadanie a odstraňovanie chýb",
@@ -292,10 +204,6 @@
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
         },
-        "code/dance-extras-2019/unversioned": {
-          "word": "",
-          "definition": ""
-        },
         "event/dance-extras-2019/unversioned": {
           "word": "Udalosť",
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
@@ -303,10 +211,6 @@
         "program/dance-extras-2019/unversioned": {
           "word": "Program",
           "definition": "Algoritmus, ktorý je naprogramovaný v niečom, čo dokáže stroj spustiť."
-        },
-        "code/dance-2019/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "event/dance-2019/unversioned": {
           "word": "Udalosť",
@@ -321,7 +225,7 @@
         },
         "code/poem-art/unversioned": {
           "word": "Kód",
-          "definition": ""
+          "definition": "(v) zapísať pokyny pre počítač."
         },
         "event/poem-art/unversioned": {
           "word": "Udalosť",
@@ -329,23 +233,19 @@
         },
         "program/poem-art/unversioned": {
           "word": "Program",
-          "definition": ""
+          "definition": "Séria krokov, ktoré boli zakódované do niečoho, čo môže byť spustené strojom."
         },
         "mood/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Nálada",
+          "definition": "vyjadrenie pocitu, atmosféry alebo emócie v umení alebo písaní."
         },
         "line/poem-art/unversioned": {
-          "word": "",
-          "definition": ""
+          "word": "Riadok",
+          "definition": "(poézia) - členenie básne usporiadané v riadku, ktorý končí na pravom okraji. "
         },
         "event/outbreak/unversioned": {
           "word": "Udalosť",
           "definition": "Akcia, ktorá spôsobí, že sa niečo stane."
-        },
-        "models_and_simulations/outbreak/unversioned": {
-          "word": "",
-          "definition": ""
         },
         "sprite/coursef/2021": {
           "word": "Sprajt",

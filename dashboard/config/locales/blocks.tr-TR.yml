@@ -1626,18 +1626,18 @@ tr:
       Poetry_addFrame:
         options:
           BRUSH:
-            Ice Cream: Dondurma
-            Stars: Yıldızlar
-            Fireworks: Havai fişek
-            '"rainbow"': Gökkuşağı
-            '"hearts"': Kalpler
             '"flowers"': Çiçekler
+            '"hearts"': Kalpler
+            '"iceCream"': Dondurma
+            '"rainbow"': Gökkuşağı
+            '"stars"': Yıldızlar
             '"waves"': Dalgalar
       Poetry_makeBurst:
         options:
           EFFECT:
             '"burst"': patlama
             '"rain"': yağmur
+            '"spiral"': sarmal
       Poetry_makeNewSpriteAnon:
         text: yeni yapmak {ANIMATION_NAME} sprite at {LOCATION}
       Poetry_makeNumSprites:
@@ -1646,7 +1646,7 @@ tr:
         text: playSound {SOUND}
         options:
           SOUND:
-            Light: Aydınlık
+            '"sound://category_achievements/lighthearted_bonus_objective_5.mp3"': Aydınlık
       Poetry_setBackground:
         text: arka plan rengini {COLOR} olarak ayarla
       Poetry_setBackgroundEffect:

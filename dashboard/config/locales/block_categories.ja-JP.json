@@ -1,72 +1,27 @@
 {
-  "ja-JP": {
-    "data": {
-      "block_categories": {
-        "Course F: Artist Project_2020": {
-          "Actions": "うごき",
-          "Brushes": "ブラシ",
-          "Loops": "くりかえし",
-          "Math": "計算(けいさん)",
-          "Logic": "ロジック",
-          "Functions": "関数(かんすう) ",
-          "Variables": "変数（へんすう）"
-        },
-        "CourseD_EOC_dance": {
-          "World": "世界",
-          "Dancers": "ダンサー",
-          "Properties": "プロパティ",
-          "Events": "イベント",
-          "Numbers": "数 (かず) ",
-          "Logic": "ロジック"
-        },
-        "CourseD_EOC_starwars": {
-          "Actions": "うごき",
-          "Events": "イベント",
-          "Loops": "くりかえし",
-          "Math": "計算(けいさん)",
-          "Logic": "ロジック",
-          "Games/Score": "ゲーム/スコア"
-        },
-        "CourseE_Project_SpriteLab_2020": {
-          "World": "世界",
-          "Actions": "うごき",
-          "Events": "イベント",
-          "Behaviors": "行動"
-        },
-        "CourseF_Project_SpriteLab_2020": {
-          "World": "世界",
-          "Locations": "場所",
-          "Actions": "うごき",
-          "Events": "イベント",
-          "Behaviors": "行動",
-          "Variables": "変数（へんすう）",
-          "Math": "計算(けいさん)",
-          "Logic": "ロジック",
-          "Functions": "関数(かんすう) ",
-          "Text": "テキスト",
-          "Comments": "コメント"
-        },
-        "outbreak_freeplay": {
-          "World": "世界",
-          "Actions": "うごき",
-          "Behaviors": "行動",
-          "Events": "イベント",
-          "Locations": "場所",
-          "Logic": "ロジック",
-          "Loops": "くりかえし",
-          "Math": "計算(けいさん)",
-          "Variables": "変数（へんすう）",
-          "Functions": "関数(かんすう) ",
-          "Comments": "コメント"
-        },
-        "outbreak_freeplay_basic": {
-          "World": "世界",
-          "Actions": "うごき",
-          "Events": "イベント",
-          "Logic": "ロジック",
-          "Math": "計算(けいさん)"
-        }
-      }
-    }
-  }
+  "Actions": "うごき",
+  "Advanced": "詳細設定",
+  "Behaviors": "行動",
+  "Brushes": "ブラシ",
+  "Color": "色",
+  "Comment": "コメント",
+  "Comments": "コメント",
+  "Conditionals": "条件",
+  "Dancers": "ダンサー",
+  "Default": "デフォルト",
+  "Events": "イベント",
+  "Functions": "関数(かんすう) ",
+  "Functions ": "関数(かんすう) ",
+  "Game/Score": "ゲーム/スコア",
+  "Games/Score": "ゲーム/スコア",
+  "Groups": "グループ",
+  "Locations": "場所",
+  "Logic": "ロジック",
+  "Loops": "くりかえし",
+  "Math": "計算(けいさん)",
+  "Numbers": "数（かず）",
+  "Text": "テキスト",
+  "Variables": "変数（へんすう）",
+  "Variables ": "変数(へんすう) ",
+  "World": "世界"
 }

@@ -10635,6 +10635,8 @@ ro:
               name: Prezentând Laboratorul de Desen
             lesson-8:
               name: Spiriduși în acțiune
+            lesson-5:
+              name: Epidemie
             lesson-2:
               name: Puterea cuvintelor
               description_student: Hărțuirea („bullying”) nu este niciodată acceptabilă.
@@ -11092,6 +11094,10 @@ ro:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+        csa6-pilot:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
         k5-onlinepd-2021:
           lessons:
             Sequencing:
@@ -11179,6 +11185,8 @@ ro:
           lessons:
             lesson-4:
               name: Procesul de design
+        outbreak-module:
+          title: Epidemie
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -11231,6 +11239,8 @@ ro:
           lessons:
             lesson-12:
               name: Instrumente
+            lesson-17:
+              name: Consolă
             lesson-18:
               name: Widget-uri
           lesson_groups:
@@ -11286,7 +11296,21 @@ ro:
             lesson-1:
               name: Albina de Ortografie
           title: Albina de Ortografie
+        outbreak-csc:
+          title: Epidemie
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
               display_name: Conţinut
+        csd-post-survey-2021:
+          lessons:
+            lesson-1:
+              name: Chestionar după curs
+        csa6-pilot-facilitator:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Conţinut
+        spelling-bee-2021:
+          lessons:
+            lesson-1:
+              name: Albina de Ortografie

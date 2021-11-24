@@ -844,6 +844,10 @@ bg-BG:
         - {}
         questions:
         - {}
+      CourseF_outbreak_story:
+        content1: опишете тук
+      CourseF_outbreak_story2:
+        content1: опишете тук
       Internet Simulator Setup:
         content1: опишете тук
       Internet Simulator Setup 2:
@@ -1054,6 +1058,8 @@ bg-BG:
         content1: опишете тук
       OPD-K5 Stage3aGo_copy:
         content1: опишете тук
+      OPD-K5 Stage3aGo_dani:
+        content1: опишете тук
       OPD-K5 conditionals introduced:
         content1: опишете тук
       OPD-K5 debugging:
@@ -1114,6 +1120,14 @@ bg-BG:
         content1: опишете тук
       Terminology Recap:
         content1: опишете тук
+      Unit 1 Lesson 1 Overview:
+        markdown: "# Общ Преглед\n\nТози клас работи в групи,  който ще проектират
+          кораби направени от алуминиево фолио с цел да могат да носият възможно най-много
+          стотинки. В края урока групите ще отразяват своя опит с упражненито и ще
+          правят връзки с другите видове проблеми който ще решават в следващтите уроци
+          на този курс. \n\n#E Ресурси \n\n*[Кораби  от А луминиево Фолио] (ttps://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          \ - \n\nИнструкции за Урока( копие \n[MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n\n"
       behaviors 1 predict:
         answers:
         - {}
@@ -1178,6 +1192,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseC_multi_artist_prog6_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_harvester_loops11_predict1:
         answers:
         - text: '4'
@@ -1210,6 +1232,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseC_multi_harvester_loops11_predict1_2021:
+        answers:
+        - text: '4'
+        - text: '12'
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1:
         answers:
         - {}
@@ -1235,6 +1265,14 @@ bg-BG:
         questions:
         - {}
       courseC_multi_maze_debugging8_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_debugging8_predict1_2021:
         answers:
         - {}
         - {}
@@ -1274,6 +1312,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseC_multi_maze_programming8_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict1:
         answers:
         - {}
@@ -1306,6 +1352,14 @@ bg-BG:
         - text: Не знам
         questions:
         - {}
+      courseC_multi_starWars_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict2:
         answers:
         - {}
@@ -1331,6 +1385,14 @@ bg-BG:
         questions:
         - {}
       courseC_multi_starWars_predict2_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict2_2021:
         answers:
         - {}
         - {}
@@ -1402,6 +1464,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict1_2021:
+        answers:
+        - text: А
+        - text: Б
+        - text: В
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -1434,7 +1504,23 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict1_dani:
         answers:
         - {}
         - {}
@@ -1474,6 +1560,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1:
         answers:
         - {}
@@ -1499,6 +1593,14 @@ bg-BG:
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict1_2021:
         answers:
         - {}
         - {}
@@ -1538,6 +1640,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops9_predict2_2021:
+        answers:
+        - text: '4'
+        - text: '8'
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
       courseD_multi_collector_debugging10_predict1:
         answers:
         - {}
@@ -1571,6 +1681,14 @@ bg-BG:
         questions:
         - {}
       courseD_multi_farmer_condLoops9_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_condLoops9_predict1_2021:
         answers:
         - {}
         - {}
@@ -1618,6 +1736,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while4_predict1:
         answers:
         - {}
@@ -1643,6 +1769,14 @@ bg-BG:
         questions:
         - {}
       courseD_multi_farmer_while4_predict1_2018_2019_2020:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict1_2021:
         answers:
         - {}
         - {}
@@ -1682,6 +1816,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until2_predict1:
         answers:
         - {}
@@ -1714,6 +1856,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until2_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_scrat_predict1:
         answers:
         - {}
@@ -1723,6 +1873,14 @@ bg-BG:
         questions:
         - {}
       courseE_multi_bee_functions_predict1:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_multi_dance_events_predict1_2021:
         answers:
         - {}
         - {}
@@ -1762,6 +1920,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1:
         answers:
         - {}
@@ -1794,7 +1960,31 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseE_prediction_artistFunction1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_prediction_artistFunction1_copy:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction1_dani:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_swim_fish_behavior_predict1_2021:
         answers:
         - {}
         - {}
@@ -1820,6 +2010,23 @@ bg-BG:
         - {}
       courseF_bee_variables_8a_2018_2019_2020:
         answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_events_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi:
+        answers:
+        - {}
         - {}
         - {}
         - {}
@@ -1898,6 +2105,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseF_multi_artist_variables3a_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -1946,6 +2161,14 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict1_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_fwp9_predict1:
         answers:
         - {}
@@ -1962,6 +2185,24 @@ bg-BG:
         - {}
         questions:
         - {}
+      courseF_sprites_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_predict_multi:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables_stop:
+        content1: опишете тук
       coursee_prediction_artistfunction2:
         answers:
         - {}
@@ -1994,11 +2235,25 @@ bg-BG:
         - {}
         questions:
         - {}
+      coursee_prediction_artistfunction2_2021:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       csf_be_a_super_digital_citizen:
+        content1: опишете тук
+      csf_be_a_super_digital_citizen_2021:
         content1: опишете тук
       csf_password_power-up:
         content1: опишете тук
+      csf_password_power-up_2021:
+        content1: опишете тук
       csf_putting_a_stop_to_online_meanness:
+        content1: опишете тук
+      csf_putting_a_stop_to_online_meanness_2021:
         content1: опишете тук
       grade2_multi_collector_A_predict1:
         answers:
@@ -2032,135 +2287,6 @@ bg-BG:
         - {}
         questions:
         - {}
-      outbreak_story:
-        content1: опишете тук
-      outbreak_story2:
-        content1: опишете тук
-      outbreak_freeplay_choice:
-        display_name: Свободна игра
-      CourseF_outbreak_story:
-        content1: опишете тук
-      CourseF_outbreak_story2:
-        content1: опишете тук
-      OPD-K5 Stage3aGo_dani:
-        content1: опишете тук
-      courseC_multi_artist_prog6_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_harvester_loops11_predict1_2021:
-        answers:
-        - text: '4'
-        - text: '12'
-        - text: '15'
-        - text: '20'
-        questions:
-        - {}
-      courseC_multi_maze_debugging8_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_maze_programming8_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseC_multi_starWars_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_dani:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_dani:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_events_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_labels_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_artist_variables3a_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_multi_bee_for3_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_sprites_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables_predict_multi:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseF_variables_stop:
-        content1: опишете тук
-      csf_putting_a_stop_to_online_meanness_2021:
-        content1: опишете тук
       grade2_multi_collector_A_predict1_2021:
         answers:
         - {}
@@ -2169,135 +2295,3 @@ bg-BG:
         - {}
         questions:
         - {}
-      courseD_multi_artist_nestedLoops9_predict1_2021:
-        answers:
-        - text: А
-        - text: Б
-        - text: В
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals1_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_conditionals7_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops2_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_bee_nestedLoops9_predict2_2021:
-        answers:
-        - text: '4'
-        - text: '8'
-        - text: '10'
-        - text: '12'
-        questions:
-        - {}
-      courseD_multi_farmer_condLoops9_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while10_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_farmer_while4_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until10_predict2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseD_multi_maze_until2_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_dance_events_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_multi_farmer_functions11_predict_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_prediction_artistFunction1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      courseE_swim_fish_behavior_predict1_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      coursee_prediction_artistfunction2_2021:
-        answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        questions:
-        - {}
-      csf_be_a_super_digital_citizen_2021:
-        content1: опишете тук
-      csf_password_power-up_2021:
-        content1: опишете тук
-      Unit 1 Lesson 1 Overview:
-        markdown: "# Общ Преглед\n\nТози клас работи в групи,  който ще проектират
-          кораби направени от алуминиево фолио с цел да могат да носият възможно най-много
-          стотинки. В края урока групите ще отразяват своя опит с упражненито и ще
-          правят връзки с другите видове проблеми който ще решават в следващтите уроци
-          на този курс. \n\n#E Ресурси \n\n*[Кораби  от А луминиево Фолио] (ttps://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
-          \ - \n\nИнструкции за Урока( копие \n[MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
-          [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))\n\n"

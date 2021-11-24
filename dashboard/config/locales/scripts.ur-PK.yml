@@ -916,6 +916,8 @@ ur:
             Envelope Variables:
               key: لفافہ متغیرات
               name: لفافہ متغیرات
+            lesson-5:
+              name: وباء کا پھیلنا
           lesson_groups:
             lessonGroup-8:
               display_name: متغیرات
@@ -979,7 +981,15 @@ ur:
           lessons:
             lesson-9:
               name: ٹیچر کمیونٹی
+        outbreak-module:
+          title: وباء کا پھیلنا
         dlp21-csd:
           lesson_groups:
             lessonGroup-2:
               description: آزمانا
+        csa-u6-dev:
+          lessons:
+            lesson-17:
+              name: کنسول
+        outbreak-csc:
+          title: وباء کا پھیلنا
