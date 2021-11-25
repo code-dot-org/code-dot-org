@@ -23,6 +23,7 @@ class LessonLock extends React.Component {
     sectionId: PropTypes.string.isRequired,
     sectionsAreLoaded: PropTypes.bool.isRequired,
     saving: PropTypes.bool.isRequired,
+    scriptId: PropTypes.number.isRequired,
     openLockDialog: PropTypes.func.isRequired,
     closeLockDialog: PropTypes.func.isRequired,
     refetchSectionLockStatus: PropTypes.func.isRequired
@@ -32,10 +33,11 @@ class LessonLock extends React.Component {
     const {
       openLockDialog,
       sectionId,
+      scriptId,
       lesson,
       refetchSectionLockStatus
     } = this.props;
-    refetchSectionLockStatus(sectionId);
+    refetchSectionLockStatus(sectionId, scriptId);
     openLockDialog(sectionId, lesson.id);
   };
 
@@ -84,7 +86,8 @@ export default connect(
   state => ({
     sectionId: state.teacherSections.selectedSectionId.toString(),
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
-    saving: state.lessonLock.saving
+    saving: state.lessonLock.saving,
+    scriptId: state.progress.scriptId
   }),
   {openLockDialog, closeLockDialog, refetchSectionLockStatus}
 )(LessonLock);

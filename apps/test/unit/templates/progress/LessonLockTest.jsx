@@ -9,6 +9,7 @@ import i18n from '@cdo/locale';
 
 const FAKE_SECTION_ID = 'fake-section-id';
 const FAKE_LESSON_ID = 33;
+const FAKE_SCRIPT_ID = 1;
 const DEFAULT_PROPS = {
   lesson: {
     name: '',
@@ -19,6 +20,7 @@ const DEFAULT_PROPS = {
   sectionId: FAKE_SECTION_ID,
   sectionsAreLoaded: false,
   saving: false,
+  scriptId: FAKE_SCRIPT_ID,
   openLockDialog: () => {},
   closeLockDialog: () => {},
   refetchSectionLockStatus: () => {}
@@ -87,6 +89,9 @@ describe('LessonLock', () => {
       FAKE_SECTION_ID,
       FAKE_LESSON_ID
     );
-    expect(refetchSpy).to.have.been.calledOnce.and.calledWith(FAKE_SECTION_ID);
+    expect(refetchSpy).to.have.been.calledOnce.and.calledWith(
+      FAKE_SECTION_ID,
+      FAKE_SCRIPT_ID
+    );
   });
 });
