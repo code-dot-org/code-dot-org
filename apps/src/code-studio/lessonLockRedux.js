@@ -322,17 +322,12 @@ const refreshSectionLockStatus = (sections, sectionId) => ({
   sectionId
 });
 
-export const refetchSectionLockStatus = sectionId => {
-  return (dispatch, getState) => {
-    const state = getState();
-    const scriptId = state.progress.scriptId;
-
-    return $.ajax('/api/lock_status', {
+export const refetchSectionLockStatus = (sectionId, scriptId) => {
+  return dispatch => {
+    $.ajax('/api/lock_status', {
       data: {script_id: scriptId}
     })
       .done(data => {
-        console.log('maureen data');
-        console.log(data);
         dispatch(refreshSectionLockStatus(data, sectionId));
       })
       .fail(err => {

@@ -2,7 +2,7 @@ import {assert} from 'chai';
 import _ from 'lodash';
 import $ from 'jquery';
 import sinon from 'sinon';
-import fakeSectionData from './fakeSectionData';
+import fakeSectionData, {scriptId} from './fakeSectionData';
 import {
   stubRedux,
   restoreRedux,
@@ -428,15 +428,13 @@ describe('fullyLockedLessonMapping', () => {
 
 describe('refetchSectionLockStatus', () => {
   let store;
-  let reducerSpy;
   const lockStatusResponse = _.cloneDeep(fakeSectionData);
   lockStatusResponse[section1Id]['lessons'][lesson1Id][1].locked = true;
 
   // Intercept all XHR requests, storing the last one
   beforeEach(() => {
-    reducerSpy = sinon.spy(reducer);
     stubRedux();
-    registerReducers({lessonLock: reducerSpy});
+    registerReducers({lessonLock: reducer});
     store = getStore();
 
     sinon.stub($, 'ajax').returns({
@@ -452,15 +450,16 @@ describe('refetchSectionLockStatus', () => {
     $.ajax.restore();
   });
 
-  it('updates lessonsBySectionId', () => {
+  it('updates lessonsBySectionId', async () => {
+    // Initial set up of lessonLockRedux with fakeSectionData
     store.dispatch(setSectionLockStatus(fakeSectionData));
-    console.log(store.getState().lessonLock);
     let student2 = store.getState().lessonLock.lessonsBySectionId[section1Id][
       lesson1Id
     ][1];
     assert.equal(student2.locked, false);
 
-    store.dispatch(refetchSectionLockStatus(section1Id));
+    // Refetch lessonLock data with updated lock status for lesson1 student 2
+    store.dispatch(refetchSectionLockStatus(section1Id, scriptId));
     student2 = store.getState().lessonLock.lessonsBySectionId[section1Id][
       lesson1Id
     ][1];
