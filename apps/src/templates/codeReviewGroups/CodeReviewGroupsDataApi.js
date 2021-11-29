@@ -3,7 +3,7 @@ import _ from 'lodash';
 import {
   DROPPABLE_ID_UNASSIGNED,
   getAssignedGroupDroppableId
-} from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
+} from './CodeReviewGroupsUtils';
 
 export default class CodeReviewGroupsDataApi {
   constructor(sectionId) {

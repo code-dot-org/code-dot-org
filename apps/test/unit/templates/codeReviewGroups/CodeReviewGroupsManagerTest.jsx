@@ -2,10 +2,11 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import _ from 'lodash';
-import CodeReviewGroupsManager, {
+import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
+import {
   getAssignedGroupDroppableId,
   DROPPABLE_ID_UNASSIGNED
-} from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
+} from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsUtils';
 import AssignedStudentsPanel from '@cdo/apps/templates/codeReviewGroups/AssignedStudentsPanel';
 import UnassignedStudentsPanel from '@cdo/apps/templates/codeReviewGroups/UnassignedStudentsPanel';
 import {DragDropContext} from 'react-beautiful-dnd';
