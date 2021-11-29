@@ -4,11 +4,15 @@ import CodeReviewGroupsDataApi from './CodeReviewGroupsDataApi';
 import CodeReviewGroupsManager from './CodeReviewGroupsManager';
 import LoadableComponent from '../LoadableComponent';
 
-export default function CodeReviewGroupsLoader({sectionId, groups, setGroups}) {
+export default function CodeReviewGroupsLoader({
+  sectionId,
+  groups,
+  setInitialGroups,
+  setGroups
+}) {
   return (
     <LoadableComponent
       loadFunction={(sectionId, onLoadSuccess, onLoadError) => {
-        console.log('in load function');
         const api = new CodeReviewGroupsDataApi(sectionId);
         api
           .getCodeReviewGroups()
@@ -21,7 +25,7 @@ export default function CodeReviewGroupsLoader({sectionId, groups, setGroups}) {
             // but here's something out of the box:
             // https://github.com/the-road-to-learn-react/use-state-with-callback
             // https://github.com/the-road-to-learn-react/use-state-with-callback/blob/master/src/index.js
-            setGroups(groups);
+            setInitialGroups(groups);
             onLoadSuccess([groups]);
           })
           .fail(error => onLoadError());
@@ -40,5 +44,6 @@ CodeReviewGroupsLoader.propTypes = {
   /** Required. The section ID the Code Review Groups belong to */
   sectionId: PropTypes.number.isRequired,
   groups: PropTypes.array.isRequired,
+  setInitialGroups: PropTypes.func.isRequired,
   setGroups: PropTypes.func.isRequired
 };

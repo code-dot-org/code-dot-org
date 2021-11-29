@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import _ from 'lodash';
 import {
   DROPPABLE_ID_UNASSIGNED,
   getAssignedGroupDroppableId
@@ -19,10 +20,11 @@ export default class CodeReviewGroupsDataApi {
   }
 
   setCodeReviewGroups(groups) {
+    const clonedGroups = _.cloneDeep(groups);
     return this.postJSON(
       `/api/v1/sections/${this.sectionId}/code_review_groups`,
       {
-        groups: this.convertGroupsToSnakeCase(groups)
+        groups: this.convertGroupsToSnakeCase(clonedGroups)
       }
     );
   }
