@@ -85,9 +85,7 @@ describe('UnitEditor', () => {
       initialInstructorAudience: InstructorAudience.teacher,
       initialParticipantAudience: ParticipantAudience.student,
       hasCourse: false,
-      scriptPath: '/s/test-unit',
-      initialLessonLevelData:
-        "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true\n"
+      scriptPath: '/s/test-unit'
     };
   });
 
