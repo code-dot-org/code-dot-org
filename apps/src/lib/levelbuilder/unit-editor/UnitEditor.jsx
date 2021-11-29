@@ -164,7 +164,6 @@ class UnitEditor extends React.Component {
       lessonDescriptions: this.props.i18nData.lessonDescriptions,
       teacherResources: teacherResources,
       hasImportedLessonDescriptions: false,
-      oldScriptText: this.props.initialLessonLevelData,
       includeStudentLessonPlans: this.props.initialIncludeStudentLessonPlans,
       useLegacyLessonPlans: this.props.initialUseLegacyLessonPlans,
       deprecated: this.props.initialDeprecated,
@@ -299,7 +298,6 @@ class UnitEditor extends React.Component {
         this.props.isMigrated && JSON.stringify(this.props.lessonGroups),
       script_text: !this.props.isMigrated && this.state.lessonLevelData,
       last_updated_at: this.state.lastUpdatedAt,
-      old_unit_text: this.state.oldScriptText,
       has_verified_resources: this.state.hasVerifiedResources,
       curriculum_path: this.state.curriculumPath,
       pilot_experiment: this.state.pilotExperiment,
@@ -348,7 +346,6 @@ class UnitEditor extends React.Component {
           this.setState({
             lastSaved: Date.now(),
             isSaving: false,
-            oldScriptText: data.lessonLevelData,
             lastUpdatedAt: data.updated_at
           });
         }
