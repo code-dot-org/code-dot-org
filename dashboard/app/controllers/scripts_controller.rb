@@ -65,7 +65,7 @@ class ScriptsController < ApplicationController
   def create
     return head :bad_request unless general_params[:is_migrated]
     @script = Script.new(unit_params)
-    if @script.save && @script.update_text(unit_params, nil, i18n_params, general_params)
+    if @script.save && @script.update_text(unit_params, i18n_params, general_params)
       redirect_to edit_script_url(@script), notice: I18n.t('crud.created', model: Script.model_name.human)
     else
       render json: @script.errors
@@ -116,7 +116,7 @@ class ScriptsController < ApplicationController
 
     raise 'Must provide family and version year for course' if params[:isCourse] && (!params[:family_name] || !params[:version_year])
 
-    if @script.update_text(unit_params, nil, i18n_params, general_params)
+    if @script.update_text(unit_params, i18n_params, general_params)
       @script.reload
       render json: @script.summarize_for_unit_edit
     else
