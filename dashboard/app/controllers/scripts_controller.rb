@@ -51,20 +51,6 @@ class ScriptsController < ApplicationController
 
     @show_unversioned_redirect_warning = !!session[:show_unversioned_redirect_warning] && !@script.is_course
     session[:show_unversioned_redirect_warning] = false
-
-    # Warn levelbuilder if a lesson will not be visible to users because 'visible_after' is set to a future day
-    if current_user && current_user.levelbuilder?
-      notice_text = ""
-      @script.lessons.each do |lesson|
-        next unless lesson.visible_after && Time.parse(lesson.visible_after) > Time.now
-
-        formatted_time = Time.parse(lesson.visible_after).strftime("%I:%M %p %A %B %d %Y %Z")
-        num_days_away = ((Time.parse(lesson.visible_after) - Time.now) / 1.day).ceil.to_s
-        lesson_visible_after_message = "The lesson #{lesson.name} will be visible after #{formatted_time} (#{num_days_away} Days)"
-        notice_text = notice_text.empty? ? lesson_visible_after_message : "#{notice_text} <br/> #{lesson_visible_after_message}"
-      end
-      flash[:notice] = notice_text.html_safe
-    end
   end
 
   def index

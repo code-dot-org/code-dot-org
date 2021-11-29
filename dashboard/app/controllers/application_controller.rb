@@ -93,7 +93,12 @@ class ApplicationController < ActionController::Base
   end
 
   def prevent_caching
-    response.headers["Cache-Control"] = "no-cache, no-store, max-age=0, must-revalidate"
+    # Rails has some logic to normalize the cache-control header that varies
+    # from version to version. Ideally, we would include 'no-cache' here but
+    # that causes Rails 5.2 to remove 'must-revalidate' which causes issues
+    # on older mobile Safari browsers. See Rails logic at
+    # https://github.com/rails/rails/blob/v5.2.4.4/actionpack/lib/action_dispatch/http/cache.rb#L185
+    response.headers["Cache-Control"] = "no-store, max-age=0, must-revalidate"
     response.headers["Pragma"] = "no-cache"
     response.headers["Expires"] = "Fri, 01 Jan 1990 00:00:00 GMT"
   end

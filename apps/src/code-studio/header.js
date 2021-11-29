@@ -12,7 +12,6 @@ import {
   refreshProjectName,
   setShowTryAgainDialog
 } from './headerRedux';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -171,7 +170,9 @@ function setupReduxSubscribers(store) {
 setupReduxSubscribers(getStore());
 
 function setUpGlobalData(store) {
-  fetch('/api/v1/users/current')
+  fetch('/api/v1/users/current', {
+    credentials: 'same-origin'
+  })
     .then(response => response.json())
     .then(data => {
       store.dispatch(setUserSignedIn(data.is_signed_in));
