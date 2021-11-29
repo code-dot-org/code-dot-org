@@ -8,7 +8,6 @@ class ScriptsController < ApplicationController
   before_action :set_unit, only: [:show, :vocab, :resources, :code, :standards, :edit, :update, :destroy]
   before_action :set_redirect_override, only: [:show]
   authorize_resource
-  before_action :set_unit_file, only: [:edit, :update]
 
   def show
     if @script.redirect_to?
@@ -100,7 +99,6 @@ class ScriptsController < ApplicationController
       script: @script ? @script.summarize_for_unit_edit : {},
       has_course: @script&.unit_groups&.any?,
       i18n: @script ? @script.summarize_i18n_for_edit : {},
-      lessonLevelData: @unit_dsl_text,
       locales: options_for_locale_select,
       script_families: Script.family_names,
       version_year_options: Script.get_version_year_options,
@@ -180,10 +178,6 @@ class ScriptsController < ApplicationController
   end
 
   private
-
-  def set_unit_file
-    @unit_dsl_text = @script.is_migrated ? '' : ScriptDSL.serialize_lesson_groups(@script)
-  end
 
   def rake
     @errors = []
