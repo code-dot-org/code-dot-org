@@ -574,7 +574,7 @@ Dashboard::Application.routes.draw do
       namespace :application do
         post :facilitator, to: 'facilitator_applications#create'
 
-        resources :teacher, controller: 'teacher_applications', only: :create do
+        resources :teacher, controller: 'teacher_applications', only: [:create, :update] do
           member do
             post :send_principal_approval
             post :principal_approval_not_required

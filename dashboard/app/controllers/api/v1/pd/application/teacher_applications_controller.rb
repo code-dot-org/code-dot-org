@@ -11,6 +11,11 @@ module Api::V1::Pd::Application
       )
     end
 
+    def update
+      @application.update!(status: 'incomplete')
+      return render json: {}, status: :ok
+    end
+
     def send_principal_approval
       if @application.allow_sending_principal_email?
         @application.queue_email :principal_approval, deliver_now: true
