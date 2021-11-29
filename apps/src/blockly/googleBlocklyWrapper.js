@@ -15,6 +15,7 @@ import CdoInput from './addons/cdoInput';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoPathObject from './addons/cdoPathObject';
 import CdoTheme from './addons/cdoTheme';
+import CdoTrashcan from './addons/cdoTrashcan';
 import initializeTouch from './addons/cdoTouch';
 import initializeVariables from './addons/cdoVariables';
 import CdoVariableMap from './addons/cdoVariableMap';
@@ -84,6 +85,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('Blocks');
   blocklyWrapper.wrapReadOnlyProperty('BlockSvg');
   blocklyWrapper.wrapReadOnlyProperty('common_locale');
+  blocklyWrapper.wrapReadOnlyProperty('ComponentManager');
   blocklyWrapper.wrapReadOnlyProperty('Connection');
   blocklyWrapper.wrapReadOnlyProperty('ContextMenu');
   blocklyWrapper.wrapReadOnlyProperty('contractEditor');
@@ -322,6 +324,9 @@ function initializeBlocklyWrapper(blocklyInstance) {
     }px)`;
     blocklyWrapper.editBlocks = opt_options.editBlocks;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
+
+    const trashcan = new CdoTrashcan(workspace);
+    trashcan.init();
 
     document.dispatchEvent(
       utils.createEvent(Blockly.BlockSpace.EVENTS.MAIN_BLOCK_SPACE_CREATED)
