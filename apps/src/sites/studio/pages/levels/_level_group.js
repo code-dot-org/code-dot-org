@@ -26,6 +26,14 @@ $(document).ready(() => {
       initData.last_attempt
     );
   }
+
+  if (appOptions.readonlyWorkspace) {
+    // Are we a student viewing their own previously-submitted work?
+    if (appOptions.submitted) {
+      // show the Unsubmit header.
+      $('#unsubmit-header').show();
+    }
+  }
 });
 
 function initLevelGroup(levelCount, currentPage, lastAttempt) {

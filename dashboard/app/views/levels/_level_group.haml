@@ -13,6 +13,13 @@
 - user_level = UserLevel.find_by(user: current_user, script: @script_level&.script, level: @level)
 - submitted_survey = @script_level.try(:anonymous?) && current_user && user_level.try(:submitted?)
 
+- if local_assigns[:app] != 'external' && @level.properties['submittable']
+  #unsubmit-header{style: 'display: none'}
+    %p This assessment has been submitted, to retake unsubmit the assessment
+    .buttons.submittable
+      %a.btn.btn-large.btn-primary.unsubmitButton
+        =t('unsubmit')
+
 .level-group
   - @pages.each do |page|
     - unless data["title"].blank?
