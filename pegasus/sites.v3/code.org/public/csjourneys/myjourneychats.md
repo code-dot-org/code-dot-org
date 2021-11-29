@@ -246,19 +246,13 @@ Since <strong>Joel Ferree</strong> became program director of <a href="https://w
 </div>
 
 <div class="col-66" style="padding-right:20px;">
-<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Wednesday, December 1st at 1 pm EDT</h3>
+<h3 style="background:#ffffff;color:#00adbc; margin-top: 12px">Postponed</h3>
 <strong>Recommended for grades 6-12</strong>
 <p>Learn how a creative technologist uses art, music, data, and technology to create experiential software that both helps scientists and inspires people of all ages.</p>
 <p><b>About the speaker</b>:
 <br>
 <strong>Sasha Samochina</strong> (sam-ocean-uh) is the Director of Labs at <a href="https://www.movingbrands.com/" target="_blank">Moving Brands</a>, a creative and innovation company that explores emerging technologies. She formerly led the Data Visualization and Infusion team at NASA Jet Propulsion Laboratory. With a background in art, Sasha creates software that incorporates innovative forms of visualization that aid scientists, engineers, and astronauts. For more background, please check out Sasha's <a href="https://www.cloudsasha.com/" target="_blank">personal page</a>.
 </p>
-
-<a href="https://www.eventbrite.com/e/my-journey-visual-storytelling-with-data-registration-166980004689" target="_blank"><button>Register on Eventbrite</button></a>
-<br>
-<br>
-<p><i>By clicking above, you will be<br>
-taken to www.eventbrite.com.</i></p>
 
 </div>
 <div style="clear: both; margin-bottom:35px"></div>
