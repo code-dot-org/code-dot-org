@@ -109,18 +109,11 @@ class ScriptsController < ApplicationController
   end
 
   def update
-    if @script.is_migrated && params[:last_updated_at] && params[:last_updated_at] != @script.updated_at.to_s
+    return head :bad_request unless @script.is_migrated
+
+    if params[:last_updated_at] && params[:last_updated_at] != @script.updated_at.to_s
       msg = "Could not update the unit because it has been modified more recently outside of this editor. Please save a copy your work, reload the page, and try saving again."
       raise msg
-    end
-
-    if !@script.is_migrated && params[:old_unit_text]
-      current_unit_text = ScriptDSL.serialize_lesson_groups(@script).strip
-      old_unit_text = params[:old_unit_text].strip
-      if old_unit_text != current_unit_text
-        msg = "Could not update the unit because the contents of one of its lessons or levels has changed outside of this editor. Reload the page and try saving again."
-        raise msg
-      end
     end
 
     raise 'Must provide family and version year for course' if params[:isCourse] && (!params[:family_name] || !params[:version_year])

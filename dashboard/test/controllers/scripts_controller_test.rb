@@ -623,48 +623,18 @@ class ScriptsControllerTest < ActionController::TestCase
     assert_equal unit.get_published_state, SharedCourseConstants::PUBLISHED_STATE.beta
   end
 
-  test 'cannot update unmigrated unit if changes have been made to the database which are not reflected in the current edit page' do
+  test 'cannot update unmigrated unit' do
     sign_in create(:levelbuilder)
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
     unit = create :script, is_migrated: false
-    stub_file_writes(unit.name)
-
-    error = assert_raises RuntimeError do
-      post :update, params: {
-        id: unit.id,
-        script: {name: unit.name},
-        script_text: '',
-        old_unit_text: 'different'
-      }
-    end
-
-    assert_includes error.message, 'Could not update the unit because the contents of one of its lessons or levels has changed outside of this editor. Reload the page and try saving again.'
-  end
-
-  test 'can update unmigrated unit if database matches starting content for current edit page' do
-    sign_in create(:levelbuilder)
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    unit = create :script, is_migrated: false
-    lesson_group = create :lesson_group, script: unit
-    lesson = create :lesson, script: unit, lesson_group: lesson_group
-    create(
-      :script_level,
-      script: unit,
-      lesson: lesson,
-      levels: [create(:maze)]
-    )
     stub_file_writes(unit.name)
 
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
-      old_unit_text: ScriptDSL.serialize_lesson_groups(unit)
     }
-
-    assert_response :success
+    assert_response :bad_request
   end
 
   test 'updating migrated unit without differences updates timestamp' do
