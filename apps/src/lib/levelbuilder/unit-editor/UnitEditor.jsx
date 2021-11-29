@@ -68,7 +68,6 @@ class UnitEditor extends React.Component {
     initialTeacherResources: PropTypes.arrayOf(resourceShape).isRequired,
     initialLastUpdatedAt: PropTypes.string,
     initialLessonExtrasAvailable: PropTypes.bool,
-    initialLessonLevelData: PropTypes.string,
     initialHasVerifiedResources: PropTypes.bool,
     initialCurriculumPath: PropTypes.string,
     initialPilotExperiment: PropTypes.string,
@@ -144,9 +143,6 @@ class UnitEditor extends React.Component {
       projectWidgetTypes: this.props.initialProjectWidgetTypes,
       lastUpdatedAt: this.props.initialLastUpdatedAt,
       lessonExtrasAvailable: this.props.initialLessonExtrasAvailable,
-      lessonLevelData:
-        this.props.initialLessonLevelData ||
-        "lesson_group 'lesson group', display_name: 'lesson group display name'\nlesson 'new lesson', display_name: 'lesson display name', has_lesson_plan: true\n",
       hasVerifiedResources: this.props.initialHasVerifiedResources,
       curriculumPath: this.props.initialCurriculumPath,
       pilotExperiment: this.props.initialPilotExperiment,
@@ -221,10 +217,8 @@ class UnitEditor extends React.Component {
 
     this.setState({isSaving: true, lastSaved: null, error: null});
 
-    const videoKeysBefore = (
-      this.props.initialLessonLevelData.match(VIDEO_KEY_REGEX) || []
-    ).length;
-    const unitText = this.props.isMigrated ? '' : this.state.lessonLevelData;
+    const videoKeysBefore = 0;
+    const unitText = '';
     const videoKeysAfter = (unitText.match(VIDEO_KEY_REGEX) || []).length;
     if (videoKeysBefore !== videoKeysAfter) {
       if (
@@ -296,7 +290,7 @@ class UnitEditor extends React.Component {
       lesson_extras_available: this.state.lessonExtrasAvailable,
       lesson_groups:
         this.props.isMigrated && JSON.stringify(this.props.lessonGroups),
-      script_text: !this.props.isMigrated && this.state.lessonLevelData,
+      script_text: false,
       last_updated_at: this.state.lastUpdatedAt,
       has_verified_resources: this.state.hasVerifiedResources,
       curriculum_path: this.state.curriculumPath,
@@ -364,9 +358,7 @@ class UnitEditor extends React.Component {
   };
 
   render() {
-    const textAreaRows = this.state.lessonLevelData
-      ? this.state.lessonLevelData.split('\n').length + 5
-      : 10;
+    const textAreaRows = 10;
     const useMigratedTeacherResources =
       this.props.isMigrated && !this.state.teacherResources?.length;
     return (
@@ -1088,8 +1080,7 @@ class UnitEditor extends React.Component {
                 id="script_text"
                 rows={textAreaRows}
                 style={styles.input}
-                value={this.state.lessonLevelData}
-                onChange={e => this.setState({lessonLevelData: e.target.value})}
+                value={''}
               />
             </div>
           )}
