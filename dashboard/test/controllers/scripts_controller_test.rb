@@ -677,16 +677,13 @@ class ScriptsControllerTest < ActionController::TestCase
 
     unit.reload
     timestamp = (unit.updated_at - 1).to_s
-    old_unit_dsl = ScriptDSL.serialize_lesson_groups(unit)
 
     e = assert_raises do
       post :update, params: {
         id: unit.id,
         script: {name: unit.name},
         is_migrated: true,
-        last_updated_at: timestamp,
-        script_text: old_unit_dsl,
-        old_unit_text: old_unit_dsl
+        last_updated_at: timestamp
       }
     end
     assert_includes e.message, 'Could not update the unit because it has been modified more recently outside of this editor.'
