@@ -1,0 +1,10 @@
+name 'courseF_bee_practice'
+editor_experiment ''
+display_name 'Bee Practice'
+description 'Great work so far! Choose your next activity. Complete as many as you can. Keep practicing with loops and the bee!'
+
+sublevels
+level 'courseD_bee_nestedLoops2_2021'
+level 'courseD_bee_nestedLoops8_2021'
+level 'courseD_bee_nestedLoops9_2021'
+level 'courseD_bee_nestedLoops7_2021'

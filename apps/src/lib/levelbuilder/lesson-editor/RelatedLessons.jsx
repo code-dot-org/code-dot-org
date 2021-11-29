@@ -3,34 +3,17 @@ import React, {Component} from 'react';
 import color from '../../../util/color';
 import {relatedLessonShape} from '../shapes';
 
-const styles = {
-  relatedLessonHeader: {
-    fontSize: 16,
-    marginTop: 15,
-    marginBottom: 10
-  },
-  relatedLessonContainer: {
-    marginBottom: -15
-  },
-  relatedLessonLink: {
-    marginRight: 30,
-    marginBottom: 15,
-    display: 'inline-block',
-    color: color.purple,
-    textDecoration: 'underline'
-  }
-};
-
 export default class RelatedLessons extends Component {
   static propTypes = {
     relatedLessons: PropTypes.arrayOf(relatedLessonShape).isRequired
   };
 
   getRelatedLessonText(lesson) {
-    const includeYear = !lesson.scriptTitle.includes(lesson.versionYear);
+    const includeYear =
+      lesson.versionYear && !lesson.unitTitle.includes(lesson.versionYear);
     const year = includeYear ? ` - ${lesson.versionYear}` : '';
     const type = lesson.lockable ? 'Lockable' : 'Lesson';
-    return `${lesson.scriptTitle}${year} - ${type} ${lesson.relativePosition}`;
+    return `${lesson.unitTitle}${year} - ${type} ${lesson.relativePosition}`;
   }
 
   render() {
@@ -61,3 +44,21 @@ export default class RelatedLessons extends Component {
     );
   }
 }
+
+const styles = {
+  relatedLessonHeader: {
+    fontSize: 16,
+    marginTop: 15,
+    marginBottom: 10
+  },
+  relatedLessonContainer: {
+    marginBottom: -15
+  },
+  relatedLessonLink: {
+    marginRight: 30,
+    marginBottom: 15,
+    display: 'inline-block',
+    color: color.purple,
+    textDecoration: 'underline'
+  }
+};

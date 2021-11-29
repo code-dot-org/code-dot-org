@@ -24,12 +24,32 @@ function inspectorOn(state, action) {
   }
 }
 
-function showError(state, action) {
-  state = state || false;
+function dialog(state = null, action) {
+  switch (action.type) {
+    case ActionType.CHANGE_DIALOG:
+      return action.dialog;
+    default:
+      return state;
+  }
+}
+
+function maxProjectCapacity(state, action) {
+  state = state || -1;
 
   switch (action.type) {
-    case ActionType.CHANGE_SHOW_ERROR:
-      return action.showError;
+    case ActionType.CHANGE_MAX_PROJECT_CAPACITY:
+      return action.bytes;
+    default:
+      return state;
+  }
+}
+
+function projectSize(state, action) {
+  state = state || -1;
+
+  switch (action.type) {
+    case ActionType.CHANGE_PROJECT_SIZE:
+      return action.bytes;
     default:
       return state;
   }
@@ -38,5 +58,7 @@ function showError(state, action) {
 export default {
   fullScreenPreviewOn,
   inspectorOn,
-  showError
+  dialog,
+  maxProjectCapacity,
+  projectSize
 };

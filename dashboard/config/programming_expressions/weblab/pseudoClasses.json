@@ -1,0 +1,5 @@
+{
+  "func": "pseudo-classes",
+  "category": "CSS Properties",
+  "syntax": "selector:pseudo-class {property: value;}"
+}

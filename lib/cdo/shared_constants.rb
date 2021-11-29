@@ -28,8 +28,6 @@ module SharedConstants
     {
       not_tried: "not_tried",
       submitted: "submitted",
-      locked: "locked",
-      readonly: "readonly",
       perfect: "perfect",
       passed: "passed",
       attempted: "attempted",
@@ -96,6 +94,8 @@ module SharedConstants
     playlab_k1
     dance
     spritelab
+    poetry
+    poetry_hoc
   ).freeze
 
   # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met. These project types can be shared if: the user is >= 13 years old and their teacher has NOT disabled sharing OR the user is < 13 and their teacher has enabled sharing.
@@ -142,6 +142,7 @@ module SharedConstants
       "setImageURL": null,
       "playSound": null,
       "stopSound": null,
+      "playSpeech": null,
       "showElement": null,
       "hideElement": null,
       "deleteElement": null,
@@ -192,6 +193,7 @@ module SharedConstants
       "getUserId": null,
       "drawChart": null,
       "drawChartFromRecords": null,
+      "getPrediction": null,
 
       // Turtle
       "moveForward": null,
@@ -232,6 +234,7 @@ module SharedConstants
       "subtractOperator": null,
       "multiplyOperator": null,
       "divideOperator": null,
+      "moduloOperator": null,
       "equalityOperator": null,
       "inequalityOperator": null,
       "greaterThanOperator": null,
@@ -272,6 +275,9 @@ module SharedConstants
       "appendItem": null,
       "removeItem": null,
       "join": null,
+      "declareAssign_object": null,
+      "getValue": null,
+      "addPair": null,
 
       // Functions
       "functionParams_none": null,
@@ -387,6 +393,7 @@ module SharedConstants
       "drawSprites": null,
       "playSound": null,
       "stopSound": null,
+      "playSpeech": null,
       "keyDown": null,
       "keyWentDown": null,
       "keyWentUp": null,
@@ -441,6 +448,7 @@ module SharedConstants
       "createEdgeSprites": null,
       "shapeColor": null,
       "tint": null,
+      "alpha": null,
       "setVelocity": null,
       "getDirection": null,
       "getSpeed": null,
@@ -530,6 +538,7 @@ module SharedConstants
       "subtractOperator": null,
       "multiplyOperator": null,
       "divideOperator": null,
+      "moduloOperator": null,
       "equalityOperator": null,
       "inequalityOperator": null,
       "greaterThanOperator": null,
@@ -554,15 +563,6 @@ module SharedConstants
       "declareNoAssign_x": null,
       "assign_x": null,
       "console.log": null,
-      "declareAssign_str_hello_world": null,
-      "substring": null,
-      "indexOf": null,
-      "includes": null,
-      "length": null,
-      "toUpperCase": null,
-      "toLowerCase": null,
-      "declareAssign_list_abd": null,
-      "listLength": null,
       "comment_Variables": null,
 
       // Functions
@@ -574,8 +574,6 @@ module SharedConstants
       "comment": null
     }
   JSON
-
-  ALLOWED_WEB_REQUEST_HEADERS = HttpCache::ALLOWED_WEB_REQUEST_HEADERS
 
   # Subset of Ruby Logger::Severity constants.
   # https://github.com/ruby/ruby/blob/trunk/lib/logger.rb

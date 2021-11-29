@@ -2,12 +2,17 @@
   "script": {
     "name": "step",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-11-22 19:57:16 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "step"
     }
@@ -31,6 +36,7 @@
       "name": "Step",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -41,22 +47,53 @@
       }
     }
   ],
+  "lesson_activities": [
+    {
+      "key": "941faa19-b629-4467-b5df-03b29b940313",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "941faa19-b629-4467-b5df-03b29b940313",
+        "lesson.key": "Step",
+        "lesson_group.key": "",
+        "script.name": "step"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "553d9dae-736b-402b-906e-2af10312e16e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "553d9dae-736b-402b-906e-2af10312e16e",
+        "lesson_activity.key": "941faa19-b629-4467-b5df-03b29b940313"
+      }
+    }
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:MazeStep:2_1_step"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:MazeStep:2_1_step"
         ],
         "lesson.key": "Step",
         "lesson_group.key": "",
-        "script.name": "step"
+        "script.name": "step",
+        "activity_section.key": "553d9dae-736b-402b-906e-2af10312e16e"
       },
       "level_keys": [
         "blockly:MazeStep:2_1_step"
@@ -65,18 +102,22 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:MazeStep:2_2_step"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:MazeStep:2_2_step"
         ],
         "lesson.key": "Step",
         "lesson_group.key": "",
-        "script.name": "step"
+        "script.name": "step",
+        "activity_section.key": "553d9dae-736b-402b-906e-2af10312e16e"
       },
       "level_keys": [
         "blockly:MazeStep:2_2_step"
@@ -85,18 +126,22 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:MazeStep:2_17_step"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:MazeStep:2_17_step"
         ],
         "lesson.key": "Step",
         "lesson_group.key": "",
-        "script.name": "step"
+        "script.name": "step",
+        "activity_section.key": "553d9dae-736b-402b-906e-2af10312e16e"
       },
       "level_keys": [
         "blockly:MazeStep:2_17_step"
@@ -105,18 +150,22 @@
     {
       "chapter": 4,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:MazeStep:karel_1_9_step"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:MazeStep:karel_1_9_step"
         ],
         "lesson.key": "Step",
         "lesson_group.key": "",
-        "script.name": "step"
+        "script.name": "step",
+        "activity_section.key": "553d9dae-736b-402b-906e-2af10312e16e"
       },
       "level_keys": [
         "blockly:MazeStep:karel_1_9_step"
@@ -125,18 +174,22 @@
     {
       "chapter": 5,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:MazeStep:karel_2_9_step"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:MazeStep:karel_2_9_step"
         ],
         "lesson.key": "Step",
         "lesson_group.key": "",
-        "script.name": "step"
+        "script.name": "step",
+        "activity_section.key": "553d9dae-736b-402b-906e-2af10312e16e"
       },
       "level_keys": [
         "blockly:MazeStep:karel_2_9_step"
@@ -145,18 +198,22 @@
     {
       "chapter": 6,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "blockly:MazeStep:karel_bee_1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "blockly:MazeStep:karel_bee_1"
         ],
         "lesson.key": "Step",
         "lesson_group.key": "",
-        "script.name": "step"
+        "script.name": "step",
+        "activity_section.key": "553d9dae-736b-402b-906e-2af10312e16e"
       },
       "level_keys": [
         "blockly:MazeStep:karel_bee_1"
@@ -172,7 +229,8 @@
         ],
         "lesson.key": "Step",
         "lesson_group.key": "",
-        "script.name": "step"
+        "script.name": "step",
+        "activity_section.key": "553d9dae-736b-402b-906e-2af10312e16e"
       }
     },
     {
@@ -183,7 +241,8 @@
         ],
         "lesson.key": "Step",
         "lesson_group.key": "",
-        "script.name": "step"
+        "script.name": "step",
+        "activity_section.key": "553d9dae-736b-402b-906e-2af10312e16e"
       }
     },
     {
@@ -194,7 +253,8 @@
         ],
         "lesson.key": "Step",
         "lesson_group.key": "",
-        "script.name": "step"
+        "script.name": "step",
+        "activity_section.key": "553d9dae-736b-402b-906e-2af10312e16e"
       }
     },
     {
@@ -205,7 +265,8 @@
         ],
         "lesson.key": "Step",
         "lesson_group.key": "",
-        "script.name": "step"
+        "script.name": "step",
+        "activity_section.key": "553d9dae-736b-402b-906e-2af10312e16e"
       }
     },
     {
@@ -216,7 +277,8 @@
         ],
         "lesson.key": "Step",
         "lesson_group.key": "",
-        "script.name": "step"
+        "script.name": "step",
+        "activity_section.key": "553d9dae-736b-402b-906e-2af10312e16e"
       }
     },
     {
@@ -227,8 +289,39 @@
         ],
         "lesson.key": "Step",
         "lesson_group.key": "",
-        "script.name": "step"
+        "script.name": "step",
+        "activity_section.key": "553d9dae-736b-402b-906e-2af10312e16e"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

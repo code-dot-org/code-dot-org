@@ -9,7 +9,9 @@ import {
 export {ICON_PREFIX, ICON_PREFIX_REGEX, DATA_URL_PREFIX_REGEX, ABSOLUTE_REGEXP};
 export const FOOTER_HEIGHT = 30;
 export const APP_WIDTH = 320;
-export const WIDGET_WIDTH = 600;
+export const WIDGET_WIDTH = 600; // Note: This constant is also maintained in applab/style.scss.
+export const getAppWidth = config =>
+  config?.widgetMode ? WIDGET_WIDTH : APP_WIDTH;
 export const APP_HEIGHT = 480;
 export const DESIGN_ELEMENT_ID_PREFIX = 'design_';
 export const NEW_SCREEN = 'New screen...';

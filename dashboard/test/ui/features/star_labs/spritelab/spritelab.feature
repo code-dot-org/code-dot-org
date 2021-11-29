@@ -1,7 +1,7 @@
 Feature: Sprite Lab
 
 Background:
-  Given I am on "http://studio.code.org/s/allthethings/stage/36/puzzle/1?noautoplay=true"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/36/levels/1?noautoplay=true"
   And I rotate to landscape
   And I wait for the page to fully load
   And I wait for 3 seconds

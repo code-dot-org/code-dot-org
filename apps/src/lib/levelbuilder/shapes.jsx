@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 export const levelShape = PropTypes.shape({
   // id of level
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   //name of level
   name: PropTypes.string.isRequired,
   //url for editing level
@@ -22,14 +22,14 @@ export const levelShape = PropTypes.shape({
 
 export const scriptLevelShape = PropTypes.shape({
   // script level id
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 
   // The position of this level within the lesson in the UI.
   position: PropTypes.number.isRequired,
 
   // if only one level the id for that level
   // if multiple variants the level id for the active variant
-  activeId: PropTypes.number.isRequired,
+  activeId: PropTypes.string.isRequired,
   // all variants of this level
   levels: PropTypes.arrayOf(levelShape).isRequired,
 
@@ -55,8 +55,10 @@ export const activitySectionShape = PropTypes.shape({
   key: PropTypes.string.isRequired,
   position: PropTypes.number.isRequired,
   displayName: PropTypes.string.isRequired,
+  duration: PropTypes.oneOfType([PropTypes.number, PropTypes.oneOf([''])])
+    .isRequired,
   remarks: PropTypes.bool,
-  slide: PropTypes.bool,
+  progressionName: PropTypes.string,
   scriptLevels: PropTypes.arrayOf(scriptLevelShape).isRequired,
   text: PropTypes.string.isRequired,
   tips: PropTypes.arrayOf(tipShape).isRequired
@@ -71,58 +73,63 @@ export const activityShape = PropTypes.shape({
   activitySections: PropTypes.arrayOf(activitySectionShape)
 });
 
+// Represents a migrated resource, backed by the
+// Resource model in Rails
 export const resourceShape = PropTypes.shape({
+  id: PropTypes.number,
   key: PropTypes.string.isRequired,
+  markdownKey: PropTypes.string,
   name: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   type: PropTypes.string,
   audience: PropTypes.string,
   assessment: PropTypes.bool,
   includeInPdf: PropTypes.bool,
-  downloadUrl: PropTypes.string
+  downloadUrl: PropTypes.string,
+  isRollup: PropTypes.bool
 });
 
-export const levelShapeForScript = PropTypes.shape({
-  position: PropTypes.number,
-  activeId: PropTypes.number,
-  ids: PropTypes.arrayOf(PropTypes.number),
-  kind: PropTypes.string,
-  skin: PropTypes.string,
-  videoKey: PropTypes.string,
-  concepts: PropTypes.string,
-  conceptDifficulty: PropTypes.string,
-  progression: PropTypes.bool,
-  named: PropTypes.bool,
-  bonus: PropTypes.bool,
-  assessment: PropTypes.bool,
-  challenge: PropTypes.bool
-});
-
-export const lessonShape = PropTypes.shape({
-  id: PropTypes.number,
+export const vocabularyShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
-  name: PropTypes.string,
-  position: PropTypes.number.isRequired,
-  lockable: PropTypes.bool,
-  unplugged: PropTypes.bool,
-  assessment: PropTypes.bool,
-  relativePosition: PropTypes.number,
-  levels: PropTypes.arrayOf(levelShapeForScript).isRequired // TODO: Update to use scriptLevelShape
+  markdownKey: PropTypes.string,
+  word: PropTypes.string.isRequired,
+  definition: PropTypes.string.isRequired,
+  commonSenseMedia: PropTypes.bool.isRequired
 });
 
-export const lessonGroupShape = PropTypes.shape({
+export const programmingEnvironmentShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired
+});
+
+export const programmingExpressionShape = PropTypes.shape({
+  id: PropTypes.number.isRequired,
   key: PropTypes.string.isRequired,
-  displayName: PropTypes.string,
-  position: PropTypes.number.isRequired,
-  userFacing: PropTypes.bool.isRequired,
-  bigQuestions: PropTypes.string,
-  description: PropTypes.string,
-  lessons: PropTypes.arrayOf(lessonShape).isRequired
+  name: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
+  programmingEnvironmentName: PropTypes.string.isRequired
+});
+
+export const frameworkShape = PropTypes.shape({
+  name: PropTypes.string.isRequired,
+  shortcode: PropTypes.string.isRequired
+});
+
+export const standardShape = PropTypes.shape({
+  frameworkShortcode: PropTypes.string.isRequired,
+  frameworkName: PropTypes.string.isRequired,
+  parentCategoryShortcode: PropTypes.string,
+  parentCategoryDescription: PropTypes.string,
+  categoryShortcode: PropTypes.string.isRequired,
+  categoryDescription: PropTypes.string.isRequired,
+  shortcode: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired
 });
 
 export const relatedLessonShape = PropTypes.shape({
-  scriptTitle: PropTypes.string.isRequired,
-  versionYear: PropTypes.string.isRequired,
+  unitTitle: PropTypes.string.isRequired,
+  versionYear: PropTypes.string,
   lockable: PropTypes.bool,
   relativePosition: PropTypes.number.isRequired,
   id: PropTypes.number.isRequired,

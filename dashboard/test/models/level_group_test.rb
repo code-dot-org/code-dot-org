@@ -15,15 +15,15 @@ class LevelGroupTest < ActiveSupport::TestCase
   end
 
   def get_evaluation_multi_dsl(id)
-    stage1 = create :lesson
-    stage2 = create :lesson
+    lesson1 = create :lesson
+    lesson2 = create :lesson
 
     "
     name 'evaluation_multi_#{id}'
     title 'evaluation multi #{id}'
     question 'Some Question'
-    answer 'Answer 1', weight: #{rand(5)}, stage_name: '#{stage1.name}'
-    answer 'Answer 2', weight: #{rand(5)}, stage_name: '#{stage2.name}'
+    answer 'Answer 1', weight: #{rand(5)}, lesson_name: '#{lesson1.name}'
+    answer 'Answer 2', weight: #{rand(5)}, lesson_name: '#{lesson2.name}'
     answer 'Answer 3'
     "
   end
@@ -474,7 +474,7 @@ level 'level1 copy2'"
 
     expected_results = {
       level1.id => {
-        stage_name: script_level.lesson.localized_title,
+        lesson_name: script_level.lesson.localized_title,
         levelgroup_results: [
           {
             type: "text_match",
@@ -522,8 +522,8 @@ level 'level1 copy2'"
     }
 
     assert_equal expected_results.keys, actual_survey_results.keys
-    assert_equal expected_results[level1.id][:stage_name],
-      actual_survey_results[level1.id][:stage_name]
+    assert_equal expected_results[level1.id][:lesson_name],
+      actual_survey_results[level1.id][:lesson_name]
     assert_equal expected_results[level1.id][:levelgroup_results],
       actual_survey_results[level1.id][:levelgroup_results]
   end
@@ -559,14 +559,14 @@ level 'level1 copy2'"
 
     expected_results = {
       level1.id => {
-        stage_name: script_level.lesson.localized_title,
+        lesson_name: script_level.lesson.localized_title,
         levelgroup_results: []
       }
     }
 
     assert_equal expected_results.keys, actual_survey_results.keys
-    assert_equal expected_results[level1.id][:stage_name],
-      actual_survey_results[level1.id][:stage_name]
+    assert_equal expected_results[level1.id][:lesson_name],
+      actual_survey_results[level1.id][:lesson_name]
     assert_equal [], actual_survey_results[level1.id][:levelgroup_results]
   end
 end

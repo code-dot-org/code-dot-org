@@ -1,0 +1,16 @@
+{
+  "func": "buzzer.playSong",
+  "category": "Circuit",
+  "paletteParams": [
+    {
+      "name": "notes"
+    },
+    {
+      "name": "tempo"
+    }
+  ],
+  "paramButtons": {
+    "minArgs": 1,
+    "maxArgs": 2
+  }
+}

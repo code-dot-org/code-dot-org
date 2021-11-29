@@ -18,6 +18,13 @@ class PairedUserLevel < ApplicationRecord
   belongs_to :navigator_user_level, class_name: 'UserLevel'
   belongs_to :driver_user_level, class_name: 'UserLevel'
 
+  # These associations return the User object representing the driver and
+  # navigator. Note that these associations join across the user_levels and
+  # users tables and will return nil if the associated user_level or user
+  # row was deleted.
+  has_one :driver, through: :driver_user_level, source: :user
+  has_one :navigator, through: :navigator_user_level, source: :user
+
   # @param user_level_ids (Array) an array of user_level_ids.
   # @return (Array) a subarray of user_level_ids containing those IDs associated
   #   with pair programming (as driver or navigator)
@@ -59,5 +66,35 @@ class PairedUserLevel < ApplicationRecord
         memo[user_id].add user_level_id
         memo
       end
+  end
+
+  # Returns the level_source_id from the driver's user_level. Note that this
+  # returns nil if the driver's progress was deleted.
+  def driver_level_source_id
+    driver_user_level&.level_source_id
+  end
+
+  # Returns the display names of the navigators in the pairing group that
+  # includes this pairing record. Note that the number of names returned may
+  # be less than the value returned by navigator_count if some navigator user
+  # accounts or progress was deleted.
+  def navigators_names(exclude_self: false)
+    excluded_navigator_user_level_ids =
+      exclude_self ? [navigator_user_level_id] : []
+
+    PairedUserLevel.
+      joins(:navigator).
+      where(driver_user_level_id: driver_user_level_id).
+      where.not(navigator_user_level_id: excluded_navigator_user_level_ids).
+      order('paired_user_levels.id DESC').
+      pluck('users.name')
+  end
+
+  # Returns the number of navigators in the pairing group that includes this
+  # pairing record.
+  def navigator_count
+    PairedUserLevel.
+      where(driver_user_level_id: driver_user_level_id).
+      count
   end
 end

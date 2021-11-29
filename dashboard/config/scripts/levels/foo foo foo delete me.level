@@ -1,0 +1,17 @@
+<Maze>
+  <config><![CDATA[{
+  "game_id": 25,
+  "created_at": "2021-04-01T01:39:54.000Z",
+  "level_num": "custom",
+  "user_id": 13,
+  "properties": {
+    "encrypted": "false",
+    "skin": "birds",
+    "maze_data": null,
+    "preload_asset_list": null,
+    "maze": "[[2,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]]"
+  },
+  "published": true
+}]]></config>
+  <blocks/>
+</Maze>

@@ -1,4 +1,4 @@
-import {expect} from '../../../../../../util/deprecatedChai';
+import {expect} from '../../../../../../util/reconfiguredChai';
 import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
 import {MicrobitStubBoard} from '../makeStubBoard';
 import sinon from 'sinon';
@@ -40,6 +40,7 @@ describe('MicroBitBoard', () => {
 
   afterEach(() => {
     board = undefined;
+    sinon.restore();
   });
 
   describe('Maker Board Interface', () => {
@@ -182,8 +183,8 @@ describe('MicroBitBoard', () => {
             expect(component.start).to.be.a('function');
           });
 
-          it('setRange()', () => {
-            expect(component.setRange).to.be.a('function');
+          it('setScale()', () => {
+            expect(component.setScale).to.be.a('function');
           });
         });
 

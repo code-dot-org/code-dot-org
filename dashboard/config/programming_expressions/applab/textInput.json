@@ -1,0 +1,16 @@
+{
+  "func": "textInput",
+  "category": "UI controls",
+  "paletteParams": [
+    {
+      "name": "id"
+    },
+    {
+      "name": "text"
+    }
+  ],
+  "params": [
+    "\"id\"",
+    "\"text\""
+  ]
+}

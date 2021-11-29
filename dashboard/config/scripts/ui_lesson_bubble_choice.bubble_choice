@@ -1,0 +1,9 @@
+name 'ui_lesson_bubble_choice'
+display_name 'HTML Headings'
+description 'Try out what you\'ve learned on one or more of the following activities.'
+
+sublevels
+level 'ui_lesson_bubble_choice_1'
+level 'ui_lesson_bubble_choice_2'
+level 'ui_lesson_bubble_choice_3'
+level 'ui_lesson_bubble_choice_4'

@@ -11,7 +11,7 @@ const responses = {
       puzzle: 2,
       question: 'Free Response',
       response: 'Lorem ipsum dolor sit amet, postea pericula',
-      stage: 'Lesson 1',
+      lesson: 'Lesson 1',
       studentId: 1,
       studentName: 'Student A',
       url: 'http://fake.url'
@@ -20,7 +20,7 @@ const responses = {
       puzzle: 3,
       question: 'Free Response',
       response: 'Lorem ipsum dolor sit amet, postea pericula',
-      stage: 'Lesson 2',
+      lesson: 'Lesson 2',
       studentId: 1,
       studentName: 'Student A',
       url: 'http://fake.url'
@@ -29,7 +29,7 @@ const responses = {
       puzzle: 3,
       question: 'Free Response',
       response: 'Lorem ipsum dolor sit amet, postea pericula',
-      stage: 'Lesson 2',
+      lesson: 'Lesson 2',
       studentId: 3,
       studentName: 'Student C',
       url: 'http://fake.url'
@@ -39,7 +39,7 @@ const responses = {
 };
 
 describe('TextResponses', () => {
-  it('renders the ScriptSelector dropdown', () => {
+  it('renders the UnitSelector dropdown', () => {
     const wrapper = shallow(
       <TextResponses
         sectionId={2}
@@ -52,7 +52,7 @@ describe('TextResponses', () => {
       />
     );
 
-    expect(wrapper.find('ScriptSelector').exists()).to.be.true;
+    expect(wrapper.find('UnitSelector').exists()).to.be.true;
   });
 
   it('renders the TextResponsesTable', () => {
@@ -86,7 +86,7 @@ describe('TextResponses', () => {
       );
 
       expect(wrapper.find('#uitest-response-actions').exists()).to.be.false;
-      expect(wrapper.find('#uitest-stage-filter').exists()).to.be.false;
+      expect(wrapper.find('#uitest-lesson-filter').exists()).to.be.false;
       expect(wrapper.find('CSVLink').exists()).to.be.false;
     });
 
@@ -108,7 +108,7 @@ describe('TextResponses', () => {
       expect(csvLink.find('Button').exists()).to.be.true;
     });
 
-    it('renders a filter if there are 2+ stages to filter by', () => {
+    it('renders a filter if there are 2+ lessons to filter by', () => {
       const wrapper = shallow(
         <TextResponses
           sectionId={2}
@@ -121,7 +121,7 @@ describe('TextResponses', () => {
         />
       );
 
-      const filterDropdown = wrapper.find('#uitest-stage-filter');
+      const filterDropdown = wrapper.find('#uitest-lesson-filter');
       const filterOptions = filterDropdown.find('option');
       expect(filterDropdown.exists()).to.be.true;
       expect(filterOptions).to.have.length(3);

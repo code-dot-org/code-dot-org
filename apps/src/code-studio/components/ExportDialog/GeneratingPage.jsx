@@ -7,38 +7,6 @@ import {PLATFORM_ANDROID, PLATFORM_IOS} from '../../../util/exporterConstants';
 import SendToPhone from '../SendToPhone';
 import commonStyles from './styles';
 
-const styles = {
-  uriInput: {
-    cursor: 'copy',
-    width: 'unset'
-  },
-  spinner: {
-    fontSize: 24
-  },
-  phoneLabel: {
-    marginTop: 15,
-    marginBottom: 0
-  },
-  apkUriContainer: {
-    display: 'flex',
-    flexDirection: 'column'
-  },
-  sendToPhoneButton: {
-    ...commonStyles.button,
-    backgroundColor: color.purple,
-    color: color.white
-  },
-  sendToPhoneButtonBody: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  sendToPhoneIcon: {
-    fontSize: 32,
-    width: 30,
-    margin: '-8px 0'
-  }
-};
-
 /**
  * Generating Page in Export Dialog
  */
@@ -149,3 +117,35 @@ export default class GeneratingPage extends React.Component {
     );
   }
 }
+
+const styles = {
+  uriInput: {
+    cursor: 'copy',
+    width: 'unset'
+  },
+  spinner: {
+    fontSize: 24
+  },
+  phoneLabel: {
+    marginTop: 15,
+    marginBottom: 0
+  },
+  apkUriContainer: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  sendToPhoneButton: {
+    ...commonStyles.button,
+    backgroundColor: color.purple,
+    color: color.white
+  },
+  sendToPhoneButtonBody: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  sendToPhoneIcon: {
+    fontSize: 32,
+    width: 30,
+    margin: '-8px 0'
+  }
+};

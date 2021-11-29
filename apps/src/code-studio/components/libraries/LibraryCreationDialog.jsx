@@ -19,31 +19,6 @@ import Button from '@cdo/apps/templates/Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
-const styles = {
-  libraryBoundary: {
-    padding: 10,
-    width: '90%'
-  },
-  centerContent: {
-    display: 'flex',
-    justifyContent: 'center'
-  },
-  info: {
-    fontSize: 12,
-    fontStyle: 'italic',
-    lineHeight: 1.2
-  },
-  idInfo: {
-    marginBottom: 10
-  },
-  copyBtn: {
-    margin: '0 15px',
-    ':hover': {
-      cursor: 'copy'
-    }
-  }
-};
-
 const DEFAULT_COPY_BUTTON_TEXT = i18n.copyId();
 
 /**
@@ -295,6 +270,31 @@ export class UnpublishSuccessDisplay extends React.Component {
     );
   }
 }
+
+const styles = {
+  libraryBoundary: {
+    padding: 10,
+    width: '90%'
+  },
+  centerContent: {
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  info: {
+    fontSize: 12,
+    fontStyle: 'italic',
+    lineHeight: 1.2
+  },
+  idInfo: {
+    marginBottom: 10
+  },
+  copyBtn: {
+    margin: '0 15px',
+    ':hover': {
+      cursor: 'copy'
+    }
+  }
+};
 
 export const UnconnectedLibraryCreationDialog = LibraryCreationDialog;
 

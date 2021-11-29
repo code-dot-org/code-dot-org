@@ -1,8 +1,12 @@
 import $ from 'jquery';
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import ContentContainer from '../ContentContainer';
-import {AdministratorResourcesActionBlock} from './TwoColumnActionBlock';
+import {
+  AdministratorResourcesActionBlock,
+  CscInfoActionBlock
+} from './TwoColumnActionBlock';
 import {CourseBlocksHoc} from './CourseBlocks';
 import CourseBlocksTools from './CourseBlocksTools';
 import CourseBlocksTeacherGradeBands from './CourseBlocksTeacherGradeBands';
@@ -14,6 +18,10 @@ import i18n from '@cdo/locale';
  * though it may also be shown for a signed-out user using English.
  */
 class CoursesTeacherEnglish extends Component {
+  static propTypes = {
+    showAiCard: PropTypes.bool
+  };
+
   componentDidMount() {
     // The components used here are implemented in legacy HAML/CSS rather than React.
     $('.courseexplorer')
@@ -36,9 +44,11 @@ class CoursesTeacherEnglish extends Component {
 
           <CourseBlocksTeacherGradeBands />
 
+          <CscInfoActionBlock />
+
           <CourseBlocksHoc />
 
-          <CourseBlocksTools isEnglish={true} />
+          <CourseBlocksTools isEnglish showAiCard={this.props.showAiCard} />
 
           <AdministratorResourcesActionBlock />
         </div>

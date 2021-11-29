@@ -11,16 +11,6 @@ import BaseDialog from '../../../templates/BaseDialog';
 import DialogFooter from '../../../templates/teacherDashboard/DialogFooter';
 import Button from '../../../templates/Button';
 
-const styles = {
-  dialog: {
-    color: color.default_text,
-    fontSize: 15,
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  }
-};
-
 export class UnconnectedRetryProjectSaveDialog extends Component {
   static propTypes = {
     projectUpdatedStatus: PropTypes.oneOf(Object.values(statuses)),
@@ -66,6 +56,16 @@ export class UnconnectedRetryProjectSaveDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    color: color.default_text,
+    fontSize: 15,
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  }
+};
 
 export default connect(
   state => ({

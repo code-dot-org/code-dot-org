@@ -1,0 +1,127 @@
+#!/usr/bin/env ruby
+
+# This script deletes hoc_activity.name from all rows between the given start
+# and end ids.
+#
+# This script is step 1 of a two-step process to ensure that student names
+# stored in pegasus.hoc_activity are deleted after 3 months. This script will
+# be run once in production to remove names from all older rows in the table.
+# After this script is run, bin/cron/hoc_student_name_cleanup will be used to
+# delete names based on hoc_activity.finished_at. This two-step process is
+# necessary because while recent rows with names all have a finished_at value,
+# older rows do not.
+#
+# This script was run on production from 2021-02-17 5:00pm to 2021-02-18 2:48am PST
+# with the following parameters: --start-id=0 --end_id=1000000000 --sleep=0
+
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'cdo/db'
+require 'optparse'
+
+CDO.log.info("Script started at #{Time.now}")
+
+HOC_ACTIVITY = PEGASUS_DB[:hoc_activity]
+
+# Parse options
+options = {
+  start_id: nil,
+  end_id: nil,
+  batch_size: 1000,
+  sleep_msecs: 50,
+  dry_run: false,
+  log_sql: false,
+}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    This script deletes names stored in the pegasus.hoc_activity table after the
+    configured retention period.
+
+    Options:
+  BANNER
+
+  opts.on('--start-id=1234567',
+    Integer,
+    'Id of first entry to clean up (inclusive). Required.'
+  ) do |start_id|
+    options[:start_id] = start_id
+  end
+
+  opts.on('--end-id=1234567',
+    Integer,
+    'Id of last entry to clean up (exclusive). Required.'
+  ) do |end_id|
+    options[:end_id] = end_id
+  end
+
+  opts.on('--batch-size=1000',
+    Integer,
+    'Number of rows in each batch. Defaults to 1000 if not specified.'
+  ) do |batch_size|
+    options[:batch_size] = batch_size
+  end
+
+  opts.on('--sleep=50',
+    Integer,
+    'Amount of time in milliseconds to sleep between batches. Higher values ' \
+    'will reduce the performance impact on the datbase. Defaults to 50 msecs ' \
+    'if not specified.'
+  ) do |sleep_msecs|
+    options[:sleep_msecs] = sleep_msecs
+  end
+
+  opts.on('--dry-run',
+    'Enables read-only mode where no changes are written to the database'
+  ) do |dry_run|
+    options[:dry_run] = dry_run
+  end
+
+  opts.on('--log-sql',
+    'Logs all sql statements sent to the database'
+  ) do |log_sql|
+    options[:log_sql] = log_sql
+  end
+
+  opts.on('-h', '--help', 'Prints this help message') do
+    puts opts
+    exit
+  end
+end.parse!
+CDO.log.info "Options: #{options}"
+options.freeze
+
+# Check that start_id and end_id were specified
+if options[:start_id].nil? || options[:end_id].nil?
+  CDO.log.error("start_id and/or end_id were not specified, exiting script.")
+  return
+end
+
+PEGASUS_DB.loggers << CDO.log if options[:log_sql]
+
+# Main loop - update rows with names one batch at a time.
+batch_start_id = options[:start_id]
+batch_number = 0
+total_rows_updated = 0
+while batch_start_id < options[:end_id]
+  batch_end_id = [batch_start_id + options[:batch_size], options[:end_id]].min
+  batch_rows_updated = 0
+
+  PEGASUS_DB.transaction do
+    batch_rows_updated = HOC_ACTIVITY.
+      where(Sequel.lit('id >= ? AND id < ? AND name IS NOT NULL', batch_start_id, batch_end_id)).
+      update(name: nil)
+    raise Sequel::Rollback if options[:dry_run]
+  end
+  total_rows_updated += batch_rows_updated
+
+  CDO.log.info("Processed batch #{batch_number} (id=#{batch_start_id}...#{batch_end_id}): " \
+    "rows updated in current batch=#{batch_rows_updated}, total rows updated=#{total_rows_updated}"
+  )
+
+  batch_start_id = batch_end_id
+  batch_number += 1
+  sleep(options[:sleep_msecs] / 1000.0)
+end
+
+CDO.log.info("Script completed at #{Time.now}. #{total_rows_updated} rows updated.")

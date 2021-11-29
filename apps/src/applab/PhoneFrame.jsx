@@ -10,51 +10,6 @@ import FontAwesome from '../templates/FontAwesome';
 const RADIUS = 30;
 const FRAME_HEIGHT = 60;
 
-const styles = {
-  phoneFrame: {
-    display: 'block',
-    height: FRAME_HEIGHT,
-    backgroundColor: color.lighter_gray
-  },
-  phoneFrameDark: {
-    backgroundColor: color.charcoal
-  },
-  phoneFrameTop: {
-    borderTopLeftRadius: RADIUS,
-    borderTopRightRadius: RADIUS
-  },
-  phoneFrameBottom: {
-    borderBottomLeftRadius: RADIUS,
-    borderBottomRightRadius: RADIUS
-  },
-  screenSelector: {
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    paddingTop: (FRAME_HEIGHT - ScreenSelectorStyles.dropdown.height) / 2,
-    width: '80%'
-  },
-  centeredInFrame: {
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    width: '100%',
-    textAlign: 'center',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: FRAME_HEIGHT
-  },
-  paused: {
-    color: 'white',
-    fontSize: 20
-  },
-  pauseIcon: {
-    marginRight: 5
-  },
-  buttonMinWidth: {
-    minWidth: CompletionButtonStyles.phoneFrameButton.minWidth
-  }
-};
-
 class PhoneFrame extends React.Component {
   static propTypes = {
     isDark: PropTypes.bool.isRequired,
@@ -116,5 +71,50 @@ class PhoneFrame extends React.Component {
     );
   }
 }
+
+const styles = {
+  phoneFrame: {
+    display: 'block',
+    height: FRAME_HEIGHT,
+    backgroundColor: color.lighter_gray
+  },
+  phoneFrameDark: {
+    backgroundColor: color.charcoal
+  },
+  phoneFrameTop: {
+    borderTopLeftRadius: RADIUS,
+    borderTopRightRadius: RADIUS
+  },
+  phoneFrameBottom: {
+    borderBottomLeftRadius: RADIUS,
+    borderBottomRightRadius: RADIUS
+  },
+  screenSelector: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    paddingTop: (FRAME_HEIGHT - ScreenSelectorStyles.dropdown.height) / 2,
+    width: '80%'
+  },
+  centeredInFrame: {
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: '100%',
+    textAlign: 'center',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: FRAME_HEIGHT
+  },
+  paused: {
+    color: 'white',
+    fontSize: 20
+  },
+  pauseIcon: {
+    marginRight: 5
+  },
+  buttonMinWidth: {
+    minWidth: CompletionButtonStyles.phoneFrameButton.minWidth
+  }
+};
 
 export default Radium(PhoneFrame);

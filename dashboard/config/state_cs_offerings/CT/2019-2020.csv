@@ -1,0 +1,361 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Ansonia High School,,90006010002,10152,Computer Programming,18,0,0,0,0,0,0,0,0
+Avon High School,,90012000011,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Avon High School,,90012000011,10157,AP Computer Science A,81,0,0,0,0,0,0,0,0
+Avon High School,,90012000011,10198,Computer Programming - Workplace Experience,0,0,0,0,0,0,0,0,0
+Avon High School,,90012000011,10205,Computer Gaming and Design,90,0,0,0,0,0,0,0,0
+Berlin High School,,90021000016,10157,AP Computer Science A,10,0,0,0,0,0,0,0,0
+Berlin High School,,90021000016,10205,Computer Gaming and Design,28,0,0,0,0,0,0,0,0
+Berlin High School,,90021000016,10206,Mobile Applications,16,0,0,0,0,0,0,0,0
+Bethel High School,,90027000024,10012,Exploring Computer Science,9,0,0,0,0,0,0,0,0
+Bethel High School,,90027000024,10158,AP Computer Science AB,15,0,0,0,0,0,0,0,0
+Bethel High School,,90027000024,21009,Robotics,33,0,0,0,0,0,0,0,0
+Bloomfield High School,,90033000029,10157,AP Computer Science A,17,0,0,0,0,0,0,0,0
+Bolton High School,,90036000037,10158,AP Computer Science AB,20,0,0,0,0,0,0,0,0
+Bolton High School,,90036000037,21009,Robotics,9,0,0,0,0,0,0,0,0
+"Biotechnology, Research & Zoological Studies Magnet High School",,90045001636,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+"Biotechnology, Research & Zoological Studies Magnet High School",,90045001636,10155,Java Programming,0,0,0,0,0,0,0,0,0
+"Biotechnology, Research & Zoological Studies Magnet High School",,90045001636,10158,AP Computer Science AB,0,0,0,0,0,0,0,0,0
+"Aerospace/Hydrospace, Engineering and Physical Sciences Magnet High School",,90045001639,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+"Aerospace/Hydrospace, Engineering and Physical Sciences Magnet High School",,90045001639,10155,Java Programming,0,0,0,0,0,0,0,0,0
+"Aerospace/Hydrospace, Engineering and Physical Sciences Magnet High School",,90045001639,10158,AP Computer Science AB,0,0,0,0,0,0,0,0,0
+"Aerospace/Hydrospace, Engineering and Physical Sciences Magnet High School",,90045001639,21009,Robotics,0,0,0,0,0,0,0,0,0
+Information Technology & Software Engineering Magnet High School,,90045001633,10152,Computer Programming,11,0,0,0,0,0,0,0,0
+Information Technology & Software Engineering Magnet High School,,90045001633,10155,Java Programming,80,0,0,0,0,0,0,0,0
+Information Technology & Software Engineering Magnet High School,,90045001633,10158,AP Computer Science AB,109,0,0,0,0,0,0,0,0
+Information Technology & Software Engineering Magnet High School,,90045001633,10160,Particular Topics in Computer Programming,34,0,0,0,0,0,0,0,0
+Information Technology & Software Engineering Magnet High School,,90045001633,21009,Robotics,35,0,0,0,0,0,0,0,0
+Central High School,,90045000056,10152,Computer Programming,77,0,0,0,0,0,0,0,0
+Central High School,,90045000056,10158,AP Computer Science AB,8,0,0,0,0,0,0,0,0
+Bristol Central High School,,90051000092,10156,Computer Programming - Other Language,19,0,0,0,0,0,0,0,0
+Bristol Central High School,,90051000092,21009,Robotics,37,0,0,0,0,0,0,0,0
+Bristol Eastern High School,,90051000093,10156,Computer Programming - Other Language,35,0,0,0,0,0,0,0,0
+Bristol Eastern High School,,90051000093,21009,Robotics,27,0,0,0,0,0,0,0,0
+Brookfield High School,,90054000109,10157,AP Computer Science A,26,0,0,0,0,0,0,0,0
+Brookfield High School,,90054000109,21009,Robotics,14,0,0,0,0,0,0,0,0
+Canton High School,,90069000118,10152,Computer Programming,7,0,0,0,0,0,0,0,0
+Cheshire High School,,90075000123,10157,AP Computer Science A,63,0,0,0,0,0,0,0,0
+Cheshire High School,,90075000123,21009,Robotics,40,0,0,0,0,0,0,0,0
+The Morgan School,,90081000134,10158,AP Computer Science AB,28,0,0,0,0,0,0,0,0
+Bacon Academy,,90084000135,10152,Computer Programming,21,0,0,0,0,0,0,0,0
+Bacon Academy,,90084000135,10158,AP Computer Science AB,7,0,0,0,0,0,0,0,0
+Coventry High School,,90096000143,10155,Java Programming,0,0,0,0,0,0,0,0,0
+Coventry High School,,90096000143,21009,Robotics,10,0,0,0,0,0,0,0,0
+Cromwell High School,,90099000145,10152,Computer Programming,44,0,0,0,0,0,0,0,0
+Cromwell High School,,90099000145,21009,Robotics,44,0,0,0,0,0,0,0,0
+Danbury High School,,90102000150,10151,Business Programming,31,0,0,0,0,0,0,0,0
+Danbury High School,,90102000150,10152,Computer Programming,44,0,0,0,0,0,0,0,0
+Danbury High School,,90102000150,10155,Java Programming,13,0,0,0,0,0,0,0,0
+Danbury High School,,90102000150,10158,AP Computer Science AB,78,0,0,0,0,0,0,0,0
+Danbury High School,,90102000150,21009,Robotics,20,0,0,0,0,0,0,0,0
+Darien High School,,90105000164,10152,Computer Programming,70,0,0,0,0,0,0,0,0
+Darien High School,,90105000164,10157,AP Computer Science A,33,0,0,0,0,0,0,0,0
+Nathan Hale-Ray High School,,90120000185,10158,AP Computer Science AB,0,0,0,0,0,0,0,0,0
+Nathan Hale-Ray High School,,90120000185,10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+Nathan Hale-Ray High School,,90120000185,10206,Mobile Applications,27,0,0,0,0,0,0,0,0
+East Hampton High School,,90123000187,10157,AP Computer Science A,18,0,0,0,0,0,0,0,0
+East Hampton High School,,90123000187,21009,Robotics,47,0,0,0,0,0,0,0,0
+East Hartford High School,,90126000200,10152,Computer Programming,19,0,0,0,0,0,0,0,0
+East Hartford High School,,90126000200,10158,AP Computer Science AB,22,0,0,0,0,0,0,0,0
+East Hartford High School,,90126000200,21009,Robotics,44,0,0,0,0,0,0,0,0
+East Lyme High School,,90132000223,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+East Lyme High School,,90132000223,10157,AP Computer Science A,20,0,0,0,0,0,0,0,0
+East Windsor High School,,90135000229,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+Ellington High School,,90144000237,10152,Computer Programming,15,0,0,0,0,0,0,0,0
+Ellington High School,,90144000237,10157,AP Computer Science A,13,0,0,0,0,0,0,0,0
+Ellington High School,,90144000237,10160,Particular Topics in Computer Programming,43,0,0,0,0,0,0,0,0
+Ellington High School,,90144000237,21009,Robotics,56,0,0,0,0,0,0,0,0
+Enfield High School,,90147000243,10152,Computer Programming,9,0,0,0,0,0,0,0,0
+Enfield High School,,90147000243,10156,Computer Programming - Other Language,25,0,0,0,0,0,0,0,0
+Enfield High School,,90147000243,10158,AP Computer Science AB,7,0,0,0,0,0,0,0,0
+Enfield High School,,90147000243,21009,Robotics,13,0,0,0,0,0,0,0,0
+Fairfield Ludlowe High School,,90153001379,10152,Computer Programming,25,0,0,0,0,0,0,0,0
+Fairfield Ludlowe High School,,90153001379,10157,AP Computer Science A,21,0,0,0,0,0,0,0,0
+Fairfield Ludlowe High School,,90153001379,10160,Particular Topics in Computer Programming,28,0,0,0,0,0,0,0,0
+Fairfield Ludlowe High School,,90153001379,10199,Computer Programming - Other,9,0,0,0,0,0,0,0,0
+Fairfield Ludlowe High School,,90153001379,21009,Robotics,28,0,0,0,0,0,0,0,0
+Fairfield Warde High School,,90153000256,10152,Computer Programming,21,0,0,0,0,0,0,0,0
+Fairfield Warde High School,,90153000256,10157,AP Computer Science A,24,0,0,0,0,0,0,0,0
+Fairfield Warde High School,,90153000256,10160,Particular Topics in Computer Programming,60,0,0,0,0,0,0,0,0
+Fairfield Warde High School,,90153000256,10199,Computer Programming - Other,20,0,0,0,0,0,0,0,0
+Fairfield Warde High School,,90153000256,21009,Robotics,28,0,0,0,0,0,0,0,0
+Farmington High School,,90156000273,10158,AP Computer Science AB,70,0,0,0,0,0,0,0,0
+Farmington High School,,90156000273,10205,Computer Gaming and Design,16,0,0,0,0,0,0,0,0
+Glastonbury High School,,90162000283,10019,AP Computer Science Principles,40,0,0,0,0,0,0,0,0
+Glastonbury High School,,90162000283,10152,Computer Programming,29,0,0,0,0,0,0,0,0
+Glastonbury High School,,90162000283,10158,AP Computer Science AB,18,0,0,0,0,0,0,0,0
+Glastonbury High School,,90162000283,21009,Robotics,0,0,0,0,0,0,0,0,0
+Granby Memorial High School,,90168000289,10019,AP Computer Science Principles,20,0,0,0,0,0,0,0,0
+Granby Memorial High School,,90168000289,21009,Robotics,22,0,0,0,0,0,0,0,0
+Greenwich High School,,90171000300,10152,Computer Programming,96,0,0,0,0,0,0,0,0
+Greenwich High School,,90171000300,10155,Java Programming,0,0,0,0,0,0,0,0,0
+Greenwich High School,,90171000300,10157,AP Computer Science A,46,0,0,0,0,0,0,0,0
+Greenwich High School,,90171000300,10197,Computer Programming - Independent Study,0,0,0,0,0,0,0,0,0
+Greenwich High School,,90171000300,10199,Computer Programming - Other,0,0,0,0,0,0,0,0,0
+Griswold High School,,90174000311,10153,Visual Basic (VB) Programming,0,0,0,0,0,0,0,0,0
+Griswold High School,,90174000311,10155,Java Programming,0,0,0,0,0,0,0,0,0
+Griswold High School,,90174000311,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Griswold High School,,90174000311,10199,Computer Programming - Other,10,0,0,0,0,0,0,0,0
+Robert E. Fitch High School,,90177000318,10152,Computer Programming,27,0,0,0,0,0,0,0,0
+Robert E. Fitch High School,,90177000318,10158,AP Computer Science AB,10,0,0,0,0,0,0,0,0
+Guilford High School,,90180000332,10152,Computer Programming,13,0,0,0,0,0,0,0,0
+Guilford High School,,90180000332,10155,Java Programming,18,0,0,0,0,0,0,0,0
+Guilford High School,,90180000332,10157,AP Computer Science A,12,0,0,0,0,0,0,0,0
+Hamden High School,,90186000339,10152,Computer Programming,6,0,0,0,0,0,0,0,0
+Global Communications Academy,,90192001535,10152,Computer Programming,41,0,0,0,0,0,0,0,0
+Hartford Magnet Trinity College Academy,,90192001295,10152,Computer Programming,39,0,0,0,0,0,0,0,0
+Hartford Magnet Trinity College Academy,,90192001295,10157,AP Computer Science A,19,0,0,0,0,0,0,0,0
+Hartford Magnet Trinity College Academy,,90192001295,10199,Computer Programming - Other,0,0,0,0,0,0,0,0,0
+Hartford Magnet Trinity College Academy,,90192001295,10206,Mobile Applications,56,0,0,0,0,0,0,0,0
+Hartford Magnet Trinity College Academy,,90192001295,21009,Robotics,57,0,0,0,0,0,0,0,0
+Hartford Public High School,,90192001925,10152,Computer Programming,87,0,0,0,0,0,0,0,0
+Hartford Public High School,,90192001925,21009,Robotics,98,0,0,0,0,0,0,0,0
+Classical Magnet School,,90192001478,10152,Computer Programming,22,0,0,0,0,0,0,0,0
+Classical Magnet School,,90192001478,21009,Robotics,24,0,0,0,0,0,0,0,0
+Sport and Medical Sciences Academy,,90192001370,10157,AP Computer Science A,12,0,0,0,0,0,0,0,0
+Pathways Academy of Technology and Design,,90192001479,10152,Computer Programming,131,0,0,0,0,0,0,0,0
+Pathways Academy of Technology and Design,,90192001479,10157,AP Computer Science A,45,0,0,0,0,0,0,0,0
+Pathways Academy of Technology and Design,,90192001479,21009,Robotics,49,0,0,0,0,0,0,0,0
+University High School of Science and Engineering,,90192001381,10152,Computer Programming,9,0,0,0,0,0,0,0,0
+University High School of Science and Engineering,,90192001381,10160,Particular Topics in Computer Programming,0,0,0,0,0,0,0,0,0
+Capital Preparatory Magnet School,,90192001435,10152,Computer Programming,16,0,0,0,0,0,0,0,0
+Bulkeley High School,,90192001572,10152,Computer Programming,17,0,0,0,0,0,0,0,0
+Bulkeley High School,,90192001572,10157,AP Computer Science A,8,0,0,0,0,0,0,0,0
+Great Path Academy at MCC,,90192001403,10152,Computer Programming,97,0,0,0,0,0,0,0,0
+Great Path Academy at MCC,,90192001403,10157,AP Computer Science A,14,0,0,0,0,0,0,0,0
+Killingly High School,,90207000392,10152,Computer Programming,9,0,0,0,0,0,0,0,0
+Killingly High School,,90207000392,10160,Particular Topics in Computer Programming,8,0,0,0,0,0,0,0,0
+Killingly High School,,90207000392,21009,Robotics,7,0,0,0,0,0,0,0,0
+Lyman Memorial High School,,90213000396,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Lyman Memorial High School,,90213000396,10199,Computer Programming - Other,0,0,0,0,0,0,0,0,0
+Litchfield High School,,90222000406,10151,Business Programming,0,0,0,0,0,0,0,0,0
+Litchfield High School,,90222000406,10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+Daniel Hand High School,,90228000411,10152,Computer Programming,19,0,0,0,0,0,0,0,0
+Daniel Hand High School,,90228000411,10157,AP Computer Science A,13,0,0,0,0,0,0,0,0
+Daniel Hand High School,,90228000411,10199,Computer Programming - Other,14,0,0,0,0,0,0,0,0
+Daniel Hand High School,,90228000411,21009,Robotics,26,0,0,0,0,0,0,0,0
+Manchester High School,,90231000424,10019,AP Computer Science Principles,8,0,0,0,0,0,0,0,0
+Manchester High School,,90231000424,10152,Computer Programming,58,0,0,0,0,0,0,0,0
+Manchester High School,,90231000424,10154,C++ Programming,69,0,0,0,0,0,0,0,0
+Manchester High School,,90231000424,10199,Computer Programming - Other,16,0,0,0,0,0,0,0,0
+Manchester High School,,90231000424,21009,Robotics,52,0,0,0,0,0,0,0,0
+Francis T. Maloney High School,,90240000441,21009,Robotics,48,0,0,0,0,0,0,0,0
+Orville H. Platt High School,,90240000449,21009,Robotics,20,0,0,0,0,0,0,0,0
+Middletown High School,,90249000465,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Middletown High School,,90249000465,10157,AP Computer Science A,48,0,0,0,0,0,0,0,0
+Middletown High School,,90249000465,10158,AP Computer Science AB,22,0,0,0,0,0,0,0,0
+Jonathan Law High School,,90252000472,10012,Exploring Computer Science,67,0,0,0,0,0,0,0,0
+Jonathan Law High School,,90252000472,10152,Computer Programming,10,0,0,0,0,0,0,0,0
+Jonathan Law High School,,90252000472,21009,Robotics,32,0,0,0,0,0,0,0,0
+Joseph A. Foran High School,,90252000473,10012,Exploring Computer Science,43,0,0,0,0,0,0,0,0
+Joseph A. Foran High School,,90252000473,21009,Robotics,31,0,0,0,0,0,0,0,0
+Masuk High School,,90255000489,10019,AP Computer Science Principles,29,0,0,0,0,0,0,0,0
+Masuk High School,,90255000489,10152,Computer Programming,32,0,0,0,0,0,0,0,0
+Masuk High School,,90255000489,10158,AP Computer Science AB,19,0,0,0,0,0,0,0,0
+Masuk High School,,90255000489,21009,Robotics,11,0,0,0,0,0,0,0,0
+Montville High School,,90258000495,21009,Robotics,27,0,0,0,0,0,0,0,0
+Naugatuck High School,,90264000505,10012,Exploring Computer Science,18,0,0,0,0,0,0,0,0
+New Britain High School,,90267000521,10012,Exploring Computer Science,13,0,0,0,0,0,0,0,0
+New Britain High School,,90267000521,10157,AP Computer Science A,12,0,0,0,0,0,0,0,0
+New Canaan High School,,90270000531,10158,AP Computer Science AB,64,0,0,0,0,0,0,0,0
+New Canaan High School,,90270000531,10205,Computer Gaming and Design,20,0,0,0,0,0,0,0,0
+New Canaan High School,,90270000531,21009,Robotics,12,0,0,0,0,0,0,0,0
+New Fairfield High School,,90273000537,10157,AP Computer Science A,15,0,0,0,0,0,0,0,0
+New Fairfield High School,,90273000537,21009,Robotics,26,0,0,0,0,0,0,0,0
+Engineering - Science University Magnet School,,90279001519,10152,Computer Programming,67,0,0,0,0,0,0,0,0
+Engineering - Science University Magnet School,,90279001519,10158,AP Computer Science AB,11,0,0,0,0,0,0,0,0
+Engineering - Science University Magnet School,,90279001519,21009,Robotics,20,0,0,0,0,0,0,0,0
+Metropolitan Business Academy,,90279001485,10152,Computer Programming,16,0,0,0,0,0,0,0,0
+Metropolitan Business Academy,,90279001485,21009,Robotics,12,0,0,0,0,0,0,0,0
+Wilbur Cross High School,,90279000585,10158,AP Computer Science AB,0,0,0,0,0,0,0,0,0
+Wilbur Cross High School,,90279000585,10199,Computer Programming - Other,96,0,0,0,0,0,0,0,0
+James Hillhouse High School,,90279000563,10158,AP Computer Science AB,0,0,0,0,0,0,0,0,0
+High School In The Community,,90279000558,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Newington High School,,90288000610,10152,Computer Programming,47,0,0,0,0,0,0,0,0
+Newington High School,,90288000610,10156,Computer Programming - Other Language,41,0,0,0,0,0,0,0,0
+Newington High School,,90288000610,10158,AP Computer Science AB,0,0,0,0,0,0,0,0,0
+Newington High School,,90288000610,10197,Computer Programming - Independent Study,0,0,0,0,0,0,0,0,0
+Science and Technology Magnet School of Southeastern Connecticut,,90282001913,10152,Computer Programming,11,0,0,0,0,0,0,0,0
+New London High School,,90282000595,10152,Computer Programming,8,0,0,0,0,0,0,0,0
+New Milford High School,,90285000602,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+New Milford High School,,90285000602,10197,Computer Programming - Independent Study,0,0,0,0,0,0,0,0,0
+Newtown High School,,90291000615,10156,Computer Programming - Other Language,29,0,0,0,0,0,0,0,0
+Newtown High School,,90291000615,10158,AP Computer Science AB,20,0,0,0,0,0,0,0,0
+Newtown High School,,90291000615,10206,Mobile Applications,9,0,0,0,0,0,0,0,0
+North Haven High School,,90303000631,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+North Haven High School,,90303000631,10155,Java Programming,15,0,0,0,0,0,0,0,0
+North Haven High School,,90303000631,10158,AP Computer Science AB,14,0,0,0,0,0,0,0,0
+North Haven High School,,90303000631,21009,Robotics,0,0,0,0,0,0,0,0,0
+Wheeler High School,,90306000635,10152,Computer Programming,9,0,0,0,0,0,0,0,0
+Wheeler High School,,90306000635,10153,Visual Basic (VB) Programming,0,0,0,0,0,0,0,0,0
+Wheeler High School,,90306000635,21009,Robotics,10,0,0,0,0,0,0,0,0
+Center for Global Studies,,90309001917,10158,AP Computer Science AB,0,0,0,0,0,0,0,0,0
+P-TECH Norwalk,,90309001923,10206,Mobile Applications,11,0,0,0,0,0,0,0,0
+Norwalk High School,,90309000655,10158,AP Computer Science AB,16,0,0,0,0,0,0,0,0
+Brien McMahon High School,,90309000638,10158,AP Computer Science AB,36,0,0,0,0,0,0,0,0
+Old Saybrook Senior High School,,90318000684,10152,Computer Programming,12,0,0,0,0,0,0,0,0
+Old Saybrook Senior High School,,90318000684,10155,Java Programming,0,0,0,0,0,0,0,0,0
+Old Saybrook Senior High School,,90318000684,10197,Computer Programming - Independent Study,0,0,0,0,0,0,0,0,0
+Oxford High School,,90324001504,10158,AP Computer Science AB,16,0,0,0,0,0,0,0,0
+Plainfield High School,,90327000695,10160,Particular Topics in Computer Programming,14,0,0,0,0,0,0,0,0
+Plainfield High School,,90327000695,10199,Computer Programming - Other,64,0,0,0,0,0,0,0,0
+Terryville High School,,90333001199,10158,AP Computer Science AB,16,0,0,0,0,0,0,0,0
+Portland High School,,90339000712,10157,AP Computer Science A,12,0,0,0,0,0,0,0,0
+Putnam High School,,90348000719,21009,Robotics,13,0,0,0,0,0,0,0,0
+Ridgefield High School,,90381000779,10158,AP Computer Science AB,52,0,0,0,0,0,0,0,0
+Ridgefield High School,,90381000779,21009,Robotics,92,0,0,0,0,0,0,0,0
+Rocky Hill High School,,90384000785,21009,Robotics,57,0,0,0,0,0,0,0,0
+Seymour High School,,90399000793,21009,Robotics,39,0,0,0,0,0,0,0,0
+Shelton High School,,90405000806,10152,Computer Programming,14,0,0,0,0,0,0,0,0
+Shelton High School,,90405000806,10157,AP Computer Science A,16,0,0,0,0,0,0,0,0
+Simsbury High School,,90411000813,10019,AP Computer Science Principles,30,0,0,0,0,0,0,0,0
+Simsbury High School,,90411000813,10158,AP Computer Science AB,33,0,0,0,0,0,0,0,0
+Somers High School,,90414000819,21009,Robotics,13,0,0,0,0,0,0,0,0
+Southington High School,,90423000838,10153,Visual Basic (VB) Programming,32,0,0,0,0,0,0,0,0
+Southington High School,,90423000838,10157,AP Computer Science A,20,0,0,0,0,0,0,0,0
+Southington High School,,90423000838,10199,Computer Programming - Other,34,0,0,0,0,0,0,0,0
+South Windsor High School,,90417000826,10156,Computer Programming - Other Language,40,0,0,0,0,0,0,0,0
+South Windsor High School,,90417000826,10158,AP Computer Science AB,97,0,0,0,0,0,0,0,0
+South Windsor High School,,90417000826,10206,Mobile Applications,0,0,0,0,0,0,0,0,0
+South Windsor High School,,90417000826,21009,Robotics,29,0,0,0,0,0,0,0,0
+Stafford High School,,90429000845,10152,Computer Programming,10,0,0,0,0,0,0,0,0
+Stafford High School,,90429000845,21009,Robotics,7,0,0,0,0,0,0,0,0
+Stamford High School,,90432000867,10153,Visual Basic (VB) Programming,93,0,0,0,0,0,0,0,0
+Stamford High School,,90432000867,10158,AP Computer Science AB,33,0,0,0,0,0,0,0,0
+Westhill High School,,90432000871,10152,Computer Programming,69,0,0,0,0,0,0,0,0
+Westhill High School,,90432000871,10153,Visual Basic (VB) Programming,91,0,0,0,0,0,0,0,0
+Westhill High School,,90432000871,10156,Computer Programming - Other Language,28,0,0,0,0,0,0,0,0
+Westhill High School,,90432000871,10157,AP Computer Science A,30,0,0,0,0,0,0,0,0
+Westhill High School,,90432000871,10158,AP Computer Science AB,92,0,0,0,0,0,0,0,0
+Westhill High School,,90432000871,10159,IB Computing Studies,11,0,0,0,0,0,0,0,0
+Westhill High School,,90432000871,21009,Robotics,11,0,0,0,0,0,0,0,0
+"The Academy of Information, Technology & Engineering",,90432001468,10153,Visual Basic (VB) Programming,22,0,0,0,0,0,0,0,0
+"The Academy of Information, Technology & Engineering",,90432001468,10158,AP Computer Science AB,18,0,0,0,0,0,0,0,0
+Stonington High School,,90438000881,10152,Computer Programming,36,0,0,0,0,0,0,0,0
+Stonington High School,,90438000881,10158,AP Computer Science AB,0,0,0,0,0,0,0,0,0
+Stonington High School,,90438000881,10197,Computer Programming - Independent Study,0,0,0,0,0,0,0,0,0
+Stonington High School,,90438000881,21009,Robotics,26,0,0,0,0,0,0,0,0
+Stratford High School,,90444000897,10019,AP Computer Science Principles,23,0,0,0,0,0,0,0,0
+Stratford High School,,90444000897,10205,Computer Gaming and Design,60,0,0,0,0,0,0,0,0
+Bunnell High School,,90444000885,10019,AP Computer Science Principles,19,0,0,0,0,0,0,0,0
+Bunnell High School,,90444000885,10205,Computer Gaming and Design,59,0,0,0,0,0,0,0,0
+Suffield High School,,90447000904,10152,Computer Programming,16,0,0,0,0,0,0,0,0
+Suffield High School,,90447000904,10157,AP Computer Science A,13,0,0,0,0,0,0,0,0
+Suffield High School,,90447000904,10158,AP Computer Science AB,25,0,0,0,0,0,0,0,0
+Suffield High School,,90447000904,21009,Robotics,12,0,0,0,0,0,0,0,0
+Thomaston High School,,90450000908,10158,AP Computer Science AB,6,0,0,0,0,0,0,0,0
+Thomaston High School,,90450000908,21009,Robotics,17,0,0,0,0,0,0,0,0
+Tourtellotte Memorial High School,,90453000911,10152,Computer Programming,14,0,0,0,0,0,0,0,0
+Tourtellotte Memorial High School,,90453000911,10153,Visual Basic (VB) Programming,11,0,0,0,0,0,0,0,0
+Tourtellotte Memorial High School,,90453000911,10199,Computer Programming - Other,6,0,0,0,0,0,0,0,0
+Torrington High School,,90459000924,10152,Computer Programming,26,0,0,0,0,0,0,0,0
+Torrington High School,,90459000924,10158,AP Computer Science AB,16,0,0,0,0,0,0,0,0
+Trumbull High School,,90462000937,10157,AP Computer Science A,43,0,0,0,0,0,0,0,0
+Trumbull High School,,90462000937,10158,AP Computer Science AB,59,0,0,0,0,0,0,0,0
+Trumbull High School,,90462000937,21009,Robotics,34,0,0,0,0,0,0,0,0
+Rockville High School,,90468000943,10152,Computer Programming,13,0,0,0,0,0,0,0,0
+Rockville High School,,90468000943,10156,Computer Programming - Other Language,0,0,0,0,0,0,0,0,0
+Rockville High School,,90468000943,21009,Robotics,0,0,0,0,0,0,0,0,0
+Lyman Hall High School,,90474000955,10152,Computer Programming,17,0,0,0,0,0,0,0,0
+Lyman Hall High School,,90474000955,21009,Robotics,52,0,0,0,0,0,0,0,0
+Mark T. Sheehan High School,,90474000956,10152,Computer Programming,34,0,0,0,0,0,0,0,0
+Mark T. Sheehan High School,,90474000956,21009,Robotics,38,0,0,0,0,0,0,0,0
+Crosby High School,,90483000971,21009,Robotics,34,0,0,0,0,0,0,0,0
+Waterbury Career Academy,,90483001638,10152,Computer Programming,13,0,0,0,0,0,0,0,0
+Waterford High School,,90486001001,21009,Robotics,18,0,0,0,0,0,0,0,0
+Watertown High School,,90489001008,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Westbrook High School,,90498001044,10199,Computer Programming - Other,0,0,0,0,0,0,0,0,0
+Conard High School,,90492001013,10152,Computer Programming,23,0,0,0,0,0,0,0,0
+Conard High School,,90492001013,10157,AP Computer Science A,45,0,0,0,0,0,0,0,0
+Conard High School,,90492001013,10158,AP Computer Science AB,109,0,0,0,0,0,0,0,0
+Conard High School,,90492001013,10160,Particular Topics in Computer Programming,89,0,0,0,0,0,0,0,0
+Hall High School,,90492001015,10152,Computer Programming,22,0,0,0,0,0,0,0,0
+Hall High School,,90492001015,10157,AP Computer Science A,63,0,0,0,0,0,0,0,0
+Hall High School,,90492001015,10158,AP Computer Science AB,24,0,0,0,0,0,0,0,0
+Hall High School,,90492001015,10160,Particular Topics in Computer Programming,60,0,0,0,0,0,0,0,0
+Hall High School,,90492001015,21009,Robotics,31,0,0,0,0,0,0,0,0
+West Haven High School,,90495001041,10152,Computer Programming,23,0,0,0,0,0,0,0,0
+West Haven High School,,90495001041,10205,Computer Gaming and Design,117,0,0,0,0,0,0,0,0
+West Haven High School,,90495001041,10206,Mobile Applications,15,0,0,0,0,0,0,0,0
+Weston High School,,90501001046,10152,Computer Programming,53,0,0,0,0,0,0,0,0
+Staples High School,,90504001058,10054,Data Systems/Processing,0,0,0,0,0,0,0,0,0
+Staples High School,,90504001058,10152,Computer Programming,200,0,0,0,0,0,0,0,0
+Staples High School,,90504001058,10157,AP Computer Science A,78,0,0,0,0,0,0,0,0
+Staples High School,,90504001058,10206,Mobile Applications,14,0,0,0,0,0,0,0,0
+Wethersfield High School,,90507001068,10152,Computer Programming,44,0,0,0,0,0,0,0,0
+Wethersfield High School,,90507001068,10158,AP Computer Science AB,0,0,0,0,0,0,0,0,0
+Wethersfield High School,,90507001068,21009,Robotics,93,0,0,0,0,0,0,0,0
+Wilton High School,,90513001076,10157,AP Computer Science A,75,0,0,0,0,0,0,0,0
+Wilton High School,,90513001076,10160,Particular Topics in Computer Programming,28,0,0,0,0,0,0,0,0
+Wilton High School,,90513001076,10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+Windsor High School,,90522001096,10152,Computer Programming,19,0,0,0,0,0,0,0,0
+Windsor High School,,90522001096,10157,AP Computer Science A,12,0,0,0,0,0,0,0,0
+Windsor High School,,90522001096,21009,Robotics,33,0,0,0,0,0,0,0,0
+Windsor Locks High School,,90525001100,10158,AP Computer Science AB,0,0,0,0,0,0,0,0,0
+Windsor Locks High School,,90525001100,21009,Robotics,0,0,0,0,0,0,0,0,0
+Wolcott High School,,90528001107,21009,Robotics,10,0,0,0,0,0,0,0,0
+Valley Regional High School,,90363000768,10152,Computer Programming,39,0,0,0,0,0,0,0,0
+Valley Regional High School,,90363000768,10206,Mobile Applications,7,0,0,0,0,0,0,0,0
+Amity Regional High School,,90366000770,10158,AP Computer Science AB,66,0,0,0,0,0,0,0,0
+Amity Regional High School,,90366000770,21009,Robotics,13,0,0,0,0,0,0,0,0
+Wamogo Regional High School,,90351500725,10205,Computer Gaming and Design,8,0,0,0,0,0,0,0,0
+Northwestern Regional High School,,90372000771,10159,IB Computing Studies,14,0,0,0,0,0,0,0,0
+Northwestern Regional High School,,90372000771,21009,Robotics,7,0,0,0,0,0,0,0,0
+RHAM High School,,90375000772,10152,Computer Programming,31,0,0,0,0,0,0,0,0
+RHAM High School,,90375000772,10159,IB Computing Studies,26,0,0,0,0,0,0,0,0
+RHAM High School,,90375000772,10199,Computer Programming - Other,0,0,0,0,0,0,0,0,0
+RHAM High School,,90375000772,10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+Joel Barlow High School,,90378000773,10155,Java Programming,35,0,0,0,0,0,0,0,0
+Joel Barlow High School,,90378000773,10158,AP Computer Science AB,53,0,0,0,0,0,0,0,0
+Joel Barlow High School,,90378000773,10206,Mobile Applications,0,0,0,0,0,0,0,0,0
+Joel Barlow High School,,90378000773,21009,Robotics,0,0,0,0,0,0,0,0,0
+Lewis S. Mills High School,,90352000730,10156,Computer Programming - Other Language,0,0,0,0,0,0,0,0,0
+Lewis S. Mills High School,,90352000730,10158,AP Computer Science AB,0,0,0,0,0,0,0,0,0
+Parish Hill High School,,90357000765,21009,Robotics,9,0,0,0,0,0,0,0,0
+Shepaug Valley School,,90353001632,10152,Computer Programming,9,0,0,0,0,0,0,0,0
+Shepaug Valley School,,90353001632,10199,Computer Programming - Other,0,0,0,0,0,0,0,0,0
+Shepaug Valley School,,90353001632,21009,Robotics,0,0,0,0,0,0,0,0,0
+Coginchaug Regional High School,,90353500737,10012,Exploring Computer Science,58,0,0,0,0,0,0,0,0
+Coginchaug Regional High School,,90353500737,10152,Computer Programming,15,0,0,0,0,0,0,0,0
+Coginchaug Regional High School,,90353500737,10158,AP Computer Science AB,16,0,0,0,0,0,0,0,0
+Coginchaug Regional High School,,90353500737,10205,Computer Gaming and Design,12,0,0,0,0,0,0,0,0
+Nonnewaug High School,,90353600745,10152,Computer Programming,8,0,0,0,0,0,0,0,0
+Nonnewaug High School,,90353600745,10205,Computer Gaming and Design,33,0,0,0,0,0,0,0,0
+Pomperaug Regional High School,,90353700749,10157,AP Computer Science A,0,0,0,0,0,0,0,0,0
+Pomperaug Regional High School,,90353700749,10158,AP Computer Science AB,19,0,0,0,0,0,0,0,0
+Pomperaug Regional High School,,90353700749,10199,Computer Programming - Other,57,0,0,0,0,0,0,0,0
+Pomperaug Regional High School,,90353700749,10206,Mobile Applications,0,0,0,0,0,0,0,0,0
+Woodland Regional High School,,90353801356,10158,AP Computer Science AB,45,0,0,0,0,0,0,0,0
+Woodland Regional High School,,90353801356,10199,Computer Programming - Other,9,0,0,0,0,0,0,0,0
+Woodland Regional High School,,90353801356,21009,Robotics,18,0,0,0,0,0,0,0,0
+Haddam-Killingworth High School,,90353900759,10158,AP Computer Science AB,0,0,0,0,0,0,0,0,0
+Lyme-Old Lyme High School,,90354000763,10155,Java Programming,9,0,0,0,0,0,0,0,0
+Lyme-Old Lyme High School,,90354000763,10197,Computer Programming - Independent Study,0,0,0,0,0,0,0,0,0
+E. O. Smith High School,,90000501215,10012,Exploring Computer Science,0,0,0,0,0,0,0,0,0
+E. O. Smith High School,,90000501215,10155,Java Programming,44,0,0,0,0,0,0,0,0
+E. O. Smith High School,,90000501215,21009,Robotics,0,0,0,0,0,0,0,0,0
+Academy of Aerospace and Engineering,,90070001513,10152,Computer Programming,54,0,0,0,0,0,0,0,0
+Academy of Aerospace and Engineering,,90070001513,10158,AP Computer Science AB,53,0,0,0,0,0,0,0,0
+Academy of Aerospace and Engineering,,90070001513,10199,Computer Programming - Other,42,0,0,0,0,0,0,0,0
+Academy of Aerospace and Engineering,,90070001513,21009,Robotics,12,0,0,0,0,0,0,0,0
+Metropolitan Learning Center for Global and International Studies,,90070000880,10152,Computer Programming,7,0,0,0,0,0,0,0,0
+Academy of Science and Innovation,,90070001592,10152,Computer Programming,26,0,0,0,0,0,0,0,0
+Academy of Science and Innovation,,90070001592,10158,AP Computer Science AB,9,0,0,0,0,0,0,0,0
+Academy of Science and Innovation,,90070001592,10199,Computer Programming - Other,12,0,0,0,0,0,0,0,0
+Academy of Science and Innovation,,90070001592,21009,Robotics,54,0,0,0,0,0,0,0,0
+Marine Science Magnet High School,,90345001606,10158,AP Computer Science AB,34,0,0,0,0,0,0,0,0
+Three Rivers Middle College Magnet School,,90345001617,10152,Computer Programming,0,0,0,0,0,0,0,0,0
+Three Rivers Middle College Magnet School,,90345001617,10156,Computer Programming - Other Language,0,0,0,0,0,0,0,0,0
+Quinebaug Middle College,,90136001530,10152,Computer Programming,6,0,0,0,0,0,0,0,0
+Capital Preparatory Harbor School,,90022101803,10153,Visual Basic (VB) Programming,0,0,0,0,0,0,0,0,0
+Capital Preparatory Harbor School,,90022101803,10155,Java Programming,0,0,0,0,0,0,0,0,0
+Platt Technical High School,,90000201149,10205,Computer Gaming and Design,0,0,0,0,0,0,0,0,0
+Platt Technical High School,,90000201149,21009,Robotics,0,0,0,0,0,0,0,0,0
+Norwich Free Academy,,90537101221,10153,Visual Basic (VB) Programming,33,0,0,0,0,0,0,0,0
+Norwich Free Academy,,90537101221,10155,Java Programming,11,0,0,0,0,0,0,0,0
+Norwich Free Academy,,90537101221,10157,AP Computer Science A,6,0,0,0,0,0,0,0,0
+Norwich Free Academy,,90537101221,21009,Robotics,22,0,0,0,0,0,0,0,0
+The Gilbert School,,90537201222,10158,AP Computer Science AB,15,0,0,0,0,0,0,0,0
+The Woodstock Academy,,90537311223,10152,Computer Programming,34,0,0,0,0,0,0,0,0
+The Woodstock Academy,,90537311223,10159,IB Computing Studies,20,0,0,0,0,0,0,0,0
+The Woodstock Academy,,90537311223,10205,Computer Gaming and Design,40,0,0,0,0,0,0,0,0

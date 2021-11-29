@@ -34,11 +34,16 @@
     "shape_shift": "false",
     "name_suffix": "_2020",
     "parent_level_id": 14723,
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "\r\n",
-  "audit_log": "[{\"changed_at\":\"2017-09-28 05:25:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2017-09-28 05:25:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"contained_level_names\"],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 3,
+    "debugging": 3
+  }
 }]]></config>
   <blocks>
     <start_blocks>

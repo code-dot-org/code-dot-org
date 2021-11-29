@@ -43,7 +43,7 @@
     "expand_debugger": "false",
     "parent_level_id": 16220,
     "name_suffix": "_virtual",
-    "long_instructions": "# Getting Started: Set Animations\r\n\r\nYou should have already reviewed the planning guide for this project. A lot of the work to turn this project guide into a working game has already been started. Based on the project guide you're going to do the rest of this work.\r\n\r\n# Do This\r\n\r\nBefore we get started you'll want some better animations for each of your sprites.\r\n\r\n* In the Animation Tab are animations for each of your sprites. Go look at what they are.\r\n* In your code give each sprite its appropriate animation. **Use the ones provided for now** but later you'll be able to go change them.\r\n* Head to [Level 4](../../20/puzzle/4) if you need help remembering how to do this.",
+    "long_instructions": "# Getting Started: Set Animations\r\n\r\nYou should have already reviewed the planning guide for this project. A lot of the work to turn this project guide into a working game has already been started. Based on the project guide you're going to do the rest of this work.\r\n\r\n# Do This\r\n\r\nBefore we get started you'll want some better animations for each of your sprites.\r\n\r\n* In the Animation Tab are animations for each of your sprites. Go look at what they are.\r\n* In your code give each sprite its appropriate animation. **Use the ones provided for now** but later you'll be able to go change them.\r\n* Head to [Level 4](../../20/levels/4) if you need help remembering how to do this.",
     "reference_links": [
       "/docs/concepts/game-lab/sprites/",
       "/docs/concepts/game-lab/animation-tab/",

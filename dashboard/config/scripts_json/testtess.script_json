@@ -1,0 +1,121 @@
+{
+  "script": {
+    "name": "testtess",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true,
+      "use_legacy_lesson_plans": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-11-22 17:08:55 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "testtess"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lesson group",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "lesson group display name"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lesson group",
+        "script.name": "testtess"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "new lesson",
+      "name": "lesson display name",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "testtess"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "new lesson 1",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lesson group",
+        "script.name": "testtess"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "c811c038-b5ac-497d-81cb-f5599061941f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c811c038-b5ac-497d-81cb-f5599061941f",
+        "lesson.key": "new lesson",
+        "lesson_group.key": "lesson group",
+        "script.name": "testtess"
+      }
+    }
+  ],
+  "activity_sections": [
+
+  ],
+  "script_levels": [
+
+  ],
+  "levels_script_levels": [
+
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

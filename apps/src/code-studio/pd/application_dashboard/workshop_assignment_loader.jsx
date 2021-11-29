@@ -14,13 +14,6 @@ const SUBJECT_NAME_MAP = {
 const SUBJECT_TYPES = Object.keys(SUBJECT_NAME_MAP);
 export {SUBJECT_TYPES};
 
-const styles = {
-  error: {
-    color: color.red,
-    display: 'inline-block'
-  }
-};
-
 export default class WorkshopAssignmentLoader extends React.Component {
   static propTypes = {
     courseName: PropTypes.string.isRequired,
@@ -34,7 +27,7 @@ export default class WorkshopAssignmentLoader extends React.Component {
     loading: true
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.load();
   }
 
@@ -139,3 +132,10 @@ export default class WorkshopAssignmentLoader extends React.Component {
     }
   }
 }
+
+const styles = {
+  error: {
+    color: color.red,
+    display: 'inline-block'
+  }
+};

@@ -25,4 +25,20 @@ class Census::StateCsOfferingTest < ActiveSupport::TestCase
     offering = build :state_cs_offering, :with_invalid_school_year
     refute offering.valid?
   end
+
+  test "Deconstructing the object key succeeds" do
+    object_key = "state_cs_offerings/DE/2020-2021.test"
+    state_code, school_year, update, extension = Census::StateCsOffering.deconstruct_object_key(object_key)
+    assert state_code == 'DE'
+    assert school_year == 2020
+    assert update == 1
+    assert extension == 'test'
+
+    object_key = "state_cs_offerings/DE/2020-2021.2.test2"
+    state_code, school_year, update, extension = Census::StateCsOffering.deconstruct_object_key(object_key)
+    assert state_code == 'DE'
+    assert school_year == 2020
+    assert update == 2
+    assert extension == 'test2'
+  end
 end

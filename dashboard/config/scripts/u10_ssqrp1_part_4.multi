@@ -13,3 +13,18 @@ wrong 'A popular, large grocery store.'
 markdown <<MARKDOWN
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** _GroceryGrabbr_ only pays stores for customers who use the app and check out with over MARKDOWN00 in groceries. A small, local store is least-likely to have this type of shopper because of its smaller inventory and number of overall customers.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* IOC-1.B: Explain how a computing innovation can have an impact beyond its intended purpose.
+* IOC-1.B.1: Computing innovations can be used in ways that their creators had not originally intended- * The World Wide Web was originally intended only for rapid and easy exchange of information within the scientific community. * Targeted advertising is used to help businesses, but it can be misused at both individual and aggregate levels. * Machine learning and data mining have enabled innovation in medicine, business, and science, but information discovered in this way has also been used to discriminate against groups of individuals.
+
+
+:::
+
+
+MARKDOWN

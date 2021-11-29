@@ -59,7 +59,7 @@ Review with students the Getting Loopy activity:
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Maze: Loops](http://learn.code.org/s/course1/stage/13/puzzle/1)
+### <a name="Activity"></a> [Maze: Loops](http://learn.code.org/s/course1/lessons/13/levels/1)
 
 As students work through the puzzles, see if they can figure out how many fewer blocks they use with a loop vs. not using a loop.
 

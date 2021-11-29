@@ -64,8 +64,8 @@ Feature: Hamburger dropdown
 
   Scenario: Student viewing hamburger dropdown and help button in English on desktop on level
     Given I create a student named "Sally Student"
-    And I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
-    Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
+    And I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1"
+    Then I wait until I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1"
     Then I wait to see "#hamburger-icon"
     Then I wait to see "#help-icon"
     And I click selector "#hamburger-icon"
@@ -84,8 +84,8 @@ Feature: Hamburger dropdown
 
   Scenario: Teacher viewing hamburger dropdown and help button in English on desktop on level
     Given I create a teacher named "Tessa Teacher"
-    And I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
-    Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
+    And I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1"
+    Then I wait until I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1"
     Then I wait to see "#hamburger-icon"
     Then I wait to see "#help-icon"
     And I click selector "#hamburger-icon"
@@ -144,8 +144,8 @@ Scenario: Teacher viewing help dropdown in Spanish on desktop
 
 Scenario: Student viewing help dropdown in Spanish on desktop on level
   Given I create a student named "Eva Estudiante"
-  Given I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1/lang/es"
-  Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1/lang/es"
+  Then I wait until I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1"
   Then I wait to see "#help-icon"
   Then I click selector "#help-icon"
   Then I wait to see "#help-contents"
@@ -156,8 +156,8 @@ Scenario: Student viewing help dropdown in Spanish on desktop on level
 
 Scenario: Teacher viewing help dropdown in Spanish on desktop on level
   Given I create a teacher named "Pabla Profesora"
-  Given I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1/lang/es"
-  Then I wait until I am on "http://studio.code.org/s/allthethings/stage/1/puzzle/1"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1/lang/es"
+  Then I wait until I am on "http://studio.code.org/s/allthethings/lessons/1/levels/1"
   Then I wait to see "#help-icon"
   Then I click selector "#help-icon"
   Then I wait to see "#help-contents"

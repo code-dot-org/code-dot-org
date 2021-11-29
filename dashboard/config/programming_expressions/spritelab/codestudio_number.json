@@ -1,0 +1,7 @@
+{
+  "category": "Math",
+  "config": {
+    "docFunc": "codestudio_number",
+    "func": "math_number"
+  }
+}

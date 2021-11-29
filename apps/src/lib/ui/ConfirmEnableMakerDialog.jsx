@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import Portal from 'react-portal';
+import {Portal} from 'react-portal';
 import msg from '@cdo/locale';
 import color from '../../util/color';
 import Dialog, {
@@ -113,9 +113,11 @@ export default class ConfirmEnableMakerDialogPortal extends Component {
   static propTypes = ConfirmEnableMakerDialog.propTypes;
   render() {
     return (
-      <Portal isOpened={this.props.isOpen}>
-        <ConfirmEnableMakerDialog {...this.props} />
-      </Portal>
+      this.props.isOpen && (
+        <Portal>
+          <ConfirmEnableMakerDialog {...this.props} />
+        </Portal>
+      )
     );
   }
 }

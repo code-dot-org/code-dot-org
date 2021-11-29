@@ -101,7 +101,7 @@ Invite a [local volunteer]({{ urls/volunteer_local }}) to inspire your students 
 - Το αρχικό βίντεο του Code.org, με τον Bill Gates, τον Mark Zuckerberg και τον αστέρι του NBA Chris Bosh. (Υπάρχουν εκδόσεις του [1 λεπτού](https://www.youtube.com/watch?v=qYZF6oIZtfc), των [5 λεπτών](https://www.youtube.com/watch?v=nKIu9yen5nc), και των [9 λεπτών](https://www.youtube.com/watch?v=dU1xS07N-FA))
 - Αναζητήστε έμπνευση και σε άλλους [πόρους](%= codeorg_url('/inspire') %) και [βίντεο](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-It’s okay if both you and your students are brand new to computer science. Here are some ideas to introduce your Hour of Code activity:
+Δεν υπάρχει πρόβλημα αν τόσο εσείς όσο και οι μαθητές σας είστε καινούργιοι στην επιστήμη της πληροφορικής. Εδώ θα βρείτε μερικές ιδέες για να εισάγάγετε τη δραστηριότητά σας:
 
 - Εξηγήστε τους τρόπους που η τεχνολογία επηρεάζει τις ζωές μας, με παραδείγματα που θα προκαλέσουν το ενδιαφέρον αγοριών και κοριτσιών (μιλήστε για το διάσωση ζωών, τη βοήθεια σε ανθρώπους, τη σύνδεση ατόμων κτλ).
 - Ως τάξη, φτιάξτε μια λίστα με πράγματα που χρησιμοποιούν κώδικα στην καθημερινή ζωή.
@@ -115,7 +115,7 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 Κατευθύνετε τους μαθητές σε αυτήν την δραστηριότητα
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- Γράψτε τον σύνδεσμο του μαθήματος-οδηγού στον πίνακα. Τον σύνδεσμο θα τον βρείτε στις [πληροφορίες για το μάθημα-οδηγό της επιλογής σας]({{ urls/learn }}) κάτω από τον αριθμό των συμμετεχόντων.
 
 Όταν οι μαθητές συναντήσουν δυσκολίες, δεν πειράζει να απαντήσετε:
 

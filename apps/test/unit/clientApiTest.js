@@ -1,5 +1,5 @@
 import sinon from 'sinon';
-import {expect, assert} from '../util/deprecatedChai';
+import {expect, assert} from '../util/reconfiguredChai';
 const project = require('@cdo/apps/code-studio/initApp/project');
 var clientApi = require('@cdo/apps/clientApi');
 

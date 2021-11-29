@@ -1,0 +1,7 @@
+name 'CSD U1 Test define problem_2021'
+title 'Question 4'
+question 'Two classes want to improve their school. One class wants to shorten the amount of time students wait in the lunch line. Another class wants to increase school spirit. Which problem is better defined?'
+right 'Lunch line, because it is clear how you would know that people are waiting less time, but harder to know what school spirit would look like'
+wrong 'Lunch line, because it is easier to create rules around standing in line, but harder to make rules about school spirit'
+wrong 'School spirit, because you can always have more school spirit, but the lunch line might already be as short as possible'
+wrong 'School spirit, because it is a better thing for students to do, but the adults should be in charge of the lunch line'

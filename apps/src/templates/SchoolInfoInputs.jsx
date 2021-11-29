@@ -22,7 +22,6 @@ export default class SchoolInfoInputs extends Component {
     onSchoolTypeChange: PropTypes.func.isRequired,
     onSchoolChange: PropTypes.func.isRequired,
     onSchoolNotFoundChange: PropTypes.func.isRequired,
-    mapboxAccessToken: PropTypes.string,
     country: PropTypes.string,
     schoolType: PropTypes.string,
     ncesSchoolId: PropTypes.string,
@@ -177,7 +176,6 @@ export default class SchoolInfoInputs extends Component {
             showRequiredIndicators={this.props.showRequiredIndicator}
             schoolNameLabel={schoolNameLabel}
             useLocationSearch={this.props.useLocationSearch}
-            mapboxAccessToken={this.props.mapboxAccessToken}
           />
         )}
       </div>

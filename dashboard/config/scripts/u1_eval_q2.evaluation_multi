@@ -1,5 +1,5 @@
 name 'U1 eval q2'
 question ‘Are you comfortable with the underlying concepts behind how non-decimal number systems work?’
 answer ‘Yes!’
-answer ‘I know how to convert between number systems, but I don\’t know about the underlying rules of how they work’, weight: 5, stage_name: 'Lessons 4 - 6: Encoding and Sending Numbers'
-answer ‘I have no idea what you\’re talking about!’, weight: 5, stage_name: 'Lessons 4 - 6: Encoding and Sending Numbers'
+answer ‘I know how to convert between number systems, but I don\’t know about the underlying rules of how they work’, weight: 5, lesson_name: 'Lessons 4 - 6: Encoding and Sending Numbers'
+answer ‘I have no idea what you\’re talking about!’, weight: 5, lesson_name: 'Lessons 4 - 6: Encoding and Sending Numbers'

@@ -5,7 +5,7 @@
   "level_num": "custom",
   "user_id": 155,
   "properties": {
-    "long_instructions": "# Adding HTML and CSS\r\n\r\nNow that you have the files set up bring over your code for your Guinness Book of World Records page.\r\n\r\n## Copy Code\r\n* Go to <a href=\"https://studio.code.org/s/csd2-2019/stage/7/puzzle/8\" target=\"_blank\">this level</a> and copy all the code from the HTML file. Paste the code into the HTML file you just created.\r\n* Copy the CSS code from the style sheet at <a href=\"https://studio.code.org/s/csd2-2019/stage/7/puzzle/8\" target=\"_blank\">this level</a> and copy it into the CSS file you just created.",
+    "long_instructions": "# Adding HTML and CSS\r\n\r\nNow that you have the files set up bring over your code for your Guinness Book of World Records page.\r\n\r\n## Copy Code\r\n* Go to <a href=\"https://studio.code.org/s/csd2-2019/lessons/7/levels/8\" target=\"_blank\" rel=\"noopener noreferrer\">this level</a> and copy all the code from the HTML file. Paste the code into the HTML file you just created.\r\n* Copy the CSS code from the style sheet at <a href=\"https://studio.code.org/s/csd2-2019/lessons/7/levels/8\" target=\"_blank\" rel=\"noopener noreferrer\">this level</a> and copy it into the CSS file you just created.",
     "project_template_level_name": "CSDU2 - Odd Stuff Site Template",
     "instructions_important": "false",
     "encrypted_examples": "wO5J6MOMr38O+NiTnCyK8xV4lz9oz3evfEFrp+hYZ9aD9PCYc5WXgwA5QIgc\nfkTmL1H8fJeXmRa5Vw+P+mgAJQ==\n",

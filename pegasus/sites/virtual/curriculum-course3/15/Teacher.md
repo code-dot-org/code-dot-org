@@ -62,7 +62,7 @@ Students will have the opportunity to share their final product with a link. Thi
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Bounce](http://learn.code.org/s/course3/stage/15/puzzle/1)
+### <a name="Activity"></a> [Bounce](http://learn.code.org/s/course3/lessons/15/levels/1)
 
 In the final stage of this lesson students are able to tweak their game to make it unique - encourage them to see how different they can make each game within the constraints provided.
 

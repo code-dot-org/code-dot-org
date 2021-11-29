@@ -5,46 +5,13 @@ import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import LegacyDialog from '../../code-studio/LegacyDialog';
 
-const styles = {
-  textLink: {
-    display: 'inline-block',
-    margin: 8,
-    fontWeight: 'bold',
-    fontSize: 16,
-    lineHeight: '25px',
-    cursor: 'pointer',
-    maxWidth: '90%'
-  },
-  mapThumbnail: {
-    backgroundColor: color.teal
-  },
-  commonThumbnail: {
-    borderRadius: 5,
-    paddingLeft: 26,
-    paddingRight: 26,
-    paddingTop: 16,
-    paddingBottom: 9
-  },
-  commonIcon: {
-    fontSize: 22
-  },
-  mapIcon: {
-    color: color.white
-  },
-  resourceIcon: {
-    color: color.teal
-  },
-  resourceStyle: {
-    margin: 8
-  }
-};
-
 class ResourceLink extends React.Component {
   static propTypes = {
     highlight: PropTypes.bool,
     icon: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired,
-    reference: PropTypes.string.isRequired
+    reference: PropTypes.string.isRequired,
+    openReferenceInNewTab: PropTypes.bool
   };
 
   state = {
@@ -56,8 +23,12 @@ class ResourceLink extends React.Component {
       // Don't open modal, just open link in new tab/window
       return;
     }
-    // Don't open link, just open modal.
     e.preventDefault();
+    if (!!this.props.openReferenceInNewTab) {
+      window.open(this.props.reference, '_blank', 'noopener,noreferrer');
+      return;
+    }
+    // Don't open link, just open modal.
     var dialog = new LegacyDialog({
       body: $('<iframe>')
         .addClass('instructions-container')
@@ -105,5 +76,39 @@ class ResourceLink extends React.Component {
     );
   }
 }
+
+const styles = {
+  textLink: {
+    display: 'inline-block',
+    margin: 8,
+    fontWeight: 'bold',
+    fontSize: 16,
+    lineHeight: '25px',
+    cursor: 'pointer',
+    maxWidth: '90%'
+  },
+  mapThumbnail: {
+    backgroundColor: color.teal
+  },
+  commonThumbnail: {
+    borderRadius: 5,
+    paddingLeft: 26,
+    paddingRight: 26,
+    paddingTop: 16,
+    paddingBottom: 9
+  },
+  commonIcon: {
+    fontSize: 22
+  },
+  mapIcon: {
+    color: color.white
+  },
+  resourceIcon: {
+    color: color.teal
+  },
+  resourceStyle: {
+    margin: 8
+  }
+};
 
 export default Radium(ResourceLink);

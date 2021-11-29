@@ -1,0 +1,5 @@
+{
+  "func": "ifBlock",
+  "block": "if (__) {\n  __;\n}",
+  "category": "Control"
+}

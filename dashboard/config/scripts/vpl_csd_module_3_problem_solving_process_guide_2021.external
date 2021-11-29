@@ -1,0 +1,45 @@
+name 'VPL - CSD - Module 3 - Problem Solving Process Guide_2021'
+editor_experiment ''
+display_name 'U4L1 Investigation'
+
+title 'Lesson Investigation Session 1'
+markdown <<MARKDOWN
+# Problem Solving Process
+**Estimated time: 5 minutes**
+
+**Directions:** Read the following taken directly from page 62 of the <a href="https://docs.google.com/document/d/1-O6o5yQ4I1dk0n4Qzh86quXGBtzDDtyJ3Skr6RpcpO4/preview" target="_blank">CS Discoveries curriculum guide.</a>  
+
+### Using resources as problem solving
+In computer science, using resources is a key part of problem solving, and students can use a version of the four step Problem Solving Process as a framework for using resources.  Just as in other forms of problem solving, many students may jump to the “Try” part of the framework and begin looking through documentation before really understanding what they are looking for.  Remind them that all parts of the process are important, and that ignoring the other three steps will actually take more time in the long run.
+
+## Define - Describe what you need to know
+Before looking for information, students should first know what they are looking for.  Most likely, they are stuck in a programming problem, but they may not understand exactly what sort of information might help them.   Students can use the following questions as prompts:
+
+* What do I need to know?
+* What is the problem I am trying to solve?
+* What does success look like?
+
+In some cases, the answer to this step might be very specific (“I need to know how to make my text green.”), but in other cases it might be more general or hard to define.  Encourage students to have a question that they want answered before moving to the next step.  You may need to support them in articulating their question or understanding what makes a question specific enough to be useful.
+
+## Prepare - Decide where to look for the information
+Some questions, such as those around how a particular Game Lab block or HTML tag is used, will easily lead to a particular piece of documentation. Others, such as more general questions on how to accomplish a particular task, might not be as obvious.  Students can use the following questions to help them decide where they can look for help:
+
+* Where can I find answers to this sort of problem (code documentation, help and tips pages)?
+* What has helped me solve similar problems in the past?
+* What resources are available for this programming environment?
+
+## Try - Read the resources
+As students read over the resources, they should compare them to the question that they came up with, and try to relate the information that they are reading to their own problem.  They should be actively searching for answers, rather than reading for general comprehension.
+
+As students are reading the resource, they should also be working to use what they have learned.  This means that they may read a bit, change their code and test it, then repeat the process depending on the results of their code.
+
+## Reflect - Think about what worked
+After using the resources, students should think about what was helpful and what was not.  Some questions they may ask include:
+
+* Did that answer the question?
+* Did the question I asked and information I looked for help me solve my problem?
+* What works well for me? Videos? Examples? Step by step instructions?
+* What will I do if I have a similar question in the future?
+
+Encourage students to think about how their skills at using resources are improving over time.  Do they know what information they should look for?  Do they know where to find it?  Do they know how to use it?
+MARKDOWN

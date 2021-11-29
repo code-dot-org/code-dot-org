@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Radium from 'radium';
 import color from '@cdo/apps/util/color';
 import Button from '@cdo/apps/templates/Button';
+import onClickOutside from 'react-onclickoutside';
 
 const styles = {
   main: {
@@ -45,12 +45,13 @@ const styles = {
  * A button that drops down to a set of clickable links, and closes itself if
  * you click on the button, or outside of the dropdown.
  */
-class DropdownButton extends Component {
+export const DropdownButton = class DropdownButtonComponent extends Component {
   static propTypes = {
     text: PropTypes.string.isRequired,
     color: PropTypes.oneOf(Object.values(Button.ButtonColor)).isRequired,
     size: PropTypes.string,
     onClick: PropTypes.func,
+    className: PropTypes.string,
     children: props => {
       React.Children.map(props.children, child => {
         if (child.type !== 'a') {
@@ -67,25 +68,15 @@ class DropdownButton extends Component {
     dropdownOpen: false
   };
 
-  onComponentDidUnmount() {
-    document.removeEventListener('click', this.onClickDocument, false);
-  }
-
   expandDropdown = () => {
-    document.addEventListener('click', this.onClickDocument, false);
     this.setState({dropdownOpen: true});
   };
 
   collapseDropdown = () => {
-    document.removeEventListener('click', this.onClickDocument, false);
     this.setState({dropdownOpen: false});
   };
 
-  onClickDocument = event => {
-    // We're only concerned with clicks outside of ourselves
-    if (ReactDOM.findDOMNode(this).contains(event.target)) {
-      return;
-    }
+  handleClickOutside = () => {
     if (this.state.dropdownOpen) {
       this.collapseDropdown();
     }
@@ -132,10 +123,11 @@ class DropdownButton extends Component {
           icon={dropdownOpen ? 'caret-up' : 'caret-down'}
           iconStyle={styles.icon}
           color={color}
+          className={this.props.className}
         />
 
         {dropdownOpen && (
-          <div style={styles.dropdown}>
+          <div style={styles.dropdown} ref={ref => (this.dropdownList = ref)}>
             {this.props.children.map((child, index) => (
               <a
                 {...child.props}
@@ -153,6 +145,6 @@ class DropdownButton extends Component {
       </div>
     );
   }
-}
+};
 
-export default Radium(DropdownButton);
+export default onClickOutside(Radium(DropdownButton));

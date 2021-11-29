@@ -1,0 +1,15 @@
+{
+  "func": "setAnimation",
+  "category": "Sprites",
+  "paletteParams": [
+    {
+      "name": "label"
+    }
+  ],
+  "params": [
+    "\"animation_1\""
+  ],
+  "dropdown": {
+  },
+  "modeOptionName": "*.setAnimation"
+}

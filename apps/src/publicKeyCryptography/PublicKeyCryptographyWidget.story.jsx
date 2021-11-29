@@ -10,6 +10,7 @@ import '@cdo/apps/../style/publicKeyCryptography/publicKeyCryptography.scss';
 export default storybook => {
   storybook
     .storiesOf('Public Key Cryptography Widget', module)
+    .withReduxStore()
     .add('Characters view', () => <PublicKeyCryptographyWidget />)
     .add(`Alice's Instructions`, () => <AliceInstructions />)
     .add(`Eve's Instructions`, () => <EveInstructions />)

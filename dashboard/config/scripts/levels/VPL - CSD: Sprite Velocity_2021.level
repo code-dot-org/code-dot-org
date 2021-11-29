@@ -1,0 +1,22 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2021-05-28T01:04:15.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "video_key": "csd_gamelab_velocity",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "display_name": "Video: Velocity",
+    "parent_level_id": 24353,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "long_instructions": "**Note:** Students will watch this video as a part of Unit 3 Lesson 18. \r\n\r\n## Movement with Velocity\r\n\r\nThe velocity blocks (velocityX and velocityY), tell sprites how fast to move in a particular direction, just as the counter pattern did before. By hiding the counter pattern code inside a block, you can build even more complex programs.\r\n\r\nWatch the video below to learn more about velocity and how your students will use velocity in Game Lab. "
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-06-15 23:42:06 +0000\",\"changed\":[\"display_name\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2019-03-18 23:49:45 +0000\",\"changed\":[],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2020-07-17 15:24:43 +0000\",\"changed\":[],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-17 15:29:35 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-17 15:31:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"},{\"changed_at\":\"2020-07-24 21:07:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":962,\"changed_by_email\":\"jess@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

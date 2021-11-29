@@ -1,178 +1,178 @@
 {
-  "https://studio.code.org/s/csd4-2018/stage/1/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/1/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd4-2018/stage/2/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/2/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd4-2018/stage/3/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/3/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd4-2018/stage/4/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/4/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd4-2018/stage/5/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/5/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd4-2018/stage/6/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/6/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd4-2018/stage/7/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/7/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd4-2018/stage/7/puzzle/2": {
+  "https://studio.code.org/s/csd4-2018/lessons/7/levels/2": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
     }
   },
-  "https://studio.code.org/s/csd4-2018/stage/8/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/8/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd4-2018/stage/9/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/9/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd4-2018/stage/10/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/10/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd4-2018/stage/10/puzzle/2": {
+  "https://studio.code.org/s/csd4-2018/lessons/10/levels/2": {
     "dsls": {
       "markdown": "# Example App Types\n\nIn the following levels you see several different example apps. They will give you an idea of what the UI (User Interface) could look like for apps with different goals.\n\nFor each example app:\n\n* Click through the example to get a feel for how it functions.\n* In your activity guide, make a note of any features or UI elements you find and what they are used for.\n* Discuss with your groups how that app and any of its UI features could be applied to your chosen topic.\n\n# A Note About Functionality\n\nThese apps are _prototypes_; they allow a user to interact with the design without worrying about the underlying functionality. For example, when you take use the Quiz App, each question will always respond the same way, regardless of which answer you choose.\n\nBy focusing on an interactive prototype first you can learn a lot about how users might use your app before investing too much energy in making it actually work.\n",
       "teacher_markdown": "In this activity students will be introduced to a small number of relatively constrained apps:\n\n* Quiz Me\n* Decision Maker\n* List Manager\n* Crowdsourcing\n\nFor younger or more inexperienced students you may want to restrict them to _just_ these app types. We've specifically chosen these examples because they are relatively easy to prototype in App Lab.\n\nIf you allow students to stray from these, be aware that some types of apps are more difficult to create in App Lab and may require more creativity in developing a prototype. For example, App Lab has no mapping functionality, so if students wanted to create a mapping app, they would need to find or create a static image of a map to use in their app.\n"
     }
   },
-  "https://studio.code.org/s/csd4-2018/stage/10/puzzle/3": {
+  "https://studio.code.org/s/csd4-2018/lessons/10/levels/3": {
     "long_instructions": "# Quiz Me\n\nA quiz app can be used to teach, or help reinforce, information important to your chosen topic.\n\nAt its most basic, a quiz app is composed of a screen for each question with two or more buttons for multiple choice answers. Each button links to a page that either confirms that you were correct, or gives you information about why you were were wrong.\n\nMore advanced quiz apps could include features such as:\n\n-   Different types of questions (such as matching, free response, or even interactive games)\n-   Randomizing the order of questions\n-   Changing the questions based on how we'll you're doing\n-   Providing a final score\n-   Incorporating study material\n\n# Functionality Missing from this Prototype\n\n-   Questions aren't actually checked for correctness"
   },
-  "https://studio.code.org/s/csd4-2018/stage/10/puzzle/4": {
+  "https://studio.code.org/s/csd4-2018/lessons/10/levels/4": {
     "long_instructions": "# Decision Maker\n\nSimilar to the quiz app, a decision tree app asks the user a series of questions. The primary difference between the two is that a decision tree doesn't check for right or wrong answers, but instead attempts to give the user a suggestion or help them make a decision based on their answers.\n\nThis simple decision maker asks only three questions,  but more advanced ones actually take the form of a tree as seen below:\n\n[][0]\n\nDepending on the user's answer to each question, they're given a different page for the next question. This allows the app to gradually narrow down the decision one question at a time. This type of app can be really useful to help users understand complex processes - for example, you might introduce a recycling program by using a decision tree app to help users figure out which bin to sort items into - first asking what material it's made out of, then whether it is clean or not, and so on.\n\n# Functionality Missing from this Prototype\n\n-   Question buttons don't direct you to different screens\n-   The final screen doesn't give you a recommended decision"
   },
-  "https://studio.code.org/s/csd4-2018/stage/10/puzzle/5": {
+  "https://studio.code.org/s/csd4-2018/lessons/10/levels/5": {
     "long_instructions": "# List Manager\n\nThe list manager app allows user to keep track of the state of information and can be modified to serve many different purposes, such as checking in / out loaned items, tracking personal To Dos, or keeping track of where things are in a multi-step process.\n\nWhile this example focuses on a single list, more sophisticated list apps could allow the user to create multiple lists, or even move items between lists. This app also only keeps track of the name of an item and whether or not it is \"Done,\" but it could be extended to track and organize any amount of information about the list items.\n\n# Functionality Missing from this Prototype\n\n-   Delete buttons don't actually delete items from the list\n-   Add screen doesn't actually add an item to the list"
   },
-  "https://studio.code.org/s/csd4-2018/stage/10/puzzle/6": {
+  "https://studio.code.org/s/csd4-2018/lessons/10/levels/6": {
     "long_instructions": "# Crowdsourcing\n\nCrowdsourcing apps allow multiple users to submit content for everyone to use (the _source_ of content is the _crowd_). This app is very similar to the list app, with the main difference being that the list app assumes a single user while this app allows all users to add to the same list and \"like\" submissions.\n\nThis example uses a list of crowdsourced information for simplicity, but you could display any kind of information in many different formats. A crowdsourcing app could allow users to submit locations for display on a map, images to go into a gallery, or any number of other types of information.\n\n# Functionality Missing from this Prototype\n\n-   User's can't create accounts or profiles\n-   Submitted things aren't added to the list\n-   Clicking on the \"like\" icons don't change their state"
   },
-  "https://studio.code.org/s/csd4-2018/stage/11/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/11/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd4-2018/stage/12/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/12/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd4-2018/stage/12/puzzle/2": {
+  "https://studio.code.org/s/csd4-2018/lessons/12/levels/2": {
     "display_name": "Tour of Design Mode"
   },
-  "https://studio.code.org/s/csd4-2018/stage/12/puzzle/3": {
+  "https://studio.code.org/s/csd4-2018/lessons/12/levels/3": {
     "display_name": "Intro to Design Mode"
   },
-  "https://studio.code.org/s/csd4-2018/stage/12/puzzle/4": {
+  "https://studio.code.org/s/csd4-2018/lessons/12/levels/4": {
     "short_instructions": "Add a large red button to your screen using Design Mode. (Click for full instructions.)",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\n\n[expandable][0]\n\n<br/>\n\nClick to expand\n\n</div>\n\n# Creating a digital prototype\n\nUsing the prototype to the right (click the image to enlarge it) you're going to create a digital prototype of the example app \"Recycling Finder\". We've already added a few of the elements for you, including the title, but it doesn't look quite right yet. We'll go over each element of this as we go, but for now let's **just focus on the title**.\n\n<!--<img src=\"https://images.code.org/66633526e03550bedb8503fefdc2ece3-image-1502921575904.png\" style=\"width: 300px; float: right; clear: both;\">-->\n\n# Do This\n\n-   **Make sure you are in Design Mode,** the switch appears above your app window on the left.\n-   **Click on the title text** to view its properties.\n-   **Change the property \"text\"** to \"Recycling Finder\".\n-   **Change the \"font size\"** to make the title larger.\n-   **Change the \"text alignment\"** so the title is centered on the screen.\n\n_Note: Make sure you click **\"Run\"** before moving on to save your progress._",
     "teacher_markdown": "Students will be using App Lab to create a simple prototype for their app.  Students who want to go further in making their apps functional can learn more about App Lab, watch demo videos, and work through tutorials at [https://code.org/educate/applab][0]."
   },
-  "https://studio.code.org/s/csd4-2018/stage/12/puzzle/5": {
+  "https://studio.code.org/s/csd4-2018/lessons/12/levels/5": {
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\n\n[expandable][0]\n\n<br/>\n\nClick to expand\n\n</div>\n\n# Adding more text\n\nEach screen of your app is composed of multiple design _elements_. You can drag out elements from the \"Design Toolbox\" on the left side of the workspace. To add more blocks of text, just drag out additional \"label\" elements.\n\n# Do This\n\n-   **Drag out a new \"label\" element** and place it where the \"home\\_description\" text should be.\n-   **Change the id** to match the prototype (home\\_description)\n-   **Change the field \"text\"** to match the prototype.\n-   **Resize** the text area by clicking and dragging the bottom right corner.\n-   **Change any other properties** to make the text look like you want it to."
   },
-  "https://studio.code.org/s/csd4-2018/stage/12/puzzle/6": {
+  "https://studio.code.org/s/csd4-2018/lessons/12/levels/6": {
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\n\n[expandable][0]\n\n<br/>\n\nClick to expand\n\n</div>\n\n# Adding images\n\nThe prototype just has a plain black square where the logo should be - let's add an image to spice it up. The \"image\" element allows you to either upload an image from your computer or select from a library of graphic icons.\n\n# Do This\n\n-   **Drag out a new \"image\" element** and place between the description and the title.\n-   **Change the id** to match the prototype.\n-   **Click the \"Choose...\" link** next to the \"image\" field.\n-   **Select the \"Icons\" tab** and choose an icon for your logo.\n-   **Change the color** of the icon using the \"icon color\" field."
   },
-  "https://studio.code.org/s/csd4-2018/stage/12/puzzle/7": {
+  "https://studio.code.org/s/csd4-2018/lessons/12/levels/7": {
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\n\n[expandable][0]\n\n<br/>\n\nClick to expand\n\n</div>\n\n# Adding buttons\n\nButtons allow your user to interact with your app. This prototype screen will need three buttons (each shaded gray on the prototype.) We've already added the Search button, so you just need to add Contact and About.\n\n# Do This\n\n-   **Drag out a new \"button\" element** for each of the two remaining buttons.\n-   **Change the ids** to match the prototype.\n-   **Change the text** to match the prototype.\n-   **Modify other properties** to make the screen look like you'd like.\n\n<img src=\"https://images.code.org/4cab6a5233cf07df0d8e312932762012-image-1444314797615.gif\" style=\"width: 500px;\">"
   },
-  "https://studio.code.org/s/csd4-2018/stage/12/puzzle/8": {
+  "https://studio.code.org/s/csd4-2018/lessons/12/levels/8": {
     "display_name": "Design Mode Elements",
     "teacher_markdown": "#### Developing Good Programming Habits\n\nFollowing clear and consistent naming conventions is an important habit to develop, but the benefits are rarely immediately obvious to students. It really pays off in the long term to be a stickler for well named IDs, particularly because it will save your own sanity when it comes time to read your students' programs, but it will also simplify the process of combining each student's screen into a full team app."
   },
-  "https://studio.code.org/s/csd4-2018/stage/12/puzzle/9": {
+  "https://studio.code.org/s/csd4-2018/lessons/12/levels/9": {
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\n\n[expandable][0]\n\n<br/>\n\nClick to expand\n\n</div>\n\n# Making a Search Box\n\nThe search box in our prototype can be created using a \"Text Input\" element. This is a box that your user can type into, and later your software can read what was entered and do something with it.\n\n# Do This\n\n-   **Add a Text Input** element.\n-   **Change the id** to match the prototype.\n-   **Add a Label** with the text \"Location\" next to your text input."
   },
-  "https://studio.code.org/s/csd4-2018/stage/12/puzzle/10": {
+  "https://studio.code.org/s/csd4-2018/lessons/12/levels/10": {
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\n\n[expandable][0]\n\n<br/>\n\nClick to expand\n\n</div>\n\n# Checkboxes\n\nThe type of recyclables you're searching for can be set using \"Checkbox\" elements. We already added a checkbox and label for glass, so you just need to add ones for paper and plastic.\n\n# Do This\n\n-   **Add a Checkbox** for each of the options.\n-   **Change the ids** to match the prototype.\n-   **Add labels** to describe each checkbox."
   },
-  "https://studio.code.org/s/csd4-2018/stage/12/puzzle/11": {
+  "https://studio.code.org/s/csd4-2018/lessons/12/levels/11": {
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\n\n[expandable][0]\n\n<br/>\n\nClick to expand\n\n</div>\n\n# Finishing Touches\n\nBy now you should have a fairly complete (though non-functional) digital version of the paper prototype we started with. All that's left to do is check back over your paper prototype and add any final touches you might have missed.\n\n# Do This\n\n-   **Check over the prototype** to make sure you've included everything.\n-   **Read through your IDs** and fix any that aren't descriptive.\n-   **Clean up** any rough edges by resizing or moving around elements."
   },
-  "https://studio.code.org/s/csd4-2018/stage/12/puzzle/12": {
+  "https://studio.code.org/s/csd4-2018/lessons/12/levels/12": {
     "dsls": {
       "markdown": "# Mocking Up Your App\n\nNow that you have some practice laying out elements in App Lab, you can start working on mocking your own app. With your group, divvy up the screens so that everyone is working on a different screen.\n\nBecause you'll be dividing the work up, you'll want to do some planning ahead of time to decide on a common look and feel for your pages. For example, you'll want to agree on things such as:\n\n* Where do navigation buttons go?\n* What colors will you use for backgrounds, text, and buttons\n* What's the general style and layout?\n\n# Namespacing\n\nIn the next lesson you will combine all of your team members' screens into one app. To make sure that the IDs on one page don't conflict with another you'll need to include a unique _namespace_ for your page. This will be something you add to the beginning of every id so that your element ids don't conflict with others when you merge everyone's screens together. Your namespace should be the ID of your screen with an underscore at the end. For example, if you are making the home page, you might use \"home_\" as your namespace - leading to ids such as:\n\n* \"home_title\"\n* \"home_loginButton\"\n* \"home_logo\"\n",
       "teacher_markdown": "#### Namespacing\n\nEnsuring that all students are both creating unique IDs for all elements and properly namespacing them will go a long way towards avoiding issues in the next lesson, so it pays to be a stickler here. You can provide students with the optional Screen Design Activity Guide to keep track of their element IDs.\n\n#### Working together, apart\n\nEven more so than the the paper prototyping activity, it is easy for students in this lesson to forget that they need to consider how their choices affect their team. Encourage active discussion among teams as they design screens to ensure that they are all working towards a common goal.\n"
     }
   },
-  "https://studio.code.org/s/csd4-2018/stage/12/puzzle/13": {
+  "https://studio.code.org/s/csd4-2018/lessons/12/levels/13": {
     "display_name": "App Project: Screen Design",
     "long_instructions": "# Mocking Up Your App\n\nUsing your paper prototype, create a digital version of your screen using the Design Mode elements you've learned about.\n\n# Do This\n\n-   Rename the screen to match your _namespace_.\n-   Use the built-in elements to lay out your app screen, giving each a proper ID\n    -   For example, if your namespace is `home_` you might create IDs like:\n        -   `home_title`\n        -   `home_login_button`\n        -   `home_logo`\n-   For any components of your app that can't be recreated with the built in elements you can either:\n    -   Redesign to utilize built in elements\n    -   Find an image to use in place of your element\n    -   Draw the element using your preferred image editor\n-   Make sure that you and your teammates are regularly looking at each other's designs to ensure consistent style"
   },
-  "https://studio.code.org/s/csd4-2018/stage/13/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/13/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd4-2018/stage/13/puzzle/2": {
+  "https://studio.code.org/s/csd4-2018/lessons/13/levels/2": {
     "display_name": "Multi-Screen Apps",
     "teacher_markdown": "#### Cards to Screens\n\nTo simplify the prototyping process, teams can think of each card that they created in the Paper Prototyping as a separate screen in the App Lab iteration of their app. In reality, screens that are very similar can often be developed as a single screen with content that changes based on user interaction. In the next lesson students will see some examples of how that could work, but it's not expected that they incorporated that kind of functionality in this project."
   },
-  "https://studio.code.org/s/csd4-2018/stage/13/puzzle/3": {
+  "https://studio.code.org/s/csd4-2018/lessons/13/levels/3": {
     "long_instructions": "# Adding a New Screen\n\nTo complete your app, you're going to need more than just a home screen. Each card that you created in your paper prototype is represented by a \"screen\" in App Lab. To create more screens, just click the dropdown at the top of the app display and select \"New Screen...\"\n\n<img src=\"https://images.code.org/2b49c36a57fb904d4fcf219ca498647d-image-1504714832027.png\" style=\"width: 200px\">\n\n# Do This\n\n-   **Create a New Screen** and give it the ID \"about\".",
-    "teacher_markdown": "#### Catching Up\n\nIf students missed the previous lesson, or were unable to complete the home screen, you can have them import this completed version of the home screen <a href=\"https://studio.code.org/projects/applab/Y3yxoz85-vy5Hpq8R4qOTQ/\" target=\"_blank\">https\\://studio.code.org/projects/applab/Y3yxoz85-vy5Hpq8R4qOTQ/</a>. See the <a href=\"5\">Screen Import Map</a> for details."
+    "teacher_markdown": "#### Catching Up\n\nIf students missed the previous lesson, or were unable to complete the home screen, you can have them import this completed version of the home screen <a href=\"https://studio.code.org/projects/applab/Y3yxoz85-vy5Hpq8R4qOTQ/\" target=\"_blank\" rel=\"noopener noreferrer\">https\\://studio.code.org/projects/applab/Y3yxoz85-vy5Hpq8R4qOTQ/</a>. See the <a href=\"5\">Screen Import Map</a> for details."
   },
-  "https://studio.code.org/s/csd4-2018/stage/13/puzzle/4": {
+  "https://studio.code.org/s/csd4-2018/lessons/13/levels/4": {
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\n\n[expandable][0]\n\n<br/>\n\nClick to expand\n\n</div>\n\n# Design the About Screen\n\nTo add elements to your new About screen, you'll need to first select it from the screens dropdown.\n\n# Do This\n\n-   **Complete the About screen** using the prototype to the right.\n-   **Use the screens dropdown** to switch between your Home and About screens."
   },
-  "https://studio.code.org/s/csd4-2018/stage/13/puzzle/5": {
+  "https://studio.code.org/s/csd4-2018/lessons/13/levels/5": {
     "display_name": "Importing Screens",
     "teacher_markdown": "#### Promoting Teamwork\n\nThe following levels will prepare teams to merge all of their separate screens into a single app. There are two potential stumbling blocks that teams may run into during the import process:\n\n-   Miscommunicated urls: The sharing URLS are long and complicated, so students will need a shared location where they can copy/paste their urls\n-   Conflicting screen IDs: Importing a screen with the same ID as an existing one will allow you to overwrite the existing screen. This is particularly troublesome when students leave the default screen ID \"screen1\"\n-   Conflicting element IDs: If students have _properly_ namespaced all of their elements this shouldn't be an issue, but any elements that have the default ID or share an ID with an existing element will prevent a screen from importing\n\nOnce teams move to the programming phase of this project, it becomes much more difficult for students to collaborate on the same app. The design phase is the primary opportunity for all students to collaborate on the app - after this teams will still be working together, but each student will be working on their own copy of the app."
   },
-  "https://studio.code.org/s/csd4-2018/stage/13/puzzle/6": {
-    "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\n\n[expandable][0]\n\n<br/>\n\nClick to expand\n\n</div>\n\n# Screen Import\n\nIn addition to adding new blank screens, you can import screens from \"Import Screen...\" To import a screen from someone else, you'll need them to give you the sharing URL.\n\n**Note:** Screens you import _must not_ share any IDs with elements already in your app!\n\n# Do This\n\nAnother student has created a search results screen that you can import into your app. Their app's share link is **<a href=\"https://studio.code.org/projects/applab/XkcpDVj8MJWQvUr9OSgIlA/\" target=\"_blank\">https\\://studio.code.org/projects/applab/XkcpDVj8MJWQvUr9OSgIlA/</a>**\n\n-   **Select \"Import Screen...** from the screens dropdown.\n-   **Copy and paste the above url** into the import screens dialog.\n-   **Select the screen** you wish to import.\n-   **Click Import** to import the screen.\n-   **Use the screens dropdown** to switch between your Home, About, and Search screens."
+  "https://studio.code.org/s/csd4-2018/lessons/13/levels/6": {
+    "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\n\n[expandable][0]\n\n<br/>\n\nClick to expand\n\n</div>\n\n# Screen Import\n\nIn addition to adding new blank screens, you can import screens from \"Import Screen...\" To import a screen from someone else, you'll need them to give you the sharing URL.\n\n**Note:** Screens you import _must not_ share any IDs with elements already in your app!\n\n# Do This\n\nAnother student has created a search results screen that you can import into your app. Their app's share link is **<a href=\"https://studio.code.org/projects/applab/XkcpDVj8MJWQvUr9OSgIlA/\" target=\"_blank\" rel=\"noopener noreferrer\">https\\://studio.code.org/projects/applab/XkcpDVj8MJWQvUr9OSgIlA/</a>**\n\n-   **Select \"Import Screen...** from the screens dropdown.\n-   **Copy and paste the above url** into the import screens dialog.\n-   **Select the screen** you wish to import.\n-   **Click Import** to import the screen.\n-   **Use the screens dropdown** to switch between your Home, About, and Search screens."
   },
-  "https://studio.code.org/s/csd4-2018/stage/13/puzzle/7": {
-    "long_instructions": "# Contact Screen Import\n\nYet another student created a Contact screen that you can import into your app. Their share link is **<a href =\"https://studio.code.org/projects/applab/QUAOln68kifScEwQauwNqw/\" target=\"_blank\">https\\://studio.code.org/projects/applab/QUAOln68kifScEwQauwNqw/</a>**\n\n# Do This\n\n-   **Select \"Import Screen...** from the screens dropdown.\n-   **Copy and paste the above url** into the import screens dialog.\n-   **Select the screen** you wish to import.\n-   **Click Import** to import the screen.\n-   **Use the screens dropdown** to make sure your app has Home, About, Contact, and Search screens."
+  "https://studio.code.org/s/csd4-2018/lessons/13/levels/7": {
+    "long_instructions": "# Contact Screen Import\n\nYet another student created a Contact screen that you can import into your app. Their share link is **<a href =\"https://studio.code.org/projects/applab/QUAOln68kifScEwQauwNqw/\" target=\"_blank\" rel=\"noopener noreferrer\">https\\://studio.code.org/projects/applab/QUAOln68kifScEwQauwNqw/</a>**\n\n# Do This\n\n-   **Select \"Import Screen...** from the screens dropdown.\n-   **Copy and paste the above url** into the import screens dialog.\n-   **Select the screen** you wish to import.\n-   **Click Import** to import the screen.\n-   **Use the screens dropdown** to make sure your app has Home, About, Contact, and Search screens."
   },
-  "https://studio.code.org/s/csd4-2018/stage/13/puzzle/8": {
+  "https://studio.code.org/s/csd4-2018/lessons/13/levels/8": {
     "display_name": "Responding to User Input",
     "teacher_markdown": "#### Just the Facts\n\nThere's a lot to consume here and many of the details about how events work in App Lab are not totally necessary to understand for our needs in this unit. If students are struggling with how programming works in App Lab, focus on these essentials:\n\n-   There is no `draw` loop that runs forever\n-   The `onEvent()` block specifies:\n    -   an element ID\n    -   an event (such as \"click\" or \"mouseover\")\n    -   code that should be run when the event occurs (this code is technically an anonymous callback function, represented by the green block)\n-   Code inside `onEvent()` blocks runs any time the specified event occurs\n\n#### Compared to Game Lab\n\nIn Game Lab, we might use the following code to check if a sprite named \"button\" was clicked and do something about it:\n\n    function draw() {\n    \tif (mousePressedOver(button)) {\n       \t\t// Do something\n       \t}\n    }\n\nIn App Lab, given a button with the ID \"button\", we could write the following code to achieve the same goal:\n\n    onEvent(\"button\", \"click\", function () {\n    \t// Do something\n    });\n\nIn the App Lab example, the function is just another argument passed to the onEvent function, it just so happens that the argument must be a function itself. We could also define the function separately and write this same program as follows:\n\n    function doSomething() {\n    \t// Do something\n    }\n\n    onEvent(\"button\", \"click\", doSomething);\n\nIn the second example, notice that when we pass the function `doSomething` to the `onEvent` function we _don't_ include the parenthesis at the end. This is because we're actually passing the whole function as an object."
   },
-  "https://studio.code.org/s/csd4-2018/stage/13/puzzle/9": {
+  "https://studio.code.org/s/csd4-2018/lessons/13/levels/9": {
     "long_instructions": "# Button Events\n\nWith our screens in place, it's time to start actually _programming_ the app so that it responds to button clicks. For each button on each screen, you'll want to add an `onEvent` block that watches for that button to be clicked and responds appropriately. To start off with we'll just watch the `home_search_btn` button and print something to the console when it's clicked\n\n# Do This\n\nYou're now in Code Mode (you can use the buttons above your app to switch between Code Mode and Design Mode). This is where you can write the code that will respond to users interacting with your app.\n\n[][0]\n\n-   **Drag out an `onEvent` block** from the code toolbox.\n-   **Select `home_search_btn`** from the \"id\" dropdown.\n-   **Drag out a `console.log` block** from the variables drawer.\n-   **Run your app**.\n-   **Click the Search button** and look for messages in the console."
   },
-  "https://studio.code.org/s/csd4-2018/stage/13/puzzle/10": {
+  "https://studio.code.org/s/csd4-2018/lessons/13/levels/10": {
     "display_name": "Changing Screens",
     "teacher_markdown": "#### Limited Programming Required\n\nThe goal of this unit is to get students thinking about the role design plays in developing a product and to help them build empathy for end users. This is not a programming focused unit, and the extent to which students will be expected to program is represented in its entirety here. Students will get a chance to delve deeper into App Lab, and to learn more about how `onEvent` works, in unit 6."
   },
-  "https://studio.code.org/s/csd4-2018/stage/13/puzzle/11": {
+  "https://studio.code.org/s/csd4-2018/lessons/13/levels/11": {
     "long_instructions": "# Changing Screens On Click\n\nThe `setScreen` block will change your app to whichever screen you specify. If you place a `setScreen` block _inside_ an `onEvent` block, you can program your buttons to change to the correct screen.\n\n# Do This\n\nUsing the `onEvent` block that you've created, make your program change to the \"search\" screen when the `home_search_btn` is clicked.\n\n-   **Drag out a `setScreen` block** an put it inside the `onEvent` block.\n-   **Select \"search\"** from the `setScreen` dropdown.\n-   **Run your app** and test the `home_search_btn` button."
   },
-  "https://studio.code.org/s/csd4-2018/stage/13/puzzle/12": {
+  "https://studio.code.org/s/csd4-2018/lessons/13/levels/12": {
     "long_instructions": "# Wire Up the Other Buttons\n\nNow that you've made one button work, just follow the same pattern for all of your others.\n\n# Do This\n\n-   **Add an `onEvent` block** for each button.\n-   **Select the button ID** from the \"id\" dropdown.\n-   **Add a `setScreen` block** inside each `onEvent` block.\n-   **Select the screen ID** from each `setScreen` dropdown.\n-   **Run your app** and test that all of the buttons work."
   },
-  "https://studio.code.org/s/csd4-2018/stage/13/puzzle/13": {
+  "https://studio.code.org/s/csd4-2018/lessons/13/levels/13": {
     "display_name": "App Project: Screen Import",
     "long_instructions": "# Back To Your App\n\nNow that you've had some practice with importing screens, it's time to start working on your team's app.\n\n# Do This\n\nEach member of your team is going to create their own copy of the app, with all of the team members' screens imported in. This will be your copy of the app, and the copy that you will start to add code to in the next lesson.  (Don't forget that you'll also need to import your own screen into this project.)\n\n-   Collect all of the sharing urls for your team's pages, **including your own**\n    -   Each team member can find the share url for their own screen by going back to the last level of the previous lesson, or by finding the screen in their [projects directory][0]\n-   Import each of the screens, one at a time\n    -   If you run into an ID error with one of the screens, discuss the issue with the screen's creator so it can be fixed and imported\n-   Delete the default \"screen1\"\n-   Set the main screen as the default\n\nDon't worry about adding any code at this point; we'll get to that in the next level.",
     "teacher_markdown": "#### Breaking for the Day\n\nDepending on how much time you have in class, this can be a great point to break for the day. This and the next level can be quite time consuming, so if you are running short on time, consider jumping to the Screen Pair activity described in the Extension Activities for this lesson.\n\n#### Team Time\n\nThough students are working on their individual copies of their team app at this point, encourage teams to be active and vocal through this portion of the lesson. Any issues that students encounter when importing their teammates' screens can only be resolved through teamwork, and will likely be a problem for all members of the team."
   },
-  "https://studio.code.org/s/csd4-2018/stage/13/puzzle/14": {
+  "https://studio.code.org/s/csd4-2018/lessons/13/levels/14": {
     "display_name": "App Project: Linking Screens",
     "long_instructions": "# Linking Screens\n\nWith all of your screens in place you can start adding events that will change the screens. When you're done with this step you'll actually have an interactive prototype!\n\n# Do This\n\nFor each screen of your app:\n\n-   Find all of the button IDs\n-   For each button, add an event handler that watches that ID\n-   In each event handler, use `setScreen()` to move the the right screen\n-   Test it all out!\n\nDepending on the number of screens and buttons your app has, this can be a pretty involved process. Make sure that you test your work often, using `console.log()` blocks to debug any strange behavior with your app. When you think you've got the whole thing working, compare your app with other members of your group to see if they work the same."
   },
-  "https://studio.code.org/s/csd4-2018/stage/14/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/14/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd4-2018/stage/15/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/15/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd4-2018/stage/15/puzzle/2": {
+  "https://studio.code.org/s/csd4-2018/lessons/15/levels/2": {
     "display_name": "App Project: Bugs and Features",
     "long_instructions": "# Improving and Iterating\n\nYou've put your app in front of users, gathered feedback, and identified bugs and new features - time to do something about it.\n\n# Do This\n\nEach team member is going to implement select features and bug fixes on their own version of the team's app. Start by selecting a sticky note from the **To Do** column of your team's chart and moving it to the **Doing** column. For each sticky you tackle:\n\n-   Add a comment to the top of your program describing the feature or bug fix you are implementing\n-   Work on your iteration until it works. Try to stay focused on only the single feature or bug that you've selected.\n-   When done, move your sticky to the **Done** column, pick a new one, and start the process over.",
     "teacher_markdown": "#### Implementing Features and Fixes Individually\n\nBecause App Lab is difficult for large groups of students to work on simultaneously, we have students work on implementing features and fixes individually or in pairs. The benefit of this approach is that it allows the team as a whole to explore more potential features than if they were working all on the same app, but it also means that each team member's app will diverge further from the others as more changes are made.\n\nAs an optional extension activity you could provide a day of work for students to share their changes with each other and attempt to integrate all of the added features into a single app.\n\n#### Keeping Track of Changes\n\nThe more features students add to their app, the more likely they are to introduce new unforeseen bugs. To ensure that students always keep the most recent working copy of their app, encourage them make a remix before adding any new features. Make sure students leave the remix alone and return to this level to do their programming - this will ensure that when they go to submit their app for your review it is the most recent version."
   },
-  "https://studio.code.org/s/csd4-2018/stage/16/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/16/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd4-2018/stage/16/puzzle/2": {
+  "https://studio.code.org/s/csd4-2018/lessons/16/levels/2": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
     }
   },
-  "https://studio.code.org/s/csd4-2018/stage/17/puzzle/1": {
+  "https://studio.code.org/s/csd4-2018/lessons/17/levels/1": {
     "dsls": {
-      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* understand your experience\n* make improvements to the course\n\nThanks for taking the time to help make CS Discoveries even better!\n\n<a class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey-2018/stage/1/puzzle/1/page/1\" target=\"top\">Click here to complete the CS Discoveries Post-Course Survey</a>\n\n(opens in a new tab)\n\n<br>\n\n\n\n\n\n",
+      "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* understand your experience\n* make improvements to the course\n\nThanks for taking the time to help make CS Discoveries even better!\n\n<a class=\"btn btn-large btn-success\" href=\"/s/csd-post-survey-2018/lessons/1/levels/1/page/1\" target=\"top\">Click here to complete the CS Discoveries Post-Course Survey</a>\n\n(opens in a new tab)\n\n<br>\n\n\n\n\n\n",
       "teacher_markdown": "**Please have your students complete this survey!!!**\n\n* The results are vital for us (code.org) to sustain our courses and make improvements.\n* There will be a teacher survey as well, where you can provide your own input, which you will be notified about via email.\n\n**To view results** -- the post-course survey is a little different. The survey which lives in its own unit of the course, and this page simply links to it.\n\n* To view anonymized results of the survey in your teacher dashboard, you need to (1) view survey/assessments, and then (2) select the post-course survey unit as the unit you want view.  \n\n* **More Instructions for viewing results of post-course survey**: [[google doc](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw)] [[pdf](https://docs.google.com/document/d/1EQfPy0D6lSWA3s3d2hkgVLSRn1vrjLLXaZBSz3-E9aw/export?format=pdf)]\n\n\n\n\n"
     }
   }

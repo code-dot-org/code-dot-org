@@ -2,12 +2,17 @@
   "script": {
     "name": "SpecialSeries",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-11-22 19:55:41 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "SpecialSeries"
     }
@@ -31,6 +36,7 @@
       "name": "Halloween 2015",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -41,22 +47,53 @@
       }
     }
   ],
+  "lesson_activities": [
+    {
+      "key": "f8ae5670-6c36-417d-8057-f159af6f99be",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f8ae5670-6c36-417d-8057-f159af6f99be",
+        "lesson.key": "Halloween 2015",
+        "lesson_group.key": "",
+        "script.name": "SpecialSeries"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "ef3bf1a8-dccf-4738-bb82-d9cbd7372b41",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ef3bf1a8-dccf-4738-bb82-d9cbd7372b41",
+        "lesson_activity.key": "f8ae5670-6c36-417d-8057-f159af6f99be"
+      }
+    }
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "October15 ghost 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "October15 ghost 1"
         ],
         "lesson.key": "Halloween 2015",
         "lesson_group.key": "",
-        "script.name": "SpecialSeries"
+        "script.name": "SpecialSeries",
+        "activity_section.key": "ef3bf1a8-dccf-4738-bb82-d9cbd7372b41"
       },
       "level_keys": [
         "October15 ghost 1"
@@ -65,18 +102,22 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "October15 stars 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "October15 stars 1"
         ],
         "lesson.key": "Halloween 2015",
         "lesson_group.key": "",
-        "script.name": "SpecialSeries"
+        "script.name": "SpecialSeries",
+        "activity_section.key": "ef3bf1a8-dccf-4738-bb82-d9cbd7372b41"
       },
       "level_keys": [
         "October15 stars 1"
@@ -85,18 +126,22 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "October15 JoL 1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "October15 JoL 1"
         ],
         "lesson.key": "Halloween 2015",
         "lesson_group.key": "",
-        "script.name": "SpecialSeries"
+        "script.name": "SpecialSeries",
+        "activity_section.key": "ef3bf1a8-dccf-4738-bb82-d9cbd7372b41"
       },
       "level_keys": [
         "October15 JoL 1"
@@ -112,7 +157,8 @@
         ],
         "lesson.key": "Halloween 2015",
         "lesson_group.key": "",
-        "script.name": "SpecialSeries"
+        "script.name": "SpecialSeries",
+        "activity_section.key": "ef3bf1a8-dccf-4738-bb82-d9cbd7372b41"
       }
     },
     {
@@ -123,7 +169,8 @@
         ],
         "lesson.key": "Halloween 2015",
         "lesson_group.key": "",
-        "script.name": "SpecialSeries"
+        "script.name": "SpecialSeries",
+        "activity_section.key": "ef3bf1a8-dccf-4738-bb82-d9cbd7372b41"
       }
     },
     {
@@ -134,8 +181,39 @@
         ],
         "lesson.key": "Halloween 2015",
         "lesson_group.key": "",
-        "script.name": "SpecialSeries"
+        "script.name": "SpecialSeries",
+        "activity_section.key": "ef3bf1a8-dccf-4738-bb82-d9cbd7372b41"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

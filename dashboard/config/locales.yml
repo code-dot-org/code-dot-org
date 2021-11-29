@@ -70,6 +70,13 @@
   english: "German"
   native: "Deutsch"
 
+"dv": "dv-MV"
+"dv-MV":
+  english: "Dhivehi"
+  native: "ދިވެހި"
+  debug: true
+  webfonts: false
+
 "el": "el-GR"
 "el-GR":
   english: "Greek"
@@ -190,6 +197,12 @@
 "id-ID":
   english: "Indonesian"
   native: "Bahasa Indonesia"
+
+"in": "in-TL"
+"in-TL":
+  english: "Crowdin In-Context"
+  native: "Crowdin In-Context"
+  debug: true
 
 "is": "is-IS"
 "is-IS":

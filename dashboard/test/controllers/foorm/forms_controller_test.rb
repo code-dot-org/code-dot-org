@@ -8,9 +8,13 @@ module Foorm
       @levelbuilder = create :levelbuilder
     end
 
+    test_redirect_to_sign_in_for :editor
     test_redirect_to_sign_in_for :create, method: :post
     test_redirect_to_sign_in_for :update_questions, method: :put, params: {id: 1}
     test_redirect_to_sign_in_for :publish, method: :put, params: {id: 1}
+
+    test_user_gets_response_for :editor, user: :student, response: :forbidden
+    test_user_gets_response_for :editor, user: :levelbuilder, response: :success
     test_user_gets_response_for :create, user: :student, method: :post, params: {
       name: 'name',
       version: 0,
@@ -21,7 +25,10 @@ module Foorm
       version: 0,
       questions: {pages: [{elements: [{name: "test"}]}]}
     }, response: :success
-    test_user_gets_response_for :update_questions, user: :student, method: :put, params: {id: 1}, response: :forbidden
+    test_user_gets_response_for :update_questions, user: :student, method: :put, params: {
+      id: 1,
+      questions: {pages: [{elements: [{name: "test"}]}]}
+    }, response: :forbidden
     test_user_gets_response_for :publish, user: :student, method: :put, params: {id: 1}, response: :forbidden
 
     test 'update succeeds on existing form' do

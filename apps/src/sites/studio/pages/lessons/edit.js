@@ -4,54 +4,71 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 import LessonEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonEditor';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import reducers, {
-  init,
+  initActivities,
+  initLevelSearching,
+  initUnitInfo,
   mapActivityDataForEditor
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import resourcesEditor, {
+import createResourcesReducer, {
   initResources
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import createStandardsReducer, {
+  initStandards
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
+import vocabulariesEditor, {
+  initVocabularies
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
+import programmingExpressionsEditor, {
+  initProgrammingExpressions
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
 import {Provider} from 'react-redux';
+import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
+import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
 
 $(document).ready(function() {
   const lessonData = getScriptData('lesson');
   const relatedLessons = getScriptData('relatedLessons');
-  const searchOptions = getScriptData('searchOptions');
+  const unitInfo = getScriptData('unitForLesson');
+  const levelSearchingInfo = getScriptData('levelSearchingInfo');
 
   const activities = mapActivityDataForEditor(lessonData.activities);
   const objectives = lessonData.objectives || [];
 
-  // Do the same thing for objective keys as for activity keys above.
-  // React needs unique keys for all objects, but objectives don't get
-  // a key until they're saved to the server, which happens after lesson save.
-  objectives.forEach(objective => (objective.key = objective.id + ''));
-
-  registerReducers({...reducers, resources: resourcesEditor});
+  registerReducers({
+    ...reducers,
+    instructionsDialog: instructionsDialog,
+    resources: createResourcesReducer('lessonResource'),
+    vocabularies: vocabulariesEditor,
+    programmingExpressions: programmingExpressionsEditor,
+    standards: createStandardsReducer('standard'),
+    opportunityStandards: createStandardsReducer('opportunityStandard')
+  });
   const store = getStore();
 
-  store.dispatch(init(activities, searchOptions));
-  store.dispatch(initResources(lessonData.resources || []));
+  store.dispatch(initActivities(activities));
+  store.dispatch(initLevelSearching(levelSearchingInfo));
+  store.dispatch(initUnitInfo(unitInfo));
+  store.dispatch(initResources('lessonResource', lessonData.resources || []));
+  store.dispatch(initVocabularies(lessonData.vocabularies || []));
+  store.dispatch(
+    initProgrammingExpressions(lessonData.programmingExpressions || [])
+  );
+  store.dispatch(initStandards('standard', lessonData.standards || []));
+  store.dispatch(
+    initStandards('opportunityStandard', lessonData.opportunityStandards || [])
+  );
 
   ReactDOM.render(
     <Provider store={store}>
-      <LessonEditor
-        id={lessonData.id}
-        initialDisplayName={lessonData.name}
-        initialOverview={lessonData.overview || ''}
-        initialStudentOverview={lessonData.studentOverview || ''}
-        initialAssessmentOpportunities={
-          lessonData.assessmentOpportunities || ''
-        }
-        initialUnplugged={lessonData.unplugged}
-        initialLockable={lessonData.lockable}
-        initialCreativeCommonsLicense={lessonData.creativeCommonsLicense}
-        initialAssessment={lessonData.assessment}
-        initialPurpose={lessonData.purpose || ''}
-        initialPreparation={lessonData.preparation || ''}
-        initialAnnouncements={lessonData.announcements || []}
-        relatedLessons={relatedLessons}
-        initialObjectives={objectives}
-        courseVersionId={lessonData.courseVersionId}
-      />
+      <div>
+        <LessonEditor
+          initialObjectives={objectives}
+          relatedLessons={relatedLessons}
+          initialLessonData={lessonData}
+          unitInfo={unitInfo}
+        />
+        <ExpandableImageDialog />
+      </div>
     </Provider>,
     document.getElementById('edit-container')
   );

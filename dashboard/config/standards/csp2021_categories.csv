@@ -1,0 +1,117 @@
+framework,parent,category,type,description
+csp2021,,AAP-1,Enduring Understanding,"To find specific solutions to generalizable problems, programmers represent and organize data in multiple ways."
+csp2021,,AAP-2,Enduring Understanding,The way statements are sequenced and combined in a program determines the computed result. Programs incorporate iteration and selection constructs to represent repetition and make decisions to handle varied input values.
+csp2021,,AAP-3,Enduring Understanding,"Programmers break down problems into smaller and more manageable pieces. By creating procedures and leveraging parameters, programmers generalize processes that can be reused. Procedures allow programmers to draw upon existing code that has already been tested, allowing programmers to write programs more quickly and with more confidence."
+csp2021,,AAP-4,Enduring Understanding,"There exist problems that the computer cannot solve, and even when the computer can solve a problem, it may not be able to do so in a reasonable amount of time."
+csp2021,,CRD-1,Enduring Understanding,Incorporating multiple perspectives through collaboration improves the computing innovations being developed.
+csp2021,,CRD-2,Enduring Understanding,"Developers create and innovate using an iterative design process that is user-focused, that incorporates implementation/feedback cycles, and that leaves ample room for experimentation and risk-taking."
+csp2021,,CSN-1,Enduring Understanding,Computer systems and networks facilitate how data is transferred.
+csp2021,,CSN-2,Enduring Understanding,Parallel and distributed computing leverages multiple computers to more quickly solve complex problems or process large data sets.
+csp2021,,DAT-1,Enduring Understanding,The way that the computer represents data is different from the way that the data are interpreted and displayed for the user. Programs are used to translate data into a representation that is more easily understood by people.
+csp2021,,DAT-2,Enduring Understanding,"Programs can be used to process data, which allows users to discover information and create new knowledge."
+csp2021,,IOC-1,Enduring Understanding,"While computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences."
+csp2021,,IOC-2,Enduring Understanding,The use of computing innovations may involve risks to your personal safety and identity.
+csp2021,AAP-1,AAP-1.A,Learning Objective,Represent a value with a variable.
+csp2021,AAP-1,AAP-1.B,Learning Objective,Determine the value of a variable as a result of an assignment.
+csp2021,AAP-1,AAP-1.C,Learning Objective,Represent a list or string using a variable.
+csp2021,AAP-1,AAP-1.D,Learning Objective,"For data abstraction: 
+a. Develop data abstraction using lists to store multiple elements.
+b.  Explain how the use of data abstraction manages complexity in program code."
+csp2021,AAP-2,AAP-2.A,Learning Objective,Express an algorithm that uses sequencing without using a programming language.
+csp2021,AAP-2,AAP-2.B,Learning Objective,Represent a step-by-step algorithmic process using sequential code statements.
+csp2021,AAP-2,AAP-2.C,Learning Objective,Evaluate expressions that use arithmetic operators.
+csp2021,AAP-2,AAP-2.D,Learning Objective,Evaluate expressions that manipulate strings.
+csp2021,AAP-2,AAP-2.E,Learning Objective,"For relationships between two variables, expressions, or values: 
+a. Represent using relational operators
+b. Evaluate expressions that use relational operators."
+csp2021,AAP-2,AAP-2.F,Learning Objective,"For relationships between Boolean values:
+a. Represent using logical operators.
+b. Evaluate expressions that use logic operators."
+csp2021,AAP-2,AAP-2.G,Learning Objective,Express an algorithm that uses selection without using a programming language.
+csp2021,AAP-2,AAP-2.H,Learning Objective,"For selection:
+a. Represent using conditional statements.
+b. Determine the result of conditional statements."
+csp2021,AAP-2,AAP-2.I,Learning Objective,"For nested selection:
+a. Represent using nested conditional statements. 
+b. Determine the result of nested conditional statements."
+csp2021,AAP-2,AAP-2.J,Learning Objective,Express an algorithm that uses iteration without using a programming language.
+csp2021,AAP-2,AAP-2.K,Learning Objective,"For iteration:
+a. Represent using iteration statements.
+b. Determine the result or side-effect of iteration statements."
+csp2021,AAP-2,AAP-2.L,Learning Objective,Compare multiple algorithms to determine if they yield the same side effect or result.
+csp2021,AAP-2,AAP-2.M,Learning Objective,"For algorithms: 
+a. Create algorithms. 
+b. Combine and modify existing algorithms."
+csp2021,AAP-2,AAP-2.N,Learning Objective,"For list operations:
+a. Write expressions that use list indexing and list procedures.
+b. Evaluate expressions that use list indexing and list procedures."
+csp2021,AAP-2,AAP-2.O,Learning Objective,"For algorithms involving elements of a list:
+a. Represent using iterative statements to traverse a list.
+b. Determine the result of an algorithm with list traversals."
+csp2021,AAP-2,AAP-2.P,Learning Objective,"For binary search algorithms:
+a. Determine the number of iterations required to find a value in a data set. 
+b. Explain the requirements necessary to complete a binary search."
+csp2021,AAP-3,AAP-3.A,Learning Objective,"For procedure calls:
+a. Write statements to call procedures.
+b. Determine the result or effect of a procedure call."
+csp2021,AAP-3,AAP-3.B,Learning Objective,"For procedure calls:
+a. Write statements to call procedures.
+b. Determine the result or effect of a procedure call."
+csp2021,AAP-3,AAP-3.C,Learning Objective,Develop procedural abstractions to manage complexity in a program by writing procedures.
+csp2021,AAP-3,AAP-3.D,Learning Objective,Select appropriate libraries or existing code segments to use in creating new programs.
+csp2021,AAP-3,AAP-3.E,Learning Objective,"For generating random values: 
+a. Write expressions to generate possible values. 
+b. Evaluate expressions to determine the possible results."
+csp2021,AAP-3,AAP-3.F,Learning Objective,"For simulations:
+a. Explain how computers can be used to represent real-world phenomena or outcomes. 
+b. Compare the use of simulations with real-world contexts."
+csp2021,AAP-4,AAP-4.A,Learning Objective,"For determining the efficiency of an algorithm:
+a. Explain the difference between algorithms that run in reasonable time and those that do not run in reasonable time. 
+b. Identify situations where a heuristic solution may be more appropriate."
+csp2021,AAP-4,AAP-4.B,Learning Objective,Explain the existence of undecidable problems in computer science.
+csp2021,CRD-1,CRD-1.A,Learning Objective,Explain how computing innovations are improved through collaboration.
+csp2021,CRD-1,CRD-1.B,Learning Objective,Explain how computing innovations are developed by groups of people.
+csp2021,CRD-1,CRD-1.C,Learning Objective,Demonstrate effective interpersonal skills during collaboration.
+csp2021,CRD-2,CRD-2.A,Learning Objective,Describe the purpose of a computing innovation.
+csp2021,CRD-2,CRD-2.B,Learning Objective,Explain how a program or code segment functions.
+csp2021,CRD-2,CRD-2.C,Learning Objective,Identify input(s) to a program.
+csp2021,CRD-2,CRD-2.D,Learning Objective,Identify output(s) produced by a program.
+csp2021,CRD-2,CRD-2.E,Learning Objective,Develop a program using a development process.
+csp2021,CRD-2,CRD-2.F,Learning Objective,Design a program and its user interface.
+csp2021,CRD-2,CRD-2.G,Learning Objective,Describe the purpose of a code segment or program by writing documentation.
+csp2021,CRD-2,CRD-2.H,Learning Objective,Acknowledge code segments used from other sources.
+csp2021,CRD-2,CRD-2.I,Learning Objective,"For errors in an algorithm or program: 
+a. Identify the error. 
+b. Correct the error."
+csp2021,CRD-2,CRD-2.J,Learning Objective,Identify inputs and corresponding expected output or behaviors that can be used to check the correctness of an algorithm or program.
+csp2021,CSN-1,CSN-1.A,Learning Objective,Explain how computing devices work together in a network.
+csp2021,CSN-1,CSN-1.B,Learning Objective,Explain how the Internet works.
+csp2021,CSN-1,CSN-1.C,Learning Objective,Explain how data is sent through the Internet via packets.
+csp2021,CSN-1,CSN-1.D,Learning Objective,Describe the differences between the Internet and the World Wide Web.
+csp2021,CSN-1,CSN-1.E,Learning Objective,"For fault-tolerant systems, like the Internet:
+a. Describe the benefits of fault-tolerance
+b. Explain how a given system is fault-tolerant
+c. Identify vulnerabilities in a system."
+csp2021,CSN-2,CSN-2.A,Learning Objective,"Compare problem solutions that use sequential, parallel, and distributed computing."
+csp2021,CSN-2,CSN-2.B,Learning Objective,Determine the efficiency of sequential and parallel solutions.
+csp2021,CSN-2,CSN-2.C,Learning Objective,Describe benefits and challenges of parallel and distributed computing.
+csp2021,DAT-1,DAT-1.A,Learning Objective,Explain how data can be represented using bits.
+csp2021,DAT-1,DAT-1.B,Learning Objective,Explain the consequences of using bits to represent data.
+csp2021,DAT-1,DAT-1.C,Learning Objective,"For binary numbers:
+a. Calculate the binary (base 2) equivalent of a positive integer (base 10) and vice versa. 
+b. Compare and order binary numbers."
+csp2021,DAT-1,DAT-1.D,Learning Objective,Compare data compression algorithms to determine which is best in a particular context.
+csp2021,DAT-2,DAT-2.A,Learning Objective,Describe what information can be extracted from data.
+csp2021,DAT-2,DAT-2.B,Learning Objective,Describe what information can be extracted from metadata.
+csp2021,DAT-2,DAT-2.C,Learning Objective,Identify the challenges associated with processing data.
+csp2021,DAT-2,DAT-2.D,Learning Objective,Extract information from data using a program.
+csp2021,DAT-2,DAT-2.E,Learning Objective,Explain how programs can be used to gain insight and knowledge from data.
+csp2021,IOC-1,IOC-1.A,Learning Objective,Explain how an effect of a computing innovation can be both beneficial and harmful.
+csp2021,IOC-1,IOC-1.B,Learning Objective,Explain how a computing innovation can have an impact beyond its intended purpose.
+csp2021,IOC-1,IOC-1.C,Learning Objective,Describe issues that contribute to the digital divide.
+csp2021,IOC-1,IOC-1.D,Learning Objective,Explain how bias exists in computing innovations.
+csp2021,IOC-1,IOC-1.E,Learning Objective,Explain how people participate in problem-solving processes at scale.
+csp2021,IOC-1,IOC-1.F,Learning Objective,Explain how the use of computing could raise legal and ethical concerns.
+csp2021,IOC-2,IOC-2.A,Learning Objective,Describe the risks to privacy from collecting and storing personal data on a computer system.
+csp2021,IOC-2,IOC-2.B,Learning Objective,Explain how computing resources can be protected and can be misused.
+csp2021,IOC-2,IOC-2.C,Learning Objective,Explain how unauthorized access to computing resources is gained.

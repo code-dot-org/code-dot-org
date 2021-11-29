@@ -12,7 +12,7 @@ nav: how_to_nav
 
 Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
 
-Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. If you'd like an extra set of hands to help out, you can find a [local volunteer]({{ urls/volunteer_local }}) to help run an Hour of Code in your after-school class or club.
+Trying an Hour of Code is a simple and fun way to introduce students to computer science, perhaps for the very first time. אם תצטרכו עזרה נוספת, תוכלו למצוא [מתנדב/ת מקומי/ת]({{ urls/volunteer_local }}) שיעזור לכם/ן להעביר שעת קוד בשיעורים שלאחר שעות הלימודים ובמועדוניות.
 
 ### An Hour of Code can also be hosted remotely! To get started, check out our [tips for hosting a virtual Hour of Code event](https://hourofcode.com/us/how-to/virtual).
 
@@ -22,23 +22,23 @@ Trying an Hour of Code is a simple and fun way to introduce students to computer
 
 ## 2. בחרו סרטון הדרכה
 
-We provide a variety of [fun, hour-long tutorials]({{ urls/learn }}) for participants all ages, created by a variety of partners. [Try them out!]({{ urls/learn }})
+אנחנו מציעים מגוון רחב של [מדריכים כיפיים באורך של שעה אחת]({{ urls/learn }}) למשתתפים בכל הגילאים, אשר נוצרו על ידי אנשים רבים. [נסו אותם!]({{ urls/learn }})
 
-**All Hour of Code tutorials** require minimal prep-time for organizers, and are self-guided - allowing kids to work at their own pace and skill-level.
+**כל מדריכי 'שעה של קוד'** דורשים הכנה מזערית מצד המארגנים וכולל הסברים, מה שמאפשר לילדים לעבוד בקצב שלהם ובהתאם לרמתם.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
-**Need a lesson plan for your afterschool Hour of Code?** Check out this [template](/files/AfterschoolEducatorLessonPlanOutline.docx)!
+**צריכים תוכנית לשיעור 'שעה של קוד' שלכם?** בדקו את [התבנית הזו](/files/AfterschoolEducatorLessonPlanOutline.docx)!
 
 ## 3. קדמו את שעת הקוד שלכם/ן
 
-Promote your Hour of Code [with these tools]({{ urls/promote }}) and encourage others to host their own events.
+קדמו את שעת הקוד שלכם/ן [עם הכלים האלו]({{ urls/promote }}) ועודדו אחרים לארח אירועים משלהם.
 
 ## 4. תכננו את הצרכים הטכונולוגיים - מחשבים הם לא חובה
 
-The best Hour of Code experience includes Internet-connected computers. But you **don’t** need a computer for every child, and you can even do the Hour of Code without a computer at all.
+The best Hour of Code experience includes Internet-connected computers. אבל **אינך** נדרש למחשב עבור כל ילד, וגם באפשרותך לבצע "שעה של קוד" ללא מחשב כלל.
 
-ודא שניסית מדריכים על מחשבי או מכשירי הסטודנטים כדי לאשש שאכן הם עובדים בצורה תקינה על הדפדפנים יחד עם קול ווידאו. **Have low bandwidth?** Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the unplugged / offline tutorials.
+ודא שניסית מדריכים על מחשבי או מכשירי הסטודנטים כדי לאשש שאכן הם עובדים בצורה תקינה על הדפדפנים יחד עם קול ווידאו. **יש רוחב פס נמוך?** תכנן להציג סרטונים בפני כל הכיתה, כך שאף תלמיד לא יידרש להוריד בעצמו את הסרטונים. או נסה את המדריכים הלא מקוונים.
 
 ספק אזניות עבור הכיתה, או בקש מהתלמידים להביא את שלהם, אם המדריך אשר בחרת עובד הכי טוב עם שמע.
 
@@ -55,13 +55,13 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 - [הנשיא לשעבר אובמה קורא לכל הסטודנטים ללמוד מדעי המחשב](https://www.youtube.com/watch?v=6XvmhE1J9PY).
 - מצא עוד סרטוני השראה נוספים [כאן](https://www.youtube.com/playlist?list=PLzdnOPI1iJNfpD8i4Sx7U0y2MccnrNZuP).
 
-**It’s okay if you are all brand new to computer science. Here are some ideas to introduce your Hour of Code activity:**
+**זה בסדר אם את חדש לעולם מדעי המחשב. הנה כמה רעיונות להכיר עבור את פעילויות "שעה של קוד":**
 
 - הסבר כיצד טכנולוגיה משפיעה על חיינו, עם דוגמאות שיתחברו אליהם, גם לבנות וגם לבנים (דבר על אפליקציות וטכנולוגיות שעוזרות להציל חיים, לעזור לאנשים, לחבר אנשים וכדו').
 - ערכו רשימה של דברים שמשתמשים בקוד בחיי היום יום.
 - See tips for getting girls interested in computer science [here]({{ urls/girls }}).
 
-**Need more guidance?** Download this [template lesson plan](/files/AfterschoolEducatorLessonPlanOutline.docx).
+**זקוק להדרכה נוספת?** הורד את זה [תבנית לתכנון שיעור](/files/AfterschoolEducatorLessonPlanOutline.docx).
 
 ## 6) קודד!
 
@@ -80,9 +80,9 @@ Kick off your Hour of Code by inspiring participants and discussing how computer
 
 ## מקורות מידע נוספים במסגרת "שעה של קוד" למורים
 
-- Check out [best practices](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) from past Hour of Code organizers.
-- Watch the recording of our [Educator's Guide to the Hour of Code webinar](https://youtu.be/EJeMeSW2-Mw).
-- Visit the [Hour of Code Forum](http://forum.code.org/c/plc/hour-of-code) to get advice, insight and support from other organizers.
+- הכנס לאתר [שיטות מומלצות](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466) ממארגני עבר של "שעה של קוד".
+- צפה בסרטונים של [המדריך למדריך של "שעה של קוד"](https://youtu.be/EJeMeSW2-Mw).
+- בקרו ב [שעה של קוד הפורום](http://forum.code.org/c/plc/hour-of-code) כדי לקבל עצות, תובנה ותמיכה של המארגנים אחרים.
 - Review the [Hour of Code FAQ](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code).
 
 ## איך ממשיכים אחרי "שעה של קוד"?

@@ -1,0 +1,15 @@
+name 'courseF_markdown_forloops_intro_2021'
+title 'Test Markdown Textbook Page'
+description 'Test Markdown Textbook Page'
+markdown <<MARKDOWN
+# **In this lesson...**
+
+### Today you'll be learning about a new kind of `repeat` loop. Here is a preview of the block you'll be using:
+
+![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)
+
+### *For*tunately, this new loop will make solving puzzles like this really easy!
+
+![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)
+
+MARKDOWN

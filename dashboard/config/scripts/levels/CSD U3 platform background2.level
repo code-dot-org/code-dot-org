@@ -7,7 +7,7 @@
   "properties": {
     "skin": "gamelab",
     "embed": "false",
-    "long_instructions": "# Choosing your Background\r\n\r\nNow that you have your score variable, you can use it to choose the right background for your game.  You can see an example of changing your background according to your score in [Lesson 19 Level 11](/s/csd3-2017/stage/19/puzzle/11)\r\n\r\n# Do This\r\n\r\n\r\n* Inside the draw loop, use an `if` statement and your two background functions to draw your background according to your score level.\r\n* Test your code by changing the start score to 100, then running to code to see whether the background changes.\r\n\r\n_Challenge: If you have a third background, you can click the plus sign at the bottom of the `if` block.  Another space will appear for your third background function, as well as a place to check the score again._\r\n",
+    "long_instructions": "# Choosing your Background\r\n\r\nNow that you have your score variable, you can use it to choose the right background for your game.  You can see an example of changing your background according to your score in [Lesson 19 Level 11](/s/csd3-2017/lessons/19/levels/11)\r\n\r\n# Do This\r\n\r\n\r\n* Inside the draw loop, use an `if` statement and your two background functions to draw your background according to your score level.\r\n* Test your code by changing the start score to 100, then running to code to see whether the background changes.\r\n\r\n_Challenge: If you have a third background, you can click the plus sign at the bottom of the `if` block.  Another space will appear for your third background function, as well as a place to check the score again._\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",

@@ -89,12 +89,12 @@ class ActivitiesController < ApplicationController
         level_id: @script_level.level.id,
         script_id: @script_level.script.id
       )
-      # For lockable stages, the last script_level (which will be a LevelGroup) is the only one where
+      # For lockable lessons, the last script_level (which will be a LevelGroup) is the only one where
       # we actually prevent milestone requests. It will be have no user_level until it first gets unlocked
       # so having no user_level is equivalent to bein glocked
-      nonsubmitted_lockable = user_level.nil? && @script_level.end_of_stage?
-      # we have a lockable stage, and user_level is locked. disallow milestone requests
-      if nonsubmitted_lockable || user_level.try(:locked?, @script_level.lesson) || user_level.try(:readonly_answers?)
+      nonsubmitted_lockable = user_level.nil? && @script_level.end_of_lesson?
+      # we have a lockable lesson, and user_level is locked. disallow milestone requests
+      if nonsubmitted_lockable || user_level.try(:show_as_locked?, @script_level.lesson) || user_level.try(:readonly_answers?)
         return head 403
       end
     end
@@ -130,16 +130,6 @@ class ActivitiesController < ApplicationController
       share_failure: share_failure,
       user_level: @user_level
     )
-
-    if solved
-      slog(
-        tag: 'activity_finish',
-        script_level_id: @script_level.try(:id),
-        level_id: @level.id,
-        user_agent: request.user_agent,
-        locale: locale
-      )
-    end
 
     # log this at the end so that server errors (which might be caused by invalid input) prevent logging
     log_milestone(@level_source, params)

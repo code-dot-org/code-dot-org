@@ -41,51 +41,13 @@ import AddMultipleStudents from './AddMultipleStudents';
 import MoveStudents from './MoveStudents';
 import DownloadParentLetter from './DownloadParentLetter';
 import PrintLoginCards from './PrintLoginCards';
+import ManageCodeReviewGroups from './ManageCodeReviewGroups';
 import Button from '../Button';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-
-const styles = {
-  headerName: {
-    width: '60%',
-    float: 'left',
-    marginRight: 5
-  },
-  headerIcon: {
-    width: '20%',
-    float: 'left'
-  },
-  button: {
-    float: 'left'
-  },
-  buttonWithMargin: {
-    marginRight: 5,
-    float: 'left'
-  },
-  verticalAlign: {
-    display: 'flex',
-    alignItems: 'center'
-  },
-  sectionCodeBox: {
-    float: 'right',
-    lineHeight: '30px'
-  },
-  sectionCode: {
-    marginLeft: 5,
-    color: color.teal,
-    fontFamily: '"Gotham 7r", sans-serif',
-    cursor: 'copy'
-  },
-  noSectionCode: {
-    color: color.teal,
-    textDecoration: 'none',
-    cursor: 'pointer'
-  },
-  sectionCodeNotApplicable: {
-    fontFamily: '"Gotham 7r", sans-serif'
-  }
-};
+import SafeMarkdown from '../SafeMarkdown';
+import experiments from '@cdo/apps/util/experiments';
 
 const LOGIN_TYPES_WITH_PASSWORD_COLUMN = [
   SectionLoginType.word,
@@ -148,6 +110,53 @@ export const sortRows = (data, columnIndexList, orderList) => {
   return addRows.concat(newStudentRows).concat(studentRows);
 };
 
+export const ManageStudentsNotificationFull = ({manageStatus}) => {
+  const {sectionCapacity, sectionCode, sectionStudentCount} = manageStatus;
+
+  const sectionSpotsRemaining =
+    sectionCapacity - sectionStudentCount > 0
+      ? sectionCapacity - sectionStudentCount
+      : 0;
+
+  const notificationParams = {
+    studentLimit: sectionCapacity,
+    currentStudentCount: sectionStudentCount,
+    sectionCode: sectionCode,
+    availableSpace: sectionSpotsRemaining
+  };
+
+  const notification = {
+    notice: i18n.manageStudentsNotificationCannotVerb({
+      numStudents: manageStatus.numStudents,
+      verb: manageStatus.verb || 'add'
+    }),
+    details: `${
+      sectionSpotsRemaining === 0
+        ? i18n.manageStudentsNotificationFull(notificationParams)
+        : i18n.manageStudentsNotificationWillBecomeFull(notificationParams)
+    } 
+          ${i18n.contactSupportFullSection({
+            supportLink: 'https://support.code.org/hc/en-us/requests/new'
+          })}`
+  };
+
+  return (
+    <Notification
+      type={NotificationType.failure}
+      notice={notification.notice}
+      details={
+        // SafeMarkedown required to convert i18n string to clickable link
+        <SafeMarkdown markdown={notification.details} />
+      }
+      dismissible={false}
+    />
+  );
+};
+
+ManageStudentsNotificationFull.propTypes = {
+  manageStatus: PropTypes.object.isRequired
+};
+
 class ManageStudentsTable extends Component {
   static propTypes = {
     studioUrlPrefix: PropTypes.string,
@@ -158,6 +167,7 @@ class ManageStudentsTable extends Component {
     sectionName: PropTypes.string,
     studentData: PropTypes.arrayOf(studentSectionDataPropType),
     loginType: PropTypes.string,
+    isSectionAssignedCSA: PropTypes.bool,
     editingData: PropTypes.object,
     addStatus: PropTypes.object,
     saveAllStudents: PropTypes.func,
@@ -246,27 +256,12 @@ class ManageStudentsTable extends Component {
   }
 
   // Cell formatters.
-
   passwordHeaderFormatter() {
     const {loginType} = this.props;
-    const passwordLabels = {};
-    passwordLabels[SectionLoginType.picture] = i18n.picturePassword();
-    passwordLabels[SectionLoginType.word] = i18n.secretWords();
-    passwordLabels[SectionLoginType.email] = i18n.password();
-    const passwordTooltips = {};
-    passwordTooltips[
-      SectionLoginType.picture
-    ] = i18n.editSectionLoginTypePicDesc();
-    passwordTooltips[
-      SectionLoginType.word
-    ] = i18n.editSectionLoginTypeWordDesc();
-    passwordTooltips[
-      SectionLoginType.email
-    ] = i18n.editSectionLoginTypeEmailDesc();
     return (
       <span style={styles.verticalAlign}>
         <div data-for="password" data-tip="" id="password-header">
-          {passwordLabels[loginType]}
+          {this.getPasswordLabel(loginType)}
         </div>
         <ReactTooltip
           id="password"
@@ -276,10 +271,30 @@ class ManageStudentsTable extends Component {
           place="top"
           delayHide={1000}
         >
-          <div>{passwordTooltips[loginType]}</div>
+          <div>{this.getPasswordTooltip(loginType)}</div>
         </ReactTooltip>
       </span>
     );
+  }
+
+  getPasswordLabel(loginType) {
+    const labels = {
+      [SectionLoginType.picture]: i18n.picturePassword(),
+      [SectionLoginType.word]: i18n.secretWords(),
+      [SectionLoginType.email]: i18n.password()
+    };
+
+    return labels[loginType];
+  }
+
+  getPasswordTooltip(loginType) {
+    const tooltipContent = {
+      [SectionLoginType.picture]: i18n.editSectionLoginTypePicDesc(),
+      [SectionLoginType.word]: i18n.editSectionLoginTypeWordDesc(),
+      [SectionLoginType.email]: i18n.editSectionLoginTypeEmailDesc()
+    };
+
+    return tooltipContent[loginType];
   }
 
   passwordFormatter(loginType, {rowData}) {
@@ -467,156 +482,173 @@ class ManageStudentsTable extends Component {
 
   getColumns(sortable) {
     const {loginType} = this.props;
-    let dataColumns = [
-      {
-        property: 'name',
-        header: {
-          label: i18n.name(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell
-            }
-          },
-          transforms: [sortable]
-        },
-        cell: {
-          formatters: [this.nameFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell
-            }
-          }
-        }
-      },
-      {
-        property: 'age',
-        header: {
-          label: i18n.age(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              width: 90
-            }
-          },
-          transforms: [sortable]
-        },
-        cell: {
-          formatters: [this.ageFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              width: 90
-            }
-          }
-        }
-      },
-      {
-        property: 'gender',
-        header: {
-          label: i18n.gender(),
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              width: 120
-            }
-          },
-          transforms: [sortable]
-        },
-        cell: {
-          formatters: [this.genderFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              width: 120
-            }
-          }
-        }
-      }
-    ];
-    const passwordColumn = [
-      {
-        property: 'password',
-        header: {
-          formatters: [this.passwordHeaderFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader,
-              width: 180
-            }
-          }
-        },
-        cell: {
-          formatters: [this.passwordFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              width: 180
-            }
-          }
-        }
-      }
-    ];
-    const projectSharingColumn = [
-      {
-        property: 'projectSharing',
-        header: {
-          label: i18n.projectSharingColumnHeader(),
-          formatters: [this.projectSharingHeaderFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader,
-              width: 130
-            }
-          }
-        },
-        cell: {
-          formatters: [this.projectSharingFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell,
-              ...{textAlign: 'center', width: 130}
-            }
-          }
-        }
-      }
-    ];
-    const controlsColumn = [
-      {
-        property: 'actions',
-        header: {
-          label: i18n.actions(),
-          formatters: [this.actionsHeaderFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.headerCell,
-              ...tableLayoutStyles.unsortableHeader
-            }
-          }
-        },
-        cell: {
-          formatters: [this.actionsFormatter],
-          props: {
-            style: {
-              ...tableLayoutStyles.cell
-            }
-          }
-        }
-      }
+
+    const columns = [
+      this.nameColumn(sortable),
+      this.ageColumn(sortable),
+      this.genderColumn(sortable)
     ];
 
     if (LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType)) {
-      dataColumns = dataColumns.concat(passwordColumn);
+      columns.push(this.passwordColumn());
     }
     if (this.props.showSharingColumn) {
-      dataColumns = dataColumns.concat(projectSharingColumn);
-    }
-    if (LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType)) {
-      dataColumns = dataColumns.concat(controlsColumn);
+      columns.push(this.projectSharingColumn());
     }
 
-    return dataColumns;
+    if (LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType)) {
+      columns.push(this.controlsColumn());
+    }
+
+    return columns;
+  }
+
+  nameColumn(sortable) {
+    return {
+      property: 'name',
+      header: {
+        label: i18n.name(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell
+          }
+        },
+        transforms: [sortable]
+      },
+      cell: {
+        formatters: [this.nameFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell
+          }
+        }
+      }
+    };
+  }
+
+  ageColumn(sortable) {
+    return {
+      property: 'age',
+      header: {
+        label: i18n.age(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            width: 90
+          }
+        },
+        transforms: [sortable]
+      },
+      cell: {
+        formatters: [this.ageFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            width: 90
+          }
+        }
+      }
+    };
+  }
+
+  genderColumn(sortable) {
+    return {
+      property: 'gender',
+      header: {
+        label: i18n.gender(),
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            width: 120
+          }
+        },
+        transforms: [sortable]
+      },
+      cell: {
+        formatters: [this.genderFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            width: 120
+          }
+        }
+      }
+    };
+  }
+
+  passwordColumn() {
+    return {
+      property: 'password',
+      header: {
+        formatters: [this.passwordHeaderFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...tableLayoutStyles.unsortableHeader,
+            width: 180
+          }
+        }
+      },
+      cell: {
+        formatters: [this.passwordFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            width: 180
+          }
+        }
+      }
+    };
+  }
+
+  projectSharingColumn() {
+    return {
+      property: 'projectSharing',
+      header: {
+        label: i18n.projectSharingColumnHeader(),
+        formatters: [this.projectSharingHeaderFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...tableLayoutStyles.unsortableHeader,
+            width: 130
+          }
+        }
+      },
+      cell: {
+        formatters: [this.projectSharingFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell,
+            ...{textAlign: 'center', width: 130}
+          }
+        }
+      }
+    };
+  }
+
+  controlsColumn() {
+    return {
+      property: 'actions',
+      header: {
+        label: i18n.actions(),
+        formatters: [this.actionsHeaderFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.headerCell,
+            ...tableLayoutStyles.unsortableHeader
+          }
+        }
+      },
+      cell: {
+        formatters: [this.actionsFormatter],
+        props: {
+          style: {
+            ...tableLayoutStyles.cell
+          }
+        }
+      }
+    };
   }
 
   copySectionCode() {
@@ -626,7 +658,7 @@ class ManageStudentsTable extends Component {
     firehoseClient.putRecord(
       {
         study: 'teacher-dashboard',
-        study_group: 'manage-students',
+        study_group: 'manage-students-actions',
         event: 'copy-section-code-join-link',
         data_json: JSON.stringify({
           sectionId: sectionId
@@ -645,7 +677,7 @@ class ManageStudentsTable extends Component {
     const {sectionId} = this.props;
     const url =
       teacherDashboardUrl(sectionId, '/login_info') + `?autoPrint=true`;
-    window.open(url, '_blank');
+    window.open(url, '_blank', 'noopener,noreferrer');
   }
 
   showSectionCodeDialog() {
@@ -696,7 +728,8 @@ class ManageStudentsTable extends Component {
       sectionId,
       sectionName,
       sectionCode,
-      studentData
+      studentData,
+      isSectionAssignedCSA
     } = this.props;
 
     const noSectionCode = [
@@ -715,6 +748,12 @@ class ManageStudentsTable extends Component {
             })}
             dismissible={false}
           />
+        )}
+        {addStatus.status === AddStatus.FULL && (
+          <ManageStudentsNotificationFull manageStatus={addStatus} />
+        )}
+        {transferStatus.status === TransferStatus.FULL && (
+          <ManageStudentsNotificationFull manageStatus={transferStatus} />
         )}
         {addStatus.status === AddStatus.FAIL && (
           <Notification
@@ -764,6 +803,15 @@ class ManageStudentsTable extends Component {
               }
             />
           </div>
+          {/* Passes button style to ManageCodeReviewGroups to avoid extra div,
+            but is otherwise similar to other button/modal components here */}
+          {isSectionAssignedCSA &&
+            experiments.isEnabled(experiments.CODE_REVIEW_GROUPS) && (
+              <ManageCodeReviewGroups
+                sectionId={sectionId}
+                buttonContainerStyle={styles.button}
+              />
+            )}
           {LOGIN_TYPES_WITH_PASSWORD_COLUMN.includes(loginType) && (
             <div
               style={styles.sectionCodeBox}
@@ -825,6 +873,47 @@ class ManageStudentsTable extends Component {
   }
 }
 
+const styles = {
+  headerName: {
+    width: '60%',
+    float: 'left',
+    marginRight: 5
+  },
+  headerIcon: {
+    width: '20%',
+    float: 'left'
+  },
+  button: {
+    float: 'left'
+  },
+  buttonWithMargin: {
+    marginRight: 5,
+    float: 'left'
+  },
+  verticalAlign: {
+    display: 'flex',
+    alignItems: 'center'
+  },
+  sectionCodeBox: {
+    float: 'right',
+    lineHeight: '30px'
+  },
+  sectionCode: {
+    marginLeft: 5,
+    color: color.teal,
+    fontFamily: '"Gotham 7r", sans-serif',
+    cursor: 'copy'
+  },
+  noSectionCode: {
+    color: color.teal,
+    textDecoration: 'none',
+    cursor: 'pointer'
+  },
+  sectionCodeNotApplicable: {
+    fontFamily: '"Gotham 7r", sans-serif'
+  }
+};
+
 export const UnconnectedManageStudentsTable = ManageStudentsTable;
 
 export default connect(
@@ -834,6 +923,7 @@ export default connect(
     sectionName: sectionName(state, state.sectionData.section.id),
     loginType: state.manageStudents.loginType,
     studentData: convertStudentDataToArray(state.manageStudents.studentData),
+    isSectionAssignedCSA: state.sectionData.section.isAssignedCSA,
     editingData: state.manageStudents.editingData,
     showSharingColumn: state.manageStudents.showSharingColumn,
     addStatus: state.manageStudents.addStatus,

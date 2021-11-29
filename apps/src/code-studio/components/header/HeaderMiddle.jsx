@@ -6,21 +6,8 @@ import ScriptName from './ScriptName';
 import LessonProgress from '../progress/LessonProgress';
 import HeaderPopup from './HeaderPopup';
 import HeaderFinish from './HeaderFinish';
-import {lessonExtrasUrl} from '@cdo/apps/code-studio/progressRedux';
 import _ from 'lodash';
 import $ from 'jquery';
-
-const styles = {
-  headerMiddleContent: {
-    width: '100%',
-    display: 'flex',
-    alignItems: 'center',
-    animation: 'header_fadein 0.4s'
-  },
-  finishedLink: {
-    width: '100%'
-  }
-};
 
 // These components will be given additional width beyond what they desire.
 const scriptNameExtraWidth = 10;
@@ -33,7 +20,6 @@ class HeaderMiddle extends React.Component {
     appLoaded: PropTypes.bool,
     scriptNameData: PropTypes.object,
     lessonData: PropTypes.object,
-    lessonExtrasUrl: PropTypes.string,
     scriptData: PropTypes.object,
     currentLevelId: PropTypes.string,
     linesOfCodeText: PropTypes.string,
@@ -249,7 +235,7 @@ class HeaderMiddle extends React.Component {
 
           {extraScriptNameData && (
             <div
-              id="script_name_container"
+              id="unit_name_container"
               style={{
                 float: 'left',
                 textAlign: 'right',
@@ -336,12 +322,20 @@ class HeaderMiddle extends React.Component {
   }
 }
 
+const styles = {
+  headerMiddleContent: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    animation: 'header_fadein 0.4s'
+  },
+  finishedLink: {
+    width: '100%'
+  }
+};
+
 export default connect(state => ({
   isRtl: state.isRtl,
   appLoadStarted: state.header.appLoadStarted,
-  appLoaded: state.header.appLoaded,
-  lessonExtrasUrl: lessonExtrasUrl(
-    state.progress,
-    state.progress.currentStageId
-  )
+  appLoaded: state.header.appLoaded
 }))(HeaderMiddle);

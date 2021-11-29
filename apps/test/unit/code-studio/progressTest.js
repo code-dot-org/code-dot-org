@@ -1,7 +1,12 @@
 /** @file Test of progress.js. */
 
-var assert = require('assert');
+import assert from 'assert';
+import sinon from 'sinon';
+import queryString from 'query-string';
+
+import * as viewAsRedux from '@cdo/apps/code-studio/viewAsRedux';
 import {__testonly__} from '@cdo/apps/code-studio/progressRedux';
+import {initViewAs} from '@cdo/apps/code-studio/progress';
 
 describe('bestResultLevelId', function() {
   var progressData;
@@ -32,5 +37,56 @@ describe('bestResultLevelId', function() {
   });
   it('returns the perfect level over the passed level', function() {
     assert.strictEqual(bestResultLevelId([4, 5], progressData), 5);
+  });
+});
+
+describe('initViewAs', function() {
+  let mockStore, mockSetViewType, mockQueryStringParse;
+  before(function() {
+    mockStore = {
+      dispatch: sinon.fake()
+    };
+
+    mockSetViewType = sinon.stub(viewAsRedux, 'setViewType');
+    mockQueryStringParse = sinon.stub(queryString, 'parse').returns({});
+  });
+
+  after(function() {
+    mockSetViewType.restore();
+    mockQueryStringParse.restore();
+  });
+
+  it('defaults to Participant', function() {
+    initViewAs(mockStore, {});
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
+  });
+
+  // TODO(dmcavoy): Update so it is based on instructor instead of account type
+  it('defaults to instructor if current user is a teacher', function() {
+    initViewAs(mockStore, {user_type: 'teacher'});
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
+  });
+
+  // TODO(dmcavoy): Update so it is based on participant instead of account type
+  it('prevents overriding default if current user is a student', function() {
+    mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Instructor});
+    initViewAs(mockStore, {user_type: 'student'});
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
+  });
+
+  // TODO(dmcavoy): Update so it is based on participant instead of account type
+  it('allows overriding default if current user is not a student', function() {
+    mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Instructor});
+
+    initViewAs(mockStore, {});
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
+
+    initViewAs(mockStore, {user_type: 'teacher'});
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Instructor));
+
+    mockQueryStringParse.returns({viewAs: viewAsRedux.ViewType.Participant});
+
+    initViewAs(mockStore, {user_type: 'teacher'});
+    assert(mockSetViewType.calledWith(viewAsRedux.ViewType.Participant));
   });
 });

@@ -2,12 +2,17 @@
   "script": {
     "name": "cspexam1-mWU7ilDYM9",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": true,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-11-22 19:56:43 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "cspexam1-mWU7ilDYM9"
     }
@@ -31,6 +36,7 @@
       "name": "CS Principles Culminating Assessment Part 1",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -41,22 +47,53 @@
       }
     }
   ],
+  "lesson_activities": [
+    {
+      "key": "d0ea1529-417a-4b92-9763-0bc6a3850a03",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d0ea1529-417a-4b92-9763-0bc6a3850a03",
+        "lesson.key": "CS Principles Culminating Assessment Part 1",
+        "lesson_group.key": "",
+        "script.name": "cspexam1-mWU7ilDYM9"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "a1a85d4c-7df4-405e-b97a-e44a21a9326e",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "a1a85d4c-7df4-405e-b97a-e44a21a9326e",
+        "lesson_activity.key": "d0ea1529-417a-4b92-9763-0bc6a3850a03"
+      }
+    }
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP_Final_instructions"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP_Final_instructions"
         ],
         "lesson.key": "CS Principles Culminating Assessment Part 1",
         "lesson_group.key": "",
-        "script.name": "cspexam1-mWU7ilDYM9"
+        "script.name": "cspexam1-mWU7ilDYM9",
+        "activity_section.key": "a1a85d4c-7df4-405e-b97a-e44a21a9326e"
       },
       "level_keys": [
         "CSP_Final_instructions"
@@ -65,18 +102,22 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Part 1 - CSP Culminating Assessment"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Part 1 - CSP Culminating Assessment"
         ],
         "lesson.key": "CS Principles Culminating Assessment Part 1",
         "lesson_group.key": "",
-        "script.name": "cspexam1-mWU7ilDYM9"
+        "script.name": "cspexam1-mWU7ilDYM9",
+        "activity_section.key": "a1a85d4c-7df4-405e-b97a-e44a21a9326e"
       },
       "level_keys": [
         "Part 1 - CSP Culminating Assessment"
@@ -92,7 +133,8 @@
         ],
         "lesson.key": "CS Principles Culminating Assessment Part 1",
         "lesson_group.key": "",
-        "script.name": "cspexam1-mWU7ilDYM9"
+        "script.name": "cspexam1-mWU7ilDYM9",
+        "activity_section.key": "a1a85d4c-7df4-405e-b97a-e44a21a9326e"
       }
     },
     {
@@ -103,8 +145,39 @@
         ],
         "lesson.key": "CS Principles Culminating Assessment Part 1",
         "lesson_group.key": "",
-        "script.name": "cspexam1-mWU7ilDYM9"
+        "script.name": "cspexam1-mWU7ilDYM9",
+        "activity_section.key": "a1a85d4c-7df4-405e-b97a-e44a21a9326e"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

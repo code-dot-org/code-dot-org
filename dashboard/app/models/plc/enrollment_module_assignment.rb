@@ -35,7 +35,7 @@ class Plc::EnrollmentModuleAssignment < ApplicationRecord
   ].freeze
 
   def status
-    Plc::EnrollmentModuleAssignment.stages_based_status(
+    Plc::EnrollmentModuleAssignment.lessons_based_status(
       [plc_learning_module.lesson],
       user,
       plc_enrollment_unit_assignment.plc_course_unit.script
@@ -44,8 +44,8 @@ class Plc::EnrollmentModuleAssignment < ApplicationRecord
 
   # Legacy PD courses do not have modules. However, they have user-completion-status for different sections
   # in similar ways - look at all the levels, and see what the user progress is for them.
-  def self.stages_based_status(stages, user, script)
-    all_levels = stages.flat_map(&:script_levels).flat_map(&:levels)
+  def self.lessons_based_status(lessons, user, script)
+    all_levels = lessons.flat_map(&:script_levels).flat_map(&:levels)
     levels_tracked = all_levels.reject {|level| [External, ExternalLink].include?(level.class) || level.try(:peer_reviewable?)}
 
     user_progress_on_tracked_levels = UserLevel.where(user: user, level: levels_tracked, script: script)

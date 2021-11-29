@@ -18,7 +18,9 @@ const lessons = [
 const levelsByLesson = [
   [
     {
+      id: '30',
       status: LevelStatus.not_tried,
+      isLocked: false,
       url: '/step1/level1',
       name: 'First progression',
       levelNumber: 1
@@ -28,7 +30,9 @@ const levelsByLesson = [
       progression: 'Second Progression'
     })),
     {
+      id: '40',
       status: LevelStatus.not_tried,
+      isLocked: false,
       url: '/step3/level1',
       name: 'Last progression',
       levelNumber: 7
@@ -39,40 +43,37 @@ const levelsByLesson = [
   fakeLevels(2)
 ];
 
+const groupedLesson = {lessons, levelsByLesson};
+
 export default storybook => {
   storybook.storiesOf('Progress/DetailProgressTable', module).addStoryTable([
     {
       name: 'simple DetailProgressTable',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, null)}>
-          <DetailProgressTable
-            lessons={lessons}
-            levelsByLesson={levelsByLesson}
-          />
+        <Provider
+          store={createStoreWithHiddenLesson(ViewType.Instructor, null)}
+        >
+          <DetailProgressTable groupedLesson={groupedLesson} />
         </Provider>
       )
     },
     {
-      name: 'with hidden lesson as teacher',
+      name: 'with hidden lesson as instructor',
       description: 'lesson 2 should be white with dashed outline',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Teacher, '2')}>
-          <DetailProgressTable
-            lessons={lessons}
-            levelsByLesson={levelsByLesson}
-          />
+        <Provider store={createStoreWithHiddenLesson(ViewType.Instructor, '2')}>
+          <DetailProgressTable groupedLesson={groupedLesson} />
         </Provider>
       )
     },
     {
-      name: 'with hidden lesson as student',
+      name: 'with hidden lesson as participant',
       description: 'lesson 2 should be invisible',
       story: () => (
-        <Provider store={createStoreWithHiddenLesson(ViewType.Student, '2')}>
-          <DetailProgressTable
-            lessons={lessons}
-            levelsByLesson={levelsByLesson}
-          />
+        <Provider
+          store={createStoreWithHiddenLesson(ViewType.Participant, '2')}
+        >
+          <DetailProgressTable groupedLesson={groupedLesson} />
         </Provider>
       )
     }

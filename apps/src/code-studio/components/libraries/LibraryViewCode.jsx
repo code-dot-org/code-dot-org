@@ -7,36 +7,6 @@ import color from '@cdo/apps/util/color';
 
 const DEFAULT_MARGIN = 7;
 
-const styles = {
-  dialog: {
-    padding: 15
-  },
-  header: {
-    textAlign: 'left',
-    fontSize: 24,
-    marginTop: 5,
-    whiteSpace: 'pre-wrap',
-    lineHeight: 1.25,
-    textOverflow: 'ellipsis',
-    overflow: 'hidden'
-  },
-  message: {
-    color: color.dark_charcoal,
-    margin: DEFAULT_MARGIN,
-    overflow: 'auto',
-    whiteSpace: 'pre-wrap',
-    fontSize: 14,
-    maxHeight: 95
-  },
-  code: {
-    position: 'relative',
-    // Our droplet editor requires a specific height to display correctly.
-    // Therefore, we use `height` rather than `maxHeight` here.
-    height: 390,
-    margin: DEFAULT_MARGIN
-  }
-};
-
 export default class LibraryViewCode extends React.Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
@@ -83,3 +53,33 @@ export default class LibraryViewCode extends React.Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    padding: 15
+  },
+  header: {
+    textAlign: 'left',
+    fontSize: 24,
+    marginTop: 5,
+    whiteSpace: 'pre-wrap',
+    lineHeight: 1.25,
+    textOverflow: 'ellipsis',
+    overflow: 'hidden'
+  },
+  message: {
+    color: color.dark_charcoal,
+    margin: DEFAULT_MARGIN,
+    overflow: 'auto',
+    whiteSpace: 'pre-wrap',
+    fontSize: 14,
+    maxHeight: 95
+  },
+  code: {
+    position: 'relative',
+    // Our droplet editor requires a specific height to display correctly.
+    // Therefore, we use `height` rather than `maxHeight` here.
+    height: 390,
+    margin: DEFAULT_MARGIN
+  }
+};

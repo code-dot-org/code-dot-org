@@ -10,57 +10,6 @@ import SublevelCard from '../SublevelCard';
 const CARD_AREA_SIZE = 900;
 const RadiumFontAwesome = Radium(FontAwesome);
 
-const styles = {
-  challengeRow: {
-    clear: 'both',
-    overflow: 'hidden',
-    display: 'inline-block',
-    position: 'relative',
-    whiteSpace: 'normal',
-    transition: 'left 0.25s ease-out',
-    padding: '10px 0',
-    verticalAlign: 'top'
-  },
-  challenges: {
-    display: 'inline-block',
-    overflowX: 'hidden',
-    whiteSpace: 'nowrap',
-    transition: 'width 0.1s ease-out',
-    verticalAlign: 'top'
-  },
-  lessonNumberHeading: {
-    backgroundColor: color.purple,
-    width: '100%',
-    textAlign: 'center',
-    color: color.white,
-    fontSize: 20,
-    lineHeight: '35px'
-  },
-  arrow: {
-    fontSize: 40,
-    cursor: 'pointer',
-    verticalAlign: -30,
-    margin: 10
-  },
-  arrowDisabled: {
-    color: color.lighter_gray,
-    cursor: 'default'
-  },
-  cards: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-    backgroundColor: color.white
-  },
-  scroller: {
-    backgroundColor: color.white,
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center'
-  }
-};
-
 class BonusLevels extends React.Component {
   static propTypes = {
     bonusLevels: PropTypes.arrayOf(PropTypes.shape(lessonOfBonusLevels)),
@@ -76,37 +25,44 @@ class BonusLevels extends React.Component {
   }
 
   nextLesson = () => {
-    if (this.state.lessonIndex < this.props.bonusLevels.length - 1) {
+    if (!this.isRightArrowDisabled()) {
       this.setState({lessonIndex: this.state.lessonIndex + 1});
     }
   };
 
   previousLesson = () => {
-    if (this.state.lessonIndex > 0) {
+    if (!this.isLeftArrowDisabled()) {
       this.setState({lessonIndex: this.state.lessonIndex - 1});
     }
   };
 
+  isLeftArrowDisabled = () => {
+    return this.state.lessonIndex === 0;
+  };
+
+  isRightArrowDisabled = () => {
+    return this.state.lessonIndex === this.props.bonusLevels.length - 1;
+  };
+
   render() {
+    const currLessonNum = this.props.bonusLevels[this.state.lessonIndex]
+      .lessonNumber;
+
     const previousNumLessons = this.props.bonusLevels.filter(
-      lesson =>
-        lesson.stageNumber <
-        this.props.bonusLevels[this.state.lessonIndex].stageNumber
+      lesson => lesson.lessonNumber < currLessonNum
     ).length;
     const scrollAmount = -1 * previousNumLessons * CARD_AREA_SIZE;
 
-    const leftDisabled = this.state.lessonIndex === 0;
-    const rightDisabled =
-      this.state.lessonIndex === this.props.bonusLevels.length - 1;
+    const leftDisabled = this.isLeftArrowDisabled();
+    const rightDisabled = this.isRightArrowDisabled();
 
     return (
       <div>
-        <div style={styles.lessonNumberHeading}>
+        <h2 style={styles.lessonNumberHeading}>
           {i18n.extrasStageNChallenges({
-            stageNumber: this.props.bonusLevels[this.state.lessonIndex]
-              .stageNumber
+            lessonNumber: currLessonNum
           })}
-        </div>
+        </h2>
         <div style={styles.scroller}>
           <RadiumFontAwesome
             icon="caret-left"
@@ -121,7 +77,7 @@ class BonusLevels extends React.Component {
           >
             {this.props.bonusLevels.map(lesson => (
               <div
-                key={lesson.stageNumber}
+                key={lesson.lessonNumber}
                 style={{
                   ...styles.challengeRow,
                   left: scrollAmount,
@@ -152,5 +108,58 @@ class BonusLevels extends React.Component {
     );
   }
 }
+
+const styles = {
+  challengeRow: {
+    clear: 'both',
+    overflow: 'hidden',
+    display: 'inline-block',
+    position: 'relative',
+    whiteSpace: 'normal',
+    transition: 'left 0.25s ease-out',
+    padding: '10px 0',
+    verticalAlign: 'top'
+  },
+  challenges: {
+    display: 'inline-block',
+    overflowX: 'hidden',
+    whiteSpace: 'nowrap',
+    transition: 'width 0.1s ease-out',
+    verticalAlign: 'top'
+  },
+  lessonNumberHeading: {
+    backgroundColor: color.purple,
+    width: '100%',
+    textAlign: 'center',
+    color: color.white,
+    fontSize: 20,
+    lineHeight: '35px',
+    fontFamily: '"Gotham 4r"',
+    margin: 0
+  },
+  arrow: {
+    fontSize: 40,
+    cursor: 'pointer',
+    verticalAlign: -30,
+    margin: 10
+  },
+  arrowDisabled: {
+    color: color.lighter_gray,
+    cursor: 'default'
+  },
+  cards: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    backgroundColor: color.white
+  },
+  scroller: {
+    backgroundColor: color.white,
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
+  }
+};
 
 export default Radium(BonusLevels);

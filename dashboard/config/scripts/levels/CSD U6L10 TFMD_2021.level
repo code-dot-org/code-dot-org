@@ -1,0 +1,20 @@
+<CurriculumReference>
+  <config><![CDATA[{
+  "game_id": 59,
+  "created_at": "2020-12-04T21:56:16.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "instructions_important": "false",
+    "display_name": "Lesson Overview",
+    "reference": "/curriculum/csd-20/unit6/10/overview/index.html",
+    "parent_level_id": 20498,
+    "name_suffix": "_2021",
+    "encrypted": "false",
+    "teacher_markdown": "**[Arrays](https://drive.google.com/file/d/1X8tTj4O9_XVn1LNPhs9LZGIXJVxB6yFX/view?usp=sharing)** - Map Level (PDF)\r\n\r\n**[Circuits and LEDs](https://drive.google.com/file/d/1uRQsBQna07gfhhqlIz6mgX56fki8n_-d/view?usp=sharing)** - Map Level (PDF)\r\n\r\n**[Color Lights](https://drive.google.com/file/d/1EEZhq_8Ljs77kLQoriJj24frEkFfHIKZ/view?usp=sharing)** - Map Level (PDF)"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-01-09 22:43:36 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-11 23:35:42 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-11 23:36:09 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-11 23:36:52 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-11 23:37:15 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-11 23:37:33 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-11 23:37:51 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-11 23:38:11 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-11 23:40:18 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-01-11 23:40:42 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-05-04 22:08:57 +0000\",\"changed\":[\"reference\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2020-07-08 14:48:51 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"}]"
+}]]></config>
+</CurriculumReference>

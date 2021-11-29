@@ -52,7 +52,7 @@ This lesson gets complicated rather quickly.  If your students had an easy time 
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Super Challenge - Functions with Parameters](http://learn.code.org/s/course4/stage/21/puzzle/1)
+### <a name="Activity"></a> [Super Challenge - Functions with Parameters](http://learn.code.org/s/course4/lessons/21/levels/1)
 
 [/together]
 

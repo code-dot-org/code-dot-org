@@ -1,0 +1,6 @@
+{
+  "func": "keyIsPressed",
+  "category": "World",
+  "type": "readonlyproperty",
+  "noAutocomplete": true
+}

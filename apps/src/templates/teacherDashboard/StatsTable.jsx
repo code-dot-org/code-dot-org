@@ -7,17 +7,8 @@ import * as sort from 'sortabular';
 import wrappedSortable from '../tables/wrapped_sortable';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import orderBy from 'lodash/orderBy';
-import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
+import {getSelectedScriptName} from '@cdo/apps/redux/unitSelectionRedux';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-
-const styles = {
-  table: {
-    width: '100%'
-  },
-  rightAlignText: {
-    textAlign: 'right'
-  }
-};
 
 class StatsTable extends Component {
   static propTypes = {
@@ -178,6 +169,15 @@ class StatsTable extends Component {
     );
   }
 }
+
+const styles = {
+  table: {
+    width: '100%'
+  },
+  rightAlignText: {
+    textAlign: 'right'
+  }
+};
 
 export const UnconnectedStatsTable = StatsTable;
 export default connect(state => ({

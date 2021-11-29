@@ -2,12 +2,17 @@
   "script": {
     "name": "allthehiddenthings",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-11-22 17:07:10 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "allthehiddenthings"
     }
@@ -31,6 +36,7 @@
       "name": "Game Lab",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -45,6 +51,7 @@
       "name": "Contained Levels",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -55,22 +62,76 @@
       }
     }
   ],
+  "lesson_activities": [
+    {
+      "key": "89dbfb97-6622-4efb-9980-3b82aed194f5",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "89dbfb97-6622-4efb-9980-3b82aed194f5",
+        "lesson.key": "Game Lab",
+        "lesson_group.key": "",
+        "script.name": "allthehiddenthings"
+      }
+    },
+    {
+      "key": "0e9e342e-b500-4626-8a46-451be740297d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0e9e342e-b500-4626-8a46-451be740297d",
+        "lesson.key": "Contained Levels",
+        "lesson_group.key": "",
+        "script.name": "allthehiddenthings"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "912e1ff9-7f96-44cd-89f4-845af0d6f664",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "912e1ff9-7f96-44cd-89f4-845af0d6f664",
+        "lesson_activity.key": "89dbfb97-6622-4efb-9980-3b82aed194f5"
+      }
+    },
+    {
+      "key": "bab1cddb-031b-4336-b770-f3a7a7b78627",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bab1cddb-031b-4336-b770-f3a7a7b78627",
+        "lesson_activity.key": "0e9e342e-b500-4626-8a46-451be740297d"
+      }
+    }
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "allthethings_U3 - Simple Drawing - Rectangle Width and Height"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "allthethings_U3 - Simple Drawing - Rectangle Width and Height"
         ],
         "lesson.key": "Game Lab",
         "lesson_group.key": "",
-        "script.name": "allthehiddenthings"
+        "script.name": "allthehiddenthings",
+        "activity_section.key": "912e1ff9-7f96-44cd-89f4-845af0d6f664"
       },
       "level_keys": [
         "allthethings_U3 - Simple Drawing - Rectangle Width and Height"
@@ -79,18 +140,22 @@
     {
       "chapter": 2,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Test GameLab Predictive"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Test GameLab Predictive"
         ],
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
-        "script.name": "allthehiddenthings"
+        "script.name": "allthehiddenthings",
+        "activity_section.key": "bab1cddb-031b-4336-b770-f3a7a7b78627"
       },
       "level_keys": [
         "Test GameLab Predictive"
@@ -99,18 +164,22 @@
     {
       "chapter": 3,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Test Contained Multi"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Test Contained Multi"
         ],
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
-        "script.name": "allthehiddenthings"
+        "script.name": "allthehiddenthings",
+        "activity_section.key": "bab1cddb-031b-4336-b770-f3a7a7b78627"
       },
       "level_keys": [
         "Test Contained Multi"
@@ -119,18 +188,22 @@
     {
       "chapter": 4,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "PS predictive Applab level test"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "PS predictive Applab level test"
         ],
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
-        "script.name": "allthehiddenthings"
+        "script.name": "allthehiddenthings",
+        "activity_section.key": "bab1cddb-031b-4336-b770-f3a7a7b78627"
       },
       "level_keys": [
         "PS predictive Applab level test"
@@ -146,7 +219,8 @@
         ],
         "lesson.key": "Game Lab",
         "lesson_group.key": "",
-        "script.name": "allthehiddenthings"
+        "script.name": "allthehiddenthings",
+        "activity_section.key": "912e1ff9-7f96-44cd-89f4-845af0d6f664"
       }
     },
     {
@@ -157,7 +231,8 @@
         ],
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
-        "script.name": "allthehiddenthings"
+        "script.name": "allthehiddenthings",
+        "activity_section.key": "bab1cddb-031b-4336-b770-f3a7a7b78627"
       }
     },
     {
@@ -168,7 +243,8 @@
         ],
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
-        "script.name": "allthehiddenthings"
+        "script.name": "allthehiddenthings",
+        "activity_section.key": "bab1cddb-031b-4336-b770-f3a7a7b78627"
       }
     },
     {
@@ -179,8 +255,39 @@
         ],
         "lesson.key": "Contained Levels",
         "lesson_group.key": "",
-        "script.name": "allthehiddenthings"
+        "script.name": "allthehiddenthings",
+        "activity_section.key": "bab1cddb-031b-4336-b770-f3a7a7b78627"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

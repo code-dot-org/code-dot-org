@@ -1,0 +1,8 @@
+name 'CSP U1L10 More Shades of Color_2021'
+display_name 'Red, Green, and Blue (RGB)'
+css 'unplugged'
+markdown <<MARKDOWN
+# More Shades of Color
+
+![](https://images.code.org/aaea52cd2d3a57df86022c0eb9620025-image-1564715963534.PNG)
+MARKDOWN

@@ -1,0 +1,30 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "setDefaultSpriteSize",
+    "blockText": "set new sprite default size to {SIZE}",
+    "args": [
+      {
+        "name": "SIZE",
+        "options": [
+          [
+            "large",
+            "100"
+          ],
+          [
+            "medium",
+            "75"
+          ],
+          [
+            "small",
+            "50"
+          ],
+          [
+            "extra small",
+            "25"
+          ]
+        ]
+      }
+    ]
+  }
+}

@@ -24,14 +24,22 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
     assert_equal [a.script, s2.script, s1.script], Queries::ScriptActivity.working_on_scripts(@user)
     assert_equal a.script, Queries::ScriptActivity.primary_script(@user)
 
+    unit_group = create :unit_group, published_state: SharedCourseConstants::PUBLISHED_STATE.stable
+    course_script = create :script, published_state: nil
+    create :unit_group_unit, unit_group: unit_group, script: course_script, position: 1
+    course_script.reload
+    create :user_script, user: @user, started_at: Time.now - 12.hours, script: course_script
+    assert_equal [course_script, a.script, s2.script, s1.script], Queries::ScriptActivity.working_on_scripts(@user)
+    assert_equal course_script, Queries::ScriptActivity.primary_script(@user)
+
     # make progress on an older script
     s1.update_attribute(:last_progress_at, Time.now - 3.hours)
-    assert_equal [s1.script, a.script, s2.script], Queries::ScriptActivity.working_on_scripts(@user)
+    assert_equal [s1.script, course_script, a.script, s2.script], Queries::ScriptActivity.working_on_scripts(@user)
     assert_equal s1.script, Queries::ScriptActivity.primary_script(@user)
   end
 
   test 'user should prefer working on 20hour instead of hoc' do
-    twenty_hour = Script.twenty_hour_script
+    twenty_hour = Script.twenty_hour_unit
     hoc = Script.find_by(name: 'hourofcode')
 
     # do a level that is both in script 1 and hoc
@@ -43,7 +51,7 @@ class Queries::ScriptActivityTest < ActiveSupport::TestCase
   end
 
   test 'in_progress_and_completed_scripts does not include deleted scripts' do
-    real_script = Script.starwars_script
+    real_script = Script.starwars_unit
     fake_script = create :script
 
     user_script_1 = create :user_script, user: @user, script: real_script

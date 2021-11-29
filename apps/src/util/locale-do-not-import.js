@@ -12,5 +12,5 @@ import safeLoadLocale from '@cdo/apps/util/safeLoadLocale';
 import localeWithI18nStringTracker from '@cdo/apps/util/i18nStringTracker';
 
 let locale = safeLoadLocale('common_locale');
-locale = localeWithI18nStringTracker(locale, 'common_locale');
+locale = localeWithI18nStringTracker(locale, 'common');
 module.exports = locale;

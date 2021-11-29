@@ -1,4 +1,4 @@
 name 'U2 evaluation q5'
 question ‘How much have you thought about how images are represented digitally on computers?’
-answer ‘I have thought about this and have a good sense of how it works’, weight: -1, stage_name: ‘Lessons 3 - 4 : Encoding Images'
-answer ‘I do not have much of an idea of how it works’, weight: 3, stage_name: ‘Lessons 3 - 4 : Encoding Images'
+answer ‘I have thought about this and have a good sense of how it works’, weight: -1, lesson_name: ‘Lessons 3 - 4 : Encoding Images'
+answer ‘I do not have much of an idea of how it works’, weight: 3, lesson_name: ‘Lessons 3 - 4 : Encoding Images'

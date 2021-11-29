@@ -2,7 +2,23 @@
   "//": ["Test Animation Library Manifest", "For testing only"],
   "metadata": {
     "category_animals/hippo": {
-      "name": "hippo"
+      "name": "hippo",
+      "frameCount": 1,
+      "frameSize": {
+        "x": 264,
+        "y": 264
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "categories": [
+        "animals"
+      ],
+      "version": "Yr86vxBjq3lCyCJHDOFtW.p8gR0AURzQ",
+      "sourceUrl": "/api/v1/animation-library/spritelab/Yr86vxBjq3lCyCJHDOFtW.p8gR0AURzQ/category_animals/hippo.png",
+      "sourceSize": {
+        "x": 264,
+        "y": 264
+      }
     },
     "category_animals/hippo_gray": {
       "name": "hippo_gray"
@@ -44,6 +60,25 @@
     },
     "category_body_parts/hip": {
       "name": "hip"
+    },
+    "category_video_games/wheat": {
+      "name": "wheat",
+      "categories": [
+        "video_games"
+      ],
+      "frameCount": 1,
+      "frameSize": {
+        "x": 128,
+        "y": 128
+      },
+      "looping": true,
+      "frameDelay": 2,
+      "version": "IYyVUgsI9mXMCoxR1hNQjDAqk8H73De.",
+      "sourceUrl": "/api/v1/animation-library/spritelab/IYyVUgsI9mXMCoxR1hNQjDAqk8H73De./category_video_games/wheat.png",
+      "sourceSize": {
+        "x": 128,
+        "y": 128
+      }
     }
   },
   "categories": {

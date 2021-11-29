@@ -1,0 +1,18 @@
+name 'csp-9-exam1-photoalbum-metadata-2020_2021'
+editor_experiment ''
+wrong 'Filter photos to those taken in the last week'
+wrong 'Filter photos to those taken in a particular country'
+right 'Filter photos to those taken of buildings'
+wrong 'Filter photos to those taken with her favorite camera'
+
+
+markdown <<MARKDOWN
+A photographer stores digital photographs on her computer. In this case the photographs are considered the data. Each photograph also includes multiple pieces of metadata including:
+
+* Date: The date the photograph was taken
+* Time: The time the photograph was taken
+* Location: The location where the photograph was taken
+* Device: Which camera the photo was taken with
+
+Which of the following could the photographer NOT do based on this metadata?
+MARKDOWN

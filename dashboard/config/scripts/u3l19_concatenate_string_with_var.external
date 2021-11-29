@@ -26,7 +26,5 @@ write("So far " + numLikes + " like this page");
 On the next screen we'll have you play with this a little bit.
 
 
-<a class="btn btn-large btn-primary next-stage submitButton">Try it...</a>
-
 
 MARKDOWN

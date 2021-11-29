@@ -27,7 +27,8 @@ describe('ActivityCardAndPreview', () => {
       updateActivitySectionMetrics,
       generateActivitySectionKey,
       targetActivitySectionPos: 1,
-      activitySectionMetrics: []
+      activitySectionMetrics: [],
+      hasLessonPlan: true
     };
   });
 

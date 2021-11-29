@@ -1,0 +1,22 @@
+{
+  "func": "digitalWrite",
+  "category": "Maker",
+  "paletteParams": [
+    {
+      "name": "pin"
+    },
+    {
+      "name": "value"
+    }
+  ],
+  "params": [
+    "13",
+    "1"
+  ],
+  "dropdown": {
+    "1": [
+      "1",
+      "0"
+    ]
+  }
+}

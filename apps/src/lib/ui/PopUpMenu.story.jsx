@@ -7,6 +7,7 @@ export default storybook => {
 
 class Overview extends Component {
   state = {
+    isOpen: true,
     targetPoint: {
       top: 0,
       left: 0
@@ -36,10 +37,15 @@ class Overview extends Component {
             width: '50%'
           }}
           ref={el => (this.target = el)}
+          onClick={() => !this.state.isOpen && this.setState({isOpen: true})}
         >
           It targets the bottom-center of this element.
         </div>
-        <PopUpMenu isOpen targetPoint={this.state.targetPoint}>
+        <PopUpMenu
+          isOpen={this.state.isOpen}
+          onClose={() => this.setState({isOpen: false})}
+          targetPoint={this.state.targetPoint}
+        >
           <PopUpMenu.Item onClick={() => {}}>Option One</PopUpMenu.Item>
           <PopUpMenu.Item onClick={() => {}}>Option Two</PopUpMenu.Item>
           <PopUpMenu.Item onClick={() => {}}>Option Three</PopUpMenu.Item>

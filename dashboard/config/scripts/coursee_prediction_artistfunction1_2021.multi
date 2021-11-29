@@ -1,0 +1,6 @@
+name 'courseE_prediction_artistFunction1_2021'
+question 'What will happen when you press "Run"?'
+wrong 'Nothing. The function is not called in the program.', feedback: 'Incorrect. The function is actually called two times in the program.'
+wrong 'The artist will draw a single square.', feedback: 'Incorrect. The function is actually called two times in the program.'
+wrong 'The artist will draw two squares that overlap.', feedback: 'Incorrect. The length of each side of the square is only 100 pixels, but the artist jumps by 175 pixels between functions.'
+right 'The artist will draw two squares with a small gap in between.', feedback: 'Correct! The function is called two times in the program, with a jump in between.'

@@ -99,7 +99,7 @@ describe('activitiesEditorRedux reducer tests', () => {
         .activities;
       assert.deepEqual(
         nextState[0].activitySections[2].scriptLevels.map(l => l.id),
-        [11, 10]
+        ['11', '10']
       );
     });
 
@@ -116,7 +116,6 @@ describe('activitiesEditorRedux reducer tests', () => {
               position: 1,
               displayName: 'Making drawings',
               remarks: true,
-              slide: false,
               scriptLevels: [],
               text: 'Drawing text',
               tips: []
@@ -136,7 +135,10 @@ describe('activitiesEditorRedux reducer tests', () => {
 
       it('moves level to activitySection within the same activity', () => {
         const oldActivities = initialState.activities;
-        assert.deepEqual([[], [], [1, 2]], activeLevelIdMap(oldActivities[0]));
+        assert.deepEqual(
+          [[], [], ['1', '2']],
+          activeLevelIdMap(oldActivities[0])
+        );
 
         const activityPos = 1;
         const sectionPos = 3;
@@ -152,12 +154,18 @@ describe('activitiesEditorRedux reducer tests', () => {
             newSectionPos
           )
         ).activities;
-        assert.deepEqual([[], [2], [1]], activeLevelIdMap(newActivities[0]));
+        assert.deepEqual(
+          [[], ['2'], ['1']],
+          activeLevelIdMap(newActivities[0])
+        );
       });
 
       it('moves level to activitySection in a different activity', () => {
         const oldActivities = initialState.activities;
-        assert.deepEqual([[], [], [1, 2]], activeLevelIdMap(oldActivities[0]));
+        assert.deepEqual(
+          [[], [], ['1', '2']],
+          activeLevelIdMap(oldActivities[0])
+        );
         assert.deepEqual([[]], activeLevelIdMap(oldActivities[1]));
 
         const activityPos = 1;
@@ -175,8 +183,8 @@ describe('activitiesEditorRedux reducer tests', () => {
             newSectionPos
           )
         ).activities;
-        assert.deepEqual([[], [], [1]], activeLevelIdMap(newActivities[0]));
-        assert.deepEqual([[2]], activeLevelIdMap(newActivities[1]));
+        assert.deepEqual([[], [], ['1']], activeLevelIdMap(newActivities[0]));
+        assert.deepEqual([['2']], activeLevelIdMap(newActivities[1]));
       });
     });
 
@@ -184,11 +192,11 @@ describe('activitiesEditorRedux reducer tests', () => {
       const nextState = reducer(
         initialState,
         addLevel(1, 3, {
-          id: 12,
+          id: '12',
           levels: [
             {
               name: 'Level 4',
-              id: 4,
+              id: '4',
               url: '/levels/598/edit',
               icon: 'fa-desktop',
               isUnplugged: false,
@@ -200,7 +208,7 @@ describe('activitiesEditorRedux reducer tests', () => {
             }
           ],
           position: 4,
-          activeId: 4,
+          activeId: '4',
           kind: 'puzzle',
           bonus: false,
           assessment: false,
@@ -210,7 +218,7 @@ describe('activitiesEditorRedux reducer tests', () => {
       ).activities;
       assert.deepEqual(
         nextState[0].activitySections[2].scriptLevels.map(s => s.id),
-        [10, 11, 12]
+        ['10', '11', '12']
       );
     });
 
@@ -218,7 +226,7 @@ describe('activitiesEditorRedux reducer tests', () => {
       const nextState = reducer(initialState, removeLevel(1, 3, 1)).activities;
       assert.deepEqual(
         nextState[0].activitySections[2].scriptLevels.map(s => s.id),
-        [11]
+        ['11']
       );
     });
 

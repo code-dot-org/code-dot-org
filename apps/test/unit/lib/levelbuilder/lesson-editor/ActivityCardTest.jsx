@@ -2,7 +2,10 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedActivityCard as ActivityCard} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard';
-import {sampleActivities} from './activitiesTestData';
+import {
+  sampleActivities,
+  sampleActivityForLessonWithoutLessonPlan
+} from './activitiesTestData';
 import sinon from 'sinon';
 
 describe('ActivityCard', () => {
@@ -43,7 +46,8 @@ describe('ActivityCard', () => {
       targetActivitySectionPos: 1,
       activitySectionMetrics: [],
       handleCollapse,
-      collapsed: false
+      collapsed: false,
+      hasLessonPlan: true
     };
   });
 
@@ -53,6 +57,21 @@ describe('ActivityCard', () => {
     expect(wrapper.contains('Duration:')).to.be.true;
     expect(wrapper.find('OrderControls').length).to.equal(1);
     expect(wrapper.find('Connect(ActivitySectionCard)').length).to.equal(3);
+    expect(wrapper.find('button').length).to.equal(1);
+  });
+
+  it('renders correct fields for lesson without lesson plan', () => {
+    const wrapper = shallow(
+      <ActivityCard
+        {...defaultProps}
+        hasLessonPlan={false}
+        activity={sampleActivityForLessonWithoutLessonPlan}
+      />
+    );
+    expect(wrapper.contains('Activity:')).to.be.false;
+    expect(wrapper.contains('Duration:')).to.be.false;
+    expect(wrapper.find('OrderControls').length).to.equal(0);
+    expect(wrapper.find('Connect(ActivitySectionCard)').length).to.equal(1);
     expect(wrapper.find('button').length).to.equal(1);
   });
 

@@ -14,14 +14,6 @@ import {
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 
-const styles = {
-  text: {
-    font: 10,
-    paddingTop: 20,
-    paddingBottom: 20
-  }
-};
-
 export const freeResponseSummaryPropType = PropTypes.shape({
   questionText: PropTypes.string,
   responses: PropTypes.arrayOf(freeResponsesDataPropType)
@@ -82,6 +74,14 @@ class FreeResponsesAssessmentsContainer extends Component {
     );
   }
 }
+
+const styles = {
+  text: {
+    font: 10,
+    paddingTop: 20,
+    paddingBottom: 20
+  }
+};
 
 export const UnconnectedFreeResponsesAssessmentsContainer = FreeResponsesAssessmentsContainer;
 

@@ -6,76 +6,6 @@ import styleConstants from '../../styleConstants';
 import color from '@cdo/apps/util/color';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-const styles = {
-  button: {
-    marginLeft: 7,
-    marginRight: 7,
-    marginTop: 15,
-    marginBottom: 15
-  },
-  buttonDiv: {
-    textAlign: 'center'
-  },
-  clear: {
-    clear: 'both'
-  },
-  error: {
-    color: color.red
-  },
-  header: {
-    marginTop: 10,
-    marginBottom: 5,
-    marginLeft: 20,
-    marginRight: 20
-  },
-  image: {
-    float: 'right',
-    margin: 5
-  },
-  introQuestion: {
-    marginTop: 10,
-    marginBottom: 5
-  },
-  main: {
-    borderWidth: 1,
-    borderStyle: 'solid',
-    borderColor: color.teal,
-    minHeight: 72,
-    width: styleConstants['content-width'],
-    backgroundColor: color.white,
-    overflowWrap: 'break-word'
-  },
-  message: {
-    marginTop: 0,
-    marginBottom: 20,
-    marginLeft: 20,
-    marginRight: 20
-  },
-  radio: {
-    verticalAlign: 'top',
-    marginRight: 10
-  },
-  share: {
-    textAlign: 'center'
-  },
-  shareButton: {
-    color: color.white,
-    backgroundColor: '#7E5CA2',
-    minWidth: 40
-  },
-  title: {
-    marginBottom: 0
-  },
-  updateSchool: {
-    fontSize: '85%',
-    marginTop: 0,
-    marginBottom: 0
-  },
-  updateSchoolLink: {
-    cursor: 'pointer'
-  }
-};
-
 export default class CensusTeacherBanner extends Component {
   static propTypes = {
     schoolYear: PropTypes.number.isRequired,
@@ -94,8 +24,7 @@ export default class CensusTeacherBanner extends Component {
     teacherEmail: PropTypes.string.isRequired,
     showInvalidError: PropTypes.bool,
     showUnknownError: PropTypes.bool,
-    submittedSuccessfully: PropTypes.bool,
-    mapboxAccessToken: PropTypes.string
+    submittedSuccessfully: PropTypes.bool
   };
 
   componentDidMount() {
@@ -337,7 +266,6 @@ export default class CensusTeacherBanner extends Component {
             schoolZip={this.state.schoolZip}
             schoolLocation={this.state.schoolLocation}
             useLocationSearch={true}
-            mapboxAccessToken={this.props.mapboxAccessToken}
             showErrors={this.state.showSchoolInfoErrors}
             showRequiredIndicator={true}
           />
@@ -562,3 +490,73 @@ export default class CensusTeacherBanner extends Component {
     );
   }
 }
+
+const styles = {
+  button: {
+    marginLeft: 7,
+    marginRight: 7,
+    marginTop: 15,
+    marginBottom: 15
+  },
+  buttonDiv: {
+    textAlign: 'center'
+  },
+  clear: {
+    clear: 'both'
+  },
+  error: {
+    color: color.red
+  },
+  header: {
+    marginTop: 10,
+    marginBottom: 5,
+    marginLeft: 20,
+    marginRight: 20
+  },
+  image: {
+    float: 'right',
+    margin: 5
+  },
+  introQuestion: {
+    marginTop: 10,
+    marginBottom: 5
+  },
+  main: {
+    borderWidth: 1,
+    borderStyle: 'solid',
+    borderColor: color.teal,
+    minHeight: 72,
+    width: styleConstants['content-width'],
+    backgroundColor: color.white,
+    overflowWrap: 'break-word'
+  },
+  message: {
+    marginTop: 0,
+    marginBottom: 20,
+    marginLeft: 20,
+    marginRight: 20
+  },
+  radio: {
+    verticalAlign: 'top',
+    marginRight: 10
+  },
+  share: {
+    textAlign: 'center'
+  },
+  shareButton: {
+    color: color.white,
+    backgroundColor: '#7E5CA2',
+    minWidth: 40
+  },
+  title: {
+    marginBottom: 0
+  },
+  updateSchool: {
+    fontSize: '85%',
+    marginTop: 0,
+    marginBottom: 0
+  },
+  updateSchoolLink: {
+    cursor: 'pointer'
+  }
+};

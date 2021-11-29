@@ -1,0 +1,23 @@
+{
+  "category": "Experimental",
+  "config": {
+    "func": "spriteSayTime",
+    "blockText": "{SPRITE}say{TEXT1}for{NUM}seconds",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "TEXT1",
+        "type": "String",
+        "field": false
+      },
+      {
+        "name": "NUM",
+        "type": "Number",
+        "field": false
+      }
+    ]
+  }
+}

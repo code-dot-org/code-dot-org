@@ -1,7 +1,7 @@
 class Api::V1::SectionsController < Api::V1::JsonApiController
   load_resource :section, find_by: :code, only: [:join, :leave]
   before_action :find_follower, only: :leave
-  load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :create, :update]
+  load_and_authorize_resource except: [:join, :leave, :membership, :valid_scripts, :create, :update, :require_captcha]
 
   skip_before_action :verify_authenticity_token, only: [:update_sharing_disabled, :update]
 
@@ -18,6 +18,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # GET /api/v1/sections
   # Get the set of sections owned by the current user
   def index
+    prevent_caching
     render json: current_user.sections.map(&:summarize)
   end
 
@@ -37,7 +38,7 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     # rather than manually authorizing (above)
     return head :bad_request unless Section.valid_login_type? params[:login_type]
 
-    valid_script = params[:script] && Script.valid_script_id?(current_user, params[:script][:id])
+    valid_script = params[:script] && Script.valid_unit_id?(current_user, params[:script][:id])
     script_to_assign = valid_script && Script.get_from_cache(params[:script][:id])
 
     section = Section.create(
@@ -47,10 +48,13 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
         login_type: params[:login_type],
         grade: Section.valid_grade?(params[:grade].to_s) ? params[:grade].to_s : nil,
         script_id: script_to_assign ? script_to_assign.id : params[:script_id],
-        course_id: params[:course_id] && UnitGroup.valid_course_id?(params[:course_id]) ?
+        course_id: params[:course_id] && UnitGroup.valid_course_id?(params[:course_id], current_user) ?
           params[:course_id].to_i : nil,
-        stage_extras: params['lesson_extras'] || false,
-        pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed]
+        lesson_extras: params['lesson_extras'] || false,
+        pairing_allowed: params[:pairing_allowed].nil? ? true : params[:pairing_allowed],
+        tts_autoplay_enabled: params[:tts_autoplay_enabled].nil? ? false : params[:tts_autoplay_enabled],
+        restrict_section: params[:restrict_section].nil? ? false : params[:restrict_section],
+        code_review_enabled: params[:code_review_enabled].nil? ? true : params[:code_review_enabled]
       }
     )
     render head :bad_request unless section
@@ -93,9 +97,12 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     fields[:name] = params[:name] if params[:name].present?
     fields[:login_type] = params[:login_type] if Section.valid_login_type?(params[:login_type])
     fields[:grade] = params[:grade] if Section.valid_grade?(params[:grade])
-    fields[:stage_extras] = params[:lesson_extras] unless params[:lesson_extras].nil?
+    fields[:lesson_extras] = params[:lesson_extras] unless params[:lesson_extras].nil?
     fields[:pairing_allowed] = params[:pairing_allowed] unless params[:pairing_allowed].nil?
+    fields[:tts_autoplay_enabled] = params[:tts_autoplay_enabled] unless params[:tts_autoplay_enabled].nil?
     fields[:hidden] = params[:hidden] unless params[:hidden].nil?
+    fields[:restrict_section] = params[:restrict_section] unless params[:restrict_section].nil?
+    fields[:code_review_enabled] = params[:code_review_enabled].nil? ? true : params[:code_review_enabled]
 
     section.update!(fields)
     if script_id
@@ -120,6 +127,28 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
       return
     end
     result = @section.add_student current_user
+    # add_student returns 'failure' when id of current user is owner of @section
+    if result == 'failure'
+      render json: {
+        result: 'section_owned'
+      }, status: :bad_request
+      return
+    end
+    # add_student returns 'full' when @section has or will have 500 followers
+    if result == 'full'
+      render json: {
+        result: 'section_full',
+        sectionCapacity: @section.capacity
+      }, status: :forbidden
+      return
+    end
+    # add_student returns 'restricted' when @section is flagged to restrict access
+    if result == 'restricted'
+      render json: {
+        result: 'section_restricted'
+      }, status: :forbidden
+      return
+    end
     render json: {
       sections: current_user.sections_as_student.map(&:summarize_without_students),
       result: result
@@ -164,6 +193,60 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
     render json: scripts
   end
 
+  # GET /api/v1/sections/require_captcha
+  # Get the recaptcha site key for frontend and whether current user requires captcha verification
+  def require_captcha
+    return head :forbidden unless current_user
+    site_key = CDO.recaptcha_site_key
+    render json: {key: site_key}
+  end
+
+  # GET /api/v1/sections/<id>/code_review_groups
+  # Get all code review groups and their members for this section. Also include
+  # all unassigned followers.
+  # Format is:
+  # { groups: [
+  #   {unassigned: true, name: 'unassigned', members: [{follower_id: 1, name: 'student_name'},...]},
+  #   {id: <group-id>, name: 'group_name', members: [{follower_id: 2, name: 'student_name'},...]},
+  #   ...
+  # ]}
+  def code_review_groups
+    groups = @section.code_review_groups
+    groups_details = []
+    assigned_follower_ids = []
+    groups.each do |group|
+      members = []
+      group.members.each do |member|
+        members << {follower_id: member.follower_id, name: member.name}
+        assigned_follower_ids << member.follower_id
+      end
+      groups_details << {id: group.id, name: group.name, members: members}
+    end
+
+    unassigned_students = @section.followers.where.not(id: assigned_follower_ids)
+    unassigned_students = unassigned_students.map {|student| {follower_id: student.id, name: student.student_user.name}}
+    groups_details << {unassigned: true, members: unassigned_students}
+    render json: {groups: groups_details}
+  end
+
+  # POST /api/v1/sections/<id>/code_review_groups
+  def set_code_review_groups
+    @section.reset_code_review_groups(params[:groups])
+    render json: {result: 'success'}
+  # if the group data is invalid we will get a record invalid exception
+  rescue ActiveRecord::RecordInvalid
+    render json: {result: 'invalid groups'}, status: 400
+  end
+
+  # POST /api/v1/sections/<id>/code_review_enabled
+  def set_code_review_enabled
+    # ensure a string or boolean gets parsed correctly
+    enable_code_review = ActiveModel::Type::Boolean.new.cast(params[:enabled])
+    @section.update_code_review_expiration(enable_code_review)
+    @section.save
+    render json: {result: 'success', expiration: @section.code_review_expires_at}
+  end
+
   private
 
   def find_follower
@@ -177,14 +260,14 @@ class Api::V1::SectionsController < Api::V1::JsonApiController
   # Update script_id if user provided valid script_id
   # Set script_id to nil if invalid or no script_id provided
   def set_script_id(script_id)
-    return script_id if Script.valid_script_id?(current_user, script_id)
+    return script_id if Script.valid_unit_id?(current_user, script_id)
     nil
   end
 
   # Update course_id if user provided valid course_id
   # Set course_id to nil if invalid or no course_id provided
   def set_course_id(course_id)
-    return course_id if UnitGroup.valid_course_id?(course_id)
+    return course_id if UnitGroup.valid_course_id?(course_id, current_user)
     nil
   end
 end

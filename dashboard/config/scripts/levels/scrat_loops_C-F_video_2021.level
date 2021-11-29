@@ -1,0 +1,19 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T22:28:15.000Z",
+  "level_num": "custom",
+  "user_id": 772,
+  "properties": {
+    "video_key": "CSF_scrat_loops_CF",
+    "instructions_important": "false",
+    "display_name": "Loops in Ice Age Video",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 21327,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</StandaloneVideo>

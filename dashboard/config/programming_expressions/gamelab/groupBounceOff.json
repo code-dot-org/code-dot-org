@@ -1,0 +1,14 @@
+{
+  "func": "group.bounceOff",
+  "category": "Groups",
+  "paletteParams": [
+    {
+      "name": "target"
+    }
+  ],
+  "params": [
+    "target"
+  ],
+  "modeOptionName": "group_bounceOff",
+  "noAutocomplete": true
+}

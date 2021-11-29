@@ -3,30 +3,6 @@ import React from 'react';
 import headerVignetteStyles from './HeaderVignette';
 import $ from 'jquery';
 
-const styles = {
-  headerContainer: {
-    position: 'relative',
-    overflow: 'hidden',
-    height: 18
-  },
-  headerInner: {
-    position: 'absolute'
-  },
-  scriptLinkWithUpdatedAt: {
-    display: 'block'
-  },
-  outerContainer: {
-    textAlign: 'right'
-  },
-  containerWithUpdatedAt: {
-    verticalAlign: 'bottom',
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    display: 'inline-block'
-  }
-};
-
 export default class HeaderFinish extends React.Component {
   static propTypes = {
     lessonData: PropTypes.object,
@@ -96,3 +72,27 @@ export default class HeaderFinish extends React.Component {
     );
   }
 }
+
+const styles = {
+  headerContainer: {
+    position: 'relative',
+    overflow: 'hidden',
+    height: 18
+  },
+  headerInner: {
+    position: 'absolute'
+  },
+  scriptLinkWithUpdatedAt: {
+    display: 'block'
+  },
+  outerContainer: {
+    textAlign: 'right'
+  },
+  containerWithUpdatedAt: {
+    verticalAlign: 'bottom',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    display: 'inline-block'
+  }
+};

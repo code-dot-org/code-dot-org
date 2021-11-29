@@ -2,6 +2,7 @@
  * Application Dashboard quick view.
  * Route: /csd_teachers
  *        /csp_teachers
+ *        /csa_teachers
  *        /csf_facilitators
  *        /csd_facilitators
  *        /csp_facilitators
@@ -21,15 +22,6 @@ import Spinner from '../components/spinner';
 import $ from 'jquery';
 import {getApplicationStatuses} from './constants';
 import {Button, FormGroup, ControlLabel, Row, Col} from 'react-bootstrap';
-
-const styles = {
-  button: {
-    margin: '20px 20px 20px auto'
-  },
-  select: {
-    width: 250
-  }
-};
 
 export class QuickView extends React.Component {
   static propTypes = {
@@ -58,13 +50,13 @@ export class QuickView extends React.Component {
     this.loadRequest = null;
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.regionalPartnerFilter !== nextProps.regionalPartnerFilter) {
       this.load(nextProps.regionalPartnerFilter.value);
     }
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     const statusList = getApplicationStatuses(this.props.route.viewType);
     this.statuses = Object.keys(statusList).map(v => ({
       value: v,
@@ -182,6 +174,15 @@ export class QuickView extends React.Component {
     );
   }
 }
+
+const styles = {
+  button: {
+    margin: '20px 20px 20px auto'
+  },
+  select: {
+    width: 250
+  }
+};
 
 export default connect(state => ({
   regionalPartnerFilter: state.regionalPartners.regionalPartnerFilter,

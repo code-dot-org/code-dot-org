@@ -1,0 +1,24 @@
+name 'OPD-K5 Stage6Go_copy_2021'
+skip_dialog true
+markdown <<MARKDOWN
+# Unplugged Lesson: Songwriting
+
+> A **function** is a piece of code that you can easily call over and over again.
+
+Programmers are always looking for ways to make their code more efficient. One way that they do that is through **functions**, which allow them to reuse segments of code.
+
+*** 
+
+## **1. Review "<a href="https://curriculum.code.org/csf-20/coursee/14/" target="blank" rel="noopener noreferrer">Functions: Songwriting</a>" Lesson Plan from Course E.**
+<br/>
+Course E is meant for students in Grade 4. Functions are not covered in Courses A-D. 
+
+## **2. Watch the student video: "Functions: Songwriting" (found in the lesson plan)**
+This is a video that you would show your students to help introduce the concept of functions and kick off the unplugged lesson.  
+
+## **3. Watch a teacher model this lesson: "Functions: Songwriting" (found in the lesson plan)**
+This video is meant to be support for you as the teacher, if you are looking for tips on how to run this lesson.
+
+***
+<a href="https://curriculum.code.org/csf-20/coursee/14/" target="blank" rel="noopener noreferrer">![](https://images.code.org/189f906ccbf9ee177cb408756dfd1ce6-image-1592843033565.png)</a>
+MARKDOWN

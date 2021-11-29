@@ -1,0 +1,13 @@
+{
+  "func": "setRotationSpeedEach",
+  "category": "Groups",
+  "paletteParams": [
+    {
+      "name": "speed"
+    }
+  ],
+  "params": [
+    "5"
+  ],
+  "modeOptionName": "*.setRotationSpeedEach"
+}

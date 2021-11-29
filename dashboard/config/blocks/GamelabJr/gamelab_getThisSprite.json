@@ -2,6 +2,7 @@
   "category": "Sprites",
   "config": {
     "func": "getThisSprite",
+    "docFunc": "gamelab_getThisSprite",
     "blockText": "{CHOICE} sprite",
     "returnType": "Sprite",
     "color": [

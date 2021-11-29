@@ -1,18 +1,18 @@
 {
-  "https://studio.code.org/s/csd6-2019/stage/1/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lessons/1/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "-   [Computing Innovations][0] - Exemplar ([PDF][1] \\| [DOCX][2])"
   },
-  "https://studio.code.org/s/csd6-2019/stage/1/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lessons/1/levels/2": {
     "dsls": {
       "markdown": "# Innovation Research\n\nChoose one of the following topics to look into. You'll want to find information about some of the most recent innovative computing devices related to your category.\n\n## Wearable Technology\nWearable technology includes any form of computing that is designed to be worn by the user, whether it's embedded into the clothing or worn as an accessory. Many wearables, such as smart pedometers, overlap somewhat with health and safety as the device is both wearable _and_ intended to help improve your personal health.\n\n## Health and Safety\nThe broad range topic includes both consumer technology (things that you might use to improve your health or safety) and professional technology (gear that a doctor or other professional might use).\n\n## Agriculture\nAgriculture might not be an obvious topic, but technological innovations have had a huge impact on how we approach farming. This includes incorporating computers into existing farm equipment, using sensors and robotics to monitor crops, and analyzing data to improve efficiency and sustainability.\n\n## Manufacturing\nAdvancements in rapid prototyping, industrial robotics, and automation have had a major impact on how goods are produced. Whether it's technology to enable affordable small-scale manufacturing (like 3D printers and laser cutters) or the integration of computers into factory work, there are many interesting areas to research here.\n\n## Art and Design\nThe intersection of artistic expression and computing can yield impressive and unexpected results. While you are less likely to find commercially available products related to art and design, you will find a wide variety of homemade creations that use all manners of computing devices in creative and expressive ways.\n\n## Smart Home\nThe dream of a house that understands and even anticipates your needs is closer than ever. Whether controlled explicitly through voice commands, or by using sensors to monitor and respond to changing conditions, smart home devices take care of any number of mundane or repetitive tasks around the house.\n\n\n# Research Considerations\n\nAs you research devices on your topic, keep the following considerations in mind:\n\n* Focus on hardware based solutions over software programs\n* Focus on recent innovations over old news\n* Follow what interests you\n\nIn addition to the recommended sites listed for each topic, consider looking towards the various crowd funding websites (such as Kickstarter and Indiegogo) to see the products that haven't quite made it off the ground yet.\n\n",
       "teacher_markdown": "Here are some recommended sites for students to start their research.  Although these sites are generally appropriate for school, the content within them changes frequently, so **we strongly suggest you check each site for inappropriate content before sharing it with students**.\n\n### Wearable Technology\n\n* [Warable.com](https://www.wareable.com/)\n\n### Health and Safety\n\n* [Modern Healthcare](http://www.modernhealthcare.com/section/medical-devices)\n* [Medstartr](http://www.medstartr.com/)\n\n### Agriculture\n\n* [National Institute of Food and Agriculture](https://nifa.usda.gov/topic/agriculture-technology)\n* [Farm Industry News](http://www.farmindustrynews.com/technology)\n\n### Manufacturing\n\n* [Industry Week](http://www.industryweek.com/technology)\n* [3D Printing](https://3dprinting.com/)\n\n### Art and Design\n\n* [ArtFab](http://artfab.art.cmu.edu/)\n* [Instructables](http://www.instructables.com/tag/type-id/category-technology/)\n\n### Smart Home\n\n* [CNet](https://www.cnet.com/smart-home/)\n* [IoT Evolution](http://www.iotevolutionworld.com/smart-home/)\n\n\n"
     }
   },
-  "https://studio.code.org/s/csd6-2019/stage/2/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lessons/2/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd6-2019/stage/2/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lessons/2/levels/2": {
     "contained levels": [
       {
         "dsls": {
@@ -45,61 +45,61 @@
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/2/puzzle/3": {
+  "https://studio.code.org/s/csd6-2019/lessons/2/levels/3": {
     "long_instructions": "# Changing the Text\n\nThe `setProperty` block can be used to change lots of things about your design elements, including the text they contain.\n\n# Do This\n\n-   Drag out a `setProperty` block\n-   For the first parameter, select \"name\" (the element's id)\n-   For the second parameter, select \"text\" (the property you want to set)\n-   For the third parameter, write your name in quotes (the value to set)\n\n_Note: We've removed the Design Mode tab for now so you can practice working with `setProperty`, but it'll come back later once you're building apps of your own._"
   },
-  "https://studio.code.org/s/csd6-2019/stage/2/puzzle/4": {
+  "https://studio.code.org/s/csd6-2019/lessons/2/levels/4": {
     "long_instructions": "# Changing Position\n\nEvery design element (except for the screen) has an \"x\" and a \"y\" property that controls its position.\n\n# Do This\n\n<div markdown=\"1\" style=\"float:right\">\n\n[expandable][0]\n\n</div>\n\nUsing the `setProperty` block, move \"red\\_button\" so that it matches the image to the right. (Click on the image to see the full size.)\n\n_Note: We've removed the Design Mode tab for now so you can practice working with setProperty, but it'll come back later once you're building apps of your own._"
   },
-  "https://studio.code.org/s/csd6-2019/stage/2/puzzle/5": {
+  "https://studio.code.org/s/csd6-2019/lessons/2/levels/5": {
     "display_name": "Designing Screens with Code"
   },
-  "https://studio.code.org/s/csd6-2019/stage/2/puzzle/6": {
+  "https://studio.code.org/s/csd6-2019/lessons/2/levels/6": {
     "long_instructions": "# Changing With a Click\n\nIt's not really useful to only set a property when your program is first run. After all, you could just do all of that in Design Mode. When you use an `onEvent` block with `setProperty`, you're able to do things you couldn't do with Design Mode alone.\n\n# Do This\n\nWe've provided an empty `onEvent` block that's watching the \"smiley\" image. Inside the `onEvent` block, use two `setProperty` blocks to move the smiley somewhere else (it doesn't really matter where for now). Test your program by running it and clicking on the smiley."
   },
-  "https://studio.code.org/s/csd6-2019/stage/2/puzzle/7": {
+  "https://studio.code.org/s/csd6-2019/lessons/2/levels/7": {
     "long_instructions": "<img src=\"https://images.code.org/67c6cc358b235e2c2ae39f3f72a3e0b1-image-1507326303839.gif\" style=\"float:right; max-width: 150px; margin: 10px;\">\n\n# Randomization\n\nMoving on the first click is fine, but this smiley would be even cooler if it moved somewhere new _every time_ we clicked. Fortunately, we can use the `randomNumber` block to do just that.\n\n# Do This\n\nInstead of setting the \"x\" and \"y\" properties to a specific number, use the `randomNumber` block to pick a new random \"x\" and \"y\" each time the smiley is clicked.\n\n_Tip: The App Lab screen is 320 pixels wide by 450 pixels tall. What range of random numbers will ensure that the smiley is always visible on screen?_"
   },
-  "https://studio.code.org/s/csd6-2019/stage/2/puzzle/8": {
+  "https://studio.code.org/s/csd6-2019/lessons/2/levels/8": {
     "long_instructions": "# Hidden\n\nDesign elements have a property called \"hidden\" that controls whether the element should show on screen or not. We are going to use this property to create an alarm app. Notice that when the program starts one button is hidden, and one is not.\n\nWe have already set up an event handler for the \"triggerAlarmButton\" which will do two things when clicked:\n\n-   Change the \"text\" property of \"statusLabel\" to \"on\"\n-   Set the \"hidden\" property of \"stopAlarmButton\" to `false` (meaning it should _not_ be hidden)\n\n# Do This\n\n-   Run the program and click \"Trigger Alarm\" to see how it works\n-   Add code to the provided event handler that hides the \"triggerAlarmButton\"\n\n_Note: the button \"stopAlarmButton\" is already on the screen, but because its \"hidden\" property is marked true, it isn't shown when the program starts._"
   },
-  "https://studio.code.org/s/csd6-2019/stage/2/puzzle/9": {
+  "https://studio.code.org/s/csd6-2019/lessons/2/levels/9": {
     "long_instructions": "# Showing/Hiding\n\nThis alarm app isn't super useful if you can't turn the alarm off once it's been triggered. Let's fix that.\n\n# Do This\n\nCreate a second event to watch for the \"stopAlarmButton\" to be clicked. When that event is triggered:\n\n-   Change the status text to \"OFF\"\n-   Hide the \"stopAlarmButton\"\n\n_Hint: \"hidden\" is a boolean property. If we used `false` to make the button show up, what should you use to make it hidden again?_"
   },
-  "https://studio.code.org/s/csd6-2019/stage/2/puzzle/10": {
+  "https://studio.code.org/s/csd6-2019/lessons/2/levels/10": {
     "display_name": "Emotion Machine Example",
     "long_instructions": "# The Emotion Machine\n\nCheck out this Emotion Machine app that you'll be building next. Try clicking on the buttons to see how it works.\n\n# Do This\n\nTry out the app, and then with a neighbor discuss:\n\n-   What events handlers does this app use?\n-   Which elements are being changed with code?\n-   Which properties are being changed when you click a button?"
   },
-  "https://studio.code.org/s/csd6-2019/stage/2/puzzle/11": {
+  "https://studio.code.org/s/csd6-2019/lessons/2/levels/11": {
     "long_instructions": "# Changing Images\n\nThe first thing you'll need your emotion machine to do is change to the appropriate image when a button is clicked. If you look at the starting code, you'll see that we already added `setProperty(\"face\", \"image\", \"icon://fa-smile-o\")` to change to a smiley face when you click happy.\n\n# Do This\n\n<div markdown=\"1\" style=\"float:right; margin: 20px;\">\n\n[expandable][0]\n\n</div>\n\nCreate an event handler for \"sad\\_button\" and make it change to a sad emoji. To do this you'll need to set the \"image\" property of the image with id \"face\".\n\n_Tip: when you click the last dropdown in the `setProperty` block click \"Choose...\" to go to your media library. From there you can select an icon from our icon library or upload an image of your own._"
   },
-  "https://studio.code.org/s/csd6-2019/stage/2/puzzle/12": {
+  "https://studio.code.org/s/csd6-2019/lessons/2/levels/12": {
     "long_instructions": "# Changing Color\n\nIf you look back at the example for this app, you should notice that not only do the emojis change when you click a button, but their color changes as well.\n\n# Do This\n\nIn each of the event handlers, set the \"icon-color\" property of \"face\". Pick a warm color for happy and a cool color for sad."
   },
-  "https://studio.code.org/s/csd6-2019/stage/2/puzzle/13": {
+  "https://studio.code.org/s/csd6-2019/lessons/2/levels/13": {
     "long_instructions": "# Setting Text\n\nYour happy and sad buttons should be almost completely functional now. The only thing they still need to do is change the text at the bottom of the screen.\n\n# Do This\n\nMake each of the event handlers change the text of \"feeling\" to the appropriate emotion (either \"happy\" or \"sad\")"
   },
-  "https://studio.code.org/s/csd6-2019/stage/2/puzzle/14": {
+  "https://studio.code.org/s/csd6-2019/lessons/2/levels/14": {
     "long_instructions": "# Add Another Emotion\n\nIn the example app you saw earlier, you could set the emotion to happy, sad, or meh. Your app only has happy and sad, can you add a third emotion?\n\n# Do This\n\nUsing all of the same techniques you used for the happy and sad buttons, create a third emotion button. You could stick with meh, or you could pick an emotion of your own.\n\nWhen you're all done, feel free to add more emotions or features before submitting your final version."
   },
-  "https://studio.code.org/s/csd6-2019/stage/3/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lessons/3/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd6-2019/stage/3/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lessons/3/levels/2": {
     "display_name": "Hardware and Software",
     "long_instructions": "## Questions to Consider\n\n-   What's the difference between hardware and software?\n-   What does the operating system of a computer do?",
     "teacher_markdown": "## Discussion Goals\n\nThe goal of this discussion is to highlight the difference between hardware and software.  Students should understand that hardware is the physical part of the computer, such as the chips and the wires, and the software is the programs that are running on the computer.  The operating system of the computer allows all the software on the computer to run at the same time, deciding how the different hardware resources will be shared."
   },
-  "https://studio.code.org/s/csd6-2019/stage/3/puzzle/3": {
+  "https://studio.code.org/s/csd6-2019/lessons/3/levels/3": {
     "display_name": "Circuit Playground: Introduction"
   },
-  "https://studio.code.org/s/csd6-2019/stage/3/puzzle/4": {
+  "https://studio.code.org/s/csd6-2019/lessons/3/levels/4": {
     "long_instructions": "# Test Your Board\n\nThis level is just a quick test to make sure your board is working. To run this test, do the following:\n\n1.  Plug your board into your computer with a USB cable\n2.  Click \"Run\"\n3.  Wait a few seconds for either a Success or Error screen to pop up\n4.  If your test was successful, move on to the next level. If not, try some of the troubleshooting steps\n\n## Troubleshooting\n\nThere are a number of things that could prevent your test from passing.\n\n1.  Try refreshing the page and running the test again (you should refresh the page for each of the following ideas as well)\n2.  Try connecting your board to a different USB port\n3.  Try a different USB cable. Some USB cables can only be used for charging, so make sure your cable supports data transfer!\n4.  Try a different board\n5.  Go to [studio.code.org/maker/setup][0] to run a more detailed test"
   },
-  "https://studio.code.org/s/csd6-2019/stage/3/puzzle/5": {
+  "https://studio.code.org/s/csd6-2019/lessons/3/levels/5": {
     "long_instructions": "# Control the LED\n\nNow that you know your board is working, you can try out the different LED blocks.\n\n# Do This\n\n-   Click \"Run\" and discuss with your partner how the code works.\n-   Try the different LED blocks to see what they do.\n    -   Hint: Don't forget to hit \"Reset\" and run your code again after you change it"
   },
-  "https://studio.code.org/s/csd6-2019/stage/3/puzzle/6": {
+  "https://studio.code.org/s/csd6-2019/lessons/3/levels/6": {
     "long_instructions": "Embedded Prediction",
     "contained levels": [
       {
@@ -107,22 +107,22 @@
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/3/puzzle/7": {
+  "https://studio.code.org/s/csd6-2019/lessons/3/levels/7": {
     "long_instructions": "# Using Events\n\nThis program has two buttons.  The \"on\" button works, but the \"off\" button still needs to be programmed.\n\n# Do This\n\n-   Add code so that the second button turns the LED off."
   },
-  "https://studio.code.org/s/csd6-2019/stage/3/puzzle/8": {
+  "https://studio.code.org/s/csd6-2019/lessons/3/levels/8": {
     "long_instructions": "# Light Switch\n\nThere are three more LED blocks that you haven't used yet. One of them can make the button work like a light switch, turning the LED on when it's off, but off when it's on.\n\n# Do This\n\n-   Try the `blink`, `toggle` and `pulse` blocks to see what they do.\n-   Use one of the blocks to make the button work like a light switch.\n    -   If the LED is off, the button should turn it on.\n    -   If the LED is on, the button should turn it off."
   },
-  "https://studio.code.org/s/csd6-2019/stage/3/puzzle/9": {
+  "https://studio.code.org/s/csd6-2019/lessons/3/levels/9": {
     "long_instructions": "# Multi-function Light\n\nThis app should let you choose between three types of lights: on, blink, and pulse.  It should also have a button that turns the light completely off.  Right now only the \"on\" button works, and the \"off\" button is completely missing.\n\n# Do This\n\n-   Add code to make the \"blink\" and \"pulse\" buttons work.\n-   In design mode, add a new \"off\" button.\n-   Add code to make the \"off\" button work."
   },
-  "https://studio.code.org/s/csd6-2019/stage/3/puzzle/10": {
+  "https://studio.code.org/s/csd6-2019/lessons/3/levels/10": {
     "dsls": {
       "content1": "description here",
       "markdown": "# LED Apps\n\nIn the last level, you made an app to control the LED with different buttons on the screen.   In the next two levels, you'll see some other examples of apps, then have a chance to make one of your own.\n\nAs you look at the examples, think of what code might be useful for the app that you and your partner want to create.\n"
     }
   },
-  "https://studio.code.org/s/csd6-2019/stage/3/puzzle/11": {
+  "https://studio.code.org/s/csd6-2019/lessons/3/levels/11": {
     "callouts": {
       "CSDUDL03P09": "What does this line do?"
     },
@@ -132,7 +132,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/3/puzzle/12": {
+  "https://studio.code.org/s/csd6-2019/lessons/3/levels/12": {
     "long_instructions": "Embedded Prediction",
     "contained levels": [
       {
@@ -140,25 +140,25 @@
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/3/puzzle/13": {
+  "https://studio.code.org/s/csd6-2019/lessons/3/levels/13": {
     "long_instructions": "# Make Your App - The Screen\n\nNow, you and your partner can make your own app using the LED.  Discuss with your partner what kind of app you want to make.\n\n# Do This\n\n-   Discuss with your partner what screen elements you will need in your app.  Do you want...\n    -   Buttons?\n    -   Images?\n    -   Text?\n-   In Design Mode, add the elements, making sure you give each a meaningful ID."
   },
-  "https://studio.code.org/s/csd6-2019/stage/3/puzzle/14": {
+  "https://studio.code.org/s/csd6-2019/lessons/3/levels/14": {
     "long_instructions": "# Make Your App - The Code\n\nNext, you'll need to add the code that makes your app work.\n\n# Do This\n\n-   Discuss with your partner what code you will need in your app.  Do you need...\n    -   Events?\n    -   Variables?\n    -   Setters?\n    -   Random Numbers?\n-   In Code Mode, add in the code that will make your app work."
   },
-  "https://studio.code.org/s/csd6-2019/stage/4/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lessons/4/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd6-2019/stage/4/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lessons/4/levels/2": {
     "long_instructions": "# Input in Game Lab\n\n_You don't need to make any changes to the code here_\n\nTake a minute to read through the code and run the program. Discuss with a partner:\n\n1.  What is the source of input?\n2.  Where and how does the program check for input?\n3.  What does the program do when it gets the correct input?\n4.  What is the program doing when there is no input?"
   },
-  "https://studio.code.org/s/csd6-2019/stage/4/puzzle/3": {
+  "https://studio.code.org/s/csd6-2019/lessons/4/levels/3": {
     "long_instructions": "# Input in App Lab\n\n_You don't need to make any changes to the code here_\n\nTake a minute to read through the code and run the program. Discuss with a partner:\n\n1.  What is the source of input?\n2.  Where and how does the program check for input?\n3.  What does the program do when it gets the right input?\n4.  What is the program doing when there is no input?"
   },
-  "https://studio.code.org/s/csd6-2019/stage/5/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lessons/5/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd6-2019/stage/5/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lessons/5/levels/2": {
     "long_instructions": "See contained level for markdown",
     "contained levels": [
       {
@@ -166,19 +166,19 @@
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/5/puzzle/3": {
+  "https://studio.code.org/s/csd6-2019/lessons/5/levels/3": {
     "long_instructions": "# Using Board Events\n\nRight now the LED turns on when the left button (`buttonL`) is pressed down. It should turn off when the right button (buttonR) is pressed down.\n\n<div style=\"float:right;\" markdown=1> \n\n[expandable][0] \n\n</div>\n\n# Do this\n\n-   Add another `onBoardEvent()` block to turn the LED off when the right button is pressed down."
   },
-  "https://studio.code.org/s/csd6-2019/stage/5/puzzle/4": {
+  "https://studio.code.org/s/csd6-2019/lessons/5/levels/4": {
     "long_instructions": "# Other Board Events with the Buttons\n\nInstead of using the right button, you can make the LED turn off when the left button comes back up.\n\n# Do this\n\n-   Create an 'up' event for the left button.\n-   Add code to turn the LED off when the button pops back up."
   },
-  "https://studio.code.org/s/csd6-2019/stage/5/puzzle/5": {
+  "https://studio.code.org/s/csd6-2019/lessons/5/levels/5": {
     "display_name": "Responding to Board Events"
   },
-  "https://studio.code.org/s/csd6-2019/stage/5/puzzle/6": {
+  "https://studio.code.org/s/csd6-2019/lessons/5/levels/6": {
     "long_instructions": "# Using the Toggle Switch\n\nThe toggle switch can flip in one of two positions: `open` and `close`.  This program uses it to make a light switch.  Right now it can only turn the light on.\n\n# Do this\n\n-   Create a new toggle switch event that is triggered when the switch is flipped to `close`.\n-   Add code so that when the toggle switch is flipped to `close` the light turns off."
   },
-  "https://studio.code.org/s/csd6-2019/stage/5/puzzle/7": {
+  "https://studio.code.org/s/csd6-2019/lessons/5/levels/7": {
     "long_instructions": "See contained level for markdown",
     "contained levels": [
       {
@@ -186,44 +186,44 @@
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/5/puzzle/8": {
+  "https://studio.code.org/s/csd6-2019/lessons/5/levels/8": {
     "long_instructions": "# State and the Toggle Switch\n\nThis program tells you whether the toggle switch is opened or closed, but it needs the `toggleSwitch.isOpen` block to work.  `toggleSwitch.isOpen` is `true` if the switch is opened and `false` if the switch is closed.\n\n# Do this\n\n-   Complete the if-statement with the `toggleSwitch.isOpen` property.\n-   Run the program and press the left button, then flip the toggle switch and press the button again."
   },
-  "https://studio.code.org/s/csd6-2019/stage/5/puzzle/9": {
+  "https://studio.code.org/s/csd6-2019/lessons/5/levels/9": {
     "display_name": "Buttons and Switch"
   },
-  "https://studio.code.org/s/csd6-2019/stage/5/puzzle/10": {
+  "https://studio.code.org/s/csd6-2019/lessons/5/levels/10": {
     "long_instructions": "# Using the Buzzer\n\nYou can use the buzzer in a lot of different ways, but right now we're just going to use the `buzzer.frequency()`.\n\n# Do this\n\n-   Pull out a `buzzer.frequency()` block from the toolbox and play around with it. You'll notice it has two parameters, what happens when you change either, or both of those?\n-   Run the program and enjoy the music of your Circuit Playground."
   },
-  "https://studio.code.org/s/csd6-2019/stage/5/puzzle/11": {
+  "https://studio.code.org/s/csd6-2019/lessons/5/levels/11": {
     "long_instructions": "# Buzzer Duration\n\nAs you've noticed, `buzzer.frequency()` has two parameters: frequency and duration. Both of these take a number as input.\n\n-   Frequency changes how the buzzer sounds. The bigger the number you give it, the higher the buzzer's sound will be.\n\n-   Duration determines how long the buzzer is going to play a sound for in milliseconds.\n\nFor right now we're going to focus on duration, the second parameter.\n\n# Do this\n\nTry out a few things with duration:\n\n-   Change the duration of the buzzer to something longer than 100.\n-   Try setting the duration to 0, what happens?\n\nRun the program multiple times to see what happens before you move on."
   },
-  "https://studio.code.org/s/csd6-2019/stage/5/puzzle/12": {
+  "https://studio.code.org/s/csd6-2019/lessons/5/levels/12": {
     "long_instructions": "# Buzzer and the Buttons\n\nThis program should use the buttons to play long and short buzzes.\n\n# Do this\n\n-   Change the duration parameter of `buzzer.frequency` to make the left button play a long buzz, and the right button play a short buzz."
   },
-  "https://studio.code.org/s/csd6-2019/stage/5/puzzle/13": {
+  "https://studio.code.org/s/csd6-2019/lessons/5/levels/13": {
     "display_name": "Circuit Playground: Buzzer"
   },
-  "https://studio.code.org/s/csd6-2019/stage/5/extras?level_name=CSDU6+-+board+event+challenge_2019": {
+  "https://studio.code.org/s/csd6-2019/lessons/5/extras?level_name=CSDU6+-+board+event+challenge_2019": {
     "display_name": "Sound Board",
     "long_instructions": "# Challenge: Sound Board\n\nCheck with your teacher before starting the challenge.\n\nNow that you know how to use board events, the buttons, switch, and the buzzer, try making a program that turns your board into a sound board when you press the buttons or flip the switch. Play around with the duration and frequencies of the sounds, and listen to how it turns out."
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/levels/2": {
     "long_instructions": "# Updating Properties\n\nHere's an example of an app that uses both `getProperty` and `setProperty` to update elements on the screen. Read through the code, and then test it out by filling out the input fields and clicking \"Save\"\n\n_Note: you don't need to change any code here, but read through the provided code to see how it works._"
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/puzzle/3": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/levels/3": {
     "long_instructions": "# getProperty and Variables\n\nThis program uses the `name` variable to display the name typed into \"name\\_input\" when the Submit button is clicked. It should do the same for *friend\\_input* and *friend\\_output*, but it's missing a block.\n\n# Do This\n\n-   Read the code and comments, then run the program to see how it works. (Make sure you type in your name and your friend's name before hitting \"Submit\".)\n-   Use a `getProperty` block to store the text property of *friend\\_input* into your the variable \"friend\\_name\". ([Show me where.][0])",
     "callouts": {
       "CSD_U6L06P03": "Add your block here."
     }
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/puzzle/4": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/levels/4": {
     "long_instructions": "# Dropdowns\n\nText Inputs are nice when you want users to be able to enter _anything_ they want, but often you want to restrict them to just a few choices. For example, if you want your user to pick a color, you probably want to make sure they can only choose colors that will actually work.\n\nThe provided dropdown with the ID \"color\\_input\" allows a user to choose from a handful of background colors. When the \"Set Color\" button is clicked, the screen will turn that color.\n\n# Do This\n\n-   Inside the event block, create a variable called `color` and assign it a value using the `getProperty` block.\n    -   Hint: You'll need to use the \"value\" property to get the user's choice.\n-   Use the `setProperty` block to set the \"background-color\" property of \"screen1\" to your variable `color`.\n    -   Hint: Make sure you type `color` without quotation marks.\n-   Test your program by picking a color and clicking \"Set Color\"."
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/puzzle/5": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/levels/5": {
     "long_instructions": "Predict Level (See contained level for markdown)",
     "contained levels": [
       {
@@ -231,19 +231,19 @@
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/puzzle/6": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/levels/6": {
     "long_instructions": "# Using the Circuit Playground\n\nHere's the same code you saw in the last level, but this time there's another dropdown menu to control the buzzer.  You'll have to add the code to make it work.\n\n# Do This\n\n-   Using the LED code as a model, add new code inside the buttonL event that will play a long or short buzz according to the chosen value property of the *buzzer\\_input* dropdown menu.\n-   Add new code that will turn the buzzer off when the right button is pressed.\n    -   (Hint: the event is already in the code.)"
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/puzzle/7": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/levels/7": {
     "display_name": "getProperty"
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/puzzle/8": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/levels/8": {
     "long_instructions": "# Sliders\n\nLast time, your users were only able to choose between a short and long buzz.  To give the user control over the exact duration of the buzzer, you'll want to use a slider.\n\nThis slider lets users choose a value between 100 and 1000 for the duration of the buzz, but there's something not quite right about how it's working.\n\n# Do This\n\n-   Look over the code and find the bug that's keeping the duration from being set correctly.\n    -   (Hint: Hover over the yellow triangles for clues as to what might be wrong with the code.)"
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/puzzle/9": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/levels/9": {
     "long_instructions": "# Frequency\n\nThis buzzer controller has been expanded to control frequency as well, but the code isn't finished yet.\n\n# Do This\n\n-   Using the `duration` variable as a model, create a `frequency` variable that gets the value from the _frequency_ slider.\n-   Modify the line of code that makes the buzzer sound so that it uses the `frequency` variable rather than the default frequency of `500`.\n-   Run your code, then change the frequency and the duration to hear the difference in the buzzer.  (Don't forget to hit the button after you make a change!)"
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/puzzle/10": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/levels/10": {
     "long_instructions": "Predict Level",
     "contained levels": [
       {
@@ -251,208 +251,208 @@
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/puzzle/11": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/levels/11": {
     "long_instructions": "# Change\n\nIn the last level, the program only got the interval value from the slider when you pressed the left button.  Sometimes, though, you'll want to change the interval of the LED as soon as the user chooses a new value.   For that, you'll need the \"change\" event.\n\n# Do This\n\n-   Look at the first event block in the program and find where it says \"change\".\n-   Inside the event block, get the interval value from the slider and use it to make the LED blink at that new rate.\n-   Run your program, moving the slider to see whether the LED speed changes automatically."
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/puzzle/12": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/levels/12": {
     "long_instructions": "# change\n\nThis program has events that detect three different changes: the toggle switch, the interval slider, and the frequency slider.  Because there are so many different things that cause the LED and buzzer to reset, it uses functions to organize the code.\n\n# Do This\n\n-   Read the `updateLED` function to see what it does.\n-   Add code to `updateBuzzer` to make the buzzer only turn on when the toggle switch is open."
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/puzzle/13": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/levels/13": {
     "long_instructions": "# LED and Buzzer Controller\n\nThis program operates the LED and the buzzer, but it has some problems.\n\n# Do This\n\n-   Read the program to understand how it is supposed to work.\n-   Find and correct the bugs so that the program works properly."
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/puzzle/14": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/levels/14": {
     "display_name": "Event Types"
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/puzzle/15": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/levels/15": {
     "long_instructions": "# Movement with Properties\n\nEarlier we used `setProperty` to change the x and y position of elements on the screen, but we could only move them to either a single specific location, or a random location. By using `getProperty` to find out an element's current position, we can use the **counter pattern** from Unit 3 to update that position.\n\n# Do This\n\n-   Read the program and discuss with your partner how the left button makes the motorcycle go up.\n-   Using the working left button as an example, program the right button to make the motorcycle go down."
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/puzzle/16": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/levels/16": {
     "long_instructions": "# Add Your Own Elements\n\nNow it's time to add some elements of your own. The motorcycle should be able to move up and down right now, but how can you control its speed?\n\n# Do This\n\n-   Add a slider in design mode.\n    -   Make sure you set the min and max values of the slider in design mode.\n-   Create an event that will trigger when the slider value is changed.\n-   Add code to get the slider value and store it into the `speed` variable when the event is triggered."
   },
-  "https://studio.code.org/s/csd6-2019/stage/6/extras?level_name=CSD+U6+challenge+motorcycle_2019": {
+  "https://studio.code.org/s/csd6-2019/lessons/6/extras?level_name=CSD+U6+challenge+motorcycle_2019": {
     "display_name": "Challenge: Motorcycle",
     "long_instructions": "# Challenge\n\nUse this program to experiment some more with getting and setting properties. Some ideas you might try include:\n\n-   Use the toggle switch to change the motorcycle's movement to go up and down.\n-   Use a dropdown with color names to change the motorcycle's color\n-   Make the buzzer or LED turn on when the motorcycle reaches the top or bottom of the screen."
   },
-  "https://studio.code.org/s/csd6-2019/stage/7/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lessons/7/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd6-2019/stage/7/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lessons/7/levels/2": {
     "display_name": "Sensor Experiment",
     "long_instructions": "# Sensor Experiment\n\nRun the program to the right and experiment with your board. Try interacting with your board in many different ways to figure out what each sensor might be. As you experiment with each sensor, discuss with a neighbor:\n\n-   What does this sensor measure?\n-   What is its maximum value?\n-   What is its minimum value?"
   },
-  "https://studio.code.org/s/csd6-2019/stage/7/puzzle/3": {
+  "https://studio.code.org/s/csd6-2019/lessons/7/levels/3": {
     "long_instructions": "# Reading the Sound Sensor\n\nThe `soundSensor.value` block allows you to get the current sound sensor reading\n\n# Do This\n\nIn this app we've already added a text label with the id \"sound\\_value\". Using the `soundSensor.value` block, display the value of the sound sensor.\n\n_Tip: You can drag the `soundSensor.value` block directly into any other block where you could type a value instead._\n\n[][0]"
   },
-  "https://studio.code.org/s/csd6-2019/stage/7/puzzle/4": {
+  "https://studio.code.org/s/csd6-2019/lessons/7/levels/4": {
     "long_instructions": "# Light Sensor Updates\n\nThis app is very similar to the last, but we've added a button with the ID \"update\\_button\". Write a program that displays the current value of the light sensor every time the update button is clicked.\n\n# Do This\n\nUse an event handler to update the text of \"light\\_value\" using the `lightSensor.value` block."
   },
-  "https://studio.code.org/s/csd6-2019/stage/7/puzzle/5": {
+  "https://studio.code.org/s/csd6-2019/lessons/7/levels/5": {
     "long_instructions": "# Make a Thermometer App\n\nWhile the light and sound sensors have just a raw value with the `value` property, the temperature sensor is a little bit smarter. Instead of `tempSensor.value`, there are two properties `tempSensor.F` and `tempSensor.C` which convert the raw input value to either Fahrenheit or Celsius.\n\n# Do This\n\nMake a simple thermometer app that reads in values from the temperature sensor. Your app can display the temperature in either Fahrenheit or Celsius (or both!)\n\n-   Using Design Mode, create a button for updating and a label to display the temperature\n-   Add an event handler to respond to your update button being clicked\n-   Add code to your event handler to read the temperature sensor and display the value on screen"
   },
-  "https://studio.code.org/s/csd6-2019/stage/7/puzzle/6": {
+  "https://studio.code.org/s/csd6-2019/lessons/7/levels/6": {
     "display_name": "Analog Sensors"
   },
-  "https://studio.code.org/s/csd6-2019/stage/7/puzzle/7": {
+  "https://studio.code.org/s/csd6-2019/lessons/7/levels/7": {
     "contained levels": [
       {
         "long_instructions": "# Make a Prediction\n\nRead the code in this program and make a prediction below. What do you think this program will do when you run it? How is the user intended to interact with the board? You may need to blow onto the board to see the full range of this app."
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/7/puzzle/8": {
+  "https://studio.code.org/s/csd6-2019/lessons/7/levels/8": {
     "long_instructions": "# Data Event\n\nEach of these analog sensors emits a special event called \"data\" which occurs every time new data comes in from the sensor. Using this event, you can rewrite the first program you worked on in this lesson so that it continually updates.\n\n# Do This\n\n-   Create an event handler to respond to sound sensor's \"data\" event\n-   Move the existing code into your event handler"
   },
-  "https://studio.code.org/s/csd6-2019/stage/7/puzzle/9": {
+  "https://studio.code.org/s/csd6-2019/lessons/7/levels/9": {
     "long_instructions": "# Change Event\n\nThe data event is fine if you don't mind your code running constantly, but sometimes that's not the most efficient solution to your problem. The sensor \"change\" event only fires if the sensor value has changed since the last reading, which can make sure your program isn't running code when it's not necessary.\n\n# Do This\n\nUsing the provided event handler, write a program that buzzes the buzzer and updates \"temp\\_value\" whenever the temperature sensor reading changes. Place your thumb over the temperature sensor to get it to change and see how your program responds."
   },
-  "https://studio.code.org/s/csd6-2019/stage/7/puzzle/10": {
+  "https://studio.code.org/s/csd6-2019/lessons/7/levels/10": {
     "long_instructions": "# Change Threshold\n\nBy default a sensor's \"change\" event fires every time the sensor value changes at all, even by one. The light and sound sensors are constantly fluctuating, so you probably want the \"change\" event to be a little less responsive. The `threshold` property allows you to set how much a sensor should change before considering it a \"change\" event - so setting `soundSensor.threshold = 100` would cause the sound sensor's \"change\" event only to trigger if its value increased or decreased by at least 100.\n\n# Do This\n\nThis app changes the background color of the screen whenever the sound sensor value changes, but we want to only respond to big changes in volume (like a loud noise). Use the `soundSensor.threshold` block to fix it.\n\n-   Add a `soundSensor.threshold` block before the event handler\n-   Test out how different threshold values impact the \"change\" event\n-   Choose a threshold value that makes the screen background change only when a loud noise is sensed.\n\n_Tip: Your threshold depends on how much ambient noise there is in the room, and how much it changes. A threshold that works in a quiet room may not work in a louder classroom._"
   },
-  "https://studio.code.org/s/csd6-2019/stage/7/puzzle/11": {
+  "https://studio.code.org/s/csd6-2019/lessons/7/levels/11": {
     "display_name": "Polling Events"
   },
-  "https://studio.code.org/s/csd6-2019/stage/7/puzzle/12": {
+  "https://studio.code.org/s/csd6-2019/lessons/7/levels/12": {
     "display_name": "Changing Sensor Scale"
   },
-  "https://studio.code.org/s/csd6-2019/stage/7/puzzle/13": {
+  "https://studio.code.org/s/csd6-2019/lessons/7/levels/13": {
     "long_instructions": "# Displaying Sensor Readings in Color\n\nIn the earlier prediction level you saw how the `setScale()` method can convert the full range of sensor readings (0-1023) into a range that can be used for RGB values (0-255). Let's build on that idea to make an app that can communicate the current value of all three analog sensors with a single color.\n\n# Do This\n\nTo start, we just need to set the sensor scales correctly - don't worry about actually setting the color of the background yet.\n\n-   Using the `sensor.setScale()` block, set each of light and sound sensors to the right scale for an RGB color channel.\n-   Create a variable for each of the three colors and assign each one to the value of a different sensor.\n-   Use `console.log()` to test that your variables are in the correct range.\n\n_Hint: Order matters. You need to set the scale of a sensor before checking its value_\n\n_Hint: Remember that the temperature sensor can be read in both Celsius and Fahrenheit - either way it should already give you a value that's within the necessary range for RGB_"
   },
-  "https://studio.code.org/s/csd6-2019/stage/7/puzzle/14": {
+  "https://studio.code.org/s/csd6-2019/lessons/7/levels/14": {
     "long_instructions": "# Putting Color on the Screen\n\nNow that your sensor data is in a scale that works for RGB, you can go about setting the screen color.\n\n# Do This\n\n-   Add a `setProperty()` block and set it to change the screen's background color.\n-   Add an `rgb()` block to the last parameter of `setProperty()`.\n-   Use the three color variables you created as inputs to the `rgb()` block."
   },
-  "https://studio.code.org/s/csd6-2019/stage/7/puzzle/15": {
+  "https://studio.code.org/s/csd6-2019/lessons/7/levels/15": {
     "long_instructions": "# Continuous Updates\n\nThis sensor-to-color app isn't super useful if it only sets the color once when you start the app. You can use the sensors' \"data\" event to make your app continually update the background color every time the value changes.\n\nMove your `setProperty()` block into a an event handler for one of the sensors to make the app update continually."
   },
-  "https://studio.code.org/s/csd6-2019/stage/7/extras?level_name=CSD+U6+analog+challenge_2019": {
+  "https://studio.code.org/s/csd6-2019/lessons/7/extras?level_name=CSD+U6+analog+challenge_2019": {
     "display_name": "Challenge: Making Sense of Sensors",
     "long_instructions": "# Challenge\n\n_Check with your teacher before pursuing this challenge_\n\nNow that you've practiced taking input from the various analog sensors and changing their scale to meet your needs, can you come up with an interesting use for sensor data? It's easy to display the raw numbers coming out of a sensor, but far more interesting to present that data in different ways.\n\nConsider the following ways you might communicate sensor data:\n\n-   Use the board outputs\n-   Change the width, height, or position of a UI element\n-   Use conditionals to display different images based on sensor values"
   },
-  "https://studio.code.org/s/csd6-2019/stage/8/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lessons/8/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd6-2019/stage/8/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lessons/8/levels/2": {
     "display_name": "Sample Program",
     "long_instructions": "# Emoji Race!\n\nThis is an example of a race game that you'll build by the end of this lesson. To play, pair up with another student. The student on the left will the click the left button on the Circuit Playground as fast as they can, while the student on the right clicks the right button. Whoever can get their emoji to the bottom of the screen first wins.\n\n# Do This\n\nTurn to a classmate and make a list of the following information.\n\n-   What components of the board does this program use?\n-   What events is this program responding to?\n-   What functions might you create to make this program work?"
   },
-  "https://studio.code.org/s/csd6-2019/stage/8/puzzle/3": {
+  "https://studio.code.org/s/csd6-2019/lessons/8/levels/3": {
     "dsls": {
       "markdown": "# Stop\n\nBefore you move on you'll need to look at the Project Guide for this project. Wait for instructions from your teacher as well.\n"
     }
   },
-  "https://studio.code.org/s/csd6-2019/stage/8/puzzle/4": {
+  "https://studio.code.org/s/csd6-2019/lessons/8/levels/4": {
     "long_instructions": "# Getting Started: Screen Design\n\nYou should have already reviewed the planning guide for this project. Some of the work to turn this project guide into a working program has already been started. Based on the project guide you're going to do the rest of this work.\n\n# Do This\n\nWe've already created a \"start\" screen and included a title and \"play\" button. Using your planning guide, finish creating this screen. Specifically you'll want to:\n\n-   Update the title text to say \"Emoji Race\"\n-   Add instructions for playing using the ID \"instructions\"\n\nFeel free to add any other design tweaks that you'd like."
   },
-  "https://studio.code.org/s/csd6-2019/stage/8/puzzle/5": {
+  "https://studio.code.org/s/csd6-2019/lessons/8/levels/5": {
     "long_instructions": "# Game Screen Design\n\nWe've also added a \"game\" screen where the game will be played. It just needs a couple of tweaks.\n\n# Do This\n\nSwitch to the \"game\" screen and, using your planning guide, fix this screen by changing the color of the two emoji images.\n\nFeel free to add any other design tweaks that you'd like."
   },
-  "https://studio.code.org/s/csd6-2019/stage/8/puzzle/6": {
+  "https://studio.code.org/s/csd6-2019/lessons/8/levels/6": {
     "long_instructions": "# Designing the Win Screen\n\nThe final screen in this program shows who won. It's totally blank right now.\n\n# Do This\n\nSwitch to \"win\" and design it based on your project guide. Make sure to pay close attention to the ID of each element. Once you've added the required elements, feel free to add any other design tweaks that you'd like."
   },
-  "https://studio.code.org/s/csd6-2019/stage/8/puzzle/7": {
+  "https://studio.code.org/s/csd6-2019/lessons/8/levels/7": {
     "long_instructions": "# The startGame() Function\n\nIf you look at the events we planned for in the planning guide, you may notice that two events do essentially the same thing. The events that respond to both the \"play\" and \"replay\" buttons could be written with identical code, but duplicate code like this is a perfect place to use a **function**.\n\n# Do This\n\nWe've already added blocks that call a new function named `startGame()` to the appropriate event handlers, and we've created an empty function for you to build out. \n\n-   Find the `startGame()` function definition ( [Show me where][0] )\n-   Inside the function:\n    -   Move both of the emoji images to the top of the screen by setting each one's \"y\" property to 0\n    -   Change the screen to \"game\"\n\nOnce you've fleshed out the `startGame()` function, try clicking the \"play\" button to check that it's working.",
     "callouts": {
       "CSD_U6_startGame": "Define startGame here"
     }
   },
-  "https://studio.code.org/s/csd6-2019/stage/8/puzzle/8": {
+  "https://studio.code.org/s/csd6-2019/lessons/8/levels/8": {
     "long_instructions": "# Functions with Parameters\n\nMost of the existing functions you use in App Lab need inputs, or **parameters**, to pass the function necessary information. For example, when changing a screen, you pass the ID of that screen as a parameter, which looks like `setScreen(\"win\")`.\n\nThese parameters show up as a variable that can be used inside the function, and you can create functions that use parameters too!\n\n# Do This\n\n<div markdown=\"1\" style=\"float:right; margin: 20px;\">\n\n[expandable][0]\n\n<br/>\n\nClick to expand\n\n</div>\n\nInstead of a separate function to move the red and the blue players, we've created one function called `movePlayer()` that takes the ID of the player image as a parameter called `player`. Inside this function, you can use `player` any place where you need to specify the ID of the player you want to control.\n\n-   Find where `movePlayer()` is defined ( [Show me where][1] )\n-   Inside the `movePlayer()` definition:\n    -   Get the current \"y\" property of the player and save it to a variable called `player_y`\n    -   Increase the value of `player_y` by 10\n    -   Set the \"y\" property of player to your new value `player_y`\n\nOnce you've added your code, test it. You should see that _both buttons_ work even though we only created one function - cool!",
     "teacher_markdown": "### Exposure to Functions with Parameters\n\nParameters are a powerful way to make functions more useful by giving them specific input. We are introducing this here primarily as a way to expose students to this concept, but functions with parameters won't be taught thoroughly until chapter 2. For students who are interested in experimenting more with this technique now, direct them to [the documentation][0].",
     "callouts": {
       "CSD_U6_movePlayer": "Define movePlayer() here"
     }
   },
-  "https://studio.code.org/s/csd6-2019/stage/8/puzzle/9": {
+  "https://studio.code.org/s/csd6-2019/lessons/8/levels/9": {
     "long_instructions": "# The checkWin() Function\n\nThe last function that you need to figure out is the `checkWin()` function, which after each player is moved, and is used to both check if that player has made it to the bottom of the screen and to announce the winner if necessary. For now, we're just going to find out where the player is and log it to the console.\n\n# Do This\n\nJust like the `movePlayer()` function, `checkWin()` takes a single parameter called `player`. If you call `checkWin(\"red\")`, then the variable `player` will have the value \"red\".\n\n-   Find where the function is defined ( [Show me where][0] )\n-   Create a variable called `player_y` and assign it the \"y\" property of the player\n-   Use either a `console.log()` command or a watcher to report the value of `player_y`\n-   Play the game with only one button, keeping an eye on the value of `player_y`\n-   Decide what value of `player_y` should be considered the bottom of the screen",
     "callouts": {
       "CSD_U6_checkWin": "Check if the player has won"
     }
   },
-  "https://studio.code.org/s/csd6-2019/stage/8/puzzle/10": {
+  "https://studio.code.org/s/csd6-2019/lessons/8/levels/10": {
     "long_instructions": "# Check for a Winner\n\nYour game should be pretty playable by now. Two players can click their respective buttons, and their emojies will race down the screen. We still need a way for a player to win though.\n\n# Do This\n\nUsing a conditional inside the `checkWin()` function, you want to check if a player has won each time they click. For now, we can just use `console.log` to report the winner.\n\n-   Add an if statement to the bottom of `checkWin()`\n-   For the condition of your if statement, check if `player_y` is greater than 350 (or use the bottom of screen value you decided on in the last level)\n-   In your conditional, add a `console.log` that reports which player won\n-   Test your program to make sure that it reports a winner when one of the emojis makes it to the bottom of the screen"
   },
-  "https://studio.code.org/s/csd6-2019/stage/8/puzzle/11": {
+  "https://studio.code.org/s/csd6-2019/lessons/8/levels/11": {
     "long_instructions": "# Change to the Win Screen\n\nNow that we have conditionals to check which player won, let's switch to the \"win\" screen when a player wins.\n\n# Do This\n\nInside the conditional that you've created to check if a player has reached the bottom, add a `setScreen` block to change to the \"win\" screen. Make sure you test that your new code works before moving on!"
   },
-  "https://studio.code.org/s/csd6-2019/stage/8/puzzle/12": {
+  "https://studio.code.org/s/csd6-2019/lessons/8/levels/12": {
     "long_instructions": "# Display the Winner\n\nThe winning screen doesn't actually know _who_ won the game. Let's fix that now.\n\n# Do This\n\nBefore the call to `setScreen`, add a `setProperty` block to change the \"text\" property of \"winner\" to display the actual winner."
   },
-  "https://studio.code.org/s/csd6-2019/stage/8/puzzle/13": {
+  "https://studio.code.org/s/csd6-2019/lessons/8/levels/13": {
     "long_instructions": "# Winning Buzzer\n\nThat last thing that that is missing from your project guide's description of this project is the buzzer. It should buzz a high tone if player 1 wins and a low tone if player 2 wins. \n\n# Do This\n\nSo far we've been able to just use the `player` parameter directly to report which player won, but that won't work for buzzing different sounds. Inside the conditional that checks if a player won, you'll need to add _another_ conditional that checks which player it was. If `player == \"red\"` the buzzer should play a high note, otherwise (else) it should play a low note."
   },
-  "https://studio.code.org/s/csd6-2019/stage/8/puzzle/14": {
+  "https://studio.code.org/s/csd6-2019/lessons/8/levels/14": {
     "display_name": "Make it Your Own",
     "long_instructions": "# Make It Your Own\n\nYou just walked through someone else's plan for creating a program, so now it's time to make it your own. What additional features or challenges do you want to create?\n\n# Do This\n\nSelect one of the challenges below to add to the game or come up with a challenge of your own.\n\n-   Change the look and layout of the screens\n-   Use the buzzer or the led to show when one of the buttons has been clicked\n-   Set the \"icon-color\" property of \"winner\\_image\" to the winning color\n-   Make the emojis start out sad, change to meh halfway, and end up happy\n-   Use a variable and conditionals to make sure that players can only move their emojis when the \"game\" screen is showing"
   },
-  "https://studio.code.org/s/csd6-2019/stage/9/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lessons/9/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "[][0]\n\n-   [Make a Game][1] - Sample Marked Rubrics 1 ([PDF][2] \\| [DOCX][3])\n-   [Make a Game][4] - Sample Marked Rubrics 2 ([PDF][5] \\| [DOCX][6])\n\n[/][0]"
   },
-  "https://studio.code.org/s/csd6-2019/stage/9/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lessons/9/levels/2": {
     "display_name": "Demo - Bug Grab",
     "long_instructions": "# Grab that Bug!\n\nThis is an example of a tug o' war game that could be built in this lesson. To play, pair up with another student. The student on the left will the click the left button on the Circuit Playground as fast as they can, while the student on the right clicks the right button. Whoever can get the bug over to their side first wins."
   },
-  "https://studio.code.org/s/csd6-2019/stage/9/puzzle/3": {
+  "https://studio.code.org/s/csd6-2019/lessons/9/levels/3": {
     "dsls": {
       "markdown": "# Stop\n\nBefore you move on you'll need to look at the Project Guide for this project. Wait for instructions from your teacher as well.\n"
     }
   },
-  "https://studio.code.org/s/csd6-2019/stage/9/puzzle/4": {
+  "https://studio.code.org/s/csd6-2019/lessons/9/levels/4": {
     "long_instructions": "# Create Your Screens\n\nThe first thing you'll need to do is create all of the screens that you've sketched in your planning guide.\n\n# Do This\n\nUse Design Mode to create all of the screens that your program will need. Don't forget to **pick sensible IDs** for all of your design elements."
   },
-  "https://studio.code.org/s/csd6-2019/stage/9/puzzle/5": {
+  "https://studio.code.org/s/csd6-2019/lessons/9/levels/5": {
     "long_instructions": "# UI Element Events\n\nNow that all of your screens are designed, you can add any event handlers that will respond to _screen interaction_. These should be listed in the \"Events\" section of your activity guide. If you run into new events that you hadn't thought of in the planning stage, make sure you add them to your project guide.\n\nDon't worry about making these completely functional yet. If your events rely on board elements or your own functions, we'll take care of that in later levels."
   },
-  "https://studio.code.org/s/csd6-2019/stage/9/puzzle/6": {
+  "https://studio.code.org/s/csd6-2019/lessons/9/levels/6": {
     "long_instructions": "# Board Events\n\nGo back to the Events section of your activity guide and find any events that respond to your board (ones that would use `onBoardEvent()`). Create event handlers for each of those now. If these events rely on functions you haven't written yet, just leave yourself a comment in the code."
   },
-  "https://studio.code.org/s/csd6-2019/stage/9/puzzle/7": {
+  "https://studio.code.org/s/csd6-2019/lessons/9/levels/7": {
     "long_instructions": "# Define Your Functions\n\nDefine all of your functions at the bottom of the program, under the comment `// Create your functions here`.\n\nRight now we're only worrying about writing the function _definitions_, the part which looks like:\n\n    function myFunction() {\n    \t// Things my function does\n    }"
   },
-  "https://studio.code.org/s/csd6-2019/stage/9/puzzle/8": {
+  "https://studio.code.org/s/csd6-2019/lessons/9/levels/8": {
     "long_instructions": "# Calling your Functions\n\nWith your functions defined, you can can call them wherever you need. Go through your event handlers, or anywhere else in your program that your function should be used, and add calls to the function you created."
   },
-  "https://studio.code.org/s/csd6-2019/stage/9/puzzle/9": {
+  "https://studio.code.org/s/csd6-2019/lessons/9/levels/9": {
     "long_instructions": "# Finishing Touches and Testing\n\nAt this point you should have most of your program in place. Now you need to add whatever finishing touches are needed and do a little testing. When your app is ready, have your classmates try it out. See if you can find any bugs, confusing design choices, or missing features you'd like to work on.\n\nOnce you're all done with this version of your program, click Submit to turn it in."
   },
-  "https://studio.code.org/s/csd6-2019/stage/9/puzzle/10": {
+  "https://studio.code.org/s/csd6-2019/lessons/9/levels/10": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
     }
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/2": {
     "display_name": "Video: Introduction to Arrays",
     "long_instructions": "## Questions to Consider\n\n-   When might an array be more useful than a variable?\n-   Why do you always need to assign an array to a variable?\n-   How can you access the elements in your array?",
     "teacher_markdown": "## Discussion Goals\n\nThis is the first introduction to arrays, and students will have an opportunity to try them out in the lesson, so understanding why arrays are helpful and the general ways that can use them is more important than the particular syntax or commands in the video.  Students should understand that arrays are intended to hold several pieces of information, usually all of the same type.  Just like any other piece of information, it needs to be assigned to a variable for a programmer to find it again.  Programmers can access each element of the array by its **index**, or its position number in the array.  Students will have a chance to practice the exact syntax in the lesson."
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/3": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/3": {
     "contained levels": [
       {
         "long_instructions": "# Predict\n\nThe code below will display four things on the screen.  What do you think they will be?"
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/4": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/4": {
     "short_instructions": "Write the contents of the array to the screen in numerical order. (Click to see full instructions)",
     "long_instructions": "# Index Practice\n\n<img src=\"https://images.code.org/d3b8a9275703944808bc832c02f19fda-image-1486501806089.09.45 PM.png\" style=\"width: 150px; float: right\">\n\n**Starter code** has been provided that creates a list called `colors` and uses it to set the colors of the rectangles on the screen.  Unfortunately, the colors are out of order.\n\n# Do This\n\n-   Change the index numbers inside each selection block to make the rainbow appear as in the picture on the right."
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/5": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/5": {
     "long_instructions": "# Accessing Items in an Array\n\nThis program uses the Circuit Playground.  It creates an array of the days of the week.  When the left button is pressed, it displays the day as \"Tuesday\".\n\n# Do This\n\n-   Add code that will display the day as \"Thursday\" when the right button is pressed."
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/6": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/6": {
     "short_instructions": "Write a program that displays a randomly chosen color from the array. (Click to see full instructions)",
     "long_instructions": "# Random Selection\n\nYou can also select a random element in the list by using the `randomNumber` block instead of an index.  This program selects a random icon from a list and displays it on the screen when the left button is pressed.  Right now, the icons are always blue.\n\n# Do This\n\n-   Add code that will select a random color from the list and use that as the icon color."
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/7": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/7": {
     "short_instructions": "Write a program that displays a randomly chosen color from the array. (Click to see full instructions)",
     "long_instructions": "# Using Variables\n\nThis program is like the last one, but the icons should always match the colors (red heart, yellow star, green leaf, and blue water).  You can do this using the variable \"myIndex\", which will store the value of a random number so that it can be used to get the icon and the color from the same place on each list.\n\n# Do This\n\n-   Change the code so that both the icon and its color are chosen using the \"myIndex\" variable."
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/8": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/8": {
     "display_name": "Arrays"
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/9": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/9": {
     "dsls": {
       "answers": [
         {
@@ -481,74 +481,74 @@
       "title": "Using Arrays"
     }
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/10": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/10": {
     "contained levels": [
       {
         "long_instructions": "# colorLEDs\n\nThis program uses the colorLEDs array, which lets you control the color LEDs in your Circuit Playground.\n\nWhat do you think this code will do?  Write your prediction in the box below, then run the code to see what happens."
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/11": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/11": {
     "long_instructions": "<img src=\"//curriculum.code.org/images/circuitplayground/colorLedonoff.gif\" style=\"float: right; margin: 10px;\">\n\n# colorLeds\n\nThe color LEDs can use the same basic commands that you used with the red LED, such as `on()` and `off()`. This program should turn on and off the bottom LEDs as shown in the picture, but only one LED is working.\n\n# Do This\n\n-   Read and run the code to see how the program turns the bottom left LED on and off.\n-   Add more code to make both bottom LEDs turn on and off."
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/12": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/12": {
     "long_instructions": "# Adding Some Color\n\nYou probably noticed when you used `colorLeds[0].on()` in the last level, the LEDs turned on as white. If you don't specify a color, `on()` will turn on all three parts of the LED (red, green, and blue) to produce white. You'll see a new command in the toolbox called `colorLeds[0].color()` which lets you specify a color, either as a string like \"blue\" or an RGB value using color `color()` command.\n\n# Do This\n\nUse the `.color()` command to set each of the color LEDs to a different color."
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/13": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/13": {
     "long_instructions": "<img src=\"https://images.code.org/723f036c40ef2770426d5d437e69fcde-image-1527268321449.png\" style=\"width:250px; float:right\">\n\n# Debug: colorLeds\n\nCan you debug the index values so that the rainbow shows up on the board like in the picture?"
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/14": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/14": {
     "long_instructions": "# Changing Brightness\n\nThe `intensity()` command lets you set an LED's brightness (or _intensity_) from 0 - 100. This program lets you choose three levels of brightness for your rainbow lights, but the medium level doesn't work yet.\n\n# Do This\n\n-   Read the program and see how the \"Bright\" and \"Dim\" buttons work.\n-   Add code to make the \"Medium\" button make the rainbow a medium level of brightness (between \"Bright\" and \"Dim\"). ([Show me where][0])",
     "callouts": {
       "CSDU6L10_rainbow": "Add your code here"
     }
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/15": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/15": {
     "display_name": "Circuit Playground: Color LEDs"
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/16": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/16": {
     "long_instructions": "# Light Patterns\n\nThis app already has one light pattern program, which can be activated by clicking a button. Notice that we put this pattern into a function to make the code cleaner and clearer.\n\n# Do This\n\nCreate a light pattern function of your own - maybe the colors of your favorite holiday, college, sports team, or try to create an image with the lights.\n\nAfter you've created your new function, add a button and event handler so that you can switch between the two light patterns."
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/puzzle/17": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/levels/17": {
     "long_instructions": "# Turning It Off\n\nWhen you start this app your lights are off, but as soon as you choose a pattern, there's no way to turn the lights back off!\n\n# Do This\n\nCreate a function that turns all of the LEDs off, and then add a \"Off\" button to your app and make it turn off all of the color LEDs."
   },
-  "https://studio.code.org/s/csd6-2019/stage/10/extras?level_name=CSD+U6+light+pattern+challenge_2019": {
+  "https://studio.code.org/s/csd6-2019/lessons/10/extras?level_name=CSD+U6+light+pattern+challenge_2019": {
     "display_name": "Improved Light Show",
     "long_instructions": "# Challenge: More Patterns\n\nAdd some more patterns to your app. Find a partner and add their pattern as an option. Make sure to put each pattern into its own function."
   },
-  "https://studio.code.org/s/csd6-2019/stage/11/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lessons/11/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd6-2019/stage/11/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lessons/11/levels/2": {
     "long_instructions": "# Circuit Piano\n\nLook at the code below. You're not going to be changing it, but try to see what it does. \n\n# Do this\n\n-   Run the program and play with the piano on the screen."
   },
-  "https://studio.code.org/s/csd6-2019/stage/11/puzzle/3": {
+  "https://studio.code.org/s/csd6-2019/lessons/11/levels/3": {
     "long_instructions": "# Making the Buzzer Buzz\n\nThe frequency of the buzzer determines how high or how low the buzzer will sound when it plays. The higher the number you give frequency, the higher the buzzer will sound.\n\n# Do this\n\n-   Right now the buzzer plays a high note when the left button is pressed. Make the buzzer play a low note instead."
   },
-  "https://studio.code.org/s/csd6-2019/stage/11/puzzle/4": {
+  "https://studio.code.org/s/csd6-2019/lessons/11/levels/4": {
     "long_instructions": "# Making the Buzzer Buzz\n\nNow that you can use the buzzer's frequency, try to make the buzzer play a high sound when the same button pops back up.\n\n# Do this\n\n-   Add another onBoardEvent block so the buzzer plays a high sound when the left button comes back **up**"
   },
-  "https://studio.code.org/s/csd6-2019/stage/11/puzzle/5": {
+  "https://studio.code.org/s/csd6-2019/lessons/11/levels/5": {
     "long_instructions": "# Piano Notes\n\nThis is the same piano that you saw at the beginning of the lesson, but there are some bugs!\n\n# Do this\n\n-   Edit the code so that all keys are using a `buzzer.note()` block to play the corresponding note.\n-   Make sure that all the values passed in to `buzzer.note()` are notes, and not frequencies.\n\n_Hint: Remember to put quotes around the notes! e.g `buzzer.note(\"A4\", 100);`_"
   },
-  "https://studio.code.org/s/csd6-2019/stage/11/puzzle/6": {
+  "https://studio.code.org/s/csd6-2019/lessons/11/levels/6": {
     "display_name": "Making Music",
     "long_instructions": "Today you’re going to learn how to use and create **functions**.\n\nCreating a function lets you make your own blocks! There are two parts to a function: \n\nMaking a newly named block that has all of the code you want to run inside of it. \n\\-xml of function definition- \n\nThe single green block itself that you use, or call, to run the function you created.\n\\-xml of function call-\n\nPrepare to get familiar with functions, learn how to edit them, and create your own!"
   },
-  "https://studio.code.org/s/csd6-2019/stage/11/puzzle/7": {
+  "https://studio.code.org/s/csd6-2019/lessons/11/levels/7": {
     "long_instructions": "# Piano Panic\n\nSo far you’ve just been using the elements of an array. Now, you're going to change what's inside the array.\n\nOur good friend the piano is back, except now it plays notes from two arrays: `notes`, which holds natural notes (C, D, E, F, G, A, B), and `sharpNotes`, which holds sharp notes (C#, D#, F#, G#, A#).\n\n# Do this\n\nThe `sharpNotes` array only has one item inside of it right now.\n\n-   Fix the array so that the sharp keys on the piano can actually play the right note.\n\n_Hint: Modifying arrays is much easier in text mode.  You can always switch between block and text mode by clicking the button at the top right of your code workspace._"
   },
-  "https://studio.code.org/s/csd6-2019/stage/11/puzzle/8": {
+  "https://studio.code.org/s/csd6-2019/lessons/11/levels/8": {
     "long_instructions": "# Random Song Generator\n\nYou're going to make a random song generator. When you press a button, a random note should play. Press it enough times, and you have yourself a beautiful arrangement of bleeps and bloops. \n\nYou used `randomNumber()` to select an element from an array in the previous lesson, so this should be familiar.\n\n# Do This\n\n-   Add code to randomly select a note from the `notes` array and play it.\n-   Run the program and press the left button to hear your buzzer sing its beautiful tune."
   },
-  "https://studio.code.org/s/csd6-2019/stage/11/puzzle/9": {
+  "https://studio.code.org/s/csd6-2019/lessons/11/levels/9": {
     "long_instructions": "# Making New Arrays\n\nNow that you can change arrays, it's time for you to make your own.\n\n# Do this\n\n-   Make a new array with whatever notes you want. They can be in different octaves, arranged in a certain key, etc. Anything you want!\n-   Have the buzzer play a random note from your array when the **right** button is pressed."
   },
-  "https://studio.code.org/s/csd6-2019/stage/11/puzzle/10": {
+  "https://studio.code.org/s/csd6-2019/lessons/11/levels/10": {
     "display_name": "Modifying Arrays",
     "long_instructions": "Today you’re going to learn how to use and create **functions**.\n\nCreating a function lets you make your own blocks! There are two parts to a function: \n\nMaking a newly named block that has all of the code you want to run inside of it. \n\\-xml of function definition- \n\nThe single green block itself that you use, or call, to run the function you created.\n\\-xml of function call-\n\nPrepare to get familiar with functions, learn how to edit them, and create your own!"
   },
-  "https://studio.code.org/s/csd6-2019/stage/11/puzzle/11": {
+  "https://studio.code.org/s/csd6-2019/lessons/11/levels/11": {
     "long_instructions": "Markdown is in contained level",
     "contained levels": [
       {
@@ -556,143 +556,143 @@
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/11/puzzle/12": {
+  "https://studio.code.org/s/csd6-2019/lessons/11/levels/12": {
     "long_instructions": "# Making Songs\n\nYou can make and play full songs with `buzzer.playNotes()`. It takes two parameters: an array of notes to play, and a tempo at which to play the notes. In previous bubbles you created arrays of notes and played through them randomly, but `buzzer.playNotes()` plays each note consecutively instead.\n\n# Do this\n\n-   Pull out a `buzzer.playNotes` block and change the starting array inside.\n-   Make sure the new array you give it has at least two pairs of notes that are next to each other in the list (Example: `[\"A5\", \"A5\", \"G4\", \"G4\"]`)\n\n_Hint: Don't forget that you can always switch back and forth between block and text mode._"
   },
-  "https://studio.code.org/s/csd6-2019/stage/11/puzzle/13": {
+  "https://studio.code.org/s/csd6-2019/lessons/11/levels/13": {
     "long_instructions": "# Null Notes\n\nYou may have noticed that if you put the same note side-by-side in the array, the buzzer just plays that note as one long sound instead of as individual notes. In music we often want a break (or _rest_) between notes. You can get your buzzer to play a rest by sending it the value `null`.\n\n`null` is a special value that represents emptiness in computer science. `playNotes` plays each note for the same duration, so a `null` element in the array is just telling `playNotes` to play nothing for the same duration as everything else.\n\n# Do this\n\n-   Run the code to hear what it sounds like first.\n-   Examine the array inside `buzzer.playNotes()`.\n-   Put a pause between notes that are the same and side-by-side, and any other place you deem appropriate.\n\n_Tip: `null` references a value, just like a variable name. Make sure you don't put it in quotation marks!_"
   },
-  "https://studio.code.org/s/csd6-2019/stage/11/puzzle/14": {
+  "https://studio.code.org/s/csd6-2019/lessons/11/levels/14": {
     "long_instructions": "# Sound Board 2.0\n\nYou can now play sounds, notes, and songs! With this new knowledge, you can even turn your board into a sound board.\n\nIn the toolbox you have all of the buzzer and led-related blocks at your disposal. See what cool stuff you can come up with!\n\n# Do This\n\n-   Use all of the button related board events (up, down), to play a unique sound or song at each event.\n-   Are there any other events you could use to play even more sounds/songs?"
   },
-  "https://studio.code.org/s/csd6-2019/stage/11/extras?level_name=CSDU6+buzzer+2d+arrays_2019": {
+  "https://studio.code.org/s/csd6-2019/lessons/11/extras?level_name=CSDU6+buzzer+2d+arrays_2019": {
     "display_name": "2D Arrays",
     "long_instructions": "# Challenge: 2D Arrays\n\nArrays can hold all sorts of data, like numbers, strings, and even other arrays. When we put an array inside another, this becomes a 2D array. The `buzzer.playSong()` block can be used to play songs that sound more precise with 2D arrays.\n\nThe structure that you've been using to play notes looks like this:\n\n`buzzer.playNotes( [array of notes to play] , tempo of the whole song);`\n\nThe main difference with `buzzer.playSong()` is each element inside the `[array of notes to play]`, is an array with two elements: the note you want to play, and the duration of the note. Sometime you'll want a quarter note in your song, other times you'll want a full note, or maybe somewhere in between. A full song might look something like this:\n\n`buzzer.playSong([\n  [\"G3\",0.25],\n  [\"C4\",0.25],\n  [\"E4\",0.25],\n  [\"G4\",0.125],\n  [null,0.375],\n  [\"E4\",0.1875],\n  [\"G4\",1]\n], 120);`\n\n# Do this\n\n-   Use the `buzzer.playSong` block to make a different song.\n-   When you get comfortable with the structure, add more notes to the song."
   },
-  "https://studio.code.org/s/csd6-2019/stage/11/extras?level_name=CSDU6+buzzer.stop_2019": {
+  "https://studio.code.org/s/csd6-2019/lessons/11/extras?level_name=CSDU6+buzzer.stop_2019": {
     "display_name": "Stopping the Music",
     "long_instructions": "# Stopping the Music\n\nSometimes you need to be able to stop the music when you want, like in the code below. Duration wasn't specified so now the note plays continuously. Luckily, the `buzzer.stop()` method is here to save your ears.\n\n# Do this\n\n-   Find a way to get the note to stop playing with `buzzer.stop()`.\n-   Celebrate your win over the endless note!"
   },
-  "https://studio.code.org/s/csd6-2019/stage/12/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lessons/12/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd6-2019/stage/12/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lessons/12/levels/2": {
     "contained levels": [
       {
         "long_instructions": "# Make a Prediction\n\nRead through the code for this program and predict what will happen each time the button is clicked?"
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/12/puzzle/3": {
+  "https://studio.code.org/s/csd6-2019/lessons/12/levels/3": {
     "long_instructions": "# Knowing When to Stop\n\nIf you clicked the button too many times in the last level, you got an error. Whenever you're writing code that repeats, you should think about when to _stop_ repeating.\n\n# Do This\n\nThis program is similar to the previous one, but there is a conditional inside the event handler. You'll need to complete the conditional so that we don't try to toggle an LED that doesn't exist.\n\n_Would your code work without changes for a board with more or fewer LEDs? If not, could you modify it so it would?_"
   },
-  "https://studio.code.org/s/csd6-2019/stage/12/puzzle/4": {
+  "https://studio.code.org/s/csd6-2019/lessons/12/levels/4": {
     "display_name": "Video: For Loops",
     "long_instructions": "## Questions to Consider\n\n-   What are loops used for in programming?\n-   Where do loops go in your code?",
     "teacher_markdown": "## Discussion Questions\n\nFor-loops are a very powerful construct, but this introduction intentionally only covers a small part of their functionality.  As students are more comfortable with loops, more functionality will be introduced.  For now, students should know that they can use a for loop to repeat a segment of code multiple times.  The segment should go wherever in the program that code will be run.   (This aspect of loops is highlighted to keep students from treating loops like functions and placing them at the bottom of the code.)"
   },
-  "https://studio.code.org/s/csd6-2019/stage/12/puzzle/5": {
+  "https://studio.code.org/s/csd6-2019/lessons/12/levels/5": {
     "contained levels": [
       {
         "long_instructions": "# Predict\n\nWhat will print as a result of this loop?"
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/12/puzzle/6": {
+  "https://studio.code.org/s/csd6-2019/lessons/12/levels/6": {
     "long_instructions": "# Looping Over Arrays\n\nOne of the most powerful ways to use a for loop is to loop over an array, running code on each item in the array. We can do this by using the for loop counter variable (usually `i`) as the index of your array.\n\n# Do This\n\nThis program should loop over the array `buttons` and do two things to each button - change the background color to red, and change the height to 50 px.\n\n-   Add a second `setProperty` block inside the loop\n-   Change the target to `buttons[i]`\n-   Set the \"height\" property to 50\n\n[expandable][0]"
   },
-  "https://studio.code.org/s/csd6-2019/stage/12/puzzle/7": {
+  "https://studio.code.org/s/csd6-2019/lessons/12/levels/7": {
     "long_instructions": "# Array Length\n\nIn the last program we told the loop to run three times with the code `for (var i = 0; i < 3; i++)`. This works, but we could write smarter programs by using the length of the array to decide how many times to loop.\n\n# Do This\n\nChange the exit condition of this for loop so that it runs while `i < buttons.length`."
   },
-  "https://studio.code.org/s/csd6-2019/stage/12/puzzle/8": {
+  "https://studio.code.org/s/csd6-2019/lessons/12/levels/8": {
     "long_instructions": "# Constructing a for loop from scratch\n\nNow that you've had some practice modifying for loops to process arrays, let's see if you can do it yourself.\n\n# Do This\n\nWe've provided the design elements and an array to start with, but the rest is on you.\n\n-   Add an event handler to respond to the \"thumbsup\\_button\" being clicked\n-   Place a _for loop_ inside the event handler\n-   Modify the exit condition of the _for loop_ so that it will run until it gets to the end of the array `images`\n-   Inside your _for loop_ change the current image to \"icon://fa-thumbs-o-up\"\n\n_Challenge: Can you add a second button that turns all of the images back to thumbs down?_"
   },
-  "https://studio.code.org/s/csd6-2019/stage/12/puzzle/9": {
+  "https://studio.code.org/s/csd6-2019/lessons/12/levels/9": {
     "display_name": "For Loops"
   },
-  "https://studio.code.org/s/csd6-2019/stage/12/puzzle/10": {
+  "https://studio.code.org/s/csd6-2019/lessons/12/levels/10": {
     "long_instructions": "# Turning all the Color LEDs On\n\nNow that you know how to use a _for loop_ to process all of the elements in an array, you can turn on all of the Color LEDs much more easily than before.\n\n# Do This\n\nOver the next few levels, you'll create an app that will control all of the Color LEDs on your board. The first step is to wire up the button that turns all of the LEDs on.  (Don't worry about the rest of the comments in the workspace.  You'll work on those in later levels.)\n\n-   Add an event handler for \"button\\_on\"\n-   Place a _for loop_ in your event handler that repeats until it reaches in the end of the array `colorLeds`\n-   Inside the for loop, call `colorLeds[i].on()` to turn on the current color LED"
   },
-  "https://studio.code.org/s/csd6-2019/stage/12/puzzle/11": {
+  "https://studio.code.org/s/csd6-2019/lessons/12/levels/11": {
     "long_instructions": "# Turning all the Color LEDs Off\n\nNow that you've got one button to turn the color LEDs on, you can make another turn them off.\n\n# Do This\n\nAdd an event handler to \"button\\_off\" with a for loop that turns each color LED off."
   },
-  "https://studio.code.org/s/csd6-2019/stage/12/puzzle/12": {
+  "https://studio.code.org/s/csd6-2019/lessons/12/levels/12": {
     "long_instructions": "# Add Some Color\n\nNow that you can turn the LEDs on and off, it's time to add some color.\n\n# Do This\n\nAdd event handlers to \"button\\_red\" and \"button\\_green\" that turns all the LEDs those colors."
   },
-  "https://studio.code.org/s/csd6-2019/stage/12/puzzle/13": {
+  "https://studio.code.org/s/csd6-2019/lessons/12/levels/13": {
     "long_instructions": "# Make it Your Own\n\nThink of a new button that you would like in this project.  Don't forget about the other LED options, such as pulse and blink.\n\n# Do This\n\nAdd a new button to the project, and program it with a behavior of your choice."
   },
-  "https://studio.code.org/s/csd6-2019/stage/13/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lessons/13/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd6-2019/stage/13/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lessons/13/levels/2": {
     "contained levels": [
       {
         "long_instructions": "# Accelerometer\n\nLook at the code below. What do you think it's going to do? Give it a guess, and run the code to find out!"
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/13/puzzle/3": {
+  "https://studio.code.org/s/csd6-2019/lessons/13/levels/3": {
     "long_instructions": "# Pitch and Roll\n\nThis program displays the board's pitch and roll, and it will also change colors depending on their values.  \n\n# Do This\n\nMake the program change the following colors by tilting the board to the correct pitch and roll.\n\n<div style=\"display:inline-block; background-color: skyblue; height: 30px; width:30px\">&nbsp;</div> Pitch: 0 | Roll: -20\n\n<p/>\n\n<div style=\"display:inline-block; background-color: burlywood; height: 30px; width:30px\">&nbsp;</div> Pitch: 30 | Roll: 0\n\n<p/>\n\n<div style=\"display:inline-block; background-color: mistyrose; height: 30px; width:30px\">&nbsp;</div> Pitch: -15 | Roll: 10\n\n<p/>\n\n<div style=\"display:inline-block; background-color: yellowgreen; height: 30px; width:30px\">&nbsp;</div> Pitch: 5 | Roll: -25\n\n<p/>\n\n<div style=\"display:inline-block; background-color: thistle; height: 30px; width:30px\">&nbsp;</div> Pitch: 10 | Roll: 30\n\n<p/>\n\nWhich way should you tilt to get a positive pitch?\n\nWhich way should you tilt to get a negative roll?"
   },
-  "https://studio.code.org/s/csd6-2019/stage/13/puzzle/4": {
+  "https://studio.code.org/s/csd6-2019/lessons/13/levels/4": {
     "long_instructions": "# Pitch\n\nThis program lights the top LEDs (0 and 9) when you tilt the board forward. If you tilt the board back, the LEDs at the bottom (4 and 5) should light.\n\n# Do This\n\n-   Use the board's pitch to make LEDs 4 and 5 light up when you tilt the board back.\n-   Run your code and test it a few times."
   },
-  "https://studio.code.org/s/csd6-2019/stage/13/puzzle/5": {
+  "https://studio.code.org/s/csd6-2019/lessons/13/levels/5": {
     "long_instructions": "# Roll\n\nThis program should display \"Left\" or \"Right\" on the screen, depending on which way the board is tilted.\n\n# Do this\n\n-   Use the \"roll\" property of the accelerometer to determine whether the board is tilted to the left or right.\n-   Use a conditional to change the text for the \"direction\" element to be either \"Left\" or \"Right\", depending on the board's orientation."
   },
-  "https://studio.code.org/s/csd6-2019/stage/13/puzzle/6": {
+  "https://studio.code.org/s/csd6-2019/lessons/13/levels/6": {
     "display_name": "The Accelerometer",
     "long_instructions": "Today you’re going to learn how to use and create **functions**.\n\nCreating a function lets you make your own blocks! There are two parts to a function: \n\nMaking a newly named block that has all of the code you want to run inside of it. \n\\-xml of function definition- \n\nThe single green block itself that you use, or call, to run the function you created.\n\\-xml of function call-\n\nPrepare to get familiar with functions, learn how to edit them, and create your own!"
   },
-  "https://studio.code.org/s/csd6-2019/stage/13/puzzle/7": {
+  "https://studio.code.org/s/csd6-2019/lessons/13/levels/7": {
     "long_instructions": "# Change with the Accelerometer\n\nThis program uses the change event to increase a movement meter every time the board moves. When the movement meter reaches 100, the alarm will sound.\n\n# Do This\n\nThis program has two bugs that you need to fix:\n\n-   The movement meter is being triggered by a button press, instead of the accelerometer's `change` event.\n-   The programmer forgot how to use the counter pattern to increase the movement variable.\n\nOnce you have found the bugs, run the program and try to pass the board to your partner without setting off the alarm."
   },
-  "https://studio.code.org/s/csd6-2019/stage/13/puzzle/8": {
+  "https://studio.code.org/s/csd6-2019/lessons/13/levels/8": {
     "long_instructions": "# Jogger\n\nThis program should use the `shake` event, which is triggered when the board is shaken.  It should add a step to the jogger's total every time the user shakes the board.\n\n# Do This\n\n-   Change the event so it triggers every time the board is shaken.\n-   Add code inside the event so that `steps` increases every time the board is shaken."
   },
-  "https://studio.code.org/s/csd6-2019/stage/13/puzzle/9": {
+  "https://studio.code.org/s/csd6-2019/lessons/13/levels/9": {
     "display_name": "Using Accelerometer Events",
     "long_instructions": "Today you’re going to learn how to use and create **functions**.\n\nCreating a function lets you make your own blocks! There are two parts to a function: \n\nMaking a newly named block that has all of the code you want to run inside of it. \n\\-xml of function definition- \n\nThe single green block itself that you use, or call, to run the function you created.\n\\-xml of function call-\n\nPrepare to get familiar with functions, learn how to edit them, and create your own!"
   },
-  "https://studio.code.org/s/csd6-2019/stage/13/puzzle/10": {
+  "https://studio.code.org/s/csd6-2019/lessons/13/levels/10": {
     "display_name": "Revisiting the Counter Pattern",
     "long_instructions": "Today you’re going to learn how to use and create **functions**.\n\nCreating a function lets you make your own blocks! There are two parts to a function: \n\nMaking a newly named block that has all of the code you want to run inside of it. \n\\-xml of function definition- \n\nThe single green block itself that you use, or call, to run the function you created.\n\\-xml of function call-\n\nPrepare to get familiar with functions, learn how to edit them, and create your own!"
   },
-  "https://studio.code.org/s/csd6-2019/stage/13/puzzle/11": {
+  "https://studio.code.org/s/csd6-2019/lessons/13/levels/11": {
     "long_instructions": "# Updating Values with Data\n\nIn this program the goalie is trying to block the soccer ball, but right now the ball isn't moving.\n\n# Do This\n\n-   Use the counter pattern to update the ball's `x` value so that it moves across the screen."
   },
-  "https://studio.code.org/s/csd6-2019/stage/13/puzzle/12": {
+  "https://studio.code.org/s/csd6-2019/lessons/13/levels/12": {
     "long_instructions": "# Steering Wheel\n\nThis game is similar to the goalie game that you just played, except a little different. Use your board as a steering wheel for the car (moving side to side). You have to get to the checkered flag at while avoiding the red flags along the way!\n\n# Do This\n\n-   Make the car move down the screen while the program runs.\n-   Give the car the ability to steer side to side.\n\nThink back to the programs you've made up until this point, how can you update these values?"
   },
-  "https://studio.code.org/s/csd6-2019/stage/13/puzzle/13": {
+  "https://studio.code.org/s/csd6-2019/lessons/13/levels/13": {
     "long_instructions": "# Limiting Turn\n\nYou might have noticed that it was really hard to steer the car unless your hands were moving slowly and carefully. This is because the number that `roll` returns can be a really big number depending on how much the accelerometer is being turned. Remember, `roll` has a range from -90 to 90.\n\n# Do This\n\nFind a way to make `roll` a smaller number while still using it to steer the car. You have all of the math operators available to you for this.\n\n_Challenge_: Can you keep the car from going off the side of the screen?"
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/levels/2": {
     "contained levels": [
       {
         "long_instructions": "# Bug Crawl\n\nLook at the program below, paying special attention to the function `crawl(bug)`.  What happens if you press the left or right button?"
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/puzzle/3": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/levels/3": {
     "display_name": "Functions with Parameters",
     "long_instructions": "## Questions to Consider\n\n-   How do parameters make functions more useful?\n-   How do you know when you can combine multiple functions into one?",
     "teacher_markdown": "## Discussion Goals\n\nStudents will have a chance to practice defining functions with parameters in the lesson, so it's not necessary for them to understand the exact process. Students should understand that parameters are useful because they let programmers use the same function to solve problems that are very similar, but with slight differences.  If multiple functions are almost alike, but have a small difference, students may want to combine those functions into one, and use a parameter to account for the difference."
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/puzzle/4": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/levels/4": {
     "long_instructions": "# Clouds\n\nThis program makes the clouds move when you blow on the sound sensor, but it's not finished.\n\n# Do This\n\n-   Create a new function `moveCloud(name)` that will move any cloud.\n    -   (Hint: you will use almost all the same code as the `moveCloud0` function)\n-   Call your new `moveCloud(name)` function inside the event block, once for each cloud name.\n    -   (Hint: this is similar to how the `loopCloud(name)` function is called many times.)"
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/puzzle/5": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/levels/5": {
     "short_instructions": "# Multi-plane Controller\n\nThis program moves the three planes using the board accelerometer and the on-screen check boxes.  Right now, only the red plane works.\n\n# Do This\n\n-   Create a new `movePlane(name)` function that can move any plane.\n-   Call the `movePlane(name)` function inside the event block, such that it only moves when its checkbox is checked.\n\n_Challenge: Right now the planes move way too fast.  Can you figure out how to change the code so they move more slowly?_"
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/puzzle/6": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/levels/6": {
     "long_instructions": "# Color Picker\n\nIn this program, pressing the buttons at the bottom of the screen changes the color of the images and the color LEDs.\n\n# Do This\n\n-   Create a function `chooseColor(color)` that changes each of the images and the color LEDs to the given color.\n-   Call your function in the event blocks so that all the buttons work."
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/puzzle/7": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/levels/7": {
     "long_instructions": "[][0]",
     "contained levels": [
       {
@@ -700,135 +700,135 @@
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/puzzle/8": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/levels/8": {
     "long_instructions": "# Bug Shaker\n\nThis program shakes bugs around when the board is shaken, but it's only working for one bug.\n\n# Do This\n\n-   Change the `moveBugs()` function so that it calls `moveBug(color)` on every bug color.\n    -   (Hint: Look at the `detectHits()` function for clues how to do this.)"
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/puzzle/9": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/levels/9": {
     "long_instructions": "# Music Player\n\nThis program lets you play music by waving a wand over the different notes, but it's missing a function definition.\n\n# Do This\n\n-   Create a `checkNotes()` function that will call `checkNote(note)` on everything in the \"notes\" array."
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/puzzle/10": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/levels/10": {
     "long_instructions": "# Star Chaser\n\nIn this game, the user tries to catch the stars according to the color of the LEDs.\n\n# Do This\n\n-   Play the game, and discuss the following with a partner:\n    -   What functions might this program need?\n    -   What parameters should these functions have?"
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/puzzle/11": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/levels/11": {
     "long_instructions": "# Make your `loopStar(color)` function\n\nRight now only the red star works, so you'll need to change this code.\n\n# Do This\n\n-   Use the code from the `loopRedStar()` function to create a `loopStar(color)` function that will work with any star.\n-   Test your function by calling `loopStar(\"red\")` and `loopStar(\"blue\")` inside the `loopStars()` function."
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/puzzle/12": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/levels/12": {
     "long_instructions": "# Star Chaser\n\nNow you'll need to make all the stars loop around the screen.\n\n# Do This\n\n-   Use a `for` loop inside your `loopStars()` function to make every star in \"starArray\" loop around the screen."
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/puzzle/13": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/levels/13": {
     "long_instructions": "# Star Chaser\n\nAll the stars loop, but you can still only catch the red star.\n\n# Do This\n\n-   Use code from the `moveRedStar()` function to make a `moveStar(color)` function that can move any star.\n-   Use code from the `checkRedStar()` function to make a `checkStar(color)` function that works for any star.\n-   Test your code by calling `checkStar(\"red\")` and `checkStar(\"blue\")` inside your event block."
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/puzzle/14": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/levels/14": {
     "long_instructions": "# Star Chaser\n\nNow make it work for all the stars\n\n# Do This\n\n-   Create a `checkStars()` functions that uses a `for` loop to check every star in the star array.\n-   Test your code by calling the `checkStars()` function inside the event block."
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/puzzle/15": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/levels/15": {
     "long_instructions": "# Star Chaser\n\nNow you can add extra stars, and your functions will work with them, too.\n\n# Do This\n\n-   In design mode, copy one of the stars, and change its name and color to \"yellow\".\n-   Add a new element, \"yellow\", to your star array.\n-   Test the game with your new star."
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/extras?level_name=CSD+U6+params+starchaser+challenge+1_2019": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/extras?level_name=CSD+U6+params+starchaser+challenge+1_2019": {
     "display_name": "Starchaser - Add Lives",
     "long_instructions": "# Star Chaser\n\nNow that you have a working game, you can challenge yourself with some different features.\n\n# Do This\n\n-   Start the user with 5 \"lives\", and take one away every time the user touches the **wrong** star.\n-   Make an end screen, and change to that screen when the user runs out of lives."
   },
-  "https://studio.code.org/s/csd6-2019/stage/14/extras?level_name=CSD+U6+params+starchaser+challenge+2_2019": {
+  "https://studio.code.org/s/csd6-2019/lessons/14/extras?level_name=CSD+U6+params+starchaser+challenge+2_2019": {
     "display_name": "Starchaser - Reset Player",
     "long_instructions": "# Star Chaser\n\nNow that you have a working game, you can challenge yourself with some different features.\n\n# Do This\n\n-   Make the player go back to the middle of the screen when the left button is pressed."
   },
-  "https://studio.code.org/s/csd6-2019/stage/15/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lessons/15/levels/1": {
     "display_name": "Lesson Overview"
   },
-  "https://studio.code.org/s/csd6-2019/stage/15/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lessons/15/levels/2": {
     "display_name": "Circuits and Logic"
   },
-  "https://studio.code.org/s/csd6-2019/stage/15/puzzle/3": {
+  "https://studio.code.org/s/csd6-2019/lessons/15/levels/3": {
     "contained levels": [
       {
         "long_instructions": "# Make a Prediction\n\nAll of the devices that you've used so far are actually circuits connected to numbered pins! Look for **#13** on your board to see which circuit is connected to pin 13, then read through this code and predict what will happen when the program is run."
       }
     ]
   },
-  "https://studio.code.org/s/csd6-2019/stage/15/puzzle/4": {
+  "https://studio.code.org/s/csd6-2019/lessons/15/levels/4": {
     "display_name": "Circuits and LEDs",
     "teacher_markdown": "#### Learning More About LEDs\n\nWe include LED sequins in the Circuit Playground classroom pack, but if you're careful you can use just about any LEDs you like. To learn more about pairing LEDs with the proper resistor, check out [Adafruit's LED primer][0]."
   },
-  "https://studio.code.org/s/csd6-2019/stage/15/puzzle/5": {
+  "https://studio.code.org/s/csd6-2019/lessons/15/levels/5": {
     "long_instructions": "# Wire a Circuit\n\nYou can use any of the numbered pads to add additional circuits to your board. Let's use pin 2 to add another LED.\n\n# Do This\n\n-   Using a wire, connect pin 2 to the positive (+) side of an LED\n-   Using another wire, connect the negative (-) side of the LED to a ground (GND) pin (it doesn't matter which one)\n-   Run this program to test your circuit. If it worked, your LED should turn on.\n\n_Debugging Tip: LEDs only work if the electricity is flowing from positive to negative. If your LED doesn't light up, make sure that it's oriented the right way._",
     "teacher_markdown": "### Why Are We Talking Pins?\n\nYou may notice that in the early levels of this lesson students are programming in a much different way than they have before, directly manipulating pins. The `digitalWrite()` and `pinMode()` commands are useful to get our wiring set up quickly, but are not the core concerns of this lesson. As soon as students are comfortable wiring LED circuits we will introduce techniques to control those LEDs with the higher level commands that have been used up to this point (like `led.on()` and `led.off()`)."
   },
-  "https://studio.code.org/s/csd6-2019/stage/15/puzzle/6": {
+  "https://studio.code.org/s/csd6-2019/lessons/15/levels/6": {
     "long_instructions": "# Creating Board Objects\n\nYou might have noticed that the new blocks we're using are in a different toolbox drawer. The **Circuit** drawer contains all of the board objects that are built into the Circuit Playground, but when you start wiring your own circuits the Maker Toolkit no longer knows where everything is.\n\nThe new **Maker** drawer contains general purpose commands instead of ones that are customized for the Circuit Playground. In addition to the `pinMode()` and `digitalWrite()` commands you've seen, it includes commands to create new objects on the board that can be programmed in the same way as the blocks in the **Circuit** drawer. The `var myLed = createLed()` command, for example, creates a new LED object that behaves just like the `led` blocks you've been using.\n\n# Do This\n\nNow that you're creating new board objects that we don't have blocks for, you'll need to work in text mode. You can still drag out blocks that you're familiar with from the **Circuit** drawer, you'll just need to change the name of the object.\n\n-   Keep your LED wired just as it was before (connected to pin 2)\n-   Make sure you're in text mode, not block mode.\n-   Drag out an `led.blink()` block below the comment `// Blink myLed`.\n-   Replace the text `led` with `myLed`.\n-   Test your code."
   },
-  "https://studio.code.org/s/csd6-2019/stage/15/puzzle/7": {
+  "https://studio.code.org/s/csd6-2019/lessons/15/levels/7": {
     "long_instructions": "# Wiring Multiple LEDs\n\nUsing the `createLed()` block you can connect and control as many LEDs as your board has room for. Each LED needs to be connected to a separate numbered pin, but they can all share the same ground pin.\n\n# Do This\n\nLeave the current LED connected to pin 2, but add another one to a numbered pin of your choice. For your new LED:\n\n-   Add a `var myLed = createLed()` block.\n-   Replace the variable label `myLed` with a unique label.\n-   Make sure you're in text mode, not block mode.\n-   Add an `led.blink()` command.\n-   Replace the text `led` with your new LED variable.\n-   Test your code.\n\n_Challenge: Try adding a third LED and make all three LED blink at different intervals._"
   },
-  "https://studio.code.org/s/csd6-2019/stage/15/puzzle/8": {
+  "https://studio.code.org/s/csd6-2019/lessons/15/levels/8": {
     "long_instructions": "# Smart Bike - Blinkers\n\nUsing your planning guide, wire up the two LEDs that will serve as the blinkers. In order to make sure that the blinkers can be mounted at the end of the handlebars, make sure you wire them so that they can stretch out in opposite directions.\n\n# Do This\n\nUsing alligator clips, wire, or other conductive material, connect two LEDs to your board, one for each turn signal blinker.\n\n-   Hook up each LED to a different numbered pin on the board.\n-   Use the `createLed()` block to create an LED object for each blinker.\n\n_Tip: Make your wiring easier by considering how your blinkers will be mounted when selecting a pin to use._ "
   },
-  "https://studio.code.org/s/csd6-2019/stage/15/puzzle/9": {
+  "https://studio.code.org/s/csd6-2019/lessons/15/levels/9": {
     "long_instructions": "# Smart Bike - Blinker Controls\n\nWith your turn signal LEDs hooked up, you just need to program some buttons to control them. You may want to place buttons elsewhere on the bike to make controlling your turn signals easier, but for now we'll just use the built in left and right buttons.\n\n# Do This\n\n-   Add event handlers to blink the left turn signal when the left button is pressed.\n-   Add event handlers to blink the right turn signal when the right button is pressed.\n-   Test your code!\n\n_Hint: You'll need to be in text mode to make the blinkers work, since there are no built-in blocks for the elements that you add on to the board._"
   },
-  "https://studio.code.org/s/csd6-2019/stage/15/puzzle/10": {
+  "https://studio.code.org/s/csd6-2019/lessons/15/levels/10": {
     "dsls": {
       "markdown": "# Build Your Blinkers\n\nUsing the circuit you just built, return to your smart bike prototype and add the blinkers.\n"
     }
   },
-  "https://studio.code.org/s/csd6-2019/stage/15/puzzle/11": {
+  "https://studio.code.org/s/csd6-2019/lessons/15/levels/11": {
     "display_name": "Button Circuits"
   },
-  "https://studio.code.org/s/csd6-2019/stage/15/puzzle/12": {
+  "https://studio.code.org/s/csd6-2019/lessons/15/levels/12": {
     "long_instructions": "<div style=\"float: right\" markdown=\"1\">\n\n[expandable][0]\n\n</div>\n\n# Make Your Own Buttons\n\nSimilar to LEDs, buttons are a really simple circuit that you can add to your board pretty easily. Like LEDs, buttons should be wired from a numbered pin to a ground pin, but unlike LEDs, a button circuit should be disconnected in the middle. When you connect the circuit, it will produce a button press event.\n\n# Do This\n\n-   Grab two wires.\n-   Connect one wire to an open numbered pin.\n-   Connect the second wire to a ground pin.\n-   Update line 2 so that it's referencing the pin you chose.\n-   Run the provided code.\n-   With the program running, touch the unconnected ends of both wires together to \"press\" the button.\n\n_Tip: A button circuit can be made with many different kinds of materials, as long as they are electrically conductive. Try making buttons with foil, silverware, or paper clips._"
   },
-  "https://studio.code.org/s/csd6-2019/stage/15/puzzle/13": {
+  "https://studio.code.org/s/csd6-2019/lessons/15/levels/13": {
     "long_instructions": "# Smart Bike - Buzzer\n\nNow that we know how to add more buttons, you can add a button to control the smart bike's horn.\n\n# Do This\n\nUsing the button that you've already wired to the board, find a good spot to place your horn button. Then:\n\n-   Create a button object for your horn button\n-   Add an event handler to buzz when button is pressed\n\n_Hint: The button object that you create won't be in the `onBoardEvent()` dropdown, so you'll need to type the name you've chosen in. Make sure not to use quotation marks!_"
   },
-  "https://studio.code.org/s/csd6-2019/stage/15/puzzle/14": {
+  "https://studio.code.org/s/csd6-2019/lessons/15/levels/14": {
     "long_instructions": "# Smart Bike - Headlight\n\nThe last part of the smart bike plan that we need to figure out is the automatic headlight.\n\n# Do This\n\nFirst you'll need to decide what to use for your headlight. You could add another LED circuit, or perhaps you can find a way to mount the board that allows for using the color LEDs as a headlight. Once you've figured out the physical layout of your lights, add code to your program that turns on and off the headlight based on how light or dark it is.\n\n_Hint: If you're using the built-in color LEDs, you might need to protect the light sensor to make sure that it's responding to the ambient light level and not the light from the LEDs._"
   },
-  "https://studio.code.org/s/csd6-2019/stage/15/puzzle/15": {
+  "https://studio.code.org/s/csd6-2019/lessons/15/levels/15": {
     "long_instructions": "# Smart Bike - Final Touches\n\nAt this point your smart bike should have all of its basic functionality in place. Now is your chance to add any finishing touches.\n\n# Do This\n\nYou may want to divide and conquer at this point, allowing some members of your group to focus on the physical aspects of the prototype while others work on improving the code. As this is a prototype, don't worry about making everything perfect, but do try to ensure that the prototype communicates your design well enough to test and get feedback."
   },
-  "https://studio.code.org/s/csd6-2019/stage/16/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lessons/16/levels/1": {
     "display_name": "Lesson Overview",
     "teacher_markdown": "[][0]\n\n-   [Prototype an Innovation][1] - Sample Marked Rubrics 1 ([PDF][2] \\| [DOCX][3])\n-   [Prototype an Innovation][4] - Peer Review 1 ([PDF][5] \\| [DOCX][6])\n-   [Prototype an Innovation][7] - Sample Marked Rubrics 2 ([PDF][8] \\| [DOCX][9])\n-   [Prototype an Innovation][10] - Peer Review 2 ([PDF][11] \\| [DOCX][12])\n\n[/][0]"
   },
-  "https://studio.code.org/s/csd6-2019/stage/16/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lessons/16/levels/2": {
     "dsls": {
       "content1": "description here",
       "markdown": "# Prototype your own innovation\n\nNow that you have all the skills you need, it's time to make your own game!\n\nWith a partner or team, brainstorm some different physical devices you could prototype. You can build on the programs that you've already made in previous lessons, innovative devices that you've seen in the real world, or any wild ideas you can come up with.\n\nOnce you have settled on an idea with your team, fill out the Project Guide with the sketches of the physical components of your device, inputs and outputs that you'll need, and plans for what information you'll need to process.\n\n## Innovation Ideas\n\nTo help kick off your brainstorming, check out these example projects:\n\n### Automatic Night Light\n\nUsing conductive thread, LEDs, and the light sensor, create a decorative piece of wall art the becomes a night light when the lights go out. This one is designed to look like flickering fireflies.\n\n![](https://images.code.org/159af2d362c678c341d22b7f29635f8a-image-1518201828308.gif)\n\n### Musical Instrument\n\nDesign a musical instrument that can be played any way you like, using sensors or buttons for input. In this case we created five new buttons using conductive copper tape, though you could also use aluminum foil or any other conductive material.\n\n![](https://images.code.org/deeb3d33ac1b51b19eec108f3b92efc7-image-1518202587911.gif)\n\n### Bop-it\n\nMake a game! This one uses an array to store the different commands, which are picked at random each time you correctly follow the instructions on screen.\n\n![](https://images.code.org/3e67cd6a112a10063d4183662d8fecc0-image-1518202606948.gif)\n"
     }
   },
-  "https://studio.code.org/s/csd6-2019/stage/16/puzzle/3": {
+  "https://studio.code.org/s/csd6-2019/lessons/16/levels/3": {
     "long_instructions": "# Designing the User Interface\n\nBefore worrying about the code for your program, start by laying out the user interface. As you add elements in Design Mode, make sure to give everything a meaningful ID. Even if you don't plan on accessing an element with code, making sure that all of your IDs are descriptive will help make your program more readable and easier to program."
   },
-  "https://studio.code.org/s/csd6-2019/stage/16/puzzle/4": {
+  "https://studio.code.org/s/csd6-2019/lessons/16/levels/4": {
     "long_instructions": "# Wiring Up the UI\n\nWith your user interface in place, you can now add event handlers for your interface elements. At this point you may want to just include `console.log()` commands to make sure that your events are working as expected - you can add the functional code later one."
   },
-  "https://studio.code.org/s/csd6-2019/stage/16/puzzle/5": {
+  "https://studio.code.org/s/csd6-2019/lessons/16/levels/5": {
     "long_instructions": "# Board Input Events\n\nNow you can add the events which will take input from the board. Again, feel free to just use `console.log()` statements at this point to ensure that your events are working."
   },
-  "https://studio.code.org/s/csd6-2019/stage/16/puzzle/6": {
+  "https://studio.code.org/s/csd6-2019/lessons/16/levels/6": {
     "long_instructions": "# Board Output\n\nIf you haven't already, use some of the output elements on the board to communicate useful information to the user."
   },
-  "https://studio.code.org/s/csd6-2019/stage/16/puzzle/7": {
+  "https://studio.code.org/s/csd6-2019/lessons/16/levels/7": {
     "long_instructions": "# Functions\n\nAs you continue to work through your program, look for patterns that can be abstracted into functions. Can you find code that is repeated multiple places, or chunks of code that could be better understood of given a name? Don't forget that you can use parameters to write functions for repeated code that is _mostly_ the same, but varies a bit (such as setting color on multiple LEDs)."
   },
-  "https://studio.code.org/s/csd6-2019/stage/16/puzzle/8": {
+  "https://studio.code.org/s/csd6-2019/lessons/16/levels/8": {
     "long_instructions": "# Finishing Touches\n\nAdd any finishing touches still needed to make your innovation awesome. If you have time, test out your innovation with some potential users to gather feedback and find opportunities for improvement. When you're totally finished, click the \"Submit\" button to turn it in!"
   },
-  "https://studio.code.org/s/csd6-2019/stage/16/puzzle/9": {
+  "https://studio.code.org/s/csd6-2019/lessons/16/levels/9": {
     "dsls": {
       "title": "CS Discoveries Rapid Survey!"
     }
   },
-  "https://studio.code.org/s/csd6-2019/lockable/1/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lockable/1/levels/1": {
     "dsls": {
       "title": "Physical Computing Post-Project Test"
     }
   },
-  "https://studio.code.org/s/csd6-2019/lockable/2/puzzle/1": {
+  "https://studio.code.org/s/csd6-2019/lockable/2/levels/1": {
     "dsls": {
       "markdown": "# CS Discoveries Post-Course Survey\n\n**Your input and feedback is important to us!** We use it to:\n\n* understand your experience\n* make improvements to the course\n\nThanks for taking the time to help make CS Discoveries even better!\n\n"
     }
   },
-  "https://studio.code.org/s/csd6-2019/lockable/2/puzzle/2": {
+  "https://studio.code.org/s/csd6-2019/lockable/2/levels/2": {
     "dsls": {
       "title": "CS Discoveries End of Semester Student Survey"
     }

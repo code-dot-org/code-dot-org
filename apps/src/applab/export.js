@@ -1,7 +1,7 @@
 import * as api from './api';
 import {executors as audioExecutors} from '../lib/util/audioApi';
 import {executors as timeoutExecutors} from '../lib/util/timeoutApi';
-import * as dontMarshalApi from './dontMarshalApi';
+import * as dontMarshalApi from '../dontMarshalApi';
 import {dropletGlobalConfigBlocks} from '../dropletUtils';
 
 export function getExportedGlobals() {

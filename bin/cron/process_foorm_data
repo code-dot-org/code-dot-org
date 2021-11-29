@@ -1,0 +1,98 @@
+#!/usr/bin/env ruby
+
+require_relative '../../lib/cdo/redshift'
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+require_relative '../../dashboard/config/environment'
+
+S3_BUCKET_NAME = 'cdo-data-sharing-internal'
+aws_account_id = Aws::STS::Client.new.get_caller_identity.account
+REDSHIFT_S3_ACCESS_ROLE_ARN = "arn:aws:iam::#{aws_account_id}:role/redshift-s3"
+
+SUBMISSIONS_S3_CSV_NAME = 'submissions.csv'
+SUBMISSIONS_REDSHIFT_TABLE_NAME = 'analysis_pii.foorm_submissions_reshaped'
+FORMS_S3_CSV_NAME = 'forms.csv'
+FORMS_REDSHIFT_TABLE_NAME = 'analysis.foorm_forms_reshaped'
+
+# Main method responsible for reshaping Foorm data
+# and importing to our analytics database (Redshift).
+# For each of our Foorm models (Forms and Submissions), we:
+# 1) delete any existing files (if any) from previous iterations of this job,
+# 2) reshape each record from our database into a CSV format,
+# 3) write that CSV to an S3 bucket,
+# 4) copy the contents of that CSV into a Redshift table,
+# 5) delete the CSV from S3.
+def main
+  redshift_client = RedshiftClient.instance
+
+  # Processes and uploads Foorm submissions to Redshift for analytics use via S3.
+  AWS::S3.delete_from_bucket(S3_BUCKET_NAME, SUBMISSIONS_S3_CSV_NAME)
+  reshaped_submissions = Pd::Foorm::SubmissionAnalyticsParser.reshape_all_submissions_into_csv
+  AWS::S3.upload_to_bucket(S3_BUCKET_NAME, SUBMISSIONS_S3_CSV_NAME, reshaped_submissions, no_random: true)
+  write_submissions_to_redshift(redshift_client, REDSHIFT_S3_ACCESS_ROLE_ARN)
+
+  # Processes and uploads Foorm forms to Redshift for analytics use via S3.
+  AWS::S3.delete_from_bucket(S3_BUCKET_NAME, FORMS_S3_CSV_NAME)
+  reshaped_forms = Pd::Foorm::FormAnalyticsParser.reshape_all_forms_into_csv
+  AWS::S3.upload_to_bucket(S3_BUCKET_NAME, FORMS_S3_CSV_NAME, reshaped_forms, no_random: true)
+  write_forms_to_redshift(redshift_client, REDSHIFT_S3_ACCESS_ROLE_ARN)
+end
+
+def write_forms_to_redshift(client, arn)
+  query = <<~SQL
+    DROP TABLE IF EXISTS #{FORMS_REDSHIFT_TABLE_NAME};
+    CREATE TABLE #{FORMS_REDSHIFT_TABLE_NAME}
+    (
+      form_id                 int,
+      form_name               varchar,
+      form_version            int,
+      item_type               varchar,
+      item_name               varchar,
+      item_text               varchar(max),
+      matrix_item_name        varchar,
+      matrix_item_header      varchar(max),
+      is_facilitator_specific int,
+      response_options        varchar(max),
+      num_response_options    int
+    );
+
+    COPY #{FORMS_REDSHIFT_TABLE_NAME}
+    FROM 's3://#{S3_BUCKET_NAME}/#{FORMS_S3_CSV_NAME}'
+    IAM_ROLE '#{arn}'
+    CSV
+    IGNOREHEADER 1;
+  SQL
+
+  client.exec(query)
+end
+
+def write_submissions_to_redshift(client, arn)
+  query = <<~SQL
+    DROP TABLE IF EXISTS #{SUBMISSIONS_REDSHIFT_TABLE_NAME};
+    CREATE TABLE IF NOT EXISTS #{SUBMISSIONS_REDSHIFT_TABLE_NAME}
+    (
+      submission_id    int,
+      item_name        varchar,
+      matrix_item_name varchar,
+      response_value   varchar,
+      response_text    varchar(max)
+    );
+
+    COPY #{SUBMISSIONS_REDSHIFT_TABLE_NAME}
+    FROM 's3://#{S3_BUCKET_NAME}/#{SUBMISSIONS_S3_CSV_NAME}'
+    IAM_ROLE  '#{arn}'
+    CSV
+    IGNOREHEADER 1;
+  SQL
+
+  client.exec(query)
+end
+
+begin
+  main
+ensure
+  # If processing fails at any point, delete CSVs from S3.
+  AWS::S3.delete_from_bucket(S3_BUCKET_NAME, SUBMISSIONS_S3_CSV_NAME)
+  AWS::S3.delete_from_bucket(S3_BUCKET_NAME, FORMS_S3_CSV_NAME)
+end

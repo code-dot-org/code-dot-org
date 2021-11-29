@@ -1,0 +1,32 @@
+name 'csp-u1-exam1-photo-owner_2021'
+height 'auto'
+
+question 'Arman takes a picture with his smartphone which he subsequently posts online. Beatrice finds the picture online and posts a copy of it on her website with an attached Creative Commons license. Which of the following best describes who owns the photo?'
+wrong ‘Beatrice owns the photo because only holders of a Creative Commons license can own works online.’
+right ‘Arman owns the photo because he was the original creator and did not license the work.’
+wrong ‘Arman owns the photo because it was granted a Creative Commons license by another person online.’
+wrong ‘Both own the photo because creating a copy makes it her intellectual property.’
+
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Since Arman is the original creator of the photo, the photo is his intellectual property.
+
+
+[Lesson 11 - Intellectual Property](https://curriculum.code.org/csp-20/unit1/11/) deals with issues of ownership over creative works.
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* IOC-1.F.1: Material created on a computer is the intellectual property of the creator or an organization. 
+
+* IOC-1.F.5: Some examples of legal ways to use materials created by someone else include:
+	* Creative Commons—a public copyright license that enables the free distribution of an otherwise copyrighted work. This is used when the content creator wants to give others the right to share, use, and build upon the work they have created. 
+	* open source—programs that are made freely available and may be redistributed and modified
+	* open access—online research output free of any and all restrictions on access and free of many restrictions on use, such as copyright or license restrictions
+:::
+
+MARKDOWN
+
+markdown <<MARKDOWN
+
+MARKDOWN

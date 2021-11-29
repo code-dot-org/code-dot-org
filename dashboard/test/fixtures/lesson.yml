@@ -13,6 +13,7 @@ lesson_21:
     zone: *2
     time: *3
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2037
@@ -31,6 +32,7 @@ lesson_27:
     zone: *2
     time: *5
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2039
@@ -49,6 +51,7 @@ lesson_28:
     zone: *2
     time: *7
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2039
@@ -67,6 +70,7 @@ lesson_29:
     zone: *2
     time: *9
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2039
@@ -85,6 +89,7 @@ lesson_30:
     zone: *2
     time: *11
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2039
@@ -103,6 +108,7 @@ lesson_32:
     zone: *2
     time: *13
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2041
@@ -121,6 +127,7 @@ lesson_3071:
     zone: *2
     time: *15
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2218
@@ -139,6 +146,7 @@ lesson_3421:
     zone: *2
     time: *17
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2265
@@ -157,6 +165,7 @@ lesson_3058:
     zone: *2
     time: *19
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2208
@@ -175,6 +184,7 @@ lesson_3253:
     zone: *2
     time: *21
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2238
@@ -193,6 +203,7 @@ lesson_488:
     zone: *2
     time: *23
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2108
@@ -211,6 +222,7 @@ lesson_273:
     zone: *2
     time: *25
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2083
@@ -229,6 +241,7 @@ lesson_6934:
     zone: *2
     time: *27
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2083
@@ -247,6 +260,7 @@ lesson_6935:
     zone: *2
     time: *29
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2083
@@ -265,6 +279,7 @@ lesson_6936:
     zone: *2
     time: *31
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2083
@@ -283,6 +298,7 @@ lesson_6937:
     zone: *2
     time: *33
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2083
@@ -301,6 +317,7 @@ lesson_6938:
     zone: *2
     time: *35
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2083
@@ -319,6 +336,7 @@ lesson_6939:
     zone: *2
     time: *37
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2083
@@ -337,6 +355,7 @@ lesson_6940:
     zone: *2
     time: *39
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2083
@@ -355,6 +374,7 @@ lesson_281:
     zone: *2
     time: *41
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2083
@@ -373,6 +393,7 @@ lesson_6941:
     zone: *2
     time: *43
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 2083
@@ -391,6 +412,7 @@ lesson_6942:
     zone: *2
     time: *45
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 2083
@@ -409,6 +431,7 @@ lesson_6943:
     zone: *2
     time: *47
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 2083
@@ -427,6 +450,7 @@ lesson_6944:
     zone: *2
     time: *49
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 2083
@@ -445,6 +469,7 @@ lesson_6945:
     zone: *2
     time: *51
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 2083
@@ -463,6 +488,7 @@ lesson_6946:
     zone: *2
     time: *53
   lockable: false
+  has_lesson_plan: true
   relative_position: 15
   properties: "{}"
   lesson_group_id: 2083
@@ -481,6 +507,7 @@ lesson_6947:
     zone: *2
     time: *55
   lockable: false
+  has_lesson_plan: true
   relative_position: 16
   properties: "{}"
   lesson_group_id: 2083
@@ -499,6 +526,7 @@ lesson_289:
     zone: *2
     time: *57
   lockable: false
+  has_lesson_plan: true
   relative_position: 17
   properties: "{}"
   lesson_group_id: 2083
@@ -517,6 +545,7 @@ lesson_6948:
     zone: *2
     time: *59
   lockable: false
+  has_lesson_plan: true
   relative_position: 18
   properties: "{}"
   lesson_group_id: 2083
@@ -535,6 +564,7 @@ lesson_6949:
     zone: *2
     time: *61
   lockable: false
+  has_lesson_plan: true
   relative_position: 19
   properties: "{}"
   lesson_group_id: 2083
@@ -553,6 +583,7 @@ lesson_6950:
     zone: *2
     time: *63
   lockable: false
+  has_lesson_plan: true
   relative_position: 20
   properties: "{}"
   lesson_group_id: 2083
@@ -571,6 +602,7 @@ lesson_31:
     zone: *2
     time: *65
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2279
@@ -589,6 +621,7 @@ lesson_1:
     zone: *2
     time: *67
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2036
@@ -607,6 +640,7 @@ lesson_2:
     zone: *2
     time: *69
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2036
@@ -625,6 +659,7 @@ lesson_3:
     zone: *2
     time: *71
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2036
@@ -643,6 +678,7 @@ lesson_4:
     zone: *2
     time: *73
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2036
@@ -661,6 +697,7 @@ lesson_5:
     zone: *2
     time: *75
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2036
@@ -679,6 +716,7 @@ lesson_6:
     zone: *2
     time: *77
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2036
@@ -697,6 +735,7 @@ lesson_7:
     zone: *2
     time: *79
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2036
@@ -715,6 +754,7 @@ lesson_8:
     zone: *2
     time: *81
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2036
@@ -733,6 +773,7 @@ lesson_9:
     zone: *2
     time: *83
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2036
@@ -751,6 +792,7 @@ lesson_10:
     zone: *2
     time: *85
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 2036
@@ -769,6 +811,7 @@ lesson_11:
     zone: *2
     time: *87
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 2036
@@ -787,6 +830,7 @@ lesson_12:
     zone: *2
     time: *89
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 2036
@@ -805,6 +849,7 @@ lesson_13:
     zone: *2
     time: *91
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 2036
@@ -823,6 +868,7 @@ lesson_14:
     zone: *2
     time: *93
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 2036
@@ -841,6 +887,7 @@ lesson_15:
     zone: *2
     time: *95
   lockable: false
+  has_lesson_plan: true
   relative_position: 15
   properties: "{}"
   lesson_group_id: 2036
@@ -859,6 +906,7 @@ lesson_16:
     zone: *2
     time: *97
   lockable: false
+  has_lesson_plan: true
   relative_position: 16
   properties: "{}"
   lesson_group_id: 2036
@@ -877,6 +925,7 @@ lesson_17:
     zone: *2
     time: *99
   lockable: false
+  has_lesson_plan: true
   relative_position: 17
   properties: "{}"
   lesson_group_id: 2036
@@ -895,6 +944,7 @@ lesson_18:
     zone: *2
     time: *101
   lockable: false
+  has_lesson_plan: true
   relative_position: 18
   properties: "{}"
   lesson_group_id: 2036
@@ -913,6 +963,7 @@ lesson_19:
     zone: *2
     time: *103
   lockable: false
+  has_lesson_plan: true
   relative_position: 19
   properties: "{}"
   lesson_group_id: 2036
@@ -931,6 +982,7 @@ lesson_20:
     zone: *2
     time: *105
   lockable: false
+  has_lesson_plan: true
   relative_position: 20
   properties: "{}"
   lesson_group_id: 2036
@@ -949,6 +1001,8 @@ lesson_557:
     zone: *2
     time: *107
   lockable: false
+  has_lesson_plan: true
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2118
@@ -967,6 +1021,7 @@ lesson_558:
     zone: *2
     time: *109
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2118
@@ -985,6 +1040,7 @@ lesson_559:
     zone: *2
     time: *111
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2118
@@ -1003,6 +1059,7 @@ lesson_560:
     zone: *2
     time: *113
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2118
@@ -1021,6 +1078,7 @@ lesson_561:
     zone: *2
     time: *115
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2118
@@ -1039,6 +1097,7 @@ lesson_5244:
     zone: *2
     time: *117
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2118
@@ -1057,6 +1116,7 @@ lesson_563:
     zone: *2
     time: *119
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2118
@@ -1075,6 +1135,8 @@ lesson_564:
     zone: *2
     time: *121
   lockable: false
+  has_lesson_plan: true
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2118
@@ -1093,6 +1155,7 @@ lesson_5245:
     zone: *2
     time: *123
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2118
@@ -1111,6 +1174,7 @@ lesson_566:
     zone: *2
     time: *125
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 2118
@@ -1129,6 +1193,7 @@ lesson_567:
     zone: *2
     time: *127
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 2118
@@ -1147,6 +1212,7 @@ lesson_568:
     zone: *2
     time: *129
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 2118
@@ -1165,6 +1231,7 @@ lesson_569:
     zone: *2
     time: *131
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 2118
@@ -1183,6 +1250,7 @@ lesson_570:
     zone: *2
     time: *133
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 2118
@@ -1201,6 +1269,7 @@ lesson_571:
     zone: *2
     time: *135
   lockable: false
+  has_lesson_plan: true
   relative_position: 15
   properties: "{}"
   lesson_group_id: 2118
@@ -1219,6 +1288,7 @@ lesson_6951:
     zone: *2
     time: *137
   lockable: false
+  has_lesson_plan: true
   relative_position: 16
   properties: "{}"
   lesson_group_id: 2118
@@ -1237,6 +1307,7 @@ lesson_5499:
     zone: *2
     time: *139
   lockable: false
+  has_lesson_plan: true
   relative_position: 17
   properties: "{}"
   lesson_group_id: 2118
@@ -1255,6 +1326,7 @@ lesson_574:
     zone: *2
     time: *141
   lockable: false
+  has_lesson_plan: true
   relative_position: 18
   properties: "{}"
   lesson_group_id: 2118
@@ -1273,6 +1345,7 @@ lesson_575:
     zone: *2
     time: *143
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2119
@@ -1291,6 +1364,7 @@ lesson_5500:
     zone: *2
     time: *145
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2119
@@ -1309,6 +1383,7 @@ lesson_577:
     zone: *2
     time: *147
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2119
@@ -1327,6 +1402,7 @@ lesson_578:
     zone: *2
     time: *149
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2119
@@ -1345,6 +1421,7 @@ lesson_579:
     zone: *2
     time: *151
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2119
@@ -1363,6 +1440,7 @@ lesson_580:
     zone: *2
     time: *153
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2119
@@ -1381,6 +1459,7 @@ lesson_581:
     zone: *2
     time: *155
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2119
@@ -1399,6 +1478,7 @@ lesson_582:
     zone: *2
     time: *157
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2119
@@ -1417,6 +1497,7 @@ lesson_583:
     zone: *2
     time: *159
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2119
@@ -1435,6 +1516,7 @@ lesson_584:
     zone: *2
     time: *161
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 2119
@@ -1453,6 +1535,7 @@ lesson_585:
     zone: *2
     time: *163
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 2119
@@ -1471,6 +1554,7 @@ lesson_5501:
     zone: *2
     time: *165
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 2119
@@ -1489,6 +1573,7 @@ lesson_587:
     zone: *2
     time: *167
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 2119
@@ -1507,6 +1592,7 @@ lesson_5249:
     zone: *2
     time: *169
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 2119
@@ -1525,6 +1611,7 @@ lesson_589:
     zone: *2
     time: *171
   lockable: false
+  has_lesson_plan: true
   relative_position: 15
   properties: "{}"
   lesson_group_id: 2119
@@ -1543,6 +1630,7 @@ lesson_590:
     zone: *2
     time: *173
   lockable: false
+  has_lesson_plan: true
   relative_position: 16
   properties: "{}"
   lesson_group_id: 2119
@@ -1561,6 +1649,7 @@ lesson_6952:
     zone: *2
     time: *175
   lockable: false
+  has_lesson_plan: true
   relative_position: 17
   properties: "{}"
   lesson_group_id: 2119
@@ -1579,6 +1668,7 @@ lesson_5250:
     zone: *2
     time: *177
   lockable: false
+  has_lesson_plan: true
   relative_position: 18
   properties: "{}"
   lesson_group_id: 2119
@@ -1597,6 +1687,7 @@ lesson_593:
     zone: *2
     time: *179
   lockable: false
+  has_lesson_plan: true
   relative_position: 19
   properties: "{}"
   lesson_group_id: 2119
@@ -1615,6 +1706,7 @@ lesson_594:
     zone: *2
     time: *181
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2120
@@ -1633,6 +1725,7 @@ lesson_595:
     zone: *2
     time: *183
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2120
@@ -1651,6 +1744,7 @@ lesson_596:
     zone: *2
     time: *185
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2120
@@ -1669,6 +1763,7 @@ lesson_597:
     zone: *2
     time: *187
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2120
@@ -1687,6 +1782,7 @@ lesson_598:
     zone: *2
     time: *189
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2120
@@ -1705,6 +1801,7 @@ lesson_599:
     zone: *2
     time: *191
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2120
@@ -1723,6 +1820,7 @@ lesson_600:
     zone: *2
     time: *193
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2120
@@ -1741,6 +1839,7 @@ lesson_601:
     zone: *2
     time: *195
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2120
@@ -1759,6 +1858,7 @@ lesson_602:
     zone: *2
     time: *197
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2120
@@ -1777,6 +1877,7 @@ lesson_603:
     zone: *2
     time: *199
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 2120
@@ -1795,6 +1896,7 @@ lesson_604:
     zone: *2
     time: *201
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 2120
@@ -1813,6 +1915,7 @@ lesson_605:
     zone: *2
     time: *203
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 2120
@@ -1831,6 +1934,7 @@ lesson_606:
     zone: *2
     time: *205
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 2120
@@ -1849,6 +1953,7 @@ lesson_607:
     zone: *2
     time: *207
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 2120
@@ -1867,6 +1972,7 @@ lesson_608:
     zone: *2
     time: *209
   lockable: false
+  has_lesson_plan: true
   relative_position: 15
   properties: "{}"
   lesson_group_id: 2120
@@ -1885,6 +1991,7 @@ lesson_6953:
     zone: *2
     time: *211
   lockable: false
+  has_lesson_plan: true
   relative_position: 16
   properties: "{}"
   lesson_group_id: 2120
@@ -1903,6 +2010,7 @@ lesson_6954:
     zone: *2
     time: *213
   lockable: false
+  has_lesson_plan: true
   relative_position: 17
   properties: "{}"
   lesson_group_id: 2120
@@ -1921,6 +2029,7 @@ lesson_5505:
     zone: *2
     time: *215
   lockable: false
+  has_lesson_plan: true
   relative_position: 18
   properties: "{}"
   lesson_group_id: 2120
@@ -1939,6 +2048,7 @@ lesson_5251:
     zone: *2
     time: *217
   lockable: false
+  has_lesson_plan: true
   relative_position: 19
   properties: "{}"
   lesson_group_id: 2120
@@ -1957,6 +2067,7 @@ lesson_5252:
     zone: *2
     time: *219
   lockable: false
+  has_lesson_plan: true
   relative_position: 20
   properties: "{}"
   lesson_group_id: 2120
@@ -1975,6 +2086,7 @@ lesson_614:
     zone: *2
     time: *221
   lockable: false
+  has_lesson_plan: true
   relative_position: 21
   properties: "{}"
   lesson_group_id: 2120
@@ -1993,6 +2105,7 @@ lesson_5506:
     zone: *2
     time: *223
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2121
@@ -2011,6 +2124,7 @@ lesson_616:
     zone: *2
     time: *225
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2121
@@ -2029,6 +2143,7 @@ lesson_5507:
     zone: *2
     time: *227
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2121
@@ -2047,6 +2162,7 @@ lesson_5508:
     zone: *2
     time: *229
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2121
@@ -2065,6 +2181,7 @@ lesson_5509:
     zone: *2
     time: *231
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2121
@@ -2083,6 +2200,7 @@ lesson_620:
     zone: *2
     time: *233
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2121
@@ -2101,6 +2219,7 @@ lesson_621:
     zone: *2
     time: *235
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2121
@@ -2119,6 +2238,7 @@ lesson_5510:
     zone: *2
     time: *237
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2121
@@ -2137,6 +2257,7 @@ lesson_623:
     zone: *2
     time: *239
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2121
@@ -2155,6 +2276,7 @@ lesson_624:
     zone: *2
     time: *241
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 2121
@@ -2173,6 +2295,7 @@ lesson_625:
     zone: *2
     time: *243
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 2121
@@ -2191,6 +2314,7 @@ lesson_626:
     zone: *2
     time: *245
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 2121
@@ -2209,6 +2333,7 @@ lesson_5511:
     zone: *2
     time: *247
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 2121
@@ -2227,6 +2352,7 @@ lesson_628:
     zone: *2
     time: *249
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 2121
@@ -2245,6 +2371,7 @@ lesson_629:
     zone: *2
     time: *251
   lockable: false
+  has_lesson_plan: true
   relative_position: 15
   properties: "{}"
   lesson_group_id: 2121
@@ -2263,6 +2390,7 @@ lesson_630:
     zone: *2
     time: *253
   lockable: false
+  has_lesson_plan: true
   relative_position: 16
   properties: "{}"
   lesson_group_id: 2121
@@ -2281,6 +2409,7 @@ lesson_5512:
     zone: *2
     time: *255
   lockable: false
+  has_lesson_plan: true
   relative_position: 17
   properties: "{}"
   lesson_group_id: 2121
@@ -2299,6 +2428,7 @@ lesson_5513:
     zone: *2
     time: *257
   lockable: false
+  has_lesson_plan: true
   relative_position: 18
   properties: "{}"
   lesson_group_id: 2121
@@ -2317,6 +2447,7 @@ lesson_633:
     zone: *2
     time: *259
   lockable: false
+  has_lesson_plan: true
   relative_position: 19
   properties: "{}"
   lesson_group_id: 2121
@@ -2335,6 +2466,7 @@ lesson_634:
     zone: *2
     time: *261
   lockable: false
+  has_lesson_plan: true
   relative_position: 20
   properties: "{}"
   lesson_group_id: 2121
@@ -2353,6 +2485,7 @@ lesson_635:
     zone: *2
     time: *263
   lockable: false
+  has_lesson_plan: true
   relative_position: 21
   properties: "{}"
   lesson_group_id: 2121
@@ -2371,6 +2504,7 @@ lesson_636:
     zone: *2
     time: *265
   lockable: false
+  has_lesson_plan: true
   relative_position: 22
   properties: "{}"
   lesson_group_id: 2121
@@ -2389,6 +2523,7 @@ lesson_2665:
     zone: *2
     time: *267
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2174
@@ -2407,6 +2542,7 @@ lesson_2666:
     zone: *2
     time: *269
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2174
@@ -2425,6 +2561,7 @@ lesson_2667:
     zone: *2
     time: *271
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2174
@@ -2443,6 +2580,7 @@ lesson_2668:
     zone: *2
     time: *273
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2174
@@ -2461,6 +2599,7 @@ lesson_2669:
     zone: *2
     time: *275
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2174
@@ -2479,6 +2618,7 @@ lesson_2670:
     zone: *2
     time: *277
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2174
@@ -2497,6 +2637,7 @@ lesson_2671:
     zone: *2
     time: *279
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2174
@@ -2515,6 +2656,7 @@ lesson_2672:
     zone: *2
     time: *281
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2174
@@ -2533,6 +2675,7 @@ lesson_2673:
     zone: *2
     time: *283
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2174
@@ -2551,6 +2694,7 @@ lesson_2674:
     zone: *2
     time: *285
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 2174
@@ -2569,6 +2713,7 @@ lesson_2675:
     zone: *2
     time: *287
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 2174
@@ -2587,6 +2732,7 @@ lesson_2676:
     zone: *2
     time: *289
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 2174
@@ -2605,6 +2751,7 @@ lesson_2677:
     zone: *2
     time: *291
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 2174
@@ -2623,6 +2770,7 @@ lesson_2678:
     zone: *2
     time: *293
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 2174
@@ -2641,6 +2789,7 @@ lesson_2679:
     zone: *2
     time: *295
   lockable: false
+  has_lesson_plan: true
   relative_position: 15
   properties: "{}"
   lesson_group_id: 2174
@@ -2659,6 +2808,7 @@ lesson_2680:
     zone: *2
     time: *297
   lockable: false
+  has_lesson_plan: true
   relative_position: 16
   properties: "{}"
   lesson_group_id: 2174
@@ -2677,6 +2827,7 @@ lesson_7190:
     zone: *2
     time: *299
   lockable: false
+  has_lesson_plan: true
   relative_position: 17
   properties: "{}"
   lesson_group_id: 2174
@@ -2695,6 +2846,7 @@ lesson_7191:
     zone: *2
     time: *301
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2175
@@ -2713,6 +2865,7 @@ lesson_2683:
     zone: *2
     time: *303
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2175
@@ -2731,6 +2884,7 @@ lesson_2684:
     zone: *2
     time: *305
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2175
@@ -2749,6 +2903,7 @@ lesson_2685:
     zone: *2
     time: *307
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2175
@@ -2767,6 +2922,7 @@ lesson_2686:
     zone: *2
     time: *309
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2175
@@ -2785,6 +2941,7 @@ lesson_2687:
     zone: *2
     time: *311
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2175
@@ -2803,6 +2960,7 @@ lesson_2688:
     zone: *2
     time: *313
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2175
@@ -2821,6 +2979,7 @@ lesson_2690:
     zone: *2
     time: *315
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2175
@@ -2839,6 +2998,7 @@ lesson_2691:
     zone: *2
     time: *317
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 2175
@@ -2857,6 +3017,7 @@ lesson_7192:
     zone: *2
     time: *319
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2175
@@ -2875,6 +3036,7 @@ lesson_2693:
     zone: *2
     time: *321
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 2175
@@ -2893,6 +3055,7 @@ lesson_7193:
     zone: *2
     time: *323
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 2175
@@ -2911,6 +3074,7 @@ lesson_7194:
     zone: *2
     time: *325
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 2175
@@ -2929,6 +3093,7 @@ lesson_2695:
     zone: *2
     time: *327
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 2175
@@ -2947,6 +3112,7 @@ lesson_7195:
     zone: *2
     time: *329
   lockable: false
+  has_lesson_plan: true
   relative_position: 15
   properties: "{}"
   lesson_group_id: 2175
@@ -2965,6 +3131,7 @@ lesson_7196:
     zone: *2
     time: *331
   lockable: false
+  has_lesson_plan: true
   relative_position: 16
   properties: "{}"
   lesson_group_id: 2175
@@ -2983,6 +3150,7 @@ lesson_7197:
     zone: *2
     time: *333
   lockable: false
+  has_lesson_plan: true
   relative_position: 17
   properties: "{}"
   lesson_group_id: 2175
@@ -3001,6 +3169,7 @@ lesson_7198:
     zone: *2
     time: *335
   lockable: false
+  has_lesson_plan: true
   relative_position: 18
   properties: "{}"
   lesson_group_id: 2175
@@ -3019,6 +3188,7 @@ lesson_7199:
     zone: *2
     time: *337
   lockable: false
+  has_lesson_plan: true
   relative_position: 19
   properties: "{}"
   lesson_group_id: 2175
@@ -3037,6 +3207,7 @@ lesson_2701:
     zone: *2
     time: *339
   lockable: false
+  has_lesson_plan: true
   relative_position: 20
   properties: "{}"
   lesson_group_id: 2175
@@ -3055,6 +3226,7 @@ lesson_2702:
     zone: *2
     time: *341
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2176
@@ -3073,6 +3245,7 @@ lesson_2703:
     zone: *2
     time: *343
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2176
@@ -3091,6 +3264,7 @@ lesson_2704:
     zone: *2
     time: *345
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2176
@@ -3109,6 +3283,7 @@ lesson_2705:
     zone: *2
     time: *347
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2176
@@ -3127,6 +3302,7 @@ lesson_2706:
     zone: *2
     time: *349
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2176
@@ -3145,6 +3321,7 @@ lesson_2707:
     zone: *2
     time: *351
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2176
@@ -3163,6 +3340,7 @@ lesson_2708:
     zone: *2
     time: *353
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2176
@@ -3181,6 +3359,7 @@ lesson_2709:
     zone: *2
     time: *355
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2176
@@ -3199,6 +3378,7 @@ lesson_2710:
     zone: *2
     time: *357
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2176
@@ -3217,6 +3397,7 @@ lesson_2711:
     zone: *2
     time: *359
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 2176
@@ -3235,6 +3416,7 @@ lesson_2712:
     zone: *2
     time: *361
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 2176
@@ -3253,6 +3435,7 @@ lesson_2713:
     zone: *2
     time: *363
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 2176
@@ -3271,6 +3454,7 @@ lesson_2714:
     zone: *2
     time: *365
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 2176
@@ -3289,6 +3473,7 @@ lesson_2715:
     zone: *2
     time: *367
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 2176
@@ -3307,6 +3492,7 @@ lesson_2716:
     zone: *2
     time: *369
   lockable: false
+  has_lesson_plan: true
   relative_position: 15
   properties: "{}"
   lesson_group_id: 2176
@@ -3325,6 +3511,7 @@ lesson_2717:
     zone: *2
     time: *371
   lockable: false
+  has_lesson_plan: true
   relative_position: 16
   properties: "{}"
   lesson_group_id: 2176
@@ -3343,6 +3530,7 @@ lesson_2718:
     zone: *2
     time: *373
   lockable: false
+  has_lesson_plan: true
   relative_position: 17
   properties: "{}"
   lesson_group_id: 2176
@@ -3361,6 +3549,7 @@ lesson_2719:
     zone: *2
     time: *375
   lockable: false
+  has_lesson_plan: true
   relative_position: 18
   properties: "{}"
   lesson_group_id: 2176
@@ -3379,6 +3568,7 @@ lesson_2720:
     zone: *2
     time: *377
   lockable: false
+  has_lesson_plan: true
   relative_position: 19
   properties: "{}"
   lesson_group_id: 2176
@@ -3397,6 +3587,7 @@ lesson_2721:
     zone: *2
     time: *379
   lockable: false
+  has_lesson_plan: true
   relative_position: 20
   properties: "{}"
   lesson_group_id: 2176
@@ -3415,6 +3606,7 @@ lesson_2722:
     zone: *2
     time: *381
   lockable: false
+  has_lesson_plan: true
   relative_position: 21
   properties: "{}"
   lesson_group_id: 2176
@@ -3433,6 +3625,7 @@ lesson_2723:
     zone: *2
     time: *383
   lockable: false
+  has_lesson_plan: true
   relative_position: 22
   properties: "{}"
   lesson_group_id: 2176
@@ -3451,6 +3644,7 @@ lesson_2724:
     zone: *2
     time: *385
   lockable: false
+  has_lesson_plan: true
   relative_position: 23
   properties: "{}"
   lesson_group_id: 2176
@@ -3469,6 +3663,7 @@ lesson_2725:
     zone: *2
     time: *387
   lockable: false
+  has_lesson_plan: true
   relative_position: 24
   properties: "{}"
   lesson_group_id: 2176
@@ -3487,6 +3682,7 @@ lesson_2726:
     zone: *2
     time: *389
   lockable: false
+  has_lesson_plan: true
   relative_position: 25
   properties: "{}"
   lesson_group_id: 2176
@@ -3505,6 +3701,7 @@ lesson_2727:
     zone: *2
     time: *391
   lockable: false
+  has_lesson_plan: true
   relative_position: 26
   properties: "{}"
   lesson_group_id: 2176
@@ -3523,6 +3720,7 @@ lesson_2728:
     zone: *2
     time: *393
   lockable: false
+  has_lesson_plan: true
   relative_position: 27
   properties: "{}"
   lesson_group_id: 2176
@@ -3541,6 +3739,7 @@ lesson_2729:
     zone: *2
     time: *395
   lockable: false
+  has_lesson_plan: true
   relative_position: 28
   properties: "{}"
   lesson_group_id: 2176
@@ -3559,6 +3758,7 @@ lesson_2730:
     zone: *2
     time: *397
   lockable: false
+  has_lesson_plan: true
   relative_position: 29
   properties: "{}"
   lesson_group_id: 2176
@@ -3577,6 +3777,7 @@ lesson_7200:
     zone: *2
     time: *399
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2178
@@ -3595,6 +3796,7 @@ lesson_2740:
     zone: *2
     time: *401
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2178
@@ -3613,6 +3815,7 @@ lesson_2741:
     zone: *2
     time: *403
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2178
@@ -3631,6 +3834,7 @@ lesson_2742:
     zone: *2
     time: *405
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2178
@@ -3649,6 +3853,7 @@ lesson_2743:
     zone: *2
     time: *407
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2178
@@ -3667,6 +3872,7 @@ lesson_2744:
     zone: *2
     time: *409
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2178
@@ -3685,6 +3891,7 @@ lesson_2745:
     zone: *2
     time: *411
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2178
@@ -3703,6 +3910,7 @@ lesson_2746:
     zone: *2
     time: *413
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2178
@@ -3721,6 +3929,7 @@ lesson_2747:
     zone: *2
     time: *415
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2178
@@ -3739,6 +3948,7 @@ lesson_2748:
     zone: *2
     time: *417
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 2178
@@ -3757,6 +3967,7 @@ lesson_2749:
     zone: *2
     time: *419
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 2178
@@ -3775,6 +3986,7 @@ lesson_2750:
     zone: *2
     time: *421
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 2178
@@ -3793,6 +4005,7 @@ lesson_2751:
     zone: *2
     time: *423
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 2178
@@ -3811,6 +4024,7 @@ lesson_2752:
     zone: *2
     time: *425
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 2178
@@ -3829,6 +4043,7 @@ lesson_2781:
     zone: *2
     time: *427
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2180
@@ -3847,6 +4062,7 @@ lesson_2782:
     zone: *2
     time: *429
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2180
@@ -3865,6 +4081,7 @@ lesson_2783:
     zone: *2
     time: *431
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2180
@@ -3883,6 +4100,7 @@ lesson_2784:
     zone: *2
     time: *433
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2180
@@ -3901,6 +4119,7 @@ lesson_2785:
     zone: *2
     time: *435
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2181
@@ -3919,6 +4138,7 @@ lesson_2786:
     zone: *2
     time: *437
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2181
@@ -3937,6 +4157,7 @@ lesson_2787:
     zone: *2
     time: *439
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2181
@@ -3955,6 +4176,7 @@ lesson_2788:
     zone: *2
     time: *441
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2181
@@ -3973,6 +4195,7 @@ lesson_2789:
     zone: *2
     time: *443
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2181
@@ -3991,6 +4214,7 @@ lesson_2790:
     zone: *2
     time: *445
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2181
@@ -4009,6 +4233,7 @@ lesson_2791:
     zone: *2
     time: *447
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2181
@@ -4027,6 +4252,7 @@ lesson_2792:
     zone: *2
     time: *449
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2181
@@ -4045,6 +4271,7 @@ lesson_2793:
     zone: *2
     time: *451
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2181
@@ -4063,6 +4290,7 @@ lesson_163:
     zone: *2
     time: *453
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2063
@@ -4081,6 +4309,7 @@ lesson_164:
     zone: *2
     time: *455
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2063
@@ -4099,6 +4328,7 @@ lesson_165:
     zone: *2
     time: *457
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2063
@@ -4117,6 +4347,7 @@ lesson_166:
     zone: *2
     time: *459
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2063
@@ -4135,6 +4366,7 @@ lesson_167:
     zone: *2
     time: *461
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2063
@@ -4153,6 +4385,7 @@ lesson_168:
     zone: *2
     time: *463
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2063
@@ -4171,6 +4404,7 @@ lesson_412:
     zone: *2
     time: *465
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2100
@@ -4189,6 +4423,7 @@ lesson_413:
     zone: *2
     time: *467
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2100
@@ -4207,6 +4442,7 @@ lesson_414:
     zone: *2
     time: *469
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2100
@@ -4225,6 +4461,7 @@ lesson_415:
     zone: *2
     time: *471
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2100
@@ -4243,6 +4480,7 @@ lesson_416:
     zone: *2
     time: *473
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2100
@@ -4261,6 +4499,7 @@ lesson_417:
     zone: *2
     time: *475
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2100
@@ -4279,6 +4518,7 @@ lesson_418:
     zone: *2
     time: *477
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2100
@@ -4297,6 +4537,7 @@ lesson_419:
     zone: *2
     time: *479
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2100
@@ -4315,6 +4556,7 @@ lesson_420:
     zone: *2
     time: *481
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2100
@@ -4333,6 +4575,7 @@ lesson_421:
     zone: *2
     time: *483
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 2100
@@ -4351,6 +4594,7 @@ lesson_422:
     zone: *2
     time: *485
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 2100
@@ -4369,6 +4613,7 @@ lesson_423:
     zone: *2
     time: *487
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 2100
@@ -4387,6 +4632,7 @@ lesson_424:
     zone: *2
     time: *489
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 2100
@@ -4405,6 +4651,7 @@ lesson_425:
     zone: *2
     time: *491
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 2100
@@ -4423,6 +4670,7 @@ lesson_426:
     zone: *2
     time: *493
   lockable: false
+  has_lesson_plan: true
   relative_position: 15
   properties: "{}"
   lesson_group_id: 2100
@@ -4441,6 +4689,7 @@ lesson_427:
     zone: *2
     time: *495
   lockable: false
+  has_lesson_plan: true
   relative_position: 16
   properties: "{}"
   lesson_group_id: 2100
@@ -4459,6 +4708,7 @@ lesson_428:
     zone: *2
     time: *497
   lockable: false
+  has_lesson_plan: true
   relative_position: 17
   properties: "{}"
   lesson_group_id: 2100
@@ -4477,6 +4727,7 @@ lesson_429:
     zone: *2
     time: *499
   lockable: false
+  has_lesson_plan: true
   relative_position: 18
   properties: "{}"
   lesson_group_id: 2100
@@ -4495,6 +4746,7 @@ lesson_430:
     zone: *2
     time: *501
   lockable: false
+  has_lesson_plan: true
   relative_position: 19
   properties: "{}"
   lesson_group_id: 2100
@@ -4513,6 +4765,7 @@ lesson_431:
     zone: *2
     time: *503
   lockable: false
+  has_lesson_plan: true
   relative_position: 20
   properties: "{}"
   lesson_group_id: 2100
@@ -4531,6 +4784,7 @@ lesson_432:
     zone: *2
     time: *505
   lockable: false
+  has_lesson_plan: true
   relative_position: 21
   properties: "{}"
   lesson_group_id: 2100
@@ -4549,6 +4803,7 @@ lesson_433:
     zone: *2
     time: *507
   lockable: false
+  has_lesson_plan: true
   relative_position: 22
   properties: "{}"
   lesson_group_id: 2100
@@ -4567,6 +4822,7 @@ lesson_434:
     zone: *2
     time: *509
   lockable: false
+  has_lesson_plan: true
   relative_position: 23
   properties: "{}"
   lesson_group_id: 2100
@@ -4585,6 +4841,7 @@ lesson_435:
     zone: *2
     time: *511
   lockable: false
+  has_lesson_plan: true
   relative_position: 24
   properties: "{}"
   lesson_group_id: 2100
@@ -4603,6 +4860,7 @@ lesson_436:
     zone: *2
     time: *513
   lockable: false
+  has_lesson_plan: true
   relative_position: 25
   properties: "{}"
   lesson_group_id: 2100
@@ -4621,6 +4879,7 @@ lesson_437:
     zone: *2
     time: *515
   lockable: false
+  has_lesson_plan: true
   relative_position: 26
   properties: "{}"
   lesson_group_id: 2100
@@ -4639,6 +4898,7 @@ lesson_438:
     zone: *2
     time: *517
   lockable: false
+  has_lesson_plan: true
   relative_position: 27
   properties: "{}"
   lesson_group_id: 2100
@@ -4657,6 +4917,7 @@ lesson_439:
     zone: *2
     time: *519
   lockable: false
+  has_lesson_plan: true
   relative_position: 28
   properties: "{}"
   lesson_group_id: 2100
@@ -4675,6 +4936,7 @@ lesson_440:
     zone: *2
     time: *521
   lockable: false
+  has_lesson_plan: true
   relative_position: 29
   properties: "{}"
   lesson_group_id: 2100
@@ -4693,6 +4955,7 @@ lesson_441:
     zone: *2
     time: *523
   lockable: false
+  has_lesson_plan: true
   relative_position: 30
   properties: "{}"
   lesson_group_id: 2100
@@ -4711,6 +4974,7 @@ lesson_442:
     zone: *2
     time: *525
   lockable: true
+  has_lesson_plan: false
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2100
@@ -4729,6 +4993,7 @@ lesson_443:
     zone: *2
     time: *527
   lockable: false
+  has_lesson_plan: true
   relative_position: 31
   properties: "{}"
   lesson_group_id: 2100
@@ -4747,6 +5012,7 @@ lesson_444:
     zone: *2
     time: *529
   lockable: false
+  has_lesson_plan: true
   relative_position: 32
   properties: "{}"
   lesson_group_id: 2100
@@ -4765,6 +5031,7 @@ lesson_445:
     zone: *2
     time: *531
   lockable: false
+  has_lesson_plan: true
   relative_position: 33
   properties: "{}"
   lesson_group_id: 2100
@@ -4783,6 +5050,7 @@ lesson_446:
     zone: *2
     time: *533
   lockable: false
+  has_lesson_plan: true
   relative_position: 34
   properties: "{}"
   lesson_group_id: 2100
@@ -4801,6 +5069,7 @@ lesson_447:
     zone: *2
     time: *535
   lockable: false
+  has_lesson_plan: true
   relative_position: 35
   properties: "{}"
   lesson_group_id: 2100
@@ -4819,6 +5088,7 @@ lesson_448:
     zone: *2
     time: *537
   lockable: false
+  has_lesson_plan: true
   relative_position: 36
   properties: "{}"
   lesson_group_id: 2100
@@ -4837,6 +5107,7 @@ lesson_449:
     zone: *2
     time: *539
   lockable: false
+  has_lesson_plan: true
   relative_position: 37
   properties: "{}"
   lesson_group_id: 2100
@@ -4855,6 +5126,7 @@ lesson_450:
     zone: *2
     time: *541
   lockable: false
+  has_lesson_plan: true
   relative_position: 38
   properties: "{}"
   lesson_group_id: 2100
@@ -4873,6 +5145,7 @@ lesson_451:
     zone: *2
     time: *543
   lockable: true
+  has_lesson_plan: false
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2100
@@ -4891,6 +5164,7 @@ lesson_452:
     zone: *2
     time: *545
   lockable: false
+  has_lesson_plan: true
   relative_position: 39
   properties: "{}"
   lesson_group_id: 2100
@@ -4909,6 +5183,7 @@ lesson_453:
     zone: *2
     time: *547
   lockable: false
+  has_lesson_plan: true
   relative_position: 40
   properties: "{}"
   lesson_group_id: 2100
@@ -4927,6 +5202,7 @@ lesson_454:
     zone: *2
     time: *549
   lockable: false
+  has_lesson_plan: true
   relative_position: 41
   properties: "{}"
   lesson_group_id: 2100
@@ -4945,6 +5221,7 @@ lesson_455:
     zone: *2
     time: *551
   lockable: false
+  has_lesson_plan: true
   relative_position: 42
   properties: "{}"
   lesson_group_id: 2100
@@ -4963,6 +5240,7 @@ lesson_5261:
     zone: *2
     time: *553
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2122
@@ -4981,6 +5259,7 @@ lesson_6955:
     zone: *2
     time: *555
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2122
@@ -4999,6 +5278,7 @@ lesson_5262:
     zone: *2
     time: *557
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2122
@@ -5017,6 +5297,7 @@ lesson_6956:
     zone: *2
     time: *559
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2122
@@ -5035,6 +5316,7 @@ lesson_5515:
     zone: *2
     time: *561
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2122
@@ -5053,6 +5335,7 @@ lesson_5265:
     zone: *2
     time: *563
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2122
@@ -5071,6 +5354,7 @@ lesson_6957:
     zone: *2
     time: *565
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2122
@@ -5089,6 +5373,7 @@ lesson_5517:
     zone: *2
     time: *567
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2122
@@ -5107,6 +5392,7 @@ lesson_5268:
     zone: *2
     time: *569
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2122
@@ -5125,6 +5411,7 @@ lesson_5269:
     zone: *2
     time: *571
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 2122
@@ -5143,6 +5430,7 @@ lesson_5518:
     zone: *2
     time: *573
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 2122
@@ -5161,6 +5449,7 @@ lesson_5271:
     zone: *2
     time: *575
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 2122
@@ -5179,6 +5468,7 @@ lesson_5279:
     zone: *2
     time: *577
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2125
@@ -5197,6 +5487,7 @@ lesson_6985:
     zone: *2
     time: *579
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2125
@@ -5215,6 +5506,7 @@ lesson_5280:
     zone: *2
     time: *581
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2125
@@ -5233,6 +5525,7 @@ lesson_6986:
     zone: *2
     time: *583
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2125
@@ -5251,6 +5544,7 @@ lesson_6987:
     zone: *2
     time: *585
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2125
@@ -5269,6 +5563,7 @@ lesson_5548:
     zone: *2
     time: *587
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2125
@@ -5287,6 +5582,7 @@ lesson_5284:
     zone: *2
     time: *589
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2125
@@ -5305,6 +5601,7 @@ lesson_5549:
     zone: *2
     time: *591
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2125
@@ -5323,6 +5620,7 @@ lesson_5550:
     zone: *2
     time: *593
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2125
@@ -5341,6 +5639,7 @@ lesson_5287:
     zone: *2
     time: *595
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 2125
@@ -5359,6 +5658,7 @@ lesson_5288:
     zone: *2
     time: *597
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 2125
@@ -5377,6 +5677,7 @@ lesson_5551:
     zone: *2
     time: *599
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 2125
@@ -5395,6 +5696,7 @@ lesson_5290:
     zone: *2
     time: *601
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 2125
@@ -5413,6 +5715,7 @@ lesson_7015:
     zone: *2
     time: *603
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2128
@@ -5431,6 +5734,7 @@ lesson_5304:
     zone: *2
     time: *605
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2128
@@ -5449,6 +5753,7 @@ lesson_5305:
     zone: *2
     time: *607
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2128
@@ -5467,6 +5772,7 @@ lesson_5306:
     zone: *2
     time: *609
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2128
@@ -5485,6 +5791,7 @@ lesson_5307:
     zone: *2
     time: *611
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2128
@@ -5503,6 +5810,7 @@ lesson_5308:
     zone: *2
     time: *613
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2128
@@ -5521,6 +5829,7 @@ lesson_5579:
     zone: *2
     time: *615
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2128
@@ -5539,6 +5848,7 @@ lesson_744:
     zone: *2
     time: *617
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2128
@@ -5557,6 +5867,7 @@ lesson_5309:
     zone: *2
     time: *619
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2128
@@ -5575,6 +5886,7 @@ lesson_5310:
     zone: *2
     time: *621
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 2128
@@ -5593,6 +5905,7 @@ lesson_5580:
     zone: *2
     time: *623
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 2128
@@ -5611,6 +5924,7 @@ lesson_5312:
     zone: *2
     time: *625
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 2128
@@ -5629,6 +5943,7 @@ lesson_7016:
     zone: *2
     time: *627
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 2128
@@ -5647,6 +5962,7 @@ lesson_7017:
     zone: *2
     time: *629
   lockable: false
+  has_lesson_plan: true
   relative_position: 15
   properties: "{}"
   lesson_group_id: 2128
@@ -5665,6 +5981,7 @@ lesson_748:
     zone: *2
     time: *631
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 2128
@@ -5683,6 +6000,7 @@ lesson_7048:
     zone: *2
     time: *633
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2131
@@ -5701,6 +6019,7 @@ lesson_7049:
     zone: *2
     time: *635
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2131
@@ -5719,6 +6038,7 @@ lesson_802:
     zone: *2
     time: *637
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2131
@@ -5737,6 +6057,7 @@ lesson_5335:
     zone: *2
     time: *639
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2131
@@ -5755,6 +6076,7 @@ lesson_5336:
     zone: *2
     time: *641
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2131
@@ -5773,6 +6095,7 @@ lesson_7050:
     zone: *2
     time: *643
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2131
@@ -5791,6 +6114,7 @@ lesson_7051:
     zone: *2
     time: *645
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2131
@@ -5809,6 +6133,7 @@ lesson_5339:
     zone: *2
     time: *647
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2131
@@ -5827,6 +6152,7 @@ lesson_5340:
     zone: *2
     time: *649
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2131
@@ -5845,6 +6171,7 @@ lesson_7052:
     zone: *2
     time: *651
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 2131
@@ -5863,6 +6190,7 @@ lesson_5341:
     zone: *2
     time: *653
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 2131
@@ -5881,6 +6209,7 @@ lesson_811:
     zone: *2
     time: *655
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 2131
@@ -5899,6 +6228,7 @@ lesson_7053:
     zone: *2
     time: *657
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 2131
@@ -5917,6 +6247,7 @@ lesson_7054:
     zone: *2
     time: *659
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 2131
@@ -5935,6 +6266,7 @@ lesson_5344:
     zone: *2
     time: *661
   lockable: false
+  has_lesson_plan: true
   relative_position: 15
   properties: "{}"
   lesson_group_id: 2131
@@ -5953,6 +6285,7 @@ lesson_7055:
     zone: *2
     time: *663
   lockable: false
+  has_lesson_plan: true
   relative_position: 16
   properties: "{}"
   lesson_group_id: 2131
@@ -5971,6 +6304,7 @@ lesson_7056:
     zone: *2
     time: *665
   lockable: false
+  has_lesson_plan: true
   relative_position: 17
   properties: "{}"
   lesson_group_id: 2131
@@ -5989,6 +6323,7 @@ lesson_5369:
     zone: *2
     time: *667
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 1378
@@ -6007,6 +6342,7 @@ lesson_5648:
     zone: *2
     time: *669
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 1378
@@ -6025,6 +6361,7 @@ lesson_5371:
     zone: *2
     time: *671
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 1378
@@ -6043,6 +6380,7 @@ lesson_874:
     zone: *2
     time: *673
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 1378
@@ -6061,6 +6399,7 @@ lesson_5372:
     zone: *2
     time: *675
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 1378
@@ -6079,6 +6418,7 @@ lesson_5649:
     zone: *2
     time: *677
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 1378
@@ -6097,6 +6437,7 @@ lesson_5374:
     zone: *2
     time: *679
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 1378
@@ -6115,6 +6456,7 @@ lesson_5375:
     zone: *2
     time: *681
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 1378
@@ -6133,6 +6475,7 @@ lesson_879:
     zone: *2
     time: *683
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 1378
@@ -6151,6 +6494,7 @@ lesson_5650:
     zone: *2
     time: *685
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 1379
@@ -6169,6 +6513,7 @@ lesson_7085:
     zone: *2
     time: *687
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 1379
@@ -6187,6 +6532,7 @@ lesson_7086:
     zone: *2
     time: *689
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 1379
@@ -6205,6 +6551,7 @@ lesson_7087:
     zone: *2
     time: *691
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 1379
@@ -6223,6 +6570,7 @@ lesson_884:
     zone: *2
     time: *693
   lockable: false
+  has_lesson_plan: true
   relative_position: 15
   properties: "{}"
   lesson_group_id: 1379
@@ -6241,6 +6589,7 @@ lesson_5654:
     zone: *2
     time: *695
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 1379
@@ -6259,6 +6608,7 @@ lesson_5380:
     zone: *2
     time: *697
   lockable: false
+  has_lesson_plan: true
   relative_position: 16
   properties: "{}"
   lesson_group_id: 1379
@@ -6277,6 +6627,7 @@ lesson_887:
     zone: *2
     time: *699
   lockable: false
+  has_lesson_plan: true
   relative_position: 17
   properties: "{}"
   lesson_group_id: 1379
@@ -6295,6 +6646,7 @@ lesson_5381:
     zone: *2
     time: *701
   lockable: false
+  has_lesson_plan: true
   relative_position: 18
   properties: "{}"
   lesson_group_id: 1379
@@ -6313,6 +6665,7 @@ lesson_889:
     zone: *2
     time: *703
   lockable: false
+  has_lesson_plan: true
   relative_position: 19
   properties: "{}"
   lesson_group_id: 1379
@@ -6331,6 +6684,7 @@ lesson_5382:
     zone: *2
     time: *705
   lockable: false
+  has_lesson_plan: true
   relative_position: 20
   properties: "{}"
   lesson_group_id: 1379
@@ -6349,6 +6703,7 @@ lesson_891:
     zone: *2
     time: *707
   lockable: false
+  has_lesson_plan: true
   relative_position: 21
   properties: "{}"
   lesson_group_id: 1380
@@ -6367,6 +6722,7 @@ lesson_892:
     zone: *2
     time: *709
   lockable: false
+  has_lesson_plan: true
   relative_position: 22
   properties: "{}"
   lesson_group_id: 1380
@@ -6385,6 +6741,7 @@ lesson_893:
     zone: *2
     time: *711
   lockable: false
+  has_lesson_plan: true
   relative_position: 23
   properties: "{}"
   lesson_group_id: 1380
@@ -6403,6 +6760,7 @@ lesson_894:
     zone: *2
     time: *713
   lockable: false
+  has_lesson_plan: true
   relative_position: 24
   properties: "{}"
   lesson_group_id: 1380
@@ -6421,6 +6779,7 @@ lesson_7088:
     zone: *2
     time: *715
   lockable: false
+  has_lesson_plan: true
   relative_position: 25
   properties: "{}"
   lesson_group_id: 1381
@@ -6439,6 +6798,7 @@ lesson_7089:
     zone: *2
     time: *717
   lockable: false
+  has_lesson_plan: true
   relative_position: 26
   properties: "{}"
   lesson_group_id: 1381
@@ -6457,6 +6817,7 @@ lesson_5407:
     zone: *2
     time: *719
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 1404
@@ -6475,6 +6836,7 @@ lesson_5693:
     zone: *2
     time: *721
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 1404
@@ -6493,6 +6855,7 @@ lesson_5409:
     zone: *2
     time: *723
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 1404
@@ -6511,6 +6874,7 @@ lesson_966:
     zone: *2
     time: *725
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 1404
@@ -6529,6 +6893,7 @@ lesson_5410:
     zone: *2
     time: *727
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 1404
@@ -6547,6 +6912,7 @@ lesson_5694:
     zone: *2
     time: *729
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 1404
@@ -6565,6 +6931,7 @@ lesson_5412:
     zone: *2
     time: *731
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 1404
@@ -6583,6 +6950,7 @@ lesson_5695:
     zone: *2
     time: *733
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 1404
@@ -6601,6 +6969,7 @@ lesson_971:
     zone: *2
     time: *735
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 1404
@@ -6619,6 +6988,7 @@ lesson_972:
     zone: *2
     time: *737
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 1405
@@ -6637,6 +7007,7 @@ lesson_7126:
     zone: *2
     time: *739
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 1405
@@ -6655,6 +7026,7 @@ lesson_7127:
     zone: *2
     time: *741
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 1405
@@ -6673,6 +7045,7 @@ lesson_7128:
     zone: *2
     time: *743
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 1405
@@ -6691,6 +7064,7 @@ lesson_976:
     zone: *2
     time: *745
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 1405
@@ -6709,6 +7083,7 @@ lesson_7129:
     zone: *2
     time: *747
   lockable: false
+  has_lesson_plan: true
   relative_position: 15
   properties: "{}"
   lesson_group_id: 1405
@@ -6727,6 +7102,7 @@ lesson_978:
     zone: *2
     time: *749
   lockable: false
+  has_lesson_plan: true
   relative_position: 16
   properties: "{}"
   lesson_group_id: 1405
@@ -6745,6 +7121,7 @@ lesson_979:
     zone: *2
     time: *751
   lockable: false
+  has_lesson_plan: true
   relative_position: 17
   properties: "{}"
   lesson_group_id: 1405
@@ -6763,6 +7140,7 @@ lesson_7130:
     zone: *2
     time: *753
   lockable: false
+  has_lesson_plan: true
   relative_position: 18
   properties: "{}"
   lesson_group_id: 1405
@@ -6781,6 +7159,7 @@ lesson_5415:
     zone: *2
     time: *755
   lockable: false
+  has_lesson_plan: true
   relative_position: 19
   properties: "{}"
   lesson_group_id: 1405
@@ -6799,6 +7178,7 @@ lesson_5416:
     zone: *2
     time: *757
   lockable: false
+  has_lesson_plan: true
   relative_position: 20
   properties: "{}"
   lesson_group_id: 1405
@@ -6817,6 +7197,7 @@ lesson_7131:
     zone: *2
     time: *759
   lockable: false
+  has_lesson_plan: true
   relative_position: 21
   properties: "{}"
   lesson_group_id: 1405
@@ -6835,6 +7216,7 @@ lesson_984:
     zone: *2
     time: *761
   lockable: false
+  has_lesson_plan: true
   relative_position: 22
   properties: "{}"
   lesson_group_id: 1405
@@ -6853,6 +7235,7 @@ lesson_985:
     zone: *2
     time: *763
   lockable: false
+  has_lesson_plan: true
   relative_position: 23
   properties: "{}"
   lesson_group_id: 1405
@@ -6871,6 +7254,7 @@ lesson_986:
     zone: *2
     time: *765
   lockable: false
+  has_lesson_plan: true
   relative_position: 24
   properties: "{}"
   lesson_group_id: 1405
@@ -6889,6 +7273,7 @@ lesson_987:
     zone: *2
     time: *767
   lockable: false
+  has_lesson_plan: true
   relative_position: 25
   properties: "{}"
   lesson_group_id: 1406
@@ -6907,6 +7292,7 @@ lesson_988:
     zone: *2
     time: *769
   lockable: false
+  has_lesson_plan: true
   relative_position: 26
   properties: "{}"
   lesson_group_id: 1406
@@ -6925,6 +7311,7 @@ lesson_989:
     zone: *2
     time: *771
   lockable: false
+  has_lesson_plan: true
   relative_position: 27
   properties: "{}"
   lesson_group_id: 1406
@@ -6943,6 +7330,7 @@ lesson_990:
     zone: *2
     time: *773
   lockable: false
+  has_lesson_plan: true
   relative_position: 28
   properties: "{}"
   lesson_group_id: 1406
@@ -6961,6 +7349,7 @@ lesson_991:
     zone: *2
     time: *775
   lockable: false
+  has_lesson_plan: true
   relative_position: 29
   properties: "{}"
   lesson_group_id: 1406
@@ -6979,6 +7368,7 @@ lesson_7202:
     zone: *2
     time: *777
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 1866
@@ -6997,6 +7387,7 @@ lesson_5436:
     zone: *2
     time: *779
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 1866
@@ -7015,6 +7406,7 @@ lesson_5439:
     zone: *2
     time: *781
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 1866
@@ -7033,6 +7425,7 @@ lesson_5773:
     zone: *2
     time: *783
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 1866
@@ -7051,6 +7444,7 @@ lesson_7203:
     zone: *2
     time: *785
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 1866
@@ -7069,6 +7463,7 @@ lesson_5440:
     zone: *2
     time: *787
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 1866
@@ -7087,6 +7482,7 @@ lesson_5775:
     zone: *2
     time: *789
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 1866
@@ -7105,6 +7501,7 @@ lesson_7204:
     zone: *2
     time: *791
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 1866
@@ -7123,6 +7520,7 @@ lesson_2931:
     zone: *2
     time: *793
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 1866
@@ -7141,6 +7539,7 @@ lesson_2932:
     zone: *2
     time: *795
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 1866
@@ -7159,6 +7558,7 @@ lesson_7205:
     zone: *2
     time: *797
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 1866
@@ -7177,6 +7577,7 @@ lesson_7206:
     zone: *2
     time: *799
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 1866
@@ -7195,6 +7596,7 @@ lesson_7207:
     zone: *2
     time: *801
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 1866
@@ -7213,6 +7615,7 @@ lesson_2933:
     zone: *2
     time: *803
   lockable: false
+  has_lesson_plan: true
   relative_position: 15
   properties: "{}"
   lesson_group_id: 1866
@@ -7231,6 +7634,7 @@ lesson_5442:
     zone: *2
     time: *805
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 1866
@@ -7249,6 +7653,7 @@ lesson_2934:
     zone: *2
     time: *807
   lockable: false
+  has_lesson_plan: true
   relative_position: 16
   properties: "{}"
   lesson_group_id: 1866
@@ -7267,6 +7672,7 @@ lesson_5443:
     zone: *2
     time: *809
   lockable: false
+  has_lesson_plan: true
   relative_position: 17
   properties: "{}"
   lesson_group_id: 1866
@@ -7285,6 +7691,7 @@ lesson_5780:
     zone: *2
     time: *811
   lockable: false
+  has_lesson_plan: true
   relative_position: 18
   properties: "{}"
   lesson_group_id: 1866
@@ -7303,6 +7710,7 @@ lesson_5445:
     zone: *2
     time: *813
   lockable: false
+  has_lesson_plan: true
   relative_position: 19
   properties: "{}"
   lesson_group_id: 1866
@@ -7321,6 +7729,7 @@ lesson_2937:
     zone: *2
     time: *815
   lockable: false
+  has_lesson_plan: true
   relative_position: 20
   properties: "{}"
   lesson_group_id: 1866
@@ -7339,6 +7748,7 @@ lesson_2939:
     zone: *2
     time: *817
   lockable: false
+  has_lesson_plan: true
   relative_position: 21
   properties: "{}"
   lesson_group_id: 1866
@@ -7357,6 +7767,7 @@ lesson_2940:
     zone: *2
     time: *819
   lockable: false
+  has_lesson_plan: true
   relative_position: 22
   properties: "{}"
   lesson_group_id: 1866
@@ -7375,6 +7786,7 @@ lesson_2941:
     zone: *2
     time: *821
   lockable: false
+  has_lesson_plan: true
   relative_position: 23
   properties: "{}"
   lesson_group_id: 1866
@@ -7393,6 +7805,7 @@ lesson_2942:
     zone: *2
     time: *823
   lockable: false
+  has_lesson_plan: true
   relative_position: 24
   properties: "{}"
   lesson_group_id: 1866
@@ -7411,6 +7824,7 @@ lesson_5781:
     zone: *2
     time: *825
   lockable: false
+  has_lesson_plan: true
   relative_position: 25
   properties: "{}"
   lesson_group_id: 1866
@@ -7429,6 +7843,7 @@ lesson_5782:
     zone: *2
     time: *827
   lockable: false
+  has_lesson_plan: true
   relative_position: 26
   properties: "{}"
   lesson_group_id: 1866
@@ -7447,6 +7862,7 @@ lesson_2945:
     zone: *2
     time: *829
   lockable: false
+  has_lesson_plan: true
   relative_position: 27
   properties: "{}"
   lesson_group_id: 1866
@@ -7465,6 +7881,7 @@ lesson_2946:
     zone: *2
     time: *831
   lockable: false
+  has_lesson_plan: true
   relative_position: 28
   properties: "{}"
   lesson_group_id: 1866
@@ -7483,6 +7900,7 @@ lesson_2947:
     zone: *2
     time: *833
   lockable: false
+  has_lesson_plan: true
   relative_position: 29
   properties: "{}"
   lesson_group_id: 1866
@@ -7501,6 +7919,7 @@ lesson_2948:
     zone: *2
     time: *835
   lockable: false
+  has_lesson_plan: true
   relative_position: 30
   properties: "{}"
   lesson_group_id: 1866
@@ -7519,6 +7938,7 @@ lesson_2949:
     zone: *2
     time: *837
   lockable: false
+  has_lesson_plan: true
   relative_position: 31
   properties: "{}"
   lesson_group_id: 1867
@@ -7537,6 +7957,7 @@ lesson_2950:
     zone: *2
     time: *839
   lockable: false
+  has_lesson_plan: true
   relative_position: 32
   properties: "{}"
   lesson_group_id: 1867
@@ -7555,6 +7976,7 @@ lesson_2951:
     zone: *2
     time: *841
   lockable: false
+  has_lesson_plan: true
   relative_position: 33
   properties: "{}"
   lesson_group_id: 1867
@@ -7573,6 +7995,7 @@ lesson_2952:
     zone: *2
     time: *843
   lockable: false
+  has_lesson_plan: true
   relative_position: 34
   properties: "{}"
   lesson_group_id: 1867
@@ -7591,6 +8014,7 @@ lesson_2953:
     zone: *2
     time: *845
   lockable: false
+  has_lesson_plan: true
   relative_position: 35
   properties: "{}"
   lesson_group_id: 1867
@@ -7609,6 +8033,7 @@ lesson_5461:
     zone: *2
     time: *847
   lockable: false
+  has_lesson_plan: true
   relative_position: 1
   properties: "{}"
   lesson_group_id: 2240
@@ -7627,6 +8052,7 @@ lesson_7256:
     zone: *2
     time: *849
   lockable: false
+  has_lesson_plan: true
   relative_position: 2
   properties: "{}"
   lesson_group_id: 2240
@@ -7645,6 +8071,7 @@ lesson_5463:
     zone: *2
     time: *851
   lockable: false
+  has_lesson_plan: true
   relative_position: 3
   properties: "{}"
   lesson_group_id: 2240
@@ -7663,6 +8090,7 @@ lesson_7257:
     zone: *2
     time: *853
   lockable: false
+  has_lesson_plan: true
   relative_position: 4
   properties: "{}"
   lesson_group_id: 2240
@@ -7681,6 +8109,7 @@ lesson_7258:
     zone: *2
     time: *855
   lockable: false
+  has_lesson_plan: true
   relative_position: 5
   properties: "{}"
   lesson_group_id: 2240
@@ -7699,6 +8128,7 @@ lesson_5467:
     zone: *2
     time: *857
   lockable: false
+  has_lesson_plan: true
   relative_position: 7
   properties: "{}"
   lesson_group_id: 2240
@@ -7717,6 +8147,7 @@ lesson_5470:
     zone: *2
     time: *859
   lockable: false
+  has_lesson_plan: true
   relative_position: 9
   properties: "{}"
   lesson_group_id: 2240
@@ -7735,6 +8166,7 @@ lesson_5838:
     zone: *2
     time: *861
   lockable: false
+  has_lesson_plan: true
   relative_position: 6
   properties: "{}"
   lesson_group_id: 2240
@@ -7753,6 +8185,7 @@ lesson_5840:
     zone: *2
     time: *863
   lockable: false
+  has_lesson_plan: true
   relative_position: 10
   properties: "{}"
   lesson_group_id: 2240
@@ -7771,6 +8204,7 @@ lesson_5839:
     zone: *2
     time: *865
   lockable: false
+  has_lesson_plan: true
   relative_position: 8
   properties: "{}"
   lesson_group_id: 2240
@@ -7789,6 +8223,7 @@ lesson_5471:
     zone: *2
     time: *867
   lockable: false
+  has_lesson_plan: true
   relative_position: 11
   properties: "{}"
   lesson_group_id: 2240
@@ -7807,6 +8242,7 @@ lesson_5841:
     zone: *2
     time: *869
   lockable: false
+  has_lesson_plan: true
   relative_position: 12
   properties: "{}"
   lesson_group_id: 2240
@@ -7825,6 +8261,7 @@ lesson_5473:
     zone: *2
     time: *871
   lockable: false
+  has_lesson_plan: true
   relative_position: 13
   properties: "{}"
   lesson_group_id: 2240
@@ -7843,6 +8280,7 @@ lesson_3268:
     zone: *2
     time: *873
   lockable: false
+  has_lesson_plan: true
   relative_position: 14
   properties: "{}"
   lesson_group_id: 2240

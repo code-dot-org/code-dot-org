@@ -1,0 +1,19 @@
+{
+  "func": "dot",
+  "category": "Turtle",
+  "paletteParams": [
+    {
+      "name": "radius"
+    }
+  ],
+  "params": [
+    "5"
+  ],
+  "dropdown": {
+    "0": [
+      "1",
+      "5",
+      "10"
+    ]
+  }
+}

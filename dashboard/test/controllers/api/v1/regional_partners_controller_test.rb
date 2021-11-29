@@ -75,14 +75,14 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     Timecop.freeze(time) do
       application = create(
-        :pd_teacher1819_application,
+        :pd_teacher_application,
         course: 'csp',
         regional_partner: @regional_partner,
         user: @serializing_teacher,
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted'
+      application.status = 'accepted_not_notified'
       application.save!
       application.lock!
 
@@ -124,14 +124,14 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     Timecop.freeze(time) do
       application = create(
-        :pd_teacher1819_application,
+        :pd_teacher_application,
         course: 'csp',
         regional_partner: @regional_partner,
         user: @serializing_teacher,
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted'
+      application.status = 'accepted_not_notified'
       application.save!
       application.lock!
 
@@ -172,14 +172,14 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     Timecop.freeze(time) do
       application = create(
-        :pd_teacher1819_application,
+        :pd_teacher_application,
         course: 'csp',
         regional_partner: @regional_partner,
         user: @serializing_teacher,
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted'
+      application.status = 'accepted_not_notified'
       application.save!
       application.lock!
 
@@ -196,14 +196,14 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     Timecop.freeze(time) do
       application = create(
-        :pd_teacher1819_application,
+        :pd_teacher_application,
         course: 'csp',
         regional_partner: @regional_partner,
         user: @serializing_teacher,
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted'
+      application.status = 'accepted_not_notified'
       application.save!
       application.lock!
 
@@ -220,14 +220,14 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
 
     Timecop.freeze(time) do
       application = create(
-        :pd_teacher1819_application,
+        :pd_teacher_application,
         course: 'csd',
         regional_partner: @regional_partner,
         user: @serializing_teacher,
       )
 
       application.update_form_data_hash({first_name: 'Minerva', last_name: 'McGonagall'})
-      application.status = 'accepted'
+      application.status = 'accepted_not_notified'
       application.save!
       application.lock!
 
@@ -272,7 +272,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'find regional partner summer workshops for state fallback' do
-    mock_illinois_object = OpenStruct.new(state_code: "IL")
+    mock_illinois_object = OpenStruct.new(country_code: "US", state_code: "IL")
     Geocoder.expects(:search).returns([mock_illinois_object])
 
     regional_partner = create :regional_partner_illinois
@@ -283,7 +283,7 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
   end
 
   test 'find no regional partner summer workshops for a state' do
-    mock_washington_object = OpenStruct.new(state_code: "WA")
+    mock_washington_object = OpenStruct.new(country_code: "US", state_code: "WA")
     Geocoder.expects(:search).returns([mock_washington_object])
 
     get :find, params: {zip_code: 98104}
@@ -336,6 +336,8 @@ class Api::V1::RegionalPartnersControllerTest < ActionController::TestCase
           [COURSE_CSD, SUBJECT_CSD_SUMMER_WORKSHOP]
         when :csp_teachers
           [COURSE_CSP, SUBJECT_CSP_SUMMER_WORKSHOP]
+        when :csa_teachers
+          [COURSE_CSA, SUBJECT_CSA_SUMMER_WORKSHOP]
         end
 
       create :workshop,

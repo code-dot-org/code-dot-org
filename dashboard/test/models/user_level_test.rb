@@ -7,48 +7,157 @@ class UserLevelTest < ActiveSupport::TestCase
     @user = create(:user)
     @level = create(:level)
 
+    # records for testing pairing-related methods
+    @unpaired_user_level = create :user_level, user: @user, level: @level
     @driver = create :student, name: 'DriverName'
-    @navigator = create :student
-    @driver_user_level = create :user_level, user: @driver, level: @level
-    @navigator_user_level = create :user_level, user: @navigator, level: @level
-    @driver_user_level.navigator_user_levels << @navigator_user_level
+    @navigator = create :student, name: 'NavigatorName'
+    @navigator2 = create :student, name: 'Navigator2Name'
+
+    @driver_user_level, @navigator_user_level = setup_pairing_group(2)
   end
 
-  test "by_stage" do
+  def setup_pairing_group(group_size)
+    case group_size
+    when 2
+      driver_user_level = create :user_level, user: @driver, level: @level
+      navigator_user_level = create :user_level, user: @navigator, level: @level
+      create :paired_user_level,
+        driver_user_level: driver_user_level, navigator_user_level: navigator_user_level
+
+      return driver_user_level, navigator_user_level
+    when 3
+      driver_user_level = create :user_level, user: @driver, level: @level
+      navigator_user_level = create :user_level, user: @navigator, level: @level
+      navigator2_user_level = create :user_level, user: @navigator2, level: @level
+      create :paired_user_level,
+        driver_user_level: driver_user_level, navigator_user_level: navigator_user_level
+      create :paired_user_level,
+        driver_user_level: driver_user_level, navigator_user_level: navigator2_user_level
+
+      return driver_user_level, navigator_user_level, navigator2_user_level
+    else
+      flunk "calling setup_pairing_group with size #{group_size} is not yet supported"
+    end
+  end
+
+  test "by_lesson" do
     script = create :script
-    stage = create :lesson, script: script
-    script_level = create :script_level, script: script, lesson: stage
+    lesson = create :lesson, script: script
+    script_level = create :script_level, script: script, lesson: lesson
     level = script_level.levels.first
 
-    stage_user_level = create :user_level, script: script, level: level
+    lesson_user_level = create :user_level, script: script, level: level
     other_user_level = create :user_level
 
-    assert_includes UserLevel.by_stage(stage), stage_user_level
-    refute_includes UserLevel.by_stage(stage), other_user_level
+    assert_includes UserLevel.by_lesson(lesson), lesson_user_level
+    refute_includes UserLevel.by_lesson(lesson), other_user_level
   end
 
-  test "by_stage will find all levels for each script_level" do
+  test "by_lesson will find all levels for each script_level" do
     script = create :script
-    stage = create :lesson, script: script
+    lesson = create :lesson, script: script
     first_level = create :level
     second_level = create :level
     create :script_level,
       script: script,
-      lesson: stage,
+      lesson: lesson,
       levels: [
         first_level,
         second_level
       ]
 
-    assert_equal UserLevel.by_stage(stage), []
+    assert_equal UserLevel.by_lesson(lesson), []
 
     first_user_level = create :user_level, script: script, level: first_level
 
-    assert_equal UserLevel.by_stage(stage), [first_user_level]
+    assert_equal UserLevel.by_lesson(lesson), [first_user_level]
 
     second_user_level = create :user_level, script: script, level: second_level
 
-    assert_equal UserLevel.by_stage(stage), [first_user_level, second_user_level]
+    assert_equal UserLevel.by_lesson(lesson), [first_user_level, second_user_level]
+  end
+
+  test "driver? for paired and unpaired progress" do
+    assert_equal false, @unpaired_user_level.driver?
+    assert_equal true, @driver_user_level.driver?
+    assert_equal false, @navigator_user_level.driver?
+  end
+
+  test "navigator? for paired and unpaired progress" do
+    assert_equal false, @unpaired_user_level.navigator?
+    assert_equal false, @driver_user_level.navigator?
+    assert_equal true, @navigator_user_level.navigator?
+  end
+
+  test "paired? for paired and unpaired progress" do
+    assert_equal false, @unpaired_user_level.paired?
+    assert_equal true, @driver_user_level.paired?
+    assert_equal true, @navigator_user_level.paired?
+  end
+
+  test "driver for paired and unpaired progress" do
+    assert_nil @unpaired_user_level.driver
+    assert_equal @driver, @driver_user_level.driver
+    assert_equal @driver, @navigator_user_level.driver
+  end
+
+  test "partners for paired and unpaired progress" do
+    assert_nil @unpaired_user_level.partner_names
+    assert_equal [@navigator.name], @driver_user_level.partner_names
+    assert_equal [@driver.name], @navigator_user_level.partner_names
+  end
+
+  test "partners for pairing group with 3 students" do
+    navigator2 = create :student, name: 'NavigatorTwoName'
+    navigator2_user_level = create :user_level, user: navigator2, level: @level
+    create :paired_user_level,
+      driver_user_level: @driver_user_level, navigator_user_level: navigator2_user_level
+
+    assert_equal [navigator2.name, @navigator.name], @driver_user_level.partner_names
+    assert_equal [@driver.name, navigator2.name], @navigator_user_level.partner_names
+    assert_equal [@driver.name, @navigator.name], navigator2_user_level.partner_names
+  end
+
+  test "partner_count for paired and unpaired progress" do
+    assert_nil @unpaired_user_level.partner_count
+    assert_equal 1, @driver_user_level.partner_count
+    assert_equal 1, @navigator_user_level.partner_count
+  end
+
+  test "partners and partner_count when the driver user_level is deleted" do
+    driver_user_level, navigator_user_level = setup_pairing_group(2)
+    driver_user_level.destroy
+
+    assert_equal [], navigator_user_level.partner_names
+    assert_equal 1, navigator_user_level.partner_count
+  end
+
+  test "partners and partner_count when the navigator user_level is deleted" do
+    driver_user_level, navigator_user_level = setup_pairing_group(2)
+    navigator_user_level.destroy
+
+    assert_equal [], driver_user_level.partner_names
+    assert_equal 1, driver_user_level.partner_count
+  end
+
+  test "partners and partner_count for pairing group with 3 students and driver user_level is deleted" do
+    driver_user_level, navigator_user_level, navigator2_user_level = setup_pairing_group(3)
+    driver_user_level.destroy
+
+    assert_equal [@navigator2.name], navigator_user_level.partner_names
+    assert_equal 2, navigator_user_level.partner_count
+    assert_equal [@navigator.name], navigator2_user_level.partner_names
+    assert_equal 2, navigator2_user_level.partner_count
+  end
+
+  test "partners and partner_count for pairing group with 3 students and navigator user_level is deleted" do
+    driver_user_level, navigator_user_level, navigator2_user_level = setup_pairing_group(3)
+    navigator_user_level.destroy
+
+    assert_equal [@navigator2.name], driver_user_level.partner_names
+    assert_equal 2, driver_user_level.partner_count
+    assert_equal [@driver.name], navigator2_user_level.partner_names
+    assert_equal 2, navigator2_user_level.partner_count
   end
 
   test "perfect? finished? and passing? should be able to handle ScriptLevels that have nil as best_result" do
@@ -277,44 +386,9 @@ class UserLevelTest < ActiveSupport::TestCase
     assert PeerReview.exists?(review_2.id)
   end
 
-  test "driver and navigator user levels" do
-    assert_equal [@navigator_user_level],
-      @driver_user_level.navigator_user_levels
-    assert_equal [@driver_user_level], @navigator_user_level.driver_user_levels
-  end
-
-  test "authorized_teacher cant become locked" do
-    teacher = create :teacher
-    teacher.permission = UserPermission::AUTHORIZED_TEACHER
-
-    stage = create(:lesson, lockable: true)
-
-    script_level = create :script_level, levels: [@level], lesson: stage
-
-    ul_student = UserLevel.create(user: @user, level: @level, submitted: true)
-    ul_teacher = UserLevel.create(user: teacher, level: @level, submitted: true)
-
-    assert_equal true, script_level.locked?(@user)
-    assert_equal false, script_level.locked?(teacher)
-
-    assert_equal true, ul_student.locked?(stage)
-    assert_equal false, ul_teacher.locked?(stage)
-  end
-
-  test 'most_recent_driver returns nil if no pair programming' do
-    UserLevel.create(user: @user, level: @level)
-    assert_nil UserLevel.most_recent_driver(nil, @level, @user)
-  end
-
-  test 'most_recent_driver returns deleted user if driver is deleted' do
-    @driver.destroy
-    assert_equal 'deleted user',
-      UserLevel.most_recent_driver(nil, @level, @navigator).first
-  end
-
-  test 'most_recent_driver returns driver name' do
-    assert_equal 'DriverName',
-      UserLevel.most_recent_driver(nil, @level, @navigator).first
+  test "virtual attribute `locked` sets `unlocked_at`" do
+    ul = UserLevel.create(user: @user, level: @level, locked: false)
+    assert_not_nil ul.send(:unlocked_at)
   end
 
   test 'count passed levels for users' do
@@ -331,6 +405,26 @@ class UserLevelTest < ActiveSupport::TestCase
       },
       passing_level_counts
     )
+  end
+
+  test 'update_best_result sets best_result to the given value' do
+    script = create :script
+    ul = create :user_level, user: @user, level: @level, script: script, best_result: 10
+
+    new_best_result = 100
+    UserLevel.update_best_result(@user.id, @level.id, script.id, new_best_result)
+
+    assert_equal new_best_result, UserLevel.find(ul.id).best_result
+  end
+
+  test 'update_best_result does not change the updated_at date if touch_updated_at=false' do
+    script = create :script
+    ul = create :user_level, user: @user, level: @level, script: script, best_result: 10
+    original_updated_at = ul.reload.updated_at
+
+    UserLevel.update_best_result(@user.id, @level.id, script.id, 100, false)
+
+    assert_equal original_updated_at, UserLevel.find(ul.id).updated_at
   end
 
   test 'calculate_total_time_spent returns 0 if no time_spent recorded' do

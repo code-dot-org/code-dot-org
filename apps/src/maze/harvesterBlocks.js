@@ -4,7 +4,6 @@
 
 var msg = require('./locale');
 var blockUtils = require('../block_utils');
-var codegen = require('../lib/tools/jsinterpreter/codegen');
 
 const CROPS = ['corn', 'pumpkin', 'lettuce'];
 
@@ -82,7 +81,7 @@ function addUntilAtSpecificCropBlock(blockly, generator, crop) {
   generator[`harvester_untilAt${capitalizeFirstLetter(crop)}`] = function() {
     var atCrop = `Maze.at${capitalizeFirstLetter(crop)}('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = codegen.loopTrap() + branch;
+    branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (!${atCrop}) {\n${branch}}\n`;
     return code;
   };
@@ -160,7 +159,7 @@ function addWhileSpecificCropHasBlock(blockly, generator, crop) {
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = codegen.loopTrap() + branch;
+    branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (${argument}) {\n${branch}}\n`;
     return code;
   };
@@ -186,7 +185,7 @@ function addUntilSpecificCropHasBlock(blockly, generator, crop) {
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = codegen.loopTrap() + branch;
+    branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (!${argument}) {\n${branch}}\n`;
     return code;
   };
@@ -298,7 +297,7 @@ exports.install = function(blockly, blockInstallOptions) {
   generator.harvester_untilAtCrop = function() {
     var atCrop = `Maze.at${this.getTitleValue('LOC')}('block_id_${this.id}')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = codegen.loopTrap() + branch;
+    branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (!${atCrop}) {\n${branch}}\n`;
     return code;
   };
@@ -376,7 +375,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = codegen.loopTrap() + branch;
+    branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (${argument}) {\n${branch}}\n`;
     return code;
   };
@@ -402,7 +401,7 @@ exports.install = function(blockly, blockInstallOptions) {
       this.id
     }')`;
     var branch = generator.statementToCode(this, 'DO');
-    branch = codegen.loopTrap() + branch;
+    branch = Blockly.getInfiniteLoopTrap() + branch;
     var code = `while (!${argument}) {\n${branch}}\n`;
     return code;
   };

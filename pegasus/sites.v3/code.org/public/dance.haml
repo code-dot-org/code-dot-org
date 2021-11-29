@@ -16,45 +16,44 @@ theme: responsive
 %link{href: "/css/tutorial-promo.css", type: "text/css", rel: "stylesheet"}
 %link{href: "/css/dance-landing/dance.css", type: "text/css", rel: "stylesheet"}
 
-=view :dance_tutorial_section
+%div{dir: language_dir_class}
 
-.dance-text-icon-container.desktop-only
-  %a.translate-link{href: "/translate/dance"}
-    .dance-translate-link-text
-      =I18n.t(:hoc2018_dance_party_subheading)
-    %i.fa.fa-chevron-right.dance-chevron-icon
+  =view :dance_tutorial_section
 
-=view :dance_teacher_resources
+  .dance-text-icon-container.desktop-only
+    %a.translate-link{href: "/translate/dance"}
+      .dance-translate-link-text
+        =I18n.t(:hoc2018_dance_party_subheading)
+      %i.fa.fa-chevron-right.dance-chevron-icon
 
-.dance-text-versions-container
-  !=I18n.t(:hoc2019_dance_previous_versions, dance_2018_link: CDO.studio_url('/s/dance/reset'), dance_extras_2018_link: CDO.studio_url('/s/dance-extras/reset'), markdown: true)
+  =view :dance_teacher_resources
 
-=view :dance_sponsor_logo
+  .dance-text-versions-container
+    !=I18n.t(:hoc2019_dance_previous_versions, dance_2018_link: CDO.studio_url('/s/dance/reset'), dance_extras_2018_link: CDO.studio_url('/s/dance-extras/reset'), markdown: true)
 
-%h2.dance-responsive-padding.add-margintop-between-sections= I18n.t(:hoc2018_dance_featured_student_creations_title)
-#student_dance_projects
+  =view :dance_sponsor_logo
 
-%h2.dance-responsive-padding= I18n.t(:hoc2018_dance_videos_section_heading)
-.thumbnail-wrapper
+  %h2.dance-responsive-padding.add-margintop-between-sections= I18n.t(:hoc2018_dance_featured_student_creations_title)
+  #student_dance_projects
+
+  %h2.dance-responsive-padding= I18n.t(:hoc2018_dance_videos_section_heading)
+  .thumbnail-wrapper
+    .dance-videos.dance-clear-element
+      =view :dance_creativity_video
+      .col-50.dance-add-padding
+        .videothumbnail
+          .thumbnail-wrapper
+            %a{href: "https://www.youtube.com/playlist?list=PLzdnOPI1iJNcXMS80NRhQd0NA3po1swJf", target: "_blank"}
+              %img.dance-thumbnail-tile-img{src:"/images/dance-hoc/dance_playlist_thumbnail.png"}
+            .dance-thumbnail-tile-subtitle= I18n.t(:hoc2018_dance_view_creativity_video_playlist)
+
   .dance-videos.dance-clear-element
-    =view :dance_creativity_video
-    .col-50.dance-add-padding
-      .videothumbnail
-        .thumbnail-wrapper
-          %a{href: "https://www.youtube.com/playlist?list=PLzdnOPI1iJNcXMS80NRhQd0NA3po1swJf", target: "_blank"}
-            %img.dance-thumbnail-tile-img{src:"/images/dance-hoc/dance_playlist_thumbnail.png"}
-          .dance-thumbnail-tile-subtitle= I18n.t(:hoc2018_dance_view_creativity_video_playlist)
-
-.dance-videos.dance-clear-element
-  =view :dance_videos
+    =view :dance_videos
 
 - if request.language == 'en'
-
   %link{href: "/css/full-resource-block.css", rel: "stylesheet"}
   %link{href: "/css/tools.css", rel: "stylesheet"}
-
   %h2= I18n.t(:hoc2018_dance_amazon_learn_more_future_engineer_subheading_title)
-
   .full-resource-block{style: "margin-top: 20px;"}
     %a{href: "https://www.amazonfutureengineer.com", target: "_blank"}
       %img.full-resource-image{src: "/images/AFE-person-2019.jpg"}
@@ -65,7 +64,8 @@ theme: responsive
         %a{href: "https://www.amazonfutureengineer.com", target: "_blank"}
           www.amazonfutureengineer.com
 
-%br/
-%br/
 
-.amazon-footer= I18n.t(:hoc2018_dance_amazon_future_engineer_footer)
+  %br/
+  %br/
+
+  .amazon-footer= I18n.t(:hoc2018_dance_amazon_future_engineer_footer)

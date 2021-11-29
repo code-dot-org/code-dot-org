@@ -25,7 +25,7 @@ We want to add an `if` statement into the event handler to check the value of `c
 
 If you understand the example above and feel like you could incorporate that into the Count Up/Down app, then you you can probably continue without difficulty.  You can always come back to this page if you want to read the more complete explanations.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 
 
 
@@ -90,7 +90,7 @@ This is why we need to **check the value of <code>count</code> EVERY time the up
 ![](https://images.code.org/a65dec71bc103397f2ceed603f328531-image-1446154248803.png)
 
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 
 
 MARKDOWN

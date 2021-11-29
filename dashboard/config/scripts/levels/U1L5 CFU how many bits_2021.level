@@ -1,0 +1,27 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2020-12-04T21:59:11.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "placeholder": "Enter your reflection here.",
+    "long_instructions": "How many bits would be needed to count all of the students in class today?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "submittable": "false",
+    "allow_user_uploads": "false",
+    "peer_reviewable": "false",
+    "instructions_important": "false",
+    "parent_level_id": 18864,
+    "name_suffix": "_2021",
+    "encrypted_solution": "QsS08bS895/ADxuFalGCTO3RYVkkjiNk/5JctGPe5tMo8xfVzP6vZ+h/loNu\ni5/bSvXqj41PWftClU++MDp6GbMb17yxkRkNkhgtGONJTd0PZQ/PHvFgYkCH\nKK4vYk0SmDwMHH/HwLikK6nrrKFLxPW7vcgGLDTxzJLS8uS/fhuSlyGKWpZb\nc20KjqjfrCr/ou2q2Vhqpxp/yLd3urJPDndl+rNMcaYMQZLxEnmJtGFnuMi9\nvMcHYJObpKHeQqfo5Ny6GwFtMrcHergSEoMc/M55mJzWdVFUX4z3N4Mr8+8D\nmwj6ctMADdQU6nm7m9wz6NVSuoNKpd4tnJQaFExEYQ==\n",
+    "encrypted": "false",
+    "optional": "false",
+    "title": "Reflection: Bits Needed"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-08-24 17:19:24 +0000\",\"changed\":[],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-08-24 17:30:45 +0000\",\"changed\":[\"encrypted_solution\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2019-07-22 13:25:01 +0000\",\"changed\":[\"title\",\"long_instructions\",\"encrypted_solution\"],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"},{\"changed_at\":\"2019-07-22 13:26:45 +0000\",\"changed\":[],\"changed_by_id\":832,\"changed_by_email\":\"hannah@code.org\"}]"
+}]]></config>
+</FreeResponse>

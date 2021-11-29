@@ -1,0 +1,44 @@
+{
+  "category": "Sprites",
+  "config": {
+    "func": "setProp_dropdown",
+    "docFunc": "gamelab_setProp_dropdown",
+    "blockText": "set {SPRITE} {PROPERTY} to {SIZE}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "type": "Sprite"
+      },
+      {
+        "name": "PROPERTY",
+        "options": [
+          [
+            "size",
+            "\"scale\""
+          ]
+        ]
+      },
+      {
+        "name": "SIZE",
+        "options": [
+          [
+            "large",
+            "100"
+          ],
+          [
+            "medium",
+            "75"
+          ],
+          [
+            "small",
+            "50"
+          ],
+          [
+            "extra small",
+            "25"
+          ]
+        ]
+      }
+    ]
+  }
+}

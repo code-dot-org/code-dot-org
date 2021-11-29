@@ -18,5 +18,5 @@ Sick turtles should probably get healthy when they interact with doctors, right?
 **Save** and **run** your code.  When you click "Setup" and "Forever" watch your World carefully.  You should notice the red sick agents turning to blue healthy agents when they collide with yellow agents.  Your doctor agents should not change color.
 If your code isn't working the way you intended, please refer to the <a href="http://www.projectguts.org/files/StarlogoNova-DebuggingTips.docx">TroubleShooting Guide</a>.
 
-<a class="btn btn-large btn-primary next-stage submitButton">Continue</a>
+
 MARKDOWN

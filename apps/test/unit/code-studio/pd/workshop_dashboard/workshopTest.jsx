@@ -22,7 +22,7 @@ describe('Workshop', () => {
   it('renders', () => {
     const wrapper = shallow(
       <Workshop
-        params={{workshopId: fakeWorkshop.id}}
+        params={{workshopId: fakeWorkshop.id.toString()}}
         route={{}}
         permission={new Permission()}
       />,

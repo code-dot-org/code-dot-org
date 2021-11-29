@@ -17,3 +17,19 @@ Which of the following conclusions is BEST supported by the scatter plot?
 
 
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** The points on the left side of the graph tend to be higher than the points on the right side of the graph. You can see this pattern if you add a trendline to the data (see below). 
+
+![](https://images.code.org/a8759f92a2272bfb6b17fe2bbfdff854-image-1616460116167.png)
+
+Students made and interpreted scatterplots similar to this one in [Lesson 4 - Exploring Two Columns](https://curriculum.code.org/csp-20/unit9/4/) 
+
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* DAT-2.D: Extract information from data using a program.
+:::
+
+
+MARKDOWN

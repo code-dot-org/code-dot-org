@@ -1,0 +1,17 @@
+{
+  "func": "randomGaussian",
+  "category": "Math",
+  "paletteParams": [
+    {
+      "name": "mean"
+    },
+    {
+      "name": "sd"
+    }
+  ],
+  "params": [
+    "0",
+    "15"
+  ],
+  "type": "value"
+}

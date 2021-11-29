@@ -1,0 +1,12 @@
+{
+  "func": "setActiveCanvas",
+  "category": "Canvas",
+  "paletteParams": [
+    {
+      "name": "id"
+    }
+  ],
+  "params": [
+    "\"id\""
+  ]
+}

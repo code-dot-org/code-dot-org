@@ -10,42 +10,6 @@ import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {canShowGoogleShareButton} from './googlePlatformApiRedux';
 import GoogleClassroomShareButton from './GoogleClassroomShareButton';
 
-const styles = {
-  dialog: {
-    textAlign: 'left',
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  },
-  detailsLine: {
-    marginBottom: 32
-  },
-  row: {
-    marginTop: 8,
-    marginBottom: 8
-  },
-  button: {
-    width: 48,
-    height: 48,
-    margin: 0,
-    // use longhand properties for border radius and padding to properly
-    // override the longhand properties in Button
-    borderTopLeftRadius: 0,
-    borderTopRightRadius: 0,
-    borderBottomLeftRadius: 0,
-    borderBottomRightRadius: 0,
-    paddingLeft: 0,
-    paddingRight: 0
-  },
-  buttonIcon: {
-    margin: 0,
-    fontSize: 24
-  },
-  buttonLabel: {
-    paddingLeft: 16
-  }
-};
-
 class SendLessonDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool,
@@ -70,11 +34,11 @@ class SendLessonDialog extends Component {
   onCopyLink() {
     copyToClipboard(this.props.lessonUrl);
 
-    // show "Link copied!" for 2 seconds
+    // show message "Link copied!" for 4 seconds
     this.setState({showLinkCopied: true});
     setTimeout(() => {
       this.setState({showLinkCopied: false});
-    }, 2000);
+    }, 4000);
 
     firehoseClient.putRecord(
       {
@@ -156,6 +120,42 @@ class SendLessonDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    textAlign: 'left',
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  },
+  detailsLine: {
+    marginBottom: 32
+  },
+  row: {
+    marginTop: 8,
+    marginBottom: 8
+  },
+  button: {
+    width: 48,
+    height: 48,
+    margin: 0,
+    // use longhand properties for border radius and padding to properly
+    // override the longhand properties in Button
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
+    paddingLeft: 0,
+    paddingRight: 0
+  },
+  buttonIcon: {
+    margin: 0,
+    fontSize: 24
+  },
+  buttonLabel: {
+    paddingLeft: 16
+  }
+};
 
 // Export unconnected dialog for unit testing
 export const UnconnectedSendLessonDialog = SendLessonDialog;

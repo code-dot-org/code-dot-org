@@ -1,0 +1,12 @@
+{
+  "func": "open",
+  "category": "UI controls",
+  "paletteParams": [
+    {
+      "name": "url"
+    }
+  ],
+  "params": [
+    "\"https://code.org\""
+  ]
+}

@@ -4,7 +4,7 @@ layout: wide
 nav: how_to_nav
 ---
 
-{{ signup_button }}
+サインアップ
 
 # How to plan your Hour of Code
 
@@ -81,7 +81,7 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 生徒たちに何をするのか指示する
 
-- Write the tutorial link on a whiteboard. Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
+- 黒板にチュートリアルのリンク先を書きます Find the link listed on the [information for your selected tutorial]({{ urls/learn }}) under the number of participants.
 
 生徒たちが困っていたら以下のように声をかけてみてもよいです
 
@@ -111,7 +111,7 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 ----
 
-## Hour of Codeの教育者向けその他資料
+## Hour of Code指導者向け その他の資料
 
 - [Hour of Code教育者フォーラム](http://forum.code.org/c/plc/hour-of-code)でアドバイスをもらったり、他の教育者からのサポートを得ることができます。
 - Hour of Codeの[よくある質問](https://support.code.org/hc/en-us/categories/200147083-Hour-of-Code)を読みましょう。
@@ -120,4 +120,4 @@ It’s okay if both you and your students are brand new to computer science. Her
 
 Computer science doesn’t have to end with the Hour of Code! Our curriculum is web-based and free to use, forever. [Learn how](/beyond) to bring CS to your school and students.
 
-{{ signup_button }}
+サインアップ

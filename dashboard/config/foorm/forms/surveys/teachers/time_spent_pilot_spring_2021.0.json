@@ -1,0 +1,114 @@
+{
+  "title": "Time Spent Pilot Feedback",
+  "description": "Thank you so much for participating in the time spent pilot! Before we finish the pilot, we’d appreciate you taking this 5-10 minute survey to let us know what your experience using the time spent feature was like. Your thoughts and feedback will help us improve the feature before we release it to other teachers. Thanks again for all that you do! ",
+  "pages": [
+    {
+      "name": "general_reactions",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "how_useful",
+          "title": "How useful was the time spent information? ",
+          "isRequired": true,
+          "minRateDescription": "Not at all useful",
+          "maxRateDescription": "Very useful"
+        },
+        {
+          "type": "comment",
+          "name": "how_use_info",
+          "title": "Please briefly describe what you used the time spent information for and how frequently you used it."
+        },
+        {
+          "type": "rating",
+          "name": "how_easy_to_use",
+          "title": "How easy was it to find and use the time spent information?",
+          "isRequired": true,
+          "minRateDescription": "Very difficult",
+          "maxRateDescription": "Very easy"
+        },
+        {
+          "type": "comment",
+          "name": "why_difficult_use",
+          "visibleIf": "{how_easy_to_use} <= 2",
+          "title": "What made the time spent information difficult to find and/or use? How could we improve it? "
+        }
+      ]
+    },
+    {
+      "name": "accuracy",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "any_bugs",
+          "title": "Did you experience any problems with the accuracy of the time spent information? ",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "Yes",
+              "text": "Yes"
+            },
+            {
+              "value": "Maybe",
+              "text": "Maybe"
+            },
+            {
+              "value": "No",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "description_of_bugs",
+          "visibleIf": "{any_bugs} anyof ['Yes', 'Maybe']",
+          "title": "Please briefly describe the problem(s) you experienced and which lesson and level they occurred on"
+        },
+        {
+          "type": "radiogroup",
+          "name": "can_email_bug_followup",
+          "visibleIf": "{any_bugs} anyof ['Yes', 'Maybe']",
+          "title": "Would you be ok if we emailed you to follow up on the bug you experienced?",
+          "choices": [
+            {
+              "value": "Yes",
+              "text": "Yes"
+            },
+            {
+              "value": "No",
+              "text": "No"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "beyond_pilot",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "how_likely_continue_using",
+          "title": "How likely are you to continue using the time spent information in the future?",
+          "isRequired": true,
+          "minRateDescription": "Not at all likely",
+          "maxRateDescription": "Very likely"
+        },
+        {
+          "type": "comment",
+          "name": "what_like_about",
+          "title": "What (if anything) did you like about the time spent feature?"
+        },
+        {
+          "type": "comment",
+          "name": "what_improvements_suggest",
+          "title": "What (if any) improvements or changes would you make to this feature?"
+        },
+        {
+          "type": "comment",
+          "name": "any_other_comments",
+          "title": "Is there anything else you would like to tell us about the time spent feature?"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

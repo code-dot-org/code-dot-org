@@ -1,17 +1,16 @@
 import {assert, expect} from '../../../util/reconfiguredChai';
 import sectionProgress, {
   setCurrentView,
-  addDataByScript,
+  addDataByUnit,
   setLessonOfInterest,
   startLoadingProgress,
   finishLoadingProgress,
-  getCurrentProgress,
-  getCurrentScriptData,
+  getCurrentUnitData,
   startRefreshingProgress,
   finishRefreshingProgress
 } from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
-import {setScriptId} from '@cdo/apps/redux/scriptSelectionRedux';
+import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import {setSection} from '@cdo/apps/redux/sectionDataRedux';
 
 const fakeSectionData = {
@@ -32,8 +31,8 @@ const fakeSectionData = {
   }
 };
 
-const fakeScriptData789 = {
-  scriptDataByScript: {
+const fakeUnitData789 = {
+  unitDataByUnit: {
     [789]: {
       id: 789,
       csf: true,
@@ -41,14 +40,14 @@ const fakeScriptData789 = {
       title: 'Title 789',
       path: '/',
       lessons: [{id: 1, levels: []}, {id: 2, levels: []}],
-      family_name: 'fakeScript789',
+      family_name: 'fakeUnit789',
       version_year: 2020
     }
   }
 };
 
-const fakeScriptData456 = {
-  scriptDataByScript: {
+const fakeUnitData456 = {
+  unitDataByUnit: {
     [456]: {
       id: 456,
       csf: true,
@@ -56,7 +55,7 @@ const fakeScriptData456 = {
       title: 'Title 456',
       path: '/',
       lessons: [{id: 3, levels: []}, {id: 4, levels: []}],
-      family_name: 'fakeScript456',
+      family_name: 'fakeUnit456',
       version_year: 2020
     }
   }
@@ -68,11 +67,11 @@ describe('sectionProgressRedux', () => {
   const initialState = sectionProgress(undefined, {});
 
   describe('setScriptId', () => {
-    it('seting the script id resets the lesson of interest', () => {
+    it('setting the unit id resets the lesson of interest', () => {
       const action = setLessonOfInterest(lessonOfInterest);
       const nextState = sectionProgress(initialState, action);
 
-      // This action is from scriptSelectionRedux but affects sectionProgress
+      // This action is from unitSelectionRedux but affects sectionProgress
       const action2 = setScriptId(130);
       const nextState2 = sectionProgress(nextState, action2);
       assert.deepEqual(nextState2.lessonOfInterest, 1);
@@ -83,10 +82,9 @@ describe('sectionProgressRedux', () => {
     it('resets all non-section data to initial state', () => {
       const action = setSection(fakeSectionData);
       const nextState = sectionProgress(initialState, action);
-      assert.deepEqual(nextState.scriptDataByScript, {});
-      assert.deepEqual(nextState.studentLevelProgressByScript, {});
-      assert.deepEqual(nextState.levelsByLessonByScript, {});
-      assert.deepEqual(nextState.studentTimestampsByScript, {});
+      assert.deepEqual(nextState.unitDataByUnit, {});
+      assert.deepEqual(nextState.studentLevelProgressByUnit, {});
+      assert.deepEqual(nextState.studentLastUpdateByUnit, {});
     });
   });
 
@@ -137,18 +135,18 @@ describe('sectionProgressRedux', () => {
     });
   });
 
-  describe('addDataByScript', () => {
+  describe('addDataByUnit', () => {
     it('adds multiple scriptData info', () => {
-      const action = addDataByScript(fakeScriptData456);
+      const action = addDataByUnit(fakeUnitData456);
       const nextState = sectionProgress(initialState, action);
-      const expected456 = fakeScriptData456.scriptDataByScript[456];
-      assert.deepEqual(nextState.scriptDataByScript[456], expected456);
+      const expected456 = fakeUnitData456.unitDataByUnit[456];
+      assert.deepEqual(nextState.unitDataByUnit[456], expected456);
 
-      const action2 = addDataByScript(fakeScriptData789);
+      const action2 = addDataByUnit(fakeUnitData789);
       const nextState2 = sectionProgress(nextState, action2);
-      const expected789 = fakeScriptData789.scriptDataByScript[789];
-      assert.deepEqual(nextState2.scriptDataByScript[456], expected456);
-      assert.deepEqual(nextState2.scriptDataByScript[789], expected789);
+      const expected789 = fakeUnitData789.unitDataByUnit[789];
+      assert.deepEqual(nextState2.unitDataByUnit[456], expected456);
+      assert.deepEqual(nextState2.unitDataByUnit[789], expected789);
     });
   });
 
@@ -160,31 +158,14 @@ describe('sectionProgressRedux', () => {
     });
   });
 
-  describe('getCurrentProgress', () => {
-    it('gets the progress for the current script', () => {
-      const stateWithProgress = {
-        scriptSelection: {scriptId: 123},
+  describe('getCurrentUnitData', () => {
+    it('gets the unit data for the section in the selected unit', () => {
+      const stateWithUnit = {
+        unitSelection: {scriptId: 123},
         sectionProgress: {
-          studentLevelProgressByScript: {
-            123: 'fake progress 1',
-            456: 'fake progress 2'
-          }
-        }
-      };
-      expect(getCurrentProgress(stateWithProgress)).to.deep.equal(
-        'fake progress 1'
-      );
-    });
-  });
-
-  describe('getCurrentScriptData', () => {
-    it('gets the script data for the section in the selected script', () => {
-      const stateWithScript = {
-        scriptSelection: {scriptId: 123},
-        sectionProgress: {
-          scriptDataByScript: {
+          unitDataByUnit: {
             123: {
-              stages: [
+              lessons: [
                 {
                   levels: [
                     {
@@ -208,8 +189,8 @@ describe('sectionProgressRedux', () => {
           }
         }
       };
-      expect(getCurrentScriptData(stateWithScript)).to.deep.equal({
-        stages: [
+      expect(getCurrentUnitData(stateWithUnit)).to.deep.equal({
+        lessons: [
           {
             levels: [
               {

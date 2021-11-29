@@ -1,0 +1,221 @@
+# Modified from https://s3.amazonaws.com/aurorabenchmark/labstack.yml
+AWSTemplateFormatVersion: 2010-09-09
+Description: 'Amazon Aurora Benchmark'
+Parameters:
+  DBClusterIdentifier:
+    Description: The DB Cluster Identifier of the Aurora cluster that will be used in the load test.
+    Type: String
+  KeyName:
+    Description: 'The name of the EC2 key pair used to SSH to the sysbench host'
+    Type: 'AWS::EC2::KeyPair::KeyName'
+    Default: 'server_access_key'
+  SysbenchAmi:
+    Description: 'The AMI used to create the sysbench host'
+    Type: 'String'
+    Default: 'ami-0f873d4d3a8b11b74' # Amazon Aurora Benchmark AMI published to us-east-1 in February 2019.
+Resources:
+  ## Create VPC
+  LabVpc:
+    Type: 'AWS::EC2::VPC'
+    Properties:
+      CidrBlock: 172.31.0.0/16
+      EnableDnsSupport: 'true'
+      EnableDnsHostnames: 'true'
+      InstanceTenancy: default
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab VPC]]
+  ## Create Internet Gateway
+  LabInternetGateway:
+    Type: 'AWS::EC2::InternetGateway'
+    Properties:
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', InternetGateway]]
+  ## Attach Internet Gateway to VPC
+  LabAttachGateway:
+    Type: 'AWS::EC2::VPCGatewayAttachment'
+    Properties:
+      VpcId: !Ref LabVpc
+      InternetGatewayId: !Ref LabInternetGateway
+  ## Create Public Subnets
+  PublicSubnet01:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref LabVpc
+      MapPublicIpOnLaunch: 'true'
+      CidrBlock: 172.31.0.0/24
+      AvailabilityZone: !Sub ${AWS::Region}a
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Subnet 1 - Public]]
+  ## Create Private Subnets
+  PrivateSubnet01:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref LabVpc
+      MapPublicIpOnLaunch: 'false'
+      CidrBlock: 172.31.24.0/24
+      AvailabilityZone: !Sub ${AWS::Region}b
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Subnet 2 - Private]]
+  PrivateSubnet02:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref LabVpc
+      MapPublicIpOnLaunch: 'false'
+      CidrBlock: 172.31.32.0/24
+      AvailabilityZone: !Sub ${AWS::Region}c
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Subnet 3 - Private]]
+  PrivateSubnet03:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref LabVpc
+      MapPublicIpOnLaunch: 'false'
+      CidrBlock: 172.31.40.0/24
+      AvailabilityZone: !Sub ${AWS::Region}d
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Subnet 4 - Private]]
+  PrivateSubnet04:
+    Type: 'AWS::EC2::Subnet'
+    Properties:
+      VpcId: !Ref LabVpc
+      MapPublicIpOnLaunch: 'false'
+      CidrBlock: 172.31.48.0/24
+      AvailabilityZone: !Sub ${AWS::Region}e
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Subnet 5 - Private]]
+  ## Create Public Route Table
+  AuroraLabPublicRouteTable:
+    Type: 'AWS::EC2::RouteTable'
+    Properties:
+      VpcId: !Ref LabVpc
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', Aurora Lab Public Route Table]]
+  ## Define the public route
+  LabPublicRoute:
+    Type: 'AWS::EC2::Route'
+    Properties:
+      RouteTableId: !Ref AuroraLabPublicRouteTable
+      DestinationCidrBlock: 0.0.0.0/0
+      GatewayId: !Ref LabInternetGateway
+  ## Associate route tables with public subnets
+  PublicSubnet01RouteTableAssociation:
+    Type: 'AWS::EC2::SubnetRouteTableAssociation'
+    Properties:
+      SubnetId: !Ref PublicSubnet01
+      RouteTableId: !Ref AuroraLabPublicRouteTable
+  ## Create DB Subnet Group
+  AuroraDbSubnetGroup:
+    Type: 'AWS::RDS::DBSubnetGroup'
+    Properties:
+      DBSubnetGroupDescription: DMS DB Subnet Group
+      SubnetIds:
+        - !Ref PrivateSubnet01
+        - !Ref PrivateSubnet02
+        - !Ref PrivateSubnet03
+        - !Ref PrivateSubnet04
+      Tags:
+        - Key: Name
+          Value: !Join
+            - '-'
+            - - !Ref 'AWS::StackName'
+              - AuroraDbSubnetGroup
+  ## Create SSH Security Group
+  SshSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      VpcId: !Ref LabVpc
+      GroupName: !Join ['-', [!Ref 'AWS::StackName', SshSecurityGroup]]
+      GroupDescription: Aurora Lab SSH Security Group
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '22'
+          ToPort: '22'
+          CidrIp: 0.0.0.0/0
+          Description: Allows SSH Access from anywhere
+  ## Create MySQL Security Group
+  MySqlSecurityGroup:
+    Type: 'AWS::EC2::SecurityGroup'
+    Properties:
+      VpcId: !Ref LabVpc
+      GroupName: !Join ['-', [!Ref 'AWS::StackName', MySqlSecurityGroup]]
+      GroupDescription: Aurora Lab MySQL Security Group
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: '3306'
+          ToPort: '3306'
+          SourceSecurityGroupId: !Ref SshSecurityGroup
+          Description: Allows MySQL Access from sysbench host
+  ## Create IAM Role for EC2
+  RootRole:
+    Type: "AWS::IAM::Role"
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: "Allow"
+            Principal:
+              Service:
+                - "ec2.amazonaws.com"
+            Action:
+              - "sts:AssumeRole"
+      Path: "/"
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+      Policies:
+        - PolicyName: "root"
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: "Allow"
+                Action: "*"
+                Resource: "*"
+  RootInstanceProfile:
+    Type: "AWS::IAM::InstanceProfile"
+    Properties:
+      Path: "/"
+      Roles:
+        - Ref: "RootRole"
+  ## Create the sysbench host
+  SysbenchHost:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      SubnetId: !Ref PublicSubnet01
+      InstanceType: c5.18xlarge
+      Monitoring: True
+      SecurityGroupIds: [!Ref SshSecurityGroup]
+      KeyName: !Ref KeyName
+      Tags:
+        - Key: Name
+          Value: !Join ['-', [!Ref 'AWS::StackName', Sysbench Host]]
+      ImageId: !Ref SysbenchAmi
+      IamInstanceProfile: !Ref RootInstanceProfile
+      BlockDeviceMappings:
+        -
+          DeviceName: /dev/xvda
+          Ebs:
+            VolumeSize: 100
+            VolumeType: gp2
+  ## Create CloudWatch Dashboard
+  LabDashboard:
+    Type: AWS::CloudWatch::Dashboard
+    Properties:
+      DashboardName: !Join ['-', [!Ref 'AWS::StackName', 'Dashboard']]
+      DashboardBody: !Sub
+        - '{"widgets":[{"type":"metric","x":0,"y":0,"width":9,"height":6,"properties":{"metrics":[["AWS/RDS","Queries","DBClusterIdentifier","${loadtest}"],["AWS/RDS","SelectThroughput","DBClusterIdentifier","${loadtest}",{"color":"#2ca02c"}],["AWS/RDS","InsertThroughput","DBClusterIdentifier","${loadtest}",{"color":"#9467bd"}],["AWS/RDS","DatabaseConnections","DBClusterIdentifier","${loadtest}",{"yAxis":"right","color":"#ff7f0e"}],["AWS/RDS","UpdateThroughput","DBClusterIdentifier","${loadtest}",{"color":"#c7c7c7"}],["AWS/RDS","DeleteThroughput","DBClusterIdentifier","${loadtest}",{"color":"#d62728"}]],"view":"singleValue","stacked":false,"region":"us-east-1","stat":"Average","period":60,"legend":{"position":"bottom"},"title":"Connections & Throughput","yAxis":{"left":{"showUnits":true},"right":{"showUnits":true}}}},{"type":"metric","x":0,"y":6,"width":9,"height":6,"properties":{"metrics":[["AWS/RDS","Queries","DBClusterIdentifier","${loadtest}"],["AWS/RDS","SelectThroughput","DBClusterIdentifier","${loadtest}",{"color":"#2ca02c"}],["AWS/RDS","InsertThroughput","DBClusterIdentifier","${loadtest}",{"color":"#9467bd"}],["AWS/RDS","DatabaseConnections","DBClusterIdentifier","${loadtest}",{"yAxis":"right","color":"#ff7f0e"}],["AWS/RDS","UpdateThroughput","DBClusterIdentifier","${loadtest}",{"color":"#c7c7c7"}],["AWS/RDS","DeleteThroughput","DBClusterIdentifier","${loadtest}",{"color":"#d62728"}]],"view":"timeSeries","stacked":false,"region":"us-east-1","stat":"Average","period":60,"legend":{"position":"bottom"},"title":"Connections & Throughput","yAxis":{"left":{"showUnits":true},"right":{"showUnits":true}}}}]}'
+        - { loadtest: !Sub '${DBClusterIdentifier}' }
+Outputs:
+  SysbenchHostEndpoint:
+    Description: Sysbench Host Endpoint
+    Value: !GetAtt SysbenchHost.PublicDnsName
+  DashboardUrl:
+    Description: URL to dashboard
+    Value: !Sub
+      - 'https://console.aws.amazon.com/cloudwatch/home?region=${region}#dashboards:name=${dashboard}'
+      - { region: { "Ref": "AWS::Region" }, dashboard: !Ref LabDashboard}

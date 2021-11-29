@@ -1,0 +1,26 @@
+name 'courseF_text_practice'
+editor_experiment ''
+display_name 'Text and Prompts Practice'
+description 'Great work so far! Choose your next activity. Complete as many as you can. Keep practicing with text and prompts!'
+
+sublevels
+level 'courseF_text_choice_conversation'
+level 'courseF_text_choice_events'
+level 'courseF_text_choice_interview'
+level 'courseF_text_choice_multiprompt'
+level 'courseF_text_choice_title'
+level 'courseF_text_choice_color'
+level 'courseF_text_choice_freeplay'
+teacher_markdown <<MARKDOWN
+# Choice Level Overview
+Choice levels provide a menu of additional levels for students to complete. Students must complete at least one of the sub-levels here, but may work through as many as they (or you) like.
+
+You can use the descriptions below to help students self-select choices, or to set expectations around how many sub-levels they should complete.
+
+|&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Using Speech for Text|Text from Prompts|Name the robot!|Variable Labels|Big Text|Prompting for colors|Starting from scratch|
+|-|-|-|-|-|-|-|-|
+| ***Type*** |**Review**|**Debug**|**Debug**|**Debug**|**Optional Content**|**Optional Content**|**Free Play**
+| ***Concept***|*print block, events*|*prompts, events*|*adding spaces*|*matching variable labels*|*title screen blocks*|*storing colors*|*no new content*
+
+
+MARKDOWN

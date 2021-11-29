@@ -6,28 +6,28 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# Melibatkan komuniti anda dalam Hour of Code
+# Melibatkan komuniti anda di dalam Jam Kod
 
-## 1. Sebarkan berita ini
+## 1. Sebarkan berita
 
-Tell your friends about the **#HourOfCode**!
+Beritahu rakan anda mengenai **#HourOfCode**!
 
 {{ promote/share_buttons }}
 
-## 2. Minta seluruh sekolah anda untuk menawarkan suatu sesi Hour of Code
+## 2. Minta seluruh sekolah anda menawarkan Jam Kod
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+[Hantarkan e-mel ini]({{ promote/sample_emails }}) kepada pengetua anda dan cuba berikan cabaran kepada setiap kelas di sekolah anda untuk mendaftar.
 
-## 3. Ajak majikan anda untuk melibatkan diri
+## 3. Minta majikan anda melibatkan diri
 
-[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
+[Hantarkan e-mel ini]({{ promote/sample_emails }}) kepada pengurus atau Ketua Pegawai Eksekutif (CEO) syarikat anda.
 
-## 4. Mempromosikan Hour of Code dalam komuniti anda
+## 4. Promosikan Jam Kod di dalam komuniti anda
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Anda tidak perlu untuk berada di sekolah untuk mempelajari kemahiran baru. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+[Merekrut kumpulan tempatan]({{ promote/sample_emails }})— kelab pengakap lelaki/perempuan, gereja, universiti, kumpulan veteran, kesatuan sekerja, atau malah sebilangan rakan. Anda tidak perlu berada di sekolah untuk belajar kemahiran baharu. Gunakan [poster, sepanduk, pelekat, video ini dan banyak lagi](/promote/resources) untuk acara anda sendiri.
 
-## 5. Minta pegawai tempatan yang dilantik untuk menyokong Hour of Code
+## 5. Minta pegawai tempatan yang dilantik untuk menyokong Jam Kod
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Ini boleh membantu membina sokongan terhadap sains komputer di kawasan anda yang melebihi masa satu jam.
+[Hantarkan e-mel ini]({{ promote/sample_emails }}) kepada wakil tempatan, majlis perbandaran, atau lembaga sekolah anda dan jemput mereka mengunjungi sekolah anda untuk Jam Kod. Aktiviti ini boleh membantu membina sokongan untuk sains komputer di kawasan anda melebihi daripada satu jam.
 
 {{ signup_button }}

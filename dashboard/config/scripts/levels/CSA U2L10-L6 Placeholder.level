@@ -1,0 +1,24 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "properties": {
+    "encrypted": "false",
+    "title": "Check for Understanding",
+    "long_instructions": "Given the following classes, write a `toString()` method for `Car` which prints each attribute on a new line.\r\n\r\n```\r\npublic class Vehicle { \r\n  private int wheels; \r\n  private int seats; \r\n\r\n  public Vehicle (int wheels, int seats) { \r\n    this.wheels = wheels; \r\n    this.seats = seats; \r\n  } \r\n\r\n  public void move() { . . . }\r\n}\r\n\r\npublic class Car extends Vehicle { \r\n  public boolean sunRoof; \r\n\r\n  public Car (int wheels, int seats, boolean sunRoof) { \r\n    super(wheels, seats); \r\n    this.sunRoof = sunRoof; \r\n  }\r\n}\r\n```",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28607
+  },
+  "game_id": 52,
+  "published": true,
+  "created_at": "2021-06-23T17:08:57.000Z",
+  "level_num": "custom",
+  "user_id": 9271,
+  "audit_log": "[{\"changed_at\":\"2021-06-23 17:09:11 +0000\",\"changed\":[],\"changed_by_id\":9271,\"changed_by_email\":\"jamila@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

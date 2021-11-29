@@ -3,11 +3,11 @@ import {UnconnectedLevelTokenDetails as LevelTokenDetails} from '@cdo/apps/lib/l
 import {action} from '@storybook/addon-actions';
 
 const defaultLevel = {
-  id: 10,
+  id: '10',
   levels: [
     {
       name: 'Level One',
-      id: 1,
+      id: '1',
       url: 'levels/598/edit',
       icon: 'fa-desktop',
       isUnplugged: false,
@@ -19,7 +19,7 @@ const defaultLevel = {
     }
   ],
   position: 1,
-  activeId: 1,
+  activeId: '1',
   kind: 'puzzle',
   bonus: false,
   assessment: false,
@@ -28,16 +28,16 @@ const defaultLevel = {
 };
 
 const blocklyLevel = {
-  id: 11,
+  id: '11',
   position: 1,
   levels: [
     {
-      id: 4,
+      id: '4',
       name: 'blockly:Studio:playlab_1',
       url: 'levels/59800/edit'
     }
   ],
-  activeId: 4,
+  activeId: '4',
   expand: false
 };
 
@@ -52,6 +52,21 @@ export default storybook => {
             scriptLevel={defaultLevel}
             activitySectionPosition={1}
             activityPosition={1}
+            lessonExtrasAvailableForUnit={true}
+          />
+        </div>
+      )
+    },
+    {
+      name: 'level token details with bonus disabled',
+      story: () => (
+        <div style={{width: 800}}>
+          <LevelTokenDetails
+            setScriptLevelField={action('setScriptLevelField')}
+            scriptLevel={defaultLevel}
+            activitySectionPosition={1}
+            activityPosition={1}
+            lessonExtrasAvailableForUnit={false}
           />
         </div>
       )
@@ -65,6 +80,7 @@ export default storybook => {
             scriptLevel={blocklyLevel}
             activitySectionPosition={1}
             activityPosition={1}
+            lessonExtrasAvailableForUnit={true}
           />
         </div>
       )

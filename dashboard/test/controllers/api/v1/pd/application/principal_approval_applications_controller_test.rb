@@ -47,12 +47,12 @@ module Api::V1::Pd::Application
       @teacher_application.reload
       expected_principal_fields = {
         principal_approval: 'Yes',
-        principal_schedule_confirmed: "Yes, I plan to include this course in the #{APPLICATION_CURRENT_YEAR} master schedule",
+        principal_schedule_confirmed: "Yes, I plan to include this course in the #{@teacher_application.year} master schedule",
         principal_diversity_recruitment: 'Yes',
         principal_free_lunch_percent: '50.00%',
         principal_underrepresented_minority_percent: '52.00%',
         principal_wont_replace_existing_course: PRINCIPAL_APPROVAL_APPLICATION_CLASS.options[:replace_course][1],
-        principal_pay_fee: 'Yes, my school will be able to pay the full program fee.'
+        principal_pay_fee: 'Yes, my school would be able to pay the full program fee.'
       }
       actual_principal_fields = @teacher_application.sanitize_form_data_hash.slice(*expected_principal_fields.keys)
       assert_equal expected_principal_fields, actual_principal_fields

@@ -13,19 +13,35 @@ require 'digest/md5'
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
-require_relative '../../tools/scripts/ManifestBuilder'
+require_relative '../animation_assets/manifest_builder'
 
 def sync_in
+  puts "Sync in starting"
+  Services::I18n::CurriculumSyncUtils.sync_in
   HocSyncUtils.sync_in
-  localize_level_content
-  localize_project_content
+  localize_level_and_project_content
   localize_block_content
   localize_animation_library
+  localize_shared_functions
   puts "Copying source files"
   I18nScriptUtils.run_bash_script "bin/i18n-codeorg/in.sh"
   redact_level_content
   redact_block_content
+  redact_script_and_course_content
   localize_markdown_content
+  puts "Sync in completed successfully"
+rescue => e
+  puts "Sync in failed from the error: #{e}"
+  raise e
+end
+
+def localize_level_and_project_content
+  variable_strings = {}
+  parameter_strings = {}
+  localize_level_content(variable_strings, parameter_strings)
+  localize_project_content(variable_strings, parameter_strings)
+  write_to_yml("variable_names", variable_strings)
+  write_to_yml("parameter_names", parameter_strings)
 end
 
 def get_i18n_strings(level)
@@ -37,6 +53,7 @@ def get_i18n_strings(level)
   elsif level.is_a?(Level)
     %w(
       display_name
+      bubble_choice_description
       short_instructions
       long_instructions
       failure_message_overrides
@@ -52,7 +69,15 @@ def get_i18n_strings(level)
       authored_hints = JSON.parse(level.authored_hints)
       i18n_strings['authored_hints'] = Hash.new unless authored_hints.empty?
       authored_hints.each do |hint|
-        i18n_strings['authored_hints'][hint['hint_id']] = hint['hint_markdown']
+        markdown = hint['hint_markdown']
+        i18n_strings['authored_hints'][hint['hint_id']] = markdown
+        # parse and store placeholder texts
+        processed_markdown = Nokogiri::HTML(markdown, &:noblanks)
+        placeholders = get_all_placeholder_text_types(processed_markdown)
+        if placeholders.present?
+          i18n_strings['placeholder_texts'] = Hash.new
+          i18n_strings['placeholder_texts'].merge! placeholders
+        end
       end
     end
 
@@ -63,6 +88,20 @@ def get_i18n_strings(level)
       callouts.each do |callout|
         i18n_strings['callouts'][callout['localization_key']] = callout['callout_text']
       end
+    end
+
+    # parse markdown properties for potential placeholder texts
+    documents = []
+    %w(
+      short_instructions
+      long_instructions
+    ).each do |prop|
+      documents.push level.try(prop) if level.try(prop)
+    end
+    i18n_strings['placeholder_texts'] = i18n_strings['placeholder_texts'] || Hash.new unless documents.empty?
+    documents.each do |document|
+      processed_doc = Nokogiri::HTML(document, &:noblanks)
+      i18n_strings['placeholder_texts'].merge! get_all_placeholder_text_types(processed_doc)
     end
 
     level_xml = Nokogiri::XML(level.to_xml, &:noblanks)
@@ -100,17 +139,37 @@ def get_i18n_strings(level)
         i18n_strings['behavior_names'][name.content] = name.content if name
       end
 
-      text_blocks = blocks.xpath("//block[@type=\"text\"]")
-      i18n_strings['placeholder_texts'] = Hash.new unless text_blocks.empty?
-      text_blocks.each do |text_block|
-        text_title = text_block.at_xpath('./title[@name="TEXT"]')
-        # Skip empty or untranslatable string.
-        # A translatable string must have at least 3 consecutive alphabetic characters.
-        next unless text_title&.content =~ /[a-zA-Z]{3,}/
+      ## Variable Names
+      variables_get = blocks.xpath("//block[@type=\"variables_get\"]")
+      variables_set = blocks.xpath("//block[@type=\"variables_set\"]")
+      variables = variables_get + variables_set
+      i18n_strings['variable_names'] = Hash.new unless variables.empty?
+      variables.each do |variable|
+        name = variable.at_xpath('./title[@name="VAR"]')
+        i18n_strings['variable_names'][name.content] = name.content if name
+      end
 
-        # Use only alphanumeric characters in lower cases as string key
-        text_key = Digest::MD5.hexdigest text_title.content
-        i18n_strings['placeholder_texts'][text_key] = text_title.content
+      ## Parameter Names
+      parameters = blocks.xpath("//block[@type=\"parameters_get\"]")
+      i18n_strings['parameter_names'] = Hash.new unless parameters.empty?
+      parameters.each do |parameter|
+        name = parameter.at_xpath('./title[@name="VAR"]')
+        i18n_strings['parameter_names'][name.content] = name.content if name
+      end
+
+      ## Placeholder texts
+      i18n_strings['placeholder_texts'] = i18n_strings['placeholder_texts'] || Hash.new
+      i18n_strings['placeholder_texts'].merge! get_all_placeholder_text_types(blocks)
+    end
+  end
+
+  if level.is_a? BubbleChoice
+    i18n_strings["sublevels"] = {}
+    level.sublevels.map do |sublevel|
+      i18n_strings["sublevels"][sublevel.name] = get_i18n_strings sublevel
+      # Block categories, variables, and parameters are handled differently below and are generally covered by the script levels
+      %w[block_categories variable_names parameter_names].each do |type|
+        i18n_strings["sublevels"][sublevel.name].delete(type) if i18n_strings["sublevels"][sublevel.name].key? type
       end
     end
   end
@@ -122,7 +181,34 @@ def get_i18n_strings(level)
   i18n_strings.delete_if {|_, value| value.blank?}
 end
 
-def localize_project_content
+def get_all_placeholder_text_types(blocks)
+  results = {}
+  results.merge! get_placeholder_texts(blocks, 'text', ['TEXT'])
+  results.merge! get_placeholder_texts(blocks, 'studio_ask', ['TEXT'])
+  results.merge! get_placeholder_texts(blocks, 'studio_showTitleScreen', %w(TEXT TITLE))
+  results
+end
+
+def get_placeholder_texts(document, block_type, title_names)
+  results = {}
+  document.xpath("//block[@type=\"#{block_type}\"]").each do |block|
+    title_names.each do |title_name|
+      title = block.at_xpath("./title[@name=\"#{title_name}\"]")
+
+      # Skip empty or untranslatable string.
+      # A translatable string must have at least 3 consecutive alphabetic characters.
+      next unless title&.content =~ /[a-zA-Z]{3,}/
+
+      # Use only alphanumeric characters in lower cases as string key
+      text_key = Digest::MD5.hexdigest title.content
+      results[text_key] = title.content
+    end
+  end
+
+  results
+end
+
+def localize_project_content(variable_strings, parameter_strings)
   puts "Preparing project content"
   project_content_file = "../#{I18N_SOURCE_DIR}/course_content/projects.json"
   project_strings = {}
@@ -135,6 +221,15 @@ def localize_project_content
       project_strings[url] = get_i18n_strings(level)
       # Block categories are handled differently below and are generally covered by the script levels
       project_strings[url].delete("block_categories") if project_strings[url].key? "block_categories"
+
+      # add project-level variables to the flattened hash structures of
+      # all variable & parameter strings
+      if project_strings[url].key? "variable_names"
+        variable_strings.merge! project_strings[url].delete("variable_names")
+      end
+      if project_strings[url].key? "parameter_names"
+        parameter_strings.merge! project_strings[url].delete("parameter_names")
+      end
     end
     project_strings.delete_if {|_, value| value.blank?}
 
@@ -144,7 +239,7 @@ def localize_project_content
   end
 end
 
-def localize_level_content
+def localize_level_content(variable_strings, parameter_strings)
   puts "Preparing level content"
 
   block_category_strings = {}
@@ -175,71 +270,50 @@ def localize_level_content
         if script_strings[url].key? "block_categories"
           block_category_strings.merge! script_strings[url].delete("block_categories")
         end
+
+        # do the same for variables and parameters
+        if script_strings[url].key? "variable_names"
+          variable_strings.merge! script_strings[url].delete("variable_names")
+        end
+
+        if script_strings[url].key? "parameter_names"
+          parameter_strings.merge! script_strings[url].delete("parameter_names")
+        end
       end
       script_strings.delete_if {|_, value| value.blank?}
 
       # We want to make sure to categorize HoC scripts as HoC scripts even if
       # they have a version year, so this ordering is important
       script_i18n_directory =
-        if ScriptConstants.script_in_category?(:hoc, script.name)
+        if ScriptConstants.unit_in_category?(:hoc, script.name)
           File.join(level_content_directory, "Hour of Code")
-        elsif script.version_year
-          File.join(level_content_directory, script.version_year)
-        else
+        elsif script.unversioned?
           File.join(level_content_directory, "other")
+        else
+          File.join(level_content_directory, script.version_year)
         end
 
       FileUtils.mkdir_p script_i18n_directory
       script_i18n_name = "#{script.name}.json"
       script_i18n_filename = File.join(script_i18n_directory, script_i18n_name)
 
-      # If a script is updated such that its destination directory changes
-      # after creation, we can end up in a situation in which we have multiple
-      # copies of the script file in the repo, which makes it difficult for the
-      # sync out to know which is the canonical version.
-      #
-      # To prevent that, here we proactively check for existing files in the
-      # filesystem with the same filename as our target script file, but a
-      # different directory. If found, we refuse to create the second such
-      # script file and notify of the attempt, so the issue can be manually
-      # resolved.
-      #
-      # Note we could try here to remove the old version of the file both from
-      # the filesystem and from github, but it would be significantly harder to
-      # also remove it from Crowdin.
-      matching_files = Dir.glob(File.join(level_content_directory, "**", script_i18n_name)).reject do |other_filename|
-        other_filename == script_i18n_filename
-      end
-      unless matching_files.empty?
-        # Clean up the file paths, just to make our output a little nicer
-        base = Pathname.new(level_content_directory)
-        relative_matching = matching_files.map {|filename| Pathname.new(filename).relative_path_from(base)}
-        relative_new = Pathname.new(script_i18n_filename).relative_path_from(base)
-        STDERR.puts "Script #{script.name.inspect} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
-        next
-      end
+      next if I18nScriptUtils.unit_directory_change?(script_i18n_name, script_i18n_filename)
 
       File.write(script_i18n_filename, JSON.pretty_generate(script_strings))
     end
   end
 
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/block_categories.yml"), 'w') do |file|
+  write_to_yml("block_categories", block_category_strings)
+  write_to_yml("progressions", progression_strings)
+end
+
+def write_to_yml(type, strings)
+  File.open(File.join(I18N_SOURCE_DIR, "dashboard/#{type}.yml"), 'w') do |file|
     # Format strings for consumption by the rails i18n engine
     formatted_data = {
       "en" => {
         "data" => {
-          "block_categories" => block_category_strings.sort.to_h
-        }
-      }
-    }
-    file.write(I18nScriptUtils.to_crowdin_yaml(formatted_data))
-  end
-  File.open(File.join(I18N_SOURCE_DIR, "dashboard/progressions.yml"), 'w') do |file|
-    # Format strings for consumption by the rails i18n engine
-    formatted_data = {
-      "en" => {
-        "data" => {
-          "progressions" => progression_strings.sort.to_h
+          type => strings.sort.to_h
         }
       }
     }
@@ -284,8 +358,21 @@ def localize_animation_library
   spritelab_animation_source_file = "#{I18N_SOURCE_DIR}/animations/spritelab_animation_library.json"
   FileUtils.mkdir_p(File.dirname(spritelab_animation_source_file))
   File.open(spritelab_animation_source_file, "w") do |file|
-    animation_strings = ManifestBuilder.new({spritelab: true, silent: true}).get_animation_strings
+    animation_strings = ManifestBuilder.new({spritelab: true, quiet: true}).get_animation_strings
     file.write(JSON.pretty_generate(animation_strings))
+  end
+end
+
+def localize_shared_functions
+  puts "Preparing shared functions"
+
+  shared_functions = SharedBlocklyFunction.where(level_type: 'GamelabJr').pluck(:name)
+  hash = {}
+  shared_functions.sort.each do |func|
+    hash[func] = func
+  end
+  File.open("i18n/locales/source/dashboard/shared_functions.yml", "w+") do |f|
+    f.write(I18nScriptUtils.to_crowdin_yaml({"en" => {"data" => {"shared_functions" => hash}}}))
   end
 end
 
@@ -354,13 +441,42 @@ def redact_block_content
   RedactRestoreUtils.redact(source, source, ['blockfield'], 'txt')
 end
 
+def redact_script_and_course_content
+  plugins = %w(resourceLink vocabularyDefinition)
+  fields = %w(description student_description description_student description_teacher)
+
+  %w(script course).each do |type|
+    puts "Redacting #{type} content"
+    source = File.join(I18N_SOURCE_DIR, "dashboard/#{type}s.yml")
+
+    # Save the original data, for restoration
+    original = source.sub("source", "original")
+    FileUtils.mkdir_p(File.dirname(original))
+    FileUtils.cp(source, original)
+
+    # Redact the specific subset of fields within each script that we care about.
+    data = YAML.load_file(source)
+    data['en']['data'][type]['name'].values.each do |datum|
+      markdown_data = datum.slice(*fields)
+      redacted_data = RedactRestoreUtils.redact_data(markdown_data, plugins, 'md')
+      datum.merge!(redacted_data)
+    end
+
+    # Overwrite source file with redacted data
+    File.write(source, I18nScriptUtils.to_crowdin_yaml(data))
+  end
+end
+
 def localize_markdown_content
   markdown_files_to_localize = %w[
-    international/about.md.partial
-    educate/curriculum/csf-transition-guide.md
+    ai.md.partial
     athome.md.partial
     break.md.partial
     csforgood.md
+    curriculum/unplugged.md.partial
+    educate/csc.md.partial
+    educate/curriculum/csf-transition-guide.md
+    helloworld.md.partial
     hourofcode/artist.md.partial
     hourofcode/flappy.md.partial
     hourofcode/frozen.md.partial
@@ -370,6 +486,8 @@ def localize_markdown_content
     hourofcode/playlab.md.partial
     hourofcode/starwars.md.partial
     hourofcode/unplugged-conditionals-with-cards.md.partial
+    international/about.md.partial
+    poetry.md.partial
   ]
   markdown_files_to_localize.each do |path|
     original_path = File.join('pegasus/sites.v3/code.org/public', path)

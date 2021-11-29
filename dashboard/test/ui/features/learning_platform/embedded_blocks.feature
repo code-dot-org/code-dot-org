@@ -3,7 +3,7 @@ Feature: Showing embedded blocks in non-blockly levels
   that those blocks are rendered.
 
   Background:
-    Given I am on "http://studio.code.org/s/allthethings/stage/13/puzzle/3?noautoplay=true"
+    Given I am on "http://studio.code.org/s/allthethings/lessons/13/levels/3?noautoplay=true"
 
   Scenario:
     When I wait until element ".content2" is visible

@@ -8,6 +8,6 @@
 
 - data = {}
 - user_id = request.params["user_id"] || current_user&.id
-- data[:level] = @level.summarize(script_level: @script_level, user: @view_as_user)
+- data[:level] = @level.summarize(script_level: @script_level, user: @view_as_user, should_localize: true)
 
 %script{src: webpack_asset_path('js/levels/_bubble_choice.js'), data: {bubblechoice: data.to_json}}

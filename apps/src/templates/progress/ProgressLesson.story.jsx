@@ -3,6 +3,10 @@ import {UnconnectedProgressLesson as ProgressLesson} from './ProgressLesson';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {fakeLesson, fakeLevels} from './progressTestHelpers';
 import {LevelStatus} from '@cdo/apps/util/sharedConstants';
+import progress from '@cdo/apps/code-studio/progressRedux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
+import lessonLock from '@cdo/apps/code-studio/lessonLockRedux';
 
 const defaultProps = {
   lesson: fakeLesson('Maze', 1),
@@ -20,140 +24,207 @@ const defaultProps = {
       name: 'Last progression'
     }
   ],
-  showTeacherInfo: false,
-  viewAs: ViewType.Teacher,
-  showLockIcon: true,
+  viewAs: ViewType.Instructor,
   lessonIsVisible: () => true,
-  lessonLockedForSection: () => false
+  lessonIsLockedForUser: () => false,
+  lessonIsLockedForAllStudents: () => false,
+  lockableAuthorized: true,
+  lockableAuthorizedLoaded: true
+};
+
+const initialState = {
+  progress: {
+    lessonGroups: [],
+    lessons: [
+      {
+        levels: []
+      }
+    ],
+    focusAreaLessonIds: [],
+    isSummaryView: false,
+    professionalLearningCourse: false,
+    scriptName: 'script-name'
+  },
+  teacherSections: {
+    sectionsAreLoaded: true,
+    sections: {},
+    sectionIds: []
+  },
+  hiddenLesson: {},
+  lessonLock: {}
 };
 
 export default storybook => {
-  storybook.storiesOf('Progress/ProgressLesson', module).addStoryTable([
-    {
-      name: 'progress lesson',
-      story: () => <ProgressLesson {...defaultProps} />
-    },
-    {
-      name: 'progress lesson with focus area',
-      story: () => (
-        <ProgressLesson
-          {...defaultProps}
-          lesson={{
-            ...defaultProps.lesson,
-            isFocusArea: true
-          }}
-        />
-      )
-    },
-    {
-      name: 'progress lesson for peer reviews',
-      story: () => (
-        <ProgressLesson
-          {...defaultProps}
-          viewAs={ViewType.Student}
-          currentStageId={-1}
-          lesson={{
-            id: -1,
-            isFocusArea: false,
-            lockable: false,
-            name: 'You must complete 4 reviews for this unit'
-          }}
-          levels={[
-            {
+  storybook
+    .storiesOf('Progress/ProgressLesson', module)
+    .withReduxStore(
+      {progress, teacherSections, hiddenLesson, lessonLock},
+      initialState
+    )
+    .addStoryTable([
+      {
+        name: 'progress lesson',
+        story: () => <ProgressLesson {...defaultProps} />
+      },
+      {
+        name: 'progress lesson with focus area',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            lesson={{
+              ...defaultProps.lesson,
+              isFocusArea: true
+            }}
+          />
+        )
+      },
+      {
+        name: 'progress lesson for peer reviews',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            viewAs={ViewType.Participant}
+            currentLessonId={-1}
+            lesson={{
               id: -1,
-              name: 'Link to submitted review',
-              status: LevelStatus.perfect,
-              url: '/peer_reviews/1',
-              levelNumber: 1
-            },
-            {
-              id: -1,
-              name: 'Review a new submission',
-              status: LevelStatus.not_tried,
-              url: '/pull-review',
-              levelNumber: 2
-            },
-            {
-              id: -1,
-              icon: 'fa-lock',
-              name: 'Reviews unavailable at this time',
-              status: LevelStatus.locked,
-              url: '',
-              levelNumber: 3
-            },
-            {
-              id: -1,
-              icon: 'fa-lock',
-              name: 'Reviews unavailable at this time',
-              status: LevelStatus.locked,
-              url: '',
-              levelNumber: 4
+              isFocusArea: false,
+              lockable: false,
+              name: 'You must complete 4 reviews for this unit'
+            }}
+            levels={[
+              {
+                id: '-1',
+                name: 'Link to submitted review',
+                status: LevelStatus.perfect,
+                isLocked: false,
+                url: '/peer_reviews/1',
+                levelNumber: 1
+              },
+              {
+                id: '-1',
+                name: 'Review a new submission',
+                status: LevelStatus.not_tried,
+                isLocked: false,
+                url: '/pull-review',
+                levelNumber: 2
+              },
+              {
+                id: '-1',
+                icon: 'fa-lock',
+                name: 'Reviews unavailable at this time',
+                status: LevelStatus.not_tried,
+                isLocked: true,
+                url: '',
+                levelNumber: 3
+              },
+              {
+                id: '-1',
+                icon: 'fa-lock',
+                name: 'Reviews unavailable at this time',
+                status: LevelStatus.not_tried,
+                isLocked: true,
+                url: '',
+                levelNumber: 4
+              }
+            ]}
+          />
+        )
+      },
+      {
+        name: 'hidden progress lesson as instructor',
+        description: 'should be white with full opacity',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            lessonIsVisible={(lesson, viewAs) => viewAs === ViewType.Instructor}
+          />
+        )
+      },
+      {
+        name: 'hidden progress lesson as participant',
+        description: 'should not show up',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            lessonIsVisible={(lesson, viewAs) =>
+              viewAs === ViewType.Participant
             }
-          ]}
-        />
-      )
-    },
-    {
-      name: 'hidden progress lesson as teacher',
-      description: 'should be white with full opacity',
-      story: () => (
-        <ProgressLesson
-          {...defaultProps}
-          lessonIsVisible={(lesson, viewAs) => viewAs === ViewType.Teacher}
-        />
-      )
-    },
-    {
-      name: 'hidden progress lesson as student',
-      description: 'should not show up',
-      story: () => (
-        <ProgressLesson
-          {...defaultProps}
-          lessonIsVisible={(lesson, viewAs) => viewAs === ViewType.Teacher}
-        />
-      )
-    },
-    {
-      name: 'locked lesson as teacher',
-      story: () => (
-        <ProgressLesson
-          {...defaultProps}
-          lesson={fakeLesson('Asessment Number One', 1, true)}
-          levels={fakeLevels(5, {named: false}).map(level => ({
-            ...level,
-            status: LevelStatus.locked
-          }))}
-          lessonLockedForSection={() => true}
-        />
-      )
-    },
-    {
-      name: 'locked lesson as student',
-      story: () => (
-        <ProgressLesson
-          {...defaultProps}
-          viewAs={ViewType.Student}
-          lesson={fakeLesson('Asessment Number One', 1, true)}
-          levels={fakeLevels(5, {named: false}).map(level => ({
-            ...level,
-            status: LevelStatus.locked
-          }))}
-          lessonLockedForSection={() => true}
-        />
-      )
-    },
-    {
-      name: 'unlocked lockable lesson',
-      story: () => (
-        <ProgressLesson
-          {...defaultProps}
-          lesson={fakeLesson('Asessment Number One', 1, true)}
-          levels={fakeLevels(5, {named: false}).map(level => ({
-            ...level,
-            status: LevelStatus.attempted
-          }))}
-        />
-      )
-    }
-  ]);
+          />
+        )
+      },
+      {
+        name: 'locked lesson as verified instructor',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            lesson={fakeLesson('Assessment Number One', 1, true)}
+            levels={fakeLevels(5, {named: false})}
+            lessonIsLockedForAllStudents={() => true}
+          />
+        )
+      },
+      {
+        name: 'unlocked lesson as verified instructor',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            lesson={fakeLesson('Asessment Number One', 1, true)}
+            levels={fakeLevels(5, {named: false})}
+            lessonIsLockedForAllStudents={() => false}
+          />
+        )
+      },
+      {
+        name: 'locked lesson as unverified instructor',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            lesson={fakeLesson('Asessment Number One', 1, true)}
+            levels={fakeLevels(5, {named: false})}
+            lessonIsLockedForUser={() => true}
+            lockableAuthorized={false}
+          />
+        )
+      },
+      {
+        name: 'locked lesson signed out',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            viewAs={ViewType.Participant}
+            lesson={fakeLesson('Asessment Number One', 1, true)}
+            levels={fakeLevels(5, {named: false})}
+            lessonIsLockedForUser={() => true}
+          />
+        )
+      },
+      {
+        name: 'locked lesson as participant',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            viewAs={ViewType.Participant}
+            lesson={fakeLesson('Asessment Number One', 1, true)}
+            levels={fakeLevels(5, {named: false}).map(level => ({
+              ...level,
+              isLocked: true
+            }))}
+            lessonIsLockedForUser={() => true}
+          />
+        )
+      },
+      {
+        name: 'unlocked lockable lesson',
+        story: () => (
+          <ProgressLesson
+            {...defaultProps}
+            lesson={fakeLesson('Asessment Number One', 1, true)}
+            levels={fakeLevels(5, {named: false}).map(level => ({
+              ...level,
+              status: LevelStatus.not_tried
+            }))}
+          />
+        )
+      }
+    ]);
 };

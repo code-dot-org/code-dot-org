@@ -1,0 +1,15 @@
+{
+  "func": "setAnimationEach",
+  "category": "Groups",
+  "paletteParams": [
+    {
+      "name": "label"
+    }
+  ],
+  "params": [
+    "\"animation_1\""
+  ],
+  "dropdown": {
+  },
+  "modeOptionName": "*.setAnimationEach"
+}

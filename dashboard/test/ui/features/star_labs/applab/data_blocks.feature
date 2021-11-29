@@ -5,7 +5,7 @@ Feature: App Lab Data Blocks
   Scenario: Evaluate Data Blocks
     # This level evaluates the create/read/update/deleteRecord and set/getKeyValue blocks
     # when run, and prints success if the data storage APIs are working properly.
-    Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/8?noautoplay=true"
+    Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/8?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     And element "#runButton" is visible
@@ -17,7 +17,7 @@ Feature: App Lab Data Blocks
   Scenario: Evaluate onRecordEvent block
     # The level verifies that onRecordEvent captures the correct events when
     # the create/update/deleteRecord blocks are evaluated, then prints success.
-    Given I am on "http://studio.code.org/s/allthethings/stage/18/puzzle/13?noautoplay=true"
+    Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/13?noautoplay=true"
     And I rotate to landscape
     And I wait for the page to fully load
     And element "#runButton" is visible

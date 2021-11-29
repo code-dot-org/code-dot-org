@@ -1,0 +1,7 @@
+{
+  "category": "Loops",
+  "config": {
+    "docFunc": "codestudio_repeat",
+    "func": "controls_repeat"
+  }
+}

@@ -1,0 +1,9 @@
+name 'CSD U2 Test ContentStructureStyle_pilot_2021'
+title 'Question 2'
+question 'A programmer has an idea to use just one language for the content, structure, and style of web pages. What might be a problem with this idea?'
+wrong 'It will be confusing and less organized for people to read and write code that mixes everything up together.'
+wrong 'Structure is more important than style or content and needs its own language'
+wrong 'Communicating about structure and style are different problems, and it is helpful to use two languages specific to those problems'
+right 'A and C'
+wrong 'All of the above'
+

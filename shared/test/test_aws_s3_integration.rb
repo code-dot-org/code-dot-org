@@ -160,6 +160,20 @@ class AwsS3IntegrationTest < Minitest::Test
     DCDO.set('s3_slow_request', nil)
   end
 
+  # Ensure find objects with ext correctly finds and filters responses
+  def test_find_objects_with_ext
+    VCR.use_cassette('awss3integration/s3_find_objects_with_ext') do
+      test_key_1 = AWS::S3.upload_to_bucket(TEST_BUCKET, 'find_objects/1.test', 'hello', no_random: true)
+      test_key_2 = AWS::S3.upload_to_bucket(TEST_BUCKET, 'find_objects/2.test', 'world', no_random: true)
+      test_key_3 = AWS::S3.upload_to_bucket(TEST_BUCKET, 'find_objects/3.bad', 'third value', no_random: true)
+      results = AWS::S3.find_objects_with_ext(TEST_BUCKET, 'test', 'find_objects')
+      assert_equal 2, results.length
+      assert results.include?(test_key_1), 'find_objects should find the first file'
+      assert results.include?(test_key_2), 'find_objects should find the second file'
+      refute results.include?(test_key_3), 'find_objects should not find the third file'
+    end
+  end
+
   # Simulate a slow AWS client response.
   class SlowResponder < Seahorse::Client::Plugin
     class Handler < Seahorse::Client::Handler

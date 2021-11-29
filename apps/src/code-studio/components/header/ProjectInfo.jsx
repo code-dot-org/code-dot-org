@@ -16,17 +16,6 @@ const headerComponents = {
   [possibleHeaders.levelBuilderSave]: LevelBuilderSaveButton
 };
 
-const styles = {
-  headerContainer: {
-    position: 'relative',
-    overflow: 'hidden',
-    height: 38
-  },
-  projectInfo: {
-    position: 'absolute'
-  }
-};
-
 class ProjectInfo extends React.Component {
   static propTypes = {
     currentHeader: PropTypes.oneOf(Object.values(possibleHeaders)),
@@ -89,6 +78,17 @@ class ProjectInfo extends React.Component {
     );
   }
 }
+
+const styles = {
+  headerContainer: {
+    position: 'relative',
+    overflow: 'hidden',
+    height: 38
+  },
+  projectInfo: {
+    position: 'absolute'
+  }
+};
 
 export const UnconnectedProjectInfo = ProjectInfo;
 export default connect(state => ({

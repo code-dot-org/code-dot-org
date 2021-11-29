@@ -1,5 +1,5 @@
 {
-  "https://studio.code.org/s/express-2019/stage/1/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/1/levels/1": {
     "short_instructions": "Drag the `make a new` block into the workspace, and connect it inside the `setup` block.",
     "long_instructions": "_Let's have a dance party!_\n\nDrag the `make a new` block into the workspace, and connect it inside the `setup` block to create your first dancer.\n\n-   _You can also click the lightbulb to the left if you want more information or extra challenges._",
     "authored_hints": {
@@ -10,7 +10,7 @@
       "dance_callout_01": "Add this block to your program!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/1/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/1/levels/2": {
     "short_instructions": "Make the moose start a new move after 4 measures!",
     "long_instructions": "Let's get this moose dancing!\n\nDrag out the [blockly block][0] block onto the workspace. Connect it underneath the [blockly block][1] event block. Your dancer should start a new move after the fourth measure.\n\n**Measures** are used to count time in music. In this tutorial, a measure is four beats long.",
     "authored_hints": {
@@ -20,14 +20,14 @@
       "dance_callout_02": "Add this block to your program!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/1/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/1/levels/3": {
     "short_instructions": "Now make the dancer start a new move after 6 measures!",
     "long_instructions": "_Now we're grooving!_ \n\nAdd an [blockly block][0] event block to your workspace. Make the dancer start a new move after 6 measures.",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   After 6 measures, your dancer needs to be doing a different dance than it was after 4 measures.\n\n_The level ends after 11 measures._"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/1/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/1/levels/4": {
     "short_instructions": "Add a background effect to your program.",
     "long_instructions": "_This dance needs some flash!_\n\nLook for a new block in your toolbox that adds a background effect behind your dancer. Watch the effects change in time with the music!",
     "authored_hints": {
@@ -38,11 +38,11 @@
       "dance_callout_04": "Add this block to your program!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/1/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/1/levels/5": {
     "short_instructions": "Use another new block to make the dancer change moves every 2 measures.",
     "long_instructions": "Use another new block to make the dancer change moves **every 2 measures**!\n\n-   Choosing `(Next)`, `(Previous)`, or `(Random)` tells the dancer to perform a different move every time the code is run."
   },
-  "https://studio.code.org/s/express-2019/stage/1/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/1/levels/6": {
     "short_instructions": "Create a backup dancer called `backup_dancer1` to dance with the cat.",
     "long_instructions": "_We need more dancers!_\n\nCreate a backup dancer called `backup_dancer1` to dance with the cat.",
     "authored_hints": {
@@ -53,7 +53,7 @@
       "dance_callout_06": "Add your new dancer here"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/1/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/1/levels/7": {
     "short_instructions": "Can you make both backup dancers the same size?",
     "long_instructions": "Every dancer has a set of _properties_ that control what it looks like.\n\nYou can make it look like a dancer is in the background by making their _size_ smaller. Can you make both backup dancers the same size?",
     "authored_hints": {
@@ -61,21 +61,21 @@
       "challenges": "**Optional Challenge**\n\n-   Experiment by changing other properties (width, height, rotation, etc.)"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/1/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/1/levels/8": {
     "short_instructions": "Use the `set tint` block to change the color of a dancer.",
     "long_instructions": "Dancers have a \"tint\" property that can add a layer of color. Try changing the tint of one of your dancers.\n\n-   Tints will mix the color you choose with the colors of the dancer.",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   Change the tint of at least one dancer.\n\n_This level ends after 7 measures._"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/1/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/1/levels/9": {
     "short_instructions": "Make the other dancer respond to the music using the `begins following` block, too.",
     "long_instructions": "Now we know how to change a dancer's properties. We can also make the same properties automatically respond to the music using this block:\n[blockly block][0]\n\nThis program uses the music's \"bass\" volume (the low sounds) to control one dancer's height. Can you make the other dancer respond to the music too?",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   Properties for two or more dancers must change.\n\n_This level ends after 7 measures._"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/1/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/1/levels/10": {
     "short_instructions": "The `when up pressed` block lets you run code when the up arrow is pressed. Try to make the dancer do a quick move when you press up.",
     "long_instructions": "The [blockly block][0] event block lets you run code when the up arrow is pressed. \n\nYou might change the dance move, change a dancer's properties, or do a quick move just once. Be creative and look out for new blocks!",
     "authored_hints": {
@@ -86,14 +86,14 @@
       "dance_callout_11_b": "New block!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/1/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/1/levels/11": {
     "short_instructions": "Make the Robot \"drop\" once when you press the right arrow key, and \"clap\" once when you press the up arrow key. Do the drop-clap as fast as you can!",
     "long_instructions": "It's time for a dance-off! The Cat dabs when you press the left arrow key. Make the Robot \"drop\" once when you press the right arrow key, and \"clap\" once when you press the up arrow key.\n\n**Use the keys to get the Robot to do the drop-clap-drop-clap as fast as you can!**",
     "authored_hints": {
       "validation": "**How do I pass this level?**\n\n-   Use the `when arrow arrow pressed` block to make the Robot do a dance move when you press it.\n\n_This level ends after 7 measures._"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/1/puzzle/12": {
+  "https://studio.code.org/s/express-2019/lessons/1/levels/12": {
     "short_instructions": "Use the \"all ducks\" blocks to make the ducks dance together.",
     "long_instructions": "Check out this block:\n\n[blockly block][0]\n\nNow you can create a bunch of dancers at once!\nTry using some of the \"all ducks\" blocks to write code that will make all of the ducks dance together.",
     "authored_hints": {
@@ -103,11 +103,11 @@
       "dance_party_11_5_groups": "Look here for \"all ducks\" blocks"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/1/puzzle/13": {
+  "https://studio.code.org/s/express-2019/lessons/1/levels/13": {
     "short_instructions": "Get your groove on! Create a dance of your own to share with your friends.",
     "long_instructions": "Get your groove on! Create a dance of your own to share with your friends."
   },
-  "https://studio.code.org/s/express-2019/stage/2/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/2/levels/2": {
     "short_instructions": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
     "long_instructions": "For this puzzle, drag all of the blocks together and click \"Run\" to watch it go!",
     "authored_hints": {
@@ -117,7 +117,7 @@
       "grade2_CaringForNewPet_0_1": "After connecting all the blocks, press \"Run\" to start your program."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/2/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/2/levels/3": {
     "short_instructions": "Drag an extra `move forward` block out of the toolbox to finish your code.",
     "long_instructions": "Drag an extra [blockly block][0] block out of the toolbox to finish your code.",
     "authored_hints": {
@@ -128,7 +128,7 @@
       "courseC_maze_programming2_1": "This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/2/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/2/levels/4": {
     "short_instructions": "There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.",
     "long_instructions": "_\"This pig is ruffling my feathers.\"_\n\nThere is one extra block that is going to cause the bird to crash.\\\nThrow it away by unhooking it from the grey blocks and dragging it back to the toolbox.",
     "authored_hints": {
@@ -140,7 +140,7 @@
       "courseC_maze_programming3_3": "These blocks are stone and cannot be thrown away."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/2/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/2/levels/5": {
     "short_instructions": "Avoid TNT or feathers will fly!",
     "long_instructions": "_\"Trace the path and lead me to the silly pig.\"_ \n\nAvoid TNT or feathers will fly!",
     "authored_hints": {
@@ -151,7 +151,7 @@
       "courseC_maze_programming4_1": "This is your block limit.  It tells you how many of these blocks you have left to use."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/2/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/2/levels/6": {
     "short_instructions": "Avoid the TNT.",
     "long_instructions": "_\"Follow this path to get me to the pig!\"_\n\nAvoid the TNT.",
     "authored_hints": {
@@ -163,7 +163,7 @@
       "": "These blocks don't have numbers on them. You can use as many as you want!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/2/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/2/levels/7": {
     "short_instructions": "\"Keep calm and help me find the bad pig. Otherwise I might get angry!\"",
     "long_instructions": "_\"Keep calm and help me find the bad pig. Otherwise I might get angry!\"_\n\nGet the bird to the pig and avoid the TNT.",
     "authored_hints": {
@@ -173,7 +173,7 @@
       "courseC_maze_programming6_d": "Feel stuck?  Look at this path!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/2/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/2/levels/8": {
     "short_instructions": "**Challenge:** This code has a lot of bugs. You'll need to remove some blocks and add others.",
     "long_instructions": "_\"It's time to get angry!\"_\n\n**Challenge:** This code has a lot of bugs. You'll need to remove some blocks and add others.",
     "authored_hints": {
@@ -185,7 +185,7 @@
       "courseC_maze_programming7_2": "These blocks are made of stone and can't be thrown away."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/2/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/2/levels/9": {
     "short_instructions": "_\"Keep calm and help me find the bad pig.\"_",
     "long_instructions": "_\"Keep calm and help me find the bad pig.\"_",
     "authored_hints": {
@@ -193,7 +193,7 @@
       "courseC_maze_programming8_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/2/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/2/levels/10": {
     "short_instructions": "_\"Keep calm and help me find the bad pig.\"_",
     "long_instructions": "_\"Keep calm and help me find the bad pig.\"_",
     "contained levels": [
@@ -230,18 +230,18 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/2/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/2/levels/11": {
     "short_instructions": "_\"Now, help me sneak up on the pig any way you want to!\"_",
     "long_instructions": "_\"Now, help me sneak up on the pig any way you want to!\"_"
   },
-  "https://studio.code.org/s/express-2019/stage/2/extras?level_name=courseC_maze_programming_challenge1_2019": {
+  "https://studio.code.org/s/express-2019/lessons/2/extras?level_name=courseC_maze_programming_challenge1_2019": {
     "short_instructions": "The pig is hiding, and the goal is to find it. ",
     "long_instructions": "The bird needs your help! The pig is hiding, and the goal is to find it. ",
     "authored_hints": {
       "courseC_maze_programming_challenge1_a": "There are many ways to get to the pig. Use your finger to find a path and then program it!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/2/extras?level_name=courseC_maze_programming_challenge2_2019": {
+  "https://studio.code.org/s/express-2019/lessons/2/extras?level_name=courseC_maze_programming_challenge2_2019": {
     "short_instructions": "Sometimes there is more than one way to solve the same problem. Sometimes it's faster to go backwards than it is to go forwards!",
     "long_instructions": "Sometimes there is more than one way to solve the same problem. Sometimes it's faster to go backwards than it is to go forwards!",
     "authored_hints": {
@@ -249,7 +249,7 @@
       "courseC_maze_programming_challenge2_b": "The shortest solution uses only 5 blocks, but it uses this block:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/3/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/3/levels/2": {
     "short_instructions": "Fix the code to help get Scrat get to the acorn.",
     "long_instructions": "This code isn't quite right!  \n\nFix the code to help Scrat get to the acorn.",
     "authored_hints": {
@@ -257,7 +257,7 @@
       "courseC_maze_debugging1_b": "There is 1 block you need to add to complete this puzzle."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/3/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/3/levels/3": {
     "short_instructions": "Use your debugging skills to get Scrat to the acorn.",
     "authored_hints": {
       "courseC_maze_debugging2_a": "There is a lot of valuable code in the workspace.  Don't just delete it all and start over!",
@@ -265,7 +265,7 @@
       "courseC_maze_debugging2_c": "Can't figure out what's wrong? Try running the code a couple of times to see what happens."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/3/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/3/levels/4": {
     "short_instructions": "Remove blocks to get Scrat to the acorn!",
     "long_instructions": "Something is not quite right. \n\nRemove blocks to get Scrat to the acorn!",
     "authored_hints": {
@@ -273,14 +273,14 @@
       "courseC_maze_debugging3_b": "Can't figure out what's wrong? Try running the code a couple of times to see what happens."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/3/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/3/levels/5": {
     "short_instructions": "Someone has their directions mixed up! Can you help?",
     "authored_hints": {
       "courseC_maze_debugging4_a": "Use the \"Step\" button to run through the instructions one at a time.  Does that help you find the line where things go wrong?",
       "courseC_maze_debugging4_b": "One of the turns is making Scrat go in the wrong direction. Can you figure out which one?"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/3/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/3/levels/6": {
     "short_instructions": "Debug this level by rearranging and changing blocks.",
     "authored_hints": {
       "courseC_maze_debugging5_a": "There are lots of helpful blocks in the workspace already.  Don't delete them all! \n\nUse the \"Step\" button to go through and figure out where the code goes wrong.",
@@ -291,14 +291,14 @@
       "courseC_maze_debugging5_1": "These blocks are locked and cannot be deleted!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/3/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/3/levels/7": {
     "short_instructions": "Figure out what is wrong and get Scrat to the acorn.",
     "authored_hints": {
       "courseC_maze_debugging6_a": "-   What is Scrat supposed to do?\n-   What does Scrat do?\n-   What does that tell you?",
       "courseC_maze_debugging6_b": "Once you've found and fixed the first bug, go through the debugging process again to find the second one.\n\nRepeat the process until the program works!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/3/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/3/levels/8": {
     "short_instructions": "**Challenge:** Debug this level by rearranging, adding, and deleting blocks.",
     "authored_hints": {
       "courseC_maze_debugging7_a": "-   Does everything work at the first step?\n-   How about the second step?\n-   Where does it go wrong?",
@@ -306,7 +306,7 @@
       "courseC_maze_debugging7_c": "After you find and fix the first bug, make sure to use the debugging process again to find the next one.\n\nRepeat the debugging process until the program works!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/3/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/3/levels/9": {
     "contained levels": [
       {
         "dsls": {
@@ -341,13 +341,13 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/3/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/3/levels/10": {
     "short_instructions": "Use the blocks in the toolbox to build your program. Get the Scrat to the acorn.",
     "callouts": {
       "express_maze_debugging9_2019_1": "Drag blocks from the toolbox into your workspace."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/3/extras?level_name=courseC_maze_debugging_challenge1_2019": {
+  "https://studio.code.org/s/express-2019/lessons/3/extras?level_name=courseC_maze_debugging_challenge1_2019": {
     "short_instructions": "Help Scrat decide which way to turn to get to the acorn.",
     "authored_hints": {
       "courseC_maze_debugging_challenge1_a": "Left or right? It's up to you!",
@@ -355,7 +355,7 @@
       "courseC_maze_debugging_challenge1_c": "If you are getting stuck, you can always start over and find a new way!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/3/extras?level_name=courseC_maze_debugging_challenge2_2019": {
+  "https://studio.code.org/s/express-2019/lessons/3/extras?level_name=courseC_maze_debugging_challenge2_2019": {
     "short_instructions": "Help Scrat reach the acorn with only four `turn` commands.",
     "long_instructions": "If Scrat turns too often, he might get dizzy! Help him reach the acorn with only four `turn` commands.",
     "authored_hints": {
@@ -363,7 +363,7 @@
       "courseC_maze_debugging_challenge2_c": "There are two different paths you can follow by just moving forward and turning four times. If you find one way to use a loop, there may be even more!\n\n[][0]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/4/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/4/levels/2": {
     "short_instructions": "Play around with the blocks to see if you can help Laurel collect some treasure.",
     "long_instructions": "**Free Play:** This is Laurel the Adventurer! Move her around and get as much treasure as you can. Use the `collect` block to pick up the treasure!\n\nDrag blocks into the workspace and try to figure out how to get treasure.  Get at least one item to pass this level.",
     "authored_hints": {
@@ -374,7 +374,7 @@
       "courseC_collector_prog1_1": "Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them in another lesson."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/4/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/4/levels/3": {
     "short_instructions": "Move Laurel to the treasure, then use `collect` to pick it up.",
     "long_instructions": "Move Laurel to the treasure, then use the [blockly block][0] block to pick it up.",
     "authored_hints": {
@@ -382,7 +382,7 @@
       "courseC_collector_prog2_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/4/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/4/levels/4": {
     "short_instructions": "Order these blocks to collect the treasure and solve the puzzle.",
     "long_instructions": "_\"Sequence matters!\"_ \n\nThe blocks you need are already in the workspace, but not connected.\\\nOrder these blocks to collect the treasure and solve the puzzle.",
     "authored_hints": {
@@ -391,7 +391,7 @@
       "courseC_collector_prog3_c": "If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/4/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/4/levels/5": {
     "short_instructions": "Put these blocks in order to collect all of the treasure and solve the puzzle.",
     "long_instructions": "_\"Sequence matters!\"_\n\nThe blocks you need are already in the workspace, but not connected.  \n\nPut these blocks in order to collect all of the treasure and solve the puzzle.",
     "authored_hints": {
@@ -400,7 +400,7 @@
       "courseC_collector_prog4_c": "Try this option for a path."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/4/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/4/levels/6": {
     "short_instructions": "These blocks are in the wrong order. Can you fix them?",
     "long_instructions": "_\"Help me collect each bit of treasure!\"_\n\nThese blocks are in the wrong order. Can you fix them?",
     "authored_hints": {
@@ -410,7 +410,7 @@
       "courseC_collector_prog5_d": "Follow the path to collect the treasure."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/4/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/4/levels/7": {
     "short_instructions": "Reorder the blocks to collect all of the treasure.",
     "long_instructions": "_\"Help me collect all of the treasure!\"_\n\nThese blocks are in the wrong order. Reorder them to collect all of the treasure.",
     "authored_hints": {
@@ -418,7 +418,7 @@
       "courseC_collector_prog6_b": "Stuck?  Try this path to collect the treasure."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/4/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/4/levels/8": {
     "short_instructions": "Use blocks from the toolbox to collect all of the treasure.",
     "long_instructions": "**Challenge:** _\"What is going on here?\"_\n\nEven if we put these in the right order, there will still be some missing.\\\nUse blocks from the toolbox to collect all of the treasure.",
     "authored_hints": {
@@ -430,19 +430,19 @@
       "courseC_collector_prog7_1": "You can take more blocks from the toolbox if you need them!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/4/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/4/levels/9": {
     "short_instructions": "_\"Keep up the good work! Help me collect all of the treasure.\"_",
     "long_instructions": "_\"Keep up the good work! Help me collect all of the treasure.\"_"
   },
-  "https://studio.code.org/s/express-2019/stage/4/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/4/levels/10": {
     "short_instructions": "_\"Let's get all of the treasure!\"_",
     "long_instructions": "_\"Let's get all of the treasure!\"_"
   },
-  "https://studio.code.org/s/express-2019/stage/4/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/4/levels/11": {
     "short_instructions": "Help Laurel collect all of the treasure.",
     "long_instructions": "Help Laurel collect all of the treasure."
   },
-  "https://studio.code.org/s/express-2019/stage/4/puzzle/12": {
+  "https://studio.code.org/s/express-2019/lessons/4/levels/12": {
     "contained levels": [
       {
         "dsls": {
@@ -477,17 +477,17 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/4/puzzle/13": {
+  "https://studio.code.org/s/express-2019/lessons/4/levels/13": {
     "short_instructions": "You're almost done! Collect as many pieces of treasure as you can to finish the stage!",
     "long_instructions": "You're almost done!  \n\nCollect as many pieces of treasure as you can to finish the stage!"
   },
-  "https://studio.code.org/s/express-2019/stage/4/extras?level_name=courseC_collector_prog_challenge1_2019": {
+  "https://studio.code.org/s/express-2019/lessons/4/extras?level_name=courseC_collector_prog_challenge1_2019": {
     "short_instructions": "Look carefully! Can you collect all **10** pieces of treasure?",
     "authored_hints": {
       "courseC_collector_prog_challenge1_a": "You can use the `collect` block many times to collect the extra treasure."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/4/extras?level_name=courseC_collector_prog_challenge2_2019": {
+  "https://studio.code.org/s/express-2019/lessons/4/extras?level_name=courseC_collector_prog_challenge2_2019": {
     "short_instructions": "Collect at least **10** pieces of treasure to finish this challenge!",
     "long_instructions": "There are 20 pieces of treasure in this cave. Collect at least **10** to finish the challenge!",
     "authored_hints": {
@@ -495,11 +495,11 @@
       "courseC_collector_prog_challenge1_b": "Lost your way?  Try this path to solve the puzzle!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/5/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/5/levels/2": {
     "short_instructions": "Play with the blocks in the toolbox to see what they do!",
     "long_instructions": "_\"Hi, I'm an artist. You can write code to make me draw almost anything.\"_\n\nPlay with the blocks in the toolbox to see what they do!"
   },
-  "https://studio.code.org/s/express-2019/stage/5/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/5/levels/3": {
     "short_instructions": "Drag blocks onto the screen to have the artist draw over the grey lines in the picture. (Each line is 100 pixels long)",
     "long_instructions": "_\"Let's make a cage for my pet monster!\"_\n\nDrag blocks onto the screen to have the artist draw over the grey lines in the picture.\\\n(Each line is 100 pixels long)",
     "authored_hints": {
@@ -507,7 +507,7 @@
       "courseC_artist_prog2_b": "Having trouble turning the corner? Use the [blockly block][0] block."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/5/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/5/levels/4": {
     "short_instructions": "Each side of the inner square is 100 pixels and all of the angles are 90 degrees.",
     "long_instructions": "_\"This spaceship needs a window!\"_\n\nEach side of the inner square is 100 pixels and all of the angles are 90 degrees.",
     "authored_hints": {
@@ -526,7 +526,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/5/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/5/levels/5": {
     "short_instructions": "Finish Starla's rocket so she can chase her pet.",
     "long_instructions": "_\"Oh no!  Starla's pet alien just flew away! Let's help the spacewoman!\"_\n\nFinish Starla's rocket so she can chase her pet.\\\n(Each side of the triangle is 100 pixels long and has 120 degree outer angles.)",
     "authored_hints": {
@@ -540,7 +540,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/5/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/5/levels/6": {
     "short_instructions": "Finish this tag by drawing a rectangle around the outside.\n(The long sides are 200 pixels each and the short sides are each 100 pixels)",
     "long_instructions": "_\"Maybe we should make a tag for each of our pets in case they get lost!\"_\n\nFinish this tag by drawing a rectangle around the outside.\\\n(The long sides are 200 pixels each and the short sides are each 100 pixels)",
     "authored_hints": {
@@ -550,7 +550,7 @@
       "courseC_artist_prog5_d": "Each turn should be 90 degrees to the right."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/5/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/5/levels/7": {
     "short_instructions": "Draw this diamond with 200 pixel sides.",
     "long_instructions": "_\"Now a tag for Belle!\"_\n\nDraw this square with 200 pixel sides.",
     "authored_hints": {
@@ -559,7 +559,7 @@
       "courseC_artist_prog6_c": "Since this diamond is also a square, be sure to turn 90 degrees at the corners."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/5/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/5/levels/8": {
     "short_instructions": "**Challenge:** This tag is a special one!  Can you figure out how to draw the outline?",
     "long_instructions": "**Challenge:** This tag is a special one!  \n\nCan you figure out how to draw the outline?\\\n(The long side is 150 pixels and each of the short sides are 75 pixels.)",
     "authored_hints": {
@@ -570,11 +570,11 @@
       "courseC_artist_prog7_e": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/5/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/5/levels/9": {
     "short_instructions": "One more tag.  This is a triangle for Pi.\n(Each side is 150 pixels)",
     "long_instructions": "One more tag.  This is a triangle for Pi.\\\n(Each side is 150 pixels)"
   },
-  "https://studio.code.org/s/express-2019/stage/5/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/5/levels/10": {
     "contained levels": [
       {
         "dsls": {
@@ -609,14 +609,14 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/5/extras?level_name=courseC_artist_prog_challenge1_2019": {
+  "https://studio.code.org/s/express-2019/lessons/5/extras?level_name=courseC_artist_prog_challenge1_2019": {
     "short_instructions": "Draw rooms for each of the animals. ",
     "long_instructions": "Draw rooms for each of the animals. There are many different ways to solve this puzzle, so have some fun! Each square has a side length of 100 pixels.",
     "authored_hints": {
       "courseC_artist_prog_challenge1_a": "You can draw this as a rectangle with a line in the middle or two different squares!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/5/extras?level_name=courseC_artist_prog_challenge2a_2019": {
+  "https://studio.code.org/s/express-2019/lessons/5/extras?level_name=courseC_artist_prog_challenge2a_2019": {
     "short_instructions": "_\"Help me paint the yellow lines on this road!\"_",
     "long_instructions": "_\"Help me paint the yellow lines on this road!\"_\n\nThe three line segments have lengths of 150, 100, and 200 pixels!",
     "authored_hints": {
@@ -624,7 +624,7 @@
       "courseC_artist_prog_challenge2_b": "After you draw the second line, turn right before you draw your third line."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/6/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/6/levels/2": {
     "short_instructions": "BB-8 will pick up any metal scraps along the path where he moves. Use 5 of the same block to get BB-8 to pick up all of the scrap metal in the play area.",
     "long_instructions": "[][0] _\"Go get the scrap metal, BB-8!\"_ \n\nUse five of the same blocks to get the scrap metal. Scrap metal glows like this: [][1]",
     "authored_hints": {
@@ -633,7 +633,7 @@
       "courseC_starWars_loops1_c": "You will want to `move forward` five times to solve this puzzle."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/6/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/6/levels/3": {
     "short_instructions": "BB-8 will pick up any metal scraps along the path where he moves. Use 5 of the same block to get BB-8 to pick up all of the scrap metal in the play area.",
     "contained levels": [
       {
@@ -669,7 +669,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/6/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/6/levels/5": {
     "short_instructions": "To get all the scrap metal, try creating a loop that uses only one block inside of a `repeat` block.",
     "long_instructions": "[][0] _\"Go BB-8!\"_\n\nTo get all the scrap metal, try creating a loop that uses only one block inside of a `repeat` block.",
     "authored_hints": {
@@ -679,7 +679,7 @@
       "courseC_starWars_loops2": "You only have one of these blocks available in this puzzle."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/6/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/6/levels/6": {
     "short_instructions": "In this puzzle, two `repeat` loops will help you get BB-8 to all of the scrap metal with the fewest number of blocks!",
     "long_instructions": "[][0] _\"Keep it up, BB-8.\"_\n\nIn this puzzle, two `repeat` loops will help you get BB-8 to all of the scrap metal with the fewest number of blocks!",
     "authored_hints": {
@@ -688,14 +688,14 @@
       "courseC_starWars_loops4_b": "Each `repeat` loop will have only one command inside of it: `move forward`."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/6/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/6/levels/7": {
     "short_instructions": "Get BB-8 to pick up all the scrap metal as quickly as possible!",
     "long_instructions": "[][0] _\"Go BB-8!\"_",
     "authored_hints": {
       "courseC_starWars_loops5_a": "The best solution uses a single `move forward`, then a turn, then a loop."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/6/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/6/levels/8": {
     "short_instructions": "Loops even work with more than one block inside!  Can you loop this sequence?",
     "long_instructions": "[][0] _\"Can you get it all?\"_\n\nLoops even work with more than one block inside!  Can you loop this sequence?",
     "authored_hints": {
@@ -703,7 +703,7 @@
       "courseC_starWars_loops6_b": "If you want to use less code, you can put one `repeat` loop inside of another!\\\nThis is called a **nested loop**."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/6/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/6/levels/9": {
     "short_instructions": "Can you try to get all the scrap metal using just one loop? Try programming it all out then finding the repeating code to put in a loop.",
     "long_instructions": "[][0] _\"You can do it!\"_\n\nCan you try to get all the scrap metal using just one loop? Try programming it all out then finding the repeating code to put in a loop.",
     "authored_hints": {
@@ -712,7 +712,7 @@
       "courseC_starWars_loops7_c": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/6/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/6/levels/10": {
     "long_instructions": "[][0] _\"Keep it up, BB-8.\"_\n\n**Challenge:** Combine ideas from the last few puzzles to complete this level.",
     "authored_hints": {
       "course_starWars_loops8_a": "Try thinking about this problem in small parts. Take your time. You don't need to solve it on the first try!",
@@ -720,7 +720,7 @@
       "course_starWars_loops8_c": "Take a look at this path.\n\n[][0]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/6/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/6/levels/11": {
     "short_instructions": "Use what you have learned to pick up all of the scrap metal!",
     "long_instructions": "[][0] _\"Keep going!\"_\n\nUse what you have learned to pick up all of the scrap metal!",
     "authored_hints": {
@@ -728,7 +728,7 @@
       "course_starWars_loops9_c": "You do not need to turn left to solve this puzzle. All of your turns can be to the right.\n\n[][0]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/6/puzzle/12": {
+  "https://studio.code.org/s/express-2019/lessons/6/levels/12": {
     "short_instructions": "You are doing great! Keep it up!",
     "long_instructions": "[][0]\n _\"Go BB-8!\"_\n\nYou are doing great! Keep it up!",
     "authored_hints": {
@@ -737,7 +737,7 @@
       "courseC_starWars_loops10_c": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/6/puzzle/13": {
+  "https://studio.code.org/s/express-2019/lessons/6/levels/13": {
     "short_instructions": "You are doing great! Keep it up!",
     "contained levels": [
       {
@@ -773,25 +773,25 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/6/puzzle/14": {
+  "https://studio.code.org/s/express-2019/lessons/6/levels/14": {
     "short_instructions": "You are almost there! This time, choose any path you like!",
     "long_instructions": "[][0] _\"Keep going, BB-8!\"_\n\nYou are almost there! This time, choose any path you like!"
   },
-  "https://studio.code.org/s/express-2019/stage/6/extras?level_name=courseC_maze_loops_challenge1a_2019": {
+  "https://studio.code.org/s/express-2019/lessons/6/extras?level_name=courseC_maze_loops_challenge1a_2019": {
     "short_instructions": "Now Scrat wants to try using loops to find his acorn! ",
     "authored_hints": {
       "courseC_maze_loops_challenge1_a": "Think about this path as being two different pieces. Each one has a pattern you can repeat.",
       "courseC_maze_loops_challenge1_b": "Can you remember how to use loops to repeat a staircase pattern?"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/6/extras?level_name=courseC_collector_loops_challenge2_2019": {
+  "https://studio.code.org/s/express-2019/lessons/6/extras?level_name=courseC_collector_loops_challenge2_2019": {
     "short_instructions": "Get at least **5** pieces of treasure!",
     "long_instructions": "_\"Let's hunt for treasure!\"_\n\nHelp the collector get at least **5** pieces of treasure.",
     "authored_hints": {
       "courseC_maze_loops_challenge2_b": "Use loops so you don't run out of `collect` blocks!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/7/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/7/levels/1": {
     "short_instructions": "Get the artist to the center of the play area, then draw a line. ",
     "long_instructions": "The artist is in the wrong spot!  \n\nUse the [blockly block][0] block to get the artist to the center of the play area.\\\nThen draw a line 50 pixels long with the [blockly block][1] block.",
     "authored_hints": {
@@ -802,7 +802,7 @@
       "courseC_artist_loopsPrePre1a_1": "Start by using this block to get the artist to the center of the screen."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/7/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/7/levels/2": {
     "short_instructions": "Time to spin that line around!",
     "long_instructions": "Now, put this code into  a `repeat` block and loop it **6** times.\n\n-   Notice that we have added a 60 degree turn at the end of the looped code to get a full rotation.",
     "authored_hints": {
@@ -810,7 +810,7 @@
       "courseC_artist_loopsPre1a_b": "Your `repeat` loop should have 3 blocks inside of it: `jump to 200 over 200 down`, `move forward by 50 pixels`, and `turn right by 60 degrees`."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/7/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/7/levels/3": {
     "short_instructions": "Let's add some pizazz with a `set pattern` block.",
     "long_instructions": "_\"Fantastic!\"_ \n\nLet's add some style by changing the brush using the [blockly block][0] block before our loop starts.",
     "authored_hints": {
@@ -819,7 +819,7 @@
       "": ""
     }
   },
-  "https://studio.code.org/s/express-2019/stage/7/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/7/levels/4": {
     "short_instructions": "Get the artist to the center of the play area, then draw a sticker. ",
     "long_instructions": "**Free Play:** Let's build something bigger, one step at a time!\n\nGet the artist to the center of the play area using the [blockly block][0] block, then use the [blockly block][1] block to make something appear.\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][2]\n[expandable][3]\n[expandable][4]",
     "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
@@ -831,7 +831,7 @@
       "jumpto_callout": "This block is very important for this project. Be sure to use it!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/7/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/7/levels/5": {
     "short_instructions": "Now, use a loop to make more copies of your sticker. Try changing the numbers in the turn and repeat blocks to make different patterns.",
     "long_instructions": "Now, use a loop to make more copies of your sticker. Try changing the numbers in the `turn` and `repeat` blocks to make different patterns.\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
     "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
@@ -840,7 +840,7 @@
       "courseC_artist_loops2a_b": "Click on the number at the top of the `repeat` loop to change how many times it repeats."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/7/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/7/levels/6": {
     "short_instructions": "Now add a second sticker!",
     "long_instructions": "So much fun!  \n\nNow, add a second sticker right on top of the first one to make an image like the ones below.\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
     "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting.\n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
@@ -849,7 +849,7 @@
       "courseC_artist_loops3a_b": "Your program should look like this!\n\n[blockly block][0]\n\nYou can use any stickers you like!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/7/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/7/levels/7": {
     "short_instructions": "Edit your code so that you jump forward between drawing the two stickers.",
     "long_instructions": "Edit your code so that you jump forward between drawing the two stickers. In this puzzle, make sure you have `jump to the middle center position` inside of your loop, so you stay in the center!\n\n* * *\n\nPress \"Finish\" when you are happy with what you've made.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]\n[expandable][3]",
     "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
@@ -858,14 +858,14 @@
       "courseC_artist_loops4a_b": "Your program should look like this!\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/7/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/7/levels/8": {
     "short_instructions": "Try new stickers!",
     "long_instructions": "What happens when you replace one or both of the stickers with a different creature?\n\n* * *\n\n[expandable][0]",
     "authored_hints": {
       "courseC_artist_loops5a_a": "Use the drop down menus on the `draw sticker` blocks to change their images."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/7/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/7/levels/9": {
     "short_instructions": "Try adding lines!",
     "long_instructions": "What happens when you `move forward` then `move backward` by 100, 200, or 400 pixels somewhere inside the loop?  \n\n-   Try using the `set pattern` block before you start your loop to make a work of art!\n\n* * *\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
     "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
@@ -875,7 +875,7 @@
       "courseC_artist_loops5b_c": "Your program should look like this!\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/7/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/7/levels/10": {
     "short_instructions": "Add another sticker!",
     "long_instructions": "Add a third sticker anywhere in the loop that you want! What does it look like now?\n\n-   Change the pattern on your brush for more variety!\n\n* * *\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
     "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
@@ -883,7 +883,7 @@
       "courseC_artist_loops6a_a": "To make a design like the one above, jump forward less than 75 pixels between each sticker."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/7/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/7/levels/11": {
     "short_instructions": "Play with the loops and angles.",
     "long_instructions": "Try changing the `repeat` loop to run a different number of times.  How far do you have to turn to go around in a full circle?\n\n-   Try changing how many times you spin\n    -   Try a 60 degree turn for 6 times around\n    -   Try a 20 degree turn for 18 times around\n\n* * *\n\nThe first image uses a pirate, a ninja, and a giraffe. They loop 18 times with a 20 degree turn.\n\n[expandable][0]\n[expandable][1]\n[expandable][2]\n[expandable][3]",
     "teacher_markdown": "This lesson contains a **mini-project** called _Sticker Design_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
@@ -891,12 +891,12 @@
       "courseC_artist_loops7a_a": "A circle has 360 degrees. Multiply the degrees in your turn times the number of times you repeat. Does it equal 360?\nCheck the suggested rotations to see that this works!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/7/puzzle/12": {
+  "https://studio.code.org/s/express-2019/lessons/7/levels/12": {
     "short_instructions": "Now try something on your own!",
     "long_instructions": "Now make something on your own.  What happens when you make two separate circles of different stickers?\n\n* * *\n\nNeed an idea? Try making a design like this one.\n\n[expandable][0]",
     "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right."
   },
-  "https://studio.code.org/s/express-2019/stage/8/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/8/levels/1": {
     "short_instructions": "Help the bee collect all of the nectar.",
     "long_instructions": "_\"This is going to **BEE** great!\"_\n\nHelp the bee collect all of the nectar.",
     "authored_hints": {
@@ -904,7 +904,7 @@
       "courseD_bee_nestedLoops1_c": "Remember to use the `get nectar` block once you are on a square with a flower."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/8/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/8/levels/2": {
     "short_instructions": "Help the bee collect all of the nectar.",
     "long_instructions": "\"_This is going to **BEE** great!_\"\n\nHelp the bee collect all of the nectar.",
     "authored_hints": {
@@ -913,7 +913,7 @@
       "courseD_bee_nestedLoops1_c": "Remember to use the `get nectar` block once you are on a square with a flower."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/8/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/8/levels/4": {
     "short_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "contained levels": [
@@ -950,7 +950,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/8/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/8/levels/5": {
     "short_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "authored_hints": {
@@ -959,7 +959,7 @@
       "courseD_bee_nestedLoops2_c": "Remember you can put more than one block inside of a loop."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/8/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/8/levels/6": {
     "short_instructions": "Get the zombie to the sunflower using the fewest number of blocks possible.",
     "long_instructions": "_\"Zombie hungry!\"_\n\nGet the zombie to the sunflower using the fewest number of blocks possible.",
     "authored_hints": {
@@ -968,7 +968,7 @@
       "courseD_maze_nestedLoops3_c": "Try writing code for one straight piece of path and a turn. Can you repeat this to get to the sunflower?"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/8/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/8/levels/7": {
     "short_instructions": "Get the zombie to the sunflower using the fewest blocks possible!  ",
     "long_instructions": "Get the zombie to the sunflower using the fewest blocks possible!  ",
     "authored_hints": {
@@ -977,14 +977,14 @@
       "courseD_maze_nestedLoops4_c": "Try using one `repeat` loop inside of another to cut down on the amount of code you need."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/8/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/8/levels/8": {
     "short_instructions": "Get the zombie to the sunflower using the fewest number of blocks possible!",
     "authored_hints": {
       "courseD_maze_nestedLoops5_a": "Look for a stair-step pattern in this maze to find where a nested loop can be used.",
       "courseD_maze_nestedLoops5_b": "Can't figure out where to put the loops? Try writing the code step-by-step and look for a pattern."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/8/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/8/levels/9": {
     "short_instructions": "Get the zombie to the sunflower using only the blocks available.",
     "long_instructions": "_\"Must eat sunflower!\"_\n\nGet the zombie to the sunflower using only the blocks available.",
     "authored_hints": {
@@ -993,7 +993,7 @@
       "courseD_maze_nestedLoops6_c": "It will take two sets of nested `repeat` loops to solve this puzzle."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/8/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/8/levels/10": {
     "short_instructions": "Challenge: Figure out how to get all of the nectar using only the blocks available.",
     "long_instructions": "**Challenge:** Figure out how to get all of the nectar using only the blocks available.",
     "authored_hints": {
@@ -1002,15 +1002,15 @@
       "courseD_bee_nestedLoops7_c": "Nest your blocks three deep, like this:\n\n-   repeat 4\n    -   repeat 3\n        -   repeat 12\n            -   get nectar\n        -   move forward\n    -   turn right"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/8/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/8/levels/11": {
     "short_instructions": "Collect all of the nectar from each flower and make honey at the honeycomb. ",
     "long_instructions": "Collect all of the nectar from each flower and make honey at the honeycomb. "
   },
-  "https://studio.code.org/s/express-2019/stage/8/puzzle/12": {
+  "https://studio.code.org/s/express-2019/lessons/8/levels/12": {
     "short_instructions": "Make all of the honey.",
     "long_instructions": "Make all of the honey."
   },
-  "https://studio.code.org/s/express-2019/stage/8/puzzle/13": {
+  "https://studio.code.org/s/express-2019/lessons/8/levels/13": {
     "short_instructions": "Make all of the honey.",
     "long_instructions": "Make all of the honey.",
     "contained levels": [
@@ -1047,7 +1047,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/8/extras?level_name=courseD_harvester_nested_loops_challenge1_2019": {
+  "https://studio.code.org/s/express-2019/lessons/8/extras?level_name=courseD_harvester_nested_loops_challenge1_2019": {
     "short_instructions": "\"I need some help on the farm! Help me harvest this corn using only the blocks in your toolbox.\"",
     "long_instructions": "_\"I need some help on the farm! Help me harvest this corn using only the blocks in your toolbox.\"_",
     "authored_hints": {
@@ -1056,7 +1056,7 @@
       "courseD_harvester_nested_loops_challenge1_c": "You will need to put a small loop inside of your main loop to solve this puzzle!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/8/extras?level_name=courseD_collector_nested_loops_challenge2_2019": {
+  "https://studio.code.org/s/express-2019/lessons/8/extras?level_name=courseD_collector_nested_loops_challenge2_2019": {
     "short_instructions": "Help the collector reach at least two piles of treasure using only the blocks in your toolbox. It is possible to collect all 4.",
     "long_instructions": "_\"Let's hunt for treasure - using loops!\"_ \n\nHelp the collector reach at least two piles of treasure using only the blocks in your toolbox. It is possible to collect all 4.",
     "authored_hints": {
@@ -1066,7 +1066,7 @@
       "courseD_bee_nested_loops_challenge2_d": "**Solution:**\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/9/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/9/levels/1": {
     "short_instructions": "Draw a hexagon with **50** pixel long sides.  ",
     "long_instructions": "[][0] _“Hi, I’m Elsa of Arendelle, help me draw a shape.”_\n\nDraw a hexagon with 50 pixel long sides.  \n\n* * *\n\nTo draw a hexagon, you will need to: \n\n-   move forward by **50** pixels\n-   turn right by **60** degrees\n-   repeat a total of **6** times",
     "authored_hints": {
@@ -1074,7 +1074,7 @@
       "courseD_artist_project1_b": "Remember that `move forward` draws a line, while `jump forward` does not."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/9/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/9/levels/2": {
     "short_instructions": "Now, turn right by **60** degrees, then draw a straight line **150** pixels long and jump back to the center of the play area.",
     "long_instructions": "[][0] _“Good job!”_\n\nAfter your hexagon, turn right by **60** degrees, then draw a line that is **150** pixels long.   \n\nFinish by putting Elsa back to the center of the play area, using the [blockly block][1] block.",
     "authored_hints": {
@@ -1082,26 +1082,26 @@
       "courseD_artist_project1_a": "Use the drop down menu on the `turn` blocks to choose the angle you need!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/9/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/9/levels/3": {
     "short_instructions": "Nest all of the code inside of another `repeat` loop and run it a total of **6** times. ",
     "long_instructions": "[][0] _“Let’s make a snowflake.”_\n\nTo turn this code into a snowflake, nest all of the code inside of another `repeat` loop and run it a total of **6** times.  You should only need to add one block."
   },
-  "https://studio.code.org/s/express-2019/stage/9/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/9/levels/4": {
     "short_instructions": "Add a tiny shape to the end of your line!",
     "long_instructions": "[][0] _\"Let's make our snowflakes special!\"_\n\n**Inspiration:** Where do you need to add code if you want to draw a tiny square at the tip of each long line?\n\n* * *\n\nYou can try whatever you want in this puzzle, but here is an idea:\n\nTry making a tiny square at the end of each line\n\n-   Each side should be 15 pixels long\n-   You should turn by 90 degrees\n-   Repeat those actions a total of 4 times"
   },
-  "https://studio.code.org/s/express-2019/stage/9/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/9/levels/5": {
     "short_instructions": "Play with the snowflakes!",
     "long_instructions": "[][0] _\"Try changing the shapes or the lengths of the lines to make this your own!\"_\n\n<br/>  \n\n**Inspiration:** You can change your drawing in any way you want, but here is an idea:\n\n-   Try switching the types of shape in the middle of the snowflake with the one at the end of each line!",
     "authored_hints": {
       "1": "If you are switching your shapes, don't forget that you will need to switch their angles, too!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/9/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/9/levels/6": {
     "short_instructions": "Try changing your long 150 pixel line into 6 short lines of **25** pixels, with little turns at the end.",
     "long_instructions": "[][0] _\"Let’s try something new. This time, skate in a zig-zag.\"_\n\n<br/>  \n\n**Inspiration:** Try changing your long 150 pixel line into 6 short lines of **25** pixels\n\n-   Turn by **45** degrees in alternate directions after each short line to get a zig-zag look\n-   Where do you need to put a new `repeat` block to make this happen?\n-   How many times do you have to repeat your pattern of 2 short lines to get 6 total?"
   },
-  "https://studio.code.org/s/express-2019/stage/10/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/10/levels/1": {
     "short_instructions": "Add a second `move forward` block to reach the sheep.",
     "long_instructions": "Add a second `move forward` block to reach the sheep.",
     "authored_hints": {
@@ -1113,7 +1113,7 @@
       "craft_drag_block_callout": "Drag a \"move forward\" block and snap it below the other block"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/10/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/10/levels/2": {
     "short_instructions": "Wood is a very important resource. Many things are made from it. Walk to the tree and use the “destroy block” command to chop it down.",
     "long_instructions": "Wood is a very important resource. Many things are made from it. Walk to the tree and use the `destroy` block command to chop it down.",
     "authored_hints": {
@@ -1121,7 +1121,7 @@
       "mc_2_b": "The `destroy block` command cuts down the tree in front of you."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/10/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/10/levels/3": {
     "short_instructions": "Sheep-shearing time! Use the “shear” command to gather wool from both sheep.",
     "long_instructions": "Sheep-shearing time! Use the `shear` command to gather wool from both sheep.",
     "authored_hints": {
@@ -1130,7 +1130,7 @@
       "mc_3_c": "Don't be afraid to make a mistake! Run the code to see what happens, even if you haven't solved the puzzle yet."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/10/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/10/levels/4": {
     "short_instructions": "We need to build a house before the sun goes down. Houses require a lot of wood. Cut down all 3 trees.",
     "authored_hints": {
       "mc_4_a": "You can chop down trees in any order. What path takes the smallest number of blocks?",
@@ -1140,7 +1140,7 @@
       "craft_callout_preplaced": "We've put some blocks here to get you started"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/10/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/10/levels/5": {
     "short_instructions": "Every house starts with a wall. Build the first part of your house by putting the \"place\" and \"move forward\" commands inside the repeat loop.",
     "long_instructions": "Every house starts with a wall. Build the first part of your house by putting the `place` and `move forward` commands inside the repeat loop.",
     "authored_hints": {
@@ -1152,7 +1152,7 @@
       "craft_inside_repeat": "Repeat actions by placing blocks in here"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/10/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/10/levels/6": {
     "short_instructions": "Build the rest of your house from any material you'd like. The \"repeat\" command will come in handy.",
     "long_instructions": "Build the rest of your house from any material you'd like. The `repeat` command will come in handy.",
     "authored_hints": {
@@ -1164,7 +1164,7 @@
       "craft_callout_preplaced_house": "This code will start building your house. Can you finish it?"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/10/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/10/levels/7": {
     "short_instructions": "It’s good to plan ahead. Plant crops on both sides of the water so you don’t get hungry later on.",
     "authored_hints": {
       "mc_7_a": "Use the `plant crop` block to plant a crop in the space where you are standing.",
@@ -1172,7 +1172,7 @@
       "mc_7_c": "You can put more than one block inside of a `repeat` loop."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/10/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/10/levels/8": {
     "short_instructions": "Running into a Creeper is a bad idea. Carefully move past the Creepers and reach the safety of your home.",
     "authored_hints": {
       "mc_8_a": "There are a few paths you can take. Which is the shortest?",
@@ -1180,7 +1180,7 @@
       "mc_8_c": "Your goal is to get into the doorway of the house at the top of the screen."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/10/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/10/levels/9": {
     "short_instructions": "You’ll find the most valuable resources underground, but it can get dark. Place at least 2 torches and mine at least 2 coal.",
     "authored_hints": {
       "mc_9_a": "Are you facing the right way? The `destroy block` mines the block in front of you.",
@@ -1188,7 +1188,7 @@
       "mc_9_c": "Use `place torch` to put a torch in the space where you are standing."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/10/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/10/levels/10": {
     "short_instructions": "Walking into molten lava is a bad idea. Place cobblestone to create a bridge, then mine at least two of the iron blocks.",
     "authored_hints": {
       "mc_10_a": "The iron blocks are the speckled spaces behind the torch! How are you going to get over there?",
@@ -1199,7 +1199,7 @@
       "craft_what_is_iron": "Mine this iron!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/10/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/10/levels/11": {
     "short_instructions": "Lava is hiding beneath some of these blocks, which you'll need to cover up before moving forward. An \"if\" command will come in handy here. Add a \"move forward\" command in the correct place to mine these blocks.",
     "long_instructions": "Lava is hiding beneath some of these blocks, which you'll need to cover up before moving forward. An `if` command will come in handy here. Add a `move forward` command in the correct place to mine these blocks.",
     "authored_hints": {
@@ -1210,7 +1210,7 @@
       "craft_callout_moveforward": "This code will check for lava, can you add a command to move forward?"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/10/puzzle/12": {
+  "https://studio.code.org/s/express-2019/lessons/10/levels/12": {
     "short_instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an \"If\" command to place cobblestone over any lava you uncover.",
     "long_instructions": "Now things are getting tricky. Mine 3 redstone, but don’t fall in the lava. Use an `if` command to place cobblestone over any lava you uncover.",
     "authored_hints": {
@@ -1219,18 +1219,18 @@
       "mc_12_c": "Use an `if` statement to check spaces for lava, then place cobblestones. "
     }
   },
-  "https://studio.code.org/s/express-2019/stage/10/puzzle/13": {
+  "https://studio.code.org/s/express-2019/lessons/10/levels/13": {
     "short_instructions": "Great job! You’ve gathered lots of resources and built a modest home. Now lay rail from the edge of the map to the door of your house.",
     "authored_hints": {
       "mc_13_a": "Use `place rail` to lay rail on the square you are standing in.",
       "mc_13_b": "Use `repeat` loops to make your code shorter."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/10/puzzle/14": {
+  "https://studio.code.org/s/express-2019/lessons/10/levels/14": {
     "short_instructions": "Congratulations! You've completed all our puzzles! Now mine, build, and create something unique by using everything you've learned so far.",
     "teacher_markdown": "This is a free-play level. This is not only a great place to point students who are progressing quickly, but a place for all students to really express their creativity. While students are not actually required to write any code in this level, doing so will allow them to apply what they have learned in a way that is more meaningful to them. Encourage your students to take their time here."
   },
-  "https://studio.code.org/s/express-2019/stage/11/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/11/levels/2": {
     "short_instructions": "Check to see if there's a flower under the cloud. If there's a flower, get nectar.",
     "long_instructions": "_\"This cloud is blocking my view!\"_\n\nCheck to see if there's a flower under the cloud. If there's a flower, get nectar.",
     "authored_hints": {
@@ -1270,7 +1270,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/11/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/11/levels/3": {
     "short_instructions": "Check underneath every cloud to see if it is hiding a flower before you get nectar.  ",
     "long_instructions": "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar _once_.  \n\nRemember: Not all clouds hide the same thing!",
     "authored_hints": {
@@ -1281,7 +1281,7 @@
       "4_5_Bee_Conditionals_2_1": "Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/11/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/11/levels/4": {
     "short_instructions": "Help the bee collect all of the nectar. \n\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower.",
     "long_instructions": "You can only collect nectar from flowers, but you can check any space to see if there is a flower. If there is a flower under any of these clouds, the bee will need to collect nectar _once_.",
     "authored_hints": {
@@ -1289,7 +1289,7 @@
       "courseD_bee_conditionals3_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/11/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/11/levels/5": {
     "short_instructions": "Get all of the nectar using as few blocks as possible.",
     "long_instructions": "In this puzzle, we know that every flower has exactly one nectar, but the flowers aren't spaced evenly.\n\nGet all of the nectar using as few blocks as possible.",
     "authored_hints": {
@@ -1297,14 +1297,14 @@
       "courseD_bee_conditionals4_b": "Use an `if` statement inside your loop to check each space for nectar. "
     }
   },
-  "https://studio.code.org/s/express-2019/stage/11/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/11/levels/6": {
     "short_instructions": "Collect all of the nectar using as few blocks as possible",
     "authored_hints": {
       "courseD_bee_conditionals5_a": "If you use an `if at flower` block, you can solve this using a nested loop. Write a program for the left and bottom paths, then repeat everything twice!",
       "courseD_bee_conditionals5_c": "To continue down the path, the bee will need to `move forward`. As it moves, the bee needs to check for a flower. `if there is a flower`, the bee should `get nectar`."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/11/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/11/levels/7": {
     "short_instructions": "Some of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud!",
     "long_instructions": "_\"Now I just want to make honey.\"_\n\nSome of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud! If there is a honeycomb, the bee will only need to make honey _once_.",
     "authored_hints": {
@@ -1313,7 +1313,7 @@
       "courseD_bee_conditionals6_c": "Is there a loop you can use to make your code simpler?"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/11/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/11/levels/9": {
     "short_instructions": "Use the `if/else` block to collect nectar at flowers and make honey at honeycomb.",
     "long_instructions": "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb. Remember: if there is a flower, the bee only needs to get nectar _once_. If there is a honeycomb, the bee only needs to make honey _once_.",
     "authored_hints": {
@@ -1321,7 +1321,7 @@
       "courseD_bee_conditionals7_b": "If there is not a flower under the cloud, there must be a honeycomb, so you don't need to think about the case of an empty space."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/11/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/11/levels/10": {
     "short_instructions": "Use the `if/else` block to collect nectar at flowers and make honey at honeycomb.",
     "long_instructions": "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb. Remember: there will only ever be _one_ honeycomb or _one_ flower behind each cloud.",
     "authored_hints": {
@@ -1361,7 +1361,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/11/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/11/levels/11": {
     "short_instructions": "Collect nectar if there is a flower.\nOtherwise, make honey (because there is a honeycomb).",
     "long_instructions": "**Challenge:** There will be either a flower or a honeycomb under each of those clouds!\n\nCollect nectar once if there is a flower.\nOtherwise, make honey once (because there is a honeycomb).",
     "authored_hints": {
@@ -1369,15 +1369,15 @@
       "courseD_bee_conditionals8_b": "This puzzle is tricky, because you can't check blank squares, nectar, _and_ honey with just one single conditional.\n\nOnly check for nectar and honey at the end of your path."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/11/puzzle/12": {
+  "https://studio.code.org/s/express-2019/lessons/11/levels/12": {
     "short_instructions": "Collect all of the nectar or make all the honey.",
     "long_instructions": "Collect all of the nectar or make all the honey. You can only collect nectar from flowers and make honey from honeycombs. Check any space to see if there is a flower or honeycomb. There will only ever be one flower or one honeycomb behind each cloud."
   },
-  "https://studio.code.org/s/express-2019/stage/11/puzzle/13": {
+  "https://studio.code.org/s/express-2019/lessons/11/levels/13": {
     "short_instructions": "Collect all of the nectar and make all of the honey.",
     "long_instructions": "Conditionals can be helpful, even when you know exactly what is in each spot!\n\nCollect all of the nectar and make all of the honey."
   },
-  "https://studio.code.org/s/express-2019/stage/11/extras?level_name=courseD_bee_conditionals_challenge1_2019": {
+  "https://studio.code.org/s/express-2019/lessons/11/extras?level_name=courseD_bee_conditionals_challenge1_2019": {
     "short_instructions": "Collect all the nectar and make all the honey.",
     "long_instructions": "Collect all of the nectar and make all of the honey. You can only collect nectar from flowers and make honey from honeycombs. Check every space to see if there is a flower or honeycomb.",
     "authored_hints": {
@@ -1385,7 +1385,7 @@
       "courseD_bee_conditionals_challenge1_b": "In this puzzle, each space could have a flower, a honey comb, or nothing.  That means you can repeat your `if/else` conditional at each square."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/11/extras?level_name=courseD_bee_conditionals_challenge2_2019": {
+  "https://studio.code.org/s/express-2019/lessons/11/extras?level_name=courseD_bee_conditionals_challenge2_2019": {
     "short_instructions": "Collect all of the nectar and make all the honey.",
     "long_instructions": "Collect all of the nectar and make all the honey. You can collect all of the nectar in one flower by using the `while nectar > 0` loop.",
     "authored_hints": {
@@ -1395,7 +1395,7 @@
       "courseD_bee_conditionals_challenge2_1": "Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb)."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/12/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/12/levels/1": {
     "short_instructions": "Move to the pile of dirt and use the `remove` block to remove it.",
     "long_instructions": "_\"Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting!\"_  \n\nMove to the pile of dirt and use the `remove` block to remove it.",
     "authored_hints": {
@@ -1403,14 +1403,14 @@
       "courseD_farmer_while1_b": "Use the `remove 1` block when you are standing on the pile of dirt to remove it."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/12/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/12/levels/2": {
     "short_instructions": "Move to the hole and fill it with six shovelfuls of dirt, using the `fill` block.",
     "authored_hints": {
       "courseD_farmer_while2_a": "You will only need to move once to get to the hole.",
       "courseD_farmer_while2_b": "You will need the `fill 1` block six times. Can you use a loop to make this simpler?"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/12/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/12/levels/3": {
     "short_instructions": "Use as few blocks as possible to solve this puzzle.",
     "long_instructions": "_\"Move to the pile of dirt and tell me how many shovelfuls to remove.\"_\n\nUse as few blocks as possible to solve this puzzle.",
     "authored_hints": {
@@ -1418,7 +1418,7 @@
       "courseD_farmer_while3_b": "You shouldn't need any `turn` blocks to get to the pile."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/12/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/12/levels/5": {
     "short_instructions": "Help the farmer remove this entire pile using a `while` loop.",
     "long_instructions": "_\"I don't know how much dirt is in this pile!\"_\n\nHelp the farmer remove this entire pile using a `while` loop.",
     "contained levels": [
@@ -1455,7 +1455,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/12/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/12/levels/6": {
     "short_instructions": "Help the farmer remove this entire pile using a `while` loop.",
     "long_instructions": "_\"I don't know how much dirt is in this pile!\"_\n\nHelp the farmer remove this entire pile using a `while` loop.",
     "authored_hints": {
@@ -1463,7 +1463,7 @@
       "courseD_farmer_conditionals4_b": "This looks very similar to an earlier puzzle, the only difference is which loop you need."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/12/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/12/levels/7": {
     "short_instructions": "Help me remove all of this dirt. ",
     "authored_hints": {
       "courseD_farmer_conditionals5a_a": "Try nesting a `while` loop inside of a `repeat` loop.",
@@ -1471,7 +1471,7 @@
       "courseD_farmer_conditionals5a_c": "Move forward 5 times. Each time you move forward, remove the pile of dirt by using the `while there is a pile` block."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/12/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/12/levels/8": {
     "short_instructions": "Use the `while` loop to easily fill all of the holes.",
     "long_instructions": "Look at all of those holes!  Each one needs a different amount of dirt.   \n\nYou can use the `while` loop to easily fill them all!",
     "authored_hints": {
@@ -1480,7 +1480,7 @@
       "courseD_farmer_conditionals6_c": "The stair step pattern uses the following blocks\n\n-   move forward\n-   fill hole\n-   turn right\n-   move forward\n-   fill hole\n-   turn left\n\nHow many times do you need to use this stair step pattern?\n\nMake sure you are using the `while there is a hole` to fill the hole."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/12/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/12/levels/9": {
     "short_instructions": "Fill in the hole at the end of each of these paths.",
     "authored_hints": {
       "courseD_farmer_conditionals8_a": "The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.",
@@ -1491,7 +1491,7 @@
       "courseD_farmer_while7_2018_PathAhead": "You'll need to use the `while path ahead` block in order to solve this puzzle."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/12/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/12/levels/10": {
     "short_instructions": "Challenge: Fill all of these holes using as few blocks as possible. ",
     "long_instructions": "**Challenge:** Fill all of these holes using as few blocks as possible. ",
     "authored_hints": {
@@ -1500,13 +1500,13 @@
       "courseD_farmer_conditionals8_c": "Notice that you need to repeat the `while path ahead`, `while there is a hole` code six times."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/12/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/12/levels/11": {
     "short_instructions": "Flatten all of these piles using as few blocks as possible. "
   },
-  "https://studio.code.org/s/express-2019/stage/12/puzzle/12": {
+  "https://studio.code.org/s/express-2019/lessons/12/levels/12": {
     "short_instructions": "Flatten all of these piles using as few blocks as possible. "
   },
-  "https://studio.code.org/s/express-2019/stage/12/puzzle/13": {
+  "https://studio.code.org/s/express-2019/lessons/12/levels/13": {
     "short_instructions": "Flatten all of these piles using as few blocks as possible. ",
     "contained levels": [
       {
@@ -1542,7 +1542,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/12/extras?level_name=courseD_farmer_while_challenge1_2019": {
+  "https://studio.code.org/s/express-2019/lessons/12/extras?level_name=courseD_farmer_while_challenge1_2019": {
     "short_instructions": "Fill all of the holes and remove all of the piles.",
     "long_instructions": "Fill all of the holes and remove all of the piles.",
     "authored_hints": {
@@ -1551,66 +1551,66 @@
       "courseD_farmer_conditionals8_c": "It is possible to solve this without using any `repeat` loops. To do this, you will need to use four `while` loops."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/13/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/13/levels/1": {
     "short_instructions": "Collect a boat from the chest.",
     "long_instructions": "You need supplies for the voyage ahead. Collect a **boat** [][0] from the **chest** [][1]."
   },
-  "https://studio.code.org/s/express-2019/stage/13/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/13/levels/2": {
     "short_instructions": "Head to the end of the dock.",
     "long_instructions": "Boats are much easier than swimming in open water! Head to the end of the dock to hop aboard."
   },
-  "https://studio.code.org/s/express-2019/stage/13/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/13/levels/3": {
     "short_instructions": "Head across the open seas to the cod.",
     "long_instructions": "Grab the oars and pilot your boat across the open seas to catch the **cod** [][0]."
   },
-  "https://studio.code.org/s/express-2019/stage/13/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/13/levels/4": {
     "short_instructions": "Use a loop to get to the dolphin.",
     "long_instructions": "Let's feed the cod to the **dolphin** [][0]. Use a repeat until block to get across the ocean faster."
   },
-  "https://studio.code.org/s/express-2019/stage/13/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/13/levels/5": {
     "short_instructions": "Explore the shipwreck to reach the chest.",
     "long_instructions": "There's a **nautilus shell** [][0] hidden somewhere! Explore the shipwreck to reach the **chest** [][1]."
   },
-  "https://studio.code.org/s/express-2019/stage/13/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/13/levels/6": {
     "short_instructions": "Navigate through the ice to reach the salmon.",
     "long_instructions": "Looks freezing out there! Catch a **salmon** [][0] on your way to the underwater ruins."
   },
-  "https://studio.code.org/s/express-2019/stage/13/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/13/levels/7": {
     "short_instructions": "Search these underwater ruins for a chest.",
     "long_instructions": "You found the underwater ruins. Search the sandstone for a **chest** [][0] containing **prismarine** [][1] treasure.",
     "authored_hints": {
       "aquatic7": "You can use the if path block to help you make the right turns."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/13/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/13/levels/8": {
     "long_instructions": "First icebergs, now lava? Get through this volcanic island and find the **tropical fish** [][0] in the coral reef."
   },
-  "https://studio.code.org/s/express-2019/stage/13/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/13/levels/9": {
     "short_instructions": "Use the coral as waypoints to reach the treasure.",
     "long_instructions": "You made it to the reef, now search for the **Heart of the Sea** [][0] ! Use the blue and red coral to reach the treasure **chest** [][1].",
     "authored_hints": {
       "voyage_aquatic_9a": "See the red and blue coral blocks? Use them as guideposts to turn right and left through the reef."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/13/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/13/levels/10": {
     "short_instructions": "Get to the entrance of this Ocean Monument.",
     "long_instructions": "There is a **squid** [][0] hiding somewhere in this Ocean Monument, can you find it?",
     "authored_hints": {
       "voyage_aquatic_10a": "See the **Sea Lanterns** [][0]? How can you use a conditional with them to get through the Ocean Monument?"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/13/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/13/levels/11": {
     "short_instructions": "Build a conduit with Prismarine inside the Ocean Monument.",
     "long_instructions": "Build a wall of **prismarine** [][0] around the black concrete. This will activate the **conduit** [][1] and complete your challenge!"
   },
-  "https://studio.code.org/s/express-2019/stage/14/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/14/levels/1": {
     "short_instructions": "Get the angry bird to the pig.",
     "authored_hints": {
       "courseD_maze_until1_a": "Are there any sequences you can loop to make your code shorter?",
       "courseD_maze_until1_b": "Try using a nested loop to solve this puzzle."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/14/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/14/levels/3": {
     "contained levels": [
       {
         "dsls": {
@@ -1645,7 +1645,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/14/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/14/levels/4": {
     "short_instructions": "Get the bird to the pig.",
     "authored_hints": {
       "courseD_maze_until3_a": "-   What does your code do?\n-   What is it supposed to do?\n-   What does that tell you?",
@@ -1654,7 +1654,7 @@
       "courseD_maze_until3_d": "Don't forget to use the `repeat until` block to make your code shorter."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/14/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/14/levels/5": {
     "short_instructions": "Can you get the zombie to the sunflower using only the blocks that are available?",
     "long_instructions": "_\"Dear person. Me zombie. Me hungry. Must... get... to sunflower...\"_\n\nCan you get the zombie to the sunflower using only the blocks that are available?",
     "authored_hints": {
@@ -1663,21 +1663,21 @@
       "courseD_maze_until4_c": "Don't forget to use the `repeat until` block to make your code shorter."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/14/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/14/levels/6": {
     "short_instructions": "Use the `if` block to help the zombie decide when to turn, then get the zombie to the sunflower.",
     "long_instructions": "Use the `if` block to help the zombie decide when to turn, then get the zombie to the sunflower.",
     "authored_hints": {
       "courseD_maze_until5_b": "To use only one `move forward`, put it inside the `repeat until sunflower` block."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/14/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/14/levels/7": {
     "short_instructions": "Help the zombie get to the sunflower.",
     "long_instructions": "Help the zombie get to the sunflower.",
     "authored_hints": {
       "courseD_maze_until6_b": "To use only one `move forward`, put it inside the `repeat until sunflower` block."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/14/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/14/levels/8": {
     "short_instructions": "Help the zombie get to the sunflower.",
     "long_instructions": "Help the zombie get to the sunflower.",
     "authored_hints": {
@@ -1685,18 +1685,18 @@
       "courseD_maze_until7_b": "Although there are more turns here than the last puzzle, your code can be almost identical because of the `repeat until` block!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/14/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/14/levels/9": {
     "short_instructions": "**Challenge:** Avoid the chompers and help the zombie get to the sunflower.",
     "long_instructions": "**Challenge:** Avoid the chompers and help the zombie get to the sunflower.",
     "authored_hints": {
       "courseD_maze_until8_c": "Remember to use the `repeat until` block to get you to the sunflower!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/14/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/14/levels/10": {
     "short_instructions": "Help the zombie get to the sunflower.",
     "long_instructions": "Help the zombie get to the sunflower."
   },
-  "https://studio.code.org/s/express-2019/stage/14/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/14/levels/11": {
     "short_instructions": "Help the zombie get to the sunflower.",
     "long_instructions": "Help the zombie get to the sunflower.",
     "contained levels": [
@@ -1733,7 +1733,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/15/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/15/levels/2": {
     "short_instructions": "Use conditionals to make sure that you pick corn only when it's there.",
     "long_instructions": "_\"Corn you help me harvest today?\"_\n\nHelp the harvester check her row of corn to see if anything is ready to pick.  Use conditionals to look at each sprout.  Every stalk will have either **0 or 1** pieces of corn ready to harvest.",
     "authored_hints": {
@@ -1741,7 +1741,7 @@
       "courseD_farmer_condLoops1_b": "Make sure to use an `if at corn` block or you might try to pick something that's not there!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/15/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/15/levels/3": {
     "short_instructions": "Help the harvester collect both corn and lettuce from the field.",
     "long_instructions": "_\"Lettuce collect both crops from this row!\"_\n\nThis garden is all mixed up, it has both **corn and lettuce**!  \n\nHelp the harvester pick the items that are ready for harvesting.  Each plant will have either **one** corn or **one** lettuce.",
     "authored_hints": {
@@ -1750,7 +1750,7 @@
       "courseD_farmer_condLoops2_c": "Your `if` statement could look a lot like this:\n\n-   if at corn\n    -   pick corn\n-   else\n    -   if at lettuce\n        -   pick lettuce\n\nIf there is nothing there, you won't pick anything!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/15/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/15/levels/4": {
     "short_instructions": "_\"Corn, lettuce, AND pumpkins! Help me harvest them all.\"_",
     "long_instructions": "_\"Corn, lettuce, AND pumpkins! Help me harvest them all.\"_\n\nEach plant will have either one piece of corn, one head of lettuce, or one pumpkin.",
     "authored_hints": {
@@ -1758,7 +1758,7 @@
       "courseD_farmer_condLoops3_b": "For this puzzle, you should have two `if/else` statements and one plain `if` statement."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/15/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/15/levels/5": {
     "short_instructions": "Help the harvester pick all of the lettuce in each cluster before moving on to the next bunch.",
     "long_instructions": "_\"Gosh! Now the lettuce is growing in clusters!\"_  \n\nThe harvester wants to pick everything from her lettuce garden. Each plant will now have more than one head of lettuce on it, so the harvester will need to keep picking while there is still lettuce growing.  \n\n##### (Remember: This garden only has lettuce!)",
     "authored_hints": {
@@ -1767,7 +1767,7 @@
       "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "You can use either a `while path ahead` loop or a `repeat` loop to go through all of the crops."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/15/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/15/levels/6": {
     "short_instructions": "Collect all of the corn and lettuce, then grab the pumpkin at the end.",
     "long_instructions": "_\"What a bountiful crop!\"_\n\nThis field has clusters of corn and lettuce growing together -- with one pumpkin at the end.  Can you harvest everything?",
     "authored_hints": {
@@ -1775,7 +1775,7 @@
       "courseD_farmer_condLoops5_b": "There could be more than one corn or lettuce plant in each spot. Use a `while` loop to gather all of them!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/15/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/15/levels/7": {
     "short_instructions": "Can you figure out how to pick the pumpkin?  Make sure to collect all of the corn along the way!",
     "long_instructions": "_\"Let's take this one step further!\"_\n\nCan you figure out how to pick the pumpkin?  Make sure to collect all of the corn along the way!",
     "authored_hints": {
@@ -1783,7 +1783,7 @@
       "courseD_farmer_condLoops6_b": "You only need to check for corn during most of the harvest.  Just pick one pumpkin at the very end of your program."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/15/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/15/levels/8": {
     "short_instructions": "Challenge: Collect all of the corn and lettuce, then pick the pumpkin.",
     "long_instructions": "**Challenge:** Collect all of the corn and lettuce, then pick the pumpkin.",
     "authored_hints": {
@@ -1791,15 +1791,15 @@
       "courseD_farmer_condLoops7_b": "Try using `while path ahead` to keep the harvester moving the right number of steps."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/15/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/15/levels/9": {
     "short_instructions": "Collect all of the corn and lettuce, then pick the pumpkin.",
     "long_instructions": "Collect all of the corn and lettuce, then pick the pumpkin."
   },
-  "https://studio.code.org/s/express-2019/stage/15/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/15/levels/10": {
     "short_instructions": "Collect all of the corn and lettuce, then pick the pumpkin.",
     "long_instructions": "Collect all of the corn and lettuce, then pick the pumpkin."
   },
-  "https://studio.code.org/s/express-2019/stage/15/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/15/levels/11": {
     "short_instructions": "Collect all of the corn and lettuce, then pick the pumpkin.",
     "long_instructions": "Collect all of the corn and lettuce, then pick the pumpkin.",
     "contained levels": [
@@ -1837,7 +1837,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/15/extras?level_name=courseD_farmer_condLoops_challenge1_2019": {
+  "https://studio.code.org/s/express-2019/lessons/15/extras?level_name=courseD_farmer_condLoops_challenge1_2019": {
     "short_instructions": "Collect everything to complete the level. Each hidden crop has only one corn or lettuce.",
     "long_instructions": "The pumpkins mark the place where you should `turn right`. Otherwise keep going forward, but remember to collect all of the lettuce or corn along the way. \n\n**Each hidden crop has only one corn or lettuce.**",
     "authored_hints": {
@@ -1845,14 +1845,14 @@
       "courseD_farmer_condLoops_challenge1_b": "Normally you would just `pick pumpkin` if you are at a pumpkin. What else do you need to do if you're at a pumpkin?"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/15/extras?level_name=courseD_farmer_condLoops_challenge2_2019": {
+  "https://studio.code.org/s/express-2019/lessons/15/extras?level_name=courseD_farmer_condLoops_challenge2_2019": {
     "short_instructions": "Collect everything to complete the level.",
     "long_instructions": "_\"It's a very varied vegetable maze!\"_ \n\nTurn right at pumpkins, turn left at lettuce. Collect everything to complete the level.",
     "authored_hints": {
       "courseD_farmer_condLoops_challenge2_a": "The amount of each vegetable in each space can change. A `while` loop can help!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/16/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/16/levels/1": {
     "display_name": "Homestead",
     "short_instructions": "Write code to get the Agent to the pressure plate, then press \"Run\" and use the arrow keys to move the player out of the house to collect the chest. ",
     "long_instructions": "The door is locked, but the Agent is here to help!\n\nSnap a `move forward` block to the bottom of the `when run` block in the workspace to get the Agent to the pressure plate [PressurePlate_Up], then press \"Run\" and use the arrow keys to move out of the house to collect the **chest** [chest].",
@@ -1862,7 +1862,7 @@
       "MC_HOC_2017_01_RETRY_c": "Once the Agent has run all of its code, you can move the player with the arrow keys!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/16/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/16/levels/2": {
     "display_name": "The Farm",
     "short_instructions": "Move the Agent to the pressure plate so that {currentPlayerName} can get to the map. ",
     "long_instructions": "{currentPlayerName} is headed on an adventure! To help, get the **map** [map_empty] behind the locked door on the right. \n\nSnap the code into the workspace to move the Agent to the pressure plate [PressurePlate_Up] so that {currentPlayerName} can get through. ",
@@ -1873,7 +1873,7 @@
       "MC_HOC_2017_02_Cole_d": "Make sure the Agent is following the path outlined on the map!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/16/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/16/levels/3": {
     "display_name": "The Woods",
     "short_instructions": "Code the Agent to open the gate. ",
     "long_instructions": "{currentPlayerName} continues on the adventure and needs the **compass** [compass] to prepare for the trip.  \n\nCode the Agent to open the gate. ",
@@ -1885,7 +1885,7 @@
       "MC_HOC_2017_03_Cole_1": "This is a `repeat` loop!  Click it into the workspace and add code that you want to run over and over."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/16/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/16/levels/4": {
     "display_name": "The Swamp",
     "short_instructions": "Get the Agent to the pressure plate.",
     "long_instructions": "The Agent can move across water!  \n\nUse a `repeat` loop to solve this puzzle and help {currentPlayerName} get to the **bucket** [bucket_empty] behind the door. ",
@@ -1898,7 +1898,7 @@
       "MC_HOC_2017_04_Cole_a": "The Agent can hover over water, but the player can't!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/16/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/16/levels/5": {
     "display_name": "The Desert",
     "short_instructions": "Get the Agent to the pressure plate.",
     "long_instructions": "You made it across! \n\nNow, get {currentPlayerName} safely through the maze to collect the **axe** [diamond_axe]",
@@ -1907,7 +1907,7 @@
       "MC_HOC_2017_04POINT5_RYAN_a": "The Agent only needs to get to the first pressure plate to let Alex or Steve through to the axe."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/16/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/16/levels/6": {
     "display_name": "The River",
     "short_instructions": "Get the player to the shovel.",
     "long_instructions": "Oh no, the bridge is out! \n\nCode the Agent to rebuild the bridge using the [blockly block][0] block so that {currentPlayerName} can get to the **shovel** [diamond_shovel].",
@@ -1916,7 +1916,7 @@
       "MC_HOC_2017_05_Cole_b": "Get the Agent across the river, building a bridge as you go."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/16/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/16/levels/7": {
     "display_name": "High Tide",
     "short_instructions": "Fix this code to get the Agent to build a bridge across this river.",
     "long_instructions": "Another river, but this one is much wider! \n\nFix this code to help the Agent build a bridge so that {currentPlayerName} can get to the **pickaxe** [diamond_pickaxe]. ",
@@ -1928,7 +1928,7 @@
       "MC_HOC_2017_06_Cole_1": "You cannot throw these blocks away, but you can edit them!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/16/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/16/levels/8": {
     "short_instructions": "Use the `build bridge` function twice to make a path to the Redstone Torch.",
     "long_instructions": "A **function** named `build bridge` is in your workspace.  All of the code you need to cross the river is built right in! \n\nSnap the small, green [blockly block][0] function block into your workspace twice to fix the path and get {currentPlayerName} to the Redstone Torch [redstone_torch].",
     "authored_hints": {
@@ -1944,7 +1944,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/16/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/16/levels/9": {
     "display_name": "Snowy Pass",
     "short_instructions": "Destroy the ice and get {currentPlayerName} to the Minecart.",
     "long_instructions": "There's ice in the way!  \n\nThe `clear path` function can help you destroy the ice and get {currentPlayerName} to the Minecart [minecart_normal]! ",
@@ -1959,7 +1959,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/16/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/16/levels/10": {
     "display_name": "The Cave",
     "short_instructions": "Use the functions to finish this minecart track.",
     "long_instructions": "Can you spot the difference between the two functions in your workspace? \n\nUse these functions with other code from the toolbox to clear a path for the Minecart, then collect the **Flint and Steel** [flint_and_steel]. \n ",
@@ -1976,7 +1976,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/16/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/16/levels/11": {
     "display_name": "The Nether Fortress",
     "short_instructions": "Use the functions to find a way across the lava.",
     "long_instructions": "Look at the functions below.  How can you use them to avoid the Ghasts and help {currentPlayerName} make it safely to the **Enchanted Book** [book_enchanted]?  ",
@@ -1997,7 +1997,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/16/puzzle/12": {
+  "https://studio.code.org/s/express-2019/lessons/16/levels/12": {
     "display_name": "Freeplay",
     "short_instructions": "**Freeplay:**  Time to explore on your own!",
     "long_instructions": "**Freeplay:** Now it's up to you! Use the Agent's code to help you explore this world.",
@@ -2013,7 +2013,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/17/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/17/levels/2": {
     "short_instructions": "Help the harvester get to the pumpkin and pick it.",
     "long_instructions": "_\"Have we met before? I'm the harvester!\"_\n\nHelp the harvester get to the pumpkin and pick it.",
     "authored_hints": {
@@ -2024,7 +2024,7 @@
       "courseE_farmer_functions1_2": "The toolbox is organized a little differently this time! Click on the different categories to see which blocks you have."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/17/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/17/levels/3": {
     "short_instructions": "Help the harvester pick all of the corn, then the pumpkin.",
     "long_instructions": "_\"Oooh, veggies are cropping up everywhere!\"_\n\nNow help the harvester pick all of the corn on the way to the pumpkin at the end.\n\n* * *\n\n##### Note: Every square on the way to the pumpkin either has **1** corn or nothing at all.  Use the provided `check for corn` function to make sure you get everything.",
     "authored_hints": {
@@ -2040,7 +2040,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/17/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/17/levels/4": {
     "short_instructions": "Help the harvester pick the corn and pumpkins.",
     "long_instructions": "Use the function to help the harvester pick the corn and pumpkins.\n\n* * *\n\n##### Each sprout will either grow _one_ corn or nothing.",
     "authored_hints": {
@@ -2057,7 +2057,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/17/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/17/levels/5": {
     "short_instructions": "Help the farmer pick the corn and pumpkins using the `corn and pumpkin` function.",
     "long_instructions": "_\"I feel so functional!\"_\n\nNow there are multiple pumpkins in each patch!  Look carefully at the function definitions below to figure out how to use each one.\n\n* * *\n\n##### Each sprout will either grow _one_ corn or nothing.",
     "authored_hints": {
@@ -2072,7 +2072,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/17/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/17/levels/6": {
     "short_instructions": "Try on a longer path.",
     "long_instructions": "Great!  Try your functions out on a longer path.",
     "function_definitions": {
@@ -2084,7 +2084,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/17/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/17/levels/7": {
     "short_instructions": "This function calls other functions!",
     "long_instructions": "Did you notice that there was a lot of repeated code in that last puzzle?  We can save space by calling that code `pick along path` and using a new function to call the other functions!\n\nUse `pick along path` to solve this puzzle again using fewer blocks.",
     "authored_hints": {
@@ -2103,10 +2103,10 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/17/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/17/levels/8": {
     "short_instructions": "We don't have a video for creating functions, yet. This is a placeholder."
   },
-  "https://studio.code.org/s/express-2019/stage/17/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/17/levels/9": {
     "short_instructions": "Create a function that sends the harvester down a square path to pick a single head of lettuce from the middle of each row.",
     "long_instructions": "_\"Functions **lettuce** do more with less work!\"_\n\nCreate a function that sends the harvester down a square path to pick a single head of lettuce from the middle of each row.",
     "authored_hints": {
@@ -2119,7 +2119,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/17/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/17/levels/10": {
     "short_instructions": "Is your function still helpful?",
     "long_instructions": "Try writing your function again. Is it still helpful?  How can you make it work for this puzzle?",
     "authored_hints": {
@@ -2132,7 +2132,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/17/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/17/levels/11": {
     "short_instructions": "Is your function still helpful?",
     "long_instructions": "**This puzzle is a-MAZE-ing!**\n\nIs your function still helpful for this puzzle?",
     "authored_hints": {
@@ -2146,7 +2146,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/17/puzzle/12": {
+  "https://studio.code.org/s/express-2019/lessons/17/levels/12": {
     "short_instructions": "Use everything that you've learned so far to solve this puzzle!",
     "long_instructions": "**Challenge:** Use everything that you've learned so far to solve this puzzle in 19 blocks or less!",
     "function_definitions": {
@@ -2164,7 +2164,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/17/puzzle/13": {
+  "https://studio.code.org/s/express-2019/lessons/17/levels/13": {
     "short_instructions": "Solve this puzzle in 23 blocks or less.",
     "long_instructions": "Solve this puzzle in 23 blocks or less.\n\n* * *\n\n##### Each sprout will either grow _one_ corn or nothing. To find the best solution, you will need to edit the functions directly.",
     "callouts": {
@@ -2185,7 +2185,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/17/puzzle/14": {
+  "https://studio.code.org/s/express-2019/lessons/17/levels/14": {
     "long_instructions": "Figure out which function to use and which one to delete, then solve this puzzle!",
     "function_definitions": {
       "pick along path": {
@@ -2238,7 +2238,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/18/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/18/levels/1": {
     "long_instructions": "Here is a puzzle that uses a function that we have defined. ",
     "function_definitions": {
       "draw a square": {
@@ -2282,7 +2282,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/18/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/18/levels/2": {
     "short_instructions": "Use the `draw a square` function to create the glasses. ",
     "long_instructions": "Here is a function called `draw a square`. Use it to complete this drawing. \n\n* * *\n\nThe squares are 75 pixels apart.",
     "authored_hints": {
@@ -2302,7 +2302,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/18/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/18/levels/3": {
     "short_instructions": "Build a function that will create this star.",
     "long_instructions": "Build a function that will create this star.\n\n* * *\n\n-   Each arm of the star is 25 pixels long\n-   You need to turn 45 degrees to get 8 arms\n-   It is okay to go forward and backward over the same arm",
     "function_definitions": {
@@ -2311,7 +2311,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/18/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/18/levels/4": {
     "short_instructions": "Draw only those three stars to finish this puzzle.",
     "long_instructions": "When is drawing three stars harder than drawing four? When you also have to jump over the moon!\n\nDraw only those three stars to finish this puzzle.\n\n* * *\n\n-   The jump between the first and second star is **200** pixels\n-   The jump between the second and third is **100** pixels",
     "authored_hints": {
@@ -2325,7 +2325,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/18/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/18/levels/5": {
     "short_instructions": "Try solving this puzzle by creating `draw a window` and calling it five times. Watch out for the door!",
     "long_instructions": "Drawing all of these windows individually would be a pain!  \n\nTry solving this puzzle by creating `draw a window` and calling it five times. Watch out for the door!\n\n* * *\n\n-   Each window is made up of four **25** pixel squares.\n-   The top windows are a **100** pixel jump away from each other.  \n-   The bottom windows are a **150** pixel jump below the top set.",
     "authored_hints": {
@@ -2338,7 +2338,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/18/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/18/levels/6": {
     "short_instructions": "Create a function for a single square.",
     "long_instructions": "_\"Functions easy!\"_\n\nWe are going to build up to something fancy!  Start by creating a function for this square.",
     "callouts": {
@@ -2353,7 +2353,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/18/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/18/levels/7": {
     "short_instructions": "Call the `draw a square` function from inside your `draw a line of squares` function to make this even easier!",
     "long_instructions": "_\"Zombie get dizzy.\"_\n\nCall the `draw a square` function from inside your `draw a line of squares` function to make this even easier!\n\n* * *\n\n-   The squares are _50_ pixels apart.",
     "authored_hints": {
@@ -2373,7 +2373,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/18/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/18/levels/8": {
     "short_instructions": "Add one more function that creates this stack of staggered squares.",
     "long_instructions": "Add one more function that creates this stack of staggered squares using the `draw a line of squares` function.",
     "authored_hints": {
@@ -2396,7 +2396,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/18/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/18/levels/9": {
     "short_instructions": "Use everything you've learned so far to recreate this design.",
     "authored_hints": {
       "courseD_artist_functions8_f": "You only need one `move forward` block, but you will need quite a few `jump forward` and/or `jump backward` blocks!",
@@ -2421,7 +2421,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/18/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/18/levels/10": {
     "short_instructions": "**Challenge:** Create this image using only the blocks provided.",
     "long_instructions": "**Challenge:** Create this image using the limited blocks provided. \n\n-   Each triangle has sides of **50 pixels**  \n-   To draw a diamond, you will need to alternate between turning **60 degrees and 120 degrees**.",
     "authored_hints": {
@@ -2443,7 +2443,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/18/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/18/levels/11": {
     "short_instructions": "This time, use lines of 8 hexagons with 25 pixel sides.",
     "long_instructions": "This time, use lines of 8 hexagons with 25 pixel sides.\n\n-   To make each hexagon, repeat the side 6 times, turning 60 degrees.\n-   Jump 25 pixels between each hexagon.\n-   To draw a diamond, you will need to alternate between turning 60 degrees and 120 degrees.",
     "authored_hints": {
@@ -2463,7 +2463,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/18/puzzle/12": {
+  "https://studio.code.org/s/express-2019/lessons/18/levels/12": {
     "function_definitions": {
       "draw line of polygons": {
         "name": "draw line of polygons"
@@ -2509,7 +2509,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/18/puzzle/13": {
+  "https://studio.code.org/s/express-2019/lessons/18/levels/13": {
     "short_instructions": "**Inspiration:** Use what you've learned to make whatever you want!",
     "long_instructions": "**Inspiration:** Use what you've learned to make whatever you want!  \n\nCan you make something like this pinwheel?",
     "function_definitions": {
@@ -2530,7 +2530,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/18/extras?level_name=courseE_artist_functions_challenge1_2019": {
+  "https://studio.code.org/s/express-2019/lessons/18/extras?level_name=courseE_artist_functions_challenge1_2019": {
     "short_instructions": "Once you define a function, you can call it over and over again - whenever and wherever you want! Try this code to see how it works, then change it to make your own impressive design!",
     "long_instructions": "Once you define a function, you can call it over and over again - whenever and wherever you want! Try this code to see how it works, then change it to make your own impressive design!",
     "authored_hints": {
@@ -2550,7 +2550,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/18/extras?level_name=courseE_artist_functions_challenge2_2019": {
+  "https://studio.code.org/s/express-2019/lessons/18/extras?level_name=courseE_artist_functions_challenge2_2019": {
     "short_instructions": "Try this code to see how it works, then make the program your own!",
     "long_instructions": "Not only can you jump to some pre-set locations, like the corners of the canvas, you can also use a `jump to` command to get to absolutely any spot you like! Try this code to see how it works, then make the program your own!\n\n[blockly block][0]",
     "authored_hints": {
@@ -2569,7 +2569,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/19/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/19/levels/1": {
     "long_instructions": "Let's draw an equilateral triangle. \n\nIt has to be exactly 50 pixels long on each side.",
     "authored_hints": {
       "grade5_artist_variables_triangles1_a": "To make an internal angle of 60 degrees in this triangle, remember to turn the artist 120 degrees.",
@@ -2580,7 +2580,7 @@
       "grade5_artist_variables_triangles1_1": "Notice that blocks now have a new way to enter numbers. These `math` blocks can be pulled out and moved around!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/19/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/19/levels/2": {
     "short_instructions": "Now draw three of those triangles right next to each other.   ",
     "long_instructions": "Now use another loop to draw three of those triangles right next to each other.   \n\nYou can nest the code from your last puzzle inside.",
     "authored_hints": {
@@ -2588,13 +2588,13 @@
       "courseF_artist_variables2_b": "Your new loop will contain the loop for your triangle, then a `move forward` command."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/19/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/19/levels/3": {
     "dsls": {
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **In this lesson...**\n\n### *Variables* are placeholders for information that can change.  Having a placeholder makes it possible to write a program, even when you won't know all of your values until later!\n\n\n---\n\n## **Blocks to Know**\n\n![](https://images.code.org/2e5804ee6783390a6b86b7b2d7153594-image-1524772405748.png)\n\n\n"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/19/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/19/levels/5": {
     "contained levels": [
       {
         "dsls": {
@@ -2629,7 +2629,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/19/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/19/levels/6": {
     "short_instructions": "Move the length of 50 into a variable so we can use it in the next few puzzles.",
     "long_instructions": "Before things get tricky, can you move the length of 50 into a variable so we can use it in the next few puzzles?  \n\n[expandable][0]",
     "authored_hints": {
@@ -2640,7 +2640,7 @@
       "courseF_artist_variables3_a": "Use this to set the value of the variable `length`"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/19/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/19/levels/7": {
     "short_instructions": "Now, use the `length` variable to have the artist jump forward and down by `length` pixels between triangles.",
     "long_instructions": "Now, use the `length` variable to have the artist jump forward and down by `length` pixels between triangles.",
     "authored_hints": {
@@ -2649,7 +2649,7 @@
       "courseF_artist_variables4_b": "[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/19/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/19/levels/8": {
     "short_instructions": "Add another set of loops at the end of your code to add three more triangles. This time, move forward and up!",
     "authored_hints": {
       "courseF_artist_variables5_a": "The second half of your code should look almost the same as the first half, except you will be turning _left_, jumping, then turning _right_.",
@@ -2658,7 +2658,7 @@
       "courseF_artist_variables5_d": "This is the pattern your artist will follow:\n\n[][0]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/19/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/19/levels/9": {
     "short_instructions": "Now make the triangles to be 60 pixels wide, with 60 pixel jumps.  ",
     "long_instructions": "**OOPS!**  \n\nWe actually need the triangles to be 60 pixels wide, with 60 pixel jumps.  \n\nAren't you glad you're using a variable?",
     "authored_hints": {
@@ -2669,7 +2669,7 @@
       "courseF_artist_variables6_1": "Variables can be helpful when you have to change a lot of copies of the same number."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/19/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/19/levels/10": {
     "short_instructions": "Build this design where the squares have 80 pixel sides and the artist jumps 80 pixels over and down between each one.",
     "long_instructions": "Use what you've learned to build this design where the squares have 80 pixel sides and the artist jumps 80 pixels over and down between each one.",
     "authored_hints": {
@@ -2682,12 +2682,12 @@
       "courseF_artist_variables6a_1": "Variables can be helpful when you have to change a lot of copies of the same number."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/19/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/19/levels/11": {
     "dsls": {
       "markdown": "<h2>More on Variables</h2>\n\n\n<img src=\"https://images.code.org/082c757f5c939bd353eacda9589ca54f-image-1477349401281.35.08.png\" style=\"padding-left: 30px; width:300px; float:right;\"/>\n<h3>You've just learned one great way to use a variable...as a constant!  \nWhen you use a variable as a constant, you are setting a value one time, then using that *same* value multiple times in your program without changing it after you click \"Run\".  </h3>\n<br/><hr/>\n<h3>In the next part of the series, you will write code with variables that *do* change inside the program.</h3>\n\n"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/20/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/20/levels/1": {
     "short_instructions": "Finish this code so that the bee can collect all of the honey and nectar.",
     "callouts": {
       "courseF_bee_functions_1_2018_1": "You can find your variables under here!"
@@ -2698,7 +2698,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/20/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/20/levels/2": {
     "short_instructions": "Edit your solution in one place so that the bee can collect all of the honey and nectar.",
     "function_definitions": {
       "collect row": {
@@ -2706,7 +2706,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/20/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/20/levels/3": {
     "short_instructions": "Subtract one from the variable each time through the loop if you want to use the same function to solve this level.",
     "long_instructions": "_\"Such an a-MAZE-ing garden!\"_\n\nIn this puzzle, each patch needs the variable to be one less than the patch before. Subtract one from the variable each time through the loop if you want to use the same function to solve this level.",
     "authored_hints": {
@@ -2718,7 +2718,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/20/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/20/levels/4": {
     "short_instructions": "Edit the code to work for this puzzle.",
     "long_instructions": "\"Let's keep going!\"\n\nEdit the code to make it work for this puzzle.",
     "authored_hints": {
@@ -2730,7 +2730,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/20/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/20/levels/5": {
     "short_instructions": "Create your own code to solve this puzzle",
     "function_definitions": {
       "collect row": {
@@ -2738,7 +2738,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/20/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/20/levels/6": {
     "short_instructions": "**Challenge** Now give this puzzle a try!",
     "function_definitions": {
       "collect stairs": {
@@ -2746,7 +2746,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/20/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/20/levels/7": {
     "short_instructions": "This puzzle is a little different.  What do you need to do to solve it?",
     "function_definitions": {
       "collect": {
@@ -2754,7 +2754,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/20/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/20/levels/8": {
     "short_instructions": "How many nectar will the bee collect from this flower?",
     "function_definitions": {
       "move and increment": {
@@ -2799,7 +2799,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/21/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/21/levels/1": {
     "short_instructions": "Draw a triangle with 150 pixels sides. ",
     "long_instructions": "Let's start this section by drawing a triangle with 150 pixel sides. \n\nBe sure to use the `length` variable and a repeat loop.",
     "authored_hints": {
@@ -2808,7 +2808,7 @@
       "courseF_artist_variables7_c": "You will want to turn left 120 degrees to make the corners of the triangle."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/21/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/21/levels/2": {
     "short_instructions": "Rebuild the triangle code from the last puzzle, but this time use the `set length to` block to reset the `length` variable to `length`+10 at the end of each loop iteration.",
     "long_instructions": "Rebuild the triangle code from the last puzzle, but this time use the `set length to` block to reset the `length` variable to `length`+10 at the end of each loop iteration.\n\n[blockly block][0]\n\nThe length of the first side of the triangle is 150 pixels.",
     "authored_hints": {
@@ -2817,7 +2817,7 @@
       "courseF_artist_variables8_a": "Try putting the set of \n\n[blockly block][0]\n\nblocks inside your loop at the end."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/21/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/21/levels/3": {
     "short_instructions": "See what happens when you repeat the code from the last puzzle 30 times instead of only 3!  Feel free to make your lines any color or pattern for some extra zest.",
     "long_instructions": "Time to make some art!  \n\nSee what happens when you repeat the code from the last puzzle **30** times instead of only 3!\n\nFeel free to make your lines any color or pattern for some extra zest.",
     "authored_hints": {
@@ -2825,7 +2825,7 @@
       "courseF_artist_variables9_b": "Make sure the blocks that increment `length` are within your loop so the lines keep getting longer."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/21/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/21/levels/4": {
     "short_instructions": "Here's your code from the last puzzle.  Try editing the variable in other ways.  ",
     "long_instructions": "Here's your code from the last puzzle.  Try editing the variable in other ways.  \n\n-   What happens if you start out with `length` less than 150? \n-   What if you multiply your variable by 1.25 each time through?\n-   What will your code do if you turn 119 degrees?",
     "authored_hints": {
@@ -2833,7 +2833,7 @@
       "courseF_artist_variables10_b": "You can try multiple things, and run your code multiple times."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/21/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/21/levels/5": {
     "short_instructions": "**Freeplay:** Take what you've learned and make your own drawing. ",
     "long_instructions": "**Freeplay:** Take what you've learned and make your own drawing. \n\nHow can you use variables with squares, pentagons, or hexagons?",
     "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right.",
@@ -2841,13 +2841,13 @@
       "courseF_artist_variablesFP_a": "Try one of these three drawings.\n[][0]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/21/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/21/levels/6": {
     "dsls": {
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"variables\"!**\n\n### In order to use a variable, it needs a name and a value. The name doesn't change, but the value can. This way you can use the name of the variable as a placeholder wherever you want in your program! \n\n---\n\n## **Vocab to Know**\n\n### **Variable** - A placeholder for a piece of information that can change\n\n"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/21/extras?level_name=courseF_artist_variables_challenge1_2019": {
+  "https://studio.code.org/s/express-2019/lessons/21/extras?level_name=courseF_artist_variables_challenge1_2019": {
     "short_instructions": "Can you create a `length` variable and use it to create this pattern?",
     "long_instructions": "Challenge alert! Can you create a `length` variable and use it to create this interesting pattern?",
     "authored_hints": {
@@ -2858,7 +2858,7 @@
       "courseF_artist_variables_challenge1_e": "Here is the solution.\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/21/extras?level_name=courseF_artist_variables_challenge2_2019": {
+  "https://studio.code.org/s/express-2019/lessons/21/extras?level_name=courseF_artist_variables_challenge2_2019": {
     "short_instructions": "You've now learned everything you need to know to make a pattern like this!",
     "long_instructions": "<img src=\"https://images.code.org/7469d6b9aaaae532d864caecb65bd2cc-image-1444706295435.54.39.png\" width=\"250px\"/>\n\nYou've now learned everything you need to know to make a pattern like this! This puzzle is meant to be difficult.  Can you stick with it until you figure out the solution?",
     "authored_hints": {
@@ -2867,14 +2867,14 @@
       "courseF_artist_variables_challenge2_d": "**Solution:**\n\n[Solution][0]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/22/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/22/levels/1": {
     "short_instructions": "Collect the nectar from each flower using the fewest blocks possible.",
     "authored_hints": {
       "courseF_bee_for1_a": "Drag a purple number block into the blank space on the `repeat` loop to tell it how many times to repeat.",
       "courseF_bee_for1_b": "You will need two blocks in your ‘repeat’ loop to collect all of the nectar."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/22/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/22/levels/2": {
     "short_instructions": "Write the code to help the bee collect all of the nectar.",
     "long_instructions": "Write the code to help the bee collect all of the nectar.\n\nYou will need lots of blocks for this challenge, but we'll learn an easier way in the next puzzle.",
     "authored_hints": {
@@ -2882,13 +2882,13 @@
       "courseF_bee_for2_b": "Remember to move forward between each loop, so you reach each flower."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/22/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/22/levels/3": {
     "dsls": {
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **In this lesson...**\n\n### Today you'll be learning about a new kind of `repeat` loop. Here is a preview of the block you'll be using:\n\n![](https://images.code.org/d9cb4b829fe4e688b10c19e879cf4a4b-image-1531938148965.png)\n\n### *For*tunately, this new loop will make solving puzzles like this really easy!\n\n![](https://images.code.org/072230b389feb9c6c6998619a245b8af-image-1524773190948.png)\n\n"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/22/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/22/levels/5": {
     "contained levels": [
       {
         "dsls": {
@@ -2924,7 +2924,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/22/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/22/levels/6": {
     "short_instructions": "Help the bee collect all of the nectar.",
     "authored_hints": {
       "courseF_bee_for4_a": "Use a `for` loop that goes from 1 to 7 with an increment of 1 to solve this puzzle.",
@@ -2935,7 +2935,7 @@
       "courseF_bee_for4_1": "You will find the `for` loop in here!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/22/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/22/levels/7": {
     "short_instructions": "Try gathering this nectar by counting down from 5 to 1 by 1.",
     "long_instructions": "You can also use a `for` loop to count down. \n\nTry gathering this nectar by counting down from **5** to **1** by **1**.",
     "authored_hints": {
@@ -2944,7 +2944,7 @@
       "courseF_bee_for6_c": "Your loop should count **from 5 to 1**."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/22/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/22/levels/8": {
     "short_instructions": "Try collecting these flowers using an increment of 2.",
     "long_instructions": "The last number in your `for` loop is called the **\"increment\"**.  Each time the loop is run, the counter variable changes by the value of the **increment**.\n\nTry collecting these flowers using an **increment** of 2.",
     "authored_hints": {
@@ -2953,7 +2953,7 @@
       "courseF_bee_for7_c": "Remember to use the `counter` variable in your `repeat` loop."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/22/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/22/levels/9": {
     "short_instructions": "You've got this! What should your increment be to collect 3, 6, 9, 12, 15 nectar?",
     "long_instructions": "You've got this!  \n\nWhat should your **increment** be to collect 3, 6, 9, 12, 15 nectar?",
     "authored_hints": {
@@ -2962,7 +2962,7 @@
       "courseF_bee_for8_c": "Your loop will count _from 3 to 15_ with some increment. What is it?"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/22/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/22/levels/10": {
     "short_instructions": "Use the `counter` variable twice to solve this puzzle.",
     "authored_hints": {
       "courseF_bee_for5_a": "This time, your `move forward` block and your `get nectar` block will need to be in separate `repeat` loops, both inside the same `for` loop.",
@@ -2970,7 +2970,7 @@
       "courseF_bee_for5_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/22/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/22/levels/11": {
     "short_instructions": "Use the `counter` variable to navigate this garden with the fewest number of blocks possible.",
     "long_instructions": "Now, let's combine the `counter` variable with a `math` block! \n\nHow can you use the `counter` variable to navigate this garden with the fewest number of blocks possible?",
     "authored_hints": {
@@ -2982,7 +2982,7 @@
       "courseF_bee_for9_1": "You will find the `math` block in here."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/22/puzzle/12": {
+  "https://studio.code.org/s/express-2019/lessons/22/levels/12": {
     "short_instructions": "**Challenge:** Take what you've learned about `for` loops and try to solve this problem. ",
     "long_instructions": "**Challenge:** Take what you've learned about `for` loops and try to solve this problem. \n\nRemember: You may have to run through solutions multiple times before you figure out all of the steps.",
     "authored_hints": {
@@ -2992,20 +2992,20 @@
       "courseF_bee_for10_d": "You'll need to have 2 repeats, one will use a math block."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/22/puzzle/13": {
+  "https://studio.code.org/s/express-2019/lessons/22/levels/13": {
     "short_instructions": "What should your increment be to collect 15, then 12, then 9, 6, 3 nectar?",
     "long_instructions": "If your loop is counting down, the increment is **subtracted** from your counter variable each time through. \n\nWhat should your increment be to collect 15, then 12, then 9, 6, 3 nectar?",
     "authored_hints": {
       "courseF_bee_for11_a": "How much less is 12 than 15?\\\nHow much less is 9 than 12?\n\nDo you see a pattern?"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/22/puzzle/14": {
+  "https://studio.code.org/s/express-2019/lessons/22/levels/14": {
     "dsls": {
       "content1": "Test Markdown Textbook Page",
       "markdown": "# **You just learned \"for loops\"!**\n\n### **For loops are loops where you set the start, stop, and step values.**\n\n### This new kind of `repeat` loop gives you more control over when you loop starts, when it ends, and what your loop should increase by every time it runs.\n\n### More control means you can solve puzzles a lot faster! \n\n---\n\n## **Vocab to Know**\n\n### **For loop** - For loops are loops that have a predetermined beginning, end, and increment (step interval)\n\n"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/22/extras?level_name=courseF_bee_for_challenge1_2019": {
+  "https://studio.code.org/s/express-2019/lessons/22/extras?level_name=courseF_bee_for_challenge1_2019": {
     "short_instructions": "Use this `for loop` to collect all of the nectar. ",
     "long_instructions": "You can use this `for loop` to collect all of the nectar. Un-bee-lievable!\n\nThere are a few actions that you will want to `repeat 'counter' times`.",
     "function_definitions": {
@@ -3014,7 +3014,7 @@
       }
     }
   },
-  "https://studio.code.org/s/express-2019/stage/22/extras?level_name=courseF_bee_for_challenge2_2019": {
+  "https://studio.code.org/s/express-2019/lessons/22/extras?level_name=courseF_bee_for_challenge2_2019": {
     "short_instructions": "Solve this puzzle using the fewest number of blocks possible.",
     "long_instructions": "Solve this puzzle with the fewest number of blocks possible.",
     "authored_hints": {
@@ -3024,7 +3024,7 @@
       "courseF_bee_for_challenge2_d": "**Solution:**\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/23/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/23/levels/2": {
     "display_name": "For Loops Freeplay (Beginning)",
     "short_instructions": "Experiment with the `for` loop and play with the `counter` variable.",
     "long_instructions": "**Free Play:** Experiment with the `for` loop and the `counter` variable.  \n\nDrag out a few blocks and see what happens.  ",
@@ -3035,7 +3035,7 @@
       "courseF_artist_for1_1": "The toolbox is in \"category\" mode to make more room for your code.  The `for` loops live in here."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/23/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/23/levels/3": {
     "short_instructions": "Create this stack of triangles that goes from 50 pixel to 100 pixel sides.",
     "long_instructions": "Use a `repeat` loop inside of a `for` loop to create this stack of triangles that goes from 50 pixel to 100 pixel sides.",
     "authored_hints": {
@@ -3044,7 +3044,7 @@
       "courseF_artist_for2_c": "This is the pattern that the Artist will follow:\n\n[][0]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/23/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/23/levels/4": {
     "short_instructions": "These triangles go from 20 pixel sides to 200 pixel sides, and each triangle is 20 pixels larger than the last. ",
     "long_instructions": "Create these triangles that go from 20 pixel sides to 200 pixel sides, where each triangle is 20 pixels larger than the last.",
     "authored_hints": {
@@ -3052,7 +3052,7 @@
       "courseF_artist_for3_b": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/23/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/23/levels/5": {
     "short_instructions": "These squares start at 15 pixels long. The largest is 300 pixels long, and each square is 15 pixels larger than the last. ",
     "authored_hints": {
       "courseF_artist_for4_a": "**What is the smallest number you will need?\\\nWhat is the largest number?\\\nHow big is the increase each time?**\n\nThose are the questions you need to ask to fill in the blanks of the `for` loop.",
@@ -3060,7 +3060,7 @@
       "courseF_artist_for4_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you haven't solved the puzzle yet."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/23/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/23/levels/6": {
     "short_instructions": "Just one little change to the code from the last image can create this drawing. Can you figure out what that change is?",
     "long_instructions": "Just one little change to the code from the last image can create this drawing. Can you figure out what that change is?\n\n* * *\n\nHint:  You need to remove something!",
     "authored_hints": {
@@ -3068,7 +3068,7 @@
       "courseF_artist_for5_b": "Your `for` loop, move, and turn blocks can stay exactly the same."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/23/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/23/levels/7": {
     "short_instructions": "Recreate your code from the last level, but turn 89 degrees to create this twisted square spiral.",
     "long_instructions": "If you turn a little bit more or less than you normally would for a shape, it creates a neat effect.\n\nRecreate your code from the last level, but turn 89 degrees to create this twisted square spiral.",
     "authored_hints": {
@@ -3077,7 +3077,7 @@
       "courseF_artist_for6_c": "All you have to change is the number of degrees in the `turn` block."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/23/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/23/levels/8": {
     "short_instructions": "Make three small changes to the code from the last level to get this!",
     "long_instructions": "Make three small changes to the code from the last level to get this!  ",
     "authored_hints": {
@@ -3087,14 +3087,14 @@
       "courseF_artist_for7_d": "This image is made by turning just 89 degrees."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/23/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/23/levels/9": {
     "short_instructions": "Take the angle down to 72 degrees to get a spiraled pentagon.",
     "authored_hints": {
       "courseF_artist_for8_a": "Keep everything else the same in your code, only the turn angle needs to change.",
       "courseF_artist_for8_b": "If you want, you can choose a different color for your spiral!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/23/puzzle/10": {
+  "https://studio.code.org/s/express-2019/lessons/23/levels/10": {
     "short_instructions": "**Inspiration:**  Use the counter inside the `set alpha` block to get this faded center.",
     "long_instructions": "**Inspiration:** Use the counter inside the `set alpha` block to get something like this faded center.\\\n(This hexagon pattern was made using a 60 degree turn.)",
     "authored_hints": {
@@ -3102,7 +3102,7 @@
       "courseF_artist_for9_b": "The `set alpha` block changes the opacity of a color. The smaller the value, the more transparent the color is."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/23/puzzle/11": {
+  "https://studio.code.org/s/express-2019/lessons/23/levels/11": {
     "contained levels": [
       {
         "dsls": {
@@ -3138,7 +3138,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/23/puzzle/12": {
+  "https://studio.code.org/s/express-2019/lessons/23/levels/12": {
     "short_instructions": "Free Play: Try using the `counter` variable with other drawing elements to make magical images like this one.",
     "long_instructions": "**Free Play:** Try using the `counter` variable with other drawing elements to make magical images like this one.\n\n[][0]",
     "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right.",
@@ -3148,7 +3148,7 @@
       "courseF_artist_for10_c": "Want to know how the sample image was done?\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/23/extras?level_name=courseF_artist_for_challenge1_2019": {
+  "https://studio.code.org/s/express-2019/lessons/23/extras?level_name=courseF_artist_for_challenge1_2019": {
     "short_instructions": "Can you figure out how to re-create this drawing?",
     "long_instructions": "Can you figure out how to re-create this drawing? \n\n<img src=\"https://images.code.org/724b2efa8aefe863bd0d6491a3f1590f-image-1445563707400.26.50.png\" width=\"350px\"/>",
     "authored_hints": {
@@ -3158,7 +3158,7 @@
       "courseF_artist_for_challenge1_d": "**Solution:**\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/23/extras?level_name=courseF_artist_for_challenge2_2019": {
+  "https://studio.code.org/s/express-2019/lessons/23/extras?level_name=courseF_artist_for_challenge2_2019": {
     "short_instructions": "Can you figure out how to re-create this drawing with a single loop?",
     "long_instructions": "Can you figure out how to re-create this drawing with a single loop? \n\n<img src=\"https://images.code.org/b0d15d06465d645c5ca533e5da6387b3-image-1446075597132.36.04.png\" width=\"350px\"/>",
     "authored_hints": {
@@ -3168,17 +3168,17 @@
       "courseF_artist_for_challenge2_d": "**Solution:**\n\n[blockly block][0]\n\n[][1]"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/24/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/24/levels/1": {
     "display_name": "This is Sprite Lab"
   },
-  "https://studio.code.org/s/express-2019/stage/24/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/24/levels/2": {
     "contained levels": [
       {
         "long_instructions": "**Make a prediction**: What do you think will happen when you run this code?"
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/24/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/24/levels/3": {
     "short_instructions": "Change the tumbleweed into any kind of fish!",
     "long_instructions": "Let's make a fish tank!  \n\nChange the tumbleweed sprite into any kind of fish by clicking [blockly block][0].\n\nBe sure to also update this sprite's costume in [blockly block][1].",
     "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must have at least one fish sprite with an active behavior.",
@@ -3196,7 +3196,7 @@
       "spinning right": "spinning right"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/24/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/24/levels/4": {
     "short_instructions": "Change the fish's behavior so that it swims left and right.",
     "long_instructions": "The fish is getting dizzy! \n\nChange the fish's behavior so that it swims left and right.",
     "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must have at least one fish sprite with an active behavior.\n-   The fish sprite needs to move left and right. This can be done by changing its behavior to `swimming left and right`.",
@@ -3217,7 +3217,7 @@
       "spinning right": "spinning right"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/24/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/24/levels/5": {
     "short_instructions": "Use the `set background color` block to make the background any color.",
     "long_instructions": "Our fish tank needs some water! \n\nUse [blockly block][0] to make the background any color. We recommend blue!",
     "teacher_markdown": "This lesson contains a **mini-project** called _PROGRESSION NAME_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must change the background to something other than white.",
@@ -3235,10 +3235,10 @@
       "spinning right": "spinning right"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/24/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/24/levels/6": {
     "display_name": "How to Make a Sprite"
   },
-  "https://studio.code.org/s/express-2019/stage/24/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/24/levels/7": {
     "short_instructions": "The fish is adventurous and wants to meet new creatures in the sea. Add another sprite to the fish tank. This sprite can have any costume other than the one you use for your fish!",
     "long_instructions": "The fish is adventurous and wants to meet new creatures in the sea. Add another sprite to the fish tank. This sprite can have any costume other than the one you use for your fish!",
     "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must create exactly two unique sprites, and one must be a fish.",
@@ -3256,7 +3256,7 @@
       "spinning right": "spinning right"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/24/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/24/levels/8": {
     "short_instructions": "Add a behavior to the fish's new friend.",
     "long_instructions": "What do you want your fish’s new friend to do?\n\nAdd a behavior and watch them go!",
     "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Each sprite must have an active behavior.",
@@ -3274,12 +3274,12 @@
       "spinning right": "spinning right"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/24/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/24/levels/9": {
     "short_instructions": "Use some new blocks from the toolbox to make your fish tank special!",
     "long_instructions": "We've added a lot of new blocks to the toolbox.   \n\nPlay with them to make your fish tank special!",
     "teacher_markdown": "This lesson contains a **mini-project** called _Swimming Fish_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
   },
-  "https://studio.code.org/s/express-2019/stage/25/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/25/levels/1": {
     "contained levels": [
       {
         "short_instructions": "What do you think will happen when you click on the alien?  ",
@@ -3287,10 +3287,10 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/25/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/25/levels/2": {
     "display_name": "How to Make a Sprite"
   },
-  "https://studio.code.org/s/express-2019/stage/25/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/25/levels/3": {
     "short_instructions": "Replace the behavior block in the `sprite begins` block to a different one that will make the alien start spinning!",
     "long_instructions": "The alien was proud of its dancing skills on Mars, but now it can only move side-to-side.\n\nReplace the behavior block in [blockly block][0] to a different one that will make the alien start spinning!",
     "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must click the sprite after pressing `Run`.\n-   The sprite needs to spin.",
@@ -3309,7 +3309,7 @@
       "swimming left and right": "swimming left and right"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/25/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/25/levels/4": {
     "short_instructions": "Create a new sprite that looks like a pink alien, then make it do a any move when it's clicked.  ",
     "long_instructions": "Create a new sprite that looks like a pink alien. <img src=\"https://studio.code.org/api/v1/animation-library/spritelab/2QJkd5Ya9YmFBKAnIwNVeRr0Om.Hroxu/category_characters/alienPink.png\" width=\"3%\"></img>\n\nMake it do any move you want when it's clicked. Try using a new move this time!",
     "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must create a pink alien sprite.\n-   The pink alien sprite must start a behavior when clicked.",
@@ -3328,7 +3328,7 @@
       "swimming left and right": "swimming left and right"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/25/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/25/levels/5": {
     "short_instructions": "Create a third sprite that looks like a yellow alien, make it do a dance when clicked, and set all of your aliens to stand in a horizontal line.",
     "long_instructions": "Form an alien dance crew! \n\n-   Create a third sprite that looks like a yellow alien, and make it begin a dance move when clicked.\n-   Set all of your aliens to stand in a horizontal line, like this:\n\n[][0]",
     "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must create three sprites using the blue alien, pink alien, and yellow alien costumes.\n-   Students must arrange the alien sprites in a horizontal line (within 50 pixels).\n-   The yellow alien sprite needs to start a behavior when clicked.",
@@ -3347,7 +3347,7 @@
       "swimming left and right": "swimming left and right"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/25/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/25/levels/6": {
     "short_instructions": "Create a single keypress event using the keypress event block. For this event, make it so that when a key is pressed, each of your aliens changes color!",
     "long_instructions": "<!-- We can change all kinds of things in this program when you click on the sprites. Add code to change the color of each alien when it gets clicked. -->\n\nLet's try using a different kind of event. \n\nCreate a single keypress event using [blockly block][0]. \n\nFor this event, make it so that when a key is pressed, each of your aliens changes color! Choose any key you like, but if you are using a touch screen we recommend _up_, _down_, _left_, or _right_.",
     "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Moves_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Student must change the color of each of the three alien sprites.",
@@ -3366,7 +3366,7 @@
       "swimming left and right": "swimming left and right"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/25/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/25/levels/7": {
     "short_instructions": "Add a sprite that looks like a bell, then add an event that makes each alien stop dancing when it is clicked.",
     "long_instructions": "These aliens are running wild! Let's calm them down by ringing a bell.\n\nFirst add a new sprite that looks like a bell.\n\nThen add an event that makes each alien stop dancing when the bell is clicked, using [blockly block][0]!",
     "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Party_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   All alien sprites must stop their behaviors.",
@@ -3384,7 +3384,7 @@
       "spinning right": "spinning right"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/25/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/25/levels/8": {
     "short_instructions": "Make the blue alien begin a new dance when the pink alien touches it. Use the `when touches` event.",
     "long_instructions": "For the pink alien, fun is contagious! Touching it makes anyone want to dance! \n\nUse [blockly block][0] to make the blue alien begin a new dance move when the pink alien touches it.",
     "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Party_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   The blue alien sprite needs to start a new behavior.",
@@ -3402,12 +3402,12 @@
       "spinning right": "spinning right"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/25/puzzle/9": {
+  "https://studio.code.org/s/express-2019/lessons/25/levels/9": {
     "short_instructions": "Now create your own alien disco!",
     "long_instructions": "Now create your own alien disco! Looking for inspiration? Try these ideas:\n\n-   Create another alien that does another move when clicked.\n-   Make aliens do more dance moves when they touch each other.",
     "teacher_markdown": "This lesson contains a **mini-project** called _Alien Dance Party_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must have at least one costume in their project.\n-   Students must create three sprites with unique costumes."
   },
-  "https://studio.code.org/s/express-2019/stage/26/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/26/levels/1": {
     "short_instructions": "Make a prediction!",
     "long_instructions": "Make a prediction! Study the code.\n\n-   The sprite will spin.\n-   The sprite will shrink.\n-   The sprite will move.\n-   The sprite will change colors.",
     "callouts": {
@@ -3463,7 +3463,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/26/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/26/levels/2": {
     "short_instructions": "Fly the rocket to the stars!",
     "long_instructions": "Fly the rocket to the stars!\n\n-   Change the behavior of the rocket so that it flies upwards in the display area.",
     "authored_hints": {
@@ -3486,7 +3486,7 @@
       "moving east": "moving east"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/26/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/26/levels/3": {
     "short_instructions": "Help the rover outrun the robot!",
     "long_instructions": "Help the rover outrun the robot!\n\n-   Edit the behavior of the rover sprite (top) so that it goes faster than the robot.",
     "authored_hints": {
@@ -3509,7 +3509,7 @@
       "moving east": "moving east"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/26/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/26/levels/4": {
     "short_instructions": "Debug: Make all of the stars spin the same way!",
     "long_instructions": "Edit the `spinning right` behavior. The [blockly block][0] block should be used instead of the `costume` block. This will make it work for any sprite, regardless of the costume it uses.\n\n**Debug:** Make all of the stars spin the same way!",
     "authored_hints": {
@@ -3537,7 +3537,7 @@
       "moving east": "moving east"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/26/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/26/levels/5": {
     "short_instructions": "Make a prediction!",
     "long_instructions": "Make a prediction! Which path will the satellite follow to reach the solar system?",
     "callouts": {
@@ -3593,7 +3593,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/express-2019/stage/26/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/26/levels/6": {
     "short_instructions": "Move the astronaut diagonally.",
     "long_instructions": "Write your own behavior.\n\n-   Write a new behavior for this astronaut to lead it towards one of the four ships in the display area.",
     "authored_hints": {
@@ -3604,7 +3604,7 @@
       "behaviors_edit": "Add code to this behavior."
     }
   },
-  "https://studio.code.org/s/express-2019/stage/26/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/26/levels/7": {
     "short_instructions": "Free play: Create your own outer space scene!",
     "long_instructions": "**Free play:** Create your own outer space scene!",
     "teacher_markdown": "This level is a “free play”. These levels have some characteristics you may want to explore before starting. \n\n-   These levels are **not checked for correctness** to allow for more open-ended creativity. Empower your students to determine for themselves when they have created something they like. There is no one right answer! \n-   Example solutions are available for this level which can be viewed by opening the teacher panel to the right.",
@@ -3615,7 +3615,7 @@
       "spinning and growing": "spinning and growing"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors+6": {
+  "https://studio.code.org/s/express-2019/lessons/26/extras?level_name=behaviors+6": {
     "short_instructions": "Make the ball roll.",
     "long_instructions": "Make the ball roll.\n\n-   Create a new behavior and use it to make the ball roll. Your behavior should combine two different actions.\n\n[][0]",
     "authored_hints": {
@@ -3638,7 +3638,7 @@
       "patrolling": "patrolling"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/26/extras?level_name=behaviors+7": {
+  "https://studio.code.org/s/express-2019/lessons/26/extras?level_name=behaviors+7": {
     "short_instructions": "Drive off into the horizon!",
     "long_instructions": "Drive off into the horizon!\n\n-   Create a new behavior and use it to make the car move up (north) and shrink. If you do it right, it could look like it is driving off into the horizon.\n\n[][0]",
     "authored_hints": {
@@ -3662,7 +3662,7 @@
       "moving east": "moving east"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/27/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/27/levels/1": {
     "long_instructions": "**Free Play**: Whoa! Check out this cool pet! \n\nWhile reading the code below, ask yourself:\n\n-   How do you command the pet to move? \n-   What happens when the pet touches the ice cream cone? How about the pepper?\n-   How is the `energy` variable used? How can you check the pet's current `energy` value?\n\nRun the code and play with the pet! When you are done, click **Finish**.",
     "behavior_names": {
       "wandering": "wandering",
@@ -3684,7 +3684,7 @@
       "4ac000226dd5bc7fc14ecde063245731": "Yuck! Energy reset!"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/27/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/27/levels/2": {
     "long_instructions": "Now it's your turn to create your own virtual pet! Start by giving it a look you like.\n\n1.  Click the **Costumes** tab at the top-left of your screen (next to **Code**). \n2.  Edit the starting costume, or add a new one that you like. \n3.  Change the sprite's costume to your own in the code below.\n4.  Click **Run** to see your pet's new look!",
     "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "callouts": {
@@ -3705,7 +3705,7 @@
       "patrolling": "patrolling"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/27/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/27/levels/3": {
     "long_instructions": "Create events to make your pet move on command!\n\nStart by using [blockly block][0] along with [blockly block][1] to make your pet move North **while** the up arrow is pressed.\n\nRepeat the above for the other three directions (South, West, East) and arrow keys (down, left, right)!",
     "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.",
     "behavior_names": {
@@ -3735,7 +3735,7 @@
       "patrolling2": "patrolling2"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/27/puzzle/4": {
+  "https://studio.code.org/s/express-2019/lessons/27/levels/4": {
     "long_instructions": "Let's make some wandering food!\n\n1.  Add **two** sprites to your world. \n2.  Make one sprite look like what your pet **likes** to eat, and the other look like what it **doesn't** like to eat.\n3.  Make each food sprite begin the **wandering** behavior immediately after it appears.",
     "teacher_markdown": "This lesson contains a **mini-project** called \\*Virtual Pet. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right.\n\nThis level will validate a student’s code by checking that the following conditions have been met:\n\n-   Students must have at least three sprites.",
     "behavior_names": {
@@ -3753,30 +3753,30 @@
       "patrolling": "patrolling"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/27/puzzle/5": {
+  "https://studio.code.org/s/express-2019/lessons/27/levels/5": {
     "long_instructions": "Use [blockly block][0] with [blockly block][1] to **simulate** \"eating\" in your virtual world!\n\n1.  Create an event that makes one of your food sprites jump to a random location when your pet touches it.\n2.  Repeat the above for the other food sprite.",
     "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
   },
-  "https://studio.code.org/s/express-2019/stage/27/puzzle/6": {
+  "https://studio.code.org/s/express-2019/lessons/27/levels/6": {
     "long_instructions": "Use [blockly block][0] along with [blockly block][1] to make eating food affect your pet's energy! The more energy it has, the faster it moves! \n\n1.  Set the variable `energy` to 5 when the program starts.\n2.  When your pet eats food it **likes**, add 1 to `energy`.\n3.  When your pet eats food it **doesn't like**, set `energy` back to 5.\n4.  Change each arrow key event so that your pet now moves `energy` pixels instead of a specific number.",
     "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
   },
-  "https://studio.code.org/s/express-2019/stage/27/puzzle/7": {
+  "https://studio.code.org/s/express-2019/lessons/27/levels/7": {
     "long_instructions": "You can check your pet's `energy` value with [blockly block][0], a new block found in the `World` category! \n\nCreate an event that makes the value of `energy` be printed when the pet sprite is clicked. ",
     "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
   },
-  "https://studio.code.org/s/express-2019/stage/27/puzzle/8": {
+  "https://studio.code.org/s/express-2019/lessons/27/levels/8": {
     "short_instructions": "**Free Play:** What more can you make your pet do? Try anything you like!",
     "long_instructions": "**Free Play:** Your virtual pet is _VIRTUALLY AWESOME!_ \n\nWhat more can you do? Try these ideas:\n\n-   Change the background to a color or an image.\n-   Print more! Try printing _\"Yum! Energy increased!\"_ when the pet eats food it likes, or _\"Yuck! Energy reset!\"_ when it eats food it doesn't like.\n-   Add another sprite that interacts with your pet in a different way. How about a **toy** sprite?\n-   Add another variable that can affect your pet or the world. What might `happiness` or `age` do?\n-   Experiment with behaviors! Try editing the **wandering** behavior to slow down or speed up the food sprites (hint: their \"speed\" is currently 5...).",
     "teacher_markdown": "This lesson contains a **mini-project** called _Virtual Pet_. This progression may feel very different from what has come earlier in the course for you as well as your students. These levels have some new characteristics you may want to explore before starting. \n\n-   The code your students write in one level will automatically transfer over to the other levels. This allows them to build gradually and iterate on their ideas as they learn.\n-   These levels allow for more open-ended creativity. Empower your students to determine for themselves when they have completed each task. There is no one right answer! \n-   Example solutions are available for this step of the progression which can be viewed by opening the teacher panel to the right."
   },
-  "https://studio.code.org/s/express-2019/stage/28/puzzle/1": {
+  "https://studio.code.org/s/express-2019/lessons/28/levels/1": {
     "dsls": {
       "content1": "Test Markdown Textbook Page",
       "markdown": "# Project Examples\n\nYou are about to start your final project. Before you begin, spend some time looking at the example projects.\n\n## Sprite Lab\n\n| Cupcake Game (Sprite Lab) | Helicopter Game (Sprite Lab) |\n|---|---|\n| [![#Cupcake Game(Sprite Lab)](https://images.code.org/c90080aaf05349fb6e1fbb6861e815df-image-1556809855136.png)](https://studio.code.org/projects/spritelab/YMEHR4ps9cDJ0sb4Ks0YrZcpcjGmc4OEiUudZHm-l6g/view) | [![#Helicopter Game (Sprite Lab)](https://images.code.org/1a273fd447b952367792423a70c5087a-image-1556812149075.png)](https://studio.code.org/projects/spritelab/STSNFsfSpabSzZcZYC7o2HLgTz-vKlZm-vqRyp94pk4/view) |\n| Try adding text or a score to this game! | Try adding text or a score to this game! |\n\n## Artist\n\n| Flowers (Artist) | Spiral (Arist) |\n|---|---|\n| [![Flowers (Artist)](https://images.code.org/0f5adf63c318eab8c8acb397d9db7f2a-image-1556821537577.png)](https://studio.code.org/projects/artist/MIMh2pV2IiLm1ZzaiA6N7kKvg534lFck3abLXTsvZU8/view) | [![Spiral (Artist)](https://images.code.org/06514571a8cf2f8b0346006ac1adc219-image-1556819399386.png)](https://studio.code.org/projects/artist/66scPDPWa8RNNHkcXDaXdA/view) |\n| Let's get creative with variables! | Let's get creative with For Loops! |\n\n"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/28/puzzle/2": {
+  "https://studio.code.org/s/express-2019/lessons/28/levels/2": {
     "display_name": "Course F Sprite Lab Project",
     "behavior_names": {
       "moving east": "moving east",
@@ -3793,7 +3793,7 @@
       "wandering": "wandering"
     }
   },
-  "https://studio.code.org/s/express-2019/stage/28/puzzle/3": {
+  "https://studio.code.org/s/express-2019/lessons/28/levels/3": {
     "display_name": "Course F Artist Project"
   }
 }

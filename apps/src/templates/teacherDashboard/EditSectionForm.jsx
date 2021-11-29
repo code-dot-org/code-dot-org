@@ -9,45 +9,22 @@ import {sectionShape, assignmentShape, assignmentFamilyShape} from './shapes';
 import DialogFooter from './DialogFooter';
 import i18n from '@cdo/locale';
 import {
-  assignedScriptName,
+  assignedUnitName,
   editSectionProperties,
   finishEditingSection,
   cancelEditingSection,
   reloadAfterEditingSection,
-  stageExtrasAvailable
+  lessonExtrasAvailable
 } from './teacherSectionsRedux';
 import {
   isScriptHiddenForSection,
   updateHiddenScript
-} from '@cdo/apps/code-studio/hiddenStageRedux';
+} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import ConfirmHiddenAssignment from '../courseOverview/ConfirmHiddenAssignment';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
 
-const style = {
-  root: {
-    width: styleConstants['content-width'],
-    height: '80vh',
-    left: 20,
-    right: 20
-  },
-  dropdown: {
-    padding: '0.3em'
-  },
-  sectionNameInput: {
-    // Full-width, large happy text, lots of space.
-    display: 'block',
-    width: '98%',
-    boxSizing: 'border-box',
-    fontSize: 'large',
-    padding: '0.5em'
-  },
-  scroll: {
-    position: 'absolute',
-    top: 80,
-    overflowY: 'scroll',
-    height: 'calc(80vh - 200px)'
-  }
-};
+import experiments from '@cdo/apps/util/experiments';
 
 /**
  * UI for editing section details: Name, grade, assigned course, etc.
@@ -59,7 +36,7 @@ class EditSectionForm extends Component {
     isNewSection: PropTypes.bool,
 
     //Comes from redux
-    initialScriptId: PropTypes.number,
+    initialUnitId: PropTypes.number,
     initialCourseId: PropTypes.number,
     validGrades: PropTypes.arrayOf(PropTypes.string).isRequired,
     validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
@@ -69,11 +46,13 @@ class EditSectionForm extends Component {
     handleSave: PropTypes.func.isRequired,
     handleClose: PropTypes.func.isRequired,
     isSaveInProgress: PropTypes.bool.isRequired,
-    stageExtrasAvailable: PropTypes.func.isRequired,
-    hiddenStageState: PropTypes.object.isRequired,
-    assignedScriptName: PropTypes.string.isRequired,
+    textToSpeechUnitIds: PropTypes.arrayOf(PropTypes.number).isRequired,
+    lessonExtrasAvailable: PropTypes.func.isRequired,
+    hiddenLessonState: PropTypes.object.isRequired,
+    assignedUnitName: PropTypes.string.isRequired,
     updateHiddenScript: PropTypes.func.isRequired,
-    localeEnglishName: PropTypes.string
+    localeCode: PropTypes.string,
+    showLockSectionField: PropTypes.bool // DCDO Flag - show/hide Lock Section field
   };
 
   state = {
@@ -81,14 +60,14 @@ class EditSectionForm extends Component {
   };
 
   onSaveClick = () => {
-    const {section, hiddenStageState} = this.props;
+    const {section, hiddenLessonState} = this.props;
     const sectionId = section.id;
     const scriptId = section.scriptId;
 
     const isScriptHidden =
       sectionId &&
       scriptId &&
-      isScriptHiddenForSection(hiddenStageState, sectionId, scriptId);
+      isScriptHiddenForSection(hiddenLessonState, sectionId, scriptId);
 
     if (isScriptHidden) {
       this.setState({showHiddenUnitWarning: true});
@@ -101,7 +80,7 @@ class EditSectionForm extends Component {
     const {section, updateHiddenScript} = this.props;
 
     // Avoid incorrectly showing the hidden unit warning twice.
-    updateHiddenScript(section.id, section.scriptId, false);
+    updateHiddenScript(section.id.toString(), section.scriptId, false);
 
     this.setState({showHiddenUnitWarning: false});
     this.handleSave();
@@ -121,6 +100,35 @@ class EditSectionForm extends Component {
     ].includes(loginType);
   }
 
+  recordAutoplayToggleEvent = ttsAutoplayEnabled => {
+    firehoseClient.putRecord(
+      {
+        study: 'section_setting',
+        study_group: 'tts_auto_play',
+        event: ttsAutoplayEnabled ? 'turn_on' : 'turn_off',
+        script_id: this.props.section.scriptId,
+        data_json: JSON.stringify({
+          section_id: this.props.section.id
+        })
+      },
+      {useProgressScriptId: false, includeUserId: true}
+    );
+  };
+
+  recordRestrictSectionEvent = restrictSection => {
+    firehoseClient.putRecord(
+      {
+        study: 'lock_section',
+        study_group: 'display_lock_section',
+        event: restrictSection ? 'turn_on' : 'turn_off',
+        data_json: JSON.stringify({
+          section_id: this.props.section.id
+        })
+      },
+      {useProgressScriptId: false, includeUserId: true}
+    );
+  };
+
   render() {
     const {
       section,
@@ -131,10 +139,12 @@ class EditSectionForm extends Component {
       isSaveInProgress,
       editSectionProperties,
       handleClose,
-      stageExtrasAvailable,
-      assignedScriptName,
-      localeEnglishName,
-      isNewSection
+      lessonExtrasAvailable,
+      textToSpeechUnitIds,
+      assignedUnitName,
+      localeCode,
+      isNewSection,
+      showLockSectionField // DCDO Flag - show/hide Lock Section field
     } = this.props;
 
     /**
@@ -171,6 +181,11 @@ class EditSectionForm extends Component {
     const showLoginTypeField =
       !isNewSection && changeableLoginTypes.includes(section.loginType);
 
+    // These are server-side experiments, which are passed down to the client
+    const showCodeReviewEnabledCheckbox =
+      experiments.isEnabled('csa-pilot') ||
+      experiments.isEnabled('csa-pilot-facilitators');
+
     if (!section) {
       return null;
     }
@@ -203,13 +218,13 @@ class EditSectionForm extends Component {
             validAssignments={validAssignments}
             assignmentFamilies={assignmentFamilies}
             disabled={isSaveInProgress}
-            localeEnglishName={localeEnglishName}
+            localeCode={localeCode}
             isNewSection={isNewSection}
           />
-          {stageExtrasAvailable(section.scriptId) && (
+          {lessonExtrasAvailable(section.scriptId) && (
             <LessonExtrasField
-              value={section.stageExtras}
-              onChange={stageExtras => editSectionProperties({stageExtras})}
+              value={section.lessonExtras}
+              onChange={lessonExtras => editSectionProperties({lessonExtras})}
               disabled={isSaveInProgress}
             />
           )}
@@ -218,6 +233,37 @@ class EditSectionForm extends Component {
             onChange={pairingAllowed => editSectionProperties({pairingAllowed})}
             disabled={isSaveInProgress}
           />
+          {showCodeReviewEnabledCheckbox && (
+            <CodeReviewField
+              value={section.codeReviewEnabled}
+              onChange={codeReviewEnabled =>
+                editSectionProperties({codeReviewEnabled})
+              }
+              disabled={isSaveInProgress}
+            />
+          )}
+          {textToSpeechUnitIds.indexOf(section.scriptId) > -1 && (
+            <TtsAutoplayField
+              isEnglish={localeCode.startsWith('en')}
+              value={section.ttsAutoplayEnabled}
+              onChange={ttsAutoplayEnabled => {
+                editSectionProperties({ttsAutoplayEnabled});
+                this.recordAutoplayToggleEvent(ttsAutoplayEnabled);
+              }}
+              disabled={isSaveInProgress}
+            />
+          )}
+          {showLockSectionField && (
+            <RestrictAccessField
+              value={section.restrictSection}
+              onChange={restrictSection => {
+                editSectionProperties({restrictSection});
+                this.recordRestrictSectionEvent(restrictSection);
+              }}
+              disabled={isSaveInProgress}
+              loginType={this.props.section.loginType}
+            />
+          )}
         </div>
         <DialogFooter>
           <Button
@@ -241,7 +287,7 @@ class EditSectionForm extends Component {
         {this.state.showHiddenUnitWarning && (
           <ConfirmHiddenAssignment
             sectionName={section.name}
-            assignmentName={assignedScriptName}
+            assignmentName={assignedUnitName}
             onClose={handleClose}
             onConfirm={this.handleConfirmAssign}
           />
@@ -315,6 +361,7 @@ const LoginTypeField = ({value, onChange, validLoginTypes, disabled}) => {
     [SectionLoginType.google_classroom]: i18n.editSectionLoginTypeGoogleDesc(),
     [SectionLoginType.clever]: i18n.editSectionLoginTypeCleverDesc()
   };
+
   return (
     <div>
       <FieldName>{i18n.loginType()}</FieldName>
@@ -344,7 +391,7 @@ const AssignmentField = ({
   validAssignments,
   assignmentFamilies,
   disabled,
-  localeEnglishName,
+  localeCode,
   isNewSection
 }) => (
   <div>
@@ -358,7 +405,7 @@ const AssignmentField = ({
       chooseLaterOption={true}
       dropdownStyle={style.dropdown}
       disabled={disabled}
-      localeEnglishName={localeEnglishName}
+      localeCode={localeCode}
       isNewSection={isNewSection}
     />
   </div>
@@ -369,7 +416,7 @@ AssignmentField.propTypes = {
   validAssignments: PropTypes.objectOf(assignmentShape).isRequired,
   assignmentFamilies: PropTypes.arrayOf(assignmentFamilyShape).isRequired,
   disabled: PropTypes.bool,
-  localeEnglishName: PropTypes.string,
+  localeCode: PropTypes.string,
   isNewSection: PropTypes.bool
 };
 
@@ -388,7 +435,7 @@ const LessonExtrasField = ({value, onChange, disabled}) => (
     </FieldDescription>
     <YesNoDropdown
       value={value}
-      onChange={stageExtras => onChange(stageExtras)}
+      onChange={lessonExtras => onChange(lessonExtras)}
       disabled={disabled}
     />
   </div>
@@ -416,6 +463,73 @@ const PairProgrammingField = ({value, onChange, disabled}) => (
   </div>
 );
 PairProgrammingField.propTypes = FieldProps;
+
+const CodeReviewField = ({value, onChange, disabled}) => (
+  <div>
+    <FieldName>{i18n.enablePeerFeedback()}</FieldName>
+    <FieldDescription>{i18n.enablePeerFeedbackDescription()}</FieldDescription>
+    <YesNoDropdown value={value} onChange={onChange} disabled={disabled} />
+  </div>
+);
+CodeReviewField.propTypes = FieldProps;
+
+const RestrictAccessField = ({value, onChange, disabled, loginType}) => {
+  const {clever, google_classroom} = SectionLoginType;
+  if (loginType !== (clever && google_classroom)) {
+    return (
+      <div>
+        <FieldName>{i18n.restrictSectionAccess()}</FieldName>
+        <FieldDescription>
+          {loginType === 'email'
+            ? i18n.explainRestrictedSectionEmail()
+            : i18n.explainRestrictedSectionWordAndPicture()}{' '}
+          <a
+            href="https://support.code.org/hc/en-us/articles/360060056611"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {i18n.learnMore()}
+          </a>
+        </FieldDescription>
+        <YesNoDropdown
+          value={value}
+          onChange={restrictSection => onChange(restrictSection)}
+          disabled={disabled}
+        />
+      </div>
+    );
+  } else {
+    return null;
+  }
+};
+RestrictAccessField.propTypes = {...FieldProps, loginType: PropTypes.string};
+
+const TtsAutoplayField = ({value, onChange, disabled, isEnglish}) => (
+  <div>
+    <FieldName>{i18n.enableTtsAutoplay()}</FieldName>
+    <FieldDescription>
+      {i18n.explainTtsAutoplay()}{' '}
+      {isEnglish && (
+        <a
+          href="https://support.code.org/hc/en-us/articles/360058843692"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {'Learn more about read aloud options on Code.org.'}
+        </a>
+      )}
+    </FieldDescription>
+    <YesNoDropdown
+      value={value}
+      onChange={ttsAutoplayEnabled => onChange(ttsAutoplayEnabled)}
+      disabled={disabled}
+    />
+  </div>
+);
+TtsAutoplayField.propTypes = {
+  ...FieldProps,
+  isEnglish: PropTypes.bool.isRequired
+};
 
 const FieldName = props => (
   <div
@@ -453,16 +567,20 @@ YesNoDropdown.propTypes = FieldProps;
 
 let defaultPropsFromState = state => ({
   initialCourseId: state.teacherSections.initialCourseId,
-  initialScriptId: state.teacherSections.initialScriptId,
+  initialUnitId: state.teacherSections.initialUnitId,
   validGrades: state.teacherSections.validGrades,
   validAssignments: state.teacherSections.validAssignments,
   assignmentFamilies: state.teacherSections.assignmentFamilies,
   section: state.teacherSections.sectionBeingEdited,
   isSaveInProgress: state.teacherSections.saveInProgress,
-  stageExtrasAvailable: id => stageExtrasAvailable(state, id),
-  hiddenStageState: state.hiddenStage,
-  assignedScriptName: assignedScriptName(state),
-  localeEnglishName: state.locales.localeEnglishName
+  textToSpeechUnitIds: state.teacherSections.textToSpeechUnitIds,
+  lessonExtrasAvailable: id => lessonExtrasAvailable(state, id),
+  hiddenLessonState: state.hiddenLesson,
+  assignedUnitName: assignedUnitName(state),
+  localeCode: state.locales.localeCode,
+
+  // DCDO Flag - show/hide Lock Section field
+  showLockSectionField: state.teacherSections.showLockSectionField
 });
 
 export const UnconnectedEditSectionForm = EditSectionForm;
@@ -486,3 +604,29 @@ export default connect(
     handleClose: cancelEditingSection
   }
 )(EditSectionForm);
+
+const style = {
+  root: {
+    width: styleConstants['content-width'],
+    height: '80vh',
+    left: 20,
+    right: 20
+  },
+  dropdown: {
+    padding: '0.3em'
+  },
+  sectionNameInput: {
+    // Full-width, large happy text, lots of space.
+    display: 'block',
+    width: '98%',
+    boxSizing: 'border-box',
+    fontSize: 'large',
+    padding: '0.5em'
+  },
+  scroll: {
+    position: 'absolute',
+    top: 80,
+    overflowY: 'scroll',
+    height: 'calc(80vh - 200px)'
+  }
+};

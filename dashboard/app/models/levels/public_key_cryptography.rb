@@ -8,7 +8,7 @@
 #  created_at            :datetime
 #  updated_at            :datetime
 #  level_num             :string(255)
-#  ideal_level_source_id :integer          unsigned
+#  ideal_level_source_id :bigint           unsigned
 #  user_id               :integer
 #  properties            :text(16777215)
 #  type                  :string(255)
@@ -19,8 +19,9 @@
 #
 # Indexes
 #
-#  index_levels_on_game_id  (game_id)
-#  index_levels_on_name     (name)
+#  index_levels_on_game_id    (game_id)
+#  index_levels_on_level_num  (level_num)
+#  index_levels_on_name       (name)
 #
 
 # Level type for standalone widget teaching public key cryptography
@@ -30,7 +31,7 @@ class PublicKeyCryptography < Widget
   )
 
   before_validation do
-    self.href = 'public_key_cryptography/public_key_cryptography.html'
+    self.href = 'public_key_cryptography/public_key_cryptography.html.haml'
   end
 
   def self.create_from_level_builder(params, level_params)

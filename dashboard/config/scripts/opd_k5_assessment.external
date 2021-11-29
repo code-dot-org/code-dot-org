@@ -16,7 +16,7 @@ When you're logged into Code.org as a teacher, you have access to many features 
 > ## Visit support.code.org
 > If you get stuck or have questions, make sure to check our support articles on support.code.org! You can also reach out to us directly through that page, as well.  [our forum](http://forum.code.org/t/teaching-conditionals/406/1).
 
-> <a href="http://support.code.org" target="blank"><button class="plc">Get help >></button></a>
+> <a href="http://support.code.org" target="blank" rel="noopener noreferrer"><button class="plc">Get help >></button></a>
 
 After commenting in the forum, return here and click below to move on to the next stage.
 MARKDOWN

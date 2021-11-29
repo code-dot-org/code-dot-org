@@ -96,7 +96,7 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium', '3.17.19'
+  gem 'eyes_selenium', '3.18.4'
   gem 'minitest', '~> 5.5'
   gem 'minitest-around'
   gem 'minitest-reporters', '~> 1.2.0.beta3'
@@ -122,7 +122,7 @@ end
 gem 'factory_girl_rails', group: [:development, :staging, :test, :adhoc]
 
 # For pegasus PDF generation.
-gem 'open_uri_redirections', require: false, group: [:development, :staging, :test]
+gem 'open_uri_redirections', require: false
 
 # Ref: https://github.com/tmm1/gctools/pull/17
 gem 'gctools', github: 'wjordan/gctools', ref: 'ruby-2.5'
@@ -153,7 +153,7 @@ gem 'phantomjs', '~> 1.9.7.1'
 gem 'gemoji'
 
 # Authentication and permissions.
-gem 'cancancan', '~> 2.2.0'
+gem 'cancancan', '~> 3.0.0'
 gem 'devise', '~> 4.7.0'
 gem 'devise_invitable', '~> 1.6.0'
 
@@ -256,7 +256,7 @@ gem 'aws-sdk-s3'
 gem 'aws-sdk-secretsmanager'
 
 # Lint tools
-group :development, :staging do
+group :development, :staging, :levelbuilder do
   gem 'haml_lint', require: false
   gem 'rubocop', '~> 0.52', require: false
   gem 'scss_lint', require: false
@@ -332,10 +332,10 @@ gem 'recaptcha', require: 'recaptcha/rails'
 
 gem 'loofah', ' ~> 2.2.1'
 
-# Install pg gem only on specific production hosts.
+# Install pg gem only on specific production hosts and the i18n-dev server.
 require_pg = -> do
   require 'socket'
-  %w[production-daemon production-console].include?(Socket.gethostname)
+  %w[production-daemon production-console i18n-dev].include?(Socket.gethostname)
 end
 
 install_if require_pg do

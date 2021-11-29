@@ -1,0 +1,14 @@
+{
+  "func": "collide",
+  "category": "Sprites",
+  "paletteParams": [
+    {
+      "name": "target"
+    }
+  ],
+  "params": [
+    "target"
+  ],
+  "modeOptionName": "*.collide",
+  "type": "either"
+}

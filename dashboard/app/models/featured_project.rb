@@ -6,10 +6,12 @@
 #  storage_app_id :integer
 #  featured_at    :datetime
 #  unfeatured_at  :datetime
+#  topic          :string(255)
 #
 # Indexes
 #
 #  index_featured_projects_on_storage_app_id  (storage_app_id) UNIQUE
+#  index_featured_projects_on_topic           (topic)
 #
 
 class FeaturedProject < ApplicationRecord

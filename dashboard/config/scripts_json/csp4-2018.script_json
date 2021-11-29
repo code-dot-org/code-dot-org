@@ -2,10 +2,29 @@
   "script": {
     "name": "csp4-2018",
     "wrapup_video_id": null,
-    "hidden": false,
     "login_required": true,
     "properties": {
-      "exclude_csf_column_in_legend": true,
+      "announcements": [
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
+          "link": "https://studio.code.org/s/csp-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Student-only"
+        },
+        {
+          "notice": "CS Principles Post-Course Survey for Students Now Open!",
+          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
+          "link": "https://studio.code.org/s/csp-post-survey-2018",
+          "type": "bullhorn",
+          "visibility": "Teacher-only"
+        }
+      ],
+      "curriculum_umbrella": "CSP",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "project_sharing": true,
       "student_detail_progress_view": true,
       "teacher_resources": [
         [
@@ -29,49 +48,16 @@
           "https://studio.code.org/s/csp4-support"
         ]
       ],
-      "has_verified_resources": true,
-      "has_lesson_plan": true,
-      "version_year": "2018",
-      "is_stable": true,
-      "script_announcements": [
-        {
-          "notice": "CS Principles Post-Course Survey for Students Now Open!",
-          "details": "Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
-          "link": "https://studio.code.org/s/csp-post-survey-2018",
-          "type": "bullhorn",
-          "visibility": "Student-only"
-        },
-        {
-          "notice": "CS Principles Post-Course Survey for Students Now Open!",
-          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
-          "link": "https://studio.code.org/s/csp-post-survey-2018",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
-      ],
-      "project_sharing": true,
-      "curriculum_umbrella": "CSP",
-      "family_name": "csp4",
-      "hideable_lessons": true,
-      "announcements": [
-        {
-          "notice": "CS Principles Post-Course Survey for Students Now Open!",
-          "details": "Please complete this important survey. It takes less than 10 minutes! Simply click the Learn More button to go directly to it, or scroll to the bottom of page to find it there.",
-          "link": "https://studio.code.org/s/csp-post-survey-2018",
-          "type": "bullhorn",
-          "visibility": "Student-only"
-        },
-        {
-          "notice": "CS Principles Post-Course Survey for Students Now Open!",
-          "details": "Teachers, please ask your students to complete this important survey. It takes less than 10 minutes! Check it out: you can find a link to the survey at the bottom of this unit page or click the Learn More button to go directly to it. Click the \"View Lesson Plan\" button next to the survey for instructions. Thanks!",
-          "link": "https://studio.code.org/s/csp-post-survey-2018",
-          "type": "bullhorn",
-          "visibility": "Teacher-only"
-        }
-      ]
+      "use_legacy_lesson_plans": true,
+      "version_year": "2018"
     },
     "new_name": null,
     "family_name": "csp4",
+    "serialized_at": "2021-11-22 17:07:49 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
     "seeding_key": {
       "script.name": "csp4-2018"
     }
@@ -120,6 +106,7 @@
       "name": "What is Big Data?",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
       },
@@ -134,6 +121,7 @@
       "name": "Finding Trends with Visualizations",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -148,6 +136,7 @@
       "name": "Check Your Assumptions",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -162,6 +151,7 @@
       "name": "Rapid Research - Data Innovations",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
       },
@@ -176,6 +166,7 @@
       "name": "Identifying People with Data",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
       },
@@ -190,6 +181,7 @@
       "name": "The Cost of Free",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
       },
@@ -204,6 +196,7 @@
       "name": "Simple Encryption",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
       },
@@ -218,6 +211,7 @@
       "name": "Encryption with Keys and Passwords",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
       },
@@ -232,6 +226,7 @@
       "name": "Public Key Crypto",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
       },
@@ -246,6 +241,7 @@
       "name": "Rapid Research - Cybercrime",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
       },
@@ -260,6 +256,7 @@
       "name": "Unit 4 Assessment",
       "absolute_position": 11,
       "lockable": true,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -274,6 +271,7 @@
       "name": "CS Principles Post-Course Survey",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
       },
@@ -284,22 +282,637 @@
       }
     }
   ],
+  "lesson_activities": [
+    {
+      "key": "2c3fd662-8800-4334-bb2b-8d794a948234",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "2c3fd662-8800-4334-bb2b-8d794a948234",
+        "lesson.key": "What is Big Data?",
+        "lesson_group.key": "csp4_1_2018",
+        "script.name": "csp4-2018"
+      }
+    },
+    {
+      "key": "c5e1faa1-a74e-4394-84cd-bd55ef547895",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c5e1faa1-a74e-4394-84cd-bd55ef547895",
+        "lesson.key": "Finding Trends with Visualizations",
+        "lesson_group.key": "csp4_1_2018",
+        "script.name": "csp4-2018"
+      }
+    },
+    {
+      "key": "beba7906-3a51-45dd-8850-620fca9eb3a6",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "beba7906-3a51-45dd-8850-620fca9eb3a6",
+        "lesson.key": "Check Your Assumptions",
+        "lesson_group.key": "csp4_1_2018",
+        "script.name": "csp4-2018"
+      }
+    },
+    {
+      "key": "05b135a3-a195-4d21-98be-4510bda073fd",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "05b135a3-a195-4d21-98be-4510bda073fd",
+        "lesson.key": "Rapid Research - Data Innovations",
+        "lesson_group.key": "csp4_1_2018",
+        "script.name": "csp4-2018"
+      }
+    },
+    {
+      "key": "4879785b-0a92-4d7a-939a-9fdc83dd08b4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4879785b-0a92-4d7a-939a-9fdc83dd08b4",
+        "lesson.key": "Identifying People with Data",
+        "lesson_group.key": "csp4_1_2018",
+        "script.name": "csp4-2018"
+      }
+    },
+    {
+      "key": "80b3cffb-14ac-4b9f-ae46-b1f86b6a6011",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "80b3cffb-14ac-4b9f-ae46-b1f86b6a6011",
+        "lesson.key": "The Cost of Free",
+        "lesson_group.key": "csp4_1_2018",
+        "script.name": "csp4-2018"
+      }
+    },
+    {
+      "key": "ec64ec67-17c4-4929-8f98-9fb7aa1c624e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ec64ec67-17c4-4929-8f98-9fb7aa1c624e",
+        "lesson.key": "Simple Encryption",
+        "lesson_group.key": "csp4_1_2018",
+        "script.name": "csp4-2018"
+      }
+    },
+    {
+      "key": "8c4063ea-4039-4c20-bcb7-18116e9246b8",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8c4063ea-4039-4c20-bcb7-18116e9246b8",
+        "lesson.key": "Encryption with Keys and Passwords",
+        "lesson_group.key": "csp4_1_2018",
+        "script.name": "csp4-2018"
+      }
+    },
+    {
+      "key": "7244fc0d-f00d-4519-9e08-307cbb524939",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7244fc0d-f00d-4519-9e08-307cbb524939",
+        "lesson.key": "Public Key Crypto",
+        "lesson_group.key": "csp4_1_2018",
+        "script.name": "csp4-2018"
+      }
+    },
+    {
+      "key": "968440b2-e97a-4255-ba2b-ee2563b4a13a",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "968440b2-e97a-4255-ba2b-ee2563b4a13a",
+        "lesson.key": "Rapid Research - Cybercrime",
+        "lesson_group.key": "csp4_1_2018",
+        "script.name": "csp4-2018"
+      }
+    },
+    {
+      "key": "443b2f23-d9f8-4927-98fd-d78920010f01",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "443b2f23-d9f8-4927-98fd-d78920010f01",
+        "lesson.key": "Unit 4 Assessment",
+        "lesson_group.key": "cspAssessment",
+        "script.name": "csp4-2018"
+      }
+    },
+    {
+      "key": "f1af12a8-edda-4e67-a346-d3c32792c7dc",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f1af12a8-edda-4e67-a346-d3c32792c7dc",
+        "lesson.key": "CS Principles Post-Course Survey",
+        "lesson_group.key": "cspSurvey",
+        "script.name": "csp4-2018"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "0b3e655a-f086-449a-9c33-6e1d117eb687",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "0b3e655a-f086-449a-9c33-6e1d117eb687",
+        "lesson_activity.key": "2c3fd662-8800-4334-bb2b-8d794a948234"
+      }
+    },
+    {
+      "key": "8bee14b4-e3a2-4dda-b616-a0c5f333ccf4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "8bee14b4-e3a2-4dda-b616-a0c5f333ccf4",
+        "lesson_activity.key": "2c3fd662-8800-4334-bb2b-8d794a948234"
+      }
+    },
+    {
+      "key": "900afd33-2b3c-4e12-ac3c-777d5b92ea60",
+      "position": 3,
+      "properties": {
+        "name": "Quick Check-In",
+        "progression_name": "Quick Check-In"
+      },
+      "seeding_key": {
+        "activity_section.key": "900afd33-2b3c-4e12-ac3c-777d5b92ea60",
+        "lesson_activity.key": "2c3fd662-8800-4334-bb2b-8d794a948234"
+      }
+    },
+    {
+      "key": "5c05c0d3-da79-4116-95f9-3ab319efcab3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c05c0d3-da79-4116-95f9-3ab319efcab3",
+        "lesson_activity.key": "c5e1faa1-a74e-4394-84cd-bd55ef547895"
+      }
+    },
+    {
+      "key": "545d328a-e54d-4a4d-8cb3-718f9aa2f086",
+      "position": 2,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "545d328a-e54d-4a4d-8cb3-718f9aa2f086",
+        "lesson_activity.key": "c5e1faa1-a74e-4394-84cd-bd55ef547895"
+      }
+    },
+    {
+      "key": "5952baa3-085e-4d48-91e2-4b8ff3ef9bae",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "5952baa3-085e-4d48-91e2-4b8ff3ef9bae",
+        "lesson_activity.key": "beba7906-3a51-45dd-8850-620fca9eb3a6"
+      }
+    },
+    {
+      "key": "9b48c165-d369-4866-98e8-416a0969bc39",
+      "position": 2,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "9b48c165-d369-4866-98e8-416a0969bc39",
+        "lesson_activity.key": "beba7906-3a51-45dd-8850-620fca9eb3a6"
+      }
+    },
+    {
+      "key": "aaf0d11d-09fd-44a9-9782-197c173480ed",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "aaf0d11d-09fd-44a9-9782-197c173480ed",
+        "lesson_activity.key": "05b135a3-a195-4d21-98be-4510bda073fd"
+      }
+    },
+    {
+      "key": "7935f428-7e95-4cc8-8af0-97d0aefdab08",
+      "position": 2,
+      "properties": {
+        "progression_name": "Data and Medicine"
+      },
+      "seeding_key": {
+        "activity_section.key": "7935f428-7e95-4cc8-8af0-97d0aefdab08",
+        "lesson_activity.key": "05b135a3-a195-4d21-98be-4510bda073fd"
+      }
+    },
+    {
+      "key": "8b2b388c-88c9-4733-9004-402dccced194",
+      "position": 3,
+      "properties": {
+        "progression_name": "CS is Changing Everything"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b2b388c-88c9-4733-9004-402dccced194",
+        "lesson_activity.key": "05b135a3-a195-4d21-98be-4510bda073fd"
+      }
+    },
+    {
+      "key": "b5482353-ca77-4699-bf6e-f8aed076e595",
+      "position": 4,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "b5482353-ca77-4699-bf6e-f8aed076e595",
+        "lesson_activity.key": "05b135a3-a195-4d21-98be-4510bda073fd"
+      }
+    },
+    {
+      "key": "841f6fa8-8052-48d6-aa1c-3f863fa4da17",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "841f6fa8-8052-48d6-aa1c-3f863fa4da17",
+        "lesson_activity.key": "4879785b-0a92-4d7a-939a-9fdc83dd08b4"
+      }
+    },
+    {
+      "key": "9fa25974-531c-4046-b7d1-d2918caabfd8",
+      "position": 2,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "9fa25974-531c-4046-b7d1-d2918caabfd8",
+        "lesson_activity.key": "4879785b-0a92-4d7a-939a-9fdc83dd08b4"
+      }
+    },
+    {
+      "key": "6778d695-b203-460c-ac9b-c04673bb5937",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "6778d695-b203-460c-ac9b-c04673bb5937",
+        "lesson_activity.key": "80b3cffb-14ac-4b9f-ae46-b1f86b6a6011"
+      }
+    },
+    {
+      "key": "cf424373-41c9-4f42-a94d-1272b7a8dc05",
+      "position": 2,
+      "properties": {
+        "progression_name": "AP Practice Response - Justify the Score"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf424373-41c9-4f42-a94d-1272b7a8dc05",
+        "lesson_activity.key": "80b3cffb-14ac-4b9f-ae46-b1f86b6a6011"
+      }
+    },
+    {
+      "key": "3c17bc45-9d2f-4806-b8f5-742953a413fb",
+      "position": 3,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c17bc45-9d2f-4806-b8f5-742953a413fb",
+        "lesson_activity.key": "80b3cffb-14ac-4b9f-ae46-b1f86b6a6011"
+      }
+    },
+    {
+      "key": "66e94e86-6a0f-45a5-a9ff-f6d92a58988a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "66e94e86-6a0f-45a5-a9ff-f6d92a58988a",
+        "lesson_activity.key": "ec64ec67-17c4-4929-8f98-9fb7aa1c624e"
+      }
+    },
+    {
+      "key": "a58b1ae5-7e22-425b-bd20-571e02bfa8c4",
+      "position": 2,
+      "properties": {
+        "progression_name": "Crack a Caesar Cipher"
+      },
+      "seeding_key": {
+        "activity_section.key": "a58b1ae5-7e22-425b-bd20-571e02bfa8c4",
+        "lesson_activity.key": "ec64ec67-17c4-4929-8f98-9fb7aa1c624e"
+      }
+    },
+    {
+      "key": "89ac5b1d-7a0f-4ce5-bd91-79f9ebcc03d9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Terminology Recap"
+      },
+      "seeding_key": {
+        "activity_section.key": "89ac5b1d-7a0f-4ce5-bd91-79f9ebcc03d9",
+        "lesson_activity.key": "ec64ec67-17c4-4929-8f98-9fb7aa1c624e"
+      }
+    },
+    {
+      "key": "c5f68a8e-a6b6-45b0-a4e7-03876cc5dc7f",
+      "position": 4,
+      "properties": {
+        "progression_name": "New Challenge Introduction"
+      },
+      "seeding_key": {
+        "activity_section.key": "c5f68a8e-a6b6-45b0-a4e7-03876cc5dc7f",
+        "lesson_activity.key": "ec64ec67-17c4-4929-8f98-9fb7aa1c624e"
+      }
+    },
+    {
+      "key": "ab8c5e66-fdd6-4209-9068-6f70805cdafe",
+      "position": 5,
+      "properties": {
+        "progression_name": "Crack Random Substitution"
+      },
+      "seeding_key": {
+        "activity_section.key": "ab8c5e66-fdd6-4209-9068-6f70805cdafe",
+        "lesson_activity.key": "ec64ec67-17c4-4929-8f98-9fb7aa1c624e"
+      }
+    },
+    {
+      "key": "636d6d2f-ab2b-40a7-9f75-91ee51098be0",
+      "position": 6,
+      "properties": {
+        "progression_name": "Technique: Frequency Analysis"
+      },
+      "seeding_key": {
+        "activity_section.key": "636d6d2f-ab2b-40a7-9f75-91ee51098be0",
+        "lesson_activity.key": "ec64ec67-17c4-4929-8f98-9fb7aa1c624e"
+      }
+    },
+    {
+      "key": "da411af6-2731-4098-99ba-4746ee8cdc76",
+      "position": 7,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "da411af6-2731-4098-99ba-4746ee8cdc76",
+        "lesson_activity.key": "ec64ec67-17c4-4929-8f98-9fb7aa1c624e"
+      }
+    },
+    {
+      "key": "60c41655-29f5-4f57-b536-f266a8c5c98b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "60c41655-29f5-4f57-b536-f266a8c5c98b",
+        "lesson_activity.key": "8c4063ea-4039-4c20-bcb7-18116e9246b8"
+      }
+    },
+    {
+      "key": "77442365-a205-4630-a579-9c427fbd4bef",
+      "position": 2,
+      "properties": {
+        "progression_name": "The Vigenere Cipher Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "77442365-a205-4630-a579-9c427fbd4bef",
+        "lesson_activity.key": "8c4063ea-4039-4c20-bcb7-18116e9246b8"
+      }
+    },
+    {
+      "key": "00b8ce50-9884-42f2-b7be-274cc5e74258",
+      "position": 3,
+      "properties": {
+        "progression_name": "How Secure Is Your Password?"
+      },
+      "seeding_key": {
+        "activity_section.key": "00b8ce50-9884-42f2-b7be-274cc5e74258",
+        "lesson_activity.key": "8c4063ea-4039-4c20-bcb7-18116e9246b8"
+      }
+    },
+    {
+      "key": "7bf53dfd-1144-4a25-beeb-6e3362922e0d",
+      "position": 4,
+      "properties": {
+        "progression_name": "Encryption and Public Keys"
+      },
+      "seeding_key": {
+        "activity_section.key": "7bf53dfd-1144-4a25-beeb-6e3362922e0d",
+        "lesson_activity.key": "8c4063ea-4039-4c20-bcb7-18116e9246b8"
+      }
+    },
+    {
+      "key": "750bddcf-6355-4a54-bd1a-0fca61e4a28c",
+      "position": 5,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "750bddcf-6355-4a54-bd1a-0fca61e4a28c",
+        "lesson_activity.key": "8c4063ea-4039-4c20-bcb7-18116e9246b8"
+      }
+    },
+    {
+      "key": "bd9b933a-d530-47ca-9b1b-fb8da70b9984",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "bd9b933a-d530-47ca-9b1b-fb8da70b9984",
+        "lesson_activity.key": "7244fc0d-f00d-4519-9e08-307cbb524939"
+      }
+    },
+    {
+      "key": "f56f3d2c-49ce-434f-be21-01459980f968",
+      "position": 2,
+      "properties": {
+        "progression_name": "Encryption and Public Keys"
+      },
+      "seeding_key": {
+        "activity_section.key": "f56f3d2c-49ce-434f-be21-01459980f968",
+        "lesson_activity.key": "7244fc0d-f00d-4519-9e08-307cbb524939"
+      }
+    },
+    {
+      "key": "89e52ed3-a3b2-4e8e-8107-5149296cb516",
+      "position": 3,
+      "properties": {
+        "progression_name": "Cups and Beans Activity"
+      },
+      "seeding_key": {
+        "activity_section.key": "89e52ed3-a3b2-4e8e-8107-5149296cb516",
+        "lesson_activity.key": "7244fc0d-f00d-4519-9e08-307cbb524939"
+      }
+    },
+    {
+      "key": "858f2820-7458-47bd-b5fd-09138bfd203f",
+      "position": 4,
+      "properties": {
+        "progression_name": "Modulo Clock Instructions"
+      },
+      "seeding_key": {
+        "activity_section.key": "858f2820-7458-47bd-b5fd-09138bfd203f",
+        "lesson_activity.key": "7244fc0d-f00d-4519-9e08-307cbb524939"
+      }
+    },
+    {
+      "key": "c7874f53-3776-47a2-af31-c4af17e68c20",
+      "position": 5,
+      "properties": {
+        "progression_name": "The Modulo Clock"
+      },
+      "seeding_key": {
+        "activity_section.key": "c7874f53-3776-47a2-af31-c4af17e68c20",
+        "lesson_activity.key": "7244fc0d-f00d-4519-9e08-307cbb524939"
+      }
+    },
+    {
+      "key": "b4ed4acb-c074-49ae-9c05-1868fd88a912",
+      "position": 6,
+      "properties": {
+        "progression_name": "Public Key Crypto Widget Instructions"
+      },
+      "seeding_key": {
+        "activity_section.key": "b4ed4acb-c074-49ae-9c05-1868fd88a912",
+        "lesson_activity.key": "7244fc0d-f00d-4519-9e08-307cbb524939"
+      }
+    },
+    {
+      "key": "35de6c0c-2be4-4fa0-ae81-aefc1b8ede15",
+      "position": 7,
+      "properties": {
+        "progression_name": "Public Key Cryptography Widget"
+      },
+      "seeding_key": {
+        "activity_section.key": "35de6c0c-2be4-4fa0-ae81-aefc1b8ede15",
+        "lesson_activity.key": "7244fc0d-f00d-4519-9e08-307cbb524939"
+      }
+    },
+    {
+      "key": "e9b3293a-fdc5-409c-bbf8-c864387fa520",
+      "position": 8,
+      "properties": {
+        "name": "Check Your Understanding",
+        "progression_name": "Check Your Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "e9b3293a-fdc5-409c-bbf8-c864387fa520",
+        "lesson_activity.key": "7244fc0d-f00d-4519-9e08-307cbb524939"
+      }
+    },
+    {
+      "key": "6b9fd1a9-dd3e-48e2-b4b8-fa92569f3706",
+      "position": 1,
+      "properties": {
+        "progression_name": "Lesson Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b9fd1a9-dd3e-48e2-b4b8-fa92569f3706",
+        "lesson_activity.key": "968440b2-e97a-4255-ba2b-ee2563b4a13a"
+      }
+    },
+    {
+      "key": "a2dbfb4a-10f6-4159-8e6b-258a1a93fd8d",
+      "position": 2,
+      "properties": {
+        "name": "Cybersecurity and Crime",
+        "progression_name": "Cybersecurity and Crime"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2dbfb4a-10f6-4159-8e6b-258a1a93fd8d",
+        "lesson_activity.key": "968440b2-e97a-4255-ba2b-ee2563b4a13a"
+      }
+    },
+    {
+      "key": "8c47afc9-fbe1-4bec-8d29-b7f02543c1d3",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8c47afc9-fbe1-4bec-8d29-b7f02543c1d3",
+        "lesson_activity.key": "443b2f23-d9f8-4927-98fd-d78920010f01"
+      }
+    },
+    {
+      "key": "72a38e58-c596-4e58-a613-c6da57c87666",
+      "position": 1,
+      "properties": {
+        "name": "Post-Course Survey Instructions",
+        "progression_name": "Post-Course Survey Instructions"
+      },
+      "seeding_key": {
+        "activity_section.key": "72a38e58-c596-4e58-a613-c6da57c87666",
+        "lesson_activity.key": "f1af12a8-edda-4e67-a346-d3c32792c7dc"
+      }
+    }
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L01 SFLP"
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L01 SFLP"
         ],
         "lesson.key": "What is Big Data?",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "0b3e655a-f086-449a-9c33-6e1d117eb687"
       },
       "level_keys": [
         "CSP U4L01 SFLP"
@@ -308,19 +921,23 @@
     {
       "chapter": 2,
       "position": 2,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L1 - MC moores law_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L1 - MC moores law_2018"
         ],
         "lesson.key": "What is Big Data?",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "8bee14b4-e3a2-4dda-b616-a0c5f333ccf4"
       },
       "level_keys": [
         "U4L1 - MC moores law_2018"
@@ -329,19 +946,23 @@
     {
       "chapter": 3,
       "position": 3,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L1 - MC big data def_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L1 - MC big data def_2018"
         ],
         "lesson.key": "What is Big Data?",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "8bee14b4-e3a2-4dda-b616-a0c5f333ccf4"
       },
       "level_keys": [
         "U4L1 - MC big data def_2018"
@@ -350,19 +971,23 @@
     {
       "chapter": 4,
       "position": 4,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pulse-check-survey-5-levelgroup-U4Ch1_2018"
+        ],
         "progression": "Quick Check-In"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-pulse-check-survey-5-levelgroup-U4Ch1_2018"
         ],
         "lesson.key": "What is Big Data?",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "900afd33-2b3c-4e12-ac3c-777d5b92ea60"
       },
       "level_keys": [
         "csp-pulse-check-survey-5-levelgroup-U4Ch1_2018"
@@ -371,18 +996,23 @@
     {
       "chapter": 5,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L08 SFLP"
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U2L08 SFLP"
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "5c05c0d3-da79-4116-95f9-3ab319efcab3"
       },
       "level_keys": [
         "CSP U2L08 SFLP"
@@ -391,19 +1021,23 @@
     {
       "chapter": 6,
       "position": 2,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L8 google trends MC_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L8 google trends MC_2018"
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "545d328a-e54d-4a4d-8cb3-718f9aa2f086"
       },
       "level_keys": [
         "U2L8 google trends MC_2018"
@@ -412,19 +1046,23 @@
     {
       "chapter": 7,
       "position": 3,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L8 google trends hypothesis_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L8 google trends hypothesis_2018"
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "545d328a-e54d-4a4d-8cb3-718f9aa2f086"
       },
       "level_keys": [
         "U2L8 google trends hypothesis_2018"
@@ -433,19 +1071,23 @@
     {
       "chapter": 8,
       "position": 4,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 4 google trends MC_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 4 google trends MC_2018"
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "545d328a-e54d-4a4d-8cb3-718f9aa2f086"
       },
       "level_keys": [
         "CSP Unit 4 google trends MC_2018"
@@ -454,19 +1096,23 @@
     {
       "chapter": 9,
       "position": 5,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 4 trends as predictors_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 4 trends as predictors_2018"
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "545d328a-e54d-4a4d-8cb3-718f9aa2f086"
       },
       "level_keys": [
         "CSP Unit 4 trends as predictors_2018"
@@ -475,18 +1121,23 @@
     {
       "chapter": 10,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L09 SFLP"
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U2L09 SFLP"
         ],
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "5952baa3-085e-4d48-91e2-4b8ff3ef9bae"
       },
       "level_keys": [
         "CSP U2L09 SFLP"
@@ -495,19 +1146,23 @@
     {
       "chapter": 11,
       "position": 2,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L9 What is digital divide MC_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L9 What is digital divide MC_2018"
         ],
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "9b48c165-d369-4866-98e8-416a0969bc39"
       },
       "level_keys": [
         "U2L9 What is digital divide MC_2018"
@@ -516,19 +1171,23 @@
     {
       "chapter": 12,
       "position": 3,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L9 FR digital divide issue_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L9 FR digital divide issue_2018"
         ],
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "9b48c165-d369-4866-98e8-416a0969bc39"
       },
       "level_keys": [
         "U2L9 FR digital divide issue_2018"
@@ -537,19 +1196,23 @@
     {
       "chapter": 13,
       "position": 4,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 4 MC data bias_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 4 MC data bias_2018"
         ],
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "9b48c165-d369-4866-98e8-416a0969bc39"
       },
       "level_keys": [
         "CSP Unit 4 MC data bias_2018"
@@ -558,18 +1221,23 @@
     {
       "chapter": 14,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L02 SFLP"
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L02 SFLP"
         ],
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "aaf0d11d-09fd-44a9-9782-197c173480ed"
       },
       "level_keys": [
         "CSP U4L02 SFLP"
@@ -578,19 +1246,23 @@
     {
       "chapter": 15,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - Data and Medicine_2018"
+        ],
         "progression": "Data and Medicine"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Video - Data and Medicine_2018"
         ],
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "7935f428-7e95-4cc8-8af0-97d0aefdab08"
       },
       "level_keys": [
         "Video - Data and Medicine_2018"
@@ -599,19 +1271,23 @@
     {
       "chapter": 16,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - CS is Changing Everything_2018"
+        ],
         "progression": "CS is Changing Everything"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Video - CS is Changing Everything_2018"
         ],
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "8b2b388c-88c9-4733-9004-402dccced194"
       },
       "level_keys": [
         "Video - CS is Changing Everything_2018"
@@ -620,19 +1296,23 @@
     {
       "chapter": 17,
       "position": 4,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L2 - FR Practice AP response about data_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L2 - FR Practice AP response about data_2018"
         ],
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "b5482353-ca77-4699-bf6e-f8aed076e595"
       },
       "level_keys": [
         "U4L2 - FR Practice AP response about data_2018"
@@ -641,18 +1321,23 @@
     {
       "chapter": 18,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L03 SFLP"
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L03 SFLP"
         ],
         "lesson.key": "Identifying People with Data",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "841f6fa8-8052-48d6-aa1c-3f863fa4da17"
       },
       "level_keys": [
         "CSP U4L03 SFLP"
@@ -661,18 +1346,23 @@
     {
       "chapter": 19,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4-AP-Practice-Choose-The-Data-Concern_2018"
+        ],
+        "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4-AP-Practice-Choose-The-Data-Concern_2018"
         ],
         "lesson.key": "Identifying People with Data",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "9fa25974-531c-4046-b7d1-d2918caabfd8"
       },
       "level_keys": [
         "U4-AP-Practice-Choose-The-Data-Concern_2018"
@@ -681,19 +1371,23 @@
     {
       "chapter": 20,
       "position": 3,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L3 - FR Identifying people_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L3 - FR Identifying people_2018"
         ],
         "lesson.key": "Identifying People with Data",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "9fa25974-531c-4046-b7d1-d2918caabfd8"
       },
       "level_keys": [
         "U4L3 - FR Identifying people_2018"
@@ -702,18 +1396,23 @@
     {
       "chapter": 21,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L04 SFLP"
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L04 SFLP"
         ],
         "lesson.key": "The Cost of Free",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "6778d695-b203-460c-ac9b-c04673bb5937"
       },
       "level_keys": [
         "CSP U4L04 SFLP"
@@ -722,18 +1421,23 @@
     {
       "chapter": 22,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "U4-AP-Practice-Justify-the-Score_2018"
+        ],
+        "progression": "AP Practice Response - Justify the Score"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4-AP-Practice-Justify-the-Score_2018"
         ],
         "lesson.key": "The Cost of Free",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "cf424373-41c9-4f42-a94d-1272b7a8dc05"
       },
       "level_keys": [
         "U4-AP-Practice-Justify-the-Score_2018"
@@ -742,19 +1446,23 @@
     {
       "chapter": 23,
       "position": 3,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L4 - MC cost of free_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L4 - MC cost of free_2018"
         ],
         "lesson.key": "The Cost of Free",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "3c17bc45-9d2f-4806-b8f5-742953a413fb"
       },
       "level_keys": [
         "U4L4 - MC cost of free_2018"
@@ -763,19 +1471,23 @@
     {
       "chapter": 24,
       "position": 4,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U4L4 - FR cost of free_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U4L4 - FR cost of free_2018"
         ],
         "lesson.key": "The Cost of Free",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "3c17bc45-9d2f-4806-b8f5-742953a413fb"
       },
       "level_keys": [
         "U4L4 - FR cost of free_2018"
@@ -784,18 +1496,23 @@
     {
       "chapter": 25,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L05 SFLP"
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L05 SFLP"
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "66e94e86-6a0f-45a5-a9ff-f6d92a58988a"
       },
       "level_keys": [
         "CSP U4L05 SFLP"
@@ -804,19 +1521,23 @@
     {
       "chapter": 26,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack a Caesar Cipher_2018"
+        ],
         "progression": "Crack a Caesar Cipher"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Crack a Caesar Cipher_2018"
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "a58b1ae5-7e22-425b-bd20-571e02bfa8c4"
       },
       "level_keys": [
         "Crack a Caesar Cipher_2018"
@@ -825,19 +1546,23 @@
     {
       "chapter": 27,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Terminology Recap_2018"
+        ],
         "progression": "Terminology Recap"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Terminology Recap_2018"
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "89ac5b1d-7a0f-4ce5-bd91-79f9ebcc03d9"
       },
       "level_keys": [
         "Terminology Recap_2018"
@@ -846,19 +1571,23 @@
     {
       "chapter": 28,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "New Challenge Introduction_2018"
+        ],
         "progression": "New Challenge Introduction"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "New Challenge Introduction_2018"
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "c5f68a8e-a6b6-45b0-a4e7-03876cc5dc7f"
       },
       "level_keys": [
         "New Challenge Introduction_2018"
@@ -867,19 +1596,23 @@
     {
       "chapter": 29,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Crack Random Substitution_2018"
+        ],
         "progression": "Crack Random Substitution"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Crack Random Substitution_2018"
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "ab8c5e66-fdd6-4209-9068-6f70805cdafe"
       },
       "level_keys": [
         "Crack Random Substitution_2018"
@@ -888,19 +1621,23 @@
     {
       "chapter": 30,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Technique: Frequency Analysis_2018"
+        ],
         "progression": "Technique: Frequency Analysis"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Technique: Frequency Analysis_2018"
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "636d6d2f-ab2b-40a7-9f75-91ee51098be0"
       },
       "level_keys": [
         "Technique: Frequency Analysis_2018"
@@ -909,19 +1646,23 @@
     {
       "chapter": 31,
       "position": 7,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Free Response Getting Started_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L13 Free Response Getting Started_2018"
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "da411af6-2731-4098-99ba-4746ee8cdc76"
       },
       "level_keys": [
         "U2L13 Free Response Getting Started_2018"
@@ -930,19 +1671,23 @@
     {
       "chapter": 32,
       "position": 8,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Assessment1_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L13 Assessment1_2018"
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "da411af6-2731-4098-99ba-4746ee8cdc76"
       },
       "level_keys": [
         "U2L13 Assessment1_2018"
@@ -951,19 +1696,23 @@
     {
       "chapter": 33,
       "position": 9,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Assessment3_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L13 Assessment3_2018"
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "da411af6-2731-4098-99ba-4746ee8cdc76"
       },
       "level_keys": [
         "U2L13 Assessment3_2018"
@@ -972,19 +1721,23 @@
     {
       "chapter": 34,
       "position": 10,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Assessment4_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L13 Assessment4_2018"
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "da411af6-2731-4098-99ba-4746ee8cdc76"
       },
       "level_keys": [
         "U2L13 Assessment4_2018"
@@ -993,19 +1746,23 @@
     {
       "chapter": 35,
       "position": 11,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L13 Free Response Wrap Up_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L13 Free Response Wrap Up_2018"
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "da411af6-2731-4098-99ba-4746ee8cdc76"
       },
       "level_keys": [
         "U2L13 Free Response Wrap Up_2018"
@@ -1014,19 +1771,23 @@
     {
       "chapter": 36,
       "position": 12,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Free Response Wrap Up_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L14 Free Response Wrap Up_2018"
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "da411af6-2731-4098-99ba-4746ee8cdc76"
       },
       "level_keys": [
         "U2L14 Free Response Wrap Up_2018"
@@ -1035,18 +1796,23 @@
     {
       "chapter": 37,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L06 SFLP"
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L06 SFLP"
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "60c41655-29f5-4f57-b536-f266a8c5c98b"
       },
       "level_keys": [
         "CSP U4L06 SFLP"
@@ -1055,19 +1821,23 @@
     {
       "chapter": 38,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Vigenere Cipher Widget_2018"
+        ],
         "progression": "The Vigenere Cipher Widget"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "The Vigenere Cipher Widget_2018"
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "77442365-a205-4630-a579-9c427fbd4bef"
       },
       "level_keys": [
         "The Vigenere Cipher Widget_2018"
@@ -1076,19 +1846,23 @@
     {
       "chapter": 39,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "How Secure Is Your Password?_2018"
+        ],
         "progression": "How Secure Is Your Password?"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "How Secure Is Your Password?_2018"
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "00b8ce50-9884-42f2-b7be-274cc5e74258"
       },
       "level_keys": [
         "How Secure Is Your Password?_2018"
@@ -1097,19 +1871,23 @@
     {
       "chapter": 40,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - Encryption and Public Keys_2018"
+        ],
         "progression": "Encryption and Public Keys"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Video - Encryption and Public Keys_2018"
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "7bf53dfd-1144-4a25-beeb-6e3362922e0d"
       },
       "level_keys": [
         "Video - Encryption and Public Keys_2018"
@@ -1118,19 +1896,23 @@
     {
       "chapter": 41,
       "position": 5,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Free Response Getting Started_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L14 Free Response Getting Started_2018"
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "750bddcf-6355-4a54-bd1a-0fca61e4a28c"
       },
       "level_keys": [
         "U2L14 Free Response Getting Started_2018"
@@ -1139,19 +1921,23 @@
     {
       "chapter": 42,
       "position": 6,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Assessment_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L14 Assessment_2018"
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "750bddcf-6355-4a54-bd1a-0fca61e4a28c"
       },
       "level_keys": [
         "U2L14 Assessment_2018"
@@ -1160,19 +1946,23 @@
     {
       "chapter": 43,
       "position": 7,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Free Response Wrap Up_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L14 Free Response Wrap Up_2018"
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "750bddcf-6355-4a54-bd1a-0fca61e4a28c"
       },
       "level_keys": [
         "U2L14 Free Response Wrap Up_2018"
@@ -1181,19 +1971,23 @@
     {
       "chapter": 44,
       "position": 8,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L14 Assessment2_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L14 Assessment2_2018"
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "750bddcf-6355-4a54-bd1a-0fca61e4a28c"
       },
       "level_keys": [
         "U2L14 Assessment2_2018"
@@ -1202,19 +1996,23 @@
     {
       "chapter": 45,
       "position": 9,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L15 Assessment1_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L15 Assessment1_2018"
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "750bddcf-6355-4a54-bd1a-0fca61e4a28c"
       },
       "level_keys": [
         "U2L15 Assessment1_2018"
@@ -1223,18 +2021,23 @@
     {
       "chapter": 46,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L07 SFLP"
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L07 SFLP"
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "bd9b933a-d530-47ca-9b1b-fb8da70b9984"
       },
       "level_keys": [
         "CSP U4L07 SFLP"
@@ -1243,19 +2046,23 @@
     {
       "chapter": 47,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - Encryption and Public Keys_2018"
+        ],
         "progression": "Encryption and Public Keys"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Video - Encryption and Public Keys_2018"
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "f56f3d2c-49ce-434f-be21-01459980f968"
       },
       "level_keys": [
         "Video - Encryption and Public Keys_2018"
@@ -1264,19 +2071,23 @@
     {
       "chapter": 48,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Cups and Beans Activity_2018"
+        ],
         "progression": "Cups and Beans Activity"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Cups and Beans Activity_2018"
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "89e52ed3-a3b2-4e8e-8107-5149296cb516"
       },
       "level_keys": [
         "Cups and Beans Activity_2018"
@@ -1285,19 +2096,23 @@
     {
       "chapter": 49,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Modulo Clock Instructions_2018"
+        ],
         "progression": "Modulo Clock Instructions"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Modulo Clock Instructions_2018"
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "858f2820-7458-47bd-b5fd-09138bfd203f"
       },
       "level_keys": [
         "Modulo Clock Instructions_2018"
@@ -1306,19 +2121,23 @@
     {
       "chapter": 50,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "The Modulo Clock_2018"
+        ],
         "progression": "The Modulo Clock"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "The Modulo Clock_2018"
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "c7874f53-3776-47a2-af31-c4af17e68c20"
       },
       "level_keys": [
         "The Modulo Clock_2018"
@@ -1327,19 +2146,23 @@
     {
       "chapter": 51,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Public Key Crypto Widget Instructions_2018"
+        ],
         "progression": "Public Key Crypto Widget Instructions"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Public Key Crypto Widget Instructions_2018"
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "b4ed4acb-c074-49ae-9c05-1868fd88a912"
       },
       "level_keys": [
         "Public Key Crypto Widget Instructions_2018"
@@ -1348,19 +2171,23 @@
     {
       "chapter": 52,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Public Key Cryptography Widget_2018"
+        ],
         "progression": "Public Key Cryptography Widget"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Public Key Cryptography Widget_2018"
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "35de6c0c-2be4-4fa0-ae81-aefc1b8ede15"
       },
       "level_keys": [
         "Public Key Cryptography Widget_2018"
@@ -1369,19 +2196,23 @@
     {
       "chapter": 53,
       "position": 8,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L18 Free Response Assessment 1_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L18 Free Response Assessment 1_2018"
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "e9b3293a-fdc5-409c-bbf8-c864387fa520"
       },
       "level_keys": [
         "U2L18 Free Response Assessment 1_2018"
@@ -1390,19 +2221,23 @@
     {
       "chapter": 54,
       "position": 9,
+      "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L18 Match terms to cups and beans analogy_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L18 Match terms to cups and beans analogy_2018"
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "e9b3293a-fdc5-409c-bbf8-c864387fa520"
       },
       "level_keys": [
         "U2L18 Match terms to cups and beans analogy_2018"
@@ -1411,19 +2246,23 @@
     {
       "chapter": 55,
       "position": 10,
+      "activity_section_position": 3,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L19 Free Response Getting Started_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L19 Free Response Getting Started_2018"
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "e9b3293a-fdc5-409c-bbf8-c864387fa520"
       },
       "level_keys": [
         "U2L19 Free Response Getting Started_2018"
@@ -1432,19 +2271,23 @@
     {
       "chapter": 56,
       "position": 11,
+      "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L19 mutlichoice 20 mod 15_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L19 mutlichoice 20 mod 15_2018"
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "e9b3293a-fdc5-409c-bbf8-c864387fa520"
       },
       "level_keys": [
         "U2L19 mutlichoice 20 mod 15_2018"
@@ -1453,19 +2296,23 @@
     {
       "chapter": 57,
       "position": 12,
+      "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L19 multichoice 13 MOD 17_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L19 multichoice 13 MOD 17_2018"
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "e9b3293a-fdc5-409c-bbf8-c864387fa520"
       },
       "level_keys": [
         "U2L19 multichoice 13 MOD 17_2018"
@@ -1474,19 +2321,23 @@
     {
       "chapter": 58,
       "position": 13,
+      "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L19 Free Response Wrap Up_2018"
+        ],
         "progression": "Check Your Understanding"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "U2L19 Free Response Wrap Up_2018"
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "e9b3293a-fdc5-409c-bbf8-c864387fa520"
       },
       "level_keys": [
         "U2L19 Free Response Wrap Up_2018"
@@ -1495,18 +2346,23 @@
     {
       "chapter": 59,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U4L08 SFLP"
+        ],
+        "progression": "Lesson Overview"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP U4L08 SFLP"
         ],
         "lesson.key": "Rapid Research - Cybercrime",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "6b9fd1a9-dd3e-48e2-b4b8-fa92569f3706"
       },
       "level_keys": [
         "CSP U4L08 SFLP"
@@ -1515,19 +2371,23 @@
     {
       "chapter": 60,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "Video - Cybersecurity and Crime_2018"
+        ],
         "progression": "Cybersecurity and Crime"
       },
-      "named_level": true,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "Video - Cybersecurity and Crime_2018"
         ],
         "lesson.key": "Rapid Research - Cybercrime",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "a2dbfb4a-10f6-4159-8e6b-258a1a93fd8d"
       },
       "level_keys": [
         "Video - Cybersecurity and Crime_2018"
@@ -1536,18 +2396,22 @@
     {
       "chapter": 61,
       "position": 1,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 4 Ch1 Cumulative Assessment MC_2018"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "CSP Unit 4 Ch1 Cumulative Assessment MC_2018"
         ],
         "lesson.key": "Unit 4 Assessment",
         "lesson_group.key": "cspAssessment",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "8c47afc9-fbe1-4bec-8d29-b7f02543c1d3"
       },
       "level_keys": [
         "CSP Unit 4 Ch1 Cumulative Assessment MC_2018"
@@ -1556,19 +2420,23 @@
     {
       "chapter": 62,
       "position": 1,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2018-markdown-with-link-to-survey_v2"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "csp-post-survey-2018-markdown-with-link-to-survey_v2"
         ],
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "72a38e58-c596-4e58-a613-c6da57c87666"
       },
       "level_keys": [
         "csp-post-survey-2018-markdown-with-link-to-survey_v2"
@@ -1584,7 +2452,8 @@
         ],
         "lesson.key": "What is Big Data?",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "0b3e655a-f086-449a-9c33-6e1d117eb687"
       }
     },
     {
@@ -1595,7 +2464,8 @@
         ],
         "lesson.key": "What is Big Data?",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "8bee14b4-e3a2-4dda-b616-a0c5f333ccf4"
       }
     },
     {
@@ -1606,7 +2476,8 @@
         ],
         "lesson.key": "What is Big Data?",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "8bee14b4-e3a2-4dda-b616-a0c5f333ccf4"
       }
     },
     {
@@ -1617,7 +2488,8 @@
         ],
         "lesson.key": "What is Big Data?",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "900afd33-2b3c-4e12-ac3c-777d5b92ea60"
       }
     },
     {
@@ -1628,7 +2500,8 @@
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "5c05c0d3-da79-4116-95f9-3ab319efcab3"
       }
     },
     {
@@ -1639,7 +2512,8 @@
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "545d328a-e54d-4a4d-8cb3-718f9aa2f086"
       }
     },
     {
@@ -1650,7 +2524,8 @@
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "545d328a-e54d-4a4d-8cb3-718f9aa2f086"
       }
     },
     {
@@ -1661,7 +2536,8 @@
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "545d328a-e54d-4a4d-8cb3-718f9aa2f086"
       }
     },
     {
@@ -1672,7 +2548,8 @@
         ],
         "lesson.key": "Finding Trends with Visualizations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "545d328a-e54d-4a4d-8cb3-718f9aa2f086"
       }
     },
     {
@@ -1683,7 +2560,8 @@
         ],
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "5952baa3-085e-4d48-91e2-4b8ff3ef9bae"
       }
     },
     {
@@ -1694,7 +2572,8 @@
         ],
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "9b48c165-d369-4866-98e8-416a0969bc39"
       }
     },
     {
@@ -1705,7 +2584,8 @@
         ],
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "9b48c165-d369-4866-98e8-416a0969bc39"
       }
     },
     {
@@ -1716,7 +2596,8 @@
         ],
         "lesson.key": "Check Your Assumptions",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "9b48c165-d369-4866-98e8-416a0969bc39"
       }
     },
     {
@@ -1727,7 +2608,8 @@
         ],
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "aaf0d11d-09fd-44a9-9782-197c173480ed"
       }
     },
     {
@@ -1738,7 +2620,8 @@
         ],
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "7935f428-7e95-4cc8-8af0-97d0aefdab08"
       }
     },
     {
@@ -1749,7 +2632,8 @@
         ],
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "8b2b388c-88c9-4733-9004-402dccced194"
       }
     },
     {
@@ -1760,7 +2644,8 @@
         ],
         "lesson.key": "Rapid Research - Data Innovations",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "b5482353-ca77-4699-bf6e-f8aed076e595"
       }
     },
     {
@@ -1771,7 +2656,8 @@
         ],
         "lesson.key": "Identifying People with Data",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "841f6fa8-8052-48d6-aa1c-3f863fa4da17"
       }
     },
     {
@@ -1782,7 +2668,8 @@
         ],
         "lesson.key": "Identifying People with Data",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "9fa25974-531c-4046-b7d1-d2918caabfd8"
       }
     },
     {
@@ -1793,7 +2680,8 @@
         ],
         "lesson.key": "Identifying People with Data",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "9fa25974-531c-4046-b7d1-d2918caabfd8"
       }
     },
     {
@@ -1804,7 +2692,8 @@
         ],
         "lesson.key": "The Cost of Free",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "6778d695-b203-460c-ac9b-c04673bb5937"
       }
     },
     {
@@ -1815,7 +2704,8 @@
         ],
         "lesson.key": "The Cost of Free",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "cf424373-41c9-4f42-a94d-1272b7a8dc05"
       }
     },
     {
@@ -1826,7 +2716,8 @@
         ],
         "lesson.key": "The Cost of Free",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "3c17bc45-9d2f-4806-b8f5-742953a413fb"
       }
     },
     {
@@ -1837,7 +2728,8 @@
         ],
         "lesson.key": "The Cost of Free",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "3c17bc45-9d2f-4806-b8f5-742953a413fb"
       }
     },
     {
@@ -1848,7 +2740,8 @@
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "66e94e86-6a0f-45a5-a9ff-f6d92a58988a"
       }
     },
     {
@@ -1859,7 +2752,8 @@
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "a58b1ae5-7e22-425b-bd20-571e02bfa8c4"
       }
     },
     {
@@ -1870,7 +2764,8 @@
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "89ac5b1d-7a0f-4ce5-bd91-79f9ebcc03d9"
       }
     },
     {
@@ -1881,7 +2776,8 @@
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "c5f68a8e-a6b6-45b0-a4e7-03876cc5dc7f"
       }
     },
     {
@@ -1892,7 +2788,8 @@
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "ab8c5e66-fdd6-4209-9068-6f70805cdafe"
       }
     },
     {
@@ -1903,7 +2800,8 @@
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "636d6d2f-ab2b-40a7-9f75-91ee51098be0"
       }
     },
     {
@@ -1914,7 +2812,8 @@
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "da411af6-2731-4098-99ba-4746ee8cdc76"
       }
     },
     {
@@ -1925,7 +2824,8 @@
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "da411af6-2731-4098-99ba-4746ee8cdc76"
       }
     },
     {
@@ -1936,7 +2836,8 @@
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "da411af6-2731-4098-99ba-4746ee8cdc76"
       }
     },
     {
@@ -1947,7 +2848,8 @@
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "da411af6-2731-4098-99ba-4746ee8cdc76"
       }
     },
     {
@@ -1958,7 +2860,8 @@
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "da411af6-2731-4098-99ba-4746ee8cdc76"
       }
     },
     {
@@ -1969,7 +2872,8 @@
         ],
         "lesson.key": "Simple Encryption",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "da411af6-2731-4098-99ba-4746ee8cdc76"
       }
     },
     {
@@ -1980,7 +2884,8 @@
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "60c41655-29f5-4f57-b536-f266a8c5c98b"
       }
     },
     {
@@ -1991,7 +2896,8 @@
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "77442365-a205-4630-a579-9c427fbd4bef"
       }
     },
     {
@@ -2002,7 +2908,8 @@
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "00b8ce50-9884-42f2-b7be-274cc5e74258"
       }
     },
     {
@@ -2013,7 +2920,8 @@
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "7bf53dfd-1144-4a25-beeb-6e3362922e0d"
       }
     },
     {
@@ -2024,7 +2932,8 @@
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "750bddcf-6355-4a54-bd1a-0fca61e4a28c"
       }
     },
     {
@@ -2035,7 +2944,8 @@
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "750bddcf-6355-4a54-bd1a-0fca61e4a28c"
       }
     },
     {
@@ -2046,7 +2956,8 @@
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "750bddcf-6355-4a54-bd1a-0fca61e4a28c"
       }
     },
     {
@@ -2057,7 +2968,8 @@
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "750bddcf-6355-4a54-bd1a-0fca61e4a28c"
       }
     },
     {
@@ -2068,7 +2980,8 @@
         ],
         "lesson.key": "Encryption with Keys and Passwords",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "750bddcf-6355-4a54-bd1a-0fca61e4a28c"
       }
     },
     {
@@ -2079,7 +2992,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "bd9b933a-d530-47ca-9b1b-fb8da70b9984"
       }
     },
     {
@@ -2090,7 +3004,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "f56f3d2c-49ce-434f-be21-01459980f968"
       }
     },
     {
@@ -2101,7 +3016,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "89e52ed3-a3b2-4e8e-8107-5149296cb516"
       }
     },
     {
@@ -2112,7 +3028,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "858f2820-7458-47bd-b5fd-09138bfd203f"
       }
     },
     {
@@ -2123,7 +3040,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "c7874f53-3776-47a2-af31-c4af17e68c20"
       }
     },
     {
@@ -2134,7 +3052,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "b4ed4acb-c074-49ae-9c05-1868fd88a912"
       }
     },
     {
@@ -2145,7 +3064,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "35de6c0c-2be4-4fa0-ae81-aefc1b8ede15"
       }
     },
     {
@@ -2156,7 +3076,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "e9b3293a-fdc5-409c-bbf8-c864387fa520"
       }
     },
     {
@@ -2167,7 +3088,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "e9b3293a-fdc5-409c-bbf8-c864387fa520"
       }
     },
     {
@@ -2178,7 +3100,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "e9b3293a-fdc5-409c-bbf8-c864387fa520"
       }
     },
     {
@@ -2189,7 +3112,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "e9b3293a-fdc5-409c-bbf8-c864387fa520"
       }
     },
     {
@@ -2200,7 +3124,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "e9b3293a-fdc5-409c-bbf8-c864387fa520"
       }
     },
     {
@@ -2211,7 +3136,8 @@
         ],
         "lesson.key": "Public Key Crypto",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "e9b3293a-fdc5-409c-bbf8-c864387fa520"
       }
     },
     {
@@ -2222,7 +3148,8 @@
         ],
         "lesson.key": "Rapid Research - Cybercrime",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "6b9fd1a9-dd3e-48e2-b4b8-fa92569f3706"
       }
     },
     {
@@ -2233,7 +3160,8 @@
         ],
         "lesson.key": "Rapid Research - Cybercrime",
         "lesson_group.key": "csp4_1_2018",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "a2dbfb4a-10f6-4159-8e6b-258a1a93fd8d"
       }
     },
     {
@@ -2244,7 +3172,8 @@
         ],
         "lesson.key": "Unit 4 Assessment",
         "lesson_group.key": "cspAssessment",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "8c47afc9-fbe1-4bec-8d29-b7f02543c1d3"
       }
     },
     {
@@ -2255,8 +3184,39 @@
         ],
         "lesson.key": "CS Principles Post-Course Survey",
         "lesson_group.key": "cspSurvey",
-        "script.name": "csp4-2018"
+        "script.name": "csp4-2018",
+        "activity_section.key": "72a38e58-c596-4e58-a613-c6da57c87666"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

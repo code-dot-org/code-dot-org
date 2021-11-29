@@ -1,0 +1,22 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "properties": {
+    "video_key": "poembot-pilot-text",
+    "instructions_important": "false",
+    "display_name": "This is Sprite Lab",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 27810,
+    "name_suffix": "_2020",
+    "encrypted": "false",
+    "long_instructions": "<div style=\"display: inline-block\">\r\n<img src=\"https://images.code.org/36455e75aa6e692c8fe61feb7486f99c-image-1615329933168.png\" alt=\"drawing\" width=\"100\" style=\"float:left; padding-right:20px\"/>\r\n\r\n## Great work so far!  \r\nLet's take a moment to pause and wait for directions from your teacher. You'll watch a video together as a class. To keep working, you can go back to the [previous level](../levels/6).\r\n\r\n\r\nOnce you've watched the video on how to add text to your program, click `Continue`, below. \r\n\r\n</div>\r\n\r\n"
+  },
+  "game_id": 54,
+  "published": true,
+  "created_at": "2021-03-31T17:52:56.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2018-07-03 22:54:26 +0000\",\"changed\":[],\"changed_by_id\":63,\"changed_by_email\":\"kiki@code.org\"},{\"changed_at\":\"2019-05-29 17:24:05 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2021-03-31 17:46:05 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 17:53:16 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 17:54:51 +0000\",\"changed\":[],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 17:55:40 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-03-31 20:31:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":831,\"changed_by_email\":\"mike.harvey@code.org\"},{\"changed_at\":\"2021-04-05 18:03:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+</StandaloneVideo>

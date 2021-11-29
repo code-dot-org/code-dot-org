@@ -80,7 +80,7 @@ Badly designed programs can work just fine, but they are hard to read, hard to t
 ## Activity: Sam the Bat
 ### <a name="Activity1"></a> 2) Online Puzzles
 
-Using Boolean logic, you're going to write functions to help make sure Sam the Bat doesn't leave his mom's yard. Head to [CS in Algebra stage 15](http://studio.code.org/s/algebra/stage/15/puzzle/1) in Code Studio to get started programming.
+Using Boolean logic, you're going to write functions to help make sure Sam the Bat doesn't leave his mom's yard. Head to [CS in Algebra stage 15](http://studio.code.org/s/algebra/lessons/15/levels/1) in Code Studio to get started programming.
 
 [/together]
 

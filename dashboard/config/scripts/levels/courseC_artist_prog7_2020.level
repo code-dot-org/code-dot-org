@@ -45,12 +45,10 @@
     "show_type_hints": "false",
     "short_instructions": "**Challenge:** This tag is a special one!  Can you figure out how to draw the outline?",
     "long_instructions": "**Challenge:** This tag is a special one!  \r\n\r\nCan you figure out how to draw the outline?  \r\n(The long side is 150 pixels and each of the short sides are 75 pixels.)",
-    "preload_asset_list": null,
     "encrypted": "false",
-    "encrypted_examples": [
-
-    ],
-    "mini_rubric": "false"
+    "mini_rubric": "false",
+    "preload_asset_list": null,
+    "contained_level_names": null
   },
   "published": true,
   "notes": "",

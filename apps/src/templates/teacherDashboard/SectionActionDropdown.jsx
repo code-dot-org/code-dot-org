@@ -24,22 +24,6 @@ import {getStore} from '@cdo/apps/redux';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
-const styles = {
-  xIcon: {
-    paddingRight: 5
-  },
-  heading: {
-    borderTopWidth: 0,
-    borderBottomWidth: 1,
-    borderRightWidth: 0,
-    borderLeftWidth: 0,
-    borderStyle: 'solid',
-    borderColor: color.default_text,
-    paddingBottom: 20,
-    marginBottom: 30
-  }
-};
-
 class SectionActionDropdown extends Component {
   static propTypes = {
     handleEdit: PropTypes.func,
@@ -201,6 +185,22 @@ class SectionActionDropdown extends Component {
     );
   }
 }
+
+const styles = {
+  xIcon: {
+    paddingRight: 5
+  },
+  heading: {
+    borderTopWidth: 0,
+    borderBottomWidth: 1,
+    borderRightWidth: 0,
+    borderLeftWidth: 0,
+    borderStyle: 'solid',
+    borderColor: color.default_text,
+    paddingBottom: 20,
+    marginBottom: 30
+  }
+};
 
 export const UnconnectedSectionActionDropdown = SectionActionDropdown;
 

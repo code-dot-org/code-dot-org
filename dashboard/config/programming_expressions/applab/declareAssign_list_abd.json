@@ -1,0 +1,6 @@
+{
+  "func": "declareAssign_list_abd",
+  "block": "var list = [\"a\", \"b\", \"d\"];",
+  "category": "Variables",
+  "noAutocomplete": true
+}

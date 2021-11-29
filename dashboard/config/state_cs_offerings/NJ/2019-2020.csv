@@ -1,0 +1,862 @@
+school_name,state_school_id,nces_id,course_id,course_name,num_students_enrolled,num_students_female,num_students_black_or_african_american,num_students_hispanic_or_latino,num_students_american_indian_or_native_alaskan,num_students_native_hawaiian_or_pacific_islander,num_students_free_or_reduced_lunch,num_students_special_education_status,num_students_english_language_learner_status
+Atlantic City High School,,340096000010,10152,Computer Programming,37,11,2,6,0,0,29,2,1
+Atlantic City High School,,340096000010,10157,AP Computer Science A ,55,19,2,3,0,4,48,1,0
+Atlantic County Institute of Technology,,340099000034,10152,Computer Programming,55,12,4,14,0,1,24,2,0
+Atlantic County Institute of Technology,,340099000034,10154,C++ Programming ,17,8,4,2,0,1,6,2,0
+Atlantic County Institute of Technology,,340099000034,10157,AP Computer Science A ,20,5,4,3,0,0,9,0,0
+Egg Harbor Township High School,,340456005961,10019,AP Computer Science Principles,27,6,2,0,0,0,9,0,0
+Egg Harbor Township High School,,340456005961,10155,Java Programming ,94,15,4,19,0,0,38,9,7
+Egg Harbor Township High School,,340456005961,10157,AP Computer Science A ,37,14,1,3,0,0,10,0,0
+Egg Harbor Township High School,,340456005961,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,1,0,0,0,0,0,0,0,0
+Egg Harbor Township High School,,340456005961,10197,COMPUTER PROGRAMMING—INDEPENDENT STUDY,1,1,0,0,0,0,0,0,0
+Absegami High School,,340606000122,10019,AP Computer Science Principles,20,10,0,2,0,0,8,0,0
+Absegami High School,,340606000122,10152,Computer Programming,52,12,10,8,0,0,20,2,0
+Absegami High School,,340606000122,10155,Java Programming ,48,10,10,14,0,0,32,4,4
+Absegami High School,,340606000122,10157,AP Computer Science A ,36,9,4,5,0,0,18,3,0
+Oakcrest High School,,340606000124,10019,AP Computer Science Principles,16,4,2,1,0,0,3,0,0
+Oakcrest High School,,340606000124,10155,Java Programming ,8,0,3,1,0,0,3,1,0
+Oakcrest High School,,340606000124,10157,AP Computer Science A ,9,2,0,0,0,0,2,0,0
+Hammonton High School,,340657000136,10157,AP Computer Science A ,4,3,0,1,0,0,1,0,0
+Mainland Regional High School,,340936000158,10152,Computer Programming,58,8,7,11,0,0,17,15,0
+Mainland Regional High School,,340936000158,10157,AP Computer Science A ,36,7,0,0,0,0,4,1,0
+Pleasantville High School,,341320000192,10152,Computer Programming,47,10,11,32,0,1,37,7,1
+Emotionally Disturbed,,340145000238,10156,Computer Programming—Other Language ,1,0,0,0,0,0,0,1,0
+Emotionally Disturbed,,340145000238,10157,AP Computer Science A ,1,0,1,0,0,0,0,1,0
+Bergen County Academies,,340147000250,10152,Computer Programming,158,81,1,10,0,0,6,1,0
+Bergen County Academies,,340147000250,10154,C++ Programming ,42,12,0,3,0,0,2,0,0
+Bergen County Academies,,340147000250,10157,AP Computer Science A ,76,26,1,5,0,2,2,0,0
+Bergen County Academies,,340147000250,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,98,13,1,13,0,1,7,3,0
+Bergen County Academies,,340147000250,10197,COMPUTER PROGRAMMING—INDEPENDENT STUDY,104,29,0,23,0,3,9,9,0
+Bergen County Academies,,340147000250,10199,COMPUTER PROGRAMMING—OTHER,57,14,0,6,0,1,2,2,0
+Bergen County Technical High School - Teterboro,,340147000262,10152,Computer Programming,11,5,3,3,0,0,1,1,0
+Bergen County Technical High School - Teterboro,,340147000262,10155,Java Programming ,17,3,2,4,0,0,2,2,0
+Bergen County Technical High School - Teterboro,,340147000262,10157,AP Computer Science A ,45,15,6,10,0,1,2,2,0
+Bergenfield High School,,340150000268,10019,AP Computer Science Principles,61,15,4,21,0,0,17,0,0
+Bergenfield High School,,340150000268,10157,AP Computer Science A ,19,2,1,4,0,1,4,0,1
+Henry P. Becton Regional High School,,340280000300,10152,Computer Programming,28,8,2,11,0,0,8,0,0
+Henry P. Becton Regional High School,,340280000300,10155,Java Programming ,13,2,0,1,0,0,3,2,0
+Cliffside Park High School,,340327000304,10152,Computer Programming,17,0,0,10,0,0,4,0,1
+Cliffside Park High School,,340327000304,10157,AP Computer Science A ,13,2,1,7,0,0,10,0,0
+Cresskill High School,,340360000324,10154,C++ Programming ,16,5,0,0,0,0,0,0,0
+Cresskill High School,,340360000324,10156,Computer Programming—Other Language ,40,7,0,1,0,0,0,4,2
+Cresskill High School,,340360000324,10157,AP Computer Science A ,21,4,0,0,0,0,0,0,0
+Dumont High School,,340399000340,10155,Java Programming ,1,0,0,0,0,0,0,0,0
+Dumont High School,,340399000340,10157,AP Computer Science A ,1,0,0,0,0,0,0,0,0
+Emerson Jr Sr High,,340471000380,10019,AP Computer Science Principles,12,2,0,0,0,0,1,0,0
+Emerson Jr Sr High,,340471000380,10152,Computer Programming,10,0,0,2,0,0,1,2,0
+Emerson Jr Sr High,,340471000380,10155,Java Programming ,10,2,0,1,0,0,0,0,0
+Fair Lawn High School,,340498000410,10019,AP Computer Science Principles,11,1,1,2,0,0,1,0,0
+Fair Lawn High School,,340498000410,10153,Visual Basic (VB) Programming ,89,28,3,5,1,2,5,3,1
+Fair Lawn High School,,340498000410,10157,AP Computer Science A ,23,2,0,3,0,1,1,1,0
+Fort Lee High School,,340531000442,10019,AP Computer Science Principles,4,0,0,1,0,0,0,0,0
+Fort Lee High School,,340531000442,10152,Computer Programming,82,22,5,12,0,2,7,7,8
+Fort Lee High School,,340531000442,10154,C++ Programming ,16,1,0,3,0,0,4,0,0
+Fort Lee High School,,340531000442,10157,AP Computer Science A ,9,3,1,2,0,0,2,0,0
+Garfield High School,,340576000466,10152,Computer Programming,30,10,1,13,0,0,19,1,1
+Garfield High School,,340576000466,10157,AP Computer Science A ,14,2,0,6,0,0,3,0,0
+Glen Rock High School,,340597000484,10152,Computer Programming,26,3,0,2,0,0,0,3,0
+Hackensack High School,,340627000496,10019,AP Computer Science Principles,12,5,0,8,0,0,4,0,0
+Hackensack High School,,340627000496,10155,Java Programming ,24,9,6,13,0,0,10,5,0
+Hackensack High School,,340627000496,10157,AP Computer Science A ,23,8,2,11,0,0,6,0,0
+Hasbrouck Heights High School,,340693000512,10156,Computer Programming—Other Language ,31,3,0,5,0,0,3,2,0
+Hasbrouck Heights High School,,340693000512,10157,AP Computer Science A ,4,2,0,0,0,0,0,0,0
+Leonia High School,,340852000534,10155,Java Programming ,20,1,2,1,0,0,0,0,0
+Leonia High School,,340852000534,10156,Computer Programming—Other Language ,12,2,0,2,0,0,0,0,0
+Leonia High School,,340852000534,10157,AP Computer Science A ,52,14,0,4,0,0,9,1,0
+Lodi High School,,340885000050,10152,Computer Programming,27,8,5,14,0,1,9,1,1
+Lyndhurst High School,,340921000568,10019,AP Computer Science Principles,17,6,1,6,0,0,1,0,0
+Lyndhurst High School,,340921000568,10156,Computer Programming—Other Language ,96,25,5,32,0,0,19,7,4
+Lyndhurst High School,,340921000568,10157,AP Computer Science A ,6,1,0,2,0,0,1,0,0
+Mahwah High School,,340933000586,10019,AP Computer Science Principles,14,3,0,0,0,0,0,0,0
+Mahwah High School,,340933000586,10155,Java Programming ,59,9,1,4,0,0,2,3,0
+Mahwah High School,,340933000586,10157,AP Computer Science A ,34,4,0,4,0,0,1,0,0
+Mahwah High School,,340933000586,10199,COMPUTER PROGRAMMING—OTHER,16,2,0,1,0,0,0,0,0
+Midland Park Jr./Sr. High School,,341014000608,10019,AP Computer Science Principles,10,2,0,1,0,0,0,2,0
+Midland Park Jr./Sr. High School,,341014000608,10152,Computer Programming,6,0,0,0,0,0,0,0,0
+Midland Park Jr./Sr. High School,,341014000608,10157,AP Computer Science A ,23,9,0,1,0,0,0,0,0
+New Milford High School,,341128000624,10019,AP Computer Science Principles,2,1,0,0,0,0,0,0,0
+New Milford High School,,341128000624,10152,Computer Programming,3,2,0,0,0,1,0,0,0
+New Milford High School,,341128000624,10154,C++ Programming ,1,0,0,0,0,0,0,0,0
+New Milford High School,,341128000624,10155,Java Programming ,1,0,0,0,0,1,0,1,0
+North Arlington High School,,341143000636,10019,AP Computer Science Principles,9,4,0,2,0,0,1,0,0
+North Arlington High School,,341143000636,10153,Visual Basic (VB) Programming ,39,13,0,10,0,0,10,7,0
+Northern Highlands Regional High School,,341173000646,10019,AP Computer Science Principles,47,17,2,0,0,0,0,7,0
+Northern Highlands Regional High School,,341173000646,10152,Computer Programming,51,13,2,3,0,0,1,5,0
+Northern Highlands Regional High School,,341173000646,10155,Java Programming ,51,13,2,3,0,0,1,5,0
+Northern Highlands Regional High School,,341173000646,10157,AP Computer Science A ,24,12,0,0,0,0,0,0,0
+Northern Valley Regional High School at Demarest,,341176000650,10019,AP Computer Science Principles,10,3,0,1,0,0,1,1,0
+Northern Valley Regional High School at Demarest,,341176000650,10152,Computer Programming,32,4,0,1,0,0,0,4,0
+Northern Valley Regional High School at Demarest,,341176000650,10155,Java Programming ,8,4,0,2,0,0,0,1,0
+Northern Valley Regional High School at Demarest,,341176000650,10157,AP Computer Science A ,17,4,0,3,0,0,0,1,0
+Northern Valley Regional High School at Old Tappan,,341176000652,10019,AP Computer Science Principles,28,4,0,0,0,0,0,2,0
+Northern Valley Regional High School at Old Tappan,,341176000652,10152,Computer Programming,54,2,2,2,0,0,2,2,2
+Northern Valley Regional High School at Old Tappan,,341176000652,10155,Java Programming ,10,3,0,0,0,0,0,1,0
+Northern Valley Regional High School at Old Tappan,,341176000652,10157,AP Computer Science A ,15,4,0,0,0,0,0,1,0
+Paramus High School,,341242000688,10019,AP Computer Science Principles,51,9,1,2,0,0,3,1,0
+Paramus High School,,341242000688,10152,Computer Programming,51,16,0,6,0,0,6,8,3
+Paramus High School,,341242000688,10153,Visual Basic (VB) Programming ,45,4,1,1,1,0,2,6,2
+Paramus High School,,341242000688,10155,Java Programming ,23,4,1,2,0,0,1,1,0
+Paramus High School,,341242000688,10157,AP Computer Science A ,22,6,0,0,0,0,2,0,0
+Park Ridge High School,,341245000710,10019,AP Computer Science Principles,15,3,0,1,0,0,0,2,0
+Park Ridge High School,,341245000710,10152,Computer Programming,8,1,0,1,0,0,0,0,0
+Park Ridge High School,,341245000710,10153,Visual Basic (VB) Programming ,16,7,0,1,0,0,1,2,0
+Pascack Hills High School,,341251000718,10019,AP Computer Science Principles,8,2,0,1,0,0,0,2,0
+Pascack Hills High School,,341251000718,10155,Java Programming ,28,6,0,0,0,0,0,1,0
+Pascack Hills High School,,341251000718,10157,AP Computer Science A ,16,3,0,2,0,0,0,2,0
+Pascack Valley High School,,341251000720,10019,AP Computer Science Principles,9,1,0,1,0,0,0,0,0
+Pascack Valley High School,,341251000720,10155,Java Programming ,29,12,0,1,0,0,2,2,1
+Pascack Valley High School,,341251000720,10157,AP Computer Science A ,19,8,1,1,0,0,0,0,1
+Indian Hills High School,,341356000724,10019,AP Computer Science Principles,10,3,0,0,0,0,0,0,0
+Indian Hills High School,,341356000724,10156,Computer Programming—Other Language ,18,4,0,1,0,0,0,1,0
+Ramapo High School,,341356000726,10019,AP Computer Science Principles,45,15,1,3,0,1,0,1,0
+Ramapo High School,,341356000726,10156,Computer Programming—Other Language ,10,1,0,1,0,0,1,3,0
+Ramapo High School,,341356000726,10157,AP Computer Science A ,29,10,0,3,0,0,0,0,0
+Ramsey High School,,341359000730,10019,AP Computer Science Principles,28,8,0,1,0,0,1,1,0
+Ramsey High School,,341359000730,10155,Java Programming ,34,8,0,4,0,0,5,3,1
+Ramsey High School,,341359000730,10157,AP Computer Science A ,14,1,0,1,0,0,1,0,0
+Ridgefield Park Jr Sr High School,,341380000754,10152,Computer Programming,6,2,0,3,0,1,2,0,0
+Ridgefield Park Jr Sr High School,,341380000754,10153,Visual Basic (VB) Programming ,35,9,1,20,0,1,12,3,0
+Ridgewood High School,,341383000764,10019,AP Computer Science Principles,86,47,1,8,0,0,0,2,0
+Ridgewood High School,,341383000764,10152,Computer Programming,32,10,0,2,0,0,0,2,1
+Ridgewood High School,,341383000764,10157,AP Computer Science A ,15,2,0,0,0,0,0,0,0
+Ridgewood High School,,341383000764,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,7,2,0,0,0,0,0,0,0
+River Dell Regional High School,,341226000786,10019,AP Computer Science Principles,42,10,1,1,0,0,2,0,1
+Rutherford High School,,341446000810,10152,Computer Programming,65,13,1,14,0,0,3,4,0
+Rutherford High School,,341446000810,10154,C++ Programming ,15,1,0,1,0,0,1,1,1
+Rutherford High School,,341446000810,10155,Java Programming ,17,1,0,3,0,0,1,0,0
+Rutherford High School,,341446000810,10157,AP Computer Science A ,16,1,0,0,0,0,2,0,0
+Saddle Brook Middle/High School,,341449000824,10152,Computer Programming,48,22,1,8,0,0,10,4,0
+Teaneck High School,,341608000840,10019,AP Computer Science Principles,16,9,6,3,0,0,3,1,0
+Teaneck High School,,341608000840,10152,Computer Programming,93,35,15,29,0,0,27,8,0
+Teaneck High School,,341608000840,10157,AP Computer Science A ,28,10,4,5,0,0,4,2,0
+Tenafly High School,,341611000864,10152,Computer Programming,51,12,1,5,0,0,3,5,1
+Tenafly High School,,341611000864,10157,AP Computer Science A ,13,3,0,1,0,0,0,1,0
+Waldwick High School,,341686000888,10152,Computer Programming,10,1,0,2,0,0,0,0,0
+Waldwick High School,,341686000888,10155,Java Programming ,8,0,0,0,0,0,0,0,0
+Wallington Junior Senior High School,,341692000898,10156,Computer Programming—Other Language ,28,6,0,4,0,0,2,0,0
+Wallington Junior Senior High School,,341692000898,10157,AP Computer Science A ,22,0,0,0,0,0,0,0,0
+Westwood Regional High School,,341782000906,10152,Computer Programming,265,113,8,43,0,1,29,42,4
+Westwood Regional High School,,341782000906,10157,AP Computer Science A ,28,1,1,1,0,0,0,0,0
+Wood-Ridge Jr/Sr High School,,341830000922,10019,AP Computer Science Principles,5,4,0,0,0,0,0,0,0
+Wood-Ridge Jr/Sr High School,,341830000922,10157,AP Computer Science A ,12,7,0,1,0,0,1,0,0
+Bordentown Regional High School,,340203000960,10019,AP Computer Science Principles,25,8,1,1,0,0,3,0,0
+Bordentown Regional High School,,340203000960,10156,Computer Programming—Other Language ,46,10,4,3,0,0,8,3,3
+Bordentown Regional High School,,340203000960,10157,AP Computer Science A ,10,1,0,0,0,0,0,0,0
+Burlington City High School,,340243000966,10152,Computer Programming,20,4,5,4,0,0,6,1,1
+Burlington Township High School,,340246001004,10019,AP Computer Science Principles,26,13,6,3,0,0,2,0,0
+Burlington Township High School,,340246001004,10155,Java Programming ,15,5,3,0,0,0,2,2,0
+Burlington Township High School,,340246001004,10157,AP Computer Science A ,43,6,4,3,0,0,7,1,0
+Cinnaminson High School,,340312001020,10155,Java Programming ,24,4,2,2,0,0,4,2,0
+Delran High School,,340378001040,10152,Computer Programming,39,13,6,2,0,0,11,6,1
+Delran High School,,340378001040,10157,AP Computer Science A ,16,1,2,1,0,0,2,1,0
+Florence Township Memorial High School,,340522001082,10199,COMPUTER PROGRAMMING—OTHER,47,12,12,1,2,0,18,7,3
+Cherokee High School,,340849001092,10153,Visual Basic (VB) Programming ,35,7,1,0,0,0,1,0,0
+Cherokee High School,,340849001092,10157,AP Computer Science A ,18,0,2,1,0,0,1,0,0
+Lenape High School,,340849001094,10153,Visual Basic (VB) Programming ,56,15,6,1,0,0,3,2,0
+Lenape High School,,340849001094,10157,AP Computer Science A ,29,5,1,1,0,0,0,1,0
+Shawnee High School,,340849001096,10153,Visual Basic (VB) Programming ,37,10,1,2,0,0,0,0,0
+Shawnee High School,,340849001096,10157,AP Computer Science A ,6,2,0,1,0,0,0,0,0
+Seneca High School,,340849000701,10153,Visual Basic (VB) Programming ,19,3,1,2,0,0,1,2,0
+Seneca High School,,340849000701,10157,AP Computer Science A ,6,0,0,0,0,0,0,0,0
+Maple Shade High School,,340966001104,10019,AP Computer Science Principles,17,5,0,1,0,0,2,1,0
+Maple Shade High School,,340966001104,10199,COMPUTER PROGRAMMING—OTHER,54,10,6,15,0,0,29,20,3
+Moorestown High School,,341071001132,10152,Computer Programming,1,0,0,0,0,0,0,0,0
+Moorestown High School,,341071001132,10155,Java Programming ,36,6,2,1,0,0,0,2,0
+Moorestown High School,,341071001132,10157,AP Computer Science A ,28,5,2,1,0,0,1,0,0
+Northern Burlington County Regional High School,,341170001182,10019,AP Computer Science Principles,46,15,3,0,1,0,1,1,0
+Northern Burlington County Regional High School,,341170001182,10152,Computer Programming,59,11,4,5,0,0,3,8,0
+Northern Burlington County Regional High School,,341170001182,10157,AP Computer Science A ,11,2,0,0,0,0,0,1,0
+Palmyra High School,,341239001190,10152,Computer Programming,16,7,3,7,0,0,6,4,3
+Palmyra High School,,341239001190,10156,Computer Programming—Other Language ,1,0,1,0,0,0,0,0,0
+Helen A. Fort Middle School,,341281001200,10152,Computer Programming,485,219,120,90,2,3,217,96,4
+Pemberton Township High School,,341281001202,10155,Java Programming ,16,2,2,4,0,0,6,3,0
+Pemberton Township High School,,341281001202,10157,AP Computer Science A ,47,7,10,2,0,1,12,1,0
+Marcus Newcomb Middle School,,341281003398,10152,Computer Programming,237,117,45,36,2,2,107,45,0
+Rancocas Valley Regional High School,,341362001230,10156,Computer Programming—Other Language ,33,10,13,4,0,0,7,10,1
+Willingboro High School,,341800001264,10152,Computer Programming,63,23,54,4,0,0,27,12,0
+Camden County Technical School-GTC,,340267001414,10154,C++ Programming ,10,4,2,0,0,0,3,0,0
+Camden County Technical School-GTC,,340267001414,10199,COMPUTER PROGRAMMING—OTHER,3,1,0,2,0,0,2,1,0
+Cherry Hill High School East,,340300001418,10019,AP Computer Science Principles,55,14,0,1,0,0,6,4,0
+Cherry Hill High School East,,340300001418,10152,Computer Programming,86,17,4,5,0,2,6,5,1
+Cherry Hill High School East,,340300001418,10157,AP Computer Science A ,37,7,1,0,0,0,4,1,0
+Cherry Hill High School West,,340300001420,10019,AP Computer Science Principles,24,7,1,1,0,0,0,1,1
+Cherry Hill High School West,,340300001420,10157,AP Computer Science A ,94,18,10,15,0,1,22,8,1
+Collingswood High School,,340342001474,10152,Computer Programming,31,7,2,2,0,0,5,2,0
+Collingswood High School,,340342001474,10156,Computer Programming—Other Language ,2,1,0,0,0,0,0,0,0
+Collingswood High School,,340342001474,10157,AP Computer Science A ,15,9,2,0,0,0,7,0,1
+Eastern Regional High School,,340438001488,10152,Computer Programming,111,16,9,7,0,0,14,8,0
+Gloucester City Jr. Sr. High School,,340600001494,10157,AP Computer Science A ,5,1,1,1,0,0,3,0,0
+Haddon Township High School,,340636001540,10152,Computer Programming,25,1,0,4,0,0,6,4,1
+Haddonfield Memorial High School,,340639001554,10152,Computer Programming,35,10,1,0,0,0,0,5,0
+Haddonfield Memorial High School,,340639001554,10157,AP Computer Science A ,17,6,0,0,0,0,0,1,0
+Pennsauken High School,,341287001610,10019,AP Computer Science Principles,11,1,0,4,0,0,4,0,0
+Pennsauken High School,,341287001610,10152,Computer Programming,21,1,7,3,0,0,12,2,1
+Overbrook Senior High School,,341299000432,10155,Java Programming ,30,5,10,2,0,0,14,3,1
+Winslow Township High School,,341806000437,10152,Computer Programming,65,10,37,4,1,0,26,10,1
+Winslow Township High School,,341806000437,10155,Java Programming ,6,1,3,1,0,0,0,0,1
+Winslow Township High School,,341806000437,10157,AP Computer Science A ,4,0,1,1,0,0,0,0,0
+Winslow Township High School,,341806000437,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,11,1,6,0,0,0,4,2,0
+Lower Cape May Regional High School,,340909001720,10019,AP Computer Science Principles,30,8,1,1,0,0,9,2,0
+Lower Cape May Regional High School,,340909001720,10157,AP Computer Science A ,11,0,0,0,0,0,1,3,0
+Ocean City High School,,341197001746,10155,Java Programming ,9,2,0,0,0,1,1,0,0
+Ocean City High School,,341197001746,10157,AP Computer Science A ,95,28,1,2,0,1,2,2,0
+Cumberland County Technical Education Center,,340361001816,10152,Computer Programming,21,4,3,0,0,0,4,1,0
+Cumberland County Technical Education Center,,340361001816,10155,Java Programming ,19,7,3,4,0,0,6,0,0
+Cumberland Regional High School,,340362001820,10152,Computer Programming,43,10,11,14,0,0,25,5,1
+Cumberland Regional High School,,340362001820,10153,Visual Basic (VB) Programming ,30,4,7,3,0,0,9,4,0
+Cumberland Regional High School,,340362001820,10154,C++ Programming ,9,4,0,0,0,0,1,0,0
+Millville Senior High School,,341032001868,10152,Computer Programming,40,3,11,4,0,0,18,16,1
+Memorial High School,,341032001870,10152,Computer Programming,46,3,12,4,1,1,24,19,0
+Vineland Senior High School,,341680001902,10152,Computer Programming,25,5,4,12,0,0,12,6,2
+Vineland Senior High School,,341680001902,10155,Java Programming ,12,4,1,3,0,0,2,2,1
+Belleville High School,,340135001954,10019,AP Computer Science Principles,34,6,2,23,0,1,16,1,1
+Belleville High School,,340135001954,10157,AP Computer Science A ,10,1,0,6,0,0,3,0,0
+Belleville High School,,340135001954,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,30,12,2,23,0,1,16,2,2
+Bloomfield High School,,340183001980,10152,Computer Programming,76,13,16,21,0,1,27,8,1
+Bloomfield High School,,340183001980,10157,AP Computer Science A ,42,18,9,13,0,0,13,0,0
+James Caldwell High School,,340258002008,10153,Visual Basic (VB) Programming ,39,10,0,5,0,0,2,3,0
+James Caldwell High School,,340258002008,10157,AP Computer Science A ,18,5,1,0,0,0,1,0,0
+Cedar Grove High School,,340285002026,10019,AP Computer Science Principles,36,8,0,1,0,0,0,4,0
+Cedar Grove High School,,340285002026,10152,Computer Programming,73,18,0,1,1,1,2,12,1
+East Orange STEM Academy High School,,340423002040,10019,AP Computer Science Principles,17,9,16,0,0,0,13,0,0
+East Orange STEM Academy High School,,340423002040,10152,Computer Programming,8,1,8,0,0,0,5,0,0
+East Orange STEM Academy High School,,340423002040,10157,AP Computer Science A ,28,12,27,0,0,0,24,7,0
+East Orange Campus High School,,340423000494,10156,Computer Programming—Other Language ,4,0,4,0,0,0,3,0,0
+Cicely L. Tyson Community Middle/High School,,340423002064,10152,Computer Programming,20,11,18,2,0,0,11,1,0
+Cicely L. Tyson Community Middle/High School,,340423002064,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,23,9,23,0,0,0,12,3,0
+"Essex County Donald M. Payne, Sr. School of Technology",,340480002074,10152,Computer Programming,463,215,178,258,3,2,358,58,26
+Essex County Newark Tech,,340480000137,10152,Computer Programming,266,159,112,145,1,0,216,1,50
+Essex County West Caldwell Tech,,340480002080,10152,Computer Programming,153,89,52,95,0,0,123,40,18
+Glen Ridge High School,,340594002092,10019,AP Computer Science Principles,46,18,2,0,0,0,0,3,0
+Glen Ridge High School,,340594002092,10152,Computer Programming,133,64,6,4,0,0,1,18,0
+Glen Ridge High School,,340594002092,10157,AP Computer Science A ,21,5,0,1,0,0,0,3,0
+Irvington High School,,340768002104,10019,AP Computer Science Principles,18,5,16,2,0,0,12,2,1
+Livingston High School,,340882002126,10019,AP Computer Science Principles,218,101,2,8,1,0,2,10,0
+Livingston High School,,340882002126,10152,Computer Programming,36,5,2,0,0,0,0,6,2
+Livingston High School,,340882002126,10157,AP Computer Science A ,73,17,2,2,0,0,2,2,0
+Millburn High School,,341020002148,10152,Computer Programming,21,11,0,0,0,0,0,0,0
+Millburn High School,,341020002148,10157,AP Computer Science A ,58,10,0,4,0,0,0,2,0
+Montclair High School,,341056002166,10019,AP Computer Science Principles,27,5,1,5,0,0,2,1,0
+Montclair High School,,341056002166,10152,Computer Programming,5,3,0,1,0,0,1,0,0
+Montclair High School,,341056002166,10157,AP Computer Science A ,31,6,4,2,0,0,3,2,0
+East Side High School,,341134002194,10152,Computer Programming,50,33,3,33,0,0,41,0,2
+Orange High School,,341227002396,10019,AP Computer Science Principles,3,0,1,2,0,0,3,0,0
+Orange High School,,341227002396,10152,Computer Programming,28,8,20,8,0,0,22,0,0
+Orange High School,,341227002396,10157,AP Computer Science A ,14,4,9,5,0,0,9,0,0
+Orange High School,,341227002396,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,48,20,25,23,0,0,37,0,0
+Orange Preparatory Academy,,341227002410,10156,Computer Programming—Other Language ,14,4,8,6,0,0,11,1,0
+Columbia High School,,341533002422,10019,AP Computer Science Principles,63,18,3,0,0,0,6,0,0
+Verona High School,,341674002448,10019,AP Computer Science Principles,55,14,1,4,0,0,0,0,0
+Verona High School,,341674002448,10152,Computer Programming,2,1,0,0,0,0,0,0,0
+Verona High School,,341674002448,10157,AP Computer Science A ,58,26,4,5,0,0,0,2,0
+Verona High School,,341674002448,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,3,1,0,0,0,0,0,0,0
+Henry B. Whitehorne Middle School,,341674002456,10152,Computer Programming,177,88,0,23,0,0,0,27,1
+West Essex High School,,341746002462,10019,AP Computer Science Principles,49,20,0,1,1,0,1,0,0
+West Essex High School,,341746002462,10152,Computer Programming,34,12,3,5,0,0,1,1,0
+West Essex High School,,341746002462,10153,Visual Basic (VB) Programming ,26,8,2,2,0,0,0,1,0
+West Essex High School,,341746002462,10157,AP Computer Science A ,8,1,0,1,0,0,1,0,0
+West Orange High School,,341761002468,10153,Visual Basic (VB) Programming ,62,11,22,10,0,1,11,6,2
+West Orange High School,,341761002468,10154,C++ Programming ,53,10,19,10,0,1,12,3,2
+West Orange High School,,341761002468,10155,Java Programming ,34,3,14,7,0,0,11,4,0
+West Orange High School,,341761002468,10157,AP Computer Science A ,21,3,8,3,0,0,2,3,0
+Clayton High School,,340318002498,10156,Computer Programming—Other Language ,21,7,6,3,0,0,6,2,0
+Clayton High School,,340318002498,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,21,10,10,5,0,0,12,2,0
+Clearview Regional High School,,340321002506,10152,Computer Programming,41,4,5,1,0,0,3,7,0
+Deptford Township High School,,340390002512,10154,C++ Programming ,1,0,0,0,0,0,0,0,0
+Deptford Township High School,,340390002512,10157,AP Computer Science A ,5,0,1,0,0,0,2,0,0
+Deptford Township High School,,340390002512,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,4,1,0,0,0,0,0,0,0
+Gateway Regional High School,,340582002554,10156,Computer Programming—Other Language ,14,4,1,4,0,0,5,3,0
+Gateway Regional High School,,340582002554,10157,AP Computer Science A ,11,2,0,1,0,0,3,0,0
+Glassboro High School,,340588002558,10157,AP Computer Science A ,9,3,1,0,0,0,0,1,0
+Gloucester County Institute of Technology,,340604002570,10152,Computer Programming,13,3,2,0,0,0,1,0,0
+Gloucester County Institute of Technology,,340604002570,10153,Visual Basic (VB) Programming ,25,9,2,4,0,0,2,3,0
+Gloucester County Institute of Technology,,340604002570,10155,Java Programming ,28,4,0,3,0,0,2,2,0
+Kingsway Regional High School,,340798002580,10019,AP Computer Science Principles,1,0,0,0,0,0,0,0,0
+Willliamstown High School,,341047002594,10154,C++ Programming ,15,3,4,1,0,0,3,2,0
+Willliamstown High School,,341047002594,10155,Java Programming ,36,7,5,3,0,0,1,5,1
+Willliamstown High School,,341047002594,10157,AP Computer Science A ,7,1,2,0,0,0,0,0,0
+Pitman High School,,341308002616,10152,Computer Programming,24,1,0,0,0,0,2,0,0
+Pitman High School,,341308002616,10157,AP Computer Science A ,9,1,0,0,0,0,3,0,0
+Delsea Regional High School,,341545002630,10153,Visual Basic (VB) Programming ,26,4,3,1,0,0,9,2,0
+Delsea Regional High School,,341545002630,10154,C++ Programming ,9,2,1,0,0,0,3,2,0
+Delsea Regional High School,,341545002630,10156,Computer Programming—Other Language ,25,4,1,5,0,0,7,1,0
+Delsea Regional High School,,341545002630,10157,AP Computer Science A ,9,2,0,1,0,0,2,0,0
+Washington Township High School,,341707002640,10154,C++ Programming ,12,0,1,2,0,0,6,1,0
+Washington Township High School,,341707002640,10155,Java Programming ,33,9,1,0,0,0,3,0,0
+Washington Township High School,,341707002640,10157,AP Computer Science A ,6,1,0,0,0,0,0,0,0
+West Deptford High School,,341743002662,10019,AP Computer Science Principles,6,2,1,0,0,0,1,0,0
+West Deptford High School,,341743002662,10156,Computer Programming—Other Language ,19,4,2,0,0,0,5,4,0
+West Deptford High School,,341743002662,10157,AP Computer Science A ,16,1,0,2,0,0,2,1,0
+West Deptford High School,,341743002662,10199,COMPUTER PROGRAMMING—OTHER,17,4,2,0,0,0,4,3,0
+Woodbury Jr-Sr High School,,341815002688,10156,Computer Programming—Other Language ,49,19,17,18,0,0,31,6,7
+Woodbury Jr-Sr High School,,341815002688,10157,AP Computer Science A ,13,4,3,1,0,0,3,2,0
+Bayonne High School,,340126002704,10152,Computer Programming,75,16,6,15,0,0,39,6,3
+Bayonne High School,,340126002704,10157,AP Computer Science A ,33,9,0,4,0,0,13,0,0
+Harrison High School,,340687002738,10019,AP Computer Science Principles,46,16,1,29,0,0,37,1,6
+Harrison High School,,340687002738,10157,AP Computer Science A ,6,0,0,5,0,0,5,0,0
+County Prep High School,,340757005906,10156,Computer Programming—Other Language ,22,8,0,6,0,0,10,0,0
+County Prep High School,,340757005906,10157,AP Computer Science A ,27,17,5,5,0,0,19,0,0
+High Tech High School,,340757002766,10019,AP Computer Science Principles,38,18,0,11,0,0,14,2,0
+High Tech High School,,340757002766,10157,AP Computer Science A ,20,12,2,11,0,0,9,1,0
+High Tech High School,,340757002766,10199,COMPUTER PROGRAMMING—OTHER,228,65,13,94,0,2,87,5,0
+Dr Ronald McNair High School,,340783002778,10157,AP Computer Science A ,38,20,6,1,0,1,10,0,0
+William L Dickinson High School,,340783002780,10152,Computer Programming,32,11,0,7,0,2,9,0,2
+William L Dickinson High School,,340783002780,10157,AP Computer Science A ,41,13,2,7,0,1,6,0,3
+Kearny High School,,340789002866,10019,AP Computer Science Principles,22,5,0,10,0,0,13,1,1
+Kearny High School,,340789002866,10157,AP Computer Science A ,24,3,1,12,0,0,9,3,1
+North Bergen High School,,341146002882,10019,AP Computer Science Principles,5,1,0,4,0,0,4,0,0
+North Bergen High School,,341146002882,10152,Computer Programming,27,2,1,24,0,0,14,0,0
+North Bergen High School,,341146002882,10154,C++ Programming ,19,1,0,18,0,0,11,4,2
+North Bergen High School,,341146002882,10155,Java Programming ,20,4,0,13,0,0,10,1,2
+Secaucus High School,,341485002900,10157,AP Computer Science A ,10,3,1,0,0,0,3,0,0
+Jose Marti STEM Academy,,341638003074,10152,Computer Programming,59,33,0,56,0,0,51,2,0
+Jose Marti STEM Academy,,341638003074,10157,AP Computer Science A ,17,8,0,14,0,0,9,0,0
+Weehawken High School,,341731002928,10157,AP Computer Science A ,7,1,0,2,0,0,2,1,0
+Memorial High School,,341758002938,10019,AP Computer Science Principles,10,5,0,10,0,0,7,0,0
+Memorial High School,,341758002938,10152,Computer Programming,53,16,0,51,0,0,39,4,1
+Delaware Valley Regional High School,,340375002978,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,12,3,0,0,0,0,1,1,0
+Hunterdon Central Regional High School District,,340759003006,10019,AP Computer Science Principles,70,12,2,7,0,0,3,4,0
+Hunterdon Central Regional High School District,,340759003006,10152,Computer Programming,40,6,0,2,0,0,0,2,0
+Hunterdon Central Regional High School District,,340759003006,10157,AP Computer Science A ,22,3,1,0,0,0,0,2,0
+Hunterdon County Academies,,340005003405,10019,AP Computer Science Principles,24,5,1,3,0,0,0,3,0
+Hunterdon County Academies,,340005003405,10152,Computer Programming,2,1,0,1,0,0,0,0,0
+Hunterdon County Academies,,340005003405,10157,AP Computer Science A ,26,9,1,0,0,0,0,0,0
+Hunterdon County Academies,,340005003405,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,13,2,0,0,0,0,0,0,0
+North Hunterdon High School,,341161003024,10019,AP Computer Science Principles,16,2,0,3,0,0,0,0,0
+North Hunterdon High School,,341161003024,10152,Computer Programming,23,4,1,3,0,0,0,6,0
+North Hunterdon High School,,341161003024,10155,Java Programming ,43,14,1,3,0,0,0,2,0
+North Hunterdon High School,,341161003024,10156,Computer Programming—Other Language ,38,9,1,5,0,0,1,2,0
+North Hunterdon High School,,341161003024,10157,AP Computer Science A ,43,15,0,1,0,0,0,0,0
+Voorhees High School,,341161003026,10152,Computer Programming,21,1,0,2,0,0,2,2,0
+Voorhees High School,,341161003026,10156,Computer Programming—Other Language ,14,0,0,0,0,0,0,0,0
+Voorhees High School,,341161003026,10157,AP Computer Science A ,15,2,0,0,0,0,1,0,0
+Hightstown High School,,340432003054,10153,Visual Basic (VB) Programming ,48,15,1,9,0,0,15,2,6
+Hightstown High School,,340432003054,10154,C++ Programming ,19,1,3,2,0,0,4,1,0
+Hightstown High School,,340432003054,10156,Computer Programming—Other Language ,23,8,0,0,0,0,1,0,0
+Hightstown High School,,340432003054,10157,AP Computer Science A ,36,10,1,1,0,0,2,0,0
+Ewing High School,,340492003068,10152,Computer Programming,16,1,3,5,0,0,3,0,0
+Ewing High School,,340492003068,10157,AP Computer Science A ,6,1,1,2,0,0,2,0,0
+Hamilton East - Steinert,,340654003090,10157,AP Computer Science A ,10,0,0,2,0,0,1,0,0
+Hamilton East - Steinert,,340654003090,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,4,0,0,0,0,0,0,0,1
+Hamilton North - Nottingham,,340654005933,10157,AP Computer Science A ,8,2,0,1,0,0,1,0,0
+Hamilton North - Nottingham,,340654005933,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,4,1,1,0,0,0,0,0,0
+Hamilton West-Watson,,340654003092,10157,AP Computer Science A ,10,5,0,1,0,0,2,0,0
+Hamilton West-Watson,,340654003092,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,5,2,0,2,0,0,1,0,0
+Hopewell Valley Central High School,,340753003136,10152,Computer Programming,55,10,1,1,0,0,1,7,0
+Hopewell Valley Central High School,,340753003136,10157,AP Computer Science A ,16,6,0,0,0,0,0,0,0
+Lawrence High School,,340840003152,10152,Computer Programming,142,31,13,18,0,0,24,12,6
+Lawrence High School,,340840003152,10157,AP Computer Science A ,24,7,1,1,0,0,5,0,1
+Mercer County Technical School STEM Academy,,340995003415,10152,Computer Programming,26,5,3,7,0,0,8,1,0
+Mercer County Technical School STEM Academy,,340995003415,10199,COMPUTER PROGRAMMING—OTHER,4,2,0,1,0,0,1,0,0
+Mercer County Technical School Health Sciences Academy,,340995003409,10156,Computer Programming—Other Language ,11,8,2,3,0,0,2,1,0
+Mercer County Technical School Health Sciences Academy,,340995003409,10199,COMPUTER PROGRAMMING—OTHER,3,0,0,0,0,0,0,0,0
+Princeton High School,,341341003182,10152,Computer Programming,27,10,0,0,0,0,0,0,0
+Princeton High School,,341341003182,10155,Java Programming ,62,18,0,8,0,0,3,2,1
+Princeton High School,,341341003182,10156,Computer Programming—Other Language ,114,38,1,6,0,0,4,3,1
+Princeton High School,,341341003182,10157,AP Computer Science A ,44,17,1,1,0,0,1,1,0
+Trenton Central High School - Main Campus,,341629003200,10152,Computer Programming,40,16,16,22,0,0,8,2,5
+Robbinsville High School,,341710000549,10152,Computer Programming,128,31,0,7,1,0,4,8,3
+Robbinsville High School,,341710000549,10157,AP Computer Science A ,21,4,0,0,0,0,0,0,0
+West Windsor-Plainsboro High School South,,341770003258,10019,AP Computer Science Principles,39,12,0,1,0,0,0,0,0
+West Windsor-Plainsboro High School South,,341770003258,10152,Computer Programming,212,53,2,7,0,0,7,7,4
+West Windsor-Plainsboro High School South,,341770003258,10157,AP Computer Science A ,90,29,0,1,0,0,1,2,0
+West Windsor-Plainsboro High School North,,341770000191,10152,Computer Programming,226,81,0,0,0,0,2,9,2
+West Windsor-Plainsboro High School North,,341770000191,10157,AP Computer Science A ,140,53,0,1,0,0,0,0,0
+Carteret High School,,340282003268,10019,AP Computer Science Principles,18,4,2,5,0,0,15,1,0
+Carteret High School,,340282003268,10157,AP Computer Science A ,8,1,0,2,0,0,4,0,0
+Dunellen High School,,340402003286,10019,AP Computer Science Principles,48,19,6,19,0,0,19,6,0
+Dunellen High School,,340402003286,10157,AP Computer Science A ,10,5,2,4,0,0,3,1,0
+East Brunswick High School,,340411003294,10152,Computer Programming,131,39,2,9,0,1,15,7,0
+East Brunswick High School,,340411003294,10155,Java Programming ,71,24,0,1,0,0,6,2,0
+East Brunswick High School,,340411003294,10157,AP Computer Science A ,61,25,1,0,0,0,3,2,0
+Churchill Jr High School,,340411003296,10152,Computer Programming,52,16,1,2,0,1,2,0,0
+Edison High School,,340450003324,10019,AP Computer Science Principles,11,1,0,1,0,1,1,0,0
+Edison High School,,340450003324,10154,C++ Programming ,46,16,2,3,0,0,8,2,0
+Edison High School,,340450003324,10155,Java Programming ,23,3,1,0,0,1,2,2,0
+Edison High School,,340450003324,10157,AP Computer Science A ,23,4,0,2,0,0,2,1,0
+John P. Stevens High School,,340450003326,10019,AP Computer Science Principles,53,18,0,0,0,0,1,0,0
+John P. Stevens High School,,340450003326,10154,C++ Programming ,163,61,0,0,2,0,5,1,3
+John P. Stevens High School,,340450003326,10155,Java Programming ,87,21,0,1,0,0,5,2,0
+John P. Stevens High School,,340450003326,10157,AP Computer Science A ,98,21,0,1,0,0,1,0,0
+Highland Park High School,,340717003372,10152,Computer Programming,15,5,1,1,0,0,3,2,0
+Highland Park High School,,340717003372,10157,AP Computer Science A ,12,5,0,0,0,0,1,0,0
+Highland Park High School,,340717003372,10197,COMPUTER PROGRAMMING—INDEPENDENT STUDY,1,0,0,0,0,0,0,0,0
+Metuchen High School,,340999003392,10152,Computer Programming,22,4,0,3,0,0,3,1,1
+Metuchen High School,,340999003392,10153,Visual Basic (VB) Programming ,15,3,0,2,0,0,2,2,0
+Metuchen High School,,340999003392,10157,AP Computer Science A ,16,6,0,1,0,0,0,0,0
+Metuchen High School,,340999003392,10199,COMPUTER PROGRAMMING—OTHER,1,0,0,0,0,0,0,1,0
+Middlesex High School,,341005003404,10152,Computer Programming,9,1,0,2,0,0,1,0,0
+Middlesex High School,,341005003404,10157,AP Computer Science A ,4,3,0,2,0,0,0,0,0
+Monroe Township High School,,341050003438,10153,Visual Basic (VB) Programming ,58,13,5,0,0,0,2,7,0
+Monroe Township High School,,341050003438,10157,AP Computer Science A ,60,14,0,1,0,0,1,2,0
+Monroe Township High School,,341050003438,10199,COMPUTER PROGRAMMING—OTHER,88,37,1,0,0,0,0,0,0
+New Brunswick High School,,341122003454,10152,Computer Programming,43,10,5,38,0,0,43,2,1
+North Brunswick Township High School,,341149003480,10019,AP Computer Science Principles,39,19,0,1,0,0,1,0,0
+North Brunswick Township High School,,341149003480,10155,Java Programming ,57,21,4,12,0,0,13,2,1
+North Brunswick Township High School,,341149003480,10157,AP Computer Science A ,24,7,2,1,0,0,4,0,0
+Old Bridge High School,,340927003496,10152,Computer Programming,86,16,8,7,0,0,11,1,0
+Old Bridge High School,,340927003496,10157,AP Computer Science A ,59,10,4,3,0,0,8,0,0
+Old Bridge High School,,340927003496,10199,COMPUTER PROGRAMMING—OTHER,49,4,4,5,0,0,9,2,0
+Perth Amboy High School,,341293003530,10019,AP Computer Science Principles,14,1,1,13,0,0,11,0,0
+Piscataway Township High School,,341305003554,10019,AP Computer Science Principles,27,8,4,4,0,0,6,0,1
+Piscataway Township High School,,341305003554,10152,Computer Programming,123,36,20,21,1,1,25,7,1
+Piscataway Township High School,,341305003554,10155,Java Programming ,28,6,1,1,0,0,6,0,0
+Piscataway Township High School,,341305003554,10157,AP Computer Science A ,46,12,3,5,0,0,7,1,1
+Sayreville War Memorial High School,,341464003580,10152,Computer Programming,26,1,5,6,0,0,8,2,0
+Sayreville War Memorial High School,,341464003580,10157,AP Computer Science A ,22,5,3,1,0,0,9,1,0
+Sayreville War Memorial High School,,341464003580,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,10,2,1,2,0,0,2,2,0
+Sayreville Middle School,,341464003582,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,254,105,44,80,1,0,116,47,9
+South Brunswick High School,,341521003610,10152,Computer Programming,293,107,7,2,1,0,7,4,0
+South Brunswick High School,,341521003610,10157,AP Computer Science A ,326,122,2,4,0,0,8,2,0
+South Brunswick High School,,341521003610,10199,COMPUTER PROGRAMMING—OTHER,107,27,0,0,0,0,0,1,0
+Spotswood High School,,341554003660,10152,Computer Programming,17,2,1,1,0,0,3,0,0
+Spotswood High School,,341554003660,10157,AP Computer Science A ,14,3,0,1,0,0,0,0,0
+Colonia High School,,341812003668,10019,AP Computer Science Principles,21,9,2,0,0,0,4,0,0
+Colonia High School,,341812003668,10152,Computer Programming,65,18,2,9,0,0,11,0,0
+Colonia High School,,341812003668,10157,AP Computer Science A ,17,7,2,1,0,0,4,0,0
+John F. Kennedy Memorial High School,,341812003670,10019,AP Computer Science Principles,39,12,0,1,0,0,10,0,1
+John F. Kennedy Memorial High School,,341812003670,10152,Computer Programming,52,17,0,1,0,0,10,0,2
+John F. Kennedy Memorial High School,,341812003670,10157,AP Computer Science A ,22,7,0,1,0,0,6,0,0
+Woodbridge High School,,341812003672,10019,AP Computer Science Principles,22,6,2,7,0,0,5,0,0
+Woodbridge High School,,341812003672,10151,Business Programming,5,3,2,1,0,0,4,1,0
+Woodbridge High School,,341812003672,10152,Computer Programming,64,14,5,17,0,0,18,4,2
+Woodbridge High School,,341812003672,10157,AP Computer Science A ,19,1,1,1,0,0,1,0,0
+Colts Neck High School,,340561000237,10157,AP Computer Science A ,30,5,0,0,0,1,3,0,0
+Freehold Borough High School,,340561003796,10019,AP Computer Science Principles,16,2,2,4,0,0,4,2,0
+Freehold Borough High School,,340561003796,10152,Computer Programming,53,21,2,3,0,0,0,1,0
+Freehold Borough High School,,340561003796,10153,Visual Basic (VB) Programming ,24,5,1,2,0,0,0,0,0
+Freehold Borough High School,,340561003796,10154,C++ Programming ,27,2,0,1,0,0,0,0,0
+Freehold Borough High School,,340561003796,10157,AP Computer Science A ,28,5,0,0,0,0,0,0,0
+Freehold Township High School,,340561003798,10019,AP Computer Science Principles,21,14,0,3,0,0,1,0,0
+Freehold Township High School,,340561003798,10157,AP Computer Science A ,15,3,1,0,0,0,0,0,0
+Howell High School,,340561003800,10157,AP Computer Science A ,50,15,7,2,0,0,4,1,0
+Manalapan High School,,340561003802,10019,AP Computer Science Principles,41,8,2,1,0,1,3,3,0
+Manalapan High School,,340561003802,10157,AP Computer Science A ,21,4,0,1,0,0,0,1,0
+Marlboro High School,,340561003804,10019,AP Computer Science Principles,70,21,0,4,0,0,3,3,0
+Marlboro High School,,340561003804,10157,AP Computer Science A ,81,22,0,2,0,0,0,2,0
+Raritan High School,,341368003826,10157,AP Computer Science A ,3,0,0,0,0,0,0,0,0
+Raritan High School,,341368003826,10199,COMPUTER PROGRAMMING—OTHER,12,0,0,0,0,0,1,2,0
+Holmdel High School,,340741003850,10157,AP Computer Science A ,59,20,0,2,0,1,0,1,0
+Manasquan High School,,340942003940,10019,AP Computer Science Principles,36,8,0,3,0,0,2,1,0
+Matawan Regional High School,,340975003958,10156,Computer Programming—Other Language ,43,18,4,5,0,0,4,2,0
+Matawan Regional High School,,340975003958,10157,AP Computer Science A ,26,9,2,3,0,1,4,0,0
+Middletown High School North,,341011003976,10152,Computer Programming,29,6,1,8,0,1,4,7,0
+Middletown High School North,,341011003976,10157,AP Computer Science A ,23,6,0,2,0,0,5,3,0
+Middletown High School South,,341011003978,02156,COMPUTER MATHEMATICS WITH ALGEBRA,3,0,0,0,0,0,0,0,0
+Middletown High School South,,341011003978,10152,Computer Programming,28,7,0,4,0,0,2,3,0
+Middletown High School South,,341011003978,10157,AP Computer Science A ,69,14,0,2,0,0,1,9,0
+Communications High School,,341750000409,10155,Java Programming ,111,66,0,8,0,0,2,0,0
+High Technology High School,,341750006095,10152,Computer Programming,20,5,1,0,0,0,0,0,0
+High Technology High School,,341750006095,10157,AP Computer Science A ,71,24,1,1,0,0,1,0,0
+Biotechnology High School,,341750006121,10152,Computer Programming,115,62,1,1,0,1,1,0,0
+Biotechnology High School,,341750006121,10157,AP Computer Science A ,43,19,1,1,0,0,1,0,0
+Monmouth Regional High School,,341044004026,10019,AP Computer Science Principles,17,0,4,0,0,0,3,2,0
+Monmouth Regional High School,,341044004026,10152,Computer Programming,34,2,8,8,0,0,6,7,4
+Monmouth Regional High School,,341044004026,10155,Java Programming ,9,1,3,2,0,0,3,0,0
+Monmouth Regional High School,,341044004026,10157,AP Computer Science A ,5,2,0,2,0,0,2,0,0
+Neptune High School,,341116004032,10155,Java Programming ,6,0,2,1,0,0,4,0,0
+Ocean Township High School,,341206004058,10019,AP Computer Science Principles,11,2,0,0,0,0,2,0,0
+Ocean Township High School,,341206004058,10152,Computer Programming,8,2,0,1,0,0,2,0,0
+Ocean Township High School,,341206004058,10155,Java Programming ,11,1,1,0,0,0,3,5,0
+Ocean Township High School,,341206004058,10157,AP Computer Science A ,6,2,0,4,0,0,1,0,0
+Red Bank Regional High School,,341375004084,10019,AP Computer Science Principles,72,17,5,13,0,0,10,4,0
+Red Bank Regional High School,,341375004084,10152,Computer Programming,25,5,1,5,0,0,0,3,0
+Red Bank Regional High School,,341375004084,10157,AP Computer Science A ,22,2,2,3,0,0,3,2,0
+Rumson-Fair Haven Regional High School,,341440004094,10157,AP Computer Science A ,24,1,0,0,0,0,0,0,0
+Shore Regional High School,,341494004100,10019,AP Computer Science Principles,14,5,0,1,0,0,1,0,0
+Shore Regional High School,,341494004100,10157,AP Computer Science A ,7,0,0,0,0,0,0,0,0
+Allentown High School,,341656004124,10153,Visual Basic (VB) Programming ,55,23,4,1,0,0,4,2,0
+Wall High School,,341689004132,10019,AP Computer Science Principles,51,16,1,3,0,0,3,2,0
+Boonton High School,,340195004154,10152,Computer Programming,17,3,0,5,0,0,7,5,1
+Boonton High School,,340195004154,10157,AP Computer Science A ,5,2,0,0,0,0,0,0,0
+Boonton High School,,340195004154,10199,COMPUTER PROGRAMMING—OTHER,34,4,0,5,0,0,10,11,0
+Chatham High School,,340000406014,10019,AP Computer Science Principles,46,12,1,3,0,0,0,4,0
+Chatham High School,,340000406014,10152,Computer Programming,111,19,0,6,0,0,1,11,0
+Chatham High School,,340000406014,10155,Java Programming ,42,8,0,2,0,0,0,5,0
+Chatham High School,,340000406014,10157,AP Computer Science A ,23,4,0,1,0,0,0,0,0
+Dover High School,,340393004212,10152,Computer Programming,38,7,0,35,0,0,21,0,1
+Dover High School,,340393004212,10157,AP Computer Science A ,25,3,2,20,0,0,17,1,0
+Hanover Park High School,,340666004244,10019,AP Computer Science Principles,14,3,0,0,0,0,0,1,0
+Whippany Park High School,,340666004246,10019,AP Computer Science Principles,19,6,0,1,0,0,0,1,0
+Whippany Park High School,,340666004246,10152,Computer Programming,14,4,0,0,0,0,0,1,0
+Jefferson Township High School,,340780004264,10019,AP Computer Science Principles,22,11,0,0,0,0,3,0,0
+Jefferson Township High School,,340780004264,10157,AP Computer Science A ,8,1,0,1,0,0,0,0,0
+Kinnelon High School,,340804004282,10019,AP Computer Science Principles,27,9,0,4,0,0,0,1,0
+Kinnelon High School,,340804004282,10153,Visual Basic (VB) Programming ,12,2,0,1,0,0,1,2,0
+Kinnelon High School,,340804004282,10154,C++ Programming ,9,1,0,1,0,0,1,0,0
+Kinnelon High School,,340804004282,10155,Java Programming ,3,3,0,0,0,0,0,0,0
+Kinnelon High School,,340804004282,10157,AP Computer Science A ,5,0,0,0,0,0,0,0,0
+Madison High School,,340924004300,10157,AP Computer Science A ,24,5,0,0,0,0,0,0,0
+Montville Township High School,,341065004332,10019,AP Computer Science Principles,21,4,0,0,0,0,0,1,0
+Montville Township High School,,341065004332,10155,Java Programming ,32,9,1,1,0,0,0,2,1
+Montville Township High School,,341065004332,10157,AP Computer Science A ,32,6,0,0,0,0,0,1,0
+"Academy for Mathematics, Science and Engineering",,341072000522,10157,AP Computer Science A ,60,15,0,0,0,0,0,0,0
+Morris County School of Technology,,341072004348,10054,DATA SYSTEMS/PROCESSING,4,3,0,1,0,0,0,0,0
+Morris County School of Technology,,341072004348,10152,Computer Programming,11,5,0,1,0,0,0,0,0
+Morris County School of Technology,,341072004348,10156,Computer Programming—Other Language ,25,8,0,4,0,0,2,0,0
+Morris County School of Technology,,341072004348,10157,AP Computer Science A ,16,4,1,1,0,0,1,0,0
+Morris County School of Technology,,341072004348,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,12,0,1,0,0,0,1,5,0
+Academy for Biotechnology,,3410720,10152,Computer Programming,3,0,0,0,0,0,0,0,0
+Academy for Biotechnology,,3410720,10155,Java Programming ,2,0,0,0,0,0,0,0,0
+Academy for Biotechnology,,3410720,10157,AP Computer Science A ,1,0,0,0,0,0,0,0,0
+Morris Hills High School,,341074004352,10153,Visual Basic (VB) Programming ,2,0,0,1,0,0,0,0,0
+Morris Hills High School,,341074004352,10157,AP Computer Science A ,60,20,1,10,0,0,11,0,0
+Morris Hills High School,,341074004352,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,1,0,0,0,0,0,0,0,0
+Morris Knolls High School,,341074004354,10157,AP Computer Science A ,89,30,2,6,0,0,2,2,0
+Morris Knolls High School,,341074004354,10199,COMPUTER PROGRAMMING—OTHER,2,0,0,0,0,0,0,0,0
+Mount Olive High School,,341098004398,10152,Computer Programming,41,13,1,7,0,1,2,4,1
+Mount Olive High School,,341098004398,10155,Java Programming ,22,7,2,2,0,1,2,2,0
+Mount Olive High School,,341098004398,10157,AP Computer Science A ,26,5,0,3,0,0,3,3,0
+Mountain Lakes High School,,341101004416,10152,Computer Programming,39,12,0,4,0,0,0,3,0
+Mountain Lakes High School,,341101004416,10155,Java Programming ,31,12,0,2,0,0,0,2,0
+Mountain Lakes High School,,341101004416,10157,AP Computer Science A ,18,7,0,0,0,0,0,1,0
+Mountain Lakes High School,,341101004416,10199,COMPUTER PROGRAMMING—OTHER,12,5,0,0,1,0,0,0,0
+Parsippany High School,,341248004430,10019,AP Computer Science Principles,53,22,0,0,0,0,3,0,0
+Parsippany High School,,341248004430,10155,Java Programming ,1,0,0,0,0,0,0,0,0
+Parsippany High School,,341248004430,10156,Computer Programming—Other Language ,121,23,1,5,0,0,21,9,5
+Parsippany High School,,341248004430,10157,AP Computer Science A ,13,4,0,1,0,0,0,1,0
+Parsippany Hills High School,,341248004432,10019,AP Computer Science Principles,29,7,1,2,0,0,0,1,1
+Parsippany Hills High School,,341248004432,10054,DATA SYSTEMS/PROCESSING,11,1,0,0,0,0,0,0,0
+Parsippany Hills High School,,341248004432,10156,Computer Programming—Other Language ,120,31,2,5,0,0,8,5,1
+Parsippany Hills High School,,341248004432,10157,AP Computer Science A ,21,5,0,0,1,0,0,0,0
+Pequannock Township High School,,341290004470,10019,AP Computer Science Principles,2,0,0,0,0,0,0,0,0
+Pequannock Township High School,,341290004470,10054,DATA SYSTEMS/PROCESSING,2,0,0,0,0,0,0,0,0
+Randolph High School,,341365004486,10019,AP Computer Science Principles,103,28,5,8,0,0,3,4,0
+Randolph High School,,341365004486,10152,Computer Programming,22,1,3,2,0,0,2,1,0
+Randolph High School,,341365004486,10157,AP Computer Science A ,23,7,1,2,0,0,0,1,0
+Roxbury High School,,341434004524,10019,AP Computer Science Principles,13,4,0,2,0,1,1,0,0
+Roxbury High School,,341434004524,10152,Computer Programming,25,9,0,3,0,0,1,3,0
+Roxbury High School,,341434004524,10157,AP Computer Science A ,11,5,1,0,0,0,0,0,0
+Roxbury High School,,341434004524,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,2,0,0,0,0,0,0,0,0
+West Morris Central High School,,341755004550,10152,Computer Programming,65,12,1,6,0,0,0,12,0
+West Morris Central High School,,341755004550,10159,IB Computer Science,13,1,0,1,0,0,0,1,0
+West Morris Mendham High School,,341755004552,10152,Computer Programming,76,19,1,7,0,0,1,11,0
+West Morris Mendham High School,,341755004552,10155,Java Programming ,1,1,0,0,0,0,0,1,0
+West Morris Mendham High School,,341755004552,10159,IB Computer Science,48,11,0,2,0,0,2,3,0
+Barnegat High School,,341647000557,10019,AP Computer Science Principles,19,7,1,2,0,0,2,0,0
+Brick Township High School,,340222004582,10155,Java Programming ,33,14,0,6,0,0,3,0,1
+Brick Township High School,,340222004582,10156,Computer Programming—Other Language ,15,5,0,1,0,0,3,0,0
+Brick Township High School,,340222004582,10157,AP Computer Science A ,11,4,0,0,0,0,2,0,0
+Brick Township Memorial High School,,340222005896,10155,Java Programming ,34,7,0,4,0,0,2,2,0
+Brick Township Memorial High School,,340222005896,10157,AP Computer Science A ,3,1,0,0,0,0,1,0,0
+Central Regional High School,,340291004604,10152,Computer Programming,53,9,1,9,0,0,12,0,0
+Jackson Memorial High School,,340774004612,10152,Computer Programming,128,38,3,16,0,0,11,13,0
+Jackson Memorial High School,,340774004612,10155,Java Programming ,14,2,1,2,0,0,4,2,0
+Jackson Memorial High School,,340774004612,10157,AP Computer Science A ,31,10,1,2,0,0,0,1,0
+Jackson Liberty High School,,340774000787,10152,Computer Programming,17,4,3,2,0,0,5,3,0
+Jackson Liberty High School,,340774000787,10155,Java Programming ,19,7,1,2,0,0,7,0,0
+Jackson Liberty High School,,340774000787,10157,AP Computer Science A ,4,1,0,2,0,0,1,0,0
+Jackson Liberty High School,,340774000787,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,3,0,0,0,0,0,1,0,0
+Lacey Township High School,,340810005935,10157,AP Computer Science A ,15,3,0,0,0,0,1,0,0
+Manchester Township High School,,340945004660,10199,COMPUTER PROGRAMMING—OTHER,22,4,2,2,0,1,2,3,0
+Ocean County Vocational Technical School Toms River Center,,341198004674,10152,Computer Programming,58,6,0,12,0,0,16,8,0
+Ocean County Vocational Technical School Toms River Center,,341198004674,10198,COMPUTER PROGRAMMING—WORKPLACE EXPERIENCE,66,6,2,14,0,0,16,12,0
+Marine Academy of Technology and Environmental Science,,341198000559,10152,Computer Programming,67,31,0,4,0,0,5,1,0
+Marine Academy of Technology and Environmental Science,,341198000559,10199,COMPUTER PROGRAMMING—OTHER,18,4,0,1,0,0,0,0,0
+Pinelands Regional High School,,341300005917,10155,Java Programming ,6,0,0,0,0,0,3,2,0
+Point Pleasant Borough High School,,341329004692,10019,AP Computer Science Principles,45,9,0,0,0,0,0,0,0
+Point Pleasant Borough High School,,341329004692,10152,Computer Programming,49,10,0,4,0,1,7,6,0
+Point Pleasant Borough High School,,341329004692,10157,AP Computer Science A ,39,10,0,3,0,0,2,3,0
+Point Pleasant Beach High School,,341332004702,10019,AP Computer Science Principles,39,16,0,3,0,0,0,3,0
+Point Pleasant Beach High School,,341332004702,10157,AP Computer Science A ,7,1,0,0,0,0,0,0,0
+Southern Regional High School,,341548004710,10152,Computer Programming,24,3,2,1,0,0,3,6,0
+Southern Regional High School,,341548004710,10157,AP Computer Science A ,25,8,2,0,0,1,1,3,0
+Toms River High School East,,341623005919,10152,Computer Programming,18,2,0,1,0,0,2,1,0
+Toms River High School East,,341623005919,10157,AP Computer Science A ,2,1,0,0,0,0,0,0,0
+Toms River High School North,,341623004722,10152,Computer Programming,84,36,0,8,0,1,9,4,2
+Toms River High School North,,341623004722,10157,AP Computer Science A ,31,11,0,3,0,0,2,0,0
+Toms River High School South,,341623004724,10152,Computer Programming,13,5,0,0,0,0,0,0,0
+Toms River High School South,,341623004724,10157,AP Computer Science A ,7,0,0,0,0,0,0,0,0
+Clifton High School,,340330004762,10152,Computer Programming,2,0,0,1,0,0,0,0,0
+Hawthorne High School,,340699004806,10019,AP Computer Science Principles,6,3,0,0,0,0,0,0,0
+Hawthorne High School,,340699004806,10152,Computer Programming,54,13,1,17,0,0,11,11,2
+Hawthorne High School,,340699004806,10157,AP Computer Science A ,6,3,0,1,0,0,0,0,0
+Lakeland Regional High School,,340819004818,10155,Java Programming ,16,4,1,1,0,0,1,1,0
+Lakeland Regional High School,,340819004818,10156,Computer Programming—Other Language ,10,1,0,1,1,0,2,2,0
+Lakeland Regional High School,,340819004818,10157,AP Computer Science A ,18,6,1,3,0,0,1,0,0
+Passaic High School No. 12,,341254004836,10152,Computer Programming,89,21,4,83,0,1,89,19,5
+Passaic High School No. 12,,341254004836,10155,Java Programming ,16,2,0,14,0,0,16,2,0
+Passaic High School No. 12,,341254004836,10156,Computer Programming—Other Language ,41,8,0,38,1,0,41,3,6
+Passaic Academy for Science and Engineering,,341254003433,10019,AP Computer Science Principles,27,14,0,27,0,0,27,0,0
+Passaic Academy for Science and Engineering,,341254003433,10156,Computer Programming—Other Language ,33,10,0,32,0,0,33,0,5
+Passaic County Technical Institute,,341263004860,10019,AP Computer Science Principles,38,6,4,19,0,0,23,0,2
+Passaic County Technical Institute,,341263004860,10152,Computer Programming,59,15,6,28,0,1,32,3,0
+Passaic County Technical Institute,,341263004860,10155,Java Programming ,18,3,1,10,0,0,10,1,0
+Passaic County Technical Institute,,341263004860,10157,AP Computer Science A ,18,2,0,6,0,0,6,0,0
+Passaic County Technical Institute,,341263004860,10198,COMPUTER PROGRAMMING—WORKPLACE EXPERIENCE,5,1,0,3,0,0,1,0,0
+Diana C. Lobosco STEM Academy,,341263004860,10019,AP Computer Science Principles,88,31,4,47,0,0,50,1,1
+Diana C. Lobosco STEM Academy,,341263004860,10152,Computer Programming,43,10,3,17,2,0,22,0,0
+Diana C. Lobosco STEM Academy,,341263004860,10156,Computer Programming—Other Language ,97,14,4,52,0,2,33,1,0
+School Of Information Technology,,341269003101,10019,AP Computer Science Principles,24,10,3,21,0,0,15,0,10
+"School Of Culinary Arts, Hospitality and Tourism",,341269003103,10019,AP Computer Science Principles,8,6,4,4,0,0,6,0,0
+School of Government and Public Administration,,341269003105,10019,AP Computer Science Principles,6,5,2,4,0,0,3,0,0
+School of Earth and Space Science,,341269003109,10019,AP Computer Science Principles,16,8,4,10,0,0,10,0,2
+International High School,,341269000809,10019,AP Computer Science Principles,39,27,6,27,0,0,26,1,0
+"School of Science, Technology, Engineering and Mathematics",,341269003169,10019,AP Computer Science Principles,1,0,0,0,0,0,0,0,0
+"School of Business, Technology, Marketing and Finance",,341269003170,10019,AP Computer Science Principles,1,1,1,0,0,0,1,0,0
+School of Architecture and Construction Trades,,341269003171,10019,AP Computer Science Principles,1,1,0,1,0,0,1,0,0
+Garrett Morgan Academy,,341269003370,10019,AP Computer Science Principles,3,1,1,1,0,0,2,0,0
+Pompton Lakes High School,,341335004930,10019,AP Computer Science Principles,25,13,0,3,0,1,3,1,0
+Pompton Lakes High School,,341335004930,10155,Java Programming ,62,27,1,10,0,1,10,8,0
+Pompton Lakes High School,,341335004930,10156,Computer Programming—Other Language ,3,1,0,1,0,0,0,0,0
+Wayne Valley High School,,341728004964,10019,AP Computer Science Principles,26,4,0,6,0,0,2,0,0
+Wayne Valley High School,,341728004964,10155,Java Programming ,82,28,2,12,0,0,6,2,0
+Wayne Valley High School,,341728004964,10157,AP Computer Science A ,47,11,4,6,0,0,2,2,2
+Wayne Hills High School,,341728004966,10019,AP Computer Science Principles,37,14,0,1,0,0,5,1,0
+Wayne Hills High School,,341728004966,10153,Visual Basic (VB) Programming ,59,18,0,7,1,0,9,6,3
+Wayne Hills High School,,341728004966,10154,C++ Programming ,51,12,0,4,0,0,4,2,6
+Wayne Hills High School,,341728004966,10155,Java Programming ,44,9,0,6,0,0,7,3,1
+Wayne Hills High School,,341728004966,10157,AP Computer Science A ,28,4,1,1,0,0,1,0,0
+Wayne Hills High School,,341728004966,10199,COMPUTER PROGRAMMING—OTHER,9,1,0,2,0,0,1,0,0
+West Milford High School,,341752004998,10154,C++ Programming ,16,7,0,1,0,0,3,0,0
+West Milford High School,,341752004998,10155,Java Programming ,6,1,0,0,0,0,1,1,0
+West Milford High School,,341752004998,10157,AP Computer Science A ,16,5,0,1,0,0,1,0,0
+Pennsville Memorial High School,,340912005064,10152,Computer Programming,50,10,4,6,0,0,19,17,0
+Pennsville Middle School,,340912005066,10152,Computer Programming,47,15,2,4,0,0,17,5,1
+Arthur P. Schalick High School,,341311005080,10152,Computer Programming,9,3,3,1,0,0,2,2,0
+Arthur P. Schalick High School,,341311005080,10154,C++ Programming ,1,0,0,0,0,0,0,0,0
+Arthur P. Schalick High School,,341311005080,10157,AP Computer Science A ,6,1,0,1,0,0,0,1,0
+Salem County Career and Technical High School,,341458005098,10152,Computer Programming,6,2,0,2,0,0,1,0,0
+Woodstown High School,,341833005114,10153,Visual Basic (VB) Programming ,18,3,1,0,0,0,1,0,0
+Woodstown High School,,341833005114,10157,AP Computer Science A ,20,2,0,0,0,0,0,0,0
+Ridge High School,,340165005124,10156,Computer Programming—Other Language ,24,5,0,1,0,0,0,2,0
+Ridge High School,,340165005124,10157,AP Computer Science A ,120,48,0,2,0,0,1,2,0
+Ridge High School,,340165005124,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,11,3,0,1,0,0,0,1,0
+Bridgewater-Raritan High School,,340228000173,10019,AP Computer Science Principles,97,27,1,7,0,1,1,0,0
+Bridgewater-Raritan High School,,340228000173,10152,Computer Programming,157,45,1,6,0,1,3,6,0
+Bridgewater-Raritan High School,,340228000173,10157,AP Computer Science A ,65,9,0,2,0,0,3,0,0
+Bridgewater-Raritan High School,,340228000173,10199,COMPUTER PROGRAMMING—OTHER,38,11,0,1,0,0,0,0,0
+Franklin High School,,340549005194,02156,COMPUTER MATHEMATICS WITH ALGEBRA,35,10,7,5,0,1,9,2,0
+Franklin High School,,340549005194,10019,AP Computer Science Principles,47,9,11,7,0,0,9,1,0
+Franklin High School,,340549005194,10157,AP Computer Science A ,6,1,2,0,0,0,1,0,0
+Franklin Middle School at Sampson G. Smith Campus,,340549000563,10152,Computer Programming,29,14,5,7,0,0,7,1,0
+Hillsborough High School,,340723005222,10152,Computer Programming,77,9,1,4,1,0,3,3,0
+Hillsborough High School,,340723005222,10156,Computer Programming—Other Language ,43,5,0,0,1,0,1,2,0
+Hillsborough High School,,340723005222,10157,AP Computer Science A ,42,5,1,2,0,0,1,1,0
+Manville High School,,340963005238,10156,Computer Programming—Other Language ,10,1,2,2,0,0,2,2,0
+Manville High School,,340963005238,10157,AP Computer Science A ,15,1,0,7,0,0,5,1,0
+Montgomery High School,,341059005250,10155,Java Programming ,48,15,0,3,0,0,1,0,1
+Montgomery High School,,341059005250,10157,AP Computer Science A ,59,21,0,1,0,0,1,0,0
+North Plainfield High School,,341164005258,10019,AP Computer Science Principles,27,8,5,14,0,0,13,2,0
+North Plainfield High School,,341164005258,10152,Computer Programming,102,18,19,66,0,0,56,32,29
+Bernards High School,,340000900176,10019,AP Computer Science Principles,43,10,0,3,0,0,1,1,0
+Bernards High School,,340000900176,10157,AP Computer Science A ,33,15,0,2,0,0,0,1,0
+Bernardsville Middle School,,340000900178,10152,Computer Programming,106,39,0,21,0,0,9,19,3
+Somerville High School,,341509005284,10156,Computer Programming—Other Language ,53,10,4,6,0,0,5,6,0
+Somerville High School,,341509005284,10157,AP Computer Science A ,2,0,0,0,0,0,0,0,0
+Somerville High School,,341509005284,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,54,10,6,20,0,0,20,18,3
+Watchung Hills Regional High School,,341722005320,10019,AP Computer Science Principles,153,54,1,9,0,1,0,1,0
+Watchung Hills Regional High School,,341722005320,10152,Computer Programming,78,23,2,5,0,0,0,5,0
+Watchung Hills Regional High School,,341722005320,10156,Computer Programming—Other Language ,1,0,0,0,0,0,0,1,0
+Watchung Hills Regional High School,,341722005320,10157,AP Computer Science A ,37,9,0,1,0,0,0,0,0
+High Point Regional High School District,,340714005358,10152,Computer Programming,43,9,1,4,0,0,11,5,0
+High Point Regional High School District,,340714005358,10157,AP Computer Science A ,37,9,2,2,0,0,5,6,0
+Kittatinny Regional High School,,340806005372,10019,AP Computer Science Principles,21,6,0,0,0,0,0,1,0
+Kittatinny Regional High School,,340806005372,10152,Computer Programming,15,2,0,0,0,0,2,2,0
+Lenape Valley Regional High School,,340850005378,10156,Computer Programming—Other Language ,14,5,0,1,0,0,2,2,0
+Newton High School,,341140005384,10152,Computer Programming,8,0,0,2,0,0,0,2,0
+Sparta High School,,341551005396,10152,Computer Programming,38,13,0,3,0,0,0,2,0
+Sparta High School,,341551005396,10155,Java Programming ,10,3,0,1,0,0,1,1,0
+Sparta High School,,341551005396,10157,AP Computer Science A ,19,2,1,0,0,0,0,0,0
+Vernon Township High School,,341671005422,10152,Computer Programming,8,1,0,0,0,0,0,2,0
+Vernon Township High School,,341671005422,10157,AP Computer Science A ,4,1,0,1,0,0,1,1,0
+WALLKILL VALLEY REGIONAL HIGH SCHOOL,,341687005949,10152,Computer Programming,15,4,1,3,0,0,3,1,0
+WALLKILL VALLEY REGIONAL HIGH SCHOOL,,341687005949,10157,AP Computer Science A ,10,2,0,1,0,0,0,1,0
+Governor Livingston High School,,340153000201,10019,AP Computer Science Principles,37,8,2,4,0,0,0,0,0
+Governor Livingston High School,,340153000201,10152,Computer Programming,60,16,1,6,0,0,1,7,0
+Governor Livingston High School,,340153000201,10155,Java Programming ,5,0,0,2,0,0,0,2,0
+Governor Livingston High School,,340153000201,10157,AP Computer Science A ,12,2,0,2,0,0,0,0,0
+Arthur L. Johnson High School,,340315000205,10152,Computer Programming,65,10,0,9,0,0,3,12,1
+Arthur L. Johnson High School,,340315000205,10155,Java Programming ,7,0,0,2,0,0,0,1,0
+Arthur L. Johnson High School,,340315000205,10157,AP Computer Science A ,33,7,0,2,0,0,3,1,0
+Cranford High School,,340357005458,10019,AP Computer Science Principles,28,3,1,2,0,0,0,3,0
+Cranford High School,,340357005458,10152,Computer Programming,39,8,1,2,0,0,1,6,0
+Cranford High School,,340357005458,10157,AP Computer Science A ,9,1,0,0,0,0,0,1,0
+Elizabeth High School - Frank J Cicarell Academy,,340459005478,10019,AP Computer Science Principles,51,13,5,33,0,0,38,0,0
+Hillside High School,,340729005540,10019,AP Computer Science Principles,36,2,32,4,0,0,28,2,0
+Hillside High School,,340729005540,10157,AP Computer Science A ,34,2,22,8,0,0,26,0,0
+David Brearley Middle/High School,,340792000209,10152,Computer Programming,42,5,3,10,1,1,10,6,0
+Linden High School,,340861005556,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,18,3,8,9,0,0,14,4,0
+New Providence High School,,341131005592,10019,AP Computer Science Principles,21,9,0,1,0,0,0,1,0
+New Providence High School,,341131005592,10157,AP Computer Science A ,7,2,0,3,0,0,0,0,0
+New Providence High School,,341131005592,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,39,6,1,5,0,0,2,2,0
+Rahway High School,,341353005634,10157,AP Computer Science A ,9,1,4,4,0,0,4,0,0
+Roselle Park High School,,341431005664,10157,AP Computer Science A ,31,12,0,12,0,0,4,0,0
+Scotch Plains-Fanwood High School,,341467005676,10019,AP Computer Science Principles,14,3,1,1,0,0,0,0,0
+Scotch Plains-Fanwood High School,,341467005676,10152,Computer Programming,48,7,1,4,0,0,1,3,0
+Scotch Plains-Fanwood High School,,341467005676,10157,AP Computer Science A ,26,6,0,2,0,0,1,2,0
+Jonathan Dayton High School,,341563000213,10019,AP Computer Science Principles,2,0,1,0,0,0,0,1,0
+Jonathan Dayton High School,,341563000213,10157,AP Computer Science A ,10,4,0,2,0,0,0,1,0
+Florence M. Gaudineer Middle School,,341563005700,10156,Computer Programming—Other Language ,60,28,4,8,0,1,4,18,0
+Florence M. Gaudineer Middle School,,341563005700,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,49,13,7,8,1,0,4,7,0
+Summit High School,,341590005708,10019,AP Computer Science Principles,17,1,0,4,0,0,1,0,0
+Summit High School,,341590005708,10152,Computer Programming,64,19,1,5,0,0,2,4,2
+Summit High School,,341590005708,10155,Java Programming ,37,15,1,4,0,0,2,3,0
+Summit High School,,341590005708,10157,AP Computer Science A ,23,4,0,0,0,0,0,0,0
+Summit High School,,341590005708,10197,COMPUTER PROGRAMMING—INDEPENDENT STUDY,2,0,0,0,0,0,0,0,0
+Academy For Information Technology,,341804006134,10155,Java Programming ,10,1,2,1,0,0,2,1,0
+Academy For Information Technology,,341804006134,10157,AP Computer Science A ,30,6,0,8,0,0,2,3,0
+Union County Magnet High School,,341804000214,10199,COMPUTER PROGRAMMING—OTHER,71,25,5,15,0,0,4,2,0
+Union High School,,341650005742,10019,AP Computer Science Principles,12,2,5,3,0,2,4,0,0
+Union High School,,341650005742,10152,Computer Programming,65,16,32,12,0,2,19,5,0
+Westfield Senior High School,,341776005764,10153,Visual Basic (VB) Programming ,112,37,0,13,0,0,0,10,0
+Westfield Senior High School,,341776005764,10157,AP Computer Science A ,36,9,0,1,0,0,0,1,0
+Westfield Senior High School,,341776005764,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,22,6,0,0,0,0,1,0,0
+Belvidere High School,,340144005794,10019,AP Computer Science Principles,7,1,0,0,0,0,0,1,0
+Belvidere High School,,340144005794,10155,Java Programming ,1,1,0,0,0,0,0,0,0
+Hackettstown High School,,340630005814,10152,Computer Programming,26,4,3,5,0,0,3,5,1
+North Warren Regional School,,340955005844,10019,AP Computer Science Principles,20,4,0,0,0,0,1,1,0
+North Warren Regional School,,340955005844,10152,Computer Programming,11,7,0,1,0,0,0,1,0
+North Warren Regional School,,340955005844,10157,AP Computer Science A ,4,3,0,0,0,0,0,0,0
+Phillipsburg High School,,341296005852,10152,Computer Programming,55,14,4,2,1,0,5,4,1
+Phillipsburg High School,,341296005852,10157,AP Computer Science A ,12,1,0,1,0,0,2,0,0
+Warren Hills Regional High School,,341697005878,10019,AP Computer Science Principles,35,16,3,2,0,0,4,0,0
+Warren Hills Regional High School,,341697005878,10152,Computer Programming,34,10,4,4,0,0,5,4,1
+Warren Hills Regional High School,,341697005878,10157,AP Computer Science A ,29,13,0,4,0,0,1,2,0
+Bergen Arts and Sciences Charter School,,340071502923,10019,AP Computer Science Principles,20,2,4,4,0,0,8,0,2
+Bergen Arts and Sciences Charter School,,340071502923,10152,Computer Programming,12,5,0,5,0,0,7,0,1
+Bergen Arts and Sciences Charter School,,340071502923,10156,Computer Programming—Other Language ,13,2,0,5,0,0,3,0,1
+Central Jersey College Prep Charter School,,340009000829,10157,AP Computer Science A ,32,9,3,5,0,0,8,0,0
+Central Jersey College Prep Charter School,,340009000829,10199,COMPUTER PROGRAMMING—OTHER,59,29,6,3,0,0,3,0,0
+Academy for Urban Leadership Charter School,,340074103050,10152,Computer Programming,97,58,5,92,0,0,62,2,16
+Passaic Arts and Science Charter School,,340074503137,10156,Computer Programming—Other Language ,16,6,0,14,0,0,15,1,0
+Thomas Edison EnergySmart Charter School,,340074603143,10152,Computer Programming,74,33,17,6,0,0,16,4,6
+BelovED Community Charter School,,340075903196,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,10,1,3,4,0,0,6,2,0
+Paterson Arts and Science Charter School,,340076503254,10152,Computer Programming,15,4,4,11,0,0,11,3,2
+Freedom Prep Charter School,,340008000566,10152,Computer Programming,2,0,1,1,0,0,2,0,0
+Hoboken Charter School,,340003200302,10152,Computer Programming,10,2,2,8,0,0,6,2,0
+Hoboken Charter School,,340003200302,10197,COMPUTER PROGRAMMING—INDEPENDENT STUDY,1,0,0,0,0,0,0,0,0
+North Star Academy Charter School,,340002400289,10019,AP Computer Science Principles,23,14,18,5,0,0,15,1,0
+North Star Academy Charter School,,340002400289,10152,Computer Programming,175,84,136,37,0,0,155,14,2
+North Star Academy Charter School,,340002400289,10156,Computer Programming—Other Language ,54,31,41,12,0,0,41,0,0
+North Star Academy Charter School,,340002400289,10157,AP Computer Science A ,45,22,33,10,0,0,34,0,0
+TEAM Academy Charter School,,340007000529,10019,AP Computer Science Principles,14,4,11,3,0,0,10,1,0
+TEAM Academy Charter School,,340007000529,10152,Computer Programming,117,57,103,8,0,0,104,18,2
+TEAM Academy Charter School,,340007000529,10199,COMPUTER PROGRAMMING—OTHER,120,58,106,12,0,0,111,13,3
+Paterson Charter School for Science/Technology,,340008700735,10152,Computer Programming,21,0,0,0,0,0,0,0,0
+Paterson Charter School for Science/Technology,,340008700735,10160,PARTICULAR TOPICS IN COMPUTER PROGRAMMING,20,0,0,0,0,0,0,0,0
+University Academy Charter High School,,340007300531,10157,AP Computer Science A ,20,11,16,0,0,0,10,2,0
+Atlantic County Institute of Technology,,340099000034,21009,Robotics,30,8,7,7,0,0,12,1,0
+Egg Harbor Township High School,,340456005961,21009,Robotics,15,3,1,7,0,0,8,3,2
+Bergen County Academies,,340147000250,21009,Robotics,29,8,1,2,0,0,2,1,0
+Cresskill High School,,340360000324,21009,Robotics,42,15,1,1,0,0,0,3,1
+Fair Lawn High School,,340498000410,21009,Robotics,13,2,1,0,0,0,0,2,0
+Garfield High School,,340576000466,21009,Robotics,41,7,2,23,0,0,19,3,1
+Leonia High School,,340852000534,21009,Robotics,10,1,1,0,0,0,4,1,0
+Mahwah High School,,340933000586,21009,Robotics,29,2,0,2,0,0,2,1,0
+Pascack Hills High School,,341251000718,21009,Robotics,16,0,0,2,0,0,0,2,0
+Pascack Valley High School,,341251000720,21009,Robotics,68,4,0,2,0,0,4,10,0
+Ridgewood High School,,341383000764,21009,Robotics,9,1,0,0,0,0,0,1,0
+River Dell Regional High School,,341226000786,21009,Robotics,16,1,0,2,0,0,0,3,0
+Rutherford High School,,341446000810,21009,Robotics,47,5,5,6,0,0,1,7,0
+Saddle Brook Middle/High School,,341449000824,21009,Robotics,13,2,0,3,0,0,3,1,2
+Teaneck High School,,341608000840,21009,Robotics,17,3,2,6,0,0,6,3,1
+Tenafly High School,,341611000864,21009,Robotics,20,1,0,1,0,0,1,4,0
+Lumberton Campus,,340244000121,21009,Robotics,1,0,0,0,0,0,0,0,0
+Cinnaminson High School,,340312001020,21009,Robotics,16,1,0,2,0,0,2,1,0
+Delran High School,,340378001040,21009,Robotics,3,1,1,1,0,0,0,1,0
+Moorestown High School,,341071001132,21009,Robotics,12,1,2,0,0,0,0,2,0
+Audubon Junior/Senior High School,,340105001298,21009,Robotics,6,2,0,0,0,0,0,0,0
+Highland Regional High School,,340177001336,21009,Robotics,45,4,8,3,0,0,11,6,0
+Eastern Regional High School,,340438001488,21009,Robotics,94,9,17,8,0,0,16,15,0
+Overbrook Senior High School,,341299000432,21009,Robotics,24,0,2,2,0,0,14,0,0
+Sterling High School,,340288001662,21009,Robotics,64,11,8,6,0,0,19,16,0
+Millville Senior High School,,341032001868,21009,Robotics,43,3,5,7,0,0,19,16,0
+Memorial High School,,341032001870,21009,Robotics,36,5,7,12,0,0,24,15,0
+Belleville High School,,340135001954,21009,Robotics,9,5,0,6,0,0,3,0,0
+Bloomfield High School,,340183001980,21009,Robotics,74,7,12,37,0,1,29,21,6
+James Caldwell High School,,340258002008,21009,Robotics,7,0,0,3,0,0,1,3,0
+Cedar Grove High School,,340285002026,21009,Robotics,58,9,1,3,0,0,2,10,2
+East Orange STEM Academy High School,,340423002040,21009,Robotics,18,7,16,2,0,0,18,5,0
+Glen Ridge High School,,340594002092,21009,Robotics,10,5,1,0,0,0,0,4,0
+Irvington High School,,340768002104,21009,Robotics,82,12,69,12,0,0,53,15,11
+Livingston High School,,340882002126,21009,Robotics,12,0,2,1,0,0,1,2,0
+Millburn High School,,341020002148,21009,Robotics,17,4,0,1,0,0,1,4,0
+Montclair High School,,341056002166,21009,Robotics,42,2,11,6,1,0,11,9,0
+Science Park High School,,341134002200,21009,Robotics,98,32,28,56,0,0,62,8,0
+Weequahic High School,,341134002206,21009,Robotics,111,38,96,14,0,0,59,32,1
+Nutley High School,,341188002378,21009,Robotics,15,1,0,6,0,0,2,5,1
+Clayton High School,,340318002498,21009,Robotics,25,4,5,4,0,0,12,4,0
+Clearview Regional High School,,340321002506,21009,Robotics,57,7,3,1,0,0,10,14,0
+Deptford Township High School,,340390002512,21009,Robotics,44,7,9,7,0,0,16,13,0
+Paulsboro High School,,341272002608,21009,Robotics,12,4,1,2,0,0,2,3,0
+Pitman High School,,341308002616,21009,Robotics,25,1,0,0,0,0,3,0,0
+Washington Township High School,,341707002640,21009,Robotics,10,0,1,0,0,0,3,2,0
+West Deptford High School,,341743002662,21009,Robotics,9,4,1,1,0,0,1,0,0
+Jose Marti STEM Academy,,341638003074,21009,Robotics,27,14,0,27,0,0,24,1,0
+Weehawken High School,,341731002928,21009,Robotics,21,6,2,13,0,0,12,6,0
+Memorial High School,,341758002938,21009,Robotics,81,24,2,73,0,0,64,5,0
+Hunterdon Central Regional High School District,,340759003006,21009,Robotics,72,8,3,9,0,0,5,15,0
+Ewing High School,,340492003068,21009,Robotics,32,5,17,5,0,0,15,0,1
+Hamilton East - Steinert,,340654003090,21009,Robotics,54,3,13,5,0,0,9,7,4
+Hamilton North - Nottingham,,340654005933,21009,Robotics,23,1,7,8,0,0,12,4,1
+Hamilton West-Watson,,340654003092,21009,Robotics,39,4,5,16,0,0,18,8,0
+Lawrence High School,,340840003152,21009,Robotics,39,4,3,9,0,0,11,2,2
+Mercer County Technical School STEM Academy,,340995003415,21009,Robotics,51,16,6,16,0,0,15,3,0
+Robbinsville High School,,341710000549,21009,Robotics,47,16,1,3,0,0,1,3,1
+Carteret High School,,340282003268,21009,Robotics,115,44,15,63,0,0,73,11,9
+John P. Stevens High School,,340450003326,21009,Robotics,37,5,1,1,0,0,3,0,1
+Monroe Township High School,,341050003438,21009,Robotics,54,6,4,1,0,0,2,7,0
+New Brunswick High School,,341122003454,21009,Robotics,44,5,2,40,0,0,43,7,0
+Linwood School,,341149003486,21009,Robotics,88,17,19,31,0,1,40,10,0
+Perth Amboy High School,,341293003530,21009,Robotics,51,9,2,47,0,0,39,3,0
+Sayreville War Memorial High School,,341464003580,21009,Robotics,84,16,6,20,0,1,28,17,1
+South Brunswick High School,,341521003610,21009,Robotics,27,2,3,1,0,0,3,4,0
+Keyport High School,,340795003888,21009,Robotics,22,0,0,5,0,0,6,6,0
+Manasquan High School,,340942003940,21009,Robotics,32,6,0,2,0,0,0,4,0
+Monmouth Regional High School,,341044004026,21009,Robotics,24,1,0,2,0,0,1,1,2
+Ocean Township High School,,341206004058,21009,Robotics,94,7,9,10,0,1,18,25,3
+Wall High School,,341689004132,21009,Robotics,34,11,0,0,0,0,1,1,0
+Frank Antonides School,,341749004148,21009,Robotics,88,41,2,9,0,0,7,13,1
+Chatham High School,,340000406014,21009,Robotics,61,15,0,2,0,0,0,11,0
+Hanover Park High School,,340666004244,21009,Robotics,67,5,3,4,0,1,1,16,0
+Whippany Park High School,,340666004246,21009,Robotics,71,2,4,11,0,0,4,6,1
+Jefferson Township High School,,340780004264,21009,Robotics,48,3,0,9,1,0,6,15,0
+Montville Township High School,,341065004332,21009,Robotics,8,1,0,1,0,0,0,0,0
+Athletic Training and Physical Therapy,,341072003474,21009,Robotics,1,0,0,0,0,0,0,0,0
+Morris Hills High School,,341074004352,21009,Robotics,12,1,0,2,0,0,4,0,0
+Morris Knolls High School,,341074004354,21009,Robotics,27,4,1,2,0,0,0,1,0
+Morristown High School,,341081004366,21009,Robotics,13,2,2,4,0,0,4,2,0
+Mount Olive High School,,341098004398,21009,Robotics,103,15,3,15,1,1,13,26,0
+Parsippany High School,,341248004430,21009,Robotics,14,0,0,1,0,0,1,2,1
+Parsippany Hills High School,,341248004432,21009,Robotics,35,5,1,2,1,0,4,2,0
+Pequannock Township High School,,341290004470,21009,Robotics,19,6,0,0,0,0,0,0,0
+Randolph High School,,341365004486,21009,Robotics,15,0,0,4,0,0,3,1,1
+Roxbury High School,,341434004524,21009,Robotics,15,1,1,2,0,0,1,1,0
+West Morris Central High School,,341755004550,21009,Robotics,74,15,2,8,0,0,0,6,0
+West Morris Mendham High School,,341755004552,21009,Robotics,76,12,0,7,0,0,1,9,0
+Barnegat High School,,341647000557,21009,Robotics,77,12,5,17,0,0,22,9,1
+Brick Township High School,,340222004582,21009,Robotics,11,8,0,2,0,0,2,0,0
+Brick Township Memorial High School,,340222005896,21009,Robotics,51,7,1,9,0,0,11,6,0
+Jackson Memorial High School,,340774004612,21009,Robotics,16,3,0,2,0,0,0,1,0
+Jackson Liberty High School,,340774000787,21009,Robotics,22,10,4,4,0,0,3,1,0
+New Egypt High School,,341323000341,21009,Robotics,8,2,0,0,0,0,1,2,0
+Point Pleasant Borough High School,,341329004692,21009,Robotics,129,25,0,6,3,1,7,23,0
+Toms River Intermediate School East,,341623004726,21009,Robotics,38,13,1,1,0,0,3,3,0
+Clifton High School,,340330004762,21009,Robotics,14,0,1,5,0,0,4,2,0
+Lakeland Regional High School,,340819004818,21009,Robotics,2,0,0,0,0,0,1,0,0
+School Of Information Technology,,341269003101,21009,Robotics,16,6,3,13,0,0,8,1,5
+School of Earth and Space Science,,341269003109,21009,Robotics,26,8,10,16,0,0,16,4,0
+Pompton Lakes High School,,341335004930,21009,Robotics,14,1,0,4,0,0,1,1,0
+Wayne Valley High School,,341728004964,21009,Robotics,50,5,1,5,0,0,1,4,1
+Wayne Hills High School,,341728004966,21009,Robotics,66,2,2,2,0,0,4,12,2
+Ridge High School,,340165005124,21009,Robotics,91,14,0,7,0,0,1,14,1
+Manville High School,,340963005238,21009,Robotics,83,16,7,27,0,0,32,19,4
+Watchung Hills Regional High School,,341722005320,21009,Robotics,11,2,0,0,0,0,0,0,0
+Kittatinny Regional High School,,340806005372,21009,Robotics,10,1,0,1,0,0,1,1,0
+Lenape Valley Regional High School,,340850005378,21009,Robotics,32,4,0,6,0,0,4,10,1
+Newton High School,,341140005384,21009,Robotics,25,0,2,2,0,0,5,1,0
+Sparta High School,,341551005396,21009,Robotics,57,8,3,4,0,0,1,6,0
+Sussex County Technical School,,341593005416,21009,Robotics,17,1,0,0,0,0,4,6,0
+Governor Livingston High School,,340153000201,21009,Robotics,36,4,0,6,0,0,0,8,0
+Arthur L. Johnson High School,,340315000205,21009,Robotics,48,4,1,2,0,0,3,8,0
+John E. Dwyer Technology Academy,,340459003071,21009,Robotics,21,6,6,14,0,0,17,0,11
+Plainfield Academy  For The Arts & Advanced Studies,,341314003041,21009,Robotics,32,7,16,16,0,0,24,2,1
+Rahway High School,,341353005634,21009,Robotics,72,18,23,39,0,0,42,23,3
+Florence M. Gaudineer Middle School,,341563005700,21009,Robotics,61,22,6,21,0,0,7,15,1
+Union County Magnet High School,,341804000214,21009,Robotics,22,8,0,5,0,0,3,2,0
+Hackettstown High School,,340630005814,21009,Robotics,106,18,2,29,1,0,25,22,6
+North Warren Regional School,,340955005844,21009,Robotics,13,1,0,1,0,0,1,7,0
+Warren Hills Regional High School,,341697005878,21009,Robotics,42,13,5,3,0,0,10,10,1
+Leap Academy University Charter School,,340007800487,21009,Robotics,22,11,7,10,0,0,14,1,2
+North Star Academy Charter School,,340002400289,21009,Robotics,244,116,180,56,1,0,210,18,3

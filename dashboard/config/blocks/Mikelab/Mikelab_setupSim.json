@@ -1,0 +1,53 @@
+{
+  "category": "Experimental",
+  "config": {
+    "func": "setupSim",
+    "blockText": "setup simulation with\n{SPRITE1N}{SPRITE1COSTUME}speed{SPRITE1SPEED}\n{SPRITE2N}{SPRITE2COSTUME}speed{SPRITE2SPEED}\ncollecting\n{SPRITE3N}{SPRITE3COSTUME}",
+    "eventBlock": true,
+    "inline": false,
+    "args": [
+      {
+        "name": "SPRITE1N",
+        "type": "Number",
+        "field": true
+      },
+      {
+        "name": "SPRITE1COSTUME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "SPRITE1SPEED",
+        "type": "Number",
+        "field": true
+      },
+      {
+        "name": "SPRITE2N",
+        "type": "Number",
+        "field": true
+      },
+      {
+        "name": "SPRITE2COSTUME",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "SPRITE2SPEED",
+        "type": "Number",
+        "field": true
+      },
+      {
+        "name": "SPRITE3N",
+        "type": "Number",
+        "field": true
+      },
+      {
+        "name": "SPRITE3COSTUME",
+        "customInput": "costumePicker"
+      }
+    ],
+    "color": [
+      39,
+      1,
+      0.99
+    ]
+  }
+}

@@ -83,7 +83,7 @@ describe('Audio API', function() {
   });
 
   describe('playSpeech', function() {
-    it('has three arguments, "text", "gender", and "language"', function() {
+    it('has four arguments, "text", "gender", "language", and "onComplete"', function() {
       const funcName = 'playSpeech';
       // Check droplet config for the 2 documented params
       expect(dropletConfig[funcName].paletteParams).to.deep.equal([
@@ -96,17 +96,25 @@ describe('Audio API', function() {
       // Check that executors map arguments to object correctly
       let spy = sinon.spy();
       injectExecuteCmd(spy);
-      executors[funcName]('this is text', 'female', 'English', 'nothing');
+      const onCompleteCallback = () => console.log('done');
+      executors[funcName](
+        'this is text',
+        'female',
+        'English',
+        onCompleteCallback,
+        'no fifth arg'
+      );
       expect(spy).to.have.been.calledOnce;
       expect(spy.firstCall.args[2]).to.deep.equal({
         text: 'this is text',
         gender: 'female',
-        language: 'English'
+        language: 'English',
+        onComplete: onCompleteCallback
       });
     });
 
     describe('block functionality', function() {
-      let outputWarningSpy, azureTTSStub, appOptions, options;
+      let outputWarningSpy, azureTTSStub, options;
 
       beforeEach(function() {
         outputWarningSpy = sinon.spy();
@@ -116,12 +124,11 @@ describe('Audio API', function() {
           enqueueAndPlay: sinon.spy()
         };
         sinon.stub(AzureTextToSpeech, 'getSingleton').returns(azureTTSStub);
-        appOptions = {
+        setAppOptions({
           azureSpeechServiceVoices: {
-            English: {female: 'en-female', languageCode: 'en-US'}
+            English: {female: 'en-female', locale: 'en-US'}
           }
-        };
-        setAppOptions(appOptions);
+        });
         options = {
           text: 'hello world',
           gender: 'female',
@@ -154,7 +161,7 @@ describe('Audio API', function() {
         expect(azureTTSStub.createSoundPromise).to.have.been.calledOnce;
         const args = azureTTSStub.createSoundPromise.firstCall.args[0];
         expect(args.gender).to.equal('female');
-        expect(args.languageCode).to.equal('en-US');
+        expect(args.locale).to.equal('en-US');
         expect(azureTTSStub.enqueueAndPlay).to.have.been.calledOnce;
       });
 
@@ -166,7 +173,7 @@ describe('Audio API', function() {
         const args = azureTTSStub.createSoundPromise.firstCall.args[0];
         expect(args.text).to.equal('hello world');
         expect(args.gender).to.equal('female');
-        expect(args.languageCode).to.equal('en-US');
+        expect(args.locale).to.equal('en-US');
         expect(azureTTSStub.enqueueAndPlay).to.have.been.calledOnce;
       });
     });

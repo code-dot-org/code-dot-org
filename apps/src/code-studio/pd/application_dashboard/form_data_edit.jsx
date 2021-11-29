@@ -17,12 +17,6 @@ import {
 import parseJson from 'json-parse-better-errors';
 import color from '@cdo/apps/util/color';
 
-const styles = {
-  error: {
-    color: color.red
-  }
-};
-
 export default class FormDataEdit extends React.Component {
   static propTypes = {
     applicationId: PropTypes.string.isRequired,
@@ -164,3 +158,9 @@ export default class FormDataEdit extends React.Component {
     );
   }
 }
+
+const styles = {
+  error: {
+    color: color.red
+  }
+};

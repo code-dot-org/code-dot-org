@@ -5,10 +5,6 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   load_resource :workshop, class: 'Pd::Workshop', through: :session, singleton: true,
     only: [:join_session, :confirm_join_session]
 
-  def csd_or_csp_workshop
-    [Pd::Workshop::COURSE_CSD, Pd::Workshop::COURSE_CSP].include?(@workshop.course)
-  end
-
   # GET /pd/workshops/1/enroll
   def new
     view_options(no_footer: true, answerdash: true)
@@ -66,7 +62,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       # this enrollment is for a local summer workshop (since this means it's for
       # CSD/CSP, and they will only apply for one local summer workshop a year).
       collect_demographics = !!current_user &&
-        Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.where(user: current_user).empty? &&
+        Pd::Application::ActiveApplicationModels::TEACHER_APPLICATION_CLASS.
+          where(application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR).
+          where(user: current_user).empty? &&
         @workshop.local_summer?
 
       @script_data = {
@@ -77,14 +75,15 @@ class Pd::WorkshopEnrollmentController < ApplicationController
               regional_partner: @workshop.regional_partner,
               course_url: @workshop.course_url,
               fee: @workshop.fee,
-              properties: nil
+              properties: nil,
+              virtual: @workshop.virtual
             }
           ),
           session_dates: session_dates,
           enrollment: @enrollment,
           facilitators: facilitators,
           workshop_enrollment_status: "unsubmitted",
-          previous_courses: Pd::Teacher2021ApplicationConstants::SUBJECTS_TAUGHT_IN_PAST,
+          previous_courses: Pd::TeacherApplicationConstants::SUBJECTS_TAUGHT_IN_PAST,
           collect_demographics: collect_demographics
         }.to_json
       }

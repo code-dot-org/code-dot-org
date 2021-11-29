@@ -8,7 +8,7 @@
 -# geocoder sometimes shows localhost's country as RD/Reserved
 - us_ip = location.nil? || ['US', 'RD'].include?(location.country_code.to_s.upcase)
 - current_user_user_school_info = Queries::UserSchoolInfo.last_complete(current_user)
-- current_user_school_info = current_user_user_school_info.school_info
+- current_user_school_info = current_user_user_school_info ? current_user_user_school_info.school_info : nil
 
 - script_data = {}
 - script_data[:formUrl] = '/api/v1/user_school_infos'
@@ -17,7 +17,8 @@
 - script_data[:existingSchoolInfo] = {}
 - if current_user_school_info
   - script_data[:existingSchoolInfo] = current_user_school_info.slice(:id, :country, :school_type, :school_id, :school_name, :full_address)
-- script_data[:existingSchoolInfo][:user_school_info_id] = current_user_user_school_info.id
+- if current_user_user_school_info
+  - script_data[:existingSchoolInfo][:user_school_info_id] = current_user_user_school_info.id
 - script_data[:existingSchoolInfo][:country] ||= 'United States' if us_ip
 - script_data[:existingSchoolInfo][:school_name] ||= current_user_school_info&.school&.name
 - script_data[:mapboxAccessToken] = CDO.mapbox_access_token

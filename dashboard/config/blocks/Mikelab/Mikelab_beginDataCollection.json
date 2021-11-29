@@ -1,0 +1,35 @@
+{
+  "category": "",
+  "config": {
+    "func": "beginDataCollection",
+    "inline": false,
+    "blockText": "prompt user {QUESTION} for variable {VAR} with choices {A}{B}{C}",
+    "color": [
+      136,
+      ".84",
+      ".80"
+    ],
+    "args": [
+      {
+        "name": "QUESTION",
+        "type": "String"
+      },
+      {
+        "name": "VAR",
+        "customInput": "variableNamePicker"
+      },
+      {
+        "name": "A",
+        "type": "String"
+      },
+      {
+        "name": "B",
+        "type": "String"
+      },
+      {
+        "name": "C",
+        "type": "String"
+      }
+    ]
+  }
+}

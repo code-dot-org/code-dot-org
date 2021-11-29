@@ -3,25 +3,6 @@ import React, {Component} from 'react';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
-const styles = {
-  main: {
-    border: 'none',
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
-    height: '100%',
-    padding: 10
-  },
-  icon: {
-    color: color.level_perfect
-  },
-  value: {
-    color: color.charcoal,
-    fontFamily: '"Gotham 5r", sans-serif'
-  }
-};
-
 function calculateOpacity(answered) {
   return (answered + 10) / 100;
 }
@@ -80,6 +61,25 @@ class PercentAnsweredCell extends Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    border: 'none',
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: 'row',
+    alignItems: 'center',
+    height: '100%',
+    padding: 10
+  },
+  icon: {
+    color: color.level_perfect
+  },
+  value: {
+    color: color.charcoal,
+    fontFamily: '"Gotham 5r", sans-serif'
+  }
+};
 
 PercentAnsweredCell.defaultProps = {
   percentValue: -1,

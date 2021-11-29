@@ -1,0 +1,1217 @@
+{
+  "script": {
+    "name": "self-paced-pl-csd5-2021",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "has_verified_resources": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2021-11-22 19:57:39 UTC",
+    "published_state": "beta",
+    "instruction_type": "self_paced",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "self-paced-pl-csd5-2021"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-8",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Preparing to Teach Unit 7 "
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-7",
+      "name": "AI and Machine Learning",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "Students learn how machine learning can be used to solve problems by preparing data, training a machine model, the testing the model for accuracy and bias. Students use Code.org's AI Lab environment to train machine learning models, then import their models into App Lab to create apps that solve problems. "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "ff517f5c-91f6-4c25-8e6b-deed6d34c693",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ff517f5c-91f6-4c25-8e6b-deed6d34c693",
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "c8b16024-726b-4943-a7c9-09b68613ee9f",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8b16024-726b-4943-a7c9-09b68613ee9f",
+        "lesson_activity.key": "ff517f5c-91f6-4c25-8e6b-deed6d34c693"
+      }
+    },
+    {
+      "key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f",
+      "position": 2,
+      "properties": {
+        "progression_name": "Introduction to AI and machine learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f",
+        "lesson_activity.key": "ff517f5c-91f6-4c25-8e6b-deed6d34c693"
+      }
+    },
+    {
+      "key": "99ba30eb-df29-43ed-8ee5-420301268666",
+      "position": 3,
+      "properties": {
+        "progression_name": "Train a machine learning model"
+      },
+      "seeding_key": {
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666",
+        "lesson_activity.key": "ff517f5c-91f6-4c25-8e6b-deed6d34c693"
+      }
+    },
+    {
+      "key": "d92f6a31-5689-4671-bd1f-6968128ff768",
+      "position": 4,
+      "properties": {
+        "progression_name": "Explore machine learning apps "
+      },
+      "seeding_key": {
+        "activity_section.key": "d92f6a31-5689-4671-bd1f-6968128ff768",
+        "lesson_activity.key": "ff517f5c-91f6-4c25-8e6b-deed6d34c693"
+      }
+    },
+    {
+      "key": "d0423928-907f-4246-b062-97330e60ca53",
+      "position": 5,
+      "properties": {
+        "progression_name": "Consider real world implications"
+      },
+      "seeding_key": {
+        "activity_section.key": "d0423928-907f-4246-b062-97330e60ca53",
+        "lesson_activity.key": "ff517f5c-91f6-4c25-8e6b-deed6d34c693"
+      }
+    },
+    {
+      "key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752",
+      "position": 6,
+      "properties": {
+        "progression_name": "Wrap up"
+      },
+      "seeding_key": {
+        "activity_section.key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752",
+        "lesson_activity.key": "ff517f5c-91f6-4c25-8e6b-deed6d34c693"
+      }
+    },
+    {
+      "key": "ccd112bc-ecf4-4b2c-ae57-deec167d5cf8",
+      "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "ccd112bc-ecf4-4b2c-ae57-deec167d5cf8",
+        "lesson_activity.key": "ff517f5c-91f6-4c25-8e6b-deed6d34c693"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML"
+        ],
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "c8b16024-726b-4943-a7c9-09b68613ee9f"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-Overview-AIML"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-Intro-Quotes"
+        ],
+        "progression": "Introduction to AI and machine learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-Intro-Quotes"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-Intro-Quotes"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ML-vid"
+        ],
+        "progression": "Introduction to AI and machine learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-ML-vid"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-21-mod5-ML-vid"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-UnitOverview-AIML"
+        ],
+        "progression": "Introduction to AI and machine learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-UnitOverview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-UnitOverview-AIML"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-U7L1L1"
+        ],
+        "progression": "Introduction to AI and machine learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-U7L1L1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-U7L1L1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-MLintro-c4u"
+        ],
+        "progression": "Introduction to AI and machine learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-MLintro-c4u"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-MLintro-c4u"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-2-4Overview-AIML"
+        ],
+        "progression": "Introduction to AI and machine learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-2-4Overview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-2-4Overview-AIML"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L5overview-AIML"
+        ],
+        "progression": "Introduction to AI and machine learning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-L5overview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-L5overview-AIML"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-AILab-vid"
+        ],
+        "progression": "Train a machine learning model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-AILab-vid"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-21-mod5-AILab-vid"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L6overview-AIML"
+        ],
+        "progression": "Train a machine learning model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-L6overview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-L6overview-AIML"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro ai lab-shapes v1"
+        ],
+        "progression": "Train a machine learning model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro ai lab-shapes v1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-Mod5-ml-intro ai lab-shapes v1"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-AILabVocab-c4u"
+        ],
+        "progression": "Train a machine learning model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-AILabVocab-c4u"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-21-mod5-AILabVocab-c4u"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-AILabPart2-vid"
+        ],
+        "progression": "Train a machine learning model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-AILabPart2-vid"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-21-mod5-AILabPart2-vid"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L6overviewCont-AIML"
+        ],
+        "progression": "Train a machine learning model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-L6overviewCont-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-L6overviewCont-AIML"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro categorical-pizza-2021"
+        ],
+        "progression": "Train a machine learning model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro categorical-pizza-2021"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-Mod5-ml-intro categorical-pizza-2021"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 16,
+      "activity_section_position": 8,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-DataVisualizations-c4u"
+        ],
+        "progression": "Train a machine learning model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-DataVisualizations-c4u"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-DataVisualizations-c4u"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 17,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo-2021"
+        ],
+        "progression": "Explore machine learning apps "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo-2021"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d92f6a31-5689-4671-bd1f-6968128ff768"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo-2021"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 18,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-AppLabOverview-AIML"
+        ],
+        "progression": "Explore machine learning apps "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-AppLabOverview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d92f6a31-5689-4671-bd1f-6968128ff768"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-AppLabOverview-AIML"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 19,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-BiasOverview-AIML"
+        ],
+        "progression": "Consider real world implications"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-BiasOverview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d0423928-907f-4246-b062-97330e60ca53"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-BiasOverview-AIML"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 20,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-TrainingDataBias-vid"
+        ],
+        "progression": "Consider real world implications"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-TrainingDataBias-vid"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d0423928-907f-4246-b062-97330e60ca53"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-21-mod5-TrainingDataBias-vid"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 21,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021"
+        ],
+        "progression": "Consider real world implications"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d0423928-907f-4246-b062-97330e60ca53"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 22,
+      "activity_section_position": 4,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-ModelCards-c4u"
+        ],
+        "progression": "Consider real world implications"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-ModelCards-c4u"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d0423928-907f-4246-b062-97330e60ca53"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-ModelCards-c4u"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 23,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-EqualAccessAndBias-vid"
+        ],
+        "progression": "Consider real world implications"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-EqualAccessAndBias-vid"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d0423928-907f-4246-b062-97330e60ca53"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-21-mod5-EqualAccessAndBias-vid"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 24,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L14examples-AIML"
+        ],
+        "progression": "Consider real world implications"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-L14examples-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d0423928-907f-4246-b062-97330e60ca53"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-L14examples-AIML"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 25,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-ProjectOverview-AIML"
+        ],
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-ProjectOverview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-ProjectOverview-AIML"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 26,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-success-Quotes"
+        ],
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-success-Quotes"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-success-Quotes"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 27,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-MakeAPlan-AIML"
+        ],
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-MakeAPlan-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752"
+      },
+      "level_keys": [
+        "SP-VPL-21-CSD-mod5-MakeAPlan-AIML"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 28,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-WrapUp"
+        ],
+        "progression": "Wrap up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-WrapUp"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752"
+      },
+      "level_keys": [
+        "SP-VPL-CSD-21-mod5-WrapUp"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-Overview-AIML",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "c8b16024-726b-4943-a7c9-09b68613ee9f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-Intro-Quotes",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-Intro-Quotes"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-21-mod5-ML-vid",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-ML-vid"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-UnitOverview-AIML",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-UnitOverview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-U7L1L1",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-U7L1L1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-MLintro-c4u",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-MLintro-c4u"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-2-4Overview-AIML",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-2-4Overview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-L5overview-AIML",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-L5overview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "cd1d53c5-b221-42d1-bcc9-299dd137d40f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-21-mod5-AILab-vid",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-AILab-vid"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-L6overview-AIML",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-L6overview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-Mod5-ml-intro ai lab-shapes v1",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro ai lab-shapes v1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-21-mod5-AILabVocab-c4u",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-AILabVocab-c4u"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-21-mod5-AILabPart2-vid",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-AILabPart2-vid"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-L6overviewCont-AIML",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-L6overviewCont-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-Mod5-ml-intro categorical-pizza-2021",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro categorical-pizza-2021"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-DataVisualizations-c4u",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-DataVisualizations-c4u"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "99ba30eb-df29-43ed-8ee5-420301268666"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo-2021",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo-2021"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d92f6a31-5689-4671-bd1f-6968128ff768"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-AppLabOverview-AIML",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-AppLabOverview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d92f6a31-5689-4671-bd1f-6968128ff768"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-BiasOverview-AIML",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-BiasOverview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d0423928-907f-4246-b062-97330e60ca53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-21-mod5-TrainingDataBias-vid",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-TrainingDataBias-vid"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d0423928-907f-4246-b062-97330e60ca53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-use model card-example3A-2021"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d0423928-907f-4246-b062-97330e60ca53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-ModelCards-c4u",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-ModelCards-c4u"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d0423928-907f-4246-b062-97330e60ca53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-21-mod5-EqualAccessAndBias-vid",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-EqualAccessAndBias-vid"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d0423928-907f-4246-b062-97330e60ca53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-L14examples-AIML",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-L14examples-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "d0423928-907f-4246-b062-97330e60ca53"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-ProjectOverview-AIML",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-ProjectOverview-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-success-Quotes",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-success-Quotes"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-CSD-mod5-MakeAPlan-AIML",
+        "script_level.level_keys": [
+          "SP-VPL-21-CSD-mod5-MakeAPlan-AIML"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-CSD-21-mod5-WrapUp",
+        "script_level.level_keys": [
+          "SP-VPL-CSD-21-mod5-WrapUp"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-8",
+        "script.name": "self-paced-pl-csd5-2021",
+        "activity_section.key": "dfb74156-2bc3-4ef8-b561-9ec53a9b0752"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ]
+}

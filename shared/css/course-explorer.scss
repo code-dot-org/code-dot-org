@@ -72,6 +72,11 @@ $color_border_invisible: rgba(170, 170, 170, 0);
     &.lighter {
     }
 
+    &.announcement {
+      font-size: 12px;
+      padding: 3px 10px;
+    }
+
     .arrow-down {
       font-size: 28px;
       margin-top: 7px;

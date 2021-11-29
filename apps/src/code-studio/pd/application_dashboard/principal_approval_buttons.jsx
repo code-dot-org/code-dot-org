@@ -5,15 +5,6 @@ import ConfirmationDialog from '../components/confirmation_dialog';
 import $ from 'jquery';
 import {Button} from 'react-bootstrap';
 
-const styles = {
-  button: {
-    marginTop: 10,
-    marginBottom: 10,
-    marginLeft: 5,
-    marginRight: 5
-  }
-};
-
 export default class PrincipalApprovalButtons extends React.Component {
   static propTypes = {
     applicationId: PropTypes.oneOfType([
@@ -165,3 +156,12 @@ export default class PrincipalApprovalButtons extends React.Component {
     );
   }
 }
+
+const styles = {
+  button: {
+    marginTop: 10,
+    marginBottom: 10,
+    marginLeft: 5,
+    marginRight: 5
+  }
+};

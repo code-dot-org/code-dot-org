@@ -1,0 +1,12 @@
+name 'CSD U2 Image practice_pilot_2021'
+display_name 'Adding Images'
+description 'Practice your new skills here.'
+
+sublevels
+level 'CSD U2 image debug match_pilot_2021'
+level 'CSD U2 Image Tag No End Quote_2021'
+level 'CSD U2 Image Tag Mispelled src_2021'
+level 'CSD U2 Image Tag Inconsistent Spelling_2021'
+level 'CSD U2 Image Tag Add Alt_2021'
+level 'CSD U2 Image Tag Add Image Link_2021'
+level 'CSD U2 Image Tag Add Image_2021'

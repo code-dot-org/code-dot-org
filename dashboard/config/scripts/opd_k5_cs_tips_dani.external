@@ -1,0 +1,69 @@
+name 'OPD-K5 CS Tips_dani'
+skip_dialog true
+markdown <<MARKDOWN
+# Getting Started > Navigating this Online Course
+
+If you've made it this far, congratulations! As you complete this course, you'll familiarize yourself with everything CS Fundamentals has to offer.
+
+If you find yourself having trouble, the information below will help you navigate and use this space for your professional learning as you complete this online course.
+
+---
+
+## Stages
+
+The main professional development page is pictured below. This page is broken up into several __stages__, which each represent a different topic or idea.
+
+<img src ="https://images.code.org/3f0fa0abc76fa6e6bde06bb4bc705202-image-1548976538784.png" />
+
+<br/>
+<br/>
+
+## Puzzles
+
+Each stage is made up of levels that we call __puzzles__, which hold individual videos, readings, or questions. Puzzles are indicated as circles with numbers. The colors of the puzzle circle will change based on your progress. In this professional development you'll see the following types of circles:
+<br/>
+
+<img src ="https://images.code.org/8b3fcfcf0120bed0dc34c014f1f81071-image-1548976153188.png" />
+
+<br/>
+<br/>
+
+## Accessing Puzzles
+
+Puzzles are visible:
+<p>-On the main professional development page</p>
+<p>-On the header in any other puzzle on the same stage</p>
+<p>-From the header drop-down in any puzzle</p>
+
+<h4><details>
+<summary style="color:#ffa400;">Click here to see more about accessing puzzles</summary>
+<br>
+<div><em>Once you're finished viewing this, click the arrow above to collapse the section</em></div>
+<br>
+<img src ="https://images.code.org/27681ae1028bb26bcacd9970086c3792-image-1548976069596.gif" />
+</details></h4>
+
+<br/>
+
+## Moving Between Puzzles
+
+Click "Continue" or "Next Resource" after each puzzle to progress to the next one. Or, at any point, you can jump to a new puzzle by clicking on that number in the header.
+
+<h4><details>
+<summary style="color:#ffa400;">Click here to see more about moving between puzzles</summary>
+<br>
+<div><em>Once you're finished viewing this, click the arrow above to collapse the section</em></div>
+<br>
+<img src ="https://images.code.org/d28046a78ecb03f9501f3bb7764c7ce8-image-1548976730590.gif" />
+</details></h4>
+
+<br/>
+<br/>
+
+
+> That's all there is to it! Feel free to come back to this level any time if you need a refresher on how this platform works.
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

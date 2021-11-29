@@ -3,7 +3,7 @@ require 'cdo/chat_client'
 
 module Google
   class Drive
-    BATCH_UPDATE_SIZE = 2000
+    BATCH_UPDATE_SIZE = 1000
 
     class File
       def initialize(session, file)

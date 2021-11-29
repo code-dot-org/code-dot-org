@@ -5,6 +5,8 @@
 //   apps/src/color.js during the apps build process.
 
 $black: #000;
+$darkest_gray: #272822;
+$dark_slate_gray: #282c34;
 $dark_charcoal: #4d575f;
 $charcoal: #5b6770;
 $light_gray: #949ca2;
@@ -107,6 +109,9 @@ $bootstrap_warning_background: #fcf8e3;
 $bootstrap_warning_text: #c09853;
 $bootstrap_warning_border: #faebcc;
 $bootstrap_border_color: #cccccc;
+$bootstrap_success_background: #dff0d8;
+$bootstrap_success_text: #468847;
+$bootstrap_success_border: #d6e9c6;
 
 // Colors taken from droplet, not part of our core theme.
 $droplet_light_green: #d3e965;

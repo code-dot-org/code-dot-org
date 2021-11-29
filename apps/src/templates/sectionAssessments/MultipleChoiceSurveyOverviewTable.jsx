@@ -18,34 +18,6 @@ export const COLUMNS = {
 const ANSWER_COLUMN_WIDTH = 40;
 const MIN_ROW_HEIGHT = 35;
 
-const styles = {
-  table: {
-    ...tableLayoutStyles.table,
-    tableLayout: 'fixed'
-  },
-  answerColumnHeader: {
-    width: ANSWER_COLUMN_WIDTH,
-    textAlign: 'center',
-    height: MIN_ROW_HEIGHT
-  },
-  answerColumnCell: {
-    padding: 0,
-    height: '100%'
-  },
-  answerColumnCellContent: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: '100%'
-  },
-  questionCell: {
-    height: MIN_ROW_HEIGHT
-  },
-  link: {
-    color: color.teal
-  }
-};
-
 const NOT_ANSWERED = 'notAnswered';
 
 const answerColumnsFormatter = (
@@ -253,5 +225,33 @@ class MultipleChoiceSurveyOverviewTable extends Component {
     );
   }
 }
+
+const styles = {
+  table: {
+    ...tableLayoutStyles.table,
+    tableLayout: 'fixed'
+  },
+  answerColumnHeader: {
+    width: ANSWER_COLUMN_WIDTH,
+    textAlign: 'center',
+    height: MIN_ROW_HEIGHT
+  },
+  answerColumnCell: {
+    padding: 0,
+    height: '100%'
+  },
+  answerColumnCellContent: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%'
+  },
+  questionCell: {
+    height: MIN_ROW_HEIGHT
+  },
+  link: {
+    color: color.teal
+  }
+};
 
 export default MultipleChoiceSurveyOverviewTable;

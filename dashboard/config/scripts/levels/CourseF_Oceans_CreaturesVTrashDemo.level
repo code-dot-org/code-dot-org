@@ -8,7 +8,8 @@
     "mode": "creaturesvtrashdemo",
     "parent_level_id": 19641,
     "encrypted": "false",
-    "instructions_important": "false"
+    "instructions_important": "false",
+    "background": "oceans-blue"
   },
   "published": true,
   "notes": "",

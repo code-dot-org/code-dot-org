@@ -1,0 +1,20 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T22:13:47.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "video_key": "oceans_training_data",
+    "display_name": "Video: Training Data",
+    "video_rounded_corners": true,
+    "video_full_width": true,
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19648,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</StandaloneVideo>

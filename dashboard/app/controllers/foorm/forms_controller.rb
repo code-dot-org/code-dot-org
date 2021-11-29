@@ -2,11 +2,27 @@ module Foorm
   class FormsController < ApplicationController
     before_action :require_levelbuilder_mode_or_test_env
     before_action :authenticate_user!
+    before_action :require_questions, only: [:create, :update_questions]
     load_and_authorize_resource
+
+    # GET '/foorm/forms/editor'
+    def editor
+      formatted_names_and_versions = Foorm::Form.all.map {|form| {name: form.name, version: form.version, id: form.id}}
+      categories = formatted_names_and_versions.map {|data| data[:name].slice(0, data[:name].rindex('/'))}.uniq
+
+      @script_data = {
+        props: {
+          formNamesAndVersions: formatted_names_and_versions,
+          formCategories: categories
+        }.to_json
+      }
+
+      render 'foorm/forms/editor'
+    end
 
     # PUT foorm/form/:id/update_questions
     def update_questions
-      questions_json = get_questions
+      questions_json = params[:questions].as_json
       published_state = questions_json['published']
 
       if published_state.nil?
@@ -22,16 +38,16 @@ module Foorm
       save_form(@form)
     end
 
-    # POST foorm/form
+    # POST foorm/forms
     def create
       form_name = params[:name]
-      form_version = params[:version]
+      form_version = params[:version] || 0
 
       if Foorm::Form.where(name: form_name, version: form_version).any?
         return render(status: :conflict, plain: "Form with name #{form_name} and version #{form_version} already exists.")
       end
 
-      questions_json = get_questions
+      questions_json = params[:questions].as_json
       published = questions_json['published']
       published_params = params[:published]
       # If questions do not contain a published state, either use published state provided by params or default to false.
@@ -53,7 +69,7 @@ module Foorm
     # PUT foorm/form/:id/publish
     def publish
       if @form.published
-        return render plain: "success"
+        return render json: form
       end
 
       parsed_questions = JSON.parse(@form.questions)
@@ -65,18 +81,14 @@ module Foorm
 
     def save_form(form)
       if form.save
-        return render plain: "success"
+        return render json: form
       else
         return render status: :bad_request, json: form.errors
       end
     end
 
-    def get_questions
-      questions_json = params[:questions].as_json
-      unless questions_json
-        return render(status: :bad_request, plain: "no questions provided")
-      end
-      questions_json
+    def require_questions
+      render(status: :bad_request, plain: "no questions provided") unless params[:questions]
     end
   end
 end

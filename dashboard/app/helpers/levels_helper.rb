@@ -22,20 +22,22 @@ module LevelsHelper
     elsif script_level.script.name == Script::FLAPPY_NAME
       flappy_chapter_path(script_level.chapter, params)
     elsif params[:puzzle_page]
-      if script_level.lesson.lockable?
-        puzzle_page_script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
+      if script_level.lesson.numbered_lesson?
+        puzzle_page_script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
       else
-        puzzle_page_script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
+        puzzle_page_script_lockable_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:puzzle_page])
       end
     elsif params[:sublevel_position]
-      sublevel_script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params[:sublevel_position])
-    elsif script_level.lesson.lockable?
-      script_lockable_stage_script_level_path(script_level.script, script_level.lesson, script_level, params)
+      sublevel_script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params[:sublevel_position])
+    # It is possible to have lockable lessons that are also numbered_lessons, and those urls will appropriately
+    # not include the '/lockable/' piece added in this elsif case
+    elsif !script_level.lesson.numbered_lesson?
+      script_lockable_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params)
     elsif script_level.bonus
       query_params = params.merge(level_name: script_level.level.name)
-      script_stage_extras_path(script_level.script.name, script_level.lesson.relative_position, query_params)
+      script_lesson_extras_path(script_level.script.name, script_level.lesson.relative_position, query_params)
     else
-      script_stage_script_level_path(script_level.script, script_level.lesson, script_level, params)
+      script_lesson_script_level_path(script_level.script, script_level.lesson, script_level, params)
     end
   end
 
@@ -85,19 +87,20 @@ module LevelsHelper
   # If given a user, find the channel associated with the given level/user.
   # Otherwise, gets the storage_id associated with the (potentially signed out)
   # current user, and either finds or creates a channel for the level
-  def get_channel_for(level, user = nil)
+  def get_channel_for(level, script_id = nil, user = nil)
     if user
       # "answers" are in the channel so instead of doing
       # set_level_source to load answers when looking at another user,
       # we have to load the channel here.
       user_storage_id = storage_id_for_user_id(user.id)
-      channel_token = ChannelToken.find_channel_token(level, user_storage_id)
+      channel_token = ChannelToken.find_channel_token(level, user_storage_id, script_id)
     else
       user_storage_id = get_storage_id
       channel_token = ChannelToken.find_or_create_channel_token(
         level,
         request.ip,
         user_storage_id,
+        script_id,
         {
           hidden: true,
         }
@@ -105,6 +108,21 @@ module LevelsHelper
     end
 
     channel_token&.channel
+  end
+
+  # If given a level, script and a user, returns whether the level
+  # has been started by the user. A channel-backed level is considered started when a
+  # channel is created for the level, which happens when the user first visits the level page.
+  # Other levels are considered started when progress has been saved for the level (for example
+  # clicking the run button saves progress).
+  def level_started?(level, script, user)
+    return false unless user.present?
+
+    if level.channel_backed?
+      return get_channel_for(level, script.id, user).present?
+    else
+      user.last_attempt(level, script).present?
+    end
   end
 
   def select_and_track_autoplay_video
@@ -161,13 +179,35 @@ module LevelsHelper
     # Unsafe to generate these twice, so use the cached version if it exists.
     return @app_options unless @app_options.nil?
 
-    if @level.channel_backed? && params[:action] != 'edit_blocks'
+    @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
+    view_options(public_caching: @public_caching)
+
+    is_caching_exception = request ? ScriptConfig.uncached_script_level_path?(request.path) : false
+    is_cached_level = @public_caching && !is_caching_exception
+
+    level_requires_channel = (@level.channel_backed? && params[:action] != 'edit_blocks') || @level.is_a?(Javalab)
+    # If the level is cached, the channel is loaded client-side in loadApp.js
+    if level_requires_channel && !is_cached_level
       view_options(
-        channel: get_channel_for(@level, @user),
-        server_project_level_id: @level.project_template_level.try(:id),
+        channel: get_channel_for(@level, @script&.id, @user),
+        reduce_channel_updates: @script ?
+          !Gatekeeper.allows("updateChannelOnSave", where: {script_name: @script.name}, default: true) :
+          false
       )
       # readonly if viewing another user's channel
       readonly_view_options if @user
+    end
+
+    view_options(
+      level_requires_channel: level_requires_channel,
+      server_project_level_id: @level.project_template_level.try(:id)
+    )
+
+    # For levels with a backpack option (currently all Javalab), get the backpack channel token if it exists
+    if @level.is_a?(Javalab) && (@user || current_user)
+      user_id = @user&.id || current_user&.id
+      backpack = Backpack.find_by_user_id(user_id)
+      view_options(backpack_channel: backpack&.channel)
     end
 
     # Always pass user age limit
@@ -176,11 +216,12 @@ module LevelsHelper
     view_options(user_id: current_user.id) if current_user
 
     view_options(server_level_id: @level.id)
+
     if @script_level
       view_options(
-        stage_position: @script_level.lesson.absolute_position,
+        lesson_position: @script_level.lesson.absolute_position,
         level_position: @script_level.position,
-        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @stage)
+        next_level_url: @script_level.next_level_or_redirect_path_for_user(current_user, @lesson)
       )
     end
 
@@ -204,9 +245,6 @@ module LevelsHelper
     post_failed_run_milestone = @script ? Gatekeeper.allows('postFailedRunMilestone', where: {script_name: @script.name}, default: true) : true
     view_options(post_milestone_mode: post_milestone_mode(post_milestone, post_failed_run_milestone))
 
-    @public_caching = @script ? ScriptConfig.allows_public_caching_for_script(@script.name) : false
-    view_options(public_caching: @public_caching)
-
     if PuzzleRating.enabled?
       view_options(puzzle_ratings_url: puzzle_ratings_path)
     end
@@ -225,14 +263,20 @@ module LevelsHelper
     end
 
     if pairing_check_user
-      recent_driver, recent_attempt, recent_user = UserLevel.most_recent_driver(@script, @level, pairing_check_user)
-      if recent_driver && !recent_user.is_a?(DeletedUser)
-        level_view_options(@level.id, pairing_driver: recent_driver)
-        if recent_attempt
-          level_view_options(@level.id, pairing_attempt: edit_level_source_path(recent_attempt)) if recent_attempt
+      user_level = UserLevel.find_by(user: pairing_check_user, script: @script, level: @level)
+      is_navigator = !user_level.nil? && user_level.navigator?
+      if is_navigator
+        driver = user_level.driver
+        driver_level_source_id = user_level.driver_level_source_id
+      end
+
+      level_view_options(@level.id, is_navigator: is_navigator)
+      if driver
+        level_view_options(@level.id, pairing_driver: driver.name)
+        if driver_level_source_id
+          level_view_options(@level.id, pairing_attempt: edit_level_source_path(driver_level_source_id))
         elsif @level.channel_backed?
-          recent_channel = get_channel_for(@level, recent_user) if recent_user
-          level_view_options(@level.id, pairing_channel_id: recent_channel) if recent_channel
+          level_view_options(@level.id, pairing_channel_id: get_channel_for(@level, @script&.id, driver))
         end
       end
     end
@@ -240,7 +284,7 @@ module LevelsHelper
     @app_options =
       if @level.is_a? Blockly
         blockly_options
-      elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab)
+      elsif @level.is_a?(Weblab) || @level.is_a?(Fish) || @level.is_a?(Ailab) || @level.is_a?(Javalab)
         non_blockly_puzzle_options
       elsif @level.is_a?(DSLDefined) || @level.is_a?(FreeResponse) || @level.is_a?(CurriculumReference)
         question_options
@@ -253,9 +297,16 @@ module LevelsHelper
         view_options.camelize_keys
       end
 
-    if @script_level && @level.can_have_feedback?
-      @app_options[:serverScriptLevelId] = @script_level.id
-      @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
+    @app_options[:serverScriptLevelId] = @script_level.id if @script_level
+    @app_options[:serverScriptId] = @script.id if @script
+    @app_options[:verifiedTeacher] = current_user && current_user.authorized_teacher?
+
+    if @script_level && (@level.can_have_feedback? || @level.can_have_code_review?)
+      @app_options[:canHaveFeedbackReviewState] = @level.can_have_feedback_review_state?
+    end
+
+    if @level && @script_level
+      @app_options[:exampleSolutions] = @script_level.get_example_solutions(@level, current_user, @section&.id)
     end
 
     # Blockly caches level properties, whereas this field depends on the user
@@ -277,6 +328,10 @@ module LevelsHelper
       @app_options[:level][:levelVideos] = @level.related_videos.map(&:summarize)
       @app_options[:level][:mapReference] = @level.map_reference
       @app_options[:level][:referenceLinks] = @level.reference_links
+
+      if (@user || current_user) && @script
+        @app_options[:level][:isStarted] = level_started?(@level, @script, @user || current_user)
+      end
     end
 
     if current_user
@@ -294,6 +349,7 @@ module LevelsHelper
       @app_options[:experiments] =
         Experiment.get_all_enabled(user: current_user, section: section, script: @script).pluck(:name)
       @app_options[:usingTextModePref] = !!current_user.using_text_mode
+      @app_options[:displayTheme] = current_user.display_theme
       @app_options[:userSharingDisabled] = current_user.sharing_disabled?
     end
 
@@ -309,10 +365,10 @@ module LevelsHelper
     use_gamelab = @level.is_a?(Gamelab)
     use_weblab = @level.game == Game.weblab
     use_phaser = @level.game == Game.craft
-    use_blockly = !use_droplet && !use_netsim && !use_weblab
+    use_javalab = @level.is_a?(Javalab)
+    use_blockly = !use_droplet && !use_netsim && !use_weblab && !use_javalab
     use_p5 = @level.is_a?(Gamelab)
     hide_source = app_options[:hideSource]
-    use_google_blockly = @level.is_a?(Flappy) || view_options[:useGoogleBlockly]
     render partial: 'levels/apps_dependencies',
       locals: {
         app: app_options[:app],
@@ -320,6 +376,7 @@ module LevelsHelper
         use_google_blockly: use_google_blockly,
         use_blockly: use_blockly,
         use_applab: use_applab,
+        use_javalab: use_javalab,
         use_gamelab: use_gamelab,
         use_weblab: use_weblab,
         use_phaser: use_phaser,
@@ -328,6 +385,20 @@ module LevelsHelper
         preload_asset_list: @level.try(:preload_asset_list),
         static_asset_base_path: app_options[:baseUrl]
       }
+  end
+
+  # As we migrate labs from CDO to Google Blockly, there are multiple ways to determine which version a lab uses:
+  #  1. Setting the useGoogleBlockly view_option, usually configured by a URL parameter.
+  #  2. The corresponding inherited Level model can override Level#uses_google_blockly?. This option is for labs that
+  #     have fully transitioned to Google Blockly.
+  #  3. The disable_google_blockly DCDO flag, which contains an array of strings corresponding to model class names.
+  #     This option will override #2 as an "emergency switch" to go back to CDO Blockly.
+  def use_google_blockly
+    return true if view_options[:useGoogleBlockly]
+    return false unless @level.uses_google_blockly?
+
+    # Only check DCDO flag if level type uses Google Blockly to avoid performance hit.
+    DCDO.get('disable_google_blockly', []).map(&:downcase).exclude?(@level.class.to_s.downcase)
   end
 
   # Options hash for Widget
@@ -363,7 +434,7 @@ module LevelsHelper
   def set_puzzle_position_options(level_options)
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
-    level_options['stage_total'] = script_level ? script_level.lesson_total : 1
+    level_options['lesson_total'] = script_level ? script_level.lesson_total : 1
   end
 
   # Options hash for non-blockly puzzle apps
@@ -460,7 +531,7 @@ module LevelsHelper
     if @level.game.use_firebase?
       fb_options[:firebaseName] = CDO.firebase_name
       fb_options[:firebaseAuthToken] = firebase_auth_token
-      fb_options[:firebaseSharedAuthToken] = CDO.firebase_shared_secret
+      fb_options[:firebaseSharedAuthToken] = firebase_shared_auth_token
       fb_options[:firebaseChannelIdSuffix] = CDO.firebase_channel_id_suffix
     end
 
@@ -470,6 +541,10 @@ module LevelsHelper
   def azure_speech_service_options
     return {} unless @level.game.use_azure_speech_service?
     {voices: AzureTextToSpeech.get_voices || {}}
+  end
+
+  def disallowed_html_tags
+    DCDO.get('disallowed_html_tags', [])
   end
 
   # Options hash for Blockly
@@ -489,7 +564,7 @@ module LevelsHelper
     # ScriptLevel-dependent option
     script_level = @script_level
     level_options['puzzle_number'] = script_level ? script_level.position : 1
-    level_options['stage_total'] = script_level ? script_level.lesson_total : 1
+    level_options['lesson_total'] = script_level ? script_level.lesson_total : 1
     level_options['final_level'] = script_level.final_level? if script_level
 
     # Edit blocks-dependent options
@@ -514,9 +589,13 @@ module LevelsHelper
       app_options['netsimMaxRouters'] = CDO.netsim_max_routers
     end
 
+    # Allow levelbuilders building AppLab widgets in start mode to access Applab as usual.
+    # Everywhere else, widgets should be treated as embedded levels.
+    treat_widget_as_embed = level_options['widgetMode'] && !@is_start_mode
+
     # Process level view options
     level_overrides = level_view_options(@level.id).dup
-    level_options['embed'] = level_options['embed'] || level_options['widgetMode']
+    level_options['embed'] = level_options['embed'] || treat_widget_as_embed
     if level_options['embed'] || level_overrides[:embed]
       level_overrides[:hide_source] = true
       level_overrides[:show_finish] = true
@@ -690,10 +769,10 @@ module LevelsHelper
         else
           data_t_suffix 'script.name', @script_level.script.name, 'title'
         end
-      stage = @script_level.name
+      lesson = @script_level.name
       position = @script_level.position
       if @script_level.script.lessons.many?
-        "#{script}: #{stage} ##{position}"
+        "#{script}: #{lesson} ##{position}"
       elsif @script_level.position != 1
         "#{script} ##{position}"
       else
@@ -754,17 +833,43 @@ module LevelsHelper
     Digest::SHA1.base64digest(storage_encrypt(plaintext_id)).tr('=', '')
   end
 
+  # Assign a firebase authentication token based on the firebase shared secret,
+  # plus either the dashboard user id or the rails session id. This is
+  # sufficient for rate limiting, since it uniquely identifies users.
+  #
+  # Today, anyone can edit the data in any channel, so this meets our current needs.
+  # In the future, if we need to assign special privileges to channel owners,
+  # we could include the storage_id associated with the user id (if one exists).
+  def firebase_shared_auth_token
+    return nil unless CDO.firebase_shared_secret
+
+    base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
+    payload = {
+      uid: user_or_session_id,
+      is_dashboard_user: !!current_user,
+      channel: "#{base_channel}#{CDO.firebase_channel_id_suffix}"
+    }
+    options = {}
+    # Provides additional debugging information to the browser when
+    # security rules are evaluated.
+    options[:debug] = true if CDO.firebase_debug && CDO.rack_env?(:development)
+
+    # TODO(dave): cache token generator across requests
+    generator = Firebase::FirebaseTokenGenerator.new(CDO.firebase_shared_secret)
+    generator.create_token(payload, options)
+  end
+
   # Assign a firebase authentication token based on the firebase secret,
   # plus either the dashboard user id or the rails session id. This is
   # sufficient for rate limiting, since it uniquely identifies users.
   #
-  # TODO(dave): include the storage_id associated with the user id
-  # (if one exists), so auth can be used to assign appropriate privileges
-  # to channel owners.
+  # Today, anyone can edit the data in any channel, so this meets our current needs.
+  # In the future, if we need to assign special privileges to channel owners,
+  # we could include the storage_id associated with the user id (if one exists).
   def firebase_auth_token
     return nil unless CDO.firebase_secret
 
-    base_channel = params[:channel_id] || get_channel_for(@level, @user)
+    base_channel = params[:channel_id] || get_channel_for(@level, @script&.id, @user)
     payload = {
       uid: user_or_session_id,
       is_dashboard_user: !!current_user,

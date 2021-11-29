@@ -10,19 +10,6 @@ import {
 import ReactDOM from 'react-dom';
 import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
-const styles = {
-  activityEditAndPreview: {
-    margin: 10
-  },
-  addActivity: {
-    fontSize: 14,
-    color: 'white',
-    background: color.cyan,
-    border: `1px solid ${color.cyan}`,
-    boxShadow: 'none'
-  }
-};
-
 /*
  A GUI for editing activities in a lesson. Shows
  the editing fields side by side with a preview of how they will
@@ -31,6 +18,7 @@ const styles = {
 
 class ActivitiesEditor extends Component {
   static propTypes = {
+    hasLessonPlan: PropTypes.bool.isRequired,
     //redux
     activities: PropTypes.arrayOf(activityShape).isRequired,
     addActivity: PropTypes.func.isRequired
@@ -151,17 +139,20 @@ class ActivitiesEditor extends Component {
             targetActivitySectionPos={this.state.targetActivitySectionPos}
             activitySectionMetrics={this.sectionMetrics}
             updateActivitySectionMetrics={this.updateActivitySectionMetrics}
+            hasLessonPlan={this.props.hasLessonPlan}
           />
         ))}
-        <button
-          onMouseDown={this.handleAddActivity}
-          className="btn add-activity"
-          style={styles.addActivity}
-          type="button"
-        >
-          <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-          Activity
-        </button>
+        {this.props.hasLessonPlan && (
+          <button
+            onMouseDown={this.handleAddActivity}
+            className="btn add-activity"
+            style={styles.addActivity}
+            type="button"
+          >
+            <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+            Activity
+          </button>
+        )}
         <input
           type="hidden"
           name="activities"
@@ -171,6 +162,19 @@ class ActivitiesEditor extends Component {
     );
   }
 }
+
+const styles = {
+  activityEditAndPreview: {
+    margin: 10
+  },
+  addActivity: {
+    fontSize: 14,
+    color: 'white',
+    background: color.cyan,
+    border: `1px solid ${color.cyan}`,
+    boxShadow: 'none'
+  }
+};
 
 export const UnconnectedActivitiesEditor = ActivitiesEditor;
 

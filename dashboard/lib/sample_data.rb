@@ -205,6 +205,7 @@ class SampleData
               script_level.levels.first,
               '127.0.0.1',
               find_or_create_storage_id_for_user_id(student_user.id),
+              script.id,
               {
                 hidden: true
               }

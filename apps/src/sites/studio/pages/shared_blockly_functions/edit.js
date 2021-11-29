@@ -3,7 +3,7 @@ import unzip from 'lodash/unzip';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 
 import {install, customInputTypes} from '@cdo/apps/p5lab/spritelab/blocks';
-import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/P5Lab';
+import {valueTypeTabShapeMap} from '@cdo/apps/p5lab/spritelab/constants';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
 
 const customSimpleDialog = function({
@@ -46,7 +46,7 @@ const DEFAULT_NAME = 'acting';
 
 const blockXml = `<xml>
   <block type="behavior_definition">
-    <title name="NAME">${DEFAULT_NAME}</title>
+    <title id=${DEFAULT_NAME} name="NAME">${DEFAULT_NAME}</title>
   </block>
 </xml>`;
 
@@ -55,7 +55,7 @@ Blockly.Xml.domToBlockSpace(
   Blockly.Xml.textToDom(blockXml)
 );
 const block = Blockly.mainBlockSpace.getTopBlocks()[0];
-const name = getInput('name').value;
+const name = getInput('name').value || DEFAULT_NAME;
 
 if (name) {
   block.setTitleValue(name, 'NAME');

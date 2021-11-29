@@ -27,3 +27,17 @@ for(var i = 0; i < rolls; i++){
 
 Which of the following is NOT a possible combination of values of the variables in this program when it finishes running?
 MARKDOWN
+
+teacher_markdown <<MARKDOWN
+**Explanation:** Since the for-loop will run 100 times until the expression `i < rolls` evaluates to `false` the combined total of `tails` and `heads` must be 100.
+
+[Lesson 6 - Loops Investigate](https://curriculum.code.org/csp-20/unit5/6/) gave students practice with a coin flip simulation program.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* AAP-3.F: For simulations:
+a. Explain how computers can be used to represent real-world phenomena or outcomes.
+b. Compare simulations with real-world contexts.
+:::
+
+MARKDOWN

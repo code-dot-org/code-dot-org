@@ -5,7 +5,7 @@ wrong '20 mins'
 wrong '10 mins'
 
 markdown <<MARKDOWN
-An algorithm was initially written sequentially. Later it was determined that a parallel solution was possible and so the algorithm rewritten. The times to run each version of the algorithm are included in the table below.
+An algorithm was initially written sequentially. Later it was determined that a parallel solution was possible and so the algorithm was rewritten. The times to run each version of the algorithm are included in the table below.
 
 |Algorithm Type|Time|
 |---|---|

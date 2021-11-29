@@ -37,17 +37,17 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if time_difference >= 5
       flash.now[:alert] = I18n.t('maker.google_oauth.error_token_expired')
       return render 'maker/login_code'
-    elsif !secret.ends_with?('google_oauth2')
+    elsif !secret.ends_with?(AuthenticationOption::GOOGLE)
       flash.now[:alert] = I18n.t('maker.google_oauth.error_wrong_provider')
       return render 'maker/login_code'
     else
       secret.slice!(AuthenticationOption::GOOGLE)
     end
 
-    # Check user id all numbers
+    # Check authentication_id only contains numbers.
     if secret.scan(/\D/).empty?
       # Look up user and use devise to sign user in
-      user = AuthenticationOption.find_by(credential_type: AuthenticationOption::GOOGLE, authentication_id: secret)&.user
+      user = User.find_by_credential(type: AuthenticationOption::GOOGLE, id: secret)
       sign_in_and_redirect user
     else
       flash.now[:alert] = I18n.t('maker.google_oauth.error_invalid_user')

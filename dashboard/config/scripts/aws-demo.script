@@ -1,5 +1,1 @@
-lesson 'new stage', display_name: 'new stage'
-level 'AWS Demo'
-level 'AWS applab'
-level 'AWS link'
-
+is_migrated true

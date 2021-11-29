@@ -1,0 +1,19 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2020-12-04T21:56:37.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "video_key": "csd_concept_circuits_logic",
+    "instructions_important": "false",
+    "display_name": "Circuits and Logic",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20591,
+    "name_suffix": "_2021"
+  },
+  "published": true,
+  "notes": ""
+}]]></config>
+</StandaloneVideo>

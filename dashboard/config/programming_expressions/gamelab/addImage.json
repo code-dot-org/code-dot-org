@@ -1,0 +1,18 @@
+{
+  "func": "addImage",
+  "category": "Sprites",
+  "paletteParams": [
+    {
+      "name": "label"
+    },
+    {
+      "name": "image"
+    }
+  ],
+  "params": [
+    "\"img1\"",
+    "img"
+  ],
+  "modeOptionName": "*.addImage",
+  "noAutocomplete": true
+}

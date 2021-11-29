@@ -4,34 +4,15 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import _ from 'lodash';
 import {connect} from 'react-redux';
 
-const styles = {
-  filters: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  input: {
-    width: 195,
-    margin: 5
-  },
-  dropdown: {
-    width: 150,
-    margin: 5
-  },
-  label: {
-    marginRight: 15
-  }
-};
-
 class AddLevelFilters extends Component {
   static propTypes = {
     handleSearch: PropTypes.func.isRequired,
     handleChangeLevelName: PropTypes.func.isRequired,
     handleChangeLevelType: PropTypes.func.isRequired,
-    handleChangeScript: PropTypes.func.isRequired,
+    handleChangeUnit: PropTypes.func.isRequired,
     handleChangeOwner: PropTypes.func.isRequired,
     ownerId: PropTypes.string.isRequired,
-    scriptId: PropTypes.string.isRequired,
+    unitId: PropTypes.string.isRequired,
     levelType: PropTypes.string.isRequired,
     levelName: PropTypes.string.isRequired,
 
@@ -78,15 +59,15 @@ class AddLevelFilters extends Component {
           </select>
         </label>
         <label style={styles.label}>
-          By Script:
+          By Unit:
           <select
             style={styles.dropdown}
-            onChange={this.props.handleChangeScript}
-            value={this.props.scriptId}
+            onChange={this.props.handleChangeUnit}
+            value={this.props.unitId}
           >
-            {this.props.searchOptions.scriptOptions.map(script => (
-              <option key={script[0]} value={script[1]}>
-                {script[0]}
+            {this.props.searchOptions.scriptOptions.map(unit => (
+              <option key={unit[0]} value={unit[1]}>
+                {unit[0]}
               </option>
             ))}
           </select>
@@ -113,8 +94,27 @@ class AddLevelFilters extends Component {
   }
 }
 
+const styles = {
+  filters: {
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  input: {
+    width: 195,
+    margin: 5
+  },
+  dropdown: {
+    width: 150,
+    margin: 5
+  },
+  label: {
+    marginRight: 15
+  }
+};
+
 export const UnconnectedAddLevelFilters = AddLevelFilters;
 
 export default connect(state => ({
-  searchOptions: state.searchOptions
+  searchOptions: state.levelSearchingInfo.searchOptions
 }))(AddLevelFilters);

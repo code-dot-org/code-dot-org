@@ -1,0 +1,80 @@
+{
+  "category": "Experimental",
+  "config": {
+    "func": "setupLevel",
+    "blockText": "setup level with\n{A1}{A2}{A3}{A4}\n{A5}{A6}{A7}{A8}\n{B1}{B2}{B3}{B4}\n{B5}{B6}{B7}{B8}",
+    "eventBlock": true,
+    "inline": false,
+    "args": [
+      {
+        "name": "A1",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "A2",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "A3",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "A4",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "A5",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "A6",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "A7",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "A8",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "B1",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "B2",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "B3",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "B4",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "B5",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "B6",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "B7",
+        "customInput": "costumePicker"
+      },
+      {
+        "name": "B8",
+        "customInput": "costumePicker"
+      }
+    ],
+    "color": [
+      39,
+      1,
+      0.99
+    ]
+  }
+}

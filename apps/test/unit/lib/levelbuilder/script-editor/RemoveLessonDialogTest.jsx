@@ -2,7 +2,7 @@ import React from 'react';
 import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import sinon from 'sinon';
-import {UnconnectedRemoveLessonDialog as RemoveLessonDialog} from '@cdo/apps/lib/levelbuilder/script-editor/RemoveLessonDialog';
+import {UnconnectedRemoveLessonDialog as RemoveLessonDialog} from '@cdo/apps/lib/levelbuilder/unit-editor/RemoveLessonDialog';
 
 describe('RemoveLessonDialog', () => {
   let handleClose, removeLesson, props;

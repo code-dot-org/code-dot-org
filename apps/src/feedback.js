@@ -1,10 +1,21 @@
+// Globals used in this file:
+//   Blockly
+
 import $ from 'jquery';
 import {getStore} from './redux';
 import React from 'react';
 import {Provider} from 'react-redux';
 import ReactDOM from 'react-dom';
+import msg from '@cdo/locale';
+import dom from './dom';
 import LegacyDialog from './code-studio/LegacyDialog';
+import ChallengeDialog from './templates/ChallengeDialog';
 import project from './code-studio/initApp/project';
+import FeedbackBlocks from './feedbackBlocks';
+import puzzleRatingUtils from './puzzleRatingUtils';
+import DialogButtons from './templates/DialogButtons';
+import CodeWritten from './templates/feedback/CodeWritten';
+import GeneratedCode from './templates/feedback/GeneratedCode';
 import {dataURIToBlob} from './imageUtils';
 import trackEvent from './util/trackEvent';
 import {getValidatedResult} from './containedLevels';
@@ -26,7 +37,10 @@ import clientState from '@cdo/apps/code-studio/clientState';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
-var UNCOUNTED_BLOCK_TYPES = ['draw_colour', 'alpha', 'comment'];
+const UNCOUNTED_BLOCK_TYPES = ['draw_colour', 'alpha', 'comment'];
+
+const FIREHOSE_STUDY = 'feedback_dialog';
+let dialog_type = 'default';
 
 /**
  * Bag of utility functions related to building and displaying feedback
@@ -39,24 +53,6 @@ var FeedbackUtils = function(studioApp) {
   this.studioApp_ = studioApp;
 };
 module.exports = FeedbackUtils;
-
-// Globals used in this file:
-//   Blockly
-
-var codegen = require('./lib/tools/jsinterpreter/codegen');
-/** @type {Object<string, function>} */
-var msg = require('@cdo/locale');
-var dom = require('./dom');
-var FeedbackBlocks = require('./feedbackBlocks');
-var puzzleRatingUtils = require('./puzzleRatingUtils');
-var DialogButtons = require('./templates/DialogButtons');
-var CodeWritten = require('./templates/feedback/CodeWritten');
-var GeneratedCode = require('./templates/feedback/GeneratedCode');
-
-import ChallengeDialog from './templates/ChallengeDialog';
-
-const FIREHOSE_STUDY = 'feedback_dialog';
-let dialog_type = 'default';
 
 /**
  * @typedef {Object} FeedbackOptions
@@ -291,37 +287,26 @@ FeedbackUtils.prototype.displayFeedback = function(
         onContinue();
       };
     }
-    if (isPerfect) {
-      ReactDOM.render(
-        <ChallengeDialog
-          title={msg.challengeLevelPerfectTitle()}
-          avatar={icon}
-          complete
-          handlePrimary={onChallengeContinue}
-          primaryButtonLabel={msg.continue()}
-          cancelButtonLabel={msg.tryAgain()}
-          showPuzzleRatingButtons={showPuzzleRatingButtons}
-        >
-          {displayShowCode && this.getShowCodeComponent_(options, true)}
-        </ChallengeDialog>,
-        container
-      );
-    } else {
-      ReactDOM.render(
-        <ChallengeDialog
-          title={msg.challengeLevelPassTitle()}
-          avatar={icon}
-          handlePrimary={onChallengeContinue}
-          primaryButtonLabel={msg.continue()}
-          cancelButtonLabel={msg.tryAgain()}
-          showPuzzleRatingButtons={showPuzzleRatingButtons}
-          text={msg.challengeLevelPassText({idealBlocks})}
-        >
-          {displayShowCode && this.getShowCodeComponent_(options, true)}
-        </ChallengeDialog>,
-        container
-      );
-    }
+
+    ReactDOM.render(
+      <ChallengeDialog
+        title={
+          isPerfect
+            ? msg.challengeLevelPerfectTitle()
+            : msg.challengeLevelPassTitle()
+        }
+        avatar={icon}
+        text={isPerfect ? null : msg.challengeLevelPassText({idealBlocks})}
+        complete={isPerfect}
+        handlePrimary={onChallengeContinue}
+        primaryButtonLabel={msg.continue()}
+        cancelButtonLabel={msg.tryAgain()}
+        showPuzzleRatingButtons={showPuzzleRatingButtons}
+      >
+        {displayShowCode && this.getShowCodeComponent_(options, true)}
+      </ChallengeDialog>,
+      container
+    );
     return;
   }
 
@@ -613,9 +598,9 @@ FeedbackUtils.saveThumbnail = function(image) {
 };
 
 FeedbackUtils.isLastLevel = function() {
-  const stage = getStore().getState().progress.stages[0];
+  const lesson = getStore().getState().progress.lessons[0];
   return (
-    stage.levels[stage.levels.length - 1].ids.indexOf(
+    lesson.levels[lesson.levels.length - 1].ids.indexOf(
       window.appOptions.serverLevelId
     ) !== -1
   );
@@ -693,18 +678,18 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function(options) {
   }
 
   ReactDOM.render(
-    React.createElement(DialogButtons, {
-      tryAgain: tryAgainText,
-      continueText:
+    <DialogButtons
+      tryAgain={tryAgainText}
+      continueText={
         options.continueText ||
-        (options.finalLevel ? msg.finish() : msg.continue()),
-      nextLevel: this.canContinueToNextLevel(options.feedbackType),
-      shouldPromptForHint: this.shouldPromptForHint(options.feedbackType),
-      userId: options.userId,
-      isK1: options.isK1,
-      assetUrl: this.studioApp_.assetUrl,
-      freePlay: options.freePlay
-    }),
+        (options.finalLevel ? msg.finish() : msg.continue())
+      }
+      nextLevel={this.canContinueToNextLevel(options.feedbackType)}
+      shouldPromptForHint={this.shouldPromptForHint(options.feedbackType)}
+      isK1={options.isK1}
+      assetUrl={this.studioApp_.assetUrl}
+      freePlay={options.freePlay}
+    />,
     buttons
   );
 
@@ -894,13 +879,13 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
       case TestResults.PASS_WITH_EXTRA_TOP_BLOCKS:
         var finalLevel =
           options.response && options.response.message === 'no more levels';
-        var stageCompleted = null;
-        if (options.response && options.response.stage_changing) {
-          stageCompleted = options.response.stage_changing.previous.name;
+        var lessonCompleted = null;
+        if (options.response && options.response.lesson_changing) {
+          lessonCompleted = options.response.lesson_changing.previous.name;
         }
         var msgParams = {
-          stageNumber: 0, // TODO: remove once localized strings have been fixed
-          stageName: stageCompleted,
+          lessonNumber: 0, // TODO: remove once localized strings have been fixed
+          stageName: lessonCompleted,
           puzzleNumber: options.level.puzzle_number || 0
         };
         if (
@@ -910,7 +895,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
           var reinfFeedbackMsg =
             (options.appStrings && options.appStrings.reinfFeedbackMsg) || '';
 
-          if (options.level.disableFinalStageMessage) {
+          if (options.level.disableFinalLessonMessage) {
             message = reinfFeedbackMsg;
           } else {
             message = finalLevel ? msg.finalStage(msgParams) + ' ' : '';
@@ -922,7 +907,7 @@ FeedbackUtils.prototype.getFeedbackMessage = function(options) {
             msg.nextLevel(msgParams);
           message = finalLevel
             ? msg.finalStage(msgParams)
-            : stageCompleted
+            : lessonCompleted
             ? msg.nextStage(msgParams)
             : nextLevelMsg;
         }
@@ -1192,7 +1177,7 @@ FeedbackUtils.prototype.getGeneratedCodeString_ = function() {
   } else if (this.studioApp_.editCode) {
     return this.studioApp_.editor ? this.studioApp_.editor.getValue() : '';
   } else {
-    return codegen.workspaceCode(Blockly);
+    return Blockly.getWorkspaceCode();
   }
 };
 
@@ -1411,12 +1396,7 @@ FeedbackUtils.prototype.showToggleBlocksError = function() {
   contentDiv.innerHTML = msg.toggleBlocksErrorMsg();
 
   var buttons = document.createElement('div');
-  ReactDOM.render(
-    React.createElement(DialogButtons, {
-      ok: true
-    }),
-    buttons
-  );
+  ReactDOM.render(<DialogButtons ok={true} />, buttons);
   contentDiv.appendChild(buttons);
 
   var dialog = this.createModalDialog({

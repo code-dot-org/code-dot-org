@@ -4,17 +4,8 @@ import {connect} from 'react-redux';
 import {tableLayoutStyles} from '../tables/tableConstants';
 import i18n from '@cdo/locale';
 import {editStudent} from './manageStudentsRedux';
-import {getSelectedScriptName} from '@cdo/apps/redux/scriptSelectionRedux';
+import {getSelectedScriptName} from '@cdo/apps/redux/unitSelectionRedux';
 import {scriptUrlForStudent} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-
-const styles = {
-  inputBox: {
-    width: 225
-  },
-  details: {
-    fontSize: 12
-  }
-};
 
 class ManageStudentNameCell extends Component {
   static propTypes = {
@@ -87,6 +78,15 @@ class ManageStudentNameCell extends Component {
     );
   }
 }
+
+const styles = {
+  inputBox: {
+    width: 225
+  },
+  details: {
+    fontSize: 12
+  }
+};
 
 export default connect(
   state => ({

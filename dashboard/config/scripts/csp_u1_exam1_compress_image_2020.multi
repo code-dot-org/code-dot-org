@@ -8,6 +8,14 @@ wrong ‘The image will require more pixels to display it on the screen.’
 right ‘The image will require fewer bits in order to be represented.’
 
 teacher_markdown <<MARKDOWN
+**Explanation:** No matter the method, compressing the image should reduce the number of bits needed to represent the image.
+
+[Lesson 9 - Lossless Compression](https://curriculum.code.org/csp-20/unit1/9/) and [Lesson 10 - Lossy Compression](https://curriculum.code.org/csp-20/unit1/10/) showed examples of this concept with various song lyrics and images.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+* DAT-1.D.1: Data compression can reduce the size (number of bits) of transmitted or stored data.
+:::
 
 MARKDOWN
 

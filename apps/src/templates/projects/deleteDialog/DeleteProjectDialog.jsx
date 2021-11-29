@@ -7,14 +7,6 @@ import Button from '../../Button';
 import i18n from '@cdo/locale';
 import {hideDeleteDialog, deleteProject} from './deleteProjectDialogRedux';
 
-const styles = {
-  dialog: {
-    paddingLeft: 20,
-    paddingRight: 20,
-    paddingBottom: 20
-  }
-};
-
 class DeleteProjectDialog extends Component {
   static propTypes = {
     isOpen: PropTypes.bool.isRequired,
@@ -60,6 +52,14 @@ class DeleteProjectDialog extends Component {
     );
   }
 }
+
+const styles = {
+  dialog: {
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingBottom: 20
+  }
+};
 
 export const UnconnectedDeleteProjectDialog = DeleteProjectDialog;
 

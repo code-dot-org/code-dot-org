@@ -57,7 +57,7 @@ At this point, students have used loops in context of both the Maze and the Arti
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Bee: Loops](http://learn.code.org/s/course2/stage/8/puzzle/1)
+### <a name="Activity"></a> [Bee: Loops](http://learn.code.org/s/course2/lessons/8/levels/1)
 
 When students are using loops to repeat an action (such as getting nectar), encourage them to think about the movements before and after that action. Could those be brought into the loop as well?
 

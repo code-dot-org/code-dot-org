@@ -2,12 +2,17 @@
   "script": {
     "name": "kinderTest",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-11-22 19:57:05 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "kinderTest"
     }
@@ -31,6 +36,7 @@
       "name": "Bee: Conditionals",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -45,6 +51,7 @@
       "name": "Kindergarten Stage 1",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 2,
       "properties": {
       },
@@ -55,22 +62,76 @@
       }
     }
   ],
+  "lesson_activities": [
+    {
+      "key": "ab8049a8-6164-41d1-957b-d2e531cb0e3d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ab8049a8-6164-41d1-957b-d2e531cb0e3d",
+        "lesson.key": "Bee: Conditionals",
+        "lesson_group.key": "",
+        "script.name": "kinderTest"
+      }
+    },
+    {
+      "key": "8e92115b-40ab-4292-b9c5-917284042d2c",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8e92115b-40ab-4292-b9c5-917284042d2c",
+        "lesson.key": "Kindergarten Stage 1",
+        "lesson_group.key": "",
+        "script.name": "kinderTest"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "9299877b-88ed-40ee-8834-3644f762b763",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763",
+        "lesson_activity.key": "ab8049a8-6164-41d1-957b-d2e531cb0e3d"
+      }
+    },
+    {
+      "key": "c9dab405-bf3a-4e9b-87d6-aeb881fce9cb",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c9dab405-bf3a-4e9b-87d6-aeb881fce9cb",
+        "lesson_activity.key": "8e92115b-40ab-4292-b9c5-917284042d2c"
+      }
+    }
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_ifvid"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade4_bee_conditionals_ifvid"
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       },
       "level_keys": [
         "grade4_bee_conditionals_ifvid"
@@ -79,18 +140,22 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_quantum1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade4_bee_conditionals_quantum1"
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       },
       "level_keys": [
         "grade4_bee_conditionals_quantum1"
@@ -99,18 +164,22 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_quantum2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade4_bee_conditionals_quantum2"
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       },
       "level_keys": [
         "grade4_bee_conditionals_quantum2"
@@ -119,18 +188,22 @@
     {
       "chapter": 4,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_new1a"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade4_bee_conditionals_new1a"
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       },
       "level_keys": [
         "grade4_bee_conditionals_new1a"
@@ -139,18 +212,22 @@
     {
       "chapter": 5,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_new2a"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade4_bee_conditionals_new2a"
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       },
       "level_keys": [
         "grade4_bee_conditionals_new2a"
@@ -159,18 +236,22 @@
     {
       "chapter": 6,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_new2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade4_bee_conditionals_new2"
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       },
       "level_keys": [
         "grade4_bee_conditionals_new2"
@@ -179,18 +260,22 @@
     {
       "chapter": 7,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_quantum3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade4_bee_conditionals_quantum3"
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       },
       "level_keys": [
         "grade4_bee_conditionals_quantum3"
@@ -199,18 +284,22 @@
     {
       "chapter": 8,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_ifelsevid"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade4_bee_conditionals_ifelsevid"
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       },
       "level_keys": [
         "grade4_bee_conditionals_ifelsevid"
@@ -219,18 +308,22 @@
     {
       "chapter": 9,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_quantum4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade4_bee_conditionals_quantum4"
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       },
       "level_keys": [
         "grade4_bee_conditionals_quantum4"
@@ -239,18 +332,22 @@
     {
       "chapter": 10,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 10,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_quantum5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade4_bee_conditionals_quantum5"
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       },
       "level_keys": [
         "grade4_bee_conditionals_quantum5"
@@ -259,18 +356,22 @@
     {
       "chapter": 11,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 11,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_new3a"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade4_bee_conditionals_new3a"
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       },
       "level_keys": [
         "grade4_bee_conditionals_new3a"
@@ -279,18 +380,22 @@
     {
       "chapter": 12,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": 12,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_new3b"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade4_bee_conditionals_new3b"
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       },
       "level_keys": [
         "grade4_bee_conditionals_new3b"
@@ -299,18 +404,22 @@
     {
       "chapter": 13,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": 13,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade4_bee_conditionals_new3c"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade4_bee_conditionals_new3c"
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       },
       "level_keys": [
         "grade4_bee_conditionals_new3c"
@@ -319,18 +428,22 @@
     {
       "chapter": 14,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "KTest1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "KTest1"
         ],
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "c9dab405-bf3a-4e9b-87d6-aeb881fce9cb"
       },
       "level_keys": [
         "KTest1"
@@ -339,18 +452,22 @@
     {
       "chapter": 15,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "KTest2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "KTest2"
         ],
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "c9dab405-bf3a-4e9b-87d6-aeb881fce9cb"
       },
       "level_keys": [
         "KTest2"
@@ -359,18 +476,22 @@
     {
       "chapter": 16,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "testArtistForTestK"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "testArtistForTestK"
         ],
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "c9dab405-bf3a-4e9b-87d6-aeb881fce9cb"
       },
       "level_keys": [
         "testArtistForTestK"
@@ -379,18 +500,22 @@
     {
       "chapter": 17,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "testBeeFarmer"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "testBeeFarmer"
         ],
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "c9dab405-bf3a-4e9b-87d6-aeb881fce9cb"
       },
       "level_keys": [
         "testBeeFarmer"
@@ -399,18 +524,22 @@
     {
       "chapter": 18,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "testPlaylabLevel"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "testPlaylabLevel"
         ],
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "c9dab405-bf3a-4e9b-87d6-aeb881fce9cb"
       },
       "level_keys": [
         "testPlaylabLevel"
@@ -426,7 +555,8 @@
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       }
     },
     {
@@ -437,7 +567,8 @@
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       }
     },
     {
@@ -448,7 +579,8 @@
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       }
     },
     {
@@ -459,7 +591,8 @@
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       }
     },
     {
@@ -470,7 +603,8 @@
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       }
     },
     {
@@ -481,7 +615,8 @@
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       }
     },
     {
@@ -492,7 +627,8 @@
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       }
     },
     {
@@ -503,7 +639,8 @@
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       }
     },
     {
@@ -514,7 +651,8 @@
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       }
     },
     {
@@ -525,7 +663,8 @@
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       }
     },
     {
@@ -536,7 +675,8 @@
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       }
     },
     {
@@ -547,7 +687,8 @@
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       }
     },
     {
@@ -558,7 +699,8 @@
         ],
         "lesson.key": "Bee: Conditionals",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "9299877b-88ed-40ee-8834-3644f762b763"
       }
     },
     {
@@ -569,7 +711,8 @@
         ],
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "c9dab405-bf3a-4e9b-87d6-aeb881fce9cb"
       }
     },
     {
@@ -580,7 +723,8 @@
         ],
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "c9dab405-bf3a-4e9b-87d6-aeb881fce9cb"
       }
     },
     {
@@ -591,7 +735,8 @@
         ],
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "c9dab405-bf3a-4e9b-87d6-aeb881fce9cb"
       }
     },
     {
@@ -602,7 +747,8 @@
         ],
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "c9dab405-bf3a-4e9b-87d6-aeb881fce9cb"
       }
     },
     {
@@ -613,8 +759,39 @@
         ],
         "lesson.key": "Kindergarten Stage 1",
         "lesson_group.key": "",
-        "script.name": "kinderTest"
+        "script.name": "kinderTest",
+        "activity_section.key": "c9dab405-bf3a-4e9b-87d6-aeb881fce9cb"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

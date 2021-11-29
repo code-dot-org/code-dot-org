@@ -70,8 +70,6 @@ module ApplicationHelper
       LEVEL_STATUS.review_rejected
     elsif result == Activity::REVIEW_ACCEPTED_RESULT
       LEVEL_STATUS.review_accepted
-    elsif user_level.try(:locked)
-      LEVEL_STATUS.locked
     elsif user_level.try(:submitted)
       LEVEL_STATUS.submitted
     elsif result.nil? || result == 0
@@ -168,7 +166,7 @@ module ApplicationHelper
           level_source.level_source_image.s3_url
         end
       end
-    elsif [Game::FLAPPY, Game::STUDIO, Game::CRAFT, Game::APPLAB, Game::GAMELAB, Game::WEBLAB, Game::DANCE].include? app
+    elsif [Game::FLAPPY, Game::STUDIO, Game::CRAFT, Game::APPLAB, Game::GAMELAB, Game::WEBLAB, Game::DANCE, Game::SPRITELAB].include? app
       asset_url "#{app}_sharing_drawing.png"
     elsif app == Game::BOUNCE
       if ["basketball", "sports"].include? skin

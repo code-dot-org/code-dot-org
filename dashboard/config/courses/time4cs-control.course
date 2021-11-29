@@ -4,6 +4,14 @@
     "time4cs-control-unit-1",
     "time4cs-control-unit-2"
   ],
+  "published_state": "beta",
+  "instruction_type": "teacher_led",
   "properties": {
-  }
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
 }

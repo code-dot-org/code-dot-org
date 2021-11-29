@@ -159,7 +159,7 @@
             <arg name="this sprite" type="Sprite"/>
             <description>move a sprite, changing its direction randomly</description>
           </mutation>
-          <title name="NAME">wandering</title>
+          <title name="NAME" id="wandering">wandering</title>
           <statement name="STACK">
             <block type="controls_if">
               <value name="IF0">

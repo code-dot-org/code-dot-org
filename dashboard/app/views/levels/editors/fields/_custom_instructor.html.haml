@@ -1,0 +1,22 @@
+= f.label :instructions_icon,'Instructions Icon'
+- labName = (@level.is_a? Poetry) ? 'poetry' : 'spritelab'
+%p Please refer to
+#{link_to 'Static Assets','https://github.com/code-dot-org/code-dot-org/tree/levelbuilder/apps/static/' + labName}
+for available assets, then enter the name of the image to use as the instructions icon for this level.
+= f.text_field :instructions_icon, value: @level.instructions_icon
+%p Preview:
+%img.instructions-icon-preview{id: "#{labName}", style: 'height: 64px;'}
+
+:javascript
+  $(document).ready(function() {
+    if ($('#level_instructions_icon').length > 0) {
+      function updateIconPreview() {
+        var labName = $('.instructions-icon-preview')[0].id;
+        var iconName = $('#level_instructions_icon')[0].value || 'avatar';
+
+        $('.instructions-icon-preview').attr('src', 'https://studio.code.org/blockly/media/' + labName + '/' + iconName + '.png');
+      }
+      $('#level_instructions_icon').change(updateIconPreview);
+      updateIconPreview();
+    }
+  })

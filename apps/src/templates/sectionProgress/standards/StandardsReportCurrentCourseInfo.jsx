@@ -7,41 +7,12 @@ import {sectionDataPropType} from '@cdo/apps/redux/sectionDataRedux';
 import color from '@cdo/apps/util/color';
 import {cstaStandardsURL} from './standardsConstants';
 
-const styles = {
-  currentCourse: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    width: '100%'
-  },
-  classProgress: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginLeft: 30
-  },
-  courseOverview: {
-    width: '75%'
-  },
-  scriptLink: {
-    color: color.teal
-  },
-  statsRow: {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'space-between'
-  },
-  lessonNote: {
-    marginTop: 10
-  }
-};
-
 export default class StandardsReportCurrentCourseInfo extends Component {
   static propTypes = {
     section: sectionDataPropType.isRequired,
     scriptFriendlyName: PropTypes.string.isRequired,
     scriptData: scriptDataPropType,
-    scriptDescription: PropTypes.string.isRequired,
+    unitDescription: PropTypes.string.isRequired,
     numStudentsInSection: PropTypes.number,
     numLessonsCompleted: PropTypes.number,
     numLessonsInUnit: PropTypes.number
@@ -62,7 +33,7 @@ export default class StandardsReportCurrentCourseInfo extends Component {
               {this.props.scriptFriendlyName}
             </a>
           </h3>
-          <p>{this.props.scriptDescription} </p>
+          <p>{this.props.unitDescription} </p>
           <SafeMarkdown
             markdown={i18n.mapsToCSTAStandards({
               cstaLink: cstaStandardsURL
@@ -91,3 +62,32 @@ export default class StandardsReportCurrentCourseInfo extends Component {
     );
   }
 }
+
+const styles = {
+  currentCourse: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
+    width: '100%'
+  },
+  classProgress: {
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: 30
+  },
+  courseOverview: {
+    width: '75%'
+  },
+  scriptLink: {
+    color: color.teal
+  },
+  statsRow: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  },
+  lessonNote: {
+    marginTop: 10
+  }
+};

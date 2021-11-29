@@ -1,0 +1,15 @@
+{
+  "category": "Events",
+  "config": {
+    "simpleValue": true,
+    "name": "newSpritePointer",
+    "blockText": "{SPRITE}",
+    "args": [
+      {
+        "name": "SPRITE",
+        "customInput": "spritePointer"
+      }
+    ],
+    "returnType": "Sprite"
+  }
+}

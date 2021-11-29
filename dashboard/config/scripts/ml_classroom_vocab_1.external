@@ -1,0 +1,117 @@
+name 'ml-classroom vocab-1'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+<h1 style="text-align: center">
+Welcome to AI Lab!
+</h1>
+
+<div style="height: 250px">
+<img style="float:left; margin-right: 10px; margin-left: 10px; border: 2px solid black" src="https://images.code.org/f6438df7e9ddba9343861fe5635e7eec-image-1616511376606.png" width="50%" />
+<p>
+AI Lab is a tool that lets you create <strong>Machine Learning Models</strong> to solve problems, make decisions, or create predictions. Machine Learning Models are just computer programs designed to make a decision. Sometimes the decision can be random, or it can be based on a set of rules like when playing a board game.
+</p>
+<p>
+In this widget, we create models that use patterns in data to make decisions. You will help train A.I. Bot to make decisions based on data, then you can save A.I. Bot's decision-making model to use in an App Lab project.
+</p>
+</div>
+
+<div style="height: 250px">
+<img src="https://images.code.org/4c16f69d655ab1782124a6d46a07c2fc-image-1616511395871.png" width="50%" style="float:right; margin-left: 10px; margin-right: 10px; border: 2px solid black">
+<h2>
+Step 1: Choose a Label
+</h2>
+<p>
+A <strong>Label</strong> is what you are trying to help A.I. Bot predict or decide. The label is usually related to a problem you are trying to solve, or it can be something you <em>wonder</em> or are <em>curious</em> about. Sometimes data is collected with the label in mind, but not always.
+</p>
+<p>
+You can explore your data on the left panel, and make decisions on the right panel.
+</p>
+</div>
+
+<div style="height: 250px">
+<img style="float:left; margin-right: 10px; margin-left: 10px; border: 2px solid black" src="https://images.code.org/9c106a4d860168fe3564709f15aea329-image-1616511405390.png" width="50%" />
+<h2>
+Step 2: Choose Features
+</h2>
+<p>
+The <strong>Features</strong> are what A.I. Bot is basing it's prediction on. You can choose as many features as you like, but some may not be as helpful for making predictions as others. AI Lab has different data visualizations that can help you decide which features are more useful than others.
+</p>
+<p>
+You can explore your data on the left panel, and make decisions on the right panel.
+</p>
+</div>
+
+<div style="height: 250px">
+<img src="https://images.code.org/9de79f238a091e2c6482d89a39e84c25-image-1616511415607.png" width="50%" style="float:right; margin-left: 10px; margin-right: 10px; border: 2px solid black">
+<h2>
+Step 3: Train A.I. Bot
+</h2>
+<p>
+Based on your decisions, A.I. Bot will look at the data find patterns to help it make decisions.
+
+<br />
+
+A.I. Bot automatically holds back some of the data so it can test itself to see how well it's doing. It's kind of like studying for a test - you might look at most of the practice questions to study, but then save several for the end to quiz yourself and see how well you're doing.
+</p>
+</div>
+
+<div style="height: 300px">
+<img style="float:left; margin-right: 10px; margin-left: 10px; border: 2px solid black" src="https://images.code.org/533b0a019b50e9410bca4ff73e118310-image-1616511430805.png" width="50%" />
+<h2>
+Step 4: Evaluate and Test
+</h2>
+<p>
+In this screen, you can see some of the decisions that A.I. Bot is making based on the data. You can also see how accurate it did based on the testing data A.I. Bot held back.
+</p>
+<p>
+If A.I. Bot isn't making very good decisions, you can always return to a previous screen and choose different features or a new label.
+</p>
+</div>
+
+<div style="height: 350px">
+<img src="https://images.code.org/ab441a75cf50d92f1da344ff96d93d3a-image-1616511439816.png" width="30%" style="float:right; margin-left: 10px; margin-right: 10px; border: 2px solid black">
+<p>
+You can also test A.I. Bot's model yourself. Try out different values and see what decisions A.I. Bot makes. Testing the model is important to make sure we avoid <strong>bias</strong>, which is when decisions favor some things and de-prioritize others. If you discover bias in your model, you can always go back and choose new features or a new label.
+</p>
+</div>
+
+<div style="height: 300px">
+<img style="float:left; margin-right: 10px; margin-left: 10px; border: 2px solid black" src="https://images.code.org/cf56f4bbe4fad787e00019cb3c6bf11e-image-1616511449679.png" width="50%" />
+<h2>
+Step 5: Save Your Model
+</h2>
+<p>
+In this screen, you can save your model to use in an App Lab project. Saving the model is like taking A.I. Bot's brain and using it to make the same decisions in different places. The code for your project will just ask your model to make a prediction.
+</p>
+<p>
+Before you can save, you need to answer a few questions that get saved with your model. This is like documenting your code - instead of writing comments to describe how a program works, we're adding notes about how we trained our model to make its decisions.
+</p>
+</div>
+
+
+<!--
+<div>
+<p id="modelDef"><strong>Machine Learning Model:</strong> a computer program designed to make a decision. Sometimes the decision can be random, or it can be based on a set of rules like when playing a board game. In this widget, we create models that use patterns in data to make decisions.</p>
+</div>
+
+![00_AI Lab](https://images.code.org/f6438df7e9ddba9343861fe5635e7eec-image-1616511376606.png)
+
+![01_Label Screen](https://images.code.org/4c16f69d655ab1782124a6d46a07c2fc-image-1616511395871.png)
+
+![02_Features](https://images.code.org/9c106a4d860168fe3564709f15aea329-image-1616511405390.png)
+
+![03_Training](https://images.code.org/9de79f238a091e2c6482d89a39e84c25-image-1616511415607.png)
+
+![04_Evaluation](https://images.code.org/533b0a019b50e9410bca4ff73e118310-image-1616511430805.png)
+
+![05_Testing](https://images.code.org/ab441a75cf50d92f1da344ff96d93d3a-image-1616511439816.png)
+
+![06_Saving](https://images.code.org/cf56f4bbe4fad787e00019cb3c6bf11e-image-1616511449679.png)
+-->
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

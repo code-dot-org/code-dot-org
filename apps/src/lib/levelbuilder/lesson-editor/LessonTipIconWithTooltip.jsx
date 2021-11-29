@@ -7,6 +7,7 @@ import LessonTip, {
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import {tipShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import color from '@cdo/apps/util/color';
 
 export default class LessonTipIconWithTooltip extends Component {
   static propTypes = {
@@ -37,7 +38,7 @@ export default class LessonTipIconWithTooltip extends Component {
           effect="solid"
           disable={false}
         >
-          <div style={{maxWidth: 400}}>
+          <div style={styles.tip}>
             <LessonTip tip={tip} />
           </div>
         </ReactTooltip>
@@ -45,3 +46,10 @@ export default class LessonTipIconWithTooltip extends Component {
     );
   }
 }
+
+const styles = {
+  tip: {
+    maxWidth: 400,
+    color: color.default_text
+  }
+};

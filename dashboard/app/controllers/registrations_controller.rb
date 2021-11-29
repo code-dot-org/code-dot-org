@@ -112,7 +112,7 @@ class RegistrationsController < Devise::RegistrationsController
     end
 
     should_send_new_teacher_email = current_user && current_user.teacher?
-    TeacherMailer.new_teacher_email(current_user).deliver_now if should_send_new_teacher_email
+    TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now if should_send_new_teacher_email
     should_send_parent_email = current_user && current_user.parent_email.present?
     ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if should_send_parent_email
 

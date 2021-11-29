@@ -253,7 +253,7 @@ module HttpCacheTest
       it 'Handles Accept-Language behaviors' do
         skip 'Not implemented in Rack yet' unless environment.to_s == 'integration'
         # URL contains whitelisted 'Accept-Language' header
-        url = build_url 's/starwars/stage/1/puzzle'
+        url = build_url 's/starwars/lessons/1/levels'
         text_en = 'Hello World!'
         text_fr = 'Bonjour le Monde!'
         mock_response url, text_en, {'X-Varnish-Accept-Language' => 'en'}
@@ -490,17 +490,17 @@ module HttpCacheTest
       end
 
       it 'Strips cookies from the penultimate dance level' do
-        assert strips_session_specific_cookies_from_request? '/s/dance/stage/1/puzzle/12'
-        assert strips_session_specific_cookies_from_request? '/s/dance-2019/stage/1/puzzle/9'
+        assert strips_session_specific_cookies_from_request? '/s/dance/lessons/1/levels/12'
+        assert strips_session_specific_cookies_from_request? '/s/dance-2019/lessons/1/levels/9'
       end
 
       it 'Does not strip cookies from the last dance level' do
-        refute strips_session_specific_cookies_from_request? '/s/dance/stage/1/puzzle/13'
-        refute strips_session_specific_cookies_from_request? '/s/dance-2019/stage/1/puzzle/10'
+        refute strips_session_specific_cookies_from_request? '/s/dance/lessons/1/levels/13'
+        refute strips_session_specific_cookies_from_request? '/s/dance-2019/lessons/1/levels/10'
       end
 
       it 'Strips cookies from an aquatic level' do
-        assert strips_session_specific_cookies_from_request? '/s/aquatic/stage/1/puzzle/5'
+        assert strips_session_specific_cookies_from_request? '/s/aquatic/lessons/1/levels/5'
       end
 
       # rubocop:disable Lint/NestedMethodDefinition

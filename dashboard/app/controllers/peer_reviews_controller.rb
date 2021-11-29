@@ -15,15 +15,26 @@ class PeerReviewsController < ApplicationController
   end
 
   def dashboard
-    plc_courses = Plc::Course.all.select {|course| course.plc_course_units.map(&:script).any?(&:peer_reviews_to_complete?)}
+    plc_courses = Plc::Course.all.select do |course|
+      course.
+        plc_course_units.
+        map(&:script).
+        any?(&:peer_reviews_to_complete?)
+    end
 
     @course_list = plc_courses.map {|course| [course.name, course.id]}
 
     @course_unit_map = {}.tap do |course_unit_map|
       plc_courses.each do |course|
-        course_unit_map[course.id] = course.plc_course_units.map {|course_unit| [course_unit.name, course_unit.id]}
+        course_unit_map[course.id] = course.
+          plc_course_units.
+          select {|course_unit| !course_unit.deprecated?}.
+          map {|course_unit| [course_unit.name, course_unit.id]}
       end
     end
+
+    # Remove courses from course list where all course units are deprecated (ie, courses with no valid units)
+    @course_list.reject! {|course| @course_unit_map[course[1]].empty?}
   end
 
   def pull_review

@@ -8,14 +8,15 @@
       - @workshop.sessions.each do |session|
         = session.start_date_with_start_and_end_times_us_format
         %br
-  %tr
-    %td.heading
-      Location:
-    %td
-      = @workshop.location_name
-      - if @workshop.location_address.present?
-        %br
-        = @workshop.location_address
+  - unless @workshop.location_name.blank? || @workshop.virtual?
+    %tr
+      %td.heading
+        Location:
+      %td
+        = @workshop.location_name
+        - if @workshop.location_address.present?
+          %br
+          = @workshop.location_address
   %tr
     %td.heading
       Organizer:

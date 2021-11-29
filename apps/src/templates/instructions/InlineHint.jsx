@@ -19,7 +19,11 @@ class InlineHint extends React.Component {
     video: videoDataShape,
     ttsUrl: PropTypes.string,
     ttsMessage: PropTypes.string,
-    isBlockly: PropTypes.bool
+    ttsEnabled: PropTypes.bool,
+    textToSpeechEnabled: PropTypes.bool,
+    isBlockly: PropTypes.bool,
+    isMinecraft: PropTypes.bool,
+    skinId: PropTypes.string
   };
 
   componentDidMount() {
@@ -43,8 +47,11 @@ class InlineHint extends React.Component {
     return (
       <ChatBubble
         borderColor={this.props.borderColor}
+        textToSpeechEnabled={this.props.textToSpeechEnabled}
         ttsUrl={this.props.ttsUrl}
         ttsMessage={this.props.ttsMessage}
+        isMinecraft={this.props.isMinecraft}
+        skinId={this.props.skinId}
       >
         <SafeMarkdown markdown={this.props.markdown} />
         {this.props.block && <ReadOnlyBlockSpace block={this.props.block} />}
@@ -61,5 +68,9 @@ class InlineHint extends React.Component {
 
 export const StatelessInlineHint = Radium(InlineHint);
 export default connect(state => ({
-  isBlockly: state.pageConstants.isBlockly
+  isBlockly: state.pageConstants.isBlockly,
+  isMinecraft: state.pageConstants.isMinecraft,
+  skinId: state.pageConstants.skinId,
+  textToSpeechEnabled:
+    state.pageConstants.textToSpeechEnabled || state.pageConstants.isK1
 }))(Radium(InlineHint));

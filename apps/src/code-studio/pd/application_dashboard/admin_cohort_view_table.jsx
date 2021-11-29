@@ -9,33 +9,6 @@ import _, {orderBy} from 'lodash';
 import moment from 'moment';
 import wrappedSortable from '@cdo/apps/templates/tables/wrapped_sortable';
 
-const styles = {
-  container: {
-    overflowX: 'auto'
-  },
-  table: {
-    width: '100%'
-  },
-  sortableColumnHeader: {
-    container: {
-      display: 'flex',
-      alignItems: 'center'
-    },
-    default: {
-      color: color.light_gray
-    }
-  },
-  notesCell: {
-    maxWidth: '200px'
-  },
-  notesCellContent: {
-    whiteSpace: 'nowrap',
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    paddingLeft: '2px'
-  }
-};
-
 export default class AdminCohortViewTable extends React.Component {
   static propTypes = {
     data: PropTypes.array.isRequired
@@ -310,3 +283,30 @@ export default class AdminCohortViewTable extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    overflowX: 'auto'
+  },
+  table: {
+    width: '100%'
+  },
+  sortableColumnHeader: {
+    container: {
+      display: 'flex',
+      alignItems: 'center'
+    },
+    default: {
+      color: color.light_gray
+    }
+  },
+  notesCell: {
+    maxWidth: '200px'
+  },
+  notesCellContent: {
+    whiteSpace: 'nowrap',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    paddingLeft: '2px'
+  }
+};

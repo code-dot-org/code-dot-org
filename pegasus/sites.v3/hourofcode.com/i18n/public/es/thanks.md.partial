@@ -9,7 +9,7 @@ social:
 
 # ¡Gracias por inscribirte para ser anfitrión de una Hora de Código!
 
-<br /> **La Hora del Código se celebra durante {{ campaign_date/full }}. Te notificaremos acerca de nuevos tutoriales y otras actualizaciones emocionantes a medida que estén disponibles. Mientras tanto, ¿qué puedes hacer?**
+<br /> **La Hora del código se celebra durante {{ campaign_date/full }}. Estaremos en contacto con nuevos tutoriales y otras actualizaciones emocionantes a medida que salgan. Mientras tanto, ¿qué puedes hacer ahora?**
 
 Como un agradecimiento especial a los organizadores de la Hora del Código, tenemos una nueva serie de carteles con Malala, Stephen Curry, Shakira y otros, que ya puedes pedir con [50% de descuento en Amazon](https://www.amazon.com/promocode/A3QAYNZUZTSSNQ). Este año, cada serie incluye 6 carteles y 126 etiquetas autoadhesivas de "Yo participé en la Hora del Código". Gracias al descuento, te costarán menos de lo que nos sale producirlos. Los materiales son limitados. Pide tus carteles cuanto antes. Si no estás en los Estados Unidos, puedes [descargar e imprimir todos los carteles]({{ promote/promote_posters_url }}).
 
@@ -17,7 +17,7 @@ Como un agradecimiento especial a los organizadores de la Hora del Código, tene
 
 Te acabas de unir al movimiento de la Hora del Código. ¡Cuéntale a tus amigos con el hashtag **#HoraDelCódigo**!
 
-{{ social_media_hoc }} <br /> Aprovecha [nuestros ejemplos de correos electrónicos]({{ promote/sample_emails }}) para invitar a otras personas a participar. Ponte en contacto con tu director y desafía a cada clase de tu escuela a que se inscriba. Convoca a un grupo local clubes de niñas y niños exploradores, iglesias, universidades, grupos de veteranos, sindicatos o, incluso, algunos amigos. No tienes que estar en la escuela para aprender nuevas habilidades. Invita a un político local o autoridad a visitar tu escuela durante la Hora del Código. Puede ayudarte a apoyar las ciencias de la computación en tu zona durante más que una hora.
+{{ social_media_hoc }} <br /> Aprovecha [nuestros ejemplos de correos electrónicos]({{ promote/sample_emails }}) para invitar a otras personas a participar. Ponte en contacto con tu director y desafía a cada clase de tu escuela a que se inscriba. Convoca a un grupo local de niñas y niños exploradores, iglesias, universidades, grupos de veteranos, sindicatos o, incluso, algunos amigos. No tienes que estar en la escuela para aprender nuevas habilidades. Invita a un político local o autoridad a visitar tu escuela durante la Hora del Código. Puede ayudarte a apoyar las ciencias de la computación en tu zona durante más que una hora.
 
 Utiliza estos [carteles, pancartas, etiquetas adhesivas, videos y demás recursos]({{ promote/resources }}) en tu propio evento.
 

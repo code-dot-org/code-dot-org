@@ -1,0 +1,15 @@
+name 'ml-model cards-medical app'
+title 'Introduction to Machine Learning'
+description ''
+
+markdown <<MARKDOWN
+# Medical Priority App
+
+![](https://images.code.org/279132924aab63bc34860f6722a32cab-image-1613532532668.png)
+
+### [Click Here](https://studio.code.org/projects/applab/AQyJyzEPKPvfPhrb9eCSoc2R_VJzJADZ2jmlu02Oz6I?enableExperiments=applab-ml) to open the Medical Priority App. You will use this in the first part of today's lesson.
+
+*Beta Testers Note: This app doesn't have any design to it yet. Don't hold that against me*
+
+
+MARKDOWN

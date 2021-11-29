@@ -1,0 +1,12 @@
+name 'OPD-K5-VariablesVid-2021'
+video_key 'C4_unplugged_variables'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Blank Space Stories
+
+**Student lesson level shown here:  Course F - Lesson 6, Level 1:  Blank Space Stories.**
+
+In this lesson, you'll learn to use and write blank space stories. Watch this video to learn how this connects to computer science.
+MARKDOWN

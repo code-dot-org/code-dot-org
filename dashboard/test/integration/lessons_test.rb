@@ -4,7 +4,10 @@ class LessonsTest < ActionDispatch::IntegrationTest
   setup do
     Rails.application.config.stubs(:levelbuilder_mode).returns true
 
-    @script = create :script, name: 'unit-1'
+    # stub writes so that we dont actually make updates to filesystem
+    File.stubs(:write)
+
+    @script = create :script, name: 'unit-1', is_migrated: true
     lesson_group = create :lesson_group, script: @script
     @lesson = create(
       :lesson,
@@ -13,11 +16,16 @@ class LessonsTest < ActionDispatch::IntegrationTest
       name: 'lesson display name',
       relative_position: 1,
       absolute_position: 1,
+      has_lesson_plan: true,
       properties: {
         overview: 'lesson overview',
         student_overview: 'student overview'
       }
     )
+    standard = create :standard, description: 'Standard Description'
+    @lesson.standards = [standard]
+    standard = create :standard, description: 'Opportunity Standard Description'
+    @lesson.opportunity_standards = [standard]
 
     @lesson2 = create(
       :lesson,
@@ -25,7 +33,8 @@ class LessonsTest < ActionDispatch::IntegrationTest
       lesson_group: lesson_group,
       name: 'second lesson',
       relative_position: 2,
-      absolute_position: 2
+      absolute_position: 2,
+      has_lesson_plan: true
     )
 
     @activity = create(
@@ -42,7 +51,6 @@ class LessonsTest < ActionDispatch::IntegrationTest
       position: 1,
       name: 'activity section name',
       remarks: false,
-      slide: true,
       description: 'activity section description',
       tips: []
     )
@@ -66,14 +74,16 @@ class LessonsTest < ActionDispatch::IntegrationTest
   end
 
   test 'lesson show page contains expected data' do
-    get lesson_path(id: @lesson.id)
+    get script_lesson_path(@lesson.script, @lesson)
     assert_response :success
     assert_select 'script[data-lesson]', 1
     lesson_data = JSON.parse(css_select('script[data-lesson]').first.attribute('data-lesson').to_s)
     assert_equal 'lesson overview', lesson_data['overview']
     assert_equal '/s/unit-1', lesson_data['unit']['link']
-    assert_equal lesson_path(id: @lesson.id), lesson_data['unit']['lessons'][0]['link']
-    assert_equal lesson_path(id: @lesson2.id), lesson_data['unit']['lessons'][1]['link']
+    assert_equal script_lesson_path(@lesson.script, @lesson), lesson_data['unit']['lessonGroups'][0]['lessons'][0]['link']
+    assert_equal script_lesson_path(@lesson2.script, @lesson2), lesson_data['unit']['lessonGroups'][0]['lessons'][1]['link']
+    assert_equal 'Standard Description', lesson_data['standards'][0]['description']
+    assert_equal 'Opportunity Standard Description', lesson_data['opportunityStandards'][0]['description']
   end
 
   test 'lesson edit page contains expected data' do
@@ -96,18 +106,17 @@ class LessonsTest < ActionDispatch::IntegrationTest
     assert_equal 'activity section name', activity_section_data['name']
     # assigning a serialized_attribute to false sets the value to nil
     assert_nil activity_section_data['remarks']
-    assert_equal true, activity_section_data['slide']
 
     assert_equal 1, activity_section_data['scriptLevels'].count
     script_level_data = activity_section_data['scriptLevels'].first
     assert script_level_data['challenge']
     refute script_level_data['assessment']
     refute script_level_data['bonus']
-    assert_equal @level.id, script_level_data['activeId']
+    assert_equal @level.id.to_s, script_level_data['activeId']
     assert_equal 1, script_level_data['levels'].count
     level_data = script_level_data['levels'].first
     assert_equal @level.name, level_data['name']
-    assert_equal @level.id, level_data['id']
+    assert_equal @level.id.to_s, level_data['id']
   end
 
   test 'update lesson using data from edit page' do
@@ -125,7 +134,6 @@ class LessonsTest < ActionDispatch::IntegrationTest
     activity_section_data = activity_data['activitySections'].first
     activity_section_data['name'] = 'new activity section name'
     activity_section_data['remarks'] = true
-    activity_section_data['slide'] = false
 
     script_level_data = activity_section_data['scriptLevels'].first
     script_level_data['assessment'] = true
@@ -159,12 +167,11 @@ class LessonsTest < ActionDispatch::IntegrationTest
     @activity_section.reload
     assert_equal 'new activity section name', @activity_section.name
     assert_equal true, @activity_section.remarks
-    # assigning a serialized_attribute to false sets the value to nil
-    assert_nil @activity_section.slide
     assert_equal [@script_level], @activity_section.script_levels
 
     @script_level.reload
     assert @script_level.assessment
+    assert_equal nil, @script_level.bonus
     refute @script_level.challenge
     assert_equal 1, @script_level.levels.count
     assert_equal [@level], @script_level.levels.all

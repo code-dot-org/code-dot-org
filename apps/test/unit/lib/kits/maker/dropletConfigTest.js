@@ -1,5 +1,5 @@
 /** @file Test maker droplet config behavior */
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import dropletConfig, {
   configMicrobit
 } from '@cdo/apps/lib/kits/maker/dropletConfig';

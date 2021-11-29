@@ -1,14 +1,33 @@
 require 'test_helper'
 
 class TeacherMailerTest < ActionMailer::TestCase
-  test 'new teacher email' do
-    teacher = create :teacher, email: 'minerva@hogwarts.co.uk'
-    mail = TeacherMailer.new_teacher_email(teacher)
+  test 'new teacher email for en-US locale' do
+    # Teacher with en-US locale will get the en-US version of the welcome email.
+    teacher = build :teacher, email: 'minerva@hogwarts.co.uk'
+    mail = TeacherMailer.new_teacher_email(teacher, 'en-US')
 
-    assert_equal I18n.t('teacher_mailer.new_teacher_subject'), mail.subject
+    assert_equal I18n.t('teacher_mailer.new_teacher_subject', locale: 'en-US'), mail.subject
     assert_equal [teacher.email], mail.to
     assert_equal ['hadi_partovi@code.org'], mail.from
+    assert_match /Hello/, mail.body.encoded
     assert links_are_complete_urls?(mail)
+  end
+
+  test 'new teacher email for es-MX locale' do
+    # Teacher with es-MX locale will get the es-MX version of the welcome email.
+    teacher = build :teacher, email: 'teacher@gmail.com'
+    mail = TeacherMailer.new_teacher_email(teacher, 'es-MX')
+    assert_equal I18n.t('teacher_mailer.new_teacher_subject', locale: 'es-MX'), mail.subject
+    assert_match /Hola/, mail.body.encoded
+  end
+
+  test 'new teacher email for non en-US, non es-MX locale' do
+    # Teacher with non en-US and non es-MX locale will get the
+    # standard en-US version of the welcome email.
+    teacher = build :teacher, email: 'teacher@gmail.com'
+    mail = TeacherMailer.new_teacher_email(teacher, 'it-IT')
+    assert_equal I18n.t('teacher_mailer.new_teacher_subject', locale: 'en-US'), mail.subject
+    assert_match /Hello/, mail.body.encoded
   end
 
   test 'delete teacher email' do

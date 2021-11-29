@@ -4,28 +4,6 @@ import React from 'react';
 import msg from '@cdo/locale';
 import trackEvent from '../../util/trackEvent';
 
-const styles = {
-  summary: {
-    fontSize: 18,
-    lineHeight: '20px',
-    fontWeight: 'normal',
-    outline: 'none',
-    padding: 5,
-    display: 'list-item'
-  },
-  challengeLineCounts: {
-    fontSize: 16
-  },
-  challengeSummary: {
-    fontColor: 'black',
-    fontSize: 14,
-    marginLeft: 40
-  },
-  details: {
-    textAlign: 'left'
-  }
-};
-
 class CodeWritten extends React.Component {
   static propTypes = {
     numLinesWritten: PropTypes.number.isRequired,
@@ -96,5 +74,27 @@ class CodeWritten extends React.Component {
     );
   }
 }
+
+const styles = {
+  summary: {
+    fontSize: 18,
+    lineHeight: '20px',
+    fontWeight: 'normal',
+    outline: 'none',
+    padding: 5,
+    display: 'list-item'
+  },
+  challengeLineCounts: {
+    fontSize: 16
+  },
+  challengeSummary: {
+    fontColor: 'black',
+    fontSize: 14,
+    marginLeft: 40
+  },
+  details: {
+    textAlign: 'left'
+  }
+};
 
 export default Radium(CodeWritten);

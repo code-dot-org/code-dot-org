@@ -4,12 +4,12 @@ description 'description here'
 markdown <<MARKDOWN
 # Sprite Lab: Where is it introduced?
 
-## <a href="https://curriculum.code.org/csf-20/coursee/" target="blank">Course E</a>
+## <a href="https://curriculum.code.org/csf-20/coursee/" target="blank" rel="noopener noreferrer">Course E</a>
 - Lesson 5 (Unplugged): Simon Says
 - Lesson 6: Swimming Fish with Sprite Lab
 - Lesson 7: Alien Dance Party with Sprite Lab
 
-## <a href="https://curriculum.code.org/csf-20/coursef/" target="blank">Course F</a>
+## <a href="https://curriculum.code.org/csf-20/coursef/" target="blank" rel="noopener noreferrer">Course F</a>
 - Lesson 2: Swimming Fish with Sprite Lab
 - Lesson 3: Alien Dance Party with Sprite Lab
 - Lesson 17: Behaviors in Sprite Lab

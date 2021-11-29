@@ -1,0 +1,5 @@
+{
+  "func": "Text-Dec",
+  "category": "CSS Properties",
+  "syntax": "text-decoration: value;"
+}

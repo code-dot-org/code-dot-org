@@ -6,7 +6,7 @@ nav: promote_nav
 
 {{ signup_button }}
 
-# How to attract media to your Hour of Code event
+# 怎样为你的编程一小时活动吸引媒体
 
 ### Make a splash with your Hour of Code event and invite local media to see why computer science is important at your school.
 
@@ -14,7 +14,7 @@ nav: promote_nav
 
 * * *
 
-## Key Tips
+## 重点提示
 
 - 在你的活动开始两周前通过电子邮件主动联系媒体，如果没有得到初步答复跟进邮件或电话联系。
 - 请学校工作人员或志愿者拍照在网上分享或发送给媒体。
@@ -23,7 +23,7 @@ nav: promote_nav
 
 ## Step-by-step guide
 
-### 1. Plan your event
+### 1. 计划你的活动
 
 - 策划一系列活动揭开编程一小时的序幕
 - Send [a letter]({{ promote/sample_emails }}) to parents and ask them to spread the word.
@@ -35,13 +35,13 @@ nav: promote_nav
 
 Like local newspapers, TV station or radio stations, or blogs. <br />
 
-### 3. Contact local media
+### 3. 联系当地媒体
 
-The best way to reach out is by email. It should be short and should communicate "why should other people care about this event"? Include contact information (including a cellphone number) for who will be on site at the event. **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
+通过电子邮件是最好的联系办法。 It should be short and should communicate "why should other people care about this event"? 内容包括在座的出席活动各位的联系信息（含手机号码）。 **[See a sample pitch to media]({{ promote/press-kit-emails }})**.
 
-Look online to find reporter contact information. If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
+在网上查找记者的联系信息。 If you can't find it, call the publication to ask, or email the organization's general email address and ask for your message to be directed to the correct reporter. <br />
 
-### 4. Prepare to field questions about your school event. Here are some examples:
+### 4. 准备好回答关于你学校活动的问题，以下是一些例子：
 
 #### 为什么你的学校组织编程一小时活动？
 
@@ -75,11 +75,11 @@ I look forward to being in touch. <br />
 
 ## Additional details and a quote you can use in materials
 
-Hadi Partovi，Code.org的创始人和CEO曾说过“打造编程一小时就是为了揭秘代码并表明计算机科学并不是火箭科学，是任何人都可以学习的基础知识， 全球超过 1 亿学生已经尝试过代码一小时。 The demand for relevant 21st-century computer science education crosses all borders and knows no boundaries." <br /> <br />
+Hadi Partovi，Code.org的创始人和CEO曾说过“打造编程一小时就是为了揭秘代码并表明计算机科学并不是火箭科学，是任何人都可以学习的基础知识， 全球超过 1 亿学生已经尝试过代码一小时。 对21世纪计算机科学教育的需求跨越了所有边界，没有国界。 <br /> <br />
 
 #### 关于Code.org
 
-Code.org is a 501c3 public non-profit dedicated to expanding participation in computer science and increasing participation by young women and students from other underrepresented groups. Its vision is that every student in every school has the opportunity to learn computer programming. 在2013年启动后，Code.org组织了编程一小时系列活动—向数以百万计的学生介绍计算机科学—和全国超过70所公立学区合作，拓展计算机科学课程。 Code.org is supported by philanthropic donations from corporations, foundations and generous individuals, including Microsoft, Facebook, Infosys Foundation USA, Amazon, and others. For more information, please visit: [code.org]({{ urls/codeorg }}).
+Code.org是一个501c3公共非营利组织，致力于扩大对计算机科学的参与，提高来自其他弱势群体的年轻女性和学生的参与。 其愿景是，每所学校的每个学生都有机会学习计算机编程。 在2013年启动后，Code.org组织了编程一小时系列活动—向数以百万计的学生介绍计算机科学—和全国超过70所公立学区合作，拓展计算机科学课程。 Code.org得到了来自企业、基金会和慷慨个人的慈善捐赠，包括微软、Facebook、美国印孚瑟斯基金会、亚马逊等。 For more information, please visit: [code.org]({{ urls/codeorg }}).
 
   
 Find more resources and sample emails [here]({{ promote/sample_emails }}).

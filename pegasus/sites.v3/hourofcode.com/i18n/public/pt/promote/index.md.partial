@@ -10,24 +10,24 @@ nav: promote_nav
 
 ## 1. Divulgue
 
-Tell your friends about the **#HourOfCode**!
+Conte aos seus amigos sobre a **#HoraDoCodigo**!
 
 {{ promote/share_buttons }}
 
 ## 2. Peça para sua escola oferecer uma Hora do Código
 
-[Send this email]({{ promote/sample_emails }}) to your principal and challenge every classroom at your school to sign up.
+<a href="{{ promote/sample_emails }}”>Envie este e-mail</a> para o seu diretor e desafie todas as turmas da sua escola a participar.
 
 ## 3. Peça para seu empregador para participar
 
-[Send this email]({{ promote/sample_emails }}) to your manager or company's CEO.
+<a href="{{ promote/sample_emails }}”>Envie este e-mail</a> para o gerente ou CEO da empresa.
 
 ## 4. Promova a Hora do Código em sua comunidade
 
-[Recruit a local group]({{ promote/sample_emails }})— boy/girl scouts club, church, university, veterans group, labor union, or even some friends. Você não precisa estar na escola para aprender novas habilidades. Use these [posters, banners, stickers, videos and more](/promote/resources) for your own event.
+<a href="{{ promote/sample_emails }}”>Recrute um grupo local</a>– clubes de escoteiros, igrejas, universidades, grupos de veteranos, sindicatos e até mesmo alguns amigos. Você não precisa estar na escola para aprender novas habilidades. Use estes <a href=”/promote/resources”>pôsteres, banners, adesivos, vídeos e mais</a> para promover seu próprio evento.
 
 ## 5. Peça que um representante político apoie a Hora do Código
 
-[Send this email]({{ promote/sample_emails }}) to your local representatives, city council, or school board and invite them to visit your school for the Hour of Code. Isso pode ajudá-lo a conseguir suporte para o ensino da Ciência da Computação para além de uma hora.
+<a href="{{ promote/sample_emails }}”>Envie este e-mail</a> para os representantes locais, a câmara de vereadores da sua cidade, ou o conselho escolas, e convide-os para visitar sua escola e participar do Hour of Code. Isso pode ajudá-lo a conseguir suporte para o ensino da Ciência da Computação para além de uma hora.
 
 {{ signup_button }}

@@ -9,12 +9,12 @@
 // todo - should we also have tests around which blocks to show as part of the
 // feedback when a user gets the puzzle wrong?
 
-import {assert} from '../util/deprecatedChai';
+import {assert} from '../util/reconfiguredChai';
 import sinon from 'sinon';
 import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
 import jQuery from 'jquery';
 var tickWrapper = require('./util/tickWrapper');
-import stageLock from '@cdo/apps/code-studio/stageLockRedux';
+import lessonLock from '@cdo/apps/code-studio/lessonLockRedux';
 import runState from '@cdo/apps/redux/runState';
 import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -119,7 +119,7 @@ describe('Level tests', function() {
     // Recreate our redux store so that we have a fresh copy
     stubRedux();
     registerReducers({
-      stageLock,
+      lessonLock,
       runState,
       isRtl,
       progress,

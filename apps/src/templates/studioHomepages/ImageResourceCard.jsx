@@ -4,60 +4,10 @@ import {connect} from 'react-redux';
 import Button from '../Button';
 import color from '../../util/color';
 
-const styles = {
-  card: {
-    overflow: 'hidden',
-    position: 'relative',
-    height: 200,
-    width: 473,
-    float: 'left',
-    marginBottom: 20,
-    borderStyle: 'solid',
-    borderWidth: 1,
-    borderColor: color.border_gray,
-    background: color.teal
-  },
-  image: {
-    position: 'absolute'
-  },
-  textbox: {
-    position: 'absolute',
-    width: 275,
-    padding: 20
-  },
-  title: {
-    fontSize: 24,
-    paddingBottom: 10,
-    fontFamily: '"Gotham 7r", sans-serif',
-    color: color.white,
-    whiteSpace: 'nowrap',
-    textOverflow: 'ellipsis',
-    overflow: 'hidden'
-  },
-  description: {
-    fontSize: 14,
-    lineHeight: '21px',
-    fontFamily: '"Gotham 4r", sans-serif',
-    color: color.white,
-    height: 80
-  },
-  ltr: {
-    float: 'left'
-  },
-  rtl: {
-    float: 'right'
-  },
-  rtlMargin: {
-    marginRight: 160
-  },
-  ltrMargin: {
-    marginRight: 0
-  }
-};
-
 class ImageResourceCard extends Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
+    callout: PropTypes.string,
     description: PropTypes.string.isRequired,
     buttonText: PropTypes.string.isRequired,
     link: PropTypes.string.isRequired,
@@ -65,33 +15,27 @@ class ImageResourceCard extends Component {
     isRtl: PropTypes.bool.isRequired
   };
 
-  render() {
-    const {title, description, buttonText, link, image, isRtl} = this.props;
-    const localeStyle = isRtl ? styles.rtl : styles.ltr;
-    const uncoverImage = isRtl ? styles.rtlMargin : styles.ltrMargin;
+  getImage() {
+    return require(`@cdo/static/resource_cards/${this.props.image}`);
+  }
 
-    const filenameToImgUrl = {
-      'teacher-community': require('@cdo/static/resource_cards/teachercommunity.png'),
-      'guest-speaker': require('@cdo/static/resource_cards/findguestspeaker.png'),
-      'professional-learning': require('@cdo/static/resource_cards/professionallearning.png'),
-      'standards-framework': require('@cdo/static/resource_cards/standardsandframework.png'),
-      elementary: require('@cdo/static/resource_cards/elementary.png'),
-      middleschool: require('@cdo/static/resource_cards/middleschool.png'),
-      highschool: require('@cdo/static/resource_cards/highschool.png'),
-      hourofcode: require('@cdo/static/resource_cards/hourofcode.png'),
-      hourofcode2: require('@cdo/static/resource_cards/hourofcode2.png')
-    };
-    const imgSrc = filenameToImgUrl[image];
+  render() {
+    const {title, callout, description, buttonText, link, isRtl} = this.props;
 
     return (
-      <div style={{...styles.card, ...localeStyle}}>
-        <div style={styles.image}>
-          <img src={imgSrc} />
-        </div>
-        <div style={{...styles.textbox, ...localeStyle, ...uncoverImage}}>
-          <div style={styles.title}>{title}</div>
-          <div style={styles.description}>{description}</div>
-          <br />
+      <div style={{...styles.card, ...(isRtl && styles.rtl)}}>
+        <div style={styles.textbox}>
+          <div>
+            <div style={styles.titleContainer}>
+              <div style={styles.title}>{title}</div>
+              {callout && (
+                <div style={styles.callout}>
+                  <i>{callout}</i>
+                </div>
+              )}
+            </div>
+            <div style={styles.description}>{description}</div>
+          </div>
           <Button
             __useDeprecatedTag
             href={link}
@@ -100,10 +44,67 @@ class ImageResourceCard extends Component {
             style={styles.button}
           />
         </div>
+        <img style={styles.image} src={this.getImage()} />
       </div>
     );
   }
 }
+
+const styles = {
+  card: {
+    display: 'flex',
+    height: 200,
+    width: 473,
+    marginBottom: 20,
+    borderStyle: 'solid',
+    borderWidth: 1,
+    borderColor: color.border_gray,
+    background: color.teal
+  },
+  image: {
+    width: 158
+  },
+  textbox: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    boxSizing: 'border-box',
+    width: 315,
+    padding: 20
+  },
+  titleContainer: {
+    display: 'flex',
+    alignItems: 'baseline'
+  },
+  title: {
+    fontSize: 24,
+    paddingBottom: 10,
+    fontFamily: '"Gotham 7r", sans-serif',
+    color: color.white,
+    whiteSpace: 'nowrap'
+  },
+  callout: {
+    flex: 'none',
+    fontSize: 14,
+    paddingBottom: 10,
+    margin: '0px 8px',
+    fontFamily: '"Gotham 5r", sans-serif',
+    color: color.white
+  },
+  description: {
+    fontSize: 14,
+    lineHeight: '21px',
+    fontFamily: '"Gotham 4r", sans-serif',
+    color: color.white,
+    height: 80
+  },
+  button: {
+    alignSelf: 'flex-start'
+  },
+  rtl: {
+    direction: 'rtl'
+  }
+};
 
 export default connect(state => ({
   isRtl: state.isRtl

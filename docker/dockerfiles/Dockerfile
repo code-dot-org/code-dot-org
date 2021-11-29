@@ -1,5 +1,5 @@
 # Based on Code.org CircleCI-dependencies Dockerfile in .circle directory
-# Pushed to Docker Hub at wjordan/code-dot-org:2020-09-10
+# Pushed to Docker Hub at codedotorg/code-dot-org:<version>
 FROM ubuntu:18.04
 
 USER root
@@ -30,7 +30,7 @@ RUN apt-get update && \
 		apt-get install -y \
 		  git \
 		  xvfb \
-		  yarn=1.16.0-1 \
+		  yarn=1.22.5-1 \
 		  sudo \
 		  openssh-client \
 		  ca-certificates \
@@ -47,15 +47,15 @@ RUN apt-get update && \
 		  python python-dev
 
 # install node
-RUN wget https://nodejs.org/dist/v8.15.0/node-v8.15.0.tar.gz && \
-    tar -xzvf node-v8.15.0.tar.gz && \
-    rm node-v8.15.0.tar.gz && \
-    cd node-v8.15.0 && \
+RUN wget https://nodejs.org/dist/v14.17.1/node-v14.17.1.tar.gz && \
+    tar -xzvf node-v14.17.1.tar.gz && \
+    rm node-v14.17.1.tar.gz && \
+    cd node-v14.17.1 && \
     ./configure && \
     make -j4 && \
     make install && \
     cd .. && \
-    rm -r node-v8.15.0
+    rm -r node-v14.17.1
 
 # more more tools
 RUN apt-get install -y unzip
@@ -102,9 +102,9 @@ RUN chown -R mysql:mysql /var/lib/mysql \
 RUN apt-get update && apt-get -y install parallel libmagickwand-dev imagemagick
 RUN mv /usr/bin/parallel /usr/bin/gnu_parallel
 
-RUN curl -sSL -o /tmp/pdftk-java_3.0.2-2_all.deb https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/pdftk-java_3.0.2-2_all.deb \
-  && DEBIAN_FRONTEND=noninteractive dpkg -i /tmp/pdftk-java_3.0.2-2_all.deb || apt-get -fy install \
-  && rm -rf /tmp/pdftk-java_3.0.2-2_all.deb
+RUN curl -sSL -o /tmp/pdftk-java_3.0.9-1_all.deb https://mirrors.kernel.org/ubuntu/pool/universe/p/pdftk-java/pdftk-java_3.0.9-1_all.deb \
+  && DEBIAN_FRONTEND=noninteractive dpkg -i /tmp/pdftk-java_3.0.9-1_all.deb || apt-get -fy install \
+  && rm -rf /tmp/pdftk-java_3.0.9-1_all.deb
 RUN apt-get update
 RUN apt-get install -y libicu-dev enscript moreutils libmysqlclient-dev libsqlite3-dev
 RUN wget https://github.com/htacg/tidy-html5/releases/download/5.4.0/tidy-5.4.0-64bit.deb \

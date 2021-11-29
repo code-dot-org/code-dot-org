@@ -22,7 +22,6 @@
 #
 # @attr [String] name - The user-visible heading of this section of the activity
 # @attr [boolean] remarks - Whether to show the remarks icon
-# @attr [boolean] slide - Whether to show the slides icon
 # @attr [String] description - Text describing the activity
 # @attr [Array<Hash>] tips - An array of instructional tips to display
 class ActivitySection < ApplicationRecord
@@ -36,27 +35,33 @@ class ActivitySection < ApplicationRecord
 
   serialized_attrs %w(
     name
+    duration
     remarks
-    slide
     description
     tips
+    progression_name
   )
 
   def summarize
     {
       id: id,
       position: position,
-      name: name,
+      name: Services::I18n::CurriculumSyncUtils.get_localized_property(self, :name),
+      duration: duration,
       remarks: remarks,
-      slide: slide,
-      description: description,
+      description: Services::I18n::CurriculumSyncUtils.get_localized_property(self, :description),
       tips: tips,
+      progressionName: progression_name
     }
   end
 
-  def summarize_for_lesson_show
+  def summarize_for_lesson_show(can_view_teacher_markdown, current_user)
     summary = summarize
-    summary[:scriptLevels] = script_levels.map(&:summarize_for_lesson_show)
+    summary[:scriptLevels] = script_levels.map {|sl| sl.summarize_for_lesson_show(can_view_teacher_markdown, current_user)}
+    Services::MarkdownPreprocessor.process!(summary[:description])
+    summary[:tips]&.each do |tip|
+      Services::MarkdownPreprocessor.process!(tip["markdown"])
+    end
     summary
   end
 
@@ -76,12 +81,12 @@ class ActivitySection < ApplicationRecord
         # position and chapter will be updated based on activity_section_position later
         activity_section_position: sl_data['activitySectionPosition'] || 0,
         # Script levels containing anonymous levels must be assessments.
-        assessment: !!sl_data['assessment'] || sl.anonymous?,
-        bonus: !!sl_data['bonus'],
+        assessment: sl_data['assessment'] || sl.anonymous?,
+        bonus: sl_data['bonus'],
         challenge: !!sl_data['challenge'],
-        progression: name.present? && name
+        variants: sl_data['variants'],
+        progression: progression_name.present? && progression_name
       )
-      # TODO(dave): check and update script level variants
       sl.update_levels(sl_data['levels'] || [])
       sl
     end
@@ -92,7 +97,7 @@ class ActivitySection < ApplicationRecord
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
-  # See comments on ScriptSeed.seed_from_json for more context.
+  # See comments on ScriptSeed.seed_from_hash for more context.
   #
   # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
   # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.

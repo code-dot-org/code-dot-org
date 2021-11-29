@@ -1,0 +1,24 @@
+name 'U10 SSQRP2 part 1_2021'
+editor_experiment ''
+
+
+
+
+wrong 'The user\'s current location.'
+wrong 'Access to photos from the user\'s device'
+right 'Photos tagged by location that are submitted by any user.'
+wrong 'Ratings for each photo.'
+
+markdown <<MARKDOWN
+## Single-Select Questions with Reading Passage #2
+
+### Snappy
+
+*The following passage will be used to answer questions #6 - #10*
+<br><br><br>
+*Snappy* is a crowdsourcing app designed with the purpose of making the world a happier place. The app collects photos users submit of "Happy Moments". Photos are tagged with the location where they were taken. Users have access to a map where they can zoom in to photos submitted at specific locations. A leaderboard displays the locations with the most "Happiness Moments" and the users who are the "snappiest" in each city due to the volume and rating of "Happiness Moments" they have submitted. Users can rate other "Happiness Moments" using a limited set of emojis and can also leave comments which are moderated using machine learning in an effort to only allow positive comments, by checking each comment for common negative words learned through a training set. 
+
+**Question:**
+
+Which of the following data is necessary for Snappy to display "Happy Moments" for a particular city?
+MARKDOWN

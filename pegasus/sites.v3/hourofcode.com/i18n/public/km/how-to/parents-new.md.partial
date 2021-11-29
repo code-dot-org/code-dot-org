@@ -43,7 +43,7 @@ Now that you have some tutorials in mind, it may be helpful to try these activit
 <h3>More than one child at home?</h3>
 Consider providing each of your children with headphones if they’ll be working on separate devices. That way, they’ll be able to play activities with sound without distracting each other.
 
-If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>. Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. They’ll also see that computer science is social and collaborative.
+If you’ll only be using one device, or simply want to make your Hour of Code more interactive, try <a href="https://www.youtube.com/watch?v=vgkahOzFH2Q">pair programming</a>. Pair programming encourages children to work together. When they partner up, they help one another to problem-solve. ពួកគេក៏នឹងមើលឃើញថាវិទ្យាសាស្រ្តកុំព្យួទ័រគឺជាទំនាក់ទំនងសង្គមនិងមានការសហការគ្នា។
 
 <h3>Get the kids excited! </h3>
 This is a great opportunity to add a new type of activity to your child’s day. You can extend the fun beyond one tutorial with these suggestions:
@@ -68,9 +68,9 @@ It’s okay if both you and your child are brand new to computer science. Here a
 
 <h3>Problem-solve together</h3>
 Lastly, when your child comes across difficulties it's okay to respond:
-- “I don’t know. Let’s figure this out together.”
-- “Technology doesn’t always work out the way we want.”
-- “Learning to program is like learning a new language; you won’t be fluent right away.”
+- “ ខ្ញុំមិនដឹងទេ។ តោះដោះស្រាយបញ្ហានេះជាមួយគ្នា” ។
+- បច្ចេកវិទ្យាមិនតែងតែដំណើរការទៅតាមអ្វីដែលយើងចង់បាននោះទេ។
+- “ ការរៀនសរសេរកម្មវិធី ដូចទៅនិងការរៀនភាសាថ្មីអញ្ចឹង។ អ្នកនឹងមិនអាចស្ទាត់ជំនាញបានភ្លាមៗនោះទេ។ "
 
 Computer science is all about learning how to “debug” situations that didn’t turn out the way we thought they would. Together, you and your child can think of creative ways to solve the problem!
 
@@ -81,10 +81,10 @@ The Hour of Code is a global event, and your family deserves to celebrate. Here 
 
 - Print <a href="https://staging.code.org/certificates">Hour of Code Certificates</a> that you award when your child completes their activity
 - <a href="https://staging.hourofcode.com/us/promote/resources#stickers">Print stickers</a> at home or <a href="https://store.code.org/">purchase them online</a>, as an added surprise.
-- Share photos and videos of your at-home Hour of Code on social media. Use #HourOfCode and @codeorg so we can highlight your success, too!
+- Share photos and videos of your at-home Hour of Code on social media. ប្រើ #HourOfCode និង @codeorg ដើម្បីអោយយើងខ្ញុំអាចបង្ហាញពីជោគជ័យរបស់អ្នកផងដែរ។
 
 [<img src="/images/fit-600/Marketing/g8TUlHzF.jpeg" />]({{ urls/learn }})
 
 <h2>What comes after the Hour of Code?</h2>
 
-Computer science doesn’t have to end with the Hour of Code! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.
+វិទ្យាសាស្រ្តកុំព្យូរទ័រមិនចាំបាច់បញ្ចប់ជាមួយ Hour of Code ទេ! While 90% of parents want their child to learn computer science, most schools still don’t teach it. To help, our curriculum is web-based and free to use, forever. <a href="https://code.org/yourschool">Learn how</a> to bring CS to your child’s school today.

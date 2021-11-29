@@ -1,0 +1,13 @@
+{
+  "func": "mirrorX",
+  "category": "Sprites",
+  "paletteParams": [
+    {
+      "name": "dir"
+    }
+  ],
+  "params": [
+    "-1"
+  ],
+  "modeOptionName": "*.mirrorX"
+}

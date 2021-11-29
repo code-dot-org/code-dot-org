@@ -12,7 +12,7 @@ nav: how_to_nav
 
 * * *
 
-Computational thinking helps nurture problem-solving skills, logic, and creativity. And technology is transforming every industry on the planet. Students today should learn how to create technology, not just use it. By starting early, they’ll have a foundation for success in any 21st-century career path.
+გამოთვლითი აზროვნება გვეხმარება პრობლემის გადაწყვეტის უნარების, ლოგიკის და კრეატიულობის განვითარებაში. ტექნოლოგია მსოფლიოში ყველა ინდუსტრიას ცვლის. დღეს, მოსწავლეებმა უნდა ისწავლონ როგორ შექმნან ტექნოლოგია და არა მარტო გამოიყენონ ის. ბავშვობიდანვე დაწყებით მათ ექნებათ ფუნდამენტი, რომელიც გამოადგებათ 21-ე საუკუნის ნებისმიერ პროფესიაში.
 
 During the Hour of Code campaign, your company can help raise awareness of the computer science movement. Whether you volunteer as an individual or plan an event for your company, all of your efforts can make a huge impact on the way young women and students from marginalized racial and ethnic groups view computer science and their own potential.
 
@@ -32,7 +32,7 @@ During the Hour of Code campaign, your company can help raise awareness of the c
 
 One of the most fulfilling ways to participate in the Hour of Code is to volunteer with a local classroom, either in-person or virtually. Best of all, you don’t have to be an engineer in order to volunteer. You can still provide a meaningful experience to students by sharing your own career experience and how CS or technology have impacted your role.
 
-[<button>Sign up to volunteer</button>]({{ urls/volunteer }})
+[<button>დარეგისტრირდით მოხალისედ</button>]({{ urls/volunteer }})
 
 Once a volunteer registers, a teacher can review their profile on our [volunteer map](https://code.org/volunteer/local) - so profiles should be submitted as complete as possible. If you’re a good fit for their classroom, a teacher will contact you through the platform (we will never share your email address with the teacher). You can then coordinate details directly with the teacher around [how to best volunteer with their classroom](https://hourofcode.com/us/how-to/volunteers).
 
@@ -84,7 +84,7 @@ We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual)
 
 - Explain ways technology impacts our lives, with examples that students of all backgrounds will care about - talk about technology that’s saving lives, helping people, connecting people. 
 - If you are a tech company, demo fun, innovative products your company is working on. If you aren’t a tech company, discuss ways your company uses technology to solve problems and accomplish goals.
-- Invite software engineers from your company to speak about why they decided to study computer science and the projects they work on.
+- მოიწვიეთ პროგრამისტები თქვენი კომპანიიდან, რათა ისაუბრონ იმაზე, რატომ გადაწყვიტეს კომპიუტერული მეცნიერების სწავლა და რა პროექტებზე მუშაობენ ამჟამად.
 - If you have a group of staff that will be facilitating your event or volunteering with a local school, consider ordering [custom t-shirts](http://blog.code.org/post/132608499493/hour-of-code-shirts-and-more) for your employees.
 
 ### 3. Plan your technology needs
@@ -93,7 +93,7 @@ We’ve seen events that are [virtual](https://hourofcode.com/us/how-to/virtual)
 
 #### Devices:
 
-კოდის ერთი საათის საუკეთესო გამოცდილების მისაღებად საჭიროა ინტერნეტთან დაკავშირებული კომპიუტერები. But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
+კოდის ერთი საათის საუკეთესო გამოცდილების მისაღებად საჭიროა ინტერნეტთან დაკავშირებული კომპიუტერები. თუმცა, ყველა ბავშვისთვის ცალკე კომპიუტერი არ გჭირდებათ. მეტიც, კოდის ერთი საათი კომპიუტერის გარეშეც შეგიძლიათ ჩაატაროთ! For unplugged activities, simply filter the Classroom Technology section to show options for “No computers or devices”.
 
 - **Test activities** on computers or devices. Make sure they work properly on browsers with sound and video.
 - **Don't have enough devices?** Use pair programming. წყვილში მუშაობისას მოსწავლეები ეხმარებიან ერთმანეთს და ნაკლებად არიან დამოკიდებული მასწავლებელზე. ამის გარდა, ისინი ხვდებიან, რომ პროგრამირებაში მნიშვნელოვანია თანამშრომლობა.
@@ -108,7 +108,7 @@ If your event is going to be virtual, you’ll want to decide on your conference
 
 We provide a variety of fun, student-guided tutorials for all age groups and experience levels. It’s popular for students to try self-led tutorials, though you may want to begin the event with an [inspirational video](https://hourofcode.com/us/promote/resources#videos) for everyone to view together.
 
-<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **All Hour of Code activities** require minimal prep-time, and are self-guided - allowing participants to work at their own pace and skill-level.
+<a href="https://hourofcode.com/us/learn">Explore the activities</a> and decide ahead of time if you want to choose a single tutorial for all of your guests, or let each child pick their own. **ყველა კოდის ერთი საათის აქტივობა** საჭიროებს მინიმალურ მოსამზადებელ დროს, ხელს უწყობს დამოუკიდებელ მუშაობას - აძლევს საშუალებას მონაწილეებს იმუშავონ მათი ტემპის და უნარების შესაბამისად.
 
 [![](/images/fit-700/tutorials.png)]({{ urls/learn }})
 
@@ -122,9 +122,9 @@ Once you have a solid roadmap for your event, you can then start inviting studen
 
 After students or guests have completed their Hour of Code, it’s time to celebrate their success. Here are some ideas for making your event even more fun:
 
-- [Print certificates]({{ urls/certificates }}) for participants and students.
+- [დაბეჭდეთ სერტიფიკატები]({{ urls/certificates }}) მონაწილეების და მოსწავლეებისთვის.
 - [Print "I did an Hour of Code! stickers"]({{ promote/resources_stickers }}) or find other prizes and swag on the [Code.org Amazon Store](https://code.org/shop). 
-- გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეობი სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg - ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
+- გააზიარეთ თქვენი კოდის ერთი საათის სურათები და ვიდეოები სოციალურ მედიაში. გამოიყენეთ #HourOfCode და @codeorg — ასე ჩვენც შევძლებთ გავაზიაროთ თქვენი წარმატება!
 
 * * *
 
@@ -177,7 +177,7 @@ Help raise awareness of the computer science movement with this sample content t
 
 - Spread awareness by wearing [Code.org swag](https://store.code.org/) (all proceeds go to supporting more students gain access to computer science education).
 - Choose to benefit Code.org when you shop on [AmazonSmile](https://code.org/donate/amazonsmile). 
-- Ask your CEO to send a company-wide email emphasizing the importance of computer science and encouraging employees to spread the word.
+- სთხოვეთ აღმასრულებელ დირექტორს დააგზავნოს წერილი თქვენს კომპანიაში, რომელშიც ახსნის კომპიუტერული მეცნიერების მნიშვნელობას და მოუწოდებს თანამშრომლებს, გაავრცელონ სიტყვა.
 - Have some fun with co-workers in a [giving campaign](https://medium.com/@codeorg/how-a-haircut-happy-hour-turned-into-a-fundraiser-for-code-org-1952b197faa2).
 - [Sign this petition](https://code.org/promote) to make sure that every student has the opportunity to learn computer science. 
 - [Donate](https://code.org/donate) to Code.org so that we can keep our educational resources free and accessible to all. 

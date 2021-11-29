@@ -42,9 +42,10 @@ class LessonActivity < ApplicationRecord
     }
   end
 
-  def summarize_for_lesson_show
+  def summarize_for_lesson_show(can_view_teacher_markdown, current_user)
     summary = summarize
-    summary[:activitySections] = activity_sections.map(&:summarize_for_lesson_show)
+    summary[:activitySections] = activity_sections.map {|as| as.summarize_for_lesson_show(can_view_teacher_markdown, current_user)}
+    summary[:name] = Services::I18n::CurriculumSyncUtils.get_localized_property(self, :name)
     summary
   end
 
@@ -67,10 +68,11 @@ class LessonActivity < ApplicationRecord
       activity_section.update!(
         position: section['position'],
         name: section['name'],
+        duration: section['duration'],
         remarks: section['remarks'],
-        slide: section['slide'],
         description: section['description'],
-        tips: section['tips']
+        tips: section['tips'],
+        progression_name: section['progressionName']
       )
       activity_section.update_script_levels(section['scriptLevels'] || [])
       activity_section
@@ -82,7 +84,7 @@ class LessonActivity < ApplicationRecord
   # If the attributes of this object alone aren't sufficient, and associated objects are needed, then data from
   # the seeding_keys of those objects should be included as well.
   # Ideally should correspond to a unique index for this model's table.
-  # See comments on ScriptSeed.seed_from_json for more context.
+  # See comments on ScriptSeed.seed_from_hash for more context.
   #
   # @param [ScriptSeed::SeedContext] seed_context - contains preloaded data to use when looking up associated objects
   # @return [Hash<String, String>] all information needed to uniquely identify this object across environments.

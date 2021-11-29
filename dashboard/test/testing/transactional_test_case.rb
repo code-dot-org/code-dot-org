@@ -28,7 +28,7 @@ module ActiveSupport
           if use_transactional_test_case?
             @test_case_connections = enlist_transaction_connections
             @test_case_connections.each do |connection|
-              connection.begin_transaction joinable: false, lock_thread: true
+              connection.begin_transaction joinable: false, _lazy: false, lock_thread: true
               connection.pool.lock_thread = true
             end
           end

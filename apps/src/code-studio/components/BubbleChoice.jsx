@@ -1,55 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SublevelCard from './SublevelCard';
-
-const MARGIN = 10;
-
-const styles = {
-  h2: {
-    color: color.charcoal,
-    padding: `${MARGIN}px 0`
-  },
-  btn: {
-    color: color.white,
-    backgroundColor: color.lighter_gray,
-    borderColor: color.lighter_gray
-  },
-  btnOrange: {
-    backgroundColor: color.orange,
-    borderColor: color.orange
-  },
-  cards: {
-    display: 'flex',
-    flexWrap: 'wrap'
-  }
-};
+import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 
 export default class BubbleChoice extends React.Component {
-  static propTypes = {
-    level: PropTypes.shape({
-      display_name: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      previous_level_url: PropTypes.string,
-      redirect_url: PropTypes.string,
-      script_url: PropTypes.string,
-      sublevels: PropTypes.arrayOf(
-        PropTypes.shape({
-          id: PropTypes.number.isRequired,
-          display_name: PropTypes.string.isRequired,
-          description: PropTypes.string,
-          thumbnail_url: PropTypes.string,
-          url: PropTypes.string.isRequired,
-          position: PropTypes.number,
-          letter: PropTypes.string,
-          perfect: PropTypes.bool
-        })
-      )
-    })
-  };
+  static propTypes = {level: levelType};
 
   goToUrl = url => {
     navigateToHref(url + location.search);
@@ -107,3 +65,23 @@ export default class BubbleChoice extends React.Component {
     );
   }
 }
+
+const styles = {
+  h2: {
+    color: color.charcoal,
+    padding: '10px 0'
+  },
+  btn: {
+    color: color.white,
+    backgroundColor: color.lighter_gray,
+    borderColor: color.lighter_gray
+  },
+  btnOrange: {
+    backgroundColor: color.orange,
+    borderColor: color.orange
+  },
+  cards: {
+    display: 'flex',
+    flexWrap: 'wrap'
+  }
+};

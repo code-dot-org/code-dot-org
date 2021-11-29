@@ -56,7 +56,7 @@ Ask students about problems they solve in everyday life.
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Maze: Debugging](http://learn.code.org/s/course1/stage/5/puzzle/1)
+### <a name="Activity"></a> [Maze: Debugging](http://learn.code.org/s/course1/lessons/5/levels/1)
 As your students work through the puzzles, observe how they search for bugs. Identify different strategies used and ask students to share with the whole class. This helps students to recognize that there are many ways to approach these problems.
 
 [/together]

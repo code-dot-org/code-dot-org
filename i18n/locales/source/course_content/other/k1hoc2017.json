@@ -1,26 +1,26 @@
 {
-  "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/2": {
+  "https://studio.code.org/s/k1hoc2017/lessons/1/levels/2": {
     "short_instructions": "This is Laurel the Adventurer! \n\nPress \"Run\" to see her walk up to the treasure and grab it.",
     "long_instructions": "This is Laurel the Adventurer! \n\nPress \"Run\" to see her walk up to the treasure and grab it.",
     "callouts": {
       "courseA_collector_preLoops1_1": "Click here to watch the code run!"
     }
   },
-  "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/3": {
+  "https://studio.code.org/s/k1hoc2017/lessons/1/levels/3": {
     "short_instructions": "Great!  Now you get to add code yourself!  \n\nSnap a `get treasure` block to the bottom of the program and click \"Run\".",
     "long_instructions": "Great!  Now you get to add code yourself!  \n\nSnap a [][0] block to the bottom of the program and click \"Run\"!",
     "callouts": {
       "courseA_collector_loops1_1": "Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage."
     }
   },
-  "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/4": {
+  "https://studio.code.org/s/k1hoc2017/lessons/1/levels/4": {
     "short_instructions": "Snap two `E -->` blocks and one `get treasure` block to the bottom of the program, then click \"Run\".",
     "long_instructions": "To grab the treasure, snap two [][0] blocks and one [][1] block to the bottom of the program and click \"Run\"!",
     "callouts": {
       "courseA_collector_loops1_1": "Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage."
     }
   },
-  "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/5": {
+  "https://studio.code.org/s/k1hoc2017/lessons/1/levels/5": {
     "short_instructions": "Can you figure out how to solve this puzzle?",
     "authored_hints": {
       "courseA_collector_preLoops4_a": "To grab the treasure, snap two [][0] blocks and one [][1] block to the bottom of the program and click \"Run\"!"
@@ -29,7 +29,7 @@
       "courseA_collector_loops1_1": "Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage."
     }
   },
-  "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/6": {
+  "https://studio.code.org/s/k1hoc2017/lessons/1/levels/6": {
     "short_instructions": "Get 1 of these 2 gems to solve this puzzle.",
     "authored_hints": {
       "courseA_collector_preLoops5_a": "You'll need to go two different directions to get even one gem!"
@@ -38,7 +38,7 @@
       "courseA_collector_loops1_1": "Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage."
     }
   },
-  "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/7": {
+  "https://studio.code.org/s/k1hoc2017/lessons/1/levels/7": {
     "short_instructions": "Get both pieces of treasure to solve this puzzle.",
     "authored_hints": {
       "courseA_collector_preLoops6_a": "You will need to use two [][0] blocks to solve this puzzle."
@@ -47,14 +47,14 @@
       "courseA_collector_loops1_1": "Do you see some new blocks in the toolbox?  Don't worry, we will show you how to use them later in the stage."
     }
   },
-  "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/8": {
+  "https://studio.code.org/s/k1hoc2017/lessons/1/levels/8": {
     "short_instructions": "Get all three piles to pass this level.",
     "long_instructions": "Get all three piles! Move Laurel to each piece of treasure, then use this block:\n  [blockly block][0]",
     "authored_hints": {
       "courseA_collector_loops2_b": "After you have moved to a square with treasure, use this block to pick it up.\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/10": {
+  "https://studio.code.org/s/k1hoc2017/lessons/1/levels/10": {
     "long_instructions": "How can Laurel get all five piles of treasure using only one [blockly block][0] block?",
     "authored_hints": {
       "courseA_collector_loops3_a": "Try using a [blockly block][0] loop!",
@@ -64,14 +64,14 @@
       "gradek_adventurer_loops2_1": "This number tells you how many of these blocks you can use in this puzzle."
     }
   },
-  "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/11": {
+  "https://studio.code.org/s/k1hoc2017/lessons/1/levels/11": {
     "short_instructions": "Fix Laurel's path to get all of this treasure.",
     "authored_hints": {
       "courseA_collector_loops4_a": "To change how far Laurel goes, change the number of times that the loop runs.",
       "courseA_collector_loops4_b": "Don't forget that Laurel needs to walk down and collect the treasure after she finishes the [blockly block][0] loop!"
     }
   },
-  "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/12": {
+  "https://studio.code.org/s/k1hoc2017/lessons/1/levels/12": {
     "short_instructions": "Use what you learned to get all of the treasure.",
     "authored_hints": {
       "courseA_collector_loops5_a": "If you can't figure out the answer right away, try using a piece of paper to figure out what arrows you will need and look for a pattern.",
@@ -79,20 +79,20 @@
       "courseA_collector_loops5_c": "You'll want to start with a [blockly block][0] loop that moves Laurel west and collects treasure."
     }
   },
-  "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/13": {
+  "https://studio.code.org/s/k1hoc2017/lessons/1/levels/13": {
     "short_instructions": "Add blocks to this code to get all of the treasure.",
     "authored_hints": {
       "courseA_collector_loops6_a": "Can't figure out what's wrong? Try running the code a couple of times to see what happens.",
       "courseA_collector_loops6_b": "The shortest solution has 2 [blockly block][0] loops, one after the other."
     }
   },
-  "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/14": {
+  "https://studio.code.org/s/k1hoc2017/lessons/1/levels/14": {
     "short_instructions": "What should you add to this code to get all of the treasure?",
     "authored_hints": {
       "courseA_collector_loops7_a": "If you can't figure out what comes next, try running the code to see where Laurel ends up."
     }
   },
-  "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/15": {
+  "https://studio.code.org/s/k1hoc2017/lessons/1/levels/15": {
     "short_instructions": "Write code to get all of this treasure.",
     "authored_hints": {
       "courseA_collector_loops8_a": "If you are having trouble figuring this puzzle out, try writing the moves down on a piece of paper and looking for a pattern.",
@@ -100,11 +100,11 @@
       "courseA_collector_loops8_c": "Remember you can write one piece of the code at a time, then press \"Run\" to figure out where you need to go from there."
     }
   },
-  "https://studio.code.org/s/k1hoc2017/stage/1/puzzle/16": {
+  "https://studio.code.org/s/k1hoc2017/lessons/1/levels/16": {
     "short_instructions": "_\"Eureka!  Get as much treasure as you can!\"_",
     "long_instructions": "_\"Eureka!  Get as much treasure as you can!\"_\\\n(You do not have to get it all.)"
   },
-  "https://studio.code.org/s/k1hoc2017/stage/1/extras?level_name=courseA_collector_loops_challenge1": {
+  "https://studio.code.org/s/k1hoc2017/lessons/1/extras?level_name=courseA_collector_loops_challenge1": {
     "short_instructions": "_\"Can you help me spot some bugs?\"_",
     "long_instructions": "_\"Can you help me spot some bugs? I know which way I want to go, but I'm not sure how many steps to take.\"_",
     "authored_hints": {
@@ -114,7 +114,7 @@
       "courseA_collector_loops_challenge1_d": "The starting program doesn't collect the last 2 gems. Try adding this code at the very end:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/k1hoc2017/stage/1/extras?level_name=courseA_collector_loops_challenge2": {
+  "https://studio.code.org/s/k1hoc2017/lessons/1/extras?level_name=courseA_collector_loops_challenge2": {
     "short_instructions": "Get all of the treasure! ",
     "authored_hints": {
       "courseA_collector_loops_challenge2_b": "You only need to use 1 block to solve this.",

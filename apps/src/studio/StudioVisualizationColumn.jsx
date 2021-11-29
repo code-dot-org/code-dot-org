@@ -19,7 +19,9 @@ var StudioVisualizationColumn = function(props) {
         <svg version="1.1" id="svgStudio" />
         <VisualizationOverlay width={400} height={400}>
           <CrosshairOverlay />
-          <TooltipOverlay providers={[coordinatesProvider()]} />
+          <TooltipOverlay
+            providers={[coordinatesProvider(false, !!props.isRtl)]}
+          />
         </VisualizationOverlay>
       </ProtectedVisualizationDiv>
       <GameButtons>
@@ -40,7 +42,8 @@ var StudioVisualizationColumn = function(props) {
 };
 
 StudioVisualizationColumn.propTypes = {
-  finishButton: PropTypes.bool.isRequired
+  finishButton: PropTypes.bool.isRequired,
+  isRtl: PropTypes.bool
 };
 
 module.exports = StudioVisualizationColumn;

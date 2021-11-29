@@ -16,7 +16,7 @@ class ProjectWidgetWithData extends React.Component {
     projectList: this.props.projectList || []
   };
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     if (this.state.projectList.length === 0) {
       $.ajax({
         method: 'GET',

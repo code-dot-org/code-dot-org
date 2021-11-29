@@ -1,0 +1,13 @@
+{
+  "func": "cos",
+  "category": "Math",
+  "paletteParams": [
+    {
+      "name": "angle"
+    }
+  ],
+  "params": [
+    "0"
+  ],
+  "type": "value"
+}

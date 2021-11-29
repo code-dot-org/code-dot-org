@@ -1,0 +1,250 @@
+framework,category,standard,description
+csa,MOD-1.A,MOD-1.A.1,System.out.print and System.out.println display information on the computer monitor.
+csa,MOD-1.A,MOD-1.A.2,"System.out.println moves the cursor to a new line after the information has been displayed, while System.out.print does not."
+csa,MOD-1.B,MOD-1.B.1,An object is a specific instance of a class with defined attributes.
+csa,MOD-1.B,MOD-1.B.2,"A class is the formal implementation, or blueprint, of the attributes and behaviors of an object."
+csa,MOD-1.C,MOD-1.C.1,A signature consists of the constructor name and the parameter list.
+csa,MOD-1.C,MOD-1.C.2,"The parameter list, in the header of a constructor, lists the types of the values that are passed and their variable names. These are often referred to as formal parameters."
+csa,MOD-1.C,MOD-1.C.3,A parameter is a value that is passed into a constructor. These are often referred to as actual parameters.
+csa,MOD-1.C,MOD-1.C.4,Constructors are said to be overloaded when there are multiple constructors with the same name but a different signature.
+csa,MOD-1.C,MOD-1.C.5,The actual parameters passed to a constructor must be compatible with the types identified in the formal parameter list.
+csa,MOD-1.C,MOD-1.C.6,Parameters are passed using call by value. Call by value initializes the formal parameters with copies of the actual parameters.
+csa,MOD-1.D,MOD-1.D.1,Every object is created using the keyword new followed by a call to one of the class’s constructors.
+csa,MOD-1.D,MOD-1.D.2,A class contains constructors that are invoked to create objects. They have the same name as the class.
+csa,MOD-1.D,MOD-1.D.3,Existing classes and class libraries can be utilized as appropriate to create objects.
+csa,MOD-1.D,MOD-1.D.4,Parameters allow values to be passed to the constructor to establish the initial state of the object.
+csa,MOD-1.E,MOD-1.E.1,An object’s behavior refers to what the object can do (or what can be done to it) and is defined by methods.
+csa,MOD-1.E,MOD-1.E.2,Procedural abstraction allows a programmer to use a method by knowing what the method does even if they do not know how the method was written.
+csa,MOD-1.E,MOD-1.E.3,A method signature for a method without parameters consists of the method name and an empty parameter list.
+csa,MOD-1.E,MOD-1.E.4,"A method or constructor call interrupts the sequential execution of statements, causing the program to first execute the statements in the method or constructor before continuing. Once the last statement in the method or constructor has executed or a return statement is executed, flow of control is returned to the point immediately following where the method or constructor was called."
+csa,MOD-1.E,MOD-1.E.5,Non-static methods are called through objects of the class.
+csa,MOD-1.E,MOD-1.E.6,The dot operator is used along with the object name to call non-static methods.
+csa,MOD-1.E,MOD-1.E.7,Void methods do not have return values and are therefore not called as part of an expression.
+csa,MOD-1.E,MOD-1.E.8,Using a null reference to call a method or access an instance variable causes a NullPointerException to be thrown.
+csa,MOD-1.F,MOD-1.F.1,A method signature for a method with parameters consists of the method name and the ordered list of parameter types.
+csa,MOD-1.F,MOD-1.F.2,Values provided in the parameter list need to correspond to the order and type in the method signature.
+csa,MOD-1.F,MOD-1.F.3,Methods are said to be overloaded when there are multiple methods with the same name but a different signature.
+csa,MOD-1.G,MOD-1.G.1,"Non-void methods return a value that is the same type as the return type in the signature. To use the return value when calling a non-void method, it must be stored in a variable or used as part of an expression."
+csa,MOD-1.H,MOD-1.H.1,Static methods are called using the dot operator along with the class name unless they are defined in the enclosing class.
+csa,MOD-2.A,MOD-2.A.1,"The keywords public and private affect the access of classes, data, constructors, and methods."
+csa,MOD-2.A,MOD-2.A.2,"The keyword private restricts access to the declaring class, while the keyword public allows access from classes outside the declaring class."
+csa,MOD-2.A,MOD-2.A.3,Classes are designated public.
+csa,MOD-2.A,MOD-2.A.4,"Access to attributes should be kept internal to the class. Therefore, instance variables are designated as private."
+csa,MOD-2.A,MOD-2.A.5,Constructors are designated public.
+csa,MOD-2.A,MOD-2.A.6,"Access to behaviors can be internal or external to the class. Therefore, methods can be designated as either public or private."
+csa,MOD-2.B,MOD-2.B.1,An object’s state refers to its attributes and their values at a given time and is defined by instance variables belonging to the object. This creates a “has-a” relationship between the object and its instance variables.
+csa,MOD-2.B,MOD-2.B.2,"Constructors are used to set the initial state of an object, which should include initial values for all instance variables."
+csa,MOD-2.B,MOD-2.B.3,Constructor parameters are local variables to the constructor and provide data to initialize instance variables.
+csa,MOD-2.B,MOD-2.B.4,"When a mutable object is a constructor parameter, the instance variable should be initialized with a copy of the referenced object. In this way, the instance variable is not an alias of the original object, and methods are prevented from modifying the state of the original object."
+csa,MOD-2.B,MOD-2.B.5,"When no constructor is written, Java provides a no-argument constructor, and the instance variables are set to default values."
+csa,MOD-2.C,MOD-2.C.1,Comments are ignored by the compiler and are not executed when the program is run.
+csa,MOD-2.C,MOD-2.C.2,"Three types of comments in Java include /* */, which generates a block of comments, //, which generates a comment on one line, and /** */, which are Javadoc comments and are used to create API documentation."
+csa,MOD-2.C,MOD-2.C.3,A precondition is a condition that must be true just prior to the execution of a section of program code in order for the method to behave as expected. There is no expectation that the method will check to ensure preconditions are satisfied.
+csa,MOD-2.C,MOD-2.C.4,A postcondition is a condition that must always be true after the execution of a section of program code. Postconditions describe the outcome of the execution in terms of what is being returned or the state of an object.
+csa,MOD-2.C,MOD-2.C.5,Programmers write method code to satisfy the postconditions when preconditions are met.
+csa,MOD-2.D,MOD-2.D.1,An accessor method allows other objects to obtain the value of instance variables or static variables.
+csa,MOD-2.D,MOD-2.D.2,A non-void method returns a single value. Its header includes the return type in place of the keyword void.
+csa,MOD-2.D,MOD-2.D.3,"In non-void methods, a return expression compatible with the return type is evaluated, and a copy of that value is returned. This is referred to as “return by value.”"
+csa,MOD-2.D,MOD-2.D.4,"When the return expression is a reference to an object, a copy of that reference is returned, not a copy of the object"
+csa,MOD-2.D,MOD-2.D.5,The return keyword is used to return the flow of control to the point immediately following where the method or constructor was called.
+csa,MOD-2.D,MOD-2.D.6,The toString method is an overridden method that is included in classes to provide a description of a specific object. It generally includes what values are stored in the instance data of the object.
+csa,MOD-2.D,MOD-2.D.7,"If System.out.print or System.out. println is passed an object, that object’s toString method is called, and the returned string is printed."
+csa,MOD-2.E,MOD-2.E.1,A void method does not return a value. Its header contains the keyword void before the method name.
+csa,MOD-2.E,MOD-2.E.2,A mutator (modifier) method is often a void method that changes the values of instance variables or static variables.
+csa,MOD-2.F,MOD-2.F.1,Methods can only access the private data and methods of a parameter that is a reference to an object when the parameter is the same type as the method’s enclosing class.
+csa,MOD-2.F,MOD-2.F.2,"Non-void methods with parameters receive values through parameters, use those values, and return a computed value of the specified type."
+csa,MOD-2.F,MOD-2.F.3,It is good programming practice to not modify mutable objects that are passed as parameters unless required in the specification.
+csa,MOD-2.F,MOD-2.F.4,"When an actual parameter is a primitive value, the formal parameter is initialized with a copy of that value. Changes to the formal parameter have no effect on the corresponding actual parameter."
+csa,MOD-2.F,MOD-2.F.5,"When an actual parameter is a reference to an object, the formal parameter is initialized with a copy of that reference, not a copy of the object. If the reference is to a mutable object, the method or constructor can use this reference to alter the state of the object."
+csa,MOD-2.F,MOD-2.F.6,Passing a reference parameter results in the formal parameter and the actual parameter being aliases. They both refer to the same object.
+csa,MOD-2.G,MOD-2.G.1,"Static methods are associated with the class, not objects of the class."
+csa,MOD-2.G,MOD-2.G.2,Static methods include the keyword static in the header before the method name.
+csa,MOD-2.G,MOD-2.G.3,Static methods cannot access or change the values of instance variables.
+csa,MOD-2.G,MOD-2.G.4,Static methods can access or change the values of static variables.
+csa,MOD-2.G,MOD-2.G.5,Static methods do not have a this reference and are unable to use the class’s instance variables or call non-static methods.
+csa,MOD-2.H,MOD-2.H.1,"Static variables belong to the class, with all objects of a class sharing a single static variable."
+csa,MOD-2.H,MOD-2.H.2,Static variables can be designated as either public or private and are designated with the static keyword before the variable type.
+csa,MOD-2.H,MOD-2.H.3,"Static variables are used with the class name and the dot operator, since they are associated with a class, not objects of a class."
+csa,MOD-3.A,MOD-3.A.1,Data encapsulation is a technique in which the implementation details of a class are kept hidden from the user.
+csa,MOD-3.A,MOD-3.A.2,"When designing a class, programmers make decisions about what data to make accessible and modifiable from an external class. Data can be either accessible or modifiable, or it can be both or neither."
+csa,MOD-3.A,MOD-3.A.3,Instance variables are encapsulated by using the private access modifier.
+csa,MOD-3.A,MOD-3.A.4,The provided accessor and mutator methods in a class allow client code to use and modify data.
+csa,MOD-3.B,MOD-3.B.1,A class hierarchy can be developed by putting common attributes and behaviors of related classes into a single class called a superclass.
+csa,MOD-3.B,MOD-3.B.2,"Classes that extend a superclass, called subclasses, can draw upon the existing attributes and behaviors of the superclass without repeating these in the code."
+csa,MOD-3.B,MOD-3.B.3,Extending a subclass from a superclass creates an “is-a” relationship from the subclass to the superclass.
+csa,MOD-3.B,MOD-3.B.4,The keyword extends is used to establish an inheritance relationship between a subclass and a superclass. A class can extend only one superclass.
+csa,MOD-3.B,MOD-3.B.5,Constructors are not inherited
+csa,MOD-3.B,MOD-3.B.6,The superclass constructor can be called from the first line of a subclass constructor by using the keyword super and passing appropriate parameters.
+csa,MOD-3.B,MOD-3.B.7,The actual parameters passed in the call to the superclass constructor provide values that the constructor can use to initialize the object’s instance variables.
+csa,MOD-3.B,MOD-3.B.8,"When a subclass’s constructor does not explicitly call a superclass’s constructor using super, Java inserts a call to the superclass’s no-argument constructor."
+csa,MOD-3.B,MOD-3.B.9,"Regardless of whether the superclass constructor is called implicitly or explicitly, the process of calling superclass constructors continues until the Object constructor is called. At this point, all of the constructors within the hierarchy execute beginning with the Object constructor."
+csa,MOD-3.B,MOD-3.B.10,Method overriding occurs when a public method in a subclass has the same method signature as a public method in the superclass.
+csa,MOD-3.B,MOD-3.B.11,Any method that is called must be defined within its own class or its superclass.
+csa,MOD-3.B,MOD-3.B.12,A subclass is usually designed to have modified (overridden) or additional methods or instance variables.
+csa,MOD-3.B,MOD-3.B.13,A subclass will inherit all public methods from the superclass; these methods remain public in the subclass.
+csa,MOD-3.B,MOD-3.B.14,The keyword super can be used to call a superclass’s constructors and methods.
+csa,MOD-3.B,MOD-3.B.15,The superclass method can be called in a subclass by using the keyword super with the method name and passing appropriate parameters.
+csa,MOD-3.C,MOD-3.C.1,"When a class S “is-a” class T, T is referred to as a superclass, and S is referred to as a subclass."
+csa,MOD-3.C,MOD-3.C.2,"If S is a subclass of T, then assigning an object of type S to a reference of type T facilitates polymorphism."
+csa,MOD-3.C,MOD-3.C.3,"If S is a subclass of T, then a reference of type T can be used to refer to an object of type T or S."
+csa,MOD-3.C,MOD-3.C.4,"Declaring references of type T, when S is a subclass of T, is useful in the following declarations: • Formal method parameters • arrays — T[] var ArrayList<T> var"
+csa,MOD-3.D,MOD-3.D.1,Utilize the Object class through inheritance.
+csa,MOD-3.D,MOD-3.D.2,"At compile time, methods in or inherited by the declared type determine the correctness of a non-static method call."
+csa,MOD-3.D,MOD-3.D.3,"At run-time, the method in the actual object type is executed for a non-static method call."
+csa,MOD-3.E,MOD-3.E.1,The Object class is the superclass of all other classes in Java.
+csa,MOD-3.E,MOD-3.E.2,The Object class is part of the java.lang package
+csa,MOD-3.E,MOD-3.E.3,The following Object class methods and constructors—including what they do and when they are used—are part of the Java Quick Reference: • boolean equals(Object other) • String toString()
+csa,MOD-3.E,MOD-3.E.4,Subclasses of Object often override the equals and toString methods with class specific implementations.
+csa,VAR-1.A,VAR-1.A.1,A string literal is enclosed in double quotes.
+csa,VAR-1.B,VAR-1.B.1,A type is a set of values (a domain) and a set of operations on them.
+csa,VAR-1.B,VAR-1.B.2,Data types can be categorized as either primitive or reference.
+csa,VAR-1.B,VAR-1.B.3,The primitive data types used in this course define the set of operations for numbers and Boolean values.
+csa,VAR-1.C,VAR-1.C.1,"The three primitive data types used in this course are int, double, and boolean."
+csa,VAR-1.C,VAR-1.C.2,Each variable has associated memory that is used to hold its value.
+csa,VAR-1.C,VAR-1.C.3,The memory associated with a variable of a primitive type holds an actual primitive value.
+csa,VAR-1.C,VAR-1.C.4,"When a variable is declared final, its value cannot be changed once it is initialized."
+csa,VAR-1.D,VAR-1.D.1,The keyword null is a special value used to indicate that a reference is not associated with any object.
+csa,VAR-1.D,VAR-1.D.2,"The memory associated with a variable of a reference type holds an object reference value or, if there is no object, null. This value is the memory address of the referenced object."
+csa,VAR-1.E,VAR-1.E.1,String objects can be created by usingstring literals or by calling the String class constructor.
+csa,VAR-1.E,VAR-1.E.2,"String objects are immutable, meaning that String methods do not change the String object."
+csa,VAR-1.E,VAR-1.E.3,"String objects can be concatenated using the + or += operator, resulting in a new String object."
+csa,VAR-1.E,VAR-1.E.4,Primitive values can be concatenated with a String object. This causes implicit conversion of the values to String objects.
+csa,VAR-1.E,VAR-1.E.5,"Escape sequences start with a \ and have a special meaning in Java. Escape sequences used in this course include \”, \\, and \n."
+csa,VAR-1.E,VAR-1.E.6,Application program interfaces (APIs) and libraries simplify complex programming tasks.
+csa,VAR-1.E,VAR-1.E.7,Documentation for APIs and libraries are essential to understanding the attributes and behaviors of an object of a class.
+csa,VAR-1.E,VAR-1.E.8,Classes in the APIs and libraries are grouped into packages.
+csa,VAR-1.E,VAR-1.E.9,The String class is part of the java.lang package. Classes in the java.lang package are available by default.
+csa,VAR-1.E,VAR-1.E.10,A String object has index values from 0 to length – 1. Attempting to access indices outside this range will result in an IndexOutOfBoundsException.
+csa,VAR-1.E,VAR-1.E.11,"A String object can be concatenated with an object reference, which implicitly calls the referenced object’s toString method."
+csa,VAR-1.E,VAR-1.E.12,"The following String methods and constructors—including what they do and when they are used—are part of the Java Quick Reference: • String(String str) — Constructs a new String object that represents the same sequence of characters as str • int length() — Returns the number of characters in a String object • String substring(int from, int to) — Returns the substring beginning at index from and ending at index to - 1 • String substring(int from) — Returns substring(from, length()) • int indexOf(String str) — Returns the index of the first occurrence of str; returns -1 if not found • boolean equals(String other) — Returns true if this is equal to other; returns false otherwise • int compareTo(String other) — Returns a value < 0 if this is less than other; returns zero if this is equal to other; returns a value > 0 if this is greater than other"
+csa,VAR-1.E,VAR-1.E.13,"A string identical to the single element substring at position index can be created by calling substring(index, index + 1)."
+csa,VAR-1.F,VAR-1.F.1,The Integer class and Double class are part of the java.lang package.
+csa,VAR-1.F,VAR-1.F.2,The following Integer methods and constructors—including what they do and when they are used—are part of the Java Quick Reference: • Integer(int value) — Constructs a new Integer object that represents the specified int value • Integer.MIN_VALUE — The minimum value represented by an int or Integer • Integer.MAX_VALUE — The maximum value represented by an int or Integer • int intValue() — Returns the value of this Integer as an int
+csa,VAR-1.F,VAR-1.F.3,The following Double methods and constructors—including what they do and when they are used—are part of the Java Quick Reference: • Double(double value) — Constructs a new Double object that represents the specified double value • double doubleValue() — Returns the value of this Double as a double
+csa,VAR-1.F,VAR-1.F.4,Autoboxing is the automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes. This includes converting an int to an Integer and a double to a Double.
+csa,VAR-1.F,VAR-1.F.5,The Java compiler applies autoboxing when a primitive value is: • Passed as a parameter to a method that expects an object of the corresponding wrapper class. • Assigned to a variable of the corresponding wrapper class.
+csa,VAR-1.F,VAR-1.F.6,Unboxing is the automatic conversion that the Java compiler makes from the wrapper class to the primitive type. This includes converting an Integer to an int and a Double to a double.
+csa,VAR-1.F,VAR-1.F.7,The Java compiler applies unboxing when a wrapper class object is: • Passed as a parameter to a method that expects a value of the corresponding primitive type. • Assigned to a variable of the corresponding primitive type.
+csa,VAR-1.G,VAR-1.G.1,Local variables can be declared in the body of constructors and methods. These variables may only be used within the constructor or method and cannot be declared to be public or private.
+csa,VAR-1.G,VAR-1.G.2,"When there is a local variable with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable."
+csa,VAR-1.G,VAR-1.G.3,Formal parameters and variables declared in a method or constructor can only be used within that method or constructor.
+csa,VAR-1.G,VAR-1.G.4,"Through method decomposition, a programmer breaks down a large problem into smaller subproblems by creating methods to solve each individual subproblem."
+csa,VAR-1.H,VAR-1.H.1,"Within a non-static method or a constructor, the keyword this is a reference to the current object—the object whose method or constructor is being called."
+csa,VAR-1.H,VAR-1.H.2,The keyword this can be used to pass the current object as an actual parameter in a method call.
+csa,VAR-2.A,VAR-2.A.1,The use of array objects allows multiple related items to be represented using a single variable.
+csa,VAR-2.A,VAR-2.A.2,The size of an array is established at the time of creation and cannot be changed.
+csa,VAR-2.A,VAR-2.A.3,Arrays can store either primitive data or object reference data.
+csa,VAR-2.A,VAR-2.A.4,"When an array is created using the keyword new, all of its elements are initialized with a specific value based on the type of elements: • Elements of type int are initialized to 0 • Elements of type double are initialized to 0.0 • Elements of type boolean are initialized to false • Elements of a reference type are initialized to the reference value null. No objects are automatically created"
+csa,VAR-2.A,VAR-2.A.5,Initializer lists can be used to create and initialize arrays.
+csa,VAR-2.A,VAR-2.A.6,Square brackets ([ ]) are used to access and modify an element in a 1D array using an index.
+csa,VAR-2.A,VAR-2.A.7,"The valid index values for an array are 0 through one less than the number of elements in the array, inclusive. Using an index value outside of this range will result in an ArrayIndexOutOfBoundsException being thrown."
+csa,VAR-2.B,VAR-2.B.1,Iteration statements can be used to access all the elements in an array. This is called traversing the array.
+csa,VAR-2.B,VAR-2.B.2,Traversing an array with an indexed for loop or while loop requires elements to be accessed using their indices
+csa,VAR-2.B,VAR-2.B.3,"Since the indices for an array start at 0 and end at the number of elements − 1, “off by one” errors are easy to make when traversing an array, resulting in an ArrayIndexOutOfBoundsException being thrown."
+csa,VAR-2.C,VAR-2.C.1,"An enhanced for loop header includes a variable, referred to as the enhanced for loop variable."
+csa,VAR-2.C,VAR-2.C.2,"For each iteration of the enhanced for loop, the enhanced for loop variable is assigned a copy of an element without using its index."
+csa,VAR-2.C,VAR-2.C.3,Assigning a new value to the enhanced for loop variable does not change the value stored in the array
+csa,VAR-2.C,VAR-2.C.4,Program code written using an enhanced for loop to traverse and access elements in an array can be rewritten using an indexed for loop or a while loop.
+csa,VAR-2.D,VAR-2.D.1,An ArrayList object is mutable and contains object references.
+csa,VAR-2.D,VAR-2.D.2,The ArrayList constructor ArrayList() constructs an empty list.
+csa,VAR-2.D,VAR-2.D.3,"Java allows the generic type ArrayList<E>, where the generic type E specifies the type of the elements."
+csa,VAR-2.D,VAR-2.D.4,"When ArrayList<E> is specified, the types of the reference parameters and return type when using the methods are type E."
+csa,VAR-2.D,VAR-2.D.5,ArrayList<E> is preferred over ArrayList because it allows the compiler to find errors that would otherwise be found at run-time.
+csa,VAR-2.D,VAR-2.D.6,The ArrayList class is part of the java.util package. An import statement can be used to make this class available for use in the program.
+csa,VAR-2.D,VAR-2.D.7,"The following ArrayList methods— including what they do and when they are used—are part of the Java Quick Reference: • int size() - Returns the number of elements in the list • boolean add(E obj) - Appends obj to end of list; returns true • void add(int index, E obj) - Inserts obj at position index (0 <= index <= size), moving elements at position index and higher to the right (adds 1 to their indices) and adds 1 to size • E get(int index) - Returns the element at position index in the list • E set(int index, E obj) —  Replaces the element at position index with obj; returns the element formerly at position index • E remove(int index) — Removes element from position index, moving elements at position index + 1 and higher to the left (subtracts 1 from their indices) and subtracts 1 from size; returns the element formerly at position index"
+csa,VAR-2.E,VAR-2.E.1,Iteration statements can be used to access all the elements in an ArrayList. This is called traversing the ArrayList.
+csa,VAR-2.E,VAR-2.E.2,Deleting elements during a traversal of an ArrayList requires using special techniques to avoid skipping elements.
+csa,VAR-2.E,VAR-2.E.3,"Since the indices for an ArrayList start at 0 and end at the number of elements − 1, accessing an index value outside of this range will result in an ArrayIndexOutOfBoundsException being thrown."
+csa,VAR-2.E,VAR-2.E.4,"Changing the size of an ArrayList while traversing it using an enhanced for loop can result in a ConcurrentModificationException being thrown. Therefore, when using an enhanced for loop to traverse an ArrayList, you should not add or remove elements."
+csa,VAR-2.F,VAR-2.F.1,"2D arrays are stored as arrays of arrays. Therefore, the way 2D arrays are created and indexed is similar to 1D array objects"
+csa,VAR-2.F,VAR-2.F.2,"For the purposes of the exam, when accessing the element at arr[first][second], the first index is used for rows, the second index is used for columns."
+csa,VAR-2.F,VAR-2.F.3,The initializer list used to create and initialize a 2D array consists of initializer lists that represent 1D arrays.
+csa,VAR-2.F,VAR-2.F.4,The square brackets [row][col] are used to access and modify an element in a 2D array.
+csa,VAR-2.F,VAR-2.F.5,"“Row-major order” refers to an ordering of 2D array elements where traversal occurs across each row, while “column-major order” traversal occurs down each column"
+csa,VAR-2.G,VAR-2.G.1,"Nested iteration statements are used to traverse and access all elements in a 2D array. Since 2D arrays are stored as arrays of arrays, the way 2D arrays are traversed using for loops and enhanced for loops is similar to 1D array objects."
+csa,VAR-2.G,VAR-2.G.2,Nested iteration statements can be written to traverse the 2D array in “row-major order” or “column-major order.”
+csa,VAR-2.G,VAR-2.G.3,"The outer loop of a nested enhanced for loop used to traverse a 2D array traverses the rows. Therefore, the enhanced for loop variable must be the type of each row, which is a 1D array. The inner loop traverses a single row. Therefore, the inner enhanced for loop variable must be the same type as the elements stored in the 1D array."
+csa,CON-1.A,CON-1.A.1,A literal is the source code representation of a fixed value.
+csa,CON-1.A,CON-1.A.2,Arithmetic expressions include expressions of type int and double.
+csa,CON-1.A,CON-1.A.3,"The arithmetic operators consist of +, −, *, /, and %."
+csa,CON-1.A,CON-1.A.4,An arithmetic operation that uses two int values will evaluate to an int value.
+csa,CON-1.A,CON-1.A.5,An arithmetic operation that uses a double value will evaluate to a double value.
+csa,CON-1.A,CON-1.A.6,Operators can be used to construct compound expressions.
+csa,CON-1.A,CON-1.A.7,"During evaluation, operands are associated with operators according to operator precedence to determine how they are grouped."
+csa,CON-1.A,CON-1.A.8,An attempt to divide an integer by zero will result in an ArithmeticException to occur.
+csa,CON-1.B,CON-1.B.1,The assignment operator (=) allows a program to initialize or change the value stored in a variable. The value of the expression on the right is stored in the variable on the left.
+csa,CON-1.B,CON-1.B.2,"During execution, expressions are evaluated to produce a single value."
+csa,CON-1.B,CON-1.B.3,The value of an expression has a type based on the evaluation of the expression.
+csa,CON-1.B,CON-1.B.4,"Compound assignment operators (+=, −=, *=, /=, %=) can be used in place of the assignment operator."
+csa,CON-1.B,CON-1.B.5,The increment operator (++) and decrement operator (−−) are used to add 1 or subtract 1 from the stored value of a variable or an array element. The new value is assigned to the variable or array element.
+csa,CON-1.C,CON-1.C.1,The casting operators (int) and (double) can be used to create a temporary value converted to a different data type.
+csa,CON-1.C,CON-1.C.2,Casting a double value to an int causes the digits to the right of the decimal point to be truncated.
+csa,CON-1.C,CON-1.C.3,Some programming code causes int values to be automatically cast (widened) to double values
+csa,CON-1.C,CON-1.C.4,Values of type double can be rounded to the nearest integer by (int)(x + 0.5) or (int)(x - 0.5) for negative numbers.
+csa,CON-1.C,CON-1.C.5,"Integer values in Java are represented by values of type int, which are stored using a finite amount (4 bytes) of memory. Therefore, an int value must be in the range from Integer.MIN_VALUE to Integer.MAX_VALUE inclusive."
+csa,CON-1.C,CON-1.C.6,"If an expression would evaluate to an int value outside of the allowed range, an integer overflow occurs. This could result in an incorrect value within the allowed range."
+csa,CON-1.D,CON-1.D.1,The Math class is part of the java.lang package.
+csa,CON-1.D,CON-1.D.2,The Math class contains only static methods.
+csa,CON-1.D,CON-1.D.3,"The following static Math methods—including what they do and when they are used—are part of the Java Quick Reference: • int abs(int x) — Returns the absolute value of an int value • double abs(double x) — Returns the absolute value of a double value • double pow(double base, double exponent) — Returns the value of the first parameter raised to the power of the second parameter • double sqrt(double x) — Returns the positive square root of a double value • double random() — Returns a double value greater than or equal to 0.0 and less than 1.0"
+csa,CON-1.D,CON-1.D.4,The values returned from Math.random can be manipulated to produce a random int or double in a defined range.
+csa,CON-1.E,CON-1.E.1,"Primitive values and reference values can be compared using relational operators (i.e., == and !=)."
+csa,CON-1.E,CON-1.E.2,"Arithmetic expression values can be compared using relational operators (i.e., <, >, <=, >=)."
+csa,CON-1.E,CON-1.E.3,An expression involving relational operators evaluates to a Boolean value.
+csa,CON-1.F,CON-1.F.1,"Logical operators !(not), &&(and), and ||(or) are used with Boolean values. This represents the order these operators will be evaluated."
+csa,CON-1.F,CON-1.F.2,An expression involving logical operators evaluates to a Boolean value.
+csa,CON-1.F,CON-1.F.3,"When the result of a logical expression using && or || can be determined by evaluating only the first Boolean operand, the second is not evaluated. This is known as short-circuited evaluation."
+csa,CON-1.G,CON-1.G.1,De Morgan’s Laws can be applied to Boolean expressions.
+csa,CON-1.G,CON-1.G.2,Truth tables can be used to prove Boolean identities.
+csa,CON-1.G,CON-1.G.3,Equivalent Boolean expressions will evaluate to the same value in all cases.
+csa,CON-1.H,CON-1.H.1,Two object references are considered aliases when they both reference the same object.
+csa,CON-1.H,CON-1.H.2,"Object reference values can be compared, using == and !=, to identify aliases."
+csa,CON-1.H,CON-1.H.3,"A reference value can be compared with null, using == or !=, to determine if the reference actually references an object."
+csa,CON-1.H,CON-1.H.4,"Often classes have their own equals method, which can be used to determine whether two objects of the class are equivalent."
+csa,CON-2.A,CON-2.A.1,Conditional statements interrupt the sequential execution of statements.
+csa,CON-2.A,CON-2.A.2,if statements affect the flow of control by executing different statements based on the value of a Boolean expression.
+csa,CON-2.A,CON-2.A.3,"A one-way selection (if statement) is written when there is a set of statements to execute under a certain condition. In this case, the body is executed only when the Boolean condition is true."
+csa,CON-2.A,CON-2.A.4,"A two-way selection is written when there are two sets of statements— one to be executed when the Boolean condition is true, and another set for when the Boolean condition is false. In this case, the body of the “if” is executed when the Boolean condition is true, and the body of the “else” is executed when the Boolean condition is false."
+csa,CON-2.A,CON-2.A.5,A multi-way selection is written when there are a series of conditions with different statements for each condition. Multi-way selection is performed using if-else-if statements such that exactly one section of code is executed based on the first condition that evaluates to true.
+csa,CON-2.B,CON-2.B.1,Nested if statements consist of if statements within if statements.
+csa,CON-2.C,CON-2.C.1,Iteration statements change the flow of control by repeating a set of statements zero or more times until a condition is met.
+csa,CON-2.C,CON-2.C.2,"In loops, the Boolean expression is evaluated before each iteration of the loop body, including the first. When the expression evaluates to true, the loop body is executed. This continues until the expression evaluates to false, whereupon the iteration ceases."
+csa,CON-2.C,CON-2.C.3,A loop is an infinite loop when the Boolean expression always evaluates to true.
+csa,CON-2.C,CON-2.C.4,"If the Boolean expression evaluates to false initially, the loop body is not executed at all."
+csa,CON-2.C,CON-2.C.5,Executing a return statement inside an iteration statement will halt the loop and exit the method or constructor.
+csa,CON-2.D,CON-2.D.1,There are standard algorithms to: • Identify if an integer is or is not evenly divisible by another integer • Identify the individual digits in an integer • Determine the frequency with which a specific criterion is met
+csa,CON-2.D,CON-2.D.2,"There are standard algorithms to: • Determine a minimum or maximum value • Compute a sum, average, or mode"
+csa,CON-2.E,CON-2.E.1,"There are three parts in a for loop header: the initialization, the Boolean expression, and the increment. The increment statement can also be a decrement statement."
+csa,CON-2.E,CON-2.E.2,"In a for loop, the initialization statement is only executed once before the first Boolean expression evaluation. The variable being initialized is referred to as a loop control variable."
+csa,CON-2.E,CON-2.E.3,"In each iteration of a for loop, the increment statement is executed after the entire loop body is executed and before the Boolean expression is evaluated again."
+csa,CON-2.E,CON-2.E.4,A for loop can be rewritten into an equivalent while loop and vice versa.
+csa,CON-2.E,CON-2.E.5,“Off by one” errors occur when the iteration statement loops one time too many or one time too few.
+csa,CON-2.F,CON-2.F.1,There are standard algorithms that utilize String traversals to: • Find if one or more substrings has a particular property • Determine the number of substrings that meet specific criteria • Create a new string with the characters reversed
+csa,CON-2.G,CON-2.G.1,Nested iteration statements are iteration statements that appear in the body of another iteration statement.
+csa,CON-2.G,CON-2.G.2,"When a loop is nested inside another loop, the inner loop must complete all its iterations before the outer loop can continue."
+csa,CON-2.H,CON-2.H.1,A statement execution count indicates the number of times a statement is executed by the program.
+csa,CON-2.I,CON-2.I.1,"There are standard algorithms that utilize array traversals to: • Determine a minimum or maximum value • Compute a sum, average, or mode • Determine if at least one element has a particular property • Determine if all elements have a particular property • Access all consecutive pairs of elements • Determine the presence or absence of duplicate elements • Determine the number of elements meeting specific criteria"
+csa,CON-2.I,CON-2.I.2,There are standard array algorithms that utilize traversals to: • Shift or rotate elements left or right • Reverse the order of the elements
+csa,CON-2.J,CON-2.J.1,There are standard ArrayList algorithms that utilize traversals to: • Insert elements • Delete elements • Apply the same standard algorithms that are used with 1D arrays
+csa,CON-2.J,CON-2.J.2,"Some algorithms require multiple String, array, or ArrayList objects to be traversed simultaneously."
+csa,CON-2.K,CON-2.K.1,There are standard algorithms for searching.
+csa,CON-2.K,CON-2.K.2,Sequential/linear search algorithms check each element in order until the desired value is found or all elements in the array or ArrayList have been checked.
+csa,CON-2.L,CON-2.L.1,Selection sort and insertion sort are iterative sorting algorithms that can be used to sort elements in an array or ArrayList.
+csa,CON-2.M,CON-2.M.1,Informal run-time comparisons of program code segments can be made using statement execution counts.
+csa,CON-2.N,CON-2.N.1,"When applying sequential/linear search algorithms to 2D arrays, each row must be accessed then sequential/linear search applied to each row of a 2D array."
+csa,CON-2.N,CON-2.N.2,All standard 1D array algorithms can be applied to 2D array objects.
+csa,CON-2.O,CON-2.O.1,A recursive method is a method that calls itself.
+csa,CON-2.O,CON-2.O.2,"Recursive methods contain at least one base case, which halts the recursion, and at least one recursive call."
+csa,CON-2.O,CON-2.O.3,"Each recursive call has its own set of local variables, including the formal parameters."
+csa,CON-2.O,CON-2.O.4,"Parameter values capture the progress of a recursive process, much like loop control variable values capture the progress of a loop."
+csa,CON-2.O,CON-2.O.5,Any recursive solution can be replicated through the use of an iterative approach.
+csa,CON-2.O,CON-2.O.6,"Recursion can be used to traverse String, array, and ArrayList objects."
+csa,CON-2.P,CON-2.P.1,Data must be in sorted order to use the binary search algorithm.
+csa,CON-2.P,CON-2.P.2,The binary search algorithm starts at the middle of a sorted array or ArrayList and eliminates half of the array or ArrayList in each iteration until the desired value is found or all elements have been eliminated.
+csa,CON-2.P,CON-2.P.3,Binary search can be more efficient than sequential/linear search.
+csa,CON-2.P,CON-2.P.4,The binary search algorithm can be written either iteratively or recursively.
+csa,CON-2.Q,CON-2.Q.1,Merge sort is a recursive sorting algorithm that can be used to sort elements in an array or ArrayList.
+csa,IOC-1.A,IOC-1.A.1,System reliability is limited. Programmers should make an effort to maximize system reliability.
+csa,IOC-1.A,IOC-1.A.2,Legal issues and intellectual property concerns arise when creating programs.
+csa,IOC-1.A,IOC-1.A.3,"The creation of programs has impacts on society, economies, and culture. These impacts can be beneficial and/or harmful."
+csa,IOC-1.B,IOC-1.B.1,"When using the computer, personal privacy is at risk. Programmers should attempt to safeguard personal privacy"
+csa,IOC-1.B,IOC-1.B.2,Computer use and the creation of programs have an impact on personal security. These impacts can be beneficial and/or harmful.

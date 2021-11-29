@@ -1,0 +1,17 @@
+%h1 Foorm Simple Surveys
+
+%p
+  Simple surveys are a way to collect responses to a
+  survey at a simple URL (both of your choosing).
+%p
+  Check out
+  = link_to 'this page', new_foorm_simple_survey_form_path
+  to create a new simple survey, or implement a new survey at an existing URL.
+%p
+  Here's a list of simple surveys that have been set up.
+  Note that some surveys are disabled after they've been used (disabling currently only accessible to engineers),
+  so you may see a message saying the survey has closed on some of these pages.
+
+- Foorm::SimpleSurveyForm.all.pluck(:path).sort.uniq.each do |path|
+  %p
+    = link_to path, CDO.studio_url("form/#{path}", CDO.default_scheme)

@@ -1,0 +1,79 @@
+---
+title: Computer Science Curriculum for Grades 6-12
+theme: responsive
+---
+
+:css
+  h2 {
+    margin: 0;
+  }
+
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/code.org/public/student/middle-high-alt.js')}
+%link{href: "/shared/css/course-blocks.css", rel: "stylesheet", type: "text/css"}
+= view 'mobilecheck.js'
+
+.solid-block-header
+  Grades 6-12
+
+%h1 Learning at your own pace
+
+%h2 Learn the fundamentals with our self-paced courses
+
+%h3
+  %strong
+    Express course
+
+A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour
+%a{href: CDO.studio_url('/s/20-hour')} Accelerated Course.
+To see what's available in your language, visit our
+%a{href: CDO.studio_url('/courses')} course catalog.
+
+%div{style: "padding-top: 20px;"}
+  %a{href: CDO.studio_url('/s/express')}
+    %img{src: "/images/curriculum/course-tile-express.png", style: "max-width: 100%"}
+
+= view :athome_olderstudents
+
+%div{style: "clear: both;"}
+%br/
+%br/
+%h2 Make your own apps, games, and webpages
+.hoc-tiles-container
+
+%div{style: "clear: both;"}
+%br/
+%br/
+%h2 Videos: Watch these easy 3-5 minute educational videos
+%br/
+= view :athome_videos
+%br/
+%hr/
+
+%h1 Learning in the classroom
+%h2 Computer Science Discoveries
+%br/
+= view :csd_information
+%div{style: "clear: both;"}
+%br/
+%h2 Computer Science Principles (intro and AP course)
+%br/
+= view :csp_information
+%br/
+%br/
+%h2 Computer Science A (coming in 2022)
+%br/
+= view :csa_information
+%br/
+
+%h2 Discovering Artificial Intelligence and Machine Learning
+%br/
+The CS Discoveries curriculum features a <a href="https://studio.code.org/s/csd7-2021" target="_blank">standalone module</a> on artificial intelligence (AI) and machine learning (ML), which can be taught on its own or as a part of your CS curriculum. As these technologies touch more and more of our daily lives, they have become an essential part of foundational computer science education. The module focuses on AI ethics, examines issues of bias, and explores and explains fundamental concepts through a number of online and unplugged activities and full-group discussions.
+
+[<button>Explore the AI module</button>](https://studio.code.org/s/csd7-2021)&nbsp;&nbsp;
+
+<br>
+%hr/
+%h1 Courses from 3rd parties
+= view :learn_carousels, variation:'middle_high'

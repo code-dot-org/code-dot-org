@@ -2,13 +2,18 @@
   "script": {
     "name": "coursec-draft",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
-      "has_lesson_plan": true
+      "is_migrated": true,
+      "use_legacy_lesson_plans": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-11-22 19:56:03 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "coursec-draft"
     }
@@ -32,8 +37,10 @@
       "name": "Building a Foundation",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Building a Foundation",
@@ -46,6 +53,7 @@
       "name": "Programming in Maze",
       "absolute_position": 2,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
       },
@@ -60,6 +68,7 @@
       "name": "Debugging in Maze",
       "absolute_position": 3,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
       },
@@ -74,8 +83,10 @@
       "name": "Real-life Algorithms: Paper Planes",
       "absolute_position": 4,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Real-life Algorithms: Paper Planes",
@@ -88,6 +99,7 @@
       "name": "Programming in Collector",
       "absolute_position": 5,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
       },
@@ -102,6 +114,7 @@
       "name": "Programming in Artist",
       "absolute_position": 6,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
       },
@@ -116,8 +129,10 @@
       "name": "Loops: Getting Loopy",
       "absolute_position": 7,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Loops: Getting Loopy",
@@ -130,6 +145,7 @@
       "name": "Loops in Maze",
       "absolute_position": 8,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
       },
@@ -144,6 +160,7 @@
       "name": "Loops in Harvester",
       "absolute_position": 9,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
       },
@@ -158,8 +175,10 @@
       "name": "Events: The Big Event",
       "absolute_position": 10,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Events: The Big Event",
@@ -172,6 +191,7 @@
       "name": "Build a Flappy Game",
       "absolute_position": 11,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
       },
@@ -186,6 +206,7 @@
       "name": "Events in Play Lab",
       "absolute_position": 12,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
       },
@@ -200,6 +221,7 @@
       "name": "Screen Out the Mean",
       "absolute_position": 13,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
       },
@@ -214,8 +236,10 @@
       "name": "Binary Bracelets",
       "absolute_position": 14,
       "lockable": false,
+      "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
+        "unplugged": true
       },
       "seeding_key": {
         "lesson.key": "Binary Bracelets",
@@ -224,22 +248,352 @@
       }
     }
   ],
+  "lesson_activities": [
+    {
+      "key": "c6a4d7da-f761-42a5-8b06-71a08f06bd0b",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c6a4d7da-f761-42a5-8b06-71a08f06bd0b",
+        "lesson.key": "Building a Foundation",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "40f5ab83-c637-494a-92fe-cd1e1b1c196d",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "40f5ab83-c637-494a-92fe-cd1e1b1c196d",
+        "lesson.key": "Programming in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "57507c7c-1bce-4516-afda-7096fd48acc4",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "57507c7c-1bce-4516-afda-7096fd48acc4",
+        "lesson.key": "Debugging in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "6f93cceb-cb9c-468a-9a0a-328776979884",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6f93cceb-cb9c-468a-9a0a-328776979884",
+        "lesson.key": "Real-life Algorithms: Paper Planes",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "f50c3e16-c17c-4c0c-b8cc-009534a9298f",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f50c3e16-c17c-4c0c-b8cc-009534a9298f",
+        "lesson.key": "Programming in Collector",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "176141cf-1d53-4327-86a6-2eb251639c0e",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "176141cf-1d53-4327-86a6-2eb251639c0e",
+        "lesson.key": "Programming in Artist",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "ccb43d92-8853-4fa8-8972-2a5f48a67594",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ccb43d92-8853-4fa8-8972-2a5f48a67594",
+        "lesson.key": "Loops: Getting Loopy",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "98ee3bd1-bb4c-4d2c-a0c8-654264a98bf9",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "98ee3bd1-bb4c-4d2c-a0c8-654264a98bf9",
+        "lesson.key": "Loops in Maze",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "b3e67a7f-cb01-4a2e-b4d6-3fc410727354",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b3e67a7f-cb01-4a2e-b4d6-3fc410727354",
+        "lesson.key": "Loops in Harvester",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "26e1d36a-b7db-443d-9ed7-a746b8aec558",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "26e1d36a-b7db-443d-9ed7-a746b8aec558",
+        "lesson.key": "Events: The Big Event",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "8e4f7a09-fe62-4376-90ac-1c7c650f36ff",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8e4f7a09-fe62-4376-90ac-1c7c650f36ff",
+        "lesson.key": "Build a Flappy Game",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "3aadf9ca-f5dc-4ea9-90cc-1e266b0231a3",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3aadf9ca-f5dc-4ea9-90cc-1e266b0231a3",
+        "lesson.key": "Events in Play Lab",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "708604ca-e4f4-47bb-8dc4-c377eede1266",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "708604ca-e4f4-47bb-8dc4-c377eede1266",
+        "lesson.key": "Screen Out the Mean",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    },
+    {
+      "key": "9f73079c-81b5-45cb-aea8-9e0e327d1218",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9f73079c-81b5-45cb-aea8-9e0e327d1218",
+        "lesson.key": "Binary Bracelets",
+        "lesson_group.key": "",
+        "script.name": "coursec-draft"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "bfc02d7f-a99e-41c9-a426-bcfa64e051e9",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "bfc02d7f-a99e-41c9-a426-bcfa64e051e9",
+        "lesson_activity.key": "c6a4d7da-f761-42a5-8b06-71a08f06bd0b"
+      }
+    },
+    {
+      "key": "eca44544-76d6-40c1-ab43-2169aebd87ae",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae",
+        "lesson_activity.key": "40f5ab83-c637-494a-92fe-cd1e1b1c196d"
+      }
+    },
+    {
+      "key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf",
+        "lesson_activity.key": "57507c7c-1bce-4516-afda-7096fd48acc4"
+      }
+    },
+    {
+      "key": "3208cb94-75dc-4185-acf2-6617d153ba23",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3208cb94-75dc-4185-acf2-6617d153ba23",
+        "lesson_activity.key": "6f93cceb-cb9c-468a-9a0a-328776979884"
+      }
+    },
+    {
+      "key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a",
+        "lesson_activity.key": "f50c3e16-c17c-4c0c-b8cc-009534a9298f"
+      }
+    },
+    {
+      "key": "f70c2d96-1760-4f1b-9b41-167ed855dc20",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20",
+        "lesson_activity.key": "176141cf-1d53-4327-86a6-2eb251639c0e"
+      }
+    },
+    {
+      "key": "5b48e4bb-cd41-4062-9c95-97829229f2f8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5b48e4bb-cd41-4062-9c95-97829229f2f8",
+        "lesson_activity.key": "ccb43d92-8853-4fa8-8972-2a5f48a67594"
+      }
+    },
+    {
+      "key": "2e381621-2b9f-4907-b611-9f5100cd1e16",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16",
+        "lesson_activity.key": "98ee3bd1-bb4c-4d2c-a0c8-654264a98bf9"
+      }
+    },
+    {
+      "key": "f49037ad-79f0-4193-b240-a6a1e873aba8",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8",
+        "lesson_activity.key": "b3e67a7f-cb01-4a2e-b4d6-3fc410727354"
+      }
+    },
+    {
+      "key": "874843be-b643-4ab7-8149-b45b0eefd1aa",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "874843be-b643-4ab7-8149-b45b0eefd1aa",
+        "lesson_activity.key": "26e1d36a-b7db-443d-9ed7-a746b8aec558"
+      }
+    },
+    {
+      "key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975",
+        "lesson_activity.key": "8e4f7a09-fe62-4376-90ac-1c7c650f36ff"
+      }
+    },
+    {
+      "key": "3d618f6c-1a87-4e18-8102-440db69f915c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c",
+        "lesson_activity.key": "3aadf9ca-f5dc-4ea9-90cc-1e266b0231a3"
+      }
+    },
+    {
+      "key": "05c1246c-2011-4305-b5d0-d95ab7a57f4c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "05c1246c-2011-4305-b5d0-d95ab7a57f4c",
+        "lesson_activity.key": "708604ca-e4f4-47bb-8dc4-c377eede1266"
+      }
+    },
+    {
+      "key": "1e905771-7e00-4d44-abac-c685ffeed015",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1e905771-7e00-4d44-abac-c685ffeed015",
+        "lesson_activity.key": "9f73079c-81b5-45cb-aea8-9e0e327d1218"
+      }
+    }
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "BuildingAFoundation"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "BuildingAFoundation"
         ],
         "lesson.key": "Building a Foundation",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "bfc02d7f-a99e-41c9-a426-bcfa64e051e9"
       },
       "level_keys": [
         "BuildingAFoundation"
@@ -248,18 +602,22 @@
     {
       "chapter": 2,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_maze"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_video_maze"
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       },
       "level_keys": [
         "courseC_video_maze"
@@ -268,18 +626,22 @@
     {
       "chapter": 3,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_programming1"
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       },
       "level_keys": [
         "courseC_maze_programming1"
@@ -288,18 +650,22 @@
     {
       "chapter": 4,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_programming2"
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       },
       "level_keys": [
         "courseC_maze_programming2"
@@ -308,18 +674,22 @@
     {
       "chapter": 5,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_programming3"
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       },
       "level_keys": [
         "courseC_maze_programming3"
@@ -328,18 +698,22 @@
     {
       "chapter": 6,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_programming4"
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       },
       "level_keys": [
         "courseC_maze_programming4"
@@ -348,18 +722,22 @@
     {
       "chapter": 7,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_programming5"
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       },
       "level_keys": [
         "courseC_maze_programming5"
@@ -368,18 +746,22 @@
     {
       "chapter": 8,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_programming6"
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       },
       "level_keys": [
         "courseC_maze_programming6"
@@ -388,19 +770,23 @@
     {
       "chapter": 9,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_programming7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_programming7"
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       },
       "level_keys": [
         "courseC_maze_programming7"
@@ -409,18 +795,22 @@
     {
       "chapter": 10,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_programming8"
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       },
       "level_keys": [
         "courseC_maze_programming8"
@@ -429,18 +819,22 @@
     {
       "chapter": 11,
       "position": 10,
+      "activity_section_position": 10,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming8_predict1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_programming8_predict1"
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       },
       "level_keys": [
         "courseC_maze_programming8_predict1"
@@ -449,18 +843,22 @@
     {
       "chapter": 12,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 11,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_programming9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_programming9"
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       },
       "level_keys": [
         "courseC_maze_programming9"
@@ -469,11 +867,14 @@
     {
       "chapter": 13,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": 12,
+      "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_programming_challenge1"
+        ]
       },
-      "named_level": null,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -481,7 +882,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       },
       "level_keys": [
         "courseC_maze_programming_challenge1"
@@ -490,11 +892,14 @@
     {
       "chapter": 14,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": 13,
+      "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_programming_challenge2"
+        ]
       },
-      "named_level": null,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -502,7 +907,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       },
       "level_keys": [
         "courseC_maze_programming_challenge2"
@@ -511,18 +917,22 @@
     {
       "chapter": 15,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_debugging"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_video_debugging"
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       },
       "level_keys": [
         "courseC_video_debugging"
@@ -531,18 +941,22 @@
     {
       "chapter": 16,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_debugging1"
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       },
       "level_keys": [
         "courseC_maze_debugging1"
@@ -551,18 +965,22 @@
     {
       "chapter": 17,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_debugging2"
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       },
       "level_keys": [
         "courseC_maze_debugging2"
@@ -571,18 +989,22 @@
     {
       "chapter": 18,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_debugging3"
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       },
       "level_keys": [
         "courseC_maze_debugging3"
@@ -591,18 +1013,22 @@
     {
       "chapter": 19,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_debugging4"
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       },
       "level_keys": [
         "courseC_maze_debugging4"
@@ -611,18 +1037,22 @@
     {
       "chapter": 20,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_debugging5"
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       },
       "level_keys": [
         "courseC_maze_debugging5"
@@ -631,18 +1061,22 @@
     {
       "chapter": 21,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_debugging6"
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       },
       "level_keys": [
         "courseC_maze_debugging6"
@@ -651,19 +1085,23 @@
     {
       "chapter": 22,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_debugging7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_debugging7"
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       },
       "level_keys": [
         "courseC_maze_debugging7"
@@ -672,18 +1110,22 @@
     {
       "chapter": 23,
       "position": 9,
+      "activity_section_position": 9,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging8_predict1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_debugging8_predict1"
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       },
       "level_keys": [
         "courseC_maze_debugging8_predict1"
@@ -692,18 +1134,22 @@
     {
       "chapter": 24,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 10,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_debugging9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_debugging9"
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       },
       "level_keys": [
         "courseC_maze_debugging9"
@@ -712,11 +1158,14 @@
     {
       "chapter": 25,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 11,
+      "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_debugging_challenge1"
+        ]
       },
-      "named_level": null,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -724,7 +1173,8 @@
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       },
       "level_keys": [
         "courseC_maze_debugging_challenge1"
@@ -733,11 +1183,14 @@
     {
       "chapter": 26,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": 12,
+      "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_debugging_challenge2"
+        ]
       },
-      "named_level": null,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -745,7 +1198,8 @@
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       },
       "level_keys": [
         "courseC_maze_debugging_challenge2"
@@ -754,18 +1208,22 @@
     {
       "chapter": 27,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "PaperPlanes"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "PaperPlanes"
         ],
         "lesson.key": "Real-life Algorithms: Paper Planes",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3208cb94-75dc-4185-acf2-6617d153ba23"
       },
       "level_keys": [
         "PaperPlanes"
@@ -774,18 +1232,22 @@
     {
       "chapter": 28,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_collector"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_video_collector"
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       },
       "level_keys": [
         "courseC_video_collector"
@@ -794,18 +1256,22 @@
     {
       "chapter": 29,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_collector_prog1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_collector_prog1"
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       },
       "level_keys": [
         "courseC_collector_prog1"
@@ -814,18 +1280,22 @@
     {
       "chapter": 30,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_collector_prog2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_collector_prog2"
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       },
       "level_keys": [
         "courseC_collector_prog2"
@@ -834,18 +1304,22 @@
     {
       "chapter": 31,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_collector_prog3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_collector_prog3"
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       },
       "level_keys": [
         "courseC_collector_prog3"
@@ -854,18 +1328,22 @@
     {
       "chapter": 32,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_collector_prog4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_collector_prog4"
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       },
       "level_keys": [
         "courseC_collector_prog4"
@@ -874,18 +1352,22 @@
     {
       "chapter": 33,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_collector_prog5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_collector_prog5"
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       },
       "level_keys": [
         "courseC_collector_prog5"
@@ -894,18 +1376,22 @@
     {
       "chapter": 34,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_collector_prog6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_collector_prog6"
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       },
       "level_keys": [
         "courseC_collector_prog6"
@@ -914,19 +1400,23 @@
     {
       "chapter": 35,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseC_collector_prog7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_collector_prog7"
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       },
       "level_keys": [
         "courseC_collector_prog7"
@@ -935,18 +1425,22 @@
     {
       "chapter": 36,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_collector_prog8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_collector_prog8"
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       },
       "level_keys": [
         "courseC_collector_prog8"
@@ -955,18 +1449,22 @@
     {
       "chapter": 37,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 10,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_collector_prog9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_collector_prog9"
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       },
       "level_keys": [
         "courseC_collector_prog9"
@@ -975,18 +1473,22 @@
     {
       "chapter": 38,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 11,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade2_collector_A"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade2_collector_A"
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       },
       "level_keys": [
         "grade2_collector_A"
@@ -995,18 +1497,22 @@
     {
       "chapter": 39,
       "position": 12,
+      "activity_section_position": 12,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "grade2_collector_A_predict1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade2_collector_A_predict1"
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       },
       "level_keys": [
         "grade2_collector_A_predict1"
@@ -1015,18 +1521,22 @@
     {
       "chapter": 40,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": 13,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "grade2_collector_10"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "grade2_collector_10"
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       },
       "level_keys": [
         "grade2_collector_10"
@@ -1035,11 +1545,14 @@
     {
       "chapter": 41,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": 14,
+      "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseC_collector_prog_challenge1"
+        ]
       },
-      "named_level": null,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1047,7 +1560,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       },
       "level_keys": [
         "courseC_collector_prog_challenge1"
@@ -1056,11 +1570,14 @@
     {
       "chapter": 42,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": 15,
+      "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseC_collector_prog_challenge2"
+        ]
       },
-      "named_level": null,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1068,7 +1585,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       },
       "level_keys": [
         "courseC_collector_prog_challenge2"
@@ -1077,18 +1595,22 @@
     {
       "chapter": 43,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_artist"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_video_artist"
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       },
       "level_keys": [
         "courseC_video_artist"
@@ -1097,18 +1619,22 @@
     {
       "chapter": 44,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog1"
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       },
       "level_keys": [
         "courseC_artist_prog1"
@@ -1117,18 +1643,22 @@
     {
       "chapter": 45,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog2"
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       },
       "level_keys": [
         "courseC_artist_prog2"
@@ -1137,18 +1667,22 @@
     {
       "chapter": 46,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog3"
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       },
       "level_keys": [
         "courseC_artist_prog3"
@@ -1157,18 +1691,22 @@
     {
       "chapter": 47,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog4"
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       },
       "level_keys": [
         "courseC_artist_prog4"
@@ -1177,18 +1715,22 @@
     {
       "chapter": 48,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog5"
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       },
       "level_keys": [
         "courseC_artist_prog5"
@@ -1197,18 +1739,22 @@
     {
       "chapter": 49,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog6"
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       },
       "level_keys": [
         "courseC_artist_prog6"
@@ -1217,19 +1763,23 @@
     {
       "chapter": 50,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseC_artist_prog7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog7"
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       },
       "level_keys": [
         "courseC_artist_prog7"
@@ -1238,18 +1788,22 @@
     {
       "chapter": 51,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog8"
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       },
       "level_keys": [
         "courseC_artist_prog8"
@@ -1258,18 +1812,22 @@
     {
       "chapter": 52,
       "position": 10,
+      "activity_section_position": 10,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "courseC_artist_prog6_predict1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_artist_prog6_predict1"
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       },
       "level_keys": [
         "courseC_artist_prog6_predict1"
@@ -1278,11 +1836,14 @@
     {
       "chapter": 53,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 11,
+      "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseC_artist_prog_challenge2"
+        ]
       },
-      "named_level": null,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1290,7 +1851,8 @@
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       },
       "level_keys": [
         "courseC_artist_prog_challenge2"
@@ -1299,18 +1861,22 @@
     {
       "chapter": 54,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "GettingLoopy"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "GettingLoopy"
         ],
         "lesson.key": "Loops: Getting Loopy",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "5b48e4bb-cd41-4062-9c95-97829229f2f8"
       },
       "level_keys": [
         "GettingLoopy"
@@ -1319,18 +1885,22 @@
     {
       "chapter": 55,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_loops1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_loops1"
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       },
       "level_keys": [
         "courseC_maze_loops1"
@@ -1339,18 +1909,22 @@
     {
       "chapter": 56,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_video_loops"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_video_loops"
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       },
       "level_keys": [
         "courseC_video_loops"
@@ -1359,18 +1933,22 @@
     {
       "chapter": 57,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_loops2_predict1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_loops2_predict1"
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       },
       "level_keys": [
         "courseC_maze_loops2_predict1"
@@ -1379,18 +1957,22 @@
     {
       "chapter": 58,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_loops2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_loops2"
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       },
       "level_keys": [
         "courseC_maze_loops2"
@@ -1399,18 +1981,22 @@
     {
       "chapter": 59,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_loops4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_loops4"
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       },
       "level_keys": [
         "courseC_maze_loops4"
@@ -1419,18 +2005,22 @@
     {
       "chapter": 60,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_loops5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_loops5"
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       },
       "level_keys": [
         "courseC_maze_loops5"
@@ -1439,18 +2029,22 @@
     {
       "chapter": 61,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_loops6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_loops6"
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       },
       "level_keys": [
         "courseC_maze_loops6"
@@ -1459,18 +2053,22 @@
     {
       "chapter": 62,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_loops7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_loops7"
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       },
       "level_keys": [
         "courseC_maze_loops7"
@@ -1479,19 +2077,23 @@
     {
       "chapter": 63,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseC_maze_loops8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_loops8"
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       },
       "level_keys": [
         "courseC_maze_loops8"
@@ -1500,18 +2102,22 @@
     {
       "chapter": 64,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 10,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_loops9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_loops9"
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       },
       "level_keys": [
         "courseC_maze_loops9"
@@ -1520,18 +2126,22 @@
     {
       "chapter": 65,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 11,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_loops10"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_loops10"
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       },
       "level_keys": [
         "courseC_maze_loops10"
@@ -1540,18 +2150,22 @@
     {
       "chapter": 66,
       "position": 12,
+      "activity_section_position": 12,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "courseC_maze_loops10_predict2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_loops10_predict2"
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       },
       "level_keys": [
         "courseC_maze_loops10_predict2"
@@ -1560,18 +2174,22 @@
     {
       "chapter": 67,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": 13,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_loops11"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_maze_loops11"
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       },
       "level_keys": [
         "courseC_maze_loops11"
@@ -1580,10 +2198,13 @@
     {
       "chapter": 68,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": 14,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_maze_loops_challenge1"
+        ]
       },
-      "named_level": null,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1591,7 +2212,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       },
       "level_keys": [
         "courseC_maze_loops_challenge1"
@@ -1600,10 +2222,13 @@
     {
       "chapter": 69,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": 15,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_collector_loops_challenge2"
+        ]
       },
-      "named_level": null,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1611,7 +2236,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       },
       "level_keys": [
         "courseC_collector_loops_challenge2"
@@ -1620,18 +2246,22 @@
     {
       "chapter": 70,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_harvester_loops1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_harvester_loops1"
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       },
       "level_keys": [
         "courseC_harvester_loops1"
@@ -1640,18 +2270,22 @@
     {
       "chapter": 71,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_harvester_loops2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_harvester_loops2"
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       },
       "level_keys": [
         "courseC_harvester_loops2"
@@ -1660,18 +2294,22 @@
     {
       "chapter": 72,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_harvester_loops3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_harvester_loops3"
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       },
       "level_keys": [
         "courseC_harvester_loops3"
@@ -1680,18 +2318,22 @@
     {
       "chapter": 73,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_harvester_loops4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_harvester_loops4"
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       },
       "level_keys": [
         "courseC_harvester_loops4"
@@ -1700,18 +2342,22 @@
     {
       "chapter": 74,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_harvester_loops6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_harvester_loops6"
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       },
       "level_keys": [
         "courseC_harvester_loops6"
@@ -1720,18 +2366,22 @@
     {
       "chapter": 75,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_harvester_loops7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_harvester_loops7"
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       },
       "level_keys": [
         "courseC_harvester_loops7"
@@ -1740,18 +2390,22 @@
     {
       "chapter": 76,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_harvester_loops5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_harvester_loops5"
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       },
       "level_keys": [
         "courseC_harvester_loops5"
@@ -1760,19 +2414,23 @@
     {
       "chapter": 77,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
-        "challenge": true
+        "challenge": true,
+        "level_keys": [
+          "courseC_harvester_loops8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_harvester_loops8"
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       },
       "level_keys": [
         "courseC_harvester_loops8"
@@ -1781,18 +2439,22 @@
     {
       "chapter": 78,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_harvester_loops9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_harvester_loops9"
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       },
       "level_keys": [
         "courseC_harvester_loops9"
@@ -1801,18 +2463,22 @@
     {
       "chapter": 79,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 10,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_harvester_loops10"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_harvester_loops10"
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       },
       "level_keys": [
         "courseC_harvester_loops10"
@@ -1821,18 +2487,22 @@
     {
       "chapter": 80,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 11,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_harvester_loops11"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_harvester_loops11"
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       },
       "level_keys": [
         "courseC_harvester_loops11"
@@ -1841,18 +2511,22 @@
     {
       "chapter": 81,
       "position": 12,
+      "activity_section_position": 12,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "courseC_harvester_loops11_predict1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_harvester_loops11_predict1"
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       },
       "level_keys": [
         "courseC_harvester_loops11_predict1"
@@ -1861,10 +2535,13 @@
     {
       "chapter": 82,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": 13,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_harvester_loops_challenge1"
+        ]
       },
-      "named_level": null,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1872,7 +2549,8 @@
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       },
       "level_keys": [
         "courseC_harvester_loops_challenge1"
@@ -1881,10 +2559,13 @@
     {
       "chapter": 83,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": 14,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_harvester_loops_challenge2"
+        ]
       },
-      "named_level": null,
       "bonus": true,
       "seeding_key": {
         "script_level.level_keys": [
@@ -1892,7 +2573,8 @@
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       },
       "level_keys": [
         "courseC_harvester_loops_challenge2"
@@ -1901,18 +2583,22 @@
     {
       "chapter": 84,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "BigEvent"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "BigEvent"
         ],
         "lesson.key": "Events: The Big Event",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "874843be-b643-4ab7-8149-b45b0eefd1aa"
       },
       "level_keys": [
         "BigEvent"
@@ -1921,18 +2607,22 @@
     {
       "chapter": 85,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_1"
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       },
       "level_keys": [
         "flappy_1"
@@ -1941,18 +2631,22 @@
     {
       "chapter": 86,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_2"
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       },
       "level_keys": [
         "flappy_2"
@@ -1961,18 +2655,22 @@
     {
       "chapter": 87,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_3"
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       },
       "level_keys": [
         "flappy_3"
@@ -1981,18 +2679,22 @@
     {
       "chapter": 88,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_4"
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       },
       "level_keys": [
         "flappy_4"
@@ -2001,18 +2703,22 @@
     {
       "chapter": 89,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_5"
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       },
       "level_keys": [
         "flappy_5"
@@ -2021,18 +2727,22 @@
     {
       "chapter": 90,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_6"
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       },
       "level_keys": [
         "flappy_6"
@@ -2041,18 +2751,22 @@
     {
       "chapter": 91,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_7"
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       },
       "level_keys": [
         "flappy_7"
@@ -2061,18 +2775,22 @@
     {
       "chapter": 92,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_8"
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       },
       "level_keys": [
         "flappy_8"
@@ -2081,18 +2799,22 @@
     {
       "chapter": 93,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_9"
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       },
       "level_keys": [
         "flappy_9"
@@ -2101,18 +2823,22 @@
     {
       "chapter": 94,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 10,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "flappy_11"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "flappy_11"
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       },
       "level_keys": [
         "flappy_11"
@@ -2121,18 +2847,22 @@
     {
       "chapter": 95,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_PlayLab_events1"
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       },
       "level_keys": [
         "courseC_PlayLab_events1"
@@ -2141,18 +2871,22 @@
     {
       "chapter": 96,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_PlayLab_events2"
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       },
       "level_keys": [
         "courseC_PlayLab_events2"
@@ -2161,18 +2895,22 @@
     {
       "chapter": 97,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_PlayLab_events3"
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       },
       "level_keys": [
         "courseC_PlayLab_events3"
@@ -2181,18 +2919,22 @@
     {
       "chapter": 98,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_PlayLab_events4"
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       },
       "level_keys": [
         "courseC_PlayLab_events4"
@@ -2201,18 +2943,22 @@
     {
       "chapter": 99,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_PlayLab_events5"
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       },
       "level_keys": [
         "courseC_PlayLab_events5"
@@ -2221,18 +2967,22 @@
     {
       "chapter": 100,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_PlayLab_events6"
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       },
       "level_keys": [
         "courseC_PlayLab_events6"
@@ -2241,18 +2991,22 @@
     {
       "chapter": 101,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_PlayLab_events7"
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       },
       "level_keys": [
         "courseC_PlayLab_events7"
@@ -2261,18 +3015,22 @@
     {
       "chapter": 102,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_PlayLab_events8"
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       },
       "level_keys": [
         "courseC_PlayLab_events8"
@@ -2281,18 +3039,22 @@
     {
       "chapter": 103,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_PlayLab_events9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_PlayLab_events9"
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       },
       "level_keys": [
         "courseC_PlayLab_events9"
@@ -2301,18 +3063,22 @@
     {
       "chapter": 104,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 10,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_PlayLab_eventsA"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_PlayLab_eventsA"
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       },
       "level_keys": [
         "courseC_PlayLab_eventsA"
@@ -2321,18 +3087,22 @@
     {
       "chapter": 105,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 11,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_PlayLab_eventsFP"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_PlayLab_eventsFP"
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       },
       "level_keys": [
         "courseC_PlayLab_eventsFP"
@@ -2341,18 +3111,22 @@
     {
       "chapter": 106,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseC_screenoutthemean"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseC_screenoutthemean"
         ],
         "lesson.key": "Screen Out the Mean",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "05c1246c-2011-4305-b5d0-d95ab7a57f4c"
       },
       "level_keys": [
         "courseC_screenoutthemean"
@@ -2361,18 +3135,22 @@
     {
       "chapter": 107,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "BinaryBracelets"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "BinaryBracelets"
         ],
         "lesson.key": "Binary Bracelets",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "1e905771-7e00-4d44-abac-c685ffeed015"
       },
       "level_keys": [
         "BinaryBracelets"
@@ -2388,7 +3166,8 @@
         ],
         "lesson.key": "Building a Foundation",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "bfc02d7f-a99e-41c9-a426-bcfa64e051e9"
       }
     },
     {
@@ -2399,7 +3178,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       }
     },
     {
@@ -2410,7 +3190,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       }
     },
     {
@@ -2421,7 +3202,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       }
     },
     {
@@ -2432,7 +3214,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       }
     },
     {
@@ -2443,7 +3226,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       }
     },
     {
@@ -2454,7 +3238,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       }
     },
     {
@@ -2465,7 +3250,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       }
     },
     {
@@ -2476,7 +3262,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       }
     },
     {
@@ -2487,7 +3274,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       }
     },
     {
@@ -2498,7 +3286,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       }
     },
     {
@@ -2509,7 +3298,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       }
     },
     {
@@ -2520,7 +3310,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       }
     },
     {
@@ -2531,7 +3322,8 @@
         ],
         "lesson.key": "Programming in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "eca44544-76d6-40c1-ab43-2169aebd87ae"
       }
     },
     {
@@ -2542,7 +3334,8 @@
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       }
     },
     {
@@ -2553,7 +3346,8 @@
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       }
     },
     {
@@ -2564,7 +3358,8 @@
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       }
     },
     {
@@ -2575,7 +3370,8 @@
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       }
     },
     {
@@ -2586,7 +3382,8 @@
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       }
     },
     {
@@ -2597,7 +3394,8 @@
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       }
     },
     {
@@ -2608,7 +3406,8 @@
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       }
     },
     {
@@ -2619,7 +3418,8 @@
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       }
     },
     {
@@ -2630,7 +3430,8 @@
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       }
     },
     {
@@ -2641,7 +3442,8 @@
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       }
     },
     {
@@ -2652,7 +3454,8 @@
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       }
     },
     {
@@ -2663,7 +3466,8 @@
         ],
         "lesson.key": "Debugging in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "d0bbfb3e-e225-4d04-a394-d3c1367bb2cf"
       }
     },
     {
@@ -2674,7 +3478,8 @@
         ],
         "lesson.key": "Real-life Algorithms: Paper Planes",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3208cb94-75dc-4185-acf2-6617d153ba23"
       }
     },
     {
@@ -2685,7 +3490,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       }
     },
     {
@@ -2696,7 +3502,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       }
     },
     {
@@ -2707,7 +3514,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       }
     },
     {
@@ -2718,7 +3526,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       }
     },
     {
@@ -2729,7 +3538,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       }
     },
     {
@@ -2740,7 +3550,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       }
     },
     {
@@ -2751,7 +3562,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       }
     },
     {
@@ -2762,7 +3574,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       }
     },
     {
@@ -2773,7 +3586,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       }
     },
     {
@@ -2784,7 +3598,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       }
     },
     {
@@ -2795,7 +3610,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       }
     },
     {
@@ -2806,7 +3622,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       }
     },
     {
@@ -2817,7 +3634,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       }
     },
     {
@@ -2828,7 +3646,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       }
     },
     {
@@ -2839,7 +3658,8 @@
         ],
         "lesson.key": "Programming in Collector",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "c1040683-ea1a-45b4-a1be-91baa2c11b8a"
       }
     },
     {
@@ -2850,7 +3670,8 @@
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       }
     },
     {
@@ -2861,7 +3682,8 @@
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       }
     },
     {
@@ -2872,7 +3694,8 @@
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       }
     },
     {
@@ -2883,7 +3706,8 @@
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       }
     },
     {
@@ -2894,7 +3718,8 @@
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       }
     },
     {
@@ -2905,7 +3730,8 @@
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       }
     },
     {
@@ -2916,7 +3742,8 @@
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       }
     },
     {
@@ -2927,7 +3754,8 @@
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       }
     },
     {
@@ -2938,7 +3766,8 @@
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       }
     },
     {
@@ -2949,7 +3778,8 @@
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       }
     },
     {
@@ -2960,7 +3790,8 @@
         ],
         "lesson.key": "Programming in Artist",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f70c2d96-1760-4f1b-9b41-167ed855dc20"
       }
     },
     {
@@ -2971,7 +3802,8 @@
         ],
         "lesson.key": "Loops: Getting Loopy",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "5b48e4bb-cd41-4062-9c95-97829229f2f8"
       }
     },
     {
@@ -2982,7 +3814,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       }
     },
     {
@@ -2993,7 +3826,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       }
     },
     {
@@ -3004,7 +3838,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       }
     },
     {
@@ -3015,7 +3850,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       }
     },
     {
@@ -3026,7 +3862,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       }
     },
     {
@@ -3037,7 +3874,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       }
     },
     {
@@ -3048,7 +3886,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       }
     },
     {
@@ -3059,7 +3898,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       }
     },
     {
@@ -3070,7 +3910,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       }
     },
     {
@@ -3081,7 +3922,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       }
     },
     {
@@ -3092,7 +3934,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       }
     },
     {
@@ -3103,7 +3946,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       }
     },
     {
@@ -3114,7 +3958,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       }
     },
     {
@@ -3125,7 +3970,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       }
     },
     {
@@ -3136,7 +3982,8 @@
         ],
         "lesson.key": "Loops in Maze",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "2e381621-2b9f-4907-b611-9f5100cd1e16"
       }
     },
     {
@@ -3147,7 +3994,8 @@
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       }
     },
     {
@@ -3158,7 +4006,8 @@
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       }
     },
     {
@@ -3169,7 +4018,8 @@
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       }
     },
     {
@@ -3180,7 +4030,8 @@
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       }
     },
     {
@@ -3191,7 +4042,8 @@
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       }
     },
     {
@@ -3202,7 +4054,8 @@
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       }
     },
     {
@@ -3213,7 +4066,8 @@
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       }
     },
     {
@@ -3224,7 +4078,8 @@
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       }
     },
     {
@@ -3235,7 +4090,8 @@
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       }
     },
     {
@@ -3246,7 +4102,8 @@
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       }
     },
     {
@@ -3257,7 +4114,8 @@
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       }
     },
     {
@@ -3268,7 +4126,8 @@
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       }
     },
     {
@@ -3279,7 +4138,8 @@
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       }
     },
     {
@@ -3290,7 +4150,8 @@
         ],
         "lesson.key": "Loops in Harvester",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "f49037ad-79f0-4193-b240-a6a1e873aba8"
       }
     },
     {
@@ -3301,7 +4162,8 @@
         ],
         "lesson.key": "Events: The Big Event",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "874843be-b643-4ab7-8149-b45b0eefd1aa"
       }
     },
     {
@@ -3312,7 +4174,8 @@
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       }
     },
     {
@@ -3323,7 +4186,8 @@
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       }
     },
     {
@@ -3334,7 +4198,8 @@
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       }
     },
     {
@@ -3345,7 +4210,8 @@
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       }
     },
     {
@@ -3356,7 +4222,8 @@
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       }
     },
     {
@@ -3367,7 +4234,8 @@
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       }
     },
     {
@@ -3378,7 +4246,8 @@
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       }
     },
     {
@@ -3389,7 +4258,8 @@
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       }
     },
     {
@@ -3400,7 +4270,8 @@
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       }
     },
     {
@@ -3411,7 +4282,8 @@
         ],
         "lesson.key": "Build a Flappy Game",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "36b7c7f5-45ca-4d72-abeb-9bf72789b975"
       }
     },
     {
@@ -3422,7 +4294,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       }
     },
     {
@@ -3433,7 +4306,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       }
     },
     {
@@ -3444,7 +4318,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       }
     },
     {
@@ -3455,7 +4330,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       }
     },
     {
@@ -3466,7 +4342,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       }
     },
     {
@@ -3477,7 +4354,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       }
     },
     {
@@ -3488,7 +4366,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       }
     },
     {
@@ -3499,7 +4378,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       }
     },
     {
@@ -3510,7 +4390,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       }
     },
     {
@@ -3521,7 +4402,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       }
     },
     {
@@ -3532,7 +4414,8 @@
         ],
         "lesson.key": "Events in Play Lab",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "3d618f6c-1a87-4e18-8102-440db69f915c"
       }
     },
     {
@@ -3543,7 +4426,8 @@
         ],
         "lesson.key": "Screen Out the Mean",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "05c1246c-2011-4305-b5d0-d95ab7a57f4c"
       }
     },
     {
@@ -3554,8 +4438,39 @@
         ],
         "lesson.key": "Binary Bracelets",
         "lesson_group.key": "",
-        "script.name": "coursec-draft"
+        "script.name": "coursec-draft",
+        "activity_section.key": "1e905771-7e00-4d44-abac-c685ffeed015"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

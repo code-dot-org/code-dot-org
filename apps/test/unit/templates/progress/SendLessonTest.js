@@ -3,7 +3,7 @@ import {assert} from '../../../util/reconfiguredChai';
 import SendLesson from '@cdo/apps/templates/progress/SendLesson';
 import {shallow} from 'enzyme';
 
-const lessonUrl = 'https://studio.code.org/s/coursee-2020/stage/2/puzzle/1';
+const lessonUrl = 'https://studio.code.org/s/coursee-2020/lessons/2/levels/1';
 const lessonTitle = 'Lesson 2: Drawing with Loops';
 
 describe('SendLesson', () => {

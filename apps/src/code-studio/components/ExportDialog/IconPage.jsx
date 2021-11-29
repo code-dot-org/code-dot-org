@@ -4,28 +4,6 @@ import color from '../../../util/color';
 import exportExpoIconPng from '../../../templates/export/expo/icon.png';
 import commonStyles from './styles';
 
-const styles = {
-  icon: {
-    marginRight: 10,
-    width: 125,
-    height: 125,
-    overflow: 'hidden',
-    borderRadius: 2,
-    border: '1px solid rgb(187,187,187)',
-    backgroundColor: color.black,
-    position: 'relative',
-    display: 'inline-block'
-  },
-  uploadIconButton: {
-    ...commonStyles.button,
-    backgroundColor: color.default_blue,
-    color: color.white
-  },
-  hiddenFileInput: {
-    display: 'none'
-  }
-};
-
 /**
  * Icon Page in Export Dialog
  */
@@ -78,3 +56,25 @@ export default class IconPage extends React.Component {
     this.uploadFileInput.click();
   };
 }
+
+const styles = {
+  icon: {
+    marginRight: 10,
+    width: 125,
+    height: 125,
+    overflow: 'hidden',
+    borderRadius: 2,
+    border: '1px solid rgb(187,187,187)',
+    backgroundColor: color.black,
+    position: 'relative',
+    display: 'inline-block'
+  },
+  uploadIconButton: {
+    ...commonStyles.button,
+    backgroundColor: color.default_blue,
+    color: color.white
+  },
+  hiddenFileInput: {
+    display: 'none'
+  }
+};

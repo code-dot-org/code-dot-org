@@ -1,0 +1,225 @@
+#!/usr/bin/env ruby
+require_relative 'only_one'
+abort 'Script already running' unless only_one_running?(__FILE__)
+
+# This script deletes hoc_activity.name from all rows with a finished_at time
+# between the given start and end dates. It is designed to run every night as
+# a cron job.
+#
+# This script is part 2 of a two-step process to ensure that student names
+# stored in pegasus.hoc_activity are deleted after 3 months. This script assumes
+# that the finished_at value is a reasonable estimate for when a name is written
+# to the row. This relationship is almost always true in practice for recently
+# written rows but it is not directly enforced by our code. (Older rows may not
+# meet this assumption and were removed by bin/oneoff/hoc_student_name_initial_cleanup.)
+#
+# The logic in this script was constrained by the current schema of the table
+# because the table is very large and changing its schema is difficult. When
+# online schema changes become available, we should add an indexed column to
+# track when the name is added to the table and update the logic in this script
+# accordingly.
+
+require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'optparse'
+require 'optparse/date'
+require 'cdo/db'
+require 'cdo/properties'
+require 'cdo/chat_client'
+
+script_start_time = Time.now
+CDO.log.info("Script started at #{script_start_time}")
+
+HOC_ACTIVITY = PEGASUS_DB[:hoc_activity]
+LAST_PROCESSED_DATE_PROPERTY = "hoc_activity.name_cleanup.last_processed_date".freeze
+
+# Parse options
+options = {
+  retention_days: 90,
+  start_date: nil,
+  end_date: nil,
+  batch_size: 100,
+  sleep_msecs: 0,
+  dry_run: false,
+  log_sql: false,
+  notify_slack: true,
+}
+OptionParser.new do |opts|
+  opts.banner = <<~BANNER
+    Usage: #{File.basename(__FILE__)} [options]
+
+    This script deletes names stored in the pegasus.hoc_activity table after the
+    configured retention period.
+
+    Options:
+  BANNER
+
+  opts.on('--retention=90',
+    Integer,
+    'Retention period in days. Defaults to 90 days if not specified. Ignored if ' \
+    '--end-date is specified.'
+  ) do |retention_days|
+    options[:retention_days] = retention_days
+  end
+
+  opts.on('--start-date=2021-01-01',
+    Date,
+    'Start of interval to clean up (inclusive). If not specified, the script will ' \
+    'determine this value based on where the last run left off.'
+  ) do |start_date|
+    options[:start_date] = start_date
+  end
+
+  opts.on('--end-date=2021-12-31',
+    Date,
+    'End of interval to clean up (exclusive). If not specified, the script will ' \
+    'calculate this value from the retention period.'
+  ) do |end_date|
+    options[:end_date] = end_date
+  end
+
+  opts.on('--batch_size=100',
+    Integer,
+    'Number of rows in each batch. Defaults to 100 if not specified.'
+  ) do |batch_size|
+    options[:batch_size] = batch_size
+  end
+
+  opts.on('--sleep=0',
+    Integer,
+    'Amount of time in milliseconds to sleep between batches. Higher values ' \
+    'will reduce the performance impact on the datbase. Defaults to 0 msecs ' \
+    'if not specified.'
+  ) do |sleep_msecs|
+    options[:sleep_msecs] = sleep_msecs
+  end
+
+  opts.on('--dry-run',
+    'Enables read-only mode where no changes are written to the database'
+  ) do |dry_run|
+    options[:dry_run] = dry_run
+  end
+
+  opts.on('--log-sql',
+    'Logs all sql statements sent to the database'
+  ) do |log_sql|
+    options[:log_sql] = log_sql
+  end
+
+  opts.on('--[no-]slack',
+    'Sends summary of script to slack. Defaults to true.'
+  ) do |notify_slack|
+    options[:notify_slack] = notify_slack
+  end
+
+  opts.on('-h', '--help', 'Prints this help message') do
+    puts opts
+    exit
+  end
+end.parse!
+CDO.log.info "Initial parsed options: #{options}"
+
+PEGASUS_DB.loggers << CDO.log if options[:log_sql]
+
+if options[:start_date].nil?
+  last_processed_date = Properties.get(LAST_PROCESSED_DATE_PROPERTY)
+  if last_processed_date.nil?
+    CDO.log.error "--start-date is required on first run of the script"
+    return
+  end
+  options[:start_date] = Date.parse(last_processed_date) + 1
+end
+
+if options[:end_date].nil?
+  options[:end_date] = Date.today - options[:retention_days]
+end
+
+# Options should not change from here on
+options.freeze
+CDO.log.info "Final calculated options: #{options}"
+
+# Main loop - Conceptually, we want to remove names from all rows with a
+# finished_at time between the start date and end date. We iterate over the
+# rows with a set of nested loops. The outer loop processes one day at a time,
+# checkpointing after each iteration by updating LAST_PROCESSED_DATE_PROPERTY
+# after each iteration. The inner loop processes the rows for a given day in
+# small batches to minimize impact to the database.
+date = options[:start_date]
+total_rows_processed = 0
+total_rows_updated = 0
+while date < options[:end_date]
+  CDO.log.info "Processing rows with finished_at=#{date}"
+
+  batch_start_time = date.to_time
+  batch_start_id = 0
+  batch_end_time = (date + 1).to_time
+  batch_number = 0
+
+  while batch_start_time < batch_end_time
+    ids_to_cleanup = []
+    last_row = nil
+
+    # Construct the sql where clauses for the start and end of the interval for
+    # this batch. Rows are ordered by (finished_at, id). The interval starts at
+    # (batch_start_time, batch_start_id) inclusive and ends at (batch_end_time, 0)
+    # exclusive.
+    interval_start_where_clause = Sequel.lit(
+      '(finished_at = ? AND id >= ?) OR finished_at > ?',
+      batch_start_time, batch_start_id, batch_start_time
+    )
+    interval_end_where_clause = Sequel.lit(
+      'finished_at < ?',
+      batch_end_time
+    )
+
+    HOC_ACTIVITY.select(:id, :name, :finished_at).
+      where(interval_start_where_clause).
+      where(interval_end_where_clause).
+      order(:finished_at, :id).
+      first(options[:batch_size]).
+      each do |row|
+        unless row[:name].nil?
+          ids_to_cleanup << row[:id]
+        end
+        total_rows_processed += 1
+        last_row = row
+      end
+
+    # If no rows were returned, we have processed all rows for this day
+    break if last_row.nil?
+
+    # Wrap the update in a transaction so we can rollback the changes on a dry run
+    batch_rows_updated = 0
+    DB.transaction do
+      batch_rows_updated = HOC_ACTIVITY.where(id: ids_to_cleanup).update(name: nil) unless ids_to_cleanup.empty?
+      raise Sequel::Rollback if options[:dry_run]
+    end
+    total_rows_updated += batch_rows_updated
+
+    CDO.log.info("Processed batch #{batch_number} (start_time=#{batch_start_time}, " \
+      "start_id=#{batch_start_id}, end_time=#{batch_end_time}): " \
+      "rows updated in current batch=#{batch_rows_updated}, " \
+      "total rows updated=#{total_rows_updated}"
+    )
+
+    batch_start_time = last_row[:finished_at]
+    batch_start_id = last_row[:id] + 1
+    # batch_end_time is always the the start of the next day and does not change
+
+    batch_number += 1
+    sleep(options[:sleep_msecs] / 1000.0)
+  end
+
+  Properties.set(LAST_PROCESSED_DATE_PROPERTY, date.to_s) unless options[:dry_run]
+  date += 1
+end
+
+# Send message to #cron-daily
+summary = "*HoC Student Name Cleanup*\n"
+summary += "Dry-run (no changes written to database)\n" if options[:dry_run]
+summary += "Script ran for #{(Time.now - script_start_time).round(1)} seconds. " \
+  "#{total_rows_processed} rows processed, #{total_rows_updated} rows updated. " \
+  "Script options:\n"
+summary += "```#{options}```"
+
+ChatClient.message 'cron-daily', summary if options[:notify_slack]
+CDO.log.info summary

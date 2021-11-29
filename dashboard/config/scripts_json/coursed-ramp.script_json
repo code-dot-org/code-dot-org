@@ -2,13 +2,18 @@
   "script": {
     "name": "coursed-ramp",
     "wrapup_video_id": null,
-    "hidden": true,
     "login_required": false,
     "properties": {
-      "hideable_lessons": true
+      "hideable_lessons": true,
+      "is_migrated": true
     },
     "new_name": null,
     "family_name": null,
+    "serialized_at": "2021-11-22 19:56:08 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "coursed-ramp"
     }
@@ -32,6 +37,7 @@
       "name": "Introduction",
       "absolute_position": 1,
       "lockable": false,
+      "has_lesson_plan": false,
       "relative_position": 1,
       "properties": {
       },
@@ -42,22 +48,53 @@
       }
     }
   ],
+  "lesson_activities": [
+    {
+      "key": "105da91f-be2b-4d90-b7b2-96c5bf6440ed",
+      "position": 1,
+      "properties": {
+        "name": "Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "105da91f-be2b-4d90-b7b2-96c5bf6440ed",
+        "lesson.key": "Introduction",
+        "lesson_group.key": "",
+        "script.name": "coursed-ramp"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52",
+        "lesson_activity.key": "105da91f-be2b-4d90-b7b2-96c5bf6440ed"
+      }
+    }
+  ],
   "script_levels": [
     {
       "chapter": 1,
       "position": 1,
-      "assessment": null,
+      "activity_section_position": 1,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_video_ramp1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_video_ramp1"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       },
       "level_keys": [
         "courseD_video_ramp1"
@@ -66,18 +103,22 @@
     {
       "chapter": 2,
       "position": 2,
-      "assessment": null,
+      "activity_section_position": 2,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp1"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_ramp1"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       },
       "level_keys": [
         "courseD_maze_ramp1"
@@ -86,18 +127,22 @@
     {
       "chapter": 3,
       "position": 3,
-      "assessment": null,
+      "activity_section_position": 3,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp2"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_ramp2"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       },
       "level_keys": [
         "courseD_maze_ramp2"
@@ -106,18 +151,22 @@
     {
       "chapter": 4,
       "position": 4,
-      "assessment": null,
+      "activity_section_position": 4,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp3"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_ramp3"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       },
       "level_keys": [
         "courseD_maze_ramp3"
@@ -126,18 +175,22 @@
     {
       "chapter": 5,
       "position": 5,
-      "assessment": null,
+      "activity_section_position": 5,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp4"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_ramp4"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       },
       "level_keys": [
         "courseD_maze_ramp4"
@@ -146,18 +199,22 @@
     {
       "chapter": 6,
       "position": 6,
-      "assessment": null,
+      "activity_section_position": 6,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp5"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_ramp5"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       },
       "level_keys": [
         "courseD_maze_ramp5"
@@ -166,18 +223,22 @@
     {
       "chapter": 7,
       "position": 7,
-      "assessment": null,
+      "activity_section_position": 7,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_video_Loops"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_video_Loops"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       },
       "level_keys": [
         "courseD_maze_video_Loops"
@@ -186,18 +247,22 @@
     {
       "chapter": 8,
       "position": 8,
-      "assessment": null,
+      "activity_section_position": 8,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp6"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_ramp6"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       },
       "level_keys": [
         "courseD_maze_ramp6"
@@ -206,18 +271,22 @@
     {
       "chapter": 9,
       "position": 9,
-      "assessment": null,
+      "activity_section_position": 9,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_maze_ramp7"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_maze_ramp7"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       },
       "level_keys": [
         "courseD_maze_ramp7"
@@ -226,18 +295,22 @@
     {
       "chapter": 10,
       "position": 10,
-      "assessment": null,
+      "activity_section_position": 10,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_ramp8"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_collector_ramp8"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       },
       "level_keys": [
         "courseD_collector_ramp8"
@@ -246,18 +319,22 @@
     {
       "chapter": 11,
       "position": 11,
-      "assessment": null,
+      "activity_section_position": 11,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_ramp9"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_collector_ramp9"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       },
       "level_keys": [
         "courseD_collector_ramp9"
@@ -266,18 +343,22 @@
     {
       "chapter": 12,
       "position": 12,
-      "assessment": null,
+      "activity_section_position": 12,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_collector_ramp10"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_collector_ramp10"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       },
       "level_keys": [
         "courseD_collector_ramp10"
@@ -286,18 +367,22 @@
     {
       "chapter": 13,
       "position": 13,
-      "assessment": null,
+      "activity_section_position": 13,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_ramp11"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_artist_ramp11"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       },
       "level_keys": [
         "courseD_artist_ramp11"
@@ -306,18 +391,22 @@
     {
       "chapter": 14,
       "position": 14,
-      "assessment": null,
+      "activity_section_position": 14,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_artist_ramp12"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_artist_ramp12"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       },
       "level_keys": [
         "courseD_artist_ramp12"
@@ -326,18 +415,22 @@
     {
       "chapter": 15,
       "position": 15,
-      "assessment": null,
+      "activity_section_position": 15,
+      "assessment": false,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_ramp13"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_farmer_ramp13"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       },
       "level_keys": [
         "courseD_farmer_ramp13"
@@ -346,18 +439,22 @@
     {
       "chapter": 16,
       "position": 16,
+      "activity_section_position": 16,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "courseD_farmer_ramp14"
+        ]
       },
-      "named_level": null,
-      "bonus": null,
+      "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
           "courseD_farmer_ramp14"
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       },
       "level_keys": [
         "courseD_farmer_ramp14"
@@ -373,7 +470,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       }
     },
     {
@@ -384,7 +482,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       }
     },
     {
@@ -395,7 +494,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       }
     },
     {
@@ -406,7 +506,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       }
     },
     {
@@ -417,7 +518,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       }
     },
     {
@@ -428,7 +530,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       }
     },
     {
@@ -439,7 +542,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       }
     },
     {
@@ -450,7 +554,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       }
     },
     {
@@ -461,7 +566,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       }
     },
     {
@@ -472,7 +578,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       }
     },
     {
@@ -483,7 +590,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       }
     },
     {
@@ -494,7 +602,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       }
     },
     {
@@ -505,7 +614,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       }
     },
     {
@@ -516,7 +626,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       }
     },
     {
@@ -527,7 +638,8 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       }
     },
     {
@@ -538,8 +650,39 @@
         ],
         "lesson.key": "Introduction",
         "lesson_group.key": "",
-        "script.name": "coursed-ramp"
+        "script.name": "coursed-ramp",
+        "activity_section.key": "7774af27-e8e2-4844-a6f5-93a1ef0f9c52"
       }
     }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
   ]
 }

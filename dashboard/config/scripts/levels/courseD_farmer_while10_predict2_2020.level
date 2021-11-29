@@ -40,7 +40,9 @@
     "preload_asset_list": null
   },
   "published": true,
-  "notes": "Left this so it works either way (two move forwards or one while path).  Better puzzle if not ambiguous, better assessment if it is."
+  "notes": "Left this so it works either way (two move forwards or one while path).  Better puzzle if not ambiguous, better assessment if it is.",
+  "level_concept_difficulty": {
+  }
 }]]></config>
   <blocks>
     <start_blocks>

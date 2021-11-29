@@ -10,7 +10,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 * See [state-by-state data](https://docs.google.com/spreadsheets/d/e/2PACX-1vSntgonHS7gQ-QI7hcwNq0ssLt99IcwoUZMRZ2uksOkdxlvPi5yuY3GjdxzfELwaOZC4eZoLLnhsSxE/pubhtml) on our 9 model policies for computer science education.
 * Code.org partnered with CSTA and ECEP to create the annual [State of Computer Science Education](https://advocacy.code.org/stateofcs) report on state-level policies that support equitable K-12 computer science education and an analysis of implementation and participation data. You can download the reports from 2017-2020. The 2020 report found that states who adopt more state computer science policies show greater gender diversity in AP computer science exam-taking.
 * [Computer science and ESSA](http://code.org/files/CS_and_ESSA.pdf): Read our recommendations for how states can add computer science to their state ESSA plans.
-* Download a [master slide deck](https://docs.google.com/presentation/d/1SUGh9QdyXoXPepD1vC5YXRnicxp-th_yWX8dNM_vywc/edit?usp=sharing) that you can use to create your own presentations.
+* Download this [slide deck](https://docs.google.com/presentation/d/1SUGh9QdyXoXPepD1vC5YXRnicxp-th_yWX8dNM_vywc/edit?usp=sharing) that you can use to create your own presentations.
 
 ## Why study computer science? 
 [Six different studies](https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536) show that studying computer science helps students outperform in school and college. Details on each of the studies follow.
@@ -38,7 +38,7 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 ### Diversity in computer science
 
 * We compiled and analyzed data on student participation in CS by race/ethnicity and gender (in Code.org's courses, in AP CS, and in bachelor's degrees earned in CS). View our blog post [here](https://codeorg.medium.com/detailed-data-uncovers-new-stories-reveals-gaps-in-cs-access-and-participation-d5cbc01a5974), our summary [here](https://docs.google.com/document/d/e/2PACX-1vSUfAnF829USdnUbiQ_RZNJ0xM2SZypTsGTuBSGpzsAez9B2k092UHlVYFufIfrG9Pd3a8HIEZ9xVYx/pub) and download the data set [here](https://docs.google.com/spreadsheets/d/1v6x0lSz6i6olztGITk17sp82VHBhFPrM2sA77cc4lvg).
-* Women who learn computer science in high school are   [10 times](http://codeorg.tumblr.com/post/143007230537/computer-science-the-impact-of-k-12-on-university) more likely to study it in university.
+* Women who learn computer science in high school are 5-10 times more likely to major in it in university ([5 times if they take AP CSP](https://apcentral.collegeboard.org/pdf/ap-csp-and-stem-cs-pipelines.pdf?course=ap-computer-science-principles),    [10 times if they take AP CS A](http://codeorg.tumblr.com/post/143007230537/computer-science-the-impact-of-k-12-on-university)). Similarly, Black/African American students are 2-7 times more likely and Hispanic/Latino/Latina students are 3-8 times more likely to study computer science in university if they take it in high school. First generation college students are also three times as likely to major in computer science if they took AP CSP in high school.
 * When computer science counts for graduation, [diversity increases] (https://medium.com/@codeorg/does-making-cs-count-make-a-difference-7ab5ca6b8407).
 * The [underrepresentation of students from marginalized racial and ethnic groups in computer science isn't about lack of interest](https://medium.com/@codeorg/with-code-orgs-6d43964e3fff) but lack of access.
 * Girls set AP Computer Science record: skyrocketing growth outpaces boys [in 2017](https://medium.com/@codeorg/girls-set-ap-computer-science-record-skyrocketing-growth-outpaces-boys-41b7c01373a5) and [in 2018](https://medium.com/@codeorg/girls-and-minorities-break-records-in-computer-science-as-fastest-growing-groups-39d23425810e).
@@ -56,16 +56,13 @@ Do you need to create a slide deck or one-pager to advocate for computer science
 * AP Computer Science A is the [fastest-growing](http://codeorg.tumblr.com/post/150040749703/another-year-of-record-growth-for-ap-computer) AP course of the decade.
 * Code.org [updated our position](http://codeorg.tumblr.com/post/154518222573/computer-science-really-is-computer-science) on [Making Computer Science Count](https://docs.google.com/document/d/1ksKYCmYVK7cNS6Pfc7OL9Cre2SsFsWWTyvW7faPPIZc/edit?usp=sharing).
 
-
-## International K-12 computer science
-We are interested in seeing what's happening in computer science education internationally. [This](https://docs.google.com/document/d/1H171Mu2RKzD9Qvp38sjKu1vuXX524XqdHtUf0BFzpWI/edit?usp=sharing) crowd-sourced document tracks what we know about current policy and in-progress efforts.
-
-
 ## Outside resources
 
 ### K-12 education
 
 - The [K-12 Computer Science Framework](https://k12cs.org/) provides a vision for computer science education for all students, including concepts and practices by grade band.
+- [The Computer Science Teacher Landscape: Results of a Nationwide Teacher Survey](https://www.kaporcenter.org/the-computer-science-teacher-landscape-results-of-a-nationwide-teacher-survey) report, coauthored by the Kapor Center and the CSTA, describes several findings about computer science teacher demographics, credentials, experiences, and challenges to equitable CS classrooms. 
+- See what is happening in K-12 computer science education internationally at [this Brookings report](https://www.brookings.edu/research/what-do-we-know-about-the-expansion-of-k-12-computer-science-education). 
 - The International Society for Technology in Education (ISTE) recently released [guidelines](https://www.iste.org/standards/computational-thinking) regarding the integration of computational thinking across disciplines. 
 - Access to computer science matters! [A longitudinal study described in this article](https://dl.acm.org/citation.cfm?doid=3363561.3343195) and [this summary](https://computinged.wordpress.com/2019/10/14/results-from-longitudinal-study-of-female-persistence-in-cs-ap-cs-matters-after-school-programs-and-internships-do-not/) report that the three best predictors of student persistence in computing-related majors were taking programming in high school, taking a computer science AP exam, and participating in the Aspirations awards program. 
 - The Kapor Center's report [Teacher Perspectives on COVID-19's Impact on K-12 Computer Science Instruction](https://www.kaporcenter.org/teacher-perspectives-on-covid-19s-impact-on-k-12-computer-science-instruction/) found that 18% of teachers temporarily suspended CS instruction, with higher rates from schools serving underrepresented students.

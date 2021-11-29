@@ -1,6 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
 describe('InlineMarkdown', () => {

@@ -381,7 +381,7 @@ class SectionTest < ActiveSupport::TestCase
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
-        autoplay_enabled: false,
+        tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
         course_id: unit_group.id,
@@ -391,6 +391,11 @@ class SectionTest < ActiveSupport::TestCase
         providerManaged: false,
         hidden: false,
         students: [],
+        restrict_section: false,
+        code_review_enabled: true,
+        is_assigned_csa: false,
+        post_milestone_disabled: false,
+        code_review_expires_at: nil
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -420,7 +425,7 @@ class SectionTest < ActiveSupport::TestCase
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
-        autoplay_enabled: false,
+        tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
         course_id: nil,
@@ -430,6 +435,11 @@ class SectionTest < ActiveSupport::TestCase
         providerManaged: false,
         hidden: false,
         students: [],
+        restrict_section: false,
+        code_review_enabled: true,
+        is_assigned_csa: false,
+        post_milestone_disabled: false,
+        code_review_expires_at: nil
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -462,7 +472,7 @@ class SectionTest < ActiveSupport::TestCase
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
-        autoplay_enabled: false,
+        tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
         course_id: unit_group.id,
@@ -472,6 +482,11 @@ class SectionTest < ActiveSupport::TestCase
         providerManaged: false,
         hidden: false,
         students: [],
+        restrict_section: false,
+        code_review_enabled: true,
+        is_assigned_csa: false,
+        post_milestone_disabled: false,
+        code_review_expires_at: nil
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -498,7 +513,7 @@ class SectionTest < ActiveSupport::TestCase
         code: section.code,
         lesson_extras: false,
         pairing_allowed: true,
-        autoplay_enabled: false,
+        tts_autoplay_enabled: false,
         sharing_disabled: false,
         login_type: "email",
         course_id: nil,
@@ -508,6 +523,11 @@ class SectionTest < ActiveSupport::TestCase
         providerManaged: false,
         hidden: false,
         students: [],
+        restrict_section: false,
+        code_review_enabled: true,
+        is_assigned_csa: false,
+        post_milestone_disabled: false,
+        code_review_expires_at: nil
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -561,6 +581,103 @@ class SectionTest < ActiveSupport::TestCase
   test 'valid_grade? does not accept invalid numbers and strings' do
     refute Section.valid_grade?("Something else")
     refute Section.valid_grade?("56")
+  end
+
+  test 'code review disabled for sections with no code review expiration' do
+    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
+    section = create :section
+
+    refute section.code_review_enabled?
+  end
+
+  test 'code review enabled for sections with code review expiration later than current time' do
+    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
+    section = create :section, code_review_expires_at: Time.now.utc + 1.day
+
+    assert section.code_review_enabled?
+  end
+
+  test 'code review disabled for sections with code review expiration before current time' do
+    DCDO.stubs(:get).with('code_review_groups_enabled', false).returns(true)
+    section = create :section, code_review_expires_at: Time.now.utc - 1.day
+
+    refute section.code_review_enabled?
+  end
+
+  test 'reset_code_review_groups creates new code review groups' do
+    code_review_group_section = create(:section, user: @teacher, login_type: 'word')
+    # Create 5 students
+    followers = []
+    5.times do |i|
+      student = create(:student, name: "student_#{i}")
+      followers << create(:follower, section: code_review_group_section, student_user: student)
+    end
+    group_1_name = 'new_group_1'
+    group_2_name = 'new_group_2'
+    new_groups = [
+      {name: group_1_name, members: [{follower_id: followers[0].id}]},
+      {name: group_2_name, members: [{follower_id: followers[2].id}, {follower_id: followers[3].id}]}
+    ]
+    code_review_group_section.reset_code_review_groups(new_groups)
+    code_review_group_section.reload
+
+    groups = code_review_group_section.code_review_groups
+    assert_equal 2, groups.count
+    assert_equal 1, groups.first.members.count
+  end
+
+  test 'reset_code_review_groups replaces existing code review groups' do
+    set_up_code_review_groups
+
+    new_group_name = 'new_group'
+    new_groups = [
+      {name: new_group_name, members: [{follower_id: @followers[0].id}, {follower_id: @followers[1].id}]},
+    ]
+
+    @code_review_group_section.reset_code_review_groups(new_groups)
+    @code_review_group_section.reload
+    # old group should be deleted
+    refute CodeReviewGroup.exists?(@group1.id)
+    new_groups = @code_review_group_section.code_review_groups
+    assert_equal 1, new_groups.count
+    assert_equal 2, new_groups.first.members.count
+  end
+
+  test 'update_code_review_expiration resets expiration time when enabling code review' do
+    @section.update_code_review_expiration(true)
+    @section.save
+    assert_not_nil @section.code_review_expires_at
+    # check the expiration date was set to a time greater than now.
+    assert DateTime.parse(@section.code_review_expires_at) > DateTime.now
+  end
+
+  test 'update_code_review_expiration sets expiration time to nil when disabling code review' do
+    # set expiration to a non-nil time
+    @section.code_review_expires_at = DateTime.now
+    @section.save
+
+    @section.update_code_review_expiration(false)
+    @section.save
+    assert_nil @section.code_review_expires_at
+  end
+
+  def set_up_code_review_groups
+    # create a new section to avoid extra unassigned students
+    @code_review_group_section = create(:section, user: @teacher, login_type: 'word')
+    # Create 5 students
+    @followers = []
+    5.times do |i|
+      student = create(:student, name: "student_#{i}")
+      @followers << create(:follower, section: @code_review_group_section, student_user: student)
+    end
+
+    # Create 2 code review groups
+    @group1 = create :code_review_group, section: @code_review_group_section
+    @group2 = create :code_review_group, section: @code_review_group_section
+    # put student 0 and 1 in group 1, and student 2 in group 2
+    CodeReviewGroupMember.create(follower_id: @followers[0].id, code_review_group_id: @group1.id)
+    CodeReviewGroupMember.create(follower_id: @followers[1].id, code_review_group_id: @group1.id)
+    CodeReviewGroupMember.create(follower_id: @followers[2].id, code_review_group_id: @group2.id)
   end
 
   class HasSufficientDiscountCodeProgress < ActiveSupport::TestCase

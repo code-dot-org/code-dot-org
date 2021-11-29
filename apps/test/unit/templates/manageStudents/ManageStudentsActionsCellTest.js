@@ -4,7 +4,7 @@ import sinon from 'sinon';
 import {shallow} from 'enzyme';
 import {expect} from '../../../util/deprecatedChai';
 import * as client from '@cdo/apps/util/userSectionClient';
-import {UnconnectedManageStudentActionsCell as ManageStudentsActionsCell} from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
+import {UnconnectedManageStudentsActionsCell as ManageStudentsActionsCell} from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
 
 const DEFAULT_PROPS = {
   id: 2,

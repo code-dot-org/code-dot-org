@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+# Simple script for importing pilots that were hard-coded in
+# /models/experiments/experiment.rb into the newly created pilots table.
+
+require_relative '../../dashboard/config/environment'
+
+rows_added = 0
+Experiment::PILOT_EXPERIMENTS.each do |pilot|
+  Pilot.create(
+    name: pilot[:name],
+    display_name: pilot[:label],
+    allow_joining_via_url: pilot[:allow_joining_via_url]
+  )
+  rows_added += 1
+end
+
+puts "#{rows_added} rows added."

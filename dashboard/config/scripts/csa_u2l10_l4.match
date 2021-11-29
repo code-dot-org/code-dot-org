@@ -1,0 +1,14 @@
+name 'CSA U2L10-L4'
+title 'Check for Understanding'
+
+question 'overloading'
+answer 'the ability to have multiple methods with the same name and different parameters'
+
+question 'override'
+answer 'provide a specific implementation of a method for a subclass that is already provided in a superclass'
+
+question 'return by value'
+answer 'a copy of the value is given to where the method is called'
+
+question 'concatenation'
+answer 'the act of merging two strings into one'

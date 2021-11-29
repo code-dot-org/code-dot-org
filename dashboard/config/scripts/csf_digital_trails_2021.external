@@ -1,0 +1,11 @@
+name 'csf_digital_trails_2021'
+editor_experiment ''
+video_key 'csf_follow_the_digital_trail'
+display_as_unplugged 'true'
+use_large_video_player 'true'
+hide_reference_area 'true'
+markdown <<MARKDOWN
+# Follow the Digital Trail
+
+## What information is OK to have in your digital footprint?
+MARKDOWN

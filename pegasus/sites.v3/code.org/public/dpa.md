@@ -15,4 +15,4 @@ We know that districts often seek to enter into Data Privacy Agreements with edu
 
 When you click on the "Read and sign our DPA" button above, you will be redirected from Code.org to DocuSign.  After providing your name and email address, you will receive an email from DocuSign allowing you to sign and receive a copy of the fully executed DPA for your records.
 
-Although our standard DPA is designed to address the requirements of most states, we have created specific state versions of the DPA for [New York](/dpa-ny) and [Montana](/dpa-mt).  Click on the links to be redirected to a page containing the state-specific DPA.
+Although our standard DPA is designed to address the requirements of most states, we have created specific state versions of the DPA for [New York](/dpa-ny), [Illinois](/dpa-il) and [Montana](/dpa-mt).  Click on the links to be redirected to a page containing the state-specific DPA.

@@ -48,5 +48,6 @@ export default storybook => {
 
   storybook
     .storiesOf('Progress/SectionProgressToggle', module)
+    .withReduxStore()
     .addStoryTable([isSummaryTrue(), isSummaryFalse(), isStandardsTrue()]);
 };

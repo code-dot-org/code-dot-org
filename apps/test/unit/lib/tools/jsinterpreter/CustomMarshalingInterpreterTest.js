@@ -1,6 +1,6 @@
 import sinon from 'sinon';
 import Interpreter from '@code-dot-org/js-interpreter';
-import {expect} from '../../../../util/deprecatedChai';
+import {expect} from '../../../../util/reconfiguredChai';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import CustomMarshaler from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshaler';
 import {
@@ -802,9 +802,7 @@ describe('The CustomMarshalingInterpreter', () => {
       });
 
       it('will skip the inherits and trigger properties if present', () => {
-        expect(nativeFunc.inherits).to.be.defined;
         value.assert(`assert(value.inherits === undefined)`);
-        expect(nativeFunc.trigger).to.be.defined;
         value.assert(`assert(value.trigger === undefined)`);
       });
     });

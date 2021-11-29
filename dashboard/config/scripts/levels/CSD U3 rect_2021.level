@@ -1,0 +1,73 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2020-12-04T21:50:38.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "rect": {
+        "paletteParams": [
+          "x",
+          "y"
+        ],
+        "params": [
+          "200",
+          "200"
+        ]
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "start_blocks": "rect(100,100);",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "true",
+    "text_mode_at_start": "false",
+    "hide_animation_mode": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "true",
+    "pause_animations_by_default": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD_U3_rect_c1\",\r\n  \"callout_text\": \"Here is the code\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"block_trigger\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"rect(\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 50,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "long_instructions": "# Explore Game Lab\r\n\r\nWelcome to Game Lab, where you can create interactive animations and games!   \r\n\r\nYou've already practiced the basics of putting shapes on a grid.  In Game Lab, you'll do the same with the display area on the left.\r\n\r\n# Do This\r\n\r\n* Look at the line of code in the workspace below these instructions ( [Show me where](#triggercallout=block_trigger) ) and discuss with your partner where you think the shape will be drawn on the grid.\r\n* Click <img src=\"https://images.code.org/9e963203e9cafd558b760730d13537ca-image-1461783998310.06.20 PM.png\" width=100> to run the program and see what happens.\r\n* Change the numbers inside the block, then try running the program again.\r\n* Try to place the rectangle near the bottom right of the screen.",
+    "display_name": "Introduction to Game Lab",
+    "teacher_markdown": "# Tour of Game Lab\r\n\r\nDepending on the age and comfort level of your students, you may choose to use this level to tour the environment as a whole class. Make sure that students can find the level instructions, coding area, display area, and block drawers. This is also a good opportunity to point out some of the useful resources like documentation and the blocks to text button.",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 20640,
+    "name_suffix": "_2021",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2017-05-26 17:42:28 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-05-26 20:55:04 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2017-06-08 19:19:30 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 22:04:25 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-08 23:35:03 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-13 20:32:05 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2017-06-28 17:59:06 +0000\",\"changed\":[\"code_functions\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2017-11-15 20:48:05 +0000\",\"changed\":[\"code_functions\",\"hide_animation_mode\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"},{\"changed_at\":\"2018-06-22 11:20:59 +0000\",\"changed\":[\"code_functions\",\"callout_json\",\"markdown_instructions\",\"contained_level_names\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-06-22 11:21:47 +0000\",\"changed\":[\"code_functions\",\"callout_json\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-06-22 11:28:20 +0000\",\"changed\":[\"code_functions\",\"callout_json\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"josh@code.org\"},{\"changed_at\":\"2018-06-22 11:29:12 +0000\",\"changed\":[\"code_functions\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-06-22 11:30:13 +0000\",\"changed\":[\"code_functions\",\"callout_json\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-06-22 11:30:41 +0000\",\"changed\":[\"code_functions\",\"callout_json\",\"contained_level_names\",\"encrypted_examples\"],\"changed_by_id\":106,\"changed_by_email\":\"gtwrobel@gmail.com\"},{\"changed_at\":\"2018-07-26 20:41:53 +0000\",\"changed\":[\"code_functions\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":324,\"changed_by_email\":\"elizabeth@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Gamelab>

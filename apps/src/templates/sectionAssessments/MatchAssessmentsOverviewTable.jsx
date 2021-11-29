@@ -21,27 +21,6 @@ const ANSWER_COLUMN_WIDTH = 100;
 const PADDING = 20;
 const ANSWER_CHAR_LIMIT = 30;
 
-const styles = {
-  answerColumnHeader: {
-    width: ANSWER_COLUMN_WIDTH,
-    textAlign: 'center'
-  },
-  answerColumnCell: {
-    width: ANSWER_COLUMN_WIDTH,
-    padding: 0,
-    height: 40
-  },
-  notAnsweredCell: {
-    padding: 0,
-    height: 40
-  },
-  questionCell: {
-    overflow: 'hidden',
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap'
-  }
-};
-
 const NOT_ANSWERED = 'notAnswered';
 
 const answerColumnsFormatter = (
@@ -243,6 +222,27 @@ class MatchAssessmentsOverviewTable extends Component {
     );
   }
 }
+
+const styles = {
+  answerColumnHeader: {
+    width: ANSWER_COLUMN_WIDTH,
+    textAlign: 'center'
+  },
+  answerColumnCell: {
+    width: ANSWER_COLUMN_WIDTH,
+    padding: 0,
+    height: 40
+  },
+  notAnsweredCell: {
+    padding: 0,
+    height: 40
+  },
+  questionCell: {
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap'
+  }
+};
 
 export const UnconnectedMatchAssessmentsOverviewTable = MatchAssessmentsOverviewTable;
 

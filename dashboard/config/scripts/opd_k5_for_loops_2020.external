@@ -6,7 +6,7 @@ markdown <<MARKDOWN
 
 > A **for loop** is a loop with a predetermined beginning, end, and increment (step interval).
 *** 
-## **1. Review "<a href="https://curriculum.code.org/csf-20/coursef/14/" target="blank">For Loop Fun</a>" Lesson Plan from Course F.**
+## **1. Review "<a href="https://curriculum.code.org/csf-20/coursef/14/" target="blank" rel="noopener noreferrer">For Loop Fun</a>" Lesson Plan from Course F.**
 <br/>
 Course F is meant for students in Grade 5. This is the only place where for loops come up in Courses A-F.
 <br/><br/>
@@ -17,5 +17,5 @@ This is a video that you would show your students to help introduce the concept 
 
 ***
 
-<a href="https://curriculum.code.org/csf-20/coursef/14/" target="blank">![](https://images.code.org/da3ec84e5e35cd627a1824b04dc54895-image-1592843488156.png)</a>
+<a href="https://curriculum.code.org/csf-20/coursef/14/" target="blank" rel="noopener noreferrer">![](https://images.code.org/da3ec84e5e35cd627a1824b04dc54895-image-1592843488156.png)</a>
 MARKDOWN

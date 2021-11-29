@@ -9,6 +9,17 @@ wrong 'Line 3'
 wrong 'Line 4'
 
 teacher_markdown <<MARKDOWN
+**Explanation:** When printing characters to the console, they must have quotes around them to mark them as a string. Numbers can be printed as strings as in “100” or as numbers with no quotes, as in 100.
+
+[Lesson 7 - Intro to Debugging](https://curriculum.code.org/csp-20/unit3/7/) gave students opportunities to debug programs similar to this one.
+
+::: details [**Essential Knowledge Connected To This Question**]
+
+CRD-2.I: For errors in an algorithm or program: 
+a. Identify the error.
+b. Correct the error.
+
+:::
 
 MARKDOWN
 

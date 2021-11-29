@@ -24,36 +24,6 @@ export const COLUMNS = {
 
 const CELL_WIDTH = 250;
 
-const styles = {
-  headerCellName: {
-    borderWidth: '0px 1px 1px 0px',
-    borderColor: color.border_light_gray,
-    padding: 15
-  },
-  cellName: {
-    borderWidth: '1px 1px 1px 0px',
-    borderColor: color.border_light_gray,
-    padding: 15,
-    width: CELL_WIDTH
-  },
-  truncateText: {
-    width: CELL_WIDTH,
-    textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
-    overflow: 'hidden'
-  },
-  centeredCell: {
-    textAlign: 'center'
-  },
-  dialog: {
-    padding: '0 15px 8px 15px'
-  },
-  dialogBody: {
-    fontSize: 18,
-    color: color.charcoal
-  }
-};
-
 const projectNameFormatter = (name, {rowData}) => {
   return (
     <PersonalProjectsNameCell
@@ -308,6 +278,36 @@ class LibraryTable extends React.Component {
     );
   }
 }
+
+const styles = {
+  headerCellName: {
+    borderWidth: '0px 1px 1px 0px',
+    borderColor: color.border_light_gray,
+    padding: 15
+  },
+  cellName: {
+    borderWidth: '1px 1px 1px 0px',
+    borderColor: color.border_light_gray,
+    padding: 15,
+    width: CELL_WIDTH
+  },
+  truncateText: {
+    width: CELL_WIDTH,
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    overflow: 'hidden'
+  },
+  centeredCell: {
+    textAlign: 'center'
+  },
+  dialog: {
+    padding: '0 15px 8px 15px'
+  },
+  dialogBody: {
+    fontSize: 18,
+    color: color.charcoal
+  }
+};
 
 export const UnconnectedLibraryTable = LibraryTable;
 

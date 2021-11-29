@@ -6,18 +6,6 @@ import color from '@cdo/apps/util/color';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 
-const styles = {
-  heading: {
-    color: color.purple
-  },
-  listAlign: {
-    marginLeft: 10
-  },
-  sublistAlign: {
-    marginLeft: 20
-  }
-};
-
 export default class SignInInstructions extends React.Component {
   static propTypes = {
     loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
@@ -34,7 +22,7 @@ export default class SignInInstructions extends React.Component {
             <p>{i18n.signingInWordIntro()}</p>
             <SafeMarkdown
               markdown={i18n.signingInWordPic1({
-                joinLink: `${studioUrlPrefix}/join/${sectionCode}`,
+                joinLink: `${studioUrlPrefix}/sections/${sectionCode}`,
                 sectionCode: sectionCode,
                 codeOrgLink: pegasus('/')
               })}
@@ -49,7 +37,7 @@ export default class SignInInstructions extends React.Component {
             <p>{i18n.signingInPicIntro()}</p>
             <SafeMarkdown
               markdown={i18n.signingInWordPic1({
-                joinLink: `${studioUrlPrefix}/join/${sectionCode}`,
+                joinLink: `${studioUrlPrefix}/sections/${sectionCode}`,
                 sectionCode: sectionCode,
                 codeOrgLink: pegasus('/')
               })}
@@ -103,3 +91,15 @@ export default class SignInInstructions extends React.Component {
     );
   }
 }
+
+const styles = {
+  heading: {
+    color: color.purple
+  },
+  listAlign: {
+    marginLeft: 10
+  },
+  sublistAlign: {
+    marginLeft: 20
+  }
+};

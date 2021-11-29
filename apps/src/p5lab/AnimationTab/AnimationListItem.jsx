@@ -12,73 +12,11 @@ import {
   setAnimationFrameDelay,
   setAnimationLooping,
   isNameUnique
-} from '../animationListModule';
-import {selectAnimation} from './animationTabModule';
+} from '../redux/animationList';
+import {selectAnimation} from '../redux/animationTab';
 import ListItemButtons from './ListItemButtons';
 import ListItemThumbnail from './ListItemThumbnail';
 import _ from 'lodash';
-
-const styles = {
-  tile: {
-    width: '100%',
-
-    backgroundColor: 'transparent',
-    borderRadius: 10,
-
-    // Provide vertical padding because we flow vertically, but require
-    // children to use margins horizontally.
-    paddingTop: 4,
-    paddingBottom: 4,
-    marginBottom: 4,
-
-    // Allows looping button to display relative to whole card
-    position: 'relative',
-
-    ':hover': {
-      cursor: 'pointer',
-      backgroundColor: color.lighter_purple
-    }
-  },
-  selectedTile: {
-    backgroundColor: color.purple,
-
-    ':hover': {
-      cursor: 'auto',
-      backgroundColor: color.purple
-    }
-  },
-  nameLabel: {
-    marginLeft: 4,
-    marginRight: 4,
-    marginTop: 4,
-    textAlign: 'center',
-    userSelect: 'none',
-    overflow: 'hidden'
-  },
-  nameInputWrapper: {
-    marginLeft: 5,
-    marginRight: 5,
-    marginTop: 4
-  },
-  nameInput: {
-    width: '100%',
-    margin: 0,
-    padding: 0,
-    textAlign: 'center',
-    border: 'none',
-    borderRadius: 9
-  },
-  rightArrow: {
-    width: 0,
-    height: 0,
-    borderTop: '10px solid transparent',
-    borderBottom: '10px solid transparent',
-    borderLeft: '10px solid ' + color.purple,
-    position: 'absolute',
-    right: '-10px',
-    top: 80
-  }
-};
 
 /**
  * A single list item representing an animation.  Displays an animated
@@ -100,7 +38,8 @@ class AnimationListItem extends React.Component {
     children: PropTypes.node,
     style: PropTypes.object,
     allAnimationsSingleFrame: PropTypes.bool.isRequired,
-    spriteLab: PropTypes.bool.isRequired
+    spriteLab: PropTypes.bool.isRequired,
+    labType: PropTypes.string.isRequired
   };
 
   getAnimationProps(props) {
@@ -118,7 +57,7 @@ class AnimationListItem extends React.Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.columnWidth !== nextProps.columnWidth) {
       this.refs.thumbnail.forceResize();
     }
@@ -131,7 +70,7 @@ class AnimationListItem extends React.Component {
     }
   }
 
-  componentWillMount() {
+  UNSAFE_componentWillMount() {
     this.setState({frameDelay: this.getAnimationProps(this.props).frameDelay});
     this.debouncedFrameDelay = _.debounce(() => {
       const latestFrameDelay = this.state.frameDelay;
@@ -260,7 +199,7 @@ class AnimationListItem extends React.Component {
     const arrowStyle = [this.props.isSelected && styles.rightArrow];
 
     return (
-      <div style={tileStyle} onClick={this.onSelect}>
+      <button style={tileStyle} onClick={this.onSelect} type="button">
         <div style={arrowStyle} />
         <ListItemThumbnail
           ref="thumbnail"
@@ -280,12 +219,76 @@ class AnimationListItem extends React.Component {
               this.state.frameDelay
             )}
             singleFrameAnimation={this.props.allAnimationsSingleFrame}
+            labType={this.props.labType}
           />
         )}
-      </div>
+      </button>
     );
   }
 }
+
+const styles = {
+  tile: {
+    width: '100%',
+
+    backgroundColor: 'transparent',
+    borderRadius: 10,
+
+    // Provide vertical padding because we flow vertically, but require
+    // children to use margins horizontally.
+    padding: '4px 0px',
+
+    // Allows looping button to display relative to whole card
+    position: 'relative',
+
+    ':hover': {
+      cursor: 'pointer',
+      backgroundColor: color.lighter_purple
+    },
+    border: 0,
+    margin: '5px 0 0 0'
+  },
+  selectedTile: {
+    backgroundColor: color.purple,
+
+    ':hover': {
+      cursor: 'auto',
+      backgroundColor: color.purple
+    }
+  },
+  nameLabel: {
+    marginLeft: 4,
+    marginRight: 4,
+    marginTop: 4,
+    textAlign: 'center',
+    userSelect: 'none',
+    overflow: 'hidden',
+    fontSize: '13px'
+  },
+  nameInputWrapper: {
+    marginLeft: 5,
+    marginRight: 5,
+    marginTop: 4
+  },
+  nameInput: {
+    width: '100%',
+    margin: 0,
+    padding: 0,
+    textAlign: 'center',
+    border: 'none',
+    borderRadius: 9
+  },
+  rightArrow: {
+    width: 0,
+    height: 0,
+    borderTop: '10px solid transparent',
+    borderBottom: '10px solid transparent',
+    borderLeft: '10px solid ' + color.purple,
+    position: 'absolute',
+    right: '-10px',
+    top: 80
+  }
+};
 export default connect(
   state => ({
     columnWidth: state.animationTab.columnSizes[0],

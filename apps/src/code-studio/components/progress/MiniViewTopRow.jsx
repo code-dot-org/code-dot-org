@@ -8,53 +8,12 @@ import {stringifyQueryParams} from '@cdo/apps/utils';
 import {queryParams, updateQueryParam} from '@cdo/apps/code-studio/utils';
 import {getStore} from '@cdo/apps/redux';
 
-const styles = {
-  main: {
-    fontSize: 16,
-    backgroundColor: color.teal,
-    color: color.white,
-    padding: 15,
-    marginBottom: 0,
-    // matches the lineHeight of Button,
-    height: 34,
-    lineHeight: '34px'
-  },
-  // absolutely position children so that they're located correctly in RTL as well
-  button: {
-    position: 'absolute',
-    left: 15
-  },
-  buttonRtl: {
-    position: 'absolute',
-    right: 15
-  },
-  linesOfCodeText: {
-    position: 'absolute',
-    right: 115
-  },
-  linesOfCodeTextRtl: {
-    position: 'absolute',
-    left: 115
-  },
-  toggle: {
-    position: 'absolute',
-    top: 10,
-    right: 15
-  },
-  toggleRtl: {
-    position: 'absolute',
-    top: 10,
-    left: 15,
-    direction: 'ltr'
-  }
-};
-
 export default class MiniViewTopRow extends React.Component {
   static propTypes = {
     scriptName: PropTypes.string.isRequired,
     // May not have this (i.e if not logged in)
     linesOfCodeText: PropTypes.string,
-    selectedSectionId: PropTypes.number
+    selectedSectionId: PropTypes.string
   };
 
   render() {
@@ -95,3 +54,44 @@ export default class MiniViewTopRow extends React.Component {
     );
   }
 }
+
+const styles = {
+  main: {
+    fontSize: 16,
+    backgroundColor: color.teal,
+    color: color.white,
+    padding: 15,
+    marginBottom: 0,
+    // matches the lineHeight of Button,
+    height: 34,
+    lineHeight: '34px'
+  },
+  // absolutely position children so that they're located correctly in RTL as well
+  button: {
+    position: 'absolute',
+    left: 15
+  },
+  buttonRtl: {
+    position: 'absolute',
+    right: 15
+  },
+  linesOfCodeText: {
+    position: 'absolute',
+    right: 115
+  },
+  linesOfCodeTextRtl: {
+    position: 'absolute',
+    left: 115
+  },
+  toggle: {
+    position: 'absolute',
+    top: 10,
+    right: 15
+  },
+  toggleRtl: {
+    position: 'absolute',
+    top: 10,
+    left: 15,
+    direction: 'ltr'
+  }
+};

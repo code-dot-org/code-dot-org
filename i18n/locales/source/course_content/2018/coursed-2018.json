@@ -1,8 +1,8 @@
 {
-  "https://studio.code.org/s/coursed-2018/stage/1/puzzle/1": {
+  "https://studio.code.org/s/coursed-2018/lessons/1/levels/1": {
     "title": "Graph Paper Programming"
   },
-  "https://studio.code.org/s/coursed-2018/stage/2/puzzle/2": {
+  "https://studio.code.org/s/coursed-2018/lessons/2/levels/2": {
     "short_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
     "long_instructions": "For this puzzle, snap all of the blocks together and click \"Run\" to watch it go!",
     "authored_hints": {
@@ -13,7 +13,7 @@
       "grade2_CaringForNewPet_0_1": "After connecting all the blocks, press \"Run\" to start your program."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/2/puzzle/3": {
+  "https://studio.code.org/s/coursed-2018/lessons/2/levels/3": {
     "short_instructions": "Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.",
     "long_instructions": "Drag an extra `move forward` block out of the toolbox, then attach all blocks to `when run` to finish your code.",
     "authored_hints": {
@@ -24,7 +24,7 @@
       "courseC_maze_programming2_1": "This is the toolbox. It’s where you’ll find extra blocks to complete your puzzles."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/2/puzzle/4": {
+  "https://studio.code.org/s/coursed-2018/lessons/2/levels/4": {
     "short_instructions": "There is one extra block that is going to cause the bird to crash. Throw it away by dragging it back to the toolbox.",
     "long_instructions": "_\"This pig is ruffling my feathers.\"_\n\nThere is one extra block that is going to cause the bird to crash.\\\nThrow it away by removing it from the other blocks and dragging it back to the toolbox.",
     "authored_hints": {
@@ -35,7 +35,7 @@
       "stone_block_2": "Grey blocks are made of stone and cannot be thrown away."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/2/puzzle/5": {
+  "https://studio.code.org/s/coursed-2018/lessons/2/levels/5": {
     "short_instructions": "Avoid TNT or feathers will fly!",
     "long_instructions": "_\"Trace the path and lead me to the silly pig.\"_ \n\nAvoid TNT or feathers will fly!",
     "authored_hints": {
@@ -46,7 +46,7 @@
       "courseC_maze_programming4_1": "This is your block limit.  It tells you how many of these blocks you have left to use."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/2/puzzle/6": {
+  "https://studio.code.org/s/coursed-2018/lessons/2/levels/6": {
     "short_instructions": "Avoid the TNT.",
     "long_instructions": "_\"Follow this path to get me to the pig!\"_\n\nAvoid the TNT.",
     "authored_hints": {
@@ -58,7 +58,7 @@
       "": "These blocks don't have numbers on them. You can use as many as you want!"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/2/puzzle/7": {
+  "https://studio.code.org/s/coursed-2018/lessons/2/levels/7": {
     "short_instructions": "Pay attention to the sequence and see if you can figure out how to get to that pig!",
     "long_instructions": "Pay attention to the sequence and see if you can figure out how to get to that pig!",
     "authored_hints": {
@@ -70,7 +70,7 @@
       "": "These blocks don't have numbers on them. You can use as many as you want!"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/2/puzzle/8": {
+  "https://studio.code.org/s/coursed-2018/lessons/2/levels/8": {
     "short_instructions": "Navigate this maze to help the bird find the pig!",
     "long_instructions": "**Challenge:** Navigate this maze to help the bird find the pig!",
     "authored_hints": {
@@ -79,18 +79,18 @@
       "courseC_maze_programming5_c": "Don't be afraid to make a mistake! Try adding blocks and running the code to see what will happen, even if you don't think you've solved the puzzle yet."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/2/puzzle/9": {
+  "https://studio.code.org/s/coursed-2018/lessons/2/levels/9": {
     "short_instructions": "Help the bird get to the pig.",
     "long_instructions": "Help the bird get to the pig."
   },
-  "https://studio.code.org/s/coursed-2018/stage/2/puzzle/10": {
+  "https://studio.code.org/s/coursed-2018/lessons/2/levels/10": {
     "short_instructions": "Get the bird to the pig.",
     "long_instructions": "Get the bird to the pig."
   },
-  "https://studio.code.org/s/coursed-2018/stage/3/puzzle/1": {
+  "https://studio.code.org/s/coursed-2018/lessons/3/levels/1": {
     "title": "Relay Programming"
   },
-  "https://studio.code.org/s/coursed-2018/stage/4/puzzle/2": {
+  "https://studio.code.org/s/coursed-2018/lessons/4/levels/2": {
     "short_instructions": "Fix the error(s) to collect all of the treasure.",
     "long_instructions": "_\"Oh no! I see a problem.\"_\n\nFix the error(s) to collect all of the treasure.",
     "authored_hints": {
@@ -98,7 +98,7 @@
       "courseD_collector_debugging1_c": "Remember to use the `collect` block to pick up treasure once you have moved to it."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/4/puzzle/3": {
+  "https://studio.code.org/s/coursed-2018/lessons/4/levels/3": {
     "short_instructions": "Fix the error(s) to collect all of the treasure.",
     "long_instructions": "_\"You can do this!\"_\n\nFix the error(s) to collect all of the treasure.",
     "authored_hints": {
@@ -106,14 +106,14 @@
       "courseD_collector_debugging2a_c": "What happens?\n\nWhat is supposed to happen?\n\nWhat does that tell you?"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/4/puzzle/4": {
+  "https://studio.code.org/s/coursed-2018/lessons/4/levels/4": {
     "short_instructions": "Fix the error(s) to collect all of the treasure.",
     "long_instructions": "_\"Be persistent and you will figure this out.\"_\n\nFix the error(s) to collect all of the treasure.",
     "authored_hints": {
       "courseD_collector_debugging3_a": "Is there any place where Laurel does something that doesn't make sense? What happens when you change those blocks?"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/4/puzzle/5": {
+  "https://studio.code.org/s/coursed-2018/lessons/4/levels/5": {
     "short_instructions": "Fix the error(s) to collect all of the treasure.",
     "long_instructions": "_\"Don't get frustrated. You can do it!\"_\n\nFix the error(s) to collect all of the treasure.",
     "authored_hints": {
@@ -121,7 +121,7 @@
       "courseD_collector_debugging4_b": "If you're having a hard time figuring out how to make the stair step pattern, try tracing it with your finger and saying the commands out loud. \n\nDon't forget to point out the direction of the turns!"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/4/puzzle/6": {
+  "https://studio.code.org/s/coursed-2018/lessons/4/levels/6": {
     "short_instructions": "All of the commands that you need are already here...now use your debugging skills to figure out how to solve this puzzle.",
     "long_instructions": "_\"This puzzle is making me loopy!\"_\n\nAll of the commands that you need are already here...now use your debugging skills to figure out how to solve this puzzle.",
     "authored_hints": {
@@ -129,7 +129,7 @@
       "courseD_collector_debugging5a_b": "Once you have the first line of treasure collected, what is left over in your code?"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/4/puzzle/7": {
+  "https://studio.code.org/s/coursed-2018/lessons/4/levels/7": {
     "short_instructions": "Challenge: Use the code in the work area to get at least **6** pieces of treasure!",
     "long_instructions": "Challenge: Use the code in the work area to get at least **6** pieces of treasure!",
     "authored_hints": {
@@ -137,13 +137,13 @@
       "courseD_collector_debugging6_b": "It looks like all of the blocks you need are in the workspace. Try clicking \"start over\" if things get too confusing."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/4/puzzle/8": {
+  "https://studio.code.org/s/coursed-2018/lessons/4/levels/8": {
     "long_instructions": "_\"So much treasure!\"_\n\nHelp Laurel fix the code to get all the treasure."
   },
-  "https://studio.code.org/s/coursed-2018/stage/4/puzzle/9": {
+  "https://studio.code.org/s/coursed-2018/lessons/4/levels/9": {
     "long_instructions": "_\"It's treasure island!\"_\n\nHelp Laurel fix the code to get all the treasure."
   },
-  "https://studio.code.org/s/coursed-2018/stage/5/puzzle/1": {
+  "https://studio.code.org/s/coursed-2018/lessons/5/levels/1": {
     "short_instructions": "Attach a block to the \"when left arrow\" block and press \"Run\" to move the player to the net.",
     "long_instructions": "Get to the hoop!     \n\nAttach a block to the `when left arrow` event and press \"Run\" to move the player to the net.",
     "authored_hints": {
@@ -151,14 +151,14 @@
       "courseD_bounce_events1s_b": "Don't forget to press \"Run\" and get the hand to the basket in order to solve this puzzle."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/5/puzzle/2": {
+  "https://studio.code.org/s/coursed-2018/lessons/5/levels/2": {
     "short_instructions": "Now, attach a block to the `when right event` so that the hand can get to both baskets.",
     "long_instructions": "Now, attach a block to the `when right event` so that the hand can get to both baskets.",
     "authored_hints": {
       "courseD_bounce_events2s_a": "You will need to have two sets of `move` events coded for this to work:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/5/puzzle/3": {
+  "https://studio.code.org/s/coursed-2018/lessons/5/levels/3": {
     "short_instructions": "Attach a block to the `when ball hits hand` event to ensure the ball reaches the basket.",
     "long_instructions": "We're going to send a basketball flying down towards the hand.  Attach a block to the `when ball hits hand` event to ensure the ball reaches the basket.",
     "authored_hints": {
@@ -166,7 +166,7 @@
       "courseD_bounce_events5s_b": "Make sure you have added this code to your workspace:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/5/puzzle/4": {
+  "https://studio.code.org/s/coursed-2018/lessons/5/levels/4": {
     "short_instructions": "Attach code to make the ball bounce when it hits the wall so you can solve this puzzle.",
     "long_instructions": "Now the basket is at the top.  \n\nAttach code to make the ball bounce when it hits the wall so you can solve this puzzle.",
     "authored_hints": {
@@ -174,35 +174,35 @@
       "courseD_bounce_events6s_b": "If you've written the code correctly, you don't have to move the hand to win."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/5/puzzle/5": {
+  "https://studio.code.org/s/coursed-2018/lessons/5/levels/5": {
     "short_instructions": "Attach sound blocks to make the net swish when you hit the basket and have the whistle blow when the ball misses your hand. Bounce the ball until it hits the finish target.",
     "long_instructions": "Attach sound blocks to make the net swish when you hit the basket and have the whistle blow when the ball misses your hand.  \n\n* * *\n\nBounce the ball until it hits the finish target.",
     "authored_hints": {
       "courseD_bounce_events7s_a": "You can add sounds in more places if you feel like it!"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/5/puzzle/6": {
+  "https://studio.code.org/s/coursed-2018/lessons/5/levels/6": {
     "short_instructions": "Attach the `score point` block to the `when ball in goal` event and the `score opponent point` block to the `when ball misses hand` event to make a game. ",
     "long_instructions": "There is now a hoop at the top.  \n\nAttach the `score point` block to the `when ball in goal` event and the `score opponent point` block to the `when ball misses hand` event to make a game. \n\n* * *\n\nSee how many points you can score before your opponent scores twice.",
     "authored_hints": {
       "courseD_bounce_events10s_a": "You should have both of these events in your code:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/5/puzzle/7": {
+  "https://studio.code.org/s/coursed-2018/lessons/5/levels/7": {
     "short_instructions": "Attach the `throw new ball` block in all of the places where the game needs a new ball. ",
     "long_instructions": "Now, you are in control of the ball!  Attach the `throw new ball` block in all of the places where the game needs a new ball.\n\n* * *\n\nSee how many points you can score before your opponent scores twice!",
     "authored_hints": {
       "courseD_bounce_events11s_a": "You will need to throw a ball when the game starts, when you hit the basket, and when the hand misses the ball."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/5/puzzle/8": {
+  "https://studio.code.org/s/coursed-2018/lessons/5/levels/8": {
     "short_instructions": "Make this game your own. You can change all the visuals and the rules. When you're done, click \"Finish\" to let friends try your game on their phones.",
     "authored_hints": {
       "courseD_bounce_events12s_a": "You can speed up the basketball or the hand by attaching those blocks to the `when run` event.",
       "courseD_bounce_events12s_b": "Try making each shot worth 2 points and changing the team logo to the one from your home town!"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/6/puzzle/1": {
+  "https://studio.code.org/s/coursed-2018/lessons/6/levels/1": {
     "short_instructions": "Help Scrat across the ice to get to the acorn!",
     "long_instructions": "Help Scrat across the slippery ice to get to the acorn!",
     "authored_hints": {
@@ -210,7 +210,7 @@
       "courseD_iceage_loops1_b": "You will have to use this block:\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/6/puzzle/2": {
+  "https://studio.code.org/s/coursed-2018/lessons/6/levels/2": {
     "short_instructions": "Use a `turn left` block to get to the acorn!",
     "long_instructions": "Use a [blockly block][0] block to get to the acorn!",
     "authored_hints": {
@@ -219,10 +219,10 @@
       "courseD_iceage_loops2_c": "Follow this path to get Scrat to the acorn."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/6/puzzle/3": {
+  "https://studio.code.org/s/coursed-2018/lessons/6/levels/3": {
     "display_name": "Loops in Ice Age Video"
   },
-  "https://studio.code.org/s/coursed-2018/stage/6/puzzle/4": {
+  "https://studio.code.org/s/coursed-2018/lessons/6/levels/4": {
     "short_instructions": "Can you get to the acorn with just one `move forward` block?",
     "long_instructions": "Can you get to the acorn with just one [blockly block][0] block? Try using a loop!",
     "authored_hints": {
@@ -230,7 +230,7 @@
       "courseB_iceage_loops3_b": "To repeat code, drag out a `repeat` loop, then put the block you want repeated inside."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/6/puzzle/5": {
+  "https://studio.code.org/s/coursed-2018/lessons/6/levels/5": {
     "short_instructions": "Add one more block to get Scrat all the way to the acorn!",
     "long_instructions": "Add one more block to get Scrat all the way to the acorn!",
     "authored_hints": {
@@ -239,7 +239,7 @@
       "courseD_iceage_loops4_c": "This is the path Scrat should take."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/6/puzzle/6": {
+  "https://studio.code.org/s/coursed-2018/lessons/6/levels/6": {
     "short_instructions": "Can you add a loop to get to the acorn?",
     "long_instructions": "Can you add a loop to get to the acorn?",
     "authored_hints": {
@@ -248,7 +248,7 @@
       "courseD_iceage_loops6_c": "Your final path should look like this."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/6/puzzle/7": {
+  "https://studio.code.org/s/coursed-2018/lessons/6/levels/7": {
     "short_instructions": "Scrat really wants that acorn! ",
     "long_instructions": "Scrat really wants that acorn! ",
     "authored_hints": {
@@ -256,7 +256,7 @@
       "courseB_iceage_loops7_b": "This is the path Scrat should take to get to the acorn."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/6/puzzle/8": {
+  "https://studio.code.org/s/coursed-2018/lessons/6/levels/8": {
     "short_instructions": "Can you fix this code? ",
     "long_instructions": "Can you fix this code? ",
     "authored_hints": {
@@ -265,7 +265,7 @@
       "courseD_iceage_loops8_c": "Use loops to help Scrat follow this path."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/6/puzzle/9": {
+  "https://studio.code.org/s/coursed-2018/lessons/6/levels/9": {
     "short_instructions": "The acorn is so far away! Can you use loops to help Scrat get there?",
     "long_instructions": "The acorn is so far away! Can you use loops to help Scrat get there?",
     "authored_hints": {
@@ -274,7 +274,7 @@
       "courseD_iceage_loops9_c": "Scrat should follow this path to get the acorn."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/6/puzzle/10": {
+  "https://studio.code.org/s/coursed-2018/lessons/6/levels/10": {
     "short_instructions": "Help Scrat get all the way over to the acorn!",
     "long_instructions": "Help Scrat get all the way over to the acorn!",
     "authored_hints": {
@@ -283,51 +283,51 @@
       "courseB_iceage_loops10_c": "This is a long puzzle! Follow this path."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/6/puzzle/11": {
+  "https://studio.code.org/s/coursed-2018/lessons/6/levels/11": {
     "short_instructions": "Help Scrat get to the acorn!",
     "long_instructions": "Help Scrat get to the acorn!"
   },
-  "https://studio.code.org/s/coursed-2018/stage/6/puzzle/12": {
+  "https://studio.code.org/s/coursed-2018/lessons/6/levels/12": {
     "short_instructions": "Get to the acorn any way you can!",
     "long_instructions": "Get to the acorn any way you can!"
   },
-  "https://studio.code.org/s/coursed-2018/stage/7/puzzle/2": {
+  "https://studio.code.org/s/coursed-2018/lessons/7/levels/2": {
     "short_instructions": "Move forward by 60 pixels to complete this puzzle.",
     "long_instructions": "What a lovely day!  \n\nHelp the Artist cover his flowers before the winter by moving forward by 60 pixels."
   },
-  "https://studio.code.org/s/coursed-2018/stage/7/puzzle/3": {
+  "https://studio.code.org/s/coursed-2018/lessons/7/levels/3": {
     "short_instructions": "Move forward five times and make this colored line.",
     "long_instructions": "Add some beauty by repeating that step five times, changing to a random color between each move."
   },
-  "https://studio.code.org/s/coursed-2018/stage/7/puzzle/5": {
+  "https://studio.code.org/s/coursed-2018/lessons/7/levels/5": {
     "short_instructions": "Use a `repeat` loop to draw five colored dashes.",
     "long_instructions": "Draw the colorful line 5 times again, this time using a `repeat` loop."
   },
-  "https://studio.code.org/s/coursed-2018/stage/7/puzzle/6": {
+  "https://studio.code.org/s/coursed-2018/lessons/7/levels/6": {
     "short_instructions": "What happens when you add a 72 degree right turn after everything else inside your loop?",
     "long_instructions": "What happens when you add a 72 degree right turn after everything else inside your loop?"
   },
-  "https://studio.code.org/s/coursed-2018/stage/7/puzzle/7": {
+  "https://studio.code.org/s/coursed-2018/lessons/7/levels/7": {
     "short_instructions": "Use loops to draw this staircase.",
     "long_instructions": "Loops sure make writing code easier!\n\nUse loops to draw this staircase.\n\n-   Each stairstep is 50 pixels long and 50 pixels tall\n-   You will need to turn 90 degrees in each direction"
   },
-  "https://studio.code.org/s/coursed-2018/stage/7/puzzle/8": {
+  "https://studio.code.org/s/coursed-2018/lessons/7/levels/8": {
     "short_instructions": "Edit your loop to draw this staircase.",
     "long_instructions": "This staircase is much bigger, but it takes the same amount of code as the last puzzle!\n\nFix this loop to complete the puzzle."
   },
-  "https://studio.code.org/s/coursed-2018/stage/7/puzzle/9": {
+  "https://studio.code.org/s/coursed-2018/lessons/7/levels/9": {
     "short_instructions": "Look for a pattern and make this code shorter using loops!",
     "long_instructions": "Look for a pattern and make this code shorter using loops!"
   },
-  "https://studio.code.org/s/coursed-2018/stage/7/puzzle/10": {
+  "https://studio.code.org/s/coursed-2018/lessons/7/levels/10": {
     "short_instructions": "Look for a pattern and make this code shorter using loops.",
     "long_instructions": "**Challenge:** Look for a pattern and make this code shorter using loops."
   },
-  "https://studio.code.org/s/coursed-2018/stage/7/puzzle/11": {
+  "https://studio.code.org/s/coursed-2018/lessons/7/levels/11": {
     "short_instructions": "Solve this puzzle by drawing a square.",
     "long_instructions": "Solve this puzzle by drawing a square with 200 pixel sides."
   },
-  "https://studio.code.org/s/coursed-2018/stage/8/puzzle/1": {
+  "https://studio.code.org/s/coursed-2018/lessons/8/levels/1": {
     "short_instructions": "Help the bee collect all of the nectar.",
     "long_instructions": "_\"This is going to **BEE** great!\"_\n\nHelp the bee collect all of the nectar.",
     "authored_hints": {
@@ -335,7 +335,7 @@
       "courseD_bee_nestedLoops1_c": "Remember to use the `get nectar` block once you are on a square with a flower."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/8/puzzle/2": {
+  "https://studio.code.org/s/coursed-2018/lessons/8/levels/2": {
     "short_instructions": "Help the bee collect all of the nectar.",
     "long_instructions": "\"_This is going to **BEE** great!_\"\n\nHelp the bee collect all of the nectar.",
     "authored_hints": {
@@ -344,7 +344,7 @@
       "courseD_bee_nestedLoops1_c": "Remember to use the `get nectar` block once you are on a square with a flower."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/8/puzzle/4": {
+  "https://studio.code.org/s/coursed-2018/lessons/8/levels/4": {
     "short_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "contained levels": [
@@ -381,7 +381,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/coursed-2018/stage/8/puzzle/5": {
+  "https://studio.code.org/s/coursed-2018/lessons/8/levels/5": {
     "short_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "long_instructions": "This time, help the bee collect all of the nectar using as few blocks as possible.",
     "authored_hints": {
@@ -390,7 +390,7 @@
       "courseD_bee_nestedLoops2_c": "Remember you can put more than one block inside of a loop."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/8/puzzle/6": {
+  "https://studio.code.org/s/coursed-2018/lessons/8/levels/6": {
     "short_instructions": "Get the zombie to the sunflower using the fewest number of blocks possible.",
     "long_instructions": "_\"Zombie hungry!\"_\n\nGet the zombie to the sunflower using the fewest number of blocks possible.",
     "authored_hints": {
@@ -399,7 +399,7 @@
       "courseD_maze_nestedLoops3_c": "Try writing code for one straight piece of path and a turn. Can you repeat this to get to the sunflower?"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/8/puzzle/7": {
+  "https://studio.code.org/s/coursed-2018/lessons/8/levels/7": {
     "short_instructions": "Get the zombie to the sunflower using the fewest blocks possible!  ",
     "long_instructions": "Get the zombie to the sunflower using the fewest blocks possible!  ",
     "authored_hints": {
@@ -408,14 +408,14 @@
       "courseD_maze_nestedLoops4_c": "Try using one `repeat` loop inside of another to cut down on the amount of code you need."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/8/puzzle/8": {
+  "https://studio.code.org/s/coursed-2018/lessons/8/levels/8": {
     "short_instructions": "Get the zombie to the sunflower using the fewest number of blocks possible!",
     "authored_hints": {
       "courseD_maze_nestedLoops5_a": "Look for a stair-step pattern in this maze to find where a nested loop can be used.",
       "courseD_maze_nestedLoops5_b": "Can't figure out where to put the loops? Try writing the code step-by-step and look for a pattern."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/8/puzzle/9": {
+  "https://studio.code.org/s/coursed-2018/lessons/8/levels/9": {
     "short_instructions": "Get the zombie to the sunflower using only the blocks available.",
     "long_instructions": "_\"Must eat sunflower!\"_\n\nGet the zombie to the sunflower using only the blocks available.",
     "authored_hints": {
@@ -424,7 +424,7 @@
       "courseD_maze_nestedLoops6_c": "It will take two sets of nested `repeat` loops to solve this puzzle."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/8/puzzle/10": {
+  "https://studio.code.org/s/coursed-2018/lessons/8/levels/10": {
     "short_instructions": "Challenge: Figure out how to get all of the nectar using only the blocks available.",
     "long_instructions": "**Challenge:** Figure out how to get all of the nectar using only the blocks available.",
     "authored_hints": {
@@ -433,15 +433,15 @@
       "courseD_bee_nestedLoops7_c": "Nest your blocks three deep, like this:\n\n-   repeat 4\n    -   repeat 3\n        -   repeat 12\n            -   get nectar\n        -   move forward\n    -   turn right"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/8/puzzle/11": {
+  "https://studio.code.org/s/coursed-2018/lessons/8/levels/11": {
     "short_instructions": "Collect all of the nectar from each flower and make honey at the honeycomb. ",
     "long_instructions": "Collect all of the nectar from each flower and make honey at the honeycomb. "
   },
-  "https://studio.code.org/s/coursed-2018/stage/8/puzzle/12": {
+  "https://studio.code.org/s/coursed-2018/lessons/8/levels/12": {
     "short_instructions": "Make all of the honey.",
     "long_instructions": "Make all of the honey."
   },
-  "https://studio.code.org/s/coursed-2018/stage/8/puzzle/13": {
+  "https://studio.code.org/s/coursed-2018/lessons/8/levels/13": {
     "short_instructions": "Make all of the honey.",
     "long_instructions": "Make all of the honey.",
     "contained levels": [
@@ -478,7 +478,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/coursed-2018/stage/8/extras?level_name=courseD_harvester_nested_loops_challenge1_2018": {
+  "https://studio.code.org/s/coursed-2018/lessons/8/extras?level_name=courseD_harvester_nested_loops_challenge1_2018": {
     "short_instructions": "\"I need some help on the farm! Help me harvest this corn using only the blocks in your toolbox.\"",
     "long_instructions": "_\"I need some help on the farm! Help me harvest this corn using only the blocks in your toolbox.\"_",
     "authored_hints": {
@@ -487,7 +487,7 @@
       "courseD_harvester_nested_loops_challenge1_c": "You will need to put a small loop inside of your main loop to solve this puzzle!"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/8/extras?level_name=courseD_collector_nested_loops_challenge2_2018": {
+  "https://studio.code.org/s/coursed-2018/lessons/8/extras?level_name=courseD_collector_nested_loops_challenge2_2018": {
     "short_instructions": "Help the collector reach at least two piles of treasure using only the blocks in your toolbox. It is possible to collect all 4.",
     "long_instructions": "_\"Let's hunt for treasure - using loops!\"_ \n\nHelp the collector reach at least two piles of treasure using only the blocks in your toolbox. It is possible to collect all 4.",
     "authored_hints": {
@@ -497,7 +497,7 @@
       "courseD_bee_nested_loops_challenge2_d": "**Solution:**\n\n[blockly block][0]"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/9/puzzle/1": {
+  "https://studio.code.org/s/coursed-2018/lessons/9/levels/1": {
     "short_instructions": "Draw a triangle to kickstart this stage.\\\n(Each side is 100 pixels long and you'll need to turn 120 degrees for each exterior angle.)",
     "authored_hints": {
       "courseD_artist_nestedLoops1_a": "The easiest way to draw this is to move forward and use right turns.",
@@ -505,7 +505,7 @@
       "courseD_artist_nestedLoops1_c": "Try writing the steps on paper and looking for patterns that can be simplified with loops."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/9/puzzle/2": {
+  "https://studio.code.org/s/coursed-2018/lessons/9/levels/2": {
     "short_instructions": "Now loop the triangle 6 times. ",
     "long_instructions": "Now loop the triangle 6 times. \n\nAfter each triangle, you'll need to turn 60 degrees before drawing the next. ",
     "authored_hints": {
@@ -517,7 +517,7 @@
       "courseD_artist_nestedLoops1a_1": "You don't have to use colors to get this puzzle right. If you want to, this `random color` block makes it easy!"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/9/puzzle/4": {
+  "https://studio.code.org/s/coursed-2018/lessons/9/levels/4": {
     "short_instructions": "This time, complete the puzzle with the fewest number of blocks possible.",
     "long_instructions": "This time, complete the puzzle with the fewest number of blocks possible.\n\nAfter each triangle, you'll need to turn 60 degrees before drawing the next.\nSee how much easier this is with **nested loops**?",
     "authored_hints": {
@@ -525,7 +525,7 @@
       "courseD_artist_nestedLoops2_b": "Remember to put the `turn` block inside of the loop so that the artist turns after each triangle."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/9/puzzle/5": {
+  "https://studio.code.org/s/coursed-2018/lessons/9/levels/5": {
     "short_instructions": "Use your new skills to quickly draw the last row of windows for this building.\n\nThe windows are 20 pixel squares, each 20 pixels apart.",
     "authored_hints": {
       "courseD_artist_nestedLoops3_a": "Try using the `jump forward` block to get from the top of one square to the place where you will start the next. \n\nIf your squares are 20 pixels tall and they are 20 pixels apart, how far do you need to jump?",
@@ -533,7 +533,7 @@
       "courseD_artist_nestedLoops3_c": "Start by using a `repeat` loop to make one square.  Next, repeat that square 8 times, jumping 40 pixels in between. "
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/9/puzzle/6": {
+  "https://studio.code.org/s/coursed-2018/lessons/9/levels/6": {
     "short_instructions": "Great!  Do the same thing with these circles.",
     "long_instructions": "Great!  Do the same thing with these circles. \n\n-   Each circle is made by moving 1 pixel before turning 1 degree, 360 times.\n-   Each circle begins just 50 pixels from where the last one ended",
     "authored_hints": {
@@ -543,7 +543,7 @@
       "courseD_artist_nestedLoops4_c": "Use a nested loop to draw your circles 4 times."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/9/puzzle/7": {
+  "https://studio.code.org/s/coursed-2018/lessons/9/levels/7": {
     "short_instructions": "What happens if you also turn 90 degrees between circles?",
     "long_instructions": "What happens if you also turn 90 degrees between circles?\n\n(To get this image, you still need to jump 50 pixels between circles)",
     "authored_hints": {
@@ -551,7 +551,7 @@
       "courseD_artist_nestedLoops5_b": "To make a circle you'll need to set a repeat loop to repeat 360 times. Inside the loop, move forward 1 pixel and turn by 1 degree."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/9/puzzle/8": {
+  "https://studio.code.org/s/coursed-2018/lessons/9/levels/8": {
     "short_instructions": "Use what you've learned to make this drawing.",
     "long_instructions": "Use what you've learned to make this drawing.\n\n-   The squares each have **100 pixel sides** and **90 degree angles**\n-   You will need to turn **60 degrees between each square**. Why? Because there are 6 squares, and 360 degrees (a full turn around) divided by 6 is 60 degrees.\n-   Make sure you jump **50 pixels to get to the next square**",
     "authored_hints": {
@@ -559,7 +559,7 @@
       "courseD_artist_nestedLoops7_b": "Use a nested loop, where the inner loop is the code for a square.\n\n-   repeat 6 times\n    -   make square\n    -   jump forward by **50 pixels**\n    -   turn **60 degrees**"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/9/puzzle/9": {
+  "https://studio.code.org/s/coursed-2018/lessons/9/levels/9": {
     "short_instructions": "Using what you have learned in the last couple of puzzles, build this image from the beginning.",
     "long_instructions": "Using what you have learned in the last couple of puzzles, build this image from the beginning.\n\n-   Each hexagon has **50 pixel sides** and **60 degree turns**",
     "authored_hints": {
@@ -568,7 +568,7 @@
       "courseD_artist_nestedLoops8_c": "Use a nested loop:\n\n-   Repeat 8 times\n    -   draw a hexagon\n    -   jump forward 50 pixels\n    -   turn right 45 degrees"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/9/puzzle/10": {
+  "https://studio.code.org/s/coursed-2018/lessons/9/levels/10": {
     "short_instructions": "**Challenge:** Can you figure out how to make a picture like this?",
     "long_instructions": "**Challenge:** Can you figure out how to make a picture like this?\n\n-   Both shapes have **50 pixel sides**\n-   Between each pair of shapes, you will need to jump forward the length of a side, and turn 45 degrees.",
     "authored_hints": {
@@ -577,10 +577,10 @@
       "courseD_artist_nestedLoops9_c": "Use two nested loops:\n\n-   Repeat 8 times\n    -   draw a square\n    -   jump forward 50 pixels\n    -   turn right by 45 degrees\n-   Repeat 8 times\n    -   draw a triangle\n    -   jump forward 50 pixels\n    -   turn right by 45 degrees"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/9/puzzle/11": {
+  "https://studio.code.org/s/coursed-2018/lessons/9/levels/11": {
     "short_instructions": "Take the squares from before, but this time only make 7 of them, and lay them out in a row."
   },
-  "https://studio.code.org/s/coursed-2018/stage/9/puzzle/12": {
+  "https://studio.code.org/s/coursed-2018/lessons/9/levels/12": {
     "short_instructions": "**Challenge:** Can you figure out how to make a picture like this?",
     "long_instructions": "**Challenge:** Can you figure out how to make a picture like this?\n\n-   Both shapes have 50 pixel sides",
     "contained levels": [
@@ -618,7 +618,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/coursed-2018/stage/9/puzzle/13": {
+  "https://studio.code.org/s/coursed-2018/lessons/9/levels/13": {
     "short_instructions": "Now it's your turn.  Take the skills you have learned and make something that you love!",
     "long_instructions": "Now it's your turn.  Take the skills you have learned and make something that you love!\n\nNeed an idea?  Try to make one of these:\n\n[expandable][0]\n[expandable][1]\n[expandable][2]",
     "authored_hints": {
@@ -627,7 +627,7 @@
       "courseD_artist_nestedLoopsFP_c": "<img src=\"https://images.code.org/f654f1512860c6c8cf6795c961a8959c-image-1478732674616.02.58.png\" width=\"200px\"/>\n\nThis image was made using a single nested loop that repeats a pentagon (with 50px sides) 15 times using a 48 degree turn."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/9/extras?level_name=courseD_artist_nestedLoops_challenge1_2018": {
+  "https://studio.code.org/s/coursed-2018/lessons/9/extras?level_name=courseD_artist_nestedLoops_challenge1_2018": {
     "short_instructions": "Can you figure out how to make a picture like this?",
     "long_instructions": "Can you figure out how to make a picture like this?\n\n-   Both shapes have **50 pixel sides.**\n-   The _octagons_ are made with **45 degree** turns.\n-   The _triangles_ are made with **120 degree** turns.",
     "authored_hints": {
@@ -637,7 +637,7 @@
       "courseD_artist_nestedLoops_challenge1_d": "Put all of your code inside of a `repeat 4 times` loop to finish it off."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/9/extras?level_name=courseD_artist_nestedLoops_challenge2_2018": {
+  "https://studio.code.org/s/coursed-2018/lessons/9/extras?level_name=courseD_artist_nestedLoops_challenge2_2018": {
     "short_instructions": "Fix the code to make this picture!",
     "long_instructions": "This code is just a little bit off!  Can you fix it to make the correct drawing in the workspace?\n\n-   The first inner loop should make an octagon.\n-   The second inner loop should make a hexagon.\n-   The third inner loop should make a square.",
     "authored_hints": {
@@ -645,7 +645,7 @@
       "courseD_artist_nestedLoops_challenge2_b": "To draw a square, the artist needs to turn 90 degrees 4 times."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/10/puzzle/1": {
+  "https://studio.code.org/s/coursed-2018/lessons/10/levels/1": {
     "short_instructions": "Draw a hexagon with **50** pixel long sides.  ",
     "long_instructions": "[][0] _“Hi, I’m Elsa of Arendelle, help me draw a shape.”_\n\nDraw a hexagon with 50 pixel long sides.  \n\n* * *\n\nTo draw a hexagon, you will need to: \n\n-   move forward by **50** pixels\n-   turn right by **60** degrees\n-   repeat a total of **6** times",
     "authored_hints": {
@@ -653,7 +653,7 @@
       "courseD_artist_project1_b": "Remember that `move forward` draws a line, while `jump forward` does not."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/10/puzzle/2": {
+  "https://studio.code.org/s/coursed-2018/lessons/10/levels/2": {
     "short_instructions": "Now, turn right by **60** degrees, then draw a straight line **150** pixels long and jump back to the center of the play area.",
     "long_instructions": "[][0] _“Good job!”_\n\nAfter your hexagon, turn right by **60** degrees, then draw a line that is **150** pixels long.   \n\nFinish by putting Elsa back to the center of the play area, using the [blockly block][1] block.",
     "authored_hints": {
@@ -661,26 +661,26 @@
       "courseD_artist_project1_a": "Use the drop down menu on the `turn` blocks to choose the angle you need!"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/10/puzzle/3": {
+  "https://studio.code.org/s/coursed-2018/lessons/10/levels/3": {
     "short_instructions": "Nest all of the code inside of another `repeat` loop and run it a total of **6** times. ",
     "long_instructions": "[][0] _“Let’s make a snowflake.”_\n\nTo turn this code into a snowflake, nest all of the code inside of another `repeat` loop and run it a total of **6** times.  You should only need to add one block."
   },
-  "https://studio.code.org/s/coursed-2018/stage/10/puzzle/4": {
+  "https://studio.code.org/s/coursed-2018/lessons/10/levels/4": {
     "short_instructions": "Add a tiny shape to the end of your line!",
     "long_instructions": "[][0] _\"Let's make our snowflakes special!\"_\n\n**Inspiration:** Where do you need to add code if you want to draw a tiny square at the tip of each long line?\n\n* * *\n\nYou can try whatever you want in this puzzle, but here is an idea:\n\nTry making a tiny square at the end of each line\n\n-   Each side should be 15 pixels long\n-   You should turn by 90 degrees\n-   Repeat those actions a total of 4 times"
   },
-  "https://studio.code.org/s/coursed-2018/stage/10/puzzle/5": {
+  "https://studio.code.org/s/coursed-2018/lessons/10/levels/5": {
     "short_instructions": "Play with the snowflakes!",
     "long_instructions": "[][0] _\"Try changing the shapes or the lengths of the lines to make this your own!\"_\n\n**Inspiration:** You can change your drawing in any way you want, but here is an idea:\n\n-   Try switching the types of shape in the middle of the snowflake with the one at the end of each line!",
     "authored_hints": {
       "1": "If you are switching your shapes, don't forget that you will need to switch their angles, too!"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/10/puzzle/6": {
+  "https://studio.code.org/s/coursed-2018/lessons/10/levels/6": {
     "short_instructions": "Try changing your long 150 pixel line into 6 short lines of **25** pixels, with little turns at the end.",
     "long_instructions": "[][0] _\"Let’s try something new. This time, skate in a zig-zag.\"_\n\n<br/>  \n\n**Inspiration:** Try changing your long 150 pixel line into 6 short lines of **25** pixels\n\n-   Turn by **45** degrees in alternate directions after each short line to get a zig-zag look\n-   Where do you need to put a new `repeat` block to make this happen?\n-   How many times do you have to repeat your pattern of 2 short lines to get 6 total?"
   },
-  "https://studio.code.org/s/coursed-2018/stage/11/puzzle/1": {
+  "https://studio.code.org/s/coursed-2018/lessons/11/levels/1": {
     "short_instructions": "Move to the pile of dirt and use the `remove` block to remove it.",
     "long_instructions": "_\"Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting!\"_  \n\nMove to the pile of dirt and use the `remove` block to remove it.",
     "authored_hints": {
@@ -688,14 +688,14 @@
       "courseD_farmer_while1_b": "Use the `remove 1` block when you are standing on the pile of dirt to remove it."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/11/puzzle/2": {
+  "https://studio.code.org/s/coursed-2018/lessons/11/levels/2": {
     "short_instructions": "Move to the hole and fill it with six shovelfuls of dirt, using the `fill` block.",
     "authored_hints": {
       "courseD_farmer_while2_a": "You will only need to move once to get to the hole.",
       "courseD_farmer_while2_b": "You will need the `fill 1` block six times. Can you use a loop to make this simpler?"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/11/puzzle/3": {
+  "https://studio.code.org/s/coursed-2018/lessons/11/levels/3": {
     "short_instructions": "Use as few blocks as possible to solve this puzzle.",
     "long_instructions": "_\"Move to the pile of dirt and tell me how many shovelfuls to remove.\"_\n\nUse as few blocks as possible to solve this puzzle.",
     "authored_hints": {
@@ -703,7 +703,7 @@
       "courseD_farmer_while3_b": "You shouldn't need any `turn` blocks to get to the pile."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/11/puzzle/5": {
+  "https://studio.code.org/s/coursed-2018/lessons/11/levels/5": {
     "short_instructions": "Help the farmer remove this entire pile using a `while` loop.",
     "long_instructions": "_\"I don't know how much dirt is in this pile!\"_\n\nHelp the farmer remove this entire pile using a `while` loop.",
     "contained levels": [
@@ -740,7 +740,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/coursed-2018/stage/11/puzzle/6": {
+  "https://studio.code.org/s/coursed-2018/lessons/11/levels/6": {
     "short_instructions": "Help the farmer remove this entire pile using a `while` loop.",
     "long_instructions": "_\"I don't know how much dirt is in this pile!\"_\n\nHelp the farmer remove this entire pile using a `while` loop.",
     "authored_hints": {
@@ -748,7 +748,7 @@
       "courseD_farmer_conditionals4_b": "This looks very similar to an earlier puzzle, the only difference is which loop you need."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/11/puzzle/7": {
+  "https://studio.code.org/s/coursed-2018/lessons/11/levels/7": {
     "short_instructions": "Help me remove all of this dirt. ",
     "authored_hints": {
       "courseD_farmer_conditionals5a_a": "Try nesting a `while` loop inside of a `repeat` loop.",
@@ -756,7 +756,7 @@
       "courseD_farmer_conditionals5a_c": "Move forward 5 times. Each time you move forward, remove the pile of dirt by using the `while there is a pile` block."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/11/puzzle/8": {
+  "https://studio.code.org/s/coursed-2018/lessons/11/levels/8": {
     "short_instructions": "Use the `while` loop to easily fill all of the holes.",
     "long_instructions": "Look at all of those holes!  Each one needs a different amount of dirt.   \n\nYou can use the `while` loop to easily fill them all!",
     "authored_hints": {
@@ -765,7 +765,7 @@
       "courseD_farmer_conditionals6_c": "The stair step pattern uses the following blocks\n\n-   move forward\n-   fill hole\n-   turn right\n-   move forward\n-   fill hole\n-   turn left\n\nHow many times do you need to use this stair step pattern?\n\nMake sure you are using the `while there is a hole` to fill the hole."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/11/puzzle/9": {
+  "https://studio.code.org/s/coursed-2018/lessons/11/levels/9": {
     "short_instructions": "Fill in the hole at the end of each of these paths.",
     "authored_hints": {
       "courseD_farmer_conditionals8_a": "The `while path ahead` block lets you keep going, even if you don't know how many squares are in a path.",
@@ -776,7 +776,7 @@
       "courseD_farmer_while7_2018_PathAhead": "You'll need to use the `while path ahead` block in order to solve this puzzle."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/11/puzzle/10": {
+  "https://studio.code.org/s/coursed-2018/lessons/11/levels/10": {
     "short_instructions": "Challenge: Fill all of these holes using as few blocks as possible. ",
     "long_instructions": "**Challenge:** Fill all of these holes using as few blocks as possible. ",
     "authored_hints": {
@@ -785,13 +785,13 @@
       "courseD_farmer_conditionals8_c": "Notice that you need to repeat the `while path ahead`, `while there is a hole` code six times."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/11/puzzle/11": {
+  "https://studio.code.org/s/coursed-2018/lessons/11/levels/11": {
     "short_instructions": "Flatten all of these piles using as few blocks as possible. "
   },
-  "https://studio.code.org/s/coursed-2018/stage/11/puzzle/12": {
+  "https://studio.code.org/s/coursed-2018/lessons/11/levels/12": {
     "short_instructions": "Flatten all of these piles using as few blocks as possible. "
   },
-  "https://studio.code.org/s/coursed-2018/stage/11/puzzle/13": {
+  "https://studio.code.org/s/coursed-2018/lessons/11/levels/13": {
     "short_instructions": "Flatten all of these piles using as few blocks as possible. ",
     "contained levels": [
       {
@@ -827,7 +827,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/coursed-2018/stage/11/extras?level_name=courseD_farmer_while_challenge1_2018": {
+  "https://studio.code.org/s/coursed-2018/lessons/11/extras?level_name=courseD_farmer_while_challenge1_2018": {
     "short_instructions": "Fill all of the holes and remove all of the piles.",
     "long_instructions": "Fill all of the holes and remove all of the piles.",
     "authored_hints": {
@@ -836,14 +836,14 @@
       "courseD_farmer_conditionals8_c": "It is possible to solve this without using any `repeat` loops. To do this, you will need to use four `while` loops."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/12/puzzle/1": {
+  "https://studio.code.org/s/coursed-2018/lessons/12/levels/1": {
     "short_instructions": "Get the angry bird to the pig.",
     "authored_hints": {
       "courseD_maze_until1_a": "Are there any sequences you can loop to make your code shorter?",
       "courseD_maze_until1_b": "Try using a nested loop to solve this puzzle."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/12/puzzle/3": {
+  "https://studio.code.org/s/coursed-2018/lessons/12/levels/3": {
     "contained levels": [
       {
         "dsls": {
@@ -878,7 +878,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/coursed-2018/stage/12/puzzle/4": {
+  "https://studio.code.org/s/coursed-2018/lessons/12/levels/4": {
     "short_instructions": "Get the bird to the pig.",
     "authored_hints": {
       "courseD_maze_until3_a": "-   What does your code do?\n-   What is it supposed to do?\n-   What does that tell you?",
@@ -887,7 +887,7 @@
       "courseD_maze_until3_d": "Don't forget to use the `repeat until` block to make your code shorter."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/12/puzzle/5": {
+  "https://studio.code.org/s/coursed-2018/lessons/12/levels/5": {
     "short_instructions": "Can you get the zombie to the sunflower using only the blocks that are available?",
     "long_instructions": "_\"Dear person. Me zombie. Me hungry. Must... get... to sunflower...\"_\n\nCan you get the zombie to the sunflower using only the blocks that are available?",
     "authored_hints": {
@@ -896,21 +896,21 @@
       "courseD_maze_until4_c": "Don't forget to use the `repeat until` block to make your code shorter."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/12/puzzle/6": {
+  "https://studio.code.org/s/coursed-2018/lessons/12/levels/6": {
     "short_instructions": "Use the `if` block to help the zombie decide when to turn, then get the zombie to the sunflower.",
     "long_instructions": "Use the `if` block to help the zombie decide when to turn, then get the zombie to the sunflower.",
     "authored_hints": {
       "courseD_maze_until5_b": "To use only one `move forward`, put it inside the `repeat until sunflower` block."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/12/puzzle/7": {
+  "https://studio.code.org/s/coursed-2018/lessons/12/levels/7": {
     "short_instructions": "Help the zombie get to the sunflower.",
     "long_instructions": "Help the zombie get to the sunflower.",
     "authored_hints": {
       "courseD_maze_until6_b": "To use only one `move forward`, put it inside the `repeat until sunflower` block."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/12/puzzle/8": {
+  "https://studio.code.org/s/coursed-2018/lessons/12/levels/8": {
     "short_instructions": "Help the zombie get to the sunflower.",
     "long_instructions": "Help the zombie get to the sunflower.",
     "authored_hints": {
@@ -918,18 +918,18 @@
       "courseD_maze_until7_b": "Although there are more turns here than the last puzzle, your code can be almost identical because of the `repeat until` block!"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/12/puzzle/9": {
+  "https://studio.code.org/s/coursed-2018/lessons/12/levels/9": {
     "short_instructions": "**Challenge:** Avoid the chompers and help the zombie get to the sunflower.",
     "long_instructions": "**Challenge:** Avoid the chompers and help the zombie get to the sunflower.",
     "authored_hints": {
       "courseD_maze_until8_c": "Remember to use the `repeat until` block to get you to the sunflower!"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/12/puzzle/10": {
+  "https://studio.code.org/s/coursed-2018/lessons/12/levels/10": {
     "short_instructions": "Help the zombie get to the sunflower.",
     "long_instructions": "Help the zombie get to the sunflower."
   },
-  "https://studio.code.org/s/coursed-2018/stage/12/puzzle/11": {
+  "https://studio.code.org/s/coursed-2018/lessons/12/levels/11": {
     "short_instructions": "Help the zombie get to the sunflower.",
     "long_instructions": "Help the zombie get to the sunflower.",
     "contained levels": [
@@ -966,10 +966,10 @@
       }
     ]
   },
-  "https://studio.code.org/s/coursed-2018/stage/13/puzzle/1": {
+  "https://studio.code.org/s/coursed-2018/lessons/13/levels/1": {
     "title": "Conditionals"
   },
-  "https://studio.code.org/s/coursed-2018/stage/14/puzzle/2": {
+  "https://studio.code.org/s/coursed-2018/lessons/14/levels/2": {
     "short_instructions": "Check to see if there's a flower under the cloud. If there's a flower, get nectar.",
     "long_instructions": "_\"This cloud is blocking my view!\"_\n\nCheck to see if there's a flower under the cloud. If there's a flower, get nectar.",
     "authored_hints": {
@@ -1009,7 +1009,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/coursed-2018/stage/14/puzzle/3": {
+  "https://studio.code.org/s/coursed-2018/lessons/14/levels/3": {
     "short_instructions": "Check underneath every cloud to see if it is hiding a flower before you get nectar.  ",
     "long_instructions": "More clouds! \n\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar _once_.  \n\nRemember: Not all clouds hide the same thing!",
     "authored_hints": {
@@ -1023,7 +1023,7 @@
       "4_5_Bee_Conditionals_2_1": "Remember, check to see if EVERY cloud has a FLOWER. You don't have to check for honeycombs at all."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/14/puzzle/4": {
+  "https://studio.code.org/s/coursed-2018/lessons/14/levels/4": {
     "short_instructions": "Help the bee collect all of the nectar. \n\nYou can only collect nectar from flowers, but you can check any space to see if there is a flower.",
     "long_instructions": "You can only collect nectar from flowers, but you can check any space to see if there is a flower. If there is a flower under any of these clouds, the bee will need to collect nectar _once_.",
     "authored_hints": {
@@ -1034,7 +1034,7 @@
       "courseD_bee_conditionals3_hintVid2": "Watch this video for help solving this puzzle."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/14/puzzle/5": {
+  "https://studio.code.org/s/coursed-2018/lessons/14/levels/5": {
     "short_instructions": "Get all of the nectar using as few blocks as possible.",
     "long_instructions": "In this puzzle, we know that every flower has exactly one nectar, but the flowers aren't spaced evenly.\n\nGet all of the nectar using as few blocks as possible.",
     "authored_hints": {
@@ -1045,7 +1045,7 @@
       "courseD_bee_conditionals4_hintVid2": "Watch this video for help solving this puzzle."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/14/puzzle/6": {
+  "https://studio.code.org/s/coursed-2018/lessons/14/levels/6": {
     "short_instructions": "Collect all of the nectar using as few blocks as possible",
     "authored_hints": {
       "courseD_bee_conditionals5_hintVid1": "Need help getting started?  Watch the video!",
@@ -1055,7 +1055,7 @@
       "courseD_bee_conditionals5_hintVid2": "Watch this video for help solving this puzzle."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/14/puzzle/7": {
+  "https://studio.code.org/s/coursed-2018/lessons/14/levels/7": {
     "short_instructions": "Some of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud!",
     "long_instructions": "_\"Now I just want to make honey.\"_\n\nSome of these clouds might have honeycombs under them.  Be sure to check if a honeycomb is hiding behind each cloud! If there is a honeycomb, the bee will only need to make honey _once_.",
     "authored_hints": {
@@ -1066,7 +1066,7 @@
       "courseD_bee_conditionals6_hintVid2": "Watch this video for help solving this puzzle."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/14/puzzle/9": {
+  "https://studio.code.org/s/coursed-2018/lessons/14/levels/9": {
     "short_instructions": "Use the `if/else` block to collect nectar at flowers and make honey at honeycomb.",
     "long_instructions": "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb. Remember: if there is a flower, the bee only needs to get nectar _once_. If there is a honeycomb, the bee only needs to make honey _once_.",
     "authored_hints": {
@@ -1076,7 +1076,7 @@
       "courseD_bee_conditionals7_hintVid2": "Watch this video for help solving this puzzle."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/14/puzzle/10": {
+  "https://studio.code.org/s/coursed-2018/lessons/14/levels/10": {
     "short_instructions": "Use the `if/else` block to collect nectar at flowers and make honey at honeycomb.",
     "long_instructions": "Sometimes a cloud covers a flower, sometimes it covers a honeycomb! \n\nUse the `if/else` block to collect nectar at flowers and make honey at honeycomb. Remember: there will only ever be _one_ honeycomb or _one_ flower behind each cloud.",
     "authored_hints": {
@@ -1116,7 +1116,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/coursed-2018/stage/14/puzzle/11": {
+  "https://studio.code.org/s/coursed-2018/lessons/14/levels/11": {
     "short_instructions": "Collect nectar if there is a flower.\nOtherwise, make honey (because there is a honeycomb).",
     "long_instructions": "**Challenge:** There will be either a flower or a honeycomb under each of those clouds!\n\nCollect nectar once if there is a flower.\nOtherwise, make honey once (because there is a honeycomb).",
     "authored_hints": {
@@ -1128,15 +1128,15 @@
       "courseD_bee_conditionals8_hintVid2": "Watch this video for help solving this puzzle."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/14/puzzle/12": {
+  "https://studio.code.org/s/coursed-2018/lessons/14/levels/12": {
     "short_instructions": "Collect all of the nectar or make all the honey.",
     "long_instructions": "Collect all of the nectar or make all the honey. You can only collect nectar from flowers and make honey from honeycombs. Check any space to see if there is a flower or honeycomb. There will only ever be one flower or one honeycomb behind each cloud."
   },
-  "https://studio.code.org/s/coursed-2018/stage/14/puzzle/13": {
+  "https://studio.code.org/s/coursed-2018/lessons/14/levels/13": {
     "short_instructions": "Collect all of the nectar and make all of the honey.",
     "long_instructions": "Conditionals can be helpful, even when you know exactly what is in each spot!\n\nCollect all of the nectar and make all of the honey."
   },
-  "https://studio.code.org/s/coursed-2018/stage/14/extras?level_name=courseD_bee_conditionals_challenge1_2018": {
+  "https://studio.code.org/s/coursed-2018/lessons/14/extras?level_name=courseD_bee_conditionals_challenge1_2018": {
     "short_instructions": "Collect all the nectar and make all the honey.",
     "long_instructions": "Collect all of the nectar and make all of the honey. You can only collect nectar from flowers and make honey from honeycombs. Check every space to see if there is a flower or honeycomb.",
     "authored_hints": {
@@ -1144,7 +1144,7 @@
       "courseD_bee_conditionals_challenge1_b": "In this puzzle, each space could have a flower, a honey comb, or nothing.  That means you can repeat your `if/else` conditional at each square."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/14/extras?level_name=courseD_bee_conditionals_challenge2_2018": {
+  "https://studio.code.org/s/coursed-2018/lessons/14/extras?level_name=courseD_bee_conditionals_challenge2_2018": {
     "short_instructions": "Collect all of the nectar and make all the honey.",
     "long_instructions": "Collect all of the nectar and make all the honey. You can collect all of the nectar in one flower by using the `while nectar > 0` loop.",
     "authored_hints": {
@@ -1154,7 +1154,7 @@
       "courseD_bee_conditionals_challenge2_1": "Use this loop to collect all of the nectar (or honey) from one flower (or honeycomb)."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/15/puzzle/2": {
+  "https://studio.code.org/s/coursed-2018/lessons/15/levels/2": {
     "short_instructions": "Use conditionals to make sure that you pick corn only when it's there.",
     "long_instructions": "_\"Corn you help me harvest today?\"_\n\nHelp the harvester check her row of corn to see if anything is ready to pick.  Use conditionals to look at each sprout.  Every stalk will have either **0 or 1** pieces of corn ready to harvest.",
     "authored_hints": {
@@ -1162,7 +1162,7 @@
       "courseD_farmer_condLoops1_b": "Make sure to use an `if at corn` block or you might try to pick something that's not there!"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/15/puzzle/3": {
+  "https://studio.code.org/s/coursed-2018/lessons/15/levels/3": {
     "short_instructions": "Help the harvester collect both corn and lettuce from the field.",
     "long_instructions": "_\"Lettuce collect both crops from this row!\"_\n\nThis garden is all mixed up, it has both **corn and lettuce**!  \n\nHelp the harvester pick the items that are ready for harvesting.  Each plant will have either **one** corn or **one** lettuce.",
     "authored_hints": {
@@ -1171,7 +1171,7 @@
       "courseD_farmer_condLoops2_c": "Your `if` statement could look a lot like this:\n\n-   if at corn\n    -   pick corn\n-   else\n    -   if at lettuce\n        -   pick lettuce\n\nIf there is nothing there, you won't pick anything!"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/15/puzzle/4": {
+  "https://studio.code.org/s/coursed-2018/lessons/15/levels/4": {
     "short_instructions": "_\"Corn, lettuce, AND pumpkins! Help me harvest them all.\"_",
     "long_instructions": "_\"Corn, lettuce, AND pumpkins! Help me harvest them all.\"_\n\nEach plant will have either one piece of corn, one head of lettuce, or one pumpkin.",
     "authored_hints": {
@@ -1179,7 +1179,7 @@
       "courseD_farmer_condLoops3_b": "For this puzzle, you should have two `if/else` statements and one plain `if` statement."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/15/puzzle/5": {
+  "https://studio.code.org/s/coursed-2018/lessons/15/levels/5": {
     "short_instructions": "Help the harvester pick all of the lettuce in each cluster before moving on to the next bunch.",
     "long_instructions": "_\"Gosh! Now the lettuce is growing in clusters!\"_  \n\nThe harvester wants to pick everything from her lettuce garden. Each plant will now have more than one head of lettuce on it, so the harvester will need to keep picking while there is still lettuce growing.  \n\n##### (Remember: This garden only has lettuce!)",
     "authored_hints": {
@@ -1188,7 +1188,7 @@
       "grade3_RunningFarm_4courseD_farmer_condLoops4_c": "You can use either a `while path ahead` loop or a `repeat` loop to go through all of the crops."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/15/puzzle/6": {
+  "https://studio.code.org/s/coursed-2018/lessons/15/levels/6": {
     "short_instructions": "Collect all of the corn and lettuce, then grab the pumpkin at the end.",
     "long_instructions": "_\"What a bountiful crop!\"_\n\nThis field has clusters of corn and lettuce growing together -- with one pumpkin at the end.  Can you harvest everything?",
     "authored_hints": {
@@ -1196,7 +1196,7 @@
       "courseD_farmer_condLoops5_b": "There could be more than one corn or lettuce plant in each spot. Use a `while` loop to gather all of them!"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/15/puzzle/7": {
+  "https://studio.code.org/s/coursed-2018/lessons/15/levels/7": {
     "short_instructions": "Can you figure out how to pick the pumpkin?  Make sure to collect all of the corn along the way!",
     "long_instructions": "_\"Let's take this one step further!\"_\n\nCan you figure out how to pick the pumpkin?  Make sure to collect all of the corn along the way!",
     "authored_hints": {
@@ -1204,7 +1204,7 @@
       "courseD_farmer_condLoops6_b": "You only need to check for corn during most of the harvest.  Just pick one pumpkin at the very end of your program."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/15/puzzle/8": {
+  "https://studio.code.org/s/coursed-2018/lessons/15/levels/8": {
     "short_instructions": "Challenge: Collect all of the corn and lettuce, then pick the pumpkin.",
     "long_instructions": "**Challenge:** Collect all of the corn and lettuce, then pick the pumpkin.",
     "authored_hints": {
@@ -1212,15 +1212,15 @@
       "courseD_farmer_condLoops7_b": "Try using `when path ahead` to keep the harvester moving the right number of steps."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/15/puzzle/9": {
+  "https://studio.code.org/s/coursed-2018/lessons/15/levels/9": {
     "short_instructions": "Collect all of the corn and lettuce, then pick the pumpkin.",
     "long_instructions": "Collect all of the corn and lettuce, then pick the pumpkin."
   },
-  "https://studio.code.org/s/coursed-2018/stage/15/puzzle/10": {
+  "https://studio.code.org/s/coursed-2018/lessons/15/levels/10": {
     "short_instructions": "Collect all of the corn and lettuce, then pick the pumpkin.",
     "long_instructions": "Collect all of the corn and lettuce, then pick the pumpkin."
   },
-  "https://studio.code.org/s/coursed-2018/stage/15/puzzle/11": {
+  "https://studio.code.org/s/coursed-2018/lessons/15/levels/11": {
     "short_instructions": "Collect all of the corn and lettuce, then pick the pumpkin.",
     "long_instructions": "Collect all of the corn and lettuce, then pick the pumpkin.",
     "contained levels": [
@@ -1258,7 +1258,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/coursed-2018/stage/15/extras?level_name=courseD_farmer_condLoops_challenge1_2018": {
+  "https://studio.code.org/s/coursed-2018/lessons/15/extras?level_name=courseD_farmer_condLoops_challenge1_2018": {
     "short_instructions": "Collect everything to complete the level. Each hidden crop has only one corn or lettuce.",
     "long_instructions": "The pumpkins mark the place where you should `turn right`. Otherwise keep going forward, but remember to collect all of the lettuce or corn along the way. \n\n**Each hidden crop has only one corn or lettuce.**",
     "authored_hints": {
@@ -1266,17 +1266,17 @@
       "courseD_farmer_condLoops_challenge1_b": "Normally you would just `pick pumpkin` if you are at a pumpkin. What else do you need to do if you're at a pumpkin?"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/15/extras?level_name=courseD_farmer_condLoops_challenge2_2018": {
+  "https://studio.code.org/s/coursed-2018/lessons/15/extras?level_name=courseD_farmer_condLoops_challenge2_2018": {
     "short_instructions": "Collect everything to complete the level.",
     "long_instructions": "_\"It's a very varied vegetable maze!\"_ \n\nTurn right at pumpkins, turn left at lettuce. Collect everything to complete the level.",
     "authored_hints": {
       "courseD_farmer_condLoops_challenge2_a": "The amount of each vegetable in each space can change. A `while` loop can help!"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/16/puzzle/1": {
+  "https://studio.code.org/s/coursed-2018/lessons/16/levels/1": {
     "title": "Unplugged Activity"
   },
-  "https://studio.code.org/s/coursed-2018/stage/17/puzzle/1": {
+  "https://studio.code.org/s/coursed-2018/lessons/17/levels/1": {
     "short_instructions": "Get Pegleg to the flags to solve this puzzle.",
     "long_instructions": "To start our game, Pirate Pegleg (actor 1) needs to be able to get around in all directions.   Connect the blocks to the correct events to get Pegleg moving.  \n\n* * *\n\nHelp Pegleg gather the flags to solve this puzzle.",
     "authored_hints": {
@@ -1285,28 +1285,28 @@
       "courseD_playLab_cond1_c": "Remember to move Pegleg to both of the flags once you click \"Run\"!"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/17/puzzle/2": {
+  "https://studio.code.org/s/coursed-2018/lessons/17/levels/2": {
     "short_instructions": "Give Pegleg a point every time he makes it to the dragon. ",
     "long_instructions": "Time to add points!  \n\nEdit the code to give Pegleg (actor 1) a point when he makes it to the dragon (actor 2). ",
     "authored_hints": {
       "courseD_playLab_cond2_a": "To succeed with this puzzle, use the `score point` block beneath the `when actor 1 touches actor 2` event."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/17/puzzle/3": {
+  "https://studio.code.org/s/coursed-2018/lessons/17/levels/3": {
     "short_instructions": "Make the dragon change between random emotions every second.  ",
     "long_instructions": "Use a `repeat forever` loop to make the dragon (actor 2) change between random emotions every second.  ",
     "authored_hints": {
       "courseD_playLab_cond3_a": "You will need to add two blocks to your `repeat forever` loop.  One will choose a random emotion for the dragon (actor 2) and the other will wait 1 second before going through the loop again."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/17/puzzle/4": {
+  "https://studio.code.org/s/coursed-2018/lessons/17/levels/4": {
     "short_instructions": "Make it so when Pegleg gets to the dragon, he gets 2 points if the dragon is happy and 1 otherwise.",
     "long_instructions": "It's time to use what we've learned about conditionals to make this game amazing. \n\nAdd code so that when Pegleg gets to the dragon, he gets two points _if_ the dragon is happy. Otherwise, he should get only one point added to his score.",
     "authored_hints": {
       "courseD_playLab_cond3_c": "-   `If` the dragon is happy \n    -   `score point`\n    -   `score point`  \n\n-   `Else` `score point`"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/17/puzzle/5": {
+  "https://studio.code.org/s/coursed-2018/lessons/17/levels/5": {
     "short_instructions": "Add some code so that the ninja (actor 3) starts chasing Pegleg as soon as the game begins.  End the game as a loss if the ninja catches him.",
     "long_instructions": "This is about to get interesting!\n\nAdd some code so that the ninja (actor 3) starts chasing Pegleg as soon as the game begins.  End the game as a loss if the ninja catches him.",
     "authored_hints": {
@@ -1315,7 +1315,7 @@
       "courseD_playLab_cond4_c": "Put the `end game as a loss` block underneath the `when actor 1 touches actor 3` event."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/17/puzzle/6": {
+  "https://studio.code.org/s/coursed-2018/lessons/17/levels/6": {
     "short_instructions": "Add a `repeat forever` loop that continuously checks if the score is greater than 5, then ends the game as a win when it is.",
     "long_instructions": "Now we need a way to win.\n\nAdd a `repeat forever` loop that continuously checks **if** the score is greater than 5, then ends the game as a **win** when it is.",
     "authored_hints": {
@@ -1323,7 +1323,7 @@
       "courseD_playLab_cond5_b": "You can have more than one `repeat forever` loop in the workspace."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/17/puzzle/7": {
+  "https://studio.code.org/s/coursed-2018/lessons/17/levels/7": {
     "short_instructions": "1.  Slow the ninja (actor 3) down before you set him to chase the pirate.  \n2.  If the pirate is greater than 225 pixels down, set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the pirate.  ",
     "long_instructions": "Wow, this game is hard to win!\n\nLet's customize this game to make it more fun.  This challenge has two parts:\n\n* * *\n\n1.  Slow down the ninja (actor 3) before you set him to chase the pirate (actor 1).  \n\n2.  Use a `repeat forever` loop to check to see if the pirate is in the \"safe zone\" beneath the line of octopuses (greater than 225 pixels down).  If he is, set the ninja to **flee** the pirate.  Otherwise, set the ninja to **chase** the pirate.  ",
     "authored_hints": {
@@ -1331,29 +1331,29 @@
       "courseD_playLab_cond6_b": "You will need to use an `if actor 1 y position > 255` block inside of a `repeat forever` block to always check if the pirate is below the octopuses."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/17/puzzle/8": {
+  "https://studio.code.org/s/coursed-2018/lessons/17/levels/8": {
     "short_instructions": "If the pirate (actor 1) is in the safe zone, wait one second, then deduct a point as long as he stays beneath the octopus line.",
     "long_instructions": "We don't want the pirate to stay in the \"safe zone\" too long!  \n\nAdd code to the `if` statement below so that if the pirate (actor 1) is in the safe zone, the program will wait one second, then deduct a point as long as he stays beneath the octopus line.",
     "authored_hints": {
       "courseD_playLab_cond6_c": "Add a `wait 1 second` block to the top of the `repeat forever` loop that checks the pirate position (but not inside the `if` statement) to keep points from being removed too quickly."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/17/puzzle/9": {
+  "https://studio.code.org/s/coursed-2018/lessons/17/levels/9": {
     "short_instructions": "Now, build your own game to show off to your friends!",
     "long_instructions": "Now, build your own game to show off to your friends!\n\n* * *\n\nYou could:\n\n-   Have the pirate and ninja work together to get points from the octopus\n-   Have both octopuses follow the pirate, doing double damage to the ninja when they collide\n-   Have each character disappear when touched by the ninja\n-   Invent your own game!",
     "callouts": {
       "courseD_playLab_condFP_1": "we have organized the blocks into categories to give you more code to play with!  Click here to see where everything went."
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/18/puzzle/1": {
+  "https://studio.code.org/s/coursed-2018/lessons/18/levels/1": {
     "title": "Binary Images"
   },
-  "https://studio.code.org/s/coursed-2018/stage/19/puzzle/1": {
+  "https://studio.code.org/s/coursed-2018/lessons/19/levels/1": {
     "dsls": {
       "markdown": "<h1>Draw with Binary</h1>\n \n<h3>Binary is a way of representing information using only two options. In this case, <b>off</b> and <b>on</b>.\n<br/>\nHere, we're going to use the number <b>0</b> as code for \"off\" and the number <b>1</b> as code for \"on\".\n<br/>\n<table>\n<tr><td><img src=\"https://images.code.org/50283881d577c17ac6f1d1648d8f361f-image-1483640342574.09.14.png\" width=\"75px\"/></td><td><img src=\"https://images.code.org/ba6f0a000b18f2dd87160e6255e8a71c-image-1483640355103.09.24.png\" width=\"90px\"/></td></tr>\n<tr padding=\"0px\"><td align=\"center\"><b>0</b></td><td align=\"center\"><b>1</b></td></tr>\n</table><img src=\"https://images.code.org/934883837aa59bca1d5c1ded0e0ac675-image-1483640120036.51.06.png\" float=\"left\"/><h3>In this stage, we've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on certain squares!</h3>\n\n![](https://images.code.org/c53e00cde9acbae72d02fb9cc2a20e53-image-1483639858942.png)\n\n\n"
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/19/puzzle/2": {
+  "https://studio.code.org/s/coursed-2018/lessons/19/levels/2": {
     "short_instructions": "Use the blocks below to have the artist draw \"01010101\" in binary in the first row.",
     "long_instructions": "We've provided you with a grid of \"pixels\" that you can walk through and make designs by turning on only certain squares.\n\nUse the blocks below to have the artist draw \"01010101\" in binary in the first row.",
     "authored_hints": {
@@ -1373,7 +1373,7 @@
       }
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/19/puzzle/3": {
+  "https://studio.code.org/s/coursed-2018/lessons/19/levels/3": {
     "short_instructions": "Run this code to see how the artist uses binary to draw this pattern.",
     "long_instructions": "Here's a function that takes a binary string of 1's and 0's and instructs the artist to follow them from left to right, top to bottom.  \n\n* * *\n\nThe artist will fill-in the squares when it sees a 1 and ignore the square when it sees a 0. \n\n* * *\n\n**Run this code to see how the artist uses binary to draw this pattern.**",
     "authored_hints": {
@@ -1391,7 +1391,7 @@
       }
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/19/puzzle/4": {
+  "https://studio.code.org/s/coursed-2018/lessons/19/levels/4": {
     "short_instructions": "Which of the binary strings below could you loop 8 times to draw this image?",
     "authored_hints": {
       "courseD_artist_binary3_a": "One of the four binary patterns in the toolbox will solve this puzzle!",
@@ -1409,7 +1409,7 @@
       }
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/19/puzzle/5": {
+  "https://studio.code.org/s/coursed-2018/lessons/19/levels/5": {
     "short_instructions": "Can you draw this pattern by looping just three binary digits (0s and 1s)?",
     "authored_hints": {
       "courseD_artist_binary4_a": "Look at the first three squares on the top row. Could you repeat these three to get the whole pattern?",
@@ -1427,7 +1427,7 @@
       }
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/19/puzzle/6": {
+  "https://studio.code.org/s/coursed-2018/lessons/19/levels/6": {
     "short_instructions": "Each binary string below represents one row of this picture. \n\nCan you rearrange them so it draws a smiley face instead of a frown?",
     "authored_hints": {
       "courseD_artist_binary5_a": "Try running the code first to see what you have to work with.",
@@ -1446,7 +1446,7 @@
       }
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/19/puzzle/7": {
+  "https://studio.code.org/s/coursed-2018/lessons/19/levels/7": {
     "short_instructions": "Which 6 digit binary string, repeated 11 times, will draw this image?",
     "authored_hints": {
       "courseD_artist_binary6_a": "Start at the top left. How far do you have to read before the pattern starts to repeat?",
@@ -1464,7 +1464,7 @@
       }
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/19/puzzle/8": {
+  "https://studio.code.org/s/coursed-2018/lessons/19/levels/8": {
     "short_instructions": "What is the shortest binary string that you can repeat to draw this image?",
     "authored_hints": {
       "courseD_artist_binary7_a": "Start at the top left. How far do you have to read before the pattern starts to repeat?",
@@ -1482,7 +1482,7 @@
       }
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/19/puzzle/9": {
+  "https://studio.code.org/s/coursed-2018/lessons/19/levels/9": {
     "short_instructions": "Finish the code to create this drawing.",
     "authored_hints": {
       "courseD_artist_binary8_a": "The spiral can be confusing sometimes. Isolate each horizontal line in your mind as you create this design.",
@@ -1501,7 +1501,7 @@
       }
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/19/puzzle/10": {
+  "https://studio.code.org/s/coursed-2018/lessons/19/levels/10": {
     "short_instructions": "Finish the code to create this drawing.",
     "function_definitions": {
       "draw": {
@@ -1549,7 +1549,7 @@
       }
     ]
   },
-  "https://studio.code.org/s/coursed-2018/stage/19/puzzle/11": {
+  "https://studio.code.org/s/coursed-2018/lessons/19/levels/11": {
     "short_instructions": "Here's a higher resolution canvas to draw on - 16 pixels by 16 pixels!\n\nSee what happens when we start to get creative with the bits!",
     "function_definitions": {
       "draw": {
@@ -1563,7 +1563,7 @@
       }
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/19/extras?level_name=courseD_artist_binary_challenge1_2018": {
+  "https://studio.code.org/s/coursed-2018/lessons/19/extras?level_name=courseD_artist_binary_challenge1_2018": {
     "short_instructions": "You can only use each binary value (0 or 1) once each in this puzzle. Try using nested loops to complete this drawing.",
     "long_instructions": "You can only use each binary value (0 or 1) once each in this puzzle. Try using nested loops to complete this drawing.",
     "function_definitions": {
@@ -1578,7 +1578,7 @@
       }
     }
   },
-  "https://studio.code.org/s/coursed-2018/stage/19/extras?level_name=courseD_artist_binary_challenge2_2018": {
+  "https://studio.code.org/s/coursed-2018/lessons/19/extras?level_name=courseD_artist_binary_challenge2_2018": {
     "short_instructions": "Are you persistent enough to restore this logo back to normal?",
     "long_instructions": "There are 256 bits represented on this grid - that means it's easy for a small change to cause big problems. Are you persistent enough to restore this logo back to normal?\n\n[][0]",
     "authored_hints": {

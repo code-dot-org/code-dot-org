@@ -37,6 +37,10 @@ class Plc::CourseUnit < ApplicationRecord
     script.levels.where(type: 'LevelGroup').flat_map(&:levels).any? {|level| level.class == EvaluationMulti}
   end
 
+  def deprecated?
+    !!script&.deprecated
+  end
+
   def determine_preferred_learning_modules(user)
     evaluation_level = script.levels.reverse.find {|level| level.class == LevelGroup}
 
@@ -52,10 +56,10 @@ class Plc::CourseUnit < ApplicationRecord
       level = EvaluationMulti.cache_find(level_id)
       selected_answer = level.answers[response['result'].to_i]
 
-      next if selected_answer['stage'].nil?
+      next if selected_answer['lesson'].nil?
 
-      stage = Lesson.find_by(name: selected_answer['stage'], script: script)
-      learning_module = stage.try(:plc_learning_module)
+      lesson = Lesson.find_by(name: selected_answer['lesson'], script: script)
+      learning_module = lesson.try(:plc_learning_module)
 
       next if learning_module.nil?
 

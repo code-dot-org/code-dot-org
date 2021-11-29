@@ -1,5 +1,5 @@
 import React from 'react';
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/reconfiguredChai';
 import {VisualizationOverlay} from '@cdo/apps/templates/VisualizationOverlay';
 import {mount} from 'enzyme';
 import CrosshairOverlay from '@cdo/apps/templates/CrosshairOverlay';

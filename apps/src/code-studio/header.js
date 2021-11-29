@@ -12,17 +12,20 @@ import {
   refreshProjectName,
   setShowTryAgainDialog
 } from './headerRedux';
-import {useDbProgress} from './progressRedux';
-import clientState from './clientState';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {Provider} from 'react-redux';
 import progress from './progress';
 import {getStore} from '../redux';
+import {
+  setUserSignedIn,
+  setInitialData
+} from '@cdo/apps/templates/currentUserRedux';
 
+import {PUZZLE_PAGE_NONE} from '@cdo/apps/templates/progress/progressTypes';
 import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
+import SignInCalloutWrapper from './components/header/SignInCalloutWrapper';
 
 /**
  * Dynamic header generation and event bindings for header actions.
@@ -30,11 +33,6 @@ import HeaderMiddle from '@cdo/apps/code-studio/components/header/HeaderMiddle';
 
 // Namespace for manipulating the header DOM.
 var header = {};
-
-/**
- * See ApplicationHelper::PUZZLE_PAGE_NONE.
- */
-const PUZZLE_PAGE_NONE = -1;
 
 /**
  * @param {object} scriptData
@@ -49,19 +47,24 @@ const PUZZLE_PAGE_NONE = -1;
  *   finishLink: string,
  *   finishText: string,
  *   levels: Array.<{
- *     id: number,
+ *     id: string,
  *     position: number,
  *     title: string,
  *     kind: string
  *   }>
  * }}
  * @param {object} progressData
- * @param {string} currentLevelId
- * @param {number} puzzlePage
+ * @param {string} currentLevelId The id of the level the user is currently
+ *   on. This gets used in the url and as a key in many objects. Therefore,
+ *   it is a string despite always being a numerical value
+ * @param {number} currentPageNumber The page we are on if this is a multi-
+ *   page level.
  * @param {boolean} signedIn True/false if we know the sign in state of the
  *   user, null otherwise
- * @param {boolean} stageExtrasEnabled Whether this user is in a section with
- *   stageExtras enabled for this script
+ * @param {boolean} lessonExtrasEnabled Whether this user is in a section with
+ *   lessonExtras enabled for this script
+ * @param {boolean} isLessonExtras Boolean indicating we are not on a script
+ *   level and therefore are on lesson extras
  */
 header.build = function(
   scriptData,
@@ -69,28 +72,23 @@ header.build = function(
   lessonData,
   progressData,
   currentLevelId,
-  puzzlePage,
+  currentPageNumber,
   signedIn,
-  stageExtrasEnabled,
+  lessonExtrasEnabled,
   scriptNameData,
-  hasAppOptions
+  isLessonExtras
 ) {
-  const store = getStore();
-  if (progressData) {
-    store.dispatch(useDbProgress());
-    clientState.clearProgress();
-  }
   scriptData = scriptData || {};
   lessonGroupData = lessonGroupData || {};
   lessonData = lessonData || {};
   progressData = progressData || {};
 
   const linesOfCodeText = progressData.linesOfCodeText;
+  let saveAnswersBeforeNavigation = currentPageNumber !== PUZZLE_PAGE_NONE;
 
-  let saveAnswersBeforeNavigation = puzzlePage !== PUZZLE_PAGE_NONE;
-
-  // Set up the store immediately.
-  progress.generateStageProgress(
+  // Set up the store immediately. Note that some progress values are populated
+  // asynchronously.
+  progress.generateLessonProgress(
     scriptData,
     lessonGroupData,
     lessonData,
@@ -98,12 +96,15 @@ header.build = function(
     currentLevelId,
     saveAnswersBeforeNavigation,
     signedIn,
-    stageExtrasEnabled
+    lessonExtrasEnabled,
+    isLessonExtras,
+    currentPageNumber
   );
 
   // Hold off on rendering HeaderMiddle.  This will allow the "app load"
   // to potentially begin before we first render HeaderMiddle, giving HeaderMiddle
   // the opportunity to wait until the app is loaded before rendering.
+  const store = getStore();
   $(document).ready(function() {
     ReactDOM.render(
       <Provider store={store}>
@@ -113,11 +114,18 @@ header.build = function(
           scriptData={scriptData}
           currentLevelId={currentLevelId}
           linesOfCodeText={linesOfCodeText}
-          hasAppOptions={hasAppOptions}
         />
       </Provider>,
       document.querySelector('.header_level')
     );
+    // Only render sign in callout if the course is CSF and the user is
+    // not signed in
+    if (scriptData.is_csf && signedIn === false) {
+      ReactDOM.render(
+        <SignInCalloutWrapper />,
+        document.querySelector('.signin_callout_wrapper')
+      );
+    }
   });
 };
 
@@ -160,6 +168,45 @@ function setupReduxSubscribers(store) {
   });
 }
 setupReduxSubscribers(getStore());
+
+function setUpGlobalData(store) {
+  fetch('/api/v1/users/current', {
+    credentials: 'same-origin'
+  })
+    .then(response => response.json())
+    .then(data => {
+      store.dispatch(setUserSignedIn(data.is_signed_in));
+      if (data.is_signed_in) {
+        store.dispatch(setInitialData(data));
+        ensureHeaderSigninState(true, data.short_name);
+      } else {
+        ensureHeaderSigninState(false);
+      }
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}
+setUpGlobalData(getStore());
+
+// Some of our cached pages can become cached by the browser with the
+// wrong sign-in state. This is a temporary patch to ensure that the header
+// displays the correct sign-in state for the user.
+function ensureHeaderSigninState(isSignedIn, shortName) {
+  const userMenu = document.querySelector('#header_user_menu');
+  const signinButton = document.querySelector('#signin_button');
+
+  if (isSignedIn && userMenu.style.display === 'none') {
+    userMenu.style.display = 'block';
+    signinButton.style.display = 'none';
+
+    const displayName = document.querySelector('#header_display_name');
+    displayName.textContent = shortName;
+  } else if (!isSignedIn && signinButton.style.display === 'none') {
+    userMenu.style.display = 'none';
+    signinButton.style.display = 'inline';
+  }
+}
 
 header.showMinimalProjectHeader = function() {
   getStore().dispatch(refreshProjectName());

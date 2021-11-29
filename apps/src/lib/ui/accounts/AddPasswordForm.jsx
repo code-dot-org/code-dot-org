@@ -6,35 +6,6 @@ import color from '@cdo/apps/util/color';
 import {Field} from '../SystemDialog/SystemDialog';
 import BootstrapButton from './BootstrapButton';
 
-const styles = {
-  container: {
-    paddingTop: 20
-  },
-  header: {
-    fontSize: 22
-  },
-  hint: {
-    marginTop: 10,
-    marginBottom: 10
-  },
-  input: {
-    marginBottom: 4
-  },
-  buttonContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end'
-  },
-  statusText: {
-    paddingLeft: 10,
-    paddingRight: 10,
-    fontStyle: 'italic'
-  },
-  errorText: {
-    color: color.red
-  }
-};
-
 const MIN_PASSWORD_LENGTH = 6;
 export const SAVING_STATE = i18n.saving();
 export const SUCCESS_STATE = i18n.success();
@@ -202,3 +173,32 @@ class PasswordField extends React.Component {
     );
   }
 }
+
+const styles = {
+  container: {
+    paddingTop: 20
+  },
+  header: {
+    fontSize: 22
+  },
+  hint: {
+    marginTop: 10,
+    marginBottom: 10
+  },
+  input: {
+    marginBottom: 4
+  },
+  buttonContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end'
+  },
+  statusText: {
+    paddingLeft: 10,
+    paddingRight: 10,
+    fontStyle: 'italic'
+  },
+  errorText: {
+    color: color.red
+  }
+};
