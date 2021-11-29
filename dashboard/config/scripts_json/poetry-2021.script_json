@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "poetry",
-    "serialized_at": "2021-11-23 20:29:28 UTC",
+    "serialized_at": "2021-11-25 00:11:46 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1285,13 +1285,7 @@
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** “Planning Your Poem Generator Video” slide to the class and show the video. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Code Studio:** Have students log in to their Code Studio accounts and start at Level 3.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Display:** Show the “Levels 3, 4, 5, 6  - Your Turn” slide. \n",
         "duration": "17",
-        "name": "Your Turn",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "This \"Planning Your Poem Generator App\" video is 3:45 minutes long. Use the time stamps below to remind students how to code the corresponding aspects of their program. \n\n- 0:00-0:34 Setting up your planning handout\n- 0:43-1:36 Adding three prompts and labeling variables **(Level 3)**\n- 1:36-2:06 Adding title and author **(Level 4)** \n- 2:06-2:51 Adding each line with the correct variable label **(Level 5)**\n- 2:51-3:45 Debugging your code "
-          }
-        ]
+        "name": "Your Turn"
       },
       "seeding_key": {
         "activity_section.key": "ea6fb562-19ae-4240-9336-d9bafccec32d",
@@ -3367,8 +3361,80 @@
       }
     },
     {
-      "name": "Coding with Poetry Modules",
+      "name": "Coding with Poetry Lesson 2",
+      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_134",
+      "key": "coding_with_poetry_lesson_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "coding_with_poetry_lesson_2"
+      }
+    },
+    {
+      "name": "Coding with Poetry Lesson 3",
+      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_166",
+      "key": "coding_with_poetry_lesson_3",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "coding_with_poetry_lesson_3"
+      }
+    },
+    {
+      "name": "Coding with Poetry Lesson 4",
+      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_196",
+      "key": "coding_with_poetry_lesson_4",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "coding_with_poetry_lesson_4"
+      }
+    },
+    {
+      "name": "Coding with Poetry Lesson 5",
+      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_226",
+      "key": "coding_with_poetry_lesson_5",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "coding_with_poetry_lesson_5"
+      }
+    },
+    {
+      "name": "Coding with Poetry Lesson 6",
+      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_625",
+      "key": "coding_with_poetry_lesson_6",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "coding_with_poetry_lesson_6"
+      }
+    },
+    {
+      "name": "Coding with Poetry Lesson 7",
       "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gfaf59442b2_0_129",
+      "key": "coding_with_poetry_lesson_7",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "coding_with_poetry_lesson_7"
+      }
+    },
+    {
+      "name": "Coding with Poetry Lesson 1",
+      "url": "https://docs.google.com/presentation/d/1x1PExqc7Ca45EKXtM5hditmNHdvl2gGdsIJHLez-wQo/edit#slide=id.gf2065763c4_0_8",
       "key": "coding_with_poetry_modules",
       "properties": {
         "audience": "Teacher",
@@ -3515,7 +3581,7 @@
     {
       "seeding_key": {
         "lesson.key": "Build a Poem Generator",
-        "resource.key": "coding_with_poetry_modules"
+        "resource.key": "coding_with_poetry_lesson_4"
       }
     },
     {
@@ -3539,7 +3605,7 @@
     {
       "seeding_key": {
         "lesson.key": "Choosing Words Carefully",
-        "resource.key": "coding_with_poetry_modules"
+        "resource.key": "coding_with_poetry_lesson_5"
       }
     },
     {
@@ -3551,13 +3617,13 @@
     {
       "seeding_key": {
         "lesson.key": "Code Your Own Poem",
-        "resource.key": "coding_with_poetry_modules"
+        "resource.key": "coding_with_poetry_lesson_2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Playing with Words",
-        "resource.key": "coding_with_poetry_modules"
+        "resource.key": "coding_with_poetry_lesson_3"
       }
     },
     {
@@ -3617,7 +3683,7 @@
     {
       "seeding_key": {
         "lesson.key": "Poetry Circle",
-        "resource.key": "coding_with_poetry_modules"
+        "resource.key": "coding_with_poetry_lesson_7"
       }
     },
     {
@@ -3635,7 +3701,7 @@
     {
       "seeding_key": {
         "lesson.key": "Responding to Words",
-        "resource.key": "coding_with_poetry_modules"
+        "resource.key": "coding_with_poetry_lesson_6"
       }
     }
   ],
