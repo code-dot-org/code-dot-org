@@ -35,8 +35,6 @@ import Button from '@cdo/apps/templates/Button';
 import Dialog from '@cdo/apps/templates/Dialog';
 import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
 
-const VIDEO_KEY_REGEX = /video_key_for_next_level/g;
-
 /**
  * Component for editing units in unit_groups or stand alone courses
  */
@@ -216,21 +214,6 @@ class UnitEditor extends React.Component {
     event.preventDefault();
 
     this.setState({isSaving: true, lastSaved: null, error: null});
-
-    const videoKeysBefore = 0;
-    const unitText = '';
-    const videoKeysAfter = (unitText.match(VIDEO_KEY_REGEX) || []).length;
-    if (videoKeysBefore !== videoKeysAfter) {
-      if (
-        !confirm(
-          'WARNING: adding or removing video keys will also affect ' +
-            'uses of this level in other units. Are you sure you want to ' +
-            'continue?'
-        )
-      ) {
-        shouldCloseAfterSave = false;
-      }
-    }
 
     if (this.state.showCalendar && !this.state.weeklyInstructionalMinutes) {
       this.setState({
