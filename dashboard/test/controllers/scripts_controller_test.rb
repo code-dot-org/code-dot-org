@@ -311,7 +311,6 @@ class ScriptsControllerTest < ActionController::TestCase
     sign_in create(:platformization_partner)
     post :create, params: {
       script: {name: 'test-unit-create'},
-      script_text: '',
       is_migrated: true
     }
     assert_response :forbidden
@@ -337,7 +336,6 @@ class ScriptsControllerTest < ActionController::TestCase
     patch :update, params: {
       id: @coursez_2019.id,
       script: {name: @coursez_2019.name},
-      script_text: '',
     }
     assert_response :forbidden
   end
@@ -350,7 +348,6 @@ class ScriptsControllerTest < ActionController::TestCase
     patch :update, params: {
       id: @partner_unit.id,
       script: {name: @partner_unit.name},
-      script_text: '',
     }
     assert_response :success
   end
@@ -431,7 +428,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
@@ -452,7 +448,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
@@ -473,7 +468,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       instruction_type: SharedCourseConstants::INSTRUCTION_TYPE.self_paced
     }
     assert_response :success
@@ -494,7 +488,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       published_state: SharedCourseConstants::PUBLISHED_STATE.in_development
     }
     assert_response :success
@@ -515,7 +508,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       published_state: SharedCourseConstants::PUBLISHED_STATE.pilot,
       pilot_experiment: 'my-pilot'
     }
@@ -537,7 +529,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       published_state: SharedCourseConstants::PUBLISHED_STATE.beta
     }
     assert_response :success
@@ -558,7 +549,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
@@ -579,7 +569,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       published_state: SharedCourseConstants::PUBLISHED_STATE.stable
     }
     assert_response :success
@@ -597,7 +586,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :success
@@ -615,7 +603,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
     assert_response :forbidden
@@ -768,7 +755,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       resourceTypes: ['curriculum', 'vocabulary', ''],
       resourceLinks: ['/link/to/curriculum', '/link/to/vocab', '']
     }
@@ -836,7 +822,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       pilot_experiment: 'pilot-experiment',
       published_state: SharedCourseConstants::PUBLISHED_STATE.pilot
     }
@@ -858,7 +843,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       pilot_experiment: '',
       published_state: SharedCourseConstants::PUBLISHED_STATE.preview
     }
@@ -885,7 +869,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       project_sharing: 'on',
       curriculum_umbrella: 'CSF',
       family_name: 'my-fam',
@@ -915,8 +898,7 @@ class ScriptsControllerTest < ActionController::TestCase
       post :update, params: {
         id: unit.id,
         script: {name: unit.name},
-        script_text: '',
-        resourceTypes: ['curriculum', 'something_else'],
+          resourceTypes: ['curriculum', 'something_else'],
         resourceLinks: ['/link/to/curriculum', 'link/to/something_else']
       }
       assert_response :success
@@ -929,7 +911,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       resourceTypes: [''],
       resourceLinks: ['']
     }
@@ -973,7 +954,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
     }.merge(general_params)
     assert_response :success
     unit.reload
@@ -990,7 +970,6 @@ class ScriptsControllerTest < ActionController::TestCase
     post :update, params: {
       id: unit.id,
       script: {name: unit.name},
-      script_text: '',
       curriculum_path: '',
       version_year: '',
       published_state: SharedCourseConstants::PUBLISHED_STATE.beta,
@@ -1093,34 +1072,6 @@ class ScriptsControllerTest < ActionController::TestCase
 
     refute_nil unit.published_state
     assert_equal SharedCourseConstants::PUBLISHED_STATE.in_development, unit.published_state
-  end
-
-  test 'add lesson to unmigrated unit' do
-    sign_in create(:levelbuilder)
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-
-    level = create :level
-    unit = create :script, is_migrated: false
-    stub_file_writes(unit.name)
-
-    assert_empty unit.lessons
-
-    unit_text = <<~UNIT_TEXT
-      lesson 'lesson 1', display_name: 'lesson 1'
-      level '#{level.name}'
-    UNIT_TEXT
-
-    post :update, params: {
-      id: unit.id,
-      script: {name: unit.name},
-      script_text: unit_text,
-    }
-    unit.reload
-
-    assert_response :success
-    assert_equal level, unit.lessons.first.script_levels.first.level
-    assert_equal 'lesson 1', JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['name']
-    assert_not_nil JSON.parse(@response.body)['lesson_groups'][0]['lessons'][0]['id']
   end
 
   test 'add lesson to migrated unit' do
